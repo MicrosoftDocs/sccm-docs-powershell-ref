@@ -1,0 +1,238 @@
+---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+online version: 
+schema: 2.0.0
+ms.assetid: F7A0FD2C-E055-440E-95CA-38D195955F7E
+---
+
+# Remove-CMCollectionFromAdministrativeUser
+
+## SYNOPSIS
+
+## SYNTAX
+
+### RemoveCollectionFromAdminByName_Name (Default)
+```
+Remove-CMCollectionFromAdministrativeUser -CollectionName <String> -UserName <String> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveCollectionFromAdminById_Id
+```
+Remove-CMCollectionFromAdministrativeUser -CollectionId <String> -UserId <Int32> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveCollectionFromAdminById_Name
+```
+Remove-CMCollectionFromAdministrativeUser -CollectionId <String> -UserName <String> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveCollectionFromAdminById_Object
+```
+Remove-CMCollectionFromAdministrativeUser -CollectionId <String> -User <IResultObject> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveCollectionFromAdminByName_Id
+```
+Remove-CMCollectionFromAdministrativeUser -CollectionName <String> -UserId <Int32> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveCollectionFromAdminByName_Object
+```
+Remove-CMCollectionFromAdministrativeUser -CollectionName <String> -User <IResultObject> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveCollectionFromAdminByObject_Object
+```
+Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject> -User <IResultObject> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveCollectionFromAdminByObject_Name
+```
+Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject> -UserName <String> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveCollectionFromAdminByObject_Id
+```
+Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject> -UserId <Int32> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+## EXAMPLES
+
+### 1:
+```
+PS C:\>
+```
+
+## PARAMETERS
+
+### -CollectionId
+```yaml
+Type: String
+Parameter Sets: RemoveCollectionFromAdminById_Id, RemoveCollectionFromAdminById_Name, RemoveCollectionFromAdminById_Object
+Aliases: DeviceCollectionId, UserCollectionId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CollectionName
+```yaml
+Type: String
+Parameter Sets: RemoveCollectionFromAdminByName_Name, RemoveCollectionFromAdminByName_Id, RemoveCollectionFromAdminByName_Object
+Aliases: DeviceCollectionName, UserCollectionName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableWildcardHandling
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceWildcardHandling
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+```yaml
+Type: IResultObject
+Parameter Sets: RemoveCollectionFromAdminByObject_Object, RemoveCollectionFromAdminByObject_Name, RemoveCollectionFromAdminByObject_Id
+Aliases: DeviceCollection, UserCollection, Collection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -User
+```yaml
+Type: IResultObject
+Parameter Sets: RemoveCollectionFromAdminById_Object, RemoveCollectionFromAdminByName_Object, RemoveCollectionFromAdminByObject_Object
+Aliases: AdministrativeUser
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -UserId
+```yaml
+Type: Int32
+Parameter Sets: RemoveCollectionFromAdminById_Id, RemoveCollectionFromAdminByName_Id, RemoveCollectionFromAdminByObject_Id
+Aliases: AdministrativeUserId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserName
+```yaml
+Type: String
+Parameter Sets: RemoveCollectionFromAdminByName_Name, RemoveCollectionFromAdminById_Name, RemoveCollectionFromAdminByObject_Name
+Aliases: AdministrativeUserName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+

@@ -1,0 +1,171 @@
+---
+external help file: AdminUI.PS.HS.dll-Help.xml
+online version: 
+schema: 2.0.0
+ms.assetid: 1B4D2568-7D6A-4DFF-891B-9EDB54B3DFF0
+---
+
+# New-CMStorageFolder
+
+## SYNOPSIS
+Creates a new storage folder in Configuration Manager.
+
+## SYNTAX
+
+```
+New-CMStorageFolder -StorageFolderName <String> [-MaximumClientNumber <Int32>] [-MinimumFreeSpace <Int32>]
+ [-SpaceUnit <MinSpaceType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **New-CMStoragefolder** cmdlet creates a new storage folder to store user migration data in Microsoft System Center Configuration Manager.
+
+A storage folder identifies a location on a state migration point site system to store user migration data.
+Use this cmdlet in conjunction with the Add-CMStateMigrationPoint cmdlet to create a new state migration point with storage folders.
+
+## EXAMPLES
+
+### Example 1: Create a new storage folder
+```
+PS C:\>New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
+```
+
+This command creates a new storage folder for migration data by using the maximum number of clients, minimum free space, and storage folder path parameters.
+
+## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableWildcardHandling
+Indicates that wildcard handling is disabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceWildcardHandling
+Indicates that wildcard handling is enabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaximumClientNumber
+
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MinimumFreeSpace
+
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpaceUnit
+
+
+```yaml
+Type: MinSpaceType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Megabyte, Gigabyte, Percent
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageFolderName
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+
