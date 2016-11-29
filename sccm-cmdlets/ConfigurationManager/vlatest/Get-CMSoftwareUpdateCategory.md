@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833906
 schema: 2.0.0
 ms.assetid: 46FEA3CC-7836-4F48-A8AA-F99562A238DE
 ---

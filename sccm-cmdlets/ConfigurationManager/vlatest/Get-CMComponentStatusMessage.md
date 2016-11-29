@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834250
 schema: 2.0.0
 ms.assetid: 3AABF576-B504-4756-A8B8-412E842306C3
 ---

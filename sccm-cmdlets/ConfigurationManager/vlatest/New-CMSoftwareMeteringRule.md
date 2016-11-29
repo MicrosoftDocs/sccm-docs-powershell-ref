@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833755
 schema: 2.0.0
 ms.assetid: 13FECF2C-1A82-4A61-B717-F91AE4C9F94D
 ---

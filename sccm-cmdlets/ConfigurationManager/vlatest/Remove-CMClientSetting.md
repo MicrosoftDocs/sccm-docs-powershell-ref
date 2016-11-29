@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833960
 schema: 2.0.0
 ms.assetid: 3909FDAF-A2D9-4959-814C-D9F30E1DC014
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Migration.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833701
 schema: 2.0.0
 ms.assetid: 7A6A863C-460A-4F6A-A241-DBE016C8A5B9
 ---

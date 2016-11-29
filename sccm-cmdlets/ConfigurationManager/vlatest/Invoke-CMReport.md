@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Reporting.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834162
 schema: 2.0.0
 ms.assetid: 57DE1031-012E-4267-AA6B-A56450A98AB5
 ---

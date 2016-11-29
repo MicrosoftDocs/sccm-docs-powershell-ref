@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833721
 schema: 2.0.0
 ms.assetid: AA864A00-4726-4284-8F25-958C1B3375D9
 ---

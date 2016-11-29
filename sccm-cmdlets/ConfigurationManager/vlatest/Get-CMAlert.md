@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834073
 schema: 2.0.0
 ms.assetid: AB20D6C3-3817-400F-B098-371536B4513C
 ---

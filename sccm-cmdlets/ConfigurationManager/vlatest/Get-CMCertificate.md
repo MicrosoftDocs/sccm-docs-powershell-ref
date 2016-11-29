@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834161
 schema: 2.0.0
 ms.assetid: 20865371-37E6-4090-9921-E2051D26D873
 ---

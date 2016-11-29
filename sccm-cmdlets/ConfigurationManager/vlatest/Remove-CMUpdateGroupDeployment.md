@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834253
 schema: 2.0.0
 ms.assetid: F7CA4132-611A-457C-A2D0-FCB6EC4AF2D0
 ---

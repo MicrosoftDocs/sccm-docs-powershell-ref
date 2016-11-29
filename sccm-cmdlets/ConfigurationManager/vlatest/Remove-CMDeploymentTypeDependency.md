@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834022
 schema: 2.0.0
 ms.assetid: 737EBE0F-91C4-4732-B9D2-829AA4B8617A
 ---

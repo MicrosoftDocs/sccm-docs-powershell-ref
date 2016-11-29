@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Accounts.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833865
 schema: 2.0.0
 ms.assetid: D9CF99B8-E30E-481E-A44C-D3BBAA2A9F19
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834185
 schema: 2.0.0
 ms.assetid: 291EAE74-E3F8-4D1F-8ECE-9BE35F278E98
 ---

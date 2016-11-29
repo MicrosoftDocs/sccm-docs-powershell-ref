@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834140
 schema: 2.0.0
 ms.assetid: FF47986C-F314-4A29-AD87-24010BF2C92F
 ---

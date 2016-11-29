@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Content.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833656
 schema: 2.0.0
 ms.assetid: B616CC22-3B89-436A-BDDB-3BC01C5DAD7D
 ---

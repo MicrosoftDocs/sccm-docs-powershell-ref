@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=834192
 schema: 2.0.0
 ms.assetid: 5A75BC8C-977B-4AAF-BA2E-9A5164628A62
 ---

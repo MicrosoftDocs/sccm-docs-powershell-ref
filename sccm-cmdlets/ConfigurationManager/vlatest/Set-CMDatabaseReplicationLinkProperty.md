@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833779
 schema: 2.0.0
 ms.assetid: C3D5A011-7F5C-4151-BB10-112E9A0E78CA
 ---

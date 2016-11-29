@@ -1,6 +1,6 @@
 ---
 external help file: AdminUI.PS.Oob.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=833973
 schema: 2.0.0
 ms.assetid: E23E75B8-3F37-4C75-892A-E4FDE3698767
 ---
