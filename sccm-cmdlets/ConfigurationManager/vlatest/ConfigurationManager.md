@@ -1,13 +1,13 @@
 ---
-external help file: 
-online version: 
-schema: 
+external help file:
+online version:
+schema:
 ms.assetid: 0ADD6D91-97E0-4F79-ABE3-0174AA0C4750
 ---
 
 # ConfigurationManager Module
 ## Description
-This section contains the help topics and about topics for the Configuration Manager cmdlets
+This section contains the help topics and about topics for the Configuration Manager cmdlets.
 
 ## ConfigurationManager Cmdlets
 ### [Add-CMAndroidDeploymentType](Add-CMAndroidDeploymentType.md)
@@ -31,29 +31,8 @@ Installs an Asset Intelligence synchronization point.
 ### [Add-CMBoundaryToGroup](Add-CMBoundaryToGroup.md)
 Assigns boundaries to a boundary group.
 
-### [Add-CMCertificateRegistrationPoint](Add-CMCertificateRegistrationPoint.md)
-Adds a certificate registration point role to a site system server.
-
-### [Add-CMCollectionMembershipRule](Add-CMCollectionMembershipRule.md)
-
-
-### [Add-CMCollectionToAdministrativeUser](Add-CMCollectionToAdministrativeUser.md)
-
-
-### [Add-CMCollectionToDistributionPointGroup](Add-CMCollectionToDistributionPointGroup.md)
-
-
-### [Add-CMComplianceRegistrySetting](Add-CMComplianceRegistrySetting.md)
-
-
 ### [Add-CMDeploymentType](Add-CMDeploymentType.md)
 Adds a deployment type for an application.
-
-### [Add-CMDeploymentTypeDependency](Add-CMDeploymentTypeDependency.md)
-
-
-### [Add-CMDeploymentTypeSupersedence](Add-CMDeploymentTypeSupersedence.md)
-
 
 ### [Add-CMDeviceAffinityToUser](Add-CMDeviceAffinityToUser.md)
 Adds device affinity to a Configuration Manager user.
@@ -141,9 +120,6 @@ Adds a security role to an administrative user or group in Configuration Manager
 
 ### [Add-CMSecurityScopeToAdministrativeUser](Add-CMSecurityScopeToAdministrativeUser.md)
 Adds a security scope to an administrative user or group in Configuration Manager.
-
-### [Add-CMServiceConnectionPoint](Add-CMServiceConnectionPoint.md)
-Adds a service connection point to a site system server.
 
 ### [Add-CMSoftwareUpdatePoint](Add-CMSoftwareUpdatePoint.md)
 Adds a software update point for Configuration Manager.
@@ -238,20 +214,8 @@ Converts schedule tokens into and from interval strings.
 ### [ConvertFrom-CMApplication](ConvertFrom-CMApplication.md)
 Converts an application SDK object to an application object.
 
-### [ConvertFrom-CMConfigurationItem](ConvertFrom-CMConfigurationItem.md)
-
-
-### [ConvertFrom-CMIResultObject](ConvertFrom-CMIResultObject.md)
-
-
 ### [ConvertTo-CMApplication](ConvertTo-CMApplication.md)
 Converts an application object to an application SDK object.
-
-### [ConvertTo-CMConfigurationItem](ConvertTo-CMConfigurationItem.md)
-
-
-### [ConvertTo-CMIResultObject](ConvertTo-CMIResultObject.md)
-
 
 ### [Copy-CMConfigurationPolicy](Copy-CMConfigurationPolicy.md)
 Copies a configuration policy.
@@ -343,17 +307,11 @@ Exports driver packages.
 ### [Export-CMPackage](Export-CMPackage.md)
 Exports a Configuration Manager package.
 
-### [Export-CMQuery](Export-CMQuery.md)
-
-
 ### [Export-CMSecurityRole](Export-CMSecurityRole.md)
 Exports a security role to an XML file.
 
 ### [Export-CMTaskSequence](Export-CMTaskSequence.md)
 Exports a task sequence.
-
-### [Export-CMWindowsEnrollmentProfile](Export-CMWindowsEnrollmentProfile.md)
-
 
 ### [Get-CMAccessAccount](Get-CMAccessAccount.md)
 Gets an access account.
@@ -391,9 +349,6 @@ Gets an Application Catalog web service point.
 ### [Get-CMApplicationCatalogWebsitePoint](Get-CMApplicationCatalogWebsitePoint.md)
 Gets a Configuration Manager Application Catalog website point.
 
-### [Get-CMApplicationDeploymentStatus](Get-CMApplicationDeploymentStatus.md)
-
-
 ### [Get-CMApplicationRevisionHistory](Get-CMApplicationRevisionHistory.md)
 Gets a Configuration Manager object that represents the revision history for an application.
 
@@ -406,23 +361,14 @@ Gets an App-V virtual environment.
 ### [Get-CMAssetIntelligenceCatalogItem](Get-CMAssetIntelligenceCatalogItem.md)
 Gets an item from the Asset Intelligence catalog.
 
-### [Get-CMAssetIntelligenceProxy](Get-CMAssetIntelligenceProxy.md)
-
-
 ### [Get-CMAssetIntelligenceSynchronizationPoint](Get-CMAssetIntelligenceSynchronizationPoint.md)
 Gets Asset Intelligence synchronization points.
-
-### [Get-CMAutoDeploymentRuleDeployment](Get-CMAutoDeploymentRuleDeployment.md)
-Gets the deployments associated with an automatic deployment rule.
 
 ### [Get-CMAutomaticAmtProvisioningStatus](Get-CMAutomaticAmtProvisioningStatus.md)
 Gets the automatic provisioning status of computers with an AMT management controller.
 
 ### [Get-CMBaseline](Get-CMBaseline.md)
 Gets configuration baselines.
-
-### [Get-CMBaselineDeploymentStatus](Get-CMBaselineDeploymentStatus.md)
-
 
 ### [Get-CMBaselineSummarizationSchedule](Get-CMBaselineSummarizationSchedule.md)
 Gets the summarization schedule for configuration baseline data.
@@ -441,27 +387,6 @@ Gets a boundary group.
 
 ### [Get-CMCategory](Get-CMCategory.md)
 Gets configuration categories in Configuration Manager.
-
-### [Get-CMCertificate](Get-CMCertificate.md)
-
-
-### [Get-CMCertificateProfilePfx](Get-CMCertificateProfilePfx.md)
-Gets a PFX certificate profile.
-
-### [Get-CMCertificateProfileScep](Get-CMCertificateProfileScep.md)
-Gets a SCEP certificate profile.
-
-### [Get-CMCertificateProfileTrustedRootCA](Get-CMCertificateProfileTrustedRootCA.md)
-Gets a trusted CA certificate profile.
-
-### [Get-CMCertificateRegistrationPoint](Get-CMCertificateRegistrationPoint.md)
-Gets a certificate registration point.
-
-### [Get-CMClientCertificatePfx](Get-CMClientCertificatePfx.md)
-Gets a client PFX certificate.
-
-### [Get-CMClientOperation](Get-CMClientOperation.md)
-
 
 ### [Get-CMClientPushInstallation](Get-CMClientPushInstallation.md)
 Gets an object that installs a Configuration Manager client by using client push.
@@ -484,29 +409,8 @@ Gets a cmdlet update check configuration object.
 ### [Get-CMCollection](Get-CMCollection.md)
 Gets a collection.
 
-### [Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
-
-
-### [Get-CMCollectionExcludeMembershipRule](Get-CMCollectionExcludeMembershipRule.md)
-
-
-### [Get-CMCollectionIncludeMembershipRule](Get-CMCollectionIncludeMembershipRule.md)
-
-
-### [Get-CMCollectionMember](Get-CMCollectionMember.md)
-Gets a member of a collection.
-
 ### [Get-CMCollectionMembershipEvaluationComponent](Get-CMCollectionMembershipEvaluationComponent.md)
 Gets how often Configuration Manager evaluates collection membership.
-
-### [Get-CMCollectionMembershipRule](Get-CMCollectionMembershipRule.md)
-
-
-### [Get-CMCollectionQueryMembershipRule](Get-CMCollectionQueryMembershipRule.md)
-
-
-### [Get-CMCollectionSetting](Get-CMCollectionSetting.md)
-Gets the settings for a collection.
 
 ### [Get-CMComponentStatusMessage](Get-CMComponentStatusMessage.md)
 Gets component status messages in Configuration Manager.
@@ -532,14 +436,8 @@ Gets an XML definition of a configuration item in Configuration Manager.
 ### [Get-CMConfigurationPolicy](Get-CMConfigurationPolicy.md)
 Gets a configuration policy.
 
-### [Get-CMConfigurationPolicyXml](Get-CMConfigurationPolicyXml.md)
-
-
 ### [Get-CMConflictingRecord](Get-CMConflictingRecord.md)
 Gets conflicting Configuration Manager record objects.
-
-### [Get-CMConnectionManager](Get-CMConnectionManager.md)
-
 
 ### [Get-CMDatabaseProperty](Get-CMDatabaseProperty.md)
 Gets an object that represents a Configuration Manager database.
@@ -559,23 +457,8 @@ Gets information about deployment packages on a distribution point.
 ### [Get-CMDeploymentStatus](Get-CMDeploymentStatus.md)
 Gets the status of classic software distribution deployments.
 
-### [Get-CMDeploymentStatusDetails](Get-CMDeploymentStatusDetails.md)
-
-
 ### [Get-CMDeploymentType](Get-CMDeploymentType.md)
 Gets the deployment type of an application.
-
-### [Get-CMDeploymentTypeDependency](Get-CMDeploymentTypeDependency.md)
-
-
-### [Get-CMDeploymentTypeDependencyGroup](Get-CMDeploymentTypeDependencyGroup.md)
-
-
-### [Get-CMDeploymentTypeSupersedence](Get-CMDeploymentTypeSupersedence.md)
-
-
-### [Get-CMDetectedMalware](Get-CMDetectedMalware.md)
-
 
 ### [Get-CMDevice](Get-CMDevice.md)
 Gets a device.
@@ -613,9 +496,6 @@ Gets a distribution point.
 ### [Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md)
 Gets distribution point groups.
 
-### [Get-CMDistributionPointInfo](Get-CMDistributionPointInfo.md)
-
-
 ### [Get-CMDriver](Get-CMDriver.md)
 Gets a device driver.
 
@@ -624,9 +504,6 @@ Gets a driver package.
 
 ### [Get-CMEmailNotificationComponent](Get-CMEmailNotificationComponent.md)
 Gets an email notification components.
-
-### [Get-CMEmailProfile](Get-CMEmailProfile.md)
-Gets an email profile.
 
 ### [Get-CMEndpointProtectionPoint](Get-CMEndpointProtectionPoint.md)
 Gets an Endpoint Protection point.
@@ -655,9 +532,6 @@ Gets global condition objects.
 ### [Get-CMHardwareRequirement](Get-CMHardwareRequirement.md)
 Gets Configuration Manager hardware requirements for products.
 
-### [Get-CMHierarchySetting](Get-CMHierarchySetting.md)
-
-
 ### [Get-CMInitialModifiableSecuredCategory](Get-CMInitialModifiableSecuredCategory.md)
 Gets modifiable secured categories.
 
@@ -669,9 +543,6 @@ Gets a Configuration Manager IP subnet.
 
 ### [Get-CMMaintenanceWindow](Get-CMMaintenanceWindow.md)
 Gets the maintenance windows for a collection.
-
-### [Get-CMMalwareThreatCategory](Get-CMMalwareThreatCategory.md)
-
 
 ### [Get-CMManagementPoint](Get-CMManagementPoint.md)
 Gets a management point.
@@ -691,17 +562,8 @@ Gets a migration entity in System Center Configuration Manager.
 ### [Get-CMMigrationEntityDependency](Get-CMMigrationEntityDependency.md)
 Gets a dependency for a migration entity in Configuration Manager.
 
-### [Get-CMMigrationJob](Get-CMMigrationJob.md)
-
-
-### [Get-CMMigrationSource](Get-CMMigrationSource.md)
-
-
 ### [Get-CMMulticastServicePoint](Get-CMMulticastServicePoint.md)
 Gets a multicast service point.
-
-### [Get-CMObjectLockDetails](Get-CMObjectLockDetails.md)
-
 
 ### [Get-CMObjectSecurityScope](Get-CMObjectSecurityScope.md)
 Gets the security scope associated with a Configuration Manager object.
@@ -724,17 +586,8 @@ Gets an out of band service point.
 ### [Get-CMPackage](Get-CMPackage.md)
 Gets Configuration Manager packages.
 
-### [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
-
-
-### [Get-CMPowerManagementSchema](Get-CMPowerManagementSchema.md)
-
-
 ### [Get-CMProgram](Get-CMProgram.md)
 Gets programs in Configuration Manager.
-
-### [Get-CMQuery](Get-CMQuery.md)
-
 
 ### [Get-CMQueryResultMaximum](Get-CMQueryResultMaximum.md)
 Gets the maximum number of rows that a Configuration Manager report query can return.
@@ -742,35 +595,20 @@ Gets the maximum number of rows that a Configuration Manager report query can re
 ### [Get-CMReportingServicePoint](Get-CMReportingServicePoint.md)
 Gets a reporting service point.
 
-### [Get-CMResource](Get-CMResource.md)
-Gets a resource.
-
 ### [Get-CMSecurityRole](Get-CMSecurityRole.md)
 Gets security roles.
 
 ### [Get-CMSecurityScope](Get-CMSecurityScope.md)
 Gets a security scope.
 
-### [Get-CMServiceConnectionPoint](Get-CMServiceConnectionPoint.md)
-Gets a service connection point.
-
 ### [Get-CMSite](Get-CMSite.md)
 Gets one or more Configuration Manager sites.
-
-### [Get-CMSiteComponent](Get-CMSiteComponent.md)
-
-
-### [Get-CMSiteDefinition](Get-CMSiteDefinition.md)
-
 
 ### [Get-CMSiteInstallStatus](Get-CMSiteInstallStatus.md)
 Provides information about Configuration Manager installation status.
 
 ### [Get-CMSiteMaintenanceTask](Get-CMSiteMaintenanceTask.md)
 Gets maintenance tasks in Configuration Manager.
-
-### [Get-CMSiteRole](Get-CMSiteRole.md)
-
 
 ### [Get-CMSiteStatusMessage](Get-CMSiteStatusMessage.md)
 Gets site system status messages.
@@ -798,9 +636,6 @@ Gets Configuration Manager deployment rules for automatic software updates.
 
 ### [Get-CMSoftwareUpdateBasedClientInstallation](Get-CMSoftwareUpdateBasedClientInstallation.md)
 Gets a client installation on a Configuration Manager software update point.
-
-### [Get-CMSoftwareUpdateCategory](Get-CMSoftwareUpdateCategory.md)
-
 
 ### [Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md)
 Retrieves a deployment package.
@@ -835,9 +670,6 @@ Gets an object representing a status reporting component.
 ### [Get-CMStatusSummarizer](Get-CMStatusSummarizer.md)
 Gets a status summarizer object for Configuration Manager.
 
-### [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md)
-
-
 ### [Get-CMSystemHealthValidatorPoint](Get-CMSystemHealthValidatorPoint.md)
 Gets a system health validator point for Configuration Manager.
 
@@ -849,9 +681,6 @@ Gets Configuration Manager task sequences.
 
 ### [Get-CMTrustedRootCertificate](Get-CMTrustedRootCertificate.md)
 Gets a trusted root certificate for Configuration Manager.
-
-### [Get-CMUpdateGroupDeployment](Get-CMUpdateGroupDeployment.md)
-
 
 ### [Get-CMUser](Get-CMUser.md)
 Gets a Configuration Manager user.
@@ -880,18 +709,6 @@ Gets a request for user device affinity in Configuration Manager.
 ### [Get-CMVhd](Get-CMVhd.md)
 Gets VHD images.
 
-### [Get-CMWindowsEnrollmentProfile](Get-CMWindowsEnrollmentProfile.md)
-
-
-### [Get-CMWindowsEnrollmentProfilePackage](Get-CMWindowsEnrollmentProfilePackage.md)
-
-
-### [Get-CMWindowsServicingPlan](Get-CMWindowsServicingPlan.md)
-Gets a Windows 10 servicing plan.
-
-### [Get-CMWinPEOptionalComponentInfo](Get-CMWinPEOptionalComponentInfo.md)
-
-
 ### [Import-CMAntimalwarePolicy](Import-CMAntimalwarePolicy.md)
 Imports an antimalware policy for Endpoint Protection.
 
@@ -903,9 +720,6 @@ Imports Configuration Manager baselines.
 
 ### [Import-CMCertificate](Import-CMCertificate.md)
 Imports a certificate.
-
-### [Import-CMClientCertificatePfx](Import-CMClientCertificatePfx.md)
-Imports a client PFX certificate.
 
 ### [Import-CMCollection](Import-CMCollection.md)
 Imports a collection.
@@ -925,9 +739,6 @@ Imports a driver package.
 ### [Import-CMPackage](Import-CMPackage.md)
 Imports a Configuration Manager package.
 
-### [Import-CMQuery](Import-CMQuery.md)
-
-
 ### [Import-CMSecurityRole](Import-CMSecurityRole.md)
 Imports a security role into Configuration Manager.
 
@@ -939,9 +750,6 @@ Imports a task sequence.
 
 ### [Import-CMUserDeviceAffinity](Import-CMUserDeviceAffinity.md)
 Imports a file that contains user and device affinities to Configuration Manager.
-
-### [Import-CMWirelessProfileConfigurationItem](Import-CMWirelessProfileConfigurationItem.md)
-Imports a wireless profile configuration item.
 
 ### [Install-CMClient](Install-CMClient.md)
 Installs a Configuration Manager client.
@@ -957,9 +765,6 @@ Sends a notification to client computers to trigger an immediate client action.
 
 ### [Invoke-CMClientOperationSummarization](Invoke-CMClientOperationSummarization.md)
 Performs a Configuration Manager client operations summarization.
-
-### [Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
-Updates the membership of a collection.
 
 ### [Invoke-CMContentValidation](Invoke-CMContentValidation.md)
 Validates packages on a distribution point.
@@ -985,12 +790,6 @@ Retrieves summary status data about Endpoint Protection.
 ### [Invoke-CMForestDiscovery](Invoke-CMForestDiscovery.md)
 Starts a forest discovery operation in Active Directory.
 
-### [Invoke-CMGroupDiscovery](Invoke-CMGroupDiscovery.md)
-
-
-### [Invoke-CMQuery](Invoke-CMQuery.md)
-
-
 ### [Invoke-CMRemoteControl](Invoke-CMRemoteControl.md)
 Enables remote control on computers.
 
@@ -1005,18 +804,6 @@ Runs a Configuration Manager deployment rule for automatic software updates.
 
 ### [Invoke-CMSoftwareUpdateSummarization](Invoke-CMSoftwareUpdateSummarization.md)
 Runs the Configuration Manager software update summarization.
-
-### [Invoke-CMSystemDiscovery](Invoke-CMSystemDiscovery.md)
-
-
-### [Invoke-CMUserDiscovery](Invoke-CMUserDiscovery.md)
-
-
-### [Invoke-CMWmiMethod](Invoke-CMWmiMethod.md)
-Calls a WMI method.
-
-### [Invoke-CMWmiQuery](Invoke-CMWmiQuery.md)
-Runs a WMI query.
 
 ### [Lock-CMObject](Lock-CMObject.md)
 Locks global objects in Configuration Manager.
@@ -1038,9 +825,6 @@ Creates a Configuration Manager user account.
 
 ### [New-CMActiveDirectoryForest](New-CMActiveDirectoryForest.md)
 Creates one or more Active Directory forest objects in Configuration Manager.
-
-### [New-CMADGroupDiscoveryScope](New-CMADGroupDiscoveryScope.md)
-
 
 ### [New-CMAdministrativeUser](New-CMAdministrativeUser.md)
 Creates an administrative user.
@@ -1066,9 +850,6 @@ Creates an App-V virtual environment.
 ### [New-CMAssetIntelligenceCatalogItem](New-CMAssetIntelligenceCatalogItem.md)
 Creates an item for the Asset Intelligence catalog.
 
-### [New-CMAutoDeploymentRuleDeployment](New-CMAutoDeploymentRuleDeployment.md)
-Creates a deployment for an automatic deployment rule.
-
 ### [New-CMBaseline](New-CMBaseline.md)
 Creates a Configuration Manager baseline.
 
@@ -1090,15 +871,6 @@ Creates capture media.
 ### [New-CMCategory](New-CMCategory.md)
 Creates a configuration category in Configuration Manager.
 
-### [New-CMCertificateProfilePfx](New-CMCertificateProfilePfx.md)
-Creates a PFX certificate profile.
-
-### [New-CMCertificateProfileScep](New-CMCertificateProfileScep.md)
-Creates a SCEP certificate profile.
-
-### [New-CMCertificateProfileTrustedRootCA](New-CMCertificateProfileTrustedRootCA.md)
-Creates a trusted CA certificate profile.
-
 ### [New-CMClientAuthCertificateProfileConfigurationItem](New-CMClientAuthCertificateProfileConfigurationItem.md)
 Creates a certificate profile.
 
@@ -1111,9 +883,6 @@ Creates a cloud distribution point.
 ### [New-CMCollection](New-CMCollection.md)
 Creates a collection.
 
-### [New-CMComplianceRule](New-CMComplianceRule.md)
-
-
 ### [New-CMComputerAssociation](New-CMComputerAssociation.md)
 Creates an association between two computers in Configuration Manager.
 
@@ -1122,9 +891,6 @@ Creates a conditional access policy.
 
 ### [New-CMConfigurationItem](New-CMConfigurationItem.md)
 Creates a configuration item.
-
-### [New-CMDeploymentTypeDependencyGroup](New-CMDeploymentTypeDependencyGroup.md)
-
 
 ### [New-CMDepTokenRequest](New-CMDepTokenRequest.md)
 Creates an Apple DEP token reqeust.
@@ -1143,18 +909,6 @@ Creates a distribution point group.
 
 ### [New-CMDriverPackage](New-CMDriverPackage.md)
 Creates a driver package.
-
-### [New-CMEmailProfile](New-CMEmailProfile.md)
-Creates an email profile.
-
-### [New-CMEmbeddedObjectInstance](New-CMEmbeddedObjectInstance.md)
-
-
-### [New-CMEmbeddedProperty](New-CMEmbeddedProperty.md)
-
-
-### [New-CMEmbeddedPropertyList](New-CMEmbeddedPropertyList.md)
-
 
 ### [New-CMExchangeClientAccessServer](New-CMExchangeClientAccessServer.md)
 Creates a Client Access server role for an Exchange Server.
@@ -1198,26 +952,17 @@ Creates a migration job in System Center Configuration Manager.
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
 
-### [New-CMOperatingSystemImageUpdateSchedule](New-CMOperatingSystemImageUpdateSchedule.md)
-
-
 ### [New-CMOperatingSystemInstaller](New-CMOperatingSystemInstaller.md)
 Adds an operating system installer.
 
 ### [New-CMPackage](New-CMPackage.md)
 Creates a Configuration Manager package.
 
-### [New-CMPowerManagementCustomPlan](New-CMPowerManagementCustomPlan.md)
-Creates a custom power management plan.
-
 ### [New-CMPrestagedMedia](New-CMPrestagedMedia.md)
 Creates prestaged media.
 
 ### [New-CMProgram](New-CMProgram.md)
 Creates a new program in Configuration Manager.
-
-### [New-CMQuery](New-CMQuery.md)
-
 
 ### [New-CMRemoteConnectionProfileConfigurationItem](New-CMRemoteConnectionProfileConfigurationItem.md)
 Creates a remote connection profile.
@@ -1239,9 +984,6 @@ Creates a Configuration Manager software metering rule.
 
 ### [New-CMSoftwareUpdateAutoDeploymentRule](New-CMSoftwareUpdateAutoDeploymentRule.md)
 Creates Configuration Manager deployment rules for automatic software updates.
-
-### [New-CMSoftwareUpdateDeploymentPackage](New-CMSoftwareUpdateDeploymentPackage.md)
-
 
 ### [New-CMSoftwareUpdateGroup](New-CMSoftwareUpdateGroup.md)
 Creates a software update group.
@@ -1285,14 +1027,8 @@ Creates a virtual environment group.
 ### [New-CMVpnProfileConfigurationItem](New-CMVpnProfileConfigurationItem.md)
 Creates a VPN profile.
 
-### [New-CMWindowsEnrollmentProfile](New-CMWindowsEnrollmentProfile.md)
-
-
 ### [New-CMWindowsFirewallPolicy](New-CMWindowsFirewallPolicy.md)
 Creates a new Windows Firewall policy in Configuration Manager.
-
-### [New-CMWindowsServicingPlan](New-CMWindowsServicingPlan.md)
-Creates a Windows 10 servicing plan.
 
 ### [New-CMWiredProfileObject](New-CMWiredProfileObject.md)
 Creates a profile that specifies settings for AMT-based computers on a wired network.
@@ -1357,9 +1093,6 @@ Removes an item from the Asset Intelligence catalog.
 ### [Remove-CMAssetIntelligenceSynchronizationPoint](Remove-CMAssetIntelligenceSynchronizationPoint.md)
 Removes an Asset Intelligence synchronization point.
 
-### [Remove-CMAutoDeploymentRuleDeployment](Remove-CMAutoDeploymentRuleDeployment.md)
-Removes a deployment from an auto deployment rule.
-
 ### [Remove-CMBaseline](Remove-CMBaseline.md)
 Removes configuration baselines.
 
@@ -1378,12 +1111,6 @@ Removes a boundary group.
 ### [Remove-CMCategory](Remove-CMCategory.md)
 Removes a configuration category in Configuration Manager.
 
-### [Remove-CMCertificateRegistrationPoint](Remove-CMCertificateRegistrationPoint.md)
-Removes a certificate registration point role from a site system server.
-
-### [Remove-CMClientCertificatePfx](Remove-CMClientCertificatePfx.md)
-Removes a PFX client certificate.
-
 ### [Remove-CMClientOperation](Remove-CMClientOperation.md)
 Removes a Configuration Manager client operation object.
 
@@ -1395,27 +1122,6 @@ Removes cloud-based distribution points.
 
 ### [Remove-CMCollection](Remove-CMCollection.md)
 Removes a collection.
-
-### [Remove-CMCollectionDirectMembershipRule](Remove-CMCollectionDirectMembershipRule.md)
-
-
-### [Remove-CMCollectionExcludeMembershipRule](Remove-CMCollectionExcludeMembershipRule.md)
-
-
-### [Remove-CMCollectionFromAdministrativeUser](Remove-CMCollectionFromAdministrativeUser.md)
-
-
-### [Remove-CMCollectionFromDistributionPointGroup](Remove-CMCollectionFromDistributionPointGroup.md)
-
-
-### [Remove-CMCollectionIncludeMembershipRule](Remove-CMCollectionIncludeMembershipRule.md)
-
-
-### [Remove-CMCollectionMembershipRule](Remove-CMCollectionMembershipRule.md)
-
-
-### [Remove-CMCollectionQueryMembershipRule](Remove-CMCollectionQueryMembershipRule.md)
-
 
 ### [Remove-CMComputerAssociation](Remove-CMComputerAssociation.md)
 Deletes a computer association from Configuration Manager.
@@ -1437,15 +1143,6 @@ Removes a deployment.
 
 ### [Remove-CMDeploymentType](Remove-CMDeploymentType.md)
 Removes a deployment type.
-
-### [Remove-CMDeploymentTypeDependency](Remove-CMDeploymentTypeDependency.md)
-
-
-### [Remove-CMDeploymentTypeDependencyGroup](Remove-CMDeploymentTypeDependencyGroup.md)
-
-
-### [Remove-CMDeploymentTypeSupersedence](Remove-CMDeploymentTypeSupersedence.md)
-
 
 ### [Remove-CMDevice](Remove-CMDevice.md)
 Removes a client device from Configuration Manager.
@@ -1546,14 +1243,8 @@ Removes a Configuration Manager package.
 ### [Remove-CMProgram](Remove-CMProgram.md)
 Removes programs from a Configuration Manager package.
 
-### [Remove-CMQuery](Remove-CMQuery.md)
-
-
 ### [Remove-CMReportingServicePoint](Remove-CMReportingServicePoint.md)
 Removes a reporting service point.
-
-### [Remove-CMResource](Remove-CMResource.md)
-Removes a resource.
 
 ### [Remove-CMSecondarySite](Remove-CMSecondarySite.md)
 Removes a secondary site from Configuration Manager.
@@ -1569,12 +1260,6 @@ Removes a security scope.
 
 ### [Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
 Removes the association between security scopes and an administrative user.
-
-### [Remove-CMServiceConnectionPoint](Remove-CMServiceConnectionPoint.md)
-Removes a service connection point.
-
-### [Remove-CMSiteRole](Remove-CMSiteRole.md)
-
 
 ### [Remove-CMSiteSystemServer](Remove-CMSiteSystemServer.md)
 Removes a site system server.
@@ -1609,9 +1294,6 @@ Removes a system health validator point from Configuration Manager.
 ### [Remove-CMTaskSequence](Remove-CMTaskSequence.md)
 Removes a task sequence.
 
-### [Remove-CMUpdateGroupDeployment](Remove-CMUpdateGroupDeployment.md)
-
-
 ### [Remove-CMUser](Remove-CMUser.md)
 Removes a user from Configuration Manager.
 
@@ -1632,15 +1314,6 @@ Removes a query membership rule from one or more user collection in the Configur
 
 ### [Remove-CMVhd](Remove-CMVhd.md)
 Removes VHD images.
-
-### [Remove-CMWindowsEnrollmentProfile](Remove-CMWindowsEnrollmentProfile.md)
-
-
-### [Remove-CMWindowsEnrollmentProfilePackage](Remove-CMWindowsEnrollmentProfilePackage.md)
-
-
-### [Rename-CMCategory](Rename-CMCategory.md)
-
 
 ### [Resolve-CMInventoriedSoftwareConflict](Resolve-CMInventoriedSoftwareConflict.md)
 Resolves a conflict in Configuration Manager software inventory information.
@@ -1717,9 +1390,6 @@ Enables or disables an Asset Intelligence synchronization point.
 ### [Set-CMAssignedSite](Set-CMAssignedSite.md)
 Assigns a client computer to a primary site.
 
-### [Set-CMAutoDeploymentRuleDeployment](Set-CMAutoDeploymentRuleDeployment.md)
-Sets a deployment for an automatic deployment rule.
-
 ### [Set-CMBaseline](Set-CMBaseline.md)
 Changes the settings of configuration baselines.
 
@@ -1737,18 +1407,6 @@ Modifies boundary settings.
 
 ### [Set-CMBoundaryGroup](Set-CMBoundaryGroup.md)
 Modifies the properties of a boundary group.
-
-### [Set-CMCertificateProfilePfx](Set-CMCertificateProfilePfx.md)
-Sets a PFX certificate profile.
-
-### [Set-CMCertificateProfileScep](Set-CMCertificateProfileScep.md)
-Sets a SCEP certificate profile.
-
-### [Set-CMCertificateProfileTrustedRootCA](Set-CMCertificateProfileTrustedRootCA.md)
-Sets a trusted CA certificate profile.
-
-### [Set-CMCertificateRegistrationPoint](Set-CMCertificateRegistrationPoint.md)
-Sets a certificate registration point role on a site system server.
 
 ### [Set-CMClientAuthCertificateProfileConfigurationItem](Set-CMClientAuthCertificateProfileConfigurationItem.md)
 Modifies a certificate profile.
@@ -1777,12 +1435,6 @@ Sets a collection.
 ### [Set-CMCollectionMembershipEvaluationComponent](Set-CMCollectionMembershipEvaluationComponent.md)
 Sets how often Configuration Manager evaluates collections for membership.
 
-### [Set-CMCollectionPowerManagement](Set-CMCollectionPowerManagement.md)
-Configures power management settings for a device collection.
-
-### [Set-CMComplianceSupportedPlatform](Set-CMComplianceSupportedPlatform.md)
-
-
 ### [Set-CMComputerAssociation](Set-CMComputerAssociation.md)
 Changes settings for a computer association in Configuration Manager.
 
@@ -1803,15 +1455,6 @@ Changes configuration settings for a database replication link.
 
 ### [Set-CMDeploymentType](Set-CMDeploymentType.md)
 Changes a deployment type.
-
-### [Set-CMDeploymentTypeDependency](Set-CMDeploymentTypeDependency.md)
-
-
-### [Set-CMDeploymentTypeDependencyGroup](Set-CMDeploymentTypeDependencyGroup.md)
-
-
-### [Set-CMDeploymentTypeSupersedence](Set-CMDeploymentTypeSupersedence.md)
-
 
 ### [Set-CMDeviceCollectionVariable](Set-CMDeviceCollectionVariable.md)
 Sets a device collection variable.
@@ -1842,9 +1485,6 @@ Modifies a driver package
 
 ### [Set-CMEmailNotificationComponent](Set-CMEmailNotificationComponent.md)
 Changes configuration settings of an email notification component.
-
-### [Set-CMEmailProfile](Set-CMEmailProfile.md)
-Sets an email profile.
 
 ### [Set-CMEndpointProtectionPoint](Set-CMEndpointProtectionPoint.md)
 Modifies a site system role for Endpoint Protection.
@@ -1918,9 +1558,6 @@ Sets a component for a management point in Configuration Manager.
 ### [Set-CMMigrationExclusionList](Set-CMMigrationExclusionList.md)
 Edits the global exclusion list for migration jobs.
 
-### [Set-CMMigrationJob](Set-CMMigrationJob.md)
-
-
 ### [Set-CMMigrationSource](Set-CMMigrationSource.md)
 Specifies or changes settings for a migration source site in Configuration Manager.
 
@@ -1963,9 +1600,6 @@ Changes power state for client devices by using AMT power control commands.
 ### [Set-CMProgram](Set-CMProgram.md)
 Modifies a program in Configuration Manager.
 
-### [Set-CMQuery](Set-CMQuery.md)
-
-
 ### [Set-CMQueryResultMaximum](Set-CMQueryResultMaximum.md)
 Changes the setting for the query result maximum.
 
@@ -1983,12 +1617,6 @@ Changes configuration settings of a security role.
 
 ### [Set-CMSecurityScope](Set-CMSecurityScope.md)
 Sets a security scope.
-
-### [Set-CMServiceConnectionPoint](Set-CMServiceConnectionPoint.md)
-Sets a service connection point.
-
-### [Set-CMSettingDefinition](Set-CMSettingDefinition.md)
-
 
 ### [Set-CMSite](Set-CMSite.md)
 Changes security scope settings for Configuration Manager sites.
@@ -2062,9 +1690,6 @@ Sets a task sequence.
 ### [Set-CMTaskSequenceDeployment](Set-CMTaskSequenceDeployment.md)
 Creates a task sequence deployment in Configuration Manager.
 
-### [Set-CMUpdateGroupDeployment](Set-CMUpdateGroupDeployment.md)
-
-
 ### [Set-CMUserDataAndProfileConfigurationItem](Set-CMUserDataAndProfileConfigurationItem.md)
 Modifies a user data and profile configuration item.
 
@@ -2079,9 +1704,6 @@ Sets a web application deployment type.
 
 ### [Set-CMWindowsAppxDeploymentType](Set-CMWindowsAppxDeploymentType.md)
 Sets a Windows app package deployment type.
-
-### [Set-CMWindowsEnrollmentProfile](Set-CMWindowsEnrollmentProfile.md)
-
 
 ### [Set-CMWindowsFirewallPolicy](Set-CMWindowsFirewallPolicy.md)
 Changes settings of a Windows Firewall policy.
@@ -2152,17 +1774,11 @@ Synchronizes the Asset Intelligence catalog with System Center Online.
 ### [Sync-CMExchangeServer](Sync-CMExchangeServer.md)
 Synchronizes Configuration Manager mobile device information with an Exchange Server.
 
-### [Sync-CMMigrationSource](Sync-CMMigrationSource.md)
-
-
 ### [Sync-CMSoftwareUpdate](Sync-CMSoftwareUpdate.md)
 Synchronizes software updates.
 
 ### [Unblock-CMCertificate](Unblock-CMCertificate.md)
 Unblocks certificates.
-
-### [Unblock-CMDetectedMalware](Unblock-CMDetectedMalware.md)
-
 
 ### [Unblock-CMDevice](Unblock-CMDevice.md)
 Unblocks a client device.
@@ -2187,6 +1803,3 @@ Updates client status.
 
 ### [Update-CMDistributionPoint](Update-CMDistributionPoint.md)
 Updates content on a distribution point.
-
-
-

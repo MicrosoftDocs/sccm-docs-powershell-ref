@@ -62,19 +62,16 @@ The **New-CMMigrationJob** cmdlet creates a migration job in Microsoft System Ce
 
 ### Example 1: Create a migration job
 ```
-PS C:\>$Group = @{"122" = "123""234" = "123"}
 PS C:\> $CategoryObjects = Get-CMInitialModifiableSecuredCategory
 PS C:\> $MigrationEntity = Get-CMMigrationEntity
-PS C:\> New-CMMigrationJob -Name "123" -ObjectMigrationJobType -ContentObjectsSiteCodeMapping $Group -SecurityScope $CategoryObjects -MigrationObject $MigrationEntity
+PS C:\> New-CMMigrationJob -Name "123" -ObjectMigrationJobType -SecurityScope $CategoryObjects -MigrationObject $MigrationEntity
 ```
 
-The first command creates mappings of site codes and stores the result in the $Group variable.
+The first command uses the Get-CMInitialModifiableSecuredCategory cmdlet and stores the result in the $CategoryObjects variable.
 
-The second command uses the Get-CMInitialModifiableSecuredCategory cmdlet and stores the result in the $CategoryObjects variable.
+The second command uses the Get-CMMigrationEntity cmdlet and stores the result in the $MigrationEntity variable.
 
-The third command uses the Get-CMMigrationEntity cmdlet and stores the result in the $MigrationEntity variable.
-
-The fourth command creates a migration job.
+The last command creates a migration job.
 
 ## PARAMETERS
 
@@ -85,7 +82,7 @@ Collection limiting prevents the addition of collection members you do want in t
 ```yaml
 Type: Hashtable
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +97,7 @@ Indicates that the job migrates collections, objects, or previously migrated obj
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -130,7 +127,7 @@ Specifies key-value pairs that map content objects in the new site.
 ```yaml
 Type: Hashtable
 Parameter Sets: NewMigrationJobByObject, NewMigrationJobByCollectionMigrateObject, NewMigrationJobByObjectModified
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +142,7 @@ Specifies a description for the migration job.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +157,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +172,7 @@ Indicates whether to enable programs associated with an advertisement after they
 ```yaml
 Type: Boolean
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +187,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,7 +202,7 @@ Indicates that you migrate associated objects with the collection.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -220,7 +217,7 @@ Specifies an array of input objects.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -235,7 +232,7 @@ Specifies a date time, in D.HH:MM:SS format, to schedule the migration job.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +247,7 @@ Specifies an array of input objects.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: NewMigrationJobByObject, NewMigrationJobByCollectionMigrateObject, NewMigrationJobByObjectModified
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -265,7 +262,7 @@ Specifies the name of a migration job in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -280,7 +277,7 @@ Indicates that the job type is an object migration job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -295,7 +292,7 @@ Indicates that the new migration job only includes objects that were modified si
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByObjectModified
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -310,7 +307,7 @@ Indicates whether to overwrite objects in the destination database.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,7 +322,7 @@ Specifies a path for the collection information.
 ```yaml
 Type: String
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -340,7 +337,7 @@ Specifies a path for the object information.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -357,7 +354,7 @@ The cmdlet applies the security scopes that you specify to data migrated to the 
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -372,7 +369,7 @@ Specifies key-value pairs that map a migrated collection to a site in the destin
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -388,7 +385,7 @@ Configuration Manager converts the empty collection to an organizational folder.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -403,7 +400,7 @@ Indicates whether to use UTC time.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -444,5 +441,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMMigrationEntity](./Get-CMMigrationEntity.md)
 
 [Get-CMSecurityScope](./Get-CMSecurityScope.md)
-
-

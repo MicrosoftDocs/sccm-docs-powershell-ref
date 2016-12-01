@@ -36,6 +36,9 @@ New-CMConditionalAccessPolicy [-DefaultRuleOverride] -TargetedCollectionName <St
 ## DESCRIPTION
 The **New-CMConditionalAccessPolicy** cmdlet creates a conditional access policy.
 
+    > [!NOTE]
+    > Ensure that the Administrator has set the notification email address for the Exchange connector before running this cmdlet.
+
 ## EXAMPLES
 
 ### Example 1: Create a conditional access policy by value
@@ -86,7 +89,7 @@ This rule overrides the default Exchange access rule, which means that even if y
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +104,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +171,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +186,7 @@ Specifies the text of the email that Exchange sends to users when their device i
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,5 +283,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMConditionalAccessPolicy](./Remove-CMConditionalAccessPolicy.md)
 
 [Set-CMConditionalAccessPolicy](./Set-CMConditionalAccessPolicy.md)
-
-

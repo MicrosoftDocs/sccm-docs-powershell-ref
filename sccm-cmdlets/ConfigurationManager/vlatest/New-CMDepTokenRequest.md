@@ -18,8 +18,7 @@ New-CMDepTokenRequest -IntuneCredential <PSCredential> [-Path <String>] [-PassTh
 ```
 
 ## DESCRIPTION
-The **New-DepTokenRequest** cmdlet requests an Apple Device Enrollment Program (DEP) token request.
-You need to provide a Microsoft Intune organizational account by using the *IntuneCredential* parameter.
+The **New-DepTokenRequest** cmdlet requests a public certificate from Microsoft Intune that can be used to download an encrypted DEP token from the Apple Deployment Program portal. Apple uses the public token to encrypt the DEP token. You need to provide a Microsoft Intune organizational account by using the *IntuneCredential* parameter.
 
 ## EXAMPLES
 
@@ -35,7 +34,7 @@ The first command converts a password to a secure string and stores it in the $S
 The second command creates a **PSCredential** object that contains the Intune organizational account and the password stored in $SecPasswd.
 The command stores the **PSCredential** object in the $IntuneCreds variable.
 
-The last command creates a DEP token request using the Intune credentials stored inm $IntuneCreds and the DEP token request file stored at the specified path.
+The last command downloads a DEP token request using the Intune credentials stored in $IntuneCreds and stores the downloaded file at the specified path.
 
 ## PARAMETERS
 
@@ -60,7 +59,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +74,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +105,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,12 +115,12 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the path to the DEP token request (.pem) file.
+Specifies the path where the DEP token request (.pem) file is downloaded to.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,5 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
