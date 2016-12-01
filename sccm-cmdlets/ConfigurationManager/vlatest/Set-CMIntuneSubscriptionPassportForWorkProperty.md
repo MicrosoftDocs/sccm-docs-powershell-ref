@@ -23,6 +23,9 @@ Set-CMIntuneSubscriptionPassportForWorkProperty [-Enable <Boolean>] [-RequireTpm
 ## DESCRIPTION
 The **Set-CMIntuneSubscriptionPassportForWorkProperty** updates the settings of a Microsoft Intune subscription to enable Windows Hello for business for enrolled devices.
 
+> [!NOTE]
+>  Windows Hello for Business was previously known as Microsoft Passport for Work.
+
 ## EXAMPLES
 
 ### Example 1: Enable Windows Hello for business
@@ -100,7 +103,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +163,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +178,7 @@ Specifies the maximum required PIN length.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +193,7 @@ Specifies the minimum required PIN length.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +209,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +224,7 @@ Specifies the number of days before the PIN expires.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -236,7 +239,7 @@ Specifies the number of previous PINs that the user is prevented from reusing.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +254,7 @@ Indicates whether a Trusted Platform Module (TPM) is used.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,7 +269,7 @@ Indicates whether Phone Sign In is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,5 +314,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMIntuneSubscriptionWindowsPhoneProperty](./Set-CMIntuneSubscriptionWindowsPhoneProperty.md)
 
 [Set-CMIntuneSubscriptionWindowsProperty](./Set-CMIntuneSubscriptionWindowsProperty.md)
-
-

@@ -18,8 +18,7 @@ New-CMApnsCertificateRequest -IntuneCredential <PSCredential> [-Path <String>] [
 ```
 
 ## DESCRIPTION
-The **New-CMApnsCertificateRequest** cmdlet creates an Apple Push Notification Service (APNS) certificate signing request.
-You need to provide a Microsoft Intune organizational account by using the IntuneCredential parameter.
+The **New-CMApnsCertificateRequest** cmdlet downloads an Apple Push Notification Service (APNS) certificate signing request. You should upload this request (.csr) file to the Apple Deployment Program portal in order to download an APN certificate. Provide a Microsoft Intune organizational account by using the *IntuneCredential* parameter.
 
 ## EXAMPLES
 
@@ -35,7 +34,7 @@ The first command converts the password into a secure string and stores the secu
 The second command creates a **PSCredential** object with the Microsoft Intune organizational account and the password stored in $SecPasswd.
 The command then stores the **PSCredential** object in the $MyCreds variable.
 
-The third command creates an APNS certificate request with the Microsoft Intune credentials stored in $MyCreds, and saves the certificate file to the specified path.
+The last command downloads an APN certificate signing request (.csr) by using the Microsoft Intune credentials stored in $MyCreds, and saves the downloaded certificate signing request (.csr) file to the specified path.
 
 ## PARAMETERS
 
@@ -60,7 +59,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +74,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +105,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a location where the cmdlet saves the downloaded certificate (.csr) file.
+Specifies a location where the cmdlet saves the downloaded certificate signing request (.csr) file.
 
 ```yaml
 Type: String
@@ -158,5 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [ConfMgr2016_Cmdlets](./ConfigurationManager.md)
-
-
