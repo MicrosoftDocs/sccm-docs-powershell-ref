@@ -1,7 +1,9 @@
 ---
-external help file:
-online version:
-schema:
+Module Name: Configurationmanager
+Module Guid: 
+Download Help Link: {{Please enter FwLink manually}}
+Help Version: 1.0.0.0
+Locale: en-US
 ms.assetid: 0ADD6D91-97E0-4F79-ABE3-0174AA0C4750
 ---
 
