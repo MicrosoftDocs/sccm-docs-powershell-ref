@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an array of user objects.
-To obtain a user object, use the Get-CMUser cmdlet.
+To obtain a user object, use the [Get-CMUser](./Get-CMUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]

@@ -47,7 +47,7 @@ PS C:\>Add-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "D
 ```
 
 This command adds the iOS deployment type named DTIOS01 from the specified location to the application named testIOS in English and Chinese.
-By using the Confirm parameter, the user is prompted for confirmation before the cmdlet runs.
+By using the *Confirm* parameter, the user is prompted for confirmation before the cmdlet runs.
 
 ### Example 2: Add an iOS deployment type by using the pipeline
 ```
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an application object.
-To obtain an application object, use the Get-CMApplication cmdlet.
+To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -305,5 +305,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMApplication](./Get-CMApplication.md)
 
 [Set-CMIosDeploymentType](./Set-CMIosDeploymentType.md)
-
-

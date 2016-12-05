@@ -60,7 +60,7 @@ An application deployment installs an application according to schedule for a se
 Application deployments can also allow users to install at a time they choose.
 
 To specify an application deployment to modify, specify the collection name and the application.
-You can specify an application by name or ID, or you can use the Get-CMApplication cmdlet to get an application to modify.
+You can specify an application by name or ID, or you can use the [Get-CMApplication](./Get-CMApplication.md) cmdlet to get an application to modify.
 
 ## EXAMPLES
 

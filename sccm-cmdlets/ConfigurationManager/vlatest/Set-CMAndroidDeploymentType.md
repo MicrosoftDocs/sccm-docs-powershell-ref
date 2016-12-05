@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Application
 Specifies an application object that is associated with this deployment type.
-To obtain an application object, use the Get-CMApplication cmdlet.
+To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject

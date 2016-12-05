@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a collection object.
-To obtain a collection object, use the Get-CMCollection cmdlet.
+To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -LimitingCollection
 Specifies a collection object to use as a scope for this collection.
-To obtain a collection object, use the Get-CMCollection cmdlet.
+To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject

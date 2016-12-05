@@ -199,7 +199,7 @@ This command removes the driver package PCO00019 from the distribution point dis
 
 ### -Application
 Specifies a Configuration Manager application object.
-To get a **CMApplication** object, use the Get-CMApplication cmdlet.
+To get a **CMApplication** object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject

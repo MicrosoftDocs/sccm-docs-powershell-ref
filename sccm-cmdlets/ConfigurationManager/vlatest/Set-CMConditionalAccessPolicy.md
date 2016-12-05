@@ -47,7 +47,7 @@ This command gets the conditional access policy object and uses the pipeline ope
 
 ### -AddExcludedCollection
 Adds an array of user collection objects to a conditional access policy.
-To obtain a user collection object, use the Get-CMCollection cmdlet.
+To obtain a user collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 Members of these collections do not have to enroll their devices in Microsoft Intune, or be compliant with any deployed compliance policies in order to access Exchange, as long as the default Exchange rules allow access.
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -AddTargetedCollection
 Adds an array of user collection objects to a conditional access policy.
-To obtain a user collection object, use the Get-CMCollection cmdlet.
+To obtain a user collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 Members of these collections must enroll their devices in Microsoft Intune and be compliant with any deployed compliance policies in order to access Exchange.
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 
 ### -RemoveExcludedCollection
 Removes an array of user collection objects from a conditional access policy.
-To obtain a user collection object, use the Get-CMCollection cmdlet.
+To obtain a user collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 Members of these collections must enroll their devices in Microsoft Intune and be compliant with any deployed compliance policies in order to access Exchange.
 
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 
 ### -RemoveTargetedCollection
 Removes an array of user collection objects from a conditional access policy.
-To obtain a user collection object, use the Get-CMCollection cmdlet.
+To obtain a user collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 Members of these collections must enroll their devices in Microsoft Intune and be compliant with any deployed compliance policies in order to access Exchange.
 

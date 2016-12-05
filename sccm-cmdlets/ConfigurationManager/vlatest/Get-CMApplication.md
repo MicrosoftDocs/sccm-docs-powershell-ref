@@ -198,5 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMApplication](./Set-CMApplication.md)
 
 [Suspend-CMApplication](./Suspend-CMApplication.md)
-
-

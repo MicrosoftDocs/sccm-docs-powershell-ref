@@ -46,7 +46,7 @@ This command gets the collection variable named testTS for the device collection
 
 ### -Collection
 Specifies a device collection object.
-To obtain a collection object, use the Get-CMCollection cmdlet.
+To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject

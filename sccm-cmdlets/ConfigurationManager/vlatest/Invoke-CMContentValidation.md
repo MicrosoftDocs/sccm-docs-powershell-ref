@@ -200,7 +200,7 @@ This command validates the package for the application named Dict.app one the di
 
 ### -Application
 Specifies a Configuration Manager application object.
-To get a **CMApplication** object, use the Get-CMApplication cmdlet.
+To get a **CMApplication** object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject

@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -Application
 Specifies an array of application objects.
-To obtain an application object, use the Get-CMApplication cmdlet.
+To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
