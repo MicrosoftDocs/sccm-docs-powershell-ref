@@ -8,7 +8,7 @@ ms.author: "v-suhill"
 ms.manager: "mbaldwin"
 ---
 
-# Get started with Microsoft System Center Configuration Manager PowerShell cmdlets
+# Get started with Microsoft System Center Configuration Manager cmdlets
 In System Center Configuration Manager, Windows PowerShell allows you to manage a Configuration Manager hierarchy by using Windows PowerShell scripts, Windows PowerShell cmdlets, and the Windows PowerShell Drive Provider.
 
 The basic method of accessing Configuration Manager functionality is through the SMS Provider (WMI). Building PowerShell scripts to automate or extend Configuration Manager is similar to earlier documented approaches using VBScript and C#.
