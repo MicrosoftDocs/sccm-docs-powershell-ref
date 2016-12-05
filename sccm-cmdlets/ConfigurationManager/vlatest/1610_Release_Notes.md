@@ -79,9 +79,9 @@ New cmdlets have been written to support Azure Active Directory (Azure AD) condi
 *  Set-CMAadConditionalAccessPolicy
 
 ####Example
-PR1:\> Get-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -UserCredential (Get-Credential)
+`PR1:\> Get-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -UserCredential (Get-Credential)`
 
-PR1:\> Set-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -Enabled $true -TargetedDevicePlatforms Windows,WindowsPhone -WindowsDeviceState Compliant -IncludedSecurityGroup All_Users -UserCredential (Get-Credential)
+`PR1:\> Set-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -Enabled $true -TargetedDevicePlatforms Windows,WindowsPhone -WindowsDeviceState Compliant -IncludedSecurityGroup All_Users -UserCredential (Get-Credential)`
 
 ###Copy-CMCollection
 This cmdlet can be used to clone an existing collection to a new one.
@@ -101,7 +101,7 @@ These cmdlets can be used to get and set site summary tasks.
 This cmdlet can be used to promote the pre-production client to production status.
 
 ####Example
-PR1:\> Invoke-CMPromotePreProductionClient -Force
+`PR1:\> Invoke-CMPromotePreProductionClient -Force`
 
 ###Migration
 New cmdlets for migration jobs:
@@ -112,7 +112,7 @@ New cmdlets for migration jobs:
 This cmdlet can be used to rename a category.
 
 ####Example
-PR1:\> Get-CMCategory -Name MyCategoryName | Rename-CMCategory -NewName MyCategoryNewName -CategoryType AppCategories
+`PR1:\> Get-CMCategory -Name MyCategoryName | Rename-CMCategory -NewName MyCategoryNewName -CategoryType AppCategories`
 
 ##Cmdlet changes
 The following changes have been made to existing cmdlets for this release. Changes may be new functionality, bug fixes, or deprecations, and may be breaking. If you use one of the cmdlets or feature areas listed in this section, please carefully review the changes to understand how they may affect your use.

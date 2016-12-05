@@ -76,17 +76,17 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
     ```  
 
-    Go to your Windows PowerShell window, and type in `import-module .\ConfigurationManager.psd1`:  
+    Go to your Windows PowerShell window, and type in `Import-Module .\ConfigurationManager.psd1`:  
 
     ```  
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin>  
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> import-module .\ConfigurationManager.psd1  
+    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1  
     ```  
 
  > [!NOTE]
  > To run the Configuration Manager cmdlets, you need to switch the path to the Configuration Manager site.
 
-3.  Go to your Windows PowerShell window, and type in CD <site code>:, replacing <site code> with your site code (the site code "ABC" is used below):
+3.  Go to your Windows PowerShell window, and type in CD \<site code\>:, replacing \<site code\> with your site code (the site code "ABC" is used below):
 
     ```  
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> CD ABC:   
@@ -95,12 +95,12 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
 4.  Confirm that the Configuration Manager module has been loaded by using the **Get-CMSite** cmdlet.
 
-    Go to your Windows PowerShell window, and type in `Get-CMSite`:
+    Go to your Windows PowerShell window, and type in `Get-CMSite`.
 
 5.  If you see the following output (with your site information), you are connected to the Configuration Manager site and the Configuration Manager module is loaded.
 
     ```  
-    PS ABC:\> get-cmsite  
+    PS ABC:\> Get-CMSite  
 
     BuildNumber       : 7958  
     Features          : 0000000000000000000000000000000000000000000000000000000000000000  
@@ -121,6 +121,6 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
 ## Update Help
 
-1.  You can update Windows PowerShell help (and specifically the help for the Configuration Manager cmdlets) using the Update-Help cmdlet. If your computer is connected to the Internet, go to your Windows PowerShell window, and type in `Update-Help –Module configurationmanager`. Ensure that you are running Windows PowerShell as Administrator.
+1.  You can update Windows PowerShell help (and specifically the help for the Configuration Manager cmdlets) by using the Update-Help cmdlet. If your computer is connected to the Internet, go to your Windows PowerShell window, and type in `Update-Help –Module configurationmanager`. Ensure that you are running Windows PowerShell as Administrator.
 
 2.  After you have installed the Configuration Manager cmdlet help, you can get help about the cmdlets by using the **Get-Help** cmdlet. For example, go to your Windows PowerShell window, and type in `Get-Help Get-CMSite`.
