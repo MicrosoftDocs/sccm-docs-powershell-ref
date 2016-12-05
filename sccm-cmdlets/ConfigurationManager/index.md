@@ -83,7 +83,7 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> import-module .\ConfigurationManager.psd1  
     ```  
 
- > [!NOTE]
+ > [IMPORTANT]
  > To run the Configuration Manager cmdlets, you need to switch the path to the Configuration Manager site.
 
 3.  Go to your Windows PowerShell window, and type in CD <site code>:, replacing <site code> with your site code (the site code "ABC" is used below):
