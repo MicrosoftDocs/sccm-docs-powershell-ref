@@ -13,10 +13,10 @@ In System Center Configuration Manager, Windows PowerShell allows you to manage 
 
 The basic method of accessing Configuration Manager functionality is through the SMS Provider (WMI). Building PowerShell scripts to automate or extend Configuration Manager is similar to earlier documented approaches using VBScript and C#.
 
-#Using the Configuration Manager PowerShell cmdlets
+## Using the Configuration Manager PowerShell cmdlets
 You can run Configuration Manager cmdlets and scripts by using the Configuration Manager console or by using a Windows PowerShell session. When you run Configuration Manager cmdlets by using the Configuration Manager console, your session runs in the context of the site.
 
-##Load Windows PowerShell from the Configuration Manager Console
+### Load Windows PowerShell from the Configuration Manager Console
 The easiest method to load Windows PowerShell is directly from the Configuration Manager console.  
 
 1.  Start by launching the Configuration Manager console. In the upper left corner, there’s a blue rectangle. Click the white arrow in the blue rectangle, and choose Connect via Windows PowerShell.
@@ -51,7 +51,7 @@ The easiest method to load Windows PowerShell is directly from the Configuration
 
     ```  
 
-##Import the Configuration Manager PowerShell Module
+### Import the Configuration Manager PowerShell Module
 Another method of connecting to Configuration Manager from your Windows PowerShell environment is to load the Configuration Manager module manually.  
 
 1.  Right-click the Windows PowerShell icon and choose "Run as administrator".
@@ -119,7 +119,7 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
     ```  
 
-#Update Help
+## Update Help
 
 1.  You can update Windows PowerShell help (and specifically the help for the Configuration Manager cmdlets) using the Update-Help cmdlet. If your computer is connected to the Internet, go to your Windows PowerShell window, and type in `Update-Help –Module configurationmanager`. Ensure that you are running Windows PowerShell as Administrator.
 
