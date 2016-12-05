@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-
+Specifies an array of collection IDs.
 
 ```yaml
 Type: String

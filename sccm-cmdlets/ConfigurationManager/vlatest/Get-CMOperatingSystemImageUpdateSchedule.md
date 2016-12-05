@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name of an operating system image update schedule in Configuration Manager.
 
 ```yaml
 Type: String

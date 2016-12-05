@@ -51,7 +51,15 @@ This command removes the category named NewLaptopDriverSet from DriversCategorie
 ## PARAMETERS
 
 ### -CategoryType
+Specifies a category type.
+Valid values are: 
 
+-- UserCategories
+-- BaselineCategories
+-- DriverCategories
+-- AppCategories
+-- GlobalCondition
+-- CatalogCategories
 
 ```yaml
 Type: CategoryType
@@ -140,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of configuration categories.
 
 ```yaml
 Type: String[]
@@ -170,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names of configuration categories.
 
 ```yaml
 Type: String[]

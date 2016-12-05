@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies the identifier for a subscription object.
 
 ```yaml
 Type: String
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies an alert notification object in Configuration Manager.
 
 ```yaml
 Type: IResultObject
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of an alert subscription object.
 
 ```yaml
 Type: String

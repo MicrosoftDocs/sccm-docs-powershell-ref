@@ -139,7 +139,8 @@ The permissions of the new user are set to FullControl.
 ## PARAMETERS
 
 ### -Access
-
+Specifies the access rights that are associated with an access account.
+Valid values are: No Access, Read, Change, and Full Control.
 
 ```yaml
 Type: AccessRight
@@ -155,7 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -AccountType
-
+Specifies an account type.
+Valid values are: Guest, User, WindowsGroup, and WindowsUser.
 
 ```yaml
 Type: AccessAccountType
@@ -441,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
+Specifies a Windows user account name in domain\user format.
 
 ```yaml
 Type: String

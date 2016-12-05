@@ -72,7 +72,7 @@ The command specifies the import path for the PKI issued certificate that the di
 ## PARAMETERS
 
 ### -AllowFallbackForContent
-
+Indicates whether clients can use a fallback source location for content.
 
 ```yaml
 Type: Boolean
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPreStaging
-
+Indicates whether the distribution point can pre-stage contents.
 
 ```yaml
 Type: Boolean
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRespondIncomingPxeRequest
-
+Indicates whether the distribution point can respond to pre-boot execution environment (PXE) requests.
 
 ```yaml
 Type: Boolean
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateExpirationTimeUtc
-
+Specifies the date and time when the certificate expires.
 
 ```yaml
 Type: DateTime
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-
+Specifies the password, as a secure string, for the public key infrastructure (PKI) client certificate for the distribution point.
 
 ```yaml
 Type: SecureString
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePath
-
+Specifies the import path for the PKI issued certificate that the distribution point uses.
 
 ```yaml
 Type: String
@@ -178,7 +178,12 @@ Accept wildcard characters: False
 ```
 
 ### -ClientConnectionType
+Specifies the client connection type.
+Valid values are:
 
+-- Internet
+-- InternetAndIntranet
+-- Intranet
 
 ```yaml
 Type: ClientConnectionTypes
@@ -209,7 +214,16 @@ Accept wildcard characters: False
 ```
 
 ### -ContentValidationPriority
+Specifies the content validation priority.
+Valid values are: 
 
+-- High
+-- Highest
+-- Low
+-- Lowest
+-- Medium
+
+The default value is Lowest.
 
 ```yaml
 Type: Priority
@@ -255,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAnonymous
-
+Indicates whether the distribution point permits anonymous connections from Configuration Manager clients to the content library.
 
 ```yaml
 Type: Boolean
@@ -270,7 +284,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePxeSupport
+Indicates whether to enable PXE on the distribution point.
 
+When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if required.
+Windows Deployment Service is the service that performs the PXE boot to install operating systems.
+After you create the distribution point, Configuration Manager installs a provider in Windows Deployment Services that uses the PXE boot functions.
 
 ```yaml
 Type: Boolean
@@ -285,7 +303,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUnknownComputerSupport
-
+Indicates whether support for unknown computers is enabled.
+Unknown computers are computers that are not managed by Configuration Manager.
 
 ```yaml
 Type: Boolean
@@ -300,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWhenDuplicateCertificate
-
+Indicates whether Configuration Manager overwrites a duplicate certificate when you import a PKI client certificate for the distribution point.
 
 ```yaml
 Type: Boolean
@@ -330,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -InitiateConnection
-
+Indicates whether the distribution point initiates the connection with the clients.
 
 ```yaml
 Type: Boolean
@@ -375,7 +394,8 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationAccount
-
+Specifies a Site System Installation Account.
+Configuration Manager 2007 Site Component Manager service uses Site System Installation Accounts to install, reinstall, uninstall, and configure site systems.
 
 ```yaml
 Type: IResultObject
@@ -390,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -MacAddressForRespondingPxeRequest
-
+Specifies an array of media access controller (MAC) addresses that the distribution point uses to respond to pre-boot execution environment (PXE) requests.
 
 ```yaml
 Type: String[]
@@ -405,7 +425,8 @@ Accept wildcard characters: False
 ```
 
 ### -MinFreeSpaceMB
-
+Specifies the amount of free space on a drive before Configuration Manager chooses a different drive and continues the copy process to that drive.
+Content files can span multiple drives.
 
 ```yaml
 Type: Int32
@@ -420,7 +441,7 @@ Accept wildcard characters: False
 ```
 
 ### -PathForSavingMigratedPackage
-
+Specifies the path for a copy of the migrated content.
 
 ```yaml
 Type: String
@@ -435,7 +456,12 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryContentLibraryLocation
+Specifies the primary content location.
+Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
+Valid values are: 
 
+-- Automatic.
+-- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -451,7 +477,12 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryPackageShareLocation
+Specifies the primary package share location.
+Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
+Valid values are: 
 
+-- Automatic. 
+-- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -467,7 +498,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFqdn
-
+Specifies the fully qualified domain name (FQDN) of the site system server that hosts the distribution point.
 
 ```yaml
 Type: String
@@ -512,7 +543,11 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryContentLibraryLocation
+Specifies the secondary content location.
+Valid values are: 
 
+-- Automatic. 
+-- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -528,7 +563,11 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryPackageShareLocation
+Specifies the secondary package share location.
+Valid values are: 
 
+-- Automatic. 
+-- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -544,7 +583,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserDeviceAffinity
+Specify how the distribution point associates users with the destination computer for PXE deployments.
+Valid values are: 
 
+-- AllowWithAutomaticApproval
+-- AllowWithManualApproval
+-- DoNotUse
 
 ```yaml
 Type: UserDeviceAffinityType
@@ -560,7 +604,9 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateContentSchedule
-
+Specifies a CMSchedule object.
+A CMSchedule object defines the schedule for validating the integrity of content files on the distribution point.
+To create a CMSchedule object, use the New-CMSchedule cmdlet.
 
 ```yaml
 Type: IResultObject

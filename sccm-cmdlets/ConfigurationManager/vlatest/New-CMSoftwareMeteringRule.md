@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-
+Specifies a file path of the software that a rule meters.
 
 ```yaml
 Type: String

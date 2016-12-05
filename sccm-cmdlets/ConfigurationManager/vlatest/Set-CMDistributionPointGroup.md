@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs for distribution point groups.
 
 ```yaml
 Type: String
@@ -127,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a CMDistributionPointGroup object.
+To obtain a CMDistributionPointGroup object, use the Get-CMDistributionPointGroup cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -142,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name of a distribution point group.
 
 ```yaml
 Type: String

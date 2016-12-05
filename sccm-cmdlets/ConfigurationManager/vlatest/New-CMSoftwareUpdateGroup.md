@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
+Specifies a description of a software update group.
 
 ```yaml
 Type: String
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name of a software update group.
 
 ```yaml
 Type: String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateId
-
+Specifies an array of IDs of software updates.
 
 ```yaml
 Type: Int32[]

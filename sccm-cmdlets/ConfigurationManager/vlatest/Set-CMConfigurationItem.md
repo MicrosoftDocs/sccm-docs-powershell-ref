@@ -187,7 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of identifiers for one or more configuration items.
+You can use a comma separated list.
 
 ```yaml
 Type: Int32
@@ -202,7 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a configuration item object.
+To obtain a configuration item object, you can use the Get-CMConfigurationItem cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -217,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names for configuration items.
 
 ```yaml
 Type: String

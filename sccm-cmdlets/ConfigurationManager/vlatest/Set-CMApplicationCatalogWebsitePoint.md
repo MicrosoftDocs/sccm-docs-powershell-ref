@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetBiosName
-
+Specifies the NetBIOS name of the server that hosts the Application Catalog website point.
 
 ```yaml
 Type: String

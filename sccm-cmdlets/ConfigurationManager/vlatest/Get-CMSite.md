@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of a Configuration Manager site.
 
 ```yaml
 Type: String
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies a site code for a Configuration Manager site.
 
 ```yaml
 Type: String

@@ -351,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-
+Specifies a file path for the file that the condition assesses for compliance.
 
 ```yaml
 Type: String

@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of operating system installers.
 
 ```yaml
 Type: String
@@ -262,7 +262,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a CMOperatingSystemInstaller object.
+To obtain a CMOperatingSystemInstaller object, use the Get-CMOperatingSystemInstaller cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -322,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of an operating system installer.
 
 ```yaml
 Type: String

@@ -344,7 +344,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of boot image identifiers.
 
 ```yaml
 Type: String
@@ -374,7 +374,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a boot image object.
 
 ```yaml
 Type: IResultObject
@@ -389,7 +389,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name of a boot image.
 
 ```yaml
 Type: String

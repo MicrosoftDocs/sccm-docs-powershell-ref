@@ -56,7 +56,7 @@ The command also specifies the System Center Online authentication certificate (
 ## PARAMETERS
 
 ### -CertificateFile
-
+Specifies the path to a System Center Online authentication certificate (.pfx) file.
 
 ```yaml
 Type: String
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies an array of fully qualified domain names (FQDN) of the servers that host the site system role.
 
 ```yaml
 Type: String

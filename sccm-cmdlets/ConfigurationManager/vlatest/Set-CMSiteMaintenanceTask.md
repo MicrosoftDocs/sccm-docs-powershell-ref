@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-
+Indicates whether the maintenance task is enabled in Configuration Manager.
 
 ```yaml
 Type: Boolean
@@ -308,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunNow
-
+Indicates whether Configuration Manager runs the maintenance task immediately.
 
 ```yaml
 Type: SwitchParameter

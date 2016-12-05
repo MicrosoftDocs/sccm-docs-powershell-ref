@@ -52,7 +52,7 @@ This command modifies the name for the site system server for the site code CM1.
 ## PARAMETERS
 
 ### -AnonymousWsusAccess
-
+Indicates that the software update point allows anonymous.
 
 ```yaml
 Type: SwitchParameter
@@ -67,7 +67,14 @@ Accept wildcard characters: False
 ```
 
 ### -ClientConnectionType
+Specifies a connection type.
+Clients can connect to the software update point in several ways.
+You can configure the software update point to handle different types of connections differently by specifying the connection type.
+Valid values are: 
 
+-- Internet 
+-- InternetAndIntranet
+-- Intranet
 
 ```yaml
 Type: ClientConnectionTypes
@@ -173,7 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a software update point object.
+To obtain a software update point object, use the Get-CMSoftwareUpdatePoint cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -188,7 +196,8 @@ Accept wildcard characters: False
 ```
 
 ### -NlbVirtualIP
-
+Specifies an IP address or host name.
+If this software update point uses load balancing, this is the NLB address.
 
 ```yaml
 Type: String
@@ -218,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicVirtualIP
-
+Specifies a public virtual IP address for a software update point that is connected to over the Internet.
 
 ```yaml
 Type: String
@@ -233,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies a site code for a Configuration Manager site.
 
 ```yaml
 Type: String
@@ -248,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies the name of the computer that hosts the software update point site system role.
 
 ```yaml
 Type: String
@@ -263,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseProxy
-
+Specifies whether a software update point can use a proxy.
 
 ```yaml
 Type: Boolean
@@ -278,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseProxyForAutoDeploymentRule
-
+Indicates whether an auto deployment rule can use a proxy.
 
 ```yaml
 Type: Boolean
@@ -309,7 +318,8 @@ Accept wildcard characters: False
 ```
 
 ### -WsusAccessAccount
-
+Specifies an access account.
+Unless a software update point allows anonymous access, use this access account to connect to it.
 
 ```yaml
 Type: String

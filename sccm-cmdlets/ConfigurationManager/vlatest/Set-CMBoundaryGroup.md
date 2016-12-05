@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of identifiers for one or more boundary groups.
 
 ```yaml
 Type: String
@@ -180,7 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies an input object to this cmdlet.
+You can get the input object by using the Get-CMBoundaryGroup cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -195,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name for a boundary group.
 
 ```yaml
 Type: String

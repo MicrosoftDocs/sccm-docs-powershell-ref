@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies an array of a site codes for Configuration Manager sites.
 
 ```yaml
 Type: String

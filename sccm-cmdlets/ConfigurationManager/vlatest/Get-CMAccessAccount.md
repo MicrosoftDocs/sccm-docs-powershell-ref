@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
+Specifies a Windows user account name in domain\user format.
 
 ```yaml
 Type: String

@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
+Specifies a description for the VHD.
 
 ```yaml
 Type: String
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names of VHD images.
 
 ```yaml
 Type: String
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-
+Specifies a new name for the VHD image.
 
 ```yaml
 Type: String
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequencePackageId
-
+Specifies an ID for a task sequence package.
 
 ```yaml
 Type: String
@@ -210,7 +210,8 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-
+Specifies a version for the VHD.
+Use any string.
 
 ```yaml
 Type: String

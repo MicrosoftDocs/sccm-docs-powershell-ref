@@ -323,7 +323,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableIdeRedirection
-
+Indicates whether to enable IDE redirection.
+Intel AMT uses IDE redirection to redirect serial and IDE communication from a managed client to a management console.
 
 ```yaml
 Type: Boolean

@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of certificates.
 
 ```yaml
 Type: String

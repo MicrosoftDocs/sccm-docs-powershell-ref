@@ -206,7 +206,12 @@ Accept wildcard characters: False
 ```
 
 ### -WifiConnection
+Specifies whether the user can use Wireless (Wi-Fi) local area networks (LANs) with the device.
+Valid values are: 
 
+-- Allow
+-- Disable
+-- HandsfreeOnly
 
 ```yaml
 Type: Boolean

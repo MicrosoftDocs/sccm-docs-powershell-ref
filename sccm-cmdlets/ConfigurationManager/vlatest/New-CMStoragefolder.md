@@ -81,7 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumClientNumber
-
+Specifies the maximum number of clients that the storage folder can hold.
+The storage folder contains user state migration data in Configuration Manager.
+Valid values are: numbers between 1 and 99999.
 
 ```yaml
 Type: Int32
@@ -96,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumFreeSpace
-
+Specifies the minimum amount of free space for storage of user state migration data.
+Valid values are: numbers between 1 - 99999 when specifying a byte value, or numbers between 1 - 100 when specifying a percentage.
 
 ```yaml
 Type: Int32
@@ -111,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpaceUnit
-
+Specifies the storage units for the MinimumFreeSpace parameter.
 
 ```yaml
 Type: MinSpaceType
@@ -127,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageFolderName
-
+Specifies a local path for the storage folder.
+The associated state migration point site system role in Configuration Manager uses this path.
 
 ```yaml
 Type: String

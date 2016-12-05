@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComponentName
-
+Specifies the Configuration Manager component that corresponds to the status messages.
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardToStatusSummarizer
-
+Indicates whether to forward to the status summarizer.
 
 ```yaml
 Type: Boolean
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageId
-
+Specifies a message ID in Configuration Manager.
 
 ```yaml
 Type: Int32
@@ -151,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -MessageType
-
+Specifies a status message type in Configuration Manager.
+Valid values are: Audit, Detail, Milestone, and None.
 
 ```yaml
 Type: MessageType
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names for status filter rules.
 
 ```yaml
 Type: String
@@ -182,7 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-
+Specifies a change in priority.
+Configuration Manager checks status messages against rules in order of rule priority.
+Valid values are: Decrease and Increase.
 
 ```yaml
 Type: PriorityChangeType
@@ -198,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessLowerPriorityRule
-
+Indicates whether to process a lower priority rule, which prevents further rule processing.
 
 ```yaml
 Type: Boolean
@@ -213,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramPath
-
+Specifies a path to a program that runs when a status message matches the status filter rule.
 
 ```yaml
 Type: String
@@ -228,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyId
-
+Specifies a property ID in Configuration Manager.
 
 ```yaml
 Type: String
@@ -243,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyValue
-
+Specifies a value for the corresponding PropertyId parameter.
 
 ```yaml
 Type: String
@@ -258,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicateToParentSite
-
+Indicates whether to pass a message to the parent site.
 
 ```yaml
 Type: Boolean
@@ -273,7 +276,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationPriority
-
+Specifies a replication priority for sending status messages to the parent site.
+Valid values are: High, Low, and Medium.
 
 ```yaml
 Type: ReplicationPriority
@@ -289,7 +293,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportToEventLog
-
+Indicates whether to report an event in the Windows event log.
 
 ```yaml
 Type: Boolean
@@ -304,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunProgram
-
+Indicates whether to run a program when a status message matches a filter rule.
 
 ```yaml
 Type: Boolean
@@ -319,7 +323,8 @@ Accept wildcard characters: False
 ```
 
 ### -SeverityType
-
+Specifies the severity of a status message.
+Valid values are: Error, Informational, None, and Warning.
 
 ```yaml
 Type: SeverityType
@@ -335,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site code for a Configuration Manager site.
 
 ```yaml
 Type: String
@@ -350,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies the name of a site system server in Configuration Manager.
 
 ```yaml
 Type: String
@@ -365,7 +370,12 @@ Accept wildcard characters: False
 ```
 
 ### -Source
+Specifies the status message source to match.
+The possible sources are the following: 
 
+-- Client
+-- SMS Provider
+-- Site Server
 
 ```yaml
 Type: String
@@ -380,7 +390,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatusFilterRuleSiteCode
-
+Specifies a site code for the site from which the status message originated.
 
 ```yaml
 Type: String
@@ -411,7 +421,8 @@ Accept wildcard characters: False
 ```
 
 ### -WriteToDatabase
-
+Indicates whether to write a message to the database.
+Specify a value of $True for this parameter to enable the AllowUserDeleteMessagesAfterThresholdDays parameter.
 
 ```yaml
 Type: Boolean

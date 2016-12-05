@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDataCompression
-
+Specifies whether the database uses data compression.
 
 ```yaml
 Type: Boolean
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site code for a Configuration Manager site.
 
 ```yaml
 Type: String
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlServerServiceBrokerPort
-
+Specifies the port that the computer running SQL Server uses as a Service Broker port.
 
 ```yaml
 Type: Int32
