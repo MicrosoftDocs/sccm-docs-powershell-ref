@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ### -AddDriverPackage
 Specifies an array of driver package objects.
 Use this parameter to specify the driver packages that Configuration Manager uses to distribute the device drivers.
-To obtain a driver package object, use the Get-CMDriverPackage cmdlet.
+To obtain a driver package object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]

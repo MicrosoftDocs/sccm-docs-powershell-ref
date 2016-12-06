@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a task sequence object.
-To obtain a task sequence object, use the Get-CMTaskSequence cmdlet.
+To obtain a task sequence object, use the [Get-CMTaskSequence](./Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject

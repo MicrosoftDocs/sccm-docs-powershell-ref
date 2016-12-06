@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -Id
 Specifies an alert ID.
-You can obtain the ID of an alert by using the Get-CMAlert cmdlet.
+You can obtain the ID of an alert by using the [Get-CMAlert](./Get-CMAlert.md) cmdlet.
 
 ```yaml
 Type: String

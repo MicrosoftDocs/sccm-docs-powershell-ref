@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 ### -PrestartPackage
 Specifies a package object that contains files for the prestart command.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 
 ### -TaskSequence
 Specifies a task sequence object.
-To obtain a task sequence object, use the Get-CMTaskSequence cmdlet.
+To obtain a task sequence object, use the [Get-CMTaskSequence](./Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject

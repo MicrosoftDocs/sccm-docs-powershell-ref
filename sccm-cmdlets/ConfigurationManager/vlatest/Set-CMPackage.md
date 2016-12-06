@@ -272,7 +272,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a **CMPackage** object.
-To obtain a **CMPackage** object, use the Get-CMPackage cmdlet.
+To obtain a **CMPackage** object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
