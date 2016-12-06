@@ -64,7 +64,7 @@ You can use the comment to record the explanation for suspending the alert.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,12 +120,12 @@ Accept wildcard characters: False
 
 ### -Id
 Specifies an alert ID.
-You can obtain the ID of an alert by using the Get-CMAlert cmdlet.
+You can obtain the ID of an alert by using the [Get-CMAlert](./Get-CMAlert.md) cmdlet.
 
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -157,7 +157,7 @@ You can obtain the name of an alert by using **Get-CMAlert**.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ### -SkipUntil
 Specifies a specific date and time to start evaluation of the alert.
 Enter a **DateTime** object or a string that can be converted to a time, such as April 19, 2012 15:00, 12/31/2013 9:00 PM, or 3am.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 For more information, type `Get-Help Get-Date`.
 
 If you do not specify an element of the **DateTime** object, such as seconds, that element of the job trigger is not changed.
@@ -180,7 +180,7 @@ If the original job trigger did not include a **DateTime** object and you omit a
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -225,5 +225,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMAlert](./Set-CMAlert.md)
 
 [Disable-CMAlert](./Disable-CMAlert.md)
-
-

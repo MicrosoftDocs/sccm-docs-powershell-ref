@@ -118,7 +118,7 @@ Specifies the name of an application.
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,7 +133,7 @@ Specifies the ID of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ Specifies the name of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -178,7 +178,7 @@ Specifies the name of a deployment type.
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -193,7 +193,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +208,7 @@ Specifies the ID of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -223,7 +223,7 @@ Specifies the name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -238,7 +238,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a package object.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -270,7 +270,7 @@ Specify the manifest path if you specify Microsoft Application Virtualization fo
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -285,7 +285,7 @@ Specifies the ID of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -300,7 +300,7 @@ Specifies the name of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -315,7 +315,7 @@ Specifies the ID of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -330,7 +330,7 @@ Specifies the name of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -345,7 +345,7 @@ Specifies the ID of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -360,7 +360,7 @@ Specifies the name of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -375,7 +375,7 @@ Specifies the ID of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -390,7 +390,7 @@ Specifies the name of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -445,5 +445,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMPackage](./Get-CMPackage.md)
 
 [Get-CMSoftwareUpdateDeploymentPackage](./Get-CMSoftwareUpdateDeploymentPackage.md)
-
-

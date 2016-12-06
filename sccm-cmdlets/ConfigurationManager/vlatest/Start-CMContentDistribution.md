@@ -263,7 +263,7 @@ To get a **CMApplication** object, use the [Get-CMApplication](./Get-CMApplicati
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -278,7 +278,7 @@ Specifies an array of application IDs.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -293,7 +293,7 @@ Specifies an array of application names.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -309,7 +309,7 @@ To get a **CMBootImage** object, use the Get-CMBootImage cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_BootImage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -354,7 +354,7 @@ Specifies the name of a Configuration Manager collection.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -385,7 +385,7 @@ To get a **CMDeploymentPackage** object, use the Get-CMDeploymentPackage cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_DeploymentPackage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -445,7 +445,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -460,7 +460,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -475,7 +475,7 @@ Specifies the name of a distribution point that is associated with the deploymen
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -491,7 +491,7 @@ To get a **CMDriverPackage** object, use the Get-CMDriverPackage cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_DriverPackage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -536,7 +536,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -547,12 +547,12 @@ Accept wildcard characters: False
 
 ### -OperatingSystemImage
 Specifies an operating system image object.
-To get a **CMOperatingSystemImage** object, use the Get-CMOperatingSystemImage cmdlet.
+To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage](./Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemImage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -593,12 +593,12 @@ Accept wildcard characters: False
 
 ### -OperatingSystemInstaller
 Specifies an operating system installer object.
-To get a **CMOperatingSystemInstaller** object, use the Get-CMOperatingSystemInstaller cmdlet.
+To get a **CMOperatingSystemInstaller** object, use the [Get-CMOperatingSystemInstaller](./Get-CMOperatingSystemInstaller.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemInstaller
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -639,12 +639,12 @@ Accept wildcard characters: False
 
 ### -Package
 Specifies a package object.
-To get a **CMPackage** object, use the Get-CMPackage cmdlet.
+To get a **CMPackage** object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_Package
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -685,12 +685,12 @@ Accept wildcard characters: False
 
 ### -TaskSequence
 Specifies a task sequence object.
-To get a **CMTaskSequence** object, use the Get-CMTaskSequence cmdlet.
+To get a **CMTaskSequence** object, use the [Get-CMTaskSequence](./Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_TaskSequence
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -775,5 +775,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMContentDistribution](./Remove-CMContentDistribution.md)
 
 [Update-CMDistributionPoint](./Update-CMDistributionPoint.md)
-
-

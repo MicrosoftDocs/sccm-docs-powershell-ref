@@ -77,7 +77,7 @@ Indicates whether clients can use a fallback source location for content.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Indicates whether the distribution point can pre-stage contents.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ Indicates whether the distribution point can respond to pre-boot execution envir
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Specifies the date and time when the certificate expires.
 ```yaml
 Type: DateTime
 Parameter Sets: UseSelfSignedCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,7 +137,7 @@ Specifies the password, as a secure string, for the public key infrastructure (P
 ```yaml
 Type: SecureString
 Parameter Sets: UseImportCertificate
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ Specifies the import path for the PKI issued certificate that the distribution p
 ```yaml
 Type: String
 Parameter Sets: UseImportCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ComputerCommunicationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 
 Required: False
@@ -188,7 +188,7 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 
 Required: False
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ### -ContentValidationPriority
 Specifies the content validation priority.
-Valid values are: 
+Valid values are:
 
 -- High
 -- Highest
@@ -228,7 +228,7 @@ The default value is Lowest.
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lowest, Low, Medium, High, Highest
 
 Required: False
@@ -259,7 +259,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -274,7 +274,7 @@ Indicates whether the distribution point permits anonymous connections from Conf
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -293,7 +293,7 @@ After you create the distribution point, Configuration Manager installs a provid
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +309,7 @@ Unknown computers are computers that are not managed by Configuration Manager.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ Indicates whether Configuration Manager overwrites a duplicate certificate when 
 ```yaml
 Type: Boolean
 Parameter Sets: UseImportCertificate
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -339,7 +339,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -354,7 +354,7 @@ Indicates whether the distribution point initiates the connection with the clien
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -400,7 +400,7 @@ Configuration Manager 2007 Site Component Manager service uses Site System Insta
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -415,7 +415,7 @@ Specifies an array of media access controller (MAC) addresses that the distribut
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -431,7 +431,7 @@ Content files can span multiple drives.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -446,7 +446,7 @@ Specifies the path for a copy of the migrated content.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -458,7 +458,7 @@ Accept wildcard characters: False
 ### -PrimaryContentLibraryLocation
 Specifies the primary content location.
 Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
-Valid values are: 
+Valid values are:
 
 -- Automatic.
 -- Drive letter from A: through Z:.
@@ -466,7 +466,7 @@ Valid values are:
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -479,15 +479,15 @@ Accept wildcard characters: False
 ### -PrimaryPackageShareLocation
 Specifies the primary package share location.
 Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
-Valid values are: 
+Valid values are:
 
--- Automatic. 
+-- Automatic.
 -- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -503,7 +503,7 @@ Specifies the fully qualified domain name (FQDN) of the site system server that 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -544,15 +544,15 @@ Accept wildcard characters: False
 
 ### -SecondaryContentLibraryLocation
 Specifies the secondary content location.
-Valid values are: 
+Valid values are:
 
--- Automatic. 
+-- Automatic.
 -- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -564,15 +564,15 @@ Accept wildcard characters: False
 
 ### -SecondaryPackageShareLocation
 Specifies the secondary package share location.
-Valid values are: 
+Valid values are:
 
--- Automatic. 
+-- Automatic.
 -- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -584,7 +584,7 @@ Accept wildcard characters: False
 
 ### -UserDeviceAffinity
 Specify how the distribution point associates users with the destination computer for PXE deployments.
-Valid values are: 
+Valid values are:
 
 -- AllowWithAutomaticApproval
 -- AllowWithManualApproval
@@ -593,7 +593,7 @@ Valid values are:
 ```yaml
 Type: UserDeviceAffinityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotUse, AllowWithManualApproval, AllowWithAutomaticApproval
 
 Required: False
@@ -606,12 +606,12 @@ Accept wildcard characters: False
 ### -ValidateContentSchedule
 Specifies a CMSchedule object.
 A CMSchedule object defines the schedule for validating the integrity of content files on the distribution point.
-To create a CMSchedule object, use the New-CMSchedule cmdlet.
+To create a CMSchedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -654,5 +654,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDistributionPoint](./Get-CMDistributionPoint.md)
 
 [New-CMSchedule](./New-CMSchedule.md)
-
-
