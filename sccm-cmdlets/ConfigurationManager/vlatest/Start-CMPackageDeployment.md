@@ -158,7 +158,7 @@ If this value is $False, clients do not attempt to download from other clients.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ Specifies the ID of a device or user collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +188,7 @@ Specifies a comment for the deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DeployPurposeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Available, Required
 
 Required: False
@@ -239,7 +239,7 @@ To obtain a **DateTime** object, use the Get-Date cmdlet.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,7 +255,7 @@ Use *DeploymentAvailableDateTime*.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -271,7 +271,7 @@ Use *DeploymentAvailableDateTime*.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,12 +282,12 @@ Accept wildcard characters: False
 
 ### -DeploymentExpireDateTime
 Specifies, as a **DateTime** object, the date and time that the deployment expires.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 
 ```yaml
 Type: DateTime
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +303,7 @@ Use *DeploymentExpireDateTime*.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +319,7 @@ Use *DeploymentExpireDateTime*.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -330,12 +330,12 @@ Accept wildcard characters: False
 
 ### -DeploymentStartDateTime
 Specifies, as a **DateTime** object, the date and time that the deployment starts.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 
 ```yaml
 Type: DateTime
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -351,7 +351,7 @@ Use *DeploymentStartDateTime*.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -367,7 +367,7 @@ Use *DeploymentStartDateTime*.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -397,7 +397,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -416,7 +416,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: FastNetworkOptionType
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 Accepted values: RunProgramFromDistributionPoint, DownloadContentFromDistributionPointAndRunLocally
 
 Required: False
@@ -432,7 +432,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -448,7 +448,7 @@ To obtain a package object, use the Get-CMPackage cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployStandardProgramByPackageValue, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -463,7 +463,7 @@ Specifies the ID of a package.
 ```yaml
 Type: String
 Parameter Sets: DeployDeviceProgramByPackageId, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -478,7 +478,7 @@ Specifies the name of a package.
 ```yaml
 Type: String
 Parameter Sets: DeployDeviceProgramByPackageName, DeployStandardProgramByPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -493,7 +493,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -511,7 +511,7 @@ For a value of $False, the device saves changes in an overlay and commits them l
 ```yaml
 Type: Boolean
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployDeviceProgramByProgramValue, DeployStandardProgramByProgramValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -561,7 +561,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RecurUnitType
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 Accepted values: Minutes, Hours, Days
 
 Required: False
@@ -579,7 +579,7 @@ This value can be between 1 and 23 if the unit is Hours, between 1 and 31 if the
 ```yaml
 Type: Int32
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -596,7 +596,7 @@ If this value is $False, the deployment does not run again.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -609,21 +609,21 @@ Accept wildcard characters: False
 Specifies how a deployment reruns on a client.
 The acceptable values for this parameter are:
 
-- AlwaysRerunProgram.
+-- AlwaysRerunProgram.
 Rerun as scheduled, even if the deployment succeeded.
-You can use this value for recurring deployments. 
-- NeverRerunDeployedProgram.
-Does not rerun, even if the deployment failed or files changed. 
-- RerunIfFailedPreviousAttempt.
-Rerun, as scheduled, if the deployment failed on the previous attempt. 
-- RerunIfSucceededOnpreviousAttempt.
+You can use this value for recurring deployments.
+-- NeverRerunDeployedProgram.
+Does not rerun, even if the deployment failed or files changed.
+-- RerunIfFailedPreviousAttempt.
+Rerun, as scheduled, if the deployment failed on the previous attempt.
+-- RerunIfSucceededOnpreviousAttempt.
 Rerun only if the previous attempt succeeded.
 You can use this value for updates that depend on the previous update.
 
 ```yaml
 Type: RerunBehaviorType
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 Accepted values: NeverRerunDeployedProgram, AlwaysRetunProgram, AlwaysRerunProgram, RerunIfFailedPreviousAttempt, RerunIfSucceededOnPreviousAttempt
 
 Required: False
@@ -654,7 +654,7 @@ Specifies a schedule object for the deployment.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -675,7 +675,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ScheduleEventType
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 Accepted values: AsSoonAsPossible, LogOn, LogOff
 
 Required: False
@@ -694,7 +694,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployStandardProgramByPackageValue, DeployDeviceProgramByProgramValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -714,7 +714,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SlowNetworkOptionType
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 Accepted values: DoNotRunProgram, DownloadContentFromDistributionPointAndLocally, RunProgramFromDistributionPoint
 
 Required: False
@@ -733,7 +733,7 @@ If this value is $False, Configuration Manager does not install deployed softwar
 ```yaml
 Type: Boolean
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -748,7 +748,7 @@ Indicates that the program type in the deployment package is standard program.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -766,7 +766,7 @@ If this value is $False, the computer does not restart outside a maintenance win
 ```yaml
 Type: Boolean
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -781,7 +781,7 @@ Indicates whether to allow clients to download content over a metered Internet c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -798,7 +798,7 @@ If this value is $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -815,7 +815,7 @@ If this value is $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -832,7 +832,7 @@ If this value is $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -871,5 +871,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMPackageDeployment](./Set-CMPackageDeployment.md)
 
 [Get-CMPackage](./Get-CMPackage.md)
-
-

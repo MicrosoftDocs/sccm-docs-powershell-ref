@@ -35,7 +35,7 @@ The **Suspend-CMApplication** cmdlet suspends an application.
 Until the application is resumed, users cannot modify or deploy the application.
 This action does not affect existing deployments.
 When you suspend an application, its status shows as "Retired" in the Configuration Manager console.
-To resume an application, use the Resume-CMApplication cmdlet.
+To resume an application, use the [Resume-CMApplication](./Resume-CMApplication.md) cmdlet.
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an application object.
-To obtain an application object, use the Get-CMApplication cmdlet.
+To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -192,5 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-CMApplication](./Resume-CMApplication.md)
 
 [Set-CMApplication](./Set-CMApplication.md)
-
-
