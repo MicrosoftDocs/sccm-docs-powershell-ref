@@ -14,8 +14,8 @@ cmdlets and scripts.
 To use Windows PowerShell in Configuration Manager, you must install the
 following:
 
-    * Windows PowerShell 3.0 or later
-    * System Center Configuration Manager console
+* Windows PowerShell 3.0 or later
+* System Center Configuration Manager console
 
 ## Using Windows PowerShell for Configuration Manager
 You can run Configuration Manager cmdlets and scripts by using the
