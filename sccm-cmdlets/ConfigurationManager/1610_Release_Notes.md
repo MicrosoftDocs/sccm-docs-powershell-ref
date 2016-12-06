@@ -29,22 +29,22 @@ These are known issues with the Cmdlet Library that are not resolved in this rel
 If the path to the ConfigurationManager.psd1 module is added to the PSMODULEPATH environment variable, it cannot be imported by using Import-Module ConfigurationManager.
 
 ####Workaround
-    - Use the full path to the module
-    - https://gallery.technet.microsoft.com/Make-Configuration-Manager-04474a87
-        > [!NOTE]
-        >This workaround is supplied by the user community and is not tested or supported by Microsoft.)
+*  Use the full path to the module
+*  https://gallery.technet.microsoft.com/Make-Configuration-Manager-04474a87
+ > [!NOTE]
+ > This workaround is supplied by the user community and is not tested or supported by Microsoft.)
 
 ###Add-CMEnrollmentProxyPoint
 Cmdlet may not properly configure the enrollment proxy point if there are multiple enrollment points for the primary site, or if the enrollment point is on a separate server.
 
 ####Workaround
-    - Use the administrator console for this configuration.
+*  Use the administrator console for this configuration.
 
 ###Get-CMAadConditionalAccessPolicy/Set-CMAadConditionalAccessPolicy
 64-bit PowerShell environment is required for these cmdlets.
 
 ####Workaround
-    - None
+*  None
 
 ##New cmdlets
 These are newly-added cmdlets for this release that add new functionality or enhance the functionality of existing cmdlets.
@@ -52,36 +52,36 @@ These are newly-added cmdlets for this release that add new functionality or enh
 ###Client settings
 New cmdlets have been written to improve the experience around modifying client settings. These cmdlets replace the **Set-CMClientSetting** cmdlet, which is now deprecated. These cmdlets support using the object pipeline from the **Get-CMClientSetting** cmdlet for modifying user-defined client settings.
 
-    - Set-CMClientSettingBackgroundIntelligentTransfer
-    - Set-CMClientSettingClientCache
-    - Set-CMClientSettingClientPolicy
-    - Set-CMClientSettingCloudService
-    - Set-CMClientSettingComplianceSetting
-    - Set-CMClientSettingComputerAgent
-    - Set-CMClientSettingComputerRestart
-    - Set-CMClientSettingEndpointProtection
-    - Set-CMClientSettingEnrollment
-    - Set-CMClientSettingGeneral
-    - Set-CMClientSettingHardwareInventory
-    - Set-CMClientSettingMeteredInternetConnection
-    - Set-CMClientSettingPowerManagement
-    - Set-CMClientSettingRemoteTool
-    - Set-CMClientSettingSoftwareDeployment
-    - Set-CMClientSettingSoftwareInventory
-    - Set-CMClientSettingSoftwareMetering
-    - Set-CMClientSettingSoftwareUpdate
-    - Set-CMClientSettingStateMessaging
-    - Set-CMClientSettingUserAndDeviceAffinity
+*  Set-CMClientSettingBackgroundIntelligentTransfer
+*  Set-CMClientSettingClientCache
+*  Set-CMClientSettingClientPolicy
+*  Set-CMClientSettingCloudService
+*  Set-CMClientSettingComplianceSetting
+*  Set-CMClientSettingComputerAgent
+*  Set-CMClientSettingComputerRestart
+*  Set-CMClientSettingEndpointProtection
+*  Set-CMClientSettingEnrollment
+*  Set-CMClientSettingGeneral
+*  Set-CMClientSettingHardwareInventory
+*  Set-CMClientSettingMeteredInternetConnection
+*  Set-CMClientSettingPowerManagement
+*  Set-CMClientSettingRemoteTool
+*  Set-CMClientSettingSoftwareDeployment
+*  Set-CMClientSettingSoftwareInventory
+*  Set-CMClientSettingSoftwareMetering
+*  Set-CMClientSettingSoftwareUpdate
+*  Set-CMClientSettingStateMessaging
+*  Set-CMClientSettingUserAndDeviceAffinity
 
 ###Conditional access policy
 New cmdlets have been written to support Azure Active Directory (Azure AD) conditional access policy settings.
-    - Get-CMAadConditionalAccessPolicy
-    - Set-CMAadConditionalAccessPolicy
+*  Get-CMAadConditionalAccessPolicy
+*  Set-CMAadConditionalAccessPolicy
 
 ####Example
-PR1:\> Get-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -UserCredential (Get-Credential)
+`PR1:\> Get-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -UserCredential (Get-Credential)`
 
-PR1:\> Set-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -Enabled $true -TargetedDevicePlatforms Windows,WindowsPhone -WindowsDeviceState Compliant -IncludedSecurityGroup All_Users -UserCredential (Get-Credential)
+`PR1:\> Set-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -Enabled $true -TargetedDevicePlatforms Windows,WindowsPhone -WindowsDeviceState Compliant -IncludedSecurityGroup All_Users -UserCredential (Get-Credential)`
 
 ###Copy-CMCollection
 This cmdlet can be used to clone an existing collection to a new one.
@@ -89,10 +89,10 @@ This cmdlet can be used to clone an existing collection to a new one.
 ###Endpoint protection
 New cmdlets for advanced threat protection policy management:
 
-    - Get-CMAdvancedThreatProtectionPolicy
-    - New-CMAdvancedThreatProtectionPolicy
-    - Remove-CMAdvancedThreatProtectionPolicy
-    - Set-CMAdvancedThreatProtectionPolicy
+*  Get-CMAdvancedThreatProtectionPolicy
+*  New-CMAdvancedThreatProtectionPolicy
+*  Remove-CMAdvancedThreatProtectionPolicy
+*  Set-CMAdvancedThreatProtectionPolicy
 
 ###Get/Set-CMSiteSummaryTask
 These cmdlets can be used to get and set site summary tasks.
@@ -101,18 +101,18 @@ These cmdlets can be used to get and set site summary tasks.
 This cmdlet can be used to promote the pre-production client to production status.
 
 ####Example
-PR1:\> Invoke-CMPromotePreProductionClient -Force
+`PR1:\> Invoke-CMPromotePreProductionClient -Force`
 
 ###Migration
 New cmdlets for migration jobs:
-    - Get-CMMigrationJob
-    - Set-CMMigrationJob
+*  Get-CMMigrationJob
+*  Set-CMMigrationJob
 
 ###Rename-CMCategory
 This cmdlet can be used to rename a category.
 
 ####Example
-PR1:\> Get-CMCategory -Name MyCategoryName | Rename-CMCategory -NewName MyCategoryNewName -CategoryType AppCategories
+`PR1:\> Get-CMCategory -Name MyCategoryName | Rename-CMCategory -NewName MyCategoryNewName -CategoryType AppCategories`
 
 ##Cmdlet changes
 The following changes have been made to existing cmdlets for this release. Changes may be new functionality, bug fixes, or deprecations, and may be breaking. If you use one of the cmdlets or feature areas listed in this section, please carefully review the changes to understand how they may affect your use.

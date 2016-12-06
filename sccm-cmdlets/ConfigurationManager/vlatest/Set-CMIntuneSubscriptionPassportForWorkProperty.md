@@ -23,8 +23,7 @@ Set-CMIntuneSubscriptionPassportForWorkProperty [-Enable <Boolean>] [-RequireTpm
 ## DESCRIPTION
 The **Set-CMIntuneSubscriptionPassportForWorkProperty** updates the settings of a Microsoft Intune subscription to enable Windows Hello for business for enrolled devices.
 
-> [!NOTE]
->  Windows Hello for Business was previously known as Microsoft Passport for Work.
+NOTE: Windows Hello for Business was previously known as Microsoft Passport for Work.
 
 ## EXAMPLES
 
