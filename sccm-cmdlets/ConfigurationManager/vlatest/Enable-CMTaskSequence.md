@@ -9,7 +9,7 @@ ms.assetid: 9CD7B8EA-2F75-4AB0-B5FA-5CFD8855C1E9
 
 ## SYNOPSIS
 This cmdlet is deprecated.
-Use the Set-CMTaskSequence cmdlet to enable a task sequence.
+Use the [Set-CMTaskSequence](./Set-CMTaskSequence.md) cmdlet to enable a task sequence.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Enable-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardH
 
 ## DESCRIPTION
 This cmdlet is deprecated.
-Use the Set-CMTaskSequence cmdlet to enable a task sequence.
+Use the [Set-CMTaskSequence](./Set-CMTaskSequence.md) cmdlet to enable a task sequence.
 
 ## EXAMPLES
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a task sequence object.
-To obtain a task sequence object, use the Get-CMTaskSequence cmdlet.
+To obtain a task sequence object, use the [Get-CMTaskSequence](./Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject

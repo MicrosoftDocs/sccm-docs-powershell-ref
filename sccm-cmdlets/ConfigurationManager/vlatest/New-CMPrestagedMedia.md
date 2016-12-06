@@ -266,7 +266,7 @@ Accept wildcard characters: False
 
 ### -DriverPackage
 Specifies an array of driver package objects.
-To obtain driver package object, use the Get-CMDriverPackage cmdlet.
+To obtain driver package object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 
 ### -Package
 Specifies an array of package objects.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 
 ### -PrestartPackage
 Specifies the package object that includes files for the prestart command.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

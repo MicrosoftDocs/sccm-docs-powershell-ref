@@ -159,7 +159,7 @@ Accept wildcard characters: False
 
 ### -DriverPackage
 Specifies a **CMDriverPackage** object.
-To obtain a **CMDriverPackage** object, use the Get-CMDriverPackage cmdlet.
+To obtain a **CMDriverPackage** object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

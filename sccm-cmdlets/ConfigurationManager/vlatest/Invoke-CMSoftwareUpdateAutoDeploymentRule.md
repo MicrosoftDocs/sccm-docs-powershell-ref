@@ -39,7 +39,7 @@ The System Center Configuration Manager server downloads content files and copie
 
 You can specify rules to run by ID or by name, or specify a rule object by using the [Get-CMSoftwareUpdateAutoDeploymentRule](./Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 You cannot run a disabled rule.
-You can use the Enable-CMSoftwareUpdateAutoDeploymentRule cmdlet to enable a rule and then run it.
+You can use the [Enable-CMSoftwareUpdateAutoDeploymentRule](./Enable-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet to enable a rule and then run it.
 
 ## EXAMPLES
 

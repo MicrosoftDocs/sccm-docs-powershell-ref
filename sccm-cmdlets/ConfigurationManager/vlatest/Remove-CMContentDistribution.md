@@ -427,7 +427,7 @@ Accept wildcard characters: False
 
 ### -DriverPackage
 Specifies a driver package object.
-To get a **CMDriverPackage** object, use the Get-CMDriverPackage cmdlet.
+To get a **CMDriverPackage** object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -595,7 +595,7 @@ Accept wildcard characters: False
 
 ### -Package
 Specifies a package object.
-To get a **CMPackage** object, use the Get-CMPackage cmdlet.
+To get a **CMPackage** object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -641,7 +641,7 @@ Accept wildcard characters: False
 
 ### -TaskSequence
 Specifies a task sequence object.
-To get a **CMTaskSequence** object, use the Get-CMTaskSequence cmdlet.
+To get a **CMTaskSequence** object, use the [Get-CMTaskSequence](./Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject

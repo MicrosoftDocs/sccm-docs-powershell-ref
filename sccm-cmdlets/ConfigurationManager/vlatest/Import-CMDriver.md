@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -DriverPackage
 Specifies an array of driver package objects.
-To obtain a driver package object, use the Get-CMDriverPackage cmdlet.
+To obtain a driver package object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 Use this parameter to specify the driver packages that Configuration Manager uses to distribute the device drivers.
 

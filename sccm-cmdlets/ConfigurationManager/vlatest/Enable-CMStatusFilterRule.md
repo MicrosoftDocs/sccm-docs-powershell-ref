@@ -93,7 +93,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a status filter rule object to enable.
-To obtain a status filter rule object, use the Get-CMStatusFilterRule cmdlet.
+To obtain a status filter rule object, use the [Get-CMStatusFilterRule](./Get-CMStatusFilterRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject

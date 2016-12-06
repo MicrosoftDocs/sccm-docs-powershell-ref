@@ -32,7 +32,7 @@ Enable-CMSoftwareMeteringRule -InputObject <IResultObject> [-DisableWildcardHand
 
 ## DESCRIPTION
 The **Enable-CMSoftwareMeteringRule** cmdlet enables one or more software metering rules in Microsoft System Center Configuration Manager.
-You can enable a rule that you previously disabled by using the Disable-CMSoftwareMeteringRule cmdlet.
+You can enable a rule that you previously disabled by using the [Disable-CMSoftwareMeteringRule](./Disable-CMSoftwareMeteringRule.md) cmdlet.
 When System Center Configuration Manager automatically creates software metering rules, it creates them as disabled.
 
 Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
@@ -189,5 +189,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMSoftwareMeteringRule](./Remove-CMSoftwareMeteringRule.md)
 
 [Set-CMSoftwareMeteringRule](./Set-CMSoftwareMeteringRule.md)
-
-
