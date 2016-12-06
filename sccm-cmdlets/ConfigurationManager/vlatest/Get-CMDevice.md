@@ -80,7 +80,7 @@ This command gets the device named Win10-86-33 in the device collection named Al
 ## PARAMETERS
 
 ### -Collection
-Specifies a device collection object.To obtain a device collection object, use the Get-CMDeviceCollection cmdlet.
+Specifies a device collection object.To obtain a device collection object, use the [Get-CMDeviceCollection](./Get-CMDeviceCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject

@@ -69,7 +69,7 @@ Start-CMClientSettingDeployment -ClientSetting <IResultObject> -Collection <IRes
 ## DESCRIPTION
 The **Start-CMClientSettingDeployment** cmdlet deploys client settings to devices in a Microsoft System Center Configuration Manager collection.
 Specify the client setting object by using its name or ID, or you can use the **Get-CMClientSetting** cmdlet to get a client setting object.
-Specify the collection to apply the settings to by using its name or ID, or you can use the Get-CMDeviceCollection cmdlet to get a device collection.
+Specify the collection to apply the settings to by using its name or ID, or you can use the [Get-CMDeviceCollection](./Get-CMDeviceCollection.md) cmdlet to get a device collection.
 
 For more information about client settings, see [About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226) on TechNet.
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Collection
 Specifies a Configuration Manager collection object.
-To obtain a collection object, use the Get-CMDeviceCollection cmdlet.
+To obtain a collection object, use the [Get-CMDeviceCollection](./Get-CMDeviceCollection.md) cmdlet.
 Configuration Manager applies the client settings to the members of this collection.
 
 ```yaml

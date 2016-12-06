@@ -35,7 +35,7 @@ The **Update-CMAMTProvisioning** cmdlet updates provisioning for an Intel Active
 Provisioning is the process of initializing and registering a computer that has Intel AMT technology with Microsoft System Center Configuration Manager for out-of-band management.
 This cmdlet updates provisioning information.
 
-You can specify computers to update by using the System Center Configuration Manager device name or device ID, or you can use the Get-CMDevice cmdlet to get a device object.
+You can specify computers to update by using the System Center Configuration Manager device name or device ID, or you can use the [Get-CMDevice](./Get-CMDevice.md) cmdlet to get a device object.
 
 ## EXAMPLES
 

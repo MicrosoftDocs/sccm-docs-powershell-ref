@@ -59,7 +59,7 @@ PS C:\>$Driver = Get-CMDriver -Name "cdrom.sys"
 PS C:\> Set-CMDriver -InputObject $Driver -NewName "testDriver" -Description "Test configuration" -EnableAndAllowInstall $True -RunOnAnyPlatform $True
 ```
 
-The first command gets a device driver named cdrom.sys by using the Get-CMDriver cmdlet.
+The first command gets a device driver named cdrom.sys by using the [Get-CMDriver](./Get-CMDriver.md) cmdlet.
 The command stores that object in the $Driver variable.
 
 The second command renames the driver and adds a description.

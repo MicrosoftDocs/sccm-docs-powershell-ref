@@ -26,7 +26,7 @@ Get-CMSoftwareMeteringRule -Id <String> [-DisableWildcardHandling] [-ForceWildca
 
 ## DESCRIPTION
 The **Get-CMSoftwareMeteringRule** cmdlet gets one or more software metering rules in Microsoft System Center Configuration Manager.
-You can use this cmdlet to get rules to pass to other cmdlets, such as the Enable-CMSoftwareMeteringRule cmdlet or the Remove-CMSoftwareMeteringRule cmdlet.
+You can use this cmdlet to get rules to pass to other cmdlets, such as the [Enable-CMSoftwareMeteringRule](./Enable-CMSoftwareMeteringRule.md) cmdlet or the [Remove-CMSoftwareMeteringRule](./Remove-CMSoftwareMeteringRule.md) cmdlet.
 
 Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
