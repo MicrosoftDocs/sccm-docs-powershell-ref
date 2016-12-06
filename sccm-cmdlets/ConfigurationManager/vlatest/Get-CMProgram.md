@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-
+Specifies the package that contains the program by using an ID.
 
 ```yaml
 Type: String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-
+Specifies the program within the package by using a name.
 
 ```yaml
 Type: String

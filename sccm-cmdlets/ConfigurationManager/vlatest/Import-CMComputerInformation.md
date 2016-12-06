@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -SMBiosGuid
-
+Specifies a GUID for the system management BIOS (SMBIOS) of a computer.
 
 ```yaml
 Type: String

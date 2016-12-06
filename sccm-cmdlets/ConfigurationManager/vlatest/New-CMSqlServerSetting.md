@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopySqlServerExpressOnSecondarySite
-
+Indicates that Microsoft SQL Server Express is copied to a secondary site.
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceName
-
+Specifies the name of an instance of SQL Server.
 
 ```yaml
 Type: String
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteDatabaseName
-
+Specifies a name of the Configuration Manager site database.
 
 ```yaml
 Type: String
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlServerServiceBrokerPort
-
+Specifies a port number for the SQL Server Service Broker port.
 
 ```yaml
 Type: Int32
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlServerServicePort
-
+Specifies a port number for the SQL Server service port.
 
 ```yaml
 Type: Int32
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseExistingSqlServerInstance
-
+Indicates that you use the existing instance of SQL Server.
 
 ```yaml
 Type: SwitchParameter

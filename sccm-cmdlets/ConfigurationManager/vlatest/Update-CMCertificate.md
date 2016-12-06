@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies the ID of a certificate.
 
 ```yaml
 Type: String
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-
+Specifies a certification path.
 
 ```yaml
 Type: String

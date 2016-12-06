@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names of configuration items.
 
 ```yaml
 Type: String
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Revision
-
+Specifies the version of a configuration item as an integer.
 
 ```yaml
 Type: Int32

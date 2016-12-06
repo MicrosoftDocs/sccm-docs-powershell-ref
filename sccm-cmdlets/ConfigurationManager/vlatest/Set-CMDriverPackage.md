@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageSource
-
+@{Text=}
 
 ```yaml
 Type: String
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of identifiers for a driver package.
 
 ```yaml
 Type: String
@@ -250,7 +250,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a driver package object.
+To obtain a driver package object, use the Get-CMDriverPackage cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -310,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name of a driver package.
 
 ```yaml
 Type: String

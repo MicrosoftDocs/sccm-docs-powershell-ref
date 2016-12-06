@@ -36,7 +36,7 @@ The command specifies the value AutomaticallyApproveAllComputers for the *Approv
 ## PARAMETERS
 
 ### -AllowPrestage
-
+Indicates whether to allow prestaging.
 
 ```yaml
 Type: Boolean
@@ -51,7 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -ApprovalMethod
+Specifies an approval method.
+Valid values are:  
 
+-- AutomaticallyApproveAllComputers
+-- AutomaticallyApproveComputersInTrustedDomains
+-- ManuallyApproveEachComputer
 
 ```yaml
 Type: ApprovalMethodType
@@ -157,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackSiteCode
-
+Specifies the site code for a fallback site.
 
 ```yaml
 Type: String
@@ -218,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseFallbackSite
-
+Indicates whether to use a fallback site.
 
 ```yaml
 Type: Boolean

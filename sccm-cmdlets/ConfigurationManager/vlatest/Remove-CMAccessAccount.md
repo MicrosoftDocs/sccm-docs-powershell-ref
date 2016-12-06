@@ -137,7 +137,8 @@ No confirmation is required.
 ## PARAMETERS
 
 ### -AccountType
-
+Specifies an account type.
+Valid values are: Guest, User, WindowsGroup, and WindowsUser.
 
 ```yaml
 Type: AccessAccountType
@@ -438,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
+Specifies a Windows user account name in domain\user format.
 
 ```yaml
 Type: String

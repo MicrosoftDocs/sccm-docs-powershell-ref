@@ -36,8 +36,7 @@ New-CMConditionalAccessPolicy [-DefaultRuleOverride] -TargetedCollectionName <St
 ## DESCRIPTION
 The **New-CMConditionalAccessPolicy** cmdlet creates a conditional access policy.
 
-    > [!NOTE]
-    > Ensure that the Administrator has set the notification email address for the Exchange connector before running this cmdlet.
+NOTE: Ensure that the Administrator has set the notification email address for the Exchange connector before running this cmdlet.
 
 ## EXAMPLES
 

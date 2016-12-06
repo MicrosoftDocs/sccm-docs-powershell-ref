@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies a site code in Configuration Manager.
 
 ```yaml
 Type: String

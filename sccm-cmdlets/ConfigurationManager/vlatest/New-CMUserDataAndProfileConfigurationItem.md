@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddAdminGroupToRupEnabled
-
+Indicates whether to grant the Administrators group access to roaming profile folders.
 
 ```yaml
 Type: Boolean
@@ -973,7 +973,7 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-
+Specifies a timeout value.
 
 ```yaml
 Type: Int32

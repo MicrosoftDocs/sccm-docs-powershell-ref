@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-
+Specifies the path to which you export the XML file for the security role.
 
 ```yaml
 Type: String
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleId
-
+Specifies the ID of a role.
 
 ```yaml
 Type: String

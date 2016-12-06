@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of identifiers for the deployment package.
 
 ```yaml
 Type: String
@@ -138,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a CMSoftwareUpdateDeploymentPackage object.
+To obtain an CMSoftwareUpdateDeploymentPackage object, use the Get-CMSoftwareUpdateDeploymentPackage cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -153,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name for the deployment package.
 
 ```yaml
 Type: String

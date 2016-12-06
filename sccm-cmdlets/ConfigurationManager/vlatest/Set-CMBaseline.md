@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of configuration baselines.
 
 ```yaml
 Type: Int32
@@ -226,7 +226,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a CMBaseline object.
+To obtain a CMBaseline object, use the Get-CMBaseline cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -241,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names of configuration baselines.
 
 ```yaml
 Type: String

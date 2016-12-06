@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies a site code in Configuration Manager.
 
 ```yaml
 Type: String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies an array of names of a site system servers in Configuration Manager.
 
 ```yaml
 Type: String

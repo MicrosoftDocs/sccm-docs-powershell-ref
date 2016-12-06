@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name of a rule.
 
 ```yaml
 Type: String
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies a site code for the Configuration Manager site.
 
 ```yaml
 Type: String

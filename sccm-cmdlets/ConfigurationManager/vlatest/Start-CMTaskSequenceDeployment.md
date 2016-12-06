@@ -601,7 +601,11 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
-
+Indicates whether to send a wake up packet to computers before the deployment begins.
+If this value is $True, Configuration Manager wakes a computer from sleep.
+If this value is $False, it does not wake computers from sleep.
+For computers to wake, you must first configure Wake On LAN.
+The Purpose parameter must be set to Required.
 
 ```yaml
 Type: Boolean

@@ -35,7 +35,7 @@ Because the command specifies a locale ID of 1033, the subscription uses US Engl
 ## PARAMETERS
 
 ### -AlertId
-
+Specifies an array of alert identifiers for the subscription.
 
 ```yaml
 Type: Int32[]
@@ -80,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-
+Specifies an email address where you want to send an alert notification.
+For example, david.chew@contoso.com.
+You can separate multiple email addresses by using a semicolon.
 
 ```yaml
 Type: String[]
@@ -110,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleId
-
+Specifies a locale for alert messages.
+For more information and a list of locale identifiers, see the Locale IDs Assigned by Microsoft topic at http://go.microsoft.com/fwlink/?LinkId=262651.
 
 ```yaml
 Type: Int32
@@ -125,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of an alert subscription object.
 
 ```yaml
 Type: String

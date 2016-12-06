@@ -118,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies an input object to this cmdlet.
+You can get the input object by using the Get-CMBoundary cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -148,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-
+Specifies a new name for a boundary.
 
 ```yaml
 Type: String
@@ -179,7 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-
+Specifies a boundary type.
+Valid values are: ADSite, IPV6Prefix, IPSubnet, and IPRange.
 
 ```yaml
 Type: BoundaryTypes
@@ -195,7 +197,8 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-
+Specifies the data that describes the boundary.
+For example, an Active Directory site value can be Default-ADSite.
 
 ```yaml
 Type: String

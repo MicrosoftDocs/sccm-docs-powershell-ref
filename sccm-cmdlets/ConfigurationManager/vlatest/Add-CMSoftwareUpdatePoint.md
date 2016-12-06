@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -WsusIisPort
-
+Specifies a port to use for unsecured access to the WSUS server.
 
 ```yaml
 Type: Int32
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -WsusIisSslPort
-
+Specifies a port to user for secured access to the WSUS server.
 
 ```yaml
 Type: Int32

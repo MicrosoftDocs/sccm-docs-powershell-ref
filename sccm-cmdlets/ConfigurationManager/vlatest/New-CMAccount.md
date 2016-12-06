@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-
+Specifies a secure string that contains the password for the user account.
 
 ```yaml
 Type: SecureString
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies a Configuration Manager site code.
 
 ```yaml
 Type: String

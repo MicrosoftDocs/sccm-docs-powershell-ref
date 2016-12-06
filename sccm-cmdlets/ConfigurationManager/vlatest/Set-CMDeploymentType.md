@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdministratorComment
-
+Specifies a description for the deployment type.
 
 ```yaml
 Type: String
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationName
-
+Specifies the name of the deployment application that contains the deployment type.
 
 ```yaml
 Type: String
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationNameInWindowsStore
-
+Specifies the name of the application in the Windows Store.
 
 ```yaml
 Type: String
@@ -395,7 +395,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContentLocation
-
+Specifies the path of the content.
+The site system server requires permission to read the content files.
 
 ```yaml
 Type: String
@@ -425,7 +426,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentTypeName
-
+Specifies the name of a deployment type.
 
 ```yaml
 Type: String
@@ -500,7 +501,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePeerToPeerContentDistribution
-
+Indicates whether clients can distribute content to other clients.
 
 ```yaml
 Type: Boolean
@@ -695,7 +696,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-
+Specifies an array of languages that the deployment type supports.
 
 ```yaml
 Type: String[]
@@ -722,7 +723,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadContentIntoAppVCacheBeforeLaunch
-
+Indicates whether to load the content into the AppV cache when you deploy the application.
 
 ```yaml
 Type: Boolean
@@ -834,7 +835,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewDeploymentTypeName
-
+Specifies the name of a new deployment type.
 
 ```yaml
 Type: String
@@ -968,7 +969,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteComputerName
-
+Specifies a remote computer name.
 
 ```yaml
 Type: String
@@ -1060,7 +1061,7 @@ Accept wildcard characters: False
 ```
 
 ### -TriggerVpn
-
+@{Text=}
 
 ```yaml
 Type: Boolean
@@ -1106,7 +1107,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebAppInstaller
-
+@{Text=}
 
 ```yaml
 Type: SwitchParameter

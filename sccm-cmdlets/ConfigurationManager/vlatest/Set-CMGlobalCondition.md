@@ -421,7 +421,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of the global conditions.
+This value corresponds to the LocalizedDisplayName property of a global condition object.
 
 ```yaml
 Type: String

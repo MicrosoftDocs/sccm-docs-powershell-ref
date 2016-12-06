@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of application revision histories.
 
 ```yaml
 Type: Int32
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names of application revision histories.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Revision
-
+Specifies the version number of an application revision.
 
 ```yaml
 Type: UInt32

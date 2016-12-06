@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies an array of site codes that identify sites on which Configuration Manager installs the client.
 
 ```yaml
 Type: String
@@ -82,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies an array of names of site system servers.
+Site system servers contain roles that define the operations that each site can perform.
 
 ```yaml
 Type: String

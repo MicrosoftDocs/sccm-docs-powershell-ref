@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name for the virtual environment group.
 
 ```yaml
 Type: String

@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies a site code that identifies the Configuration Manager site that hosts this site system role.
 
 ```yaml
 Type: String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies the host name for a system health validator point.
 
 ```yaml
 Type: String

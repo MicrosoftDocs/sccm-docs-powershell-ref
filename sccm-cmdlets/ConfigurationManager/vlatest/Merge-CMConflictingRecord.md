@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an ID for the conflicting records.
 
 ```yaml
 Type: String
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name for the conflicting records.
 
 ```yaml
 Type: String
