@@ -15,7 +15,6 @@ To use Windows PowerShell in Configuration Manager, you must install the
 following:
 
     * Windows PowerShell 3.0 or later
-
     * System Center Configuration Manager console
 
 ## Using Windows PowerShell for Configuration Manager
@@ -24,22 +23,20 @@ Configuration Manager console or by using a Windows PowerShell session.
 When you run Configuration Manager cmdlets by using the Configuration
 Manager console, your session runs in the context of the site.
 
-    To start a Windows PowerShell session from the Configuration Manager
-    console
+To start a Windows PowerShell session from the Configuration Manager
+console
 
-    *  In the Configuration Manager console, click the drop down menu.
+*  In the Configuration Manager console, click the drop down menu.
+*  Select Connect via Windows PowerShell.
 
-    *  Select Connect via Windows PowerShell.
+To use the Configuration Manager module in a Windows PowerShell session
 
-    To use the Configuration Manager module in a Windows PowerShell session
-
-    *  Start Windows PowerShell.
-
-    *  Change the directory to
-      <ConfigMgrConsoleInstallationPath>\Program Files (x86)\Microsoft
-      Configuration Manager\AdminConsole\bin
-      and then import the Configuration Manager module by typing the
-      following command: Import-module -Name "ConfigurationManager.psd1"
+*  Start Windows PowerShell.
+*  Change the directory to
+  <ConfigMgrConsoleInstallationPath>\Program Files (x86)\Microsoft
+  Configuration Manager\AdminConsole\bin
+  and then import the Configuration Manager module by typing the
+  following command: Import-module -Name "ConfigurationManager.psd1"
 
 ## Windows PowerShell Drive Provider
 The Configuration Manager module for Windows PowerShell includes a
