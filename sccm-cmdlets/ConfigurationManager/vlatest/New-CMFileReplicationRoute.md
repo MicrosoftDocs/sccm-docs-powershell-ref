@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationSiteCode
-
+Specifies a destination site for data transfers by using a site code.
 
 ```yaml
 Type: String
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationSiteServerName
-
+Specifies a destination site server for data transfers by using a site server name.
 
 ```yaml
 Type: String
@@ -99,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileReplicationAccountName
-
+Specifies the account that Configuration Manager uses to install a site on the specified server and maintain communications between the site and other sites.
+This account must have local administrative credentials.
 
 ```yaml
 Type: String
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceSiteCode
-
+Specifies a source site for data transfers by using a site code.
 
 ```yaml
 Type: String

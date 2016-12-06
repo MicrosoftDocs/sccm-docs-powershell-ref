@@ -441,7 +441,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumNumberOfSendingWakeupPacketBeforePausing
-
+Specifies the maximum number of wake up packets transmitted by this site server before pausing.
 
 ```yaml
 Type: Int32
@@ -600,7 +600,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryNumberOfSendingWakeupPacketTransmission
-
+Specifies the number of times a wake up packet is sent to a target computer.
 
 ```yaml
 Type: Int32
@@ -691,7 +691,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThreadNumberOfSendingWakeupPacket
-
+Specifies the number of threads a site server uses when sending wake up packets.
 
 ```yaml
 Type: Int32
@@ -706,7 +706,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseCustomWebsite
-
+Indicates whether to use a custom web site.
+Use a custom web site when you do not want to use the default web site.
 
 ```yaml
 Type: Boolean

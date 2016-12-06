@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of software update groups.
 
 ```yaml
 Type: Int32
@@ -197,7 +197,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a software group object.
+To obtain a software group object, use the Get-CMSoftwareUpdateGroup cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -212,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names of software update groups.
 
 ```yaml
 Type: String

@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site code for the management point.
 
 ```yaml
 Type: String
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies a fully qualified domain name (FQDN) of the server that hosts the site system role.
 
 ```yaml
 Type: String

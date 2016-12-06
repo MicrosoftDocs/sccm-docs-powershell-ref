@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs for software metering rules.
 
 ```yaml
 Type: String
@@ -173,7 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a software metering rule object.
+To obtain a software metering rule object, use the Get-SoftwareMeteringRule cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -265,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductName
-
+Specifies a name for a product that a rule meters.
 
 ```yaml
 Type: String

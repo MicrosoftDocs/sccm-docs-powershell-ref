@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies the ID of a client operation.
 
 ```yaml
 Type: String

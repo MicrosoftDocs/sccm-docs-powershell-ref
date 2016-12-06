@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Expression
-
+Specifies an expression in WMI Query Language (WQL).
 
 ```yaml
 Type: String
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an ID for a status message query.
 
 ```yaml
 Type: String
@@ -193,7 +193,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a status message query object.
+To obtain a status message query object, use the Get-CMStatusMessageQuery cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -208,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name for a status message query.
 
 ```yaml
 Type: String
@@ -223,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-
+Specifies a new name for a query.
 
 ```yaml
 Type: String

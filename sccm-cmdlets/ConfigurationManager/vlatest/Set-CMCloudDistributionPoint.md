@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
+Specifies a description for a cloud distribution point.
 
 ```yaml
 Type: String
@@ -134,7 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a cloud distribution point object.
+To obtain a cloud distribution point object, you can use the Get-CMCloudDistributionPoint cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -164,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-
+Specifies a new name for the cloud-based distribution point.
 
 ```yaml
 Type: String
@@ -179,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuotaGB
-
+Specifies the threshold value, in gigabytes, that triggers errors or warnings for total content storage.
 
 ```yaml
 Type: Int32
@@ -194,7 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuotaGrow
-
+Specifies whether the storage quota can grow.
+By default, the amount of stored data cannot exceed the value of the StorageQuotaInGB parameter.
+The default value for this parameter is $False.
 
 ```yaml
 Type: Boolean
@@ -209,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficOutGB
-
+Specifies the threshold value, in gigabytes, that triggers errors or warnings, for monthly traffic out of Windows Azure Storage Service.
 
 ```yaml
 Type: Int32
@@ -224,7 +227,8 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficOutStopService
-
+Specifies whether Configuration Manager stops data transfers after the distribution point reaches the quota specified in the TrafficOutInGB parameter.
+The default value for this parameter is $False.
 
 ```yaml
 Type: Boolean

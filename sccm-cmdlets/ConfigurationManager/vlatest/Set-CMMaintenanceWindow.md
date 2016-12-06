@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyToSoftwareUpdateOnly
-
+Indicates that the maintenance window is used to apply software updates only.
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyToTaskSequenceOnly
-
+Indicates that the maintenance window is used to apply task sequences only.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-
+Specifies the ID of the collection that the maintenance window applies to.
 
 ```yaml
 Type: String
@@ -274,7 +274,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-
+Specifies a CMSchedule object.
+The schedule specifies when the maintenance window occurs.
+To create a CMSchedule object, use the New-CMSchedule cmdlet.
 
 ```yaml
 Type: IResultObject

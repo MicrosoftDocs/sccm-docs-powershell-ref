@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of virtual environments.
 
 ```yaml
 Type: Int32[]
@@ -140,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a virtual environment object for Configuration Manager.
+To obtain a virtual environment object, use the Get-CMAppVVirtualEnvironment cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -155,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names of virtual environments.
 
 ```yaml
 Type: String

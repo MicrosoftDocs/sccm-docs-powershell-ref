@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSiteCode
-
+Specifies the default site code for the boundary group.
 
 ```yaml
 Type: String
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
+Specifies a description for the new boundary.
 
 ```yaml
 Type: String
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name for the new boundary.
 
 ```yaml
 Type: String

@@ -49,7 +49,8 @@ The command specifies the site code for the site that the role belongs to, as we
 ## PARAMETERS
 
 ### -CommunicationType
-
+Specifies the communication type.
+Valid values are: HTTP and HTTPS.
 
 ```yaml
 Type: ComputerCommunicationType
@@ -125,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortNumber
-
+Specifies the port to use to connect with the web service.
 
 ```yaml
 Type: Int32
@@ -140,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site code for a Configuration Manager site.
 
 ```yaml
 Type: String
@@ -155,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies the name of a server that hosts a site system role.
 
 ```yaml
 Type: String
@@ -170,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplicationName
-
+Specifies the name of the web application used for the application catalog.
 
 ```yaml
 Type: String

@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNla
-
+Indicates whether to allow connections only from computers that run Remote Desktop by using Network Level Authentication.
 
 ```yaml
 Type: Boolean

@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-
+Specifies a certification path.
 
 ```yaml
 Type: String

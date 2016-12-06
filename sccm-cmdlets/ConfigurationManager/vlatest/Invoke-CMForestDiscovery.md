@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site that is the starting point for the forest discovery operation.
 
 ```yaml
 Type: String

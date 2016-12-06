@@ -58,7 +58,8 @@ The second command then uses **New-CMExchangeServer** to create the new server a
 ## PARAMETERS
 
 ### -ActiveDirectoryContainer
-
+Specifies an array of names of Active Directory containers.
+When this parameter is specified, the Exchange Server connector searches the Active Directory containers for the device.
 
 ```yaml
 Type: String[]
@@ -73,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowExternalDeviceManagement
-
+Indicates whether an external device management program can manage the device.
 
 ```yaml
 Type: Boolean
@@ -88,7 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationSetting
-
+Specifies application settings.
+For each dictionary entry in the array, specify the setting name as the key and the configuration as the value.
+Valid values are: AllowUnsignedApplications, AllowUnsignedInstallationPackages, or Block a specific application.
 
 ```yaml
 Type: ExchangeConnectorApplicationSetting
@@ -148,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -EmailManagementSetting
-
+Specifies email management settings.
+For each dictionary entry in the array, specify the setting name as the key and the configuration as the value.
 
 ```yaml
 Type: ExchangeConnectorEmailManagementSetting
@@ -163,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeClientAccessServer
-
+Specifies an array of Exchange Client Access servers, as key-value pairs.
 
 ```yaml
 Type: Dictionary`2[]
@@ -193,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullSyncSchedule
-
+Specifies a result object that schedules the full discovery time for an Exchange Server connector.
 
 ```yaml
 Type: IResultObject
@@ -208,7 +212,14 @@ Accept wildcard characters: False
 ```
 
 ### -GeneralSetting
+Specifies general settings.
+Valid values are:
 
+-- RequireManualSyncWhenRoaming
+-- RequireStorageCardEncryption
+-- UnapprovedInROMApplicationList
+-- DevicePolicyRefreshInterval
+-- MaxInactivityTimeDeviceLock
 
 ```yaml
 Type: ExchangeConnectorGeneralSetting
@@ -238,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsHosted
-
+Indicates that the Exchange Server connector configuration is for a hosted or on-premise Exchange Server.
 
 ```yaml
 Type: Boolean
@@ -253,7 +264,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumInactiveDay
-
+Specifies the interval between times that the Exchange Server connector runs device discovery.
+The cmdlet checks the last sync time of the devices that Exchange Server manages.
+If the most recent sync time is older than the current time - MinimumInactiveDay, then the exchange connector does not discover the devices.
 
 ```yaml
 Type: Int32
@@ -283,7 +296,19 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordSetting
+Specifies password settings.
+Valid values are:
 
+-- AlphanumericDevicePasswordRequired
+-- DevicePasswordEnabled
+-- DevicePasswordExpiration
+-- DevicePasswordHistory
+-- MaxDevicePasswordFailedAttempts
+-- PasswordRecoveryEnabled
+-- MinDevicePasswordComplexCharacters
+-- MinDevicePasswordLength
+-- AlphanumericDevicePasswordRequired
+-- AllowSimpleDevicePassword
 
 ```yaml
 Type: ExchangeConnectorPasswordSetting
@@ -298,7 +323,20 @@ Accept wildcard characters: False
 ```
 
 ### -SecuritySetting
+Specifies a dictionary of security settings.
+Valid values are: 
 
+-- AllowBluetooth
+-- AllowBrowser
+-- AllowCamera
+-- AllowDesktopSync
+-- AllowInternetSharing
+-- AllowIrDA
+-- AllowNonProvisionableDevices
+-- AllowRemoteDesktop
+-- AllowStorageCard
+-- AllowTextMessaging
+-- AllowWiFi
 
 ```yaml
 Type: ExchangeConnectorSecuritySetting
@@ -313,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerAddress
-
+Specifies the address of the Exchange Server for which the cmdlet configures the Exchange Server connector.
 
 ```yaml
 Type: String
@@ -328,7 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site code of the Configuration Manager site where a Exchange Server connector runs.
 
 ```yaml
 Type: String
@@ -343,7 +381,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
+Specifies the username that the connector uses to connect to the Exchange Server.
 
 ```yaml
 Type: String

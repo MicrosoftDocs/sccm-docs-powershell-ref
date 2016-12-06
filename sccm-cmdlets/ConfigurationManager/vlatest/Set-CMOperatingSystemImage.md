@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of operating system images.
 
 ```yaml
 Type: String
@@ -262,7 +262,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies a CMOperatingSystemImage object.
+To obtain a CMOperatingSystemImage object, use the Get-CMOperatingSystemImage cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -322,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of an operating system image.
 
 ```yaml
 Type: String

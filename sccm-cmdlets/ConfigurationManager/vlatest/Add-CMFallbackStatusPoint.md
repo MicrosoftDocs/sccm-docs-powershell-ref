@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site code for a Configuration Manager site.
 
 ```yaml
 Type: String
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies the name of a server that hosts a site system role.
 
 ```yaml
 Type: String
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -StateMessageNum
-
+Specifies the number of state messages that a fallback status point can send to Configuration Manager within a throttle interval.
 
 ```yaml
 Type: Int32

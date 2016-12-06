@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833617
 schema: 2.0.0
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+
 
 ```yaml
 Type: IResultObject

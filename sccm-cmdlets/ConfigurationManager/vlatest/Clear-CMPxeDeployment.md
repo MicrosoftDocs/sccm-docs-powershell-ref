@@ -82,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Device
-
+Specifies a device object.
+To obtain a device object, use the Get-CMDevice cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -188,7 +189,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-
+Specifies an array of IDs for resources.
+The cmdlet clears the status of the PXE deployment for these resources.
 
 ```yaml
 Type: Int32[]

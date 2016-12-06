@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the three-letter site code of the Configuration Manager site that hosts the site system role.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies an array of fully qualified domain names (FQDN) of the servers that host the site system role.
 
 ```yaml
 Type: String

@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -LicenseAgreed
-
+Specifies whether you agree to the Endpoint Protection software licensing terms.
 
 ```yaml
 Type: Boolean
@@ -122,7 +122,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionService
+Specifies the type of membership you have for Microsoft Active Protection Service (MAPS).
+Valid values are: 
 
+-- AdvancedMembership
+-- BasicMembership
+-- DoNotJoinMaps
 
 ```yaml
 Type: MapsMembershipType
@@ -138,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site code for a Configuration Manager site.
 
 ```yaml
 Type: String
@@ -153,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies the name of a server that hosts a site system role.
 
 ```yaml
 Type: String

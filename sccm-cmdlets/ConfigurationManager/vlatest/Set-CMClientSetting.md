@@ -718,7 +718,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBitsMaxBandwidth
-
+Specifies whether to enable maximum bandwidth for Background Intelligent Transfer Service (BITS) background transfers.
 
 ```yaml
 Type: Boolean
@@ -748,7 +748,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDownloadOffSchedule
-
+Specifies whether allow BITS downloads outside of a throttling window.
 
 ```yaml
 Type: Boolean
@@ -1204,7 +1204,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTransferRateOffSchedule
-
+Specifies an integer value for maximum transfer rate off schedule.
 
 ```yaml
 Type: Int32
@@ -1219,7 +1219,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTransferRateOnSchedule
-
+Specifies an integer value for maximum transfer rate on schedule.
 
 ```yaml
 Type: Int32
@@ -1271,7 +1271,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies a name for a client setting.
 
 ```yaml
 Type: String

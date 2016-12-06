@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-
+Specifies the ID of the collection that the maintenance window applies to.
 
 ```yaml
 Type: String

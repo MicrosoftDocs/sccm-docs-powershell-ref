@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs that identify the application revision histories that you delete.
 
 ```yaml
 Type: UInt32
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies an array of names for the application revision histories that you delete.
 
 ```yaml
 Type: String
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Revision
-
+Specifies the version number of the revision that you delete from the history.
 
 ```yaml
 Type: UInt32

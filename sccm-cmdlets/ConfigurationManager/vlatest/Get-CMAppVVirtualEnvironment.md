@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of virtual environments.
 
 ```yaml
 Type: Int32[]

@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies assigned site of a client by using a code.
 
 ```yaml
 Type: String
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies an array of site system server names.
 
 ```yaml
 Type: String

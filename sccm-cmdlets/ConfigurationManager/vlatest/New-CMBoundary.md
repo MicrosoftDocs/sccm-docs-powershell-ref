@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of the new boundary.
 
 ```yaml
 Type: String
@@ -163,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-
+Specifies a boundary type.
+Valid values are: ADSite, IPV6Prefix, IPSubnet, and IPRange.
 
 ```yaml
 Type: BoundaryTypes
@@ -179,7 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-
+Specifies the data that describes the boundary.
+For example, an Active Directory site value can be Default-First-Site-Name.
 
 ```yaml
 Type: String

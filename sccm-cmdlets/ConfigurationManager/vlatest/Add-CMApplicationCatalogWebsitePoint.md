@@ -109,7 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -ClientConnectionType
+Specifies how a client connects to the website.
+Valid values are: 
 
+-- Internet
+-- InternetAndIntranet
+-- Intranet
 
 ```yaml
 Type: ClientConnectionTypes
@@ -140,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -ColorBlue
-
+Specifies an integer value for a custom blue color.
+Configuration Manager uses custom colors to conform to customer branding.
 
 ```yaml
 Type: Int32
@@ -155,7 +161,8 @@ Accept wildcard characters: False
 ```
 
 ### -ColorGreen
-
+Specifies an integer value for a custom green color.
+Configuration Manager uses custom colors to conform to customer branding.
 
 ```yaml
 Type: Int32
@@ -170,7 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -ColorRed
-
+Specifies an integer value for a custom red color.
+Configuration Manager uses custom colors to conform to customer branding.
 
 ```yaml
 Type: Int32
@@ -276,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -IisWebsite
-
+Specifies the Internet Information Services (IIS) website installed on the Application Catalog website point server.
 
 ```yaml
 Type: String
@@ -306,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetBiosName
-
+Specifies the NetBIOS name of the server that hosts the Application Catalog website point.
 
 ```yaml
 Type: String
@@ -321,7 +329,8 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationName
-
+Specifies a name for a customer organization.
+This name appears to users who access the Application Catalog.
 
 ```yaml
 Type: String
@@ -351,7 +360,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
+Specifies the site code for a Configuration Manager site.
 
 ```yaml
 Type: String
@@ -366,7 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+Specifies the name of a server that hosts a site system role.
 
 ```yaml
 Type: String
@@ -381,7 +390,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplicationName
-
+Specifies the name of the web application used for the application catalog.
 
 ```yaml
 Type: String

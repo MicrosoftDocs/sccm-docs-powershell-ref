@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
+Specifies an array of IDs of applications.
 
 ```yaml
 Type: String[]
