@@ -56,7 +56,6 @@ Simple numeric passwords can begin or end with 0 but cannot include values that 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +70,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +84,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +98,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: MaximumIdleTimeMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +113,6 @@ A complex character is any character that is not a letter.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +131,6 @@ If * PasswordEnabled* is $False, default password lengths apply: four characters
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +152,6 @@ Type: PasswordComplexityType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Pin, Strong
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +173,6 @@ If you do not set a value for the parameter, the password-related settings on th
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -199,7 +191,6 @@ If you do not set a value for *PasswordExpiration*, password expiration settings
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +209,6 @@ If you do not set a value for *PasswordExpiration*, password settings on the mob
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +224,6 @@ If you do not set a value for this parameter, the password recovery options on t
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -249,7 +238,6 @@ Specifies the number of failed attempts to reset a password before the device wi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

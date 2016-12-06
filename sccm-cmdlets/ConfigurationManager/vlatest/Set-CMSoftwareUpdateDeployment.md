@@ -150,7 +150,6 @@ Specifies a day, in MM/DD/YYYY format, to notify clients of new software updates
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +164,6 @@ Specifies a time, in HH:MM format, to notify clients of new software updates.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +178,6 @@ Indicates whether to allow a restart following installation.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -195,7 +192,6 @@ Indicates whether to allow clients to use a metered network to download updates.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -211,7 +207,6 @@ A collection is a group of client computers.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -226,7 +221,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -242,7 +236,6 @@ By default, the update is available immediately.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -258,7 +251,6 @@ By default, the update is available immediately.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -274,7 +266,6 @@ To expire a software update on a certain day, set this parameter.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -290,7 +281,6 @@ To expire a software update at a certain time, set this parameter.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -305,7 +295,6 @@ Specifies a name for a software update deployment in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -321,7 +310,6 @@ Type: DeploymentType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Required, Available
-
 Required: False
 Position: Named
 Default value: None
@@ -336,7 +324,6 @@ Specifies a description for a software update deployment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -351,7 +338,6 @@ Indicates whether to disable System Center 2016 - Operations Manager alerts duri
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -366,7 +352,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -381,7 +366,6 @@ Indicates whether clients download updates directly from Microsoft Update.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -396,7 +380,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -411,7 +394,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -426,7 +408,6 @@ Indicates whether to generate Operations Manager alerts when a software installa
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -441,7 +422,6 @@ Indicates whether to generate alerts when a software installation succeeds.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -456,7 +436,6 @@ Specifies a name for a new deployment in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -471,7 +450,6 @@ Specifies a percentage of the update.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -486,7 +464,6 @@ Indicates whether to install a software update on the temporary overlay and comm
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -502,7 +479,6 @@ Type: ProtectedType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NoInstall, RemoteDistributionPoint
-
 Required: False
 Position: Named
 Default value: None
@@ -517,7 +493,6 @@ Indicates whether to allow a server to restart following a software update.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -532,7 +507,6 @@ Indicates whether to allow a workstation to restart following a software update.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -550,7 +524,6 @@ For computers to wake, you must first configure Wake On LAN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -565,7 +538,6 @@ Indicates whether to allow the software update to install, even if the installat
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -581,7 +553,6 @@ To obtain a software update deployment object, use the [Get-CMSoftwareUpdate](./
 Type: IResultObject
 Parameter Sets: SetSoftwareUpdateDeploymentByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -597,7 +568,6 @@ To obtain a software update group object, use the [Get-CMSoftwareUpdateGroup](./
 Type: IResultObject
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -613,7 +583,6 @@ A software update group contains individual software updates.
 Type: String
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -628,7 +597,6 @@ Specifies a name for a software update group.
 Type: String
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -643,7 +611,6 @@ Specifies an ID for a software update in Configuration Manager.
 Type: String
 Parameter Sets: SetSoftwareUpdateDeploymentByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -658,7 +625,6 @@ Specifies a name for a software update in Configuration Manager.
 Type: String
 Parameter Sets: SetSoftwareUpdateDeploymentByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -675,7 +641,6 @@ Type: TimeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: LocalTime, Utc
-
 Required: False
 Position: Named
 Default value: None
@@ -691,7 +656,6 @@ Type: UnprotectedType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NoInstall, UnprotectedDistributionPoint
-
 Required: False
 Position: Named
 Default value: None
@@ -706,7 +670,6 @@ Indicates whether to use Branch Cache as a distribution point for updates.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -722,7 +685,6 @@ Type: UserNotificationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
-
 Required: False
 Position: Named
 Default value: None
@@ -743,7 +705,6 @@ Type: VerbosityLevelType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AllMessages, OnlySuccessAndErrorMessages, OnlyErrorMessages
-
 Required: False
 Position: Named
 Default value: None
@@ -759,7 +720,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

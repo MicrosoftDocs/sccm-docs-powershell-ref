@@ -85,7 +85,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -100,7 +99,6 @@ Specifies a description for the Windows Firewall policy.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +113,6 @@ Accept wildcard characters: False
 Type: ConfigurationItem
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -130,7 +127,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: DesiredConfigurationDigestPath
-
 Required: False
 Position: Named
 Default value: None
@@ -145,7 +141,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +155,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +175,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +190,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: DomainNotifications
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +210,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +224,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -248,7 +238,6 @@ Specifies an array of IDs of firewall policies.
 Type: Int32
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -264,7 +253,6 @@ To obtain a CMWindowsFirewallPolicy object, use the Get-CMWindowsFirewallPolicy 
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -279,7 +267,6 @@ Specifies an array of firewall policy names.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -294,7 +281,6 @@ Specifies a new name for the firewall policy.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -309,7 +295,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -326,7 +311,6 @@ Type: PriorityChangeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Increase, Decrease
-
 Required: False
 Position: Named
 Default value: None
@@ -347,7 +331,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -363,7 +346,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: PrivateNotifications
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -384,7 +366,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -405,7 +386,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -421,7 +401,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: PublicNotifications
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -442,7 +421,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Yes, No, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -458,7 +436,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

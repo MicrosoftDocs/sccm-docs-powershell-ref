@@ -92,7 +92,6 @@ Type: AvailabilityLevel
 Parameter Sets: SetFileReplicationRouteBySchedule
 Aliases: 
 Accepted values: All, MediumHigh, High, Closed
-
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +106,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetFileReplicationRouteBySchedule
 Aliases: TimePeriodStart, BeginHour
-
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +120,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -137,7 +134,6 @@ Indicates that scheduled replication controls network load.
 Type: SwitchParameter
 Parameter Sets: SetFileReplicationRouteBySchedule
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -152,7 +148,6 @@ Specifies a data block size, in kilobytes.
 Type: Int32
 Parameter Sets: SetFileReplicationRouteByPulseMode
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +172,6 @@ Type: DaysOfWeek[]
 Parameter Sets: SetFileReplicationRouteBySchedule
 Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +186,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetFileReplicationRouteByPulseMode
 Aliases: DelayBetweenDataBlocksSeconds, DelayBetweenDataBlocksSec
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +200,6 @@ Specifies the destination site in the file replication route that you change by 
 Type: String
 Parameter Sets: (All)
 Aliases: DesSiteCode, DestSiteCode
-
 Required: True
 Position: Named
 Default value: None
@@ -222,7 +214,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -237,7 +228,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetFileReplicationRouteBySchedule
 Aliases: TimePeriodEnd, EndHour
-
 Required: False
 Position: Named
 Default value: None
@@ -253,7 +243,6 @@ This account must have local administrative credentials.
 Type: String
 Parameter Sets: SetFileReplicationAccount
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -265,7 +254,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SetFileReplicationRouteByPulseMode, SetFileReplicationRouteByLimited, SetFileReplicationRouteByUnlimited
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -280,7 +268,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +282,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetFileReplicationRouteByLimited
 Aliases: LimitAvailableBandwidthPercentage
-
 Required: False
 Position: Named
 Default value: None
@@ -310,7 +296,6 @@ Indicates that bandwidth for a file replication route is limited.
 Type: SwitchParameter
 Parameter Sets: SetFileReplicationRouteByLimited
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -325,7 +310,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetFileReplicationRouteByLimited
 Aliases: LimitedTimePeriodStart, LimitedBeginHour
-
 Required: False
 Position: Named
 Default value: None
@@ -340,7 +324,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetFileReplicationRouteByLimited
 Aliases: LimitedTimePeriodEnd, LimitedEndHour
-
 Required: False
 Position: Named
 Default value: None
@@ -356,7 +339,6 @@ Use this parameter when you have low network bandwidth between sites.
 Type: SwitchParameter
 Parameter Sets: SetFileReplicationRouteByPulseMode
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -371,7 +353,6 @@ Specifies the source site in the file replication route that you change by using
 Type: String
 Parameter Sets: (All)
 Aliases: SiteCode
-
 Required: True
 Position: Named
 Default value: None
@@ -386,7 +367,6 @@ Indicates that bandwidth for a file replication route is unlimited.
 Type: SwitchParameter
 Parameter Sets: SetFileReplicationRouteByUnlimited
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -402,7 +382,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

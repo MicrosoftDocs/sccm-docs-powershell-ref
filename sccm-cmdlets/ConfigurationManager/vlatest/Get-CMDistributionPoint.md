@@ -70,7 +70,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +85,6 @@ To obtain a distribution point group object, use the Get-CMDistributionPointGrou
 Type: IResultObject
 Parameter Sets: SearchByGroup
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -101,7 +99,6 @@ Specifies the ID of a distribution point group.
 Type: String
 Parameter Sets: SearchByGroupId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -116,7 +113,6 @@ Specifies the name of a distribution point group.
 Type: String
 Parameter Sets: SearchByGroupName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -131,7 +127,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +142,6 @@ To obtain a site system server object, use the Get-CMSiteSystemServer cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -162,7 +156,6 @@ Specifies the site code of the site that is associated with a distribution point
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +170,6 @@ Specifies a fully qualified domain name (FQDN) of the server that hosts the site
 Type: String
 Parameter Sets: SearchByName
 Aliases: Name, ServerName
-
 Required: False
 Position: 0
 Default value: None

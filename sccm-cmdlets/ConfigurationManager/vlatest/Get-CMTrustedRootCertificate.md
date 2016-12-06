@@ -45,7 +45,6 @@ This command gets a trusted root certificate from the internal server named Cont
 Type: String
 Parameter Sets: (All)
 Aliases: CertificationAuthorityServerName
-
 Required: False
 Position: Named
 Default value: None
@@ -60,7 +59,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +73,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -47,7 +47,6 @@ Indicates that User Account Control (UAC) prompts are allowed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -63,7 +62,6 @@ To obtain a boot image object, use the Get-CMBootImage cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: BootImagePackage
-
 Required: True
 Position: Named
 Default value: None
@@ -78,7 +76,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -93,7 +90,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +105,6 @@ To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: DistributionPoints
-
 Required: True
 Position: Named
 Default value: None
@@ -124,7 +119,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +133,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -154,7 +147,6 @@ Indicates that the cmdlet formats the removable USB drive (FAT32), and makes it 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +167,6 @@ Type: MediaInputType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Usb, CdDvd
-
 Required: True
 Position: Named
 Default value: None
@@ -190,7 +181,6 @@ Specifies the name and path where the output files are written.
 Type: String
 Parameter Sets: (All)
 Aliases: MediaPath, OutputPath, DriveName
-
 Required: True
 Position: Named
 Default value: None
@@ -206,7 +196,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

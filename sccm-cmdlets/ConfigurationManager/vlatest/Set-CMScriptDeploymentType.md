@@ -106,7 +106,6 @@ Specifies an array of languages that the deployment type supports.
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddLanguages, Languages, Language
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +120,6 @@ Specifies an array of requirements for the deployment type.
 Type: Rule[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -137,7 +135,6 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 Type: IResultObject
 Parameter Sets: ByAppValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -152,7 +149,6 @@ Specifies the ID of the application that is associated with this deployment type
 Type: Int32
 Parameter Sets: ByAppId
 Aliases: CI_ID, CIId
-
 Required: True
 Position: Named
 Default value: None
@@ -167,7 +163,6 @@ Specifies the name of the application that is associated with this deployment ty
 Type: String
 Parameter Sets: ByAppName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -182,7 +177,6 @@ Indicates whether the deployment type saves content in cache indefinitely on the
 Type: Boolean
 Parameter Sets: (All)
 Aliases: PersistContentInClientCache
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +191,6 @@ Specifies a description for the deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: AdministratorComment
-
 Required: False
 Position: Named
 Default value: None
@@ -212,7 +205,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -228,7 +220,6 @@ A fallback location point provides an alternate location for source content when
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableContentLocationFallback, AllowClientsToUseFallbackSourceLocationForContent
-
 Required: False
 Position: Named
 Default value: None
@@ -244,7 +235,6 @@ The site system server requires permission to read the content files.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -259,7 +249,6 @@ Specifies a display name for this deployment type.
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -274,7 +263,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -290,7 +278,6 @@ Content downloads from cloud-based distribution points can always be shared by c
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AllowClientsToShareContentOnSameSubnet
-
 Required: False
 Position: Named
 Default value: None
@@ -306,7 +293,6 @@ This estimate is displayed to the user before the application installs.
 Type: Int32
 Parameter Sets: (All)
 Aliases: EstimatedInstallationTimeMinutes, EstimatedInstallationTimeMins, EstimatedRunTimeMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -321,7 +307,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ForceForUnknownPublisher
-
 Required: False
 Position: Named
 Default value: None
@@ -336,7 +321,6 @@ Indicates that the deployment type uses the Microsoft Windows-32-on-Windows-64 (
 Type: Boolean
 Parameter Sets: (All)
 Aliases: Force32BitInstaller
-
 Required: False
 Position: Named
 Default value: None
@@ -351,7 +335,6 @@ Indicates that the deployment type uses the Microsoft Windows-32-on-Windows-64 (
 Type: Boolean
 Parameter Sets: (All)
 Aliases: Force32BitDetectionScript
-
 Required: False
 Position: Named
 Default value: None
@@ -366,7 +349,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -382,7 +364,6 @@ To obtain a deployment type object, use the [Get-CMDeploymentType](./Get-CMDeplo
 Type: IResultObject
 Parameter Sets: ByDTValue
 Aliases: DeploymentType
-
 Required: True
 Position: Named
 Default value: None
@@ -397,7 +378,6 @@ Specifies the install command line for the Windows Installer package.
 Type: String
 Parameter Sets: (All)
 Aliases: InstallationProgram
-
 Required: False
 Position: Named
 Default value: None
@@ -413,7 +393,6 @@ This folder can be an absolute path on the client, or a path to the distribution
 Type: String
 Parameter Sets: (All)
 Aliases: InstallationStartIn, InstallFolder
-
 Required: False
 Position: Named
 Default value: None
@@ -434,7 +413,6 @@ Type: InstallationBehaviorType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-
 Required: False
 Position: Named
 Default value: None
@@ -455,7 +433,6 @@ Type: LogonRequirementType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: OnlyWhenUserLoggedOn, WhereOrNotUserLoggedOn, WhetherOrNotUserLoggedOn, OnlyWhenNoUserLoggedOn
-
 Required: False
 Position: Named
 Default value: None
@@ -470,7 +447,6 @@ Specifies the maximum run time, in minutes, of the deployment program for this a
 Type: Int32
 Parameter Sets: (All)
 Aliases: MaximumAllowedRunTimeMinutes, MaximumAllowedRunTimeMins, MaximumRunTimeMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -485,7 +461,6 @@ Specifies a new name for this deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: NewDeploymentTypeName
-
 Required: False
 Position: Named
 Default value: None
@@ -501,7 +476,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -516,7 +490,6 @@ Specifies the product code in the detection method for the deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -531,7 +504,6 @@ Removes the existing supported languages from this deployment type.
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveLanguages
-
 Required: False
 Position: Named
 Default value: None
@@ -546,7 +518,6 @@ Removes the existing installation requirements from this deployment type.
 Type: Rule[]
 Parameter Sets: (All)
 Aliases: RemoveRequirements
-
 Required: False
 Position: Named
 Default value: None
@@ -561,7 +532,6 @@ Indicates whether a user can interact with the deployment type installation to c
 Type: Boolean
 Parameter Sets: (All)
 Aliases: RequiresUserInteraction
-
 Required: False
 Position: Named
 Default value: None
@@ -582,7 +552,6 @@ Type: ScriptLanguage
 Parameter Sets: (All)
 Aliases: ScriptType
 Accepted values: PowerShell, VBScript, JavaScript
-
 Required: False
 Position: Named
 Default value: None
@@ -597,7 +566,6 @@ Specifies the script to use to detect this deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: ScriptContent, Script
-
 Required: False
 Position: Named
 Default value: None
@@ -618,7 +586,6 @@ Type: ContentHandlingMode
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DoNothing, Download
-
 Required: False
 Position: Named
 Default value: None
@@ -634,7 +601,6 @@ Windows Source management enables an MSI represented by this deployment type to 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -649,7 +615,6 @@ Specifies the command to use to uninstall the Windows Installer package from the
 Type: String
 Parameter Sets: (All)
 Aliases: UninstallationProgram
-
 Required: False
 Position: Named
 Default value: None
@@ -665,7 +630,6 @@ This folder can be an absolute path on the client, or a path that is relative to
 Type: String
 Parameter Sets: (All)
 Aliases: UninstallationStartIn, UninstallFolder
-
 Required: False
 Position: Named
 Default value: None
@@ -687,7 +651,6 @@ Type: UserInteractionMode
 Parameter Sets: (All)
 Aliases: InstallationProgramVisibility
 Accepted values: Normal, Minimized, Maximized, Hidden
-
 Required: False
 Position: Named
 Default value: None
@@ -703,7 +666,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

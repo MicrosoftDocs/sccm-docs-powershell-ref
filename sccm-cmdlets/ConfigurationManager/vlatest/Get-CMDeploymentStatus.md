@@ -58,7 +58,6 @@ This command gets the status of a deployment that is distributed to Configuratio
 Type: String
 Parameter Sets: SearchByDeploymentId
 Aliases: Id
-
 Required: True
 Position: Named
 Default value: None
@@ -73,7 +72,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +86,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +100,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -118,7 +114,6 @@ Specifies an array of names of deployment packages.
 Type: String
 Parameter Sets: SearchByName
 Aliases: PackageName
-
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +128,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SearchByPackageId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -149,7 +143,6 @@ Type: PackageDeploymentStatusType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Any, Success, InProgress, RequirementsNotMet, Unknown, Error
-
 Required: False
 Position: Named
 Default value: None

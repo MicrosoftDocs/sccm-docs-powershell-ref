@@ -52,7 +52,6 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -67,7 +66,6 @@ Specifies the ID of a device collection.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -82,7 +80,6 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -97,7 +94,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +108,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +122,6 @@ Specifies the name of a collection variable.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

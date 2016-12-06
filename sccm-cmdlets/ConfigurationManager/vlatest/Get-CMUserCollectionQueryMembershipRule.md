@@ -53,7 +53,6 @@ This command gets the rule named Remote Users by Domain that belongs to the coll
 Type: String
 Parameter Sets: ById
 Aliases: Id
-
 Required: True
 Position: Named
 Default value: None
@@ -68,7 +67,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByName
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +81,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: Collection
-
 Required: True
 Position: Named
 Default value: None
@@ -98,7 +95,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -159,7 +159,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -176,7 +175,6 @@ The default value is 0, which indicates the last day of the month.
 Type: Int32
 Parameter Sets: RecurrenceMonthlyByDateWithEnd, RecurrenceMonthlyByDateWithDuration, RecurrenceMonthlyByDate
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -201,7 +199,6 @@ Type: DayOfWeek
 Parameter Sets: RecurrenceWeeklyWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceWeeklyWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceWeekly, RecurMonthlyByWeekday
 Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-
 Required: True
 Position: Named
 Default value: None
@@ -216,7 +213,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +229,6 @@ The default value is 0, which indicates that the scheduled action continues inde
 Type: Int32
 Parameter Sets: RecurrenceMonthlyByDateWithDuration, RecurrenceNoneWithDuration, RecurrenceIntervalWithDuration, RecurrenceWeeklyWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -249,7 +244,6 @@ Type: ScheduleInterval
 Parameter Sets: RecurrenceMonthlyByDateWithDuration, RecurrenceNoneWithDuration, RecurrenceIntervalWithDuration, RecurrenceWeeklyWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration
 Aliases: 
 Accepted values: Minutes, Hours, Days
-
 Required: True
 Position: Named
 Default value: None
@@ -264,7 +258,6 @@ Specifies the date and time when the scheduled event ends.
 Type: DateTime
 Parameter Sets: RecurrenceNoneWithEnd, RecurrenceMonthlyByDateWithEnd, RecurrenceIntervalWithEnd, RecurrenceWeeklyWithEnd, RecurMonthlyByWeekdayWithEnd, RecurMonthlyLastDayOfMonthWithEnd
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -279,7 +272,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -294,7 +286,6 @@ Indicates that the time is Coordinated Universal Time (UTC).
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -309,7 +300,6 @@ Indicates that the event occurs monthly on the last day of the month.
 Type: SwitchParameter
 Parameter Sets: RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyLastDayOfMonth
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -324,7 +314,6 @@ Indicates that the scheduled event does not recur.
 Type: SwitchParameter
 Parameter Sets: RecurrenceNone, RecurrenceNoneWithEnd, RecurrenceNoneWithDuration
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -339,7 +328,6 @@ Specifies the number of recurrences of the scheduled event.
 Type: Int32
 Parameter Sets: RecurrenceMonthlyByDateWithEnd, RecurrenceWeeklyWithEnd, RecurMonthlyByWeekdayWithEnd, RecurMonthlyLastDayOfMonthWithEnd, RecurrenceMonthlyByDateWithDuration, RecurrenceWeeklyWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceWeekly, RecurMonthlyByWeekday, RecurrenceMonthlyByDate, RecurMonthlyLastDayOfMonth
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -351,7 +339,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: RecurrenceIntervalWithEnd, RecurrenceIntervalWithDuration, RecurrenceInterval
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -367,7 +354,6 @@ Type: ScheduleInterval
 Parameter Sets: RecurrenceIntervalWithEnd, RecurrenceIntervalWithDuration, RecurrenceInterval
 Aliases: 
 Accepted values: Minutes, Hours, Days
-
 Required: True
 Position: Named
 Default value: None
@@ -382,7 +368,6 @@ Indicates that the schedule token is converted to an interval string.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -397,7 +382,6 @@ Specifies the date and time when the scheduled event occurs.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -425,7 +409,6 @@ Type: ScheduleWeekOrder
 Parameter Sets: RecurMonthlyByWeekdayWithEnd, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekday
 Aliases: 
 Accepted values: Last, First, Second, Third, Fourth
-
 Required: True
 Position: Named
 Default value: None
@@ -441,7 +424,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

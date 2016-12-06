@@ -58,7 +58,6 @@ Specifies the name of a category, family, or label in the Asset Intelligence cat
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -73,7 +72,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -88,7 +86,6 @@ Specifies the description of a category, family, or label in the Asset Intellige
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +100,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +114,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -134,7 +129,6 @@ For more information and a list of locale IDs, see the Locale IDs Assigned by Mi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -155,7 +149,6 @@ Type: Types
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TypeCategory, TypeFamily, TypeTag
-
 Required: True
 Position: Named
 Default value: None
@@ -171,7 +164,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

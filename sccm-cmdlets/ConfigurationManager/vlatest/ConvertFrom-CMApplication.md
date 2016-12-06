@@ -53,7 +53,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -68,7 +67,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +82,6 @@ To obtain an application object, use the [ConvertTo-CMApplication](./ConvertTo-C
 Type: Application
 Parameter Sets: (All)
 Aliases: Application
-
 Required: True
 Position: Named
 Default value: None

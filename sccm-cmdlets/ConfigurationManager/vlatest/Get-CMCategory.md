@@ -53,7 +53,6 @@ Type: CategoryType
 Parameter Sets: GetCategoryByName
 Aliases: 
 Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
-
 Required: False
 Position: Named
 Default value: None
@@ -68,7 +67,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +81,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +95,6 @@ Specifies an array of IDs of configuration categories.
 Type: String[]
 Parameter Sets: GetCategoryById
 Aliases: CategoryInstanceUniqueid, CategoryId
-
 Required: True
 Position: Named
 Default value: None
@@ -113,7 +109,6 @@ Specifies an array of names of configuration categories.
 Type: String
 Parameter Sets: GetCategoryByName
 Aliases: LocalizedCategoryInstanceName, CategoryName
-
 Required: False
 Position: Named
 Default value: None

@@ -45,7 +45,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -60,7 +59,6 @@ Specifies a description of the boot image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +73,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +87,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +102,6 @@ An index is the number of an image in a .wim file.
 Type: Int32
 Parameter Sets: (All)
 Aliases: ImageIndex
-
 Required: True
 Position: Named
 Default value: None
@@ -121,7 +116,6 @@ Specifies the name of a new boot image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -136,7 +130,6 @@ Specifies the location of the original WIM file for the boot image.
 Type: String
 Parameter Sets: (All)
 Aliases: ImagePath
-
 Required: True
 Position: Named
 Default value: None
@@ -151,7 +144,6 @@ Specifies the version of the boot image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +159,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

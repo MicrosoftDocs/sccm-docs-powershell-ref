@@ -46,7 +46,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -61,7 +60,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +74,6 @@ Specifies an array of IDs of operating system images.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: PackageId
-
 Required: True
 Position: Named
 Default value: None
@@ -91,7 +88,6 @@ Specifies the name of an operating system image.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

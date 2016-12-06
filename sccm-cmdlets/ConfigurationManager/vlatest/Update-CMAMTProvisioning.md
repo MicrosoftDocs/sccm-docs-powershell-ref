@@ -72,7 +72,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -87,8 +86,12 @@ To obtain a device object, use **Get-CMDevice**.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -103,7 +106,6 @@ Specifies an array of IDs of devices.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: ResourceId
-
 Required: True
 Position: Named
 Default value: None
@@ -118,7 +120,6 @@ Specifies an array of names of devices.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -132,8 +133,12 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -147,8 +152,12 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +173,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -51,7 +51,6 @@ This command gets the maintenance windows for the specified collection.
 Type: IResultObject
 Parameter Sets: ByCollectionValue
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -66,7 +65,6 @@ Specifies an array of collection IDs.
 Type: String
 Parameter Sets: ByCollectionId
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -81,7 +79,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByCollectionName
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -96,7 +93,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +107,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +121,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: Name
-
 Required: False
 Position: Named
 Default value: None

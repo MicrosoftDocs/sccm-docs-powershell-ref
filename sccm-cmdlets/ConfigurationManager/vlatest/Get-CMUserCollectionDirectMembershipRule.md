@@ -85,7 +85,6 @@ This command gets the direct membership rule that has the Id Res_94412512 for th
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
-
 Required: True
 Position: Named
 Default value: None
@@ -100,7 +99,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -115,7 +113,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
-
 Required: True
 Position: Named
 Default value: None
@@ -130,7 +127,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -145,7 +141,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +155,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -51,7 +51,6 @@ Specifies a collection ID that represents the user device affinity in Configurat
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -66,7 +65,6 @@ Specifies a name of a collection that represents the user device affinity in Con
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -81,7 +79,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -96,7 +93,6 @@ Specifies a device ID in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +107,6 @@ Specifies a device name in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +121,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +135,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -157,7 +150,6 @@ To obtain a **CMUserDeviceAffinityRequest** object, use the [Get-CMUserDeviceAff
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +164,6 @@ Specifies a unique ID for a request for user device affinity.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -187,7 +178,6 @@ Specifies a Configuration Manager ID for a user resource.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +192,6 @@ Specifies a user name for a resource in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +207,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

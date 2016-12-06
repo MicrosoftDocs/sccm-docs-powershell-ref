@@ -57,7 +57,6 @@ Specifies the account name for the site system.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +71,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -87,7 +85,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +99,6 @@ Indicates whether to enable a proxy server to use when the server synchronizes i
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +113,6 @@ Indicates whether the site system server is required to initiate connections to 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +127,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +142,6 @@ To obtain a site system server object, use the Get-CMSiteSystemServer cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: SiteSystemServer
-
 Required: True
 Position: Named
 Default value: None
@@ -164,7 +157,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +172,6 @@ Do not use user principal name (UPN) format.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -196,7 +187,6 @@ Use a fully qualified domain name (FQDN), short name, or IPv4/IPv6 address.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -211,7 +201,6 @@ Specifies the proxy server port number to use when connecting to the Internet.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -226,7 +215,6 @@ Specifies a FQDN for the site system for use on the Internet.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -241,7 +229,6 @@ Specifies the site code of a Configuration Manager site.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -256,7 +243,6 @@ Specifies a server name for the site system.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -271,7 +257,6 @@ Indicates that the cmdlet uses the site server's computer account to install the
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +272,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

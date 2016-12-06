@@ -118,8 +118,12 @@ Specifies the name of an application.
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -133,8 +137,12 @@ Specifies the ID of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageId
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -148,8 +156,12 @@ Specifies the name of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -164,7 +176,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -178,8 +189,12 @@ Specifies the name of a deployment type.
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -193,8 +208,12 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -208,8 +227,12 @@ Specifies the ID of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageId
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -223,8 +246,12 @@ Specifies the name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -238,8 +265,12 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +286,6 @@ To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: BootImage, DriverPackage, OperatingSystemImage, OperatingSystemInstaller, Package, SoftwareUpdateDeploymentPackage
-
 Required: True
 Position: Named
 Default value: None
@@ -270,8 +300,12 @@ Specify the manifest path if you specify Microsoft Application Virtualization fo
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -285,8 +319,12 @@ Specifies the ID of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageId
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -300,8 +338,12 @@ Specifies the name of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -315,8 +357,12 @@ Specifies the ID of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerId
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -330,8 +376,12 @@ Specifies the name of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -345,8 +395,12 @@ Specifies the ID of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageId
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -360,8 +414,12 @@ Specifies the name of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -375,8 +433,12 @@ Specifies the ID of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageId
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -390,8 +452,12 @@ Specifies the name of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageName
+<<<<<<< HEAD
 Aliases:
 
+=======
+Aliases: 
+>>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -407,7 +473,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

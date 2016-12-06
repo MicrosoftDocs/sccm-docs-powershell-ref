@@ -54,7 +54,6 @@ You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -69,7 +68,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +82,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +96,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Device
-
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +110,6 @@ Specifies a Systems Management Server (SMS) ID.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -129,7 +124,6 @@ Specifies the name of the device variable.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

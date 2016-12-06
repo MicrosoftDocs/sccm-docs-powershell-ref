@@ -55,7 +55,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -70,7 +69,6 @@ Specifies a device ID.
 Type: String
 Parameter Sets: NewByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -86,7 +84,6 @@ You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 Type: String
 Parameter Sets: NewByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -101,7 +98,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -116,7 +112,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +126,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: NewByValueMandatory
 Aliases: Device
-
 Required: True
 Position: Named
 Default value: None
@@ -146,7 +140,6 @@ Indicates whether the variable value is displayed in the Configuration Manager c
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +154,6 @@ Specifies the name of the device variable.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -176,7 +168,6 @@ Specifies the value of the variable.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +183,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

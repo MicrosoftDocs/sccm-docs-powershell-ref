@@ -109,7 +109,6 @@ This command creates the task sequence deployment by using the task sequence nam
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +124,6 @@ If you configure a percent success or failure rate for a deployment, alerts appe
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +139,6 @@ If you configure a percent success or failure rate for a deployment, alerts appe
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +153,6 @@ Indicates whether to allow clients to use a fallback source location for content
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +167,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AllowUseRemoteDistributionPoint
-
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +181,6 @@ Indicates whether to allow users to independently run the program, regardless of
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +196,6 @@ A collection is a group of client computers.
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByValueMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -214,7 +207,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByNameMandatory, SetTaskSequenceDeploymentByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -229,7 +221,6 @@ Specifies a comment for the task sequence deployment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -244,7 +235,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -259,7 +249,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: CreateAlertBaseOnPercentFailure
-
 Required: False
 Position: Named
 Default value: None
@@ -274,7 +263,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: CreateAlertBaseOnPercentSuccess
-
 Required: False
 Position: Named
 Default value: None
@@ -289,7 +277,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -305,7 +292,6 @@ By default, the deployment becomes available immediately.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -321,7 +307,6 @@ By default, the deployment becomes available immediately.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -336,7 +321,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -354,7 +338,6 @@ You may use this parameter in conjunction with the *DeploymentExpireTime* parame
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -372,7 +355,6 @@ You may use this parameter in conjunction with the *DeploymentExpireDay* paramet
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -393,7 +375,6 @@ Type: DeploymentOptionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
-
 Required: False
 Position: Named
 Default value: None
@@ -408,7 +389,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -423,7 +403,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -438,7 +417,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SetTaskSequenceDeploymentByValueMandatory
 Aliases: Deployment, TaskSequence
-
 Required: True
 Position: Named
 Default value: None
@@ -453,7 +431,6 @@ Indicates whether the task sequence runs on clients connecting over the Internet
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -475,7 +452,6 @@ Type: MakeAvailableToType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Clients, ClientsMediaAndPxe, MediaAndPxe, MediaAndPxeHidden
-
 Required: False
 Position: Named
 Default value: None
@@ -491,7 +467,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -506,7 +481,6 @@ Specifies a threshold percentage for failed task sequence deployment.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -521,7 +495,6 @@ Specifies a threshold percentage for successful task sequence deployment.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -536,7 +509,6 @@ Indicates whether to install a task sequence on the temporary overlay and commit
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -559,7 +531,6 @@ Type: RerunBehaviorType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NeverRerunDeployedProgram, AlwaysRerunProgram, RerunIfFailedPreviousAttempt, RerunIfSucceededOnPreviousAttempt
-
 Required: False
 Position: Named
 Default value: None
@@ -576,7 +547,6 @@ To create a **CMSchedule** object, use the New-CMSchedule cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -597,7 +567,6 @@ Type: ScheduleEventType[]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AsSoonAsPossible, LogOn, LogOff
-
 Required: False
 Position: Named
 Default value: None
@@ -615,7 +584,6 @@ For computers to wake, you must first configure Wake On LAN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -630,7 +598,6 @@ Indicates whether to show a process dialog for a task sequence.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -645,7 +612,6 @@ Indicates whether to allow the application to install, even if the installation 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -660,7 +626,6 @@ Indicates whether to allow an advertised program to restart the system, even if 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -675,7 +640,6 @@ Specifies an ID for a task sequence deployment.
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByDeploymentIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -690,7 +654,6 @@ Specifies a name for a task sequence.
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -705,7 +668,6 @@ Specifies an ID for a task sequence package.
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -720,7 +682,6 @@ Indicates whether to allow clients on a metered Internet connection to download 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -736,7 +697,6 @@ UTC time makes the task sequence available at the same time for all computers.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -752,7 +712,6 @@ UTC time makes the task sequence available at the same time for all computers.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -768,7 +727,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

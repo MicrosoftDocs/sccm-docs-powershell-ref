@@ -1,7 +1,4 @@
-﻿# ConfigurationManager_Cmdlets
-## 1610_release_notes
-
-# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
+﻿# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
 
  >[!NOTE]
  > The 1604 version of the System Center Configuration Manager Cmdlet
@@ -31,8 +28,9 @@ If the path to the ConfigurationManager.psd1 module is added to the PSMODULEPATH
 ####Workaround
 *  Use the full path to the module
 *  https://gallery.technet.microsoft.com/Make-Configuration-Manager-04474a87
- > [!NOTE]
- > This workaround is supplied by the user community and is not tested or supported by Microsoft.)
+
+    > [!NOTE]
+    > This workaround is supplied by the user community and is not tested or supported by Microsoft.
 
 ###Add-CMEnrollmentProxyPoint
 Cmdlet may not properly configure the enrollment proxy point if there are multiple enrollment points for the primary site, or if the enrollment point is on a separate server.
@@ -79,9 +77,13 @@ New cmdlets have been written to support Azure Active Directory (Azure AD) condi
 *  Set-CMAadConditionalAccessPolicy
 
 ####Example
-`PR1:\> Get-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -UserCredential (Get-Credential)`
+```
+PR1:\> Get-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -UserCredential (Get-Credential)
+```
 
-`PR1:\> Set-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -Enabled $true -TargetedDevicePlatforms Windows,WindowsPhone -WindowsDeviceState Compliant -IncludedSecurityGroup All_Users -UserCredential (Get-Credential)`
+```
+PR1:\> Set-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -Enabled $true -TargetedDevicePlatforms Windows,WindowsPhone -WindowsDeviceState Compliant -IncludedSecurityGroup All_Users -UserCredential (Get-Credential)
+```
 
 ###Copy-CMCollection
 This cmdlet can be used to clone an existing collection to a new one.
@@ -101,7 +103,10 @@ These cmdlets can be used to get and set site summary tasks.
 This cmdlet can be used to promote the pre-production client to production status.
 
 ####Example
-`PR1:\> Invoke-CMPromotePreProductionClient -Force`
+
+```
+PR1:\> Invoke-CMPromotePreProductionClient -Force
+```
 
 ###Migration
 New cmdlets for migration jobs:
@@ -112,7 +117,10 @@ New cmdlets for migration jobs:
 This cmdlet can be used to rename a category.
 
 ####Example
-`PR1:\> Get-CMCategory -Name MyCategoryName | Rename-CMCategory -NewName MyCategoryNewName -CategoryType AppCategories`
+
+```
+PR1:\> Get-CMCategory -Name MyCategoryName | Rename-CMCategory -NewName MyCategoryNewName -CategoryType AppCategories
+```
 
 ##Cmdlet changes
 The following changes have been made to existing cmdlets for this release. Changes may be new functionality, bug fixes, or deprecations, and may be breaking. If you use one of the cmdlets or feature areas listed in this section, please carefully review the changes to understand how they may affect your use.
@@ -132,9 +140,9 @@ Provider data representing \__GENERIC WMI objects now display more data to the W
 
 ###"Connect via Windows PowerShell ISE" from administrator console
 ####Bugs that were fixed
-The generated script did not run because of an invalid path to the ConfigurationManager module. If an invalid script has already been generated, remove the existing %TEMP%\ISEConnect_sitecode – sitename.ps1 file and relaunch the ISE from the administrator console.
+The generated script did not run because of an invalid path to the ConfigurationManager module. If an invalid script has already been generated, remove the existing %TEMP%\ISEConnect_sitecode - sitename.ps1 file and relaunch the ISE from the administrator console.
 
-The generated script may be unreadable when an administrator console language pack is installed. If an invalid script has already been generated, remove the existing %TEMP%\ISEConnect_sitecode – sitename.ps1 file and relaunch ISE from the administrator console.
+The generated script may be unreadable when an administrator console language pack is installed. If an invalid script has already been generated, remove the existing %TEMP%\ISEConnect_sitecode - sitename.ps1 file and relaunch ISE from the administrator console.
 
 An invalid path error may be raised when launching the ISE from the administrator console.
 
@@ -426,15 +434,15 @@ Cmdlet may return unexpected warnings about multicast service point configuratio
 
 ###Set-CMFileReplicationRoute
 ####Bugs that were fixed
-Cannot set "FileReplicationAccountName" without specifying a replication mode.
+Cannot set *FileReplicationAccountName* without specifying a replication mode.
 
 ###Set-CMGlobalCondition
 ####Bugs that were fixed
-"InstanceName" parameter value length is not validated.
+*InstanceName* parameter value length is not validated.
 
 ###Set-CMIntuneSubscription
 ####Bugs that were fixed
-"ContactEmail" parameter does not perform validation for correctness.
+*ContactEmail* parameter does not perform validation for correctness.
 
 ###Set-CMIntuneSubscriptionAppleMdmProperty
 ####Bugs that were fixed

@@ -43,7 +43,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -58,7 +57,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -73,7 +71,6 @@ Specifies an array of site codes that identify sites on which Configuration Mana
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +86,6 @@ Site system servers contain roles that define the operations that each site can 
 Type: String
 Parameter Sets: (All)
 Aliases: Name
-
 Required: False
 Position: Named
 Default value: None

@@ -43,7 +43,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -58,7 +57,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -73,7 +71,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableColumnHeadings
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +87,6 @@ Use the format \<Domain\>\\\<user name\>,\<device NetBIOS name\>.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +101,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +116,6 @@ Type: Mapping[]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Users, Devices, Ignored
-
 Required: False
 Position: Named
 Default value: None
@@ -137,7 +131,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

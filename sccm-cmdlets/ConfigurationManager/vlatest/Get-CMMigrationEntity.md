@@ -64,7 +64,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +78,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +92,6 @@ Specifies an identifier in Configuration Manager.
 Type: String
 Parameter Sets: SearchById
 Aliases: EntityId
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +106,6 @@ Specifies that this migration entity is active.
 Type: String
 Parameter Sets: SearchByOthers
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +120,6 @@ Specifies a name in Configuration Manager.
 Type: String
 Parameter Sets: SearchByName
 Aliases: EntityName
-
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +134,6 @@ Specifies a type in Configuration Manager.
 Type: String
 Parameter Sets: SearchByOthers
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -79,7 +79,6 @@ Specifies an array of device IDs.
 Type: String[]
 Parameter Sets: SearchByDeviceIdMandatory
 Aliases: ResourceId
-
 Required: True
 Position: Named
 Default value: None
@@ -94,7 +93,6 @@ Specifies an array of device names.
 Type: String[]
 Parameter Sets: SearchByDeviceNameMandatory
 Aliases: ResourceName
-
 Required: True
 Position: Named
 Default value: None
@@ -109,7 +107,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +121,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +135,6 @@ Specifies an array of IDs of the primary users of the devices.
 Type: String[]
 Parameter Sets: SearchByUserIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -154,7 +149,6 @@ Specifies an array of names of the primary users of the devices.
 Type: String[]
 Parameter Sets: SearchByUserNameMandatory
 Aliases: UniqueUserName
-
 Required: True
 Position: Named
 Default value: None

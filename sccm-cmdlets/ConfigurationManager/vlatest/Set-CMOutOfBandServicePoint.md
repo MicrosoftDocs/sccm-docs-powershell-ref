@@ -61,7 +61,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -76,7 +75,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +89,6 @@ Indicates whether the out of band service point verifies the certificate revocat
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +103,6 @@ Specifies the number of retry attempts that Configuration Manager makes after it
 Type: Int32
 Parameter Sets: (All)
 Aliases: MaximumSendRetryCount
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +117,6 @@ Specifies the number of minutes that Configuration Manager waits between retry a
 Type: Int32
 Parameter Sets: (All)
 Aliases: RetryIntervalMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +131,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +146,6 @@ To obtain a **CMOutOfBandServicePoint** object, use the Get-CMOutOfBandServicePo
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: OutOfBandServicePoint
-
 Required: True
 Position: Named
 Default value: None
@@ -167,7 +160,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +174,6 @@ Specifies the thumbprint of the AMT provisioning certificate.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +188,6 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -212,7 +202,6 @@ Specifies a fully qualified domain name (FQDN) of the server that hosts the site
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -227,7 +216,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: ThreadsOffset, TransmissionStartMinutesInterval
-
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +230,6 @@ Specifies the maximum number of connection threads that the site system role sup
 Type: Int32
 Parameter Sets: (All)
 Aliases: MaximumThreadCount
-
 Required: False
 Position: Named
 Default value: None
@@ -258,7 +245,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

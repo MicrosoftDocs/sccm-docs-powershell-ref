@@ -42,7 +42,6 @@ Specifies the fully qualified domain name (FQDN) of the server that hosts the si
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -57,7 +56,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +70,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +91,6 @@ Type: Severity
 Parameter Sets: (All)
 Aliases: 
 Accepted values: All, Error, Warning, Information
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +105,6 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +119,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: ViewingPeriod
-
 Required: True
 Position: Named
 Default value: None

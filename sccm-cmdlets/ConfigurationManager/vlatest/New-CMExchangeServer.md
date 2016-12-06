@@ -65,7 +65,6 @@ When this parameter is specified, the Exchange Server connector searches the Act
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +79,6 @@ Indicates whether an external device management program can manage the device.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +95,6 @@ Valid values are: AllowUnsignedApplications, AllowUnsignedInstallationPackages, 
 Type: ExchangeConnectorApplicationSetting
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +109,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -127,7 +123,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: DeltaSyncInterval
-
 Required: True
 Position: Named
 Default value: None
@@ -142,7 +137,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +152,6 @@ For each dictionary entry in the array, specify the setting name as the key and 
 Type: ExchangeConnectorEmailManagementSetting
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +166,6 @@ Specifies an array of Exchange Client Access servers, as key-value pairs.
 Type: Dictionary`2[]
 Parameter Sets: NewOnPrem
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +180,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +194,6 @@ Specifies a result object that schedules the full discovery time for an Exchange
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -225,7 +215,6 @@ Valid values are:
 Type: ExchangeConnectorGeneralSetting
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +229,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: NewHosted
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +243,6 @@ Indicates that the Exchange Server connector configuration is for a hosted or on
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -272,7 +259,6 @@ If the most recent sync time is older than the current time - MinimumInactiveDay
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +273,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: NewOnPrem
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -314,7 +299,6 @@ Valid values are:
 Type: ExchangeConnectorPasswordSetting
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -342,7 +326,6 @@ Valid values are:
 Type: ExchangeConnectorSecuritySetting
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +340,6 @@ Specifies the address of the Exchange Server for which the cmdlet configures the
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -372,7 +354,6 @@ Specifies the site code of the Configuration Manager site where a Exchange Serve
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -387,7 +368,6 @@ Specifies the username that the connector uses to connect to the Exchange Server
 Type: String
 Parameter Sets: NewOnPrem
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -399,7 +379,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: NewHosted
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -415,7 +394,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

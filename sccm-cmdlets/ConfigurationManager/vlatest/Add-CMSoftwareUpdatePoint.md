@@ -51,7 +51,6 @@ Indicates that the software update point allows anonymous WSUS access.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +71,6 @@ Type: ClientConnectionTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Intranet, Internet, InternetAndIntranet
-
 Required: False
 Position: Named
 Default value: None
@@ -87,7 +85,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -102,7 +99,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: UserName
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +113,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +127,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +141,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SumPByValueWithWsus
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -162,7 +155,6 @@ Specifies a site code for the Configuration Manager site that manages the system
 Type: String
 Parameter Sets: SumPWithWsus
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +169,6 @@ Specifies the name of a computer that hosts the software update point site syste
 Type: String
 Parameter Sets: SumPWithWsus
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -192,7 +183,6 @@ Indicates whether a software update point can use a proxy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +197,6 @@ Indicates whether an auto deployment rule can use a proxy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +212,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -238,7 +226,6 @@ Specifies a port to use for unsecured access to the WSUS server.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -253,7 +240,6 @@ Specifies a port to user for secured access to the WSUS server.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -268,7 +254,6 @@ Specifies whether the software update point uses SSL to connect to the WSUS serv
 Type: Boolean
 Parameter Sets: (All)
 Aliases: SslWsus
-
 Required: False
 Position: Named
 Default value: None

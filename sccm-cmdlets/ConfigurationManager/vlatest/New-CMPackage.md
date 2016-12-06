@@ -74,7 +74,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -90,7 +89,6 @@ You can use a maximum of 128 characters.
 Type: String
 Parameter Sets: New
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +103,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +117,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +131,6 @@ Indicates that Configuration Manager creates the package from a package definiti
 Type: SwitchParameter
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -153,7 +148,6 @@ For example, you can have an English version and a German version of the same pa
 Type: String
 Parameter Sets: New
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +163,6 @@ You can use a maximum of 32 characters.
 Type: String
 Parameter Sets: New
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -184,7 +177,6 @@ Specifies a name for the package.
 Type: String
 Parameter Sets: New
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -199,7 +191,6 @@ Specifies the name of a package definition file.
 Type: String
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionSourceFileWithExisted
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -214,7 +205,6 @@ Indicates that the package does not require source files to be present on client
 Type: SwitchParameter
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -229,7 +219,6 @@ Specifies a share name or path that Configuration Manager creates for the packag
 Type: String
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithNew, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -247,7 +236,6 @@ Make sure that this location contains all the files and subdirectories that the 
 Type: String
 Parameter Sets: New
 Aliases: PackageSourcePath
-
 Required: False
 Position: Named
 Default value: None
@@ -267,7 +255,6 @@ Type: SourceFileType
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
 Accepted values: AlwaysObtainSourceFile, CreateCompressedVersionOfSourceFile
-
 Required: True
 Position: Named
 Default value: None
@@ -282,7 +269,6 @@ Specifies the location of the source files for the package.
 Type: String
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -302,7 +288,6 @@ Type: SourceFolderPathType
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
 Accepted values: UncNetworkPath, LocalFolderOnSiteServer
-
 Required: True
 Position: Named
 Default value: None
@@ -317,7 +302,6 @@ Specifies a version number for the package.
 Type: String
 Parameter Sets: New
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -333,7 +317,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

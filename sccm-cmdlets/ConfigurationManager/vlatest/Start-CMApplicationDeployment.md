@@ -75,7 +75,6 @@ This command starts an application deployment named 7zip.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AppRequiresApproval
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +89,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: AvailiableDate
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +103,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +117,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: AvailiableTime
-
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +131,6 @@ Specifies a target collection to deploy this application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -150,7 +145,6 @@ Specifies a comment for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +159,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -181,7 +174,6 @@ Autoinstall performs the installation if the application is not installed.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -196,7 +188,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -212,7 +203,6 @@ Autoinstall performs the installation if the application is not installed.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -235,7 +225,6 @@ Type: DeployActionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Install, Uninstall
-
 Required: False
 Position: Named
 Default value: None
@@ -260,7 +249,6 @@ Type: DeployPurposeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Available, Required
-
 Required: False
 Position: Named
 Default value: None
@@ -275,7 +263,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -290,7 +277,6 @@ Indicates whether to enable Operations Manager maintenance mode.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -305,7 +291,6 @@ Specifies a value that generates a deployment alert when exceeded.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -320,7 +305,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -335,7 +319,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: RaiseMomAlertsOnFailure
-
 Required: False
 Position: Named
 Default value: None
@@ -350,7 +333,6 @@ Specifies an array of IDs.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -365,7 +347,6 @@ Specifies an application deployment object.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -380,7 +361,6 @@ Specifies an array of names for the application deployment.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -395,7 +375,6 @@ Indicates whether an application installation occurs outside of a maintenance wi
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -410,7 +389,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -426,7 +404,6 @@ Otherwise, changes are written on the overlay and committed later.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -441,7 +418,6 @@ Specifies a date after which to create an alert.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -456,7 +432,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -471,7 +446,6 @@ Specifies a time after which to create an alert.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -487,7 +461,6 @@ To use this parameter, set the *DeployPurpose* parameter to Required.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -505,7 +478,6 @@ If this value is $False, the computer does not restart outside a service window.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -523,7 +495,6 @@ For computers to wake, you must first configure Wake On LAN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -538,7 +509,6 @@ Specifies a value that the threshold must exceed before an alert is created.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -561,7 +531,6 @@ Type: TimeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: LocalTime, Utc
-
 Required: False
 Position: Named
 Default value: None
@@ -577,7 +546,6 @@ Clients may incur additional costs.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -604,7 +572,6 @@ Type: UserNotificationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
-
 Required: False
 Position: Named
 Default value: None
@@ -620,7 +587,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

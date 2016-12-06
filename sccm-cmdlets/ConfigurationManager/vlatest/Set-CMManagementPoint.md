@@ -73,7 +73,6 @@ Indicates whether the management point supports device clients.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +93,6 @@ Type: ClientConnectionTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Internet, Intranet, InternetAndIntranet
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +107,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -124,7 +121,6 @@ Specifies the name of the site database or site database replica that the manage
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +135,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -154,7 +149,6 @@ Indicates whether to enable SSL.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +163,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -184,7 +177,6 @@ Indicates whether the management point generates health alerts.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +192,6 @@ To obtain a management point object, use the Get-CMManagementPoint cmdlet.
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: ManagementPoint
-
 Required: True
 Position: Named
 Default value: None
@@ -216,7 +207,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -231,7 +221,6 @@ Specifies the site code of the System Center Configuration Manager site that hos
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -246,7 +235,6 @@ Specifies the name of the server that hosts the site system role.
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -262,7 +250,6 @@ You must specify this parameter if Internet-based client systems communicate wit
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +264,6 @@ Specifies the name of the SQL Server instance that clients use to communicate wi
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -292,7 +278,6 @@ Indicates that the management point uses its own computer account instead of a d
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -307,7 +292,6 @@ Indicates whether the management point queries a site database instead of a site
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -322,7 +306,6 @@ Specifies a domain user account that the management point uses to access site in
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -338,7 +321,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

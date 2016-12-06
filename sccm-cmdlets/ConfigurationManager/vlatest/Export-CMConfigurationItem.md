@@ -72,7 +72,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -87,7 +86,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +100,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +115,6 @@ You can use a comma separated list.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -134,7 +130,6 @@ To obtain a configuration item object, you can use the **Get-CMConfigurationItem
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -150,7 +145,6 @@ You can use a comma separated list.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -165,7 +159,6 @@ Specifies a full file path for an export file.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -181,7 +174,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

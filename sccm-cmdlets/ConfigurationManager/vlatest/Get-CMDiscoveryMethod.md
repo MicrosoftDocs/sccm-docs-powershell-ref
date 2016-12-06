@@ -43,7 +43,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -58,7 +57,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +84,6 @@ Type: DiscoveryType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: ActiveDirectoryForestDiscovery, ActiveDirectoryGroupDiscovery, ActiveDirectorySystemDiscovery, ActiveDirectoryUserDiscovery, NetworkDiscovery, HeartbeatDiscovery
-
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +98,6 @@ Specifies a site code.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

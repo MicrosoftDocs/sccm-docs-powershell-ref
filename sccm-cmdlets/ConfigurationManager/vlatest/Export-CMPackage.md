@@ -65,7 +65,6 @@ The second command exports the package to the path \\\\Deploy01\ExportPackages b
 Type: String
 Parameter Sets: (All)
 Aliases: Comments
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +79,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -95,7 +93,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +107,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: ExportFilePath
-
 Required: True
 Position: Named
 Default value: None
@@ -125,7 +121,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +135,6 @@ Specifies an array of IDs for packages.
 Type: String
 Parameter Sets: SearchPackageByIdMandatory
 Aliases: PackageId
-
 Required: True
 Position: Named
 Default value: None
@@ -156,7 +150,6 @@ To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -171,7 +164,6 @@ Specifies a name of a package.
 Type: String
 Parameter Sets: SearchPackageByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -187,7 +179,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -202,7 +193,6 @@ Indicates whether to include content in the package.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +207,6 @@ Indicates whether to include dependencies in the package.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -59,7 +59,6 @@ This rule overrides the default Exchange access rule, which means that even if y
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -74,7 +73,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +90,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: ExecludedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +106,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: ById
 Aliases: ExecludedCollectionIds
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +122,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: ByName
 Aliases: ExecludedCollectionNames
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +136,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +153,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: TargetedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +169,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: ById
 Aliases: TargetedCollectionIds
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +185,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: ByName
 Aliases: TargetedCollectionNames
-
 Required: False
 Position: Named
 Default value: None

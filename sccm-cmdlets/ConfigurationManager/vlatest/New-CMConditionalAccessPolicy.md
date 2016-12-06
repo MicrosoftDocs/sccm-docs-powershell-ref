@@ -73,7 +73,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -89,7 +88,6 @@ This rule overrides the default Exchange access rule, which means that even if y
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +102,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +119,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: ExcludedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +135,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: ById
 Aliases: ExcludedCollectionIds
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +151,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: ByName
 Aliases: ExcludedCollectionNames
-
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +165,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +179,6 @@ Specifies the text of the email that Exchange sends to users when their device i
 Type: String
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -204,7 +196,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: TargetedCollections
-
 Required: True
 Position: Named
 Default value: None
@@ -221,7 +212,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: ById
 Aliases: TargetedCollectionIds
-
 Required: True
 Position: Named
 Default value: None
@@ -238,7 +228,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: ByName
 Aliases: TargetedCollectionNames
-
 Required: True
 Position: Named
 Default value: None
@@ -254,7 +243,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

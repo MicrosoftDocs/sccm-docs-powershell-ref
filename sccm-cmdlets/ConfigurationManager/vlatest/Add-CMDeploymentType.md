@@ -222,7 +222,6 @@ The command specifies that the deployment type uses Microsoft Windows-32-on-Wind
 Type: Rule[]
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWindowsStoreInstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByMobileMsiInstallerManual, AddDeploymentTypeByNokiaInstaller, AddDeploymentTypeByScriptInstallerManual, AddDeploymentTypeByWebAppInstallerAuto
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -237,7 +236,6 @@ Specifies a description for the deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -252,7 +250,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByAndroidGooglePlayInstallerAuto
 Aliases: AndroidDeepLinkInstaller
-
 Required: True
 Position: Named
 Default value: None
@@ -267,7 +264,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByAndroidInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -282,7 +278,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByAppV5xInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -297,7 +292,6 @@ Specifies the name of the application that is associated with the deployment typ
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -312,7 +306,6 @@ Specifies the name of the application in the Windows Store.
 Type: String
 Parameter Sets: AddDeploymentTypeByWindowsStoreInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -327,7 +320,6 @@ Indicates that the deployment detects application information and deployment typ
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByAppvInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -342,7 +334,6 @@ Indicates that the deployment type extracts information from the content file.
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWindowsStoreInstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByNokiaInstaller, AddDeploymentTypeByWebAppInstallerAuto, AddDeploymentTypeByAndroidGooglePlayInstallerAuto
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +348,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -373,7 +363,6 @@ The site system server requires permission to read the content files.
 Type: String
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByNokiaInstaller, AddDeploymentTypeByWebAppInstallerAuto, AddDeploymentTypeByAndroidGooglePlayInstallerAuto
 Aliases: InstallationFileLocation, WebAppUrl
-
 Required: True
 Position: Named
 Default value: None
@@ -385,7 +374,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: AddDeploymentTypeByMobileMsiInstallerManual, AddDeploymentTypeByScriptInstallerManual
 Aliases: InstallationFileLocation, WebAppUrl
-
 Required: False
 Position: Named
 Default value: None
@@ -400,7 +388,6 @@ Specifies the name of a deployment type.
 Type: String
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWindowsStoreInstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByNokiaInstaller, AddDeploymentTypeByWebAppInstallerAuto, AddDeploymentTypeByAndroidGooglePlayInstallerAuto
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -412,7 +399,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: AddDeploymentTypeByMobileMsiInstallerManual, AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -427,7 +413,6 @@ Indicates that the deployment type uses a custom script to detect the presence o
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -442,7 +427,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -457,7 +441,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: AllowClientsToShareContentOnSameSubnet
-
 Required: False
 Position: Named
 Default value: None
@@ -472,7 +455,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByScriptInstallerManual
 Aliases: AllowClientsToUseFallbackSourceLocationForContent
-
 Required: False
 Position: Named
 Default value: None
@@ -487,7 +469,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByWMInstaller
 Aliases: AllowUserToUninstall, AllowsUsersToUninstallThisContent
-
 Required: False
 Position: Named
 Default value: None
@@ -502,7 +483,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: EstimatedInstallationTimeMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -517,7 +497,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: RunScriptAs32BitProcessOn64BitClient
-
 Required: False
 Position: Named
 Default value: None
@@ -532,7 +511,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByScriptInstallerManual
 Aliases: RunInstallationProgramAs32BitProcessOn64BitClient
-
 Required: False
 Position: Named
 Default value: None
@@ -547,7 +525,6 @@ Indicates whether the deployment type requires file signature verification.
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWindowsStoreInstallerAuto, AddDeploymentTypeByWinPhoneStoreInstallerAuto, AddDeploymentTypeByWMInstaller, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByAndroidInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByWinPhone8InstallerAuto, AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByIosAppStoreInstallerAuto, AddDeploymentTypeByIosInstallerAuto, AddDeploymentTypeByMacInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByNokiaInstaller, AddDeploymentTypeByAndroidGooglePlayInstallerAuto
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -562,7 +539,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -577,7 +553,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: Application
-
 Required: False
 Position: Named
 Default value: None
@@ -598,7 +573,6 @@ Type: InstallationBehaviorType
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByScriptInstallerManual
 Aliases: 
 Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-
 Required: False
 Position: Named
 Default value: None
@@ -613,7 +587,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: AddDeploymentTypeByMobileMsiInstallerAuto
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -628,7 +601,6 @@ Specifies the command line for the Windows Installer package.
 Type: String
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -640,7 +612,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -662,7 +633,6 @@ Type: UserInteractionMode
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
 Accepted values: Normal, Minimized, Maximized, Hidden
-
 Required: False
 Position: Named
 Default value: None
@@ -678,7 +648,6 @@ This folder can be an absolute path on the client, or a path to the distribution
 Type: String
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -693,7 +662,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByIosAppStoreInstallerAuto
 Aliases: IosDeepLinkInstaller
-
 Required: True
 Position: Named
 Default value: None
@@ -708,7 +676,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByIosInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -723,7 +690,6 @@ Specifies an array of languages that the deployment type supports.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -744,7 +710,6 @@ Type: LogonRequirementType
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
 Accepted values: OnlyWhenUserLoggedOn, WhereOrNotUserLoggedOn, WhetherOrNotUserLoggedOn, OnlyWhenNoUserLoggedOn
-
 Required: False
 Position: Named
 Default value: None
@@ -759,7 +724,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByMacInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -775,7 +739,6 @@ Configuration Manager does not currently use this parameter.
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByWMInstaller, AddDeploymentTypeByMobileMsiInstallerManual, AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -790,7 +753,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: MaximumAllowedRunTimeMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -805,7 +767,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByMobileMsiInstallerAuto, AddDeploymentTypeByMobileMsiInstallerManual
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -820,7 +781,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -835,7 +795,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByNokiaInstaller
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -855,7 +814,6 @@ Type: OnFastNetworkMode
 Parameter Sets: AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto
 Aliases: 
 Accepted values: RunLocal, RunFromNetwork, DownloadContentForStreaming
-
 Required: False
 Position: Named
 Default value: None
@@ -876,7 +834,6 @@ Type: ContentHandlingMode
 Parameter Sets: AddDeploymentTypeByMsiInstallerAuto, AddDeploymentTypeByWindows8AppInstallerAuto, AddDeploymentTypeByAppV5xInstallerAuto, AddDeploymentTypeByAppvInstallerAuto, AddDeploymentTypeByScriptInstallerManual
 Aliases: 
 Accepted values: DoNothing, Download, DownloadContentForStreaming
-
 Required: False
 Position: Named
 Default value: None
@@ -891,7 +848,6 @@ Indicates whether the deployment type saves content in cache indefinitely on the
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -906,7 +862,6 @@ Specifies the path of the Personal Information Exchange (PFX) file.
 Type: String
 Parameter Sets: AddDeploymentTypeByWMInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -921,7 +876,6 @@ Specifies the password, as a secure string, for the PFX file.
 Type: SecureString
 Parameter Sets: AddDeploymentTypeByWMInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -936,7 +890,6 @@ Specifies a remote computer name.
 Type: String
 Parameter Sets: AddDeploymentTypeByWindowsStoreInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -951,7 +904,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: RequiresUserInteraction
-
 Required: False
 Position: Named
 Default value: None
@@ -966,7 +918,6 @@ Specifies the script language that you want to use to detect the deployment type
 Type: String
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -981,7 +932,6 @@ Indicates that the deployment type uses a script to detect the presence of this 
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -997,7 +947,6 @@ Type: ScriptLanguage
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
 Accepted values: PowerShell, VBScript, JavaScript
-
 Required: True
 Position: Named
 Default value: None
@@ -1012,7 +961,6 @@ Indicates whether the deployment type requires a signed content file.
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByWMInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1027,7 +975,6 @@ Specifies the path of the signed content file.
 Type: String
 Parameter Sets: AddDeploymentTypeByWMInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1042,7 +989,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: AddDeploymentTypeByWindows8AppInstallerAuto
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1057,7 +1003,6 @@ Specifies the name of the uninstall program and any parameters it requires.
 Type: String
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1073,7 +1018,6 @@ This folder can be an absolute path on the client, or a path that is relative to
 Type: String
 Parameter Sets: AddDeploymentTypeByScriptInstallerManual
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1088,7 +1032,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByWMInstaller
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -1103,7 +1046,6 @@ Indicates that this cmdlet uses a web application installer for the deployment.
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByWebAppInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -1119,7 +1061,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -1134,7 +1075,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByWindows8AppInstallerAuto
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -1149,7 +1089,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByWinPhone8InstallerAuto
 Aliases: WinPhone8Installer
-
 Required: True
 Position: Named
 Default value: None
@@ -1164,7 +1103,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByWinPhoneStoreInstallerAuto
 Aliases: WinPhone8DeeplinkInstaller, WindowsPhone8StoreInstaller
-
 Required: True
 Position: Named
 Default value: None
@@ -1179,7 +1117,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: AddDeploymentTypeByWindowsStoreInstallerAuto
 Aliases: DeeplinkInstaller
-
 Required: True
 Position: Named
 Default value: None

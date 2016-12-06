@@ -84,7 +84,6 @@ To obtain an administrative category object, use the Get-CMCategory cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddAdministrativeCategories
-
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +100,6 @@ To obtain a boot image object, use the Get-CMBootImage cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +116,6 @@ To obtain a driver package object, use the [Get-CMDriverPackage](./Get-CMDriverP
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +133,6 @@ To obtain an administrative category object, use **Get-CMCategory**.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -151,7 +147,6 @@ Indicates that this cmdlet removes all the administrative category objects from 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearAdministrativeCategories
-
 Required: False
 Position: Named
 Default value: None
@@ -166,7 +161,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -181,7 +175,6 @@ Specifies a description for the device driver.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -196,7 +189,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -212,7 +204,6 @@ When you create a driver package, the source location of the package must point 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -227,7 +218,6 @@ Indicates whether Configuration Manager enables the drivers and allows computers
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +232,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -257,7 +246,6 @@ Specifies the ID of a device driver.
 Type: String
 Parameter Sets: SetDriverById
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -273,7 +261,6 @@ To obtain a driver object, use the **Get-CMDriver** cmdlet.
 Type: IResultObject
 Parameter Sets: SetDriverByResultObject
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -288,7 +275,6 @@ Specifies the name of a device driver.
 Type: String
 Parameter Sets: SetDriverByName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -303,7 +289,6 @@ Specifies a new name for the device driver.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -319,7 +304,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -335,7 +319,6 @@ To obtain an administrative category object, use **Get-CMCategory**.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveAdministrativeCategories
-
 Required: False
 Position: Named
 Default value: None
@@ -352,7 +335,6 @@ To obtain a boot image object, use the Get-CMBootImage cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -369,7 +351,6 @@ To obtain a driver package object, use the **Get-CMDriverPackage** cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -384,7 +365,6 @@ Indicates that the device driver can run on all platforms.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -399,7 +379,6 @@ Specifies an array of names of platforms on which the device driver can run.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -414,7 +393,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: UpdateDistributionPointsForBootImagePackage, UpdateBootImageDistributionPoints
-
 Required: False
 Position: Named
 Default value: None
@@ -429,7 +407,6 @@ Indicates that Configuration Manager updates distribution points when the device
 Type: Boolean
 Parameter Sets: (All)
 Aliases: UpdateDistributionPointsForDriverPackage, UpdateDriverDistributionPoints
-
 Required: False
 Position: Named
 Default value: None
@@ -445,7 +422,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

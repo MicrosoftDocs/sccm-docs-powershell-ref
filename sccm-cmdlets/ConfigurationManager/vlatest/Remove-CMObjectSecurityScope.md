@@ -64,7 +64,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -79,7 +78,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +92,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +106,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +120,6 @@ Specifies the ID of a security scope.
 Type: String
 Parameter Sets: ById
 Aliases: SecurityScopeId
-
 Required: True
 Position: Named
 Default value: None
@@ -139,7 +134,6 @@ Specifies an array of Configuration Manager objects associated with a security s
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -154,7 +148,6 @@ Specifies the name of a security scope.
 Type: String
 Parameter Sets: ByName
 Aliases: SecurityScopeName
-
 Required: True
 Position: 0
 Default value: None
@@ -169,7 +162,6 @@ Specifies an array of security scopes.
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: SecurityScope, SecuredCategory, Scopes, SecurityScopes, SecuredCategories
-
 Required: True
 Position: 0
 Default value: None
@@ -185,7 +177,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
