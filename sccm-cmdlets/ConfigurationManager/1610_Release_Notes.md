@@ -1,7 +1,4 @@
-﻿# ConfigurationManager_Cmdlets
-## 1610_release_notes
-
-# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
+﻿# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
 
  >[!NOTE]
  > The 1604 version of the System Center Configuration Manager Cmdlet
