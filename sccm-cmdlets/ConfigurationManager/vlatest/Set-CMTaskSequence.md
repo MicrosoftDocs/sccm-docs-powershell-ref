@@ -74,7 +74,7 @@ This command gets the task sequence object named TaskSequence02 and uses the pip
 
 ### -AddSupportedOperatingSystemPlatform
 Adds a supported operating system platform object to the task sequence.
-To obtain a supported operating system platform object, use the Get-CMSupportedPlatform cmdlet.
+To obtain a supported operating system platform object, use the [Get-CMSupportedPlatform](./Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 
 ### -RemoveSupportedOperatingSystemPlatform
 Removes a supported operating system platform object from the task sequence.
-To obtain a supported operating system platform object, use the **Get-CMSupportedPlatform** cmdlet.
+To obtain a supported operating system platform object, use the [Get-CMSupportedPlatform](./Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -487,5 +487,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMTaskSequence](./Remove-CMTaskSequence.md)
 
 [Get-CMSupportedPlatform](./Get-CMSupportedPlatform.md)
-
-

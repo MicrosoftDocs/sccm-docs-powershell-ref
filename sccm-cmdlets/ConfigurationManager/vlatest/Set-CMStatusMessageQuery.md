@@ -59,7 +59,7 @@ You can use this cmdlet with the *DeleteMessage* parameter to delete messages th
 This cmdlet can also add or remove a security scope for a message query.
 Every status message query must belong to at least one security scope.
 
-You can specify a name or ID for a query or use the Get-CMStatusMessageQuery cmdlet to obtain a query.
+You can specify a name or ID for a query or use the [Get-CMStatusMessageQuery](./Get-CMStatusMessageQuery.md) cmdlet to obtain a query.
 
 ## EXAMPLES
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a status message query object.
-To obtain a status message query object, use the Get-CMStatusMessageQuery cmdlet.
+To obtain a status message query object, use the [Get-CMStatusMessageQuery](./Get-CMStatusMessageQuery.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -229,7 +229,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -273,5 +274,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMStatusMessageQuery](./New-CMStatusMessageQuery.md)
 
 [Remove-CMStatusMessageQuery](./Remove-CMStatusMessageQuery.md)
-
-

@@ -343,5 +343,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMApplication](./Get-CMApplication.md)
 
 [Get-CMDeploymentType](./Get-CMDeploymentType.md)
-
-

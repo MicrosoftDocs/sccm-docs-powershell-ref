@@ -75,12 +75,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -94,12 +89,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None

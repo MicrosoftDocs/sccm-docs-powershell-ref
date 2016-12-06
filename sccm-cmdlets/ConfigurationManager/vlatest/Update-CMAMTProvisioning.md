@@ -86,12 +86,7 @@ To obtain a device object, use **Get-CMDevice**.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -133,12 +128,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -152,12 +142,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None

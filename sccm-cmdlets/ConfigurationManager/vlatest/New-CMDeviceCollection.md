@@ -58,11 +58,7 @@ PS C:\>New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Sys
 ```
 
 This command creates a collection for all computers that run Windows® 7.
-<<<<<<< HEAD
-The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the Windows 7 collection.
-=======
 The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the Windows® 7 collection.
->>>>>>> master
 
 ## PARAMETERS
 

@@ -96,7 +96,7 @@ The second command starts deployment of the client setting object in the $CSID v
 
 ### -ClientSetting
 Specifies a client setting object.
-To obtain a client setting object, use the Get-CMClientSetting cmdlet.
+To obtain a client setting object, use the [Get-CMClientSetting](./Get-CMClientSetting.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -254,5 +254,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMClientSetting](./Get-CMClientSetting.md)
 
 [Get-CMDeviceCollection](./Get-CMDeviceCollection.md)
-
-

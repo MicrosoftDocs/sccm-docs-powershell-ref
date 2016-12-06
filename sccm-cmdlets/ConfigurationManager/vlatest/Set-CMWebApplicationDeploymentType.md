@@ -342,5 +342,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDeploymentType](./Get-CMDeploymentType.md)
 
 [Add-CMWebApplicationDeploymentType](./Add-CMWebApplicationDeploymentType.md)
-
-

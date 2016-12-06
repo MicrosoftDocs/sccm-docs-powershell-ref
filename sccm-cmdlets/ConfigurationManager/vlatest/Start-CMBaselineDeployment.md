@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -PostponeDate
 Specifies a date, as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 For more information, type `Get-Help Get-Date`.
 This is the date for the deployment if postponed.
 
@@ -304,5 +304,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CMBaselineDeployment](./Set-CMBaselineDeployment.md)
-
-

@@ -77,12 +77,7 @@ Indicates whether clients can use a fallback source location for content.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -96,12 +91,7 @@ Indicates whether the distribution point can pre-stage contents.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -115,12 +105,7 @@ Indicates whether the distribution point can respond to pre-boot execution envir
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -134,12 +119,7 @@ Specifies the date and time when the certificate expires.
 ```yaml
 Type: DateTime
 Parameter Sets: UseSelfSignedCertificate
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -153,12 +133,7 @@ Specifies the password, as a secure string, for the public key infrastructure (P
 ```yaml
 Type: SecureString
 Parameter Sets: UseImportCertificate
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -172,12 +147,7 @@ Specifies the import path for the PKI issued certificate that the distribution p
 ```yaml
 Type: String
 Parameter Sets: UseImportCertificate
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -278,12 +248,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -297,12 +262,7 @@ Indicates whether the distribution point permits anonymous connections from Conf
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -320,12 +280,7 @@ After you create the distribution point, Configuration Manager installs a provid
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -340,12 +295,7 @@ Unknown computers are computers that are not managed by Configuration Manager.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -359,12 +309,7 @@ Indicates whether Configuration Manager overwrites a duplicate certificate when 
 ```yaml
 Type: Boolean
 Parameter Sets: UseImportCertificate
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -378,12 +323,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -397,12 +337,7 @@ Indicates whether the distribution point initiates the connection with the clien
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -445,12 +380,7 @@ Configuration Manager 2007 Site Component Manager service uses Site System Insta
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -464,12 +394,7 @@ Specifies an array of media access controller (MAC) addresses that the distribut
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -484,12 +409,7 @@ Content files can span multiple drives.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -503,12 +423,7 @@ Specifies the path for a copy of the migrated content.
 ```yaml
 Type: String
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -562,12 +477,7 @@ Specifies the fully qualified domain name (FQDN) of the site system server that 
 ```yaml
 Type: String
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -669,12 +579,7 @@ To create a CMSchedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmd
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None

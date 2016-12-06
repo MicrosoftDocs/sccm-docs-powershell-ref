@@ -164,7 +164,7 @@ Accept wildcard characters: False
 
 ### -DomainBlockAllInboundTraffic
 Specifies whether the firewall blocks all incoming traffic for a domain type network location.
-Valid values are: 
+Valid values are:
 
 -- No
 -- Not Configured
@@ -173,7 +173,7 @@ Valid values are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 ### -DomainTurnOnFirewall
 Specifies whether to enable Windows Firewall for domain network location.
-Valid values are: 
+Valid values are:
 
 -- No
 -- Not Configured
@@ -208,7 +208,7 @@ Valid values are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 Required: False
 Position: Named
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a CMWindowsFirewallPolicy object.
-To obtain a CMWindowsFirewallPolicy object, use the Get-CMWindowsFirewallPolicy cmdlet.
+To obtain a CMWindowsFirewallPolicy object, use the [Get-CMWindowsFirewallPolicy](./Get-CMWindowsFirewallPolicy.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -289,7 +289,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -309,7 +310,7 @@ Valid values are: Increase and Decrease.
 ```yaml
 Type: PriorityChangeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Increase, Decrease
 Required: False
 Position: Named
@@ -320,7 +321,7 @@ Accept wildcard characters: False
 
 ### -PrivateBlockAllInboundTraffic
 Specifies whether the firewall blocks all incoming traffic for a private network location.
-Valid values are: 
+Valid values are:
 
 -- No
 -- Not Configured
@@ -329,7 +330,7 @@ Valid values are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 Required: False
 Position: Named
@@ -355,7 +356,7 @@ Accept wildcard characters: False
 
 ### -PrivateTurnOnFirewall
 Specifies whether to enable Windows Firewall for a private network location.
-Valid values are: 
+Valid values are:
 
 -- No
 -- Not Configured
@@ -364,7 +365,7 @@ Valid values are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 Required: False
 Position: Named
@@ -375,7 +376,7 @@ Accept wildcard characters: False
 
 ### -PublicBlockAllInboundTraffic
 Specifies whether the firewall blocks all incoming traffic for a public network location.
-Valid values are: 
+Valid values are:
 
 -- No
 -- Not Configured
@@ -384,7 +385,7 @@ Valid values are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 Required: False
 Position: Named
@@ -410,7 +411,7 @@ Accept wildcard characters: False
 
 ### -PublicTurnOnFirewall
 Specifies whether to enable Windows Firewall for a public network location.
-Valid values are: 
+Valid values are:
 
 -- No
 -- Not Configured
@@ -419,7 +420,7 @@ Valid values are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 Required: False
 Position: Named
@@ -455,5 +456,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CMWindowsFirewallPolicy](./New-CMWindowsFirewallPolicy.md)
-
-

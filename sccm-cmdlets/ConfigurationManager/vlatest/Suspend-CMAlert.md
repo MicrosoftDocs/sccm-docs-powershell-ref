@@ -64,12 +64,7 @@ You can use the comment to record the explanation for suspending the alert.
 ```yaml
 Type: String
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -97,12 +92,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -116,12 +106,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -136,12 +121,7 @@ You can obtain the ID of an alert by using the [Get-CMAlert](./Get-CMAlert.md) c
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -171,12 +151,7 @@ You can obtain the name of an alert by using **Get-CMAlert**.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -198,12 +173,7 @@ If the original job trigger did not include a **DateTime** object and you omit a
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None

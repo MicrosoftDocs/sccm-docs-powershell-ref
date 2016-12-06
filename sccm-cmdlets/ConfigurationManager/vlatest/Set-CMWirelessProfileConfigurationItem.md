@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
+Specifies the description of the wireless profile that this cmdlet modifies.
 
 ```yaml
 Type: String
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a wireless profile object.
-To obtain a wireless profile object, use the Get-CMWirelessProfileConfigurationItem cmdlet.
+To obtain a wireless profile object, use the [Get-CMWirelessProfileConfigurationItem](./Get-CMWirelessProfileConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -205,7 +205,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -245,5 +246,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CMWirelessProfileConfigurationItem](./New-CMWirelessProfileConfigurationItem.md)
-
-

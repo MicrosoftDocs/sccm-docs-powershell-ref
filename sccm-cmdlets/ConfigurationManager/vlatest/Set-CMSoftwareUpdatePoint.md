@@ -69,16 +69,16 @@ Accept wildcard characters: False
 Specifies a connection type.
 Clients can connect to the software update point in several ways.
 You can configure the software update point to handle different types of connections differently by specifying the connection type.
-Valid values are: 
+Valid values are:
 
--- Internet 
--- InternetAndIntranet
--- Intranet
+- Internet
+- InternetAndIntranet
+- Intranet
 
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSsl
-
+Indicates that the cmdlet enables SSL for the update point.
 
 ```yaml
 Type: Boolean
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a software update point object.
-To obtain a software update point object, use the Get-CMSoftwareUpdatePoint cmdlet.
+To obtain a software update point object, use the [Get-CMSoftwareUpdatePoint](./Get-CMSoftwareUpdatePoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -202,7 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -331,5 +332,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdatePoint](./Get-CMSoftwareUpdatePoint.md)
 
 [Remove-CMSoftwareUpdatePoint](./Remove-CMSoftwareUpdatePoint.md)
-
-

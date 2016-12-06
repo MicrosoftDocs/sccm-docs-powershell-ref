@@ -214,16 +214,16 @@ Accept wildcard characters: False
 Specifies an action for a deployment.
 Valid values are:
 
-- Install.
+-- Install.
 Install the application.
- 
-- Uninstall.
+
+-- Uninstall.
 Uninstall the application.
 
 ```yaml
 Type: DeployActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Install, Uninstall
 Required: False
 Position: Named
@@ -237,17 +237,17 @@ Specifies the purpose of the deployment.
 
 Valid values are:
 
-- Available.
+-- Available.
 If the target collection is a device collection, the application is available in the software center.
 If the target collection is a user collection, the application is available in the catalog web site.
- 
-- Required.
+
+-- Required.
 Installation occurs when the deadline passes.
 
 ```yaml
 Type: DeployPurposeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Available, Required
 Required: False
 Position: Named
@@ -383,7 +383,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -519,17 +520,17 @@ Accept wildcard characters: False
 ### -TimeBaseOn
 Specifies the time zone to use.
 
-Valid values are: 
+Valid values are:
 
 - LocalTime.
-Use local time. 
+Use local time.
 - UTC.
 Use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
 
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: LocalTime, Utc
 Required: False
 Position: Named
@@ -558,19 +559,19 @@ Specifies user notification types.
 
 Valid values are:
 
-- DisplayAll.
+-- DisplayAll.
 Display in Software Center and show all notifications.
- 
-- DisplaySoftwareCenterOnly.
+
+-- DisplaySoftwareCenterOnly.
 Display in Software Center and only show notifications for computer restarts.
- 
-- HideAll.
+
+-- HideAll.
 Do not display in Software Center and do not show notifications.
 
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 Required: False
 Position: Named
@@ -606,5 +607,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CMApplicationDeployment](./Set-CMApplicationDeployment.md)
-
-

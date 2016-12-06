@@ -263,12 +263,7 @@ To get a **CMApplication** object, use the [Get-CMApplication](./Get-CMApplicati
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_Application
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -282,12 +277,7 @@ Specifies an array of application IDs.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_Application
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -301,12 +291,7 @@ Specifies an array of application names.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_Application
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -321,12 +306,7 @@ To get a **CMBootImage** object, use the Get-CMBootImage cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_BootImage
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -368,12 +348,7 @@ Specifies the name of a Configuration Manager collection.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -402,12 +377,7 @@ To get a **CMDeploymentPackage** object, use the Get-CMDeploymentPackage cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_DeploymentPackage
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -463,12 +433,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -482,12 +447,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -501,12 +461,7 @@ Specifies the name of a distribution point that is associated with the deploymen
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -521,12 +476,7 @@ To get a **CMDriverPackage** object, use the [Get-CMDriverPackage](./Get-CMDrive
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_DriverPackage
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -568,12 +518,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: False
 Position: Named
 Default value: None
@@ -588,12 +533,7 @@ To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage]
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemImage
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -636,12 +576,7 @@ To get a **CMOperatingSystemInstaller** object, use the [Get-CMOperatingSystemIn
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemInstaller
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -684,12 +619,7 @@ To get a **CMPackage** object, use the [Get-CMPackage](./Get-CMPackage.md) cmdle
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_Package
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
@@ -732,12 +662,7 @@ To get a **CMTaskSequence** object, use the [Get-CMTaskSequence](./Get-CMTaskSeq
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_TaskSequence
-<<<<<<< HEAD
-Aliases:
-
-=======
 Aliases: 
->>>>>>> master
 Required: True
 Position: Named
 Default value: None
