@@ -32,7 +32,7 @@ The easiest method to load Windows PowerShell is directly from the Configuration
     Go to your Windows PowerShell window, and type in `Get-CMSite`. You should see the following output (with your site information) in your Windows PowerShell window:
 
     ```  
-    PS ABC:\> get-cmsite  
+    PS ABC:\> Get-CMSite  
 
     BuildNumber       : 7958  
     Features          : 0000000000000000000000000000000000000000000000000000000000000000  

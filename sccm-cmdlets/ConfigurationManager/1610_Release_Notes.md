@@ -122,7 +122,7 @@ This cmdlet can be used to rename a category.
 ####Example
 
 ```
-PR1:\> Get-CMCategory -Name MyCategoryName | Rename-CMCategory -NewName MyCategoryNewName -CategoryType AppCategories`
+PR1:\> Get-CMCategory -Name MyCategoryName | Rename-CMCategory -NewName MyCategoryNewName -CategoryType AppCategories
 ```
 
 ##Cmdlet changes
