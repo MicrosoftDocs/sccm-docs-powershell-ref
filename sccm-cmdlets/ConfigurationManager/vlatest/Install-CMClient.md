@@ -221,7 +221,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a Configuration Manager client object.
-You can get a Configuration Manager client object by using the Get-CMBaseline cmdlet.
+You can get a Configuration Manager client object by using the [Get-CMBaseline](./Get-CMBaseline.md) cmdlet.
 
 ```yaml
 Type: IResultObject

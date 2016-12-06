@@ -32,7 +32,7 @@ When a rule runs, System Center Configuration Manager adds updates that qualify 
 The System Center Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
 You can specify rules by ID or by name.
-You can use this cmdlet to get deployment rules for automatic software updates to use with other cmdlets, such as the Invoke-CMSoftwareUpdateAutoDeploymentRule cmdlet or the Remove-CMSoftwareUpdateAutoDeploymentRule cmdlet.
+You can use this cmdlet to get deployment rules for automatic software updates to use with other cmdlets, such as the Invoke-CMSoftwareUpdateAutoDeploymentRule cmdlet or the [Remove-CMSoftwareUpdateAutoDeploymentRule](./Remove-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 
 ## EXAMPLES
 

@@ -32,7 +32,7 @@ Remove-CMSecurityRole -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWi
 
 ## DESCRIPTION
 The **Remove-CMSecurityRole** cmdlet removes custom security roles from Microsoft System Center Configuration Manager.
-Specify the name or ID of a security role you want to remove or use the Get-CMSecurityRole cmdlet to obtain one.
+Specify the name or ID of a security role you want to remove or use the [Get-CMSecurityRole](./Get-CMSecurityRole.md) cmdlet to obtain one.
 
 Configuration Manager uses security roles, along with security scopes and collections, to define an administrative scope for each administrative user.
 Configuration Manager provides several built-in security roles.
@@ -60,7 +60,7 @@ PS C:\>$Roles = Get-CMSecurityRole -Name *Role
 PS C:\> Remove-CMSecurityRole -SecurityRole $Roles
 ```
 
-The first command uses the Get-CMSecurityRole cmdlet to get each security role that has a name that ends in Role.
+The first command uses the [Get-CMSecurityRole](./Get-CMSecurityRole.md) cmdlet to get each security role that has a name that ends in Role.
 It stores them in the $Roles variable.
 
 The second command removes each security role stored in the $Roles variable.
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a security role object.
-To obtain a security role object, use the Get-CMSecurityRole cmdlet.
+To obtain a security role object, use the [Get-CMSecurityRole](./Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject
