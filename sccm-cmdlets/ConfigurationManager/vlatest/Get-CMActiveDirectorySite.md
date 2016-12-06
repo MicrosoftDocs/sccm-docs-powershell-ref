@@ -36,7 +36,7 @@ Get-CMActiveDirectorySite -ForestId <String[]> [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Get-CMActiveDirectorySite** cmdlet gets one or more Microsoft System Center Configuration Manager sites that are configured to publish site information to Active DirectoryÂ® Domain Services (AD DS).
+The **Get-CMActiveDirectorySite** cmdlet gets one or more Microsoft System Center Configuration Manager sites that are configured to publish site information to Active Directory® Domain Services (AD DS).
 You can get System Center Configuration Manager sites that publish site data to AD DS by using an identifier or a fully qualified domain name (FQDN).
 
 ## EXAMPLES
@@ -153,5 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CMActiveDirectoryForest](./Get-CMActiveDirectoryForest.md)
-
-

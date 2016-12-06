@@ -33,7 +33,7 @@ You configure status filter rules for each site, not across all sites.
 
 Use the rule name and site code to specify a rule to disable.
 You can use the [Enable-CMStatusFilterRule](./Enable-CMStatusFilterRule.md) cmdlet to enable a rule.
-To remove a rule permanently, use the Remove-CMStatusFilterRule cmdlet.
+To remove a rule permanently, use the [Remove-CMStatusFilterRule](./Remove-CMStatusFilterRule.md) cmdlet.
 
 ## EXAMPLES
 

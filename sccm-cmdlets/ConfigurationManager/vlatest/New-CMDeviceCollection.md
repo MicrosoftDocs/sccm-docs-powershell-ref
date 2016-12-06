@@ -57,8 +57,8 @@ For more information about Configuration Manager collections, see [Introduction 
 PS C:\>New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
 ```
 
-This command creates a collection for all computers that run WindowsÂ® 7.
-The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the WindowsÂ® 7 collection.
+This command creates a collection for all computers that run Windows® 7.
+The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the Windows 7 collection.
 
 ## PARAMETERS
 
@@ -213,5 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433)
 
 [Get-CMDeviceCollection](./Get-CMDeviceCollection.md)
-
-

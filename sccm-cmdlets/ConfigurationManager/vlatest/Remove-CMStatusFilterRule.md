@@ -33,7 +33,7 @@ You configure status filter rules for each site, not across all sites.
 
 Use the rule name and site code to specify a rule to remove.
 This cmdlet deletes rules permanently.
-You can use the Disable-CMStatusFilterRule cmdlet to suspend a rule.
+You can use the [Disable-CMStatusFilterRule](./Disable-CMStatusFilterRule.md) cmdlet to suspend a rule.
 
 ## EXAMPLES
 

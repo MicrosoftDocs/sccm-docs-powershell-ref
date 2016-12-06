@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a mobile MSI deployment type object.
-To obtain a deployment type object, use the Get-CMDeploymentType cmdlet.
+To obtain a deployment type object, use the [Get-CMDeploymentType](./Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject

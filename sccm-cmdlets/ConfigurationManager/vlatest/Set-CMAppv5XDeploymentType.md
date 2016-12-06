@@ -295,7 +295,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an App-V 5X deployment type object.
-To obtain a deployment type object, use the Get-CMDeploymentType cmdlet.
+To obtain a deployment type object, use the [Get-CMDeploymentType](./Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject

@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a configuration item object.
-To obtain a configuration item object, use the Get-CMConfigurationItem cmdlet.
+To obtain a configuration item object, use the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject
