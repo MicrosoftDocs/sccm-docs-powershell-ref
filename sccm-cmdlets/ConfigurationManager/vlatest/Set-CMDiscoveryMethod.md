@@ -128,7 +128,6 @@ Specifies an array of names of Active Directory containers.
 Type: String[]
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +142,6 @@ Indicates that the discovery method discovers security groups, including local, 
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectoryForestDiscovery
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +156,6 @@ Indicates that the discovery method discovers additional information, including 
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectoryGroupDiscovery
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -173,7 +170,6 @@ Indicates that the discovery method discovers computers from specified locations
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectorySystemDiscovery
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -188,7 +184,6 @@ Indicates that the discovery method discovers users from specified locations in 
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectoryUserDiscovery
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -203,7 +198,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
 Aliases: AddActiveDirectoryContainers
-
 Required: False
 Position: Named
 Default value: None
@@ -219,7 +213,6 @@ The cmdlet adds these attributes to the list of attributes that Configuration Ma
 Type: String[]
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +227,6 @@ Accept wildcard characters: False
 Type: ADGroupDiscoveryScope[]
 Parameter Sets: SearchByActiveDirectoryGroupDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -249,7 +241,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +255,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -279,7 +269,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery
 Aliases: DeltaDiscoveryIntervalMinutes, DeltaDiscoveryIntervalMins
-
 Required: False
 Position: Named
 Default value: None
@@ -294,7 +283,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -309,7 +297,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SearchByActiveDirectoryGroupDiscovery
 Aliases: DiscoverDistributionGroupsMembership
-
 Required: False
 Position: Named
 Default value: None
@@ -324,7 +311,6 @@ Indicates whether Configuration Manager creates Active Directory boundaries from
 Type: Boolean
 Parameter Sets: SearchByActiveDirectoryForestDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -340,7 +326,6 @@ If you specify a value of $True for this parameter, specify a value for the *Del
 Type: Boolean
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -356,7 +341,6 @@ Specify the number of days by using the *TimeSinceLastLogonDays* parameter.
 Type: Boolean
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -372,7 +356,6 @@ Specify the number of days by using the *TimeSinceLastPasswordUpdateDays* parame
 Type: Boolean
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -387,7 +370,6 @@ Indicates whether Configuration Manager creates IP address range boundaries from
 Type: Boolean
 Parameter Sets: SearchByActiveDirectoryForestDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -403,7 +385,6 @@ If you specify a value of $False, Configuration Manager does not discover resour
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -418,7 +399,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -433,7 +413,6 @@ Indicates that the discovery method updates discovery records for Configuration 
 Type: SwitchParameter
 Parameter Sets: SearchByHeartbeat
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -448,7 +427,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -463,7 +441,6 @@ Indicates that the discovery method searches the network infrastructure for netw
 Type: SwitchParameter
 Parameter Sets: SearchByNetworkDiscovery
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -488,7 +465,6 @@ Type: NetworkDiscoveryType
 Parameter Sets: SearchByNetworkDiscovery
 Aliases: 
 Accepted values: Topology, ToplogyAndClient, ToplogyClientAndClientOperatingSystem
-
 Required: False
 Position: Named
 Default value: None
@@ -505,7 +481,6 @@ The polling schedule determines how often Configuration Manager attempts to disc
 Type: IResultObject
 Parameter Sets: SearchByActiveDirectoryForestDiscovery, SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery, SearchByHeartbeat
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -520,7 +495,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -535,7 +509,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
 Aliases: RemoveActiveDirectoryContainers
-
 Required: False
 Position: Named
 Default value: None
@@ -551,7 +524,6 @@ The cmdlet removes these attributes from the list of attributes that Configurati
 Type: String[]
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -566,7 +538,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: SearchByActiveDirectoryGroupDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -581,7 +552,6 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -596,7 +566,6 @@ Indicates whether Configuration Manager makes adjustments to its discovery setti
 Type: Boolean
 Parameter Sets: SearchByNetworkDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -611,7 +580,6 @@ Specifies the number of days since the last logon when the *EnableFilteringExpir
 Type: Int32
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -626,7 +594,6 @@ Specifies the number of days since that last password updated when the *EnableFi
 Type: Int32
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -642,7 +609,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

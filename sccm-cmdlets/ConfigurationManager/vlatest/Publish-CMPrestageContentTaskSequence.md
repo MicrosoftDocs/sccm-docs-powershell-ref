@@ -55,7 +55,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -70,7 +69,6 @@ Specifies a description for the content to prestage.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -85,7 +83,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -100,7 +97,6 @@ Specifies the name of a distribution point that is associated with the task sequ
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -116,7 +112,6 @@ The folder that you specify contains prestaged content files.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -131,7 +126,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +140,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: DisableIncludeApplicationDependencies, IgnoreApplicationDependencies
-
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +155,6 @@ To obtain a task sequence object, use the Get-CMTaskSequence cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_TaskSequence
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -177,7 +169,6 @@ Specifies an array of IDs of task sequences.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_TaskSequence
 Aliases: TaskSequenceIds
-
 Required: True
 Position: Named
 Default value: None
@@ -192,7 +183,6 @@ Specifies an array of names of task sequences.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_TaskSequence
 Aliases: TaskSequenceNames
-
 Required: True
 Position: Named
 Default value: None
@@ -208,7 +198,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

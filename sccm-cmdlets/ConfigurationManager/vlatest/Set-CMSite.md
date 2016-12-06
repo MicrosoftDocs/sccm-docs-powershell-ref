@@ -134,7 +134,6 @@ To obtain an Active Directory Forest object, use the Get-ADForest cmdlet.
 Type: IResultObject[]
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +148,6 @@ Specifies an array of paths to certificates.
 Type: String[]
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +171,6 @@ Type: ClientRequestServiceType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
 Accepted values: WakeOnLanUdp, ClientNotificationTcp, ClientRequestHttpTcp, ClientRequestsHttpsTcp, ClientRequestHttpTcpDefault, ClientRequestsHttpsTcpDefault
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +185,6 @@ Specifies the name of a custom store that contains client certificates.
 Type: String
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -204,7 +200,6 @@ Type: ClientCertificateSelectionCriteriaType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
 Accepted values: ClientAuthentication, CertificateSubjectContainsString, CertificateSubjectOrSanIncludesAtrributes
-
 Required: False
 Position: Named
 Default value: None
@@ -219,7 +214,6 @@ Specifies a value for the *ClientCertificateSelectionCriteriaType*.
 Type: String
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +228,6 @@ Indicates whether to check the Certificate Revocation List (CRL) for a certifica
 Type: Boolean
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -251,7 +244,6 @@ Type: ClientComputerCommunicationType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
 Accepted values: HttpsOnly, HttpsOrHttp
-
 Required: False
 Position: Named
 Default value: None
@@ -266,7 +258,6 @@ Specifies a comment for a Configuration Manager site.
 Type: String
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -281,7 +272,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: ConcurrentSendingDelayBeforeRetryingMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -296,7 +286,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -311,7 +300,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -326,7 +314,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: GenerateAlertWhenFreeDiskSpaceOnSiteDatabaseIsLow
-
 Required: False
 Position: Named
 Default value: None
@@ -341,7 +328,6 @@ Indicates whether to send Wake On LAN packets for scheduled activities such as d
 Type: Boolean
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -356,7 +342,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +356,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: CriticalAlertWhenFreeDiskSpaceFallBelowFollowingValueGB
-
 Required: False
 Position: Named
 Default value: None
@@ -386,7 +370,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: WarningAlertWhenFreeDiskSpaceFallBelowFollowingValueGB
-
 Required: False
 Position: Named
 Default value: None
@@ -402,7 +385,6 @@ To obtain a Configuration Manager site object, use the Get-CMSite cmdlet.
 Type: IResultObject
 Parameter Sets: SetByObject, SetSecurityScopeByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -417,7 +399,6 @@ Specifies the maximum number of simultaneous communications to all sites.
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -432,7 +413,6 @@ Specifies the maximum number of simultaneous communications to any single site.
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -447,7 +427,6 @@ Specifies the maximum number of wake up packets transmitted by this site server 
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -462,7 +441,6 @@ Specifies the name of a Configuration Manager site.
 Type: String
 Parameter Sets: SetSecurityScopeByName, SetByNameMandatory
 Aliases: SiteName
-
 Required: True
 Position: Named
 Default value: None
@@ -477,7 +455,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -492,7 +469,6 @@ Specifies a port number, such as 80 or 8080, for client requests.
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -507,7 +483,6 @@ Specifies an array of Active Directory Forest objects to remove from Active Dire
 Type: IResultObject[]
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -522,7 +497,6 @@ Specifies an array of certificates to remove.
 Type: String[]
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -546,7 +520,6 @@ Type: ClientRequestServiceType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
 Accepted values: WakeOnLanUdp, ClientNotificationTcp, ClientRequestHttpTcp, ClientRequestsHttpsTcp, ClientRequestHttpTcpDefault, ClientRequestsHttpsTcpDefault
-
 Required: False
 Position: Named
 Default value: None
@@ -561,7 +534,6 @@ Indicates whether to use the SHA-256 algorithm to sign communications.
 Type: Boolean
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -576,7 +548,6 @@ Indicates whether to require Configuration Manager sites to sign communications 
 Type: Boolean
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -591,7 +562,6 @@ Specifies the number of times to retry a failed communication.
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -606,7 +576,6 @@ Specifies the number of times a wake up packet is sent to a target computer.
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -621,7 +590,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: SendingWakeupPacketBeforePausingWaitSeconds
-
 Required: False
 Position: Named
 Default value: None
@@ -636,7 +604,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: SendingWakeupPacketTransmissionDelayMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -651,7 +618,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: SendingWakeupPacketTransmissionOffsetMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -666,7 +632,6 @@ Specifies a site code for a Configuration Manager site to which you assign secur
 Type: String
 Parameter Sets: SetBySiteCodeMandatory, SetSecurityScopeBySiteCode
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -682,7 +647,6 @@ Type: TakeActionForMultipleCertificateMatchCriteria
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
 Accepted values: FailSelectionAndSendErrorMessage, SelectCertificateWithLongestValidityPeriod
-
 Required: False
 Position: Named
 Default value: None
@@ -697,7 +661,6 @@ Specifies the number of threads a site server uses when sending wake up packets.
 Type: Int32
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -713,7 +676,6 @@ Use a custom web site when you do not want to use the default web site.
 Type: Boolean
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -728,7 +690,6 @@ Indicates whether to use encryption for communication between sites.
 Type: Boolean
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -743,7 +704,6 @@ Indicates whether to use a PKI certificate management solution.
 Type: Boolean
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -759,7 +719,6 @@ Type: WakeOnLanTransmissionMethodType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
 Accepted values: Unicast, SubnetDirectedBroadcasts
-
 Required: False
 Position: Named
 Default value: None
@@ -775,7 +734,6 @@ Type: WakeOnLanType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
 Aliases: 
 Accepted values: UseAmtPowerOnCommandsOrWakeupPackets, UseAmtPowerOnCommandsOnly, UseWakeupPacketsOnly
-
 Required: False
 Position: Named
 Default value: None
@@ -791,7 +749,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

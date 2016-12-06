@@ -95,7 +95,6 @@ Specifies the ID of a boundary group.
 Type: Int32
 Parameter Sets: AddBoundaryToGroupById_Id, AddBoundaryToGroupByName_Id, AddBoundaryToGroupByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -110,7 +109,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: AddBoundaryToGroupByObject_Object, AddBoundaryToGroupById_Object, AddBoundaryToGroupByName_Object
 Aliases: BoundaryGroup
-
 Required: True
 Position: Named
 Default value: None
@@ -125,7 +123,6 @@ Specifies the name of a boundary group.
 Type: String
 Parameter Sets: AddBoundaryToGroupById_Name, AddBoundaryToGroupByName_Name, AddBoundaryToGroupByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -140,7 +137,6 @@ Specifies the ID of a boundary.
 Type: Int32
 Parameter Sets: AddBoundaryToGroupById_Id, AddBoundaryToGroupById_Object, AddBoundaryToGroupById_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -155,7 +151,6 @@ Specifies the name of a boundary.
 Type: String
 Parameter Sets: AddBoundaryToGroupByName_Id, AddBoundaryToGroupByName_Name, AddBoundaryToGroupByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -170,7 +165,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -185,7 +179,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +193,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -215,7 +207,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: AddBoundaryToGroupByObject_Object, AddBoundaryToGroupByObject_Id, AddBoundaryToGroupByObject_Name
 Aliases: Boundary, BoundaryInputObject
-
 Required: True
 Position: Named
 Default value: None
@@ -231,7 +222,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

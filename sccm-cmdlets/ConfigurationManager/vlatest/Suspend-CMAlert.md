@@ -65,7 +65,6 @@ You can use the comment to record the explanation for suspending the alert.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +79,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -95,7 +93,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +107,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +122,6 @@ You can obtain the ID of an alert by using the Get-CMAlert cmdlet.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -142,7 +137,6 @@ To obtain a **CMAlert** object, use the **Get-CMAlert** cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Alert
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +152,6 @@ You can obtain the name of an alert by using **Get-CMAlert**.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -181,7 +174,6 @@ If the original job trigger did not include a **DateTime** object and you omit a
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -197,7 +189,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

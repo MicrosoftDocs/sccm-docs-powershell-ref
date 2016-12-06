@@ -77,7 +77,6 @@ Specifies the command line for the program.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -93,7 +92,6 @@ This folder can be an absolute path on the client, or a path relative to the dis
 Type: String
 Parameter Sets: NewDeviceProgramById, NewDeviceProgram
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +107,6 @@ On client computers, this text is displayed in Run Advertised Programs in Contro
 Type: String
 Parameter Sets: NewDeviceProgramById, NewDeviceProgram
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +121,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -139,7 +135,6 @@ Specifies a device program name.
 Type: String
 Parameter Sets: NewDeviceProgramById, NewDeviceProgram
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -154,7 +149,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +165,6 @@ The value must be greater than or equal to zero.
 Type: String
 Parameter Sets: (All)
 Aliases: DiskSpaceReq
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +181,6 @@ Type: DiskSpaceUnitType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: KB, MB, GB
-
 Required: False
 Position: Named
 Default value: None
@@ -209,7 +201,6 @@ Type: DownloadProgramType
 Parameter Sets: NewDeviceProgramById, NewDeviceProgram
 Aliases: 
 Accepted values: AsSoonAsPossible, OnlyOverFastNetwork, OnlyWhenTheDeviceIsDocked
-
 Required: False
 Position: Named
 Default value: None
@@ -224,7 +215,6 @@ Specifies a drive letter to qualify the location if the *DriveMode* parameter is
 Type: String
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -243,7 +233,6 @@ Type: DriveModeType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
 Accepted values: RenameWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
-
 Required: False
 Position: Named
 Default value: None
@@ -259,7 +248,6 @@ The default value is 120 minutes.
 Type: Int32
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -274,7 +262,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -289,7 +276,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: NewStandardProgramById, NewDeviceProgramById
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -304,7 +290,6 @@ Specifies a package name.
 Type: String
 Parameter Sets: NewStandardProgram, NewDeviceProgram
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -327,7 +312,6 @@ Type: ProgramRunType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
 Accepted values: OnlyWhenUserIsLoggedOn, WhetherOrNotUserIsLoggedOn, OnlyWhenNoUserIsLoggedOn
-
 Required: False
 Position: Named
 Default value: None
@@ -342,7 +326,6 @@ Indicates whether the client computer reconnects to the distribution point when 
 Type: Boolean
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +340,6 @@ Specifies additional requirements for standard or device programs.
 Type: String
 Parameter Sets: NewDeviceProgramById, NewDeviceProgram
 Aliases: Requirements
-
 Required: False
 Position: Named
 Default value: None
@@ -374,7 +356,6 @@ Type: RunModeType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
 Accepted values: RunWithUserRights, RunWithAdministrativeRights
-
 Required: False
 Position: Named
 Default value: None
@@ -398,7 +379,6 @@ Type: RunType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
 Accepted values: Normal, Minimized, Maximized, Hidden
-
 Required: False
 Position: Named
 Default value: None
@@ -413,7 +393,6 @@ Specifies the standard program name.
 Type: String
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -428,7 +407,6 @@ Indicates whether to allow users to interact with the program.
 Type: Boolean
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -444,7 +422,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -459,7 +436,6 @@ Specifies a working directory for the program.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

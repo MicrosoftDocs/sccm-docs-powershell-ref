@@ -281,7 +281,6 @@ This command sets a deployment type named Configuration Manager Console - Window
 Type: Rule[]
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -296,7 +295,6 @@ Specifies a description for the deployment type.
 Type: String
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -311,7 +309,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyAppV5xInstaller, SetByValuePropertyAppV5xInstaller
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -326,7 +323,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyAppVInstaller, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -341,7 +337,6 @@ Specifies the name of the deployment application that contains the deployment ty
 Type: String
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByNamePropertyWindows8Installer, SetByNamePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule, SetByNamePriority, SetByIdPriority
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -356,7 +351,6 @@ Specifies the name of the application in the Windows Store.
 Type: String
 Parameter Sets: SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyWindowsStoreInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +365,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -386,7 +379,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -402,7 +394,6 @@ The site system server requires permission to read the content files.
 Type: String
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByNamePropertyWindows8Installer, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule
 Aliases: InstallationFileLocation
-
 Required: False
 Position: Named
 Default value: None
@@ -417,7 +408,6 @@ Specifies the type ID for a deployment type.
 Type: Int32
 Parameter Sets: SetByIdPriority
 Aliases: CIId, CI_ID, Id
-
 Required: True
 Position: Named
 Default value: None
@@ -432,7 +422,6 @@ Specifies the name of a deployment type.
 Type: String
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByNamePropertyWindows8Installer, SetByNamePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule, SetByNamePriority
 Aliases: LocalizedDisplayName, Name
-
 Required: True
 Position: Named
 Default value: None
@@ -447,7 +436,6 @@ Indicates that the deployment type uses a custom script to detect the presence o
 Type: SwitchParameter
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -462,7 +450,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -477,7 +464,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByValuePropertyWindows8Installer, SetByNamePropertyWindows8Installer, SetByNamePropertyMsiConfigureRule
 Aliases: AllowClientsToShareContentOnSameSubnet
-
 Required: False
 Position: Named
 Default value: None
@@ -492,7 +478,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: AllowClientsToUseFallbackSourceLocationForContent
-
 Required: False
 Position: Named
 Default value: None
@@ -507,7 +492,6 @@ Indicates whether clients can distribute content to other clients.
 Type: Boolean
 Parameter Sets: SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByValuePropertyAppV5xInstaller, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -522,7 +506,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SetByNamePropertyWmInstaller, SetByValuePropertyWmInstaller
 Aliases: AllowUserToUninstall, AllowsUsersToUninstallThisContent
-
 Required: False
 Position: Named
 Default value: None
@@ -537,7 +520,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: EstimatedInstallationTimeMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -552,7 +534,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: RunScriptAs32BitProcessOn64BitClient
-
 Required: False
 Position: Named
 Default value: None
@@ -567,7 +548,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: RunInstallationAndUninstallProgramAs32BitProcessOn64BitClient
-
 Required: False
 Position: Named
 Default value: None
@@ -582,7 +562,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -598,7 +577,6 @@ To obtain a deployment type object, use the **Get-CMDeploymentType** cmdlet.
 Type: IResultObject
 Parameter Sets: SetByValuePriority, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByValuePropertyWindowsPhoneStoreInstaller, SetByValuePropertyAppVInstaller
 Aliases: DeploymentType
-
 Required: True
 Position: Named
 Default value: None
@@ -619,7 +597,6 @@ Type: InstallationBehaviorType
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
 Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-
 Required: False
 Position: Named
 Default value: None
@@ -634,7 +611,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -649,7 +625,6 @@ Specifies the command line for the Windows Installer.
 Type: String
 Parameter Sets: SetByNamePropertyMacInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyMacInstaller, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -671,7 +646,6 @@ Type: UserInteractionMode
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
 Accepted values: Normal, Minimized, Maximized, Hidden
-
 Required: False
 Position: Named
 Default value: None
@@ -687,7 +661,6 @@ This folder can be an absolute path on the client, or a path to the distribution
 Type: String
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -702,7 +675,6 @@ Specifies an array of languages that the deployment type supports.
 Type: String[]
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -714,7 +686,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -729,7 +700,6 @@ Indicates whether to load the content into the AppV cache when you deploy the ap
 Type: Boolean
 Parameter Sets: SetByNamePropertyAppVInstaller, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -750,7 +720,6 @@ Type: LogonRequirementType
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
 Accepted values: OnlyWhenUserLoggedOn, WhereOrNotUserLoggedOn, WhetherOrNotUserLoggedOn, OnlyWhenNoUserLoggedOn
-
 Required: False
 Position: Named
 Default value: None
@@ -765,7 +734,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyMacInstaller, SetByValuePropertyMacInstaller
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -781,7 +749,6 @@ Type: MacRebootBehavior
 Parameter Sets: SetByNamePropertyMacInstaller, SetByValuePropertyMacInstaller
 Aliases: 
 Accepted values: NoAction, ForceReboot
-
 Required: False
 Position: Named
 Default value: None
@@ -796,7 +763,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyWindows8Installer, SetByNamePropertyWindows8Installer, SetByValuePropertyWindowsStoreInstaller, SetByNamePropertyMsiConfigureRule
 Aliases: MaximumAllowedRunTimeMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -811,7 +777,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -826,7 +791,6 @@ Indicates that the deployment uses a script installer program.
 Type: SwitchParameter
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -841,7 +805,6 @@ Specifies the name of a new deployment type.
 Type: String
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -861,7 +824,6 @@ Type: OnFastNetworkMode
 Parameter Sets: SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByValuePropertyAppV5xInstaller, SetByValuePropertyAppVInstaller
 Aliases: 
 Accepted values: RunLocal, RunFromNetwork, DownloadContentForStreaming
-
 Required: False
 Position: Named
 Default value: None
@@ -882,7 +844,6 @@ Type: ContentHandlingMode
 Parameter Sets: SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: 
 Accepted values: DoNothing, Download, DownloadContentForStreaming
-
 Required: False
 Position: Named
 Default value: None
@@ -897,7 +858,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -912,7 +872,6 @@ Indicates whether the deployment type saves content in cache indefinitely on the
 Type: Boolean
 Parameter Sets: SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -929,7 +888,6 @@ Type: PriorityChangeType
 Parameter Sets: SetByValuePriority, SetByNamePriority, SetByIdPriority
 Aliases: 
 Accepted values: Increase, Decrease
-
 Required: False
 Position: Named
 Default value: None
@@ -944,7 +902,6 @@ Specifies the product code in the detection method for the deployment type.
 Type: String
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -960,7 +917,6 @@ Type: RebootBehavior
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
 Accepted values: BasedOnExitCode, NoAction, ProgramReboot, ForceReboot
-
 Required: False
 Position: Named
 Default value: None
@@ -975,7 +931,6 @@ Specifies a remote computer name.
 Type: String
 Parameter Sets: SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyWindowsStoreInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -990,7 +945,6 @@ Accept wildcard characters: False
 Type: Rule[]
 Parameter Sets: SetByNamePropertyOtherInstaller, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByNamePropertyWindows8Installer, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller, SetByNamePropertyMsiConfigureRule, SetByValuePropertyAppVInstaller
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1005,7 +959,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: RequiresUserInteraction
-
 Required: False
 Position: Named
 Default value: None
@@ -1020,7 +973,6 @@ Specifies the script language that you want to use to detect the deployment type
 Type: String
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1036,7 +988,6 @@ Type: ScriptLanguage
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
 Accepted values: PowerShell, VBScript, JavaScript
-
 Required: False
 Position: Named
 Default value: None
@@ -1052,7 +1003,6 @@ Windows Source management enables an MSI represented by this deployment type to 
 Type: String
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1067,7 +1017,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: SetByValuePropertyWindows8Installer, SetByNamePropertyWindows8Installer
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1082,7 +1031,6 @@ Specifies the name of the uninstall program and any parameters it requires.
 Type: String
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1098,7 +1046,6 @@ This folder can be an absolute path on the client, or a path that is relative to
 Type: String
 Parameter Sets: SetByValuePropertyMsiConfigureRule, SetByNamePropertyMsiConfigureRule
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -1113,7 +1060,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyWebAppInstaller, SetByValuePropertyWebAppInstaller
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -1129,7 +1075,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -1144,7 +1089,6 @@ Indicates that the deployment type detects application information and deploymen
 Type: SwitchParameter
 Parameter Sets: SetByValuePropertyWindows8Installer, SetByNamePropertyWindows8Installer
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -1159,7 +1103,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyWmInstaller, SetByValuePropertyWmInstaller
 Aliases: WMInstaller
-
 Required: True
 Position: Named
 Default value: None
@@ -1174,7 +1117,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -1189,7 +1131,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyWindowsStoreInstaller
 Aliases: DeepLinkInstaller
-
 Required: True
 Position: Named
 Default value: None

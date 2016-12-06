@@ -49,7 +49,6 @@ Indicates that User Account Control (UAC) prompts are allowed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -65,7 +64,6 @@ An unattended operating system deployment does not prompt for network configurat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +78,6 @@ Specifies a path from which to import a PKI certificate.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +92,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -110,7 +106,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +121,6 @@ To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: DistributionPoints
-
 Required: True
 Position: Named
 Default value: None
@@ -141,7 +135,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +149,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +163,6 @@ Indicates that the cmdlet formats the removable USB drive (FAT32), and makes it 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +177,6 @@ Indicates that the cmdlet detects associated application dependencies and adds t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: IncludeApplicationDependencies
-
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +191,6 @@ Specifies, as a secure string, a password to protect task sequence media.
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -224,7 +213,6 @@ Type: MediaSize
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Size650MB, Size4GB, Size8GB, SizeUnlimited
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +233,6 @@ Type: MediaInputType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Usb, CdDvd
-
 Required: True
 Position: Named
 Default value: None
@@ -260,7 +247,6 @@ Specifies the name and path where the output files are written.
 Type: String
 Parameter Sets: (All)
 Aliases: MediaPath, OutputPath, DriveName
-
 Required: True
 Position: Named
 Default value: None
@@ -276,7 +262,6 @@ A prestart command is a script or an executable that can interact with the user 
 Type: String
 Parameter Sets: (All)
 Aliases: PreExecCommandLine
-
 Required: False
 Position: Named
 Default value: None
@@ -292,7 +277,6 @@ To obtain a package object, use the Get-CMPackage cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -308,7 +292,6 @@ To obtain a task sequence object, use the Get-CMTaskSequence cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -324,7 +307,6 @@ A task sequence variable is a name/value pair that is used during the task seque
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: TaskSequenceVariables, Variables
-
 Required: False
 Position: Named
 Default value: None
@@ -340,7 +322,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

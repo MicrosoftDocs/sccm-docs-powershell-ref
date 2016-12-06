@@ -60,7 +60,6 @@ This command gets an App-V virtual environment that has the ID 16781806.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +74,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Specifies an array of IDs of virtual environments.
 Type: Int32[]
 Parameter Sets: SearchById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -106,7 +103,6 @@ You can use a wildcard.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
-
 Required: False
 Position: Named
 Default value: None

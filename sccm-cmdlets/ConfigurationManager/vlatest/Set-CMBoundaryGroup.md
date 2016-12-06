@@ -66,7 +66,6 @@ This command adds the security scope OSDeploymentScope to the boundary group BGr
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: AddSiteSystemServers
-
 Required: False
 Position: Named
 Default value: None
@@ -81,7 +80,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearSiteSystemServers
-
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +94,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -111,7 +108,6 @@ Specifies the default site code of a boundary group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +122,6 @@ Specifies a description for a boundary group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +136,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +150,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +164,6 @@ Specifies an array of identifiers for one or more boundary groups.
 Type: String
 Parameter Sets: SetById
 Aliases: GroupId
-
 Required: True
 Position: Named
 Default value: None
@@ -187,7 +179,6 @@ You can get the input object by using the Get-CMBoundaryGroup cmdlet.
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -202,7 +193,6 @@ Specifies a name for a boundary group.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -217,7 +207,6 @@ Specifies a new name for a boundary group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -232,7 +221,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -247,7 +235,6 @@ Accept wildcard characters: False
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveSiteSystemServers
-
 Required: False
 Position: Named
 Default value: None
@@ -262,7 +249,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveSiteSystemServerNames
-
 Required: False
 Position: Named
 Default value: None
@@ -278,7 +264,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

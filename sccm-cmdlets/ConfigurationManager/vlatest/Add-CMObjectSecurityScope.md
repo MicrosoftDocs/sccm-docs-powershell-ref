@@ -62,7 +62,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -77,7 +76,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +90,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +104,6 @@ Specifies the ID of a security scope.
 Type: String
 Parameter Sets: ById
 Aliases: SecurityScopeId
-
 Required: True
 Position: Named
 Default value: None
@@ -122,7 +118,6 @@ Specifies an array of objects to which you want to assign a security scope.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -138,7 +133,6 @@ A security scope name can be Default or the name of a custom security scope.
 Type: String
 Parameter Sets: ByName
 Aliases: SecurityScopeName
-
 Required: True
 Position: 0
 Default value: None
@@ -153,7 +147,6 @@ Specifies an array of security scopes.
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: SecurityScope, SecuredCategory, Scopes, SecurityScopes, SecuredCategories
-
 Required: True
 Position: 0
 Default value: None
@@ -169,7 +162,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

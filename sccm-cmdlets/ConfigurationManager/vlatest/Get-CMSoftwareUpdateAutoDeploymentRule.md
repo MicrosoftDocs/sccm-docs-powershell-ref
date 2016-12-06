@@ -59,7 +59,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +76,6 @@ If lazy properties are not used, this parameter should be specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +90,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -108,7 +105,6 @@ This value is the **AutoDeploymentID** property of the deployment rule object.
 Type: Int32[]
 Parameter Sets: SearchByIdMandatory
 Aliases: AutoDeploymentId
-
 Required: True
 Position: 0
 Default value: None
@@ -123,7 +119,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -138,7 +133,6 @@ Specifies a name of a rule for automatic deployment of software updates.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: 0
 Default value: None

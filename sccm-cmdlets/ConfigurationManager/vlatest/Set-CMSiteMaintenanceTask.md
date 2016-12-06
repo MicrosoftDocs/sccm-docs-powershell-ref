@@ -59,7 +59,6 @@ Specifies the date and time at which a maintenance task starts.
 Type: DateTime
 Parameter Sets: SetMaintenanceTasksByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -74,7 +73,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -99,7 +97,6 @@ Type: DaysOfWeek[]
 Parameter Sets: SetMaintenanceTasksByName
 Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-
 Required: False
 Position: Named
 Default value: None
@@ -114,7 +111,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetMaintenanceTasksByName
 Aliases: DeleteOlderThan, DeleteThanOlderDays
-
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +125,6 @@ Specifies the name of the device on which the maintenance task runs.
 Type: String
 Parameter Sets: SetMaintenanceTasksByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -144,7 +139,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +153,6 @@ Indicates whether the maintenance task is enabled in Configuration Manager.
 Type: Boolean
 Parameter Sets: SetMaintenanceTasksByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -174,7 +167,6 @@ Indicates whether alerts for the maintenance task are enabled in Configuration M
 Type: Boolean
 Parameter Sets: SetMaintenanceTasksByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -189,7 +181,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SetSummaryTaskFixedByName
 Aliases: FixedRunInterval
-
 Required: False
 Position: Named
 Default value: None
@@ -204,7 +195,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -219,7 +209,6 @@ Specifies a future date and time at which the maintenance task runs.
 Type: DateTime
 Parameter Sets: SetMaintenanceTasksByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -284,7 +273,6 @@ Type: MaintenanceTask
 Parameter Sets: SetMaintenanceTasksByName
 Aliases: 
 Accepted values: BackupSiteServer, CheckApplicationTitleWithInventoryInformation, ClearUndiscoveredClients, DeleteAgedApplicationRequestData, DeleteUnusedApplicationRevisions, DeleteAgedClientOperations, DeleteAgedCollectedFiles, DeleteAgedComputerAssociationData, DeleteAgedDeleteDetectionData, DeleteAgedDeviceWipeRecord, DeleteAgedDiscoveryData, DeleteAgedEnrolledDevices, DeleteAgedEndpointProtectionHealthStatusHistoryData, DeleteAgedDevicesManagedByTheExchangeServerConnector, DeleteAgedInventoryHistory, DeleteAgedLogData, DeleteAgedSoftwareMeteringData, DeleteAgedSoftwareMeteringSummaryData, DeleteAgedClientPresenceHistory, DeleteAgedNotificationTaskHistory, DeleteAgedReplicationTrackingData, DeleteAgedReplicationSummaryData, DeleteAgedStatusMessages, DeleteAgedThreatData, DeleteAgedUnknownComputers, DeleteAgedUserDeviceAffinityData, DeleteInactiveClientDiscoveryData, DeleteObsoleteAlerts, DeleteObsoleteClientDiscoveryData, DeleteObsoleteForestDiscoverySitesAndSubnets, EvaluateProvisionedAmtComputerCertificates, MonitorKeys, RebuildIndexes, SummarizeSoftwareMeteringFileUsageData, SummarizeInstalledSoftwareData, SummarizeSoftwareMeteringMonthlyUsageData, DeleteAgedDistributionPointUsageStats
-
 Required: True
 Position: Named
 Default value: None
@@ -299,7 +287,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetSummaryTaskByName
 Aliases: RunIntervalMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -314,7 +301,6 @@ Indicates whether Configuration Manager runs the maintenance task immediately.
 Type: SwitchParameter
 Parameter Sets: SetSummaryTaskRunNow
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -329,7 +315,6 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -346,7 +331,6 @@ Type: SummaryTask
 Parameter Sets: SetSummaryTaskByName, SetSummaryTaskRunNow, SetSummaryTaskFixedByName
 Aliases: 
 Accepted values: UpdateApplicationCatalogTables
-
 Required: True
 Position: Named
 Default value: None
@@ -362,7 +346,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

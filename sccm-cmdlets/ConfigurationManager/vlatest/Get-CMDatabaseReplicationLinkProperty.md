@@ -43,7 +43,6 @@ This parameter refers to the child site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site2
-
 Required: True
 Position: Named
 Default value: None
@@ -58,7 +57,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -73,7 +71,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +86,6 @@ This parameter refers to the parent site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site1
-
 Required: True
 Position: Named
 Default value: None

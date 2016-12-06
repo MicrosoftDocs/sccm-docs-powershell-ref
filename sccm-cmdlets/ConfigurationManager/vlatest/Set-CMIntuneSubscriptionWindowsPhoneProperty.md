@@ -41,7 +41,6 @@ Specifies the path to the application enrollment token (AET) file.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -56,7 +55,6 @@ Specifies the path to the application enrollment token (AET) XML file.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +69,6 @@ Specifies the number of days before the Symantec certificate expires that an ale
 Type: Int32
 Parameter Sets: (All)
 Aliases: SymantecCertificateExpiryAlertDays
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +83,6 @@ Specifies the application package that contains the signed Company Portal .xap f
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +97,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -116,7 +111,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +125,6 @@ Indicates whether Windows Phone 8.0 enrollment is enabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +139,6 @@ Indicates whether Windows Phone 8.1 and Windows 10 Mobile enrollment is enabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableWindowsMobile10
-
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +153,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +167,6 @@ Indicates that no application enrollment token is needed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +182,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +196,6 @@ Specifies, as a secure string, the password for the pfx certificate.
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -222,7 +210,6 @@ Specifies the path to a pfx certificate.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -238,7 +225,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

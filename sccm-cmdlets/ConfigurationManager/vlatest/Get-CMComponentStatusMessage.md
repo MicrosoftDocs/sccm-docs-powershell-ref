@@ -47,7 +47,6 @@ A thread or process sends a component status message.
 Type: String
 Parameter Sets: (All)
 Aliases: Component
-
 Required: False
 Position: Named
 Default value: None
@@ -63,7 +62,6 @@ A computer hosts a component that sends a status message.
 Type: String
 Parameter Sets: (All)
 Aliases: MachineName
-
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +76,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +90,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +111,6 @@ Type: Severity
 Parameter Sets: (All)
 Aliases: 
 Accepted values: All, Error, Warning, Information
-
 Required: False
 Position: Named
 Default value: None
@@ -130,7 +125,6 @@ Specifies an array of a site codes for Configuration Manager sites.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -145,7 +139,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: ViewingPeriod
-
 Required: True
 Position: Named
 Default value: None

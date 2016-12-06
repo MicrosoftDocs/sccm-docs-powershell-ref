@@ -76,7 +76,6 @@ To obtain a baseline object, use the Get-CMBaseline cmdlet.
 Type: IResultObject
 Parameter Sets: SetBaselineDeploymentByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -91,7 +90,6 @@ Specifies the ID of a baseline.
 Type: String
 Parameter Sets: SetBaselineDeploymentByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -106,7 +104,6 @@ Specifies the name of a baseline.
 Type: String
 Parameter Sets: SetBaselineDeploymentByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -122,7 +119,6 @@ The deployment applies to this collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -137,7 +133,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -152,7 +147,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +162,6 @@ During enforcement, a client reports compliance information about the configurat
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +176,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -198,7 +190,6 @@ Specifies whether Configuration Manager generates alerts during the deployment.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +204,6 @@ Specifies whether to apply System Center 2016 - Operations Manager monitoring cr
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -229,7 +219,6 @@ Service windows are periods of time allocated for maintenance.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +234,6 @@ This is the parameter value.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -263,7 +251,6 @@ This is the date for the deployment if it is postponed.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -280,7 +267,6 @@ This is the time for the deployment if it is postponed.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -296,7 +282,6 @@ This is the schedule for deploying a baseline.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -312,7 +297,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

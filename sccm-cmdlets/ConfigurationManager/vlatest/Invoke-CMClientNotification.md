@@ -70,7 +70,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -86,7 +85,6 @@ To obtain a **CMDevice** object, use the Get-CMDevice cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByDeviceValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -102,7 +100,6 @@ To obtain a **CMDeviceCollection** object, use the Get-CMDeviceCollection cmdlet
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -117,7 +114,6 @@ Specifies the ID of a device collection.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -132,7 +128,6 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -147,7 +142,6 @@ Specifies the ID of a device.
 Type: String
 Parameter Sets: SearchByDeviceIdMandatory
 Aliases: ResourceID
-
 Required: True
 Position: Named
 Default value: None
@@ -163,7 +157,6 @@ You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 Type: String
 Parameter Sets: SearchByDeviceNameMandatory
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -178,7 +171,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +185,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +208,6 @@ Type: ClientNotificationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: RequestMachinePolicyNow, RequestUsersPolicyNow
-
 Required: True
 Position: Named
 Default value: None
@@ -233,7 +223,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

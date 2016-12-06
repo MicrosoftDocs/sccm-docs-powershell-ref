@@ -67,7 +67,6 @@ Specifies an array of names of configuration categories to add to the configurat
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +81,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddOSConfigurationItems
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +95,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddOptionalConfigurationItems
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +109,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddProhibitedConfigurationItems
-
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +123,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddRequiredConfigurationItems
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +137,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -157,7 +151,6 @@ Specifies a description of the configuration baseline.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +165,6 @@ Specifies a path to the configuration data stored as a digest.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -187,7 +179,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +193,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +207,6 @@ Specifies an array of IDs of configuration baselines.
 Type: Int32
 Parameter Sets: SetByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -233,7 +222,6 @@ To obtain a CMBaseline object, use the Get-CMBaseline cmdlet.
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -248,7 +236,6 @@ Specifies an array of names of configuration baselines.
 Type: String
 Parameter Sets: SetByNameMandatory
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: Named
 Default value: None
@@ -263,7 +250,6 @@ Specifies a new name for the configuration baseline.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -278,7 +264,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -293,7 +278,6 @@ Specifies an array of names of configuration categories to remove from the confi
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -309,7 +293,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

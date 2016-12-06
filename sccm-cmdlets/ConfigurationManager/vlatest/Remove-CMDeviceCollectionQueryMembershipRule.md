@@ -54,7 +54,6 @@ This command removes the query membership rule named TPM Information from the de
 Type: String
 Parameter Sets: ById
 Aliases: Id
-
 Required: True
 Position: Named
 Default value: None
@@ -69,7 +68,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByName
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -84,7 +82,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -99,7 +96,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -114,7 +110,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: Collection
-
 Required: True
 Position: Named
 Default value: None
@@ -129,7 +124,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -145,7 +139,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

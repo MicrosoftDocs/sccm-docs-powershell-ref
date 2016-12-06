@@ -103,7 +103,6 @@ To obtain an administrative user or administrative group object, use the Get-CMA
 Type: IResultObject
 Parameter Sets: AddRoleToAdminById_Object, AddRoleToAdminByName_Object, AddRoleToAdminByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -118,7 +117,6 @@ Specifies an ID of an administrative user or administrative group.
 Type: Int32
 Parameter Sets: AddRoleToAdminById_Id, AddRoleToAdminByName_Id, AddRoleToAdminByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -133,7 +131,6 @@ Specifies a name of an administrative user or administrative group.
 Type: String
 Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminById_Name, AddRoleToAdminByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -148,7 +145,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -163,7 +159,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +173,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +187,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: AddRoleToAdminByObject_Id, AddRoleToAdminByObject_Name, AddRoleToAdminByObject_Object
 Aliases: Role
-
 Required: True
 Position: Named
 Default value: None
@@ -209,7 +202,6 @@ A role represents Configuration Manager permissions granted to a user.
 Type: String
 Parameter Sets: AddRoleToAdminById_Id, AddRoleToAdminById_Object, AddRoleToAdminById_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -225,7 +217,6 @@ A role represents Configuration Manager permissions granted to a user.
 Type: String
 Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminByName_Object, AddRoleToAdminByName_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -241,7 +232,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

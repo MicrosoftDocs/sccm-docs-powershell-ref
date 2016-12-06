@@ -47,7 +47,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -62,7 +61,6 @@ Specifies a description for a cloud distribution point.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +75,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +89,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +103,6 @@ Specifies a password for a management certificate.
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +117,6 @@ Specifies a location for a management certificate.
 Type: String
 Parameter Sets: (All)
 Aliases: ManagementCertificate
-
 Required: True
 Position: Named
 Default value: None
@@ -138,7 +132,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +161,6 @@ Type: Region
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AnywhereAsia, AnywhereEurope, AnywhereUS, EastAsia, EastUS, NorthCentralUS, NorthEurope, SouthCentralUS, SoutheastAsia, WestEurope, WestUS
-
 Required: True
 Position: Named
 Default value: None
@@ -183,7 +175,6 @@ Specifies an alias, or CName, for a service.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -198,7 +189,6 @@ Specifies a password for a service certificate.
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +203,6 @@ Specifies a location for a service certificate.
 Type: String
 Parameter Sets: (All)
 Aliases: ServiceCertificate
-
 Required: True
 Position: Named
 Default value: None
@@ -228,7 +217,6 @@ Specifies a Configuration Manager site code.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -243,7 +231,6 @@ Specifies the percentage for a critical alert to occur, based on the storage ale
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -258,7 +245,6 @@ Specifies the threshold value, in gigabytes, that triggers errors or warnings fo
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -273,7 +259,6 @@ Specifies the percentage for a warning alert to occur, based on the storage aler
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -289,7 +274,6 @@ To get a subscription ID, use the Azure Management Portal.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -304,7 +288,6 @@ Specifies the percentage for a critical alert to occur, based on the traffic out
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -319,7 +302,6 @@ Specifies the threshold value, in gigabytes, that triggers errors or warnings, f
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -334,7 +316,6 @@ Specifies the percentage for a warning alert to occur, based on the traffic out 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -350,7 +331,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

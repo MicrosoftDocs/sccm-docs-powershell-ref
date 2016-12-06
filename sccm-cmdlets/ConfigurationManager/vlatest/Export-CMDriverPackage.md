@@ -54,7 +54,6 @@ This command exports the driver package named DrvPkg01 to the export file Driver
 Type: String
 Parameter Sets: (All)
 Aliases: Comments
-
 Required: False
 Position: Named
 Default value: None
@@ -69,7 +68,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -84,7 +82,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +96,6 @@ Specifies the full path for the export file.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +110,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +124,6 @@ Specifies an array of IDs of driver packages.
 Type: String
 Parameter Sets: SearchPackageByIdMandatory
 Aliases: PackageId
-
 Required: True
 Position: Named
 Default value: None
@@ -145,7 +139,6 @@ To obtain a **CMDriverPackage** object, use the Get-CMDriverPackage cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +153,6 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: SearchPackageByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -176,7 +168,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -191,7 +182,6 @@ Specifies whether to export the content files for the driver packages and driver
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -206,7 +196,6 @@ Specifies whether to export all drivers associated with the driver package.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

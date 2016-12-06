@@ -47,7 +47,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -62,7 +61,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +75,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -92,7 +89,6 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +103,6 @@ Specifies the name of the server that hosts the site system role.
 Type: String
 Parameter Sets: SearchByName
 Aliases: Name, ServerName
-
 Required: False
 Position: 0
 Default value: None

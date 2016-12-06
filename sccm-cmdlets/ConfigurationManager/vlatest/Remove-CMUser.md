@@ -63,7 +63,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -78,7 +77,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +91,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -108,7 +105,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +120,6 @@ To obtain a Configuration Manager user account object, use the Get-CMUser cmdlet
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -139,7 +134,6 @@ Specifies the name of a user account.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: UserName
-
 Required: True
 Position: 0
 Default value: None
@@ -154,7 +148,6 @@ Specifies the resource ID of a user account.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: Id, UserId
-
 Required: True
 Position: 0
 Default value: None
@@ -170,7 +163,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

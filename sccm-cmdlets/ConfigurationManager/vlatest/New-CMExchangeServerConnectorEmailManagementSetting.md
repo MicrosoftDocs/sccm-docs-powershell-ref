@@ -49,7 +49,6 @@ Indicates whether the mobile devices use HTML for e-mail messages.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -64,7 +63,6 @@ Indicates whether to allow consumer email through the connector.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +77,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +91,6 @@ Indicates whether the policy allows email attachments.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +105,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +120,6 @@ Type: MaxCalendarAgeType
 Parameter Sets: (All)
 Aliases: MaximumCalenderAge
 Accepted values: All, TwoWeeks, OneMonth, ThreeMonths, SixMonths
-
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +142,6 @@ Type: MaxEmailAgeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: All, OneDay, ThreeDays, OneWeek, TwoWeeks, OneMonth
-
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +156,6 @@ Specifies the maximum size, in kilobytes (KB), for email attachments.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +170,6 @@ Specifies the maximum size, in kilobytes, for HTML-formatted email.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +184,6 @@ Specifies the maximum size, in kilobytes, for text-formatted email.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +198,6 @@ Indicates whether to push email to roaming clients.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

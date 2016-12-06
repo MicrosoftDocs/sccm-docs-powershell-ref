@@ -96,7 +96,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -111,7 +110,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +124,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +139,6 @@ To obtain a software update object, use **Get-CMSoftwareUpdate**.
 Type: IResultObject[]
 Parameter Sets: AddSoftwareUpdateToGroupByObject_Name, AddSoftwareUpdateToGroupByObject_Object, AddSoftwareUpdateToGroupByObject_Id
 Aliases: SoftwareUpdates
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +154,6 @@ To obtain a software update group object, use **Get-CMSoftwareUpdateGroup**.
 Type: IResultObject
 Parameter Sets: AddSoftwareUpdateToGroupById_Object, AddSoftwareUpdateToGroupByName_Object, AddSoftwareUpdateToGroupByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -173,7 +168,6 @@ Specifies an ID of a software group.
 Type: String
 Parameter Sets: AddSoftwareUpdateToGroupById_Id, AddSoftwareUpdateToGroupByName_Id, AddSoftwareUpdateToGroupByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -188,7 +182,6 @@ Specifies a name of a software group.
 Type: String
 Parameter Sets: AddSoftwareUpdateToGroupById_Name, AddSoftwareUpdateToGroupByName_Name, AddSoftwareUpdateToGroupByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -203,7 +196,6 @@ Specifies an ID of a software update.
 Type: String[]
 Parameter Sets: AddSoftwareUpdateToGroupById_Id, AddSoftwareUpdateToGroupById_Name, AddSoftwareUpdateToGroupById_Object
 Aliases: SoftwareUpdateIds
-
 Required: True
 Position: Named
 Default value: None
@@ -218,7 +210,6 @@ Specifies a name of a software update.
 Type: String[]
 Parameter Sets: AddSoftwareUpdateToGroupByName_Id, AddSoftwareUpdateToGroupByName_Name, AddSoftwareUpdateToGroupByName_Object
 Aliases: SoftwareUpdateNames
-
 Required: True
 Position: Named
 Default value: None
@@ -234,7 +225,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -65,7 +65,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +79,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +93,6 @@ Specifies an ID for a configuration item revision.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -111,7 +108,6 @@ To obtain a configuration item object, use the Get-CMConfigurationItem cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -126,7 +122,6 @@ Specifies an array of names of configuration items.
 Type: String
 Parameter Sets: SearchByNameMandatoryNoWildcards
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -141,7 +136,6 @@ Specifies the version of a configuration item as an integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

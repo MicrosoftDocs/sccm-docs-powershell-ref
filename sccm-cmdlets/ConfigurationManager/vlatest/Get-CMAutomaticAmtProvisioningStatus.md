@@ -51,7 +51,6 @@ Specifies an array of device IDs.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: ResourceId
-
 Required: True
 Position: Named
 Default value: None
@@ -66,7 +65,6 @@ Specifies an array of device names.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -81,7 +79,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +93,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +108,6 @@ To obtain a **CMDevice** object, use the Get-CMDevice cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None

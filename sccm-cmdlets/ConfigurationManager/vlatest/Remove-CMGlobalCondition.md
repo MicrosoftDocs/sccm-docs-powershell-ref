@@ -73,7 +73,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -88,7 +87,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +101,6 @@ Performs the action without a confirmation message.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +115,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -134,7 +130,6 @@ This value corresponds to the **CI_ID** property of a global condition object.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId
-
 Required: True
 Position: Named
 Default value: None
@@ -150,7 +145,6 @@ To obtain a global condition object, use the **Get-CMGlobalCondition** cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -166,7 +160,6 @@ This value corresponds to the **LocalizedDisplayName** property of a global cond
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: Named
 Default value: None
@@ -182,7 +175,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

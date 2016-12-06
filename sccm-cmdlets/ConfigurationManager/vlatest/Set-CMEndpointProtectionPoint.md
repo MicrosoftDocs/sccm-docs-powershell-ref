@@ -60,7 +60,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -75,7 +74,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +103,6 @@ To obtain an input object, use the Get-CMEndpointProtectionPoint cmdlet.
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: EndpointProtectionPoint
-
 Required: True
 Position: Named
 Default value: None
@@ -121,7 +117,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +137,6 @@ Type: MapsMembershipType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DoNotJoinMaps, BasicMembership, AdvancedMembership
-
 Required: True
 Position: Named
 Default value: None
@@ -157,7 +151,6 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +165,6 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -188,7 +180,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -64,7 +64,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -79,7 +78,6 @@ Indicates that email notification is disabled.
 Type: SwitchParameter
 Parameter Sets: Disable
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -94,7 +92,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +106,6 @@ Indicates that Configuration Manager uses an SMTP server to send email alerts.
 Type: SwitchParameter
 Parameter Sets: Enable
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -124,7 +120,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +134,6 @@ Specifies the outgoing SMTP port for sending email alerts.
 Type: Int32
 Parameter Sets: Enable
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -154,7 +148,6 @@ Specifies the email address from which Configuration Manager sends email alerts.
 Type: String
 Parameter Sets: Enable
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -169,7 +162,6 @@ Specifies the fully qualified domain name (FQDN) of the SMTP server.
 Type: String
 Parameter Sets: Enable
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -190,7 +182,6 @@ Type: AuthenticationMethod
 Parameter Sets: Enable
 Aliases: 
 Accepted values: Anonymous, DefaultServiceAccount, Other
-
 Required: True
 Position: Named
 Default value: None
@@ -206,7 +197,6 @@ This parameter also specifies the SMTP Server Connection account.
 Type: String
 Parameter Sets: Enable
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -222,7 +212,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
