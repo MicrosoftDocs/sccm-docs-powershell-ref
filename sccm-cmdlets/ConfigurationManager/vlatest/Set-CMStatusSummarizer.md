@@ -62,7 +62,7 @@ Indicates that the summarizer is an application deployment status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetAppDeploymentSummarizer
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationStatisticSummarizer
-
+Indicates that the summarizer is an application statistic status summarizer.
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +92,7 @@ Indicates that the summarizer is a component status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetComponentStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -123,7 +123,7 @@ This parameter applies to site system status summarizers.
 ```yaml
 Type: Int32
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ This parameter applies to component status summarizers and site system status su
 ```yaml
 Type: Boolean
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,12 +224,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +247,7 @@ If you specify a value of $True for this parameter, specify a priority by using 
 ```yaml
 Type: Boolean
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,7 +264,7 @@ Specify this parameter if you specify $True for the *ReplicateToParentSite* para
 ```yaml
 Type: ReplicationPriorityType
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 Accepted values: Low, Normal, High
 
 Required: False
@@ -275,12 +276,12 @@ Accept wildcard characters: False
 
 ### -Schedule
 Specifies a schedule object that determines how often to summarize site system status.
-To obtain a schedule object, use the New-CMSchedule cmdlet.
+To obtain a schedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +296,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -310,7 +311,7 @@ Indicates that the summarizer is a site system status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -342,7 +343,7 @@ This parameter applies to site system status summarizers.
 ```yaml
 Type: Int32
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -381,5 +382,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSchedule](./New-CMSchedule.md)
 
 [Get-CMStatusSummarizer](./Get-CMStatusSummarizer.md)
-
-

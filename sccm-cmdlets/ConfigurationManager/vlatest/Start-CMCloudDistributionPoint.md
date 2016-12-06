@@ -33,7 +33,7 @@ Start-CMCloudDistributionPoint -Name <String> [-DisableWildcardHandling] [-Force
 ## DESCRIPTION
 The **Start-CMCloudDistributionPoint** cmdlet starts the cloud distribution point service.
 
-You can use the Stop-CMCloudDistributionPoint cmdlet to suspend distribution of content.
+You can use the [Stop-CMCloudDistributionPoint](./Stop-CMCloudDistributionPoint.md) cmdlet to suspend distribution of content.
 
 ## EXAMPLES
 
@@ -57,7 +57,7 @@ PS C:\>$DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
 PS C:\> Start-CMCloudDistributionPoint -InputObject $DistPnt
 ```
 
-The first command uses the Get-CMCloudDistributionPoint cmdlet to get the distribution point with the specified identifier, and then saves it in the $DistPnt variable.
+The first command uses the **Get-CMCloudDistributionPoint** cmdlet to get the distribution point with the specified identifier, and then saves it in the $DistPnt variable.
 
 The second command starts the cloud distribution point service for the distribution point stored in $DistPnt.
 
@@ -84,7 +84,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,12 +126,12 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a cloud distribution point object.
-To obtain a cloud distribution point object, you can use the Get-CMCloudDistributionPoint cmdlet.
+To obtain a cloud distribution point object, you can use the [Get-CMCloudDistributionPoint](./Get-CMCloudDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -146,7 +146,7 @@ Specifies the name of a cloud distribution point.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -191,5 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMCloudDistributionPoint](./Set-CMCloudDistributionPoint.md)
 
 [Stop-CMCloudDistributionPoint](./Stop-CMCloudDistributionPoint.md)
-
-

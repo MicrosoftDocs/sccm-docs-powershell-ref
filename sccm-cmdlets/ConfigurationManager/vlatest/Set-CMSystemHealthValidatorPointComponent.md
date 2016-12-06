@@ -39,7 +39,7 @@ You can specify the accounts that the component uses to publish and query Active
 You can set the validity period for cached statements of health and whether to accept statements of health only after a specific time.
 Any changes you make apply to all system health validator points in the System Center Configuration Manager site.
 
-To specify a system health validator point to modify, specify a site code or name, or you can use the Get-CMSystemHealthValidatorPointComponent cmdlet to get a system health validator point to modify.
+To specify a system health validator point to modify, specify a site code or name, or you can use the [Get-CMSystemHealthValidatorPointComponent](./Get-CMSystemHealthValidatorPointComponent.md) cmdlet to get a system health validator point to modify.
 
 ## EXAMPLES
 
@@ -94,7 +94,7 @@ The date and time must be in the past.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ If no trust relationship exists between the forests, you may need to specify acc
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ If no trust relationship exists between this forest and the site system server f
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,12 +168,12 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a system health validator point object.
-To obtain a system health validator point, use the **Get-CMSystemHealthValidatorPointComponent** cmdlet.
+To obtain a system health validator point, use the [Get-CMSystemHealthValidatorPointComponent](./Get-CMSystemHealthValidatorPointComponent.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,12 +201,12 @@ Accept wildcard characters: False
 Specifies a health state reference publishing account, in the format Domain\User.
 If you do not specify an account, the component uses the site system server account.
 
-You must specify an account if no trust relationship exists between the site server domain and the domain suffix specified in the DomainSuffix parameter or if there is a trust relationship, but the site system server account lacks Full Control permission for the System Management Active Directory container.
+You must specify an account if no trust relationship exists between the site server domain and the domain suffix specified in the *DomainSuffix* parameter or if there is a trust relationship, but the site system server account lacks Full Control permission for the System Management Active Directory container.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,12 +219,12 @@ Accept wildcard characters: False
 Specifies an account, in the format Domain\User, that the system health validator point uses to query AD DS for state references.
 If you do not specify an account, the component uses the site system server account.
 
-You must specify an account if no trust relationship exists between the site server domain and the domain suffix specified in the DomainSuffix parameter.
+You must specify an account if no trust relationship exists between the site server domain and the domain suffix specified in the *DomainSuffix* parameter.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,7 +239,7 @@ Specifies a site code in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -288,7 +288,7 @@ The date and time must be in the past.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -306,7 +306,7 @@ The default value for this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -355,5 +355,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMSoftwareUpdatePointComponent](./Set-CMSoftwareUpdatePointComponent.md)
 
 [Set-CMStatusReportingComponent](./Set-CMStatusReportingComponent.md)
-
-

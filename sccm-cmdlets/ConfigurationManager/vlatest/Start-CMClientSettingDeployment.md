@@ -96,12 +96,12 @@ The second command starts deployment of the client setting object in the $CSID v
 
 ### -ClientSetting
 Specifies a client setting object.
-To obtain a client setting object, use the Get-CMClientSetting cmdlet.
+To obtain a client setting object, use the [Get-CMClientSetting](./Get-CMClientSetting.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByClientSettingValue_CollectionId, SearchByClientSettingValue_CollectionName, SearchByClientSettingValue_CollectionValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ Specifies the ID of a client setting object.
 ```yaml
 Type: String
 Parameter Sets: SearchByClientSettingId_CollectionId, SearchByClientSettingId_CollectionValue, SearchByClientSettingId_CollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -131,7 +131,7 @@ Specifies the name of a client setting object.
 ```yaml
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingName_CollectionId, SearchByClientSettingName_CollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ Configuration Manager applies the client settings to the members of this collect
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingId_CollectionValue, SearchByClientSettingValue_CollectionValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,7 +164,7 @@ Configuration Manager applies the client settings to the members of this collect
 ```yaml
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionId, SearchByClientSettingId_CollectionId, SearchByClientSettingValue_CollectionId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -180,7 +180,7 @@ Configuration Manager applies the client settings to the members of this collect
 ```yaml
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionName, SearchByClientSettingId_CollectionName, SearchByClientSettingValue_CollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -210,7 +210,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,5 +264,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMClientSetting](./Get-CMClientSetting.md)
 
 [Get-CMDeviceCollection](./Get-CMDeviceCollection.md)
-
-

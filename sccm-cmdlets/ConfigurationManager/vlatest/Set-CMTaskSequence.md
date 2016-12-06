@@ -74,7 +74,7 @@ This command gets the task sequence object named TaskSequence02 and uses the pip
 
 ### -AddSupportedOperatingSystemPlatform
 Adds a supported operating system platform object to the task sequence.
-To obtain a supported operating system platform object, use the Get-CMSupportedPlatform cmdlet.
+To obtain a supported operating system platform object, use the [Get-CMSupportedPlatform](./Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -94,7 +94,7 @@ Specifies the ID of a boot image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ You can use categories to group task sequences.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Custom text appears in the progress notification dialog box while the task seque
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ If you specify a value of $True for the *RunAnotherProgram* parameter, the speci
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ Specifies a description for the task sequence.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Indicates whether to disable this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +202,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ Indicates whether to enable this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -247,7 +247,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a task sequence object.
-To obtain a task sequence object, use the Get-CMTaskSequence cmdlet.
+To obtain a task sequence object, use the [Get-CMTaskSequence](./Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -293,7 +293,7 @@ Specifies a new name for the task sequence.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +309,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ Specifies the name of a program to run from a Configuration Manager software pac
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 ### -RemoveSupportedOperatingSystemPlatform
 Removes a supported operating system platform object from the task sequence.
-To obtain a supported operating system platform object, use the **Get-CMSupportedPlatform** cmdlet.
+To obtain a supported operating system platform object, use the [Get-CMSupportedPlatform](./Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -356,7 +356,7 @@ Specify the program by using the *DeploymentPackageId* parameter and the *Progra
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -372,7 +372,7 @@ If you specify a value of $False, the program does not run if it has run success
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -402,7 +402,7 @@ Indicates whether to suppress notifications for this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -447,7 +447,7 @@ Indicates whether the task sequence uses the boot image specified by using the *
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -463,7 +463,7 @@ If you select a value of $False for this parameter, be sure to specify custom te
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -514,5 +514,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMTaskSequence](./Remove-CMTaskSequence.md)
 
 [Get-CMSupportedPlatform](./Get-CMSupportedPlatform.md)
-
-

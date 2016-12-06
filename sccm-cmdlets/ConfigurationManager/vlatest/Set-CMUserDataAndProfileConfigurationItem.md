@@ -97,7 +97,7 @@ Set-CMUserDataAndProfileConfigurationItem [-ConfigureFolderRedirection <Boolean>
 ## DESCRIPTION
 The **Set-CMUserDataAndProfileConfigurationItem** cmdlet modifies a user data and profile configuration item that can apply to Windows 8 computers.
 A configuration item can manage folder redirection, offline folders, and roaming user profiles.
-You can create a configuration item by using the New-CMUserDataAndProfileConfigurationItem cmdlet.
+You can create a configuration item by using the [New-CMUserDataAndProfileConfigurationItem](./New-CMUserDataAndProfileConfigurationItem.md) cmdlet.
 
 ## EXAMPLES
 
@@ -117,7 +117,7 @@ Indicates whether this configuration item manages profile access settings for ro
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Indicates whether to grant the Administrators group access to roaming profile fo
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ If this value is $False, roaming profiles apply only to the primary device for a
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ Indicates whether to permit user policies to roam across Active Directory forest
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,12 +190,17 @@ Accept wildcard characters: False
 
 ### -BackgroundSynchronization
 Specifies a background synchronization type for file in offline mode.
-The acceptable values for this parameter are: Disabled, Enabled, and NotConfigured.
+
+The acceptable values for this parameter are:
+
+-- Disabled
+-- Enabled
+-- NotConfigured
 
 ```yaml
 Type: SynchronizationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enabled, Disabled, NotConfigured
 
 Required: False
@@ -211,7 +216,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +231,7 @@ Indicates whether the configuration item includes settings for folder redirectio
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +261,7 @@ Indicates whether the configuration item includes settings for roaming user prof
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +291,7 @@ Specifies a connection transfer rate.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -318,7 +323,7 @@ A computer deletes an older profile when it restarts.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -334,7 +339,7 @@ The default for this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -380,7 +385,7 @@ Indicates whether to detect slow links.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -403,7 +408,7 @@ Folder redirection and caching on the primary device for a user.
 ```yaml
 Type: DeviceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OnAnyDevice, OnlyOnPrimaryDevices, FolderRedirectionOnAnyDeviceCachingOnPrimaryDevicesOnly
 
 Required: False
@@ -419,7 +424,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -449,7 +454,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -464,7 +469,7 @@ Indicates whether users can disable the **Make Available Offline** command.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -479,7 +484,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -494,7 +499,7 @@ Indicates whether users can disable the **Work Offline** command.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -541,7 +546,7 @@ Indicates whether this configuration item enables use of offline files.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -556,7 +561,7 @@ Indicates whether the configuration enables work with offline files over a slow 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -571,7 +576,7 @@ Specifies the number of days to wait before the profile creates an error.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -587,7 +592,7 @@ The configuration item excludes these folders from roaming profiles.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -614,12 +619,16 @@ Accept wildcard characters: False
 
 ### -FileSynchronization
 Specifies a file synchronization type for metered networks for work in offline mode.
-The acceptable values for this parameter are: Disabled, Enabled, and NotConfigured.
+The acceptable values for this parameter are:
+
+-- Disabled
+-- Enabled
+-- NotConfigured
 
 ```yaml
 Type: SynchronizationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enabled, Disabled, NotConfigured
 
 Required: False
@@ -636,7 +645,7 @@ The default value for this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -651,7 +660,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -666,7 +675,7 @@ Indicates whether to grant the user exclusive permissions to a redirected folder
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -692,12 +701,12 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a user data and profile configuration item object.
-To obtain a configuration item object, use the Get-CMUserDataAndProfileConfigurationItem cmdlet.
+To obtain a configuration item object, use the [Get-CMUserDataAndProfileConfigurationItem](./Get-CMUserDataAndProfileConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -712,7 +721,7 @@ Indicates whether to leave the folder in the redirected location in the event th
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -727,7 +736,7 @@ Specifies a limit, in megabytes, for the disk space used for offline files.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -754,7 +763,7 @@ Accept wildcard characters: False
 
 ### -ManageAdvancedSetting
 Indicates whether this configuration item manages advanced settings for folder redirection.
-Specify values for any of the following parameters: 
+Specify values for any of the following parameters:
 
 - *GrantExclusiveRight*
 - *MoveContent*
@@ -764,7 +773,7 @@ Specify values for any of the following parameters:
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -779,7 +788,7 @@ Indicates whether this profile item manages slow links.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -794,7 +803,7 @@ Indicates whether to move the cached folder when the path updates on the server.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -809,7 +818,7 @@ Indicates whether to move the contents of redirected folders to the new location
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -855,7 +864,7 @@ Specifies a new name for the configuration item.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -870,7 +879,7 @@ Specifies an array of Administrative user assigned offline folders, as UNC paths
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -900,7 +909,7 @@ Indicates whether the configuration item does not check for ownership of roaming
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -910,12 +919,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -946,7 +956,7 @@ Indicates whether to disable uploading of profiles.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -993,7 +1003,7 @@ Specifies a value for a slow link.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1008,7 +1018,7 @@ Indicates whether to enable the user logon prompt to allow profile download when
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1023,7 +1033,7 @@ Specifies a specified location.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1038,7 +1048,7 @@ Specifies a time for background upload of the user hive.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: 12:00 AM, 1:00 PM, 2:00 PM, 3:00 PM, 4:00 PM, 5:00 PM, 6:00 PM, 7:00 PM, 8:00 PM, 9:00 PM, 10:00 PM, 11:00 PM, 12:00 PM
 
 Required: False
@@ -1101,7 +1111,7 @@ The configuration item specifies these subfolders of Appdata\Roaming to synchron
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1116,7 +1126,7 @@ Indicates whether to use a synchronization policy.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1131,7 +1141,7 @@ Indicates whether to block users from logging on by using a temporary profile.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1146,7 +1156,7 @@ Specifies a timeout value.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1161,7 +1171,7 @@ Indicates whether to use common alerts.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1176,7 +1186,7 @@ Indicates whether to use the specified location referred to by the *SpecifiedLoc
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1222,7 +1232,7 @@ Specifies the number of days to wait before the profile creates a warning.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1259,5 +1269,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CMUserDataAndProfileConfigurationItem](./New-CMUserDataAndProfileConfigurationItem.md)
-
-

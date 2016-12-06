@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ Specifies a target collection to deploy this application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +149,7 @@ Specifies a comment for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ Autoinstall performs the installation if the application is not installed.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Autoinstall performs the installation if the application is not installed.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,16 +224,16 @@ Accept wildcard characters: False
 Specifies an action for a deployment.
 Valid values are:
 
-- Install.
+-- Install.
 Install the application.
- 
-- Uninstall.
+
+-- Uninstall.
 Uninstall the application.
 
 ```yaml
 Type: DeployActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Install, Uninstall
 
 Required: False
@@ -248,17 +248,17 @@ Specifies the purpose of the deployment.
 
 Valid values are:
 
-- Available.
+-- Available.
 If the target collection is a device collection, the application is available in the software center.
 If the target collection is a user collection, the application is available in the catalog web site.
- 
-- Required.
+
+-- Required.
 Installation occurs when the deadline passes.
 
 ```yaml
 Type: DeployPurposeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Available, Required
 
 Required: False
@@ -274,7 +274,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,7 +289,7 @@ Indicates whether to enable Operations Manager maintenance mode.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -304,7 +304,7 @@ Specifies a value that generates a deployment alert when exceeded.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +319,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -364,7 +364,7 @@ Specifies an application deployment object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -394,7 +394,7 @@ Indicates whether an application installation occurs outside of a maintenance wi
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -404,12 +404,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -425,7 +426,7 @@ Otherwise, changes are written on the overlay and committed later.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -440,7 +441,7 @@ Specifies a date after which to create an alert.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -455,7 +456,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -470,7 +471,7 @@ Specifies a time after which to create an alert.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -486,7 +487,7 @@ To use this parameter, set the *DeployPurpose* parameter to Required.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -504,7 +505,7 @@ If this value is $False, the computer does not restart outside a service window.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -522,7 +523,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -537,7 +538,7 @@ Specifies a value that the threshold must exceed before an alert is created.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -549,17 +550,17 @@ Accept wildcard characters: False
 ### -TimeBaseOn
 Specifies the time zone to use.
 
-Valid values are: 
+Valid values are:
 
 - LocalTime.
-Use local time. 
+Use local time.
 - UTC.
 Use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
 
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: LocalTime, Utc
 
 Required: False
@@ -576,7 +577,7 @@ Clients may incur additional costs.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -590,19 +591,19 @@ Specifies user notification types.
 
 Valid values are:
 
-- DisplayAll.
+-- DisplayAll.
 Display in Software Center and show all notifications.
- 
-- DisplaySoftwareCenterOnly.
+
+-- DisplaySoftwareCenterOnly.
 Display in Software Center and only show notifications for computer restarts.
- 
-- HideAll.
+
+-- HideAll.
 Do not display in Software Center and do not show notifications.
 
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -640,5 +641,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CMApplicationDeployment](./Set-CMApplicationDeployment.md)
-
-
