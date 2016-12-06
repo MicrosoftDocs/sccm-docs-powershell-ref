@@ -52,7 +52,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -67,7 +66,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +80,6 @@ Specifies the ID of a security scope that is associated with a Configuration Man
 Type: String
 Parameter Sets: FilterById
 Aliases: CategoryId
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +94,6 @@ Specifies a Configuration Manager object that is associated with a security scop
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -112,7 +108,6 @@ Specifies the name of a security scope that is associated with a Configuration M
 Type: String
 Parameter Sets: FilterByName
 Aliases: CategoryName
-
 Required: False
 Position: Named
 Default value: None

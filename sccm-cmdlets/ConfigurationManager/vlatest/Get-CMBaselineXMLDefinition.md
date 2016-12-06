@@ -54,7 +54,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -69,7 +68,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +82,6 @@ Specifies an array of IDs of baseline configurations.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -100,7 +97,6 @@ To obtain a **CMBaseline** object, use the Get-CMBaseline cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -115,7 +111,6 @@ Specifies an array of baseline configuration names.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
-
 Required: False
 Position: 0
 Default value: None

@@ -49,7 +49,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -64,7 +63,6 @@ Specifies the name of the Configuration Manager database that you want to use as
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +78,6 @@ To specify a database instance, use the format \<Server Name\>\\\<Instance Name\
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +92,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +106,6 @@ Specifies the name of the report folder on the report server.
 Type: String
 Parameter Sets: ReportingServicePoint
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +120,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +134,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ReportingServicePointByValue
 Aliases: SiteServer
-
 Required: True
 Position: Named
 Default value: None
@@ -155,7 +148,6 @@ Specifies the name of an instance of Microsoft SQL Server Reporting Services.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -170,7 +162,6 @@ Specifies a site code of a Configuration Manager site that hosts this site syste
 Type: String
 Parameter Sets: ReportingServicePoint
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -185,7 +176,6 @@ Specifies a fully qualified domain name (FQDN) of the server that hosts the site
 Type: String
 Parameter Sets: ReportingServicePoint
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -200,7 +190,6 @@ Specifies a user name for an account that Configuration Manager uses to connect 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -216,7 +205,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

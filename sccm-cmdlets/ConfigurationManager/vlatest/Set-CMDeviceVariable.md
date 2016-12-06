@@ -57,7 +57,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -73,7 +72,6 @@ You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -88,7 +86,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +100,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +114,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: Device
-
 Required: True
 Position: Named
 Default value: None
@@ -133,7 +128,6 @@ Indicates whether a value displays in the Configuration Manager console.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +142,6 @@ Specifies a name for the variable that this cmdlet modifies.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +156,6 @@ Specifies a value for the variable that this cmdlet modifies.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +170,6 @@ Specifies a Systems Management Server (SMS) ID.
 Type: String
 Parameter Sets: SetByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -193,7 +184,6 @@ Specifies the name of the device variable.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -209,7 +199,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -75,7 +75,6 @@ Indicates whether Configuration Manager always installs the client.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +89,6 @@ Specifies the ID of the collection to which the client belongs.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +103,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -121,7 +118,6 @@ You can get a Configuration Manager device object by using the Get-CMDevice cmdl
 Type: IResultObject
 Parameter Sets: SearchByDeviceValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -136,7 +132,6 @@ Specifies the ID for the device to which Configuration Manager installs the clie
 Type: String
 Parameter Sets: SearchByDeviceIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -151,7 +146,6 @@ Specifies the name of the device to which Configuration Manager installs the cli
 Type: String
 Parameter Sets: SearchByDeviceNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -166,7 +160,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +174,6 @@ Indicates whether the cmdlet reinstalls the client.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -196,7 +188,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -211,7 +202,6 @@ Indicates whether Configuration Manager authenticates and authorizes the client 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -227,7 +217,6 @@ You can get a Configuration Manager client object by using the Get-CMBaseline cm
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -242,7 +231,6 @@ Specifies the name of a Configuration Manager client.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -257,7 +245,6 @@ Specifies the site code for the Configuration Manager site that hosts this site 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -273,7 +260,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

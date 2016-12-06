@@ -49,7 +49,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -64,7 +63,6 @@ Accept wildcard characters: False
 Type: DeploymentTypeItem[]
 Parameter Sets: NewByDTI
 Aliases: DeploymentType
-
 Required: True
 Position: Named
 Default value: None
@@ -79,7 +77,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +91,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +105,6 @@ Accept wildcard characters: False
 Type: IResultObject[]
 Parameter Sets: NewByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -124,7 +119,6 @@ Specifies a name for the virtual environment group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -140,7 +134,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

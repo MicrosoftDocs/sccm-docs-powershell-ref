@@ -84,7 +84,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -100,7 +99,6 @@ To get a **CMDistributionPointGroup** object, use the Get-CMDistributionPointGro
 Type: IResultObject
 Parameter Sets: SearchByGroup
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -115,7 +113,6 @@ Specifies the ID of a distribution point group.
 Type: String
 Parameter Sets: SearchByGroupId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -130,7 +127,6 @@ Specifies the name of a distribution point group.
 Type: String
 Parameter Sets: SearchByGroupName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -145,7 +141,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +156,6 @@ You can use a comma separated list.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: AzureServiceId
-
 Required: True
 Position: Named
 Default value: None
@@ -176,7 +170,6 @@ Specifies the name of a cloud distribution point.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -102,7 +102,6 @@ Specifies an array of AMT user accounts to add.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +116,6 @@ Indicates whether to allow ping responses.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +130,6 @@ Specifies an organizational unit (OU) for an AMT account.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +144,6 @@ Accept wildcard characters: False
 Type: Dictionary`2[]
 Parameter Sets: (All)
 Aliases: AmtProvisioningAccounts
-
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +158,6 @@ Specifies an AMT account.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +172,6 @@ Specifies a secure string that contains a password.
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +187,6 @@ To obtain an input object, use the New-CMSchedule cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -224,7 +217,6 @@ Type: AuditLogSettingType[]
 Parameter Sets: (All)
 Aliases: AuditLogSettingNames
 Accepted values: SecurityAdministration, RemoteControlOperations, RedirectionManager, FirmwareUpdateManager, SecurityAuditLog, NetworkTime, NetworkAdministration, StorageAdministration, EventManager, CircuitBreakerManager, AgentPresenceManager, WirelessConfiguration, EndpointAccessControl
-
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +231,6 @@ Specifies a certificate template.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -254,7 +245,6 @@ Specifies the name of a certification authority.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -269,7 +259,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -284,7 +273,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -299,7 +287,6 @@ Indicates whether to bypass the BIOS password.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -314,7 +301,6 @@ Indicates whether to enable certificate revocation list (CRL) checking.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -330,7 +316,6 @@ Intel AMT uses IDE redirection to redirect serial and IDE communication from a m
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -345,7 +330,6 @@ Indicates whether to enable the Web interface.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -360,7 +344,6 @@ Indicates whether to enable wired network access.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -375,7 +358,6 @@ Specifies an enrollment point in Configuration Manager.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -390,7 +372,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -405,7 +386,6 @@ Specifies the issuing certification authority.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -420,7 +400,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: KerberosClockToleranceMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -436,7 +415,6 @@ The MEBx account provides authenticated access to the AMT firmware on AMT-based 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -451,7 +429,6 @@ Specifies a secure string that contains the password for the MEBx account.
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -466,7 +443,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -486,7 +462,6 @@ Type: PowerStateType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HostIsOnS0, AlwaysOnS0S5
-
 Required: False
 Position: Named
 Default value: None
@@ -501,7 +476,6 @@ Specifies an array of AMT user accounts to remove.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -516,7 +490,6 @@ Specifies a site code in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -531,7 +504,6 @@ Specifies the name of a universal security group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -547,7 +519,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -562,7 +533,6 @@ Specifies a wired profile object.
 Type: WiredProfile
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -577,7 +547,6 @@ Specifies an array of wireless profiles.
 Type: WirelessProfile[]
 Parameter Sets: (All)
 Aliases: WirelessProfiles
-
 Required: False
 Position: Named
 Default value: None

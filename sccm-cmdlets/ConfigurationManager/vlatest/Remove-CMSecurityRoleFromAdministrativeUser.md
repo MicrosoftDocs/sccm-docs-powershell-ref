@@ -89,7 +89,6 @@ To obtain a **CMAdministrativeUser** object, use the Get-CMAdministrativeUser cm
 Type: IResultObject
 Parameter Sets: RemoveRoleFromAdminById_Object, RemoveRoleFromAdminByName_Object, RemoveRoleFromAdminByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -104,7 +103,6 @@ Specifies the ID of an administrative user.
 Type: Int32
 Parameter Sets: RemoveRoleFromAdminById_Id, RemoveRoleFromAdminByName_Id, RemoveRoleFromAdminByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -119,7 +117,6 @@ Specifies the name of an administrative user.
 Type: String
 Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminById_Name, RemoveRoleFromAdminByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -134,7 +131,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -149,7 +145,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +159,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +173,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -195,7 +188,6 @@ To obtain a **CMSecurityRole** object, use the Get-CMSecurityRole cmdlet.
 Type: IResultObject
 Parameter Sets: RemoveRoleFromAdminByObject_Name, RemoveRoleFromAdminByObject_Object, RemoveRoleFromAdminByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -210,7 +202,6 @@ Specifies the ID of a role.
 Type: String
 Parameter Sets: RemoveRoleFromAdminById_Name, RemoveRoleFromAdminById_Object, RemoveRoleFromAdminById_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -225,7 +216,6 @@ Specifies the name of a role.
 Type: String
 Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminByName_Object, RemoveRoleFromAdminByName_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -241,7 +231,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -52,7 +52,6 @@ Specifies an array of localized names of the categories to which the configurati
 Type: String[]
 Parameter Sets: (All)
 Aliases: LocalizedCategoryInstanceNames
-
 Required: False
 Position: Named
 Default value: None
@@ -67,7 +66,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -90,7 +88,6 @@ Type: CICreationType
 Parameter Sets: New
 Aliases: 
 Accepted values: None, WindowsApplication, WindowsOS, MacOS, MobileDevice
-
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +102,6 @@ Specifies a description for a configuration item.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +116,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +130,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +144,6 @@ Specifies a name for the configuration item.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: Named
 Default value: None
@@ -166,7 +159,6 @@ To obtain a **CMConfigurationItem** object, use the Get-CMConfigurationItem cmdl
 Type: IResultObject
 Parameter Sets: NewChild
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -182,7 +174,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -60,7 +60,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -75,7 +74,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +102,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +116,6 @@ Specifies the CI__ID of a configuration policy.
 Type: Int32
 Parameter Sets: SearchById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -136,7 +131,6 @@ To obtain a configuration policy object, use the Get-CMConfigurationPolicy cmdle
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -151,7 +145,6 @@ Specifies an array of names of configuration policies.
 Type: String[]
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -167,7 +160,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -67,7 +67,6 @@ Specifies the minimum number of minutes to wait before checking for a cmdlet upd
 Type: Int32
 Parameter Sets: (All)
 Aliases: CheckIntervalMinutes, CheckIntervalMins, CheckMinimumMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +81,6 @@ Specifies the number of seconds to wait before timing out while checking for a c
 Type: Int32
 Parameter Sets: (All)
 Aliases: CheckTimeoutSeconds
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +95,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -112,7 +109,6 @@ Indicates that the update check for the current user is returned.
 Type: SwitchParameter
 Parameter Sets: User
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -127,7 +123,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +137,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +152,6 @@ To obtain a cmdlet update configuration object, use the Get-CMCmdletUpdateCheck 
 Type: CMCmdletUpdateConfiguration
 Parameter Sets: Value
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -173,7 +166,6 @@ Indicates whether update check is enabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +180,6 @@ Indicates whether update check is enabled for the Configuration ManagerWindows P
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +194,6 @@ Indicates whether update check is enabled for the Configuration Manager provider
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -219,7 +209,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +223,6 @@ Indicates that the update check for the system is returned.
 Type: SwitchParameter
 Parameter Sets: System
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -250,7 +238,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

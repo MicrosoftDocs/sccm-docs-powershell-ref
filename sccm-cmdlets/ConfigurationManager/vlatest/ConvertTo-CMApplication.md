@@ -45,7 +45,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -60,7 +59,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +74,6 @@ To obtain an application object, use the Get-CMApplication cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: Application, DeploymentType
-
 Required: True
 Position: Named
 Default value: None

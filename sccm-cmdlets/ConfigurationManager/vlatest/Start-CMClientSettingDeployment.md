@@ -102,7 +102,6 @@ To obtain a client setting object, use the Get-CMClientSetting cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByClientSettingValue_CollectionId, SearchByClientSettingValue_CollectionName, SearchByClientSettingValue_CollectionValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -117,7 +116,6 @@ Specifies the ID of a client setting object.
 Type: String
 Parameter Sets: SearchByClientSettingId_CollectionId, SearchByClientSettingId_CollectionValue, SearchByClientSettingId_CollectionName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -132,7 +130,6 @@ Specifies the name of a client setting object.
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingName_CollectionId, SearchByClientSettingName_CollectionName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -149,7 +146,6 @@ Configuration Manager applies the client settings to the members of this collect
 Type: IResultObject
 Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingId_CollectionValue, SearchByClientSettingValue_CollectionValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -165,7 +161,6 @@ Configuration Manager applies the client settings to the members of this collect
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionId, SearchByClientSettingId_CollectionId, SearchByClientSettingValue_CollectionId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -181,7 +176,6 @@ Configuration Manager applies the client settings to the members of this collect
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionName, SearchByClientSettingId_CollectionName, SearchByClientSettingValue_CollectionName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -196,7 +190,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -211,7 +204,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -226,7 +218,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +233,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

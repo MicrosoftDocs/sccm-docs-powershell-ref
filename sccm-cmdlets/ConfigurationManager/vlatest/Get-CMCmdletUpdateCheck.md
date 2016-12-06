@@ -44,7 +44,6 @@ This parameter lets you know if the system policy is overriding user policy.
 Type: SwitchParameter
 Parameter Sets: User
 Aliases: User
-
 Required: False
 Position: Named
 Default value: None
@@ -59,7 +58,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -74,7 +72,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +87,6 @@ This parameter lets you know what is being overridden by system policy.
 Type: SwitchParameter
 Parameter Sets: System
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None

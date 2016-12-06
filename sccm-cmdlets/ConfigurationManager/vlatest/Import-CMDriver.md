@@ -59,7 +59,6 @@ Assign the device drivers to an administrative category for filtering purposes, 
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AdministrativeCategories
-
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +76,6 @@ Use this parameter to specify the boot images that can install the imported devi
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: BootImagePackages
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +90,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -107,7 +104,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +121,6 @@ Use this parameter to specify the driver packages that Configuration Manager use
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: DriverPackages
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +136,6 @@ Drivers added to the driver package are not affected.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +150,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +171,6 @@ Type: ImportDuplicateDriverOption
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NotImport, AppendCategory, KeepExistingCategory, OverwriteCategory
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +185,6 @@ Indicates that Configuration Manager imports all the device drivers in the impor
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +199,6 @@ Specifies a platform object on which the device driver can run.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: SupportedPlatforms
-
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +213,6 @@ Specifies an array of names of platforms on which the device driver can run.
 Type: String[]
 Parameter Sets: (All)
 Aliases: SupportedPlatformNames
-
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +231,6 @@ To import a specific driver from a folder, specify the network path (UNC) to the
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -257,7 +245,6 @@ Indicates whether Configuration Manager updates boot images on their distributio
 Type: Boolean
 Parameter Sets: (All)
 Aliases: UpdateDistributionPointsForBootImagePackage, UpdateBootImageDistributionPoints
-
 Required: False
 Position: Named
 Default value: None
@@ -272,7 +259,6 @@ Indicates whether Configuration Manager adds the drivers to packages and deploys
 Type: Boolean
 Parameter Sets: (All)
 Aliases: UpdateDistributionPointsforDriverPackage
-
 Required: False
 Position: Named
 Default value: None
@@ -288,7 +274,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

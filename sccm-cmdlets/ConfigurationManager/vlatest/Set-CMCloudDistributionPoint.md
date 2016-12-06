@@ -64,7 +64,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -79,7 +78,6 @@ Specifies a description for a cloud distribution point.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +92,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +106,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +121,6 @@ You can use a comma-separated list.
 Type: String
 Parameter Sets: SetById
 Aliases: AzureServiceId
-
 Required: True
 Position: Named
 Default value: None
@@ -141,7 +136,6 @@ To obtain a cloud distribution point object, you can use the Get-CMCloudDistribu
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -156,7 +150,6 @@ Specifies a name for a cloud distribution point.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -171,7 +164,6 @@ Specifies a new name for the cloud-based distribution point.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +178,6 @@ Specifies the threshold value, in gigabytes, that triggers errors or warnings fo
 Type: Int32
 Parameter Sets: (All)
 Aliases: StorageQuotaInGB
-
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +194,6 @@ The default value for this parameter is $False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +208,6 @@ Specifies the threshold value, in gigabytes, that triggers errors or warnings, f
 Type: Int32
 Parameter Sets: (All)
 Aliases: TrafficOutInGB
-
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +223,6 @@ The default value for this parameter is $False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +238,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

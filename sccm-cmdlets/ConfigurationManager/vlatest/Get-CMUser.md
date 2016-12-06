@@ -68,7 +68,6 @@ Specifies the ID of a user collection.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Specifies the name of a user collection.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -98,7 +96,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +110,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +125,6 @@ To obtain a collection object, use the Get-CMCollection cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Collection
-
 Required: True
 Position: Named
 Default value: None
@@ -144,7 +139,6 @@ Specifies the name of a user.
 Type: String
 Parameter Sets: ByName, SearchByValueMandatory, SearchByIdMandatory, SearchByNameMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +153,6 @@ Specifies the resource ID of a user.
 Type: Int32
 Parameter Sets: ById
 Aliases: Id, UserId
-
 Required: True
 Position: Named
 Default value: None

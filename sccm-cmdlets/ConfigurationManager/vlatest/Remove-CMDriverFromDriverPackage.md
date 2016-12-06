@@ -88,7 +88,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -103,7 +102,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -119,7 +117,6 @@ To obtain a **CMDriver** object, use the Get-CMDriver cmdlet.
 Type: IResultObject
 Parameter Sets: RemoveDriverFromDriverPackageByObject_Name, RemoveDriverFromDriverPackageByObject_Id, RemoveDriverFromDriverPackageByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -134,7 +131,6 @@ Specifies the ID of a driver.
 Type: Int32
 Parameter Sets: RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageById_Object, RemoveDriverFromDriverPackageById_Name
 Aliases: CIId, Id, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -149,7 +145,6 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: RemoveDriverFromDriverPackageByName_Id, RemoveDriverFromDriverPackageByName_Name, RemoveDriverFromDriverPackageByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -165,7 +160,6 @@ To obtain a **CMDriverPackage** object, use the Get-CMDriverPackage cmdlet.
 Type: IResultObject
 Parameter Sets: RemoveDriverFromDriverPackageById_Object, RemoveDriverFromDriverPackageByName_Object, RemoveDriverFromDriverPackageByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -180,7 +174,6 @@ Specifies the ID of a driver package.
 Type: String
 Parameter Sets: RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageByName_Id, RemoveDriverFromDriverPackageByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -195,7 +188,6 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: RemoveDriverFromDriverPackageById_Name, RemoveDriverFromDriverPackageByName_Name, RemoveDriverFromDriverPackageByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -210,7 +202,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +216,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -241,7 +231,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

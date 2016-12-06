@@ -50,7 +50,6 @@ Specifies a destination site for data transfers by using a site code.
 Type: String
 Parameter Sets: SearchBySiteCode
 Aliases: DesSiteCode
-
 Required: False
 Position: Named
 Default value: None
@@ -65,7 +64,6 @@ Specifies a destination site for data transfers by using a site name.
 Type: String
 Parameter Sets: SearchBySiteName
 Aliases: DesSiteName
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +78,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +92,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +106,6 @@ Specifies a source site for data transfers by using a site code.
 Type: String
 Parameter Sets: SearchBySiteCode
 Aliases: SiteCode
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +120,6 @@ Specifies a destination site for data transfers by using a site name.
 Type: String
 Parameter Sets: SearchBySiteName
 Aliases: SiteName
-
 Required: False
 Position: Named
 Default value: None

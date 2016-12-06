@@ -54,7 +54,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -69,7 +68,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +82,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +96,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +111,6 @@ To obtain a multicast service point object, use the Get-CMMulticastServicePoint 
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: MulticastServicePoint
-
 Required: True
 Position: Named
 Default value: None
@@ -132,7 +127,6 @@ The default is to remove WDS.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +141,6 @@ Specifies the site code for the Configuration Manager site that hosts the site s
 Type: String
 Parameter Sets: ByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +155,6 @@ Specifies the name of the server that hosts a site system role.
 Type: String
 Parameter Sets: ByName
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -178,7 +170,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

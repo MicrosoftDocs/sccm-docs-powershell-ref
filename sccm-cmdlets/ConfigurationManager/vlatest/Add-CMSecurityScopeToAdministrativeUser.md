@@ -100,7 +100,6 @@ To get an administrative user or administrative group object, use the Get-CMAdmi
 Type: IResultObject
 Parameter Sets: AddScopeToAdminById_Object, AddScopeToAdminByName_Object, AddScopeToAdminByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -115,7 +114,6 @@ Specifies an ID of an administrative user or administrative group.
 Type: Int32
 Parameter Sets: AddScopeToAdminById_Id, AddScopeToAdminByName_Id, AddScopeToAdminByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -130,7 +128,6 @@ Specifies a name of an administrative user or administrative group.
 Type: String
 Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminById_Name, AddScopeToAdminByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -145,7 +142,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -160,7 +156,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +170,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +185,6 @@ To obtain a security scope object, use the Get-CMSecurityScope cmdlet.
 Type: IResultObject
 Parameter Sets: AddScopeToAdminByObject_Object, AddScopeToAdminByObject_Id, AddScopeToAdminByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -206,7 +199,6 @@ Specifies the ID of a security scope.
 Type: String
 Parameter Sets: AddScopeToAdminById_Id, AddScopeToAdminById_Name, AddScopeToAdminById_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -222,7 +214,6 @@ A security scope name can be Default or the name of a custom security scope.
 Type: String
 Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminByName_Object, AddScopeToAdminByName_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -238,7 +229,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

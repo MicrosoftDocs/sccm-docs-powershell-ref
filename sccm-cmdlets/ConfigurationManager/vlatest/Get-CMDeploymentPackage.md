@@ -49,7 +49,6 @@ If you do not specify this parameter, the cmdlet returns status information abou
 Type: String
 Parameter Sets: (All)
 Aliases: Name
-
 Required: False
 Position: Named
 Default value: None
@@ -64,7 +63,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +77,6 @@ Specifies an array of names of deployment packages.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -94,7 +91,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

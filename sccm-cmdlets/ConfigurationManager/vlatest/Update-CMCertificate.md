@@ -52,7 +52,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -67,7 +66,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +80,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +94,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +108,6 @@ Specifies the ID of a certificate.
 Type: String
 Parameter Sets: ById
 Aliases: SmsId
-
 Required: True
 Position: Named
 Default value: None
@@ -127,7 +122,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByValue, ByCertificate
 Aliases: Certificate
-
 Required: True
 Position: Named
 Default value: None
@@ -142,7 +136,6 @@ Specifies a certification path.
 Type: String
 Parameter Sets: ByValue, ById
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +151,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -173,7 +165,6 @@ Accept wildcard characters: False
 Type: X509Certificate
 Parameter Sets: ByCertificate
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None

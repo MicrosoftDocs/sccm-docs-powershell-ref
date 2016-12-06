@@ -86,7 +86,6 @@ Specifies a device collection object.To obtain a device collection object, use t
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -101,7 +100,6 @@ Specifies an ID for a device collection.
 Type: String
 Parameter Sets: SearchByIdMandatoryForViewInfectedClients, SearchByValueMandatoryForViewInfectedClients, SearchByNameMandatoryForViewInfectedClients
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +111,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -128,7 +125,6 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +139,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +153,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +167,6 @@ Specifies an object that represents a threat.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatoryForViewInfectedClients
 Aliases: Threat
-
 Required: True
 Position: Named
 Default value: None
@@ -188,7 +181,6 @@ Specifies the name of a device.
 Type: String
 Parameter Sets: ByName, SearchByNameMandatory, SearchByIdMandatory, SearchByValueMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +195,6 @@ Specifies the resource ID of a device.
 Type: Int32
 Parameter Sets: ById
 Aliases: Id, DeviceId
-
 Required: True
 Position: Named
 Default value: None
@@ -218,7 +209,6 @@ Specifies an ID of a threat.
 Type: String
 Parameter Sets: SearchByIdMandatoryForViewInfectedClients
 Aliases: ThreatNameId
-
 Required: True
 Position: Named
 Default value: None
@@ -233,7 +223,6 @@ Specifies a name of a threat.
 Type: String
 Parameter Sets: SearchByNameMandatoryForViewInfectedClients
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None

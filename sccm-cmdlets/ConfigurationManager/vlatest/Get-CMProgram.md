@@ -61,7 +61,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +75,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +89,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -106,7 +103,6 @@ Specifies the package that contains the program by using an ID.
 Type: String
 Parameter Sets: SearchById
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -121,7 +117,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +131,6 @@ Specifies the program within the package by using a name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -57,7 +57,6 @@ Type: ComputerCommunicationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Http, Https
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +71,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -87,7 +85,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +99,6 @@ Indicates that the cmdlet forces wild card handling.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +113,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: WebServicePointByValue
 Aliases: SiteServer
-
 Required: True
 Position: Named
 Default value: None
@@ -132,7 +127,6 @@ Specifies the port to use to connect with the web service.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +141,6 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: WebServicePointByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +155,6 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: WebServicePointByName
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -177,7 +169,6 @@ Specifies the name of the web application used for the application catalog.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +183,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: IISWebSite
-
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +198,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

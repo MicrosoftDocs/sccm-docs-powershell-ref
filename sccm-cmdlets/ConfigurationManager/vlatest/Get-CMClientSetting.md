@@ -63,7 +63,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +77,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +91,6 @@ Specifies an array of identifiers for one or more collections of client settings
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SettingsId
-
 Required: True
 Position: Named
 Default value: None
@@ -108,7 +105,6 @@ Specifies a name for customized client settings.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +142,6 @@ Type: SettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: BackgroundIntelligentTransfer, Cloud, ClientPolicy, ComplianceSettings, ComputerAgent, ComputerRestart, EndpointProtection, HardwareInventory, MeteredNetwork, MobileDevice, NetworkAccessProtection, PowerManagement, RemoteTools, SoftwareDeployment, SoftwareInventory, SoftwareMetering, SoftwareUpdates, StateMessaging, UserAndDeviceAffinity
-
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +157,6 @@ Type: Types
 Parameter Sets: (All)
 Aliases: Type
 Accepted values: Default, Device, User
-
 Required: False
 Position: Named
 Default value: None

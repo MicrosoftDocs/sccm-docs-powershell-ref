@@ -60,7 +60,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +74,6 @@ Specifies the ID of a driver package.
 Type: String
 Parameter Sets: SearchByDriverPackageIdMandatory
 Aliases: PackageId
-
 Required: True
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: SearchByDriverPackageNameMandatory
 Aliases: PackageName
-
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +102,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +116,6 @@ Specifies the ID of a driver.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, DriverId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -136,7 +131,6 @@ To obtain a driver package object, use the Get-CMDriverPackage cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByDriverPackage
 Aliases: DriverPackage
-
 Required: True
 Position: Named
 Default value: None
@@ -151,7 +145,6 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName, DriverName
-
 Required: False
 Position: Named
 Default value: None

@@ -56,7 +56,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +70,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +84,6 @@ Specifies an ID of a status message query.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: QueryId
-
 Required: True
 Position: Named
 Default value: None
@@ -101,7 +98,6 @@ Specifies a name of a status message query.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -116,7 +112,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +126,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ShowMessages
-
 Required: False
 Position: Named
 Default value: None

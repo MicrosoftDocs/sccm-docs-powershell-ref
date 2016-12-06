@@ -97,7 +97,6 @@ You can get a boundary group ID by using the **Get-CMBoundaryGroup** cmdlet.
 Type: UInt32
 Parameter Sets: SearchByBoundaryGroupIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -112,7 +111,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByBoundaryGroup
 Aliases: BoundaryGroup
-
 Required: True
 Position: Named
 Default value: None
@@ -128,7 +126,6 @@ You can get a boundary group name by using the **Get-CMBoundaryGroup** cmdlet.
 Type: String
 Parameter Sets: SearchByBoundaryGroupNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +140,6 @@ Accept wildcard characters: False
 Type: UInt32
 Parameter Sets: SearchByIdMandatory
 Aliases: Id
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +154,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SearchByName
 Aliases: DisplayName, Name
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +168,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +182,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

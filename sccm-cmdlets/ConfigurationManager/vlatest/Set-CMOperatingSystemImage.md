@@ -88,7 +88,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -103,7 +102,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: CopyToPackageShareOnDistributionPoints
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +116,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +130,6 @@ Specifies a description for the operating system image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +144,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +158,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: DisconnectUsersFromDistributionPoints
-
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +172,6 @@ Accept wildcard characters: False
 Type: UInt32
 Parameter Sets: (All)
 Aliases: DisconnectUsersFromDistributionPointsMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +186,6 @@ Accept wildcard characters: False
 Type: UInt32
 Parameter Sets: (All)
 Aliases: DisconnectUsersFromDistributionPointsRetries
-
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +200,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +214,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -238,7 +228,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -253,7 +242,6 @@ Specifies an array of IDs of operating system images.
 Type: String
 Parameter Sets: SetById
 Aliases: PackageId
-
 Required: True
 Position: Named
 Default value: None
@@ -269,7 +257,6 @@ To obtain a CMOperatingSystemImage object, use the Get-CMOperatingSystemImage cm
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -284,7 +271,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -299,7 +285,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -314,7 +299,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -329,7 +313,6 @@ Specifies the name of an operating system image.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -344,7 +327,6 @@ Specifies the new name of an operating system image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -359,7 +341,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -374,7 +355,6 @@ Specifies the network path to the operating system image source .wim file.
 Type: String
 Parameter Sets: (All)
 Aliases: PackageSourcePath
-
 Required: False
 Position: Named
 Default value: None
@@ -389,7 +369,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -405,7 +384,6 @@ Type: PrestageBehavior
 Parameter Sets: (All)
 Aliases: 
 Accepted values: ManualCopy, DownloadDelta, OnDemand
-
 Required: False
 Position: Named
 Default value: None
@@ -421,7 +399,6 @@ Type: Priority
 Parameter Sets: (All)
 Aliases: 
 Accepted values: High, Medium, Low
-
 Required: False
 Position: Named
 Default value: None
@@ -436,7 +413,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: SendToPreferredDistributionPoints
-
 Required: False
 Position: Named
 Default value: None
@@ -451,7 +427,6 @@ Specifies the version of the operating system image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -467,7 +442,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -66,7 +66,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +83,6 @@ If lazy properties are not used, this parameter should be specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +97,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -114,7 +111,6 @@ Specifies the CI_ID and ModelID properties (the same value) of an application.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -130,7 +126,6 @@ To obtain a deployment type object, use the Get-CMDeploymentType cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByDeploymentType
 Aliases: DeploymentType
-
 Required: True
 Position: Named
 Default value: None
@@ -145,7 +140,6 @@ Specifies the model name of an application.
 Type: String
 Parameter Sets: SearchByModelName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +154,6 @@ Specifies the name of an application.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName, ApplicationName
-
 Required: False
 Position: 0
 Default value: None

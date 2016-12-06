@@ -96,7 +96,6 @@ Specifies the ID of a device collection.
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
-
 Required: True
 Position: Named
 Default value: None
@@ -111,7 +110,6 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -126,7 +124,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -141,7 +138,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +152,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
-
 Required: True
 Position: Named
 Default value: None
@@ -172,7 +167,6 @@ To obtain a resource object, use the **Get-CMResource** cmdlet.
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -187,7 +181,6 @@ Specifies the ID of a resource.
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -202,7 +195,6 @@ Specifies the name of a resource.
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -218,7 +210,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -69,7 +69,6 @@ Indicates whether a client log is checked.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +83,6 @@ Indicates whether a client log failure is checked.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +104,6 @@ Type: StatusReportOrLogType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMilestones, ErrorMilestones
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +118,6 @@ Indicates whether a client report is checked.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +132,6 @@ Indicates whether a client failure is checked.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +153,6 @@ Type: StatusReportOrLogType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMilestones, ErrorMilestones
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +167,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -188,7 +181,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +195,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +209,6 @@ Specifies an object output from another cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -233,7 +223,6 @@ Specifies a name for a status reporting component in Configuration Manager.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: SiteName
-
 Required: True
 Position: Named
 Default value: None
@@ -248,7 +237,6 @@ Indicates whether a server log is checked.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -263,7 +251,6 @@ Indicates whether a server log failure is checked.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -285,7 +272,6 @@ Type: StatusReportOrLogType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMilestones, ErrorMilestones
-
 Required: False
 Position: Named
 Default value: None
@@ -300,7 +286,6 @@ Indicates whether a server report is checked.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -315,7 +300,6 @@ Indicates whether a server report failure is checked.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -337,7 +321,6 @@ Type: StatusReportOrLogType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMilestones, ErrorMilestones
-
 Required: False
 Position: Named
 Default value: None
@@ -352,7 +335,6 @@ Specifies a site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -368,7 +350,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

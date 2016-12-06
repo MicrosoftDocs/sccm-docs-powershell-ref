@@ -64,7 +64,6 @@ Specifies a comment for the task sequence.
 Type: String
 Parameter Sets: (All)
 Aliases: Comments
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +78,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -94,7 +92,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +106,6 @@ Specifies a path for the exported .zip file.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -124,7 +120,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +135,6 @@ To obtain a task sequence object, use the Get-CMTaskSequence cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -155,7 +149,6 @@ Specifies a name for the task sequence.
 Type: String
 Parameter Sets: SearchPackageByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -170,7 +163,6 @@ Specifies the ID of a task sequence.
 Type: String
 Parameter Sets: SearchPackageByIdMandatory
 Aliases: PackageId, Id
-
 Required: True
 Position: Named
 Default value: None
@@ -186,7 +178,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -203,7 +194,6 @@ If you specify a value of $True, the cmdlet copies the content from the package 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +211,6 @@ To export only the task sequence XML without the other referenced objects, set t
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -73,7 +73,6 @@ Specifies the ID of the user collection where the rule is applied.
 Type: String
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionIdAndResourceValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -88,7 +87,6 @@ Specifies the name of a user collection where the rule is applied.
 Type: String
 Parameter Sets: ByCollectionNameAndResourceValue, ByCollectionNameAndResourceId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -103,7 +101,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -118,7 +115,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +129,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +143,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByCollectionValueAndResourceValue, ByCollectionValueAndResourceId
 Aliases: Collection
-
 Required: True
 Position: Named
 Default value: None
@@ -163,7 +157,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +171,6 @@ Specifies the type of the resource that the cmdlet adds to the user collections.
 Type: IResultObject
 Parameter Sets: ByCollectionValueAndResourceValue, ByCollectionIdAndResourceValue, ByCollectionNameAndResourceValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -193,7 +185,6 @@ Specifies the ID of a resource that the cmdlet adds to the user collections.
 Type: Int32
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionNameAndResourceId, ByCollectionValueAndResourceId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -209,7 +200,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

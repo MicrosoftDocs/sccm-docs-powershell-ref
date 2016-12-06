@@ -86,7 +86,6 @@ During migration, clients in a boundary group use this site as a source location
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +104,6 @@ A state migration point stores user state data when it migrates a computer to a 
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +118,6 @@ Indicates whether a fallback source location is available.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +132,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -151,7 +147,6 @@ If you select a value of $False, specify how long to wait by using the *TimeDele
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -166,7 +161,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +176,6 @@ In restore only mode, Configuration Manager refuses new requests to store client
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +190,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +205,6 @@ To obtain a state migration point object, use the **Get-CMStateMigrationPoint** 
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: StateMigrationPoint
-
 Required: True
 Position: Named
 Default value: None
@@ -228,7 +219,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +235,6 @@ During migration, clients in a boundary group use this site as a source location
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -262,7 +251,6 @@ A state migration point stores user state data when it migrates a computer to a 
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +265,6 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -292,7 +279,6 @@ Specifies the host name for a state migration point.
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -309,7 +295,6 @@ To delete data immediately, specify a value of $True for the *DeleteImmediately*
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -326,7 +311,6 @@ Type: IntervalType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Hours, Days
-
 Required: False
 Position: Named
 Default value: None
@@ -342,7 +326,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

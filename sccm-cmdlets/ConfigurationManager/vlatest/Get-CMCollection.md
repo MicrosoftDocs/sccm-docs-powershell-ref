@@ -77,7 +77,6 @@ Type: CollectionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: User, Device
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +91,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -108,7 +106,6 @@ To obtain a distribution point group object, use the Get-CMDistributionPointGrou
 Type: IResultObject
 Parameter Sets: ByDPGroup
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -123,7 +120,6 @@ Specifies the ID of the distribution point group that is associated with the col
 Type: String
 Parameter Sets: ByDPGroupId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -138,7 +134,6 @@ Specifies the name of the distribution point group that is associated with a col
 Type: String
 Parameter Sets: ByDPGroupName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -153,7 +148,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +163,6 @@ If you do not specify a collection, all collections in the hierarchy are returne
 Type: String
 Parameter Sets: ById
 Aliases: CollectionId
-
 Required: True
 Position: Named
 Default value: None
@@ -185,7 +178,6 @@ If you do not specify a collection, all collections in the hierarchy are returne
 Type: String
 Parameter Sets: ByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -67,7 +67,6 @@ Specifies a collection ID.
 Type: String
 Parameter Sets: SetById
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -82,7 +81,6 @@ Specifies a comment for the collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +95,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -112,7 +109,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +123,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +138,6 @@ To obtain a collection object, use the Get-CMCollection cmdlet.
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: Collection
-
 Required: True
 Position: Named
 Default value: None
@@ -159,7 +153,6 @@ To obtain a collection object, use the Get-CMCollection cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -174,7 +167,6 @@ Specifies the ID of a collection to use as a scope for this collection.
 Type: String
 Parameter Sets: (All)
 Aliases: LimitToCollectionId
-
 Required: False
 Position: Named
 Default value: None
@@ -189,7 +181,6 @@ Specifies the name of a collection to use as a scope for this collection.
 Type: String
 Parameter Sets: (All)
 Aliases: LimitToCollectionName
-
 Required: False
 Position: Named
 Default value: None
@@ -204,7 +195,6 @@ Specifies the name of a collection.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -219,7 +209,6 @@ Specifies a new name for the collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -235,7 +224,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +238,6 @@ Specifies a schedule that determines when Configuration Manager refreshes the co
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -273,7 +260,6 @@ Type: CollectionRefreshType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Manual, Periodic, Continuous, Both
-
 Required: False
 Position: Named
 Default value: None
@@ -289,7 +275,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

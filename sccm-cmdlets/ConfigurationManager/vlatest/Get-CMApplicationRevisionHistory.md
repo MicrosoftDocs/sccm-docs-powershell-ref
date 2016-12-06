@@ -53,7 +53,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -68,7 +67,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +81,6 @@ Specifies an array of IDs of application revision histories.
 Type: Int32
 Parameter Sets: SearchBySingleIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -99,7 +96,6 @@ To obtain an application object, use the Get-CMApplication cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Application
-
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +110,6 @@ Specifies an array of names of application revision histories.
 Type: String
 Parameter Sets: SearchBySingleNameMandatory
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -129,7 +124,6 @@ Specifies the version number of an application revision.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

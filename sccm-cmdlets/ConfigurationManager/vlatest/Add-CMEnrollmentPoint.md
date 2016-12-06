@@ -56,7 +56,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -71,7 +70,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +84,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +98,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: EnrollmentPointByValue
 Aliases: SiteServer
-
 Required: True
 Position: Named
 Default value: None
@@ -116,7 +112,6 @@ Specifies the port to use with an enrollment point.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +126,6 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: EnrollmentPoint
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +140,6 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: EnrollmentPoint
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -161,7 +154,6 @@ Specifies an account that the enrollment point uses to connect to the Configurat
 Type: String
 Parameter Sets: EnrollmentPoint
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +168,6 @@ Specifies the name of the web application used for enrollment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +182,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: IISWebsite
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +197,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
