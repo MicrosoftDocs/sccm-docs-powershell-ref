@@ -60,7 +60,7 @@ Set-CMSoftwareUpdatePointComponent [-DefaultWsusServer <String>] [-SynchronizeAc
 The **Set-CMSoftwareUpdatePointComponent** cmdlet modifies a software update point.
 A software update point component interacts with a Windows Server Update Services (WSUS) server to configure update settings, request synchronization to the upstream update source, and synchronize updates from the WSUS database to the site server database on the central site.
 
-You can specify a software update point to modify by name, by site code, or by using the Get-CMSoftwareUpdatePointComponent cmdlet.
+You can specify a software update point to modify by name, by site code, or by using the [Get-CMSoftwareUpdatePointComponent](./Get-CMSoftwareUpdatePointComponent.md) cmdlet.
 
 ## EXAMPLES
 
@@ -114,7 +114,7 @@ The cmdlet adds these languages to the languages supported for software updates 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ This cmdlet adds these classifications to the classifications supported for soft
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Critical Updates, Definition Updates, Feature Packs, Security Updates, Service Packs, Tools, Update Rollups, Updates, Upgrades
 
 Required: False
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -236,7 +236,7 @@ Indicates whether Configuration Manager creates an alert when synchronization fa
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,7 +252,7 @@ Specify a schedule by using the *Schedule* parameter.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -267,7 +267,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -285,7 +285,7 @@ System Center 2016 Endpoint Protection definition updates and software updates t
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a software update point component object.
-To obtain a software update point component object, use the **Get-CMSoftwareUpdatePointComponent** cmdlet.
+To obtain a software update point component object, use the [Get-CMSoftwareUpdatePointComponent](./Get-CMSoftwareUpdatePointComponent.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -362,7 +362,7 @@ The cmdlet removes these languages from the languages supported for software upd
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProduct
-
+Specifies an array of products, as strings.
 
 ```yaml
 Type: String[]
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProductFamily
-
+Specifies an array of product families, as strings.
 
 ```yaml
 Type: String[]
@@ -408,7 +408,7 @@ This cmdlet removes these classifications from the classifications supported for
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Critical Updates, Definition Updates, Feature Packs, Security Updates, Service Packs, Tools, Update Rollups, Updates, Upgrades
 
 Required: False
@@ -429,7 +429,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ReportingEventType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotCreateWsusReportingEvents, CreateOnlyWsusStatusReportingEvents, CreateAllWsusReportingEvents
 
 Required: False
@@ -442,12 +442,12 @@ Accept wildcard characters: False
 ### -Schedule
 Specifies a **Schedule** object.
 Configuration Manager can synchronize updates according this schedule if you specify a value of $True for the *EnableSynchronization* parameter.
-To obtain a **Schedule** object, use the New-CMSchedule cmdlet.
+To obtain a **Schedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -462,7 +462,7 @@ Specifies a site code in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -477,14 +477,14 @@ The acceptable values for this parameter are:
 
 - DoNotSynchronizeFromMicrosoftUpdateOrUpstreamDataSource
 - SynchronizeFromAnUpstreamDataSourceLocation
----SynchronizeFromMicrosoftUpdate
+- SynchronizeFromMicrosoftUpdate
 
 If you select a value of SynchronizeFromAnUpstreamDataSourceLocation, specify the data source location by using the **UpstreamSourceLocation** parameter.
 
 ```yaml
 Type: SynchronizeActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: SynchronizeFromMicrosoftUpdate, SynchronizeFromAnUpstreamDataSourceLocation, DoNotSynchronizeFromMicrosoftUpdateOrUpstreamDataSource
 
 Required: False
@@ -501,7 +501,7 @@ To use this location, specify a value of SynchronizeFromAnUpstreamDataSourceLoca
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -519,7 +519,7 @@ Endpoint Protection definition updates and software updates that Service Packs s
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -570,5 +570,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMStatusReportingComponent](./Set-CMStatusReportingComponent.md)
 
 [Set-CMSystemHealthValidatorPointComponent](./Set-CMSystemHealthValidatorPointComponent.md)
-
-

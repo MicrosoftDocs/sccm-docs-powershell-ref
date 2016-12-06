@@ -57,7 +57,7 @@ Indicates that the software update point allows anonymous.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,16 +70,16 @@ Accept wildcard characters: False
 Specifies a connection type.
 Clients can connect to the software update point in several ways.
 You can configure the software update point to handle different types of connections differently by specifying the connection type.
-Valid values are: 
+Valid values are:
 
--- Internet 
--- InternetAndIntranet
--- Intranet
+- Internet
+- InternetAndIntranet
+- Intranet
 
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 
 Required: False
@@ -110,7 +110,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSsl
-
+Indicates that the cmdlet enables SSL for the update point.
 
 ```yaml
 Type: Boolean
@@ -140,7 +140,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a software update point object.
-To obtain a software update point object, use the Get-CMSoftwareUpdatePoint cmdlet.
+To obtain a software update point object, use the [Get-CMSoftwareUpdatePoint](./Get-CMSoftwareUpdatePoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -202,7 +202,7 @@ If this software update point uses load balancing, this is the NLB address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,12 +212,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +233,7 @@ Specifies a public virtual IP address for a software update point that is connec
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -247,7 +248,7 @@ Specifies a site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,7 +278,7 @@ Specifies whether a software update point can use a proxy.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -292,7 +293,7 @@ Indicates whether an auto deployment rule can use a proxy.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,7 +325,7 @@ Unless a software update point allows anonymous access, use this access account 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -349,5 +350,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdatePoint](./Get-CMSoftwareUpdatePoint.md)
 
 [Remove-CMSoftwareUpdatePoint](./Remove-CMSoftwareUpdatePoint.md)
-
-

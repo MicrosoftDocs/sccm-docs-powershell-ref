@@ -66,7 +66,7 @@ Specifies the Configuration Manager component that corresponds to the status mes
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Indicates whether to forward to the status summarizer.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Specifies a message ID in Configuration Manager.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,12 +152,18 @@ Accept wildcard characters: False
 
 ### -MessageType
 Specifies a status message type in Configuration Manager.
-Valid values are: Audit, Detail, Milestone, and None.
+
+Valid values are:
+
+- Audit
+- Detail
+- Milestone
+- None
 
 ```yaml
 Type: MessageType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Milestone, Detail, Audit
 
 Required: False
@@ -173,7 +179,7 @@ Specifies an array of names for status filter rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +196,7 @@ Valid values are: Decrease and Increase.
 ```yaml
 Type: PriorityChangeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Increase, Decrease
 
 Required: False
@@ -206,7 +212,7 @@ Indicates whether to process a lower priority rule, which prevents further rule 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +227,7 @@ Specifies a path to a program that runs when a status message matches the status
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -236,7 +242,7 @@ Specifies a property ID in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,12 +252,12 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyValue
-Specifies a value for the corresponding PropertyId parameter.
+Specifies a value for the corresponding *PropertyId* parameter.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,7 +272,7 @@ Indicates whether to pass a message to the parent site.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,12 +283,17 @@ Accept wildcard characters: False
 
 ### -ReplicationPriority
 Specifies a replication priority for sending status messages to the parent site.
-Valid values are: High, Low, and Medium.
+
+Valid values are:
+
+- High
+- Low
+- Medium
 
 ```yaml
 Type: ReplicationPriority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: High, Medium, Low
 
 Required: False
@@ -298,7 +309,7 @@ Indicates whether to report an event in the Windows event log.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,7 +324,7 @@ Indicates whether to run a program when a status message matches a filter rule.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,12 +335,18 @@ Accept wildcard characters: False
 
 ### -SeverityType
 Specifies the severity of a status message.
-Valid values are: Error, Informational, None, and Warning.
+
+Valid values are:
+
+- Error
+- Informational
+- None
+- Warning
 
 ```yaml
 Type: SeverityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Informational, Warning, Error
 
 Required: False
@@ -345,7 +362,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -360,7 +377,7 @@ Specifies the name of a site system server in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -371,16 +388,16 @@ Accept wildcard characters: False
 
 ### -Source
 Specifies the status message source to match.
-The possible sources are the following: 
+The possible sources are the following:
 
--- Client
--- SMS Provider
--- Site Server
+- Client
+- SMS Provider
+- Site Server
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -395,7 +412,7 @@ Specifies a site code for the site from which the status message originated.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -422,12 +439,12 @@ Accept wildcard characters: False
 
 ### -WriteToDatabase
 Indicates whether to write a message to the database.
-Specify a value of $True for this parameter to enable the AllowUserDeleteMessagesAfterThresholdDays parameter.
+Specify a value of $True for this parameter to enable the *AllowUserDeleteMessagesAfterThresholdDays* parameter.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -456,5 +473,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMStatusFilterRule](./New-CMStatusFilterRule.md)
 
 [Remove-CMStatusFilterRule](./Remove-CMStatusFilterRule.md)
-
-

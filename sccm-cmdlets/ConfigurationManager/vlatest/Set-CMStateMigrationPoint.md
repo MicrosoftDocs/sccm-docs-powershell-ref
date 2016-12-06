@@ -37,13 +37,13 @@ The **Set-CMStateMigrationPoint** cmdlet modifies settings for a state migration
 A state migration point is a site system role that manages data transfer from client computers during an operating system installation process.
 Use this cmdlet to modify the boundary groups and storage folders associated with the migration point, how long to wait before the migration point deletes client data, whether to allow a fallback source location for content, and whether to enable restore only mode.
 
-You can specify which migration point to modify by using the site system server name and the site code, or use the Get-CMStateMigrationPoint cmdlet.
+You can specify which migration point to modify by using the site system server name and the site code, or use the [Get-CMStateMigrationPoint](./Get-CMStateMigrationPoint.md) cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Modify a state migration point
 ```
-PS C:\>$StateMigrationPoint = Get-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com" 
+PS C:\>$StateMigrationPoint = Get-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com"
 PS C:\> Set-CMStateMigrationPoint -InputObject $StateMigrationPoint -AllowFallbackSourceLocationForContent $True -TimeDeleteAfter 12 -TimeUnit Hours
 ```
 
@@ -85,7 +85,7 @@ During migration, clients in a boundary group use this site as a source location
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,14 +97,14 @@ Accept wildcard characters: False
 ### -AddStorageFolder
 Specifies an array of storage folders, as storage directory data objects.
 The cmdlet adds these folders to the state migration point.
-To obtain a storage directory data object, use the New-CMStoragefolder cmdlet.
+To obtain a storage directory data object, use the [New-CMStoragefolder](./New-CMStoragefolder.md) cmdlet.
 
 A state migration point stores user state data when it migrates a computer to a new operating system.
 
 ```yaml
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Indicates whether a fallback source location is available.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ If you select a value of $False, specify how long to wait by using the *TimeDele
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +165,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ In restore only mode, Configuration Manager refuses new requests to store client
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a state migration point object.
-To obtain a state migration point object, use the **Get-CMStateMigrationPoint** cmdlet.
+To obtain a state migration point object, use the [Get-CMStateMigrationPoint](./Get-CMStateMigrationPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -222,12 +222,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +245,7 @@ During migration, clients in a boundary group use this site as a source location
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +262,7 @@ A state migration point stores user state data when it migrates a computer to a 
 ```yaml
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +277,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -308,7 +309,7 @@ To delete data immediately, specify a value of $True for the *DeleteImmediately*
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,7 +325,7 @@ The acceptable values for this parameter are: Days and Hours.
 ```yaml
 Type: IntervalType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days
 
 Required: False
@@ -368,5 +369,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMStateMigrationPoint](./Remove-CMStateMigrationPoint.md)
 
 [New-CMStoragefolder](./New-CMStoragefolder.md)
-
-

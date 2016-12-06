@@ -59,7 +59,7 @@ You can use this cmdlet with the *DeleteMessage* parameter to delete messages th
 This cmdlet can also add or remove a security scope for a message query.
 Every status message query must belong to at least one security scope.
 
-You can specify a name or ID for a query or use the Get-CMStatusMessageQuery cmdlet to obtain a query.
+You can specify a name or ID for a query or use the [Get-CMStatusMessageQuery](./Get-CMStatusMessageQuery.md) cmdlet to obtain a query.
 
 ## EXAMPLES
 
@@ -123,7 +123,7 @@ Indicates that messages found by this query are deleted from the Configuration M
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -138,7 +138,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Specifies an expression in WMI Query Language (WQL).
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,12 +194,12 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a status message query object.
-To obtain a status message query object, use the Get-CMStatusMessageQuery cmdlet.
+To obtain a status message query object, use the [Get-CMStatusMessageQuery](./Get-CMStatusMessageQuery.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, DeleteMessageByObjectMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -214,7 +214,7 @@ Specifies a name for a status message query.
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByNameMandatory, DeleteMessageByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -229,7 +229,7 @@ Specifies a new name for a query.
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,12 +239,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -285,5 +286,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMStatusMessageQuery](./New-CMStatusMessageQuery.md)
 
 [Remove-CMStatusMessageQuery](./Remove-CMStatusMessageQuery.md)
-
-

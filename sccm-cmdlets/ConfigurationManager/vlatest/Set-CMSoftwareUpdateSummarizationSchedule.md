@@ -20,7 +20,7 @@ Set-CMSoftwareUpdateSummarizationSchedule -Interval <Int32> -Unit <Summarization
 ## DESCRIPTION
 The **Set-CMSoftwareUpdateSummarizationSchedule** cmdlet sets how often Microsoft System Center Configuration Manager summarizes the status of software updates for all the System Center Configuration Manager sites.
 You can set the summary to run on an interval defined in days, hours, or minutes.
-You can use the Invoke-CMSoftwareUpdateSummarization cmdlet to run the summarization immediately.
+You can use the [Invoke-CMSoftwareUpdateSummarization](./Invoke-CMSoftwareUpdateSummarization.md) cmdlet to run the summarization immediately.
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +77,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,16 +89,16 @@ Accept wildcard characters: False
 ### -Interval
 Specifies an amount of time, as an integer.
 This value works with the unit type you specify in the Unit parameter.
-Valid values for this parameter depend on the unit that you select: 
+Valid values for this parameter depend on the unit that you select:
 
--- Minutes: 10 through 59.
--- Hours: 1 through 23.
--- Days: 1 through 31.
+- Minutes: 10 through 59.
+- Hours: 1 through 23.
+- Days: 1 through 31.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,12 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 
 ### -Unit
 Specifies a unit to use to define an interval for the summarization schedule.
-Valid values are: 
+Valid values are:
 
 -- Days
 -- Hours
@@ -133,7 +134,7 @@ Valid values are:
 ```yaml
 Type: SummarizationScheduleUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Days, Hours, Minutes
 
 Required: True
@@ -173,5 +174,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdateSummarizationSchedule](./Get-CMSoftwareUpdateSummarizationSchedule.md)
 
 [Invoke-CMSoftwareUpdateSummarization](./Invoke-CMSoftwareUpdateSummarization.md)
-
-
