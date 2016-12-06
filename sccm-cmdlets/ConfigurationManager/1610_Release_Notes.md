@@ -80,7 +80,6 @@ New cmdlets have been written to support Azure Active Directory (Azure AD) condi
 *  Set-CMAadConditionalAccessPolicy
 
 ####Example
-
 ```
 PR1:\> Get-CMAadConditionalAccessPolicy -AccountId 752c1e46-ddd2-4ffc-8f15-23623328c823 -ServicePrincipalType ExchangeOnline -UserCredential (Get-Credential)
 ```
