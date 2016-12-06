@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a security scope object.
-To obtain a security scope object, use the Get-CMSecurityScope cmdlet.
+To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject

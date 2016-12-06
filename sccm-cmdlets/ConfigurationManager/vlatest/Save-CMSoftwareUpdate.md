@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -SoftwareUpdate
 Specifies a software update object.
-To obtain a software update object, use the Get-CMSoftwareUpdate cmdlet.
+To obtain a software update object, use the [Get-CMSoftwareUpdate](./Get-CMSoftwareUpdate.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -SoftwareUpdateGroup
 Specifies a software update group object.
-To obtain a software update group object, use the Get-CMSoftwareUpdateGroup cmdlet.
+To obtain a software update group object, use the [Get-CMSoftwareUpdateGroup](./Get-CMSoftwareUpdateGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject

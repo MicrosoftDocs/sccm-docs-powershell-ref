@@ -74,7 +74,7 @@ System Center Configuration Manager provides some built-in security roles.
 You can also create custom security roles.
 For more information about security roles, see [Configuring Security for Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=247225) on TechNet.
 
-You can specify an administrative user or group by name or by ID or you can use the use the Get-CMAdministrativeUser cmdlet to obtain a user or group object.
+You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](./Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
 You can specify a role to add by name or by ID, or you can use the Get-CMSecurityRole cmdlet to obtain a role.
 
 ## EXAMPLES
@@ -97,7 +97,7 @@ This command adds a security role that has the specified ID to the administrativ
 
 ### -AdministrativeUser
 Specifies an administrative user or administrative group object.
-To obtain an administrative user or administrative group object, use the Get-CMAdministrativeUser cmdlet.
+To obtain an administrative user or administrative group object, use the [Get-CMAdministrativeUser](./Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
