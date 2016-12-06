@@ -43,7 +43,7 @@ Every rule must have at least one security scope.
 Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
 
-To change rule properties, you can specify rules to change by ID or by product name, or use the Get-CMSoftwareMeteringRule cmdlet.
+To change rule properties, you can specify rules to change by ID or by product name, or use the [Get-CMSoftwareMeteringRule](./Get-CMSoftwareMeteringRule.md) cmdlet.
 Likewise, you can change security scope for rules for specified ID, product name, or by using Get-CMSoftwareMeteringRule.
 
 For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268432) on TechNet.

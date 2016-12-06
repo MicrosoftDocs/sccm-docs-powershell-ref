@@ -58,7 +58,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### -Collection
 Specifies a device collection object.
-To obtain a collection object, use the Get-CMCollection cmdlet.
+To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject

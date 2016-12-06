@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -IncludeCollection
 Specifies a device collection object to include in the membership rule.
-To obtain a collection object, use the Get-CMCollection cmdlet.
+To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject

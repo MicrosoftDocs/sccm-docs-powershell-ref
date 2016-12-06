@@ -84,7 +84,7 @@ This command removes the association between the security scope named SecScope02
 
 ### -AdministrativeUser
 Specifies a **CMAdministrativeUser** object.
-To obtain a **CMAdministrativeUser** object, use the Get-CMAdministrativeUser cmdlet.
+To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](./Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -SecurityScope
 Specifies a security scope object.
-To obtain a security scope object, use the Get-CMSecurityScope cmdlet.
+To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject
