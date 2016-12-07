@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a **CMOutOfBandServicePoint** object.
-To obtain a **CMOutOfBandServicePoint** object, use the Get-CMOutOfBandServicePoint cmdlet.
+To obtain a **CMOutOfBandServicePoint** object, use the [Get-CMOutOfBandServicePoint](./Get-CMOutOfBandServicePoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -269,5 +269,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-CMOutOfBandServicePoint](./Add-CMOutOfBandServicePoint.md)
 
 [Remove-CMOutOfBandServicePoint](./Remove-CMOutOfBandServicePoint.md)
-
-

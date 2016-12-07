@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an input object.
-To obtain an input object, use the Get-CMReportingServicePoint cmdlet.
+To obtain an input object, use the [Get-CMReportingServicePoint](./Get-CMReportingServicePoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -232,5 +232,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMReportingServicePoint](./Get-CMReportingServicePoint.md)
 
 [Remove-CMReportingServicePoint](./Remove-CMReportingServicePoint.md)
-
-

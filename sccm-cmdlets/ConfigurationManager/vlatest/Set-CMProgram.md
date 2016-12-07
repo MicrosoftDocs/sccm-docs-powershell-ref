@@ -420,7 +420,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a **CMProgram** object.
-To obtain a **CMProgram** object, use the Get-CMProgram cmdlet.
+To obtain a **CMProgram** object, use the [Get-CMProgram](./Get-CMProgram.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -434,7 +434,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-
+Specifies a package ID.
 
 ```yaml
 Type: String
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-
+Specifies a package name.
 
 ```yaml
 Type: String
@@ -494,7 +494,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-
+Specifies the name of the program.
 
 ```yaml
 Type: String
@@ -513,7 +513,7 @@ The acceptable values for this parameter are:
 
 - OnlyWhenNoUserIsLoggedOn 
 - OnlyWhenUserIsLoggedOn 
- WhetherOrNotUserIsLoggedOn 
+- WhetherOrNotUserIsLoggedOn 
 
 The default setting is OnlyWhenUserIsLoggedOn.
 
@@ -579,7 +579,7 @@ The acceptable values for this parameter are:
 
 - Hidden 
 - Maximized 
- Minimized 
+- Minimized 
 - Normal 
 
 The default is Normal.
@@ -597,7 +597,7 @@ Accept wildcard characters: False
 ```
 
 ### -StandardProgram
-
+Indicates that the program type in the deployment package is standard program.
 
 ```yaml
 Type: SwitchParameter
@@ -687,5 +687,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMProgram](./New-CMProgram.md)
 
 [Remove-CMProgram](./Remove-CMProgram.md)
-
-
