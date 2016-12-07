@@ -18,7 +18,7 @@ Import-CMApplication -FilePath <String> [-ImportActionType <ImportActionType>] [
 ```
 
 ## DESCRIPTION
-The **Import-CMApplication** cmdlet imports a package created by the Export-CMApplication cmdlet.
+The **Import-CMApplication** cmdlet imports a package created by the [Export-CMApplication](./Export-CMApplication.cm) cmdlet.
 A package contains one or more applications and related objects, such as catalogs.
 If the package contains content, the application package imports the content, or includes a reference to the content.
 
