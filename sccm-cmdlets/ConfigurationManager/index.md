@@ -1,11 +1,12 @@
 ---
 ms.assetid:
 ms.title: Get started with SCCM cmdlets | Microsoft Docs
-ms.prod: "configuration-manager"
+ms.prod: configuration-manager
 ms.service:
-author: "shill-ms"
-ms.author: "v-suhill"
-ms.manager: "mbaldwin"
+author: shill-ms
+ms.author: v-suhill
+ms.manager: mbaldwin
+ms.assetid: 63712bbf-0f8a-4cdb-8998-e7d41257981e
 ---
 
 # Get started with Microsoft System Center Configuration Manager cmdlets
