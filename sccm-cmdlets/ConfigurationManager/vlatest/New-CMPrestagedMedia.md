@@ -237,7 +237,7 @@ Accept wildcard characters: False
 
 ### -DistributionPoint
 Specifies a distribution point object.
-To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
+To obtain a distribution point object, use the [Get-CMDistributionPoint](./Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 
 ### -ManagementPoint
 Specifies an array of management point objects.
-To obtain a management point object, use the Get-CMManagementPoint cmdlet.
+To obtain a management point object, use the [Get-CMManagementPoint](./Get-CMManagementPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
