@@ -291,5 +291,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSoftwareUpdateGroup](./New-CMSoftwareUpdateGroup.md)
 
 [Remove-CMSoftwareUpdateGroup](./Remove-CMSoftwareUpdateGroup.md)
-
-

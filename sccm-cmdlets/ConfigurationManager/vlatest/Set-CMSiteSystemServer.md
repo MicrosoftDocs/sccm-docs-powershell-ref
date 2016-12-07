@@ -299,5 +299,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSiteSystemServer](./New-CMSiteSystemServer.md)
 
 [Remove-CMSiteSystemServer](./Remove-CMSiteSystemServer.md)
-
-

@@ -44,7 +44,7 @@ Software metering monitors and collects software usage data from System Center C
 You can create software metering rules that specify which software to monitor.
 
 To change rule properties, you can specify rules to change by ID or by product name, or use the [Get-CMSoftwareMeteringRule](./Get-CMSoftwareMeteringRule.md) cmdlet.
-Likewise, you can change security scope for rules for specified ID, product name, or by using Get-CMSoftwareMeteringRule.
+Likewise, you can change security scope for rules for specified ID, product name, or by using **Get-CMSoftwareMeteringRule**.
 
 For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268432) on TechNet.
 For more information about security scopes, see [Planning for Security in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268426).
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-
+Specifies the filename of the software that a rule meters.
 
 ```yaml
 Type: String
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a software metering rule object.
-To obtain a software metering rule object, use the Get-SoftwareMeteringRule cmdlet.
+To obtain a software metering rule object, use the [Get-SoftwareMeteringRule](./Get-SoftwareMeteringRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -316,5 +316,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSoftwareMeteringRule](./New-CMSoftwareMeteringRule.md)
 
 [Remove-CMSoftwareMeteringRule](./Remove-CMSoftwareMeteringRule.md)
-
-
