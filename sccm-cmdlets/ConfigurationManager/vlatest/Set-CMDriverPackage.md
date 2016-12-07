@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageSource
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -353,7 +353,8 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-
+Specifies a change for the priority of the deployment type.
+Valid values are: Increase and Decrease.
 
 ```yaml
 Type: Priority

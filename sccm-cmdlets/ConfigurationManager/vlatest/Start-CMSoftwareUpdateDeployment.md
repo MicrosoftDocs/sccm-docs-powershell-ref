@@ -579,10 +579,10 @@ Accept wildcard characters: False
 Specifies the time unit in Configuration Manager.
 Valid values are:
 
--- Days
--- Hours
--- Months
--- Weeks
+- Days
+- Hours
+- Months
+- Weeks
 
 ```yaml
 Type: TimeUnitType
@@ -658,9 +658,9 @@ Accept wildcard characters: False
 Specifies verbosity level.
 Valid values are:
 
--- AllMessages
--- OnlyErrorMessages
--- OnlySuccessAndErrorMessages
+- AllMessages
+- OnlyErrorMessages
+- OnlySuccessAndErrorMessages
 
 ```yaml
 Type: VerbosityLevelType

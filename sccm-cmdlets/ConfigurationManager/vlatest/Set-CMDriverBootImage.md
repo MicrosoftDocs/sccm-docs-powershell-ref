@@ -289,5 +289,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMBootImage](./Get-CMBootImage.md)
 
 [Get-CMDriver](./Get-CMDriver.md)
-
-

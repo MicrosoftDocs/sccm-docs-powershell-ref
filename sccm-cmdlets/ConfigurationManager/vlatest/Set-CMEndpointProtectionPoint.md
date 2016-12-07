@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an input object.
-To obtain an input object, use the Get-CMEndpointProtectionPoint cmdlet.
+To obtain an input object, use the [Get-CMEndpointProtectionPoint](./Get-CMEndpointProtectionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject

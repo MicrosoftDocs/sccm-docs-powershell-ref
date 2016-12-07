@@ -29,7 +29,7 @@ Set-CMFallbackStatusPoint [-SiteCode <String>] [-SiteSystemServerName] <String> 
 ## DESCRIPTION
 The **Set-CMFallbackStatusPoint** cmdlet changes the throttle interval or the message count for a fallback status point.
 A fallback status point is a site system role.
-You can specify the site system name and site code for a fallback status point or use the **Get-CMFallbackStatusPoint** cmdlet to obtain a fallback status point object.
+You can specify the site system name and site code for a fallback status point or use the [Get-CMFallbackStatusPoint](./Get-CMFallbackStatusPoint.md) cmdlet to obtain a fallback status point object.
 
 Microsoft System Center Configuration Manager can use one or more fallback status points to collect state messages for a site and send them to a server that is running Configuration Manager.
 Throttling prevents the fallback status point from sending too many messages together, which can affect performance.
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a fallback status point role.
-To obtain a fallback status point role, use the Get-CMFallbackStatusPoint cmdlet.
+To obtain a fallback status point role, use the [Get-CMFallbackStatusPoint](./Get-CMFallbackStatusPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject

@@ -43,15 +43,15 @@ PS C:\> $As= New-CMExchangeServerConnectorApplicationSetting -UnsignedInstall $T
 PS C:\> Set-CMExchangeServer -SiteCode "CM2" -ServerAddress "http://www.contoso.com/powershell" -NewServerAddress "www.fabrikam.com" -UserName "ElisaDaugherty@contoso.com" -DeltaSyncInterval 124 -MaximumInactiveDay 26 -FindAll -AllowExternalDeviceManagement $False -EnableAccessRule $True -AccessLevel Allow -EmailAddress "EvanNarvaez@fabrikam.com","DavidChew@contosco.com" -GeneralSetting $Gs -PasswordSetting $Ps -EmailManagementSetting $Em -SecuritySetting $Ss -ApplicationSetting $As
 ```
 
-The first command uses the New-CMExchangeServerConnectorGeneralSetting cmdlet to add new settings to an Exchange Server connector in Configuration Manager, and stores the settings in the $Gs variable.
+The first command uses the [New-CMExchangeServerConnectorGeneralSetting](./New-CMExchangeServerConnectorGeneralSetting.md) cmdlet to add new settings to an Exchange Server connector in Configuration Manager, and stores the settings in the $Gs variable.
 
-The second command uses the New-CMExchangeServerConnectorPasswordSetting cmdlet adds new password settings to an Exchange Server connector in Configuration Manager, and stores the password settings in the $Ps variable.
+The second command uses the [New-CMExchangeServerConnectorPasswordSetting](./New-CMExchangeServerConnectorPasswordSetting.md) cmdlet adds new password settings to an Exchange Server connector in Configuration Manager, and stores the password settings in the $Ps variable.
 
-The third command uses the New-CMExchangeServerConnectorEmailManagementSetting cmdlet creates a set of e-mail management settings for a mobile device that uses an Exchange Server connector, and stores the password settings in the $Em variable.
+The third command uses the [New-CMExchangeServerConnectorEmailManagementSetting](./New-CMExchangeServerConnectorEmailManagementSetting.md) cmdlet creates a set of e-mail management settings for a mobile device that uses an Exchange Server connector, and stores the password settings in the $Em variable.
 
-The fourth command uses the New-CMExchangeServerConnectorSecuritySetting cmdlet configures security options for an Exchange Server connector in Configuration Manager, and security settings in the $Ss variable.
+The fourth command uses the [New-CMExchangeServerConnectorSecuritySetting](./New-CMExchangeServerConnectorSecuritySetting.md) cmdlet configures security options for an Exchange Server connector in Configuration Manager, and security settings in the $Ss variable.
 
-The fifth command uses the New-CMExchangeServerConnectorApplicationSetting cmdlet creates application-related settings for a mobile device that uses an Exchange Server connector, and stores the application settings in the $As variable.
+The fifth command uses the [New-CMExchangeServerConnectorApplicationSetting](./New-CMExchangeServerConnectorApplicationSetting.md) cmdlet creates application-related settings for a mobile device that uses an Exchange Server connector, and stores the application settings in the $As variable.
 
 The final command changes settings for an Exchange Server for the Configuration Manager site that has the site code CM2.
 The command specifies the general settings for the Exchange Server connector stored in $Gs.
