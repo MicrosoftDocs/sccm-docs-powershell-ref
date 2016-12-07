@@ -19,7 +19,7 @@ Import-CMDriverPackage -ImportFilePath <String> [-DisableWildcardHandling] [-For
 
 ## DESCRIPTION
 The **Import-CMDriverPackage** cmdlet imports a driver packages to Microsoft System Center Configuration Manager.
-You can use the Export-CMDriverPackage cmdlet to export a driver package to a .zip file.
+You can use the [Export-CMDriverPackage](./Export-CMDriverPackage.md) cmdlet to export a driver package to a .zip file.
 
 ## EXAMPLES
 
