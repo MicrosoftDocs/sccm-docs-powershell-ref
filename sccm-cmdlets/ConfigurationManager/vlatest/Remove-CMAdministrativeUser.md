@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an administrative user object.
-To obtain an administrative user object, use the Get-CMAdministrativeUser cmdlet.
+To obtain an administrative user object, use the [Get-CMAdministrativeUser](./Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject

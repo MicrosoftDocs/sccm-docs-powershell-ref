@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a collection object.
-To obtain a collection object, use the Get-CMCollection cmdlet.
+To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -178,5 +178,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMUserCollection](./Get-CMUserCollection.md)
 
 [Remove-CMUser](./Remove-CMUser.md)
-
-

@@ -130,7 +130,7 @@ Accept wildcard characters: False
 
 ### -Application
 Specifies an application object that is associated with this deployment type.
-To obtain an application object, use the Get-CMApplication cmdlet.
+To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a deployment type object.
-To obtain a deployment type object, use the Get-CMDeploymentType cmdlet.
+To obtain a deployment type object, use the [Get-CMDeploymentType](./Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject

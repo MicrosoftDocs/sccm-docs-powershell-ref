@@ -71,8 +71,8 @@ The **Add-CMSecurityScopeToAdministrativeUser** cmdlet adds a security scope to 
 
 For more information about security scopes, see [Configuring Security for Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=247225) on TechNet.
 
-You can specify an administrative user or group by name or by ID or you can use the use the Get-CMAdministrativeUser cmdlet to obtain a user or group object.
-You can specify a security scope to add by name or by ID or you can use the Get-CMSecurityScope cmdlet to obtain a security scope.
+You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](./Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
+You can specify a security scope to add by name or by ID or you can use the [Get-CMSecurityScope](./Get-CMSecurityScope.md) cmdlet to obtain a security scope.
 
 ## EXAMPLES
 
@@ -94,7 +94,7 @@ This command adds the security scope that has the ID SMS00067 to the administrat
 
 ### -AdministrativeUser
 Specifies an administrative user or administrative group object.
-To get an administrative user or administrative group object, use the Get-CMAdministrativeUser cmdlet.
+To get an administrative user or administrative group object, use the [Get-CMAdministrativeUser](./Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -SecurityScope
 Specifies a security scope object.
-To obtain a security scope object, use the Get-CMSecurityScope cmdlet.
+To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurityScope.md) cmdlet.
 
 ```yaml
 Type: IResultObject

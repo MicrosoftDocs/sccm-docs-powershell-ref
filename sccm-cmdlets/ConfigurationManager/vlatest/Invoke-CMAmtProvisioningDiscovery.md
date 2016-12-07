@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Device
 Specifies a device object in Configuration Manager.
-To obtain a device object, use the Get-CMDevice cmdlet.
+To obtain a device object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -DeviceCollection
 Specifies a device collection object in Configuration Manager.
-To obtain a device collection object, use the Get-CMDeviceCollection cmdlet.
+To obtain a device collection object, use the [Get-CMDeviceCollection](./Get-CMDeviceCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject

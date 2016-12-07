@@ -71,7 +71,7 @@ Additionally, the command updates the comment.
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the CultureInfo.Name Property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
 
 ```yaml
 Type: String[]
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 
 ### -Application
 Specifies an application object that is associated with this deployment type.
-To obtain an application object, use the Get-CMApplication cmdlet.
+To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a deployment type object.
-To obtain a deployment type object, use the Get-CMDeploymentType cmdlet.
+To obtain a deployment type object, use the [Get-CMDeploymentType](./Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -343,5 +343,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMApplication](./Get-CMApplication.md)
 
 [Get-CMDeploymentType](./Get-CMDeploymentType.md)
-
-

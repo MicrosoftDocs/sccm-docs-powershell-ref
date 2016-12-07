@@ -70,7 +70,7 @@ It also includes as a parameter value and postpone date and time.
 
 ### -Baseline
 Specifies a baseline object.
-To obtain a baseline object, use the Get-CMBaseline cmdlet.
+To obtain a baseline object, use the [Get-CMBaseline](./Get-CMBaseline.md) cmdlet.
 
 ```yaml
 Type: IResultObject

@@ -247,7 +247,7 @@ Specifies a deployment type in Configuration Manager.
 ```yaml
 Type: DeploymentType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Required, Available
 Required: False
 Position: Named
@@ -430,7 +430,7 @@ Specifies a protected type.
 ```yaml
 Type: ProtectedType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NoInstall, RemoteDistributionPoint
 Required: False
 Position: Named
@@ -566,7 +566,7 @@ UTC time makes the software update available at the same time for all computers.
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: LocalTime, Utc
 Required: False
 Position: Named
@@ -577,17 +577,17 @@ Accept wildcard characters: False
 
 ### -TimeUnit
 Specifies the time unit in Configuration Manager.
-Valid values are: 
+Valid values are:
 
--- Days 
+-- Days
 -- Hours
--- Months 
+-- Months
 -- Weeks
 
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 Required: False
 Position: Named
@@ -616,7 +616,7 @@ Specifies an unprotected type.
 ```yaml
 Type: UnprotectedType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NoInstall, UnprotectedDistributionPoint
 Required: False
 Position: Named
@@ -645,7 +645,7 @@ Specifies a user notification type.
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 Required: False
 Position: Named
@@ -656,7 +656,7 @@ Accept wildcard characters: False
 
 ### -VerbosityLevel
 Specifies verbosity level.
-Valid values are: 
+Valid values are:
 
 -- AllMessages
 -- OnlyErrorMessages
@@ -665,7 +665,7 @@ Valid values are:
 ```yaml
 Type: VerbosityLevelType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AllMessages, OnlySuccessAndErrorMessages, OnlyErrorMessages
 Required: False
 Position: Named
@@ -705,5 +705,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdateGroup](./Get-CMSoftwareUpdateGroup.md)
 
 [Set-CMSoftwareUpdateDeployment](./Set-CMSoftwareUpdateDeployment.md)
-
-

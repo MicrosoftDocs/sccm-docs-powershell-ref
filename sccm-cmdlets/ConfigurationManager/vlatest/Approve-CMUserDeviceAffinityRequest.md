@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -UserDeviceAffinityRequest
 Specifies a **CMUserDeviceAffinityRequest** object.
-To obtain a **CMUserDeviceAffinityRequest** object, use the Get-CMUserDeviceAffinityRequest cmdlet.
+To obtain a **CMUserDeviceAffinityRequest** object, use the [Get-CMUserDeviceAffinityRequest](./Get-CMUserDeviceAffinityRequest.md) cmdlet.
 
 ```yaml
 Type: IResultObject

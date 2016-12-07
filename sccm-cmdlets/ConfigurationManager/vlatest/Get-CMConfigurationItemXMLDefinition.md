@@ -32,7 +32,7 @@ Get-CMConfigurationItemXMLDefinition [-InputObject] <IResultObject> [-DisableWil
 
 ## DESCRIPTION
 The **Get-CMConfigurationItemXMLDefinition** cmdlet gets an XML definition of a configuration item object as a string.
-You can specify a configuration item with the configuration item ID, the configuration item name, or using the Get-CMConfigurationItem cmdlet.
+You can specify a configuration item with the configuration item ID, the configuration item name, or using the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet.
 
 ## EXAMPLES
 
@@ -56,7 +56,7 @@ PS C:\>$CIObj=Get-CMConfigurationItem -Id "16777568"
 PS C:\> Get-CMConfigurationItemXMLDefinition -InputObject $CIObj
 ```
 
-The first command uses the Get-CMConfigurationItem cmdlet to get a configuration item with the specified ID, and then stores it in the $CIObj variable.
+The first command uses the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet to get a configuration item with the specified ID, and then stores it in the $CIObj variable.
 
 The second command gets a configuration item formatted in XML for the item stored in $CIObj.
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a configuration item object.
-To get a configuration item object, use the Get-CMConfigurationItem cmdlet.
+To get a configuration item object, use the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject

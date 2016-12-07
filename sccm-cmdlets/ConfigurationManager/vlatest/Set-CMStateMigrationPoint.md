@@ -37,13 +37,13 @@ The **Set-CMStateMigrationPoint** cmdlet modifies settings for a state migration
 A state migration point is a site system role that manages data transfer from client computers during an operating system installation process.
 Use this cmdlet to modify the boundary groups and storage folders associated with the migration point, how long to wait before the migration point deletes client data, whether to allow a fallback source location for content, and whether to enable restore only mode.
 
-You can specify which migration point to modify by using the site system server name and the site code, or use the Get-CMStateMigrationPoint cmdlet.
+You can specify which migration point to modify by using the site system server name and the site code, or use the [Get-CMStateMigrationPoint](./Get-CMStateMigrationPoint.md) cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Modify a state migration point
 ```
-PS C:\>$StateMigrationPoint = Get-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com" 
+PS C:\>$StateMigrationPoint = Get-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com"
 PS C:\> Set-CMStateMigrationPoint -InputObject $StateMigrationPoint -AllowFallbackSourceLocationForContent $True -TimeDeleteAfter 12 -TimeUnit Hours
 ```
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ### -AddStorageFolder
 Specifies an array of storage folders, as storage directory data objects.
 The cmdlet adds these folders to the state migration point.
-To obtain a storage directory data object, use the New-CMStoragefolder cmdlet.
+To obtain a storage directory data object, use the [New-CMStoragefolder](./New-CMStoragefolder.md) cmdlet.
 
 A state migration point stores user state data when it migrates a computer to a new operating system.
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a state migration point object.
-To obtain a state migration point object, use the **Get-CMStateMigrationPoint** cmdlet.
+To obtain a state migration point object, use the [Get-CMStateMigrationPoint](./Get-CMStateMigrationPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -213,7 +213,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -309,7 +310,7 @@ The acceptable values for this parameter are: Days and Hours.
 ```yaml
 Type: IntervalType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days
 Required: False
 Position: Named
@@ -351,5 +352,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMStateMigrationPoint](./Remove-CMStateMigrationPoint.md)
 
 [New-CMStoragefolder](./New-CMStoragefolder.md)
-
-

@@ -97,7 +97,7 @@ Set-CMUserDataAndProfileConfigurationItem [-ConfigureFolderRedirection <Boolean>
 ## DESCRIPTION
 The **Set-CMUserDataAndProfileConfigurationItem** cmdlet modifies a user data and profile configuration item that can apply to Windows 8 computers.
 A configuration item can manage folder redirection, offline folders, and roaming user profiles.
-You can create a configuration item by using the New-CMUserDataAndProfileConfigurationItem cmdlet.
+You can create a configuration item by using the [New-CMUserDataAndProfileConfigurationItem](./New-CMUserDataAndProfileConfigurationItem.md) cmdlet.
 
 ## EXAMPLES
 
@@ -185,12 +185,17 @@ Accept wildcard characters: False
 
 ### -BackgroundSynchronization
 Specifies a background synchronization type for file in offline mode.
-The acceptable values for this parameter are: Disabled, Enabled, and NotConfigured.
+
+The acceptable values for this parameter are:
+
+-- Disabled
+-- Enabled
+-- NotConfigured
 
 ```yaml
 Type: SynchronizationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enabled, Disabled, NotConfigured
 Required: False
 Position: Named
@@ -385,7 +390,7 @@ Folder redirection and caching on the primary device for a user.
 ```yaml
 Type: DeviceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OnAnyDevice, OnlyOnPrimaryDevices, FolderRedirectionOnAnyDeviceCachingOnPrimaryDevicesOnly
 Required: False
 Position: Named
@@ -582,12 +587,16 @@ Accept wildcard characters: False
 
 ### -FileSynchronization
 Specifies a file synchronization type for metered networks for work in offline mode.
-The acceptable values for this parameter are: Disabled, Enabled, and NotConfigured.
+The acceptable values for this parameter are:
+
+-- Disabled
+-- Enabled
+-- NotConfigured
 
 ```yaml
 Type: SynchronizationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enabled, Disabled, NotConfigured
 Required: False
 Position: Named
@@ -655,7 +664,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a user data and profile configuration item object.
-To obtain a configuration item object, use the Get-CMUserDataAndProfileConfigurationItem cmdlet.
+To obtain a configuration item object, use the [Get-CMUserDataAndProfileConfigurationItem](./Get-CMUserDataAndProfileConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -713,7 +722,7 @@ Accept wildcard characters: False
 
 ### -ManageAdvancedSetting
 Indicates whether this configuration item manages advanced settings for folder redirection.
-Specify values for any of the following parameters: 
+Specify values for any of the following parameters:
 
 - *GrantExclusiveRight*
 - *MoveContent*
@@ -859,7 +868,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -979,7 +989,7 @@ Specifies a time for background upload of the user hive.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: 12:00 AM, 1:00 PM, 2:00 PM, 3:00 PM, 4:00 PM, 5:00 PM, 6:00 PM, 7:00 PM, 8:00 PM, 9:00 PM, 10:00 PM, 11:00 PM, 12:00 PM
 Required: False
 Position: Named
@@ -1186,5 +1196,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CMUserDataAndProfileConfigurationItem](./New-CMUserDataAndProfileConfigurationItem.md)
-
-

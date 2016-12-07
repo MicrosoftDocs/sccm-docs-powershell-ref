@@ -9,7 +9,7 @@ ms.assetid: F53F3AAD-52F3-40A9-84D4-350524FD49FD
 
 ## SYNOPSIS
 This cmdlet is deprecated.
-Use the Set-CMTaskSequence cmdlet to disable a task sequence.
+Use the [Set-CMTaskSequence](./Set-CMTaskSequence.md) cmdlet to disable a task sequence.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Disable-CMTaskSequence -InputObject <IResultObject> [-DisableWildcardHandling] [
 
 ## DESCRIPTION
 This cmdlet is deprecated.
-Use the Set-CMTaskSequence cmdlet to disable a task sequence.
+Use the [Set-CMTaskSequence](./Set-CMTaskSequence.md) cmdlet to disable a task sequence.
 
 ## EXAMPLES
 

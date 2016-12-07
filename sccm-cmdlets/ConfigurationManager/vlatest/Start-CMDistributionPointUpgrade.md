@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ComputerCommunicationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -ContentValidationPriority
 Specifies the content validation priority.
-Valid values are: 
+Valid values are:
 
 -- High
 -- Highest
@@ -219,7 +219,7 @@ The default value is Lowest.
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lowest, Low, Medium, High, Highest
 Required: False
 Position: Named
@@ -434,7 +434,7 @@ Accept wildcard characters: False
 ### -PrimaryContentLibraryLocation
 Specifies the primary content location.
 Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
-Valid values are: 
+Valid values are:
 
 -- Automatic.
 -- Drive letter from A: through Z:.
@@ -442,7 +442,7 @@ Valid values are:
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 Required: False
 Position: Named
@@ -454,15 +454,15 @@ Accept wildcard characters: False
 ### -PrimaryPackageShareLocation
 Specifies the primary package share location.
 Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
-Valid values are: 
+Valid values are:
 
--- Automatic. 
+-- Automatic.
 -- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 Required: False
 Position: Named
@@ -515,15 +515,15 @@ Accept wildcard characters: False
 
 ### -SecondaryContentLibraryLocation
 Specifies the secondary content location.
-Valid values are: 
+Valid values are:
 
--- Automatic. 
+-- Automatic.
 -- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 Required: False
 Position: Named
@@ -534,15 +534,15 @@ Accept wildcard characters: False
 
 ### -SecondaryPackageShareLocation
 Specifies the secondary package share location.
-Valid values are: 
+Valid values are:
 
--- Automatic. 
+-- Automatic.
 -- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 Required: False
 Position: Named
@@ -553,7 +553,7 @@ Accept wildcard characters: False
 
 ### -UserDeviceAffinity
 Specify how the distribution point associates users with the destination computer for PXE deployments.
-Valid values are: 
+Valid values are:
 
 -- AllowWithAutomaticApproval
 -- AllowWithManualApproval
@@ -562,7 +562,7 @@ Valid values are:
 ```yaml
 Type: UserDeviceAffinityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotUse, AllowWithManualApproval, AllowWithAutomaticApproval
 Required: False
 Position: Named
@@ -574,7 +574,7 @@ Accept wildcard characters: False
 ### -ValidateContentSchedule
 Specifies a CMSchedule object.
 A CMSchedule object defines the schedule for validating the integrity of content files on the distribution point.
-To create a CMSchedule object, use the New-CMSchedule cmdlet.
+To create a CMSchedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -620,5 +620,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDistributionPoint](./Get-CMDistributionPoint.md)
 
 [New-CMSchedule](./New-CMSchedule.md)
-
-

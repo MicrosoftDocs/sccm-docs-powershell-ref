@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an application SDK object.
-To obtain an application object, use the ConvertTo-CMApplication cmdlet or the Convert-CMApplication cmdlet.
+To obtain an application object, use the [ConvertTo-CMApplication](./ConvertTo-CMApplication.md) cmdlet or the [Convert-CMApplication](./Convert-CMApplication.md) cmdlet.
 
 ```yaml
 Type: Application

@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -Device
 Specifies a **CMDevice** object.
-To obtain a **CMDevice** object, use the Get-CMDevice cmdlet.
+To obtain a **CMDevice** object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 ### -DeviceCollection
 Specifies a **CMDeviceCollection** object.
-To obtain a **CMDeviceCollection** object, use the Get-CMDeviceCollection cmdlet.
+To obtain a **CMDeviceCollection** object, use the [Get-CMDeviceCollection](./Get-CMDeviceCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject

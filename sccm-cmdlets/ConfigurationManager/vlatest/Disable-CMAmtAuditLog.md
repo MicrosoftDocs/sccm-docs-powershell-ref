@@ -34,8 +34,8 @@ Disable-CMAmtAuditLog -DeviceId <String> [-Force] [-DisableWildcardHandling] [-F
 The **Disable-CMAmtAuditLog** cmdlet disables audit logging for Intel Active Management Technology (Intel AMT)-based computers.
 The audit log records authorized and authenticated out-of-band management activities performed on Intel AMT computers.
 
-You can specify computers by using the Microsoft System Center Configuration Manager device name or device ID, or you can use the Get-CMDevice cmdlet to get a device object.
-If you want to delete the current log entries, use the Clear-CMAmtAuditLog cmdlet.
+You can specify computers by using the Microsoft System Center Configuration Manager device name or device ID, or you can use the [Get-CMDevice](./Get-CMDevice.md) cmdlet to get a device object.
+If you want to delete the current log entries, use the [Clear-CMAmtAuditLog](./Clear-CMAmtAuditLog.md) cmdlet.
 
 ## EXAMPLES
 

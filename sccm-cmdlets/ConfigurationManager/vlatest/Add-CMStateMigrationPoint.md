@@ -69,7 +69,7 @@ Accept wildcard characters: False
 
 ### -BoundaryGroupName
 Specifies an array of names of boundary groups.
-You can get a boundary group name by using the Get-CMBoundaryGroup cmdlet.
+You can get a boundary group name by using the [Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md) cmdlet.
 
 ```yaml
 Type: String[]

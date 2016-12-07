@@ -31,7 +31,7 @@ Get-CMDeviceActionState [[-Action] <DeviceActionType>] [-InputObject] <IResultOb
 ```
 
 ## DESCRIPTION
-The **Get-CMDeviceActionState** cmdlet gets the state of an action initiated on a mobile device by using the Invoke-CMDeviceAction cmdlet.
+The **Get-CMDeviceActionState** cmdlet gets the state of an action initiated on a mobile device by using the [Invoke-CMDeviceAction](./Invoke-CMDeviceAction.md) cmdlet.
 
 ## EXAMPLES
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a device object.
-To obtain a device object, use the Get-CMDevice cmdlet.
+To obtain a device object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -177,5 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDevice](./Get-CMDevice.md)
 
 [Invoke-CMDeviceAction](./Invoke-CMDeviceAction.md)
-
-

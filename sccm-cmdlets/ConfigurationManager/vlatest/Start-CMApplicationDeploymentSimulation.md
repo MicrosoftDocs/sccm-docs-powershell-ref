@@ -204,5 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMApplicationDeployment](./Set-CMApplicationDeployment.md)
 
 [Start-CMApplicationDeployment](./Start-CMApplicationDeployment.md)
-
-

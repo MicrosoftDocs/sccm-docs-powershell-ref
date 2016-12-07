@@ -240,7 +240,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a package object.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -425,5 +425,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMPackage](./Get-CMPackage.md)
 
 [Get-CMSoftwareUpdateDeploymentPackage](./Get-CMSoftwareUpdateDeploymentPackage.md)
-
-

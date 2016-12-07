@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -Driver
 Specifies a driver object.
-To obtain a **CMDriver** object, use the Get-CMDriver cmdlet.
+To obtain a **CMDriver** object, use the [Get-CMDriver](./Get-CMDriver.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 
 ### -DriverPackage
 Specifies a **CMDriverPackage** object.
-To obtain a **CMDriverPackage** object, use the Get-CMDriverPackage cmdlet.
+To obtain a **CMDriverPackage** object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

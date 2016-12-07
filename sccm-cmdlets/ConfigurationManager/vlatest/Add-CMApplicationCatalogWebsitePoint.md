@@ -111,9 +111,9 @@ Accept wildcard characters: False
 Specifies how a client connects to the website.
 Valid values are: 
 
--- Internet
--- InternetAndIntranet
--- Intranet
+- Internet
+- InternetAndIntranet
+- Intranet
 
 ```yaml
 Type: ClientConnectionTypes
@@ -415,5 +415,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMApplicationCatalogWebSitePoint](./Remove-CMApplicationCatalogWebSitePoint.md)
 
 [Set-CMApplicationCatalogWebsitePoint](./Set-CMApplicationCatalogWebsitePoint.md)
-
-

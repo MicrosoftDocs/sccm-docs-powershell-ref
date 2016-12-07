@@ -32,8 +32,8 @@ Each filter rule contains criteria and actions for status messages.
 You configure status filter rules for each site, not across all sites.
 
 Use the rule name and site code to specify a rule to enable.
-You can use the Disable-CMStatusFilterRule cmdlet to disable a rule.
-To remove a rule permanently, use the Remove-CMStatusFilterRule cmdlet.
+You can use the [Disable-CMStatusFilterRule](./Disable-CMStatusFilterRule.md) cmdlet to disable a rule.
+To remove a rule permanently, use the [Remove-CMStatusFilterRule](./Remove-CMStatusFilterRule.md) cmdlet.
 
 ## EXAMPLES
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a status filter rule object to enable.
-To obtain a status filter rule object, use the Get-CMStatusFilterRule cmdlet.
+To obtain a status filter rule object, use the [Get-CMStatusFilterRule](./Get-CMStatusFilterRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject

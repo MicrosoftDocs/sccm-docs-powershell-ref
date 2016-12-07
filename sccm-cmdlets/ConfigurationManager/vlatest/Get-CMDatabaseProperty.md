@@ -22,7 +22,7 @@ The **Get-CMDatabaseProperty** cmdlet gets an object that represents a Microsoft
 Use the site code for a site to specify a database.
 
 When this cmdlet returns a database object in the console, it displays current settings for data compression, Broker port for the computer that runs Microsoft SQL Server, and the length of time that the database keeps data.
-You can use the Set-CMDatabaseProperty cmdlet to change these values.
+You can use the [Set-CMDatabaseProperty](./Set-CMDatabaseProperty.md) cmdlet to change these values.
 
 ## EXAMPLES
 
@@ -94,5 +94,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CMDatabaseProperty](./Set-CMDatabaseProperty.md)
-
-

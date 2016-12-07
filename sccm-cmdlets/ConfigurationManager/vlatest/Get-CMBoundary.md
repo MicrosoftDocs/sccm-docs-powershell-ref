@@ -49,7 +49,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ## EXAMPLES
 
-### Example 1: Get a boundary that is specified by its identifier.
+### Example 1: Get a boundary that is specified by its identifier
 ```
 PS C:\>Get-Boundary -Id "67777217"
 BoundaryFlags:      0
@@ -207,5 +207,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMBoundary](./Set-CMBoundary.md)
 
 [Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md)
-
-

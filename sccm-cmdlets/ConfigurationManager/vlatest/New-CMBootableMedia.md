@@ -347,7 +347,7 @@ Accept wildcard characters: False
 
 ### -PrestartPackage
 Specifies a package object that contains files for the prestart command.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

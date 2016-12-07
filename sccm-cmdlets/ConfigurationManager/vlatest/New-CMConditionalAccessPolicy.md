@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -ExcludedCollection
 Specifies an array of user collection objects.
-To obtain a user collection object, use the Get-CMCollection cmdlet.
+To obtain a user collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 Members of these collections do not have to enroll their devices in Microsoft Intune, or be compliant with any deployed compliance policies in order to access Exchange, as long as the default Exchange rules allow access.
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 ### -TargetedCollection
 Specifies an array of user collection objects.
-To obtain a user collection object, use the Get-CMCollection cmdlet.
+To obtain a user collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 
 Members of these collections must enroll their devices in Microsoft Intune and be compliant with any deployed compliance policies in order to access Exchange.
 

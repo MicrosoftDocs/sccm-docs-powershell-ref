@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an application object.
-To get an application object, use the Get-CMApplication cmdlet.
+To get an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject

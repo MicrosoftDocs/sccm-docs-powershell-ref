@@ -32,7 +32,7 @@ Export-CMConfigurationItem [-InputObject] <IResultObject> -Path <String> [-Disab
 
 ## DESCRIPTION
 The **Export-CMConfigurationItem** cmdlet saves a Microsoft System Center Configuration Manager configuration item to a specified .cab file.
-You can specify items by ID, name, or by use of the Get-CMConfigurationItem cmdlet.
+You can specify items by ID, name, or by use of the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet.
 
 Configuration items contain one or more settings, along with compliance rules.
 For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014) on TechNet.
