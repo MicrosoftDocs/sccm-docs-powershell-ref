@@ -402,7 +402,12 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationBehaviorType
+Specifies the installation behavior of the deployment type.
+Valid values are: 
 
+- InstallForSystem
+- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
+- InstallForUser
 
 ```yaml
 Type: InstallationBehaviorType
@@ -686,5 +691,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMApplication](./Get-CMApplication.md)
 
 [Get-CMDeploymentType](./Get-CMDeploymentType.md)
-
-

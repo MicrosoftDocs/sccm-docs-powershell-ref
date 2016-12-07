@@ -251,7 +251,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a CMOperatingSystemImage object.
-To obtain a CMOperatingSystemImage object, use the Get-CMOperatingSystemImage cmdlet.
+To obtain a CMOperatingSystemImage object, use the [Get-CMOperatingSystemImage](./Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -393,7 +393,8 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-
+Specifies a change for the priority of the deployment type.
+Valid values are: Increase and Decrease.
 
 ```yaml
 Type: Priority
