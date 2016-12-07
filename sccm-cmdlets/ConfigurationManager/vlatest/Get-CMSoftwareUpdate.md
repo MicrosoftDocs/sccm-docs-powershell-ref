@@ -419,7 +419,7 @@ Accept wildcard characters: False
 
 ### -UpdateGroup
 Specifies a software update group object.
-To obtain an update group object, use the Get-CMSoftwareUpdateGroup cmdlet.
+To obtain an update group object, use the [Get-CMSoftwareUpdateGroup](./Get-CMSoftwareUpdateGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject

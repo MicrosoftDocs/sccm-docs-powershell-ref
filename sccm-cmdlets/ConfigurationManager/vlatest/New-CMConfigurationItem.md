@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -ParentConfigurationItem
 Specifies a parent **CMConfigurationItem** object.
-To obtain a **CMConfigurationItem** object, use the Get-CMConfigurationItem cmdlet.
+To obtain a **CMConfigurationItem** object, use the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject

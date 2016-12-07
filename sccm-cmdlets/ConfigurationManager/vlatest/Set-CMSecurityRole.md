@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a **CMSecurityRole** object.
-To get a **CMSecurityRole** object, use the Get-CMSecurityRole cmdlet.
+To get a **CMSecurityRole** object, use the [Get-CMSecurityRole](./Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject

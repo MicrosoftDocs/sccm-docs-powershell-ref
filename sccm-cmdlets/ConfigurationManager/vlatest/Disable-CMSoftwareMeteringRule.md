@@ -33,12 +33,12 @@ Disable-CMSoftwareMeteringRule -InputObject <IResultObject> [-DisableWildcardHan
 ## DESCRIPTION
 The **Disable-CMSoftwareMeteringRule** cmdlet disables one or more software metering rules in Microsoft System Center Configuration Manager.
 If you disable a rule, it does not collect information from clients.
-You can use the Enable-CMSoftwareMeteringRule cmdlet to enable a rule that you previously disabled.
+You can use the [Enable-CMSoftwareMeteringRule](./Enable-CMSoftwareMeteringRule.md) cmdlet to enable a rule that you previously disabled.
 
 Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
 
-You can specify rules that disable software metering rules by ID or by product name, or use the Get-CMSoftwareMeteringRule cmdlet.
+You can specify rules that disable software metering rules by ID or by product name, or use the [Get-CMSoftwareMeteringRule](./Get-CMSoftwareMeteringRule.md) cmdlet.
 You can use the Remove-CMSoftwareMeteringRule to permanently delete a rule.
 
 For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268432) on TechNet.
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a software metering rule object.
-To obtain a software metering rule object, use the Get-CMSoftwareMeteringRule cmdlet.
+To obtain a software metering rule object, use the [Get-CMSoftwareMeteringRule](./Get-CMSoftwareMeteringRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject

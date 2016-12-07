@@ -83,7 +83,7 @@ This command removes the association between the security role named Security Up
 
 ### -AdministrativeUser
 Specifies a **CMAdministrativeUser** object.
-To obtain a **CMAdministrativeUser** object, use the Get-CMAdministrativeUser cmdlet.
+To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](./Get-CMAdministrativeUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -Role
 Specifies a **CMSecurityRole** object.
-To obtain a **CMSecurityRole** object, use the Get-CMSecurityRole cmdlet.
+To obtain a **CMSecurityRole** object, use the [Get-CMSecurityRole](./Get-CMSecurityRole.md) cmdlet.
 
 ```yaml
 Type: IResultObject

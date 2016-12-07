@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a Configuration Manager user account object.
-To obtain a Configuration Manager user account object, use the Get-CMUser cmdlet.
+To obtain a Configuration Manager user account object, use the [Get-CMUser](./Get-CMUser.md) cmdlet.
 
 ```yaml
 Type: IResultObject

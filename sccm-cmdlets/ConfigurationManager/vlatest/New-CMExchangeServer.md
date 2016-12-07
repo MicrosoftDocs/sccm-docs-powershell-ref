@@ -205,11 +205,11 @@ Accept wildcard characters: False
 Specifies general settings.
 Valid values are:
 
--- RequireManualSyncWhenRoaming
--- RequireStorageCardEncryption
--- UnapprovedInROMApplicationList
--- DevicePolicyRefreshInterval
--- MaxInactivityTimeDeviceLock
+- RequireManualSyncWhenRoaming
+- RequireStorageCardEncryption
+- UnapprovedInROMApplicationList
+- DevicePolicyRefreshInterval
+- MaxInactivityTimeDeviceLock
 
 ```yaml
 Type: ExchangeConnectorGeneralSetting
@@ -284,16 +284,16 @@ Accept wildcard characters: False
 Specifies password settings.
 Valid values are:
 
--- AlphanumericDevicePasswordRequired
--- DevicePasswordEnabled
--- DevicePasswordExpiration
--- DevicePasswordHistory
--- MaxDevicePasswordFailedAttempts
--- PasswordRecoveryEnabled
--- MinDevicePasswordComplexCharacters
--- MinDevicePasswordLength
--- AlphanumericDevicePasswordRequired
--- AllowSimpleDevicePassword
+- AlphanumericDevicePasswordRequired
+- DevicePasswordEnabled
+- DevicePasswordExpiration
+- DevicePasswordHistory
+- MaxDevicePasswordFailedAttempts
+- PasswordRecoveryEnabled
+- MinDevicePasswordComplexCharacters
+- MinDevicePasswordLength
+- AlphanumericDevicePasswordRequired
+- AllowSimpleDevicePassword
 
 ```yaml
 Type: ExchangeConnectorPasswordSetting
@@ -310,17 +310,17 @@ Accept wildcard characters: False
 Specifies a dictionary of security settings.
 Valid values are: 
 
--- AllowBluetooth
--- AllowBrowser
--- AllowCamera
--- AllowDesktopSync
--- AllowInternetSharing
--- AllowIrDA
--- AllowNonProvisionableDevices
--- AllowRemoteDesktop
--- AllowStorageCard
--- AllowTextMessaging
--- AllowWiFi
+- AllowBluetooth
+- AllowBrowser
+- AllowCamera
+- AllowDesktopSync
+- AllowInternetSharing
+- AllowIrDA
+- AllowNonProvisionableDevices
+- AllowRemoteDesktop
+- AllowStorageCard
+- AllowTextMessaging
+- AllowWiFi
 
 ```yaml
 Type: ExchangeConnectorSecuritySetting
@@ -419,5 +419,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMExchangeServer](./Set-CMExchangeServer.md)
 
 [Sync-CMExchangeServer](./Sync-CMExchangeServer.md)
-
-

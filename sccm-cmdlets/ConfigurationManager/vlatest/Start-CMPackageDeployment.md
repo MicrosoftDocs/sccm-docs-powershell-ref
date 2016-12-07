@@ -218,7 +218,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DeployPurposeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Available, Required
 Required: False
 Position: Named
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -DeploymentExpireDateTime
 Specifies, as a **DateTime** object, the date and time that the deployment expires.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 
 ```yaml
 Type: DateTime
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 
 ### -DeploymentStartDateTime
 Specifies, as a **DateTime** object, the date and time that the deployment starts.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 
 ```yaml
 Type: DateTime
@@ -400,7 +400,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: FastNetworkOptionType
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 Accepted values: RunProgramFromDistributionPoint, DownloadContentFromDistributionPointAndRunLocally
 Required: False
 Position: Named
@@ -425,7 +425,7 @@ Accept wildcard characters: False
 
 ### -Package
 Specifies a package object.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -536,7 +536,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RecurUnitType
 Parameter Sets: DeployDeviceProgramByPackageId, DeployDeviceProgramByProgramValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageValue
-Aliases: 
+Aliases:
 Accepted values: Minutes, Hours, Days
 Required: False
 Position: Named
@@ -581,21 +581,21 @@ Accept wildcard characters: False
 Specifies how a deployment reruns on a client.
 The acceptable values for this parameter are:
 
-- AlwaysRerunProgram.
+-- AlwaysRerunProgram.
 Rerun as scheduled, even if the deployment succeeded.
-You can use this value for recurring deployments. 
-- NeverRerunDeployedProgram.
-Does not rerun, even if the deployment failed or files changed. 
-- RerunIfFailedPreviousAttempt.
-Rerun, as scheduled, if the deployment failed on the previous attempt. 
-- RerunIfSucceededOnpreviousAttempt.
+You can use this value for recurring deployments.
+-- NeverRerunDeployedProgram.
+Does not rerun, even if the deployment failed or files changed.
+-- RerunIfFailedPreviousAttempt.
+Rerun, as scheduled, if the deployment failed on the previous attempt.
+-- RerunIfSucceededOnpreviousAttempt.
 Rerun only if the previous attempt succeeded.
 You can use this value for updates that depend on the previous update.
 
 ```yaml
 Type: RerunBehaviorType
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 Accepted values: NeverRerunDeployedProgram, AlwaysRetunProgram, AlwaysRerunProgram, RerunIfFailedPreviousAttempt, RerunIfSucceededOnPreviousAttempt
 Required: False
 Position: Named
@@ -644,7 +644,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ScheduleEventType
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 Accepted values: AsSoonAsPossible, LogOn, LogOff
 Required: False
 Position: Named
@@ -681,7 +681,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SlowNetworkOptionType
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByProgramValue, DeployStandardProgramByPackageId
-Aliases: 
+Aliases:
 Accepted values: DoNotRunProgram, DownloadContentFromDistributionPointAndLocally, RunProgramFromDistributionPoint
 Required: False
 Position: Named
@@ -829,5 +829,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMPackageDeployment](./Set-CMPackageDeployment.md)
 
 [Get-CMPackage](./Get-CMPackage.md)
-
-

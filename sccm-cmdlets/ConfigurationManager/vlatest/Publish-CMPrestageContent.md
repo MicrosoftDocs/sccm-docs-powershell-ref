@@ -216,7 +216,7 @@ This command publishes the operating system installer that has the ID CM200017 t
 
 ### -Application
 Specifies an application object.
-To obtain an application object, use the Get-CMApplication cmdlet.
+To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 
 ### -DriverPackage
 Specifies a driver package object.
-To obtain a driver package object, use the Get-CMDriverPackage cmdlet.
+To obtain a driver package object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -572,7 +572,7 @@ Accept wildcard characters: False
 
 ### -Package
 Specifies a package object.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

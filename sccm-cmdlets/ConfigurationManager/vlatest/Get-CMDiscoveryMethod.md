@@ -69,14 +69,10 @@ Specifies the type of discovery method that the cmdlet gets.
 The acceptable values for this parameter are:
 
 - ActiveDirectoryForestDiscovery: Discovers security groups, including local, global, and universal groups from specified locations in Active Directory Domain Services.
- 
 - ActiveDirectoryGroupDiscovery: Discovers additional information, including the OU and group membership of the computer, about previously discovered computers from specified locations in Active Directory Domain Services. 
 - ActiveDirectorySystemDiscovery: Discovers computers from specified locations in Active Directory Domain Services.
- 
 - ActiveDirectoryUserDiscovery: Discovers users from specified locations in Active Directory Domain Services.
- 
 - HeartbeatDiscovery: Updates discovery records for Microsoft System Center Configuration Manager clients in the System Center Configuration Manager database without discovering new resources.
- 
 - NetworkForestDiscovery: Searches the network infrastructure for network devices (such as printers, routers, and bridges) that have an IP address.
 
 ```yaml
@@ -119,5 +115,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [About Configuration Manager Discovery](http://go.microsoft.com/fwlink/?linkid=107444)
 
 [Set-CMDiscoveryMethod](./Set-CMDiscoveryMethod.md)
-
-

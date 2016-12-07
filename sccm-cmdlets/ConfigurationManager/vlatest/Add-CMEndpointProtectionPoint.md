@@ -120,9 +120,9 @@ Accept wildcard characters: False
 Specifies the type of membership you have for Microsoft Active Protection Service (MAPS).
 Valid values are: 
 
--- AdvancedMembership
--- BasicMembership
--- DoNotJoinMaps
+- AdvancedMembership
+- BasicMembership
+- DoNotJoinMaps
 
 ```yaml
 Type: MapsMembershipType
@@ -197,5 +197,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMEndpointProtectionPoint](./Remove-CMEndpointProtectionPoint.md)
 
 [Set-CMEndpointProtectionPoint](./Set-CMEndpointProtectionPoint.md)
-
-

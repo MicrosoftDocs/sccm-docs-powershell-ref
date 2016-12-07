@@ -373,7 +373,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DeploymentOptionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
 Required: False
 Position: Named
@@ -411,6 +411,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+Specifies an task sequence deployment object.
+To obtain a task sequence object, use the [Get-CMTaskSequenceDeployment](./Get-CMTaskSequenceDeployment.md) cmdlet.
 
 
 ```yaml
@@ -450,7 +452,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MakeAvailableToType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Clients, ClientsMediaAndPxe, MediaAndPxe, MediaAndPxeHidden
 Required: False
 Position: Named
@@ -529,7 +531,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RerunBehaviorType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NeverRerunDeployedProgram, AlwaysRerunProgram, RerunIfFailedPreviousAttempt, RerunIfSucceededOnPreviousAttempt
 Required: False
 Position: Named
@@ -541,7 +543,7 @@ Accept wildcard characters: False
 ### -Schedule
 Specifies an array of **CMSchedule** objects.
 A **CMSchedule** object defines the mandatory assignment schedule for a deployment.
-To create a **CMSchedule** object, use the New-CMSchedule cmdlet.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -565,7 +567,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ScheduleEventType[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AsSoonAsPossible, LogOn, LogOff
 Required: False
 Position: Named
@@ -750,5 +752,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSchedule](./New-CMSchedule.md)
 
 [Get-CMTaskSequence](./Get-CMTaskSequence.md)
-
-

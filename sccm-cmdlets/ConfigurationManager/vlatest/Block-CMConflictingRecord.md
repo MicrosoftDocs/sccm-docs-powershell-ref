@@ -39,7 +39,7 @@ The previous client record still exists with the same hardware information.
 If you manually resolve conflicts, you have the option to merge the new record with the existing record, create a new record, or create a record as a blocked record.
 You can also configure Configuration Manager to resolve conflicts automatically.
 
-You can specify a conflict by using a name or ID or you can use the Get-CMConflictingRecord cmdlet to obtain one.
+You can specify a conflict by using a name or ID or you can use the [Get-CMConflictingRecord](./Get-CMConflictingRecord.md) cmdlet to obtain one.
 
 ## EXAMPLES
 
@@ -175,5 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMConflictingRecord](./Get-CMConflictingRecord.md)
 
 [Merge-CMConflictingRecord](./Merge-CMConflictingRecord.md)
-
-

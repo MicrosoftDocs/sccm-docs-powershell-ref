@@ -36,7 +36,7 @@ The **Remove-CMSoftwareMeteringRule** cmdlet removes one or more software meteri
 Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
 
-You can specify rules to disable by ID or by product name, or use the Get-CMSoftwareMeteringRule cmdlet.
+You can specify rules to disable by ID or by product name, or use the [Get-CMSoftwareMeteringRule](./Get-CMSoftwareMeteringRule.md) cmdlet.
 You can use the Disable-CMSoftwareMeteringRule to temporarily suspend a rule.
 
 For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268432) on TechNet.
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a software metering rule object.
-To obtain a software metering rule object, use the Get-CMSoftwareMeteringRule cmdlet.
+To obtain a software metering rule object, use the [Get-CMSoftwareMeteringRule](./Get-CMSoftwareMeteringRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject

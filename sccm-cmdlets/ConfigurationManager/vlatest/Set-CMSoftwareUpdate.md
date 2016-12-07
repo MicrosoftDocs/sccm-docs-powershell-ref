@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a software update object.
-To obtain a software update object, use the Get-CMSoftwareUpdate cmdlet.
+To obtain a software update object, use the [Get-CMSoftwareUpdate](./Get-CMSoftwareUpdate.md) cmdlet.
 
 ```yaml
 Type: IResultObject

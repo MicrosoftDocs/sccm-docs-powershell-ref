@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ### -SecurityScope
 Specifies an array of security scope objects.
-To obtain a security scope object, use the Get-CMSecurityScope cmdlet.
+To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurityScope.md) cmdlet.
 The cmdlet applies the security scopes that you specify to data migrated to the destination hierarchy.
 
 ```yaml

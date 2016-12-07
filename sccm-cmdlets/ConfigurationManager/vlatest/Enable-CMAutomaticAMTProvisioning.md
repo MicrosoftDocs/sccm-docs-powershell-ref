@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -Device
 Specifies a device object.
-To obtain a **CMDevice** object, use the Get-CMDevice cmdlet.
+To obtain a **CMDevice** object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
 
 ```yaml
 Type: IResultObject

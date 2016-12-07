@@ -32,8 +32,8 @@ If the number of software metering rules exceeds this threshold, System Center C
 
 When System Center Configuration Manager creates a rule automatically, it creates that rule as disabled.
 A disabled rule does not collect information from clients.
-You can use the Enable-CMSoftwareMeteringRule cmdlet to enable a rule.
-You can use the Remove-CMSoftwareMeteringRule cmdlet to remove unwanted rules.
+You can use the [Enable-CMSoftwareMeteringRule](./Enable-CMSoftwareMeteringRule.md) cmdlet to enable a rule.
+You can use the [Remove-CMSoftwareMeteringRule](./Remove-CMSoftwareMeteringRule.md) cmdlet to remove unwanted rules.
 
 ## EXAMPLES
 

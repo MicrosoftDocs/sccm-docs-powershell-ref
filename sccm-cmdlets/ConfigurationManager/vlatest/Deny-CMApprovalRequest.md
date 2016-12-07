@@ -33,7 +33,7 @@ Deny-CMApprovalRequest -ApplicationName <String[]> -User <String> [-Comment <Str
 ## DESCRIPTION
 The **Deny-CMApprovalRequest** cmdlet denies a request from a user to install an application.
 You can specify an approval request by application name, application ID, or by user.
-You can use the Get-CMApprovalRequest cmdlet to view approval requests.
+You can use the [Get-CMApprovalRequest](./Get-CMApprovalRequest.md) cmdlet to view approval requests.
 
 ## EXAMPLES
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an approval request object.
-To obtain an approval request object, use the Get-CMApprovalRequest cmdlet.
+To obtain an approval request object, use the [Get-CMApprovalRequest](./Get-CMApprovalRequest.md) cmdlet.
 
 ```yaml
 Type: IResultObject

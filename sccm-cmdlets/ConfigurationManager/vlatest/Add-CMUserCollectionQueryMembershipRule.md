@@ -53,7 +53,7 @@ The command specifies the query as a string.
 
 ### -Collection
 Specifies a Configuration Manager user collection object.
-To obtain a user collection object, use the Get-CMUserCollection cmdlet.
+To obtain a user collection object, use the [Get-CMUserCollection](./Get-CMUserCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject

@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a **CMBaseline** object.
-To obtain a **CMBaseline** object, use the Get-CMBaseline cmdlet.
+To obtain a **CMBaseline** object, use the [Get-CMBaseline](./Get-CMBaseline.md) cmdlet.
 
 ```yaml
 Type: IResultObject

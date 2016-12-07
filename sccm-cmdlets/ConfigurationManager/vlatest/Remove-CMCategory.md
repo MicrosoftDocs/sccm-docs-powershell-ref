@@ -54,12 +54,12 @@ This command removes the category named NewLaptopDriverSet from DriversCategorie
 Specifies a category type.
 Valid values are: 
 
--- UserCategories
--- BaselineCategories
--- DriverCategories
--- AppCategories
--- GlobalCondition
--- CatalogCategories
+- UserCategories
+- BaselineCategories
+- DriverCategories
+- AppCategories
+- GlobalCondition
+- CatalogCategories
 
 ```yaml
 Type: CategoryType
@@ -212,5 +212,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMCategory](./Get-CMCategory.md)
 
 [New-CMCategory](./New-CMCategory.md)
-
-

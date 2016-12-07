@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies the package that you export by using a Configuration Manager package object.
-To obtain a package object, use the Get-CMPackage cmdlet.
+To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

@@ -198,9 +198,9 @@ Accept wildcard characters: False
 Specifies whether the user can use Wireless (Wi-Fi) local area networks (LANs) with the device.
 Valid values are: 
 
--- Allow
--- Disable
--- HandsfreeOnly
+- Allow
+- Disable
+- HandsfreeOnly
 
 ```yaml
 Type: Boolean
@@ -231,5 +231,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMExchangeServerConnectorEmailManagementSetting](./New-CMExchangeServerConnectorEmailManagementSetting.md)
 
 [New-CMExchangeServerConnectorPasswordSetting](./New-CMExchangeServerConnectorPasswordSetting.md)
-
-

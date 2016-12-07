@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -SoftwareInventory
 Specifies a **CMSoftwareInventory** object.
-To obtain a **CMSoftwareInventory** object, use the Get-CMSoftwareInventory cmdlet.
+To obtain a **CMSoftwareInventory** object, use the [Get-CMSoftwareInventory](./Get-CMSoftwareInventory.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -158,5 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareInventory](./Get-CMSoftwareInventory.md)
 
 [Set-CMSoftwareInventory](./Set-CMSoftwareInventory.md)
-
-

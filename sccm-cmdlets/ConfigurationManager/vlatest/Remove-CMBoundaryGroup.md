@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an input object to this cmdlet.
-You can get the input object by using the Get-CMBoundaryGroup cmdlet.
+You can get the input object by using the [Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject

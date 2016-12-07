@@ -35,7 +35,7 @@ The **Stop-CMCloudDistributionPoint** cmdlet stops the cloud distribution point 
 
 If you use the **Stop-CMCloudDistributionPoint** cmdlet, System Center Configuration Manager does not delete content from the distribution point and does not prevent the site server from transferring additional content to the distribution point.
 While the cloud distribution point service is stopped, the cloud distribution point does not distribute content.
-Use the Start-CMCloudDistributionPoint cmdlet to restart distribution.
+Use the [Start-CMCloudDistributionPoint](./Start-CMCloudDistributionPoint.md) cmdlet to restart distribution.
 
 For example, you might want to stop a cloud service when usage reaches a data threshold and then restart it at a later time.
 
@@ -61,7 +61,7 @@ PS C:\>$DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
 PS C:\> Stop-CMCloudDistributionPoint -InputObject $DistPnt
 ```
 
-The first command uses the Get-CMCloudDistributionPoint cmdlet to get the distribution point with the specified identifier, and then stores it in the $DistPnt variable.
+The first command uses the **Get-CMCloudDistributionPoint** cmdlet to get the distribution point with the specified identifier, and then stores it in the $DistPnt variable.
 
 The second command stops the cloud distribution point service for the distribution point stored in $DistPnt.
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a cloud distribution point object.
-To get a cloud distribution point object, you can use the Get-CMCloudDistributionPoint cmdlet.
+To get a cloud distribution point object, you can use the **Get-CMCloudDistributionPoint** cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -188,5 +188,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMCloudDistributionPoint](./Set-CMCloudDistributionPoint.md)
 
 [Start-CMCloudDistributionPoint](./Start-CMCloudDistributionPoint.md)
-
-

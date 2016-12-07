@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a software group object.
-To obtain a software group object, use the Get-CMSoftwareUpdateGroup cmdlet.
+To obtain a software group object, use the [Get-CMSoftwareUpdateGroup](./Get-CMSoftwareUpdateGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject

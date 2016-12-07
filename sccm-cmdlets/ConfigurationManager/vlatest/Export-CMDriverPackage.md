@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a driver package object.
-To obtain a **CMDriverPackage** object, use the Get-CMDriverPackage cmdlet.
+To obtain a **CMDriverPackage** object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

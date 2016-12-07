@@ -34,7 +34,7 @@ Enable-CMAmtAuditLog -DeviceId <String> [-Force] [-DisableWildcardHandling] [-Fo
 The **Enable-CMAmtAuditLog** cmdlet enables audit logging for Intel Active Management Technology (Intel AMT)-based computers.
 The audit log records authorized and authenticated out-of-band management activities performed on Intel AMT computers.
 
-You can specify computers by using the Microsoft System Center Configuration Manager device name or device ID, or you can use the Get-CMDevice cmdlet to get a device object.
+You can specify computers by using the Microsoft System Center Configuration Manager device name or device ID, or you can use the [Get-CMDevice](./Get-CMDevice.md) cmdlet to get a device object.
 
 ## EXAMPLES
 

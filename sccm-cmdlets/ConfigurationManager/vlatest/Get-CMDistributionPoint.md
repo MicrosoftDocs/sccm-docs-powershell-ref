@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -DistributionPointGroup
 Specifies a distribution point group object.
-To obtain a distribution point group object, use the Get-CMDistributionPointGroup cmdlet.
+To obtain a distribution point group object, use the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject

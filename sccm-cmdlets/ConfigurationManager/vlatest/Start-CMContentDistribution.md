@@ -258,7 +258,7 @@ The command distributes the operating system installer to the collection named A
 
 ### -Application
 Specifies a Configuration Manager application object.
-To get a **CMApplication** object, use the Get-CMApplication cmdlet.
+To get a **CMApplication** object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -471,7 +471,7 @@ Accept wildcard characters: False
 
 ### -DriverPackage
 Specifies a driver package object.
-To get a **CMDriverPackage** object, use the Get-CMDriverPackage cmdlet.
+To get a **CMDriverPackage** object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -528,7 +528,7 @@ Accept wildcard characters: False
 
 ### -OperatingSystemImage
 Specifies an operating system image object.
-To get a **CMOperatingSystemImage** object, use the Get-CMOperatingSystemImage cmdlet.
+To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage](./Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -571,7 +571,7 @@ Accept wildcard characters: False
 
 ### -OperatingSystemInstaller
 Specifies an operating system installer object.
-To get a **CMOperatingSystemInstaller** object, use the Get-CMOperatingSystemInstaller cmdlet.
+To get a **CMOperatingSystemInstaller** object, use the [Get-CMOperatingSystemInstaller](./Get-CMOperatingSystemInstaller.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -614,7 +614,7 @@ Accept wildcard characters: False
 
 ### -Package
 Specifies a package object.
-To get a **CMPackage** object, use the Get-CMPackage cmdlet.
+To get a **CMPackage** object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -657,7 +657,7 @@ Accept wildcard characters: False
 
 ### -TaskSequence
 Specifies a task sequence object.
-To get a **CMTaskSequence** object, use the Get-CMTaskSequence cmdlet.
+To get a **CMTaskSequence** object, use the [Get-CMTaskSequence](./Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -743,5 +743,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMContentDistribution](./Remove-CMContentDistribution.md)
 
 [Update-CMDistributionPoint](./Update-CMDistributionPoint.md)
-
-
