@@ -316,7 +316,7 @@ Accept wildcard characters: False
 
 ### -DeploymentPackage
 Specifies a deployment package object.
-To obtain a deployment package object, use the Get-CMDeploymentPackage cmdlet.
+To obtain a deployment package object, use the [Get-CMDeploymentPackage](./Get-CMDeploymentPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

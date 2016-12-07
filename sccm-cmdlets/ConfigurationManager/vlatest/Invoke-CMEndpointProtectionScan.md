@@ -195,7 +195,7 @@ Accept wildcard characters: False
 Specifies a full or a quick scan.
 A full scan looks at every location on the device.
 A quick scan looks at only those locations where malware is most likely to appear.
-The acceptable values for this parameter are:: Full or Quick.
+The acceptable values for this parameter are: Full and Quick.
 
 ```yaml
 Type: ScanType
