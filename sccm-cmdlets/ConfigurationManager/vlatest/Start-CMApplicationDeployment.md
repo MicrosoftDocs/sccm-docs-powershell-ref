@@ -214,10 +214,10 @@ Accept wildcard characters: False
 Specifies an action for a deployment.
 Valid values are:
 
--- Install.
+- Install.
 Install the application.
 
--- Uninstall.
+- Uninstall.
 Uninstall the application.
 
 ```yaml
@@ -237,11 +237,11 @@ Specifies the purpose of the deployment.
 
 Valid values are:
 
--- Available.
+- Available.
 If the target collection is a device collection, the application is available in the software center.
 If the target collection is a user collection, the application is available in the catalog web site.
 
--- Required.
+- Required.
 Installation occurs when the deadline passes.
 
 ```yaml
@@ -559,13 +559,13 @@ Specifies user notification types.
 
 Valid values are:
 
--- DisplayAll.
+- DisplayAll.
 Display in Software Center and show all notifications.
 
--- DisplaySoftwareCenterOnly.
+- DisplaySoftwareCenterOnly.
 Display in Software Center and only show notifications for computer restarts.
 
--- HideAll.
+- HideAll.
 Do not display in Software Center and do not show notifications.
 
 ```yaml

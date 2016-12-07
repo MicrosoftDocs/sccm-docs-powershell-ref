@@ -53,9 +53,9 @@ Accept wildcard characters: False
 Specifies an approval method.
 Valid values are:  
 
--- AutomaticallyApproveAllComputers
--- AutomaticallyApproveComputersInTrustedDomains
--- ManuallyApproveEachComputer
+- AutomaticallyApproveAllComputers
+- AutomaticallyApproveComputersInTrustedDomains
+- ManuallyApproveEachComputer
 
 ```yaml
 Type: ApprovalMethodType
