@@ -77,7 +77,7 @@ The **Remove-CMDistributionPointFromGroup** cmdlet removes a Microsoft System Ce
 Distribution point groups provide a logical grouping of distribution points for content distribution.
 
 To remove a distribution point, specify both the distribution point to remove and the distribution point group.
-You can specify these values by ID or name, or you can use the Get-CMDistributionPoint cmdlet or the Get-CMDistributionPointGroup cmdlet to obtain the relevant object.
+You can specify these values by ID or name, or you can use the Get-CMDistributionPoint cmdlet or the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet to obtain the relevant object.
 
 ## EXAMPLES
 

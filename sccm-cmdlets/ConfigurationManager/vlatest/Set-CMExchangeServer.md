@@ -67,9 +67,9 @@ Specifies the type of access for the mobile devices.
 Access level applies to a mobile device that is not managed by a rule.
 Valid values are: 
 
--- Allow
--- Block
--- Quarantine
+- Allow
+- Block
+- Quarantine
 
 ```yaml
 Type: AccessLevelType
@@ -287,11 +287,11 @@ Accept wildcard characters: False
 Specifies general settings for mobile devices that use the Exchange Server Connector.
 Settings you can specify for this parameter include: 
 
--- RequireManualSyncWhenRoaming
--- RequireStorageCardEncryption
--- UnapprovedInROMApplicationList
--- DevicePolicyRefreshInterval
--- MaxInactivityTimeDeviceLock
+- RequireManualSyncWhenRoaming
+- RequireStorageCardEncryption
+- UnapprovedInROMApplicationList
+- DevicePolicyRefreshInterval
+- MaxInactivityTimeDeviceLock
 
 ```yaml
 Type: ExchangeConnectorGeneralSetting
@@ -350,16 +350,16 @@ Accept wildcard characters: False
 Specifies general password settings.
 Settings you can specify for this parameter include: 
 
--- AlphanumericDevicePasswordRequired
--- DevicePasswordEnabled
--- DevicePasswordExpiration
--- DevicePasswordHistory
--- MaxDevicePasswordFailedAttempts
--- PasswordRecoveryEnabled
--- MinDevicePasswordComplexCharacters
--- MinDevicePasswordLength
--- AlphanumericDevicePasswordRequired
--- AllowSimpleDevicePassword
+- AlphanumericDevicePasswordRequired
+- DevicePasswordEnabled
+- DevicePasswordExpiration
+- DevicePasswordHistory
+- MaxDevicePasswordFailedAttempts
+- PasswordRecoveryEnabled
+- MinDevicePasswordComplexCharacters
+- MinDevicePasswordLength
+- AlphanumericDevicePasswordRequired
+- AllowSimpleDevicePassword
 
 ```yaml
 Type: ExchangeConnectorPasswordSetting
@@ -376,17 +376,17 @@ Accept wildcard characters: False
 Specifies a dictionary of security settings.
 Settings you can specify for this parameter include: 
 
--- AllowBluetooth
--- AllowBrowser
--- AllowCamera
--- AllowDesktopSync
--- AllowInternetSharing
--- AllowIrDA
--- AllowNonProvisionableDevices
--- AllowRemoteDesktop
--- AllowStorageCard
--- AllowTextMessaging
--- AllowWiFi
+- AllowBluetooth
+- AllowBrowser
+- AllowCamera
+- AllowDesktopSync
+- AllowInternetSharing
+- AllowIrDA
+- AllowNonProvisionableDevices
+- AllowRemoteDesktop
+- AllowStorageCard
+- AllowTextMessaging
+- AllowWiFi
 
 ```yaml
 Type: ExchangeConnectorSecuritySetting
@@ -480,5 +480,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMExchangeServer](./Remove-CMExchangeServer.md)
 
 [Sync-CMExchangeServer](./Sync-CMExchangeServer.md)
-
-

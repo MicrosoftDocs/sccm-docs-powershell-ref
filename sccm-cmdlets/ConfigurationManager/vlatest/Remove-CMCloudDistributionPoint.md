@@ -34,7 +34,7 @@ Remove-CMCloudDistributionPoint -Name <String> [-Force] [-DisableWildcardHandlin
 The **Remove-CMCloudDistributionPoint** cmdlet removes specified cloud-based distribution points.
 
 When you remove a distribution point, System Center Configuration Manager deletes all the content stored there.
-If you want to suspend a distribution point temporarily, use the Stop-CMCloudDistributionPoint cmdlet.
+If you want to suspend a distribution point temporarily, use the [Stop-CMCloudDistributionPoint](./Stop-CMCloudDistributionPoint.md) cmdlet.
 
 ## EXAMPLES
 

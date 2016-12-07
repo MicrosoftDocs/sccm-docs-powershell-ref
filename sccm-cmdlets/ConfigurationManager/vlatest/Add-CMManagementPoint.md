@@ -88,9 +88,9 @@ Accept wildcard characters: False
 Specifies the type of the client connection.
 Valid values are: 
 
--- Internet
--- InternetAndIntranet
--- Intranet
+- Internet
+- InternetAndIntranet
+- Intranet
 
 ```yaml
 Type: ClientConnectionTypes
@@ -318,5 +318,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMManagementPoint](./Remove-CMManagementPoint.md)
 
 [Set-CMManagementPoint](./Set-CMManagementPoint.md)
-
-

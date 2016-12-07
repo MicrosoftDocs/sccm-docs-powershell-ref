@@ -564,9 +564,9 @@ Accept wildcard characters: False
 Specifies the installation behavior of the deployment type.
 Valid values are: 
 
--- InstallForSystem
--- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
--- InstallForUser
+- InstallForSystem
+- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
+- InstallForUser
 
 ```yaml
 Type: InstallationBehaviorType
@@ -623,10 +623,10 @@ Accept wildcard characters: False
 Specifies the mode in which the deployment type runs on client devices.
 Valid values are: 
 
--- Normal
--- Minimized
--- Maximized
--- Hidden
+- Normal
+- Minimized
+- Maximized
+- Hidden
 
 ```yaml
 Type: UserInteractionMode
@@ -701,9 +701,9 @@ Accept wildcard characters: False
 Specifies the logon requirement for the deployment type.
 Valid values are: 
 
--- OnlyWhenNoUserLoggedOn
--- OnlyWhenUserLoggedOn
--- WhereOrNotUserLoggedOn
+- OnlyWhenNoUserLoggedOn
+- OnlyWhenUserLoggedOn
+- WhereOrNotUserLoggedOn
 
 ```yaml
 Type: LogonRequirementType
@@ -825,9 +825,9 @@ Accept wildcard characters: False
 Specifies the installation behavior of the deployment type on a slow network.
 Valid values are: 
 
--- DoNothing
--- Download
--- DownloadContentForStreaming
+- DoNothing
+- Download
+- DownloadContentForStreaming
 
 ```yaml
 Type: ContentHandlingMode

@@ -49,8 +49,8 @@ In Configuration Manager, you can use a cloud service in Azure to host a distrib
 You can send packages and apps to and host packages and apps in cloud distribution points.
 For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266223) on TechNet.
 
-You can use the Get-CMCloudDistributionPoint cmdlet to get distribution points to use with other cmdlets.
-For example, you might want to get a distribution point and then use the Stop-CMCloudDistributionPoint cmdlet to suspend it.
+You can use the **Get-CMCloudDistributionPoint** cmdlet to get distribution points to use with other cmdlets.
+For example, you might want to get a distribution point and then use the [Stop-CMCloudDistributionPoint](./Stop-CMCloudDistributionPoint.md) cmdlet to suspend it.
 
 ## EXAMPLES
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 
 ### -DistributionPointGroup
 Specifies a **CMDistributionPointGroup** object.
-To get a **CMDistributionPointGroup** object, use the Get-CMDistributionPointGroup cmdlet.
+To get a **CMDistributionPointGroup** object, use the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -197,5 +197,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-CMCloudDistributionPoint](./Start-CMCloudDistributionPoint.md)
 
 [Stop-CMCloudDistributionPoint](./Stop-CMCloudDistributionPoint.md)
-
-

@@ -27,7 +27,7 @@ The **Get-CMDriverPackage** cmdlet gets a driver package.
 
 ## EXAMPLES
 
-### Example 1: Get a driver package that is specified by its identifier.
+### Example 1: Get a driver package that is specified by its identifier
 ```
 PS C:\>Get-CMDriverPackage -Id "CM100042"
 ```
@@ -112,5 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDriverPackage](./Remove-CMDriverPackage.md)
 
 [Set-CMDriverPackage](./Set-CMDriverPackage.md)
-
-
