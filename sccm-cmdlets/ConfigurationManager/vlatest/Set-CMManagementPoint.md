@@ -186,7 +186,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies the management point for which you change values by using a management point object.
-To obtain a management point object, use the Get-CMManagementPoint cmdlet.
+To obtain a management point object, use the [Get-CMManagementPoint](./Get-CMManagementPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -344,5 +344,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMManagementPoint](./Get-CMManagementPoint.md)
 
 [Remove-CMManagementPoint](./Remove-CMManagementPoint.md)
-
-

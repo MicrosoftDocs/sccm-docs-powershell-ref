@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an input object.
-To obtain an input object, use the Get-CMManagementPointComponent cmdlet.
+To obtain an input object, use the [Get-CMManagementPointComponent](./Get-CMManagementPointComponent.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -178,5 +178,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CMManagementPointComponent](./Get-CMManagementPointComponent.md)
-
-
