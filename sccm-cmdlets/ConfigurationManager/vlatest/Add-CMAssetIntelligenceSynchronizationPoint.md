@@ -62,7 +62,6 @@ Specifies the path to a System Center Online authentication certificate (.pfx) f
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +76,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -92,7 +90,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +104,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +118,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: AISyncPointByValue
 Aliases: SiteServer
-
 Required: True
 Position: Named
 Default value: None
@@ -137,7 +132,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: ScheduleToken
-
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +146,6 @@ Specifies an array of fully qualified domain names (FQDN) of the servers that ho
 Type: String
 Parameter Sets: AISyncPoint
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -168,7 +161,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

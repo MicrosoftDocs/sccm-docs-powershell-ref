@@ -49,7 +49,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -64,7 +63,6 @@ Indicates that Microsoft SQL Server Express is copied to a secondary site.
 Type: SwitchParameter
 Parameter Sets: NewSettingByCopy
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -79,7 +77,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +91,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +105,6 @@ Specifies the name of an instance of SQL Server.
 Type: String
 Parameter Sets: NewSettingByExisting
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +119,6 @@ Specifies a name of the Configuration Manager site database.
 Type: String
 Parameter Sets: NewSettingByExisting
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -139,7 +133,6 @@ Specifies a port number for the SQL Server Service Broker port.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -154,7 +147,6 @@ Specifies a port number for the SQL Server service port.
 Type: Int32
 Parameter Sets: NewSettingByCopy
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +161,6 @@ Indicates that you use the existing instance of SQL Server.
 Type: SwitchParameter
 Parameter Sets: NewSettingByExisting
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -185,7 +176,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

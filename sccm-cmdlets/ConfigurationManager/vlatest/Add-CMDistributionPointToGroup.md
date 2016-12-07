@@ -91,7 +91,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -106,7 +105,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +120,6 @@ To obtain a **CMDistributionPoint** object, use the Get-CMDistributionPoint cmdl
 Type: IResultObject
 Parameter Sets: AddDistributionPointToGroupByObject_Object, AddDistributionPointToGroupByObject_Name, AddDistributionPointToGroupByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -132,13 +129,12 @@ Accept wildcard characters: False
 
 ### -DistributionPointGroup
 Specifies a distribution point group object.
-To obtain a **CMDistributionPointGroup** object, use the Get-CMDistributionPointGroup cmdlet.
+To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: AddDistributionPointToGroupByObject_Object, AddDistributionPointToGroupById_Object, AddDistributionPointToGroupByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -153,7 +149,6 @@ Specifies the ID of a distribution point group.
 Type: String
 Parameter Sets: AddDistributionPointToGroupById_Id, AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -168,7 +163,6 @@ Specifies the name of a distribution point group.
 Type: String
 Parameter Sets: AddDistributionPointToGroupById_Name, AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -183,7 +177,6 @@ Specifies the ID of a distribution point.
 Type: String
 Parameter Sets: AddDistributionPointToGroupById_Object, AddDistributionPointToGroupById_Name, AddDistributionPointToGroupById_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -198,7 +191,6 @@ Specifies the name of a distribution point.
 Type: String
 Parameter Sets: AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -213,7 +205,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -229,7 +220,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

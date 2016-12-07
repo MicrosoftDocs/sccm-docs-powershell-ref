@@ -32,7 +32,7 @@ The previous client record still exists with the same hardware information.
 If you manually resolve conflicts, you have the option to merge the new record with the existing record, create a new record, or create a record as a blocked record.
 You can also configure Configuration Manager to resolve conflicts automatically.
 
-You can use this cmdlet with the Block-CMConflictingRecord cmdlet or the Merge-CMConflictingRecord cmdlet.
+You can use this cmdlet with the [Block-CMConflictingRecord](./Block-CMConflictingRecord.md) cmdlet or the [Merge-CMConflictingRecord](./Merge-CMConflictingRecord.md) cmdlet.
 You can get all the outstanding conflicts for Configuration Manager or specify a conflict by name or by ID.
 
 ## EXAMPLES
@@ -60,7 +60,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +74,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Specifies an ID for the conflicting records.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: Smsid
-
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +102,6 @@ Specifies a name for the conflicting records.
 Type: String
 Parameter Sets: SearchByName
 Aliases: AgentName
-
 Required: False
 Position: Named
 Default value: None
@@ -127,5 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Block-CMConflictingRecord](./Block-CMConflictingRecord.md)
 
 [Merge-CMConflictingRecord](./Merge-CMConflictingRecord.md)
-
-

@@ -61,7 +61,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -76,7 +75,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +89,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +103,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +117,6 @@ Specifies the ID of an administrative user.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: AdminId
-
 Required: True
 Position: Named
 Default value: None
@@ -137,7 +132,6 @@ To obtain an administrative user object, use the [Get-CMAdministrativeUser](./Ge
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -152,7 +146,6 @@ Specifies an array of administrative user names in the format of \<domain\>\\\<u
 Type: String
 Parameter Sets: SearchByName
 Aliases: DisplayName, LogonName, UserName
-
 Required: True
 Position: Named
 Default value: None
@@ -185,7 +178,6 @@ Valid values are:
 Type: String[]
 Parameter Sets: SearchByName, SearchByIdMandatory
 Aliases: RoleNames
-
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +193,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

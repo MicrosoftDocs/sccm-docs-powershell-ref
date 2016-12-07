@@ -51,7 +51,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -66,7 +65,6 @@ Specifies a device by using an ID.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -81,7 +79,6 @@ Specifies a device by using a name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +93,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +107,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +121,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +135,6 @@ Specifies a user by using an ID.
 Type: String
 Parameter Sets: RemoveDeviceAffinityByUserId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -156,7 +149,6 @@ Specifies an array of user names.
 Type: String[]
 Parameter Sets: RemoveDeviceAffinityByUserName
 Aliases: UniqueUserName
-
 Required: True
 Position: Named
 Default value: None
@@ -172,7 +164,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

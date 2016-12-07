@@ -55,7 +55,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddExcludedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +71,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddExcludedCollectionIds
-
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +87,6 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddExcludedCollectionNames
-
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +104,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddTargetedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +120,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddTargetedCollectionIds
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +136,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddTargetedCollectionNames
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +150,6 @@ Removes all excluded collections from the conditional access policy.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearExcludedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +166,6 @@ NOTE:  You must specify at least one targeted collection for a conditional acces
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearTargetedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +180,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -204,7 +195,6 @@ This rule overrides the default Exchange access rule, which means that even if y
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -219,7 +209,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +223,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +238,6 @@ To obtain a conditional access policy object, use the Get-CMConditionalAccessPol
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -265,7 +252,6 @@ Specifies the text of the email that Exchange sends to users when their device i
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -281,7 +267,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -299,7 +284,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveExcludedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -316,7 +300,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveExcludedCollectionIds
-
 Required: False
 Position: Named
 Default value: None
@@ -333,7 +316,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveExcludedCollectionNames
-
 Required: False
 Position: Named
 Default value: None
@@ -351,7 +333,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveTargetedCollections
-
 Required: False
 Position: Named
 Default value: None
@@ -368,7 +349,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveTargetedCollectionIds
-
 Required: False
 Position: Named
 Default value: None
@@ -385,7 +365,6 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveTargetedCollectionNames
-
 Required: False
 Position: Named
 Default value: None
@@ -401,7 +380,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

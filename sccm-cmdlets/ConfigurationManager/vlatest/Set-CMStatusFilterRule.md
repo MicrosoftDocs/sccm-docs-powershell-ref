@@ -52,7 +52,6 @@ This command increases the priority of a filter rule that has the specified name
 Type: Int32
 Parameter Sets: (All)
 Aliases: AllowUserDeleteMessagesAfterThresholdDays
-
 Required: False
 Position: Named
 Default value: None
@@ -66,8 +65,7 @@ Specifies the Configuration Manager component that corresponds to the status mes
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +80,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -96,8 +93,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -111,8 +107,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -126,8 +121,7 @@ Indicates whether to forward to the status summarizer.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -141,8 +135,7 @@ Specifies a message ID in Configuration Manager.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +158,6 @@ Type: MessageType
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, Milestone, Detail, Audit
-
 Required: False
 Position: Named
 Default value: None
@@ -179,8 +171,7 @@ Specifies an array of names for status filter rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -198,7 +189,6 @@ Type: PriorityChangeType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Increase, Decrease
-
 Required: False
 Position: Named
 Default value: None
@@ -212,8 +202,7 @@ Indicates whether to process a lower priority rule, which prevents further rule 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -227,8 +216,7 @@ Specifies a path to a program that runs when a status message matches the status
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -242,8 +230,7 @@ Specifies a property ID in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -257,8 +244,7 @@ Specifies a value for the corresponding *PropertyId* parameter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -272,8 +258,7 @@ Indicates whether to pass a message to the parent site.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +280,6 @@ Type: ReplicationPriority
 Parameter Sets: (All)
 Aliases:
 Accepted values: High, Medium, Low
-
 Required: False
 Position: Named
 Default value: None
@@ -309,8 +293,7 @@ Indicates whether to report an event in the Windows event log.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -324,8 +307,7 @@ Indicates whether to run a program when a status message matches a filter rule.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -348,7 +330,6 @@ Type: SeverityType
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, Informational, Warning, Error
-
 Required: False
 Position: Named
 Default value: None
@@ -362,8 +343,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -377,8 +357,7 @@ Specifies the name of a site system server in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -397,8 +376,7 @@ The possible sources are the following:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -412,8 +390,7 @@ Specifies a site code for the site from which the status message originated.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -429,7 +406,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -444,8 +420,7 @@ Specify a value of $True for this parameter to enable the *AllowUserDeleteMessag
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None

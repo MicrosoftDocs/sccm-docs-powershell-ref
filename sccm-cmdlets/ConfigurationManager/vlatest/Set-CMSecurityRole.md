@@ -72,7 +72,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -87,7 +86,6 @@ Specifies the description of a security role.
 Type: String
 Parameter Sets: (All)
 Aliases: RoleDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +100,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +114,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +128,6 @@ Specifies an array of IDs of security roles.
 Type: String
 Parameter Sets: SetById
 Aliases: RoleId
-
 Required: True
 Position: Named
 Default value: None
@@ -148,7 +143,6 @@ To get a **CMSecurityRole** object, use the [Get-CMSecurityRole](./Get-CMSecurit
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -163,7 +157,6 @@ Specifies an array of names of security roles.
 Type: String
 Parameter Sets: SetByName
 Aliases: RoleName
-
 Required: True
 Position: Named
 Default value: None
@@ -178,7 +171,6 @@ Specifies a new name for the security role.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -194,7 +186,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

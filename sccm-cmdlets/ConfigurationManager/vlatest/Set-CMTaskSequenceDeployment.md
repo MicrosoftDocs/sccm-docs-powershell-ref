@@ -108,8 +108,7 @@ This command creates the task sequence deployment by using the task sequence nam
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -124,8 +123,7 @@ If you configure a percent success or failure rate for a deployment, alerts appe
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -140,8 +138,7 @@ If you configure a percent success or failure rate for a deployment, alerts appe
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -155,8 +152,7 @@ Indicates whether to allow clients to use a fallback source location for content
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +167,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AllowUseRemoteDistributionPoint
-
 Required: False
 Position: Named
 Default value: None
@@ -185,8 +180,7 @@ Indicates whether to allow users to independently run the program, regardless of
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -201,8 +195,7 @@ A collection is a group of client computers.
 ```yaml
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByValueMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -213,8 +206,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByNameMandatory, SetTaskSequenceDeploymentByIdMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -228,8 +220,7 @@ Specifies a comment for the task sequence deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -244,7 +235,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -259,7 +249,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: CreateAlertBaseOnPercentFailure
-
 Required: False
 Position: Named
 Default value: None
@@ -274,7 +263,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: CreateAlertBaseOnPercentSuccess
-
 Required: False
 Position: Named
 Default value: None
@@ -288,8 +276,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -304,8 +291,7 @@ By default, the deployment becomes available immediately.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -320,8 +306,7 @@ By default, the deployment becomes available immediately.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -335,8 +320,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -353,8 +337,7 @@ You may use this parameter in conjunction with the *DeploymentExpireTime* parame
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -371,8 +354,7 @@ You may use this parameter in conjunction with the *DeploymentExpireDay* paramet
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -393,7 +375,6 @@ Type: DeploymentOptionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
-
 Required: False
 Position: Named
 Default value: None
@@ -407,8 +388,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -422,8 +402,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -440,7 +419,6 @@ To obtain a task sequence object, use the [Get-CMTaskSequenceDeployment](./Get-C
 Type: IResultObject
 Parameter Sets: SetTaskSequenceDeploymentByValueMandatory
 Aliases: Deployment, TaskSequence
-
 Required: True
 Position: Named
 Default value: None
@@ -454,8 +432,7 @@ Indicates whether the task sequence runs on clients connecting over the Internet
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -477,7 +454,6 @@ Type: MakeAvailableToType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Clients, ClientsMediaAndPxe, MediaAndPxe, MediaAndPxeHidden
-
 Required: False
 Position: Named
 Default value: None
@@ -492,8 +468,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -507,8 +482,7 @@ Specifies a threshold percentage for failed task sequence deployment.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -522,8 +496,7 @@ Specifies a threshold percentage for successful task sequence deployment.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -537,8 +510,7 @@ Indicates whether to install a task sequence on the temporary overlay and commit
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -561,7 +533,6 @@ Type: RerunBehaviorType
 Parameter Sets: (All)
 Aliases:
 Accepted values: NeverRerunDeployedProgram, AlwaysRerunProgram, RerunIfFailedPreviousAttempt, RerunIfSucceededOnPreviousAttempt
-
 Required: False
 Position: Named
 Default value: None
@@ -577,8 +548,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md)
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -599,7 +569,6 @@ Type: ScheduleEventType[]
 Parameter Sets: (All)
 Aliases:
 Accepted values: AsSoonAsPossible, LogOn, LogOff
-
 Required: False
 Position: Named
 Default value: None
@@ -616,8 +585,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -631,8 +599,7 @@ Indicates whether to show a process dialog for a task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -646,8 +613,7 @@ Indicates whether to allow the application to install, even if the installation 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -661,8 +627,7 @@ Indicates whether to allow an advertised program to restart the system, even if 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -676,8 +641,7 @@ Specifies an ID for a task sequence deployment.
 ```yaml
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByDeploymentIdMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -691,8 +655,7 @@ Specifies a name for a task sequence.
 ```yaml
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByNameMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -706,8 +669,7 @@ Specifies an ID for a task sequence package.
 ```yaml
 Type: String
 Parameter Sets: SetTaskSequenceDeploymentByIdMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -721,8 +683,7 @@ Indicates whether to allow clients on a metered Internet connection to download 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -737,8 +698,7 @@ UTC time makes the task sequence available at the same time for all computers.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -753,8 +713,7 @@ UTC time makes the task sequence available at the same time for all computers.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -770,7 +729,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -56,7 +56,6 @@ Indicates that the user access control (UAC) prompt is allowed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +71,6 @@ An unattended operating system deployment does not prompt for network configurat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -87,7 +85,6 @@ Indicates that provisioning of unknown computers is allowed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +100,6 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Applications
-
 Required: False
 Position: Named
 Default value: None
@@ -119,7 +115,6 @@ To obtain a boot image object, use the Get-CMBootImage cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: BootImagePackage
-
 Required: True
 Position: Named
 Default value: None
@@ -134,7 +129,6 @@ Specifies the expiration date of the self-signed media certificate.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +144,6 @@ A PKI-issued certificate is added to the boot media for client authentication an
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +158,6 @@ Specifies the path to a PKI certificate.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +172,6 @@ Specifies a start date for the self-signed media certificate.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -195,7 +186,6 @@ Specifies a comment for a prestaged media file.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +200,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -225,7 +214,6 @@ Specifies the name of an individual or organization responsible for the creation
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +228,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -256,7 +243,6 @@ To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: DistributionPoints
-
 Required: True
 Position: Named
 Default value: None
@@ -272,7 +258,6 @@ To obtain driver package object, use the [Get-CMDriverPackage](./Get-CMDriverPac
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: DriverPackages, PackageDriver, PackageDrivers
-
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +272,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -302,7 +286,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -318,7 +301,6 @@ To obtain a management point object, use the Get-CMManagementPoint cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: ManagementPoints
-
 Required: True
 Position: Named
 Default value: None
@@ -341,7 +323,6 @@ Type: MediaMode
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Dynamic, SiteBased
-
 Required: True
 Position: Named
 Default value: None
@@ -357,7 +338,6 @@ To obtain an operating system image object, use the Get-CMOperatingSystemImage c
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: OperatingSystemImagePackage
-
 Required: True
 Position: Named
 Default value: None
@@ -372,7 +352,6 @@ Specifies the operating system image index.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -388,7 +367,6 @@ To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Packages
-
 Required: False
 Position: Named
 Default value: None
@@ -403,7 +381,6 @@ Specifies the path to the media file (.wim).
 Type: String
 Parameter Sets: (All)
 Aliases: MediaPath, OutputPath, DriveName
-
 Required: True
 Position: Named
 Default value: None
@@ -419,7 +396,6 @@ A prestart command is a script or executable that runs before the task sequence.
 Type: String
 Parameter Sets: (All)
 Aliases: PreExecCommandLine
-
 Required: False
 Position: Named
 Default value: None
@@ -435,7 +411,6 @@ To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -457,7 +432,6 @@ Type: UserDeviceAffinityType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DoNotAllow, AdministratorApproval, AutoApproval
-
 Required: False
 Position: Named
 Default value: None
@@ -473,7 +447,6 @@ The task sequence variable consists of a name and a value.
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: TaskSequenceVariables, Variables
-
 Required: False
 Position: Named
 Default value: None
@@ -488,7 +461,6 @@ Specifies the version information for the media.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -504,7 +476,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -60,7 +60,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +74,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Specifies the FQDN of a Configuration Manager object.
 Type: String
 Parameter Sets: SearchByFQDN
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +103,6 @@ You can find the identifier value in the **ForestID** property of an Active Dire
 Type: String[]
 Parameter Sets: SearchByIdMandatory
 Aliases: ForestId
-
 Required: True
 Position: Named
 Default value: None

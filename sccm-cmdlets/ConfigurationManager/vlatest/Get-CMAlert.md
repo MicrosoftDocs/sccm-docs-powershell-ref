@@ -52,7 +52,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -67,7 +66,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +80,6 @@ Specifies an alert ID.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -97,7 +94,6 @@ Specifies an alert name.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: 0
 Default value: None
@@ -112,7 +108,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +122,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

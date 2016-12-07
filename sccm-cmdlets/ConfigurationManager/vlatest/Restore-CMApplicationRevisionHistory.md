@@ -55,7 +55,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -70,7 +69,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -85,7 +83,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -100,7 +97,6 @@ Specifies an array of IDs of application revision histories.
 Type: UInt32
 Parameter Sets: SearchBySingleIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -116,7 +112,6 @@ To get this object, use the Get-CMApplicationRevisionHistory cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Application
-
 Required: True
 Position: 0
 Default value: None
@@ -131,7 +126,6 @@ Specifies an array of names of application revision histories.
 Type: String
 Parameter Sets: SearchBySingleNameMandatory
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -146,7 +140,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +154,6 @@ Specifies the version number of the application revision that you restore.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: 1
 Default value: None
@@ -177,7 +169,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

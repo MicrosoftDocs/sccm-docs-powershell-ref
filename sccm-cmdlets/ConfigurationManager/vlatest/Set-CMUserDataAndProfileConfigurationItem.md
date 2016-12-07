@@ -117,8 +117,7 @@ Indicates whether this configuration item manages profile access settings for ro
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -132,8 +131,7 @@ Indicates whether to grant the Administrators group access to roaming profile fo
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -148,8 +146,7 @@ If this value is $False, roaming profiles apply only to the primary device for a
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -163,8 +160,7 @@ Indicates whether to permit user policies to roam across Active Directory forest
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +176,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForApplicationData, FolderRedirectionUserConfigurationForAppDataRoaming
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +197,6 @@ Type: SynchronizationType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enabled, Disabled, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -216,8 +210,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -231,8 +224,7 @@ Indicates whether the configuration item includes settings for folder redirectio
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -247,7 +239,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: ConfigureOffineFile
-
 Required: False
 Position: Named
 Default value: None
@@ -261,8 +252,7 @@ Indicates whether the configuration item includes settings for roaming user prof
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +267,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -291,8 +280,7 @@ Specifies a connection transfer rate.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -308,7 +296,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForContacts, Contacts
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -323,8 +310,7 @@ A computer deletes an older profile when it restarts.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -339,8 +325,7 @@ The default for this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -355,7 +340,6 @@ Specifies a description for the configuration item.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +355,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForDesktop
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -385,8 +368,7 @@ Indicates whether to detect slow links.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -410,7 +392,6 @@ Type: DeviceType
 Parameter Sets: (All)
 Aliases:
 Accepted values: OnAnyDevice, OnlyOnPrimaryDevices, FolderRedirectionOnAnyDeviceCachingOnPrimaryDevicesOnly
-
 Required: False
 Position: Named
 Default value: None
@@ -424,8 +405,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -440,7 +420,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: DesiredConfigurationDigestPath
-
 Required: False
 Position: Named
 Default value: None
@@ -454,8 +433,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -469,8 +447,7 @@ Indicates whether users can disable the **Make Available Offline** command.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -484,8 +461,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -499,8 +475,7 @@ Indicates whether users can disable the **Work Offline** command.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -516,7 +491,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForDocuments, Documents
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -532,7 +506,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForDownloads, Downloads
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -546,8 +519,7 @@ Indicates whether this configuration item enables use of offline files.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -561,8 +533,7 @@ Indicates whether the configuration enables work with offline files over a slow 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -576,8 +547,7 @@ Specifies the number of days to wait before the profile creates an error.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -592,8 +562,7 @@ The configuration item excludes these folders from roaming profiles.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -609,7 +578,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForFavorites, Favorites
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -630,7 +598,6 @@ Type: SynchronizationType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enabled, Disabled, NotConfigured
-
 Required: False
 Position: Named
 Default value: None
@@ -645,8 +612,7 @@ The default value for this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -660,8 +626,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -675,8 +640,7 @@ Indicates whether to grant the user exclusive permissions to a redirected folder
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -691,7 +655,6 @@ Specifies an array of IDs for user data and profile configuration items.
 Type: Int32
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -706,8 +669,7 @@ To obtain a configuration item object, use the [Get-CMUserDataAndProfileConfigur
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases:
-
+Aliases: 
 Required: True
 Position: 0
 Default value: None
@@ -721,8 +683,7 @@ Indicates whether to leave the folder in the redirected location in the event th
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -736,8 +697,7 @@ Specifies a limit, in megabytes, for the disk space used for offline files.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -753,7 +713,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForLinks, Links
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -773,8 +732,7 @@ Specify values for any of the following parameters:
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -788,8 +746,7 @@ Indicates whether this profile item manages slow links.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -803,8 +760,7 @@ Indicates whether to move the cached folder when the path updates on the server.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -818,8 +774,7 @@ Indicates whether to move the contents of redirected folders to the new location
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -835,7 +790,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForMusic
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -850,7 +804,6 @@ Specifies an array of names of user data and profile configuration items.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -864,8 +817,7 @@ Specifies a new name for the configuration item.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -879,8 +831,7 @@ Specifies an array of Administrative user assigned offline folders, as UNC paths
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -895,7 +846,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: OnlyAllowLocalProfiles
-
 Required: False
 Position: Named
 Default value: None
@@ -909,8 +859,7 @@ Indicates whether the configuration item does not check for ownership of roaming
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -925,8 +874,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -942,7 +890,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForPictures, Pictures
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -956,8 +903,7 @@ Indicates whether to disable uploading of profiles.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -973,7 +919,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForSavedGames, SavedGames
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -989,7 +934,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForSearches, Searches
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -1003,8 +947,7 @@ Specifies a value for a slow link.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1018,8 +961,7 @@ Indicates whether to enable the user logon prompt to allow profile download when
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1033,8 +975,7 @@ Specifies a specified location.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1050,7 +991,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Accepted values: 12:00 AM, 1:00 PM, 2:00 PM, 3:00 PM, 4:00 PM, 5:00 PM, 6:00 PM, 7:00 PM, 8:00 PM, 9:00 PM, 10:00 PM, 11:00 PM, 12:00 PM
-
 Required: False
 Position: Named
 Default value: None
@@ -1065,7 +1005,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: SpecifyTimeInterval
-
 Required: False
 Position: Named
 Default value: None
@@ -1081,7 +1020,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForStartMenu
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -1096,7 +1034,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: SynchronizationInterval
-
 Required: False
 Position: Named
 Default value: None
@@ -1111,8 +1048,7 @@ The configuration item specifies these subfolders of Appdata\Roaming to synchron
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1126,8 +1062,7 @@ Indicates whether to use a synchronization policy.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1141,8 +1076,7 @@ Indicates whether to block users from logging on by using a temporary profile.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1156,8 +1090,7 @@ Specifies a timeout value.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1171,8 +1104,7 @@ Indicates whether to use common alerts.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1186,8 +1118,7 @@ Indicates whether to use the specified location referred to by the *SpecifiedLoc
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1203,7 +1134,6 @@ Type: FolderRedirectionType
 Parameter Sets: (All)
 Aliases: FolderRedirectionUserConfigurationForVideos, Videos
 Accepted values: RedirectToRemote, RedirectToLocal, DoNotManage
-
 Required: False
 Position: Named
 Default value: None
@@ -1218,7 +1148,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: WaitForNetworkInSeconds
-
 Required: False
 Position: Named
 Default value: None
@@ -1232,8 +1161,7 @@ Specifies the number of days to wait before the profile creates a warning.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -1249,7 +1177,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

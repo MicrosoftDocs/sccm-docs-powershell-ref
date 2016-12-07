@@ -77,7 +77,6 @@ For more information about the **CultureInfo.Name** property, see [https://msdn.
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddLanguages, Languages, Language
-
 Required: False
 Position: Named
 Default value: None
@@ -91,8 +90,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -107,8 +105,7 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -123,7 +120,6 @@ Specifies the ID of the application that is associated with this deployment type
 Type: Int32
 Parameter Sets: ByAppId
 Aliases: CI_ID, CIId
-
 Required: True
 Position: Named
 Default value: None
@@ -137,8 +133,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -153,7 +148,6 @@ Specifies a description for the deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: AdministratorComment
-
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +162,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -182,8 +175,7 @@ Specifies a display name for the deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -197,8 +189,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +204,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ForceForUnknownPublisher
-
 Required: False
 Position: Named
 Default value: None
@@ -227,8 +217,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -244,7 +233,6 @@ To obtain a deployment type object, use the [Get-CMDeploymentType](./Get-CMDeplo
 Type: IResultObject
 Parameter Sets: ByDTValue
 Aliases: DeploymentType
-
 Required: True
 Position: Named
 Default value: None
@@ -259,7 +247,6 @@ Specifies a new name for the deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: NewDeploymentTypeName
-
 Required: False
 Position: Named
 Default value: None
@@ -274,8 +261,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -291,7 +277,6 @@ Provide the languages in the "languagecode2-country" or "languagecode2" format, 
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveLanguages
-
 Required: False
 Position: Named
 Default value: None
@@ -306,7 +291,6 @@ Removes the existing installation requirements from this deployment type.
 Type: Rule[]
 Parameter Sets: (All)
 Aliases: RemoveRequirements
-
 Required: False
 Position: Named
 Default value: None
@@ -321,7 +305,6 @@ Specifies the URL of an application in the Windows Store.
 Type: String
 Parameter Sets: (All)
 Aliases: ContentLocation
-
 Required: False
 Position: Named
 Default value: None
@@ -337,7 +320,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

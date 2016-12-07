@@ -77,7 +77,7 @@ The **Remove-CMDistributionPointFromGroup** cmdlet removes a Microsoft System Ce
 Distribution point groups provide a logical grouping of distribution points for content distribution.
 
 To remove a distribution point, specify both the distribution point to remove and the distribution point group.
-You can specify these values by ID or name, or you can use the Get-CMDistributionPoint cmdlet or the Get-CMDistributionPointGroup cmdlet to obtain the relevant object.
+You can specify these values by ID or name, or you can use the Get-CMDistributionPoint cmdlet or the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet to obtain the relevant object.
 
 ## EXAMPLES
 
@@ -105,7 +105,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -120,7 +119,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +134,6 @@ To obtain a distribution point object, use the **Get-CMDistributionPoint** cmdle
 Type: IResultObject
 Parameter Sets: RemoveDistributionPointFromGroupByObject_Object, RemoveDistributionPointFromGroupByObject_Name, RemoveDistributionPointFromGroupByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -152,7 +149,6 @@ To obtain a distribution point group object, use the **Get-CMDistributionPointGr
 Type: IResultObject
 Parameter Sets: RemoveDistributionPointFromGroupByObject_Object, RemoveDistributionPointFromGroupById_Object, RemoveDistributionPointFromGroupByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -167,7 +163,6 @@ Specifies the ID of a distribution point group.
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -182,7 +177,6 @@ Specifies the name of a distribution point group.
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -197,7 +191,6 @@ Specifies the ID of a distribution point.
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupById_Object, RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupById_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -212,7 +205,6 @@ Specifies the name of a distribution point.
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupByName_Object, RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByName_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -227,7 +219,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +233,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -258,7 +248,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

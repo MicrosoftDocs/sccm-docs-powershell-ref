@@ -52,7 +52,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -67,7 +66,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +80,6 @@ Specifies an array of Configuration Manager user IDs.
 Type: Int32[]
 Parameter Sets: ByValue
 Aliases: Ids, ResourceId, ResourceIds
-
 Required: True
 Position: Named
 Default value: None
@@ -97,7 +94,6 @@ Specifies the name of a Configuration Manager user.
 Type: String
 Parameter Sets: ByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

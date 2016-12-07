@@ -62,8 +62,7 @@ Indicates that the summarizer is an application deployment status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetAppDeploymentSummarizer
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -78,7 +77,6 @@ Indicates that the summarizer is an application statistic status summarizer.
 Type: SwitchParameter
 Parameter Sets: SetAppStatisticsSummarizer
 Aliases: ApplicationStatisticsSummarizer
-
 Required: True
 Position: Named
 Default value: None
@@ -92,8 +90,7 @@ Indicates that the summarizer is a component status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetComponentStatusSummarizer
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -108,7 +105,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -123,8 +119,7 @@ This parameter applies to site system status summarizers.
 ```yaml
 Type: Int32
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +134,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetAppStatisticsSummarizer, SetAppDeploymentSummarizer
 Aliases: DayInterval
-
 Required: False
 Position: Named
 Default value: None
@@ -153,8 +147,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -169,8 +162,7 @@ This parameter applies to component status summarizers and site system status su
 ```yaml
 Type: Boolean
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -184,8 +176,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +191,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetAppStatisticsSummarizer, SetAppDeploymentSummarizer
 Aliases: HourInterval
-
 Required: False
 Position: Named
 Default value: None
@@ -215,7 +205,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: SetAppStatisticsSummarizer, SetAppDeploymentSummarizer
 Aliases: MinuteInterval
-
 Required: False
 Position: Named
 Default value: None
@@ -230,8 +219,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -247,8 +235,7 @@ If you specify a value of $True for this parameter, specify a priority by using 
 ```yaml
 Type: Boolean
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -266,7 +253,6 @@ Type: ReplicationPriorityType
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
 Aliases:
 Accepted values: Low, Normal, High
-
 Required: False
 Position: Named
 Default value: None
@@ -281,8 +267,7 @@ To obtain a schedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdle
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -296,8 +281,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -311,8 +295,7 @@ Indicates that the summarizer is a site system status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -328,7 +311,6 @@ Type: String
 Parameter Sets: SetComponentStatusSummarizer
 Aliases: ThresholdPeriod
 Accepted values: Since 0:00:00, Since 4:00:00, Since 8:00:00, Since 12:00:00, Since 16:00:00, Since 20:00:00, Since Sunday, Since Monday, Since Tuesday, Since Wednesday, Since Thursday, Since Friday, Since Saturday, Since 15th of the Month, Since 1st of the Month, Since Site Installation
-
 Required: False
 Position: Named
 Default value: None
@@ -343,8 +325,7 @@ This parameter applies to site system status summarizers.
 ```yaml
 Type: Int32
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -360,7 +341,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

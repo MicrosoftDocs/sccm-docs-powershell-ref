@@ -60,7 +60,6 @@ Type: MaintenanceWindowApplyTo
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Any, SoftwareUpdatesOnly, TaskSequencesOnly
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +74,6 @@ Indicates that the maintenance window is used to apply software updates only.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Indicates that the maintenance window is used to apply task sequences only.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +102,6 @@ Specifies the ID of the collection that the maintenance window applies to.
 Type: String
 Parameter Sets: ByCollectionId
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -120,7 +116,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByCollectionName
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -135,7 +130,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -150,7 +144,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +158,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +172,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByCollection
 Aliases: Collection
-
 Required: True
 Position: 0
 Default value: None
@@ -195,7 +186,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +200,6 @@ Specifies the name of the maintenance window.
 Type: String
 Parameter Sets: (All)
 Aliases: MaintenanceWindowName
-
 Required: True
 Position: Named
 Default value: None
@@ -227,7 +216,6 @@ To create a CMSchedule object, use the New-CMSchedule cmdlet.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -243,7 +231,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

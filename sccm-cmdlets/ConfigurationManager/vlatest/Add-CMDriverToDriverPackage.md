@@ -89,7 +89,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -104,7 +103,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +118,6 @@ To obtain a **CMDriver** object, use the **Get-CMDriver** cmdlet.
 Type: IResultObject
 Parameter Sets: AddDriverToDriverPackageByObject_Object, AddDriverToDriverPackageByObject_Id, AddDriverToDriverPackageByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -135,7 +132,6 @@ Specifies the ID of a driver.
 Type: Int32
 Parameter Sets: AddDriverToDriverPackageById_Name, AddDriverToDriverPackageById_Object, AddDriverToDriverPackageById_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -150,7 +146,6 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: AddDriverToDriverPackageByName_Id, AddDriverToDriverPackageByName_Name, AddDriverToDriverPackageByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -166,7 +161,6 @@ To obtain a **CMDriverPackage** object, use the **Get-CMDriverPackage** cmdlet.
 Type: IResultObject
 Parameter Sets: AddDriverToDriverPackageByObject_Object, AddDriverToDriverPackageById_Object, AddDriverToDriverPackageByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -181,7 +175,6 @@ Specifies the ID of a driver package.
 Type: String
 Parameter Sets: AddDriverToDriverPackageById_Id, AddDriverToDriverPackageByName_Id, AddDriverToDriverPackageByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -196,7 +189,6 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: AddDriverToDriverPackageById_Name, AddDriverToDriverPackageByName_Name, AddDriverToDriverPackageByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -211,7 +203,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -227,7 +218,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -53,7 +53,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -68,7 +67,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +81,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +95,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: SiteServer
-
 Required: True
 Position: Named
 Default value: None
@@ -113,7 +109,6 @@ Specifies whether you agree to the Endpoint Protection software licensing terms.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,16 +120,15 @@ Accept wildcard characters: False
 Specifies the type of membership you have for Microsoft Active Protection Service (MAPS).
 Valid values are: 
 
--- AdvancedMembership
--- BasicMembership
--- DoNotJoinMaps
+- AdvancedMembership
+- BasicMembership
+- DoNotJoinMaps
 
 ```yaml
 Type: MapsMembershipType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DoNotJoinMaps, BasicMembership, AdvancedMembership
-
 Required: True
 Position: Named
 Default value: None
@@ -149,7 +143,6 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: ByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +157,6 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: ByName
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -180,7 +172,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -206,5 +197,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMEndpointProtectionPoint](./Remove-CMEndpointProtectionPoint.md)
 
 [Set-CMEndpointProtectionPoint](./Set-CMEndpointProtectionPoint.md)
-
-

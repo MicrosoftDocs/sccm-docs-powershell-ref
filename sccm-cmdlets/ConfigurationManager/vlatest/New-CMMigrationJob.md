@@ -83,7 +83,6 @@ Collection limiting prevents the addition of collection members you do want in t
 Type: Hashtable
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +97,6 @@ Indicates that the job migrates collections, objects, or previously migrated obj
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -113,7 +111,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -128,7 +125,6 @@ Specifies key-value pairs that map content objects in the new site.
 Type: Hashtable
 Parameter Sets: NewMigrationJobByObject, NewMigrationJobByCollectionMigrateObject, NewMigrationJobByObjectModified
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +139,6 @@ Specifies a description for the migration job.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +153,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +167,6 @@ Indicates whether to enable programs associated with an advertisement after they
 Type: Boolean
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +181,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +195,6 @@ Indicates that you migrate associated objects with the collection.
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByCollectionMigrateObject
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -218,7 +209,6 @@ Specifies an array of input objects.
 Type: IResultObject[]
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -233,7 +223,6 @@ Specifies a date time, in D.HH:MM:SS format, to schedule the migration job.
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -248,7 +237,6 @@ Specifies an array of input objects.
 Type: IResultObject[]
 Parameter Sets: NewMigrationJobByObject, NewMigrationJobByCollectionMigrateObject, NewMigrationJobByObjectModified
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -263,7 +251,6 @@ Specifies the name of a migration job in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -278,7 +265,6 @@ Indicates that the job type is an object migration job.
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByObject
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -293,7 +279,6 @@ Indicates that the new migration job only includes objects that were modified si
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByObjectModified
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -308,7 +293,6 @@ Indicates whether to overwrite objects in the destination database.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -323,7 +307,6 @@ Specifies a path for the collection information.
 Type: String
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -338,7 +321,6 @@ Specifies a path for the object information.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -355,7 +337,6 @@ The cmdlet applies the security scopes that you specify to data migrated to the 
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -370,7 +351,6 @@ Specifies key-value pairs that map a migrated collection to a site in the destin
 Type: Hashtable
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -386,7 +366,6 @@ Configuration Manager converts the empty collection to an organizational folder.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -401,7 +380,6 @@ Indicates whether to use UTC time.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -417,7 +395,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

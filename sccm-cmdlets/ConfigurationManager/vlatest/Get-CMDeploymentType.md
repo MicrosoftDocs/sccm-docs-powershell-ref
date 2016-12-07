@@ -67,7 +67,6 @@ Specifies the name of an application that is associated with the deployment type
 Type: String
 Parameter Sets: SearchByName, SearchByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -82,7 +81,6 @@ Specifies the ID of a deployment type.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -97,7 +95,6 @@ Specifies the name of a deployment type.
 Type: String
 Parameter Sets: SearchByName, SearchByDTValue
 Aliases: LocalizedDisplayName
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +109,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +123,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +137,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByDTValue
 Aliases: Application
-
 Required: True
 Position: Named
 Default value: None

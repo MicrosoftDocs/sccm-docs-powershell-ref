@@ -62,7 +62,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -77,7 +76,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +90,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +104,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -123,7 +119,6 @@ To get a fallback status point role, use the Get-CMFallbackStatusPoint cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: FallbackStatusPoint
-
 Required: True
 Position: Named
 Default value: None
@@ -138,7 +133,6 @@ Specifies the site code for a fallback status point.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +147,6 @@ Specifies the site system name for a fallback status point.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -169,7 +162,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

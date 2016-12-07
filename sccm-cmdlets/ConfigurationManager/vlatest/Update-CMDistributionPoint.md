@@ -118,8 +118,7 @@ Specifies the name of an application.
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -133,8 +132,7 @@ Specifies the ID of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageId
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -148,8 +146,7 @@ Specifies the name of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -164,7 +161,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -178,8 +174,7 @@ Specifies the name of a deployment type.
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -193,8 +188,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -208,8 +202,7 @@ Specifies the ID of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageId
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -223,8 +216,7 @@ Specifies the name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -238,8 +230,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +246,6 @@ To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: BootImage, DriverPackage, OperatingSystemImage, OperatingSystemInstaller, Package, SoftwareUpdateDeploymentPackage
-
 Required: True
 Position: Named
 Default value: None
@@ -270,8 +260,7 @@ Specify the manifest path if you specify Microsoft Application Virtualization fo
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -285,8 +274,7 @@ Specifies the ID of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageId
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -300,8 +288,7 @@ Specifies the name of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -315,8 +302,7 @@ Specifies the ID of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerId
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -330,8 +316,7 @@ Specifies the name of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -345,8 +330,7 @@ Specifies the ID of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageId
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -360,8 +344,7 @@ Specifies the name of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -375,8 +358,7 @@ Specifies the ID of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageId
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -390,8 +372,7 @@ Specifies the name of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -407,7 +388,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

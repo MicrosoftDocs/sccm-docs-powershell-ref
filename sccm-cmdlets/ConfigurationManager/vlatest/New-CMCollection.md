@@ -69,7 +69,6 @@ Type: CollectionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: User, Device
-
 Required: True
 Position: Named
 Default value: None
@@ -84,7 +83,6 @@ Specifies a comment for the collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +97,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -114,7 +111,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +125,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -145,7 +140,6 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: LimitingCollection
-
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +154,6 @@ Specifies the ID of a collection to use as a scope for this collection.
 Type: String
 Parameter Sets: ById
 Aliases: LimitToCollectionId
-
 Required: True
 Position: Named
 Default value: None
@@ -175,7 +168,6 @@ Specifies the name of a collection to use as a scope for this collection.
 Type: String
 Parameter Sets: ByName
 Aliases: LimitToCollectionName
-
 Required: True
 Position: Named
 Default value: None
@@ -190,7 +182,6 @@ Specifies a name for the collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -205,7 +196,6 @@ Specifies a schedule that determines when Configuration Manager refreshes the co
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -228,7 +218,6 @@ Type: CollectionRefreshType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Manual, Periodic, Continuous, Both
-
 Required: False
 Position: Named
 Default value: None
@@ -244,7 +233,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Collections-help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833617
 schema: 2.0.0
@@ -57,8 +57,8 @@ For more information about Configuration Manager collections, see [Introduction 
 PS C:\>New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
 ```
 
-This command creates a collection for all computers that run WindowsÂ® 7.
-The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the WindowsÂ® 7 collection.
+This command creates a collection for all computers that run Windows® 7.
+The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the Windows® 7 collection.
 
 ## PARAMETERS
 
@@ -69,7 +69,6 @@ The *LimitingCollectionName* parameter specifies that any device in the All Syst
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +83,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -99,7 +97,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: LimitingCollection
-
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +111,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ById
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -129,7 +125,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -144,7 +139,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -159,7 +153,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +168,6 @@ Type: CollectionRefreshType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Manual, Periodic, Continuous, Both
-
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +183,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -213,5 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433)
 
 [Get-CMDeviceCollection](./Get-CMDeviceCollection.md)
-
-

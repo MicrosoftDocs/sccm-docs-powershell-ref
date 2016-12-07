@@ -48,7 +48,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -63,7 +62,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +76,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -93,7 +90,6 @@ Specifies a site code for an Application Catalog web service point object.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -108,7 +104,6 @@ Specifies an FQDN for an Application Catalog web service point.
 Type: String
 Parameter Sets: SearchByName
 Aliases: Name, ServerName
-
 Required: False
 Position: 0
 Default value: None

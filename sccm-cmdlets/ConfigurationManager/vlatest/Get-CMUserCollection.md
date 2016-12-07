@@ -59,7 +59,6 @@ This command gets the user collection that has the ID 9990000D.
 Type: IResultObject
 Parameter Sets: ByDPGroup
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -74,7 +73,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByDPGroupId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -89,7 +87,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByDPGroupName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -104,7 +101,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ById
 Aliases: CollectionId
-
 Required: True
 Position: Named
 Default value: None
@@ -119,7 +115,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -44,7 +44,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -59,7 +58,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -74,7 +72,6 @@ Specifies an array of IDs of software files.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SoftwareKey
-
 Required: True
 Position: Named
 Default value: None
@@ -89,7 +86,6 @@ Specifies an array of names of software files.
 Type: String
 Parameter Sets: SearchByName
 Aliases: CommonName
-
 Required: False
 Position: Named
 Default value: None

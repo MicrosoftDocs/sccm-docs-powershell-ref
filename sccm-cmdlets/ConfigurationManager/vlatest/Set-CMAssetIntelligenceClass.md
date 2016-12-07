@@ -57,7 +57,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -86,7 +85,6 @@ Type: ClassNameType[]
 Parameter Sets: SetBySelectReportClass
 Aliases: 
 Accepted values: SMS_AutoStartSoftware, SMS_BrowserHelperObject, SMS_InstalledExecutable, SMS_InstalledSoftware, SMS_SoftwareShortcut, SMS_SystemConsoleUsage, SMS_SystemConsoleUser, SoftwareLicensingProduct, SoftwareLicensingService, Win32_USBDevice, SMS_SoftwareTag
-
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +99,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -116,7 +113,6 @@ Indicates that all Asset Intelligence reporting classes are enabled.
 Type: SwitchParameter
 Parameter Sets: SetByAllReportClass
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -145,7 +141,6 @@ Type: ClassNameType[]
 Parameter Sets: SetBySelectReportClass
 Aliases: 
 Accepted values: SMS_AutoStartSoftware, SMS_BrowserHelperObject, SMS_InstalledExecutable, SMS_InstalledSoftware, SMS_SoftwareShortcut, SMS_SystemConsoleUsage, SMS_SystemConsoleUser, SoftwareLicensingProduct, SoftwareLicensingService, Win32_USBDevice, SMS_SoftwareTag
-
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +155,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +170,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

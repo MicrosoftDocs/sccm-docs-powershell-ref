@@ -46,7 +46,7 @@ Type:                1
 UniqueID:            {0CCA6700-AE5E-4949-8FBC-AA6719775CC3}
 ```
 
-This command creates customized device settings for the group of client computers that run WindowsÂ® 8.
+This command creates customized device settings for the group of client computers that run Windows® 8.
 After the new collection of settings is created, the command displays an unpopulated list of setting properties.
 To refresh and view a populated list of properties, use **Get-CMClientSetting**.
 The output for this example shows a populated list.
@@ -60,7 +60,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -75,7 +74,6 @@ Specifies a description of the content of the new settings.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +102,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +116,6 @@ Specifies a name for customized client settings.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -137,7 +132,6 @@ Type: Types
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Default, Device, User
-
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +147,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -179,5 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMClientSetting](./Remove-CMClientSetting.md)
 
 [Set-CMClientSetting](./Set-CMClientSetting.md)
-
-

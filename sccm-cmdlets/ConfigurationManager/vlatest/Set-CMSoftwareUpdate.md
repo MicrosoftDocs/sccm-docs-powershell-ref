@@ -61,7 +61,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -84,7 +83,6 @@ Type: CustomSeverityType
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, Low, Moderate, Important, Critical
-
 Required: False
 Position: Named
 Default value: None
@@ -98,8 +96,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -113,8 +110,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +125,6 @@ Specifies the ID of software updates.
 Type: String
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -144,8 +139,7 @@ To obtain a software update object, use the [Get-CMSoftwareUpdate](./Get-CMSoftw
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +154,6 @@ Specifies, in minutes, the maximum amount of time that a software update has to 
 Type: Int32
 Parameter Sets: (All)
 Aliases: MaximumExecutionMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +168,6 @@ Specifies the name of a software update.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: Named
 Default value: None
@@ -191,7 +183,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

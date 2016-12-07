@@ -90,7 +90,6 @@ To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](
 Type: IResultObject
 Parameter Sets: RemoveScopeFromAdminById_Object, RemoveScopeFromAdminByName_Object, RemoveScopeFromAdminByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +104,6 @@ Specifies the ID of an administrative user.
 Type: Int32
 Parameter Sets: RemoveScopeFromAdminById_Id, RemoveScopeFromAdminByName_Id, RemoveScopeFromAdminByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -120,7 +118,6 @@ Specifies the name of an administrative user.
 Type: String
 Parameter Sets: RemoveScopeFromAdminByName_Name, RemoveScopeFromAdminById_Name, RemoveScopeFromAdminByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -135,7 +132,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -150,7 +146,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +160,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +174,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -196,7 +189,6 @@ To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurit
 Type: IResultObject
 Parameter Sets: RemoveScopeFromAdminByObject_Id, RemoveScopeFromAdminByObject_Name, RemoveScopeFromAdminByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -211,7 +203,6 @@ Specifies the ID of a security scope.
 Type: String
 Parameter Sets: RemoveScopeFromAdminById_Name, RemoveScopeFromAdminById_Id, RemoveScopeFromAdminById_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -227,7 +218,6 @@ A security scope name can be Default or the name of a custom security scope.
 Type: String
 Parameter Sets: RemoveScopeFromAdminByName_Name, RemoveScopeFromAdminByName_Id, RemoveScopeFromAdminByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -243,7 +233,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

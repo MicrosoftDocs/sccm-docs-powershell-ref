@@ -68,7 +68,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +96,6 @@ Specifies an array of IDs of configuration baselines.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -113,7 +110,6 @@ Specifies an array of names of configuration baselines.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
-
 Required: False
 Position: 0
 Default value: None
@@ -128,7 +124,6 @@ Specifies a **CMParentBaseline** object.
 Type: IResultObject
 Parameter Sets: SearchByParentBaseline
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -143,7 +138,6 @@ Specifies the ID of a parent baseline object.
 Type: Int32
 Parameter Sets: SearchByParentBaselineIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +152,6 @@ Specifies the name of a parent baseline.
 Type: String
 Parameter Sets: SearchByParentBaselineNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None

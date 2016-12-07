@@ -58,7 +58,6 @@ Specifies that the configuration policy is returned in XML format.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -73,7 +72,6 @@ Specifies an array of category instance types.
 Type: String[]
 Parameter Sets: (All)
 Aliases: CategoryInstanceTypes
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +86,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +103,6 @@ If lazy properties are not used, this parameter should be specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +117,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +131,6 @@ Specifies the CI__ID of a configuration policy.
 Type: Int32
 Parameter Sets: SearchById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -151,7 +145,6 @@ Specifies a configuration policy object.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
-
 Required: False
 Position: 0
 Default value: None
@@ -166,7 +159,6 @@ Specifies the name of a configuration policy.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
-
 Required: False
 Position: 0
 Default value: None

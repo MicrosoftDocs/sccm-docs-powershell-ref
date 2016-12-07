@@ -27,7 +27,7 @@ The **Get-CMDriverPackage** cmdlet gets a driver package.
 
 ## EXAMPLES
 
-### Example 1: Get a driver package that is specified by its identifier.
+### Example 1: Get a driver package that is specified by its identifier
 ```
 PS C:\>Get-CMDriverPackage -Id "CM100042"
 ```
@@ -43,7 +43,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -58,7 +57,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -73,7 +71,6 @@ Specifies an array of identifiers for a driver package.
 Type: String[]
 Parameter Sets: SearchByIdMandatory
 Aliases: PackageId
-
 Required: True
 Position: Named
 Default value: None
@@ -88,7 +85,6 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -116,5 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDriverPackage](./Remove-CMDriverPackage.md)
 
 [Set-CMDriverPackage](./Set-CMDriverPackage.md)
-
-

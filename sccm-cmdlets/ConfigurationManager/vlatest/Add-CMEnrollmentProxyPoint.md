@@ -54,7 +54,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -69,7 +68,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +82,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +96,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: EnrollmentProxyPointByValue
 Aliases: SiteServer
-
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +110,6 @@ Specifies the port that client computers use to connect with an enrollment proxy
 Type: Int32
 Parameter Sets: (All)
 Aliases: Port
-
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +124,6 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: EnrollmentProxyPoint
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -144,7 +138,6 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: EnrollmentProxyPoint
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -159,7 +152,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: IISWebsite
-
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +167,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

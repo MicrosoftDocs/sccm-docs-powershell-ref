@@ -106,7 +106,6 @@ To obtain a **CMBootImage** object, use the Get-CMBootImage cmdlet.
 Type: IResultObject
 Parameter Sets: SetDriverBootImagesById_Object, SetDriverBootImagesByName_Object, SetDriverBootImagesByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -121,7 +120,6 @@ Specifies the ID of a boot image.
 Type: String
 Parameter Sets: SetDriverBootImagesById_Id, SetDriverBootImagesByName_Id, SetDriverBootImagesByObject_Id
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -136,7 +134,6 @@ Specifies the name of a boot image.
 Type: String
 Parameter Sets: SetDriverBootImagesById_Name, SetDriverBootImagesByName_Name, SetDriverBootImagesByObject_Name
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -151,7 +148,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -166,7 +162,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +177,6 @@ To obtain a **CMDriver** object, use the [Get-CMDriver](./Get-CMDriver.md) cmdle
 Type: IResultObject
 Parameter Sets: SetDriverBootImagesByObject_Id, SetDriverBootImagesByObject_Name, SetDriverBootImagesByObject_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -197,7 +191,6 @@ Specifies the ID of a driver.
 Type: Int32
 Parameter Sets: SetDriverBootImagesById_Id, SetDriverBootImagesById_Object, SetDriverBootImagesById_Name
 Aliases: Id, CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -212,7 +205,6 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: SetDriverBootImagesByName_Id, SetDriverBootImagesByName_Name, SetDriverBootImagesByName_Object
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -227,7 +219,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -243,7 +234,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -263,7 +253,6 @@ Type: SetDriveBootImageActionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AddDriverToBootImage, RemoveDriverFromBootImage
-
 Required: True
 Position: Named
 Default value: None
@@ -279,7 +268,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

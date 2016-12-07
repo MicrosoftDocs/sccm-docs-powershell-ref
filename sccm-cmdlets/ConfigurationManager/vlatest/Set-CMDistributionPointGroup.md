@@ -58,7 +58,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -73,7 +72,6 @@ Specifies a description for the distribution point group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +86,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +100,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +114,6 @@ Specifies an array of IDs for distribution point groups.
 Type: String
 Parameter Sets: SetById
 Aliases: GroupId
-
 Required: True
 Position: Named
 Default value: None
@@ -128,13 +123,12 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a CMDistributionPointGroup object.
-To obtain a CMDistributionPointGroup object, use the Get-CMDistributionPointGroup cmdlet.
+To obtain a CMDistributionPointGroup object, use the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -149,7 +143,6 @@ Specifies a name of a distribution point group.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -164,7 +157,6 @@ Specifies a new name for the distribution point group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +172,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

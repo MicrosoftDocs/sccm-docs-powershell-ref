@@ -46,7 +46,6 @@ Type: BluetoothConnectionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Disable, HandsfreeOnly, Allow
-
 Required: False
 Position: Named
 Default value: None
@@ -61,7 +60,6 @@ Indicates whether users can use the browser on the mobile device.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +74,6 @@ Indicates whether users can use the camera on the mobile device.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +88,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +102,6 @@ Indicates whether users can encrypt files on the mobile device.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +116,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +130,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: Infra
-
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +145,6 @@ This policy setting requires an Exchange Enterprise Client Access License.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +159,6 @@ Indicates whether the mobile device can access information on a storage card.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +173,6 @@ Indicates whether the mobile device encrypts new files on the storage card by us
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +187,6 @@ Indicates whether the user can send and receive SMS and MMS text messages with t
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -209,15 +198,14 @@ Accept wildcard characters: False
 Specifies whether the user can use Wireless (Wi-Fi) local area networks (LANs) with the device.
 Valid values are: 
 
--- Allow
--- Disable
--- HandsfreeOnly
+- Allow
+- Disable
+- HandsfreeOnly
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -243,5 +231,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMExchangeServerConnectorEmailManagementSetting](./New-CMExchangeServerConnectorEmailManagementSetting.md)
 
 [New-CMExchangeServerConnectorPasswordSetting](./New-CMExchangeServerConnectorPasswordSetting.md)
-
-

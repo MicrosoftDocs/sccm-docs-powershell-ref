@@ -48,7 +48,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -63,7 +62,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +78,6 @@ To obtain an application SDK object, use the [ConvertTo-CMApplication](./Convert
 Type: PSObject
 Parameter Sets: (All)
 Aliases: IResultObject, Application, ProviderApplicationObject
-
 Required: True
 Position: Named
 Default value: None

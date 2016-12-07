@@ -53,7 +53,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -68,7 +67,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +81,6 @@ Specifies an array of IDs for software metering rules.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: RuleId
-
 Required: True
 Position: Named
 Default value: None
@@ -98,7 +95,6 @@ Specifies a name for a product that a rule meters.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

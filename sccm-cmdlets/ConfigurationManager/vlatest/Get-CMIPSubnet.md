@@ -47,7 +47,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -62,7 +61,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +76,6 @@ This is a Configuration Manager name, not an IP address or IP address and subnet
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SubnetId
-
 Required: True
 Position: Named
 Default value: None
@@ -93,7 +90,6 @@ Specifies an array of names for IP subnets.
 Type: String
 Parameter Sets: SearchByName
 Aliases: ADSubnetName
-
 Required: False
 Position: Named
 Default value: None

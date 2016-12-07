@@ -94,7 +94,6 @@ The new name of the query is Western Security Groups.
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
 Aliases: Comments
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +108,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -123,8 +121,7 @@ Indicates that messages found by this query are deleted from the Configuration M
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -138,8 +135,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -153,8 +149,7 @@ Specifies an expression in WMI Query Language (WQL).
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -168,8 +163,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -184,7 +178,6 @@ Specifies an ID for a status message query.
 Type: String
 Parameter Sets: DeleteMessageByIdMandatory, SetStatusMessageQueryByIdMandatory
 Aliases: QueryId
-
 Required: True
 Position: Named
 Default value: None
@@ -199,8 +192,7 @@ To obtain a status message query object, use the [Get-CMStatusMessageQuery](./Ge
 ```yaml
 Type: IResultObject
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, DeleteMessageByObjectMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -214,8 +206,7 @@ Specifies a name for a status message query.
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByNameMandatory, DeleteMessageByNameMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -229,8 +220,7 @@ Specifies a new name for a query.
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -245,8 +235,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -262,7 +251,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

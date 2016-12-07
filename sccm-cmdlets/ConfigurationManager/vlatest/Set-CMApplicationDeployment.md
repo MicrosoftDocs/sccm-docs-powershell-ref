@@ -81,7 +81,6 @@ Specifies the ID of an application.
 Type: String
 Parameter Sets: SetApplicationDeploymentByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -96,7 +95,6 @@ Specifies the name of an application.
 Type: String
 Parameter Sets: SetApplicationDeploymentByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -111,7 +109,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: AvaliableDate
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +123,6 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: AvaliableTime
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +137,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +151,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +165,6 @@ Specifies the name of device collection or user collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +179,6 @@ Specifies a comment for the deployment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +193,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -217,7 +208,6 @@ Enter the percentage value by using the *FailParameterValue* parameter.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +223,6 @@ Enter the percentage value by using the *SuccessParameterValue* parameter.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -252,7 +241,6 @@ If you specify a value for the *DeadlineTime* parameter in addition to this para
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -270,7 +258,6 @@ If the application has not deployed to a client by this time, Configuration Mana
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -285,7 +272,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -300,7 +286,6 @@ Indicates whether alerts from this cmdlet appear in System Center 2016 - Operati
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -317,7 +302,6 @@ You must also specify the *CreatAlertBaseOnPercentFailure* parameter as $True.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -332,7 +316,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -347,7 +330,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SetApplicationDeploymentByValueMandatory
 Aliases: Application
-
 Required: True
 Position: Named
 Default value: None
@@ -365,7 +347,6 @@ If this value is $False, Configuration Manager does not deploy the application o
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -380,7 +361,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -398,7 +378,6 @@ For a value of $False, the device saves changes in an overlay and commits them l
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -416,7 +395,6 @@ If you specify a value for the *PostponeTime* parameter in addition to this para
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -433,7 +411,6 @@ Configuration Manager generates a deployment alert after this length of time.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -448,7 +425,6 @@ Indicates whether to pre-deploy the application to the primary device of the use
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -463,7 +439,6 @@ Indicates whether to create an Operations Manager alert if a client fails to ins
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -481,7 +456,6 @@ If this value is $False, the computer does not restart outside a service window.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -496,7 +470,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AppRequiresApproval
-
 Required: False
 Position: Named
 Default value: None
@@ -514,7 +487,6 @@ For computers to wake, you must first configure Wake On LAN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -531,7 +503,6 @@ You must also specify the *CreatAlertBaseOnPercentSuccess* parameter as $True.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -553,7 +524,6 @@ Type: TimeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: LocalTime, Utc
-
 Required: False
 Position: Named
 Default value: None
@@ -568,7 +538,6 @@ Indicates whether to allow clients to download content over a metered Internet c
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -589,7 +558,6 @@ Type: UserNotificationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
-
 Required: False
 Position: Named
 Default value: None
@@ -605,7 +573,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

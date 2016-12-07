@@ -45,7 +45,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -60,7 +59,6 @@ Specifies the name of a destination computer.
 Type: String
 Parameter Sets: (All)
 Aliases: RestoreName
-
 Required: True
 Position: Named
 Default value: None
@@ -75,7 +73,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +87,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -119,7 +115,6 @@ Type: MigrationBehavior
 Parameter Sets: (All)
 Aliases: 
 Accepted values: CaptureAndRestoreAllUserAccounts, CaptureAllUserAccountsAndRestoreSpecifiedAccounts, CaptureAndRestoreSpecifiedUserAccounts
-
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +130,6 @@ The specified user names, along with the *MigrationBehavior* parameter setting, 
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +144,6 @@ Specifies the name of the source computer.
 Type: String
 Parameter Sets: (All)
 Aliases: SourceName
-
 Required: True
 Position: Named
 Default value: None
@@ -166,7 +159,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

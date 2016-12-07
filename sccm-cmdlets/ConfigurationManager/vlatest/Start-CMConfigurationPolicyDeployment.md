@@ -114,8 +114,7 @@ The deployment applies to this Configuration Manager collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -130,7 +129,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -144,8 +142,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -160,8 +157,7 @@ During enforcement, a client reports compliance information about a deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -175,8 +171,7 @@ Specifies a firewall policy object.
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployFWPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -190,8 +185,7 @@ Specifies an ID for a firewall policy.
 ```yaml
 Type: String
 Parameter Sets: DeployFWPolicyByIdMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -205,8 +199,7 @@ Specifies a name for a firewall policy.
 ```yaml
 Type: String
 Parameter Sets: DeployFWPolicyByNameMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -220,8 +213,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -235,8 +227,7 @@ Specifies whether Configuration Manager generates alerts during the deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -250,8 +241,7 @@ Specifies whether Operations Manager monitoring criteria applies during the depl
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -265,8 +255,7 @@ Specifies whether to override the service window while deploying policies.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -281,8 +270,7 @@ This is the parameter value.
 ```yaml
 Type: Int32
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -297,8 +285,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -315,8 +302,7 @@ This is the date for the deployment if postponed.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -332,8 +318,7 @@ This is the time for the deployment if postponed.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -347,8 +332,7 @@ Specifies the remote connection profile that this cmdlet deploys configuration p
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployRCPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -362,8 +346,7 @@ Specifies the remote connection profile ID that this cmdlet deploys configuratio
 ```yaml
 Type: String
 Parameter Sets: DeployRCPolicyByIdMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -377,8 +360,7 @@ Specifies the remote connection profile name that this cmdlet deploys configurat
 ```yaml
 Type: String
 Parameter Sets: DeployRCPolicyByNameMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -393,8 +375,7 @@ This is the schedule for evaluating the policy.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -409,8 +390,7 @@ To obtain a user data and profile object, use the Get-CMUserDataAndProfileConfig
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployUSMPolicyByValueMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -424,8 +404,7 @@ Specifies an ID for a user data and profile object.
 ```yaml
 Type: String
 Parameter Sets: DeployUSMPolicyByIdMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -439,8 +418,7 @@ Specifies a name for a user data and profile object.
 ```yaml
 Type: String
 Parameter Sets: DeployUSMPolicyByNameMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -456,7 +434,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -36,7 +36,7 @@ Get-CMActiveDirectorySite -ForestId <String[]> [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Get-CMActiveDirectorySite** cmdlet gets one or more Microsoft System Center Configuration Manager sites that are configured to publish site information to Active DirectoryÂ® Domain Services (AD DS).
+The **Get-CMActiveDirectorySite** cmdlet gets one or more Microsoft System Center Configuration Manager sites that are configured to publish site information to Active Directory® Domain Services (AD DS).
 You can get System Center Configuration Manager sites that publish site data to AD DS by using an identifier or a fully qualified domain name (FQDN).
 
 ## EXAMPLES
@@ -57,7 +57,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +71,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +86,6 @@ The FQDN provides a path to an Active Directory forest.
 Type: String[]
 Parameter Sets: SearchByForestName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -103,7 +100,6 @@ Specifies an array of IDs that identify Active Directory forests.
 Type: String[]
 Parameter Sets: SearchByForestId
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -118,7 +114,6 @@ Specifies an array of identifiers of Active Directory forest objects that contai
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SiteId
-
 Required: True
 Position: Named
 Default value: None
@@ -133,7 +128,6 @@ Specifies an array of FQDNs of Active Directory forest objects that contain Acti
 Type: String
 Parameter Sets: SearchByName
 Aliases: ADSiteName
-
 Required: False
 Position: Named
 Default value: None
@@ -153,5 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CMActiveDirectoryForest](./Get-CMActiveDirectoryForest.md)
-
-

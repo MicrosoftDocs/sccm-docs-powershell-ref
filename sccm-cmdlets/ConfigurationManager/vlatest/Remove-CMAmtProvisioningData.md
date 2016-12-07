@@ -60,7 +60,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -97,7 +96,6 @@ Type: RemoteControlType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DiscoveryBmc, PartialUnprovision, FullUnprovision, FullUnprovisionSuppressAuto, PartialUnprovisionSuppressAuto, KerberosFullUnprovision, KerberosFullUnprovisionSuppressAuto, KerberosPartialUnprovision, KerberosPartialUnprovisionSuppressAuto, Unsuppress, EnableAudit, DisableAudit, ClearAuditLog
-
 Required: True
 Position: Named
 Default value: None
@@ -113,7 +111,6 @@ To obtain a device object, use the **Get-CMDevice** cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: InputObject
-
 Required: True
 Position: Named
 Default value: None
@@ -128,7 +125,6 @@ Specifies an array of IDs of devices.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: ResourceId
-
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +139,6 @@ Specifies an array of names of devices.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +153,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +167,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +200,6 @@ Resets Intel AMT to the factory default settings, except for identification info
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +215,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

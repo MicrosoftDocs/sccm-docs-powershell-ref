@@ -54,7 +54,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -68,8 +67,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -83,8 +81,7 @@ Specifies the ID of the family used to classify inventoried software in Configur
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -98,8 +95,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -114,7 +110,6 @@ Specifies an array of IDs of software files.
 Type: String
 Parameter Sets: SetById
 Aliases: SoftwareKey
-
 Required: True
 Position: Named
 Default value: None
@@ -129,8 +124,7 @@ To obtain a **CMSoftwareInventory** object, use the [Get-CMSoftwareInventory](./
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -145,7 +139,6 @@ Specifies an array of names of software files.
 Type: String[]
 Parameter Sets: SetByName
 Aliases: CommonName
-
 Required: True
 Position: Named
 Default value: None
@@ -159,8 +152,7 @@ Specifies a new name for inventoried software in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +167,6 @@ Specifies the name of a software publisher in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: CommonPublisher
-
 Required: False
 Position: Named
 Default value: None
@@ -189,8 +180,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -204,8 +194,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -219,8 +208,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +224,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

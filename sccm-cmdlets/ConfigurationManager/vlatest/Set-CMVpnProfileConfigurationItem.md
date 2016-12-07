@@ -56,7 +56,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -71,7 +70,6 @@ Specifies the description of the VPN profile that this cmdlet modifies.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -85,8 +83,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +98,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: DesiredConfigurationDigestPath
-
 Required: False
 Position: Named
 Default value: None
@@ -115,8 +111,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -130,8 +125,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -145,8 +139,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +154,6 @@ Specifies an array of IDs of VPN profile objects.
 Type: Int32
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -176,8 +168,7 @@ To obtain a VPN profile object, use the [Get-CMVpnProfileConfigurationItem](./Ge
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases:
-
+Aliases: 
 Required: True
 Position: 0
 Default value: None
@@ -192,7 +183,6 @@ Specifies an array of names of VPN profiles.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: 0
 Default value: None
@@ -206,8 +196,7 @@ Specifies the new name of the VPN profile that this cmdlet sets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -222,8 +211,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +227,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

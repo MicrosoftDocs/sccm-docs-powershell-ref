@@ -47,7 +47,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -63,7 +62,6 @@ Type: EulaAcceptance
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Declined, Accepted, Unknown
-
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +76,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +91,6 @@ To obtain a software update object, use the **Get-CMSoftwareUpdate** cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -109,7 +105,6 @@ Specifies an array of names of software updates.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +119,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

@@ -68,7 +68,6 @@ Specifies the trusted root certificate for out of band management.
 Type: X509Certificate2
 Parameter Sets: OutOfBandServicePointWithCert, OutOfBandServicePointWithCertByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -98,7 +96,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +110,6 @@ Indicates whether the out of band service point verifies the certificate revocat
 Type: Boolean
 Parameter Sets: OutOfBandServicePointByValue, OutOfBandServicePoint
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +121,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: OutOfBandServicePointWithCert, OutOfBandServicePointWithCertByValue
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -140,7 +135,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: MaximumSendRetryCount
-
 Required: True
 Position: Named
 Default value: None
@@ -155,7 +149,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: RetryIntervalMinutes
-
 Required: True
 Position: Named
 Default value: None
@@ -170,7 +163,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -185,7 +177,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: OutOfBandServicePointByValue, OutOfBandServicePointWithCertByValue
 Aliases: SiteServer
-
 Required: True
 Position: Named
 Default value: None
@@ -200,7 +191,6 @@ Specifies the site code for the Configuration Manager site that hosts this site 
 Type: String
 Parameter Sets: OutOfBandServicePoint, OutOfBandServicePointWithCert
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -215,7 +205,6 @@ Specifies a fully qualified domain name (FQDN) of the server that hosts the site
 Type: String
 Parameter Sets: OutOfBandServicePoint, OutOfBandServicePointWithCert
 Aliases: Name, ServerName
-
 Required: True
 Position: 0
 Default value: None
@@ -230,7 +219,6 @@ Specifies the thumbprint of the AMT provisioning certificate.
 Type: String
 Parameter Sets: OutOfBandServicePointByValue, OutOfBandServicePoint
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +233,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: ThreadsOffset, TransmissionStartMinutesInterval
-
 Required: True
 Position: Named
 Default value: None
@@ -260,7 +247,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: OutOfBandServicePointByValue, OutOfBandServicePoint
 Aliases: MaximumThreadCount
-
 Required: True
 Position: Named
 Default value: None
@@ -276,7 +262,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

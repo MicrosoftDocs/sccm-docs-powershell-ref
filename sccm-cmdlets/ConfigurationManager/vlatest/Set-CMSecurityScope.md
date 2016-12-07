@@ -61,7 +61,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -76,7 +75,6 @@ Specifies a description for the security scope.
 Type: String
 Parameter Sets: (All)
 Aliases: CategoryDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -90,8 +88,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -105,8 +102,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +117,6 @@ Specifies the ID of a security scope.
 Type: String
 Parameter Sets: SetById
 Aliases: CategoryId
-
 Required: True
 Position: Named
 Default value: None
@@ -136,8 +131,7 @@ To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurit
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -152,7 +146,6 @@ Specifies the name of a security scope.
 Type: String
 Parameter Sets: SetByName
 Aliases: CategoryName
-
 Required: True
 Position: Named
 Default value: None
@@ -166,8 +159,7 @@ Specifies a new name for the security scope.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +175,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

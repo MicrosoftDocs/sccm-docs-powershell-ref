@@ -62,7 +62,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -77,7 +76,6 @@ Specifies an array of device IDs.
 Type: String
 Parameter Sets: InvokeDeviceByIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -92,7 +90,6 @@ Specifies an array of device names.
 Type: String
 Parameter Sets: InvokeDeviceByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -107,7 +104,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +118,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -137,7 +132,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: InvokeDeviceByValueMandatory
 Aliases: Device, SiteStatus
-
 Required: True
 Position: Named
 Default value: None
@@ -152,7 +146,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +160,6 @@ Specifies an array of site codes of Configuration Manager sites that host the si
 Type: String
 Parameter Sets: InvokeSiteStatusByNameMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +174,6 @@ Specifies an array of Configuration Manager roles that the site system performs.
 Type: String
 Parameter Sets: InvokeSiteStatusByNameMandatory
 Aliases: Role
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +188,6 @@ Specifies an array of fully qualified domain names (FQDN) of the servers that ho
 Type: String
 Parameter Sets: InvokeSiteStatusByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -213,7 +203,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

@@ -50,8 +50,7 @@ Indicates that the cmdlet uses a client computer account.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchBySiteCodeMandatory_ClientComputerAccount
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -66,7 +65,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -81,7 +79,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: DelayBeforeRetryingMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -95,8 +92,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -110,8 +106,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -125,8 +120,7 @@ Specifies a maximum number of packages.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +135,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: MaximumThreadsPerPackage
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +149,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: MulticastDelayBeforeRetryingMinutes
-
 Required: False
 Position: Named
 Default value: None
@@ -170,8 +162,7 @@ Specifies a retry count for multicast software distribution attempts.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +177,6 @@ Specifies an account name for network access.
 Type: String[]
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: NetworkAccessAccountNames
-
 Required: False
 Position: Named
 Default value: None
@@ -200,8 +190,7 @@ Specifies a retry count.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -215,8 +204,7 @@ Specifies a site code of a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -232,7 +220,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

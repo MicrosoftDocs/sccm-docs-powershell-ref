@@ -68,7 +68,6 @@ This command removes the software update group named SUGroup01 from membership i
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddSoftwareUpdates
-
 Required: False
 Position: Named
 Default value: None
@@ -82,8 +81,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -97,8 +95,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -112,8 +109,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +124,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -143,7 +138,6 @@ Specifies a description for a software update group.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -157,8 +151,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -172,8 +165,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +180,6 @@ Specifies an array of IDs of software update groups.
 Type: Int32
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -203,8 +194,7 @@ To obtain a software group object, use the [Get-CMSoftwareUpdateGroup](./Get-CMS
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -219,7 +209,6 @@ Specifies an array of names of software update groups.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName
-
 Required: True
 Position: Named
 Default value: None
@@ -234,8 +223,7 @@ This name replaces the current name of the group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -250,8 +238,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -266,7 +253,6 @@ Accept wildcard characters: False
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveSoftwareUpdates
-
 Required: False
 Position: Named
 Default value: None
@@ -282,7 +268,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

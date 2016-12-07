@@ -79,7 +79,6 @@ The command also includes a reference computer to associate with the new compute
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +93,6 @@ Specifies a name of a Configuration Manager device collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +107,6 @@ Specifies the name of a computer that this cmdlet imports information from.
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -124,7 +121,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -139,7 +135,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -154,7 +149,6 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: ImportComputerByUsingFile
 Aliases: EnableColumnHeadings
-
 Required: False
 Position: Named
 Default value: None
@@ -170,7 +164,6 @@ The file must contain the name and MAC address of each computer to be imported.
 Type: String
 Parameter Sets: ImportComputerByUsingFile
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -185,7 +178,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +192,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: Collection
-
 Required: False
 Position: Named
 Default value: None
@@ -216,7 +207,6 @@ The Windows Preinstallation Environment (Windows PE) must have a driver for the 
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -231,7 +221,6 @@ Specifies a GUID for the system management BIOS (SMBIOS) of a computer.
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: SMBIOSID
-
 Required: False
 Position: Named
 Default value: None
@@ -247,7 +236,6 @@ Configuration Manager migrates user state and settings from the reference comput
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -263,7 +251,6 @@ Type: MigrationBehavior
 Parameter Sets: ImportSingleComputer
 Aliases: 
 Accepted values: CaptureAllUserAccountsAndRestoreSpecifiedAccounts, CaptureAndRestoreSpecifiedUserAccounts
-
 Required: False
 Position: Named
 Default value: None
@@ -278,7 +265,6 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: ImportSingleComputer
 Aliases: UserNames
-
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +281,6 @@ A variable allows you to assign a column to a variable.
 Type: String
 Parameter Sets: ImportComputerByUsingFile
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -311,7 +296,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False
@@ -326,7 +310,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: WtgUniqueKey
-
 Required: False
 Position: Named
 Default value: None

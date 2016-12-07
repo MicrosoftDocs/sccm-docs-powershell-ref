@@ -95,7 +95,6 @@ Only categories of the type AppCategories are supported.
 Type: String[]
 Parameter Sets: (All)
 Aliases: AppCategories
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +109,6 @@ Indicates whether a task sequence action can install the application.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +123,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -141,7 +138,6 @@ The description appears in the Configuration Manager console
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +152,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +166,6 @@ Indicates whether the application displays supersedence in the Application Catal
 Type: Boolean
 Parameter Sets: (All)
 Aliases: DisplaySupersedencesInApplicationCatalog
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +191,6 @@ Type: DistributionPointSettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AutoDownload, DeltaCopy, NoDownload
-
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +214,6 @@ Type: DistributionPriorityType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: High, Medium, Low
-
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +228,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -252,7 +243,6 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -267,7 +257,6 @@ Specifies the CI_ID and ModelID properties (the same value) of an application.
 Type: Int32
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -283,7 +272,6 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: Application
-
 Required: True
 Position: 0
 Default value: None
@@ -298,7 +286,6 @@ Indicates whether the application displays as a featured app and is highlighted 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -317,7 +304,6 @@ This keyword will help users of Software Center search for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -333,7 +319,6 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -348,7 +333,6 @@ Specifies a localized name string that appears in the client software center or 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -364,7 +348,6 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedApplicationDescription
-
 Required: False
 Position: Named
 Default value: None
@@ -379,7 +362,6 @@ Specifies the model name of the application.
 Type: String
 Parameter Sets: SetByModelName
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -394,7 +376,6 @@ Specifies the name of the application.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName, ApplicationName
-
 Required: True
 Position: 0
 Default value: None
@@ -409,7 +390,6 @@ Specifies a new name for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -424,7 +404,6 @@ Specifies optional reference information for this application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -439,7 +418,6 @@ Specifies an owner for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -455,7 +433,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -471,7 +448,6 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -486,7 +462,6 @@ Specifies the name of a software publisher.
 Type: String
 Parameter Sets: (All)
 Aliases: Manufacturer
-
 Required: False
 Position: Named
 Default value: None
@@ -501,7 +476,6 @@ Specifies a release date for the application.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -516,7 +490,6 @@ Indicates whether to copy this application to protected distribution points.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -531,7 +504,6 @@ Specifies a software version for an application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -546,7 +518,6 @@ Specifies one or more administrative users who are support contacts for the appl
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -562,7 +533,6 @@ You can use this parameter to identify a group or category of software, such as 
 Type: String[]
 Parameter Sets: (All)
 Aliases: UserCategories
-
 Required: False
 Position: Named
 Default value: None
@@ -578,7 +548,6 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -594,7 +563,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

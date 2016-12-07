@@ -60,7 +60,6 @@ The command changes the query interval to 60 minutes and the validity period to 
 Type: Int32
 Parameter Sets: (All)
 Aliases: QueryInterval
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +74,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -94,8 +92,7 @@ The date and time must be in the past.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -111,8 +108,7 @@ If no trust relationship exists between the forests, you may need to specify acc
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -126,8 +122,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -142,8 +137,7 @@ If no trust relationship exists between this forest and the site system server f
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -157,8 +151,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -173,8 +166,7 @@ To obtain a system health validator point, use the [Get-CMSystemHealthValidatorP
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -188,8 +180,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -206,8 +197,7 @@ You must specify an account if no trust relationship exists between the site ser
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -224,8 +214,7 @@ You must specify an account if no trust relationship exists between the site ser
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -239,8 +228,7 @@ Specifies a site code in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -254,8 +242,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -270,7 +257,6 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: CacheServerPollingMins, ValidityPeriod, SohValidityHours
-
 Required: False
 Position: Named
 Default value: None
@@ -288,8 +274,7 @@ The date and time must be in the past.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -306,8 +291,7 @@ The default value for this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -323,7 +307,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

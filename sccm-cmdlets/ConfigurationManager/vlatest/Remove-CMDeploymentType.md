@@ -56,7 +56,6 @@ Specifies the name of an application that is associated to the deployment type.
 Type: String
 Parameter Sets: SearchByInputObjectMandatory
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -68,7 +67,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SearchByIdMandatory, SearchByNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +81,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -98,7 +95,6 @@ Specifies the ID of a deployment type.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID, Id
-
 Required: True
 Position: Named
 Default value: None
@@ -113,7 +109,6 @@ Specifies the name of a deployment type.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName, Name
-
 Required: True
 Position: 0
 Default value: None
@@ -128,7 +123,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +137,6 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +151,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +165,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByInputObjectMandatory
 Aliases: DeploymentType
-
 Required: True
 Position: Named
 Default value: None
@@ -189,7 +180,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

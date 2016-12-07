@@ -45,7 +45,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -60,7 +59,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +73,6 @@ Specifies an array of interval strings.
 Type: String[]
 Parameter Sets: ByString
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -90,7 +87,6 @@ Specifies an array of Configuration Manager schedule objects output from another
 Type: IResultObject[]
 Parameter Sets: ByToken
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None

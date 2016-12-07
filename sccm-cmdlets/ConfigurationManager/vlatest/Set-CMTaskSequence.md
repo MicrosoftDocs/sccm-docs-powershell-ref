@@ -80,7 +80,6 @@ To obtain a supported operating system platform object, use the [Get-CMSupported
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddSupportedOperatingSystemPlatforms
-
 Required: False
 Position: Named
 Default value: None
@@ -94,8 +93,7 @@ Specifies the ID of a boot image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -110,8 +108,7 @@ You can use categories to group task sequences.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +123,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -141,8 +137,7 @@ Custom text appears in the progress notification dialog box while the task seque
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -157,8 +152,7 @@ If you specify a value of $True for the *RunAnotherProgram* parameter, the speci
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -172,8 +166,7 @@ Specifies a description for the task sequence.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -187,8 +180,7 @@ Indicates whether to disable this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -202,8 +194,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +209,6 @@ Indicates whether to enable notifications for this task sequence.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableNotifications
-
 Required: False
 Position: Named
 Default value: None
@@ -232,8 +222,7 @@ Indicates whether to enable this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -247,8 +236,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +252,6 @@ To obtain a task sequence object, use the [Get-CMTaskSequence](./Get-CMTaskSeque
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: TaskSequence
-
 Required: True
 Position: Named
 Default value: None
@@ -279,7 +266,6 @@ Specifies, in minutes, the maximum running time for the task sequence.
 Type: Int64
 Parameter Sets: (All)
 Aliases: Duration
-
 Required: False
 Position: Named
 Default value: None
@@ -293,8 +279,7 @@ Specifies a new name for the task sequence.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -309,8 +294,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -324,8 +308,7 @@ Specifies the name of a program to run from a Configuration Manager software pac
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -341,7 +324,6 @@ To obtain a supported operating system platform object, use the [Get-CMSupported
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveSupportedOperatingSystemPlatforms
-
 Required: False
 Position: Named
 Default value: None
@@ -356,8 +338,7 @@ Specify the program by using the *DeploymentPackageId* parameter and the *Progra
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -372,8 +353,7 @@ If you specify a value of $False, the program does not run if it has run success
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -388,7 +368,6 @@ Indicates that the task sequence runs on any operating system platform.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearSupportedOperatingSystemPlatforms
-
 Required: False
 Position: Named
 Default value: None
@@ -402,8 +381,7 @@ Indicates whether to suppress notifications for this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -418,7 +396,6 @@ Specifies the ID of a task sequence.
 Type: String
 Parameter Sets: SetById
 Aliases: Id, TaskSequencePackageId
-
 Required: True
 Position: Named
 Default value: None
@@ -433,7 +410,6 @@ Specifies the name of a task sequence.
 Type: String
 Parameter Sets: SetByName
 Aliases: Name
-
 Required: True
 Position: Named
 Default value: None
@@ -447,8 +423,7 @@ Indicates whether the task sequence uses the boot image specified by using the *
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -463,8 +438,7 @@ If you select a value of $False for this parameter, be sure to specify custom te
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -480,7 +454,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

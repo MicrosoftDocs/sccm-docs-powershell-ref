@@ -73,8 +73,7 @@ Specifies a comment for a software metering rule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +88,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -103,8 +101,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -118,8 +115,7 @@ Specifies the filename of the software that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -133,8 +129,7 @@ Specifies a version of the software that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -148,8 +143,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +158,6 @@ Specifies an array of IDs for software metering rules.
 Type: String
 Parameter Sets: SetById
 Aliases: RuleId
-
 Required: True
 Position: Named
 Default value: None
@@ -179,8 +172,7 @@ To obtain a software metering rule object, use the [Get-SoftwareMeteringRule](./
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -195,8 +187,7 @@ For more information and a list of locale identifiers, see the Locale IDs Assign
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -210,8 +201,7 @@ Specifies a new name for the software that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -226,8 +216,7 @@ This parameter can differ from the *FileName* parameter if a user changed the na
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -242,8 +231,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -257,8 +245,7 @@ Specifies a file path of the software that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -272,8 +259,7 @@ Specifies a name for a product that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases:
-
+Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -287,8 +273,7 @@ Specifies a site code of a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -304,7 +289,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

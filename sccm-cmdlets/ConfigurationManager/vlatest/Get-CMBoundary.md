@@ -49,7 +49,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ## EXAMPLES
 
-### Example 1: Get a boundary that is specified by its identifier.
+### Example 1: Get a boundary that is specified by its identifier
 ```
 PS C:\>Get-Boundary -Id "67777217"
 BoundaryFlags:      0
@@ -97,7 +97,6 @@ You can get a boundary group ID by using the **Get-CMBoundaryGroup** cmdlet.
 Type: UInt32
 Parameter Sets: SearchByBoundaryGroupIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -112,7 +111,6 @@ Accept wildcard characters: False
 Type: IResultObject
 Parameter Sets: SearchByBoundaryGroup
 Aliases: BoundaryGroup
-
 Required: True
 Position: Named
 Default value: None
@@ -128,7 +126,6 @@ You can get a boundary group name by using the **Get-CMBoundaryGroup** cmdlet.
 Type: String
 Parameter Sets: SearchByBoundaryGroupNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +140,6 @@ Accept wildcard characters: False
 Type: UInt32
 Parameter Sets: SearchByIdMandatory
 Aliases: Id
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +154,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SearchByName
 Aliases: DisplayName, Name
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +168,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +182,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -214,5 +207,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMBoundary](./Set-CMBoundary.md)
 
 [Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md)
-
-

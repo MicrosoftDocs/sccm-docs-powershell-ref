@@ -58,7 +58,6 @@ Indicates that the cmdlet returns a count of unique users and devices for the sp
 Type: SwitchParameter
 Parameter Sets: ByCount
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -73,7 +72,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +86,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +101,6 @@ You can specify the name of the license that is returned for the *LicenseName* p
 Type: SwitchParameter
 Parameter Sets: ByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +122,6 @@ Type: String
 Parameter Sets: ByValue, ByCount
 Aliases: 
 Accepted values: ConfigMgr_2012_CoreServer, ConfigMgr_2012_CoreClient, ConfigMgr_2012_EndpointClient
-
 Required: True
 Position: Named
 Default value: None

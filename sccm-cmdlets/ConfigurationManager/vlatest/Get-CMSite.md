@@ -40,7 +40,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -55,7 +54,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -70,7 +68,6 @@ Specifies the name of a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: SiteName
-
 Required: False
 Position: Named
 Default value: None
@@ -85,7 +82,6 @@ Specifies a site code for a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: 0
 Default value: None

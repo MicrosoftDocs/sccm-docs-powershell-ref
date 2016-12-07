@@ -51,7 +51,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -65,8 +64,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -80,8 +78,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
+Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +93,6 @@ Specifies an array of IDs of software files.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SoftwareKey
-
 Required: True
 Position: Named
 Default value: None
@@ -111,7 +107,6 @@ Specifies an array of names of software files.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: CommonName
-
 Required: True
 Position: Named
 Default value: None
@@ -127,7 +122,6 @@ To obtain a **CMSoftwareInventory** object, use the [Get-CMSoftwareInventory](./
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: InputObject
-
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +137,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

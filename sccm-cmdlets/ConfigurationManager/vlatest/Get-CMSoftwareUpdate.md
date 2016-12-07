@@ -76,7 +76,6 @@ Specifies the article ID of a software update.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +90,6 @@ Specifies the bulletin ID of a software update.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +105,6 @@ To obtain a category object, use the Get-CMSoftwareUpdateCategory cmdlet.
 Type: IResultObject[]
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +119,6 @@ Specifies an array of category names for software updates.
 Type: String[]
 Parameter Sets: SearchByName
 Aliases: CategoryNames
-
 Required: False
 Position: Named
 Default value: None
@@ -137,7 +133,6 @@ Specifies the latest date that a software update was released.
 Type: DateTime
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +147,6 @@ Specifies the earliest date that a software update was released.
 Type: DateTime
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +161,6 @@ Specifies the latest date that a software update was revised.
 Type: DateTime
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +175,6 @@ Specifies the earliest date that a software update was revised.
 Type: DateTime
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +189,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -212,7 +203,6 @@ Indicates whether the software update EULA exists.
 Type: Boolean
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -230,7 +220,6 @@ If lazy properties are not used, this parameter should be specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +234,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -260,7 +248,6 @@ Specifies the ID of a software update.
 Type: Int32
 Parameter Sets: SearchById
 Aliases: CIId, CI_ID
-
 Required: True
 Position: Named
 Default value: None
@@ -275,7 +262,6 @@ Indicates that upgrades are included in the software update.
 Type: SwitchParameter
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -290,7 +276,6 @@ Indicates whether the software update is downloaded.
 Type: Boolean
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -305,7 +290,6 @@ Indicates whether the software update is deployed.
 Type: Boolean
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -320,7 +304,6 @@ Indicates whether the software update has expired.
 Type: Boolean
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -335,7 +318,6 @@ Indicates whether the software update is the latest version.
 Type: Boolean
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -350,7 +332,6 @@ Indicates whether the software update is offline-serviceable.
 Type: Boolean
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -365,7 +346,6 @@ Indicates whether the software update is superseded.
 Type: Boolean
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -380,7 +360,6 @@ Indicates whether the software update is user-defined.
 Type: Boolean
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -395,7 +374,6 @@ Specifies the name of a software update.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
-
 Required: False
 Position: Named
 Default value: None
@@ -410,7 +388,6 @@ Indicates that the cmdlet only searches for expired software updates.
 Type: SwitchParameter
 Parameter Sets: SearchByName
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -433,7 +410,6 @@ Type: CustomSeverityType
 Parameter Sets: SearchByName
 Aliases: 
 Accepted values: None, Low, Moderate, Important, Critical
-
 Required: False
 Position: Named
 Default value: None
@@ -449,7 +425,6 @@ To obtain an update group object, use the [Get-CMSoftwareUpdateGroup](./Get-CMSo
 Type: IResultObject
 Parameter Sets: SearchByUpdateGroup
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -464,7 +439,6 @@ Specifies an array of IDs of software update groups.
 Type: String[]
 Parameter Sets: SearchByUpdateGroupIdMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -479,7 +453,6 @@ Specifies an array of names of software update groups.
 Type: String[]
 Parameter Sets: SearchByUpdateGroupNameMandatory
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None

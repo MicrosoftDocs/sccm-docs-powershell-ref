@@ -67,7 +67,6 @@ Type: DeviceActionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Lock, PinReset, BypassActivationLock, RequestNewActivationLockCode
-
 Required: True
 Position: 1
 Default value: None
@@ -82,7 +81,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: False
@@ -97,7 +95,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +109,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +123,6 @@ Specifies an ID for a device.
 Type: Int32
 Parameter Sets: ById
 Aliases: ResourceId
-
 Required: True
 Position: 0
 Default value: None
@@ -143,7 +138,6 @@ To obtain a device object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: Device
-
 Required: True
 Position: 0
 Default value: None
@@ -158,7 +152,6 @@ Specifies the name of a device.
 Type: String
 Parameter Sets: ByName
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -174,7 +167,6 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +182,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: False

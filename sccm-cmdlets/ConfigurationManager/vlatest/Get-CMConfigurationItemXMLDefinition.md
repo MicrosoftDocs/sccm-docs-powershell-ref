@@ -32,7 +32,7 @@ Get-CMConfigurationItemXMLDefinition [-InputObject] <IResultObject> [-DisableWil
 
 ## DESCRIPTION
 The **Get-CMConfigurationItemXMLDefinition** cmdlet gets an XML definition of a configuration item object as a string.
-You can specify a configuration item with the configuration item ID, the configuration item name, or using the Get-CMConfigurationItem cmdlet.
+You can specify a configuration item with the configuration item ID, the configuration item name, or using the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet.
 
 ## EXAMPLES
 
@@ -56,7 +56,7 @@ PS C:\>$CIObj=Get-CMConfigurationItem -Id "16777568"
 PS C:\> Get-CMConfigurationItemXMLDefinition -InputObject $CIObj
 ```
 
-The first command uses the Get-CMConfigurationItem cmdlet to get a configuration item with the specified ID, and then stores it in the $CIObj variable.
+The first command uses the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet to get a configuration item with the specified ID, and then stores it in the $CIObj variable.
 
 The second command gets a configuration item formatted in XML for the item stored in $CIObj.
 
@@ -69,7 +69,6 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +83,6 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -100,7 +98,6 @@ You can use a comma-separated list.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
-
 Required: True
 Position: 0
 Default value: None
@@ -110,13 +107,12 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a configuration item object.
-To get a configuration item object, use the Get-CMConfigurationItem cmdlet.
+To get a configuration item object, use the [Get-CMConfigurationItem](./Get-CMConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
-
 Required: True
 Position: 0
 Default value: None
@@ -132,7 +128,6 @@ You can use a comma-separated list.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
-
 Required: False
 Position: 0
 Default value: None
