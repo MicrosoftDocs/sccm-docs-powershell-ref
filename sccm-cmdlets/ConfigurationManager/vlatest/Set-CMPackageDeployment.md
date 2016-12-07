@@ -728,5 +728,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-CMPackageDeployment](./Start-CMPackageDeployment.md)
 
 [Get-CMPackage](./Get-CMPackage.md)
-
-

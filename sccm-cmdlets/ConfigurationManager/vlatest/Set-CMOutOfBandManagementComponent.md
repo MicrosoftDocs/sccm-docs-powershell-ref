@@ -42,11 +42,11 @@ PS C:\> $WirelessP = New-CMWirelessProfileObject -ProfileName "Test -NetworkName
 PS C:\> Set-CMOutOfBandManagementComponent -SiteCode "CM2" -EnableWiredNetworkAccess $True -WiredProfileObject $WiredP -WirelessProfile $WirelessP
 ```
 
-The first command uses the Get-CMTrustedRootCertificate cmdlet to get a certificate, and stores the certificate in the $Cert variable.
+The first command uses the [Get-CMTrustedRootCertificate](./Get-CMTrustedRootCertificate.md) cmdlet to get a certificate, and stores the certificate in the $Cert variable.
 
-The second command uses the New-CMWiredProfileObject cmdlet to create a profile object, and stores the object in the $WiredP variable.
+The second command uses the [New-CMWiredProfileObject](./New-CMWiredProfileObject/,md) cmdlet to create a profile object, and stores the object in the $WiredP variable.
 
-The third command uses the New-CMWirelessProfileObject cmdlet to create a wireless profile object, and stores the object in the $WirelessP variable.
+The third command uses the [New-CMWirelessProfileObject](./New-CMWirelessProfileObject.md) cmdlet to create a wireless profile object, and stores the object in the $WirelessP variable.
 
 The fourth command sets an out of band management component by using the $WiredP and $WirelessP variables.
 
@@ -61,7 +61,7 @@ PS C:\> Set-CMOutOfBandManagementComponent -SiteCode CM2 -AmtProvisioningAccount
 The first command creates a password string for the AMT provisioning account.
 The command uses a secure string to obscure the password.
 
-The second command uses the New-CMAmtProvisioningAccount cmdlet to create an account, and then stores the result in the $Apa variable.
+The second command uses the [New-CMAmtProvisioningAccount](./New-CMAmtProvisioningAccount.md) cmdlet to create an account, and then stores the result in the $Apa variable.
 
 The third command uses the **New-CMSchedule** cmdlet to create a schedule, and then stores the result in the $Schedule variable.
 
@@ -437,7 +437,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -574,5 +575,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMAmtProvisioningAccount](./New-CMAmtProvisioningAccount.md)
 
 [New-CMWiredProfileObject](./New-CMWiredProfileObject.md)
-
-
