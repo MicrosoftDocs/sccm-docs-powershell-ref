@@ -100,7 +100,7 @@ This command removes the driver named Adaptec SCSI HostRAID Management Processor
 
 ### -BootImage
 Specifies a **CMBootImage** object.
-To obtain a **CMBootImage** object, use the Get-CMBootImage cmdlet.
+To obtain a **CMBootImage** object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -289,5 +289,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMBootImage](./Get-CMBootImage.md)
 
 [Get-CMDriver](./Get-CMDriver.md)
-
-

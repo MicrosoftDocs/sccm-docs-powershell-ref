@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an input object.
-To get an input object, use the Get-CMEnrollmentPoint cmdlet.
+To get an input object, use the [Get-CMEnrollmentPoint](./Get-CMEnrollmentPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject

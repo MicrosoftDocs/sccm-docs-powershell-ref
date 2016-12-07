@@ -78,7 +78,7 @@ The command specifies values for *EnableAndAllowInstall* and *RunOnAnyPlatform*.
 
 ### -AddAdministrativeCategory
 Specifies an array of administrative category objects that this cmdlet adds to a driver.
-To obtain an administrative category object, use the Get-CMCategory cmdlet.
+To obtain an administrative category object, use the [Get-CMCategory](./Get-CMCategory.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ### -AddBootImagePackage
 Specifies an array of boot image objects.
 Use this parameter to specify the boot images that can install the device drivers.
-To obtain a boot image object, use the Get-CMBootImage cmdlet.
+To obtain a boot image object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 Specifies an array of administrative categories.
 Assign the device drivers to an administrative category for filtering purposes, such as Desktops or Notebooks categories.
 
-To obtain an administrative category object, use **Get-CMCategory**.
+To obtain an administrative category object, use the **Get-CMCategory** cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateBootImageDistributionPoint
-
+Indicates whether Configuration Manager updates boot images on their distribution points to add the new drivers.
 
 ```yaml
 Type: Boolean
@@ -455,5 +455,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMBootImage](./Get-CMBootImage.md)
 
 [Get-CMDriverPackage](./Get-CMDriverPackage.md)
-
-
