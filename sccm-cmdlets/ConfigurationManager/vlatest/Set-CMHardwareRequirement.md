@@ -100,7 +100,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a hardware requirement object.
-To obtain a hardware requirement object, use the **Get-CMHardwareRequirement** cmdlet.
+To obtain a hardware requirement object, use the [Get-CMHardwareRequirement](./Get-CMHardwareRequirement.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -214,5 +214,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMHardwareRequirement](./New-CMHardwareRequirement.md)
 
 [Remove-CMHardwareRequirement](./Remove-CMHardwareRequirement.md)
-
-
