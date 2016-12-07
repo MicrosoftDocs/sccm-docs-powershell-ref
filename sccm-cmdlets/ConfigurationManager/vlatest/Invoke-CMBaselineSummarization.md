@@ -21,7 +21,7 @@ Invoke-CMBaselineSummarization [-DisableWildcardHandling] [-ForceWildcardHandlin
 The **Invoke-CMBaselineSummarization** cmdlet updates data in configuration baselines in Microsoft System Center Configuration Manager with the latest data from the site database.
 This action might take several minutes to complete.
 
-You can use the Set-CMBaselineSummarizationSchedule cmdlet to configure a schedule by which the data is updated with the latest information from the site database.
+You can use the [Set-CMBaselineSummarizationSchedule](./Set-CMBaselineSummarizationSchedule.md) cmdlet to configure a schedule by which the data is updated with the latest information from the site database.
 
 ## EXAMPLES
 

@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -Id
 Specifies an array of boot images identifiers.
-You can get a boot image object by using the Get-CMBootImage cmdlet.
+You can get a boot image object by using the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: String
