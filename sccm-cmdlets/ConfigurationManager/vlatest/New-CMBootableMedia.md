@@ -93,7 +93,7 @@ Accept wildcard characters: False
 
 ### -BootImage
 Specifies a boot image object.
-To obtain a boot image object, use the Get-CMBootImage cmdlet.
+To obtain a boot image object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

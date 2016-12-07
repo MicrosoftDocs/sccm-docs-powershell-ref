@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a **CMOperatingSystemImage** object.
-To obtain a **CMOperatingSystemImage** object, use the Get-CMOperatingSystemImage cmdlet.
+To obtain a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage](./Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

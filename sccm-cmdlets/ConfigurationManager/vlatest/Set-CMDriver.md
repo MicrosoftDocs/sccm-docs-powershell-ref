@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ### -AddBootImagePackage
 Specifies an array of boot image objects.
 Use this parameter to specify the boot images that can install the device drivers.
-To obtain a boot image object, use the Get-CMBootImage cmdlet.
+To obtain a boot image object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ### -RemoveBootImagePackage
 Specifies an array of boot image objects.
 Use this parameter to remove the boot images that can install the device driver.
-To obtain a boot image object, use the Get-CMBootImage cmdlet.
+To obtain a boot image object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]

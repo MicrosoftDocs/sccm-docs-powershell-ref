@@ -251,7 +251,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a CMOperatingSystemInstaller object.
-To obtain a CMOperatingSystemInstaller object, use the Get-CMOperatingSystemInstaller cmdlet.
+To obtain a CMOperatingSystemInstaller object, use the [Get-CMOperatingSystemInstaller](./Get-CMOperatingSystemInstaller.md) cmdlet.
 
 ```yaml
 Type: IResultObject
