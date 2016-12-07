@@ -149,7 +149,7 @@ Specifies a day, in MM/DD/YYYY format, to notify clients of new software updates
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ Specifies a time, in HH:MM format, to notify clients of new software updates.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ Indicates whether to allow a restart following installation.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ Indicates whether to allow clients to use a metered network to download updates.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ A collection is a group of client computers.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ By default, the update is available immediately.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -257,7 +257,7 @@ By default, the update is available immediately.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ To expire a software update on a certain day, set this parameter.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,7 +289,7 @@ To expire a software update at a certain time, set this parameter.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -304,7 +304,7 @@ Specifies a name for a software update deployment in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -319,7 +319,7 @@ Specifies a deployment type in Configuration Manager.
 ```yaml
 Type: DeploymentType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Required, Available
 
 Required: False
@@ -335,7 +335,7 @@ Specifies a description for a software update deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -350,7 +350,7 @@ Indicates whether to disable System Center 2016 - Operations Manager alerts duri
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -365,7 +365,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -380,7 +380,7 @@ Indicates whether clients download updates directly from Microsoft Update.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -390,12 +390,12 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-
+Indicates whether the cmdlet enables software updates in Configuration Manager.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -410,7 +410,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -425,7 +425,7 @@ Indicates whether to generate Operations Manager alerts when a software installa
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -440,7 +440,7 @@ Indicates whether to generate alerts when a software installation succeeds.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -455,7 +455,7 @@ Specifies a name for a new deployment in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -470,7 +470,7 @@ Specifies a percentage of the update.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -485,7 +485,7 @@ Indicates whether to install a software update on the temporary overlay and comm
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -500,7 +500,7 @@ Specifies a protected type.
 ```yaml
 Type: ProtectedType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NoInstall, RemoteDistributionPoint
 
 Required: False
@@ -516,7 +516,7 @@ Indicates whether to allow a server to restart following a software update.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -531,7 +531,7 @@ Indicates whether to allow a workstation to restart following a software update.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -549,7 +549,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -564,7 +564,7 @@ Indicates whether to allow the software update to install, even if the installat
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -580,7 +580,7 @@ To obtain a software update deployment object, use the [Get-CMSoftwareUpdate](./
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSoftwareUpdateDeploymentByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -596,7 +596,7 @@ To obtain a software update group object, use the [Get-CMSoftwareUpdateGroup](./
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -612,7 +612,7 @@ A software update group contains individual software updates.
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -627,7 +627,7 @@ Specifies a name for a software update group.
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -642,7 +642,7 @@ Specifies an ID for a software update in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareUpdateDeploymentByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -657,7 +657,7 @@ Specifies a name for a software update in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareUpdateDeploymentByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -673,7 +673,7 @@ UTC time makes the software update available at the same time for all computers.
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: LocalTime, Utc
 
 Required: False
@@ -689,7 +689,7 @@ Specifies an unprotected type.
 ```yaml
 Type: UnprotectedType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NoInstall, UnprotectedDistributionPoint
 
 Required: False
@@ -705,7 +705,7 @@ Indicates whether to use Branch Cache as a distribution point for updates.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -720,7 +720,7 @@ Specifies a user notification type.
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -741,7 +741,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: VerbosityLevelType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AllMessages, OnlySuccessAndErrorMessages, OnlyErrorMessages
 
 Required: False
@@ -779,5 +779,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Start-CMSoftwareUpdateDeployment](./Start-CMSoftwareUpdateDeployment.md)
-
-

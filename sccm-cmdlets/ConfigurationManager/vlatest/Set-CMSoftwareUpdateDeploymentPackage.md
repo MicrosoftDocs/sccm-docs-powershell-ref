@@ -83,7 +83,7 @@ Specifies a description for the deployment package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,13 +138,13 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a CMSoftwareUpdateDeploymentPackage object.
-To obtain an CMSoftwareUpdateDeploymentPackage object, use the Get-CMSoftwareUpdateDeploymentPackage cmdlet.
+Specifies a **CMSoftwareUpdateDeploymentPackage** object.
+To obtain an **CMSoftwareUpdateDeploymentPackage** object, use the [Get-CMSoftwareUpdateDeploymentPackage](./Get-CMSoftwareUpdateDeploymentPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +159,7 @@ Specifies a name for the deployment package.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,7 +174,7 @@ Specifies a new name for the deployment package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,12 +184,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +220,7 @@ Specifies a distribution priority for the deployment package.
 ```yaml
 Type: Priorities
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: High, Normal, Low
 
 Required: False
@@ -304,5 +305,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdateDeploymentPackage](./Get-CMSoftwareUpdateDeploymentPackage.md)
 
 [Remove-CMSoftwareUpdateDeploymentPackage](./Remove-CMSoftwareUpdateDeploymentPackage.md)
-
-

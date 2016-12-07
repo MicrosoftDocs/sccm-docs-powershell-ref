@@ -73,16 +73,16 @@ Accept wildcard characters: False
 Specifies the severity for the software update.
 Valid values are:
 
-- Critical 
-- Important 
-- Low 
+- Critical
+- Important
+- Low
 - Moderate
 - None
 
 ```yaml
 Type: CustomSeverityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Low, Moderate, Important, Critical
 
 Required: False
@@ -98,7 +98,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ To obtain a software update object, use the [Get-CMSoftwareUpdate](./Get-CMSoftw
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -215,5 +215,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Save-CMSoftwareUpdate](./Save-CMSoftwareUpdate.md)
 
 [Sync-CMSoftwareUpdate](./Sync-CMSoftwareUpdate.md)
-
-
