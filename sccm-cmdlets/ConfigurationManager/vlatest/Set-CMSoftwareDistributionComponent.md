@@ -37,7 +37,7 @@ You can configure the properties of an object to meet the demands that clients p
 
 ### Example 1: Set properties of a software distribution component
 ```
-PS C:\>Set-CMSoftwareDistributionComponent -SiteCode "CM2" -MaximumPackageCount 3 -MaximumThreadsPerPackage 6 -RetryCount 99 -DelayBeforeRetryingMinutes 31 -MulticastRetryCount 4 -MulticastDelayBeforeRetryingMinutes 2 -NetworkAccessAccount "Western\ElisaDaugherty"
+PS C:\> Set-CMSoftwareDistributionComponent -SiteCode "CM2" -MaximumPackageCount 3 -MaximumThreadsPerPackage 6 -RetryCount 99 -DelayBeforeRetryingMinutes 31 -MulticastRetryCount 4 -MulticastDelayBeforeRetryingMinutes 2 -NetworkAccessAccount "Western\ElisaDaugherty"
 ```
 
 The following command sets all properties for a software distribution component.

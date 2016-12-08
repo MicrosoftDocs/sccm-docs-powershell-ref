@@ -24,7 +24,7 @@ The **Set-CMQueryResultMaximum** cmdlet changes the setting for the maximum numb
 
 ### Example 1: Set the query result maximum
 ```
-PS C:\>Set-CMQueryResultMaximum -Maximum 2500
+PS C:\> Set-CMQueryResultMaximum -Maximum 2500
 ```
 
 This command sets the maximum number of rows that a Configuration Manager report query can return to 2500.

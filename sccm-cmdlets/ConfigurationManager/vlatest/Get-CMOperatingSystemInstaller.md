@@ -32,7 +32,7 @@ An operating system installer is an installation package that contains all the f
 
 ### Example 1: Get an operating system installer
 ```
-PS C:\>Get-CMOperatingSystemInstaller -Name "OSInstPkg01"-SecuredScopeNames "SecScope02"
+PS C:\> Get-CMOperatingSystemInstaller -Name "OSInstPkg01"-SecuredScopeNames "SecScope02"
 ```
 
 This command gets the operating system installer named OSInstPkg01 for the security scope named SecScope02.

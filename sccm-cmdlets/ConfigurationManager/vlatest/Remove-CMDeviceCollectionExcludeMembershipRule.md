@@ -76,7 +76,7 @@ For more information about collection rules in Microsoft System Center Configura
 
 ### Example 1: Remove the exclude membership rules from a device collection
 ```
-PS C:\>Remove-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS C:\> Remove-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command removes the rules that exclude the members of the collection that has the ID SMSDM001 from the device collection that has the ID 9990000D.

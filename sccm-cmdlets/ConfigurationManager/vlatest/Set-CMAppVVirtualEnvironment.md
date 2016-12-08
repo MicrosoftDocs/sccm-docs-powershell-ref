@@ -41,7 +41,7 @@ You can specify App-V environments by name or ID.
 
 ### Example 1: Change virtual environment settings by using a name
 ```
-PS C:\>Set-CMAppVVirtualEnvironment -Name "VMWin03" -SecurityScopeAction RemoveMembership -SecurityScopeName "ClientSecGroup01"
+PS C:\> Set-CMAppVVirtualEnvironment -Name "VMWin03" -SecurityScopeAction RemoveMembership -SecurityScopeName "ClientSecGroup01"
 ```
 
 This command removes the virtual environment named VMWin03 from the security scope named ClientSecGroup01.

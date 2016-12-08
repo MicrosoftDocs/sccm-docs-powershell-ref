@@ -41,7 +41,7 @@ Maintenance windows are periods of time reserved for write operations such as ap
 
 ### Example 1: Create a maintenance window
 ```
-PS C:\>$MWSchedule = New-CMSchedule -DayOfWeek Friday -DurationCount 0 -DurationInterval Hours -RecurCount 1 -Start "10/12/2013 21:00:00"
+PS C:\> $MWSchedule = New-CMSchedule -DayOfWeek Friday -DurationCount 0 -DurationInterval Hours -RecurCount 1 -Start "10/12/2013 21:00:00"
 PS C:\> New-CMMaintenanceWindow -CollectionID "AAA0005D" -Name "MonthlySchedule" -Schedule $MWSchedule
 ```
 

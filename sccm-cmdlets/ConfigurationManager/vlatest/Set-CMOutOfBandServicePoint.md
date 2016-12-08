@@ -36,14 +36,14 @@ An out of band service point is a site system role that provisions and configure
 
 ### Example 1: Change settings of an out of band service point
 ```
-PS C:\>Set-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2" -ErrorRetryMinutesDelay 1 -TransmissionThreadCount 1 -TransmissionStartMinutesInterval 1 -EnableCrlChecking 1 -ProvisioningCertificateThumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
+PS C:\> Set-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2" -ErrorRetryMinutesDelay 1 -TransmissionThreadCount 1 -TransmissionStartMinutesInterval 1 -EnableCrlChecking 1 -ProvisioningCertificateThumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
 ```
 
 This command changes the settings of the out of band service point from the System Center Configuration Manager site that has the site code named CM2 on the site system named cmcen-dist02.tsqa.contoso.com.
 
 ### Example 2: Change settings of an out of band service point by using an object variable
 ```
-PS C:\>$Osp = Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2"
+PS C:\> $Osp = Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2"
 PS C:\> Set-CMOutOfBandServicePoint -InputObject $Osp -ErrorRetryCount 1 -ErrorRetryMinutesDelay 1 -TransmissionThreadCount 1 -TransmissionStartMinutesInterval 1 -EnableCrlChecking 1 -ProvisioningCertificateThumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
 ```
 

@@ -37,7 +37,7 @@ The **Get-CMAutomaticAmtProvisioningStatus** cmdlet gets the current automatic p
 
 ### Example 1: Get the automatic provisioning status of a computer
 ```
-PS C:\>Get-CMAutomaticAmtProvisioningStatus -DeviceName "CMDIV-WEST03"
+PS C:\> Get-CMAutomaticAmtProvisioningStatus -DeviceName "CMDIV-WEST03"
 ```
 
 This command gets the automatic provisioning status of a computer with an AMT management controller named CMDIV-WEST03.

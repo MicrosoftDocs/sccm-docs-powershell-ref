@@ -32,14 +32,14 @@ For more information about Endpoint Protection in Configuration Manager, see [En
 
 ### Example 1: Remove an Endpoint Protection point
 ```
-PS C:\>Remove-CMEndpointProtectionPoint -SiteSystemServerName "CMServer01.Contoso.com" -SiteCode "CM1"
+PS C:\> Remove-CMEndpointProtectionPoint -SiteSystemServerName "CMServer01.Contoso.com" -SiteCode "CM1"
 ```
 
 This command removes an Endpoint Protection point.
 
 ### Example 2: Remove an Endpoint Protection point by using an input object
 ```
-PS C:\>$EPP = Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com" 
+PS C:\> $EPP = Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com" 
 PS C:\> Remove-CMEndpointProtectionPoint -InputObject $EPP
 ```
 

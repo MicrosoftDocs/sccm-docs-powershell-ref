@@ -50,7 +50,7 @@ This command adds the web application deployment type named DT1 from the specifi
 
 ### Example 2: Add a web application deployment type by using the pipeline
 ```
-PS C:\>Get-CMApplication -Name "testweb" | Add-CMWebApplicationDeploymentType -Url "http://www.contoso.com" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS C:\> Get-CMApplication -Name "testweb" | Add-CMWebApplicationDeploymentType -Url "http://www.contoso.com" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command gets the application object named testweb and uses the pipeline operator to pass the object to **Add-CMWebApplicationDeploymentType**.

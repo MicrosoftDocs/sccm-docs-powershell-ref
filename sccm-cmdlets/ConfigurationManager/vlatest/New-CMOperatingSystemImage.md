@@ -25,7 +25,7 @@ Operating system images are .wim format files and represent a compressed collect
 
 ### Example 1: Create an operating system image
 ```
-PS C:\>New-CMOperatingSystemImage -Name "STANDARD_WIN7" -Path "\\Contoso01\CM\Images\STANDARD_WIN7.wim"
+PS C:\> New-CMOperatingSystemImage -Name "STANDARD_WIN7" -Path "\\Contoso01\CM\Images\STANDARD_WIN7.wim"
 ```
 
 This command creates the operating system image named STANDARD_WIN7 and specifies the network path to the installation source files of the operating system image.

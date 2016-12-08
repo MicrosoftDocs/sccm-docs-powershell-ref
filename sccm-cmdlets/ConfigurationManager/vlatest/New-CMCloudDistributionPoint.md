@@ -32,7 +32,7 @@ For more information about cloud distribution points, see [Planning for Content 
 
 ### Example 1: Create a cloud distribution point
 ```
-PS C:\>New-CMCloudDistributionPoint -ManagementCertificatePath "C:\Certificates\Management.pfx" -Region "WestUS" -ServiceCertificatePath "C:\Certificates\Distribution.pfx" -ServiceCName "distribution-server.contoso.com" -SiteCode "ContosoSite"-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"
+PS C:\> New-CMCloudDistributionPoint -ManagementCertificatePath "C:\Certificates\Management.pfx" -Region "WestUS" -ServiceCertificatePath "C:\Certificates\Distribution.pfx" -ServiceCName "distribution-server.contoso.com" -SiteCode "ContosoSite"-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"
 ```
 
 This command creates a distribution with the canonical name server.contoso.com.

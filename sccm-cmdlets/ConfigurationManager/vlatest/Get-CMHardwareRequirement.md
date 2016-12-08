@@ -30,7 +30,7 @@ You can use hardware requirements with other cmdlets, such as the **Remove-CMHar
 
 ### Example 1: Get a hardware requirement
 ```
-PS C:\>Get-CMHardwareRequirement -Product "Accounts Program"
+PS C:\> Get-CMHardwareRequirement -Product "Accounts Program"
 IsLocal     : False
 MinCPU      : 233
 MinDiskFree : 1572864

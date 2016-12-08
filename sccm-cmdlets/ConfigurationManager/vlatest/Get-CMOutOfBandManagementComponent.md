@@ -26,14 +26,14 @@ Out of band management lets you connect to a computer AMT management controller 
 
 ### Example 1: Get an out of band management component by using a site code
 ```
-PS C:\>Get-CMOutOfBandManagementComponent -SiteCode "CM4"
+PS C:\> Get-CMOutOfBandManagementComponent -SiteCode "CM4"
 ```
 
 This command gets the out of band management component from the client site that has code CM4.
 
 ### Example 2: Get an out of band management component by using a site server name
 ```
-PS C:\>Get-CMOutOfBandManagementComponent -SiteSystemServerName "condev-test04.tsqa.corp.contoso.com"
+PS C:\> Get-CMOutOfBandManagementComponent -SiteSystemServerName "condev-test04.tsqa.corp.contoso.com"
 ```
 
 This command gets the out of band management component from the site server named condev-test04.tsqa.corp.contoso.com in the client site.

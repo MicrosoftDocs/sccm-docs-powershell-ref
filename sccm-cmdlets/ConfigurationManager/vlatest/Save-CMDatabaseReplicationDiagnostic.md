@@ -30,7 +30,7 @@ Diagnostics identify problems in database replication.
 
 ### Example 1: Save database replication diagnostic
 ```
-PS C:\>Save-CMDatabaseReplicationDiagnostic -ChildSiteCode "CC2" -FileName "D:\Diagnostics\CCB_CC2_Diagnostics.csv" -ParentSiteCode "CCB"
+PS C:\> Save-CMDatabaseReplicationDiagnostic -ChildSiteCode "CC2" -FileName "D:\Diagnostics\CCB_CC2_Diagnostics.csv" -ParentSiteCode "CCB"
 ```
 
 This command saves database replication diagnostics in a file named CCB_CC2_Diagnostics.csv.

@@ -71,7 +71,7 @@ A modification to the boot image does not change its source package.
 
 ### Example 1: Rename a boot image object that is identified by using its ID
 ```
-PS C:\>Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
+PS C:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
 ```
 
 This command retrieves a boot image by using its ID, and then renames the boot image.
@@ -79,7 +79,7 @@ Depending on replication issues, this modification can take a long time to displ
 
 ### Example 2: Rename a boot image object that is identified by using its name
 ```
-PS C:\>Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
+PS C:\> Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
 ```
 
 This command retrieves a boot image by using its name, and then renames the boot image.

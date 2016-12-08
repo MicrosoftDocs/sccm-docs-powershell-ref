@@ -38,7 +38,7 @@ This cmdlet does not delete VHD images.
 
 ### Example 1: Remove a VHD image
 ```
-PS C:\>Remove-CMVhd -Name "Windows 10 Enterprise" -Force
+PS C:\> Remove-CMVhd -Name "Windows 10 Enterprise" -Force
 ```
 
 This command removes the virtual hard disk (VHD) image named Windows 10 Enterprise.

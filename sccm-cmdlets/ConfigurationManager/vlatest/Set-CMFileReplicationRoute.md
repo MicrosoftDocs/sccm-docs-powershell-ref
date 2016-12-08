@@ -61,7 +61,7 @@ The functionality of file replication routes is the same as that of addresses in
 
 ### Example 1: Specify a file replication route by using a replication account name
 ```
-PS C:\>Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -FileReplicationAccountName "11\12" -Unlimited
+PS C:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -FileReplicationAccountName "11\12" -Unlimited
 ```
 
 This command specifies a file replication route between the source site named CM2 and the destination site named SS2.
@@ -69,7 +69,7 @@ It uses the user account name 11\12 for file replication.
 
 ### Example 2: Specify a file replication route by using a source and destination site names
 ```
-PS C:\>Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -ControlNetworkLoadSchedule -DaysOfWeek Friday, Sunday -AvailabilityLevel All
+PS C:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -ControlNetworkLoadSchedule -DaysOfWeek Friday, Sunday -AvailabilityLevel All
 ```
 
 This command specifies a file replication route between the source site named CM2 and the destination site named SS2.

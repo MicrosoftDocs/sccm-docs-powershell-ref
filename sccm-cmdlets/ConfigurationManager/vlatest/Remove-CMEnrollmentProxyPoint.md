@@ -33,7 +33,7 @@ After you remove an enrollment proxy point, mobile devices must use a different 
 
 ### Example 1: Remove an enrollment proxy point
 ```
-PS C:\>Remove-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "SiteServer01.Contoso.com"
+PS C:\> Remove-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "SiteServer01.Contoso.com"
 ```
 
 This command removes an enrollment proxy point.

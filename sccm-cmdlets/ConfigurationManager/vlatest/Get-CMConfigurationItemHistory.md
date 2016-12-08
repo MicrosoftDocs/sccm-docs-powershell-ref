@@ -44,14 +44,14 @@ This cmdlet also gets the history for a specified revision of an item.
 
 ### Example 1: Get item history by name
 ```
-PS C:\>Get-CMConfigurationItemHistory -Name "CMCI07"
+PS C:\> Get-CMConfigurationItemHistory -Name "CMCI07"
 ```
 
 This command gets the history for a configuration item named CMCI07.
 
 ### Example 2: Get item history by ID
 ```
-PS C:\>Get-CMConfigurationItemHistory -Id "16777568"
+PS C:\> Get-CMConfigurationItemHistory -Id "16777568"
 ```
 
 This command gets the previous version of a configuration item with the specified ID.

@@ -24,7 +24,7 @@ The **ConvertTo-CMApplication** cmdlet converts an application object to an appl
 
 ### Example 1: Get an application and convert it
 ```
-PS C:\>Get-CMApplication -Name "Application01" | ConvertTo-CMApplication
+PS C:\> Get-CMApplication -Name "Application01" | ConvertTo-CMApplication
 ```
 
 This command gets the application object named Application01 and uses the pipeline operator to pass the object to **ConvertTo-CMApplication**, which converts the application object to an application SDK object.

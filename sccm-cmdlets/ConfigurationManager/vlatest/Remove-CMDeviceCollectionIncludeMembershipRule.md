@@ -73,7 +73,7 @@ The **Remove-CMDeviceCollectionIncludeMembershipRule** cmdlet removes an Include
 
 ### Example 1: Remove an Include Collections membership rule
 ```
-PS C:\>Remove-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems" -Force
+PS C:\> Remove-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems" -Force
 ```
 
 This command removes the Include Collections membership rule named All Systems from the device collection named Device.
@@ -81,7 +81,7 @@ Specifying the *Force* parameter indicates that the membership rule is removed w
 
 ### Example 2: Remove an include membership rule by using the pipeline
 ```
-PS C:\>Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems" -Force
+PS C:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems" -Force
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Remove-CMDeviceCollectionIncludeMembershipRule**.

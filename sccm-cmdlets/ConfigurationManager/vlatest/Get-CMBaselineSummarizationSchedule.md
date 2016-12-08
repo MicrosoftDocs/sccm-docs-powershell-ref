@@ -23,7 +23,7 @@ The **Get-CMBaselineSummarizationSchedule** cmdlet gets the schedule by which th
 
 ### Example 1: Get the update schedule for configuration baseline data
 ```
-PS C:\>Get-CMBaselineSummarizationSchedule
+PS C:\> Get-CMBaselineSummarizationSchedule
 ```
 
 This command gets the update schedule for configuration baseline data.

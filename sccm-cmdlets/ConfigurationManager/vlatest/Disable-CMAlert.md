@@ -46,7 +46,7 @@ This command disables an alert that has the ID 16777218.
 
 ### Example 2: Disable an alert by using alert object variable
 ```
-PS C:\>$AlertObj = Get-CMAlert -Id "16777221"
+PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
 PS C:\> Disable-CMAlert -InputObject $AlertObj
 ```
 

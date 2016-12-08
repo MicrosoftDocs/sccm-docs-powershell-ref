@@ -27,7 +27,7 @@ Use [Add-CMObjectSecurityScope](./Add-CMObjectSecurityScope.md) and [Remove-CMOb
 
 ### Example 1: Add a security scope to application objects by using the pipeline
 ```
-PS C:\>Get-CMApplication -Name "Application*" | Set-CMObjectSecurityScope -Action AddMembership -Name "Scope1"
+PS C:\> Get-CMApplication -Name "Application*" | Set-CMObjectSecurityScope -Action AddMembership -Name "Scope1"
 ```
 
 This command gets all application objects that have a name beginning with Application and uses the pipeline operator to pass the objects to **Set-CMObjectSecurityScope**.
@@ -35,7 +35,7 @@ This command gets all application objects that have a name beginning with Applic
 
 ### Example 2: Add a security scope to application objects
 ```
-PS C:\>Set-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Action AddMembership -Name "Scope1"
+PS C:\> Set-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Action AddMembership -Name "Scope1"
 ```
 
 This command gets all application objects that have a name beginning with Application and adds the security scope named Scope1 to each application object.

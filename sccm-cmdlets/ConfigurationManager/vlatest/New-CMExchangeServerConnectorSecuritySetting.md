@@ -27,7 +27,7 @@ An Exchange Server connector in System Center Configuration Manager manages mobi
 
 ### Example 1: Configure security settings for a mobile device
 ```
-PS C:\>New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
+PS C:\> New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
 ```
 
 This command sets the following security options for a mobile device:

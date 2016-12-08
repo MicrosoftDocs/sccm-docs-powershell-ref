@@ -41,7 +41,7 @@ If you delete an application deployment, or remove a resource from the collectio
 
 ### Example 1: Remove an application deployment
 ```
-PS C:\>Remove-CMDeployment -ApplicationName "CMappD01" -CollectionName "All Users"
+PS C:\> Remove-CMDeployment -ApplicationName "CMappD01" -CollectionName "All Users"
 ```
 
 This command removes the Configuration Manager deployment that is associated with the application named CMappD01 and that is applied to the collection named All Users.
@@ -56,7 +56,7 @@ Because the *Force* parameter is specified, the user is not prompted before the 
 
 ### Example 3: Remove a deployment by its ID
 ```
-PS C:\>Remove-CMDeployment -DeploymentId "{890082B6-7C16-4600-8807-7E0003BC9D99}" -ApplicationName "application01" -Force
+PS C:\> Remove-CMDeployment -DeploymentId "{890082B6-7C16-4600-8807-7E0003BC9D99}" -ApplicationName "application01" -Force
 ```
 
 This command removes the deployment named application01 with the specified ID.

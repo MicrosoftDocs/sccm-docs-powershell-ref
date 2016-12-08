@@ -47,7 +47,7 @@ Client computers use remote connection profiles to remotely connect to computers
 
 ### Example 1: Modify a remote connection profile configuration item
 ```
-PS C:\>Set-CMRemoteConnectionProfileConfigurationItem -ID "AAA0004D" -EnablePrimaryUsers $False -EnableTSConnection $False -EnableTSFirewallRule $False
+PS C:\> Set-CMRemoteConnectionProfileConfigurationItem -ID "AAA0004D" -EnablePrimaryUsers $False -EnableTSConnection $False -EnableTSFirewallRule $False
 ```
 
 This command modifies the remote connection profile configuration item with the ID AAA0004D.

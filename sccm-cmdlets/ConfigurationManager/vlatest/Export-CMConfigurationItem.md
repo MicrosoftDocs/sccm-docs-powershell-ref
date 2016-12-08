@@ -55,7 +55,7 @@ This command exports a configuration item named ConfigItem76 to the specified fi
 
 ### Example 3: Export an item using a variable
 ```
-PS C:\>$CIObj=Get-CMConfigurationItem -Id "16777568"
+PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
 PS C:\> Export-CMConfigurationItem -InputObject $CIObj -Path "C:\Exports\CI16777568.cab"
 ```
 

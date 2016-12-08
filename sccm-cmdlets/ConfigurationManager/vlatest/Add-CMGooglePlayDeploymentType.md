@@ -51,7 +51,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add a Google Play deployment type by using the pipeline
 ```
-PS C:\>Get-CMApplication -Name "TestGooglePlay" | Add-CMGooglePlayDeploymentType -DeploymentTypeName "DTGooglePlay01" -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
+PS C:\> Get-CMApplication -Name "TestGooglePlay" | Add-CMGooglePlayDeploymentType -DeploymentTypeName "DTGooglePlay01" -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
 ```
 
 This command gets the application object named TestGooglePlay and uses the pipeline operator to pass the object to **Add-CMGooglePlayDeploymentType**.

@@ -27,7 +27,7 @@ You can specify just the site code or just the name for a parent or child and ge
 
 ### Example 1: Get status using site codes
 ```
-PS C:\>Get-CMDataBaseReplicationStatus -ChildSiteCode "CCC" -ParentSiteCode "CCA"
+PS C:\> Get-CMDataBaseReplicationStatus -ChildSiteCode "CCC" -ParentSiteCode "CCA"
 ```
 
 This command gets the status of a database replication link for the child with a site code CCC and the parent with a site code CCA.

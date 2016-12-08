@@ -39,14 +39,14 @@ You can get all the outstanding conflicts for Configuration Manager or specify a
 
 ### Example 1: Get all conflicting records
 ```
-PS C:\>Get-CMConflictingRecord
+PS C:\> Get-CMConflictingRecord
 ```
 
 This command gets all the unresolved conflicts for Configuration Manager.
 
 ### Example 2: Get a named conflicting record
 ```
-PS C:\>Get-CMConflictingRecord -Name "CR07"
+PS C:\> Get-CMConflictingRecord -Name "CR07"
 ```
 
 This command gets a conflict named CR07.

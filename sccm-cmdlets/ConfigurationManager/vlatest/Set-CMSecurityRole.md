@@ -38,7 +38,7 @@ You can use this cmdlet to change the name and description of a security role.
 
 ### Example 1: Change the name of a security role by using an ID
 ```
-PS C:\>Set-CMSecurityRole -Id "CM100003" -NewName "RTOperator02"
+PS C:\> Set-CMSecurityRole -Id "CM100003" -NewName "RTOperator02"
 ```
 
 This command renames the security role that has the ID CM100003.
@@ -46,7 +46,7 @@ The command changes the name to RTOperator02.
 
 ### Example 2: Change the name of a security role by using a name
 ```
-PS C:\>Set-CMSecurityRole -Name "SRole02" -NewName "RTOperator02"
+PS C:\> Set-CMSecurityRole -Name "SRole02" -NewName "RTOperator02"
 ```
 
 This command renames the security role named SRole02.
@@ -54,7 +54,7 @@ The command changes the name to RTOperator02.
 
 ### Example 3: Change the name of a security role by using an object variable
 ```
-PS C:\>$Srole = Get-CMSecurityRole -Id "CM100003"
+PS C:\> $Srole = Get-CMSecurityRole -Id "CM100003"
 PS C:\> Set-CMSecurityRole -Inputobject $Srole -NewName "RTOperator02"
 ```
 

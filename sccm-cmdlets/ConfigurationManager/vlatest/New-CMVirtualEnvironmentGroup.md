@@ -35,7 +35,7 @@ When an application is installed or when a client evaluates installed applicatio
 
 ### Example 1: Create a virtual environment group
 ```
-PS C:\>New-CMVirtualEnvironmentGroup -DeploymentType "Office_Standard" -Name "Office Remote Apps"
+PS C:\> New-CMVirtualEnvironmentGroup -DeploymentType "Office_Standard" -Name "Office Remote Apps"
 ```
 
 This command creates a virtual environment group named Office Remote Apps for the deployment type Office_Standard.

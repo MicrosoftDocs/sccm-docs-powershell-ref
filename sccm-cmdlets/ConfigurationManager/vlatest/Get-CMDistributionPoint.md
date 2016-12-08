@@ -49,14 +49,14 @@ The **Get-CMDistributionPoint** cmdlet gets a distribution point.
 
 ### Example 1: Get a distribution point
 ```
-PS C:\>Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.contoso.com"
+PS C:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.contoso.com"
 ```
 
 This command gets the distribution point for the site system server named MySiteSys_11310.contoso.com.
 
 ### Example 2: Get a distribution point by using the pipeline
 ```
-PS C:\>Get-CMDistributionPointGroup -Name "DPGroup" | Get-CMDistributionPoint
+PS C:\> Get-CMDistributionPointGroup -Name "DPGroup" | Get-CMDistributionPoint
 ```
 
 This command gets the distribution point group object named DPGroup and uses the pipeline operator to pass the object to **Get-CMDistributionPoint**, which gets all of the distribution points for the distribution point group object.

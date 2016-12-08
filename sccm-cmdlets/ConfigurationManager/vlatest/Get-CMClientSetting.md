@@ -33,7 +33,7 @@ For more information about client settings, see [About Client Settings in Config
 
 ### Example 1: Get a collection of customized client settings that is specified by its name
 ```
-PS C:\>Get-CMClientSetting -Name "Windows 8 Client Computers Settings"
+PS C:\> Get-CMClientSetting -Name "Windows 8 Client Computers Settings"
 AgentConfigurations: {}
 AssignmentCount:     0
 CreatedBy:           Contoso\DChew

@@ -27,7 +27,7 @@ The **Set-CMHierarchySetting** cmdlet sets hierarchy settings in Microsoft Syste
 
 ### Example 1: Modify the hierarchy setting
 ```
-PS C:\>Set-CMHierarchySetting -AllowPrestage -ApprovalMethod AutomaticallyApproveAllComputers
+PS C:\> Set-CMHierarchySetting -AllowPrestage -ApprovalMethod AutomaticallyApproveAllComputers
 ```
 
 This command uses the **Set-CMHierarchySetting** cmdlet to modify the hierarchy setting.

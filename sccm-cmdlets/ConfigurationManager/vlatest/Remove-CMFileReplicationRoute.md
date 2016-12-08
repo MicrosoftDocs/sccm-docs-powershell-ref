@@ -29,7 +29,7 @@ The functionality of file replication routes is the same as that of addresses in
 
 ### Example 1: Remove a file replication route
 ```
-PS C:\>Remove-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode "IM1"
+PS C:\> Remove-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode "IM1"
 ```
 
 This command removes a file replication route from the site that has the site code IM1 to the site that has the site code IM5.

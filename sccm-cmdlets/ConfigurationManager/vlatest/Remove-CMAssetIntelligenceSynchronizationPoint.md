@@ -32,14 +32,14 @@ After you remove an Asset Intelligence synchronization point, the Microsoft Syst
 
 ### Example 1: Remove an Asset Intelligence synchronization point
 ```
-PS C:\>Remove-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM1"
+PS C:\> Remove-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM1"
 ```
 
 This command removes the Asset Intelligence synchronization point on the System Center Configuration Manager site that has the site code CM1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
 
 ### Example 2: Remove an Asset Intelligence synchronization point by using an object variable
 ```
-PS C:\>$AIsync = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "WEST04.CORP.CONTOSO.COM" -SiteCode "ST1"
+PS C:\> $AIsync = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "WEST04.CORP.CONTOSO.COM" -SiteCode "ST1"
 PS C:\> Remove-CMAssetIntelligenceSynchronizationPoint -InputObject $AIsync
 ```
 

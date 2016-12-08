@@ -45,7 +45,7 @@ For more information about collections, see [Introduction to Collections in Conf
 
 ### Example 1: Get a user collection
 ```
-PS C:\>Get-CMUserCollection -CollectionId "9990000D"
+PS C:\> Get-CMUserCollection -CollectionId "9990000D"
 ```
 
 This command gets the user collection that has the ID 9990000D.

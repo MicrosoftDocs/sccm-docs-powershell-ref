@@ -32,7 +32,7 @@ A management point is a site system role that provides policy and service locati
 
 ### Example 1: Get a management point
 ```
-PS C:\>Get-CMManagementPoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1" >>\CMmgmt01\Get-CMManagementPoint_data.txt
+PS C:\> Get-CMManagementPoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1" >>\CMmgmt01\Get-CMManagementPoint_data.txt
 ```
 
 This command gets a management point that is associated with the site system named cmcen-dist02.tsqa.contoso.com and the site code CM1.

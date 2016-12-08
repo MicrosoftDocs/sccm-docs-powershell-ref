@@ -61,7 +61,7 @@ The **Set-CMDistributionPoint** cmdlet modifies a distribution point on a site s
 
 ### Example 1: Set properties of a distribution point
 ```
-PS C:\>$DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+PS C:\> $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
 PS C:\> Set-CMDistributionPoint -InputObject $DP -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $False -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
 ```
 
@@ -71,7 +71,7 @@ The second command modifies the distribution point object stored in $DP.
 
 ### Example 2: Set properties of a distribution point by using the pipeline
 ```
-PS C:\>Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
+PS C:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
 ```
 
 This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and uses the pipeline operator to pass the object to **Set-CMDistributionPoint**, which modifies the distribution point object.

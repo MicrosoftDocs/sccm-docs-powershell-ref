@@ -50,7 +50,7 @@ This command adds the mobile Windows Installer deployment type named DTMobile fr
 
 ### Example 2: Add a deployment type by using the pipeline
 ```
-PS C:\>Get-CMApplication "TestMobile" | Add-CMMobileMsiDeploymentType -ContentLocation "\\127.0.0.1\c$\UnitTest\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile02" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
+PS C:\> Get-CMApplication "TestMobile" | Add-CMMobileMsiDeploymentType -ContentLocation "\\127.0.0.1\c$\UnitTest\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile02" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
 ```
 
 This command gets the application object named TestMobile and uses the pipeline operator to pass the object to **Add-CMMobileMsiDeploymentType**.

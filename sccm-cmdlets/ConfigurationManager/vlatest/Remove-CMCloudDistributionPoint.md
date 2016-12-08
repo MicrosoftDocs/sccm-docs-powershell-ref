@@ -40,7 +40,7 @@ If you want to suspend a distribution point temporarily, use the [Stop-CMCloudDi
 
 ### Example 1: Remove all distribution points
 ```
-PS C:\>Remove-CMCloudDistributionPoint
+PS C:\> Remove-CMCloudDistributionPoint
 ```
 
 This command removes all the cloud distribution points from System Center Configuration Manager.
@@ -48,7 +48,7 @@ Unless you use the *Force* parameter, the cmdlet prompts you for confirmation.
 
 ### Example 2: Remove a distribution point using a name
 ```
-PS C:\>Remove-CMCloudDistributionPoint -Name "West01"
+PS C:\> Remove-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command removes the cloud distribution point named West01.
@@ -56,7 +56,7 @@ Unless you use the *Force* parameter, the cmdlet prompts you for confirmation.
 
 ### Example 3: Remove a distribution point using an ID
 ```
-PS C:\>Remove-CMCloudDistributionPoint -Id "16777236"
+PS C:\> Remove-CMCloudDistributionPoint -Id "16777236"
 ```
 
 This command removes the cloud distribution point that has the specified identifier.

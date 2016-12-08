@@ -25,7 +25,7 @@ For more information about Endpoint Protection summarization schedules, see [How
 
 ### Example 1: Modify an Endpoint Protection summarization schedules
 ```
-PS C:\>Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "Days"
+PS C:\> Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "Days"
 ```
 
 This command modifies the interval and unit values to specify that 10 days pass before the Endpoint Protection Summarization Schedule runs again.

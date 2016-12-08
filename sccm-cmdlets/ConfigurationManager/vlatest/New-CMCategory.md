@@ -25,7 +25,7 @@ Configuration categories offer an optional method of sorting and filtering confi
 
 ### Example 1: Create a configuration category
 ```
-PS C:\>New-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
+PS C:\> New-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
 ```
 
 This command creates a new category in DriverCategories named NewLaptopDriverSet.

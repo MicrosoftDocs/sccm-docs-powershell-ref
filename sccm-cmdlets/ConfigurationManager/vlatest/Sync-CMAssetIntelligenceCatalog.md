@@ -32,7 +32,7 @@ When you manually request catalog synchronization with System Center Online, it 
 
 ### Example 1: Update the Asset Intelligence catalog
 ```
-PS C:\>Sync-CMAssetIntelligenceCatalog -SiteCode "CM2" -SiteSystemServerName "Contoso-west02"
+PS C:\> Sync-CMAssetIntelligenceCatalog -SiteCode "CM2" -SiteSystemServerName "Contoso-west02"
 ```
 
 This command the updates the Asset Intelligence catalog on the System Center Configuration Manager site that has the site code CM2 on the site system server named Contoso-west02.

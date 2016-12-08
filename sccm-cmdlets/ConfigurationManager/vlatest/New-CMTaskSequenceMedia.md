@@ -114,7 +114,7 @@ The **New-CMTaskSequenceMedia** cmdlet creates task sequence media in Microsoft 
 
 ### Example 1: Create task sequence media with the captured media option
 ```
-PS C:\>New-CMTaskSequenceMedia -CaptureMediaOption -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\1.iso" -MediaInputType CDDVD -BootImageName "Boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET"
+PS C:\> New-CMTaskSequenceMedia -CaptureMediaOption -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\1.iso" -MediaInputType CDDVD -BootImageName "Boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET"
 ```
 
 This command creates task sequence media by specifying the *CaptureMediaOption* parameter.
@@ -122,7 +122,7 @@ The command also specifies a value for the *MediaPath* parameter, and a value fo
 
 ### Example 2: Create task sequence media with the standalone media option
 ```
-PS C:\>$Group = @{"6"="8";}
+PS C:\> $Group = @{"6"="8";}
 PS C:\> New-CMTaskSequenceMedia -StandAloneMediaOption -Variable $Group -MediaInputType CDDVD -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\111 - Copy.iso" -ProtectPassword 0 -TaskSequenceId "CCC0000B" -TaskSequenceDistributionPointServerName "\\Contoso320.Contoso319DOM.NET"
 ```
 
@@ -132,14 +132,14 @@ The second command creates task sequence media by specifying the *StandAloneMedi
 
 ### Example 3: Create task sequence media with the bootable media option
 ```
-PS C:\>New-CMTaskSequenceMedia -BootableMediaOption -MediaInputType CDDVD -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\111 - Copy (6).iso" -MediaMode Dynamic -ProtectPassword 0 -BootImageName "boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET" -ManagementnPointNetworkOperatingSystemPath "Contoso320.Contoso319DOM.NET"
+PS C:\> New-CMTaskSequenceMedia -BootableMediaOption -MediaInputType CDDVD -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\111 - Copy (6).iso" -MediaMode Dynamic -ProtectPassword 0 -BootImageName "boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET" -ManagementnPointNetworkOperatingSystemPath "Contoso320.Contoso319DOM.NET"
 ```
 
 This command creates task sequence media by specifying the *BootableMediaOption* parameter.
 
 ### Example 4: Create task sequence media with the prestaged media option
 ```
-PS C:\>New-CMTaskSequenceMedia -PrestagedMediaOption -MediaMode Dynamic -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\2.wim"  -ProtectPassword 0 -TaskSequenceId "CCC0000B" -BootImageName "boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET" -ManagementnPointNetworkOperatingSystemPath "Contoso320.Contoso319DOM.NET" -OperatingSystemImageDistributionPointServerName "Contoso320.Contoso319DOM.NET" -TaskSequenceDistributionPointServerName "\\Contoso320.Contoso319DOM.NET"
+PS C:\> New-CMTaskSequenceMedia -PrestagedMediaOption -MediaMode Dynamic -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\2.wim"  -ProtectPassword 0 -TaskSequenceId "CCC0000B" -BootImageName "boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET" -ManagementnPointNetworkOperatingSystemPath "Contoso320.Contoso319DOM.NET" -OperatingSystemImageDistributionPointServerName "Contoso320.Contoso319DOM.NET" -TaskSequenceDistributionPointServerName "\\Contoso320.Contoso319DOM.NET"
 ```
 
 This command uses the **New-CMTaskSequenceMedia** cmdlet to create task sequence media by specifying the *PrestagedMediaOption* parameter.

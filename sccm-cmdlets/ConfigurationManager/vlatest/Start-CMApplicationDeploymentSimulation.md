@@ -41,7 +41,7 @@ Use simulated deployment to test an application deployment without installing an
 
 ### Example 1: Start an application deployment simulation
 ```
-PS C:\>Start-CMApplicationDeploymentSimulation -CollectionName "All Mobile Devices" -Name "WIN8_UPDATE2" -DeployAction Install
+PS C:\> Start-CMApplicationDeploymentSimulation -CollectionName "All Mobile Devices" -Name "WIN8_UPDATE2" -DeployAction Install
 ```
 
 This command starts a deployment simulation of the installation of the application named WIN8_UPDATE2 for the target collection named All Mobile Devices.

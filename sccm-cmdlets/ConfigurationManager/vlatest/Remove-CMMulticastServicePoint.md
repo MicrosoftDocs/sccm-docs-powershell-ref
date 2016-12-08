@@ -31,7 +31,7 @@ The **Remove-CMMulticastServicePoint** cmdlet removes the multicast service poin
 
 ### Example 1: Remove a multicast service point by using the pipeline
 ```
-PS C:\>Get-CMMulticastServicePoint -SiteSystemServerName "server1.contoso.com" -SiteCode "PS1" | Remove-CMMulticastServicePoint -RemoveWds -Force
+PS C:\> Get-CMMulticastServicePoint -SiteSystemServerName "server1.contoso.com" -SiteCode "PS1" | Remove-CMMulticastServicePoint -RemoveWds -Force
 ```
 
 This command gets the multicast service point object with the site system server name of server1.contoso.com and site code PS1 and uses the pipeline operator to pass the object to **Remove-CMMulticastServicePoint**, which removes the multicast service point and WDS.
@@ -39,7 +39,7 @@ Using the *Force* parameter indicates that the user is not prompted for confirma
 
 ### Example 2: Remove a multicast service point
 ```
-PS C:\>Remove-CMMulticastServicePoint -SiteSystemServerName "server1.contoso.com" -SiteCode "PS1" -RemoveWds -Force
+PS C:\> Remove-CMMulticastServicePoint -SiteSystemServerName "server1.contoso.com" -SiteCode "PS1" -RemoveWds -Force
 ```
 
 This command removes the multicast service point with the site system server name of server1.contoso.com and site code PS1.

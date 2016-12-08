@@ -83,14 +83,14 @@ You can specify these values by ID or name, or you can use the [Get-CMDistributi
 
 ### Example 1: Remove a distribution point by using an ID
 ```
-PS C:\>Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointId "SMS000022"
+PS C:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointId "SMS000022"
 ```
 
 This command removes a distribution point that has an ID of SMS000022 from a distribution point group that has the ID SMS000067.
 
 ### Example 2: Remove a distribution point by using a name
 ```
-PS C:\>Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointName "Western office distribution point" -Force
+PS C:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointName "Western office distribution point" -Force
 ```
 
 This command removes a distribution point, specified by its name, from a distribution point group that has the ID SMS000067.

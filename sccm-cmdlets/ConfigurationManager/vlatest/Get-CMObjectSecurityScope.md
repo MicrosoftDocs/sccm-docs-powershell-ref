@@ -31,14 +31,14 @@ The **Get-CMObjectSecurityScope** cmdlet gets the security scopes that are assoc
 
 ### Example 1: Get security scopes for an application object
 ```
-PS C:\>Get-CMApplication -Name "Application1" | Get-CMObjectSecurityScope
+PS C:\> Get-CMApplication -Name "Application1" | Get-CMObjectSecurityScope
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Get-CMObjectSecurityScope**, which gets all security scopes associated with the application object.
 
 ### Example 2: Get a security scope
 ```
-PS C:\>Get-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application1") -Name "Scope1"
+PS C:\> Get-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application1") -Name "Scope1"
 ```
 
 This command gets the security scope named Scope1 that is associated with the application object named Application1.

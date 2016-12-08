@@ -44,7 +44,7 @@ A classic software distribution is a legacy software distribution program on a c
 
 ### Example 1: Get the status of a deployment
 ```
-PS C:\>Get-CMDeploymentStatus -Name "Depack01"
+PS C:\> Get-CMDeploymentStatus -Name "Depack01"
 ```
 
 This command gets the status of a deployment that is distributed to Configuration Manager clients by using the deployment package named Depack01.

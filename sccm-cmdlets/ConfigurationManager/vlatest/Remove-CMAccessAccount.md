@@ -117,7 +117,7 @@ For example, members in the Software Update Point Connection Access Account can 
 
 ### Example 1: Remove a user from an access account for an application by using its name
 ```
-PS C:\>Remove-CMAccessAccount -ApplicationName "SharePoint 2010" -Type WindowsUser -UserName "CONTOSO\ENarvaez" -Confirm
+PS C:\> Remove-CMAccessAccount -ApplicationName "SharePoint 2010" -Type WindowsUser -UserName "CONTOSO\ENarvaez" -Confirm
 ```
 
 This command removes a Windows user from the access account for an application that is specified by using its name.
@@ -125,7 +125,7 @@ You must confirm the action before the command performs it.
 
 ### Example 2: Remove a group from an access account for a package by using its ID
 ```
-PS C:\>$ID = Get-CMAccessAccount -PackageId "CM1100002" 
+PS C:\> $ID = Get-CMAccessAccount -PackageId "CM1100002" 
 PS C:\> Remove-CMAccessAccount -PackageId $ID -Type WindowsGroup -UserName "CONTOSO\Guest"
 ```
 

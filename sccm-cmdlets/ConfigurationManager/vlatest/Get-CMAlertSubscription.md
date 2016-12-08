@@ -33,21 +33,21 @@ If you do not specify anything, the cmdlet returns the properties of all alert s
 
 ### Example 1: Display all alert subscriptions
 ```
-PS C:\>Get-CMAlertSubscription
+PS C:\> Get-CMAlertSubscription
 ```
 
 This command displays all System Center Configuration Manager alert subscriptions.
 
 ### Example 2: Display alert subscriptions by ID by using wildcard characters
 ```
-PS C:\>Get-CMAlertSubscription -Id 16777*
+PS C:\> Get-CMAlertSubscription -Id 16777*
 ```
 
 This command displays all System Center Configuration Manager alert subscriptions that have an ID that starts with the number 16777.
 
 ### Example 3: Display an alert subscription by name
 ```
-PS C:\>Get-CMAlertSubscription -Name "Subscription01"
+PS C:\> Get-CMAlertSubscription -Name "Subscription01"
 ```
 
 This command displays the System Center Configuration Manager alert subscription named Subscription01.

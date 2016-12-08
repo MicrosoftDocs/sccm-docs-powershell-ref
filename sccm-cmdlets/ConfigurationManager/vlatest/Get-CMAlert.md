@@ -31,14 +31,14 @@ You can get a specific alert by specifying the name or ID of the alert.
 
 ### Example 1: Get all alerts
 ```
-PS C:\>Get-CMAlert
+PS C:\> Get-CMAlert
 ```
 
 This command gets all alerts that System Center Configuration Manager manages.
 
 ### Example 2: Get alerts by using name
 ```
-PS C:\>Get-CMAlert -Name "D*"
+PS C:\> Get-CMAlert -Name "D*"
 ```
 
 This command gets all alerts that have a name that begins with the letter D.

@@ -31,7 +31,7 @@ You must specify a viewing period, as a **TimeSpan** object.
 
 ### Example 1: Get critical messages for a site
 ```
-PS C:\>Get-CMComponentStatusMessage -ViewingPeriod "2/1/2013 12:00 AM" -Severity Warning -SiteCode "CM1"
+PS C:\> Get-CMComponentStatusMessage -ViewingPeriod "2/1/2013 12:00 AM" -Severity Warning -SiteCode "CM1"
 ```
 
 This command gets component status messages for the specified viewing period for the Configuration Manager site that has the site code CM1.

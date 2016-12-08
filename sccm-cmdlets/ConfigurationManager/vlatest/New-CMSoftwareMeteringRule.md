@@ -39,7 +39,7 @@ For more information about software metering in System Center Configuration Mana
 
 ### Example 1: Create a software metering rule
 ```
-PS C:\>New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System" 
+PS C:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System" 
 ApplyToChildSites : True
 Comment           : 
 Enabled           : True

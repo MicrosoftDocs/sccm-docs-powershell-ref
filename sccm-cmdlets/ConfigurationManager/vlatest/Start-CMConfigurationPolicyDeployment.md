@@ -99,7 +99,7 @@ You can specify System Center 2016 - Operations Manager monitoring criteria.
 
 ### Example 1: Start deployment of a firewall policy
 ```
-PS C:\>Start-CMConfigurationPolicyDeployment -CollectionName "Desktop systems" -FirewallPolicyName "General firewall policy"
+PS C:\> Start-CMConfigurationPolicyDeployment -CollectionName "Desktop systems" -FirewallPolicyName "General firewall policy"
 ```
 
 This command starts the configuration policy deployment for a collection named Desktop systems.

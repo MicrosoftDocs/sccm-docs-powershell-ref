@@ -43,7 +43,7 @@ You can also create custom software labels.
 
 ### Example 1: Remove a catalog item by category name
 ```
-PS C:\>Remove-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools"
+PS C:\> Remove-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools"
 ```
 
 This command removes the category named Database Tools from the Asset Intelligence catalog.

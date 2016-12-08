@@ -37,14 +37,14 @@ The **Remove-CMAlert** cmdlet removes one or more Microsoft System Center Config
 
 ### Example 1: Remove an alert by using alert ID
 ```
-PS C:\>Remove-CMAlert -Id "16777223"
+PS C:\> Remove-CMAlert -Id "16777223"
 ```
 
 This command removes an alert that has the ID 16777223.
 
 ### Example 2: Remove an alert by using alert object variable
 ```
-PS C:\>$AlertObj = Get-CMAlert -Id "16777221"
+PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
 PS C:\> Remove-CMAlert -InputObject $AlertObj
 ```
 

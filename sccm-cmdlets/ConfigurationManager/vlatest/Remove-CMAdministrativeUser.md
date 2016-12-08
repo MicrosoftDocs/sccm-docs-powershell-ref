@@ -38,7 +38,7 @@ When you remove an administrative user, Configuration Manager revokes the access
 
 ### Example 1: SearchByValueMandatory, pipeline
 ```
-PS C:\>Get-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" | Remove-CMAdministrativeUser -Force
+PS C:\> Get-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" | Remove-CMAdministrativeUser -Force
 ```
 
 This command gets the administrative user object named AdminUser1 who is a member of the Application Administrator role and uses the pipeline operator to pass the object to **Remove-CMAdministrativeUser**, which removes the adminsitrative user.
@@ -46,7 +46,7 @@ Specifying the *Force* parameter indicates that the user is not prompted for con
 
 ### Example 2: SearchByName
 ```
-PS C:\>Remove-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" -Force
+PS C:\> Remove-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" -Force
 ```
 
 This command removes the administrative user named AdminUser1 who is a member of the Application Administrator role.

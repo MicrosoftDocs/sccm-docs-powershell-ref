@@ -32,7 +32,7 @@ The cmdlet gets summary information about application, Software Update Managemen
 
 ### Example 1: Get a deployment for a collection
 ```
-PS C:\>Get-CMDeployment -CollectionName "deviceCol1" -FeatureType "Application"
+PS C:\> Get-CMDeployment -CollectionName "deviceCol1" -FeatureType "Application"
 ```
 
 This command gets the Application deployment for the device collection named deviceCol1.

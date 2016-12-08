@@ -24,7 +24,7 @@ The **New-CMDriverPackage** cmdlet creates a driver package.
 
 ### Example 1: Create a new driver package
 ```
-PS C:\>New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifuller\Desktop\pckg" -PackageSourceType StorageDirect
+PS C:\> New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifuller\Desktop\pckg" -PackageSourceType StorageDirect
 ```
 
 This command creates a new driver package named Pckg01.

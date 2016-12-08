@@ -38,14 +38,14 @@ You can specify the association to remove by specifying both computers in the as
 
 ### Example 1: Remove an association by using computer names
 ```
-PS C:\>Remove-CMComputerAssociation -DestinationComputer "West155" -SourceComputer "West073"
+PS C:\> Remove-CMComputerAssociation -DestinationComputer "West155" -SourceComputer "West073"
 ```
 
 This command removes the computer association between the computers named West155 and West073.
 
 ### Example 2: Remove an association by using an ID
 ```
-PS C:\>Remove-CMComputerAssociation -MigrationId "MID1207" -Force
+PS C:\> Remove-CMComputerAssociation -MigrationId "MID1207" -Force
 ```
 
 This command removes the computer association that has the ID MID1207.
@@ -53,7 +53,7 @@ This command uses the *Force* parameter, so the cmdlet does not prompt you for c
 
 ### Example 3: Remove an association by using a variable
 ```
-PS C:\>$CMCA = Get-CMComputerAssociation -MigrationId "MID1207"
+PS C:\> $CMCA = Get-CMComputerAssociation -MigrationId "MID1207"
 PS C:\> Remove-CMComputerAssociation -InputObject $CMCA -Force
 ```
 

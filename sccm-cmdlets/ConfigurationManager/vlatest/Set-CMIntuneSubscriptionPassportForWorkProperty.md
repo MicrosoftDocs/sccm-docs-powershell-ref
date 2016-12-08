@@ -29,7 +29,7 @@ NOTE: Windows Hello for Business was previously known as Microsoft Passport for 
 
 ### Example 1: Enable Windows Hello for business
 ```
-PS C:\>Set-CMIntuneSubscriptionPassportForWorkProperty -Enable $True -RequireTpm $True -MinPinLength 5 -MaxPinLength 8 -AllowUpperCase $True -AllowLowerCase $True -AllowSpecialChar $True -PinExpirationDays 2 -PreventPinReuseCount 3 -EnableBiometrics $False -EnableEnhancedBiometrics $False -UseRemotePassport $False
+PS C:\> Set-CMIntuneSubscriptionPassportForWorkProperty -Enable $True -RequireTpm $True -MinPinLength 5 -MaxPinLength 8 -AllowUpperCase $True -AllowLowerCase $True -AllowSpecialChar $True -PinExpirationDays 2 -PreventPinReuseCount 3 -EnableBiometrics $False -EnableEnhancedBiometrics $False -UseRemotePassport $False
 ```
 
 This command enables Windows Hello for business for enrolled devices.

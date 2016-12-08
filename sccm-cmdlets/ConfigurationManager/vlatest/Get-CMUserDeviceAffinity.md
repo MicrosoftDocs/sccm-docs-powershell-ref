@@ -44,28 +44,28 @@ User device affinity in Microsoft System Center Configuration Manager is a metho
 
 ### Example 1: Get a user device affinity by using a user name
 ```
-PS C:\>Get-CMUserDeviceAffinity -UserName "CENTRAL\001D$"
+PS C:\> Get-CMUserDeviceAffinity -UserName "CENTRAL\001D$"
 ```
 
 This command gets the user device affinity for the user named CENTRAL\001D$.
 
 ### Example 2: Get a user device affinity by using a user ID
 ```
-PS C:\>Get-CMUserDeviceAffinity -UserID "2063597981"
+PS C:\> Get-CMUserDeviceAffinity -UserID "2063597981"
 ```
 
 This command gets the user device affinity for the user that has the ID named 2063597981.
 
 ### Example 3: Get a user device affinity by using a device name
 ```
-PS C:\>Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
+PS C:\> Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
 ```
 
 This command gets the user device affinity for the device named CMCEN-DIST02.
 
 ### Example 4: Get a user device affinity by using a device ID
 ```
-PS C:\>Get-CMUserDeviceAffinity -DeviceID "2097152000"
+PS C:\> Get-CMUserDeviceAffinity -DeviceID "2097152000"
 ```
 
 This command gets the user device affinity for the device that has the ID 2097152000.

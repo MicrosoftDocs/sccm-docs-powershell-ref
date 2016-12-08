@@ -36,14 +36,14 @@ After you modify the categorization information for predefined software, the val
 
 ### Example 1: Change the Asset Intelligence hardware inventory reporting classes
 ```
-PS C:\>Set-CMAssetIntelligenceClass -EnableReportingClassName SMS_InstalledExecutable -DisableReportingClassName MS_InstalledSoftware
+PS C:\> Set-CMAssetIntelligenceClass -EnableReportingClassName SMS_InstalledExecutable -DisableReportingClassName MS_InstalledSoftware
 ```
 
 This command enables the reporting class named SMS_InstalledExecutable and disables the reporting class named MS_InstalledSoftware.
 
 ### Example 2: Enable all Asset Intelligence hardware inventory reporting classes
 ```
-PS C:\>Set-CMAssetIntelligenceClass -EnableAllReportingClass
+PS C:\> Set-CMAssetIntelligenceClass -EnableAllReportingClass
 ```
 
 This command enables all the Asset Intelligence hardware inventory reporting classes.

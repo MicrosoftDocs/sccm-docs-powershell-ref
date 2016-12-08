@@ -37,7 +37,7 @@ The **Set-CMMulticastServicePoint** cmdlet updates the configuration of multicas
 
 ### Example 1: Modify a multicast service point by using the pipeline
 ```
-PS C:\>Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" | Set-CMMulticastServicePoint -UserName $null -StartIPAddress 224.0.1.0 -EndIPAddress 239.255.255.255 -StartUdpPort 64001 -EndUdpPort 65000 -ClientTransferRate Profile100Mbps -MaximumClientCount 100 -EnableScheduledMulticast $true -SessionStartDelayMins 15 -MinimumClientCount 20
+PS C:\> Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" | Set-CMMulticastServicePoint -UserName $null -StartIPAddress 224.0.1.0 -EndIPAddress 239.255.255.255 -StartUdpPort 64001 -EndUdpPort 65000 -ClientTransferRate Profile100Mbps -MaximumClientCount 100 -EnableScheduledMulticast $true -SessionStartDelayMins 15 -MinimumClientCount 20
 ```
 
 This command gets the multicast service point object with the site system server name server1.contoso.com and uses the pipeline operator to pass the object to **Set-CMMulticastServicePoint**.
@@ -46,7 +46,7 @@ The command also sets the minimum and maximum client count, and sets a start del
 
 ### Example 2: Modify a multicast service point
 ```
-PS C:\>Set-CMMulticastServicePoint -SiteSystemServerName "server02.contoso.com" -UserName "contoso\administrator" -StartIPAddress 224.0.1.0 -EndIPAddress 239.255.255.255 -StartUdpPort 64001 -EndUdpPort 65000 -ClientTransferRate "Profile100Mbps" -MaximumClientCount 100 -EnableScheduledMulticast $true -SessionStartDelayMins 15 -MinimumClientCount 20
+PS C:\> Set-CMMulticastServicePoint -SiteSystemServerName "server02.contoso.com" -UserName "contoso\administrator" -StartIPAddress 224.0.1.0 -EndIPAddress 239.255.255.255 -StartUdpPort 64001 -EndUdpPort 65000 -ClientTransferRate "Profile100Mbps" -MaximumClientCount 100 -EnableScheduledMulticast $true -SessionStartDelayMins 15 -MinimumClientCount 20
 ```
 
 This command updates the multicast service point settings for the site system server named server1.contoso.com using the administrator account.

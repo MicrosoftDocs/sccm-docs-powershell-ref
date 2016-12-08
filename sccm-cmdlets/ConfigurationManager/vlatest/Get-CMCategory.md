@@ -31,7 +31,7 @@ Configuration categories offer an optional method of sorting and filtering confi
 
 ### Example 1: Get configuration categories by using a name
 ```
-PS C:\>Get-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
+PS C:\> Get-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
 ```
 
 This command gets configuration driver categories in Configuration Manager that have the name NewLaptopDriverSet.

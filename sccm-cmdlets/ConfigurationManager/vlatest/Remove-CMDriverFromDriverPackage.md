@@ -74,7 +74,7 @@ When you remove a driver from a driver package, the device driver content is del
 
 ### Example 1: Remove a driver from a driver package
 ```
-PS C:\>Remove-CMDriverfromDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -DriverPackageName "DrvPkg01"
+PS C:\> Remove-CMDriverfromDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -DriverPackageName "DrvPkg01"
 ```
 
 This command removes the driver named Adaptec Embedded SCSI HostRAID Controller from the boot image named DrvPkg01.

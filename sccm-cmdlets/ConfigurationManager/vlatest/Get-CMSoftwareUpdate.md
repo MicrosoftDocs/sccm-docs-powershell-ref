@@ -55,14 +55,14 @@ Clients receive a software update object when manually or automatically deployin
 
 ### Example 1: Get software updates that have been downloaded
 ```
-PS C:\>Get-CMSoftwareUpdate -IsContentProvisioned $True
+PS C:\> Get-CMSoftwareUpdate -IsContentProvisioned $True
 ```
 
 This command gets all software updates that have been downloaded.
 
 ### Example 2: Get software updates by update group
 ```
-PS C:\>Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Get-CMSoftwareUpdate
+PS C:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Get-CMSoftwareUpdate
 ```
 
 This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Get-CMSoftwareUpdate**, which gets all software updates for the software update group object.

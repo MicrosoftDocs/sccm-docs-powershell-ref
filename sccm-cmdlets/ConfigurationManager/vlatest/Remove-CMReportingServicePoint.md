@@ -34,14 +34,14 @@ After you remove a reporting service point from a System Center Configuration Ma
 
 ### Example 1: Remove a reporting service point
 ```
-PS C:\>Remove-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
+PS C:\> Remove-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
 ```
 
 This command removes the reporting service point from the System Center Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
 
 ### Example 2: Remove a reporting service point by using an object variable
 ```
-PS C:\>$Rsp = Get-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
+PS C:\> $Rsp = Get-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
 PS C:\> Remove-CMReportingServicePoint -InputObject $Rsp
 ```
 

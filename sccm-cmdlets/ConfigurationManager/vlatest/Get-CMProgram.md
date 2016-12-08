@@ -40,14 +40,14 @@ You can associate multiple programs with the same package.
 
 ### Example 1: Get all programs
 ```
-PS C:\>Get-CMProgram
+PS C:\> Get-CMProgram
 ```
 
 This command gets all programs in System Center Configuration Manager.
 
 ### Example 2: Get a program by using a name and an ID
 ```
-PS C:\>Get-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
+PS C:\> Get-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
 ```
 
 This command gets the program named ProgramD02 in the package that has the ID ST10000F.

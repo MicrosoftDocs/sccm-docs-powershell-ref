@@ -38,7 +38,7 @@ This command gets the device enrollment manager named User01.
 
 ### Example 2: Get a device enrollment manager by ID
 ```
-PS C:\>Get-CMMdmEnrollmentManager -ID "1234567890"
+PS C:\> Get-CMMdmEnrollmentManager -ID "1234567890"
 ```
 
 This command gets the device enrollment manager named 1234567890.

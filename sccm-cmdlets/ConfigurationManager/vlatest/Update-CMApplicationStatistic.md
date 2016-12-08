@@ -51,7 +51,7 @@ This command updates statistics for an application named Test.
 
 ### Example 3: Update statistics for an application by name by using a variable
 ```
-PS C:\>$App = Get-CMApplication -Name "Test"
+PS C:\> $App = Get-CMApplication -Name "Test"
 PS C:\> Update-CMApplicationStatistic -InputObject $App
 ```
 

@@ -54,7 +54,7 @@ For more information about Configuration Manager collections, see [Introduction 
 
 ### Example 1: Create a device collection
 ```
-PS C:\>New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
+PS C:\> New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
 ```
 
 This command creates a collection for all computers that run Windows® 7.

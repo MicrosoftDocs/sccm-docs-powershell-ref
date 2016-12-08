@@ -35,14 +35,14 @@ For more information about configuration items, see [Introduction to Compliance 
 
 ### Example 1: Get an item using a name
 ```
-PS C:\>Get-CMConfigurationItem -Name "ConfigItem76"
+PS C:\> Get-CMConfigurationItem -Name "ConfigItem76"
 ```
 
 This command gets a configuration item named ConfigItem76.
 
 ### Example 2: Get an item to use with another cmdlet
 ```
-PS C:\>$CIObj=Get-CMConfigurationItem -Id "16777568"
+PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
 PS C:\> Remove-CMConfigurationItem -InputObject $CIObj
 ```
 

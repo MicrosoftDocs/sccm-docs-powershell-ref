@@ -56,14 +56,14 @@ You can associate multiple programs with the same package.
 
 ### Example 1: Create a standard program
 ```
-PS C:\>New-CMProgram -PackageName "test" -StandardProgramName SPM -CommandLine "RunMe" -WorkingDirectory "C:\temp" -RunType Hidden -ProgramRunType OnlyWhenNoUserIsLoggedOn -DiskSpaceRequirement 100 -DiskSpaceUnit GB -Duration 100 -DriveMode RenameWithUnc
+PS C:\> New-CMProgram -PackageName "test" -StandardProgramName SPM -CommandLine "RunMe" -WorkingDirectory "C:\temp" -RunType Hidden -ProgramRunType OnlyWhenNoUserIsLoggedOn -DiskSpaceRequirement 100 -DiskSpaceUnit GB -Duration 100 -DriveMode RenameWithUnc
 ```
 
 This command creates a standard program in Configuration Manager.
 
 ### Example 2: Create a device program
 ```
-PS C:\>New-CMProgram -PackageName "Contoso-12" -DeviceProgramName DPM -Comment "Upgrades for December" -WorkingDirectory "C:\temp" -CommandLine "RunMe" -CommandLineFolder "C:\Windows\" -DiskSpaceRequirement 10 -DiskSpaceUnit GB -DownloadProgramType OnlyWhenTheDeviceIsDocked -Requirement "All previous updates"
+PS C:\> New-CMProgram -PackageName "Contoso-12" -DeviceProgramName DPM -Comment "Upgrades for December" -WorkingDirectory "C:\temp" -CommandLine "RunMe" -CommandLineFolder "C:\Windows\" -DiskSpaceRequirement 10 -DiskSpaceUnit GB -DownloadProgramType OnlyWhenTheDeviceIsDocked -Requirement "All previous updates"
 ```
 
 This command creates a device program in Configuration Manager.

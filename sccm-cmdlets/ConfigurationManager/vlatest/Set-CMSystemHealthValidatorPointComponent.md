@@ -45,7 +45,7 @@ To specify a system health validator point to modify, specify a site code or nam
 
 ### Example 1: Modify settings of a system health validator point by using a name
 ```
-PS C:\>Set-CMSystemHealthValidatorPointComponent -Name "SHVPC02.TSQA.Contoso.com" -QueryInterval 60 -ValidityPeriod 24
+PS C:\> Set-CMSystemHealthValidatorPointComponent -Name "SHVPC02.TSQA.Contoso.com" -QueryInterval 60 -ValidityPeriod 24
 ```
 
 This command modifies settings of a system health validator point named SHVPC02.TSQA.Contoso.com.

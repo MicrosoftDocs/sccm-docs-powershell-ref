@@ -30,21 +30,21 @@ You can also create custom software labels.
 
 ### Example 1: Create category label item in the catalog
 ```
-PS C:\>New-CMAssetIntelligenceCatalogItem -CategoryName "Databases" -LanguageId 1033 -Type TypeTag
+PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Databases" -LanguageId 1033 -Type TypeTag
 ```
 
 This command creates a category label in the Asset Intelligence catalog named Databases that has a language ID of 1033 and a type of TypeTag.
 
 ### Example 2: Create a category item in the catalog
 ```
-PS C:\>New-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -Type TypeCategory
+PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -Type TypeCategory
 ```
 
 This command creates a category in the Asset Intelligence catalog named Database Tools that has a type of TypeCategory.
 
 ### Example 3: Create a category family in the catalog
 ```
-PS C:\>New-CMAssetIntelligenceCatalogItem -CategoryName "Database Software" -Type TypeFamily
+PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Software" -Type TypeFamily
 ```
 
 This command creates a category family item in the Asset Intelligence catalog family named Database Software that has a type of TypeFamily.

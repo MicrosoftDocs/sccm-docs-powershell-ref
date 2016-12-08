@@ -37,7 +37,7 @@ The **Set-CMManagementPointComponent** cmdlet sets a component for a management 
 
 ### Example 1: Set a management point component
 ```
-PS C:\>Set-CMManagementPointComponent -SiteCode "CM1" -PublishDNS $True
+PS C:\> Set-CMManagementPointComponent -SiteCode "CM1" -PublishDNS $True
 ```
 
 The command sets a management point component by using the *SiteCode* parameter.

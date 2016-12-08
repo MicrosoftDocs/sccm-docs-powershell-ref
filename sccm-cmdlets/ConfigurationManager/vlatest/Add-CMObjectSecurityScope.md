@@ -37,7 +37,7 @@ The **Add-CMObjectSecurityScope** cmdlet adds security scope to a Microsoft Syst
 
 ### Example 1: Add a security scope to application objects by using the pipeline
 ```
-PS C:\>$Scope = New-CMSecurityScope -Name "Scope1" -Description "Security scope 1"
+PS C:\> $Scope = New-CMSecurityScope -Name "Scope1" -Description "Security scope 1"
 PS C:\> Get-CMApplication -Name "Application*" | Add-CMObjectSecurityScope -Scope $Scope
 ```
 

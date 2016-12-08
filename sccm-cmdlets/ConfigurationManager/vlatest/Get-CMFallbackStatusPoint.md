@@ -35,7 +35,7 @@ You can use this cmdlet to get a fallback status point to use with other cmdlets
 
 ### Example 1: Get a fallback status point
 ```
-PS C:\>Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
+PS C:\> Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
 ```
 
 This command gets a fallback status point for the site with the site code cm1 and the system name Server21.West01.Contoso.com.

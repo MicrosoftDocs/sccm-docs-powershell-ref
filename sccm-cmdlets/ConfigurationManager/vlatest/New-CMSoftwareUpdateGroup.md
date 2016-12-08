@@ -28,7 +28,7 @@ After you deploy a software update group, you can add new software updates to th
 
 ### Example 1: Create a software update group
 ```
-PS C:\>New-CMSoftwareUpdateGroup -Name "ClientUpdateGroup01" -UpdateID 100027 -Description "Client software update group 01 for Accounts Payable"
+PS C:\> New-CMSoftwareUpdateGroup -Name "ClientUpdateGroup01" -UpdateID 100027 -Description "Client software update group 01 for Accounts Payable"
 ```
 
 This command creates a software update group named ClientUpdateGroup01 that includes the software update that has the update ID 100027.

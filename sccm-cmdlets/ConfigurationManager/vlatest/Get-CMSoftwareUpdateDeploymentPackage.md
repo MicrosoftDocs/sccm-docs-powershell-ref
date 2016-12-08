@@ -32,14 +32,14 @@ A **CMSoftwareUpdateDeploymentPackage** object contains one or more software upd
 
 ### Example 1: Get a deployment package by using a name
 ```
-PS C:\>Get-CMSoftwareUpdateDeploymentPackage -Name "Asdset"
+PS C:\> Get-CMSoftwareUpdateDeploymentPackage -Name "Asdset"
 ```
 
 This command gets a deployment package named Asdset.
 
 ### Example 2: Get a deployment package by using an ID
 ```
-PS C:\>Get-CMSoftwareUpdateDeploymentPackage -Id "ST10000C"
+PS C:\> Get-CMSoftwareUpdateDeploymentPackage -Id "ST10000C"
 ```
 
 This command gets a deployment package that has the ID ST10000C.

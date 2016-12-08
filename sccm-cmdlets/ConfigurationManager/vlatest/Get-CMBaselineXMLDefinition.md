@@ -37,7 +37,7 @@ The **Get-CMBaselineXMLDefinition** cmdlet gets and displays the XML definition 
 
 ### Example 1: Get a configuration baseline XML definition
 ```
-PS C:\>$CIObj = Get-CMBaseline -Id "16777568"
+PS C:\> $CIObj = Get-CMBaseline -Id "16777568"
 PS C:\> Get-CMBaselineXMLDefinition -InputObject $CIObj
 ```
 

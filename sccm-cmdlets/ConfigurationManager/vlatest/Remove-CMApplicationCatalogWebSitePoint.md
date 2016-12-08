@@ -34,7 +34,7 @@ You can specify a website point to remove by site code and name of the server th
 
 ### Example 1: Remove an Application Catalog website point
 ```
-PS C:\>Remove-CMApplicationCatalogWebsitePoint -SiteCode "CM2" -SiteSystemServerName "WesternACWP.Contoso.com"
+PS C:\> Remove-CMApplicationCatalogWebsitePoint -SiteCode "CM2" -SiteSystemServerName "WesternACWP.Contoso.com"
 ```
 
 This command removes an Application Catalog website point that belongs to the site that has the site code CM2.
@@ -42,7 +42,7 @@ The computer named WesternACWP.Contoso.com hosts the point that the cmdlet remov
 
 ### Example 2: Remove an Application Catalog website point by variable
 ```
-PS C:\>$CMACWP= Get-CMApplicationCatalogWebsitePoint -SiteCode "CM2" -SiteSystemServerName"WesternACWP.Contoso.com" 
+PS C:\> $CMACWP= Get-CMApplicationCatalogWebsitePoint -SiteCode "CM2" -SiteSystemServerName"WesternACWP.Contoso.com" 
 PS C:\> Remove-CMApplicationCatalogWebsitePoint -InputObject $CMACWP -Force
 ```
 

@@ -48,7 +48,7 @@ Before you remove a security role, make sure every user has a role in addition t
 
 ### Example 1: Remove a security role by using a name
 ```
-PS C:\>Remove-CMSecurityRole -Name "MainSecurityRole" -Force
+PS C:\> Remove-CMSecurityRole -Name "MainSecurityRole" -Force
 ```
 
 This command removes a security role named MainSecurityRole from Configuration Manager.
@@ -56,7 +56,7 @@ The command uses the *Force* parameter, so it does not prompt you for confirmati
 
 ### Example 2: Remove security roles by using a variable
 ```
-PS C:\>$Roles = Get-CMSecurityRole -Name *Role 
+PS C:\> $Roles = Get-CMSecurityRole -Name *Role 
 PS C:\> Remove-CMSecurityRole -SecurityRole $Roles
 ```
 

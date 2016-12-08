@@ -32,7 +32,7 @@ When you remove a distribution point, you remove the designation of a site syste
 
 ### Example 1: Remove a distribution point by using the pipeline
 ```
-PS C:\>Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Remove-CMDistributionPoint -Force
+PS C:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Remove-CMDistributionPoint -Force
 ```
 
 This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and uses the pipeline operator to pass the object to **Remove-CMDistributionPoint**, which removes the distribution point object.
@@ -40,7 +40,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a distribution point by using an object variable
 ```
-PS C:\>$DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+PS C:\> $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
 PS C:\> Remove-CMDistributionPoint -InputObject $DP -Force
 ```
 

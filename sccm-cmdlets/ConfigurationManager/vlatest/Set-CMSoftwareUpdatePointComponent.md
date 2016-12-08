@@ -66,7 +66,7 @@ You can specify a software update point to modify by name, by site code, or by u
 
 ### Example 1: Modify a software update point
 ```
-PS C:\>$CIObj = Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
+PS C:\> $CIObj = Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
 PS C:\> Set-CMSoftwareUpdatePointComponent -InputObject $CIObj
 ```
 

@@ -45,14 +45,14 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ### Example 1: Rename a boundary group
 ```
-PS C:\>Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
+PS C:\> Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
 ```
 
 This command renames a boundary group.
 
 ### Example 2: Add a security scope to a boundary group
 ```
-PS C:\>Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
+PS C:\> Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
 ```
 
 This command adds the security scope OSDeploymentScope to the boundary group BGroup02.

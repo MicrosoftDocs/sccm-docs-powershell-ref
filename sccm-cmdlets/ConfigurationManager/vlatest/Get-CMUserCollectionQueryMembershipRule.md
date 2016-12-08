@@ -39,7 +39,7 @@ For more information about membership rules in Microsoft System Center Configura
 
 ### Example 1: Get a rule by using a collection name
 ```
-PS C:\>Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
+PS C:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
 ```
 
 This command gets the rule named Remote Users by Domain that belongs to the collection named Remote Users.

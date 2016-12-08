@@ -76,7 +76,7 @@ You can then use the discovery information to help you to install the System Cen
 
 ### Example 1: Modify network discovery
 ```
-PS C:\>Set-CMDiscoveryMethod -NetworkDiscovery -SiteCode "CM4" -Enabled $True -NetworkDiscoveryType ToplogyAndClient -SlowNetworkSpeed $True
+PS C:\> Set-CMDiscoveryMethod -NetworkDiscovery -SiteCode "CM4" -Enabled $True -NetworkDiscoveryType ToplogyAndClient -SlowNetworkSpeed $True
 ```
 
 This command modifies network discovery for the site that has the site code CM4.
@@ -85,7 +85,7 @@ The command also enables discovery.
 
 ### Example 2: Modify Active Directory system discovery
 ```
-PS C:\>$Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS C:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
 PS C:\> Set-CMDiscoveryMethod -ActiveDirectorySystemDiscovery -SiteCode "CM4" -AddAdditionalAttribute "331", "431", "134" -DeltaDiscoveryIntervalMinutes 8 -Enabled $True -EnableDeltaDiscovery $True -EnableFilteringExpiredLogon $True -PollingSchedule $Schedule -RemoveAdditionalAttribute "123","cn" -TimeSinceLastLogonDays 80
 ```
 
@@ -100,7 +100,7 @@ Also, the command adds and removes specified attributes from the attributes used
 
 ### Example 3: Modify forest discovery
 ```
-PS C:\>$Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS C:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
 PS C:\> Set-CMDiscoveryMethod -ActiveDirectoryForestDiscovery -SiteCode "CM4" -EnableActiveDirectorySiteBoundaryCreation $True -Enabled $True  -EnableSubnetBoundaryCreation $True -PollingSchedule $Schedule
 ```
 
@@ -111,7 +111,7 @@ The command specifies the schedule object stored in the $Schedule variable as th
 
 ### Example 4: Enable heartbeat discovery
 ```
-PS C:\>$Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS C:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
 PS C:\> Set-CMDiscoveryMethod -Heartbeat -SiteCode "CM4" -Enabled $True -PollingSchedule $Schedule
 ```
 

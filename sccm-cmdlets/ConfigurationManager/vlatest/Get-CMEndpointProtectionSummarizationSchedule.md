@@ -25,7 +25,7 @@ For more information about Endpoint Protection summarization schedules, see [How
 
 ### Example 1: Get an Endpoint Protection summarization schedule
 ```
-PS C:\>Get-CMEndpointProtectionSummarizationSchedule
+PS C:\> Get-CMEndpointProtectionSummarizationSchedule
 ```
 
 This command gets an Endpoint Protection summarization schedule.

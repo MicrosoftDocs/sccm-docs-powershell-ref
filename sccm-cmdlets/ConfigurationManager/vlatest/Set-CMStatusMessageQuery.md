@@ -65,21 +65,21 @@ You can specify a name or ID for a query or use the [Get-CMStatusMessageQuery](.
 
 ### Example 1: Add a security scope
 ```
-PS C:\>Set-CMStatusMessageQuery -Name "All Status Messages" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
+PS C:\> Set-CMStatusMessageQuery -Name "All Status Messages" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
 ```
 
 This command adds the security scope named Scope22 to the query named All Status Messages.
 
 ### Example 2: Delete messages
 ```
-PS C:\>Set-CMStatusMessageQuery -DeleteMessage -Name "All Active Directory Security Groups"
+PS C:\> Set-CMStatusMessageQuery -DeleteMessage -Name "All Active Directory Security Groups"
 ```
 
 This command removes messages found by the query named All Active Directory Security Groups from the System Center Configuration Manager database.
 
 ### Example 3: Rename a query
 ```
-PS C:\>Set-CMStatusMessageQuery -Name "All Active Directory Security Groups" -NewName "Western Security Groups"
+PS C:\> Set-CMStatusMessageQuery -Name "All Active Directory Security Groups" -NewName "Western Security Groups"
 ```
 
 This command renames the query All Active Directory Security Groups.

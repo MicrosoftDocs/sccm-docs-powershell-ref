@@ -55,14 +55,14 @@ The **Set-CMWindowsAppxDeploymentType** cmdlet changes the settings for a Window
 
 ### Example 1: Modify an app package deployment type
 ```
-PS C:\>Set-CMWindowsAppxdeploymentType -ApplicationName "Application1" -DeploymentTypeName "DTS" -NewName "DTS_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS C:\> Set-CMWindowsAppxdeploymentType -ApplicationName "Application1" -DeploymentTypeName "DTS" -NewName "DTS_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command changes the name of the Windows app package deployment type named DTS for the application named Application1 to DTS_New, adds English and Chinese as supported languages, and adds a description.
 
 ### Example 2: Modify an app package deployment type by using the pipeline
 ```
-PS C:\>Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DTS" | Set-CMWindowsAppxDeploymentType -NewName "DTS_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS C:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DTS" | Set-CMWindowsAppxDeploymentType -NewName "DTS_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command gets the Windows app package deployment type object named DTS for the application named Application1 and uses the pipeline operator to pass the object to **Set-CMWindowsAppxDeploymentType**.

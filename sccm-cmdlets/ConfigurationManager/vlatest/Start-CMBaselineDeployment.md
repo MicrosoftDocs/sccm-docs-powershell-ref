@@ -48,7 +48,7 @@ System Center Configuration Manager assigns baselines to computer in collections
 
 ### Example 1: Start baseline deployment
 ```
-PS C:\>Start-CMBaselineDeployment -CollectionName "All Users" -Name "Baseline22" -EnableEnforcement $True -GenerateAlert $True -MonitoredByScom $True -OverrideServiceWindow $True -ParameterValue 30
+PS C:\> Start-CMBaselineDeployment -CollectionName "All Users" -Name "Baseline22" -EnableEnforcement $True -GenerateAlert $True -MonitoredByScom $True -OverrideServiceWindow $True -ParameterValue 30
 ```
 
 This command starts a baseline deployment named Baseline22 for the collection All Users.

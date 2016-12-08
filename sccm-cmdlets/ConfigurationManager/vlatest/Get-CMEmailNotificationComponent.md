@@ -24,14 +24,14 @@ The **Get-CMEmailNotificationComponent** cmdlet gets one or more email notificat
 
 ### Example 1: Get an email notification component by using a site code
 ```
-PS C:\>Get-CMEmailNotificationComponent -SiteCode "CM2"
+PS C:\> Get-CMEmailNotificationComponent -SiteCode "CM2"
 ```
 
 This command gets a notification component for the site that has the site code CM2.
 
 ### Example 2: Get an email notification component by using a site system server name
 ```
-PS C:\>Get-CMEmailNotificationComponent -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
+PS C:\> Get-CMEmailNotificationComponent -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
 ```
 
 This command gets a notification component for the site that has the server that has the specified name.

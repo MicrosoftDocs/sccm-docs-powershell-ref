@@ -37,14 +37,14 @@ The **Enable-CMDriver** cmdlet enables a device driver in Microsoft System Cente
 
 ### Example 1: Enable a driver by using the pipeline
 ```
-PS C:\>Get-CMDriver -Name "Driver02" | Enable-CMDriver
+PS C:\> Get-CMDriver -Name "Driver02" | Enable-CMDriver
 ```
 
 This command gets the driver object named Driver02 and uses the pipeline operator to pass the object to **Enable-CMDriver**, which enables the driver object.
 
 ### Example 2: Enable a device driver that is specified by its name
 ```
-PS C:\>$Driver = Get-CMDriver -Name "Driver01"
+PS C:\> $Driver = Get-CMDriver -Name "Driver01"
 PS C:\> Enable-CMDriver -InputObject $Driver
 ```
 

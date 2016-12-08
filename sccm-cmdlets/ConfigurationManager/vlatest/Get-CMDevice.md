@@ -65,14 +65,14 @@ The **Get-CMDevice** cmdlet gets a Microsoft System Center Configuration Manager
 
 ### Example 1: Get a device by collection ID
 ```
-PS C:\>Get-CMDevice -CollectionID "SMSDM003"
+PS C:\> Get-CMDevice -CollectionID "SMSDM003"
 ```
 
 This command gets all the device objects in the device collection with the ID of SMSDM003.
 
 ### Example 2: Get a device by name
 ```
-PS C:\>Get-CMDevice -CollectionName "All systems" -Name "Win10-86-33"
+PS C:\> Get-CMDevice -CollectionName "All systems" -Name "Win10-86-33"
 ```
 
 This command gets the device named Win10-86-33 in the device collection named All systems.

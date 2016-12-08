@@ -25,7 +25,7 @@ Client computers use VPN profiles to remotely connect to a company network over 
 
 ### Example 1: Create a VPN profile configuration item
 ```
-PS C:\>New-CMVpnProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\Vpn.xml"
+PS C:\> New-CMVpnProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\Vpn.xml"
 ```
 
 This command creates a VPN profile configuration item by using the digest file C:\Digests\Vpn.xml.

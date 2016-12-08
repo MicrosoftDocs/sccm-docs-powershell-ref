@@ -37,7 +37,7 @@ The **Get-CMOperatingSystemImageUpdateSchedule** cmdlet retrieves an object that
 
 ### Example 1: Retrieve the operating system image update schedule
 ```
-PS C:\>Get-CMOperatingSystemImageUpdateSchedule -Id "1207"
+PS C:\> Get-CMOperatingSystemImageUpdateSchedule -Id "1207"
 ```
 
 This command retrieves the operating system image update schedule identified by the ID 1207.

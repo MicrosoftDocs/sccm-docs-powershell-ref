@@ -30,7 +30,7 @@ The **Get-CMSoftwareInventory** cmdlet retrieves an object that collects informa
 
 ### Example 1: Get a software inventory object
 ```
-PS C:\>Get-CMSoftwareInventory -Name "MSXML 6.0 Parser"
+PS C:\> Get-CMSoftwareInventory -Name "MSXML 6.0 Parser"
 ```
 
 This command gets the software inventory object named MSXML 6.0 Parser.

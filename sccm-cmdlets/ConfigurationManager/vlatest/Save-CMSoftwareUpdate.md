@@ -65,14 +65,14 @@ Languages determine which summary details a software update synchronizes and the
 
 ### Example 1: Save a software update and add a language to it
 ```
-PS C:\>Save-CMSoftwareUpdate -SoftwareUpdateName "Cumulative Update for Windows 10 (KB3095020)" -DeploymentPackageName "Package01" -SoftwareUpdateLanguage "English"
+PS C:\> Save-CMSoftwareUpdate -SoftwareUpdateName "Cumulative Update for Windows 10 (KB3095020)" -DeploymentPackageName "Package01" -SoftwareUpdateLanguage "English"
 ```
 
 This command saves the software update named Cumulative Update for Windows 10 (KB3095020) for the deployment package named Package01 adding English to its array of languages.
 
 ### Example 2: Save a software update from a software update group
 ```
-PS C:\>Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Save-CMSoftwareUpdate -DeploymentPackageName "Package01"
+PS C:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Save-CMSoftwareUpdate -DeploymentPackageName "Package01"
 ```
 
 This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update with the package name Package01.

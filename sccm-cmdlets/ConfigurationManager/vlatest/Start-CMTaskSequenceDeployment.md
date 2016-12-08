@@ -56,14 +56,14 @@ A task sequence deployment assigns a task sequence to a collection of computers.
 
 ### Example 1: Start a task sequence deployment
 ```
-PS C:\>Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "All Systems"
+PS C:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "All Systems"
 ```
 
 This command starts a task sequence deployment by using the name of the task sequence deployment and the name of a collection.
 
 ### Example 2: Start a task sequence deployment for devices
 ```
-PS C:\>Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "All Mobile Devices" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
+PS C:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "All Mobile Devices" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
 ```
 
 This command starts a task sequence deployment for mobile devices.

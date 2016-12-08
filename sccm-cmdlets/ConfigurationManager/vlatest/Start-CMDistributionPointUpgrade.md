@@ -60,7 +60,7 @@ Therefore, when you upgrade a distribution point, you do not have to redistribut
 
 ### Example 1: Upgrade a shared distribution point
 ```
-PS C:\>$CIObj = Get-CMDistributionPoint -DistributionPointGroupId "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
+PS C:\> $CIObj = Get-CMDistributionPoint -DistributionPointGroupId "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
 PS C:\> Start-CMDistributionPointUpgrade -AllowPreStaging $True -CertificatePath "\\Contoso01\CM\Toolbox\BaseCert.txt" -SharedDistributionPoint $CIObj -SiteCode "CM1"
 ```
 

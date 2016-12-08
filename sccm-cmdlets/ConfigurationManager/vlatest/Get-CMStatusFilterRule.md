@@ -29,7 +29,7 @@ You configure status filter rules for each site, not across all sites.
 
 ### Example 1: Get rules for a specified site
 ```
-PS C:\>Get-CMStatusFilterRule -SiteCode "CM1"
+PS C:\> Get-CMStatusFilterRule -SiteCode "CM1"
 ```
 
 This cmdlet gets status filter rules for the site that has the site code CM1.

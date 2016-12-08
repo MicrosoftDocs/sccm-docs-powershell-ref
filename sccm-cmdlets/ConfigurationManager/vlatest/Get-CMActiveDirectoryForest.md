@@ -32,21 +32,21 @@ You can get an Active Directory forest object by ID or fully qualified domain na
 
 ### Example 1: Get all Active Directory forest objects
 ```
-PS C:\>Get-CMActiveDirectoryForest
+PS C:\> Get-CMActiveDirectoryForest
 ```
 
 This command gets all Active Directory forest objects.
 
 ### Example 2: Get an Active Directory Forest object by ID
 ```
-PS C:\>Get-CMActiveDirectoryForest -Id "16777217"
+PS C:\> Get-CMActiveDirectoryForest -Id "16777217"
 ```
 
 This command gets an Active Directory forest object that has the ID 16777217.
 
 ### Example 3: Get Active Directory Forest by domain name
 ```
-PS C:\>Get-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com"
+PS C:\> Get-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com"
 ```
 
 This command gets an Active Directory forest object that has the FQDN tsqa.contoso.com.

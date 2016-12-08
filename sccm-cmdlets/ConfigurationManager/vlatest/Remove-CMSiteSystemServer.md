@@ -32,14 +32,14 @@ If the site system server has other site system roles besides the site system ro
 
 ### Example 1: Remove a site system server by using the pipeline
 ```
-PS C:\>Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" | Remove-CMSiteSystemServer -Force
+PS C:\> Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" | Remove-CMSiteSystemServer -Force
 ```
 
 This command gets the site system server object named Server2.contoso.com with the site code MP5 and uses the pipeline operator to pass the object to **Remove-CMSiteSystemServer**, which removes the site system server object.
 
 ### Example 2: Remove a site system server
 ```
-PS C:\>Remove-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" -Force
+PS C:\> Remove-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" -Force
 ```
 
 This command removes the site system server named Server2.contoso.com with the site code MP5.

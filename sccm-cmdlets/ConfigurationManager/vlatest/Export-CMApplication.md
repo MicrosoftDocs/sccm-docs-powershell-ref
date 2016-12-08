@@ -39,7 +39,7 @@ Specify a file path to the location where you want to export the application.
 
 ### Example 1: Get an application and export it
 ```
-PS C:\>Get-CMApplication "Application01" | Export-CMApplication -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export" -Force
+PS C:\> Get-CMApplication "Application01" | Export-CMApplication -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export" -Force
 ```
 
 This command gets the application object named Applicaton01 and uses the pipeline operator to pass the object to **Export-CMApplicaton**.

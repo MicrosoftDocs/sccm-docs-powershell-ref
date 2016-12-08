@@ -34,21 +34,21 @@ After you deploy a software update group, you can add new software updates to th
 
 ### Example 1: Get software update groups
 ```
-PS C:\>Get-CMSoftwareUpdateGroup
+PS C:\> Get-CMSoftwareUpdateGroup
 ```
 
 This command gets all software update groups.
 
 ### Example 2: Get a software update group by using an ID
 ```
-PS C:\>Get-CMSoftwareUpdateGroup -Id "ST10000D"
+PS C:\> Get-CMSoftwareUpdateGroup -Id "ST10000D"
 ```
 
 This command gets a software update group that has the ID ST10000D.
 
 ### Example 3: Get a software update group by using a name
 ```
-PS C:\>Get-CMSoftwareUpdateGroup CMSoftwareUpdateGroup -Name "SUGroupD01"
+PS C:\> Get-CMSoftwareUpdateGroup CMSoftwareUpdateGroup -Name "SUGroupD01"
 ```
 
 This command gets a software update group object named SUGroupD01.

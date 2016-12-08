@@ -26,21 +26,21 @@ Configuration Manager works with Exchange Server to manage mobile devices that c
 
 ### Example 1: Get all Exchange Server systems
 ```
-PS C:\>Get-CMExchangeServer
+PS C:\> Get-CMExchangeServer
 ```
 
 This command gets all the Exchange Server items for a Configuration Manager server.
 
 ### Example 2: Get an Exchange Server for a site
 ```
-PS C:\>Get-CMExchangeServer -SiteCode "PE1"
+PS C:\> Get-CMExchangeServer -SiteCode "PE1"
 ```
 
 This command gets an Exchange Server for the site identified by the site code PE1.
 
 ### Example 3: Get a specified nextref_exchange
 ```
-PS C:\>Get-CMExchangeServer -Address "http://localhost/PowerShell"
+PS C:\> Get-CMExchangeServer -Address "http://localhost/PowerShell"
 ```
 
 This command gets the Exchange Server with the specified address.

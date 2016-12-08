@@ -28,7 +28,7 @@ Objects on the exclusion list are available for migration, but System Center Con
 
 ### Example 1: Specify a migration exclusion list
 ```
-PS C:\>Set-CMMigrationExclusionList -Name "ContosoUsersWest01"
+PS C:\> Set-CMMigrationExclusionList -Name "ContosoUsersWest01"
 ```
 
 This command adds the objects in the array ContosoUsersWest01 to the migration exclusion list.

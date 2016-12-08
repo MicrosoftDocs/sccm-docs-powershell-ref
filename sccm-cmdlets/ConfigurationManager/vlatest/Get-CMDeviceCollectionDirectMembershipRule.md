@@ -70,14 +70,14 @@ The **Get-CMDeviceCollectionDirectMembershipRule** cmdlet gets one or more direc
 
 ### Example 1: Get a direct membership rule by its name
 ```
-PS C:\>Get-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01"
+PS C:\> Get-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01"
 ```
 
 This command gets the direct membership rules for the device collection named Device01.
 
 ### Example 2: Get a direct membership rule by using the pipeline
 ```
-PS C:\>Get-CMCollection -Name "Device02" | Get-CMDeviceCollectionDirectMembershipRule
+PS C:\> Get-CMCollection -Name "Device02" | Get-CMDeviceCollectionDirectMembershipRule
 ```
 
 This command gets the device collection object named Device02 and uses the pipeline operator to pass the object to Get-CMDeviceCollectionDirectMembershipRule which gets the direct membership rules for the device collection object.

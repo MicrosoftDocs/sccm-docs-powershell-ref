@@ -43,7 +43,7 @@ This command installs an Asset Intelligence synchronization point on the site sy
 
 ### Example 2: Install a scheduled Asset Intelligence synchronization point
 ```
-PS C:\>$Sc = New-CMSchedule -DayOfWeek Friday -RecurCount 2
+PS C:\> $Sc = New-CMSchedule -DayOfWeek Friday -RecurCount 2
 PS C:\> Add-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-TSQA04.CORP.CONTOSO.COM" -CertificateFile "\\Contoso01\CM\ACDataFile\AIpfx.pfx" -EnableSynchronization -ScheduleToken $Sc
 ```
 

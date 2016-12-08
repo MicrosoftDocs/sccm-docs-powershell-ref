@@ -37,7 +37,7 @@ The **Remove-CMUser** cmdlet removes user accounts from Microsoft System Center 
 
 ### Example 1: Remove a user
 ```
-PS C:\>$User = Get-CMUser -CollectionName "All Users" -Name "Contoso\user01"
+PS C:\> $User = Get-CMUser -CollectionName "All Users" -Name "Contoso\user01"
 PS C:\> Remove-CMUser -InputObject $User -Force
 ```
 
@@ -48,7 +48,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a user by using the pipeline
 ```
-PS C:\>Get-CMUser -CollectionName "All Users" -Name "Contoso\user02" | Remove-CMUser -Force
+PS C:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\user02" | Remove-CMUser -Force
 ```
 
 This command gets the user object named user02 from the All Users collection and uses the pipeline operator to pass the object to **Remove-CMUser**, which removes the user account.

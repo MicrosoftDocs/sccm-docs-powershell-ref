@@ -25,7 +25,7 @@ Before you create an alert subscription, make sure that you have configured emai
 
 ### Example 1: Create an alert subscription
 ```
-PS C:\>New-CMAlertSubscription -Name "Subscription01" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 1033 -AlertIds 16777219
+PS C:\> New-CMAlertSubscription -Name "Subscription01" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 1033 -AlertIds 16777219
 ```
 
 This command creates an alert subscription named Subscription01.

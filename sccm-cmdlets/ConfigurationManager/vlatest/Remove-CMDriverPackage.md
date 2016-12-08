@@ -38,7 +38,7 @@ After the driver package is removed, it cannot be used by any task sequence.
 
 ### Example 1: Remove a driver package that is specified by its identifier
 ```
-PS C:\>Remove-CMDriverPackage -Id "ST100062"
+PS C:\> Remove-CMDriverPackage -Id "ST100062"
 ```
 
 This command removes a driver package that is specified by its identifier.

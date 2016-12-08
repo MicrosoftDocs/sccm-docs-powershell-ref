@@ -25,7 +25,7 @@ Distribution point groups provide a logical grouping of distribution points for 
 
 ### Example 1: Create a distribution point group
 ```
-PS C:\>New-CMDistributionPointGroup -Name "DpgDept01" -Description "Western region"
+PS C:\> New-CMDistributionPointGroup -Name "DpgDept01" -Description "Western region"
 ```
 
 This command creates a distribution point group named DpgDept01 and adds a description for the distribution point group.

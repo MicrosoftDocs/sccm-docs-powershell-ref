@@ -84,14 +84,14 @@ You should add only mass storage device drivers and network adapter device drive
 
 ### Example 1: Add a driver to a boot image
 ```
-PS C:\>Set-CMDriverBootImage -SetDriveBootImageAction AddDriverToBootImage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -BootImageName "Boot image (x64)"
+PS C:\> Set-CMDriverBootImage -SetDriveBootImageAction AddDriverToBootImage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -BootImageName "Boot image (x64)"
 ```
 
 This command adds the driver named Adaptec Embedded SCSI HostRAID Controller to the boot image named Boot image (x64).
 
 ### Example 2: Remove a driver from a boot image
 ```
-PS C:\>Set-CMDriverBootImage -SetDriveBootImageAction RemoveDriverFromBootImage -DriverName "Adaptec SCSI HostRAID Management Processor Device" -BootImageName "Boot image (x64)"
+PS C:\> Set-CMDriverBootImage -SetDriveBootImageAction RemoveDriverFromBootImage -DriverName "Adaptec SCSI HostRAID Management Processor Device" -BootImageName "Boot image (x64)"
 ```
 
 This command removes the driver named Adaptec SCSI HostRAID Management Processor Device from the boot image named Boot image (x64).

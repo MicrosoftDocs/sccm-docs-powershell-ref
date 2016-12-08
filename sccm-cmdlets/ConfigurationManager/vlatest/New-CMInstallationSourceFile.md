@@ -40,7 +40,7 @@ Instead, it forwards information that it gets from clients to a primary site tha
 
 ### Example 1: Create an installation source file
 ```
-PS C:\>New-CMInstallationSourceFile -CopyFromParentSiteServer
+PS C:\> New-CMInstallationSourceFile -CopyFromParentSiteServer
 ```
 
 This command creates an installation source file for a secondary site installation by copying the installation files from the primary site.

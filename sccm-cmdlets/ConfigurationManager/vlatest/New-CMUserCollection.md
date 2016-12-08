@@ -54,7 +54,7 @@ For more information about Configuration Manager collections, see [Introduction 
 
 ### Example 1: Create a user collection
 ```
-PS C:\>New-CMUserCollection -Name "Sales" -LimitingCollectionName "All Users"
+PS C:\> New-CMUserCollection -Name "Sales" -LimitingCollectionName "All Users"
 ```
 
 This command creates a collection for all users in the Sales department.

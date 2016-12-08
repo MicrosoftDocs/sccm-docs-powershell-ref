@@ -37,7 +37,7 @@ You can specify a software update point by site code or by the name of the compu
 
 ### Example 1: Get a software update point
 ```
-PS C:\>Get-CMSoftwareUpdatePoint -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+PS C:\> Get-CMSoftwareUpdatePoint -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
 ```
 
 The command gets a software update point that UpdateSystem.Western.Contoso.com hosts.

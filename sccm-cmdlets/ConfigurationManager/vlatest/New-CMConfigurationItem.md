@@ -38,7 +38,7 @@ You cannot create child configuration items for mobile devices.
 
 ### Example 1: Create a configuration item
 ```
-PS C:\>New-CMConfigurationItem -CreationType MobileDevice -Name "MD_Config88"
+PS C:\> New-CMConfigurationItem -CreationType MobileDevice -Name "MD_Config88"
 ```
 
 This command creates a configuration item for mobile devices named MD_Config88.

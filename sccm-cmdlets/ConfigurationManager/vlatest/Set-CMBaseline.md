@@ -46,14 +46,14 @@ The **Set-CMBaseline** cmdlet changes the settings of one or more configuration 
 
 ### Example 1: Add a membership to a security scope of a configuration baseline
 ```
-PS C:\>Set-CMBaseline -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "BLineContoso01"
+PS C:\> Set-CMBaseline -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "BLineContoso01"
 ```
 
 This command adds membership to the security scope named SecScope02 for the configuration baseline named BLineContoso01.
 
 ### Example 2: Remove membership from a security scope of a configuration baseline
 ```
-PS C:\>Set-CMBaseline -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "BLineContoso01"
+PS C:\> Set-CMBaseline -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "BLineContoso01"
 ```
 
 This command removes membership to the security scope named SecScope02 for the configuration baseline named BLineContoso01.

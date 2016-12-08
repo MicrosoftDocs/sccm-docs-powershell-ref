@@ -37,7 +37,7 @@ The **Get-CMDeviceCollectionVariable** cmdlet gets the task sequence variables f
 
 ### Example 1: Get a device collection variable by name
 ```
-PS C:\>Get-CMDeviceCollectionVariable -CollectionName "DeviceCollection02" -VariableName "testTS"
+PS C:\> Get-CMDeviceCollectionVariable -CollectionName "DeviceCollection02" -VariableName "testTS"
 ```
 
 This command gets the collection variable named testTS for the device collection named Device.

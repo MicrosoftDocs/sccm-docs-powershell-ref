@@ -55,7 +55,7 @@ You can configure the reporting component to check log files and monitor the sev
 
 ### Example 1: Set status reporting component
 ```
-PS C:\>Set-CMStatusReportingComponent -SiteCode "CM1" -ClientReportType AllMilestones -ServerReportType AllMilestones
+PS C:\> Set-CMStatusReportingComponent -SiteCode "CM1" -ClientReportType AllMilestones -ServerReportType AllMilestones
 ```
 
 This command sets a client report type and a server report type.

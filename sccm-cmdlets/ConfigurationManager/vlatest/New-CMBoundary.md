@@ -27,7 +27,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ### Example 1: Create a new IP Subnet site boundary
 ```
-PS C:\>New-CMBoundary -DisplayName "IPSubNetBoundary01" -BoundaryType IPSubNet -Value "172.16.50.0/24"
+PS C:\> New-CMBoundary -DisplayName "IPSubNetBoundary01" -BoundaryType IPSubNet -Value "172.16.50.0/24"
 BoundaryFlags:      0
 BoundaryID:         6338009
 BoundaryType:       0
@@ -46,7 +46,7 @@ This command creates a new IP subnet site boundary that has a name of IPSubNetBo
 
 ### Example 2: Create a new Active Directory site boundary
 ```
-PS C:\>New-CMBoundary -DisplayName "ADSiteBoundary01" -BoundaryType ADSite -Value "Default-First-Site-Name"
+PS C:\> New-CMBoundary -DisplayName "ADSiteBoundary01" -BoundaryType ADSite -Value "Default-First-Site-Name"
 BoundaryFlags:      0
 BoundaryID:         6339999
 BoundaryType:       1
@@ -64,7 +64,7 @@ This command creates a new Active Directory site boundary that has a name of ADS
 
 ### Example 3: Create a new IP v6 prefix site boundary
 ```
-PS C:\>New-CMBoundary -DisplayName "IPv6PrefixBoundary01" -BoundaryType IPv6Prefix -Value "FE80::/64".
+PS C:\> New-CMBoundary -DisplayName "IPv6PrefixBoundary01" -BoundaryType IPv6Prefix -Value "FE80::/64".
 BoundaryFlags:      0
 BoundaryID:         63347110
 BoundaryType:       2
@@ -83,7 +83,7 @@ This command creates a new IP v6 prefix site boundary that has a name of IPv6Pre
 
 ### Example 4: Create a new IP range site boundary
 ```
-PS C:\>New-CMBoundary -DisplayName "IPRangeBoundary01" -BoundaryType IPRange -Value "10.255.255.0-10.255.255.255" 
+PS C:\> New-CMBoundary -DisplayName "IPRangeBoundary01" -BoundaryType IPRange -Value "10.255.255.0-10.255.255.255" 
 BoundaryFlags:      0
 BoundaryID:         6334129
 BoundaryType:       3

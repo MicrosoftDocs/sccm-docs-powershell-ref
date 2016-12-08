@@ -25,7 +25,7 @@ A software distribution component consists of individual components such as the 
 
 ### Example 1: Get a software distribution component
 ```
-PS C:\>Get-CMSoftwareDistributionComponent -Name "CM2"
+PS C:\> Get-CMSoftwareDistributionComponent -Name "CM2"
 ```
 
 This command gets the software distribution component.

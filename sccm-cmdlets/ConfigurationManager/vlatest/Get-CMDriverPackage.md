@@ -29,7 +29,7 @@ The **Get-CMDriverPackage** cmdlet gets a driver package.
 
 ### Example 1: Get a driver package that is specified by its identifier
 ```
-PS C:\>Get-CMDriverPackage -Id "CM100042"
+PS C:\> Get-CMDriverPackage -Id "CM100042"
 ```
 
 This command gets a driver package that is specified by its identifier.

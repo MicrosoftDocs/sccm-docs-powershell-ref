@@ -83,7 +83,7 @@ The **Set-CMMsiDeploymentType** cmdlet changes the settings for a Windows Instal
 
 ### Example 1: Modify a Windows Installer deployment type
 ```
-PS C:\>Set-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -NewName "DTMsi_Updated" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
+PS C:\> Set-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -NewName "DTMsi_Updated" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
 ```
 
 This command changes the name of the Windows Installer deployment type named DTMsi for the application named testMsi to DTMsi_Updated, adds English and Chinese as supported languages, and adds a description.
@@ -91,7 +91,7 @@ This command specifies that the installation will take approximately 14 minutes 
 
 ### Example 2: Modify a Windows Installer deployment type by using the pipeline
 ```
-PS C:\>Get-CMDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi_Updated" | Set-CMMsiDeploymentType -NewName "DTMsi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
+PS C:\> Get-CMDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi_Updated" | Set-CMMsiDeploymentType -NewName "DTMsi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
 ```
 
 This command gets the Windows Installer deployment type object named DTMsi_Updated for the application named testMsi and uses the pipeline operator to pass the object to **Set-CMMsiDeploymentType**.

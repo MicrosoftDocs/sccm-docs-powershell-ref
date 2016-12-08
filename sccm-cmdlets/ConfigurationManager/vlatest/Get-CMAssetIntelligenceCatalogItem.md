@@ -39,14 +39,14 @@ For more information about the Asset Intelligence catalog, see [Introduction to 
 
 ### Example 1: Get catalog items by category name
 ```
-PS C:\>Get-CMAssetIntelligenceCatalogItem -CategoryName "Browsers"
+PS C:\> Get-CMAssetIntelligenceCatalogItem -CategoryName "Browsers"
 ```
 
 This command gets Asset Intelligence catalog items by category name.
 
 ### Example 2: Get catalog items by category ID
 ```
-PS C:\>Get-CMAssetIntelligenceCatalogItem -Id "1211"
+PS C:\> Get-CMAssetIntelligenceCatalogItem -Id "1211"
 ```
 
 This command gets Asset Intelligence catalog items by category ID.

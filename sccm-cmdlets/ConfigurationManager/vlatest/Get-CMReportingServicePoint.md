@@ -32,7 +32,7 @@ A reporting service point is a site system role that is installed on a server th
 
 ### Example 1: Get a reporting service point
 ```
-PS C:\>Get-CMReportingServicePoint -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM" -SiteCode "CM1" >>\Cmrsp01\Get-CMReportingServicePoint_data.txt
+PS C:\> Get-CMReportingServicePoint -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM" -SiteCode "CM1" >>\Cmrsp01\Get-CMReportingServicePoint_data.txt
 ```
 
 This command gets a reporting service point from the Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.

@@ -30,7 +30,7 @@ This server must be the active software update point in a primary site.
 
 ### Example 1: Get a client installation
 ```
-PS C:\>Get-CMSoftwareUpdateBasedClientInstallation -SiteCode "CM1"
+PS C:\> Get-CMSoftwareUpdateBasedClientInstallation -SiteCode "CM1"
 ```
 
 This command gets the client installation for the site that has the site code CM1.

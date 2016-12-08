@@ -38,7 +38,7 @@ To change the priority of a rule, use the rule name to specify the rule.
 
 ### Example 1: Increase the priority of a rule
 ```
-PS C:\>Set-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1" -Priority Increase
+PS C:\> Set-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1" -Priority Increase
 ```
 
 This command increases the priority of a filter rule that has the specified name in a site that has the site code CM1.

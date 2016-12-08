@@ -29,14 +29,14 @@ For more information about client settings, see [About Client Settings in Config
 
 ### Example 1: Modify all client status settings
 ```
-PS C:\>Set-CMClientStatusSetting -ClientPolicyDayInterval 2 -HeartbeatDiscoveryDayInterval 3 -HardwareInventoryDayInterval 4 -SoftwareInventoryDayInterval 5 -StatusMessageDayInterval 6 -HistoryCleanupDayInterval 7
+PS C:\> Set-CMClientStatusSetting -ClientPolicyDayInterval 2 -HeartbeatDiscoveryDayInterval 3 -HardwareInventoryDayInterval 4 -SoftwareInventoryDayInterval 5 -StatusMessageDayInterval 6 -HistoryCleanupDayInterval 7
 ```
 
 This command modifies all client status settings.
 
 ### Example 2: Modify the Client Policy setting
 ```
-PS C:\>Set-CMClientStatusSetting -ClientPolicyDayInterval 5
+PS C:\> Set-CMClientStatusSetting -ClientPolicyDayInterval 5
 ```
 
 This command modifies the client policy day setting only.

@@ -43,7 +43,7 @@ The **Add-CMIosDeploymentType** cmdlet adds an iOS App Store deployment type to 
 
 ### Example 1: Add an iOS App Store deployment type
 ```
-PS C:\>Get-CMApplication -Name "testIOSapp" | Add-CMIOSAppStoreDeploymentType -DeploymentTypeName "DTIOSapp01" -Url "https://itunes.apple.com/us/app/cut-the-rope-magic/id1044677336?mt=8" -Comment "Create a Mac DT" -AddLanguage "zh-CN" -Confirm
+PS C:\> Get-CMApplication -Name "testIOSapp" | Add-CMIOSAppStoreDeploymentType -DeploymentTypeName "DTIOSapp01" -Url "https://itunes.apple.com/us/app/cut-the-rope-magic/id1044677336?mt=8" -Comment "Create a Mac DT" -AddLanguage "zh-CN" -Confirm
 ```
 
 This command gets the application object named testIOSapp and uses the pipeline operator to pass the object to **Add-CMIOSAppStoreDeploymentType**.

@@ -31,7 +31,7 @@ The **Remove-CMClientOperation** cmdlet removes a Microsoft System Center Config
 
 ### Example 1: Remove a client operation
 ```
-PS C:\>Remove-CMClientOperation -Id "CMCO217" -Force
+PS C:\> Remove-CMClientOperation -Id "CMCO217" -Force
 ```
 
 This command removes the client operation that has the ID CMCO217.

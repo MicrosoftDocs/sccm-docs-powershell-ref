@@ -145,7 +145,7 @@ You can then use the interval strings to set schedule properties when you define
 
 ### Example 1: Create a schedule token
 ```
-PS C:\>New-CMSchedule -DayOfMonth 0 -DateTime "20120105185728.303000+000"
+PS C:\> New-CMSchedule -DayOfMonth 0 -DateTime "20120105185728.303000+000"
 ```
 
 This command creates a schedule token that specifies that the event occurs on the last day of the month at the specified date and time.

@@ -29,7 +29,7 @@ For more information about how to install clients, see [How to Install Clients o
 
 ### Example 1: Get a client push installation
 ```
-PS C:\>Get-CMClientPushInstallation -SiteSystemServerName "CMClientPushInstallationPoint.Western.Contoso.com"
+PS C:\> Get-CMClientPushInstallation -SiteSystemServerName "CMClientPushInstallationPoint.Western.Contoso.com"
 ```
 
 This command gets the client push installation for the site system server named CMClientPushInstallationPoint.Western.Contoso.com.

@@ -37,7 +37,7 @@ The **Get-CMMaintenanceWindow** cmdlet gets the maintenance windows for specifie
 
 ### Example 1: Get maintenance windows
 ```
-PS C:\>Get-CMMaintenanceWindow -CollectionID "AAA0004D"
+PS C:\> Get-CMMaintenanceWindow -CollectionID "AAA0004D"
 ```
 
 This command gets the maintenance windows for the specified collection.

@@ -35,14 +35,14 @@ Use this cmdlet with no parameters to get all Application Catalog website points
 
 ### Example 1: Get a website point by using a site code
 ```
-PS C:\>Get-CMApplicationCatalogWebsitePoint -SiteCode "CM4"
+PS C:\> Get-CMApplicationCatalogWebsitePoint -SiteCode "CM4"
 ```
 
 This command gets the website point role for the site that has the site code CM4.
 
 ### Example 2: Get a website point by using a site system name
 ```
-PS C:\>Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "WesternACWP.Contoso.com"
+PS C:\> Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "WesternACWP.Contoso.com"
 ```
 
 This command gets the website point role that the computer WesternACWP.Contoso.com hosts.

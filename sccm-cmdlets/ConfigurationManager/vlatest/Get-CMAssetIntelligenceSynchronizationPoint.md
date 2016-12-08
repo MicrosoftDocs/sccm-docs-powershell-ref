@@ -32,7 +32,7 @@ Microsoft System Center Configuration Manager uses the Asset Intelligence synchr
 
 ### Example 1: Get an Asset Intelligence synchronization point
 ```
-PS C:\>Get-CMAssetIntelligenceSynchronizationPoint
+PS C:\> Get-CMAssetIntelligenceSynchronizationPoint
 ```
 
 This command gets an Asset Intelligence synchronization point.

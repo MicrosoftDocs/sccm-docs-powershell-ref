@@ -42,7 +42,7 @@ If you have already deployed the application, you cannot remove the last deploym
 
 ### Example 1: Remove a deployment type
 ```
-PS C:\>Remove-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
+PS C:\> Remove-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
 ```
 
 This command removes the deployment type named InterDept - Windows app package (.appx file) that is contained in the application named CenterApp.
