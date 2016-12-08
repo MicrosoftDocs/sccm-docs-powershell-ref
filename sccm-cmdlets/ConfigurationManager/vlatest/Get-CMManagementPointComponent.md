@@ -25,7 +25,7 @@ A management point is a System Center Configuration Manager site that provides p
 
 ### Example 1: Get a management point component
 ```
-PS C:\>Get-CMManagementPointComponent -SiteCode "CM1" >>\1\Get-CMManagementPointComponent_data.txt
+PS C:\> Get-CMManagementPointComponent -SiteCode "CM1" >>\1\Get-CMManagementPointComponent_data.txt
 ```
 
 This command gets a component that is associated with the site that has the code CM1.

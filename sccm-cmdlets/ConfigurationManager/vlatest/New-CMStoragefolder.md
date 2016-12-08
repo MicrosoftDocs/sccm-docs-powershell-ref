@@ -22,13 +22,13 @@ New-CMStorageFolder -StorageFolderName <String> [-MaximumClientNumber <Int32>] [
 The **New-CMStoragefolder** cmdlet creates a new storage folder to store user migration data in Microsoft System Center Configuration Manager.
 
 A storage folder identifies a location on a state migration point site system to store user migration data.
-Use this cmdlet in conjunction with the Add-CMStateMigrationPoint cmdlet to create a new state migration point with storage folders.
+Use this cmdlet in conjunction with the [Add-CMStateMigrationPoint](./Add-CMStateMigrationPoint.md) cmdlet to create a new state migration point with storage folders.
 
 ## EXAMPLES
 
 ### Example 1: Create a new storage folder
 ```
-PS C:\>New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
+PS C:\> New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
 ```
 
 This command creates a new storage folder for migration data by using the maximum number of clients, minimum free space, and storage folder path parameters.
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpaceUnit
-Specifies the storage units for the MinimumFreeSpace parameter.
+Specifies the storage units for the *MinimumFreeSpace* parameter.
 
 ```yaml
 Type: MinSpaceType

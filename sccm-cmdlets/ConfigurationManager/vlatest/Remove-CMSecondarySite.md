@@ -39,7 +39,7 @@ Instead it is connected to a primary site and sends client data to the primary s
 
 ### Example 1: Remove a secondary site upgrade by using a site name
 ```
-PS C:\>Remove-CMSecondarySite -Action Delete -SiteName "ClientSecSiteUpgrade03"
+PS C:\> Remove-CMSecondarySite -Action Delete -SiteName "ClientSecSiteUpgrade03"
 ```
 
 This command deletes a secondary site named ClientSecSiteUpgrade03.

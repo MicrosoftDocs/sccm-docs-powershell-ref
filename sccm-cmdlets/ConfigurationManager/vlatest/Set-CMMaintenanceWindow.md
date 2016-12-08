@@ -68,7 +68,7 @@ Maintenance windows are periods of time reserved for write operations such as ap
 
 ### Example 1: Modify a maintenance window
 ```
-PS C:\>Set-CMMaintenanceWindow -Name "DiskCleanup"-CollectionID "AAA0004D" -ApplyToTaskSequenceOnly
+PS C:\> Set-CMMaintenanceWindow -Name "DiskCleanup"-CollectionID "AAA0004D" -ApplyToTaskSequenceOnly
 ```
 
 This command modifies the maintenance window named DiskCleanup, a window associated with the collection AAA0004D.

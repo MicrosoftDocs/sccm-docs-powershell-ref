@@ -25,7 +25,7 @@ Client computers use root certificate profiles to chain their certificates back 
 
 ### Example 1: Create a trusted root certificate profile configuration item
 ```
-PS C:\>New-CMTrustedRootCertificateProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\TrustedRootCertificate.xml"
+PS C:\> New-CMTrustedRootCertificateProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\TrustedRootCertificate.xml"
 ```
 
 This command creates a trusted root certificate profile configuration item by using the digest file C:\Digests\TrustedRootCertificate.xml .

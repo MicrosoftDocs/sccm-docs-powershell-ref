@@ -41,7 +41,7 @@ Client computers use VPN profiles to remotely connect to a company network over 
 
 ### Example 1: Modify a VPN profile configuration item
 ```
-PS C:\>Set-CMVpnProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Vpn2.xml"
+PS C:\> Set-CMVpnProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Vpn2.xml"
 ```
 
 This command modifies the VPN profile configuration item with the ID AAA0004D.

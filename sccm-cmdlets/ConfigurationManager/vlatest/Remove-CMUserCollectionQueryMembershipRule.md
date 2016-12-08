@@ -40,7 +40,7 @@ For more information about membership rules in Microsoft System Center Configura
 
 ### Example 1: Remove a rule from a collection by using the collection name
 ```
-PS C:\>Remove-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
+PS C:\> Remove-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
 ```
 
 This command removes the rule named Remote Users by Domain from the collection named Remote Users.

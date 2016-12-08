@@ -27,7 +27,7 @@ This enables all sites to share the same information.
 
 ### Example 1: Get a replication link
 ```
-PS C:\>Get-CMDatabaseReplicationLinkProperty -ChildSiteCode "CM8" -ParentSiteCode "CM1"
+PS C:\> Get-CMDatabaseReplicationLinkProperty -ChildSiteCode "CM8" -ParentSiteCode "CM1"
 ```
 
 This command gets a replication link between specified parent and child sites.

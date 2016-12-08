@@ -29,7 +29,7 @@ The **Get-CMVhd** cmdlet gets one or more virtual hard disk (VHD) images that we
 
 ### Example 1: Get a VHD image by using its name
 ```
-PS C:\>Get-CMVhd -Name "VHDAccounting08"
+PS C:\> Get-CMVhd -Name "VHDAccounting08"
 ```
 
 This command gets the virtual hard disk (VHD) image named VHDAccounting08.

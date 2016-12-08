@@ -47,14 +47,14 @@ The **Get-CMUser** cmdlet gets a Microsoft System Center Configuration Manager u
 
 ### Example 1: Get a user by name
 ```
-PS C:\>Get-CMUser -CollectionName "All Users" -Name "Contoso\username01"
+PS C:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\username01"
 ```
 
 This command gets the user named username01 from the All Users collection.
 
 ### Example 2: Pass a collection and get a user from it
 ```
-PS C:\>Get-CMCollection -Name "All Users" | Get-CMUser -Name "Contoso\testuser01"
+PS C:\> Get-CMCollection -Name "All Users" | Get-CMUser -Name "Contoso\testuser01"
 ```
 
 This command gets the collection object named All Users and uses the pipeline operator to pass the object to **Get-CMUser**, which gets the user named testuser01 from the collection object.

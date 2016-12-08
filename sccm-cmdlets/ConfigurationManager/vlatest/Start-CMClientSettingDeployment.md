@@ -77,14 +77,14 @@ For more information about client settings, see [About Client Settings in Config
 
 ### Example 1: Deploy a client setting object by using its ID to a named collection
 ```
-PS C:\>Start-CMClientSettingDeployment -ClientSettingId "CSI1023" -CollectionName "General Computer Collection"
+PS C:\> Start-CMClientSettingDeployment -ClientSettingId "CSI1023" -CollectionName "General Computer Collection"
 ```
 
 This command starts deployment of the client setting object that has the ID CSI1023 for the collection named General Computer Collection.
 
 ### Example 2: Deploy a client setting object by using a variable
 ```
-PS C:\>$CSID = Get-CMClientSetting -Id "CSI1023"
+PS C:\> $CSID = Get-CMClientSetting -Id "CSI1023"
 PS C:\> Start-CMClientSettingDeployment -ClientSetting $CSID -CollectionName "General Computer Collection"
 ```
 

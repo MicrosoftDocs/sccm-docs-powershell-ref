@@ -55,7 +55,7 @@ The **Set-CMDriver** cmdlet changes settings of a device driver in the driver ca
 
 ### Example 1: Modify a driver
 ```
-PS C:\>$Driver = Get-CMDriver -Name "cdrom.sys"
+PS C:\> $Driver = Get-CMDriver -Name "cdrom.sys"
 PS C:\> Set-CMDriver -InputObject $Driver -NewName "testDriver" -Description "Test configuration" -EnableAndAllowInstall $True -RunOnAnyPlatform $True
 ```
 
@@ -67,7 +67,7 @@ The command specifies values for the *EnableAndAllowInstall* and *RunOnAnyPlatfo
 
 ### Example 2: Modify a driver by using the pipeline
 ```
-PS C:\>Get-CMDriver -Name "cdrom.sys" | Set-CMDriver -NewName testDriver -Description description -EnableAndAllowInstall $True -RunOnAnyPlatform $True
+PS C:\> Get-CMDriver -Name "cdrom.sys" | Set-CMDriver -NewName testDriver -Description description -EnableAndAllowInstall $True -RunOnAnyPlatform $True
 ```
 
 This command gets a driver named cdrom.sys, and then passes it to the current cmdlet by using the pipeline operator.

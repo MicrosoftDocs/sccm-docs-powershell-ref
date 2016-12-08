@@ -47,7 +47,7 @@ This command removes a schedule named Win8UpdateSchedule that updates an operati
 
 ### Example 2: Remove a schedule for updating an operating system image by using an object
 ```
-PS C:\>$Win8UpdateSchedule = Get-CMOperatingSystemUpdateSchedule -Id 1207
+PS C:\> $Win8UpdateSchedule = Get-CMOperatingSystemUpdateSchedule -Id 1207
 PS C:\> Clear-CMOperatingSystemImageUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
 ```
 

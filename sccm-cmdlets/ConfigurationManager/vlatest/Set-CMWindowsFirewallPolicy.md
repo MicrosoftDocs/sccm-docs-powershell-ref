@@ -54,21 +54,21 @@ The **Set-CMWindowsFirewallPolicy** cmdlet changes settings of one or more Windo
 
 ### Example 1: Decrease the priority of a Windows Firewall policy by using a name
 ```
-PS C:\>Set-CMWindowsFirewallPolicy -Priority Decrease -Name "WFPContoso01"
+PS C:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Name "WFPContoso01"
 ```
 
 This command decreases the priority of the Windows Firewall policy named WFPContoso01.
 
 ### Example 2: Decrease the priority of a Windows Firewall policy by using an ID
 ```
-PS C:\>Set-CMWindowsFirewallPolicy -Priority Decrease -Id "16777568"
+PS C:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Id "16777568"
 ```
 
 This command decreases the priority of the Windows Firewall policy that has the ID 16777568.
 
 ### Example 3: Increase the priority of a Windows Firewall policy by using an object variable
 ```
-PS C:\>$WFPobj=Get-CMWindowsFirewallPolicy -Id "16777568"
+PS C:\> $WFPobj=Get-CMWindowsFirewallPolicy -Id "16777568"
 PS C:\> Set-CMWindowsFirewallPolicy -Priority Increase -InputObject $WFPobj
 ```
 

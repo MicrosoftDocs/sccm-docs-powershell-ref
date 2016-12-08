@@ -29,7 +29,7 @@ For more information about discovery in System Center Configuration Manager, see
 
 ### Example 1: Get a user discovery method
 ```
-PS C:\>Get-CMDiscoveryMethod -Name "ActiveDirectoryUserDiscovery"
+PS C:\> Get-CMDiscoveryMethod -Name "ActiveDirectoryUserDiscovery"
 ```
 
 This command gets a System Center Configuration Manager method that discovers users in the installation.

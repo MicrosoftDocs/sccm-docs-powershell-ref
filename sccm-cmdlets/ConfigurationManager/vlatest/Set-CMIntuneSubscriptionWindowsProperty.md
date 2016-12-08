@@ -25,7 +25,7 @@ The **Set-CMIntuneSubscriptionWindowsProperty** cmdlet updates the settings of a
 
 ### Example 1: Enable Windows enrollment
 ```
-PS C:\>$SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
+PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
 PS C:\> Set-CMIntuneSubscriptionWindowsProperties -Enable $True -CertificatePath "C:\Certs\sign.pfx" -CertificatePassword $SecPasswd
 ```
 

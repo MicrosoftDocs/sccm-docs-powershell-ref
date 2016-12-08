@@ -40,7 +40,7 @@ After you remove an operating system installer, you cannot distribute the instal
 
 ### Example 1: Remove an operating system installer
 ```
-PS C:\>Remove-CMOperatingSystemInstaller -Name "INSTALL01"
+PS C:\> Remove-CMOperatingSystemInstaller -Name "INSTALL01"
 ```
 
 This command removes the operating system installer named INSTALL01.

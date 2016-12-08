@@ -27,7 +27,7 @@ By default, the maximum number of rows is unbound, which is different from the b
 
 ### Example 1: Get the report query result maximum
 ```
-PS C:\>Get-CMQueryResultMaximum
+PS C:\> Get-CMQueryResultMaximum
 ```
 
 This command gets the maximum number of rows that a Configuration Manager report query can return.

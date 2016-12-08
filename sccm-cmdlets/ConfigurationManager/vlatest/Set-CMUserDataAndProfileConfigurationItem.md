@@ -103,7 +103,7 @@ You can create a configuration item by using the [New-CMUserDataAndProfileConfig
 
 ### Example 1: Modify a configuration item
 ```
-PS C:\>Set-CMUserDataAndProfileConfigurationItem -Name "CMUDaPCI001" -NewName "CMUDaPCI0073" -ConfigureFolderRedirection $False -ConfigureOffineFile $False -ConfigureRoamingUserProfile $False -Description "User data and profile configuration information"
+PS C:\> Set-CMUserDataAndProfileConfigurationItem -Name "CMUDaPCI001" -NewName "CMUDaPCI0073" -ConfigureFolderRedirection $False -ConfigureOffineFile $False -ConfigureRoamingUserProfile $False -Description "User data and profile configuration information"
 ```
 
 This command modifies the configuration item named CMUDaPCI001, changing its name to CMUDaPCI0073.

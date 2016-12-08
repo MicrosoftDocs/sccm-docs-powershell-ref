@@ -81,7 +81,7 @@ This command adds the device collection named All Systems as an Include Collecti
 
 ### Example 2: Add an Include Membership rule to a collection by using the pipeline
 ```
-PS C:\>Get-CMCollection -Name "Device" | Add-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems"
+PS C:\> Get-CMCollection -Name "Device" | Add-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems"
 ```
 
 This command gets the collection object named Device and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionIncludeMembershipRule**.

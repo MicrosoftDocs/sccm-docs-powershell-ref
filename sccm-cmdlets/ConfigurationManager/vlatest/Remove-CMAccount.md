@@ -33,7 +33,7 @@ For more information about user accounts, see [Technical Reference for Accounts 
 
 ### Example 1: Remove a user account by using its name
 ```
-PS C:\>Remove-CMAccount -Name "CONTOSO\EDaugherty"
+PS C:\> Remove-CMAccount -Name "CONTOSO\EDaugherty"
 ```
 
 This command removes the user account that is specified by its name.

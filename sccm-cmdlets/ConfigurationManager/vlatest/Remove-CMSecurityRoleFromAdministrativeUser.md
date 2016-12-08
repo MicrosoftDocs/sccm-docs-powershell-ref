@@ -74,7 +74,7 @@ After you remove the association of a security role with an administrative user,
 
 ### Example 1: Remove a security role from an administrative user
 ```
-PS C:\>Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -RoleName "Security Update Manager"
+PS C:\> Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -RoleName "Security Update Manager"
 ```
 
 This command removes the association between the security role named Security Update Manager and the administrative user named Contoso\PattiFuller.

@@ -41,7 +41,7 @@ For more control over application replacement, create a new application that sup
 
 ### Example 1: Restore an application
 ```
-PS C:\>Restore-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser" -Revision 6.05
+PS C:\> Restore-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser" -Revision 6.05
 ```
 
 This command restores the application MSXML 6.0 Parser, version 6.05.

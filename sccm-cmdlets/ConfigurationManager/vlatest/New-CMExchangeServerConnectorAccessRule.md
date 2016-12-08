@@ -24,7 +24,7 @@ The **New-CMExchangeServerConnectorAccessRule** cmdlet configures access setting
 
 ### Example 1: Configure email management settings for a mobile device
 ```
-PS C:\>New-CMExchangeServerConnectorAccessRule -RuleName "AccessRule01" -AccessLevel Allow -Device DeviceType
+PS C:\> New-CMExchangeServerConnectorAccessRule -RuleName "AccessRule01" -AccessLevel Allow -Device DeviceType
 ```
 
 This command creates an access rule for a device type named AccessRule01 that has the Allow access level.

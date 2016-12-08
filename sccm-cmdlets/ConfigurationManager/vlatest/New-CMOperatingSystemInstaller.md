@@ -25,7 +25,7 @@ An operating system installer is an installation package that contains all the f
 
 ### Example 1: Add an operating system installer
 ```
-PS C:\>New-CMOperatingSystemInstaller -Name "INSTALL01" -Path "\\Contoso01\CM\Win8Install"
+PS C:\> New-CMOperatingSystemInstaller -Name "INSTALL01" -Path "\\Contoso01\CM\Win8Install"
 ```
 
 This command adds an operating system installer named INSTALL01 and specifies the network path to the installation source files of the operating system installer.

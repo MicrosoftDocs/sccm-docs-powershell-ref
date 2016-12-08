@@ -33,7 +33,7 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ### Example 1: Get an IP subnet
 ```
-PS C:\>Get-CMIPSubnet -Name "West07Subnet"
+PS C:\> Get-CMIPSubnet -Name "West07Subnet"
 ```
 
 This command gets the IP subnet object named West07Subnet.

@@ -31,7 +31,7 @@ You can specify an installation by ID or by site code.
 
 ### Example 1: Get site installation status
 ```
-PS C:\>Get-CMSiteInstallStatus -SiteCode "CM1"
+PS C:\> Get-CMSiteInstallStatus -SiteCode "CM1"
 ```
 
 This command gets the site installation status for the site that has the specified site code.

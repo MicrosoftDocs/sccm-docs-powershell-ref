@@ -32,7 +32,7 @@ An enrollment proxy point is a site system role that manages enrollment requests
 
 ### Example 1: Get an enrollment proxy point
 ```
-PS C:\>Get-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "SiteServer01.Contoso.com"
+PS C:\> Get-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "SiteServer01.Contoso.com"
 ```
 
 This command gets an enrollment proxy point.

@@ -38,7 +38,7 @@ If you remove a maintenance window during that window, the maintenance updates f
 
 ### Example 1: Remove a maintenance window
 ```
-PS C:\>Remove-CMMaintenanceWindow -Name "Distribution Point Maintenance" -CollectionId "AAA0004D"
+PS C:\> Remove-CMMaintenanceWindow -Name "Distribution Point Maintenance" -CollectionId "AAA0004D"
 ```
 
 This command removes the maintenance window Distribution Point Maintenance.

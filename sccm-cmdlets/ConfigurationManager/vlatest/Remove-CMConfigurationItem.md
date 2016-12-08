@@ -42,21 +42,21 @@ For more information about configuration items, see [Introduction to Compliance 
 
 ### Example 1: Remove an item using an ID
 ```
-PS C:\>Remove-CMConfigurationItem -Id "16777568"
+PS C:\> Remove-CMConfigurationItem -Id "16777568"
 ```
 
 This command removes a configuration item with the specified identifier.
 
 ### Example 2: Remove an item using a name
 ```
-PS C:\>Remove-CMConfigurationItem -Name "ConfigItem76"
+PS C:\> Remove-CMConfigurationItem -Name "ConfigItem76"
 ```
 
 This command removes a configuration item named ConfigItem76.
 
 ### Example 3: Remove an item using a variable
 ```
-PS C:\>$CIObj=Get-CMConfigurationItem -Id "16777568"
+PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
 PS C:\> Remove-CMConfigurationItem -InputObject $CIObj
 ```
 

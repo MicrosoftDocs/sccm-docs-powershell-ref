@@ -36,14 +36,14 @@ For more information about Endpoint Protection in System Center Configuration Ma
 
 ### Example 1: Set an endpoint protection point
 ```
-PS C:\>Set-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -ProtectionService AdvancedMembership
+PS C:\> Set-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -ProtectionService AdvancedMembership
 ```
 
 The command sets the endpoint protection point for the server, and specifies the membership type for the *ProtectionService* parameter.
 
 ### Example 2: Set an endpoint protection point by using an input object
 ```
-PS C:\>$Epp = Get-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
+PS C:\> $Epp = Get-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
 PS C:\> Set-CMEndpointProtectionPoint -InputObject $Epp -ProtectionService BasicMembership
 ```
 

@@ -37,7 +37,7 @@ The **Remove-CMObjectSecurityScope** cmdlet removes a security scope from a Micr
 
 ### Example 1: Remove a security scope from application objects by using the pipeline
 ```
-PS C:\>$Scope = Get-CMSecurityScope -Name "Scope1"
+PS C:\> $Scope = Get-CMSecurityScope -Name "Scope1"
 PS C:\> Get-CMApplication -Name "Application*" | Remove-CMObjectSecurityScope -Scope $Scope -Force
 ```
 
@@ -49,7 +49,7 @@ The *Force* parameter indicates that the user is not prompted before the securit
 
 ### Example 2: Remove a security scope from application objects
 ```
-PS C:\>Remove-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Name "Scope1" -Force
+PS C:\> Remove-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Name "Scope1" -Force
 ```
 
 This command gets all application objects that have a name beginning with Application and removes the security scope named Scope1 from each application object.

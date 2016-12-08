@@ -27,7 +27,7 @@ You can also define the types of access that the new administrative user has to 
 
 ### Example 1: Add an administrative user
 ```
-PS C:\>New-CMAdministrativeUser -Name "Consoto\AdminUser1" -RoleName "Application Administrator","Software Update Manager" -SecurityScopeName "scope1","scope2" -CollectionName "userCollection1","deviceCollection1"
+PS C:\> New-CMAdministrativeUser -Name "Consoto\AdminUser1" -RoleName "Application Administrator","Software Update Manager" -SecurityScopeName "scope1","scope2" -CollectionName "userCollection1","deviceCollection1"
 ```
 
 This command adds the user named AdminUser1 as an administrative user to the Application Administrator and Software Update Manager security roles.

@@ -39,7 +39,7 @@ You can use the *StateMessagesCount* and *ThrottleMinutesInterval* parameters to
 
 ### Example 1: Change message and threshold settings for a fallback status point
 ```
-PS C:\>$CMFSP = Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
+PS C:\> $CMFSP = Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
 PS C:\> Set-CMFallbackStatusPoint -InputObject $CMFSP -StateMessagesCount 1000 -ThrottleMinutesInterval 60
 ```
 
@@ -49,7 +49,7 @@ The second command sets the count of state messages to 1,000 and the throttle in
 
 ### Example 2: Change message and threshold settings
 ```
-PS C:\>Set-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com" -StateMessagesCount 1000 -ThrottleMinutesInterval 60
+PS C:\> Set-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com" -StateMessagesCount 1000 -ThrottleMinutesInterval 60
 ```
 
 This command sets the count of state messages to 1,000 and the throttle interval to 60 minutes for the fallback status point for the site that has the site code CM1 and the system name Server21.West01.Contoso.com.

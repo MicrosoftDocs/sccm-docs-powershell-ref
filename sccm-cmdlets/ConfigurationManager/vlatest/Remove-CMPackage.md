@@ -43,14 +43,14 @@ If a compressed version of source files for the package exists, System Center Co
 
 ### Example 1: Remove a package
 ```
-PS C:\>Remove-CMPackage -Id "CM10000D"
+PS C:\> Remove-CMPackage -Id "CM10000D"
 ```
 
 This command removes the package that has the ID CM10000D.
 
 ### Example 2: Remove a package by using an object variable
 ```
-PS C:\>$Pkg = Get-CMPackage -Id "CM10000D"
+PS C:\> $Pkg = Get-CMPackage -Id "CM10000D"
 PS C:\> Remove-CMPackage -InputObject $Pkg
 ```
 

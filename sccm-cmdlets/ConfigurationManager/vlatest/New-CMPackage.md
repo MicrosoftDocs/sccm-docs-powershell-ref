@@ -53,14 +53,14 @@ A package is a System Center Configuration Manager object that contains the cont
 
 ### Example 1: Create a package
 ```
-PS C:\>New-CMPackage -Name "ScriptsPackage01"
+PS C:\> New-CMPackage -Name "ScriptsPackage01"
 ```
 
 This command creates a Configuration Manager package named ScriptsPackage01.
 
 ### Example 2: Create a package and add a description
 ```
-PS C:\>New-CMPackage -Name "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
+PS C:\> New-CMPackage -Name "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
 ```
 
 This command creates a Configuration Manager package named ScriptsPackage02 and adds the specified description to the package.

@@ -45,7 +45,7 @@ You can also specify a name for users to see in the browser, such as a company n
 
 ### Example 1: Change the settings of an Application Catalog website point
 ```
-PS C:\>Set-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" -NetbiosName "CMDIV-WEST02" -OrganizationName "MarketingWest" -ColorRed 168 -ColorGreen 201 -ColorBlue 52
+PS C:\> Set-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" -NetbiosName "CMDIV-WEST02" -OrganizationName "MarketingWest" -ColorRed 168 -ColorGreen 201 -ColorBlue 52
 ```
 
 This command changes the settings of the Application Catalog website point hosted on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
@@ -54,7 +54,7 @@ The command specifies that Configuration Manager displays the organization name 
 
 ### Example 2: Change the settings of an Application Catalog website point by object variable
 ```
-PS C:\>$Acwp= Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" 
+PS C:\> $Acwp= Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" 
 PS C:\> Set-CMApplicationCatalogWebsitePoint -InputObject $Acwp -NetbiosName "CMDIV-WEST02" -OrganizationName "MarketingWest" -ColorR 160 -ColorG 200 -ColorB 50
 ```
 

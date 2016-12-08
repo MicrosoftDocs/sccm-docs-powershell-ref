@@ -25,7 +25,7 @@ Security scopes provide administrative users with access to securable objects.
 
 ### Example 1: Create a security scope
 ```
-PS C:\>New-CMSecurityScope -Name "testSecope" -Description "Security Scope"
+PS C:\> New-CMSecurityScope -Name "testSecope" -Description "Security Scope"
 ```
 
 This command creates a security scope named testScope.

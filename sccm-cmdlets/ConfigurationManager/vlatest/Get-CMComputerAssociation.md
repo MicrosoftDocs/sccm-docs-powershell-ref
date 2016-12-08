@@ -34,21 +34,21 @@ You can also use an ID to specify a computer association.
 
 ### Example 1: Get all computer associations
 ```
-PS C:\>Get-CMComputerAssociation
+PS C:\> Get-CMComputerAssociation
 ```
 
 This command gets all the computer associations for System Center Configuration Manager.
 
 ### Example 2: Get computer associations for a destination comptuter
 ```
-PS C:\>Get-CMComputerAssociation -DestinationComputer "West155"
+PS C:\> Get-CMComputerAssociation -DestinationComputer "West155"
 ```
 
 This command gets all the computer associations for the destination computer named West155.
 
 ### Example 3: Get a computer association by using an ID
 ```
-PS C:\>Get-CMComputerAssociation -MigrationId "MID1207"
+PS C:\> Get-CMComputerAssociation -MigrationId "MID1207"
 ```
 
 This command gets the computer association that has the ID MID1207.

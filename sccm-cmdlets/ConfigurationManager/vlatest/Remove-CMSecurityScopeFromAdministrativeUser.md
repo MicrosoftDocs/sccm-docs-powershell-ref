@@ -75,7 +75,7 @@ After you remove the association between a security scope and an administrative 
 
 ### Example 1: Remove a security scope from an administrative user
 ```
-PS C:\>Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -SecurityScopeName "SecScope02"
+PS C:\> Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -SecurityScopeName "SecScope02"
 ```
 
 This command removes the association between the security scope named SecScope02 and the administrative user named Contoso\PattiFuller.

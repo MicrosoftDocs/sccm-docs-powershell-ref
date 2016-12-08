@@ -52,7 +52,7 @@ This command creates a blocked record for the conflict named CR07.
 
 ### Example 2: Create a blocked record by using a variable
 ```
-PS C:\>$CMCR = Get-CMConflictingRecord -Name "CR07"
+PS C:\> $CMCR = Get-CMConflictingRecord -Name "CR07"
 PS C:\> Block-CMConflictingRecord -ConflictingRecord $CMCR
 ```
 

@@ -33,7 +33,7 @@ If you specify an ID or name, you can further specify a security scope membershi
 
 ### Example 1: Get a EULA or SLT for a software update
 ```
-PS C:\>Get-CMSoftwareUpdateLicense -Name "UpdatePkg01" -SecuredScopeNames "SecScope02"
+PS C:\> Get-CMSoftwareUpdateLicense -Name "UpdatePkg01" -SecuredScopeNames "SecScope02"
 ```
 
 This command gets the EULA or SLT for a software update named UpdatePkg01 for the security scope named SecScope02.

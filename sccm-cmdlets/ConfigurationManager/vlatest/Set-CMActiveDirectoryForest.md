@@ -44,7 +44,7 @@ Active Directory Forest Discovery requires a global account to discover or publi
 
 ### Example 1: Change the description of an Active Directory forest
 ```
-PS C:\>Set-CMActiveDirectoryForest -Id "16777217" -Description "AD Forest 01"
+PS C:\> Set-CMActiveDirectoryForest -Id "16777217" -Description "AD Forest 01"
 ```
 
 This command changes the description of an Active Directory forest that has the ID 16777217 to AD Forest 01.

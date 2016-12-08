@@ -26,7 +26,7 @@ For more information about client settings, see [About Client Settings in Config
 
 ### Example 1: Get client status settings for the local computer
 ```
-PS C:\>Get-CMClientStatusSetting
+PS C:\> Get-CMClientStatusSetting
 ADRetrieving Schedule  : 
 CleanUpInterval        : 7
 DDRInactiveInterval    : 3

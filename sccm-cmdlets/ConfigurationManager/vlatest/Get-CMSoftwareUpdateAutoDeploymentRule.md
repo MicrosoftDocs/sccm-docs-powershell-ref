@@ -38,14 +38,14 @@ You can use this cmdlet to get deployment rules for automatic software updates t
 
 ### Example 1: Get a deployment rule by name
 ```
-PS C:\>Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+PS C:\> Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
 ```
 
 This command gets a deployment rule named Weekly Driver Updates.
 
 ### Example 2: Get a deployment rule by ID
 ```
-PS C:\>Get-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
+PS C:\> Get-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
 ```
 
 This command gets a deployment rule that has the ID 16777217.

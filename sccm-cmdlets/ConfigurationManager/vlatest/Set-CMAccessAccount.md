@@ -128,7 +128,7 @@ For example, members in the Software Update Point Connection Access Account can 
 
 ### Example 1: Change access to a package by using the package name
 ```
-PS C:\>$Name = Get-CMAccessAccount -PackageName "Configuration Manager Client Package" 
+PS C:\> $Name = Get-CMAccessAccount -PackageName "Configuration Manager Client Package" 
 PS C:\> Set-CMAccessAccount -PackageName $Name -Type User -UserName "CONTOSO\PFuller" -Access Read -Confirm
 ```
 

@@ -46,7 +46,7 @@ This command unblocks the device named Test-DIST02.
 
 ### Example 2: Get a device and unblock it
 ```
-PS C:\>Get-CMDevice -Name "WIN10-86-33" | Unblock-CMDevice
+PS C:\> Get-CMDevice -Name "WIN10-86-33" | Unblock-CMDevice
 ```
 
 This command gets the device object named WIN10-86-33 and uses the pipeline operator to pass the object to **Unblock-CMDevice**, which unblocks the device object.

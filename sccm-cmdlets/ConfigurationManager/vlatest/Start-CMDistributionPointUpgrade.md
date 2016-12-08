@@ -60,7 +60,7 @@ Therefore, when you upgrade a distribution point, you do not have to redistribut
 
 ### Example 1: Upgrade a shared distribution point
 ```
-PS C:\>$CIObj = Get-CMDistributionPoint -DistributionPointGroupId "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
+PS C:\> $CIObj = Get-CMDistributionPoint -DistributionPointGroupId "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
 PS C:\> Start-CMDistributionPointUpgrade -AllowPreStaging $True -CertificatePath "\\Contoso01\CM\Toolbox\BaseCert.txt" -SharedDistributionPoint $CIObj -SiteCode "CM1"
 ```
 
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 
 ### -PrimaryContentLibraryLocation
 Specifies the primary content location.
-Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
+Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the *MinFreeSpaceMB* parameter.
 Valid values are:
 
 - Automatic.
@@ -453,7 +453,7 @@ Accept wildcard characters: False
 
 ### -PrimaryPackageShareLocation
 Specifies the primary package share location.
-Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
+Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the *MinFreeSpaceMB* parameter.
 Valid values are:
 
 - Automatic.

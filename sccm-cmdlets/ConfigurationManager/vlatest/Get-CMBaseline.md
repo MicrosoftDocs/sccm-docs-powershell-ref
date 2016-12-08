@@ -47,14 +47,14 @@ The **Get-CMBaseline** cmdlet gets one or more configuration baselines.
 
 ### Example 1: Get configuration baselines by using a parent baseline name
 ```
-PS C:\>Get-CMBaseline -ParentBaselineName "ParentBaselineContoso01"
+PS C:\> Get-CMBaseline -ParentBaselineName "ParentBaselineContoso01"
 ```
 
 This command gets the child configuration baselines in the parent baseline configuration item named ParentBaselineContoso01.
 
 ### Example 2: Get configuration baselines by using a parent baseline ID
 ```
-PS C:\>Get-CMBaseline -ParentBaselineId "16777357"
+PS C:\> Get-CMBaseline -ParentBaselineId "16777357"
 ```
 
 This command gets the child configuration baselines in the parent baseline configuration item that has the identity 16777357.

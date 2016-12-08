@@ -45,7 +45,7 @@ For more information about collections, see [Introduction to Collections in Conf
 
 ### Example 1: Get a device collection by using an ID
 ```
-PS C:\>Get-CMDeviceCollection -CollectionId "9990000D"
+PS C:\> Get-CMDeviceCollection -CollectionId "9990000D"
 ```
 
 This command gets the device collection that has the ID 9990000D.

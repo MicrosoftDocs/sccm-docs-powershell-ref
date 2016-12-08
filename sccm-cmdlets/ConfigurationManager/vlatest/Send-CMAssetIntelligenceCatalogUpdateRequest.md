@@ -34,7 +34,7 @@ You can also use the Sync-CMAssetIntelligenceCatalog cmdlet to synchronize the l
 
 ### Example 1: Request an update for a software category
 ```
-PS C:\>Send-CMAssetIntelligenceCatalogUpdateRequest -Name "Browsers"
+PS C:\> Send-CMAssetIntelligenceCatalogUpdateRequest -Name "Browsers"
 ```
 
 This command requests an update of the Asset Intelligence catalog for the software category named Browsers.

@@ -30,7 +30,7 @@ The **New-CMPrestagedMedia** cmdlet creates a file to prestage on a new hard dri
 
 ### Example 1: Create prestaged media
 ```
-PS C:\>$ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
+PS C:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
 PS C:\> $BootImage = Get-CMBootImage -Name "BootImage01"
 PS C:\> $DistributionPoint = Get-CMDistributionPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
 PS C:\> $OSImage = Get-CMOperatingSystemImage -Name "OSImagePkg01"

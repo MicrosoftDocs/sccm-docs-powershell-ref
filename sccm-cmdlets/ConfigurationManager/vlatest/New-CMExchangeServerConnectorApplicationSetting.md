@@ -24,7 +24,7 @@ The **New-CMExchangeServerConnectorApplicationSetting** cmdlet creates applicati
 
 ### Example 1: Set application options for an Exchange Server connector
 ```
-PS C:\>New-CMExchangeServerConnectorApplicationSetting -UnsignedApplication $False -UnsignedInstall $True -BlockedApplication "a1","a2"
+PS C:\> New-CMExchangeServerConnectorApplicationSetting -UnsignedApplication $False -UnsignedInstall $True -BlockedApplication "a1","a2"
 ```
 
 This command sets these application options for an Exchange Server connector: 

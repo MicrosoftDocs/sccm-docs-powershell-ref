@@ -35,7 +35,7 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ### Example 1: Get a boundary group that is specified by its identifier
 ```
-PS C:\>Get-CMBoundaryGroup -Id "1600231"
+PS C:\> Get-CMBoundaryGroup -Id "1600231"
 CreatedBy:          Contoso\ENarvaez
 CreatedOn           5/17/2012 06:01:29 AM
 DefaultSiteCode: 
@@ -52,7 +52,7 @@ This command gets a boundary group that is specified by the identifier 1600231.
 
 ### Example 2: Get multiple boundary groups that are specified by name
 ```
-PS C:\>Get-CMBoundaryGroup -Name "BGroup01", "BGroup02", "BGroup03"
+PS C:\> Get-CMBoundaryGroup -Name "BGroup01", "BGroup02", "BGroup03"
 CreatedBy:          Contoso\ENarvaez
 CreatedOn           5/17/2012 07:13:02 AM
 DefaultSiteCode: 

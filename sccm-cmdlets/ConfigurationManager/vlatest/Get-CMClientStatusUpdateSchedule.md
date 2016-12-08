@@ -23,7 +23,7 @@ The **Get-CMClientStatusUpdateSchedule** cmdlet gets a schedule interval of the 
 
 ### Example 1: Gets a client status update schedule
 ```
-PS C:\>Get-CMClientStatusUpdateSchedule
+PS C:\> Get-CMClientStatusUpdateSchedule
 Interval Unit 
 -------- ----
        1 Days

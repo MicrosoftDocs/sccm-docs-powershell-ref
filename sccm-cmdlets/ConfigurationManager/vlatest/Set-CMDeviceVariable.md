@@ -42,7 +42,7 @@ Task sequence processing uses device variables.
 
 ### Example 1: Modify a device variable
 ```
-PS C:\>Set-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -NewVariableValue "192.168.100.10"
+PS C:\> Set-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -NewVariableValue "192.168.100.10"
 ```
 
 This command modifies the device variable ServerIPAddress associated with the device gateway-server.contoso.com.

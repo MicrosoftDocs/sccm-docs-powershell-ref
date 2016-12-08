@@ -39,21 +39,21 @@ A deployment type also contains rules that specify if and how the software is de
 
 ### Example 1: Get the deployment type of an application
 ```
-PS C:\>Get-CMDeploymentType -ApplicationName "CenterApp"
+PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp"
 ```
 
 This command gets the deployment type for the application named CenterApp.
 
 ### Example 2: Get the deployment type of an application by name
 ```
-PS C:\>Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
+PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
 ```
 
 This command gets the deployment type for the application named CenterApp that has a deployment type named InterDept - Windows app package (.appx file).
 
 ### Example 3: Get the deployment type of an application by ID
 ```
-PS C:\>Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeID "16777457"
+PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeID "16777457"
 ```
 
 This command gets the deployment type for the application named CenterApp that has a deployment type that has the ID 16777457.

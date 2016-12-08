@@ -36,21 +36,21 @@ A migration entity is an object to be migrated that is of any type that is suppo
 
 ### Example 1: Get information about all your migration entities
 ```
-PS C:\>Get-CMMigrationEntity
+PS C:\> Get-CMMigrationEntity
 ```
 
 This command returns information about all of your migration entities.
 
 ### Example 2: Get information about a specific migration entity
 ```
-PS C:\>Get-CMMigrationEntity -Name "MigrationTest"
+PS C:\> Get-CMMigrationEntity -Name "MigrationTest"
 ```
 
 This command returns information about the migration entity with the name MigrationTest.
 
 ### Example 3: Get information about active migration entities
 ```
-PS C:\>Get-CMMigrationEntity -IsActive
+PS C:\> Get-CMMigrationEntity -IsActive
 ```
 
 This command returns information about all of your active migration entities.

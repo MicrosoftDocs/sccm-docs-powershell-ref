@@ -33,7 +33,7 @@ User device affinity is a method of associating a user with one or more specifie
 
 ### Example 1: Remove a primary user from a device
 ```
-PS C:\>Remove-CMUserAffinityFromDevice -DeviceId "209846738" -UserId "206359374"
+PS C:\> Remove-CMUserAffinityFromDevice -DeviceId "209846738" -UserId "206359374"
 ```
 
 This command removes the association between the user that has the ID 206359374 and the device that has the ID 209846738.

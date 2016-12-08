@@ -25,14 +25,14 @@ A software update point component interacts with WSUS services to configure upda
 
 ### Example 1: Retrieve a software update point component by name
 ```
-PS C:\>Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
+PS C:\> Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
 ```
 
 This command retrieves a software update point component by using the site system server name.
 
 ### Example 2: Retrieve a software update point component by site code
 ```
-PS C:\>Get-CMSoftwareUpdatePointComponent -SiteCode "CM1"
+PS C:\> Get-CMSoftwareUpdatePointComponent -SiteCode "CM1"
 ```
 
 This command retrieves a software update point component by using the site code.

@@ -32,14 +32,14 @@ A migration entity dependency is an object upon which another object to be migra
 
 ### Example 1: Get information about all migration entity dependencies
 ```
-PS C:\>Get-CMMigrationEntityDependency
+PS C:\> Get-CMMigrationEntityDependency
 ```
 
 This command returns information about all your migration entity dependencies.
 
 ### Example 2: Get information about a specific migration entity dependency
 ```
-PS C:\>Get-CMMigrationEntityDependency -Id "121989"
+PS C:\> Get-CMMigrationEntityDependency -Id "121989"
 ```
 
 This command returns information about the migration entity dependency that has the ID 121989.

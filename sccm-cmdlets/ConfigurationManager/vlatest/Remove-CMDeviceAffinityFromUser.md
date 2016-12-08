@@ -37,7 +37,7 @@ For more information about user device affinity, see [How to Manage User Device 
 
 ### Example 1: Remove device affinity from a user by user ID
 ```
-PS C:\>Remove-CMDeviceAffinityFromUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
+PS C:\> Remove-CMDeviceAffinityFromUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
 ```
 
 This command adds affinity to the device named WestDivUpdates05 for the user named Patti Fuller.

@@ -95,7 +95,7 @@ You can add the distribution point site role to a new site system server or add 
 
 ### Example 1: Add a site by using a site system server object
 ```
-PS C:\>$Date = [DateTime]::Now.AddYears(30)
+PS C:\> $Date = [DateTime]::Now.AddYears(30)
 PS C:\> $SystemServer = Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com"
 PS C:\> Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc $Date
 ```
@@ -108,7 +108,7 @@ The third command adds a distribution point to the site system server stored in 
 
 ### Example 2: Add a site by using the pipeline
 ```
-PS C:\>$Date = [DateTime]::Now.AddYears(30)
+PS C:\> $Date = [DateTime]::Now.AddYears(30)
 PS C:\> Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add-CMDistributionPoint -CertificateExpirationTimeUtc $Date
 ```
 

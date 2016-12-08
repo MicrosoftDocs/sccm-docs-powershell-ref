@@ -51,7 +51,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add an iOS deployment type by using the pipeline
 ```
-PS C:\>Get-CMApplication -Name "testIOS" | Add-CMIOSDeploymentType -DeploymentTypeName "DTIOS" -ContentLocation "\\server01\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -Comment "Create an IOS DT" -AddLanguage "zh-CN","en-US
+PS C:\> Get-CMApplication -Name "testIOS" | Add-CMIOSDeploymentType -DeploymentTypeName "DTIOS" -ContentLocation "\\server01\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -Comment "Create an IOS DT" -AddLanguage "zh-CN","en-US
 ```
 
 This command gets the application object named testIOS and uses the pipeline operator to pass the object to **Add-CMIOSDeploymentType**.

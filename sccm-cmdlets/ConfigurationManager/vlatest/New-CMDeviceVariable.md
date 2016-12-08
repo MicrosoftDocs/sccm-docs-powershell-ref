@@ -39,7 +39,7 @@ Task sequence processing uses device variables.
 
 ### Example 1: Create a device variable
 ```
-PS C:\>New-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -VariableValue "192.168.1.1" -IsMask 0
+PS C:\> New-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -VariableValue "192.168.1.1" -IsMask 0
 ```
 
 This command creates a device variable for the device gateway-server.contoso.com.

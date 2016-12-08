@@ -41,7 +41,7 @@ Client computers use wireless profiles for configuration when they connect to a 
 
 ### Example 1: Modify a wireless profile configuration item
 ```
-PS C:\>Set-CMWirelessProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Wireless2.xml"
+PS C:\> Set-CMWirelessProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Wireless2.xml"
 ```
 
 This command modifies the wireless profile configuration item that has the ID AAA0004D.

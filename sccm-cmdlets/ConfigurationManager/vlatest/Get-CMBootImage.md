@@ -37,14 +37,14 @@ For more information about the SMS provider, see [Planning for the SMS Provider 
 
 ### Example 1: Get a boot image by using its ID
 ```
-PS C:\>Get-CMBootImage -Id "c0eb2912-0de8-4a2a-9c77-603b35bcf7e4"
+PS C:\> Get-CMBootImage -Id "c0eb2912-0de8-4a2a-9c77-603b35bcf7e4"
 ```
 
 This command gets a boot image by using its ID.
 
 ### Example 2: Get a boot image by using its name
 ```
-PS C:\>Get-CMBootImage -Name "SMS_BootImagePackage"
+PS C:\> Get-CMBootImage -Name "SMS_BootImagePackage"
 ```
 
 This command gets a boot image by using its name.

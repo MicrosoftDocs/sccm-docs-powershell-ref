@@ -47,14 +47,14 @@ After you deploy a software update group, you can add new software updates to th
 
 ### Example 1: Add a software update group to a security scope
 ```
-PS C:\>Set-CMSoftwareUpdateGroup -SecurityScopeAction AddMembership -SecurityScopeName "ScopeNameD02" -Name "SUGroup01"
+PS C:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction AddMembership -SecurityScopeName "ScopeNameD02" -Name "SUGroup01"
 ```
 
 This command adds a software update group named SUGroup01 as a member of the security scope named ScopeNameD02.
 
 ### Example 2: Remove a software update group from a security scope
 ```
-PS C:\>Set-CMSoftwareUpdateGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "ScopeNameD17" -Name "SUGroup01"
+PS C:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "ScopeNameD17" -Name "SUGroup01"
 ```
 
 This command removes the software update group named SUGroup01 from membership in the security scope named ScopeNameD17.

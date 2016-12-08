@@ -37,7 +37,7 @@ Each state migration point site server can be a member of only one System Center
 
 ### Example 1: Get a migration point
 ```
-PS C:\>Get-CMStateMigrationPoint -SiteCode "CM1" -SiteSystemServerName "SMP01.Western.Contoso.com"
+PS C:\> Get-CMStateMigrationPoint -SiteCode "CM1" -SiteSystemServerName "SMP01.Western.Contoso.com"
 ```
 
 This command gets a state migration point that belongs to the specified site and has the specified host name.

@@ -56,14 +56,14 @@ A task sequence deployment assigns a task sequence to a collection of computers.
 
 ### Example 1: Start a task sequence deployment
 ```
-PS C:\>Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "All Systems"
+PS C:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "All Systems"
 ```
 
 This command starts a task sequence deployment by using the name of the task sequence deployment and the name of a collection.
 
 ### Example 2: Start a task sequence deployment for devices
 ```
-PS C:\>Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "All Mobile Devices" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
+PS C:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "All Mobile Devices" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
 ```
 
 This command starts a task sequence deployment for mobile devices.
@@ -573,7 +573,7 @@ Indicates whether to send a wake up packet to computers before the deployment be
 If this value is $True, Configuration Manager wakes a computer from sleep.
 If this value is $False, it does not wake computers from sleep.
 For computers to wake, you must first configure Wake On LAN.
-The Purpose parameter must be set to Required.
+The *Purpose* parameter must be set to Required.
 
 ```yaml
 Type: Boolean

@@ -39,7 +39,7 @@ You can use the revision history to display each revision made to an application
 
 ### Example 1: Get the revision history for an application
 ```
-PS C:\>Get-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
+PS C:\> Get-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
 ```
 
 This command gets the application revision history named MSXML 6.0 Parser.

@@ -38,21 +38,21 @@ You can specify App-V virtual environments by name or ID, or you can provide an 
 
 ### Example 1: Remove a virtual environment by name
 ```
-PS C:\>Remove-CMAppVVirtualEnvironment -Name "Test"
+PS C:\> Remove-CMAppVVirtualEnvironment -Name "Test"
 ```
 
 This command removes an App-V virtual environment named Test.
 
 ### Example 2: Remove a virtual environment by ID
 ```
-PS C:\>Remove-CMAppVVirtualEnvironment -Id "16781806"
+PS C:\> Remove-CMAppVVirtualEnvironment -Id "16781806"
 ```
 
 This command removes an App-V virtual environment that has the ID 16781806.
 
 ### Example 3: Remove a virtual environment by name by using a wildcard
 ```
-PS C:\>$AppV = Get-CMAppVVirtualEnvironment -Name "T*"
+PS C:\> $AppV = Get-CMAppVVirtualEnvironment -Name "T*"
 PS C:\> Remove-CMAppVVirtualEnvironment -InputObject $AppV
 ```
 

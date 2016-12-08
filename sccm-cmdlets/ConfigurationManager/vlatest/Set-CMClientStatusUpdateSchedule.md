@@ -25,7 +25,7 @@ For more information, see [How to Configure Client Status in Configuration Manag
 
 ### Example 1: Modify a client's status update schedule
 ```
-PS C:\>Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
+PS C:\> Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
 ```
 
 This command modifies the client status update schedule.

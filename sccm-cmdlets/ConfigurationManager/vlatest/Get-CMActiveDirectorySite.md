@@ -43,7 +43,7 @@ You can get System Center Configuration Manager sites that publish site data to 
 
 ### Example 1: Get an Active Directory site
 ```
-PS C:\>Get-CMActiveDirectorySite
+PS C:\> Get-CMActiveDirectorySite
 ```
 
 This command gets the Active Directory sites that are configured to publish site information.

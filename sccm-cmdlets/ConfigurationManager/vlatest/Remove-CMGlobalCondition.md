@@ -43,7 +43,7 @@ You cannot remove read-only global conditions.
 
 ### Example 1: Remove a global condition
 ```
-PS C:\>Remove-CMGlobalCondition -Name "GC56" -Force
+PS C:\> Remove-CMGlobalCondition -Name "GC56" -Force
 ```
 
 This command removes a global condition named GC56.
@@ -51,7 +51,7 @@ Because the command uses the *Force* parameter, the system does not prompt you b
 
 ### Example 2: Remove a global condition using a variable
 ```
-PS C:\>$CMGC = Get-CMGlobalCondition -Name "GC57"
+PS C:\> $CMGC = Get-CMGlobalCondition -Name "GC57"
 PS C:\> Remove-CMGlobalCondition -InputObject $CMGC
 Remove
 Are you sure you wish to remove GlobalCondition: 

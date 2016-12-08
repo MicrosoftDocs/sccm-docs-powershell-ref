@@ -38,7 +38,7 @@ A state migration point is a site system role that manages data transfer from cl
 
 ### Example 1: Add a state migration point
 ```
-PS C:\>$s1 = New-CMStoragefolder -StorageFolderName "C:\Sto-1" -MaximumClientNumber 100 -MinimumFreeSpace 100 -SpaceUnit Megabyte
+PS C:\> $s1 = New-CMStoragefolder -StorageFolderName "C:\Sto-1" -MaximumClientNumber 100 -MinimumFreeSpace 100 -SpaceUnit Megabyte
 PS C:\> $s2 = New-CMStoragefolder -StorageFolderName "D:\Sto-2" -MaximumClientNumber 100 -MinimumFreeSpace 10 -SpaceUnit Gigabyte
 PS C:\> Add-CMStateMigrationPoint -SiteSystemServerName "Contoso-Migration.Contoso.com" -SiteCode "CM2" -StorageFolders $s1,$s2 -DeleteImmediately -EnableRestoreOnlyMode $False -AllowFallbackSourceLocationForContent $False -BoundaryGroupName "CMC"
 ```
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeUnit
-Specifies the unit of time for the TimeDeleteAfter parameter.
+Specifies the unit of time for the *TimeDeleteAfter* parameter.
 Valid values are: Days and Hours.
 
 ```yaml

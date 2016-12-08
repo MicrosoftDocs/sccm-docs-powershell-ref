@@ -25,14 +25,14 @@ These objects contain thresholds for Microsoft System Center Configuration Manag
 
 ### Example 1: Get settings for components
 ```
-PS C:\>Get-CMComponentStatusSetting -SiteCode "CAS" -ComponentName SMS_REPL*
+PS C:\> Get-CMComponentStatusSetting -SiteCode "CAS" -ComponentName SMS_REPL*
 ```
 
 This command gets status setting objects for the site that has the site code CAS for components with names that begin with SMS_REPL.
 
 ### Example 2: Get settings for components on specified systems
 ```
-PS C:\>Get-CMComponentStatusSetting -SiteSystemName VM* -ComponentName SMS_REPL*
+PS C:\> Get-CMComponentStatusSetting -SiteSystemName VM* -ComponentName SMS_REPL*
 ```
 
 This command gets status setting objects for systems with names that begin with VM for components with names that begin with SMS_REPL.

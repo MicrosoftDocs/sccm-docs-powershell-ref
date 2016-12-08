@@ -35,7 +35,7 @@ You can use this cmdlet with the [Remove-CMSystemHealthValidatorPoint](./Remove-
 
 ### Example 1: Get a validator point
 ```
-PS C:\>Get-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com"
+PS C:\> Get-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com"
 ```
 
 This command gets a system health validator point.

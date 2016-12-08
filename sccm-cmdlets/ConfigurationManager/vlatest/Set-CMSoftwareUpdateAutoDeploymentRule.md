@@ -93,7 +93,7 @@ The System Center Configuration Manager server downloads content files and copie
 
 ### Example 1: Modify the language selection and name of a rule
 ```
-PS C:\>Set-CMSoftwareUpdateAutoDeploymentRule -Name "DeploymentRule07" -NewName "DeploymentRule07Revised" -Description "Update rule to use Portuguese (Brazil)." -LanguageSelection "Portuguese (Brazil)"
+PS C:\> Set-CMSoftwareUpdateAutoDeploymentRule -Name "DeploymentRule07" -NewName "DeploymentRule07Revised" -Description "Update rule to use Portuguese (Brazil)." -LanguageSelection "Portuguese (Brazil)"
 ```
 
 This command modifies the automatic deployment rule named DeploymentRule07.
@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### -DownloadFromInternet
 Indicates whether computers download software updates from the Internet.
-If you specify a value of $False, specify an alternative location where computers can download updates by using the Location parameter.
+If you specify a value of $False, specify an alternative location where computers can download updates by using the *Location* parameter.
 
 ```yaml
 Type: Boolean

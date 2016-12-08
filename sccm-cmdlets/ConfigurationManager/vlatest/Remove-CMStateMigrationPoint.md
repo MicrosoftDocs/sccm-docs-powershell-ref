@@ -35,7 +35,7 @@ Each state migration point can be a member of only one System Center Configurati
 
 ### Example 1: Remove a specified migration point
 ```
-PS C:\>Remove-CMStateMigrationPoint -SiteCode "CM1" -SiteSystemServerName "SMP01.Western.Contoso.com"
+PS C:\> Remove-CMStateMigrationPoint -SiteCode "CM1" -SiteSystemServerName "SMP01.Western.Contoso.com"
 ```
 
 This command removes a state migration point that belongs to the site that has the site code CM1.
@@ -43,7 +43,7 @@ The command specifies the name of computer that hosts the site system role.
 
 ### Example 2: Remove a migration point using a variable
 ```
-PS C:\>$CMSMP = Get-CMStateMigrationPoint -SiteCode "CM1" -SiteSystemServerName "SMP01.TSQA.Contoso.com"
+PS C:\> $CMSMP = Get-CMStateMigrationPoint -SiteCode "CM1" -SiteSystemServerName "SMP01.TSQA.Contoso.com"
 PS C:\> Remove-CMStateMigrationPoint -InputObject $CMSMP
 ```
 

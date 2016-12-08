@@ -49,7 +49,7 @@ You can provide a name and description for the cloud distribution point.
 
 ### Example 1: Set values for a distribution point
 ```
-PS C:\>Set-CMCloudDistributionPoint -Id 16777237 -Description "Western distribution point" -Name "West01" -StorageQuotaInGB 50 -TrafficOutInGB 50
+PS C:\> Set-CMCloudDistributionPoint -Id 16777237 -Description "Western distribution point" -Name "West01" -StorageQuotaInGB 50 -TrafficOutInGB 50
 ```
 
 This command sets the description and name for a distribution point to the provided strings.

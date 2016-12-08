@@ -40,7 +40,7 @@ The **Export-CMTaskSequence** cmdlet exports a Microsoft System Center Configura
 
 ### Example 1: Get a task sequence and export it
 ```
-PS C:\>$TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+PS C:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
 PS C:\> Export-CMTaskSequence -InputObject $TaskSequence -ExportFilePath "\\Server1\TS\TaskSequence01.zip"
 ```
 
@@ -50,7 +50,7 @@ The second command exports the task sequence stored in $TaskSequence to the spec
 
 ### Example 2: Get a task sequence and use the pipeline to export it
 ```
-PS C:\>Get-CMTaskSequence -Name "TaskSequence02" | Export-CMTaskSequence -ExportFilePath "\\Server1\TS\TaskSequence02.zip"
+PS C:\> Get-CMTaskSequence -Name "TaskSequence02" | Export-CMTaskSequence -ExportFilePath "\\Server1\TS\TaskSequence02.zip"
 ```
 
 This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Export-CMTaskSequence**, which exports the task sequence object to the specified location.

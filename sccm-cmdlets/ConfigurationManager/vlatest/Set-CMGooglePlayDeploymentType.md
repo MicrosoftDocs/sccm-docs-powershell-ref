@@ -51,7 +51,7 @@ The **Set-CMGooglePlayDeploymentType** changes the settings for a Google Play de
 
 ### Example 1: Change the name and remove a language of the deployment type
 ```
-PS C:\>Set-CMGooglePlayDeploymentType -ApplicationName "TestGooglePlay02" -DeploymentTypeName "DTGooglePlay02" -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -NewName "DTGooglePlay_Updated" -RemoveLanguage "zh-CN" -PassThru -Confirm
+PS C:\> Set-CMGooglePlayDeploymentType -ApplicationName "TestGooglePlay02" -DeploymentTypeName "DTGooglePlay02" -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -NewName "DTGooglePlay_Updated" -RemoveLanguage "zh-CN" -PassThru -Confirm
 ```
 
 This command removes Chinese from the deployment type named DTGooglePlay02 for the application named TestGooglePlay02.
@@ -60,7 +60,7 @@ The *PassThru* parameter indicates that an object is returned from this command.
 
 ### Example 2: Change the name and remove a language of the deployment type by using the pipeline
 ```
-PS C:\>Get-CMDeploymentType -ApplicationName "TestGooglePlay01" -DeploymentTypeName "DTGooglePlay01" | Set-CMGooglePlayDeploymentType -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -NewName "DTGooglePlay" -RemoveLanguage "zh-CN" -PassThru -Confirm
+PS C:\> Get-CMDeploymentType -ApplicationName "TestGooglePlay01" -DeploymentTypeName "DTGooglePlay01" | Set-CMGooglePlayDeploymentType -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -NewName "DTGooglePlay" -RemoveLanguage "zh-CN" -PassThru -Confirm
 ```
 
 This command gets the deployment type object named DTGooglePlay01 for the application named TestGooglePlay01 and uses the pipeline operator to pass the object to **Set-CMGooglePlayDeploymentType**.

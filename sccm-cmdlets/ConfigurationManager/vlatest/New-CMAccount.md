@@ -26,7 +26,7 @@ For more information about user accounts, see [Technical Reference for Accounts 
 
 ### Example 1: Create a user account by using name and password
 ```
-PS C:\>$Secure = Read-Host -AsSecureString
+PS C:\> $Secure = Read-Host -AsSecureString
 PS C:\> $ConfirmSecure = Read-Host -AsSecureString
 PS C:\> New-CMAccount -Name "TSQA\PFuller" -Password $Secure -ConfirmPassword $ConfirmSecure -SiteCode "CM2"
 ```

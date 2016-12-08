@@ -26,7 +26,7 @@ For more information about System Center Configuration Manager user accounts, se
 
 ### Example 1: Get a user account by using its name
 ```
-PS C:\>Get-CMAccount -Name "CONTOSO\ENarvaez"
+PS C:\> Get-CMAccount -Name "CONTOSO\ENarvaez"
 ```
 
 This command gets a user account.

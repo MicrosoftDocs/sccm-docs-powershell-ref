@@ -40,7 +40,7 @@ The **Set-CMDeviceCollectionVariable** cmdlet changes the settings of a device c
 
 ### Example 1: Change a variable name
 ```
-PS C:\>$Collection = Get-CMCollection -Name "Device"
+PS C:\> $Collection = Get-CMCollection -Name "Device"
 PS C:\> Set-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -NewVariableName "NewVariable"
 ```
 
@@ -50,7 +50,7 @@ The second command changes the name of the collection variable testTS for the de
 
 ### Example 2: Change a variable name by using the pipeline
 ```
-PS C:\>Get-CMCollection -Name "Device" | Set-CMDeviceCollectionVariable -VariableName "testTS" -NewVariableName "NewVariable"
+PS C:\> Get-CMCollection -Name "Device" | Set-CMDeviceCollectionVariable -VariableName "testTS" -NewVariableName "NewVariable"
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Set-CMDeviceCollectionVariable**, which changes the name of the collection variable testTS for the device collection object to NewVariable.

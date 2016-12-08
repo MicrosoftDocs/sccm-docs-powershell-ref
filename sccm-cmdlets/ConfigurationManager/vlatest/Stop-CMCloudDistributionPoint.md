@@ -43,21 +43,21 @@ For example, you might want to stop a cloud service when usage reaches a data th
 
 ### Example 1: Stop the cloud distribution point service using an ID
 ```
-PS C:\>Stop-CMCloudDistributionPoint -Id "16777242"
+PS C:\> Stop-CMCloudDistributionPoint -Id "16777242"
 ```
 
 This command stops the cloud distribution point service for the cloud distribution point that has the specified identifier.
 
 ### Example 2: Stop the cloud distribution point service using a name
 ```
-PS C:\>Stop-CMCloudDistributionPoint -Name "West01"
+PS C:\> Stop-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command stops the cloud distribution point service for the cloud distribution point named West01.
 
 ### Example 3: Stop the cloud distribution point service using an object
 ```
-PS C:\>$DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
+PS C:\> $DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
 PS C:\> Stop-CMCloudDistributionPoint -InputObject $DistPnt
 ```
 

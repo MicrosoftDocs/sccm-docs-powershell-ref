@@ -39,7 +39,7 @@ You can use the [Disable-CMStatusFilterRule](./Disable-CMStatusFilterRule.md) cm
 
 ### Example 1: Remove a rule
 ```
-PS C:\>Remove-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1" -Force
+PS C:\> Remove-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1" -Force
 ```
 
 This command removes a status filter rule that has the specified name in a site that has the site code CM1.

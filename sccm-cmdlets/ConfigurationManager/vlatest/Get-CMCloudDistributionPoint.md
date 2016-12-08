@@ -56,21 +56,21 @@ For example, you might want to get a distribution point and then use the [Stop-C
 
 ### Example 1: Get all cloud distribution points
 ```
-PS C:\>Get-CMCloudDistributionPoint
+PS C:\> Get-CMCloudDistributionPoint
 ```
 
 This command gets all the cloud distribution points.
 
 ### Example 2: Get a cloud distribution point by name
 ```
-PS C:\>Get-CMCloudDistributionPoint -Name "West01"
+PS C:\> Get-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command gets a distribution point named West01.
 
 ### Example 3: Get a cloud distribution point by ID
 ```
-PS C:\>Get-CMCloudDistributionPoint -Id "16777230"
+PS C:\> Get-CMCloudDistributionPoint -Id "16777230"
 ```
 
 This command gets a distribution point with the specified ID.

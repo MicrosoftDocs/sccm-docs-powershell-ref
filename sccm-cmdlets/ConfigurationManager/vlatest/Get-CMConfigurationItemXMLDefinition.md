@@ -38,21 +38,21 @@ You can specify a configuration item with the configuration item ID, the configu
 
 ### Example 1: Get XML formatted item using an ID
 ```
-PS C:\>Get-CMConfigurationItemXMLDefinition -Id "16777568"
+PS C:\> Get-CMConfigurationItemXMLDefinition -Id "16777568"
 ```
 
 This command gets a configuration item formatted in XML for the item that has the specified identifier.
 
 ### Example 2: Get XML formatted item using a name
 ```
-PS C:\>Get-CMConfigurationItemXMLDefinition -Name "ConfigItem76"
+PS C:\> Get-CMConfigurationItemXMLDefinition -Name "ConfigItem76"
 ```
 
 This command gets a configuration item formatted in XML for the item named ConfigItem76.
 
 ### Example 3: Get XML formatted item using a variable
 ```
-PS C:\>$CIObj=Get-CMConfigurationItem -Id "16777568"
+PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
 PS C:\> Get-CMConfigurationItemXMLDefinition -InputObject $CIObj
 ```
 

@@ -36,7 +36,7 @@ Instead of deploying an application to a group of devices, you deploy an applica
 
 ### Example 1: Get a request for user device affinity
 ```
-PS C:\>Get-CMUserDeviceAffinityRequest -CollectionName "All Systems"
+PS C:\> Get-CMUserDeviceAffinityRequest -CollectionName "All Systems"
 ```
 
 This command gets a request for user device affinity for the collection named All Systems.

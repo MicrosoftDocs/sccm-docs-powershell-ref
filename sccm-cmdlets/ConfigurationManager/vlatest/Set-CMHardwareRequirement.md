@@ -39,14 +39,14 @@ You can specify a product by name or obtain a product by using the **Get-CMHardw
 
 ### Example 1: Change minimum RAM value
 ```
-PS C:\>Set-CMHardwareRequirement -Product "Accounts Program" -MinRam 161072
+PS C:\> Set-CMHardwareRequirement -Product "Accounts Program" -MinRam 161072
 ```
 
 This command sets the minimum RAM value for a specified product.
 
 ### Example 2: Change minimum disk size value for a hardware requirements object
 ```
-PS C:\>$CMHR = Get-CMHardwareRequirement -Product "Accounts Program"
+PS C:\> $CMHR = Get-CMHardwareRequirement -Product "Accounts Program"
 PS C:\> Set-CMHardwareRequirement -InputObject $CMHR -MinDiskSize 1600000
 ```
 

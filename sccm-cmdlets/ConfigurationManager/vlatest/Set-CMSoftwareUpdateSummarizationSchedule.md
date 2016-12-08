@@ -26,14 +26,14 @@ You can use the [Invoke-CMSoftwareUpdateSummarization](./Invoke-CMSoftwareUpdate
 
 ### Example 1: Schedule summarization interval and unit
 ```
-PS C:\>Set-CMSoftwareUpdateSummarizationSchedule -Interval 5 -Unit Days
+PS C:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 5 -Unit Days
 ```
 
 This command sets the update summarization schedule to run every five days.
 
 ### Example 2: Change schedule interval
 ```
-PS C:\>Set-CMSoftwareUpdateSummarizationSchedule -Interval 7
+PS C:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 7
 ```
 
 This command changes the interval for the update summarization schedule to seven.
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -Interval
 Specifies an amount of time, as an integer.
-This value works with the unit type you specify in the Unit parameter.
+This value works with the unit type you specify in the *Unit* parameter.
 Valid values for this parameter depend on the unit that you select:
 
 - Minutes: 10 through 59.

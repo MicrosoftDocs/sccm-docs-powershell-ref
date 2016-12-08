@@ -27,14 +27,14 @@ You can specify which site to change by site server name or site code.
 
 ### Example 1: Set an evaluation period for a site code
 ```
-PS C:\>Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 5 -SiteCode "CM4"
+PS C:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 5 -SiteCode "CM4"
 ```
 
 This command sets the evaluation frequency to five minutes for the specified site code.
 
 ### Example 2: Set an evaluation period for a system
 ```
-PS C:\>Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 6 -SiteSystemName "CM01.West01.Contoso.com"
+PS C:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 6 -SiteSystemName "CM01.West01.Contoso.com"
 ```
 
 This command sets the evaluation frequency to six minutes for the server named CM01.West01.Contoso.com.

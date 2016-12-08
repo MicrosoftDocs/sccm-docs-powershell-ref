@@ -37,7 +37,7 @@ The **Remove-CMDeviceVariable** cmdlet removes a variable defined for a device.
 
 ### Example 1: Remove a device variable
 ```
-PS C:\>Remove-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress"
+PS C:\> Remove-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress"
 ```
 
 This command removes the device variable ServerIPAddress from the device gateway-server.contoso.com.

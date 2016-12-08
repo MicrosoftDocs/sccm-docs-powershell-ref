@@ -37,7 +37,7 @@ The **Remove-CMBoundaryGroup** cmdlet removes a boundary group from Microsoft Sy
 
 ### Example 1: Remove a boundary group that is specified by its ID
 ```
-PS C:\>Remove-CMBoundaryGroup -Id "16777219"
+PS C:\> Remove-CMBoundaryGroup -Id "16777219"
 ```
 
 This command removes a boundary group that is specified by its identifier.
@@ -45,7 +45,7 @@ Because the *Force* parameter is not specified, you must confirm the action befo
 
 ### Example 2: Remove multiple boundary groups by using an InputObject
 ```
-PS C:\>$BoundaryObj = Get-CMBoundary -Name "BGroup01", "BGroup02", "BGroup03"
+PS C:\> $BoundaryObj = Get-CMBoundary -Name "BGroup01", "BGroup02", "BGroup03"
 PS C:\> Remove-CMBoundary -InputObject $BoundaryObj
 ```
 

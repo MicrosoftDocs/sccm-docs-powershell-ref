@@ -27,7 +27,7 @@ For more information about client settings, see [About Client Settings in Config
 
 ### Example 1: Create a customized collection of client settings
 ```
-PS C:\>New-CMClientSetting -Name "Win08ClientSettings" -Description "Windows 8 Client Computers Settings" -Type 1
+PS C:\> New-CMClientSetting -Name "Win08ClientSettings" -Description "Windows 8 Client Computers Settings" -Type 1
 AgentConfigurations: {}
 AssignmentCount:     0
 CreatedBy:           Contoso\DChew

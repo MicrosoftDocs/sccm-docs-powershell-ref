@@ -45,7 +45,7 @@ This command approves the device named TestVlan-site2.
 
 ### Example 2: Get a device and approve it
 ```
-PS C:\>Get-CMDevice -Name "TestVlan-site2" | Approve-CMDevice
+PS C:\> Get-CMDevice -Name "TestVlan-site2" | Approve-CMDevice
 ```
 
 This command gets the device object named TestVlan-site2 and uses the pipeline operator to pass the object to **Approve-CMDevice**, which approves the device object.

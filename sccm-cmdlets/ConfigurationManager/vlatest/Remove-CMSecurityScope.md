@@ -37,7 +37,7 @@ The **Remove-CMSecurityScope** cmdlet removes a security scope from Microsoft Sy
 
 ### Example 1: Remove a security scope in a variable
 ```
-PS C:\>$Scope = Get-CMSecurityScope -Name "Scope"
+PS C:\> $Scope = Get-CMSecurityScope -Name "Scope"
 PS C:\> Remove-CMSecurityScope -InputObject $Scope -Force
 ```
 
@@ -48,7 +48,7 @@ By specifying the *Force* parameter, the user is not prompted for confirmation p
 
 ### Example 2: Remove a security scope using the pipeline
 ```
-PS C:\>Get-CMSecurityScope -Name "Scope" | Remove-CMSecurityScope -Force
+PS C:\> Get-CMSecurityScope -Name "Scope" | Remove-CMSecurityScope -Force
 ```
 
 This command gets the security scope object named Scope and uses the pipeline operator to pass the object to **Remove-CMSecurityScope**, which removes the security scope.

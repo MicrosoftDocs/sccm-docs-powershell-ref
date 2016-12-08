@@ -44,21 +44,21 @@ You can specify an approval request by application name, application ID, or by u
 
 ### Example 1: Get all approval requests
 ```
-PS C:\>Get-CMApprovalRequest
+PS C:\> Get-CMApprovalRequest
 ```
 
 This command gets all pending Microsoft System Center Configuration Manager approval requests.
 
 ### Example 2: Get an approval request by using an application ID
 ```
-PS C:\>Get-CMApprovalRequest -Id "1635223"
+PS C:\> Get-CMApprovalRequest -Id "1635223"
 ```
 
 This command gets an approval request for an application with the specified ID.
 
 ### Example 3: Get an approval request for a specific user
 ```
-PS C:\>Get-CMApprovalRequest -Application "HelloWorld" -User "tsqa\davidchew"
+PS C:\> Get-CMApprovalRequest -Application "HelloWorld" -User "tsqa\davidchew"
 ```
 
 This command gets an approval request for the application HelloWorld for a specified user.

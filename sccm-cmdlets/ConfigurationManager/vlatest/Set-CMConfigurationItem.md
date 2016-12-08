@@ -45,21 +45,21 @@ For more information about configuration items, see [Introduction to Compliance 
 
 ### Example 1: Change the name of a configuration item
 ```
-PS C:\>Set-CMConfigurationItem -Name "CITest" -NewName "CITest01"
+PS C:\> Set-CMConfigurationItem -Name "CITest" -NewName "CITest01"
 ```
 
 This command changes the name of the configuration item named CITest to CITest01.
 
 ### Example 2: Set item settings
 ```
-PS C:\>Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction AddMembership -SecurityScopeName "DefaultScope"
+PS C:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction AddMembership -SecurityScopeName "DefaultScope"
 ```
 
 This command sets the security scope action to AddMembership and the security scope name to DefaultScope for the item named CITest01.
 
 ### Example 3: Change item settings
 ```
-PS C:\>Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction RemoveMembership -SecurityScopeName "DefaultScope"
+PS C:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction RemoveMembership -SecurityScopeName "DefaultScope"
 ```
 
 This command sets the security scope action to RemoveMembership and the security scope name to DefaultScope for the item named CITest01.

@@ -49,7 +49,7 @@ The Microsoft System Center Configuration Manager status summarizers apply to th
 
 ### Example 1: Modify a status summarizer
 ```
-PS C:\>Set-CMStatusSummarizer -ApplicationDeploymentSummarizer -SiteCode "ContosoSite"
+PS C:\> Set-CMStatusSummarizer -ApplicationDeploymentSummarizer -SiteCode "ContosoSite"
 ```
 
 This command configures the status summarizer for the Contoso site to return application deployment statistics.

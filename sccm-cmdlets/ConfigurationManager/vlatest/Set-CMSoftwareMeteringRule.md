@@ -53,14 +53,14 @@ For more information about security scopes, see [Planning for Security in Config
 
 ### Example 1: Change locale for rules for a product
 ```
-PS C:\>Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -LanguageID 1036
+PS C:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -LanguageID 1036
 ```
 
 This command sets the locale ID for rules that include the product name Accounting Package.
 
 ### Example 2: Add a security scope to rules for a product
 ```
-PS C:\>Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -SecurityScopeAction AddMembership -SecurityScopeName "Scope05"
+PS C:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -SecurityScopeAction AddMembership -SecurityScopeName "Scope05"
 ```
 
 This command adds the security scope called Scope05 to rules for the product name Accounting Package.

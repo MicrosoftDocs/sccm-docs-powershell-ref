@@ -30,7 +30,7 @@ If you migrate from a System Center Configuration Manager hierarchy, you do not 
 
 ### Example 1: Specify a migration source
 ```
-PS C:\>Set-CMMigrationSource -SourceSiteServerName "cmdev-contoso01" -SmsProviderAccount "tsqa\pattifuller" -SqlServerAccount "tsqa\pattifuller" -EnableDistributionPointSharing $True
+PS C:\> Set-CMMigrationSource -SourceSiteServerName "cmdev-contoso01" -SmsProviderAccount "tsqa\pattifuller" -SqlServerAccount "tsqa\pattifuller" -EnableDistributionPointSharing $True
 ```
 
 This command specifies the site server named cmdev-contoso01 as the source of migration data.

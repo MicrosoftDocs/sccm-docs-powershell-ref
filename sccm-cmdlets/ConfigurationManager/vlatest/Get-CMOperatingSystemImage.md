@@ -32,7 +32,7 @@ Operating system images are .wim format files and represent a compressed collect
 
 ### Example 1: Get an operating system image
 ```
-PS C:\>Get-CMOperatingSystemImage -Name "OSImagePkg01" -SecuredScopeNames "SecScope02"
+PS C:\> Get-CMOperatingSystemImage -Name "OSImagePkg01" -SecuredScopeNames "SecScope02"
 ```
 
 This command gets the operating system image named OSImagePkg01 for the security scope named SecScope02.

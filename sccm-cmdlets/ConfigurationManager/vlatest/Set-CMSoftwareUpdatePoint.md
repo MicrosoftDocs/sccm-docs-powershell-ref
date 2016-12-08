@@ -44,7 +44,7 @@ These settings include Network Load Balancing (NLB), a virtual IP address, Inter
 
 ### Example 1: Modify the server name
 ```
-PS C:\>Set-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "CMSoftwareUpdatePoint.TSQA.Contoso.com"
+PS C:\> Set-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "CMSoftwareUpdatePoint.TSQA.Contoso.com"
 ```
 
 This command modifies the name for the site system server for the site code CM1.

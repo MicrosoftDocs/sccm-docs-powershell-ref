@@ -39,14 +39,14 @@ For instance, you might specify an array of global condition names and specify a
 
 ### Example 1: Get a global condition by name
 ```
-PS C:\>Get-CMGlobalCondition -Name "CPU speed"
+PS C:\> Get-CMGlobalCondition -Name "CPU speed"
 ```
 
 This command gets the global condition named CPU speed.
 
 ### Example 2: Get a global condition by name and security scope
 ```
-PS C:\>Get-CMGlobalCondition -Name "CPU speed" -SecuredScopeNames "Scope22"
+PS C:\> Get-CMGlobalCondition -Name "CPU speed" -SecuredScopeNames "Scope22"
 ```
 
 This command gets the global condition named CPU speed that has a security scope named Scope22.

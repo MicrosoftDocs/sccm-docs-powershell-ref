@@ -37,7 +37,7 @@ You can specify a product by name or obtain a requirement by using the **Get-CMH
 
 ### Example 1: Remove a hardware requirement
 ```
-PS C:\>Remove-CMHardwareRequirement -Product "Accounts Program"
+PS C:\> Remove-CMHardwareRequirement -Product "Accounts Program"
 Remove
 Are you sure you wish to remove HardwareRequirement: Product="Accounts Program"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):

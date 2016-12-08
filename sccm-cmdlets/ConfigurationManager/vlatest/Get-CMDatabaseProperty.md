@@ -28,7 +28,7 @@ You can use the [Set-CMDatabaseProperty](./Set-CMDatabaseProperty.md) cmdlet to 
 
 ### Example 1: Get a database property
 ```
-PS C:\>Get-CMDatabaseProperty -SiteCode "CM2"
+PS C:\> Get-CMDatabaseProperty -SiteCode "CM2"
 Key                                     Value
 ---                                     -----
 SQL Server Service Broker Port          80 

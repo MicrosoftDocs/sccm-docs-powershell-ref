@@ -48,7 +48,7 @@ This command exports a package that has the ID ST120001 to the output path \\\\D
 
 ### Example 2: Export a package by using a variable
 ```
-PS C:\>$DeplObj = Get-CMPackage -Id "ST120001"
+PS C:\> $DeplObj = Get-CMPackage -Id "ST120001"
 PS C:\> Export-CMPackage - "ST120001" -ExportFilePath"\\Deploy01\ExportPackages" -InputObject $DeplObj
 ```
 

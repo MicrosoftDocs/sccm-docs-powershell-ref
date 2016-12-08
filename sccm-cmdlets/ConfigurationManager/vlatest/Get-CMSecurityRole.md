@@ -29,21 +29,21 @@ The **Get-CMSecurityRole** cmdlet gets one or more security roles in Microsoft S
 
 ### Example 1: Get all security roles
 ```
-PS C:\>Get-CMSecurityRole
+PS C:\> Get-CMSecurityRole
 ```
 
 This command gets all security roles in Configuration Manager.
 
 ### Example 2: Get a security role by using an ID
 ```
-PS C:\>Get-CMSecurityRole -Id "SMS000CR"
+PS C:\> Get-CMSecurityRole -Id "SMS000CR"
 ```
 
 This command gets the security role that has the ID SMS000CR.
 
 ### Example 3: Get a security role by using a wildcard
 ```
-PS C:\>Get-CMSecurityRole -Name App*
+PS C:\> Get-CMSecurityRole -Name App*
 ```
 
 This command gets all security roles that have a name that starts with App.

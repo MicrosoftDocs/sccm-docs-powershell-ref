@@ -26,7 +26,7 @@ You must enable the Asset Intelligence synchronization point to perform schedule
 
 ### Example 1: Enable an Asset Intelligence synchronization point
 ```
-PS C:\>Set-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -Enabled $True
+PS C:\> Set-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -Enabled $True
 ```
 
 This command enables the Asset Intelligence synchronization point on the site server named CMDIV-WEST04.CORP.CONTOSO.COM.

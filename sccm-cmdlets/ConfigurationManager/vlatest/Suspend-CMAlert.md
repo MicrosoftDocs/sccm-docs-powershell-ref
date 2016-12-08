@@ -40,14 +40,14 @@ If you do not specify the *SkipUntil* parameter, the alert is suspended indefini
 
 ### Example 1: Suspend an alert by using ID
 ```
-PS C:\>Suspend-CMAlert -Id "16777219" -Comments "Postponing alert evaluation" -SkipUntil "Wednesday, August 20, 2012 4:03:17 PM"
+PS C:\> Suspend-CMAlert -Id "16777219" -Comments "Postponing alert evaluation" -SkipUntil "Wednesday, August 20, 2012 4:03:17 PM"
 ```
 
 This command suspends an alert that has the Id 16777219 until the time specified by *SkipUntil*, and adds a comment to the alert.
 
 ### Example 2: Suspend an alert by using alert object variable
 ```
-PS C:\>$AlertObj = Get-CMAlert -Id "16777221"
+PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
 PS C:\> Suspend-CMAlert -InputObject $AlertObj -Comments "Postponing alert evaluation" -SkipUntil "4/8/2012 8:04:39 PM"
 ```
 

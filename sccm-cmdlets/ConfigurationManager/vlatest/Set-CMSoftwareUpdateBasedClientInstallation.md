@@ -31,7 +31,7 @@ The **Set-CMSoftwareUpdateBasedClientInstallation** cmdlet modifies a client ins
 
 ### Example 1: Modify a client installation to enable WSUS
 ```
-PS C:\>Set-CMSoftwareUpdateBasedClientInstallation -EnableWSUS $True -SiteCode "CM1"
+PS C:\> Set-CMSoftwareUpdateBasedClientInstallation -EnableWSUS $True -SiteCode "CM1"
 ```
 
 This command enables WSUS for a client installation.

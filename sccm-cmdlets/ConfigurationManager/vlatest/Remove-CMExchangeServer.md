@@ -34,7 +34,7 @@ Configuration Manager works with Exchange Server to manage mobile devices that c
 
 ### Example 1: Remove an nextref_exchange
 ```
-PS C:\>Remove-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
+PS C:\> Remove-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
 ```
 
 This command removes the Exchange Server with the specified address for the site code PE1.

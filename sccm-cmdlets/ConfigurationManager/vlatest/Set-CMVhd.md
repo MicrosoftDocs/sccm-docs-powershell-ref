@@ -43,14 +43,14 @@ The **Set-CMVhd** cmdlet modifies one or more virtual hard disk (VHD) images tha
 
 ### Example 1: Change the distribution point server for a VHD
 ```
-PS C:\>Set-CMVhd -Name "Windows 10 Enterprise" -DistributionPointServerNames "distribution-server.contoso.com"
+PS C:\> Set-CMVhd -Name "Windows 10 Enterprise" -DistributionPointServerNames "distribution-server.contoso.com"
 ```
 
 This command changes the distribution point server for the virtual hard disk (VHD) named Windows 10 Enterprise.
 
 ### Example 2: Rename a VHD
 ```
-PS C:\>Set-CMVhd -Name "Windows 10 Enterprise"-NewName "User Desktop Image"
+PS C:\> Set-CMVhd -Name "Windows 10 Enterprise"-NewName "User Desktop Image"
 ```
 
 This command renames the VHD named Windows 10 Enterprise.
