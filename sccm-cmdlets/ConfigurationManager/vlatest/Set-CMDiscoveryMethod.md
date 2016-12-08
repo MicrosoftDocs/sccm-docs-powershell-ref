@@ -474,7 +474,7 @@ Accept wildcard characters: False
 
 ### -PollingSchedule
 Specifies a schedule object.
-To obtain a schedule object, use the New-CMSchedule cmdlet.
+To obtain a schedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 The polling schedule determines how often Configuration Manager attempts to discover groups, systems, or user data.
 
 ```yaml

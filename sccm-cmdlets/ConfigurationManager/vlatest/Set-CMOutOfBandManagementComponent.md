@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -AmtProvisioningSchedule
 Specifies an input object.
-To obtain an input object, use the New-CMSchedule cmdlet.
+To obtain an input object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject

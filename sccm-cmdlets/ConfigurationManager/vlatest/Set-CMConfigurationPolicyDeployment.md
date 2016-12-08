@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ### -Schedule
 Specifies a schedule object.
 This is the schedule for deploying the configuration policy.
-You can use the New-CMSchedule cmdlet to create a schedule token.
+You can use the [New-CMSchedule](./New-CMSchedule.md) cmdlet to create a schedule token.
 
 ```yaml
 Type: IResultObject
