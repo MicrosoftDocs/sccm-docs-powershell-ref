@@ -42,10 +42,10 @@ You specify the limiting collection by providing its name or ID.
 Devices are added to the collection by membership rules.
 To add members to the device collection use one of the following membership rule cmdlets:
 
-- Add-CMDeviceCollectionDirectMembershipRule
--  Add-CMDeviceCollectionExcludeMembershipRule
-- Add-CMDeviceCollectionIncludeMembershipRule
-- Add-CMDeviceCollectionQueryMembershipRule
+- [Add-CMDeviceCollectionDirectMembershipRule](./Add-CMDeviceCollectionDirectMembershipRule.md) 
+- [Add-CMDeviceCollectionExcludeMembershipRule](./Add-CMDeviceCollectionExcludeMembershipRule.md) 
+- [Add-CMDeviceCollectionIncludeMembershipRule](./Add-CMDeviceCollectionIncludeMembershipRule.md) 
+- [Add-CMDeviceCollectionQueryMembershipRule](./Add-CMDeviceCollectionQueryMembershipRule.md)
 
 Collections represent logical groupings of resources, such as users and devices.
 For more information about Configuration Manager collections, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
