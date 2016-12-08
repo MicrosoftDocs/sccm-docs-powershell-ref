@@ -86,7 +86,7 @@ Specifies a date, as a DateTime object.
 To obtain a DateTime object, use the Get-Date cmdlet.
 For more information, type Get-Help Get-Date.
 
-If you specify a value of $True for the UseDateTime parameter, a client must create a statement of health after the date and time specified by using this parameter and the Time parameter.
+If you specify a value of $True for the UseDateTime parameter, a client must create a statement of health after the date and time specified by using this parameter and the *Time* parameter.
 The date and time must be in the past.
 
 ```yaml
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -DesignateActiveDirectoryForest
 Indicates whether the site system server and the system health validator points are in different Active Directory forests.
-If the value is $True, specify an Active Directory forest by using the DomainSuffix parameter.
+If the value is $True, specify an Active Directory forest by using the *DomainSuffix* parameter.
 If no trust relationship exists between the forests, you may need to specify accounts by using the PublishAccount and QueryAccount parameters.
 
 ```yaml
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 Specifies a time, as a DateTime object.
 To obtain a DateTime object, use the Get-Date cmdlet.
 
-If you specify a value of $True for the UseDateTime parameter, a client must create a statement of health after the date and time specified by using this parameter and the Date parameter.
+If you specify a value of $True for the UseDateTime parameter, a client must create a statement of health after the date and time specified by using this parameter and the *Date* parameter.
 The date and time must be in the past.
 
 ```yaml

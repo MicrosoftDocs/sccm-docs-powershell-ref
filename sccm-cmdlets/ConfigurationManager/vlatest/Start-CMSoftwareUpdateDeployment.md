@@ -597,7 +597,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeValue
-Specifies a time value in the units specified in the TimeUnit parameter.
+Specifies a time value in the units specified in the *TimeUnit* parameter.
 
 ```yaml
 Type: Int32
