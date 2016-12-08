@@ -39,7 +39,7 @@ For a company-owned device, additional information can be gathered and deleted d
 
 ### Example 1: Identify a device as a company asset
 ```
-PS C:\>Set-CMDeviceOwnership -DeviceId "209846738" -OwnershipType Company
+PS C:\> Set-CMDeviceOwnership -DeviceId "209846738" -OwnershipType Company
 ```
 
 This command identifies the specified device as a company asset.

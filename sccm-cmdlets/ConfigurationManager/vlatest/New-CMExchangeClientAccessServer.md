@@ -27,7 +27,7 @@ Hardware clients, such as mobile devices, use ActiveSync, POP3, or IMAP4 to comm
 
 ### Example 1: Create an Exchange Client Access server
 ```
-PS C:\>$Ecs= New-CMExchangeClientAccessServer -ExchangeClientAccessServerName "ContosoWestCAS11" -ActiveDirectorySiteName "ContosoWestAD01"
+PS C:\> $Ecs= New-CMExchangeClientAccessServer -ExchangeClientAccessServerName "ContosoWestCAS11" -ActiveDirectorySiteName "ContosoWestAD01"
 ```
 
 This command creates a new Exchange Client Access server named ContosoWestCAS11 and associates it with the Active Directory site named ContosoWestAD01, then places the resulting Exchange Client Access server object in the variable $Ecs.

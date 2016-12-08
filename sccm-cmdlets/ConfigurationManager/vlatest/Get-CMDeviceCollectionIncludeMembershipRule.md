@@ -73,14 +73,14 @@ The **Get-CMDeviceCollectionIncludeMembershipRule** cmdlet gets one or more Incl
 
 ### Example 1: Get all Include Collections membership rules
 ```
-PS C:\>Get-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device"
+PS C:\> Get-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device"
 ```
 
 This command gets all Include Collections membership rules for the collection named Device.
 
 ### Example 2: Get Include Collections rules by using the pipeline
 ```
-PS C:\>Get-CMCollection -Name "Device" | Get-CMDeviceCollectionIncludeMembershipRule
+PS C:\> Get-CMCollection -Name "Device" | Get-CMDeviceCollectionIncludeMembershipRule
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Get-CMDeviceCollectionIncludeMembershipRule**, which gets all Include Collections membership rules for the device collection object.

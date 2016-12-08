@@ -31,14 +31,14 @@ If you don't provide any parameters, all security scopes are returned.
 
 ### Example 1: Get a security scope by name
 ```
-PS C:\>Get-CMSecurityScope -Name "Scope"
+PS C:\> Get-CMSecurityScope -Name "Scope"
 ```
 
 This command gets the security scope named Scope.
 
 ### Example 2: Get a security scope by using a wildcard
 ```
-PS C:\>Get-CMSecurityScope -Name "S*"
+PS C:\> Get-CMSecurityScope -Name "S*"
 ```
 
 This command gets all security scope objects that have a name beginning with "S".

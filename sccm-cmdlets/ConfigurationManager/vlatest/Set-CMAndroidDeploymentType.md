@@ -51,14 +51,14 @@ The **Set-CMAndriodDeploymentType** cmdlet changes the settings for an Android d
 
 ### Example 1: Change the name of the deployment type
 ```
-PS C:\>Set-CMAndroidDeploymentType -ApplicationName "ExpensesApp" -DeploymentTypeName "Expenses" -NewName "NewExpenses"
+PS C:\> Set-CMAndroidDeploymentType -ApplicationName "ExpensesApp" -DeploymentTypeName "Expenses" -NewName "NewExpenses"
 ```
 
 This command changes the deployment type name for the application named ExpensesApp from Expenses to NewExpenses.
 
 ### Example 2: Change the name of the deployment type by using the pipeline
 ```
-PS C:\>Get-CMDeploymentType -DeploymentTypeName "Expenses" -ApplicationName "ExpensesApp2" | Set-CMAndroidDeploymentType -NewName "NewExpenses2"
+PS C:\> Get-CMDeploymentType -DeploymentTypeName "Expenses" -ApplicationName "ExpensesApp2" | Set-CMAndroidDeploymentType -NewName "NewExpenses2"
 ```
 
 This command gets the deployment type object named Expenses for the application named ExpensesApp2 and uses the pipeline operator to pass the object to **Set-CMAndroidDeploymentType**.

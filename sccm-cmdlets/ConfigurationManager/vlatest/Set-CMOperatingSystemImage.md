@@ -59,7 +59,7 @@ Operating system images are .wim format files and represent a compressed collect
 
 ### Example 1: Change settings for an operating system image by using an ID
 ```
-PS C:\>Set-CMOperatingSystemImage -Id "Cm10004f" -NewName "Microsoft Windows 8 (x64)" -Version "I20C" -Description "Dept02 Sys Image" -Path "\\Contoso\Public\OSD\win8x64.wim"
+PS C:\> Set-CMOperatingSystemImage -Id "Cm10004f" -NewName "Microsoft Windows 8 (x64)" -Version "I20C" -Description "Dept02 Sys Image" -Path "\\Contoso\Public\OSD\win8x64.wim"
 ```
 
 This command changes configuration settings of the operating system image that has the ID Cm10004f.
@@ -67,14 +67,14 @@ The command renames the operating system image, adds a version and description, 
 
 ### Example 2: Add an operating system image to a security scope by using a name
 ```
-PS C:\>Set-CMOperatingSystemImage -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "ImagePkg01"
+PS C:\> Set-CMOperatingSystemImage -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "ImagePkg01"
 ```
 
 This command adds membership to the security scope named SecScope02 for the operating system image named ImagePkg01.
 
 ### Example 3: Remove an operating system image from a security scope
 ```
-PS C:\>Set-CMOperatingSystemImage -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "ImagePkg01"
+PS C:\> Set-CMOperatingSystemImage -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "ImagePkg01"
 ```
 
 This command removes membership from the security scope named SecScope02 for the operating system image named ImagePkg01.

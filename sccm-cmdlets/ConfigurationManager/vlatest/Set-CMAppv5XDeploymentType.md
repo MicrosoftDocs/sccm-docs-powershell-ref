@@ -55,7 +55,7 @@ The **Set-CMAppv5XDeploymentType** cmdlet changes the settings for a Microsoft A
 
 ### Example 1: Change the name of the deployment type
 ```
-PS C:\>$application = Get-CMApplication -Name "testApp"
+PS C:\> $application = Get-CMApplication -Name "testApp"
 PS C:\> Set-CMAppv5XDeploymentType -Application $application -DeploymentTypeName "Appv5X" -NewName "newAppv5X"
 ```
 
@@ -65,7 +65,7 @@ The second command changes the display name of the deployment type for the appli
 
 ### Example 2: Change the name of the deployment type by using the pipeline
 ```
-PS C:\>Get-CMDeploymentType -DeploymentTypeName "Appv5X" -ApplicationName "testApp" | Set-CMAppv5XDeploymentType -NewName "newAppv5X"
+PS C:\> Get-CMDeploymentType -DeploymentTypeName "Appv5X" -ApplicationName "testApp" | Set-CMAppv5XDeploymentType -NewName "newAppv5X"
 ```
 
 This command gets the deployment type object named Appv5X for the application named testApp and uses the pipeline operator to pass the object to **Set-CMAppv5XDeployment**, which changes the name of the deployment type object to newAppv5X.

@@ -38,7 +38,7 @@ For more information, see [About Client Settings in Configuration Manager](http:
 
 ### Example 1: Remove a collection of client settings that is specified by its ID
 ```
-PS C:\>Remove-CMClientSetting -Id "16777255"
+PS C:\> Remove-CMClientSetting -Id "16777255"
 ```
 
 This command removes a collection of client settings that is specified by the ID 16777255.

@@ -37,21 +37,21 @@ The **Remove-CMAlertSubscription** cmdlet removes an alert subscription from Mic
 
 ### Example 1: Remove an alert subscription by ID
 ```
-PS C:\>Remove-CMAlertSubscription -Id "16777310"
+PS C:\> Remove-CMAlertSubscription -Id "16777310"
 ```
 
 This command removes an alert subscription by using its ID.
 
 ### Example 2: Remove an alert subscription by name
 ```
-PS C:\>Remove-CMAlertSubscription -Name "Subscription01"
+PS C:\> Remove-CMAlertSubscription -Name "Subscription01"
 ```
 
 This command removes an alert subscription named Subscription01.
 
 ### Example 3: Remove an alert subscription by using the output from another cmdlet
 ```
-PS C:\>$SubObj = Get-CMAlertSubscription -Id "16777310"
+PS C:\> $SubObj = Get-CMAlertSubscription -Id "16777310"
 PS C:\> Remove-CMAlertSubscription -AlertSubscription $SubObj
 ```
 

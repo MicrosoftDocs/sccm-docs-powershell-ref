@@ -78,7 +78,7 @@ For more information about membership rules, see [Introduction to Collections in
 
 ### Example 1: Get the exclude membership rule from a user collection
 ```
-PS C:\>Get-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS C:\> Get-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command gets the rule that excludes the members of the collection that has the ID SMSDM001 from the user collection that has the ID 9990000D.

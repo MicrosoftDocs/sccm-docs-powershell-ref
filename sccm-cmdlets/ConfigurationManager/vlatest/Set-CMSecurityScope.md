@@ -37,7 +37,7 @@ The **Set-CMSecurityScope** cmdlet changes the configuration settings of a secur
 
 ### Example 1: Get a security scope and update its name
 ```
-PS C:\>$Scope = Get-CMSecurityScope -Name "Scope"
+PS C:\> $Scope = Get-CMSecurityScope -Name "Scope"
 PS C:\> Set-CMSecurityScope -InputObject $Scope -NewName "newScope"
 ```
 
@@ -47,7 +47,7 @@ The second command changes the name of the security scope stored in $Scope to ne
 
 ### Example 2: Pass a security scope through the pipeline and update its name
 ```
-PS C:\>Get-CMSecurityScope -Name "Scope" | Set-CMSecurityScope -NewName "newScope"
+PS C:\> Get-CMSecurityScope -Name "Scope" | Set-CMSecurityScope -NewName "newScope"
 ```
 
 This command gets the security scope object named Scope and uses the pipeline operator to pass the object to **Set-CMSecurityScope**, which changes the name of the security scope to newScope.

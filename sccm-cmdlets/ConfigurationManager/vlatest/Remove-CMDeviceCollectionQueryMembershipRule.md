@@ -40,7 +40,7 @@ For more information about membership rules, see [Introduction to Collections in
 
 ### Example 1: Remove the query membership rules for a device collection
 ```
-PS C:\>Remove-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -RuleName "TPM Information"
+PS C:\> Remove-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -RuleName "TPM Information"
 ```
 
 This command removes the query membership rule named TPM Information from the device collection named Mobile Windows 7 Devices.

@@ -78,7 +78,7 @@ This command clears Intel AMT audit logs for the devices in a collection named F
 
 ### Example 3: Clear the audit log by using a variable
 ```
-PS C:\>$CMD = Get-CMDevice -Name "Accn023.Contoso.com" 
+PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com" 
 PS C:\> Clear-CMAmtAuditLog -Device $CMD -Force
 ```
 

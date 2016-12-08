@@ -31,21 +31,21 @@ You can use the *SecuredScopeNames* parameter to specify the security scope of a
 
 ### Example 1: Get all packages
 ```
-PS C:\>Get-CMPackage
+PS C:\> Get-CMPackage
 ```
 
 This command gets all Configuration Manager packages.
 
 ### Example 2: Get a package by using an ID
 ```
-PS C:\>Get-CMPackage -Id "CM100002"
+PS C:\> Get-CMPackage -Id "CM100002"
 ```
 
 This command gets the program that has the ID CM100002.
 
 ### Example 3: Get a package by using a name
 ```
-PS C:\>Get-CMPackage -Name "Configuration Manager Client Package"
+PS C:\> Get-CMPackage -Name "Configuration Manager Client Package"
 ```
 
 This command gets the program named Configuration Manager Client Package.

@@ -33,7 +33,7 @@ After you remove an enrollment point, client computers and devices must use a di
 
 ### Example 1: Remove an enrollment point
 ```
-PS C:\>Remove-CMEnrollmentPoint -SiteSystemServerName "SiteServer01.Contoso.com" -SiteCode "CM1"
+PS C:\> Remove-CMEnrollmentPoint -SiteSystemServerName "SiteServer01.Contoso.com" -SiteCode "CM1"
 ```
 
 This command removes an enrollment point.

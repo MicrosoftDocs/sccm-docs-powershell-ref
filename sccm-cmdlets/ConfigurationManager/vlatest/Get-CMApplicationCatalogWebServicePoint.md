@@ -34,7 +34,7 @@ For more information, see [Install and Configure Site System Roles for Configura
 
 ### Example 1: Get a system role
 ```
-PS C:\>Get-CMApplicationCatalogWebServicePoint -SiteSystemServerName "western.contoso.com" -SiteCode "CM1"
+PS C:\> Get-CMApplicationCatalogWebServicePoint -SiteSystemServerName "western.contoso.com" -SiteCode "CM1"
 ```
 
 This command gets an Application Catalog web service point named western.contoso.com that has the site code CM1.

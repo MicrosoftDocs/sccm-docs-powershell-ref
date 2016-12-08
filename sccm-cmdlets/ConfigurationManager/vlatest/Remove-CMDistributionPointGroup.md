@@ -38,14 +38,14 @@ When you remove a distribution point group, you cannot use the distribution poin
 
 ### Example 1: Remove a distribution point group by using an ID
 ```
-PS C:\>Remove-CMDistributionPointGroup -Id "{03BCD6FE-5604-4725-B650-DD1EA03676DE}"
+PS C:\> Remove-CMDistributionPointGroup -Id "{03BCD6FE-5604-4725-B650-DD1EA03676DE}"
 ```
 
 This command removes the distribution point group that has the ID 03BCD6FE-5604-4725-B650-DD1EA03676DE.
 
 ### Example 2: Remove a distribution point group by using a name
 ```
-PS C:\>Remove-CMDistributionPointGroup -Name "DpgDept01"
+PS C:\> Remove-CMDistributionPointGroup -Name "DpgDept01"
 ```
 
 This command removes the distribution point group named DpgDept01.

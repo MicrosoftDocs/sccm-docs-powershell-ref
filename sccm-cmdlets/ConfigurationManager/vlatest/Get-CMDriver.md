@@ -46,7 +46,7 @@ The **Get-CMDriver** cmdlet gets a device driver.
 
 ### Example 1: Get a device driver
 ```
-PS C:\>Get-CMDriver -Name "Driver01"
+PS C:\> Get-CMDriver -Name "Driver01"
 ```
 
 This command gets the driver named Driver01.

@@ -125,14 +125,14 @@ Each global condition must have at least one security scope.
 
 ### Example 1: Add a security scope
 ```
-PS C:\>Set-CMGlobalCondition -Name "CPU speed" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
+PS C:\> Set-CMGlobalCondition -Name "CPU speed" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
 ```
 
 This command adds the security scope named Scope22 to the global condition named CPU speed.
 
 ### Example 2: Remove a security scope by using a variable
 ```
-PS C:\>$CMGC = Get-CMGlobalCondition -Name "CPU speed"
+PS C:\> $CMGC = Get-CMGlobalCondition -Name "CPU speed"
 PS C:\> Set-CMGlobalCondition -InputObject $CMGC -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22"
 ```
 

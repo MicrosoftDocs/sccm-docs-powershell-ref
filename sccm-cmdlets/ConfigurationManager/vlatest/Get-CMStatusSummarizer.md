@@ -32,7 +32,7 @@ The Microsoft System Center Configuration Manager status summarizers apply to th
 
 ### Example 1: Get a status summarizer
 ```
-PS C:\>Get-CMStatusSummarizer -SiteCode "CM1" -StatusSummarizerType ComponentStatusSummarizer
+PS C:\> Get-CMStatusSummarizer -SiteCode "CM1" -StatusSummarizerType ComponentStatusSummarizer
 ```
 
 This command gets the status summarizer for the component status.

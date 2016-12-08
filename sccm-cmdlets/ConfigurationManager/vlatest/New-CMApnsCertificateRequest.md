@@ -24,7 +24,7 @@ The **New-CMApnsCertificateRequest** cmdlet downloads an Apple Push Notification
 
 ### Example 1: Create an APNS certificate signing request
 ```
-PS C:\>$SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
+PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
 PS C:\> $MyCreds = New-Object System.Management.Automation.PSCredential ("UserName@CompanyName.onmicrosoft.com", $SecPasswd)
 PS C:\> New-CMApnsCertificateRequest -IntuneCredential $MyCreds -Path "C:\Certificates\test.csr"
 ```

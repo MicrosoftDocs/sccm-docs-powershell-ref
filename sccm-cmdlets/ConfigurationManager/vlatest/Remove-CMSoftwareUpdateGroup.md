@@ -39,21 +39,21 @@ If you remove a software update group, you can use the [Get-CMSoftwareUpdateGrou
 
 ### Example 1: Remove a software update group by using an ID
 ```
-PS C:\>Remove-CMSoftwareUpdateGroup -Id "ST10000B"
+PS C:\> Remove-CMSoftwareUpdateGroup -Id "ST10000B"
 ```
 
 This command removes the software update group that has the ID ST10000B.
 
 ### Example 2: Remove a software update group by using a name
 ```
-PS C:\>Remove-CMSoftwareUpdateGroup -Name "SUGroupD01"
+PS C:\> Remove-CMSoftwareUpdateGroup -Name "SUGroupD01"
 ```
 
 This command removes the software update group named SUGroupD01.
 
 ### Example 3: Remove a software update group by using an object variable
 ```
-PS C:\>$SubObj=Get-CMSoftwareUpdateGroup -Id "ST10000B" 
+PS C:\> $SubObj=Get-CMSoftwareUpdateGroup -Id "ST10000B" 
 PS C:\> Remove-CMSoftwareUpdateGroup -SoftwareUpdateGroup $SubObj
 ```
 

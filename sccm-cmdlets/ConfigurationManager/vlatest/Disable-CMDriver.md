@@ -38,7 +38,7 @@ To enable the driver, use the [Enable-CMDriver](./EnableCMDriver.md) cmdlet.
 
 ### Example 1: Disable a device driver
 ```
-PS C:\>$Driver = Get-CMDriver -Name "Driver01"
+PS C:\> $Driver = Get-CMDriver -Name "Driver01"
 PS C:\> Disable-CMDriver -InputObject $Driver
 ```
 
@@ -48,7 +48,7 @@ The second command disables the driver stored in $Driver.
 
 ### Example 2: Disable a device driver by using the pipeline
 ```
-PS C:\>Get-CMDriver -Name "Driver02" | Disable-CMDriver
+PS C:\> Get-CMDriver -Name "Driver02" | Disable-CMDriver
 ```
 
 This command gets the driver object named Driver02 and uses the pipeline operator to pass the object to **Disable-CMDriver**, which disables the driver object.

@@ -31,7 +31,7 @@ For more information about the SMS provider, see [Planning for the SMS Provider 
 
 ### Example 1: Create a new boot image object
 ```
-PS C:\>New-CMBootImage -Path "\\Server99.Contoso.com\SMS_CCC\osd\boot\i386\boot.wim" -Index 1 -Name "WinPE Boot Image" -Version 11 -Description "WinPE Boot Image x86 Approved 9/1/2012"
+PS C:\> New-CMBootImage -Path "\\Server99.Contoso.com\SMS_CCC\osd\boot\i386\boot.wim" -Index 1 -Name "WinPE Boot Image" -Version 11 -Description "WinPE Boot Image x86 Approved 9/1/2012"
 ```
 
 This command creates a new boot image object and provides it with a source path for its WIM file, an index value, a name, an operating system version, and a description.

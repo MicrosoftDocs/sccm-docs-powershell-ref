@@ -51,7 +51,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add a Mac deployment type by using the pipeline
 ```
-PS C:\>Get-CMApplication -Name "testMac" | Add-CMMacDeploymentType -DeploymentTypeName "DTMac01" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -WhatIf -Comment "create a mac DT" -AddLanguage "zh-CN"
+PS C:\> Get-CMApplication -Name "testMac" | Add-CMMacDeploymentType -DeploymentTypeName "DTMac01" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -WhatIf -Comment "create a mac DT" -AddLanguage "zh-CN"
 ```
 
 This command gets the application object named testMAC and uses the pipeline operator to pass the object to **Add-CMMacDeploymentType**.

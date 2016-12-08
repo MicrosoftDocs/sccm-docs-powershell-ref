@@ -66,7 +66,7 @@ You can specify an application by name or ID, or you can use the [Get-CMApplicat
 
 ### Example 1: Modify availability and deadline for an application deployment
 ```
-PS C:\>Set-CMApplicationDeployment -ApplicationName "Track System 2011" -CollectionName "All Users" -AvaliableDate 2012/10/21 -AvaliableTime 17:25 -DeadlineDate 2013/01/01 -DeadlineTime 13:10
+PS C:\> Set-CMApplicationDeployment -ApplicationName "Track System 2011" -CollectionName "All Users" -AvaliableDate 2012/10/21 -AvaliableTime 17:25 -DeadlineDate 2013/01/01 -DeadlineTime 13:10
 ```
 
 This command modifies an application deployment for an application named Track System 2011 for a collection named All Users.

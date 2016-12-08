@@ -32,7 +32,7 @@ While the lock is assigned to you, no other user or computer can edit the object
 
 ### Example 1: Lock a global object
 ```
-PS C:\>$CIObj = Get-CMDriverPackage -Id "CM100042"
+PS C:\> $CIObj = Get-CMDriverPackage -Id "CM100042"
 PS C:\> Lock-CMObject -InputObject $CIObj
 ```
 

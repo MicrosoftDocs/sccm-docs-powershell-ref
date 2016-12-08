@@ -40,7 +40,7 @@ For more information about membership rules, see [Introduction to Collections in
 
 ### Example 1: Get the query membership rules for a device collection
 ```
-PS C:\>Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users By Domain"
+PS C:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users By Domain"
 ```
 
 This command gets the query membership rule named Remote Users By Domain from device collection named Remote Users.

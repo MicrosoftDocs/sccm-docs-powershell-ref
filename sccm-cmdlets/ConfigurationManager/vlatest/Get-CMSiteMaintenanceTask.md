@@ -25,7 +25,7 @@ A maintenance task is a task in System Center Configuration Manager that perform
 
 ### Example 1: Get a maintenance task
 ```
-PS C:\>Get-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup"
+PS C:\> Get-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup"
 ```
 
 This command gets the maintenance task named Backup for the Configuration Manager site that has the site code CM1.

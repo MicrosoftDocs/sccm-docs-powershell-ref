@@ -53,7 +53,7 @@ This command adds an App-V 5X deployment type to the application named testApp.
 
 ### Example 2: Add an App-V 5X deployment type by using the pipeline
 ```
-PS C:\>Get-CMApplication -Name "testApp" | Add-CMAppv5XDeploymentType -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
+PS C:\> Get-CMApplication -Name "testApp" | Add-CMAppv5XDeploymentType -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
 ```
 
 This command gets the application object named testApp and uses the pipeline operator to pass the object to **Add-CMAppV5XDeploymentType**, which adds an App-V 5X deployment type to the application.

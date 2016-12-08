@@ -26,14 +26,14 @@ You can specify which value to get by site server name or site code.
 
 ### Example 1: Get an evaluation period for a site code
 ```
-PS C:\>Get-CMCollectionMembershipEvaluationComponent -SiteCode "CM4"
+PS C:\> Get-CMCollectionMembershipEvaluationComponent -SiteCode "CM4"
 ```
 
 This command gets the evaluation frequency for collection membership for the specified site code.
 
 ### Example 2: Get an evaluation period for a system
 ```
-PS C:\>Get-CMCollectionMembershipEvaluationComponent -SiteSystemServerName "CM01.West01.Contoso.com"
+PS C:\> Get-CMCollectionMembershipEvaluationComponent -SiteSystemServerName "CM01.West01.Contoso.com"
 ```
 
 This command gets the evaluation frequency for the server named CM01.West01.Contoso.com.

@@ -45,7 +45,7 @@ For more information about software metering in System Center Configuration Mana
 
 ### Example 1: Remove rules for a product
 ```
-PS C:\>Remove-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS C:\> Remove-CMSoftwareMeteringRule -ProductName "Accounting Package"
 Remove
 Are you sure you wish to remove SoftwareMeteringRule: RuleID=16777220? 
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y

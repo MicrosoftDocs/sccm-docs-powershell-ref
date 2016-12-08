@@ -38,14 +38,14 @@ You can use this cmdlet to remove redundant fallback status points or to remove 
 
 ### Example 1: Remove a specified fallback status point
 ```
-PS C:\>Remove-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
+PS C:\> Remove-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
 ```
 
 This command removes the fallback status point for the site with the site code CM1 and the system name Server21.West01.Contoso.com.
 
 ### Example 2: Remove a fallback status point object
 ```
-PS C:\>$CMFSP = Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
+PS C:\> $CMFSP = Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
 PS C:\> Remove-CMFallbackStatusPoint -InputObject $CMFSP
 ```
 

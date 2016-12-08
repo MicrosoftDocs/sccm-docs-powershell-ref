@@ -46,21 +46,21 @@ You can also create custom software labels.
 
 ### Example 1: Change the properties of a catalog item by ID
 ```
-PS C:\>Set-CMAssetIntelligenceCatalogItem -Id "1211" -NewCategoryName "Windows Databases" -Description "Windows-based databases" -LanguageId 1033
+PS C:\> Set-CMAssetIntelligenceCatalogItem -Id "1211" -NewCategoryName "Windows Databases" -Description "Windows-based databases" -LanguageId 1033
 ```
 
 This command changes the category name, description, and language ID for the Asset Intelligence catalog item that has the category ID 1211.
 
 ### Example 2: Change the properties of a catalog item category of items
 ```
-PS C:\>Set-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -NewCategoryName "Database Clients" -Description "Database client software" -LanguageId 1033
+PS C:\> Set-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -NewCategoryName "Database Clients" -Description "Database client software" -LanguageId 1033
 ```
 
 This command changes the category name, description, and language ID for the Asset Intelligence catalog item that has the category name Database Tools.
 
 ### Example 3: Rename a category
 ```
-PS C:\>Set-CMAssetIntelligenceCatalogItem -CategoryName "Database Clients" -NewCategoryName "Database Server Tools"
+PS C:\> Set-CMAssetIntelligenceCatalogItem -CategoryName "Database Clients" -NewCategoryName "Database Server Tools"
 ```
 
 This command changes the category name of the Asset Intelligence catalog item that has the category name Database Clients to Database Server Tools.

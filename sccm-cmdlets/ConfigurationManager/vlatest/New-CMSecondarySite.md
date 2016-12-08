@@ -76,7 +76,7 @@ The **New-CMSecondarySite** cmdlet creates a secondary site in Microsoft System 
 
 ### Example 1: Create a secondary site
 ```
-PS C:\>$CIObj = New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite
+PS C:\> $CIObj = New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite
 PS C:\> New-CMSecondarySite -CertificateExpirationTimeUtc "2/1/2020 12:00 AM" -CreateSelfSignedCertificate -Https -InstallationSourceFile "\\ContosoServer1\SourceFiles" -InstallInternetServer $True -ParentSiteCode "CM1" -ServerName "server2.corp.contoso.com" -SiteCode "CM2" -SiteName "Contoso remote site" -SqlServerSetting $CIObj
 ```
 

@@ -31,7 +31,7 @@ The **Remove-CMApplicationCatalogWebServicePoint** cmdlet removes a Microsoft Sy
 
 ### Example 1: Remove a system role
 ```
-PS C:\>Remove-CMApplicationCatalogWebServicePoint -SiteSystemServerName "western.contoso.com" -SiteCode "CM1"
+PS C:\> Remove-CMApplicationCatalogWebServicePoint -SiteSystemServerName "western.contoso.com" -SiteCode "CM1"
 ```
 
 This command removes an Application Catalog web service point named western.contoso.com that has the site code CM1.

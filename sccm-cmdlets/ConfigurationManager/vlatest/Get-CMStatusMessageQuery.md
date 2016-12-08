@@ -35,14 +35,14 @@ You can use this cmdlet to get queries to use with the [Set-CMStatusMessageQuery
 
 ### Example 1: Get a query that has a specified name
 ```
-PS C:\>Get-CMStatusMessageQuery -Name "Clients That Received a Specific Deployed Program"
+PS C:\> Get-CMStatusMessageQuery -Name "Clients That Received a Specific Deployed Program"
 ```
 
 This command gets a query that has a specified name.
 
 ### Example 2: Show messages for a query
 ```
-PS C:\>Get-CMStatusMessageQuery -Id "SMS551" -ShowMessages
+PS C:\> Get-CMStatusMessageQuery -Id "SMS551" -ShowMessages
 ```
 
 This command shows messages found by a query that has an ID of SMS551.

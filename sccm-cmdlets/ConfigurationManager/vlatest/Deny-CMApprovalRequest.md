@@ -54,7 +54,7 @@ This command denies a request for an application named Test for the specified us
 
 ### Example 3: Deny a request by using a variable
 ```
-PS C:\>$Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1"
+PS C:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1"
 PS C:\> Deny-CMApprovalRequest -InputObject $Approval -Comment "Request denied."
 ```
 

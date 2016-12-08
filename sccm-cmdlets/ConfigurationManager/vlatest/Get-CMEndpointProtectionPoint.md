@@ -32,7 +32,7 @@ For more information about Endpoint Protection in Microsoft System Center Config
 
 ### Example 1: Get an Endpoint Protection point
 ```
-PS C:\>Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
+PS C:\> Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
 ```
 
 This command gets an Endpoint Protection point.

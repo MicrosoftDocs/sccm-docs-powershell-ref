@@ -38,7 +38,7 @@ You can also use the Get-CMSoftwareUpdatePoint cmdlet to obtain a software updat
 
 ### Example 1: Remove a software update point
 ```
-PS C:\>Remove-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+PS C:\> Remove-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
 ```
 
 The command removes a software update point.
@@ -47,7 +47,7 @@ Because the command does not include the *Force* parameter, the cmdlet prompts y
 
 ### Example 2: Remove a software update point by using a variable
 ```
-PS C:\>$CMSUP = Get-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+PS C:\> $CMSUP = Get-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
 PS C:\> Remove-CMSoftwareUpdatePoint -InputObject $CMSUP -Force
 ```
 

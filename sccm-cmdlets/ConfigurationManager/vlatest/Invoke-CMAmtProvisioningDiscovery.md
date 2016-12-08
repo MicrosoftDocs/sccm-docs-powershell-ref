@@ -70,7 +70,7 @@ This command checks for Intel AMT-based hardware on the devices that belong to t
 
 ### Example 3: Check for a computer for Intel AMT hardware by using a variable
 ```
-PS C:\>$CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
 PS C:\> Invoke-CMAmtProvisioningDiscovery -Device $CMD
 ```
 

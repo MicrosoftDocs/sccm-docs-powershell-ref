@@ -37,14 +37,14 @@ This cmdlet returns a list of features able to be licensed and a list of unique 
 
 ### Example 1: Get all licensable features for all servers and clients
 ```
-PS C:\>Get-CMAccessLicense -License
+PS C:\> Get-CMAccessLicense -License
 ```
 
 This command gets all licensable features for all servers and clients within the scope of System Center Configuration Manager.
 
 ### Example 2: Get the unique users, devices, and license-specific unique ID for a specified license
 ```
-PS C:\>Get-CMAccessLicense -LicenseName ConfigMgr_2012_EndPointClient
+PS C:\> Get-CMAccessLicense -LicenseName ConfigMgr_2012_EndPointClient
 ```
 
 This command gets the unique users, devices, and license-specific IDs for the license named ConfigMgr_2012_EndPointClient.

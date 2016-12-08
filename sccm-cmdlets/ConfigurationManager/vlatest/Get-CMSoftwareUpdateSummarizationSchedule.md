@@ -26,7 +26,7 @@ You can use the [Invoke-CMSoftwareUpdateSummarization](./Invoke-CMSoftwareUpdate
 
 ### Example 1: Display the summarization schedule
 ```
-PS C:\>Get-CMSoftwareUpdateSummarizationSchedule
+PS C:\> Get-CMSoftwareUpdateSummarizationSchedule
                                Interval                                    Unit
                                --------                                    ----
                                      12                                   Hours

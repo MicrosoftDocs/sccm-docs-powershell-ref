@@ -32,7 +32,7 @@ You can specify an Active Directory forest by using the ID property or the fully
 
 ### Example 1: Remove an Active Directory forest object by ID
 ```
-PS C:\>Remove-CMActiveDirectoryForest -Id "16777217"
+PS C:\> Remove-CMActiveDirectoryForest -Id "16777217"
 ```
 
 This command removes an Active Directory forest object that has the ID 16777217.

@@ -71,7 +71,7 @@ For more information about collection rules, see [Introduction to Collections in
 
 ### Example 1: Get a direct membership rule
 ```
-PS C:\>Get-CMUserCollectionDirectMembershipRule -CollectionName "All Mobile Devices" -ResourceId "Res_94412512"
+PS C:\> Get-CMUserCollectionDirectMembershipRule -CollectionName "All Mobile Devices" -ResourceId "Res_94412512"
 ```
 
 This command gets the direct membership rule that has the Id Res_94412512 for the collection named All Mobile Devices.

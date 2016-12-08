@@ -41,14 +41,14 @@ To resume an application, use the [Resume-CMApplication](./Resume-CMApplication.
 
 ### Example 1: Suspend an application by its name
 ```
-PS C:\>Suspend-CMApplication -Name "Application01"
+PS C:\> Suspend-CMApplication -Name "Application01"
 ```
 
 This command suspends the application named Application01.
 
 ### Example 2: Get an application and suspend it
 ```
-PS C:\>Get-CMApplication -Name "Application01" | Suspend-CMApplication
+PS C:\> Get-CMApplication -Name "Application01" | Suspend-CMApplication
 ```
 
 This command gets the application object named Application01 and uses the pipeline operator to pass the object to **Suspend-CMApplication**, which suspends the application.

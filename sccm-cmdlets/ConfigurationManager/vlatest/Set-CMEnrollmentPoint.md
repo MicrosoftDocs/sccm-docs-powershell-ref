@@ -33,21 +33,21 @@ An enrollment point is a site system role that uses public key infrastructure (P
 
 ### Example 1: Set an enrollment point
 ```
-PS C:\>Set-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -UserName "Contoso\ElisaDaugherty"
+PS C:\> Set-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -UserName "Contoso\ElisaDaugherty"
 ```
 
 The command sets an enrollment point, and specifies an account name to use to connect to the Configuration Manager database.
 
 ### Example 2: Set an enrollment point with the computer account
 ```
-PS C:\>Set-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -UseComputerAccount
+PS C:\> Set-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -UseComputerAccount
 ```
 
 The command sets an enrollment point by specifying the site system server and site code, and uses the computer account to connect to the Configuration Manager database.
 
 ### Example 3: Set an enrollment point by using an input object
 ```
-PS C:\>$Ep = Get-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
+PS C:\> $Ep = Get-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
 PS C:\> Set-CMEnrollmentPoint -InputObject $Ep -UserName "Contoso\ElisaDaugherty"
 ```
 

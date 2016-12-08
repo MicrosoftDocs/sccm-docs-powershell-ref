@@ -38,14 +38,14 @@ If System Center Configuration Manager has already run the advertised program on
 
 ### Example 1: Remove a program by using a name and an ID
 ```
-PS C:\>Remove-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
+PS C:\> Remove-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
 ```
 
 This command removes the program named ProgramD02 from the package that has the ID ST10000F.
 
 ### Example 2: Remove a program by using an object variable
 ```
-PS C:\>$Prog = Get-CMProgram -Name "ProgramD02" -PackageId "ST10000F"
+PS C:\> $Prog = Get-CMProgram -Name "ProgramD02" -PackageId "ST10000F"
 PS C:\> Remove-CMProgram -InputObject $Prog
 ```
 

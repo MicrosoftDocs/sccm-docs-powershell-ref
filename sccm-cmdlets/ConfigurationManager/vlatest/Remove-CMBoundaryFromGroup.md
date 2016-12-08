@@ -76,14 +76,14 @@ A boundary group is a collection of boundaries.
 
 ### Example 1: Remove a boundary from a group by using the boundary name
 ```
-PS C:\>Remove-CMBoundaryFromGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
+PS C:\> Remove-CMBoundaryFromGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
 ```
 
 This example removes a boundary named CLBound03 from a boundary group that has the ID 16777219.
 
 ### Example 2: Remove multiple boundary groups by using an InputObject
 ```
-PS C:\>$BoundaryObj = Get-CMBoundary -Name "Bound01", "Bound02", "Bound03"
+PS C:\> $BoundaryObj = Get-CMBoundary -Name "Bound01", "Bound02", "Bound03"
 PS C:\> Remove-CMBoundaryFromGroup -Boundary $BoundaryObj -BoundaryGroupName "BGroup02"
 ```
 

@@ -26,7 +26,7 @@ You can use this cmdlet to retrieve metadata for all software updates or only re
 
 ### Example 1: Perform a full synchronization for all software updates
 ```
-PS C:\>Sync-CMSoftwareUpdate -FullSync $True
+PS C:\> Sync-CMSoftwareUpdate -FullSync $True
 ```
 
 This command performs a complete metadata synchronization for all software updates.

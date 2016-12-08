@@ -27,7 +27,7 @@ You can resolve a conflict by keeping your local inventory information or updati
 
 ### Example 1: Resolve a software conflict and keep local inventory information
 ```
-PS C:\>Resolve-CMInventoriedSoftwareConflict -Id "SMS0001" -RevertLocalEdit $True
+PS C:\> Resolve-CMInventoriedSoftwareConflict -Id "SMS0001" -RevertLocalEdit $True
 ```
 
 This command resolves a software conflict that has the specified ID.

@@ -39,7 +39,7 @@ You can use the [Remove-CMSoftwareMeteringRule](./Remove-CMSoftwareMeteringRule.
 
 ### Example 1: Disable automatic rule creation
 ```
-PS C:\>Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $False
+PS C:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $False
 ```
 
 This command disables automatic rule creation.
@@ -47,7 +47,7 @@ System Center Configuration Manager does not automatically create software meter
 
 ### Example 2: Configure automatic rule creation
 ```
-PS C:\>Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $True -AutoCreatePercentage 50 -AutoCreateThreshold 200 -DataRetentionDayCount 30
+PS C:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $True -AutoCreatePercentage 50 -AutoCreateThreshold 200 -DataRetentionDayCount 30
 ```
 
 This command enables automatic rule creation and sets properties for it.
@@ -55,7 +55,7 @@ This command sets the percentage of computers that use a piece of software to 50
 
 ### Example 3: Change automatic rule creation percentage
 ```
-PS C:\>Set-CMSoftwareMeteringSetting -AutoCreatePercentage 20
+PS C:\> Set-CMSoftwareMeteringSetting -AutoCreatePercentage 20
 ```
 
 This command changes the percentage of computers that use a piece of software to 20 percent.

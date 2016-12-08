@@ -39,7 +39,7 @@ Once the deployment package is removed, clients cannot install the software upda
 
 ### Example 1: Remove a software package by using an ID
 ```
-PS C:\>Remove-CMSoftwareUpdateDeploymentPackage -PackageID "ST10000C"
+PS C:\> Remove-CMSoftwareUpdateDeploymentPackage -PackageID "ST10000C"
 ```
 
 This command removes the software package that has the ID ST10000C.

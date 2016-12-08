@@ -131,7 +131,7 @@ A global condition is a setting or expression in System Center Configuration Man
 
 ### Example 1: Create a global condition
 ```
-PS C:\>New-CMGlobalCondition -AssemblyName "Microsoft.Office.Tools.Word.v9.0" -DeviceType $Windows
+PS C:\> New-CMGlobalCondition -AssemblyName "Microsoft.Office.Tools.Word.v9.0" -DeviceType $Windows
 ```
 
 This command creates a global condition that searches the assembly named Microsoft.Office.Tools.Word.v9.0 on Windows devices.

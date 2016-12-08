@@ -43,7 +43,7 @@ The **Remove-CMCategory** cmdlet removes a configuration category in Microsoft S
 
 ### Example 1: Remove a configuration category
 ```
-PS C:\>Remove-CMCategory -CategoryType "DriverCategories" -Force -Name "NewLaptopDriverSet"
+PS C:\> Remove-CMCategory -CategoryType "DriverCategories" -Force -Name "NewLaptopDriverSet"
 ```
 
 This command removes the category named NewLaptopDriverSet from DriversCategories without prompting you for confirmation.

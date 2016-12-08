@@ -55,7 +55,7 @@ The **Set-CMTaskSequence** cmdlet modifies a Microsoft System Center Configurati
 
 ### Example 1: Get a task sequence and change its name
 ```
-PS C:\>$TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+PS C:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
 PS C:\> Set-CMTaskSequence -InputObject $TaskSequence -NewName "NewTS01"
 ```
 
@@ -65,7 +65,7 @@ The second command changes the name of the task sequence stored in $TaskSequence
 
 ### Example 2: Pass a task sequence and change its name
 ```
-PS C:\>Get-CMTaskSequence -Name "TaskSequence02" | Set-CMTaskSequence -NewName "NewTS02"
+PS C:\> Get-CMTaskSequence -Name "TaskSequence02" | Set-CMTaskSequence -NewName "NewTS02"
 ```
 
 This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Set-CMTaskSequence**, which changes the name of the task sequence object to NewTS02.

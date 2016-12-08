@@ -41,7 +41,7 @@ For more information about the SMS provider, see [Planning for the SMS Provider 
 
 ### Example 1: Remove a boot image object that is identified by using its ID
 ```
-PS C:\>Remove-CMBootImage -Id "CM100004" -Confirm
+PS C:\> Remove-CMBootImage -Id "CM100004" -Confirm
 ```
 
 This command removes a boot image object that is identified by using its ID.
@@ -49,7 +49,7 @@ You must confirm the action before the command performs it.
 
 ### Example 2: Remove a boot image object that is identified by using its name
 ```
-PS C:\>Remove-CMBootImage -Name "Boot image (86)" -Confirm
+PS C:\> Remove-CMBootImage -Name "Boot image (86)" -Confirm
 ```
 
 This command removes a boot image object that is identified by using its name.

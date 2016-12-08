@@ -32,7 +32,7 @@ The network location types are: domain, public, and private.
 
 ### Example 1: Create a Windows Firewall policy
 ```
-PS C:\>New-CMWindowsFirewallPolicy -Name "test01" -Description "323132" -DomainTurnOnFirewall Yes -PrivateTurnOnFirewall Yes -PublicTurnOnFirewall Yes
+PS C:\> New-CMWindowsFirewallPolicy -Name "test01" -Description "323132" -DomainTurnOnFirewall Yes -PrivateTurnOnFirewall Yes -PublicTurnOnFirewall Yes
 ```
 
 This command creates a new Windows Firewall policy and enables the firewall for domain, private, and public network location types.

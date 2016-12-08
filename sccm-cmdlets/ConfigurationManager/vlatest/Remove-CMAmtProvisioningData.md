@@ -43,7 +43,7 @@ Use the *ControlType* parameter to control reprovisioning for individual compute
 
 ### Example 1: Remove provisioning information completely for a specified computer
 ```
-PS C:\>Remove-CMAmtProvisioningData -ControlType FullUnprovisionSuppressAuto -DeviceId "SMS000076" -Force
+PS C:\> Remove-CMAmtProvisioningData -ControlType FullUnprovisionSuppressAuto -DeviceId "SMS000076" -Force
 ```
 
 This command removes provisioning information from a computer that has the ID SMS000076.

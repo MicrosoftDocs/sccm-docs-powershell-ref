@@ -30,7 +30,7 @@ Active Directory Forest Discovery requires a global account to discover or publi
 
 ### Example 1: Create an Active Directory forest object that has discovery enabled
 ```
-PS C:\>New-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com" -EnableDiscovery $True
+PS C:\> New-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com" -EnableDiscovery $True
 ```
 
 This command creates an Active Directory forest object that has the FQDN tsqa.contoso.com and that has discovery enabled.

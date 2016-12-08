@@ -44,7 +44,7 @@ This command enables an alert that has the ID 16777223.
 
 ### Example 2: Enable an alert by using an alert object variable
 ```
-PS C:\>$AlertObj = Get-CMAlert -Id "16777218"
+PS C:\> $AlertObj = Get-CMAlert -Id "16777218"
 PS C:\> Enable-CMAlert -InputObject $AlertObj
 ```
 

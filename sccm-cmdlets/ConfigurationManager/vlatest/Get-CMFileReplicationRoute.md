@@ -36,7 +36,7 @@ The functionality of file replication routes is the same as that of addresses in
 
 ### Example 1: Get a file replication route by using site codes
 ```
-PS C:\>Get-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode "IM1"
+PS C:\> Get-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode "IM1"
 ```
 
 This command creates a file replication route from the site that has the site code IM1 to the site that has the site code IM5.

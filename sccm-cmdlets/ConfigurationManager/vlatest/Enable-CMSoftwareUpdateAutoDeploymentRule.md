@@ -60,7 +60,7 @@ This command enables a deployment rule that has the ID 16777217.
 
 ### Example 3: Enable a deployment rule by using a variable
 ```
-PS C:\>$CMSUADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+PS C:\> $CMSUADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
 PS C:\> Enable-CMSoftwareUpdateAutoDeploymentRule -InputObject $CMSUADR
 ```
 

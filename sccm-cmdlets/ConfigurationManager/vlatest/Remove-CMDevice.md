@@ -38,14 +38,14 @@ Do not remove a client if you want to uninstall the client or remove it from a c
 
 ### Example 1: Remove a device by name
 ```
-PS C:\>Remove-CMDevice -DeviceName "WIN10-86-33"
+PS C:\> Remove-CMDevice -DeviceName "WIN10-86-33"
 ```
 
 This command removes the device named WIN10-86-33.
 
 ### Example 2: Get a device and remove it
 ```
-PS C:\>Get-CMDevice -Name "TestVLAN-VNEXT" | Remove-CMDevice
+PS C:\> Get-CMDevice -Name "TestVLAN-VNEXT" | Remove-CMDevice
 ```
 
 This command gets the device object named TestVLAN-VNEXT and uses the pipeline operator to pass the object to **Remove-CMDevice**, which removes the device object.

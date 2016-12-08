@@ -113,7 +113,7 @@ You can get an access account to change the network access permissions for clien
 
 ### Example 1: Get an access account for a package by using the package ID
 ```
-PS C:\>$ID = Get-CMPackage -PackageName "Configuration Manager Client Package" 
+PS C:\> $ID = Get-CMPackage -PackageName "Configuration Manager Client Package" 
 PS C:\> Get-CMAccessAcccount -PackageId $ID
 Name:          Administrator
 Type:          Administrator
@@ -135,7 +135,7 @@ The command output describes all users and groups that can access this package.
 
 ### Example 2: Get an access account for a boot image by using the boot image name
 ```
-PS C:\>Get-CMAccessAccount -BootImageName "System Image (x64)"
+PS C:\> Get-CMAccessAccount -BootImageName "System Image (x64)"
 Name:          CONTOSO\EDaugherty
 Type:          WindowsUser
 Access:        Read

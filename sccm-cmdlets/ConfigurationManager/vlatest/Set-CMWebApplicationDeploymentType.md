@@ -51,14 +51,14 @@ The **Set-CMWebApplicationDeploymentType** cmdlet changes the settings for a web
 
 ### Example 1: Modify a web application deployment type
 ```
-PS C:\>Set-CMWebApplicationdeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
+PS C:\> Set-CMWebApplicationdeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command changes the name of the web application deployment type named DT1 for the application named testweb to DT1_Updated, and removes Chinese from the array of supported languages.
 
 ### Example 2: Modify a web application deployment type by using the pipeline
 ```
-PS C:\>Get-CMDeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" | Set-CMWebApplicationdeploymentType -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
+PS C:\> Get-CMDeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" | Set-CMWebApplicationdeploymentType -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command gets the web application deployment type object named DT1 for the application named testweb and uses the pipeline operator to pass the object to **Set-CMWebApplicationDeploymentType**.

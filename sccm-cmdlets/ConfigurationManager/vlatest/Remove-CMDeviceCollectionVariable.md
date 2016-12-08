@@ -37,7 +37,7 @@ The **Remove-CMDeviceCollectionVariable** cmdlet removes a device collection var
 
 ### Example 1: Remove a device collection variable
 ```
-PS C:\>$Collection = Get-CMCollection -Name "Device" 
+PS C:\> $Collection = Get-CMCollection -Name "Device" 
 PS C:\> Remove-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Force
 ```
 
@@ -48,7 +48,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a device collection variable by using the pipeline
 ```
-PS C:\>Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionVariable -VariableName "testTS" -Force
+PS C:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionVariable -VariableName "testTS" -Force
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Remove-CMDeviceCollectionVariable**, which removes the device collection variable named testTS from the device collection object.

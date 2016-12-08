@@ -77,7 +77,7 @@ For more information about membership rules, see [Introduction to Collections in
 
 ### Example 1: Get the include membership rules from a user collection
 ```
-PS C:\>Get-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
+PS C:\> Get-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
 ```
 
 This command gets the include membership rules for the collection that has the ID SMSDM001 from the user collection that has the ID 9990000D.

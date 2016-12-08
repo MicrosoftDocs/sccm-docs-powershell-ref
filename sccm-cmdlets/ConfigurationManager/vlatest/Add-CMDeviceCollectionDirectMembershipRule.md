@@ -63,7 +63,7 @@ This command adds a device collection direct membership rule to the collection w
 
 ### Example 2: Add a direct membership rule by using the pipeline
 ```
-PS C:\>Get-CMCollection -Name "testCollection" | Add-CMDeviceCollectionDirectMembershipRule -ResourceId 2097152004
+PS C:\> Get-CMCollection -Name "testCollection" | Add-CMDeviceCollectionDirectMembershipRule -ResourceId 2097152004
 ```
 
 This command gets the collection object named testCollection and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionDirectMembershipRule**, which adds the direct membership rule to the collection object, and the resource with the ID of 2097152004 to the collection.This command gets the collection named Collection07 by using the [Get-CMCollection](./Get-CMCollection.md) cmdlet.

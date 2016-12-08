@@ -24,7 +24,7 @@ The **ConvertFrom-CMApplication** cmdlet converts an application SDK object to a
 
 ### Example 1: Convert an application object
 ```
-PS C:\>$SdkApp = Get-CMApplication -Name "Application01" | ConvertTo-CMApplication
+PS C:\> $SdkApp = Get-CMApplication -Name "Application01" | ConvertTo-CMApplication
 PS C:\> $SdkApp | ConvertFrom-CMApplication
 ```
 
@@ -35,7 +35,7 @@ The second command converts the application SDK object stored in $SdkApp to an a
 
 ### Example 2: Convert an application object
 ```
-PS C:\>$SdkApp = Get-CMApplication -Name "Application02" | ConvertTo-CMApplication
+PS C:\> $SdkApp = Get-CMApplication -Name "Application02" | ConvertTo-CMApplication
 PS C:\> ConvertFrom-CMApplication -InputObject $SdkApp
 ```
 

@@ -73,7 +73,7 @@ The **Remove-CMDeviceCollectionDirectMembershipRule** cmdlet removes a direct me
 
 ### Example 1: Remove a direct membership rule
 ```
-PS C:\>Remove-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01" -ResourceId 2097152004 -Force
+PS C:\> Remove-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01" -ResourceId 2097152004 -Force
 ```
 
 This command removes the direct membership rule for the resource with the ID of 2097152004 from the collection named Device01.
@@ -81,7 +81,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a direct membership rule by using the pipeline
 ```
-PS C:\>Get-CMCollection -Name "Device02" | Remove-CMDeviceCollectionDirectMembershipRule -Force
+PS C:\> Get-CMCollection -Name "Device02" | Remove-CMDeviceCollectionDirectMembershipRule -Force
 ```
 
 This command gets the collection object named Device02 and uses the pipeline operator to pass the object to **Remove-CMDeviceCollectionDirectMembershipRule** which removes the direct membership rule for the resource with the ID of 2097152004 from the collection object.

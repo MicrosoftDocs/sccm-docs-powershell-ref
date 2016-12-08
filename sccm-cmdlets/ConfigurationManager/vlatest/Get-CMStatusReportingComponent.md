@@ -25,7 +25,7 @@ This object provides information about the client configuration and server confi
 
 ### Example 1: Get status reporting components
 ```
-PS C:\>Get-CMStatusReportingComponent -SiteCode "CM1"
+PS C:\> Get-CMStatusReportingComponent -SiteCode "CM1"
 ```
 
 This command gets the status reporting components that Set-CMStatusReportingComponent configures for the site.

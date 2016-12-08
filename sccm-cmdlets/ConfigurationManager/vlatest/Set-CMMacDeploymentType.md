@@ -51,7 +51,7 @@ The **Set-CMMacDeploymentType** cmdlet changes the settings for a Mac deployment
 
 ### Example 1: Rename a deployment type and add a description
 ```
-PS C:\>Set-CMMacDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac_updated" -NewName "DTMac" -ContentLocation "\\Server01\Resources\Applications\Mac\Bean.app\Bean.app.cmmac" -PassThru -Comment "test-set-CMMacDeploymentType"
+PS C:\> Set-CMMacDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac_updated" -NewName "DTMac" -ContentLocation "\\Server01\Resources\Applications\Mac\Bean.app\Bean.app.cmmac" -PassThru -Comment "test-set-CMMacDeploymentType"
 ```
 
 This command changes the name of the deployment type named DTMac_Updated for the application named testMac to DTMac, and adds a description.
@@ -59,7 +59,7 @@ The *PassThru* parameter indicates that an object will be returned from this com
 
 ### Example 2: Rename a deployment type and add a description by using the pipeline
 ```
-PS C:\>Get-CMDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac" | Set-CMMacDeploymentType -NewName "DTMac_updated" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -PassThru -Comment "test-set-CMMacDeploymentType"
+PS C:\> Get-CMDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac" | Set-CMMacDeploymentType -NewName "DTMac_updated" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -PassThru -Comment "test-set-CMMacDeploymentType"
 ```
 
 This command gets the deployment type object named DTMac for the application named testMac and uses the pipeline operator to pass the object to **Set-CMMacDeploymentType**.

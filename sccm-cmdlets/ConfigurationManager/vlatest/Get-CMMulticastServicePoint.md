@@ -31,7 +31,7 @@ The **Get-CMMulticastServicePoint** cmdlet gets the multicast settings for a dis
 
 ### Example 1: Get a multicast service point
 ```
-PS C:\>Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" -SiteCode "PS1"
+PS C:\> Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" -SiteCode "PS1"
 ```
 
 This command gets the multicast service point settings for the distribution point that has the site system server name server01.contoso.com and site code PS1.

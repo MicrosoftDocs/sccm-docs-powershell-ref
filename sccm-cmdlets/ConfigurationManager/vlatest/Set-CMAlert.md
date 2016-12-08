@@ -40,14 +40,14 @@ The **Set-CMAlert** cmdlet changes the properties of one or more Microsoft Syste
 
 ### Example 1: Set alert properties
 ```
-PS C:\>Set-CMAlert -Id "16777223" -Comments "Editing severity" -Severity 2
+PS C:\> Set-CMAlert -Id "16777223" -Comments "Editing severity" -Severity 2
 ```
 
 This command changes the values of the *Comments* and *Severity* properties for an alert that has the ID 16777223.
 
 ### Example 2: Set alert properties by using alert object variable
 ```
-PS C:\>$AlertObj = Get-CMAlert -Id "16777221"
+PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
 PS C:\> Set-CMAlert -InputObject $AlertObj -Comments "Updating alert"
 ```
 

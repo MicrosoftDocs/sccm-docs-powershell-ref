@@ -31,14 +31,14 @@ The **Get-CMDistributionPointGroup** cmdlet gets one or more distribution point 
 
 ### Example 1: Get a distribution point group by using an ID
 ```
-PS C:\>Get-CMDistributionPointGroup -Id "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
+PS C:\> Get-CMDistributionPointGroup -Id "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
 ```
 
 This command get the distribution point group that has the ID 6617708D-0F98-4898-8D05-9E882C23DCB2.
 
 ### Example 2: Get a distribution point group by using a name
 ```
-PS C:\>Get-CMDistributionPointGroup -Name "Dpg01" -Id "{FA921CF2-89C9-407D-A21D-FE6947F2C00A}"
+PS C:\> Get-CMDistributionPointGroup -Name "Dpg01" -Id "{FA921CF2-89C9-407D-A21D-FE6947F2C00A}"
 ```
 
 This command gets the distribution point group named Dpg01 and that has the ID FA921CF2-89C9-407D-A21D-FE6947F2C00A.

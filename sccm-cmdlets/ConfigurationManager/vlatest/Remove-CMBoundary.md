@@ -40,7 +40,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ### Example 1: Remove a boundary that is specified by its ID
 ```
-PS C:\>Remove-CMBoundary -Id "16777223"
+PS C:\> Remove-CMBoundary -Id "16777223"
 ```
 
 This command removes the boundary that has an identifier of 16777223.
@@ -48,7 +48,7 @@ Because the *Force* parameter is not specified, you must confirm the action befo
 
 ### Example 2: Remove a boundary by using an InputObject
 ```
-PS C:\>$BoundaryObj = Get-CMBoundary -Id "16777223"
+PS C:\> $BoundaryObj = Get-CMBoundary -Id "16777223"
 PS C:\> 
 Remove-Boundary -InputObject $BoundaryObj
 ```

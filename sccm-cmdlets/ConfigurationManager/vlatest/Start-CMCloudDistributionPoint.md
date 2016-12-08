@@ -39,21 +39,21 @@ You can use the [Stop-CMCloudDistributionPoint](./Stop-CMCloudDistributionPoint.
 
 ### Example 1: Start the cloud distribution point service using an ID
 ```
-PS C:\>Start-CMCloudDistributionPoint -Id "16777242"
+PS C:\> Start-CMCloudDistributionPoint -Id "16777242"
 ```
 
 This command starts the cloud distribution point service for the cloud distribution point that has the specified identifier.
 
 ### Example 2: Start the cloud distribution point service using a name
 ```
-PS C:\>Start-CMCloudDistributionPoint -Name "West01"
+PS C:\> Start-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command starts the cloud distribution point service for the cloud distribution point named West01.
 
 ### Example 3: Start the cloud distribution point service using an object
 ```
-PS C:\>$DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
+PS C:\> $DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
 PS C:\> Start-CMCloudDistributionPoint -InputObject $DistPnt
 ```
 

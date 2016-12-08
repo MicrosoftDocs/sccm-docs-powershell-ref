@@ -24,7 +24,7 @@ The **Set-CMBaselineSummarizationSchedule** cmdlet configures the schedule by wh
 
 ### Example 1: Set the configuration baseline update schedule
 ```
-PS C:\>Set-CMBaselineSummarizationSchedule -Interval 6 -Unit "Hours"
+PS C:\> Set-CMBaselineSummarizationSchedule -Interval 6 -Unit "Hours"
 ```
 
 This command schedules Configuration Manager to automatically update the configuration baseline data every six hours.

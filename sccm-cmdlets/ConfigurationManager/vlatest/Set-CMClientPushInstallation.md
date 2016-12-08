@@ -60,7 +60,7 @@ For more information about how to install clients, see [How to Install Clients o
 
 ### Example 1: Change the settings of a client push installation
 ```
-PS C:\>Set-CMClientPushInstallation -EnableAutomaticClientPushInstallation $True -EnableSystemTypeConfiguationManager $True -ChosenAccount "CENTRAL\00ID$" -InstallationProperty "SMSSITECODE=CM1"
+PS C:\> Set-CMClientPushInstallation -EnableAutomaticClientPushInstallation $True -EnableSystemTypeConfiguationManager $True -ChosenAccount "CENTRAL\00ID$" -InstallationProperty "SMSSITECODE=CM1"
 ```
 
 This command specifies that Configuration Manager automatically uses client push for discovered computers.

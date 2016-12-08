@@ -54,7 +54,7 @@ The command includes a comment.
 
 ### Example 3: Approve a request by using a variable
 ```
-PS C:\>$Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_d047e945-d6af-46f4-910f-ed36c880ae06/1"
+PS C:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_d047e945-d6af-46f4-910f-ed36c880ae06/1"
 PS C:\> Approve-CMApprovalRequest -InputObject $Approval -Comment "Request approved."
 ```
 

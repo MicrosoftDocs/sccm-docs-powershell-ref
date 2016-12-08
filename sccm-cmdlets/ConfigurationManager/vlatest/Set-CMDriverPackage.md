@@ -55,14 +55,14 @@ The **Set-CMDriverPackage** cmdlet modifies a driver package in Microsoft System
 
 ### Example 1: Add a security scope action to a driver package
 ```
-PS C:\>Set-CMDriverPackage -SecurityScopeAction AddMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
+PS C:\> Set-CMDriverPackage -SecurityScopeAction AddMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
 ```
 
 This command adds a security scope action to the driver package that is named Windows 7 Standard Hardware Package.
 
 ### Example 2: Remove a security scope action from a driver package
 ```
-PS C:\>Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
+PS C:\> Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
 ```
 
 This command removes a security scope action from the driver package that is named Windows 7 Standard Hardware Package.

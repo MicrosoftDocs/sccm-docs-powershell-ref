@@ -30,7 +30,7 @@ You can also specify whether the migration includes other user names from the so
 
 ### Example 1: Create a computer association
 ```
-PS C:\>New-CMComputerAssociation -SourceComputer "TSQA073" -MigrationUserName "Contoso-TSQA\ElisaDaugherty" -DestinationComputer "TSQA155"
+PS C:\> New-CMComputerAssociation -SourceComputer "TSQA073" -MigrationUserName "Contoso-TSQA\ElisaDaugherty" -DestinationComputer "TSQA155"
 ```
 
 This command creates a computer association between the source computer named TSQA073 and the destination computer named TSQA155.

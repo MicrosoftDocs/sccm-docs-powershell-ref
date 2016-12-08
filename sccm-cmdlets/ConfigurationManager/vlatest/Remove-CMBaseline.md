@@ -39,14 +39,14 @@ After you remove a configuration baseline, System Center Configuration Manager r
 
 ### Example 1: Remove a baseline configuration by using a name
 ```
-PS C:\>Remove-CMBaseline -Name "BLConfigContoso02"
+PS C:\> Remove-CMBaseline -Name "BLConfigContoso02"
 ```
 
 This command removes the configuration baseline named BLConfigContoso02.
 
 ### Example 2: Remove a baseline configuration by using an ID
 ```
-PS C:\>Remove-CMBaseline -Id "16777366"
+PS C:\> Remove-CMBaseline -Id "16777366"
 ```
 
 This command removes the configuration baseline that has the ID 16777366.

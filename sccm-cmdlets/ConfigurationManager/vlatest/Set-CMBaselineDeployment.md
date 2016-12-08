@@ -51,7 +51,7 @@ You can use the **Start-CMBaselineDeployment** cmdlet to begin a deployment.
 
 ### Example 1: Change whether a deployment generates alerts
 ```
-PS C:\>Set-CMBaselineDeployment -BaselineName "Baseline 2012" -CollectionName "All Computers" -GenerateAlert $False
+PS C:\> Set-CMBaselineDeployment -BaselineName "Baseline 2012" -CollectionName "All Computers" -GenerateAlert $False
 ```
 
 This command changes a deployment for the baseline named Baseline 2012 for a collection named All Computers.
@@ -59,7 +59,7 @@ This command sets the *GenerateAlert* parameter to $False.
 
 ### Example 2: Change deployment settings
 ```
-PS C:\>Set-CMBaselineDeployment -BaselineName "Baseline A3" -CollectionName "TSQA Computers" -GenerateAlert $True -MonitoredByScom $True -ParameterValue 60 -PostponeDate 2013/02/12 -PostponeTime 12:34
+PS C:\> Set-CMBaselineDeployment -BaselineName "Baseline A3" -CollectionName "TSQA Computers" -GenerateAlert $True -MonitoredByScom $True -ParameterValue 60 -PostponeDate 2013/02/12 -PostponeTime 12:34
 ```
 
 This command changes a deployment for the baseline named Baseline A3 for a collection named TSQA Computers.

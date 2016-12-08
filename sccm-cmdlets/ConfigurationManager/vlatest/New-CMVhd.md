@@ -26,7 +26,7 @@ The **New-CMVhd** cmdlet creates a virtual hard disk (VHD) image by using the op
 
 ### Example 1: Create a VHD image
 ```
-PS C:\>New-CMVhd -Name "Windows 10 Enterprise " -Path "\\vhd-server\hyper-v\ Windows10.vhd" -VHDSize 50 -TaskSequencePackageId "P0071267" -DistributionPointServerNames "distribution-server.contoso.com" -Version "X64"
+PS C:\> New-CMVhd -Name "Windows 10 Enterprise " -Path "\\vhd-server\hyper-v\ Windows10.vhd" -VHDSize 50 -TaskSequencePackageId "P0071267" -DistributionPointServerNames "distribution-server.contoso.com" -Version "X64"
 ```
 
 This command creates a virtual hard disk (VHD) image named Windows 10 Enterprise, and then copies the VHD image file to the distribution point that is named distribution-server.contoso.com.

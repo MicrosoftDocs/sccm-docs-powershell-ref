@@ -26,7 +26,7 @@ You can get a Configuration Manager site by using either a site name or a site c
 
 ### Example 1: Get a site by using a site name
 ```
-PS C:\>Get-CMSite -SiteName "CMSiteSystem"
+PS C:\> Get-CMSite -SiteName "CMSiteSystem"
 ```
 
 This command gets a System Center Configuration Manager site by using the site name CMSiteSystem.

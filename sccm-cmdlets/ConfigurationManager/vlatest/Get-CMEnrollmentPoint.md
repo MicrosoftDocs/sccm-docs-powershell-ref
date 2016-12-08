@@ -32,7 +32,7 @@ An enrollment point is a site system role that uses public key infrastructure (P
 
 ### Example 1: Get an enrollment point
 ```
-PS C:\>Get-CMEnrollmentPoint -SiteSystemServerName "SiteServer01.Contoso.com" -SiteCode "CM1"
+PS C:\> Get-CMEnrollmentPoint -SiteSystemServerName "SiteServer01.Contoso.com" -SiteCode "CM1"
 ```
 
 This command gets an enrollment point.

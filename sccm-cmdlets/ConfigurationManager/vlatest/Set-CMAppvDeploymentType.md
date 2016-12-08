@@ -55,14 +55,14 @@ The **Set-CMAppvDeploymentType** cmdlet changes the settings for a Microsoft App
 
 ### Example 1: Change the name of the deployment type
 ```
-PS C:\>Set-CMAppvDeploymentType -ApplicationName "testApp" -DeploymentTypeName "Appv" -NewName "newAppv"
+PS C:\> Set-CMAppvDeploymentType -ApplicationName "testApp" -DeploymentTypeName "Appv" -NewName "newAppv"
 ```
 
 This command changes the display name of the deployment type for the application named testApp from AppV to newAppv.
 
 ### Example 2: Change the name of the deployment type by using the pipeline
 ```
-PS C:\>Get-CMDeploymentType -DeploymentTypeName "Appv" -ApplicationName "testApp" | Set-CMAppvDeploymentType -NewName "newAppv"
+PS C:\> Get-CMDeploymentType -DeploymentTypeName "Appv" -ApplicationName "testApp" | Set-CMAppvDeploymentType -NewName "newAppv"
 ```
 
 This command gets the deployment type object named Appv for the applicaton named testApp and uses the pipeline operator to pass the object to **Set-CMAppvDeploymentType**, which changes the name of the deployment type object to newAppv.

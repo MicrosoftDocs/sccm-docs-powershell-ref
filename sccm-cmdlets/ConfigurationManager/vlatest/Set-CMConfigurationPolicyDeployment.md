@@ -69,7 +69,7 @@ Use the [Start-CMConfigurationPolicyDeployment](./Start-CMConfigurationPolicyDep
 
 ### Example 1: Create a configuration policy deployment
 ```
-PS C:\>Set-CMConfigurationPolicyDeployment -CollectionName "Regional Remote Users" -FirewallPolicyName "Remote Firewall Policy"
+PS C:\> Set-CMConfigurationPolicyDeployment -CollectionName "Regional Remote Users" -FirewallPolicyName "Remote Firewall Policy"
 ```
 
 This command creates a configuration policy deployment named Remote Firewall Policy and deploys it to the collection named Regional Remote Users.

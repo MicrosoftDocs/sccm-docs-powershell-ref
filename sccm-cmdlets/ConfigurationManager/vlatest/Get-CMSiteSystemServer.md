@@ -31,7 +31,7 @@ The **Get-CMSiteSystemServer** cmdlet gets a site system server in Microsoft Sys
 
 ### Example 1: Get a site system server
 ```
-PS C:\>Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5"
+PS C:\> Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5"
 ```
 
 This command gets the site system server named Server2.contoso.com for site code MP5.

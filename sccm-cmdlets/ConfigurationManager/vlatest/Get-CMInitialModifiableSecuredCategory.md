@@ -33,14 +33,14 @@ Note: This cmdlet was previously known as **Get-CMInitModifiableSecuredCategory*
 
 ### Example 1: Get information about all your modifiable secured categories
 ```
-PS C:\>Get-CMInitialModifiableSecuredCategory
+PS C:\> Get-CMInitialModifiableSecuredCategory
 ```
 
 This command returns information about all your modifiable secured categories.
 
 ### Example 2: Get information about a specific modifiable secured category
 ```
-PS C:\>Get-CMInitialModifiableSecuredCategory -ID "121989"
+PS C:\> Get-CMInitialModifiableSecuredCategory -ID "121989"
 ```
 
 This command returns information about the modifiable secured category that has the ID 121989.

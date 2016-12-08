@@ -39,7 +39,7 @@ This cmdlet assigns a client to a different primary site.
 
 ### Example 1: Reassign a client to a site
 ```
-PS C:\>Set-CMAssignedSite -DeviceId "2097152000" -SiteCode "CM7"
+PS C:\> Set-CMAssignedSite -DeviceId "2097152000" -SiteCode "CM7"
 ```
 
 This command reassigns the client that has the device ID 2097152000 to the site that has the site code CM7.

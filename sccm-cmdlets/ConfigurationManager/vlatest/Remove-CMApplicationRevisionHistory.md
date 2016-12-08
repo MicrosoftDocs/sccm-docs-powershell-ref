@@ -44,7 +44,7 @@ The revision history contains a list of revisions to an application or a develop
 
 ### Example 1: Remove a revision history
 ```
-PS C:\>Remove-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
+PS C:\> Remove-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
 ```
 
 This command removes the revision history named MSXML 6.0 Parser.

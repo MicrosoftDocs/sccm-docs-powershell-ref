@@ -127,7 +127,7 @@ For example, members in the Software Update Point Connection access account can 
 
 ### Example 1: Modify access to an application by using the application ID
 ```
-PS C:\>$ID = Get-CMAccessAccount -ApplicationID "12994680"
+PS C:\> $ID = Get-CMAccessAccount -ApplicationID "12994680"
 PS C:\> New-CMAccessAccount -ApplicationID $ID -Type WindowsUser Username "CONTOSO\EDaugherty" -Access "FullControl"
 ```
 

@@ -34,7 +34,7 @@ The object specifies settings for the name of the site database and the port num
 
 ### Example 1: Create a SQL Server settings object
 ```
-PS C:\>New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite -SqlServerServiceBrokerPort 4037
+PS C:\> New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite -SqlServerServiceBrokerPort 4037
 ```
 
 This command creates a SQL Server settings object that specifies that System Center Configuration Manager copies Microsoft SQL Server Express to a secondary site.

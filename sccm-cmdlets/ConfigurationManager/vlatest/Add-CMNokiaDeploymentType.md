@@ -50,7 +50,7 @@ This command adds the Nokia deployment type named DTNokia from the specified loc
 
 ### Example 2: Add a Nokia deployment type by using the pipeline
 ```
-PS C:\>Get-CMApplication -Name "testNokia" | Add-CMNokiaDeploymentType -DeploymentTypeName "DTNokia01" -ContentLocation "\\Server01\Resources\Applications\SIS\FileBrowser.sisx" -Force -AddLanguage "en-US","zh-CN" -Confirm
+PS C:\> Get-CMApplication -Name "testNokia" | Add-CMNokiaDeploymentType -DeploymentTypeName "DTNokia01" -ContentLocation "\\Server01\Resources\Applications\SIS\FileBrowser.sisx" -Force -AddLanguage "en-US","zh-CN" -Confirm
 ```
 
 This command gets the application object named testNokia and uses the pipeline operator to pass the object to **Add-CMNokiaDeploymentType**.

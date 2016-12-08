@@ -40,7 +40,7 @@ The **Set-CMSoftwareInventory** cmdlet modifies an object that collects informat
 
 ### Example 1: Set a software inventory object
 ```
-PS C:\>Set-CMSoftwareInventory -Name "MSXML 6.0 Parser"
+PS C:\> Set-CMSoftwareInventory -Name "MSXML 6.0 Parser"
 ```
 
 This command starts collecting software inventory data on the file named MSXML 6.0 Parser.

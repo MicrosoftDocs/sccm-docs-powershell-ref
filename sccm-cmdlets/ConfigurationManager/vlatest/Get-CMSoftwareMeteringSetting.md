@@ -23,7 +23,7 @@ The **Get-CMSoftwareMeteringSetting** cmdlet gets a software metering settings o
 
 ### Example 1: Get software metering setting object
 ```
-PS C:\>Get-CMSoftwareMeteringSetting
+PS C:\> Get-CMSoftwareMeteringSetting
 
 ClientComponentName : Software Metering Agent
 FileType            : 2

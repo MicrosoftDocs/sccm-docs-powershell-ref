@@ -39,7 +39,7 @@ Task sequence processing uses device variables.
 
 ### Example 1: Get a variable value by using its name
 ```
-PS C:\>Get-CMDeviceVariable -DeviceName "Computer073" -VariableName "HostDrive"
+PS C:\> Get-CMDeviceVariable -DeviceName "Computer073" -VariableName "HostDrive"
 ```
 
 This command gets the value of the variable named HostDrive for the specified computer.

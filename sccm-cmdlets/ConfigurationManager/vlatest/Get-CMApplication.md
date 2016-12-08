@@ -42,7 +42,7 @@ The **Get-CMApplication** cmdlet gets a Microsoft System Center Configuration Ma
 
 ### Example 1: Get an application by name
 ```
-PS C:\>Get-CMApplication -Name "Application1"
+PS C:\> Get-CMApplication -Name "Application1"
 ```
 
 This command gets the application object named Application1.

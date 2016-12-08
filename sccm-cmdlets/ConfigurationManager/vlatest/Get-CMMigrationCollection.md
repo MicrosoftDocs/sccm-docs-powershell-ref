@@ -33,7 +33,7 @@ A migration collection is the set of resources chosen from a hierarchy for migra
 
 ### Example 1: Get a migration collection by name
 ```
-PS C:\>Get-CMMigrationCollection -Name "PhoneCollection5"
+PS C:\> Get-CMMigrationCollection -Name "PhoneCollection5"
 ```
 
 This command gets the migration collection.

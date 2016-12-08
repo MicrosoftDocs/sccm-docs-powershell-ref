@@ -27,7 +27,7 @@ You can add, modify, or delete your own hardware requirements, but you cannot ch
 
 ### Example 1: Create a hardware requirement object
 ```
-PS C:\>New-CMHardwareRequirement -MinCpu 233 -MinDiskFree 1572864 -MinDiskSize 10485760 -MinRam 131072 -Product "Accounts Program"
+PS C:\> New-CMHardwareRequirement -MinCpu 233 -MinDiskFree 1572864 -MinDiskSize 10485760 -MinRam 131072 -Product "Accounts Program"
 
 
 IsLocal     : 

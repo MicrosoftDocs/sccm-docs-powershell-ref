@@ -33,7 +33,7 @@ For more information about user accounts, see [Technical Reference for Accounts 
 
 ### Example 1: Set an account by using name and password
 ```
-PS C:\>$Secure = Read-Host -AsSecureString
+PS C:\> $Secure = Read-Host -AsSecureString
 PS C:\> $ConfirmSecure = Read-Host -AsSecureString
 PS C:\> Set-CMAccount -Name " TSQA\PFuller" -Password $Secure -ConfirmPassword $ConfirmSecure -SiteCode "CM2"
 ```

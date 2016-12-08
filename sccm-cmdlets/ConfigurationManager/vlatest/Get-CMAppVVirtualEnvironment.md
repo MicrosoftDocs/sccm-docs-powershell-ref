@@ -32,21 +32,21 @@ You can specify App-V environments by name or ID.
 
 ### Example 1: Get all virtual environments
 ```
-PS C:\>Get-CMAppVVirtualEnvironment
+PS C:\> Get-CMAppVVirtualEnvironment
 ```
 
 This command gets all App-V virtual environments.
 
 ### Example 2: Get virtual environments by using a wildcard
 ```
-PS C:\>Get-CMAppVVirtualEnvironment -Name "T*"
+PS C:\> Get-CMAppVVirtualEnvironment -Name "T*"
 ```
 
 This command gets all App-V virtual environments that have names that begin with the letter T.
 
 ### Example 3: Get virtual environment by an ID
 ```
-PS C:\>Get-CMAppVVirtualEnvironment -Id "16781806"
+PS C:\> Get-CMAppVVirtualEnvironment -Id "16781806"
 ```
 
 This command gets an App-V virtual environment that has the ID 16781806.

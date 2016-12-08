@@ -25,7 +25,7 @@ Client computers use wireless profiles for configuration when they connect to a 
 
 ### Example 1: Create a wireless profile configuration item
 ```
-PS C:\>New-CMWirelessProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\Wireless.xml"
+PS C:\> New-CMWirelessProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\Wireless.xml"
 ```
 
 This command creates a wireless profile configuration item by using the digest file C:\Digests\Wireless.xml.

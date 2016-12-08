@@ -54,7 +54,7 @@ This command enables Intel AMT audit logging for a device named Accn023.Contoso.
 
 ### Example 3: Enable audit logging by using a variable
 ```
-PS C:\>$CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
 PS C:\> Enable-CMAmtAuditLog -Device $CMD -Force
 ```
 

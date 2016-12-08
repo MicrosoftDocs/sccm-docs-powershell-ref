@@ -31,7 +31,7 @@ If you deploy your own PKI, install the required root certificate.
 
 ### Example 1: Get a trusted root certificate
 ```
-PS C:\>Get-CMTrustedRootCertificate -CertificationAuthorityServerName "ContosoCA.Contoso.com"
+PS C:\> Get-CMTrustedRootCertificate -CertificationAuthorityServerName "ContosoCA.Contoso.com"
 ```
 
 This command gets a trusted root certificate from the internal server named ContosoCA.Contoso.com.

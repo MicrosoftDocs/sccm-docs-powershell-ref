@@ -40,14 +40,14 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ### Example 1: Rename a boundary
 ```
-PS C:\>Set-CMBoundary -Name "Default-ADSite" -NewName "ADSiteBoundary01"
+PS C:\> Set-CMBoundary -Name "Default-ADSite" -NewName "ADSiteBoundary01"
 ```
 
 This command changes a boundary name from Default-ADSite to ADSiteBoundary01.
 
 ### Example 2: Modify the value of a boundary by using an InputObject
 ```
-PS C:\>$BoundaryObj = Get-CMBoundary -Id "16777217"
+PS C:\> $BoundaryObj = Get-CMBoundary -Id "16777217"
 PS C:\> Set-CMBoundary -InputObject $BoundaryObj -Value "IPSubnet17"
 ```
 

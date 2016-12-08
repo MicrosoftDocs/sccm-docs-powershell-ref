@@ -28,7 +28,7 @@ Use this cmdlet in conjunction with the Add-CMStateMigrationPoint cmdlet to crea
 
 ### Example 1: Create a new storage folder
 ```
-PS C:\>New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
+PS C:\> New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
 ```
 
 This command creates a new storage folder for migration data by using the maximum number of clients, minimum free space, and storage folder path parameters.

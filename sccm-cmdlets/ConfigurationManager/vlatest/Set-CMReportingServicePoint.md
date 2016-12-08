@@ -34,21 +34,21 @@ A reporting service point is a site system role that is installed on a server th
 
 ### Example 1: Set a reporting service point
 ```
-PS C:\>Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -UserName "Contoso\DavidChew"
+PS C:\> Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -UserName "Contoso\DavidChew"
 ```
 
 The command sets a reporting service point by using the *SiteSystemServerName* parameter.
 
 ### Example 2: Set a reporting service point by using a site system server name
 ```
-PS C:\>Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM2"
+PS C:\> Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM2"
 ```
 
 The command sets a reporting service point by using the *SiteSystemServerName* parameter.
 
 ### Example 3: Set a reporting service point by using an input object
 ```
-PS C:\>$RS = Get-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" 
+PS C:\> $RS = Get-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" 
 PS C:\> Set-CMReportingServicePoint -InputObject $RS -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM4"
 ```
 

@@ -27,7 +27,7 @@ Client computers use remote connection profiles to remotely connect to computers
 
 ### Example 1: Create a remote connection profile configuration item
 ```
-PS C:\>New-CMRemoteConnectionProfileConfigurationItem -Name "EuropeanRemoteConnections" -EnablePrimaryUsers $True -EnableTSConnection $True -EnableTSFirewallRule $True
+PS C:\> New-CMRemoteConnectionProfileConfigurationItem -Name "EuropeanRemoteConnections" -EnablePrimaryUsers $True -EnableTSConnection $True -EnableTSFirewallRule $True
 ```
 
 This command creates a remote connection profile configuration item named EuropeanRemoteConnections.

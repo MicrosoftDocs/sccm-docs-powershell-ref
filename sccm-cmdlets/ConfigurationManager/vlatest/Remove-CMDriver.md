@@ -38,7 +38,7 @@ The source is not affected.
 
 ### Example 1: Remove a driver specified by a driver object
 ```
-PS C:\>$Driver = Get-CMDriver -Name "Driver01"
+PS C:\> $Driver = Get-CMDriver -Name "Driver01"
 PS C:\> Remove-CMDriver -InputObject $Driver -Force
 ```
 
@@ -49,7 +49,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a driver by using the pipeline
 ```
-PS C:\>Get-CMDriver -Name "Driver02" | Remove-CMDriver -Force
+PS C:\> Get-CMDriver -Name "Driver02" | Remove-CMDriver -Force
 ```
 
 This command gets the driver object named Driver02 and uses the pipeline operator to pass the object to **Remove-CMDriver**, which removes the driver object.

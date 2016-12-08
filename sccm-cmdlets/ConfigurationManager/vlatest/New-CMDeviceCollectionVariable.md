@@ -42,7 +42,7 @@ Task sequence variables are a set of name and value pairs that provide a mechani
 
 ### Example 1: Create a device collection variable
 ```
-PS C:\>$Collection = Get-CMCollection -Name "Device"
+PS C:\> $Collection = Get-CMCollection -Name "Device"
 PS C:\> New-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Value "test001"
 ```
 

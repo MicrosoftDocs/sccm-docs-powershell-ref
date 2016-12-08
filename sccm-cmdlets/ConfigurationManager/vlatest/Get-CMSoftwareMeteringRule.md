@@ -39,7 +39,7 @@ For more information about software metering in System Center Configuration Mana
 
 ### Example 1: Get rules for a product
 ```
-PS C:\>Get-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS C:\> Get-CMSoftwareMeteringRule -ProductName "Accounting Package"
 ```
 
 This command gets software metering rules for the product named Accounting Package.

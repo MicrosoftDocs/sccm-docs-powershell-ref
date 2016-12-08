@@ -29,7 +29,7 @@ You can use the [Get-CMDatabaseProperty](./Get-CMDatabaseProperty.md) cmdlet to 
 
 ### Example 1: Change settings for a database
 ```
-PS C:\>Set-CMDatabaseProperty -SiteCode "CM2" -DataRetentionPeriodDays 10 -EnableDataCompression $False -SqlServerServiceBrokerPort 80
+PS C:\> Set-CMDatabaseProperty -SiteCode "CM2" -DataRetentionPeriodDays 10 -EnableDataCompression $False -SqlServerServiceBrokerPort 80
 ```
 
 This command makes changes to the database for the site that has the site code CM2.

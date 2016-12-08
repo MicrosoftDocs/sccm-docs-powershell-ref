@@ -190,7 +190,7 @@ The **Remove-CMContentDistribution** cmdlet removes one or more packages from a 
 
 ### Example 1: Remove a driver package from a distribution point
 ```
-PS C:\>Remove-CMContentDistribution -DriverPackageID "PCP00019" -DistributionPointName "distribution-server.contoso.com"
+PS C:\> Remove-CMContentDistribution -DriverPackageID "PCP00019" -DistributionPointName "distribution-server.contoso.com"
 ```
 
 This command removes the driver package PCO00019 from the distribution point distribution-server.contoso.com.

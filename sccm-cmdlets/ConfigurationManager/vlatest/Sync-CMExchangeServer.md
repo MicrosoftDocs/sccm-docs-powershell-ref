@@ -26,7 +26,7 @@ Configuration Manager works with Exchange Server to manage mobile devices that c
 
 ### Example 1: Synchronize with an nextref_exchange
 ```
-PS C:\>Sync-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
+PS C:\> Sync-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
 ```
 
 This command synchronizes mobile devices for the site that has the site code PE1 with the specified Exchange Server.

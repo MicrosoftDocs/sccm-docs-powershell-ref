@@ -43,7 +43,7 @@ For more information about Endpoint Protection, see [Endpoint Protection in Conf
 
 ### Example 1: Save an Endpoint Protection epshort definition by using a device collection nameepshortEndpoint Protection
 ```
-PS C:\>Save-CMEndpointProtectionDefinition -DeviceCollectionName "NA-Client-Devices"
+PS C:\> Save-CMEndpointProtectionDefinition -DeviceCollectionName "NA-Client-Devices"
 ```
 
 This command saves the Endpoint Protection definition to the devices in the device collection named NA-Client-Devices.

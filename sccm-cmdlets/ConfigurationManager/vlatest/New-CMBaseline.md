@@ -26,7 +26,7 @@ After you create a baseline, you can deploy it to a collection so that devices i
 
 ### Example 1: Create a configuration baseline
 ```
-PS C:\>New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
+PS C:\> New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
 ```
 
 This command creates a baseline for compliance named Accounting Department baseline.

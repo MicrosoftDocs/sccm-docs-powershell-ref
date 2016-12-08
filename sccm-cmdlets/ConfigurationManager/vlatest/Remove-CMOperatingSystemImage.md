@@ -40,7 +40,7 @@ After you remove an operating system image, you cannot distribute the operating 
 
 ### Example 1: Remove an operating system image
 ```
-PS C:\>Remove-CMOperatingSystemImage -Name "STANDARD_WIN7"
+PS C:\> Remove-CMOperatingSystemImage -Name "STANDARD_WIN7"
 ```
 
 This command removes the operating system image named STANDARD_WIN7.

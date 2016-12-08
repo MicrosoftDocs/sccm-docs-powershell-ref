@@ -53,7 +53,7 @@ This command creates a new security role named SecRole02 by copying the security
 
 ### Example 3: Copy a security role
 ```
-PS C:\>$Srole = Get-CMSecurityRole -Name "Software Update Manager"
+PS C:\> $Srole = Get-CMSecurityRole -Name "Software Update Manager"
 PS C:\> Copy-CMSecurityRole -InputObject $Srole -Name "SecRole02"
 ```
 

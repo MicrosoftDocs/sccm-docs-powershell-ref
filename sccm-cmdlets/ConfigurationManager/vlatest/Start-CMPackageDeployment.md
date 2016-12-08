@@ -119,7 +119,7 @@ You can specify whether System Center Configuration Manager deploys the package 
 
 ### Example 1: Start a recurring deployment
 ```
-PS C:\>Start-CMPackageDeployment -CollectionName "All Systems" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "DPM for all systems." -DeploymentStartDay 2012/10/26 -DeploymentStartTime 12:12 -RecurUnit Days -RecurValue 7 -Rerun $True -UseMeteredNetwork $True -UseUtc $True
+PS C:\> Start-CMPackageDeployment -CollectionName "All Systems" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "DPM for all systems." -DeploymentStartDay 2012/10/26 -DeploymentStartTime 12:12 -RecurUnit Days -RecurValue 7 -Rerun $True -UseMeteredNetwork $True -UseUtc $True
 ```
 
 This command starts deployment for a named package to the collection named All Systems for the device program named DPM.
@@ -131,7 +131,7 @@ The deployment uses UTC time.
 
 ### Example 2: Start a recurring deployment for an available package
 ```
-PS C:\>Start-CMPackageDeployment -CollectionName "Western Computers" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "Deployment for Western office." -DeployPurpose Available -Rerun $True -UseUtc $True
+PS C:\> Start-CMPackageDeployment -CollectionName "Western Computers" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "Deployment for Western office." -DeployPurpose Available -Rerun $True -UseUtc $True
 ```
 
 This command starts deployment for a named package to the collection named Western Computers for the device program named DPM.
@@ -142,7 +142,7 @@ The deployment uses UTC time.
 
 ### Example 3: Start a deployment for a standard program
 ```
-PS C:\>Start-CMPackageDeployment -CollectionName "All Systems" -PackageName "User State Migration Tool for Windows 8" -StandardProgramName "SPM" AllowSharedContent $False
+PS C:\> Start-CMPackageDeployment -CollectionName "All Systems" -PackageName "User State Migration Tool for Windows 8" -StandardProgramName "SPM" AllowSharedContent $False
 ```
 
 This command starts a deployment of a package named User State Migration Tool for Windows 8 to the collection named All Systems for the standard program named SPM.

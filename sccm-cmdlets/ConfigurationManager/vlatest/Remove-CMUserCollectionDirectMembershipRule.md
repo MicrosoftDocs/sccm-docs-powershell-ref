@@ -76,7 +76,7 @@ For more information about collection rules in Microsoft System Center Configura
 
 ### Example 1: Remove all direct membership rules from a user collection
 ```
-PS C:\>Remove-CMUserCollectionDirectMembershipRule -CollectionID "CM0001A" -ResourceId "12733"
+PS C:\> Remove-CMUserCollectionDirectMembershipRule -CollectionID "CM0001A" -ResourceId "12733"
 ```
 
 This command removes all the direct membership rules of the user collection that has the ID CM0001A.
