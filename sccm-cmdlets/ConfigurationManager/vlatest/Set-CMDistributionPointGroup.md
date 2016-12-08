@@ -122,8 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a CMDistributionPointGroup object.
-To obtain a CMDistributionPointGroup object, use the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet.
+Specifies a **CMDistributionPointGroup** object.
+To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -195,5 +195,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMDistributionPointGroup](./New-CMDistributionPointGroup.md)
 
 [Remove-CMDistributionPointGroup](./Remove-CMDistributionPointGroup.md)
-
-

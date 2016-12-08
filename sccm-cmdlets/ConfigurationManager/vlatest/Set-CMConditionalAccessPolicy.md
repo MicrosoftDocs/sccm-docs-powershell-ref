@@ -232,7 +232,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a conditional access policy object.
-To obtain a conditional access policy object, use the Get-CMConditionalAccessPolicy cmdlet.
+To obtain a conditional access policy object, use the [Get-CMConditionalAccessPolicy](./Get-CMConditionalAccessPolicy.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -405,5 +405,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMConditionalAccessPolicy](./New-CMConditionalAccessPolicy.md)
 
 [Remove-CMConditionalAccessPolicy](./Remove-CMConditionalAccessPolicy.md)
-
-
