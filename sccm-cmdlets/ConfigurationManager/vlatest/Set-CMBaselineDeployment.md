@@ -275,8 +275,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies a schedule object.
-This is the schedule for deploying a baseline.
+Specifies a **CMSchedule** object.
+The schedule specifies when the maintenance window occurs.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -318,5 +319,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-CMBaselineDeployment](./Start-CMBaselineDeployment.md)
 
 [Get-CMBaseline](./Get-CMBaseline.md)
-
-

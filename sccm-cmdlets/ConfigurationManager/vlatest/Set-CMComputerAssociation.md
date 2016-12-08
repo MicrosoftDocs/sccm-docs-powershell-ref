@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -MigrationBehavior
 Specifies how Configuration Manager treats user accounts created on the source computer.
-When you create a computer association, specify user accounts created on the source computer by using the *MigrationUserName* parameter of the New-CMComputerAssociation cmdlet.
+When you create a computer association, specify user accounts created on the source computer by using the *MigrationUserName* parameter of the [New-CMComputerAssociation](./New-CMComputerAssociation.md) cmdlet.
 The computer association can specify that the migration process creates some or all of those accounts on the destination computer.
 
 The acceptable values for this parameter are:
@@ -199,5 +199,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMComputerAssociation](./New-CMComputerAssociation.md)
 
 [Remove-CMComputerAssociation](./Remove-CMComputerAssociation.md)
-
-

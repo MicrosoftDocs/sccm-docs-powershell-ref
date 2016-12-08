@@ -263,8 +263,8 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies a schedule object.
-This is the schedule for evaluating the baseline.
+Specifies a **CMSchedule** object.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject

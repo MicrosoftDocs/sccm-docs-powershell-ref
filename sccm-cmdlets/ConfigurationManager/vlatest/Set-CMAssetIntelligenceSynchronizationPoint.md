@@ -148,7 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-
+Specifies a **CMSchedule** object.
+The schedule specifies when the maintenance window occurs.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
