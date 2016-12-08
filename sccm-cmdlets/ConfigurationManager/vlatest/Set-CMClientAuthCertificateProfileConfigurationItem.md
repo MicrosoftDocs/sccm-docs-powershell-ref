@@ -39,10 +39,6 @@ Client computers use certificate profiles to authenticate when they use services
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

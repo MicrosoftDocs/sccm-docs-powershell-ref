@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -DistributionPoint
 Specifies an array of distribution point objects.
-To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
+To obtain a distribution point object, use the [Get-CMDistributionPoint](./Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
