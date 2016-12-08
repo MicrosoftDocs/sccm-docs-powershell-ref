@@ -504,7 +504,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies an array of schedule objects for the deployment.
+Specifies a **CMSchedule** object.
+The schedule specifies when the maintenance window occurs.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -728,5 +730,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-CMPackageDeployment](./Start-CMPackageDeployment.md)
 
 [Get-CMPackage](./Get-CMPackage.md)
-
-

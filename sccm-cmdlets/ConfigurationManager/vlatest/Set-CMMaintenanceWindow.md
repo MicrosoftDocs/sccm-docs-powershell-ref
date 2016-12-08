@@ -120,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-
+Specifies a Configuration Manager maintenance window object.
+To obtain a maintenance window object, use the [Get-CMMaintenanceWindow](./Get-CMMaintenanceWindow.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -148,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
+Specifies the name of the maintenance window.
 
 ```yaml
 Type: String
@@ -232,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceWindowName
-
+Specifies the name of the maintenance window.
 
 ```yaml
 Type: String
@@ -261,9 +262,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies a CMSchedule object.
+Specifies a **CMSchedule** object.
 The schedule specifies when the maintenance window occurs.
-To create a CMSchedule object, use the New-CMSchedule cmdlet.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -309,5 +310,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSchedule](./New-CMSchedule.md)
 
 [Remove-CMMaintenanceWindow](./Remove-CMMaintenanceWindow.md)
-
-

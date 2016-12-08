@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a multicast service point object.
-To obtain a multicast service point object, use the Get-CMMulticastServicePoint cmdlet.
+To obtain a multicast service point object, use the [Get-CMMulticastServicePoint](./Get-CMMulticastServicePoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 
 ### -UserName
 Specifies the name of the user that the distribution site system components use to connect to the primary site database.
-If UserName is not specified, the cmdlet uses the computer account of the distribution point to the primary site database.
+If the *UserName* parameter is not specified, the cmdlet uses the computer account of the distribution point to the primary site database.
 
 ```yaml
 Type: String
@@ -338,5 +338,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMMulticastServicePoint](./Get-CMMulticastServicePoint.md)
 
 [Remove-CMMulticastServicePoint](./Remove-CMMulticastServicePoint.md)
-
-

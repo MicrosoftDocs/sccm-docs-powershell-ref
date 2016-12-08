@@ -166,9 +166,9 @@ Accept wildcard characters: False
 Specifies whether the firewall blocks all incoming traffic for a domain type network location.
 Valid values are:
 
--- No
--- Not Configured
--- Yes
+- No
+- Not Configured
+- Yes
 
 ```yaml
 Type: SettingType
@@ -201,9 +201,9 @@ Accept wildcard characters: False
 Specifies whether to enable Windows Firewall for domain network location.
 Valid values are:
 
--- No
--- Not Configured
--- Yes
+- No
+- Not Configured
+- Yes
 
 ```yaml
 Type: SettingType
@@ -323,9 +323,9 @@ Accept wildcard characters: False
 Specifies whether the firewall blocks all incoming traffic for a private network location.
 Valid values are:
 
--- No
--- Not Configured
--- Yes
+- No
+- Not Configured
+- Yes
 
 ```yaml
 Type: SettingType
@@ -358,9 +358,9 @@ Accept wildcard characters: False
 Specifies whether to enable Windows Firewall for a private network location.
 Valid values are:
 
--- No
--- Not Configured
--- Yes
+- No
+- Not Configured
+- Yes
 
 ```yaml
 Type: SettingType
@@ -378,9 +378,9 @@ Accept wildcard characters: False
 Specifies whether the firewall blocks all incoming traffic for a public network location.
 Valid values are:
 
--- No
--- Not Configured
--- Yes
+- No
+- Not Configured
+- Yes
 
 ```yaml
 Type: SettingType
@@ -413,9 +413,9 @@ Accept wildcard characters: False
 Specifies whether to enable Windows Firewall for a public network location.
 Valid values are:
 
--- No
--- Not Configured
--- Yes
+- No
+- Not Configured
+- Yes
 
 ```yaml
 Type: SettingType

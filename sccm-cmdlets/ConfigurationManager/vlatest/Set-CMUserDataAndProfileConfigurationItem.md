@@ -188,9 +188,9 @@ Specifies a background synchronization type for file in offline mode.
 
 The acceptable values for this parameter are:
 
--- Disabled
--- Enabled
--- NotConfigured
+- Disabled
+- Enabled
+- NotConfigured
 
 ```yaml
 Type: SynchronizationType
@@ -589,9 +589,9 @@ Accept wildcard characters: False
 Specifies a file synchronization type for metered networks for work in offline mode.
 The acceptable values for this parameter are:
 
--- Disabled
--- Enabled
--- NotConfigured
+- Disabled
+- Enabled
+- NotConfigured
 
 ```yaml
 Type: SynchronizationType

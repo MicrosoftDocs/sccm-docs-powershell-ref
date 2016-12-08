@@ -355,7 +355,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -596,5 +597,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-CMApplicationDeployment](./Start-CMApplicationDeployment.md)
 
 [Start-CMApplicationDeploymentSimulation](./Start-CMApplicationDeploymentSimulation.md)
-
-

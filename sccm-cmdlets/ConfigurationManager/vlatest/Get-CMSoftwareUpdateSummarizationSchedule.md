@@ -19,8 +19,8 @@ Get-CMSoftwareUpdateSummarizationSchedule [-PassThru] [-DisableWildcardHandling]
 
 ## DESCRIPTION
 The **Get-CMSoftwareUpdateSummarizationSchedule** cmdlet displays the current schedule for software update summarization for Microsoft System Center Configuration Manager.
-You can use the Set-CMSoftwareUpdateSummarizationSchedule cmdlet to change the schedule.
-You can use the Invoke-CMSoftwareUpdateSummarization cmdlet to run the summarization immediately.
+You can use the [Set-CMSoftwareUpdateSummarizationSchedule](./Set-CMSoftwareUpdateSummarizationSchedule.md) cmdlet to change the schedule.
+You can use the [Invoke-CMSoftwareUpdateSummarization](./Invoke-CMSoftwareUpdateSummarization.md) cmdlet to run the summarization immediately.
 
 ## EXAMPLES
 
@@ -66,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -93,5 +94,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMSoftwareUpdateSummarizationSchedule](./Set-CMSoftwareUpdateSummarizationSchedule.md)
 
 [Invoke-CMSoftwareUpdateSummarization](./Invoke-CMSoftwareUpdateSummarization.md)
-
-

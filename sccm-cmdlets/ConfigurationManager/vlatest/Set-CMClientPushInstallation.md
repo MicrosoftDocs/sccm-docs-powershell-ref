@@ -184,7 +184,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a client push installation object.
-To obtain a client push installation object, use the Get-CMClientPushInstallation cmdlet.
+To obtain a client push installation object, use the [Get-CMClientPushInstallation](./Get-CMClientPushInstallation.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -293,5 +293,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [How to Install Clients on Windows-Based Computers in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247203)
 
 [Get-CMClientPushInstallation](./Get-CMClientPushInstallation.md)
-
-

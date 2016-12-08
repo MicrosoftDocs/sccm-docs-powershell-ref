@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -BootImagePackage
 Specifies an array of boot image objects.
-To obtain a boot image object, use the Get-CMBootImage cmdlet.
+To obtain a boot image object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 Use this parameter to specify the boot images that can install the imported device drivers.
 

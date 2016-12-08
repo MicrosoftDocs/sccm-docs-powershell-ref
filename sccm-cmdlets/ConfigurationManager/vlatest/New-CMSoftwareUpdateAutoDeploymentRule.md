@@ -856,7 +856,7 @@ Accept wildcard characters: False
 
 ### -Schedule
 Specifies a schedule object for the deployment.
-To obtain a schedule object, use the New-CMSchedule cmdlet.
+To obtain a schedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 Specify a schedule for this parameter if you specify a value of RunTheRuleOnSchedule for the RunType parameter.
 
 ```yaml

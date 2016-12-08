@@ -433,7 +433,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -493,7 +494,10 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
+Specifies the priority of the package. The acceptable values for this parameter are:
 
+- Increase
+- Decrease
 
 ```yaml
 Type: Priorities
@@ -570,5 +574,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMPackage](./New-CMPackage.md)
 
 [Remove-CMPackage](./Remove-CMPackage.md)
-
-

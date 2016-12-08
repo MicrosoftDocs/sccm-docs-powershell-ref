@@ -84,18 +84,18 @@ Accept wildcard characters: False
 Specifies an array of day names that determine the days of each week on which the maintenance task runs.
 The acceptable values for this parameter are:
 
-- Monday 
-- Tuesday 
-- Wednesday 
-- Thursday 
-- Friday 
+- Monday
+- Tuesday
+- Wednesday
+- Thursday
+- Friday
 - Saturday
 - Sunday
 
 ```yaml
 Type: DaysOfWeek[]
 Parameter Sets: SetMaintenanceTasksByName
-Aliases: 
+Aliases:
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -FixedRun
-
+Indicates that this cmdlet modifies the maintenance task as a fixed run.
 
 ```yaml
 Type: SwitchParameter
@@ -271,7 +271,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MaintenanceTask
 Parameter Sets: SetMaintenanceTasksByName
-Aliases: 
+Aliases:
 Accepted values: BackupSiteServer, CheckApplicationTitleWithInventoryInformation, ClearUndiscoveredClients, DeleteAgedApplicationRequestData, DeleteUnusedApplicationRevisions, DeleteAgedClientOperations, DeleteAgedCollectedFiles, DeleteAgedComputerAssociationData, DeleteAgedDeleteDetectionData, DeleteAgedDeviceWipeRecord, DeleteAgedDiscoveryData, DeleteAgedEnrolledDevices, DeleteAgedEndpointProtectionHealthStatusHistoryData, DeleteAgedDevicesManagedByTheExchangeServerConnector, DeleteAgedInventoryHistory, DeleteAgedLogData, DeleteAgedSoftwareMeteringData, DeleteAgedSoftwareMeteringSummaryData, DeleteAgedClientPresenceHistory, DeleteAgedNotificationTaskHistory, DeleteAgedReplicationTrackingData, DeleteAgedReplicationSummaryData, DeleteAgedStatusMessages, DeleteAgedThreatData, DeleteAgedUnknownComputers, DeleteAgedUserDeviceAffinityData, DeleteInactiveClientDiscoveryData, DeleteObsoleteAlerts, DeleteObsoleteClientDiscoveryData, DeleteObsoleteForestDiscoverySitesAndSubnets, EvaluateProvisionedAmtComputerCertificates, MonitorKeys, RebuildIndexes, SummarizeSoftwareMeteringFileUsageData, SummarizeInstalledSoftwareData, SummarizeSoftwareMeteringMonthlyUsageData, DeleteAgedDistributionPointUsageStats
 Required: True
 Position: Named
@@ -329,7 +329,7 @@ The acceptable value for this parameter is UpdateApplicationCatalogTables.
 ```yaml
 Type: SummaryTask
 Parameter Sets: SetSummaryTaskByName, SetSummaryTaskRunNow, SetSummaryTaskFixedByName
-Aliases: 
+Aliases:
 Accepted values: UpdateApplicationCatalogTables
 Required: True
 Position: Named
@@ -365,5 +365,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CMSiteMaintenanceTask](./Get-CMSiteMaintenanceTask.md)
-
-

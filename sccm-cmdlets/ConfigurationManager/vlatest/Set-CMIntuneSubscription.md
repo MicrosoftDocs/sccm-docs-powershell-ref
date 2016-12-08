@@ -322,7 +322,7 @@ Accept wildcard characters: False
 
 ### -UserCollection
 Specifies a user collection.
-To obtain a user collection object, use the Get-CMUserCollection or Get-CMCollection cmdlet.
+To obtain a user collection object, use the [Get-CMUserCollection](./Get-CMUserCollection.md) or [Get-CMCollection](./Get-CMCollection.md) cmdlet.
 Members of this user collection will be able to enroll their devices for management.
 
 ```yaml
@@ -371,5 +371,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMUserCollection](./Get-CMUserCollection.md)
 
 [Remove-CMIntuneSubscription](./Remove-CMIntuneSubscription.md)
-
-

@@ -244,7 +244,7 @@ Accept wildcard characters: False
 
 ### -BootImage
 Specifies a boot image object.
-To get a **CMBootImage** object, use the Get-CMBootImage cmdlet.
+To get a **CMBootImage** object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 
 ### -DeploymentPackage
 Specifies a deployment package object.
-To get a **CMDeploymentPackage** object, use the Get-CMDeploymentPackage cmdlet.
+To get a **CMDeploymentPackage** object, use the [Get-CMDeploymentPackage](./Get-CMDeploymentPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -471,7 +471,7 @@ Accept wildcard characters: False
 
 ### -OperatingSystemImage
 Specifies an operating system image object.
-To get a **CMOperatingSystemImage** object, use the Get-CMOperatingSystemImage cmdlet.
+To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage](./Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -514,7 +514,7 @@ Accept wildcard characters: False
 
 ### -OperatingSystemInstaller
 Specifies an operating system installer object.
-To get a **CMOperatingSystemInstaller** object, use the Get-CMOperatingSystemInstaller cmdlet.
+To get a **CMOperatingSystemInstaller** object, use the [Get-CMOperatingSystemInstaller](./Get-CMOperatingSystemInstaller.md) cmdlet.
 
 ```yaml
 Type: IResultObject

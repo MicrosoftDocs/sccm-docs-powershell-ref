@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSubfolder
-
+Indicates whether the cmdlet includes subfolders in the operation.
 
 ```yaml
 Type: Boolean
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 
 ### -Name
 Specifies the name of the global conditions.
-This value corresponds to the LocalizedDisplayName property of a global condition object.
+This value corresponds to the **LocalizedDisplayName** property of a global condition object.
 
 ```yaml
 Type: String
@@ -461,7 +461,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -541,7 +542,11 @@ Accept wildcard characters: False
 
 ### -ScriptLanguage
 Specifies a scripting language to use.
-The acceptable values for this parameter are: PowerShell, VBScript, and JScript.
+The acceptable values for this parameter are: 
+  
+- PowerShell
+- VBScript
+- JScript
 
 ```yaml
 Type: ScriptingLanguage
@@ -557,7 +562,11 @@ Accept wildcard characters: False
 
 ### -SearchScope
 Specifies the search scope in AD DS. 
-The acceptable values for this parameter are: Base, OneLevel, and Subtree.
+The acceptable values for this parameter are: 
+  
+- Base
+- OneLevel
+- Subtree
 
 ```yaml
 Type: SearchScope
@@ -732,5 +741,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMGlobalCondition](./New-CMGlobalCondition.md)
 
 [Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
-
-

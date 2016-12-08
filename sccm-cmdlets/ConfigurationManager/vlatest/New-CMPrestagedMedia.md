@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -BootImage
 Specifies the boot image object associated with the task sequence media.
-To obtain a boot image object, use the Get-CMBootImage cmdlet.
+To obtain a boot image object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 
 ### -DistributionPoint
 Specifies a distribution point object.
-To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
+To obtain a distribution point object, use the [Get-CMDistributionPoint](./Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 
 ### -ManagementPoint
 Specifies an array of management point objects.
-To obtain a management point object, use the Get-CMManagementPoint cmdlet.
+To obtain a management point object, use the [Get-CMManagementPoint](./Get-CMManagementPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 
 ### -OperatingSystemImage
 Specifies an operating system image object.
-To obtain an operating system image object, use the Get-CMOperatingSystemImage cmdlet.
+To obtain an operating system image object, use the [Get-CMOperatingSystemImage](./Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject

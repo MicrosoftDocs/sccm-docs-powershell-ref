@@ -274,7 +274,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBranchCache
-
+Indicates that clients that use Windows BranchCache are allowed to download content from an on-premises distribution point.
+Content downloads from cloud-based distribution points can always be shared by clients that use Windows BranchCache.
 
 ```yaml
 Type: SwitchParameter
@@ -612,5 +613,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSqlServerSetting](./New-CMSqlServerSetting.md)
 
 [Remove-CMSecondarySite](./Remove-CMSecondarySite.md)
-
-

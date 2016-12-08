@@ -106,7 +106,7 @@ Set-CMSite -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [
 The **Set-CMSite** cmdlet changes security scope settings for one or more Microsoft System Center Configuration Manager sites.
 A security scope is a collection of permissions that, in conjunction with security roles, defines the configuration actions that an administrator can perform on the site.
 You can use this cmdlet to change the type of a security scope action and the name of a security scope for a System Center Configuration Manager site.
-You can specify a site for which you change security scope settings by using a site name or a site code, or you can use the Get-CMSite cmdlet to specify a site.
+You can specify a site for which you change security scope settings by using a site name or a site code, or you can use the [Get-CMSite](./Get-CMSite.md) cmdlet to specify a site.
 
 ## EXAMPLES
 
@@ -128,7 +128,7 @@ This command removes the custom security scope in the previous example from a Sy
 
 ### -AddActiveDirectoryForest
 Specifies an array of Active Directory Forest objects to publish in Active Directory Domain Services.
-To obtain an Active Directory Forest object, use the Get-ADForest cmdlet.
+To obtain an Active Directory Forest object, use the [Get-ADForest](./Get-ADForest.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -169,7 +169,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ClientRequestServiceType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: WakeOnLanUdp, ClientNotificationTcp, ClientRequestHttpTcp, ClientRequestsHttpsTcp, ClientRequestHttpTcpDefault, ClientRequestsHttpsTcpDefault
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ Specifies the criteria type to match in a client certificate, such as a string o
 ```yaml
 Type: ClientCertificateSelectionCriteriaType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: ClientAuthentication, CertificateSubjectContainsString, CertificateSubjectOrSanIncludesAtrributes
 Required: False
 Position: Named
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCertificateSelectionCriteriaValue
-Specifies a value for the *ClientCertificateSelectionCriteriaType*.
+Specifies a value for the *ClientCertificateSelectionCriteriaType* parameter.
 
 ```yaml
 Type: String
@@ -242,7 +242,7 @@ The acceptable values for this parameter are: HttpsOnly and HttpsOrHttp.
 ```yaml
 Type: ClientComputerCommunicationType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: HttpsOnly, HttpsOrHttp
 Required: False
 Position: Named
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a Configuration Manager site object.
-To obtain a Configuration Manager site object, use the Get-CMSite cmdlet.
+To obtain a Configuration Manager site object, use the [Get-CMSite](./Get-CMSite.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -449,7 +449,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -518,7 +519,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ClientRequestServiceType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: WakeOnLanUdp, ClientNotificationTcp, ClientRequestHttpTcp, ClientRequestsHttpsTcp, ClientRequestHttpTcpDefault, ClientRequestsHttpsTcpDefault
 Required: False
 Position: Named
@@ -645,7 +646,7 @@ Specifies the action to take for multiple matches of certificate criteria.
 ```yaml
 Type: TakeActionForMultipleCertificateMatchCriteria
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: FailSelectionAndSendErrorMessage, SelectCertificateWithLongestValidityPeriod
 Required: False
 Position: Named
@@ -717,7 +718,7 @@ Specifies the type of transmission method to use for Wake On LAN transmissions.
 ```yaml
 Type: WakeOnLanTransmissionMethodType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: Unicast, SubnetDirectedBroadcasts
 Required: False
 Position: Named
@@ -732,7 +733,7 @@ Specifies the type of Wake On LAN packet to use.
 ```yaml
 Type: WakeOnLanType
 Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: UseAmtPowerOnCommandsOrWakeupPackets, UseAmtPowerOnCommandsOnly, UseWakeupPacketsOnly
 Required: False
 Position: Named
@@ -768,5 +769,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CMSite](./Get-CMSite.md)
-
-

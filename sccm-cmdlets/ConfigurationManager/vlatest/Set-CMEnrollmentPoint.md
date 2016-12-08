@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an input object.
-To get an input object, use the Get-CMEnrollmentPoint cmdlet.
+To get an input object, use the [Get-CMEnrollmentPoint](./Get-CMEnrollmentPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -115,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -215,5 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMEnrollmentPoint](./Get-CMEnrollmentPoint.md)
 
 [Remove-CMEnrollmentPoint](./Remove-CMEnrollmentPoint.md)
-
-

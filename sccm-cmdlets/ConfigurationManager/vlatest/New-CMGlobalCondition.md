@@ -756,5 +756,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
 
 [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
-
-

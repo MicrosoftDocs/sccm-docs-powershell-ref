@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a distribution point object.
-To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
+To obtain a distribution point object, use the [Get-CMDistributionPoint](./Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject

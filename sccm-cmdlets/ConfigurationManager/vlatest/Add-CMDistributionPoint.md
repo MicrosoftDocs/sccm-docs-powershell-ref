@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 ### -ContentValidationSchedule
 Specifies a schedule token object that the distribution point uses to validate content on a scheduled basis.
-To create a schedule token object, use the New-CMSchedule cmdlet.
+To create a schedule token object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -476,7 +476,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a site system server object.
-To obtain a site system server object, use the Get-CMSiteSystemServer cmdlet.
+To obtain a site system server object, use the [Get-CMSiteSystemServer](./Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject

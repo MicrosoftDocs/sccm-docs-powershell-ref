@@ -122,9 +122,9 @@ Accept wildcard characters: False
 Specifies a unit to use to define an interval for the summarization schedule.
 Valid values are:
 
--- Days
--- Hours
--- Minutes
+- Days
+- Hours
+- Minutes
 
 ```yaml
 Type: SummarizationScheduleUnit

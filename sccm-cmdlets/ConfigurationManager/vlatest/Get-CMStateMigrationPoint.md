@@ -29,7 +29,7 @@ The **Get-CMStateMigrationPoint** cmdlet gets a state migration point for a Micr
 This site system role stores user information.
 You can store user information while an operating system deployment proceeds and then restore user information from the state migration point.
 
-You can use this cmdlet to get state migration point objects to use with the Remove-CMStateMigrationPoint cmdlet.
+You can use this cmdlet to get state migration point objects to use with the [Remove-CMStateMigrationPoint](./Remove-CMStateMigrationPoint.md) cmdlet.
 
 Each state migration point site server can be a member of only one System Center Configuration Manager site.
 
@@ -73,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies the input to this cmdlet. 
+You can use this parameter, or you can pipe the input to this cmdlet. 
 
 ```yaml
 Type: IResultObject

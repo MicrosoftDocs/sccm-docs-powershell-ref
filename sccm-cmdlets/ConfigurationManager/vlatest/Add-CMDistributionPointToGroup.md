@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -DistributionPoint
 Specifies a distribution point object.
-To obtain a **CMDistributionPoint** object, use the Get-CMDistributionPoint cmdlet.
+To obtain a **CMDistributionPoint** object, use the [Get-CMDistributionPoint](./Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject

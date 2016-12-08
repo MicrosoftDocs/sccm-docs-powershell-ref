@@ -112,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies the input to this cmdlet. 
+You can use this parameter, or you can pipe the input to this cmdlet. 
 
 ```yaml
 Type: IResultObject
@@ -126,7 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-
+Specifies a **CMSchedule** object.
+The schedule specifies when the maintenance window occurs.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -186,5 +189,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMAssetIntelligenceSynchronizationPoint](./Remove-CMAssetIntelligenceSynchronizationPoint.md)
 
 [Set-CMAssetIntelligenceSynchronizationPoint](./Set-CMAssetIntelligenceSynchronizationPoint.md)
-
-

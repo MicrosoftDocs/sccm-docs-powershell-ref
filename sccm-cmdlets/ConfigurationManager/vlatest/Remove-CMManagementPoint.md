@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a **CMManagementPoint** object.
-To obtain a **CMManagementPoint** object, use the Get-CMManagementPoint cmdlet.
+To obtain a **CMManagementPoint** object, use the [Get-CMManagementPoint](./Get-CMManagementPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject

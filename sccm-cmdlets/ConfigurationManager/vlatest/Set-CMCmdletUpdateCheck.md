@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a cmdlet update configuration object.
-To obtain a cmdlet update configuration object, use the Get-CMCmdletUpdateCheck cmdlet.
+To obtain a cmdlet update configuration object, use the [Get-CMCmdletUpdateCheck](./Get-CMCmdletUpdateCheck.md) cmdlet.
 
 ```yaml
 Type: CMCmdletUpdateConfiguration
@@ -259,5 +259,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMCmdletUpdateCheck](./Get-CMCmdletUpdateCheck.md)
 
 [Send-CMCmdletUpdateCheck](./Send-CMCmdletUpdateCheck.md)
-
-

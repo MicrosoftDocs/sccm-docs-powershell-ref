@@ -251,7 +251,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a CMOperatingSystemImage object.
-To obtain a CMOperatingSystemImage object, use the Get-CMOperatingSystemImage cmdlet.
+To obtain a CMOperatingSystemImage object, use the [Get-CMOperatingSystemImage](./Get-CMOperatingSystemImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -335,7 +335,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -392,7 +393,8 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-
+Specifies a change for the priority of the deployment type.
+Valid values are: Increase and Decrease.
 
 ```yaml
 Type: Priority
@@ -467,5 +469,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMOperatingSystemImage](./Remove-CMOperatingSystemImage.md)
 
 [Get-CMOperatingSystemImageUpdateSchedule](./Get-CMOperatingSystemImageUpdateSchedule.md)
-
-

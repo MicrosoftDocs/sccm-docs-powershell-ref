@@ -108,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies the input to this cmdlet. 
+You can use this parameter, or you can pipe the input to this cmdlet. 
 
 ```yaml
 Type: IResultObject
@@ -222,5 +223,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMDeviceVariable](./New-CMDeviceVariable.md)
 
 [Remove-CMDeviceVariable](./Remove-CMDeviceVariable.md)
-
-

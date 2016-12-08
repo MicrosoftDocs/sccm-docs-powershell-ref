@@ -22,7 +22,7 @@ The **Invoke-CMSoftwareUpdateSummarization** cmdlet runs the software update sum
 System Center Configuration Manager summarizes software update status on a regular schedule.
 This cmdlet does not reset the time for the next automatic summarization.
 
-You can use the Get-CMSoftwareUpdateSummarizationSchedule cmdlet to view the current schedule and the Set-CMSoftwareUpdateSummarizationSchedule cmdlet to change the schedule.
+You can use the Get-CMSoftwareUpdateSummarizationSchedule cmdlet to view the current schedule and the [Set-CMSoftwareUpdateSummarizationSchedule](./Set-CMSoftwareUpdateSummarizationSchedule.md) cmdlet to change the schedule.
 
 ## EXAMPLES
 
