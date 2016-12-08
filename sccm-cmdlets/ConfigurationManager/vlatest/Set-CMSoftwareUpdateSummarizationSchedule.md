@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -Interval
 Specifies an amount of time, as an integer.
-This value works with the unit type you specify in the Unit parameter.
+This value works with the unit type you specify in the *Unit* parameter.
 Valid values for this parameter depend on the unit that you select:
 
 - Minutes: 10 through 59.

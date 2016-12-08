@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### -DownloadFromInternet
 Indicates whether computers download software updates from the Internet.
-If you specify a value of $False, specify an alternative location where computers can download updates by using the Location parameter.
+If you specify a value of $False, specify an alternative location where computers can download updates by using the *Location* parameter.
 
 ```yaml
 Type: Boolean

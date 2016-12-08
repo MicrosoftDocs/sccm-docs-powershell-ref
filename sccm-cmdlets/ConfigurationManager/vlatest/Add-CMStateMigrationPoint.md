@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeUnit
-Specifies the unit of time for the TimeDeleteAfter parameter.
+Specifies the unit of time for the *TimeDeleteAfter* parameter.
 Valid values are: Days and Hours.
 
 ```yaml

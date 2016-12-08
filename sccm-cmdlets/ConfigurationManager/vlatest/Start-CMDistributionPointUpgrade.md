@@ -433,7 +433,7 @@ Accept wildcard characters: False
 
 ### -PrimaryContentLibraryLocation
 Specifies the primary content location.
-Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
+Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the *MinFreeSpaceMB* parameter.
 Valid values are:
 
 - Automatic.
@@ -453,7 +453,7 @@ Accept wildcard characters: False
 
 ### -PrimaryPackageShareLocation
 Specifies the primary package share location.
-Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
+Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the *MinFreeSpaceMB* parameter.
 Valid values are:
 
 - Automatic.
