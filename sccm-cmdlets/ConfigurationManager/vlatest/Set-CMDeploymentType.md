@@ -359,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearRequirements
-
+Indicates that this cmdlet clears the deployment type requirements.
 
 ```yaml
 Type: SwitchParameter
@@ -458,7 +458,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBranchCache
-
+Indicates that clients that use Windows BranchCache are allowed to download content from an on-premises distribution point.
+Content downloads from cloud-based distribution points can always be shared by clients that use Windows BranchCache.
 
 ```yaml
 Type: Boolean
@@ -571,7 +572,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a deployment type object for Configuration Manager.
-To obtain a deployment type object, use the **Get-CMDeploymentType** cmdlet.
+To obtain a deployment type object, use the [Get-CMDeploymentType](./Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -852,7 +853,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -1011,7 +1013,7 @@ Accept wildcard characters: False
 ```
 
 ### -TriggerVpn
-@{Text=}
+Indicates that a virtual private network (VPN) connection is used automatically.
 
 ```yaml
 Type: Boolean
@@ -1054,7 +1056,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebAppInstaller
-@{Text=}
+Indicates that this cmdlet uses a web application installer for the deployment.
 
 ```yaml
 Type: SwitchParameter
@@ -1154,5 +1156,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMDeploymentType](./Get-CMDeploymentType.md)
 
 [Remove-CMDeploymentType](./Remove-CMDeploymentType.md)
-
-

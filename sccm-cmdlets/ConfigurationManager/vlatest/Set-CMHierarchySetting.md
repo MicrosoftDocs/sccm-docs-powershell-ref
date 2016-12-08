@@ -53,9 +53,9 @@ Accept wildcard characters: False
 Specifies an approval method.
 Valid values are:  
 
--- AutomaticallyApproveAllComputers
--- AutomaticallyApproveComputersInTrustedDomains
--- ManuallyApproveEachComputer
+- AutomaticallyApproveAllComputers
+- AutomaticallyApproveComputersInTrustedDomains
+- ManuallyApproveEachComputer
 
 ```yaml
 Type: ApprovalMethodType
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeServer
-
+Indicates whether the cmdlet excludes the server.
 
 ```yaml
 Type: Boolean
@@ -249,5 +249,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

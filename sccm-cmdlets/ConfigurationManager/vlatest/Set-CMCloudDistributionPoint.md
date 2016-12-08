@@ -41,7 +41,7 @@ In Microsoft System Center Configuration Manager, you can use a cloud service in
 You can send packages and apps to and host packages and apps in cloud distribution points. 
 For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266223) on TechNet.
 
-You can use the Set-CMCloudDistributionPoint cmdlet to specify storage alert thresholds and warning levels for content that you deploy to a cloud distribution point.
+You can use the **Set-CMCloudDistributionPoint** cmdlet to specify storage alert thresholds and warning levels for content that you deploy to a cloud distribution point.
 You can also use the cmdlet to configure settings that enable users and devices to access the content.
 You can provide a name and description for the cloud distribution point.
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a cloud distribution point object.
-To obtain a cloud distribution point object, you can use the Get-CMCloudDistributionPoint cmdlet.
+To obtain a cloud distribution point object, you can use the [Get-CMCloudDistributionPoint](./Get-CMCloudDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -StorageQuotaGrow
 Specifies whether the storage quota can grow.
-By default, the amount of stored data cannot exceed the value of the StorageQuotaInGB parameter.
+By default, the amount of stored data cannot exceed the value of the *StorageQuotaInGB* parameter.
 The default value for this parameter is $False.
 
 ```yaml
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficOutStopService
-Specifies whether Configuration Manager stops data transfers after the distribution point reaches the quota specified in the TrafficOutInGB parameter.
+Specifies whether Configuration Manager stops data transfers after the distribution point reaches the quota specified in the *TrafficOutInGB* parameter.
 The default value for this parameter is $False.
 
 ```yaml
@@ -265,5 +265,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-CMCloudDistributionPoint](./Start-CMCloudDistributionPoint.md)
 
 [Stop-CMCloudDistributionPoint](./Stop-CMCloudDistributionPoint.md)
-
-

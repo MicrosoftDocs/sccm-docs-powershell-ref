@@ -467,7 +467,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -581,14 +582,14 @@ Accept wildcard characters: False
 Specifies how a deployment reruns on a client.
 The acceptable values for this parameter are:
 
--- AlwaysRerunProgram.
+- AlwaysRerunProgram.
 Rerun as scheduled, even if the deployment succeeded.
 You can use this value for recurring deployments.
--- NeverRerunDeployedProgram.
+- NeverRerunDeployedProgram.
 Does not rerun, even if the deployment failed or files changed.
--- RerunIfFailedPreviousAttempt.
+- RerunIfFailedPreviousAttempt.
 Rerun, as scheduled, if the deployment failed on the previous attempt.
--- RerunIfSucceededOnpreviousAttempt.
+- RerunIfSucceededOnpreviousAttempt.
 Rerun only if the previous attempt succeeded.
 You can use this value for updates that depend on the previous update.
 

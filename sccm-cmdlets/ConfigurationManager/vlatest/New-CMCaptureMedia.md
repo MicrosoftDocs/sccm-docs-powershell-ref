@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -BootImage
 Specifies a boot image object.
-To obtain a boot image object, use the Get-CMBootImage cmdlet.
+To obtain a boot image object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -DistributionPoint
 Specifies an array of distribution point objects.
-To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
+To obtain a distribution point object, use the [Get-CMDistributionPoint](./Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]

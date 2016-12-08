@@ -29,7 +29,7 @@ The **Get-CMStatusMessageQuery** cmdlet gets Microsoft System Center Configurati
 Status message queries return status messages from a System Center Configuration Manager site database.
 You can use this cmdlet with the *ShowMessages* parameter to display messages found by this query.
 
-You can use this cmdlet to get queries to use with the Set-CMStatusMessageQuery cmdlet or the Remove-CMStatusMessageQuery cmdlet.
+You can use this cmdlet to get queries to use with the [Set-CMStatusMessageQuery](./Set-CMStatusMessageQuery.md) cmdlet or the [Remove-CMStatusMessageQuery](./Remove-CMStatusMessageQuery.md) cmdlet.
 
 ## EXAMPLES
 
@@ -106,7 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -149,5 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMStatusMessageQuery](./Remove-CMStatusMessageQuery.md)
 
 [Set-CMStatusMessageQuery](./Set-CMStatusMessageQuery.md)
-
-

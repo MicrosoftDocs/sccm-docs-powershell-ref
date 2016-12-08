@@ -302,5 +302,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMCollection](./New-CMCollection.md)
 
 [Remove-CMCollection](./Remove-CMCollection.md)
-
-

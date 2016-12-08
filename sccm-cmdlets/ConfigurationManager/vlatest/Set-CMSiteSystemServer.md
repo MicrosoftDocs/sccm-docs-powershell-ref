@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a site system server object.
-To obtain a site system server object, use the Get-CMSiteSystemServer cmdlet.
+To obtain a site system server object, use the [Get-CMSiteSystemServer](./Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -299,5 +299,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSiteSystemServer](./New-CMSiteSystemServer.md)
 
 [Remove-CMSiteSystemServer](./Remove-CMSiteSystemServer.md)
-
-

@@ -37,10 +37,6 @@ Use the [Set-CMTaskSequence](./Set-CMTaskSequence.md) cmdlet to disable a task s
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

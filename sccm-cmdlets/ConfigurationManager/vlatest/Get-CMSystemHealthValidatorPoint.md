@@ -29,7 +29,7 @@ The **Get-CMSystemHealthValidatorPoint** cmdlet gets a system health validator p
 This site system role validates statements of health from a server that is running Network Policy Server (NPS).
 
 You can specify a validator point by site system name, site code, or both.
-You can use this cmdlet with the Remove-CMSystemHealthValidatorPoint cmdlet.
+You can use this cmdlet with the [Remove-CMSystemHealthValidatorPoint](./Remove-CMSystemHealthValidatorPoint.md) cmdlet.
 
 ## EXAMPLES
 
@@ -72,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies the input to this cmdlet. 
+You can use this parameter, or you can pipe the input to this cmdlet. 
 
 ```yaml
 Type: IResultObject

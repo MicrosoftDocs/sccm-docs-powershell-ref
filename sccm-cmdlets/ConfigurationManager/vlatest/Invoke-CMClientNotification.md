@@ -54,7 +54,7 @@ You can specify one or more client computers, or send a notification to all the 
 
 ## EXAMPLES
 
-### Example: Send a notification to trigger an event
+### Example 1: Send a notification to trigger an event
 ```
 PS C:\>Invoke-CMClientNotification -DeviceName "Computer073" -NotificationType RequestMachinePolicyNow
 ```

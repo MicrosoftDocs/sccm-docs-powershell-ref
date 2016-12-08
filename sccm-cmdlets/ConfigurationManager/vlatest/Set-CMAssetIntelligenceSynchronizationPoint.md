@@ -133,7 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-
+Specifies a **CMSchedule** object.
+The schedule specifies when the maintenance window occurs.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -191,5 +194,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMAssetIntelligenceSynchronizationPoint](./Get-CMAssetIntelligenceSynchronizationPoint.md)
 
 [Remove-CMAssetIntelligenceSynchronizationPoint](./Remove-CMAssetIntelligenceSynchronizationPoint.md)
-
-

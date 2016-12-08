@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageSource
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -323,7 +323,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -352,7 +353,8 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-
+Specifies a change for the priority of the deployment type.
+Valid values are: Increase and Decrease.
 
 ```yaml
 Type: Priority
@@ -429,5 +431,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMDriverPackage](./New-CMDriverPackage.md)
 
 [Remove-CMDriverPackage](./Remove-CMDriverPackage.md)
-
-

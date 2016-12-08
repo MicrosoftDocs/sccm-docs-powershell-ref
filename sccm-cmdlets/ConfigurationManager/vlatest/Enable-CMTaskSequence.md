@@ -37,10 +37,6 @@ Use the [Set-CMTaskSequence](./Set-CMTaskSequence.md) cmdlet to enable a task se
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

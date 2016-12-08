@@ -23,7 +23,7 @@ The **Set-CMDatabaseProperty** cmdlet changes database settings for a Microsoft 
 Specify the Configuration Manager site code for the database that you want to modify.
 
 You can modify whether the database uses data compression, the Service Broker port for the computer that runs Microsoft SQL Server, and the length of time that the database keeps data.
-You can use the Get-CMDatabaseProperty cmdlet to see current values for these properties.
+You can use the [Get-CMDatabaseProperty](./Get-CMDatabaseProperty.md) cmdlet to see current values for these properties.
 
 ## EXAMPLES
 
@@ -162,5 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CMDatabaseProperty](./Get-CMDatabaseProperty.md)
-
-

@@ -296,7 +296,7 @@ This command specifies the type of metered network usage for the client setting 
 Specifies a level of allowed remote control access.
 Valid values are: 
 
--  FullControl
+- FullControl
 - NoAccess
 - None
 - ViewOnly
@@ -606,7 +606,7 @@ Accept wildcard characters: False
 
 ### -DeploymentEvaluationSchedule
 Specifies a deployment evaluation schedule as a schedule object.
-To obtain a schedule object, use the **New-CMSchedule** cmdlet.
+To obtain a schedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -677,7 +677,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-
+Indicates whether to enable client settings.
 
 ```yaml
 Type: Boolean
@@ -1251,7 +1251,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -1495,7 +1496,8 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-
+Specifies a **CMSchedule** object.
+To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -1596,7 +1598,7 @@ Accept wildcard characters: False
 
 ### -SoftwareInventoryFileInventoriedName
 Specifies an inventoried manufacturer or product name.
-During software inventory, Configuration Manager retrieves inventoried names from header information on client devices.
+During software inventory, Configuration Manager gets inventoried names from header information on client devices.
 
 ```yaml
 Type: String
@@ -1854,5 +1856,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMClientSetting](./Remove-CMClientSetting.md)
 
 [New-CMSchedule](./New-CMSchedule.md)
-
-

@@ -303,7 +303,7 @@ Accept wildcard characters: False
 
 ### -ContentValidationSchedule
 Specifies a schedule token object that the distribution point uses to validate content on a scheduled basis.
-To create a schedule token object, use the New-CMSchedule cmdlet.
+To create a schedule token object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -359,7 +359,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBranchCache
-Indicates that the cmdlet enables and configures BranchCache for the distribution point.
+Indicates that clients that use Windows BranchCache are allowed to download content from an on-premises distribution point.
+Content downloads from cloud-based distribution points can always be shared by clients that use Windows BranchCache.
 
 ```yaml
 Type: Boolean
@@ -505,7 +506,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a distribution point object.
-To obtain a distribution point object, use the Get-CMDistributionPoint cmdlet.
+To obtain a distribution point object, use the [Get-CMDistributionPoint](./Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -859,5 +860,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDistributionPoint](./Remove-CMDistributionPoint.md)
 
 [Update-CMDistributionPoint](./Update-CMDistributionPoint.md)
-
-

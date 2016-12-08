@@ -20,7 +20,7 @@ Get-CMQueryResultMaximum [-DisableWildcardHandling] [-ForceWildcardHandling] [<C
 The **Get-CMQueryResultMaximum** cmdlet gets the maximum number of rows that a Microsoft System Center Configuration Manager query can return.
 By default, queries in Configuration Manager return only a subset of the matching rows in the database.
 This cmdlet indicates the number of rows that Configuration Manager returns.
-To change the maximum number of rows that a Configuration Manager query returns, use the Set-CMQueryResultMaximum cmdlet.
+To change the maximum number of rows that a Configuration Manager query returns, use the [Set-CMQueryResultMaximum](./Set-CMQueryResultMaximum.md) cmdlet.
 By default, the maximum number of rows is unbound, which is different from the behavior of the Configuration Manager console, and is also different from earlier releases of the Configuration Manager cmdlet library.
 
 ## EXAMPLES

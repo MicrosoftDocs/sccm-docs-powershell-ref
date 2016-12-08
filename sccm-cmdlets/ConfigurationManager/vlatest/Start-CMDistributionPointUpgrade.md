@@ -174,9 +174,9 @@ Accept wildcard characters: False
 Specifies the client connection type.
 Valid values are:
 
--- Internet
--- InternetAndIntranet
--- Intranet
+- Internet
+- InternetAndIntranet
+- Intranet
 
 ```yaml
 Type: ClientConnectionTypes
@@ -208,11 +208,11 @@ Accept wildcard characters: False
 Specifies the content validation priority.
 Valid values are:
 
--- High
--- Highest
--- Low
--- Lowest
--- Medium
+- High
+- Highest
+- Low
+- Lowest
+- Medium
 
 The default value is Lowest.
 
@@ -436,8 +436,8 @@ Specifies the primary content location.
 Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
 Valid values are:
 
--- Automatic.
--- Drive letter from A: through Z:.
+- Automatic.
+- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -456,8 +456,8 @@ Specifies the primary package share location.
 Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the MinFreeSpaceMB parameter.
 Valid values are:
 
--- Automatic.
--- Drive letter from A: through Z:.
+- Automatic.
+- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -517,8 +517,8 @@ Accept wildcard characters: False
 Specifies the secondary content location.
 Valid values are:
 
--- Automatic.
--- Drive letter from A: through Z:.
+- Automatic.
+- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -536,8 +536,8 @@ Accept wildcard characters: False
 Specifies the secondary package share location.
 Valid values are:
 
--- Automatic.
--- Drive letter from A: through Z:.
+- Automatic.
+- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -555,9 +555,9 @@ Accept wildcard characters: False
 Specify how the distribution point associates users with the destination computer for PXE deployments.
 Valid values are:
 
--- AllowWithAutomaticApproval
--- AllowWithManualApproval
--- DoNotUse
+- AllowWithAutomaticApproval
+- AllowWithManualApproval
+- DoNotUse
 
 ```yaml
 Type: UserDeviceAffinityType

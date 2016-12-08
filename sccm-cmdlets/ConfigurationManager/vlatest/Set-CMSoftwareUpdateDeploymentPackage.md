@@ -133,8 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a CMSoftwareUpdateDeploymentPackage object.
-To obtain an CMSoftwareUpdateDeploymentPackage object, use the Get-CMSoftwareUpdateDeploymentPackage cmdlet.
+Specifies a **CMSoftwareUpdateDeploymentPackage** object.
+To obtain an **CMSoftwareUpdateDeploymentPackage** object, use the [Get-CMSoftwareUpdateDeploymentPackage](./Get-CMSoftwareUpdateDeploymentPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -176,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -209,7 +210,7 @@ Specifies a distribution priority for the deployment package.
 ```yaml
 Type: Priorities
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: High, Normal, Low
 Required: False
 Position: Named
@@ -289,5 +290,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdateDeploymentPackage](./Get-CMSoftwareUpdateDeploymentPackage.md)
 
 [Remove-CMSoftwareUpdateDeploymentPackage](./Remove-CMSoftwareUpdateDeploymentPackage.md)
-
-

@@ -63,7 +63,7 @@ Set-CMConfigurationPolicyDeployment -FirewallPolicyId <String> -CollectionName <
 ## DESCRIPTION
 The **Set-CMConfigurationPolicyDeployment** cmdlet creates a configuration policy deployment in Microsoft System Center Configuration Manager.
 You can deploy firewall policies or user session management policies.
-Use the Start-CMConfigurationPolicyDeployment cmdlet to deploy specified policies for a System Center Configuration Manager collection.
+Use the [Start-CMConfigurationPolicyDeployment](./Start-CMConfigurationPolicyDeployment.md) cmdlet to deploy specified policies for a System Center Configuration Manager collection.
 
 ## EXAMPLES
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -FirewallPolicy
 Specifies a Windows Firewall Policy object.
-To obtain a **CMWindowsFirewallPolicy** object, use the Get-CMWindowsFirewallPolicy cmdlet.
+To obtain a **CMWindowsFirewallPolicy** object, use the [Get-CMWindowsFirewallPolicy](./Get-CMWindowsFirewallPolicy.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -250,7 +250,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -265,7 +266,7 @@ Accept wildcard characters: False
 
 ### -PostponeDate
 Specifies a date, as a **DateTime** object, for the deployment if it is postponed.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml
@@ -297,7 +298,7 @@ Accept wildcard characters: False
 ### -Schedule
 Specifies a schedule object.
 This is the schedule for deploying the configuration policy.
-You can use the New-CMSchedule cmdlet to create a schedule token.
+You can use the [New-CMSchedule](./New-CMSchedule.md) cmdlet to create a schedule token.
 
 ```yaml
 Type: IResultObject
@@ -312,7 +313,7 @@ Accept wildcard characters: False
 
 ### -UserDataAndProfile
 Specifies a user data and profiles configuration item object.
-To obtain a **CMUserDataAndProfileConfigurationItem** object, use the Get-CMUserDataAndProfileConfigurationItem cmdlet.
+To obtain a **CMUserDataAndProfileConfigurationItem** object, use the [Get-CMUserDataAndProfileConfigurationItem](./Get-CMUserDataAndProfileConfigurationItem.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -379,8 +380,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CMUserDataAndProfileConfigurationItem](./Get-CMUserDataAndProfileConfigurationItem.md)
+
+[Get-CMWindowsFirewallPolicy](./Get-CMWindowsFirewallPolicy.md)
+ 
 [New-CMSchedule](./New-CMSchedule.md)
 
 [Start-CMConfigurationPolicyDeployment](./Start-CMConfigurationPolicyDeployment.md)
-
-
