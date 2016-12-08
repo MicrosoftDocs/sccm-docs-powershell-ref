@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ### -DesignateActiveDirectoryForest
 Indicates whether the site system server and the system health validator points are in different Active Directory forests.
 If the value is $True, specify an Active Directory forest by using the *DomainSuffix* parameter.
-If no trust relationship exists between the forests, you may need to specify accounts by using the PublishAccount and QueryAccount parameters.
+If no trust relationship exists between the forests, you may need to specify accounts by using the *PublishAccount* and *QueryAccount* parameters.
 
 ```yaml
 Type: Boolean
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -DomainSuffix
 Specifies a domain suffix for a designated Active Directory forest.
-If no trust relationship exists between this forest and the site system server forest, you may need to specify accounts by using the PublishAccount and QueryAccount parameters.
+If no trust relationship exists between this forest and the site system server forest, you may need to specify accounts by using the *PublishAccount* and *QueryAccount* parameters.
 
 ```yaml
 Type: String
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 
 ### -UseDateTime
 Indicates whether a client must create a statement of health after a specific date and time.
-If you select a value of $True, specify the date and time by using the Date and Time parameters.
+If you select a value of $True, specify the date and time by using the *Date* and *Time* parameters.
 The date and time must be in the past.
 The default value for this parameter is $False.
 

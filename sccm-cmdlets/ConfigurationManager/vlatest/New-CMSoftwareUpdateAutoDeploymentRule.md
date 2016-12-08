@@ -237,7 +237,7 @@ Accept wildcard characters: False
 
 ### -AvailableImmediately
 Indicates whether this rule deploys updates as soon as the updates become available.
-If you select a value of $False, use the AvailableTime and AvailableTimeUnit parameters to specify how long after the rule runs to deploy the updates.
+If you select a value of $False, use the *AvailableTime* and *AvailableTimeUnit* parameters to specify how long after the rule runs to deploy the updates.
 
 ```yaml
 Type: Boolean
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 
 ### -DeadlineImmediately
 Indicates whether to impose the deadline is as soon as the rule runs.
-If you specify a value of $False, use the DeadlineTime and DeadlineTimeUnit parameters to specify how long after the rule runs to set the deadline.
+If you specify a value of $False, use the *DeadlineTime* and *DeadlineTimeUnit* parameters to specify how long after the rule runs to set the deadline.
 After the deadline, Configuration Manager installs required updates.
 
 ```yaml
