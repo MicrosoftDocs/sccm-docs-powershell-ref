@@ -26,16 +26,13 @@ For more information about user accounts, see [Technical Reference for Accounts 
 
 ### Example 1: Create a user account by using name and password
 ```
-PS C:\> $Secure = Read-Host -AsSecureString
-PS C:\> $ConfirmSecure = Read-Host -AsSecureString
-PS C:\> New-CMAccount -Name "TSQA\PFuller" -Password $Secure -ConfirmPassword $ConfirmSecure -SiteCode "CM2"
+PS C:\> $Secure = ConvertTo-SecureString -String "Pas$W0rd" -AsPlainText -Force
+PS C:\> New-CMAccount -Name "TSQA\PFuller" -Password $Secure -SiteCode "CM2"
 ```
 
 The first command creates a password as a secure string.
 
-The second command creates a password confirmation as a secure string.
-
-The third command creates an account by using the secure strings.
+The second command creates an account by using the secure string.
 
 ## PARAMETERS
 
@@ -59,7 +56,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -73,7 +70,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -87,7 +84,7 @@ Specifies a secure string that contains the password for the user account.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -101,7 +98,7 @@ Specifies a Configuration Manager site code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -154,5 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMAccount](./Remove-CMAccount.md)
 
 [Set-CMAccount](./Set-CMAccount.md)
-
-
