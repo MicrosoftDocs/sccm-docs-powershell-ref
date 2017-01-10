@@ -52,7 +52,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -66,7 +66,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-
+Specifies the path to an XML digest exported from a previously created configuration item. Note that you can only use the XML once within a hierarchy.
 
 ```yaml
 Type: String
@@ -113,5 +113,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
