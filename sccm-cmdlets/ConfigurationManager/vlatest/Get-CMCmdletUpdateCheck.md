@@ -25,6 +25,8 @@ Get-CMCmdletUpdateCheck [-System] [-DisableWildcardHandling] [-ForceWildcardHand
 ## DESCRIPTION
 The **Get-CMCmdletUpdateCheck** cmdlet gets an update check configuration object and indicates if user policy is being overridden by system policy.
 
+**Note:** This cmdlet is deprecated starting with version 1610, and may be removed in a future release.
+
 ## EXAMPLES
 
 ### Example 1: Get the update check configuration
@@ -57,7 +59,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +73,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +88,7 @@ This parameter lets you know what is being overridden by system policy.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: System
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -110,5 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Send-CMCmdletUpdateCheck](./Send-CMCmdletUpdateCheck.md)
 
 [Set-CMCmdletUpdateCheck](./Set-CMCmdletUpdateCheck.md)
-
-
