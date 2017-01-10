@@ -44,14 +44,14 @@ This command installs an Asset Intelligence synchronization point on the site sy
 ### Example 2: Install a scheduled Asset Intelligence synchronization point
 ```
 PS C:\> $Sc = New-CMSchedule -DayOfWeek Friday -RecurCount 2
-PS C:\> Add-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-TSQA04.CORP.CONTOSO.COM" -CertificateFile "\\Contoso01\CM\ACDataFile\AIpfx.pfx" -EnableSynchronization -ScheduleToken $Sc
+PS C:\> Add-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-TSQA04.CORP.CONTOSO.COM" -CertificateFile "\\Contoso01\CM\ACDataFile\AIpfx.pfx" -ScheduleToken $Sc
 ```
 
 This first command creates a System Center Configuration Manager schedule token that specifies an event that occurs once a week for three weeks on Fridays.
 The command stores the results in the $Sc variable.
 
 The second command installs an Asset Intelligence synchronization point on the site system server named CMDIV-TSQA04.CORP.CONTOSO.COM, specifying the schedule stored in $Sc.
-The command also specifies the System Center Online authentication certificate (.pfx) file, and enables synchronization.
+The command also specifies the System Center Online authentication certificate (.pfx) file.
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ Specifies the path to a System Center Online authentication certificate (.pfx) f
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -112,8 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

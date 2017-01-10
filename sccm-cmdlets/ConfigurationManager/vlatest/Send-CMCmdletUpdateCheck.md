@@ -21,6 +21,8 @@ Send-CMCmdletUpdateCheck [-Timeout <TimeSpan>] [-DisableWildcardHandling] [-Forc
 The **Send-CMCmdletUpdateCheck** cmdlet performs an unscheduled cmdlet update check.
 An unscheduled check does not consider policy settings.
 
+**Note:** This cmdlet is deprecated starting with version 1610, and may be removed in a future release.
+
 ## EXAMPLES
 
 ### Example 1: Perform a cmdlet update check
@@ -55,7 +57,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -69,7 +71,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +85,7 @@ Specifies a time span to wait before timing out while checking for a cmdlet upda
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -120,5 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMCmdletUpdateCheck](./Get-CMCmdletUpdateCheck.md)
 
 [Set-CMCmdletUpdateCheck](./Set-CMCmdletUpdateCheck.md)
-
-

@@ -24,7 +24,7 @@ The **New-CMDriverPackage** cmdlet creates a driver package.
 
 ### Example 1: Create a new driver package
 ```
-PS C:\> New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifuller\Desktop\pckg" -PackageSourceType StorageDirect
+PS C:\> New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifuller\Desktop\pckg"
 ```
 
 This command creates a new driver package named Pckg01.
@@ -51,7 +51,7 @@ Specifies a description of a driver package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -65,7 +65,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +79,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +93,7 @@ Specifies a name for a driver package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -150,5 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDriverPackage](./Remove-CMDriverPackage.md)
 
 [Set-CMDriverPackage](./Set-CMDriverPackage.md)
-
-
