@@ -39,6 +39,8 @@ Set-CMCmdletUpdateCheck [-System] [-IsUpdateCheckEnabled <Boolean>] [-IsUpdateCh
 The **Set-CMCmdletUpdateCheck** cmdlet configures update check settings on a per-user or per-system basis.
 You must be running as an administrator to set system settings.
 
+**Note:** This cmdlet is deprecated starting with version 1610, and may be removed in a future release.
+
 ## EXAMPLES
 
 ### Example 1: Disable an update check
@@ -108,7 +110,7 @@ Indicates that the update check for the current user is returned.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: User
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -122,7 +124,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +138,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -151,7 +153,7 @@ To obtain a cmdlet update configuration object, use the [Get-CMCmdletUpdateCheck
 ```yaml
 Type: CMCmdletUpdateConfiguration
 Parameter Sets: Value
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -165,7 +167,7 @@ Indicates whether update check is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +181,7 @@ Indicates whether update check is enabled for the Configuration ManagerWindows P
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +195,7 @@ Indicates whether update check is enabled for the Configuration Manager provider
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +210,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -222,7 +224,7 @@ Indicates that the update check for the system is returned.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: System
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
