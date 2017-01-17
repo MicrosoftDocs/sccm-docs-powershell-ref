@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlertDay
-Specifies a day, in MM/DD/YYYY format, to notify clients of a new deployment.
+This parameter is deprecated. Use *AlertDateTime*.
 
 ```yaml
 Type: DateTime
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlertTime
-Specifies a time, in HH:MM format, to notify clients of a new deployment.
+This parameter is deprecated. Use *AlertDateTime*.
 
 ```yaml
 Type: DateTime
@@ -303,8 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentAvailableDay
-Specifies a day, in MM/DD/YYYY format, when a deployment becomes available to clients.
-By default, the deployment becomes available immediately.
+This parameter is deprecated. Use *DeploymentAvailableDateTime*.
 
 ```yaml
 Type: DateTime
@@ -318,8 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentAvailableTime
-Specifies a time, in HH:MM format, when a deployment becomes available to clients.
-By default, the deployment becomes available immediately.
+This parameter is deprecated. Use *DeploymentAvailableDateTime*.
 
 ```yaml
 Type: DateTime
@@ -348,9 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentExpireDay
-Specifies a day, in MM/DD/YYYY format, when a deployment expires.
-By default, a deployment never expires.
-To have a deployment expire on a certain day, set this parameter.
+This parameter is deprecated. Use *DeploymentExpireDateTime*.
 
 ```yaml
 Type: DateTime
@@ -364,9 +360,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentExpireTime
-Specifies a time, in HH:MM format, when the deployment expires.
-By default, a deployment never expires.
-To have a deployment expire at a certain time, set this parameter.
+This parameter is deprecated. Use *DeploymentExpireDateTime*.
 
 ```yaml
 Type: DateTime
