@@ -380,6 +380,7 @@ The acceptable values for this parameter are:
 
 - DownloadAllContentLocallyBeforeStartingTaskSequence
 - DownloadContentLocallyWhenNeededByRunningTaskSequence
+- RunFromDistributionPoint
 
 If you specify Clients for the *Availability* parameter, the default value for this parameter is DownloadAllContentLocallyBeforeStartingTaskSequence.
 If you specify ClientsMediaAndPxe, MediaAndPxe, or MediaAndPxeHidden for the *Availability* parameter, the default value for this parameter is DownloadContentLocallyWhenNeededByRunningTaskSequence.
