@@ -20,11 +20,10 @@ Unlock-CMObject [-InputObject] <IResultObject[]> [-DisableWildcardHandling] [-Fo
 ## DESCRIPTION
 The **Unlock-CMObject** cmdlet releases locks of one or more objects in Microsoft System Center Configuration Manager.
 You can use the *InputObject* parameter to specify the input to this cmdlet, or you can pipe the input to this cmdlet.
-
-Serialized Editing of Distributed Objects (SEDO) in System Center Configuration Manager provide a mechanism for assigning and unassigning locks to global System Center Configuration Manager objects in the context of a site, computer and user.
-If you want to edit and save a SEDO-enabled object, you must lock the object.
 When you obtain the lock, the lock is assigned to you, your computer and the site in which the computer resides.
 While the lock is assigned to you, no other user or computer can edit the object until you release the lock.
+
+**Important:** Configuration Manager cmdlets now automatically handle the locking and unlocking of objects. Therefore, we do not recommend you use this cmdlet to unlock objects because this may interfere with the functionality of the cmdlets.
 
 ## EXAMPLES
 
@@ -60,7 +59,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -74,7 +73,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +87,7 @@ Specifies an array of Configuration Manager objects output from another cmdlet.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: 0
 Default value: None
@@ -125,5 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Lock-CMObject](./Lock-CMObject.md)
 
 [Move-CMObject](./Move-CMObject.md)
-
-
