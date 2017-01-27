@@ -55,7 +55,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,7 +70,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +85,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an automatic deployment rule deployment object.
-To obtain a deployment object, use the Get-CMAutoDeploymentRuleDeployment cmdlet.
+To obtain a deployment object, use the [Get-CMAutoDeploymentRuleDeployment](./Get-CMAutoDeploymentRuleDeployment.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -142,5 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMAutoDeploymentRuleDeployment](./New-CMAutoDeploymentRuleDeployment.md)
 
 [Set-CMAutoDeploymentRuleDeployment](./Set-CMAutoDeploymentRuleDeployment.md)
-
-

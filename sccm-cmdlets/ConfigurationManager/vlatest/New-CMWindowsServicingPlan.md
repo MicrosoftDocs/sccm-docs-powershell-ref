@@ -111,7 +111,7 @@ Specify a time unit by using the *AlertTimeUnit* parameter.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,17 +122,17 @@ Accept wildcard characters: False
 
 ### -AlertTimeUnit
 Specifies a unit of time for the *AlertTime* parameter.
-Valid values are: 
+Valid values are:
 
 - Hours
-- Days 
+- Days
 - Weeks
 - Months
 
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -148,7 +148,7 @@ Indicates whether a system restart is allowed to be performed outside of any def
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ Indicates whether software installation is allowed to be performed outside of an
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ Indicates whether to allow clients to download content over a metered Internet c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ Indicates whether software updates are available to install as soon as possible 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +208,7 @@ Specify when software updates are available.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,17 +219,17 @@ Accept wildcard characters: False
 
 ### -AvailableTimeUnit
 Specifies the time unit type for the software available time.
-Valid values are: 
+Valid values are:
 
 - Hours
-- Days 
+- Days
 - Weeks
 - Months
 
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -241,12 +241,12 @@ Accept wildcard characters: False
 
 ### -Collection
 Specifies the target device collection object to be used for the servicing plan.
-To obtain a device collection object, use the Get-CMCollection or Get-CMDeviceCollection cmdlets.
+To obtain a device collection object, use the [Get-CMCollection](./Get-CMCollection.md) or [Get-CMDeviceCollection](./Get-CMDeviceCollection.md) cmdlets.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: NewByCollection
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -261,7 +261,7 @@ Specifies the ID of the target device collection to be used for the servicing pl
 ```yaml
 Type: String
 Parameter Sets: NewByCollectionId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -276,7 +276,7 @@ Specifies the name of the target device collection to be used for the servicing 
 ```yaml
 Type: String
 Parameter Sets: NewByCollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -306,7 +306,7 @@ Indicates whether required software updates are installed as soon as possible wh
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +321,7 @@ Specifies the number of time units for the deadline.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 
 ### -DeadlineTimeUnit
 Specifies the time unit type for the deadline.
-Valid values are: 
+Valid values are:
 
 - Hours
 - Days
@@ -342,7 +342,7 @@ Valid values are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -DeploymentPackage
 Specifies a software update deployment package.
-To obtain a software update deployment package, use the Get-CMSoftwareUpdateDeploymentPackage cmdlet.
+To obtain a software update deployment package, use the [Get-CMSoftwareUpdateDeploymentPackage](./Get-CMSoftwareUpdateDeploymentPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -370,7 +370,7 @@ Accept wildcard characters: False
 
 ### -DeploymentRing
 Specifies the Windows readiness state to which the servicing plan should apply.
-Valid values are: 
+Valid values are:
 
 - CB
 - Release
@@ -381,7 +381,7 @@ Valid values are:
 ```yaml
 Type: DeploymentRing
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: CB, Release, BusinessMainstream, Cbb, Ltsb
 
 Required: False
@@ -397,7 +397,7 @@ Specifies a description for the servicing plan.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -412,7 +412,7 @@ Indicates whether to disable System Center Operations Manager alerts during soft
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -427,7 +427,7 @@ Indicates whether to download software updates from the Internet.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -442,7 +442,7 @@ Indicates whether computers download content from Microsoft Update if the softwa
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -472,7 +472,7 @@ Indicates whether to generate Operations Manager alerts during a software update
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -487,7 +487,7 @@ Indicates whether to generate an alert for successful deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -502,7 +502,7 @@ Specifies an array of languages used to filter software upgrades that will be ad
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -518,7 +518,7 @@ Computers download software updates available in the specified languages, in add
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -533,7 +533,7 @@ Specifies a network location to where the downloaded updates are located.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -549,7 +549,7 @@ The name must be unique, help to describe the objective of the rule, and identif
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -566,7 +566,7 @@ If you specify a value of $False, installation proceeds.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -583,7 +583,7 @@ If you specify a value of $False, installation proceeds.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -598,7 +598,7 @@ Specifies an array of search strings used to filter software upgrades that will 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -609,7 +609,7 @@ Accept wildcard characters: False
 
 ### -RunType
 Specifies the mode in which an update runs.
-Valid values are: 
+Valid values are:
 
 - DoNotRunThisRuleAutomatically
 - RunTheRuleAfterAnySoftwareUpdatePointSynchronization
@@ -618,7 +618,7 @@ Valid values are:
 ```yaml
 Type: RunType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotRunThisRuleAutomatically, RunTheRuleAfterAnySoftwareUpdatePointSynchronization, RunTheRuleOnSchedule
 
 Required: False
@@ -630,12 +630,12 @@ Accept wildcard characters: False
 
 ### -Schedule
 Specifies the deadline time (from deployment available time).
-To create a schedule, use the New-CMSchedule cmdlet.
+To create a schedule, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -653,7 +653,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -669,7 +669,7 @@ If compliance falls below this percentage, Configuration Manager produces option
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -684,7 +684,7 @@ Indicates whether a system restart is suppressed on servers when a software upda
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -699,7 +699,7 @@ Indicates whether a system restart is suppressed on workstations when a software
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -714,7 +714,7 @@ Specifies an array of search strings used to filter software update titles that 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -745,7 +745,7 @@ If you specify a value of $True, clients share content on the same subnet.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -760,7 +760,7 @@ Indicates whether the schedule for this deployment is evaluated based upon Unive
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -771,7 +771,7 @@ Accept wildcard characters: False
 
 ### -UserNotification
 Specifies the notification behavior of the user visual experience.
-Valid values are: 
+Valid values are:
 
 - DisplayAll
 - DisplaySoftwareCenterOnly
@@ -780,7 +780,7 @@ Valid values are:
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -792,7 +792,7 @@ Accept wildcard characters: False
 
 ### -VerboseLevel
 Specifies the level of detail you want clients to report for deployments that this rule creates.
-Valid values are: 
+Valid values are:
 
 - AllMessages
 - OnlyErrorMessages
@@ -801,7 +801,7 @@ Valid values are:
 ```yaml
 Type: VerboseLevelType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OnlyErrorMessages, OnlySuccessAndErrorMessages, AllMessages
 
 Required: False
@@ -834,7 +834,7 @@ If set to $False, content is applied on the overlay and committed later.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -861,5 +861,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSoftwareUpdateDeploymentPackage](./Get-CMSoftwareUpdateDeploymentPackage.md)
 
 [Get-CMWindowsServicingPlan](./Get-CMWindowsServicingPlan.md)
-
-
