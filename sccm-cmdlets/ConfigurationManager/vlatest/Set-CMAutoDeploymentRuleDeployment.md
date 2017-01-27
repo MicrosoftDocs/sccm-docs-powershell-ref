@@ -411,7 +411,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an automatic deployment rule object.
-To obtain an automatic deployment rule object, use the Get-CMSoftwareUpdateAutoDeploymentRule cmdlet.
+To obtain an automatic deployment rule object, use the [Get-CMSoftwareUpdateAutoDeploymentRule](./Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject

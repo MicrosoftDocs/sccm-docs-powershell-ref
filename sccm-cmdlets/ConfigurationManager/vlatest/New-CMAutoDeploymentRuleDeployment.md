@@ -575,7 +575,8 @@ Accept wildcard characters: False
 Specifies the notification behavior of the user visual experience.
 The acceptable values for this parameter are:
 
-- DisplayAll-- DisplaySoftwareCenterOnly
+- DisplayAll
+- DisplaySoftwareCenterOnly
 - HideAll
 
 ```yaml
