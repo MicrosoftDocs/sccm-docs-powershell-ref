@@ -33,9 +33,9 @@ The **Invoke-CMWmiQuery** cmdlet runs a Windows Management Instrumentation (WMI)
 ### Example 1: Run a WQL query
 ```
 PS C:\> $WQL = @"
-SELECT app.* FROM SMS_ApplicationLatest AS app 
-INNER JOIN SMS_CIContentPackage AS con ON app.CI_ID=con.CI_ID 
-INNER JOIN SMS_DistributionPoint AS srv ON con.PackageID=srv.PackageID 
+SELECT app.* FROM SMS_ApplicationLatest AS app
+INNER JOIN SMS_CIContentPackage AS con ON app.CI_ID=con.CI_ID
+INNER JOIN SMS_DistributionPoint AS srv ON con.PackageID=srv.PackageID
 WHERE app.IsHidden = 0
 "@
 PS C:\> Invoke-CMWmiQuery -Query $WQL -Option Lazy
@@ -112,7 +112,7 @@ Specifies the Configuration Manager WMI class that contains the static method yo
 ```yaml
 Type: String
 Parameter Sets: BySearch
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +143,7 @@ This is a list of name/value pairs that are passed to a WMI provider that suppor
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,20 +184,20 @@ Accept wildcard characters: False
 
 ### -Option
 Specifies the query option.
-Valid values are: 
+Valid values are:
 
---None
---NoRefresh
---Lazy
---Fast
---ExpectResults
---FastExpectResults
---LazyExpectResults
---Clone
---ExpectResultsSoftFail
---ExpectResultsThrowException
---NoMask
---IgnoreNoResults
+- None
+- NoRefresh
+- Lazy
+- Fast
+- ExpectResults
+- FastExpectResults
+- LazyExpectResults
+- Clone
+- ExpectResultsSoftFail
+- ExpectResultsThrowException
+- NoMask
+- IgnoreNoResults
 
 ```yaml
 Type: QueryOptions
@@ -218,7 +218,7 @@ Specifies a WMI Query Language (WQL) statement.
 ```yaml
 Type: String
 Parameter Sets: ByWql
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -233,7 +233,7 @@ Specifies an **SMSProviderSearch** object.
 ```yaml
 Type: SmsProviderSearch
 Parameter Sets: BySearch
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -272,5 +272,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Invoke-CMWmiMethod](./Invoke-CMWmiMethod.md)
-
-

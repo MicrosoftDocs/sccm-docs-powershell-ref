@@ -52,12 +52,12 @@ This command gets the automatic deployment rule object named TestRule01 and uses
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is dissabled.
+Indicates that wildcard handling is disabled.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +72,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies the auto deployment rule object associated with the deployment.
-To obtain an auto deployment rule object, use the Get-CMSoftwareUpdateAutoDeploymentRule cmdlet.
+To obtain an auto deployment rule object, use the [Get-CMSoftwareUpdateAutoDeploymentRule](./Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -147,5 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMAutoDeploymentRuleDeployment](./Set-CMAutoDeploymentRuleDeployment.md)
 
 [Get-CMSoftwareUpdateAutoDeploymentRule](./Get-CMSoftwareUpdateAutoDeploymentRule.md)
-
-
