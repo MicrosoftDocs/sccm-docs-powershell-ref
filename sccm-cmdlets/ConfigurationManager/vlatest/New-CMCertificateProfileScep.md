@@ -237,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -HashAlgorithm
-Specifies the hash algorithm.
+Specifies one or more hash algorithm. 
 Valid values are:
 
 - SHA1
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyUsage
-Specifies the key usage for the certificate.
+Specifies one or more key usage for the certificate.
 Valid values are:
 
 - KeyEncipherment
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### -SanType
-Specifies the subject alternative name.
+Specifies one or more subject alternative name.
 Valid values are:
 
 - SubjectAltRequireSpn
