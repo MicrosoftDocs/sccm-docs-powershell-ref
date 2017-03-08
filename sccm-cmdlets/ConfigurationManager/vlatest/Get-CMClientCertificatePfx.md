@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-Specifies the thumbprint of the client PFX certificate. If you don not specify this parameter, all certificates for the user are returned.
+Specifies the thumbprint of the client PFX certificate. If you do not specify this parameter, all certificates for the user are returned.
 
 ```yaml
 Type: String
