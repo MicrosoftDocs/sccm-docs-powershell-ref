@@ -37,7 +37,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -52,7 +52,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,12 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-Specifies the thumbprint of the client PFX certificate.
+Specifies the thumbprint of the client PFX certificate. If you don not specify this parameter, all certificates for the user are returned.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ To get a value for this parameter, you can use the following command: `(Get-CMUs
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,5 +128,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-CMClientCertificatePfx](./Import-CMClientCertificatePfx.md)
 
 [Remove-CMClientCertificatePfx](./Remove-CMClientCertificatePfx.md)
-
-

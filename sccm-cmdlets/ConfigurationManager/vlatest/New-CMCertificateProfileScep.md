@@ -45,7 +45,7 @@ The command then creates a SEP certificate profile using the newly created trust
 PS C:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate02" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm ShA1 -KeyUsage Digitalsignature -Name "TestSCEPProf02" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testingSecond -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -CertificateStore User -Description "Test description" -EnrollmentRenewThresholdPct 2 -EnrollmentRetryCount 5 -EnrollmentRetryDelayMins 7 -KeySize 2048 -KeyStorageProvider InstallToTPM_FailIfNotPresent -RequireMultiFactor -SubjectType SubjectRequireEmail -SanType SubjectAltReqiureEmail
 ```
 
-This command creates a trusted root CA certificata, and gets all Windows 10 Client supported platforms.
+This command creates a trusted root CA certificate, and gets all Windows 10 Client supported platforms.
 The command then creates a SCEP certificate using the newly created root CA certificate and setting the certificate store to User.
 
 ## PARAMETERS
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -HashAlgorithm
-Specifies one or more hash algorithm. 
+Specifies one or more hash algorithm.
 Valid values are:
 
 - SHA1
