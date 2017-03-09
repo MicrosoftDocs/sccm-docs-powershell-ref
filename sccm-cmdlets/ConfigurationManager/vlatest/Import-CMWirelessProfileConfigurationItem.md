@@ -25,8 +25,8 @@ The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wir
 
 ### Example 1: Import a wireless profile configuration item
 ```
-PS C:\><?xml version="1.0"?>
-<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+PS C:\> \<?xml version="1.0"?>
+\<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
  <name>Open-WEP</name>
  <SSIDConfig>
   <SSID>
@@ -82,7 +82,7 @@ Specifies a description for the wireless profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ Specifies the name of a wireless profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -Severity
 Specifies a non-compliance severity for reports.
-Valid values are: 
+Valid values are:
 
 - None
 - Informational
@@ -164,7 +164,7 @@ Valid values are:
 ```yaml
 Type: NoncomplianceSeverity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
@@ -225,5 +225,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMWirelessProfileConfigurationItem](./New-CMWirelessProfileConfigurationItem.md)
 
 [Set-CMWirelessProfileConfigurationItem](./Set-CMWirelessProfileConfigurationItem.md)
-
-
