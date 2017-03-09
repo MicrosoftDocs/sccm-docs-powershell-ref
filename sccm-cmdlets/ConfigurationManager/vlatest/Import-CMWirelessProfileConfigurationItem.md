@@ -24,10 +24,9 @@ The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wir
 ## EXAMPLES
 
 ### Example 1: Import a wireless profile configuration item
-
 ```
-PS C:\> `<?xml version="1.0"?>`
-<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1>
+PS C:\> &lt;?xml version="1.0"?&gt;
+&lt;WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1"&gt;
  <name>Open-WEP</name>
  <SSIDConfig>
   <SSID>
