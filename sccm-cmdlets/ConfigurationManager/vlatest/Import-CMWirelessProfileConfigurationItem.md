@@ -26,30 +26,30 @@ The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wir
 ### Example 1: Import a wireless profile configuration item
 
 
-`PS C:\> <?xml version="1.0"?>`
-`<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1>`
- `<name>Open-WEP</name>`
- `<SSIDConfig>`
-  `<SSID>`
-   `<hex>4E455753534944283229</hex>`
-   `<name>NEWSSID(2)</name>`
-  `</SSID>`
-  `<nonBroadcast>false</nonBroadcast>`
- `</SSIDConfig>`
- `<connectionType>ESS</connectionType>`
- `<connectionMode>auto</connectionMode>`
- `<autoSwitch>true</autoSwitch>`
- `<MSM>`
-  `<security>`
-   `<authEncryption>`
-    `<authentication>open</authentication>`
-    `<encryption>WEP</encryption>`
-    `<useOneX>false</useOneX>`
-   `</authEncryption>`
-   `<preAuthThrottle>3</preAuthThrottle>`
-  `</security>`
- `</MSM>`
-`</WLANProfile>`
+`PS C:\> <?xml version="1.0"?>
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1>
+ <name>Open-WEP</name>
+ <SSIDConfig>
+  <SSID>
+   <hex>4E455753534944283229</hex>
+   <name>NEWSSID(2)</name>
+  </SSID>
+  <nonBroadcast>false</nonBroadcast>
+ </SSIDConfig>
+ <connectionType>ESS</connectionType>
+ <connectionMode>auto</connectionMode>
+ <autoSwitch>true</autoSwitch>
+<MSM>
+  <security>
+   <authEncryption>
+    <authentication>open</authentication>
+    <encryption>WEP</encryption>
+    <useOneX>false</useOneX>
+   </authEncryption>
+   <preAuthThrottle>3</preAuthThrottle>
+  </security>
+ </MSM>
+</WLANProfile>`
 
 `PS C:\> Import-CMWirelessProfileConfigurationItem -Name "Wireless2" -Description "Imported wireless profile" -Path "c:\WLanProfile.xml" -SupportedPlatform (Get-CMSupportedPlatform -Name "*Windows*10*" -Fast)`
 
