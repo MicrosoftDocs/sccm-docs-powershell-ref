@@ -25,8 +25,8 @@ The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wir
 
 ### Example 1: Import a wireless profile configuration item
 
-
-`PS C:\> <?xml version="1.0"?>
+```
+PS C:\> `<?xml version="1.0"?>`
 <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1>
  <name>Open-WEP</name>
  <SSIDConfig>
@@ -39,7 +39,7 @@ The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wir
  <connectionType>ESS</connectionType>
  <connectionMode>auto</connectionMode>
  <autoSwitch>true</autoSwitch>
-<MSM>
+ <MSM>
   <security>
    <authEncryption>
     <authentication>open</authentication>
@@ -49,10 +49,10 @@ The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wir
    <preAuthThrottle>3</preAuthThrottle>
   </security>
  </MSM>
-</WLANProfile>`
+</WLANProfile>
 
-`PS C:\> Import-CMWirelessProfileConfigurationItem -Name "Wireless2" -Description "Imported wireless profile" -Path "c:\WLanProfile.xml" -SupportedPlatform (Get-CMSupportedPlatform -Name "*Windows*10*" -Fast)`
-
+PS C:\> Import-CMWirelessProfileConfigurationItem -Name "Wireless2" -Description "Imported wireless profile" -Path "c:\WLanProfile.xml" -SupportedPlatform (Get-CMSupportedPlatform -Name "*Windows*10*" -Fast)
+```
 
 The first section provides xml content for the wireless profile.
 Save this content to "C:\WLanProfile.xml".
