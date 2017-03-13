@@ -33,6 +33,9 @@ Installs an Asset Intelligence synchronization point.
 ### [Add-CMBoundaryToGroup](Add-CMBoundaryToGroup.md)
 Assigns boundaries to a boundary group.
 
+### [Add-CMCertificateRegistrationPoint](Add-CMCertificateRegistrationPoint.md)
+Adds a certificate registration point role to a site system server.
+
 ### [Add-CMDeploymentType](Add-CMDeploymentType.md)
 Adds a deployment type for an application.
 
@@ -122,6 +125,9 @@ Adds a security role to an administrative user or group in Configuration Manager
 
 ### [Add-CMSecurityScopeToAdministrativeUser](Add-CMSecurityScopeToAdministrativeUser.md)
 Adds a security scope to an administrative user or group in Configuration Manager.
+
+### [Add-CMServiceConnectionPoint](Add-CMServiceConnectionPoint.md)
+Adds a service connection point to a site system server.
 
 ### [Add-CMSoftwareUpdatePoint](Add-CMSoftwareUpdatePoint.md)
 Adds a software update point for Configuration Manager.
@@ -366,6 +372,9 @@ Gets an item from the Asset Intelligence catalog.
 ### [Get-CMAssetIntelligenceSynchronizationPoint](Get-CMAssetIntelligenceSynchronizationPoint.md)
 Gets Asset Intelligence synchronization points.
 
+### [Get-CMAutoDeploymentRuleDeployment](Get-CMAutoDeploymentRuleDeployment.md)
+Gets the deployments associated with an automatic deployment rule.
+
 ### [Get-CMAutomaticAmtProvisioningStatus](Get-CMAutomaticAmtProvisioningStatus.md)
 Gets the automatic provisioning status of computers with an AMT management controller.
 
@@ -389,6 +398,21 @@ Gets a boundary group.
 
 ### [Get-CMCategory](Get-CMCategory.md)
 Gets configuration categories in Configuration Manager.
+
+### [Get-CMCertificateProfilePfx](Get-CMCertificateProfilePfx.md)
+Gets a PFX certificate profile.
+
+### [Get-CMCertificateProfileScep](Get-CMCertificateProfileScep.md)
+Gets a SCEP certificate profile.
+
+### [Get-CMCertificateProfileTrustedRootCA](Get-CMCertificateProfileTrustedRootCA.md)
+Gets a trusted CA certificate profile.
+
+### [Get-CMCertificateRegistrationPoint](Get-CMCertificateRegistrationPoint.md)
+Gets a certificate registration point.
+
+### [Get-CMClientCertificatePfx](Get-CMClientCertificatePfx.md)
+Gets a client PFX certificate.
 
 ### [Get-CMClientPushInstallation](Get-CMClientPushInstallation.md)
 Gets an object that installs a Configuration Manager client by using client push.
@@ -507,6 +531,9 @@ Gets a driver package.
 ### [Get-CMEmailNotificationComponent](Get-CMEmailNotificationComponent.md)
 Gets an email notification components.
 
+### [Get-CMEmailProfile](Get-CMEmailProfile.md)
+Gets an email profile.
+
 ### [Get-CMEndpointProtectionPoint](Get-CMEndpointProtectionPoint.md)
 Gets an Endpoint Protection point.
 
@@ -602,6 +629,9 @@ Gets security roles.
 
 ### [Get-CMSecurityScope](Get-CMSecurityScope.md)
 Gets a security scope.
+
+### [Get-CMServiceConnectionPoint](Get-CMServiceConnectionPoint.md)
+Gets a service connection point.
 
 ### [Get-CMSite](Get-CMSite.md)
 Gets one or more Configuration Manager sites.
@@ -711,6 +741,9 @@ Gets a request for user device affinity in Configuration Manager.
 ### [Get-CMVhd](Get-CMVhd.md)
 Gets VHD images.
 
+### [Get-CMWindowsServicingPlan](Get-CMWindowsServicingPlan.md)
+Gets a Windows 10 servicing plan.
+
 ### [Import-CMAntimalwarePolicy](Import-CMAntimalwarePolicy.md)
 Imports an antimalware policy for Endpoint Protection.
 
@@ -722,6 +755,9 @@ Imports Configuration Manager baselines.
 
 ### [Import-CMCertificate](Import-CMCertificate.md)
 Imports a certificate.
+
+### [Import-CMClientCertificatePfx](Import-CMClientCertificatePfx.md)
+Imports a client PFX certificate.
 
 ### [Import-CMCollection](Import-CMCollection.md)
 Imports a collection.
@@ -752,6 +788,9 @@ Imports a task sequence.
 
 ### [Import-CMUserDeviceAffinity](Import-CMUserDeviceAffinity.md)
 Imports a file that contains user and device affinities to Configuration Manager.
+
+### [Import-CMWirelessProfileConfigurationItem](Import-CMWirelessProfileConfigurationItem.md)
+Imports a wireless profile configuration item.
 
 ### [Install-CMClient](Install-CMClient.md)
 Installs a Configuration Manager client.
@@ -807,6 +846,12 @@ Runs a Configuration Manager deployment rule for automatic software updates.
 ### [Invoke-CMSoftwareUpdateSummarization](Invoke-CMSoftwareUpdateSummarization.md)
 Runs the Configuration Manager software update summarization.
 
+### [Invoke-CMWmiMethod](Invoke-CMWmiMethod.md)
+Calls a WMI method.
+
+### [Invoke-CMWmiQuery](Invoke-CMWmiQuery.md)
+Runs a WMI query.
+
 ### [Lock-CMObject](Lock-CMObject.md)
 Locks global objects in Configuration Manager.
 
@@ -852,6 +897,9 @@ Creates an App-V virtual environment.
 ### [New-CMAssetIntelligenceCatalogItem](New-CMAssetIntelligenceCatalogItem.md)
 Creates an item for the Asset Intelligence catalog.
 
+### [New-CMAutoDeploymentRuleDeployment](New-CMAutoDeploymentRuleDeployment.md)
+Creates a deployment for an automatic deployment rule.
+
 ### [New-CMBaseline](New-CMBaseline.md)
 Creates a Configuration Manager baseline.
 
@@ -872,6 +920,15 @@ Creates capture media.
 
 ### [New-CMCategory](New-CMCategory.md)
 Creates a configuration category in Configuration Manager.
+
+### [New-CMCertificateProfilePfx](New-CMCertificateProfilePfx.md)
+Creates a PFX certificate profile.
+
+### [New-CMCertificateProfileScep](New-CMCertificateProfileScep.md)
+Creates a SCEP certificate profile.
+
+### [New-CMCertificateProfileTrustedRootCA](New-CMCertificateProfileTrustedRootCA.md)
+Creates a trusted CA certificate profile.
 
 ### [New-CMClientAuthCertificateProfileConfigurationItem](New-CMClientAuthCertificateProfileConfigurationItem.md)
 Creates a certificate profile.
@@ -911,6 +968,9 @@ Creates a distribution point group.
 
 ### [New-CMDriverPackage](New-CMDriverPackage.md)
 Creates a driver package.
+
+### [New-CMEmailProfile](New-CMEmailProfile.md)
+Creates an email profile.
 
 ### [New-CMExchangeClientAccessServer](New-CMExchangeClientAccessServer.md)
 Creates a Client Access server role for an Exchange Server.
@@ -1032,6 +1092,9 @@ Creates a VPN profile.
 ### [New-CMWindowsFirewallPolicy](New-CMWindowsFirewallPolicy.md)
 Creates a new Windows Firewall policy in Configuration Manager.
 
+### [New-CMWindowsServicingPlan](New-CMWindowsServicingPlan.md)
+Creates a Windows 10 servicing plan.
+
 ### [New-CMWiredProfileObject](New-CMWiredProfileObject.md)
 Creates a profile that specifies settings for AMT-based computers on a wired network.
 
@@ -1095,6 +1158,9 @@ Removes an item from the Asset Intelligence catalog.
 ### [Remove-CMAssetIntelligenceSynchronizationPoint](Remove-CMAssetIntelligenceSynchronizationPoint.md)
 Removes an Asset Intelligence synchronization point.
 
+### [Remove-CMAutoDeploymentRuleDeployment](Remove-CMAutoDeploymentRuleDeployment.md)
+Removes a deployment from an auto deployment rule.
+
 ### [Remove-CMBaseline](Remove-CMBaseline.md)
 Removes configuration baselines.
 
@@ -1112,6 +1178,12 @@ Removes a boundary group.
 
 ### [Remove-CMCategory](Remove-CMCategory.md)
 Removes a configuration category in Configuration Manager.
+
+### [Remove-CMCertificateRegistrationPoint](Remove-CMCertificateRegistrationPoint.md)
+Removes a certificate registration point role from a site system server.
+
+### [Remove-CMClientCertificatePfx](Remove-CMClientCertificatePfx.md)
+Removes a PFX client certificate.
 
 ### [Remove-CMClientOperation](Remove-CMClientOperation.md)
 Removes a Configuration Manager client operation object.
@@ -1263,6 +1335,9 @@ Removes a security scope.
 ### [Remove-CMSecurityScopeFromAdministrativeUser](Remove-CMSecurityScopeFromAdministrativeUser.md)
 Removes the association between security scopes and an administrative user.
 
+### [Remove-CMServiceConnectionPoint](Remove-CMServiceConnectionPoint.md)
+Removes a service connection point.
+
 ### [Remove-CMSiteSystemServer](Remove-CMSiteSystemServer.md)
 Removes a site system server.
 
@@ -1392,6 +1467,9 @@ Enables or disables an Asset Intelligence synchronization point.
 ### [Set-CMAssignedSite](Set-CMAssignedSite.md)
 Assigns a client computer to a primary site.
 
+### [Set-CMAutoDeploymentRuleDeployment](Set-CMAutoDeploymentRuleDeployment.md)
+Sets a deployment for an automatic deployment rule.
+
 ### [Set-CMBaseline](Set-CMBaseline.md)
 Changes the settings of configuration baselines.
 
@@ -1409,6 +1487,18 @@ Modifies boundary settings.
 
 ### [Set-CMBoundaryGroup](Set-CMBoundaryGroup.md)
 Modifies the properties of a boundary group.
+
+### [Set-CMCertificateProfilePfx](Set-CMCertificateProfilePfx.md)
+Sets a PFX certificate profile.
+
+### [Set-CMCertificateProfileScep](Set-CMCertificateProfileScep.md)
+Sets a SCEP certificate profile.
+
+### [Set-CMCertificateProfileTrustedRootCA](Set-CMCertificateProfileTrustedRootCA.md)
+Sets a trusted CA certificate profile.
+
+### [Set-CMCertificateRegistrationPoint](Set-CMCertificateRegistrationPoint.md)
+Sets a certificate registration point role on a site system server.
 
 ### [Set-CMClientAuthCertificateProfileConfigurationItem](Set-CMClientAuthCertificateProfileConfigurationItem.md)
 Modifies a certificate profile.
@@ -1487,6 +1577,9 @@ Modifies a driver package
 
 ### [Set-CMEmailNotificationComponent](Set-CMEmailNotificationComponent.md)
 Changes configuration settings of an email notification component.
+
+### [Set-CMEmailProfile](Set-CMEmailProfile.md)
+Sets an email profile.
 
 ### [Set-CMEndpointProtectionPoint](Set-CMEndpointProtectionPoint.md)
 Modifies a site system role for Endpoint Protection.
@@ -1619,6 +1712,9 @@ Changes configuration settings of a security role.
 
 ### [Set-CMSecurityScope](Set-CMSecurityScope.md)
 Sets a security scope.
+
+### [Set-CMServiceConnectionPoint](Set-CMServiceConnectionPoint.md)
+Sets a service connection point.
 
 ### [Set-CMSite](Set-CMSite.md)
 Changes security scope settings for Configuration Manager sites.
