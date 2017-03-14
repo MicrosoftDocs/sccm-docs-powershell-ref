@@ -435,8 +435,14 @@ Gets a cmdlet update check configuration object.
 ### [Get-CMCollection](Get-CMCollection.md)
 Gets a collection.
 
+### [Get-CMCollectionMember](Get-CMCollectionMember.md)
+Gets a member of a collection.
+
 ### [Get-CMCollectionMembershipEvaluationComponent](Get-CMCollectionMembershipEvaluationComponent.md)
 Gets how often Configuration Manager evaluates collection membership.
+
+###[Get-CMCollectionSetting](Get-CMCollectionSetting.md)
+Gets the settings for a collection.
 
 ### [Get-CMComponentStatusMessage](Get-CMComponentStatusMessage.md)
 Gets component status messages in Configuration Manager.
@@ -807,6 +813,9 @@ Sends a notification to client computers to trigger an immediate client action.
 ### [Invoke-CMClientOperationSummarization](Invoke-CMClientOperationSummarization.md)
 Performs a Configuration Manager client operations summarization.
 
+### [Invoke-CMCollectionUpdate](Invoke-CMCollectionUpdate.md)
+Updates the membership of a collection.
+
 ### [Invoke-CMContentValidation](Invoke-CMContentValidation.md)
 Validates packages on a distribution point.
 
@@ -1019,6 +1028,9 @@ Adds an operating system installer.
 
 ### [New-CMPackage](New-CMPackage.md)
 Creates a Configuration Manager package.
+
+### [New-CMPowerManagementCustomPlan](New-CMPowerManagementCustomPlan.md)
+Creates a custom power management plan.
 
 ### [New-CMPrestagedMedia](New-CMPrestagedMedia.md)
 Creates prestaged media.
@@ -1526,6 +1538,9 @@ Sets a collection.
 
 ### [Set-CMCollectionMembershipEvaluationComponent](Set-CMCollectionMembershipEvaluationComponent.md)
 Sets how often Configuration Manager evaluates collections for membership.
+
+### [Set-CMCollectionPowerManagement](Set-CMCollectionPowerManagement.md)
+Configures power management settings for a device collection.
 
 ### [Set-CMComputerAssociation](Set-CMComputerAssociation.md)
 Changes settings for a computer association in Configuration Manager.
