@@ -53,7 +53,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -67,7 +67,7 @@ Specifies a file path for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -81,7 +81,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -92,32 +92,32 @@ Accept wildcard characters: False
 ### -ImportActionType
 Specifies an import action type for the application.
 If this application already exists in the Software Library, Configuration Manager adds a revision to the existing application unless you modify the action to create a new application.
-Valid values are: 
+Valid values are:
 
+- Skip.
+This option is not supported.
 - NotSet.
 No action is specified.
-The default behavior is: 
-      -- If there is a conflict with the application model ID, a new revision is added to the existing application.
-      -- If there is a conflict with the application name, a new application is created with a new name.
-- Skip.
-This option is not supported. 
+The default behavior is:
+    - If there is a conflict with the application model ID, a new revision is added to the existing application.
+    - If there is a conflict with the application name, a new application is created with a new name.
 - DirectImport.
 Imports the application objects.
-The default behavior is: 
-      -- If there is a conflict with the application model ID, the error is displayed. 
-      -- If there is a conflict with the application name, a new application is created with a new name. 
+The default behavior is:
+    - If there is a conflict with the application model ID, the error is displayed.
+    - If there is a conflict with the application name, a new application is created with a new name.
 - Rename.
-This option is not supported. 
+This option is not supported.
 - Overwrite.
 Maps objects despite name or scope duplication.
-If the revision of the application does not match the revision of the application to import, then a new revision is added to the existing application. 
+If the revision of the application does not match the revision of the application to import, then a new revision is added to the existing application.
 - ImportFail.
 This option is not supported.
 
 ```yaml
 Type: ImportActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NotSet, Skip, DirectImport, Rename, Overwrite, ImportFail
 Required: False
 Position: Named
@@ -169,5 +169,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMApplication](./Set-CMApplication.md)
 
 [Suspend-CMApplication](./Suspend-CMApplication.md)
-
-
