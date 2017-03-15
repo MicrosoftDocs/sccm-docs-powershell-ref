@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: F43D2D81-0586-4B25-83CA-041B24C9D1DA
 online version: https://go.microsoft.com/fwlink/?linkid=833611
 schema: 2.0.0
-ms.assetid: F43D2D81-0586-4B25-83CA-041B24C9D1DA
 ---
 
 # Get-CMDevice
@@ -14,48 +14,49 @@ Gets a device.
 
 ### ByName (Default)
 ```
-Get-CMDevice [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMDevice [-Name <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Get-CMDevice -CollectionName <String> [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMDevice -CollectionName <String> [-Name <String>] [-Fast] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByIdMandatory
+```
+Get-CMDevice -CollectionId <String> [-Name <String>] [-Fast] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatoryForViewInfectedClients
 ```
-Get-CMDevice [-CollectionId <String>] -ThreatId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
-### SearchByValueMandatoryForViewInfectedClients
-```
-Get-CMDevice [-CollectionId <String>] -InputObject <IResultObject> [-DisableWildcardHandling]
+Get-CMDevice [-CollectionId <String>] -ThreatId <String> [-Fast] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatoryForViewInfectedClients
 ```
-Get-CMDevice [-CollectionId <String>] -ThreatName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMDevice [-CollectionId <String>] -ThreatName <String> [-Fast] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### SearchByIdMandatory
+### SearchByValueMandatoryForViewInfectedClients
 ```
-Get-CMDevice -CollectionId <String> [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMDevice [-CollectionId <String>] -InputObject <IResultObject> [-Fast] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Get-CMDevice -Collection <IResultObject> [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMDevice -Collection <IResultObject> [-Name <String>] [-Fast] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-CMDevice -ResourceId <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMDevice -ResourceId <Int32> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,7 +86,8 @@ Specifies a device collection object. To obtain a device collection object, use 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
+
 Required: True
 Position: Named
 Default value: None
@@ -98,9 +100,10 @@ Specifies an ID for a device collection.
 
 ```yaml
 Type: String
-Parameter Sets: SearchByIdMandatoryForViewInfectedClients, SearchByValueMandatoryForViewInfectedClients, SearchByNameMandatoryForViewInfectedClients
-Aliases: 
-Required: False
+Parameter Sets: SearchByIdMandatory
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -109,9 +112,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: SearchByIdMandatory
-Aliases: 
-Required: True
+Parameter Sets: SearchByIdMandatoryForViewInfectedClients, SearchByNameMandatoryForViewInfectedClients, SearchByValueMandatoryForViewInfectedClients
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -124,7 +128,8 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
+
 Required: True
 Position: Named
 Default value: None
@@ -138,7 +143,25 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+Indicates that the cmdlet does not automatically refresh lazy properties.
+
+Lazy properties contain values that are relatively inefficient to retrieve which can cause additional network traffic and decrease cmdlet performance. If lazy properties are not used, this parameter should be specified.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +175,8 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +191,7 @@ Specifies an object that represents a threat.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatoryForViewInfectedClients
 Aliases: Threat
+
 Required: True
 Position: Named
 Default value: None
@@ -180,7 +205,8 @@ Specifies the name of a device.
 ```yaml
 Type: String
 Parameter Sets: ByName, SearchByNameMandatory, SearchByIdMandatory, SearchByValueMandatory
-Aliases: 
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +221,7 @@ Specifies the resource ID of a device.
 Type: Int32
 Parameter Sets: ById
 Aliases: Id, DeviceId
+
 Required: True
 Position: Named
 Default value: None
@@ -209,6 +236,7 @@ Specifies an ID of a threat.
 Type: String
 Parameter Sets: SearchByIdMandatoryForViewInfectedClients
 Aliases: ThreatNameId
+
 Required: True
 Position: Named
 Default value: None
@@ -222,7 +250,8 @@ Specifies a name of a threat.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatoryForViewInfectedClients
-Aliases: 
+Aliases:
+
 Required: True
 Position: Named
 Default value: None
