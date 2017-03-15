@@ -94,18 +94,18 @@ Specifies an import action type for the application.
 If this application already exists in the Software Library, Configuration Manager adds a revision to the existing application unless you modify the action to create a new application.
 Valid values are:
 
+- Skip.
+This option is not supported.
 - NotSet.
 No action is specified.
 The default behavior is:
     - If there is a conflict with the application model ID, a new revision is added to the existing application.
     - If there is a conflict with the application name, a new application is created with a new name.
-- Skip.
-This option is not supported.
 - DirectImport.
 Imports the application objects.
 The default behavior is:
     - If there is a conflict with the application model ID, the error is displayed.
-    - If there is a conflict with the application name, a new application is created with a new name. 
+    - If there is a conflict with the application name, a new application is created with a new name.
 - Rename.
 This option is not supported.
 - Overwrite.
