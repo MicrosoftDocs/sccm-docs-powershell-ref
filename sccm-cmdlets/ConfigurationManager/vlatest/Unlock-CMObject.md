@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 66E1A4FB-1FF6-4DA5-8710-1A5AC6BEE641
 online version: https://go.microsoft.com/fwlink/?linkid=834278
 schema: 2.0.0
-ms.assetid: 66E1A4FB-1FF6-4DA5-8710-1A5AC6BEE641
 ---
 
 # Unlock-CMObject
@@ -13,8 +13,8 @@ Releases locks to global objects in Configuration Manager.
 ## SYNTAX
 
 ```
-Unlock-CMObject [-InputObject] <IResultObject[]> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Unlock-CMObject [-InputObject] <IResultObject[]> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,20 +39,6 @@ The second command releases the lock the object in $CIObj.
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
 Indicates that wildcard handling is disabled.
 
@@ -60,6 +46,22 @@ Indicates that wildcard handling is disabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Forces the command to run without asking for user confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -74,6 +76,7 @@ Indicates that wildcard handling is enabled.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -88,10 +91,26 @@ Specifies an array of Configuration Manager objects output from another cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases:
+
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -103,6 +122,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
