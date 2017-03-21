@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm-help.xml
+ms.assetid: C2319974-8CEA-4FA1-99D0-24DA994351AE
 online version: https://go.microsoft.com/fwlink/?linkid=834166
 schema: 2.0.0
-ms.assetid: C2319974-8CEA-4FA1-99D0-24DA994351AE
 ---
 
 # Get-CMCertificateProfilePfx

@@ -61,7 +61,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +89,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +104,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +118,7 @@ Specifies an array of a site codes for Configuration Manager sites.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-
+**Note**: This parameter is deprecated starting with version 1610, and may be removed in a future release.
 
 ```yaml
 Type: String

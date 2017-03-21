@@ -58,7 +58,7 @@ If you do not specify a collection, all collections in the hierarchy are exporte
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -86,7 +86,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -100,7 +100,7 @@ Specifies a comment for the exported collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -109,12 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExportFilePath
-Specifies the full path for the export file.
+Specifies the full path for the export file. The file name must end in ".mof".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -128,7 +128,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +143,7 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +158,7 @@ If you do not specify a collection, all collections in the hierarchy are exporte
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -201,5 +201,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMCollection](./Remove-CMCollection.md)
 
 [Set-CMCollection](./Set-CMCollection.md)
-
-
