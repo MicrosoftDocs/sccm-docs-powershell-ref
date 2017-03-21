@@ -22,14 +22,14 @@ The **Get-CMCertificate** cmdlet gets a certificate.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get all certificates
 ```
 PS ABC:\> Get-CMCertificate
 ```
 
 This command gets all certificates.
 
-### Example 2:
+### Example 2: Get a certificate by ID and thumbprint
 ```
 PS ABC:\> Get-CMCertificate -Id "{4680a1bb-ae51-4bdf-8f27-979eb49e444e}" -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767 -CertificateType DistributionPoint -KeyType SelfSigned
 ```
