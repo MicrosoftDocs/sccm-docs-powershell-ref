@@ -67,15 +67,16 @@ Valid values are:
 
 ```yaml
 Type: CategoryType
-Parameter Sets: ByName
+Parameter Sets: RenameCategoryByName
 Aliases:
 Accepted values: AppCategories, BaselineCategories, CatalogCategories, DriverCategories, UserCategories
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
