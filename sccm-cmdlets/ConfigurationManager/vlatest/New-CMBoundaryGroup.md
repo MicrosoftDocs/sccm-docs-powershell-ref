@@ -34,13 +34,13 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 PS C:\> New-BoundaryGroup -Name "BGroup05"
 CreatedBy:          
 CreatedOn           
-DefaultSiteCode: 
-Description: 
+DefaultSiteCode:
+Description:
 GroupID:            
 MemberCount:        0
 ModifiedBy:         
 ModifiedOn:         
-Name:               BGroup05 
+Name:               BGroup05
 SiteSystemCount:
 ```
 
@@ -52,7 +52,15 @@ The output shown for this example is the latter.
 ## PARAMETERS
 
 ### -AddSiteSystemServer
+Specifies the site system server and link speed as the key/value pair in a hash table.
+Valid values are:
 
+- FastLink
+- Slowlink
+
+For example: @{"Server01.contoso.com" = "FastLink"}
+
+**Important**: Starting in version 1610, FastLink is the only supported value for the hash table.
 
 ```yaml
 Type: Hashtable
@@ -85,7 +93,7 @@ Specifies the default site code for the boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +107,7 @@ Specifies a description for the new boundary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +121,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +135,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +149,7 @@ Specifies a name for the new boundary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -184,5 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMBoundaryGroup](./Set-CMBoundaryGroup.md)
 
 [New-CMBoundary](./New-CMBoundary.md)
-
-
