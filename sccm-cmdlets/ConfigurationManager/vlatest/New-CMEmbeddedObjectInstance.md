@@ -120,4 +120,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMEmbeddedProperty](./New-CMEmbeddedProperty.md)
 
-[New-CMEmbeddedPropertyList.md](./New-CMEmbeddedPropertyList.md)
+[New-CMEmbeddedPropertyList](./New-CMEmbeddedPropertyList.md)
