@@ -750,6 +750,9 @@ Gets VHD images.
 ### [Get-CMWindowsServicingPlan](Get-CMWindowsServicingPlan.md)
 Gets a Windows 10 servicing plan.
 
+### [Get-CMWinPEOptionalComponentInfo](Get-CMWinPEOptionalComponentInfo.md)
+Gets WinPE optional component information.
+
 ### [Import-CMAntimalwarePolicy](Import-CMAntimalwarePolicy.md)
 Imports an antimalware policy for Endpoint Protection.
 
@@ -1022,6 +1025,9 @@ Creates a migration job in System Center Configuration Manager.
 
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
+
+### [New-CMOperatingSystemImageUpdateSchedule](New-CMOperatingSystemImageUpdateSchedule.md)
+Creates an operating system image update schedule.
 
 ### [New-CMOperatingSystemInstaller](New-CMOperatingSystemInstaller.md)
 Adds an operating system installer.
@@ -1403,6 +1409,9 @@ Removes a query membership rule from one or more user collection in the Configur
 
 ### [Remove-CMVhd](Remove-CMVhd.md)
 Removes VHD images.
+
+### [Rename-CMCategory](Rename-CMCategory.md)
+Renames a category.
 
 ### [Resolve-CMInventoriedSoftwareConflict](Resolve-CMInventoriedSoftwareConflict.md)
 Resolves a conflict in Configuration Manager software inventory information.

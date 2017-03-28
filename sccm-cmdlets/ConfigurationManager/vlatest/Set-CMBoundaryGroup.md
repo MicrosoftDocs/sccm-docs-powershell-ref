@@ -60,7 +60,15 @@ This command adds the security scope OSDeploymentScope to the boundary group BGr
 ## PARAMETERS
 
 ### -AddSiteSystemServer
+Specifies the site system server and link speed as the key/value pair in a hash table.
+Valid values are:
 
+- FastLink
+- Slowlink
+
+For example: @{"Server01.contoso.com" = "FastLink"}
+
+**Important**: Starting in version 1610, FastLink is the only supported value for the hash table.
 
 ```yaml
 Type: Hashtable
@@ -74,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSiteSystemServer
-
+Indicates that the site system server is removed from the boundary group.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +115,7 @@ Specifies the default site code of a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +129,7 @@ Specifies a description for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +143,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +157,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -172,13 +180,13 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an input object to this cmdlet.
-You can get the input object by using the [Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md) cmdlet.
+Specifies a boundary group object.
+To obtain a boundary group object, use the [Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -192,7 +200,7 @@ Specifies a name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -206,7 +214,7 @@ Specifies a new name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +229,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -230,7 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSiteSystemServer
-
+Specifies a site system server object to remove from the boundary group.
+To obtain a site system server, use the [Get-CMSiteSystemServer](./Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -244,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSiteSystemServerName
-
+Specifies the name of a site system server to remove from the boundary group.
 
 ```yaml
 Type: String[]
@@ -283,7 +292,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266225)
+[Define site boundaries and boundary groups for System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/)
 
 [Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md)
 
