@@ -135,4 +135,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMEmbeddedObjectInstance](./New-CMEmbeddedObjectInstance.md)
 
-[New-CMEmbeddedProperty.md](./New-CMEmbeddedProperty.md)
+[New-CMEmbeddedProperty](./New-CMEmbeddedProperty.md)
