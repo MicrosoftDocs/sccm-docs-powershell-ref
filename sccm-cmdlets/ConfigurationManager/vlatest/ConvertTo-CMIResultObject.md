@@ -18,7 +18,7 @@ ConvertTo-CMIResultObject -InputObject <ManagementBaseObject> [-DisableWildcardH
 ```
 
 ## DESCRIPTION
-The **Convertto-CMIResultObject** cmdlet converts a **ManagementBaseObject** to an **IResultObject**.
+The **ConvertTo-CMIResultObject** cmdlet converts a **ManagementBaseObject** to an **IResultObject**.
 
 ## EXAMPLES
 
