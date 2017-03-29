@@ -222,8 +222,14 @@ Converts schedule tokens into and from interval strings.
 ### [ConvertFrom-CMApplication](ConvertFrom-CMApplication.md)
 Converts an application SDK object to an application object.
 
+### [ConvertFrom-CMIResultObject](ConvertFrom-CMIResultObject.md)
+Converts from an **IResultObject** to a **ManagementBaseObject**.
+
 ### [ConvertTo-CMApplication](ConvertTo-CMApplication.md)
 Converts an application object to an application SDK object.
+
+### [ConvertTo-CMIResultObject](ConvertTo-CMIResultObject.md)
+Converts a **ManagementBaseObject** to an **IResultObject**.
 
 ### [Copy-CMConfigurationPolicy](Copy-CMConfigurationPolicy.md)
 Copies a configuration policy.
@@ -471,6 +477,9 @@ Gets a configuration policy.
 ### [Get-CMConflictingRecord](Get-CMConflictingRecord.md)
 Gets conflicting Configuration Manager record objects.
 
+### [Get-CMConnectionManager](Get-CMConnectionManager.md)
+Gets the Connection Manager instance associated with the currently-connected site server.
+
 ### [Get-CMDatabaseProperty](Get-CMDatabaseProperty.md)
 Gets an object that represents a Configuration Manager database.
 
@@ -491,6 +500,9 @@ Gets the status of classic software distribution deployments.
 
 ### [Get-CMDeploymentType](Get-CMDeploymentType.md)
 Gets the deployment type of an application.
+
+### [Get-CMDetectedMalware](Get-CMDetectedMalware.md)
+Gets detected malware.
 
 ### [Get-CMDevice](Get-CMDevice.md)
 Gets a device.
@@ -579,6 +591,9 @@ Gets a Configuration Manager IP subnet.
 ### [Get-CMMaintenanceWindow](Get-CMMaintenanceWindow.md)
 Gets the maintenance windows for a collection.
 
+### [Get-CMMalwareThreatCategory](Get-CMMalwareThreatCategory.md)
+Gets a malware threat category.
+
 ### [Get-CMManagementPoint](Get-CMManagementPoint.md)
 Gets a management point.
 
@@ -599,6 +614,9 @@ Gets a dependency for a migration entity in Configuration Manager.
 
 ### [Get-CMMulticastServicePoint](Get-CMMulticastServicePoint.md)
 Gets a multicast service point.
+
+### [Get-CMObjectLockDetails](Get-CMObjectLockDetails.md)
+Gets object lock details.
 
 ### [Get-CMObjectSecurityScope](Get-CMObjectSecurityScope.md)
 Gets the security scope associated with a Configuration Manager object.
@@ -983,6 +1001,15 @@ Creates a driver package.
 
 ### [New-CMEmailProfile](New-CMEmailProfile.md)
 Creates an email profile.
+
+### [New-CMEmbeddedObjectInstance](New-CMEmbeddedObjectInstance.md)
+Creates an embedded object instance.
+
+### [New-CMEmbeddedProperty](New-CMEmbeddedProperty.md)
+Creates an embedded property.
+
+### [New-CMEmbeddedPropertyList](New-CMEmbeddedPropertyList.md)
+Creates an embedded property list.
 
 ### [New-CMExchangeClientAccessServer](New-CMExchangeClientAccessServer.md)
 Creates a Client Access server role for an Exchange Server.
@@ -1901,6 +1928,9 @@ Synchronizes software updates.
 
 ### [Unblock-CMCertificate](Unblock-CMCertificate.md)
 Unblocks certificates.
+
+### [Unblock-CMDetectedMalware](Unblock-CMDetectedMalware.md)
+Unblocks detected malware.
 
 ### [Unblock-CMDevice](Unblock-CMDevice.md)
 Unblocks a client device.
