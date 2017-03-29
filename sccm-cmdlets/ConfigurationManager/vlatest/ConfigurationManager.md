@@ -447,7 +447,7 @@ Gets a member of a collection.
 ### [Get-CMCollectionMembershipEvaluationComponent](Get-CMCollectionMembershipEvaluationComponent.md)
 Gets how often Configuration Manager evaluates collection membership.
 
-###[Get-CMCollectionSetting](Get-CMCollectionSetting.md)
+### [Get-CMCollectionSetting](Get-CMCollectionSetting.md)
 Gets the settings for a collection.
 
 ### [Get-CMComponentStatusMessage](Get-CMComponentStatusMessage.md)
