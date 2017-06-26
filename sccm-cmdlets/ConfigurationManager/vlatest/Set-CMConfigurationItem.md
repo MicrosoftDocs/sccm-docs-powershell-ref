@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 51B2F354-3AD4-4A67-B567-E76938D445E5
 online version: https://go.microsoft.com/fwlink/?linkid=833767
 schema: 2.0.0
-ms.assetid: 51B2F354-3AD4-4A67-B567-E76938D445E5
 ---
 
 # Set-CMConfigurationItem
@@ -73,6 +73,7 @@ Specifies an array of localized names of the categories to which the configurati
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +88,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -101,6 +103,7 @@ Specifies a description for a configuration item.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -109,12 +112,11 @@ Accept wildcard characters: False
 ```
 
 ### -Digest
-
-
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -123,12 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -DigestPath
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: DesiredConfigurationDigestPath
+
 Required: False
 Position: Named
 Default value: None
@@ -137,12 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -DigestXml
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -151,12 +151,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -165,12 +166,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -186,6 +188,7 @@ You can use a comma separated list.
 Type: Int32
 Parameter Sets: SetByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -201,6 +204,7 @@ To obtain a configuration item object, you can use the [Get-CMConfigurationItem]
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -215,6 +219,7 @@ Specifies an array of names for configuration items.
 Type: String
 Parameter Sets: SetByNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -229,6 +234,7 @@ Specifies a new name for a configuration item.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -237,13 +243,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -258,6 +265,7 @@ Specifies an array of localized names of the categories from which to remove the
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -273,6 +281,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

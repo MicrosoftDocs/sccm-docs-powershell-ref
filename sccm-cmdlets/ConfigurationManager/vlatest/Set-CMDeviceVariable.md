@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 7FFB20CC-CC5E-4817-9DE8-CE34A40A8C11
 online version: https://go.microsoft.com/fwlink/?linkid=833806
 schema: 2.0.0
-ms.assetid: 7FFB20CC-CC5E-4817-9DE8-CE34A40A8C11
 ---
 
 # Set-CMDeviceVariable
@@ -15,22 +15,22 @@ Modifies a device variable.
 ### SetByValueMandatory (Default)
 ```
 Set-CMDeviceVariable -InputObject <IResultObject> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByIdMandatory
 ```
 Set-CMDeviceVariable -ResourceId <String> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
 Set-CMDeviceVariable -DeviceName <String> -VariableName <String> [-NewVariableName <String>]
- [-NewVariableValue <String>] [-IsMask <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-NewVariableValue <String>] [-IsMask <Boolean>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,6 +57,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -72,6 +73,7 @@ You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -80,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -94,12 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +119,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: Device
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +134,7 @@ Indicates whether a value displays in the Configuration Manager console.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +149,7 @@ Specifies a name for the variable that this cmdlet modifies.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -157,6 +164,22 @@ Specifies a value for the variable that this cmdlet modifies.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+{{Fill PassThru Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -171,6 +194,7 @@ Specifies a Systems Management Server (SMS) ID.
 Type: String
 Parameter Sets: SetByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -185,6 +209,7 @@ Specifies the name of the device variable.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -200,6 +225,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

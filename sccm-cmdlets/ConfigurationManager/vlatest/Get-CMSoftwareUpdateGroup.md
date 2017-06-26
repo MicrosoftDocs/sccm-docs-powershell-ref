@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: F8EFAEC4-2716-4761-BA06-D4B32F6ECB15
 online version: https://go.microsoft.com/fwlink/?linkid=833913
 schema: 2.0.0
-ms.assetid: F8EFAEC4-2716-4761-BA06-D4B32F6ECB15
 ---
 
 # Get-CMSoftwareUpdateGroup
@@ -56,12 +56,13 @@ This command gets a software update group object named SUGroupD01.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -70,12 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -90,6 +92,7 @@ Specifies an array of IDs of software update groups.
 Type: Int32[]
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Specifies an array of names of software update groups.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: Named
 Default value: None

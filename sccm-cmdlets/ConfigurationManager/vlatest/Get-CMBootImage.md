@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 22CEE6D5-3BCC-43A5-9778-06779C7E5BE0
 online version: https://go.microsoft.com/fwlink/?linkid=834146
 schema: 2.0.0
-ms.assetid: 22CEE6D5-3BCC-43A5-9778-06779C7E5BE0
 ---
 
 # Get-CMBootImage
@@ -52,12 +52,13 @@ This command gets a boot image by using its name.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -66,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +88,7 @@ Specifies an array of boot image identifiers.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: PackageId
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +103,7 @@ Specifies a name of a boot image.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

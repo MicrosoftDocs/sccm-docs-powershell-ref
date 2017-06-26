@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: CBC37447-1B97-4C05-B859-BC3AD90F816D
 online version: https://go.microsoft.com/fwlink/?linkid=833981
 schema: 2.0.0
-ms.assetid: CBC37447-1B97-4C05-B859-BC3AD90F816D
 ---
 
 # Enable-CMBaseline
@@ -51,6 +51,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -59,12 +60,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -73,12 +75,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +96,7 @@ Specifies an array of IDs of configuration baselines.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -108,6 +112,7 @@ To obtain a **CMBaseline** object, use the [Get-CMBaseline](./Get-CMBaseline.md)
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -122,6 +127,7 @@ Specifies an array of names of configuration baselines.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -137,6 +143,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

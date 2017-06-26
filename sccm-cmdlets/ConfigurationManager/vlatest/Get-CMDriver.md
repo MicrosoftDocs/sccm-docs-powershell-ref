@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 2B68441B-3BDC-44EF-9546-BC931AEE22CB
 online version: https://go.microsoft.com/fwlink/?linkid=833664
 schema: 2.0.0
-ms.assetid: 2B68441B-3BDC-44EF-9546-BC931AEE22CB
 ---
 
 # Get-CMDriver
@@ -54,12 +54,13 @@ This command gets the driver named Driver01.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -74,6 +75,7 @@ Specifies the ID of a driver package.
 Type: String
 Parameter Sets: SearchByDriverPackageIdMandatory
 Aliases: PackageId
+
 Required: True
 Position: Named
 Default value: None
@@ -88,6 +90,7 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: SearchByDriverPackageNameMandatory
 Aliases: PackageName
+
 Required: True
 Position: Named
 Default value: None
@@ -96,12 +99,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +120,7 @@ Specifies the ID of a driver.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, DriverId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -131,6 +136,7 @@ To obtain a driver package object, use the [Get-CMDriverPackage](./Get-CMDriverP
 Type: IResultObject
 Parameter Sets: SearchByDriverPackage
 Aliases: DriverPackage
+
 Required: True
 Position: Named
 Default value: None
@@ -145,6 +151,7 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName, DriverName
+
 Required: False
 Position: Named
 Default value: None

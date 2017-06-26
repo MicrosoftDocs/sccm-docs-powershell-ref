@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 84CEC68E-3693-4DFD-B853-AC5032E465E6
 online version: https://go.microsoft.com/fwlink/?linkid=833884
 schema: 2.0.0
-ms.assetid: 84CEC68E-3693-4DFD-B853-AC5032E465E6
 ---
 
 # ConvertTo-CMApplication
@@ -39,12 +39,13 @@ This command gets the application object named Application02 and converts the ap
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -53,12 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -74,6 +76,7 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: Application, DeploymentType
+
 Required: True
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F94DB807-7FB0-403F-A8D2-318E1A1AC933
 online version: https://go.microsoft.com/fwlink/?linkid=833746
 schema: 2.0.0
-ms.assetid: F94DB807-7FB0-403F-A8D2-318E1A1AC933
 ---
 
 # New-CMSecondarySite
@@ -40,6 +40,20 @@ New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### NewDistributionPointByHTTPSAndCreateCertificate
+```
+New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <String>
+ [-InstallationFolder <String>] [-PrimarySiteCode <String>] -InstallationSourceFile <IResultObject[]>
+ -SqlServerSetting <IResultObject[]> [-BoundaryGroup <IResultObject[]>] [-AllowFallbackForContent <Boolean>]
+ [-InstallInternetServer <Boolean>] [-EnableBranchCache] [-Https]
+ [-ClientConnectionType <ClientConnectionTypes>] [-CreateSelfSignedCertificate]
+ -CertificateExpirationTimeUtc <DateTime> [-AllowPreStaging <Boolean>] [-MinFreeSpaceMB <Int32>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
+ [-PrimaryPackageShareLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
+ [-ValidateContentSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### NewDistributionPointByHTTPSAndImportCertificate
 ```
 New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <String>
@@ -53,20 +67,6 @@ New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <
  [-SecondaryPackageShareLocation <DriveType>] [-ValidateContentSchedule <IResultObject>]
  [-ContentMonitoringPriority <Priority>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
-```
-
-### NewDistributionPointByHTTPSAndCreateCertificate
-```
-New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <String>
- [-InstallationFolder <String>] [-PrimarySiteCode <String>] -InstallationSourceFile <IResultObject[]>
- -SqlServerSetting <IResultObject[]> [-BoundaryGroup <IResultObject[]>] [-AllowFallbackForContent <Boolean>]
- [-InstallInternetServer <Boolean>] [-EnableBranchCache] [-Https]
- [-ClientConnectionType <ClientConnectionTypes>] [-CreateSelfSignedCertificate]
- -CertificateExpirationTimeUtc <DateTime> [-AllowPreStaging <Boolean>] [-MinFreeSpaceMB <Int32>]
- [-PrimaryContentLibraryLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
- [-PrimaryPackageShareLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
- [-ValidateContentSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,6 +96,7 @@ Indicates whether clients can use a fallback source location for content.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +111,7 @@ Indicates whether the secondary site can pre-stage contents.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -118,12 +120,11 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryGroup
-
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: BoundaryGroups
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +139,7 @@ Specifies the date and time at which the self-signed certificate expires for a d
 Type: DateTime
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPSAndCreateCertificate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -152,6 +154,7 @@ Specifies the password for the PKI imported certificate for the distribution poi
 Type: SecureString
 Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -167,6 +170,7 @@ This parameter applies when the secondary site has installed and configured IIS 
 Type: String
 Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -184,9 +188,10 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: ClientConnectionTypes
-Parameter Sets: NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPSAndCreateCertificate
+Parameter Sets: NewDistributionPointByHTTPSAndCreateCertificate, NewDistributionPointByHTTPSAndImportCertificate
 Aliases: 
 Accepted values: Intranet, Internet, InternetAndIntranet
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +206,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -223,6 +229,7 @@ Type: Priority
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Lowest, Low, Medium, High, Highest
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +244,7 @@ Indicates that the secondary site creates a self-signed certificate.
 Type: SwitchParameter
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPSAndCreateCertificate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -245,12 +253,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -266,6 +275,7 @@ This parameter applies when the secondary site has installed and configured IIS 
 Type: Boolean
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPAndImportCertificate
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -281,6 +291,7 @@ Content downloads from cloud-based distribution points can always be shared by c
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -295,6 +306,7 @@ Indicates whether Configuration Manager overwrites a duplicate certificate when 
 Type: Boolean
 Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -303,12 +315,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -325,6 +338,7 @@ This option does not support mobile devices or computers running Mac OS.
 Type: SwitchParameter
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPAndImportCertificate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -339,8 +353,9 @@ This option does not support mobile devices or computers running Mac OS.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NewDistributionPointByHTTPSAndImportCertificate, NewDistributionPointByHTTPSAndCreateCertificate
+Parameter Sets: NewDistributionPointByHTTPSAndCreateCertificate, NewDistributionPointByHTTPSAndImportCertificate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -355,6 +370,7 @@ Indicates that the cmdlet imports a PKI certificate instead of using a self-sign
 Type: SwitchParameter
 Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -370,6 +386,7 @@ This parameter must be $True before the cmdlet installs the site system role for
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -384,6 +401,7 @@ Specifies the installation folder on the secondary site server where the cmdlet 
 Type: String
 Parameter Sets: (All)
 Aliases: InstallDir
+
 Required: False
 Position: Named
 Default value: None
@@ -399,6 +417,7 @@ To obtain an installation source file object, use the New-CMInstallationSourceFi
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -414,6 +433,7 @@ This value determines the remaining free space on the drive after the distributi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -433,6 +453,7 @@ Type: DriveType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
+
 Required: False
 Position: Named
 Default value: None
@@ -452,6 +473,7 @@ Type: DriveType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
+
 Required: False
 Position: Named
 Default value: None
@@ -460,12 +482,11 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySiteCode
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ParentSiteCode
+
 Required: False
 Position: Named
 Default value: None
@@ -485,6 +506,7 @@ Type: DriveType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
+
 Required: False
 Position: Named
 Default value: None
@@ -504,6 +526,7 @@ Type: DriveType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
+
 Required: False
 Position: Named
 Default value: None
@@ -512,12 +535,11 @@ Accept wildcard characters: False
 ```
 
 ### -SecondarySiteCode
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: SiteCode
+
 Required: True
 Position: Named
 Default value: None
@@ -532,6 +554,7 @@ Specifies a fully qualified domain name (FQDN) for the secondary site server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -546,6 +569,7 @@ Specifies the site name that helps identify the secondary site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -561,6 +585,7 @@ To obtain a SQL Server settings object, use the New-CMSqlServerSetting cmdlet.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -575,6 +600,7 @@ Specifies an object that represents a schedule type and determines how frequentl
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -590,6 +616,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

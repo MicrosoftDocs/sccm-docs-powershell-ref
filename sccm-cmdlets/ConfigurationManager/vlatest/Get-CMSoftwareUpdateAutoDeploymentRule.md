@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 25E50823-D771-43CD-98E0-B5463B1DB374
 online version: https://go.microsoft.com/fwlink/?linkid=833901
 schema: 2.0.0
-ms.assetid: 25E50823-D771-43CD-98E0-B5463B1DB374
 ---
 
 # Get-CMSoftwareUpdateAutoDeploymentRule
@@ -53,12 +53,13 @@ This command gets a deployment rule that has the ID 16777217.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +77,7 @@ If lazy properties are not used, this parameter should be specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -84,12 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -105,6 +108,7 @@ This value is the **AutoDeploymentID** property of the deployment rule object.
 Type: Int32[]
 Parameter Sets: SearchByIdMandatory
 Aliases: AutoDeploymentId
+
 Required: True
 Position: 0
 Default value: None
@@ -113,12 +117,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsServicingPlan
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +136,7 @@ Specifies a name of a rule for automatic deployment of software updates.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: 0
 Default value: None

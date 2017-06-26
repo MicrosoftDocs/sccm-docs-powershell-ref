@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 8210D2F5-9101-47D0-81E7-5F837F5F4F60
 online version: https://go.microsoft.com/fwlink/?linkid=834050
 schema: 2.0.0
-ms.assetid: 8210D2F5-9101-47D0-81E7-5F837F5F4F60
 ---
 
 # Set-CMSoftwareInventory
@@ -15,22 +15,22 @@ Modifies an object that collects software inventory data on files.
 ### SetById (Default)
 ```
 Set-CMSoftwareInventory -Id <String> [-NewName <String>] [-Publisher <String>] [-FamilyId <Int32>]
- [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMSoftwareInventory -Name <String[]> [-NewName <String>] [-Publisher <String>] [-FamilyId <Int32>]
- [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
 Set-CMSoftwareInventory -InputObject <IResultObject> [-NewName <String>] [-Publisher <String>]
- [-FamilyId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FamilyId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,6 +54,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -62,12 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Specifies the ID of the family used to classify inventoried software in Configur
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -90,12 +93,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +114,7 @@ Specifies an array of IDs of software files.
 Type: String
 Parameter Sets: SetById
 Aliases: SoftwareKey
+
 Required: True
 Position: Named
 Default value: None
@@ -125,6 +130,7 @@ To obtain a **CMSoftwareInventory** object, use the [Get-CMSoftwareInventory](./
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -139,6 +145,7 @@ Specifies an array of names of software files.
 Type: String[]
 Parameter Sets: SetByName
 Aliases: CommonName
+
 Required: True
 Position: Named
 Default value: None
@@ -153,6 +160,22 @@ Specifies a new name for inventoried software in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+{{Fill PassThru Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +190,7 @@ Specifies the name of a software publisher in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: CommonPublisher
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +205,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +220,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +235,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +251,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
+ms.assetid: B77A46FA-BA17-4E39-AC41-267AB0D3A353
 online version: https://go.microsoft.com/fwlink/?linkid=833636
 schema: 2.0.0
-ms.assetid: B77A46FA-BA17-4E39-AC41-267AB0D3A353
 ---
 
 # Set-CMApplicationDeployment
@@ -14,44 +14,44 @@ Modifies properties for an application deployment in Configuration Manager.
 
 ### SetApplicationDeploymentByValueMandatory (Default)
 ```
-Set-CMApplicationDeployment -InputObject <IResultObject> [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-Comment <String>] [-RequireApproval <Boolean>] [-PreDeploy <Boolean>]
- [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
- [-AvailableDate <DateTime>] [-AvailableTime <DateTime>] [-DeadlineDate <DateTime>] [-DeadlineTime <DateTime>]
- [-UserNotification <UserNotificationType>] [-OverrideServiceWindow <Boolean>]
- [-RebootOutsideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-CreateAlertBaseOnPercentSuccess <Boolean>] [-SuccessParameterValue <Int32>] [-PostponeDate <DateTime>]
- [-PostponeTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>] [-FailParameterValue <Int32>]
- [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplicationDeployment -InputObject <IResultObject> [-Comment <String>] [-RequireApproval <Boolean>]
+ [-PreDeploy <Boolean>] [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
+ [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UserNotification <UserNotificationType>]
+ [-OverrideServiceWindow <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
+ [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
+ [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetApplicationDeploymentByNameMandatory
 ```
-Set-CMApplicationDeployment -ApplicationName <String> [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-Comment <String>] [-RequireApproval <Boolean>] [-PreDeploy <Boolean>]
- [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
- [-AvailableDate <DateTime>] [-AvailableTime <DateTime>] [-DeadlineDate <DateTime>] [-DeadlineTime <DateTime>]
- [-UserNotification <UserNotificationType>] [-OverrideServiceWindow <Boolean>]
- [-RebootOutsideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-CreateAlertBaseOnPercentSuccess <Boolean>] [-SuccessParameterValue <Int32>] [-PostponeDate <DateTime>]
- [-PostponeTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>] [-FailParameterValue <Int32>]
- [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplicationDeployment -ApplicationName <String> [-Comment <String>] [-RequireApproval <Boolean>]
+ [-PreDeploy <Boolean>] [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
+ [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UserNotification <UserNotificationType>]
+ [-OverrideServiceWindow <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
+ [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
+ [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetApplicationDeploymentByIdMandatory
 ```
-Set-CMApplicationDeployment -ApplicationId <String> [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-Comment <String>] [-RequireApproval <Boolean>] [-PreDeploy <Boolean>]
- [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
- [-AvailableDate <DateTime>] [-AvailableTime <DateTime>] [-DeadlineDate <DateTime>] [-DeadlineTime <DateTime>]
- [-UserNotification <UserNotificationType>] [-OverrideServiceWindow <Boolean>]
- [-RebootOutsideServiceWindow <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-CreateAlertBaseOnPercentSuccess <Boolean>] [-SuccessParameterValue <Int32>] [-PostponeDate <DateTime>]
- [-PostponeTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>] [-FailParameterValue <Int32>]
- [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMApplicationDeployment -ApplicationId <String> [-Comment <String>] [-RequireApproval <Boolean>]
+ [-PreDeploy <Boolean>] [-SendWakeUpPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-TimeBaseOn <TimeType>]
+ [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UserNotification <UserNotificationType>]
+ [-OverrideServiceWindow <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
+ [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
+ [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
+ [-EnableSoftDeadline <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,6 +81,7 @@ Specifies the ID of an application.
 Type: String
 Parameter Sets: SetApplicationDeploymentByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -95,6 +96,7 @@ Specifies the name of an application.
 Type: String
 Parameter Sets: SetApplicationDeploymentByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -102,27 +104,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AvailableDate
-
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: AvaliableDate
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AvailableTime
-
+### -AvailableDateTime
+{{Fill AvailableDateTime Description}}
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: AvaliableTime
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -131,12 +120,11 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -145,12 +133,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +152,7 @@ Specifies the name of device collection or user collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +167,7 @@ Specifies a comment for the deployment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -193,6 +182,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -208,6 +198,7 @@ Enter the percentage value by using the *FailParameterValue* parameter.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +214,7 @@ Enter the percentage value by using the *SuccessParameterValue* parameter.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -230,34 +222,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DeadlineDate
-Specifies a date as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
-This is the deadline for deployment of the application.
-If the application has not deployed to a client by this date, Configuration Manager forces deployment.
-If you specify a value for the *DeadlineTime* parameter in addition to this parameter, the cmdlet uses that value.
+### -DeadlineDateTime
+{{Fill DeadlineDateTime Description}}
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -DeadlineTime
-Specifies a time as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
-This is the deadline for deployment of the application.
-If the application has not deployed to a client by this time, Configuration Manager forces deployment.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -266,12 +238,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -286,6 +259,22 @@ Indicates whether alerts from this cmdlet appear in System Center 2016 - Operati
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSoftDeadline
+{{Fill EnableSoftDeadline Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -302,6 +291,7 @@ You must also specify the *CreatAlertBaseOnPercentFailure* parameter as $True.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -310,12 +300,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -324,12 +315,11 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetApplicationDeploymentByValueMandatory
-Aliases: Application
+Aliases: Application, DeploymentSummary, Assignment
+
 Required: True
 Position: Named
 Default value: None
@@ -347,6 +337,7 @@ If this value is $False, Configuration Manager does not deploy the application o
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -355,13 +346,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -379,6 +371,7 @@ For a value of $False, the device saves changes in an overlay and commits them l
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -386,32 +379,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PostponeDate
-Specifies a date as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
-Configuration Manager generates a deployment alert after this length of time.
-If you specify a value for the *PostponeTime* parameter in addition to this parameter, the cmdlet uses that value.
+### -PostponeDateTime
+{{Fill PostponeDateTime Description}}
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -PostponeTime
-Specifies a time as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
-Configuration Manager generates a deployment alert after this length of time.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -426,6 +401,7 @@ Indicates whether to pre-deploy the application to the primary device of the use
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -440,6 +416,7 @@ Indicates whether to create an Operations Manager alert if a client fails to ins
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -457,6 +434,7 @@ If this value is $False, the computer does not restart outside a service window.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -465,12 +443,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequireApproval
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AppRequiresApproval
+
 Required: False
 Position: Named
 Default value: None
@@ -488,6 +465,7 @@ For computers to wake, you must first configure Wake On LAN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -504,6 +482,7 @@ You must also specify the *CreatAlertBaseOnPercentSuccess* parameter as $True.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -525,6 +504,7 @@ Type: TimeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: LocalTime, Utc
+
 Required: False
 Position: Named
 Default value: None
@@ -539,6 +519,7 @@ Indicates whether to allow clients to download content over a metered Internet c
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -559,6 +540,7 @@ Type: UserNotificationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
+
 Required: False
 Position: Named
 Default value: None
@@ -574,6 +556,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: F0E16254-CBE7-4323-B877-2BBBA28E9E24
 online version: https://go.microsoft.com/fwlink/?linkid=833665
 schema: 2.0.0
-ms.assetid: F0E16254-CBE7-4323-B877-2BBBA28E9E24
 ---
 
 # Add-CMDriverToDriverPackage
@@ -18,6 +18,12 @@ Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackage <IResultObjec
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### AddDriverToDriverPackageById_Id
+```
+Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageId <String> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### AddDriverToDriverPackageById_Name
 ```
 Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageName <String> [-DisableWildcardHandling]
@@ -27,12 +33,6 @@ Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageName <String> [-Disa
 ### AddDriverToDriverPackageById_Object
 ```
 Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackage <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddDriverToDriverPackageById_Id
-```
-Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageId <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -89,6 +89,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -97,12 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +120,7 @@ To obtain a **CMDriver** object, use the **Get-CMDriver** cmdlet.
 Type: IResultObject
 Parameter Sets: AddDriverToDriverPackageByObject_Object, AddDriverToDriverPackageByObject_Id, AddDriverToDriverPackageByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -130,8 +133,9 @@ Specifies the ID of a driver.
 
 ```yaml
 Type: Int32
-Parameter Sets: AddDriverToDriverPackageById_Name, AddDriverToDriverPackageById_Object, AddDriverToDriverPackageById_Id
+Parameter Sets: AddDriverToDriverPackageById_Id, AddDriverToDriverPackageById_Name, AddDriverToDriverPackageById_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +150,7 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: AddDriverToDriverPackageByName_Id, AddDriverToDriverPackageByName_Name, AddDriverToDriverPackageByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -161,6 +166,7 @@ To obtain a **CMDriverPackage** object, use the **Get-CMDriverPackage** cmdlet.
 Type: IResultObject
 Parameter Sets: AddDriverToDriverPackageByObject_Object, AddDriverToDriverPackageById_Object, AddDriverToDriverPackageByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -175,6 +181,7 @@ Specifies the ID of a driver package.
 Type: String
 Parameter Sets: AddDriverToDriverPackageById_Id, AddDriverToDriverPackageByName_Id, AddDriverToDriverPackageByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -189,6 +196,7 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: AddDriverToDriverPackageById_Name, AddDriverToDriverPackageByName_Name, AddDriverToDriverPackageByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -197,12 +205,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -218,6 +227,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

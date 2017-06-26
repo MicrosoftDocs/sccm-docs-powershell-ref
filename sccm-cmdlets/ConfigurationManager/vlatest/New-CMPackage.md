@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 963070B3-F0C7-4B2F-8D4A-3D1250CCCE75
 online version: https://go.microsoft.com/fwlink/?linkid=833718
 schema: 2.0.0
-ms.assetid: 963070B3-F0C7-4B2F-8D4A-3D1250CCCE75
 ---
 
 # New-CMPackage
@@ -25,16 +25,16 @@ New-CMPackage [-FromDefinition] -PackageDefinitionName <String> [-PackageNoSourc
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### NewPackageByDefinitionNoSourceFileWithNew
+```
+New-CMPackage [-FromDefinition] -PackagePath <String> [-PackageNoSourceFile] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### NewPackageByDefinitionSourceFileWithExisted
 ```
 New-CMPackage [-FromDefinition] -PackageDefinitionName <String> -SourceFileType <SourceFileType>
  -SourceFolderPathType <SourceFolderPathType> -SourceFolderPath <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewPackageByDefinitionNoSourceFileWithNew
-```
-New-CMPackage [-FromDefinition] -PackagePath <String> [-PackageNoSourceFile] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -74,6 +74,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -89,6 +90,7 @@ You can use a maximum of 128 characters.
 Type: String
 Parameter Sets: New
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,12 +99,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,12 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -129,8 +133,9 @@ Indicates that Configuration Manager creates the package from a package definiti
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew, NewPackageByDefinitionSourceFileWithNew
+Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew, NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -148,6 +153,7 @@ For example, you can have an English version and a German version of the same pa
 Type: String
 Parameter Sets: New
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +169,7 @@ You can use a maximum of 32 characters.
 Type: String
 Parameter Sets: New
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +184,7 @@ Specifies a name for the package.
 Type: String
 Parameter Sets: New
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -191,6 +199,7 @@ Specifies the name of a package definition file.
 Type: String
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionSourceFileWithExisted
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -205,6 +214,7 @@ Indicates that the package does not require source files to be present on client
 Type: SwitchParameter
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -219,6 +229,7 @@ Specifies a share name or path that Configuration Manager creates for the packag
 Type: String
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithNew, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -236,6 +247,7 @@ Make sure that this location contains all the files and subdirectories that the 
 Type: String
 Parameter Sets: New
 Aliases: PackageSourcePath
+
 Required: False
 Position: Named
 Default value: None
@@ -255,6 +267,7 @@ Type: SourceFileType
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
 Accepted values: AlwaysObtainSourceFile, CreateCompressedVersionOfSourceFile
+
 Required: True
 Position: Named
 Default value: None
@@ -269,6 +282,7 @@ Specifies the location of the source files for the package.
 Type: String
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -288,6 +302,7 @@ Type: SourceFolderPathType
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
 Aliases: 
 Accepted values: UncNetworkPath, LocalFolderOnSiteServer
+
 Required: True
 Position: Named
 Default value: None
@@ -302,6 +317,7 @@ Specifies a version number for the package.
 Type: String
 Parameter Sets: New
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -317,6 +333,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

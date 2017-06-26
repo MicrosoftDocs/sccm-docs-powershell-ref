@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 04AC8F78-1E8D-4FBC-B87E-732B52D09F9E
 online version: https://go.microsoft.com/fwlink/?linkid=834295
 schema: 2.0.0
-ms.assetid: 04AC8F78-1E8D-4FBC-B87E-732B52D09F9E
 ---
 
 # Get-CMDatabaseProperty
@@ -41,12 +41,13 @@ This command gets the database property for the site that has the site code CM2.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -55,12 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -75,6 +77,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

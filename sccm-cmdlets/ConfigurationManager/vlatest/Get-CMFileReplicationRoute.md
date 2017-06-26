@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 78A69AB1-BD8F-42A4-8A9B-B38810F81BD1
 online version: https://go.microsoft.com/fwlink/?linkid=833706
 schema: 2.0.0
-ms.assetid: 78A69AB1-BD8F-42A4-8A9B-B38810F81BD1
 ---
 
 # Get-CMFileReplicationRoute
@@ -50,6 +50,7 @@ Specifies a destination site for data transfers by using a site code.
 Type: String
 Parameter Sets: SearchBySiteCode
 Aliases: DesSiteCode
+
 Required: False
 Position: Named
 Default value: None
@@ -64,6 +65,7 @@ Specifies a destination site for data transfers by using a site name.
 Type: String
 Parameter Sets: SearchBySiteName
 Aliases: DesSiteName
+
 Required: False
 Position: Named
 Default value: None
@@ -72,12 +74,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,12 +89,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -106,6 +110,7 @@ Specifies a source site for data transfers by using a site code.
 Type: String
 Parameter Sets: SearchBySiteCode
 Aliases: SiteCode
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +125,7 @@ Specifies a destination site for data transfers by using a site name.
 Type: String
 Parameter Sets: SearchBySiteName
 Aliases: SiteName
+
 Required: False
 Position: Named
 Default value: None

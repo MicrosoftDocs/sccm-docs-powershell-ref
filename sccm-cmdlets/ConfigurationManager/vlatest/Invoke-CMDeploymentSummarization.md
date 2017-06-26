@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
+ms.assetid: A2A4F695-E2B3-4869-8235-B9486C9CB4EB
 online version: https://go.microsoft.com/fwlink/?linkid=834121
 schema: 2.0.0
-ms.assetid: A2A4F695-E2B3-4869-8235-B9486C9CB4EB
 ---
 
 # Invoke-CMDeploymentSummarization
@@ -12,22 +12,28 @@ Runs a Configuration Manager deployment summarization.
 
 ## SYNTAX
 
-### SearchByIdMandatory (Default)
+### SearchByCollectionIdMandatory (Default)
 ```
-Invoke-CMDeploymentSummarization -DeploymentId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMDeploymentSummarization -CollectionId <String> [-SoftwareName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByNameMandatory
+### SearchByIdMandatory
 ```
-Invoke-CMDeploymentSummarization -CollectionName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMDeploymentSummarization -DeploymentId <String> [-SoftwareName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByCollectionNameMandatory
+```
+Invoke-CMDeploymentSummarization -CollectionName <String> [-SoftwareName <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Invoke-CMDeploymentSummarization -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMDeploymentSummarization [-SoftwareName <String>] -InputObject <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,13 +55,29 @@ This command runs a deployment summarization for the collection named CMWest.
 
 ## PARAMETERS
 
+### -CollectionId
+{{Fill CollectionId Description}}
+
+```yaml
+Type: String
+Parameter Sets: SearchByCollectionIdMandatory
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CollectionName
 Specifies a name of a collection.
 
 ```yaml
 Type: String
-Parameter Sets: SearchByNameMandatory
+Parameter Sets: SearchByCollectionNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -70,6 +92,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -84,6 +107,7 @@ Specifies an ID of a deployment.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -92,12 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -106,12 +131,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -125,11 +151,27 @@ Specifies a deployment summarization object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases: Collection, DeploymentSummary
+
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -SoftwareName
+{{Fill SoftwareName Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -141,6 +183,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -158,5 +201,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

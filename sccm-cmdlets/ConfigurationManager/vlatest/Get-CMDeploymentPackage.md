@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 7FF1D4A7-5522-4CA1-9951-040D47781FB2
 online version: https://go.microsoft.com/fwlink/?linkid=834305
 schema: 2.0.0
-ms.assetid: 7FF1D4A7-5522-4CA1-9951-040D47781FB2
 ---
 
 # Get-CMDeploymentPackage
@@ -49,6 +49,7 @@ If you do not specify this parameter, the cmdlet returns status information abou
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: Named
 Default value: None
@@ -57,12 +58,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -77,6 +79,7 @@ Specifies an array of names of deployment packages.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -85,12 +88,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

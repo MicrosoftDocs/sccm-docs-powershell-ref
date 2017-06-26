@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 547CD0EB-6C44-45F5-9466-DEC1B9338C5E
 online version: https://go.microsoft.com/fwlink/?linkid=833992
 schema: 2.0.0
-ms.assetid: 547CD0EB-6C44-45F5-9466-DEC1B9338C5E
 ---
 
 # Get-CMUserCollectionIncludeMembershipRule
@@ -85,12 +85,11 @@ This command gets the include membership rules for the collection that has the I
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -99,12 +98,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -113,12 +111,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollection
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -127,12 +124,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -141,12 +137,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +157,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: AB26AB4A-E630-4F08-84D9-AA7A36BE9F20
 online version: https://go.microsoft.com/fwlink/?linkid=834187
 schema: 2.0.0
-ms.assetid: AB26AB4A-E630-4F08-84D9-AA7A36BE9F20
 ---
 
 # Remove-CMSecurityRoleFromAdministrativeUser
@@ -18,6 +18,12 @@ Remove-CMSecurityRoleFromAdministrativeUser -RoleName <String> -AdministrativeUs
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### RemoveRoleFromAdminById_Id
+```
+Remove-CMSecurityRoleFromAdministrativeUser -RoleId <String> -AdministrativeUserId <Int32> [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### RemoveRoleFromAdminById_Name
 ```
 Remove-CMSecurityRoleFromAdministrativeUser -RoleId <String> -AdministrativeUserName <String> [-Force]
@@ -30,9 +36,9 @@ Remove-CMSecurityRoleFromAdministrativeUser -RoleId <String> -AdministrativeUser
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveRoleFromAdminById_Id
+### RemoveRoleFromAdminByName_Id
 ```
-Remove-CMSecurityRoleFromAdministrativeUser -RoleId <String> -AdministrativeUserId <Int32> [-Force]
+Remove-CMSecurityRoleFromAdministrativeUser -RoleName <String> -AdministrativeUserId <Int32> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,9 +48,9 @@ Remove-CMSecurityRoleFromAdministrativeUser -RoleName <String> -AdministrativeUs
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveRoleFromAdminByName_Id
+### RemoveRoleFromAdminByObject_Id
 ```
-Remove-CMSecurityRoleFromAdministrativeUser -RoleName <String> -AdministrativeUserId <Int32> [-Force]
+Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -AdministrativeUserId <Int32> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -57,12 +63,6 @@ Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -Administrativ
 ### RemoveRoleFromAdminByObject_Object
 ```
 Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -AdministrativeUser <IResultObject> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RemoveRoleFromAdminByObject_Id
-```
-Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -AdministrativeUserId <Int32> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -89,6 +89,7 @@ To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](
 Type: IResultObject
 Parameter Sets: RemoveRoleFromAdminById_Object, RemoveRoleFromAdminByName_Object, RemoveRoleFromAdminByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -103,6 +104,7 @@ Specifies the ID of an administrative user.
 Type: Int32
 Parameter Sets: RemoveRoleFromAdminById_Id, RemoveRoleFromAdminByName_Id, RemoveRoleFromAdminByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -117,6 +119,7 @@ Specifies the name of an administrative user.
 Type: String
 Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminById_Name, RemoveRoleFromAdminByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -131,6 +134,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -139,12 +143,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -159,6 +164,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -167,12 +173,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -186,8 +193,9 @@ To obtain a **CMSecurityRole** object, use the [Get-CMSecurityRole](./Get-CMSecu
 
 ```yaml
 Type: IResultObject
-Parameter Sets: RemoveRoleFromAdminByObject_Name, RemoveRoleFromAdminByObject_Object, RemoveRoleFromAdminByObject_Id
+Parameter Sets: RemoveRoleFromAdminByObject_Id, RemoveRoleFromAdminByObject_Name, RemoveRoleFromAdminByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -200,8 +208,9 @@ Specifies the ID of a role.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveRoleFromAdminById_Name, RemoveRoleFromAdminById_Object, RemoveRoleFromAdminById_Id
+Parameter Sets: RemoveRoleFromAdminById_Id, RemoveRoleFromAdminById_Name, RemoveRoleFromAdminById_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -214,8 +223,9 @@ Specifies the name of a role.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminByName_Object, RemoveRoleFromAdminByName_Id
+Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminByName_Id, RemoveRoleFromAdminByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -231,6 +241,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

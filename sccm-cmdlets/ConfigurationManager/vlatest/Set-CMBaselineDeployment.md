@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
+ms.assetid: E9EBE502-8433-4600-8D69-2240C7699282
 online version: https://go.microsoft.com/fwlink/?linkid=833674
 schema: 2.0.0
-ms.assetid: E9EBE502-8433-4600-8D69-2240C7699282
 ---
 
 # Set-CMBaselineDeployment
@@ -14,26 +14,29 @@ Changes settings for a Configuration Manager baseline deployment.
 
 ### SetBaselineDeploymentByValueMandatory (Default)
 ```
-Set-CMBaselineDeployment -Baseline <IResultObject> -CollectionName <String> [-EnableEnforcement <Boolean>]
+Set-CMBaselineDeployment -InputObject <IResultObject> [-EnableEnforcement <Boolean>]
  [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
- [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetBaselineDeploymentByNameMandatory
 ```
-Set-CMBaselineDeployment -BaselineName <String> -CollectionName <String> [-EnableEnforcement <Boolean>]
+Set-CMBaselineDeployment -BaselineName <String> [-EnableEnforcement <Boolean>]
  [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
- [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetBaselineDeploymentByIdMandatory
 ```
-Set-CMBaselineDeployment -BaselineId <String> -CollectionName <String> [-EnableEnforcement <Boolean>]
- [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
- [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBaselineDeployment -BaselineId <String> [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>]
+ [-GenerateAlert <Boolean>] [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>]
+ [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru] [-CollectionName <String>]
+ [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,21 +71,6 @@ It also includes as a parameter value and postpone date and time.
 
 ## PARAMETERS
 
-### -Baseline
-Specifies a baseline object.
-To obtain a baseline object, use the [Get-CMBaseline](./Get-CMBaseline.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SetBaselineDeploymentByValueMandatory
-Aliases: 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -BaselineId
 Specifies the ID of a baseline.
 
@@ -90,6 +78,7 @@ Specifies the ID of a baseline.
 Type: String
 Parameter Sets: SetBaselineDeploymentByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -104,7 +93,38 @@ Specifies the name of a baseline.
 Type: String
 Parameter Sets: SetBaselineDeploymentByNameMandatory
 Aliases: 
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Collection
+{{Fill Collection Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CollectionId
+{{Fill CollectionId Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -119,7 +139,8 @@ The deployment applies to this collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Required: True
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -133,6 +154,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -141,12 +163,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +185,7 @@ During enforcement, a client reports compliance information about the configurat
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -170,12 +194,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -190,10 +215,26 @@ Specifies whether Configuration Manager generates alerts during the deployment.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: SetBaselineDeploymentByValueMandatory
+Aliases: Baseline, DeploymentSummary, Assignment
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -204,6 +245,7 @@ Specifies whether to apply System Center 2016 - Operations Manager monitoring cr
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -219,6 +261,7 @@ Service windows are periods of time allocated for maintenance.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -234,6 +277,7 @@ This is the parameter value.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -241,16 +285,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PostponeDate
-Specifies a date, as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
-For more information, type `Get-Help Get-Date`.
-This is the date for the deployment if it is postponed.
+### -PassThru
+{{Fill PassThru Description}}
 
 ```yaml
-Type: DateTime
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -258,15 +300,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PostponeTime
-Specifies a time, as a **DateTime** object.
-To obtain a **DateTime** object, use the **Get-Date** cmdlet.
-This is the time for the deployment if it is postponed.
+### -PostponeDateTime
+{{Fill PostponeDateTime Description}}
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -283,6 +324,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md)
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -298,6 +340,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

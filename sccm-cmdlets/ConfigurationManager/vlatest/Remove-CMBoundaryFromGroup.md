@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 478AB135-42CF-4D2E-9D7B-B6A8C5A1ECCF
 online version: https://go.microsoft.com/fwlink/?linkid=833932
 schema: 2.0.0
-ms.assetid: 478AB135-42CF-4D2E-9D7B-B6A8C5A1ECCF
 ---
 
 # Remove-CMBoundaryFromGroup
@@ -30,16 +30,16 @@ Remove-CMBoundaryFromGroup [-Force] -BoundaryId <Int32> -BoundaryGroupInputObjec
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveBoundaryFromGroupByName_Name
-```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryName <String> -BoundaryGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### RemoveBoundaryFromGroupByName_Id
 ```
 Remove-CMBoundaryFromGroup [-Force] -BoundaryName <String> -BoundaryGroupId <Int32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveBoundaryFromGroupByName_Name
+```
+Remove-CMBoundaryFromGroup [-Force] -BoundaryName <String> -BoundaryGroupName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveBoundaryFromGroupByName_Object
@@ -54,17 +54,17 @@ Remove-CMBoundaryFromGroup [-Force] -BoundaryInputObject <IResultObject> -Bounda
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### RemoveBoundaryFromGroupByObject_Name
+```
+Remove-CMBoundaryFromGroup [-Force] -BoundaryInputObject <IResultObject> -BoundaryGroupName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### RemoveBoundaryFromGroupByObject_Object
 ```
 Remove-CMBoundaryFromGroup [-Force] -BoundaryInputObject <IResultObject>
  -BoundaryGroupInputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
-```
-
-### RemoveBoundaryFromGroupByObject_Name
-```
-Remove-CMBoundaryFromGroup [-Force] -BoundaryInputObject <IResultObject> -BoundaryGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,6 +101,7 @@ Specifies an ID for the boundary group from which you remove a boundary.
 Type: Int32
 Parameter Sets: RemoveBoundaryFromGroupById_Id, RemoveBoundaryFromGroupByName_Id, RemoveBoundaryFromGroupByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -109,12 +110,11 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryGroupInputObject
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: RemoveBoundaryFromGroupById_Object, RemoveBoundaryFromGroupByName_Object, RemoveBoundaryFromGroupByObject_Object
 Aliases: BoundaryGroup
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +129,7 @@ Specifies a name for the boundary group from which you remove a boundary.
 Type: String
 Parameter Sets: RemoveBoundaryFromGroupById_Name, RemoveBoundaryFromGroupByName_Name, RemoveBoundaryFromGroupByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -143,6 +144,7 @@ Specifies an ID for the boundary that this cmdlet removes.
 Type: Int32
 Parameter Sets: RemoveBoundaryFromGroupById_Id, RemoveBoundaryFromGroupById_Name, RemoveBoundaryFromGroupById_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -151,12 +153,11 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryInputObject
-
-
 ```yaml
 Type: IResultObject
-Parameter Sets: RemoveBoundaryFromGroupByObject_Id, RemoveBoundaryFromGroupByObject_Object, RemoveBoundaryFromGroupByObject_Name
+Parameter Sets: RemoveBoundaryFromGroupByObject_Id, RemoveBoundaryFromGroupByObject_Name, RemoveBoundaryFromGroupByObject_Object
 Aliases: Boundary
+
 Required: True
 Position: Named
 Default value: None
@@ -169,8 +170,9 @@ Specifies a name for the boundary that this cmdlet removes.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveBoundaryFromGroupByName_Name, RemoveBoundaryFromGroupByName_Id, RemoveBoundaryFromGroupByName_Object
+Parameter Sets: RemoveBoundaryFromGroupByName_Id, RemoveBoundaryFromGroupByName_Name, RemoveBoundaryFromGroupByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -185,6 +187,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -193,12 +196,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -213,6 +217,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -221,12 +226,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -242,6 +248,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: F42A8C48-A9AF-4FA6-8734-16011E12C611
 online version: https://go.microsoft.com/fwlink/?linkid=834064
 schema: 2.0.0
-ms.assetid: F42A8C48-A9AF-4FA6-8734-16011E12C611
 ---
 
 # Remove-CMDeviceVariable
@@ -51,6 +51,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -66,6 +67,7 @@ To obtain a **CMDevice** object, use the [Get-CMDevice](./Get-CMDevice.md) cmdle
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: InputObject
+
 Required: True
 Position: Named
 Default value: None
@@ -81,6 +83,7 @@ You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -89,12 +92,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -109,6 +113,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -117,12 +122,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +143,7 @@ Specifies a Systems Management Server (SMS) ID.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -151,6 +158,7 @@ Specifies the name of the device variable that this cmdlet removes.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -166,6 +174,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

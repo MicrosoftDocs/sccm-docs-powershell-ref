@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 05550BB3-526D-43E5-A48A-B447E5D61EED
 online version: https://go.microsoft.com/fwlink/?linkid=833756
 schema: 2.0.0
-ms.assetid: 05550BB3-526D-43E5-A48A-B447E5D61EED
 ---
 
 # Add-CMSoftwareUpdatePoint
@@ -15,16 +15,17 @@ Adds a software update point for Configuration Manager.
 ### SumPByValueWithWsus (Default)
 ```
 Add-CMSoftwareUpdatePoint -InputObject <IResultObject> [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>]
- [-ClientConnectionType <ClientConnectionTypes>] [-WsusSsl <Boolean>] [-UseProxy <Boolean>]
- [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess] [-ConnectionAccountUserName <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-EnableCloudGateway] [-WsusSsl <Boolean>]
+ [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
+ [-ConnectionAccountUserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SumPWithWsus
 ```
 Add-CMSoftwareUpdatePoint [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>] [-SiteSystemServerName] <String>
- [-SiteCode <String>] [-ClientConnectionType <ClientConnectionTypes>] [-WsusSsl <Boolean>]
- [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
+ [-SiteCode <String>] [-ClientConnectionType <ClientConnectionTypes>] [-EnableCloudGateway]
+ [-WsusSsl <Boolean>] [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
  [-ConnectionAccountUserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -51,6 +52,7 @@ Indicates that the software update point allows anonymous WSUS access.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +73,7 @@ Type: ClientConnectionTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Intranet, Internet, InternetAndIntranet
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +88,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -93,12 +97,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionAccountUserName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: UserName
+
 Required: False
 Position: Named
 Default value: None
@@ -107,12 +110,28 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCloudGateway
+{{Fill EnableCloudGateway Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -121,12 +140,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +162,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SumPByValueWithWsus
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -156,6 +177,7 @@ Specifies a site code for the Configuration Manager site that manages the system
 Type: String
 Parameter Sets: SumPWithWsus
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -170,6 +192,7 @@ Specifies the name of a computer that hosts the software update point site syste
 Type: String
 Parameter Sets: SumPWithWsus
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -184,6 +207,7 @@ Indicates whether a software update point can use a proxy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -198,6 +222,7 @@ Indicates whether an auto deployment rule can use a proxy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -213,6 +238,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -227,6 +253,7 @@ Specifies a port to use for unsecured access to the WSUS server.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -241,6 +268,7 @@ Specifies a port to user for secured access to the WSUS server.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -255,6 +283,7 @@ Specifies whether the software update point uses SSL to connect to the WSUS serv
 Type: Boolean
 Parameter Sets: (All)
 Aliases: SslWsus
+
 Required: False
 Position: Named
 Default value: None

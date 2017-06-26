@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 5AAD5A9E-3547-47A3-8CB3-0E0DC066AACE
 online version: https://go.microsoft.com/fwlink/?linkid=833925
 schema: 2.0.0
-ms.assetid: 5AAD5A9E-3547-47A3-8CB3-0E0DC066AACE
 ---
 
 # Get-CMSoftwareUpdatePointComponent
@@ -13,7 +13,7 @@ Retrieves a software update point component in Configuration Manager.
 ## SYNTAX
 
 ```
-Get-CMSoftwareUpdatePointComponent [-SiteSystemServerName <String>] [-SiteCode <String>]
+Get-CMSoftwareUpdatePointComponent [-SiteSystemServerName <String>] [-SiteCode <String>] [-WsusSyncManager]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -40,12 +40,13 @@ This command retrieves a software update point component by using the site code.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -54,12 +55,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -74,6 +76,7 @@ Specifies a site code in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +91,22 @@ Specifies an array of names of a site system servers in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WsusSyncManager
+{{Fill WsusSyncManager Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None

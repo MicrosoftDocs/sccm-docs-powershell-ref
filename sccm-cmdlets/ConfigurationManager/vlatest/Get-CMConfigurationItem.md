@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: C935BAD3-3AE4-43E7-B02E-68C2ECD43EA2
 online version: https://go.microsoft.com/fwlink/?linkid=834267
 schema: 2.0.0
-ms.assetid: C935BAD3-3AE4-43E7-B02E-68C2ECD43EA2
 ---
 
 # Get-CMConfigurationItem
@@ -14,13 +14,14 @@ Gets Configuration Manager configuration items.
 
 ### SearchByName (Default)
 ```
-Get-CMConfigurationItem [[-Name] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMConfigurationItem [[-Name] <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMConfigurationItem [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMConfigurationItem [-Id] <Int32> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,12 +54,28 @@ The second command removes the item in the $CIObj variable.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{Fill Fast Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,12 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +106,7 @@ You can use a comma separated list.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -103,6 +122,7 @@ You can use a comma separated list.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: 0
 Default value: None

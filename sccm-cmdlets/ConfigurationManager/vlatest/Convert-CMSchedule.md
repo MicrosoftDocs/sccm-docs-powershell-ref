@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 8D8F8DC3-4AC4-417A-BA50-30E81D02EE6E
 online version: https://go.microsoft.com/fwlink/?linkid=833868
 schema: 2.0.0
-ms.assetid: 8D8F8DC3-4AC4-417A-BA50-30E81D02EE6E
 ---
 
 # Convert-CMSchedule
@@ -14,7 +14,7 @@ Converts schedule tokens into and from interval strings.
 
 ### ByToken (Default)
 ```
-Convert-CMSchedule [-ScheduleToken] <IResultObject[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Convert-CMSchedule [-InputObject] <IResultObject[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -39,12 +39,13 @@ This command converts a schedule string into a schedule token.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -53,16 +54,32 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: ByToken
+Aliases: ScheduleToken
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -73,24 +90,11 @@ Specifies an array of interval strings.
 Type: String[]
 Parameter Sets: ByString
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ScheduleToken
-Specifies an array of Configuration Manager schedule objects output from another cmdlet.
-
-```yaml
-Type: IResultObject[]
-Parameter Sets: ByToken
-Aliases: 
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

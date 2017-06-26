@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: 7E3BFA62-110D-4451-9135-02D955B057F8
 online version: https://go.microsoft.com/fwlink/?linkid=833885
 schema: 2.0.0
-ms.assetid: 7E3BFA62-110D-4451-9135-02D955B057F8
 ---
 
 # Set-CMIntuneSubscriptionAppleDepProperty
@@ -46,6 +46,7 @@ Specifies an Apple ID.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -60,6 +61,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -74,6 +76,7 @@ Specifies the path to the Device Enrollment program (DEP) token.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,12 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +106,7 @@ Indicates whether the Apple Device Enrollment program is enabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableDep, Enabled
+
 Required: False
 Position: Named
 Default value: None
@@ -110,12 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +136,7 @@ Specifies, as a **PSCredential** object, a Microsoft Intune organizational accou
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: Credentials, Credential
+
 Required: False
 Position: Named
 Default value: None
@@ -138,13 +145,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +168,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

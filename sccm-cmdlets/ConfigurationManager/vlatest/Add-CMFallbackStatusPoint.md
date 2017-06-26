@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 787B327A-1694-4942-852C-268301003B5D
 online version: https://go.microsoft.com/fwlink/?linkid=833680
 schema: 2.0.0
-ms.assetid: 787B327A-1694-4942-852C-268301003B5D
 ---
 
 # Add-CMFallbackStatusPoint
@@ -55,6 +55,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -63,12 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -77,12 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +101,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: SiteServer
+
 Required: True
 Position: Named
 Default value: None
@@ -112,6 +116,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +131,7 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: ByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -140,6 +146,7 @@ Specifies the number of state messages that a fallback status point can send to 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -148,12 +155,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -162,12 +168,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleSec
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: ThrottleIntervalSeconds, ThrottleInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +188,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

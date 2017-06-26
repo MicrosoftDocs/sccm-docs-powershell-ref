@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 3A8B20A1-F35D-483F-BF47-1ECDC5109034
 online version: https://go.microsoft.com/fwlink/?linkid=834279
 schema: 2.0.0
-ms.assetid: 3A8B20A1-F35D-483F-BF47-1ECDC5109034
 ---
 
 # Get-CMConfigurationPolicy
@@ -58,6 +58,7 @@ Specifies that the configuration policy is returned in XML format.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +73,7 @@ Specifies an array of category instance types.
 Type: String[]
 Parameter Sets: (All)
 Aliases: CategoryInstanceTypes
+
 Required: False
 Position: Named
 Default value: None
@@ -80,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +106,7 @@ If lazy properties are not used, this parameter should be specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,12 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +136,7 @@ Specifies the CI__ID of a configuration policy.
 Type: Int32
 Parameter Sets: SearchById
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -145,6 +151,7 @@ Specifies a configuration policy object.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
+
 Required: False
 Position: 0
 Default value: None
@@ -159,6 +166,7 @@ Specifies the name of a configuration policy.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: 0
 Default value: None

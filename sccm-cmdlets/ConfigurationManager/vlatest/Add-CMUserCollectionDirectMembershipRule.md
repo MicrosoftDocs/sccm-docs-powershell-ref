@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: B0E1925F-4D8D-4BFE-9DE7-8C76F10A8383
 online version: https://go.microsoft.com/fwlink/?linkid=833768
 schema: 2.0.0
-ms.assetid: B0E1925F-4D8D-4BFE-9DE7-8C76F10A8383
 ---
 
 # Add-CMUserCollectionDirectMembershipRule
@@ -30,15 +30,15 @@ Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -Resource <IResu
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByCollectionNameAndResourceValue
-```
-Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### ByCollectionNameAndResourceId
 ```
 Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceId <Int32> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByCollectionNameAndResourceValue
+```
+Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -73,6 +73,7 @@ Specifies the ID of the user collection where the rule is applied.
 Type: String
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionIdAndResourceValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -85,8 +86,9 @@ Specifies the name of a user collection where the rule is applied.
 
 ```yaml
 Type: String
-Parameter Sets: ByCollectionNameAndResourceValue, ByCollectionNameAndResourceId
+Parameter Sets: ByCollectionNameAndResourceId, ByCollectionNameAndResourceValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -101,6 +103,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -109,12 +112,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -123,12 +127,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +149,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByCollectionValueAndResourceValue, ByCollectionValueAndResourceId
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -152,13 +158,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +180,7 @@ Specifies the type of the resource that the cmdlet adds to the user collections.
 Type: IResultObject
 Parameter Sets: ByCollectionValueAndResourceValue, ByCollectionIdAndResourceValue, ByCollectionNameAndResourceValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -187,6 +195,7 @@ Specifies the ID of a resource that the cmdlet adds to the user collections.
 Type: Int32
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionNameAndResourceId, ByCollectionValueAndResourceId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -202,6 +211,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

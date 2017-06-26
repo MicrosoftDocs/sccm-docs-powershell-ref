@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: C01E6314-2F4A-4D25-B420-F73CA7F48CBD
 online version: https://go.microsoft.com/fwlink/?linkid=834130
 schema: 2.0.0
-ms.assetid: C01E6314-2F4A-4D25-B420-F73CA7F48CBD
 ---
 
 # Get-CMBaseline
@@ -62,12 +62,13 @@ This command gets the child configuration baselines in the parent baseline confi
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,12 +77,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +98,7 @@ Specifies an array of IDs of configuration baselines.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -110,6 +113,7 @@ Specifies an array of names of configuration baselines.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: 0
 Default value: None
@@ -124,6 +128,7 @@ Specifies a **CMParentBaseline** object.
 Type: IResultObject
 Parameter Sets: SearchByParentBaseline
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -138,6 +143,7 @@ Specifies the ID of a parent baseline object.
 Type: Int32
 Parameter Sets: SearchByParentBaselineIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -152,6 +158,7 @@ Specifies the name of a parent baseline.
 Type: String
 Parameter Sets: SearchByParentBaselineNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None

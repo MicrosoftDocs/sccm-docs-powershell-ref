@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
+ms.assetid: F8D992C0-0F8C-40B7-944A-7BA571735859
 online version: https://go.microsoft.com/fwlink/?linkid=833771
 schema: 2.0.0
-ms.assetid: F8D992C0-0F8C-40B7-944A-7BA571735859
 ---
 
 # Set-CMConfigurationPolicyDeployment
@@ -12,52 +12,67 @@ Creates a configuration policy deployment.
 
 ## SYNTAX
 
-### SetFWPolicyDeploymentByValueMandatory (Default)
+### SetPoicyByValueMandatory (Default)
 ```
-Set-CMConfigurationPolicyDeployment -FirewallPolicy <IResultObject> -CollectionName <String>
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMConfigurationPolicyDeployment -InputObject <IResultObject> [-EnableEnforcement <Boolean>]
+ [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetUSMPolicyDeploymentByNameMandatory
 ```
-Set-CMConfigurationPolicyDeployment -UserDataAndProfileName <String> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMConfigurationPolicyDeployment -UserDataAndProfileName <String> [-EnableEnforcement <Boolean>]
+ [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetUSMPolicyDeploymentByIdMandatory
 ```
-Set-CMConfigurationPolicyDeployment -UserDataAndProfileId <String> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMConfigurationPolicyDeployment -UserDataAndProfileId <String> [-EnableEnforcement <Boolean>]
+ [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetUSMPolicyDeploymentByValueMandatory
+### SetRemoteConnectionDeploymentByNameMandatory
 ```
-Set-CMConfigurationPolicyDeployment -UserDataAndProfile <IResultObject> -CollectionName <String>
- [-EnableEnforcement <Boolean>] [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>]
- [-ParameterValue <Int32>] [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-MonitoredByScom <Boolean>]
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMConfigurationPolicyDeployment -RemoteConnectionProfileName <String> [-EnableEnforcement <Boolean>]
+ [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetRemoteConnectionDeploymentByIdMandatory
+```
+Set-CMConfigurationPolicyDeployment -RemoteConnectionProfileId <String> [-EnableEnforcement <Boolean>]
+ [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetFWPolicyDeploymentByNameMandatory
 ```
-Set-CMConfigurationPolicyDeployment -FirewallPolicyName <String> -CollectionName <String>
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMConfigurationPolicyDeployment -FirewallPolicyName <String> [-EnableEnforcement <Boolean>]
+ [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetFWPolicyDeploymentByIdMandatory
 ```
-Set-CMConfigurationPolicyDeployment -FirewallPolicyId <String> -CollectionName <String>
- [-Schedule <IResultObject>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMConfigurationPolicyDeployment -FirewallPolicyId <String> [-EnableEnforcement <Boolean>]
+ [-OverrideServiceWindow <Boolean>] [-GenerateAlert <Boolean>] [-ParameterValue <Int32>]
+ [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>] [-Schedule <IResultObject>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,6 +91,36 @@ This command creates a configuration policy deployment named Remote Firewall Pol
 
 ## PARAMETERS
 
+### -Collection
+{{Fill Collection Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CollectionId
+{{Fill CollectionId Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CollectionName
 Specifies the name of a collection.
 The deployment applies to this collection.
@@ -84,7 +129,8 @@ The deployment applies to this collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Required: True
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -98,6 +144,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -106,12 +153,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -125,24 +173,10 @@ During enforcement, a client reports compliance information about a deployment.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetUSMPolicyDeploymentByNameMandatory, SetUSMPolicyDeploymentByIdMandatory, SetUSMPolicyDeploymentByValueMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FirewallPolicy
-Specifies a Windows Firewall Policy object.
-To obtain a **CMWindowsFirewallPolicy** object, use the [Get-CMWindowsFirewallPolicy](./Get-CMWindowsFirewallPolicy.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SetFWPolicyDeploymentByValueMandatory
-Aliases: 
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -156,6 +190,7 @@ Specifies the ID of a Windows Firewall policy.
 Type: String
 Parameter Sets: SetFWPolicyDeploymentByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -170,6 +205,7 @@ Specifies the name of a Windows Firewall policy.
 Type: String
 Parameter Sets: SetFWPolicyDeploymentByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -178,12 +214,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -196,12 +233,28 @@ Indicates whether Configuration Manager generates alerts during the deployment.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetUSMPolicyDeploymentByNameMandatory, SetUSMPolicyDeploymentByIdMandatory, SetUSMPolicyDeploymentByValueMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: SetPoicyByValueMandatory
+Aliases: UserDataAndProfile, FirewallPolicy, RemoteConnectionProfile, DeploymentSummary, Assignment
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -210,8 +263,9 @@ Indicates whether System Center 2016 - Operations Manager monitoring criteria ap
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetUSMPolicyDeploymentByNameMandatory, SetUSMPolicyDeploymentByIdMandatory, SetUSMPolicyDeploymentByValueMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -225,8 +279,9 @@ Service windows are periods of time allocated for maintenance.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetUSMPolicyDeploymentByNameMandatory, SetUSMPolicyDeploymentByIdMandatory, SetUSMPolicyDeploymentByValueMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -240,8 +295,9 @@ Configuration Manager stores the values in XML format.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetUSMPolicyDeploymentByNameMandatory, SetUSMPolicyDeploymentByIdMandatory, SetUSMPolicyDeploymentByValueMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -250,13 +306,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -264,15 +321,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PostponeDate
-Specifies a date, as a **DateTime** object, for the deployment if it is postponed.
-To obtain a **DateTime** object, use the **Get-Date** cmdlet.
-For more information, type `Get-Help Get-Date`.
+### -PostponeDateTime
+{{Fill PostponeDateTime Description}}
 
 ```yaml
 Type: DateTime
-Parameter Sets: SetUSMPolicyDeploymentByNameMandatory, SetUSMPolicyDeploymentByIdMandatory, SetUSMPolicyDeploymentByValueMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -280,15 +336,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PostponeTime
-Specifies a time, as a **DateTime** object, for the deployment if it is postponed.
-To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+### -RemoteConnectionProfileId
+{{Fill RemoteConnectionProfileId Description}}
 
 ```yaml
-Type: DateTime
-Parameter Sets: SetUSMPolicyDeploymentByNameMandatory, SetUSMPolicyDeploymentByIdMandatory, SetUSMPolicyDeploymentByValueMandatory
+Type: String
+Parameter Sets: SetRemoteConnectionDeploymentByIdMandatory
 Aliases: 
-Required: False
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteConnectionProfileName
+{{Fill RemoteConnectionProfileName Description}}
+
+```yaml
+Type: String
+Parameter Sets: SetRemoteConnectionDeploymentByNameMandatory
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -304,25 +375,11 @@ You can use the [New-CMSchedule](./New-CMSchedule.md) cmdlet to create a schedul
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserDataAndProfile
-Specifies a user data and profiles configuration item object.
-To obtain a **CMUserDataAndProfileConfigurationItem** object, use the [Get-CMUserDataAndProfileConfigurationItem](./Get-CMUserDataAndProfileConfigurationItem.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SetUSMPolicyDeploymentByValueMandatory
-Aliases: 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -333,6 +390,7 @@ Specifies an ID of a user data and profile configuration item.
 Type: String
 Parameter Sets: SetUSMPolicyDeploymentByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -347,6 +405,7 @@ Specifies a name of a user data and profile configuration item.
 Type: String
 Parameter Sets: SetUSMPolicyDeploymentByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -362,6 +421,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

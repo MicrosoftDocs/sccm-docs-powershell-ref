@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: AC1A56D7-0868-4302-B93D-423F21BFD2E0
 online version: https://go.microsoft.com/fwlink/?linkid=834293
 schema: 2.0.0
-ms.assetid: AC1A56D7-0868-4302-B93D-423F21BFD2E0
 ---
 
 # Rename-CMCategory
@@ -20,8 +20,8 @@ Rename-CMCategory -InputObject <IResultObject> -NewName <String> [-PassThru] [-D
 
 ### RenameCategoryByName
 ```
-Rename-CMCategory -Name <String> -NewName <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Rename-CMCategory -Name <String> -CategoryType <CategoryType> -NewName <String> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,7 +68,7 @@ Valid values are:
 ```yaml
 Type: CategoryType
 Parameter Sets: RenameCategoryByName
-Aliases:
+Aliases: 
 Accepted values: AppCategories, BaselineCategories, CatalogCategories, DriverCategories, UserCategories
 
 Required: True
@@ -94,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -109,12 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Specifies a new name for the category instance.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -170,13 +170,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

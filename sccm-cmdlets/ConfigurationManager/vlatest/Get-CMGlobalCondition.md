@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: FFCE8AD9-01ED-42FC-9638-D74CA31F453A
 online version: https://go.microsoft.com/fwlink/?linkid=833710
 schema: 2.0.0
-ms.assetid: FFCE8AD9-01ED-42FC-9638-D74CA31F453A
 ---
 
 # Get-CMGlobalCondition
@@ -54,12 +54,11 @@ This command gets the global condition named CPU speed that has a security scope
 ## PARAMETERS
 
 ### -AsDcmSdkObject
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -68,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +104,7 @@ This value corresponds to the **CI_ID** property of a global condition object.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +120,7 @@ This value corresponds to the **LocalizedDisplayName** property of a global cond
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: Named
 Default value: None

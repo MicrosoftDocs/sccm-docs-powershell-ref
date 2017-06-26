@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 9F810236-8954-43EB-BE04-B119088905B9
 online version: https://go.microsoft.com/fwlink/?linkid=834210
 schema: 2.0.0
-ms.assetid: 9F810236-8954-43EB-BE04-B119088905B9
 ---
 
 # Start-CMConfigurationPolicyDeployment
@@ -115,6 +115,7 @@ The deployment applies to this Configuration Manager collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +130,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -137,12 +139,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +161,7 @@ During enforcement, a client reports compliance information about a deployment.
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +176,7 @@ Specifies a firewall policy object.
 Type: IResultObject
 Parameter Sets: DeployFWPolicyByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -186,6 +191,7 @@ Specifies an ID for a firewall policy.
 Type: String
 Parameter Sets: DeployFWPolicyByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -200,6 +206,7 @@ Specifies a name for a firewall policy.
 Type: String
 Parameter Sets: DeployFWPolicyByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -208,12 +215,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -228,6 +236,7 @@ Specifies whether Configuration Manager generates alerts during the deployment.
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -242,6 +251,7 @@ Specifies whether Operations Manager monitoring criteria applies during the depl
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -256,6 +266,7 @@ Specifies whether to override the service window while deploying policies.
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -271,6 +282,7 @@ This is the parameter value.
 Type: Int32
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -279,13 +291,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -303,6 +316,7 @@ This is the date for the deployment if postponed.
 Type: DateTime
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -319,6 +333,7 @@ This is the time for the deployment if postponed.
 Type: DateTime
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +348,7 @@ Specifies the remote connection profile that this cmdlet deploys configuration p
 Type: IResultObject
 Parameter Sets: DeployRCPolicyByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -347,6 +363,7 @@ Specifies the remote connection profile ID that this cmdlet deploys configuratio
 Type: String
 Parameter Sets: DeployRCPolicyByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -361,6 +378,7 @@ Specifies the remote connection profile name that this cmdlet deploys configurat
 Type: String
 Parameter Sets: DeployRCPolicyByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -376,6 +394,7 @@ This is the schedule for evaluating the policy.
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -391,6 +410,7 @@ To obtain a user data and profile object, use the Get-CMUserDataAndProfileConfig
 Type: IResultObject
 Parameter Sets: DeployUSMPolicyByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -405,6 +425,7 @@ Specifies an ID for a user data and profile object.
 Type: String
 Parameter Sets: DeployUSMPolicyByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -419,6 +440,7 @@ Specifies a name for a user data and profile object.
 Type: String
 Parameter Sets: DeployUSMPolicyByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -434,6 +456,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

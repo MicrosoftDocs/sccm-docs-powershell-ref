@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: BE43AAAD-ABF9-42DD-886C-D3224AAAB175
 online version: https://go.microsoft.com/fwlink/?linkid=833991
 schema: 2.0.0
-ms.assetid: BE43AAAD-ABF9-42DD-886C-D3224AAAB175
 ---
 
 # Enable-CMSoftwareMeteringRule
@@ -69,6 +69,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -77,12 +78,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -91,12 +93,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +114,7 @@ Specifies an array of IDs for software metering rules.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: RuleId
+
 Required: True
 Position: Named
 Default value: None
@@ -126,6 +130,7 @@ To obtain a software metering rule object, use the [Get-CMSoftwareMeteringRule](
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -140,6 +145,7 @@ Specifies a name for a product that a rule meters.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -155,6 +161,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

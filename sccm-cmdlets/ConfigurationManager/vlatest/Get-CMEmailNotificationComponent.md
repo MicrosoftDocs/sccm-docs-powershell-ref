@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: B1E83113-4742-40EC-A78F-EC46C8C50A5E
 online version: https://go.microsoft.com/fwlink/?linkid=833672
 schema: 2.0.0
-ms.assetid: B1E83113-4742-40EC-A78F-EC46C8C50A5E
 ---
 
 # Get-CMEmailNotificationComponent
@@ -39,12 +39,13 @@ This command gets a notification component for the site that has the server that
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -53,12 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -73,6 +75,7 @@ Specifies the three-letter site code of the Configuration Manager site that host
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +90,7 @@ Specifies an array of fully qualified domain names (FQDN) of the servers that ho
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 5F699783-3BFE-4BA9-A82F-80C16196383B
 online version: https://go.microsoft.com/fwlink/?linkid=833867
 schema: 2.0.0
-ms.assetid: 5F699783-3BFE-4BA9-A82F-80C16196383B
 ---
 
 # Get-CMSiteInstallStatus
@@ -39,12 +39,13 @@ This command gets the site installation status for the site that has the specifi
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -53,12 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -73,6 +75,7 @@ Specifies an array of IDs for Configuration Manager installations.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SiteInstallId
+
 Required: True
 Position: Named
 Default value: None
@@ -87,6 +90,7 @@ Specifies a site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SearchBySiteCode
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,5 +108,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

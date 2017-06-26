@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+ms.assetid: 728F467C-C28D-428E-9C2F-8812F6A4F80F
 online version: https://go.microsoft.com/fwlink/?linkid=833581
 schema: 2.0.0
-ms.assetid: 728F467C-C28D-428E-9C2F-8812F6A4F80F
 ---
 
 # New-CMClientSetting
@@ -13,7 +13,7 @@ Creates customized client settings.
 ## SYNTAX
 
 ```
-New-CMClientSetting -Name <String> [-Description <String>] [-Type <Types>] [-DisableWildcardHandling]
+New-CMClientSetting -Name <String> [-Description <String>] -Type <Types> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -60,6 +60,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -74,6 +75,7 @@ Specifies a description of the content of the new settings.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,12 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -96,12 +99,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +120,7 @@ Specifies a name for customized client settings.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -132,7 +137,8 @@ Type: Types
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Default, Device, User
-Required: False
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -147,6 +153,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

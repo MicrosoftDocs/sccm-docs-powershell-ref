@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 8AB81212-FC73-4DA4-A8CB-F9090B6BFE91
 online version: https://go.microsoft.com/fwlink/?linkid=833647
 schema: 2.0.0
-ms.assetid: 8AB81212-FC73-4DA4-A8CB-F9090B6BFE91
 ---
 
 # Set-CMAppVVirtualEnvironment
@@ -56,6 +56,7 @@ Application groups contain multiple App-V deployment types that run in the same 
 Type: VirtualEnvironmentGroup[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -70,6 +71,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -84,6 +86,7 @@ Specifies a description for the App-V virtual environment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -92,12 +95,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -106,12 +110,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +131,7 @@ Specifies an array of IDs of virtual environments.
 Type: Int32[]
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -141,6 +147,7 @@ To obtain a virtual environment object, use the Get-CMAppVVirtualEnvironment cmd
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -155,6 +162,7 @@ Specifies an array of names of virtual environments.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -169,6 +177,7 @@ Specifies a new name for a virtual environment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -177,13 +186,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +209,7 @@ Application groups contain multiple App-V deployment types that run in the same 
 Type: VirtualEnvironmentGroup[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +225,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+ms.assetid: F80FD38D-B120-4F6B-9F6E-0DEC8A90A565
 online version: https://go.microsoft.com/fwlink/?linkid=833582
 schema: 2.0.0
-ms.assetid: F80FD38D-B120-4F6B-9F6E-0DEC8A90A565
 ---
 
 # Save-CMDatabaseReplicationDiagnostic
@@ -46,6 +46,7 @@ This is the child site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site2
+
 Required: True
 Position: Named
 Default value: None
@@ -60,6 +61,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -68,12 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +92,7 @@ This cmdlet saves database diagnostic information for database replication to th
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,12 +101,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,13 +116,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -126,12 +132,11 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Site1, ParentSiteCode
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +152,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

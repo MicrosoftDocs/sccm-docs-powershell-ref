@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 7880EBFC-D033-4243-BCFC-D9A890971680
 online version: https://go.microsoft.com/fwlink/?linkid=834088
 schema: 2.0.0
-ms.assetid: 7880EBFC-D033-4243-BCFC-D9A890971680
 ---
 
 # Set-CMSoftwareUpdateGroup
@@ -62,12 +62,11 @@ This command removes the software update group named SUGroup01 from membership i
 ## PARAMETERS
 
 ### -AddSoftwareUpdate
-
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddSoftwareUpdates
+
 Required: False
 Position: Named
 Default value: None
@@ -76,12 +75,11 @@ Accept wildcard characters: False
 ```
 
 ### -ClearExpiredSoftwareUpdate
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -90,12 +88,11 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSoftwareUpdate
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,12 +101,11 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSupersededSoftwareUpdate
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -124,6 +120,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -138,6 +135,7 @@ Specifies a description for a software update group.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -146,12 +144,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -160,12 +159,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +180,7 @@ Specifies an array of IDs of software update groups.
 Type: Int32
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -195,6 +196,7 @@ To obtain a software group object, use the [Get-CMSoftwareUpdateGroup](./Get-CMS
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -209,6 +211,7 @@ Specifies an array of names of software update groups.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: Named
 Default value: None
@@ -224,6 +227,7 @@ This name replaces the current name of the group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -232,13 +236,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -247,12 +252,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSoftwareUpdate
-
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveSoftwareUpdates
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +272,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

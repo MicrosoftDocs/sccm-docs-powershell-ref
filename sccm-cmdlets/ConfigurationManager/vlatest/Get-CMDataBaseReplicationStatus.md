@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+ms.assetid: 5BB8ECD0-6FB0-4FCB-8966-8BB7FCC10E5B
 online version: https://go.microsoft.com/fwlink/?linkid=834302
 schema: 2.0.0
-ms.assetid: 5BB8ECD0-6FB0-4FCB-8966-8BB7FCC10E5B
 ---
 
 # Get-CMDatabaseReplicationStatus
@@ -41,6 +41,7 @@ Specifies a site code for a child site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site2
+
 Required: False
 Position: Named
 Default value: None
@@ -49,12 +50,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -63,12 +65,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -83,6 +86,7 @@ Specifies a site code for a parent site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site1
+
 Required: False
 Position: Named
 Default value: None
@@ -100,5 +104,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

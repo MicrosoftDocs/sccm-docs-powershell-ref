@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 34A7028A-50C4-44B5-949E-5EE63D1DB598
 online version: https://go.microsoft.com/fwlink/?linkid=833650
 schema: 2.0.0
-ms.assetid: 34A7028A-50C4-44B5-949E-5EE63D1DB598
 ---
 
 # Add-CMDeviceCollectionIncludeMembershipRule
@@ -96,6 +96,7 @@ Specifies the ID of a device collection.
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -110,6 +111,7 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -124,6 +126,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -139,6 +142,7 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -153,6 +157,7 @@ Specifies the ID of a device collection to include in the membership rule.
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -167,6 +172,7 @@ Specifies the name of a device collection to include in the membership rule.
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -182,6 +188,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -190,13 +197,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -212,6 +220,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

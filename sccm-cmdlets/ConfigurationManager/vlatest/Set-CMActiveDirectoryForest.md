@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 4AE8D747-EDC2-486B-ADB3-0CF426C047F1
 online version: https://go.microsoft.com/fwlink/?linkid=833609
 schema: 2.0.0
-ms.assetid: 4AE8D747-EDC2-486B-ADB3-0CF426C047F1
 ---
 
 # Set-CMActiveDirectoryForest
@@ -15,22 +15,25 @@ Changes Active Directory forest properties in Configuration Manager.
 ### SetByValue (Default)
 ```
 Set-CMActiveDirectoryForest -InputObject <IResultObject> [-Description <String>] [-EnableDiscovery <Boolean>]
- [-PublishingPath <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-UserName <String>] [-PublishingPath <String>] [-AddPublishingSite <IResultObject[]>]
+ [-RemovePublishingSite <IResultObject[]>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByFQDN
 ```
 Set-CMActiveDirectoryForest -ForestFqdn <String> [-Description <String>] [-EnableDiscovery <Boolean>]
- [-PublishingPath <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-UserName <String>] [-PublishingPath <String>] [-AddPublishingSite <IResultObject[]>]
+ [-RemovePublishingSite <IResultObject[]>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
 Set-CMActiveDirectoryForest -Id <UInt32> [-Description <String>] [-EnableDiscovery <Boolean>]
- [-PublishingPath <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-UserName <String>] [-PublishingPath <String>] [-AddPublishingSite <IResultObject[]>]
+ [-RemovePublishingSite <IResultObject[]>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,6 +54,21 @@ This command changes the description of an Active Directory forest that has the 
 
 ## PARAMETERS
 
+### -AddPublishingSite
+{{Fill AddPublishingSite Description}}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases: AddPublishingSites
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -58,6 +76,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -72,6 +91,7 @@ Specifies a description for an Active Directory forest object.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,12 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +123,7 @@ The default value is $False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -110,12 +132,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +153,7 @@ Specifies the FQDN of a Configuration Manager object.
 Type: String
 Parameter Sets: SetByFQDN
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -145,6 +169,7 @@ You can find the identifier value in the **ForestID** property of an Active Dire
 Type: UInt32
 Parameter Sets: SetById
 Aliases: ForestId
+
 Required: True
 Position: Named
 Default value: None
@@ -159,6 +184,7 @@ Specifies an Active Directory forest object in Configuration Manager.
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -167,13 +193,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +216,37 @@ You can use a comma-separated list in quotation marks to specify more than one s
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePublishingSite
+{{Fill RemovePublishingSite Description}}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases: RemovePublishingSites
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserName
+{{Fill UserName Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -204,6 +262,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

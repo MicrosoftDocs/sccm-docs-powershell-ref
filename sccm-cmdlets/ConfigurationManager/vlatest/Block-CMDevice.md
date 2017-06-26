@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 2F3F29C9-FD9F-4335-8775-BC8D600F527D
 online version: https://go.microsoft.com/fwlink/?linkid=833827
 schema: 2.0.0
-ms.assetid: 2F3F29C9-FD9F-4335-8775-BC8D600F527D
 ---
 
 # Block-CMDevice
@@ -14,7 +14,7 @@ Blocks a device.
 
 ### SearchByValueMandatory (Default)
 ```
-Block-CMDevice -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Block-CMDevice [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -62,6 +62,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -76,6 +77,7 @@ Specifies the ID of a device.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: ResourceId
+
 Required: True
 Position: Named
 Default value: None
@@ -90,6 +92,7 @@ Specifies the name of a device.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -98,12 +101,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -112,12 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +137,8 @@ To obtain a device object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases:
+Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -148,6 +154,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

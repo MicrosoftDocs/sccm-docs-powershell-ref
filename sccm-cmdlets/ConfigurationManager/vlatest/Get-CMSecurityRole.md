@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: EC701CF2-B169-4E10-A386-A1DCE7CB52A4
 online version: https://go.microsoft.com/fwlink/?linkid=833842
 schema: 2.0.0
-ms.assetid: EC701CF2-B169-4E10-A386-A1DCE7CB52A4
 ---
 
 # Get-CMSecurityRole
@@ -51,12 +51,13 @@ This command gets all security roles that have a name that starts with App.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -65,12 +66,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +87,7 @@ Specifies an array of IDs of security roles.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: RoleId
+
 Required: True
 Position: Named
 Default value: None
@@ -99,6 +102,7 @@ Specifies an array of names of security roles.
 Type: String
 Parameter Sets: SearchByName
 Aliases: RoleName
+
 Required: False
 Position: Named
 Default value: None

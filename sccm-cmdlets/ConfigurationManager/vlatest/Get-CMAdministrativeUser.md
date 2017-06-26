@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: E10E2966-E438-49C0-A115-868CEDE6D8BB
 online version: https://go.microsoft.com/fwlink/?linkid=834069
 schema: 2.0.0
-ms.assetid: E10E2966-E438-49C0-A115-868CEDE6D8BB
 ---
 
 # Get-CMAdministrativeUser
@@ -47,12 +47,13 @@ This command gets the administrative user named AdminUser1.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -61,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +83,7 @@ Specifies the ID of an administrative user.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: AdminId
+
 Required: True
 Position: Named
 Default value: None
@@ -95,6 +98,7 @@ Specifies the name of the administrative user in the form \<domain\>\\\<user\>.
 Type: String
 Parameter Sets: SearchByName
 Aliases: DisplayName, LogonName, UserName
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +131,7 @@ Valid values are:
 Type: String[]
 Parameter Sets: (All)
 Aliases: RoleNames
+
 Required: False
 Position: Named
 Default value: None

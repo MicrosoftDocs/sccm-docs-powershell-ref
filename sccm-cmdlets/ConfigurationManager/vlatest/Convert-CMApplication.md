@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 96352910-63E7-438F-896E-D2C249A62FA8
 online version: https://go.microsoft.com/fwlink/?linkid=833864
 schema: 2.0.0
-ms.assetid: 96352910-63E7-438F-896E-D2C249A62FA8
 ---
 
 # Convert-CMApplication
@@ -42,12 +42,13 @@ The second command converts the SDK application object in $SdkApp to an applicat
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -56,12 +57,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -78,6 +80,7 @@ To obtain an application SDK object, use the [ConvertTo-CMApplication](./Convert
 Type: PSObject
 Parameter Sets: (All)
 Aliases: IResultObject, Application, ProviderApplicationObject
+
 Required: True
 Position: Named
 Default value: None

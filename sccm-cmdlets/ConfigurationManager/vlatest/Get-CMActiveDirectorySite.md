@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 3087AF87-3AD6-4205-9740-0373A5C5C7DC
 online version: https://go.microsoft.com/fwlink/?linkid=834065
 schema: 2.0.0
-ms.assetid: 3087AF87-3AD6-4205-9740-0373A5C5C7DC
 ---
 
 # Get-CMActiveDirectorySite
@@ -51,12 +51,13 @@ This command gets the Active Directory sites that are configured to publish site
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -65,12 +66,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +88,7 @@ The FQDN provides a path to an Active Directory forest.
 Type: String[]
 Parameter Sets: SearchByForestName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +103,7 @@ Specifies an array of IDs that identify Active Directory forests.
 Type: String[]
 Parameter Sets: SearchByForestId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -114,6 +118,7 @@ Specifies an array of identifiers of Active Directory forest objects that contai
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SiteId
+
 Required: True
 Position: Named
 Default value: None
@@ -128,6 +133,7 @@ Specifies an array of FQDNs of Active Directory forest objects that contain Acti
 Type: String
 Parameter Sets: SearchByName
 Aliases: ADSiteName
+
 Required: False
 Position: Named
 Default value: None

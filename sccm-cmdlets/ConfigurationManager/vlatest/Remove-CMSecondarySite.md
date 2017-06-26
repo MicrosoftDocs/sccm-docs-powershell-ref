@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 44AF985A-0AC1-46CC-A021-0BEE66558953
 online version: https://go.microsoft.com/fwlink/?linkid=834179
 schema: 2.0.0
-ms.assetid: 44AF985A-0AC1-46CC-A021-0BEE66558953
 ---
 
 # Remove-CMSecondarySite
@@ -61,6 +61,7 @@ Type: ActionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Uninstall, Delete
+
 Required: True
 Position: Named
 Default value: None
@@ -75,6 +76,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -83,12 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +106,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,12 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +137,7 @@ To obtain this object, use the New-CMSecondarySite cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +152,7 @@ Specifies the name of a secondary site.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: SiteName
+
 Required: True
 Position: Named
 Default value: None
@@ -160,6 +167,7 @@ Specifies a code for a secondary site.
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -175,6 +183,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

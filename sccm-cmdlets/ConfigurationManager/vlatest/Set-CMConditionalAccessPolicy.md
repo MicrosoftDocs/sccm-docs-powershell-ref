@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: 433C709E-FBB0-449F-A835-9ED3613D2581
 online version: https://go.microsoft.com/fwlink/?linkid=833760
 schema: 2.0.0
-ms.assetid: 433C709E-FBB0-449F-A835-9ED3613D2581
 ---
 
 # Set-CMConditionalAccessPolicy
@@ -55,6 +55,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddExcludedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +72,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddExcludedCollectionIds
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +89,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddExcludedCollectionNames
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddTargetedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +124,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddTargetedCollectionIds
+
 Required: False
 Position: Named
 Default value: None
@@ -136,6 +141,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddTargetedCollectionNames
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +156,7 @@ Removes all excluded collections from the conditional access policy.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearExcludedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -166,6 +173,7 @@ NOTE:  You must specify at least one targeted collection for a conditional acces
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearTargetedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +188,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -195,6 +204,7 @@ This rule overrides the default Exchange access rule, which means that even if y
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -203,12 +213,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -217,12 +228,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +250,7 @@ To obtain a conditional access policy object, use the [Get-CMConditionalAccessPo
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -252,6 +265,7 @@ Specifies the text of the email that Exchange sends to users when their device i
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -260,13 +274,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -284,6 +299,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveExcludedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +316,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveExcludedCollectionIds
+
 Required: False
 Position: Named
 Default value: None
@@ -316,6 +333,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveExcludedCollectionNames
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +351,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveTargetedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -349,6 +368,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveTargetedCollectionIds
+
 Required: False
 Position: Named
 Default value: None
@@ -365,6 +385,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveTargetedCollectionNames
+
 Required: False
 Position: Named
 Default value: None
@@ -380,6 +401,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

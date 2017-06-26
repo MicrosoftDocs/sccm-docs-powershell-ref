@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: CB778D72-D265-4EFA-AE33-A027F7B5A93B
 online version: https://go.microsoft.com/fwlink/?linkid=834194
 schema: 2.0.0
-ms.assetid: CB778D72-D265-4EFA-AE33-A027F7B5A93B
 ---
 
 # Lock-CMObject
@@ -46,6 +46,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -54,12 +55,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -68,12 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -87,7 +90,8 @@ Specifies an array of Configuration Manager objects output from another cmdlet.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -103,6 +107,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

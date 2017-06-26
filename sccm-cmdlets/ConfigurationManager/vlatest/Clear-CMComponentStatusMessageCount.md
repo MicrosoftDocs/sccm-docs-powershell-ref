@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: ACD65BCF-63FD-4A8D-B382-9FBD3BEEF261
 online version: https://go.microsoft.com/fwlink/?linkid=833839
 schema: 2.0.0
-ms.assetid: ACD65BCF-63FD-4A8D-B382-9FBD3BEEF261
 ---
 
 # Clear-CMComponentStatusMessageCount
@@ -54,6 +54,7 @@ Specifies the name of a component that creates messages.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -68,6 +69,7 @@ Specifies the name of a computer that hosts the component.
 Type: String
 Parameter Sets: (All)
 Aliases: MachineName
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -90,12 +93,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,12 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +136,7 @@ Type: Severity
 Parameter Sets: (All)
 Aliases: 
 Accepted values: All, Error, Warning, Information
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +152,7 @@ Status messages originate in this site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -161,6 +168,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

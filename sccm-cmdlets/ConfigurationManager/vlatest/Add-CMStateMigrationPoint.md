@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 3C642D15-E6BF-4416-99F6-98BDBC2A5D36
 online version: https://go.microsoft.com/fwlink/?linkid=833762
 schema: 2.0.0
-ms.assetid: 3C642D15-E6BF-4416-99F6-98BDBC2A5D36
 ---
 
 # Add-CMStateMigrationPoint
@@ -60,6 +60,7 @@ Indicates whether a fallback source location is available.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -75,6 +76,7 @@ You can get a boundary group name by using the [Get-CMBoundaryGroup](./Get-CMBou
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +91,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -103,6 +106,7 @@ Indicates that Configuration Manager deletes client data immediately after the t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,12 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +137,7 @@ If this mode is enabled, Configuration Manager refuses new requests to store cli
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -140,12 +146,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -161,6 +168,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: SiteServer
+
 Required: True
 Position: Named
 Default value: None
@@ -175,6 +183,7 @@ Specifies the Configuration Manager site that hosts this site system role.
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +198,7 @@ Specifies the name of the site system server in Configuration Manager.
 Type: String
 Parameter Sets: ByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -197,12 +207,11 @@ Accept wildcard characters: False
 ```
 
 ### -StorageFolder
-
-
 ```yaml
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
 Aliases: StorageFolders
+
 Required: True
 Position: Named
 Default value: None
@@ -217,6 +226,7 @@ Specifies a time interval to wait before client data is deleted.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -233,6 +243,7 @@ Type: IntervalType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Hours, Days
+
 Required: False
 Position: Named
 Default value: None
@@ -248,6 +259,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: FF20CB6D-729B-409C-A5E5-CBF1B3299EEC
 online version: https://go.microsoft.com/fwlink/?linkid=833583
 schema: 2.0.0
-ms.assetid: FF20CB6D-729B-409C-A5E5-CBF1B3299EEC
 ---
 
 # Add-CMApplicationCatalogWebServicePoint
@@ -57,6 +57,7 @@ Type: ComputerCommunicationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Http, Https
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +72,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -79,12 +81,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -99,6 +102,7 @@ Indicates that the cmdlet forces wild card handling.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +118,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: WebServicePointByValue
 Aliases: SiteServer
+
 Required: True
 Position: Named
 Default value: None
@@ -128,6 +133,7 @@ Specifies the port to use to connect with the web service.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +148,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: WebServicePointByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -156,6 +163,7 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: WebServicePointByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -170,6 +178,7 @@ Specifies the name of the web application used for the application catalog.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -178,12 +187,11 @@ Accept wildcard characters: False
 ```
 
 ### -WebsiteName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: IISWebSite
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +207,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

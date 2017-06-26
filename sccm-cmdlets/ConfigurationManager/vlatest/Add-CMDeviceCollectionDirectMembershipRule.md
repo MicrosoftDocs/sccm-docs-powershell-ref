@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: CEB87494-F554-4B05-A44B-978B1B418583
 online version: https://go.microsoft.com/fwlink/?linkid=833642
 schema: 2.0.0
-ms.assetid: CEB87494-F554-4B05-A44B-978B1B418583
 ---
 
 # Add-CMDeviceCollectionDirectMembershipRule
@@ -79,6 +79,7 @@ Specifies the ID of a device collection.
 Type: String
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionIdAndResourceValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -93,6 +94,7 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: ByCollectionNameAndResourceId, ByCollectionNameAndResourceValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -107,6 +109,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -115,12 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -129,12 +133,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +155,7 @@ To obtain a device collection object, use the [Get-CMCollection](./Get-CMCollect
 Type: IResultObject
 Parameter Sets: ByCollectionValueAndResourceId, ByCollectionValueAndResourceValue
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -158,13 +164,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +187,7 @@ To obtain a resource object, use the Get-CMResource cmdlet.
 Type: IResultObject
 Parameter Sets: ByCollectionIdAndResourceValue, ByCollectionNameAndResourceValue, ByCollectionValueAndResourceValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -194,6 +202,7 @@ Specifies the ID of a resource.
 Type: Int32
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionNameAndResourceId, ByCollectionValueAndResourceId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -209,6 +218,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

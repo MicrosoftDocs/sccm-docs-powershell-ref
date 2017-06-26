@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: DB992DC8-0D2B-4704-AA14-0CD157FFA1C2
 online version: https://go.microsoft.com/fwlink/?linkid=834111
 schema: 2.0.0
-ms.assetid: DB992DC8-0D2B-4704-AA14-0CD157FFA1C2
 ---
 
 # Set-CMStatusMessageQuery
@@ -19,16 +19,16 @@ Set-CMStatusMessageQuery -InputObject <IResultObject> [-NewName <String>] [-Expr
  [<CommonParameters>]
 ```
 
-### DeleteMessageByIdMandatory
-```
-Set-CMStatusMessageQuery -Id <String> [-DeleteMessage] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SetStatusMessageQueryByIdMandatory
 ```
 Set-CMStatusMessageQuery -Id <String> [-NewName <String>] [-Expression <String>] [-Comment <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeleteMessageByIdMandatory
+```
+Set-CMStatusMessageQuery -Id <String> [-DeleteMessage] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetStatusMessageQueryByNameMandatory
@@ -88,12 +88,11 @@ The new name of the query is Western Security Groups.
 ## PARAMETERS
 
 ### -Comment
-
-
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
 Aliases: Comments
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +107,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -122,6 +122,7 @@ Indicates that messages found by this query are deleted from the Configuration M
 Type: SwitchParameter
 Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -130,12 +131,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +152,7 @@ Specifies an expression in WMI Query Language (WQL).
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -158,12 +161,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -176,8 +180,9 @@ Specifies an ID for a status message query.
 
 ```yaml
 Type: String
-Parameter Sets: DeleteMessageByIdMandatory, SetStatusMessageQueryByIdMandatory
+Parameter Sets: SetStatusMessageQueryByIdMandatory, DeleteMessageByIdMandatory
 Aliases: QueryId
+
 Required: True
 Position: Named
 Default value: None
@@ -193,6 +198,7 @@ To obtain a status message query object, use the [Get-CMStatusMessageQuery](./Ge
 Type: IResultObject
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, DeleteMessageByObjectMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -207,6 +213,7 @@ Specifies a name for a status message query.
 Type: String
 Parameter Sets: SetStatusMessageQueryByNameMandatory, DeleteMessageByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -221,6 +228,7 @@ Specifies a new name for a query.
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -229,13 +237,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -251,6 +260,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: A4563737-1BF4-4AD1-A9D3-CFD2F5564586
 online version: https://go.microsoft.com/fwlink/?linkid=833676
 schema: 2.0.0
-ms.assetid: A4563737-1BF4-4AD1-A9D3-CFD2F5564586
 ---
 
 # Add-CMEnrollmentProxyPoint
@@ -14,15 +14,16 @@ Adds an enrollment proxy point to Configuration Manager.
 
 ### EnrollmentProxyPointByValue (Default)
 ```
-Add-CMEnrollmentProxyPoint [-WebsiteName <String>] [-PortNumber <Int32>] -InputObject <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMEnrollmentProxyPoint [-WebsiteName <String>] [-PortNumber <Int32>] [-ServiceHost <IResultObject>]
+ -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### EnrollmentProxyPoint
 ```
-Add-CMEnrollmentProxyPoint [-WebsiteName <String>] [-PortNumber <Int32>] [-SiteSystemServerName] <String>
- [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-CMEnrollmentProxyPoint [-WebsiteName <String>] [-PortNumber <Int32>] [-ServiceHost <IResultObject>]
+ [-SiteSystemServerName] <String> [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,6 +55,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -62,12 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,12 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +101,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: EnrollmentProxyPointByValue
 Aliases: SiteServer
+
 Required: True
 Position: Named
 Default value: None
@@ -111,6 +116,22 @@ Specifies the port that client computers use to connect with an enrollment proxy
 Type: Int32
 Parameter Sets: (All)
 Aliases: Port
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceHost
+{{Fill ServiceHost Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases: EnrollmentPoint
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +146,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: EnrollmentProxyPoint
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -139,6 +161,7 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: EnrollmentProxyPoint
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -147,12 +170,11 @@ Accept wildcard characters: False
 ```
 
 ### -WebsiteName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: IISWebsite
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +190,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

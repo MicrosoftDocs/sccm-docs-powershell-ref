@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
+ms.assetid: AB20D6C3-3817-400F-B098-371536B4513C
 online version: https://go.microsoft.com/fwlink/?linkid=834073
 schema: 2.0.0
-ms.assetid: AB20D6C3-3817-400F-B098-371536B4513C
 ---
 
 # Get-CMAlert
@@ -20,7 +20,7 @@ Get-CMAlert [[-Name] <String>] [-TypeInstanceId <String>] [-TypeId <Int32>] [-Di
 
 ### SearchByIdMandatory
 ```
-Get-CMAlert [-Id] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMAlert -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,12 +46,13 @@ This command gets all alerts that have a name that begins with the letter D.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -60,12 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,8 +82,9 @@ Specifies an alert ID.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -94,6 +97,7 @@ Specifies an alert name.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: 0
 Default value: None
@@ -102,12 +106,11 @@ Accept wildcard characters: False
 ```
 
 ### -TypeId
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -116,12 +119,11 @@ Accept wildcard characters: False
 ```
 
 ### -TypeInstanceId
-
-
 ```yaml
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: E3DB3EC2-E24E-4CEC-A7F4-92CF76D058D2
 online version: https://go.microsoft.com/fwlink/?linkid=833688
 schema: 2.0.0
-ms.assetid: E3DB3EC2-E24E-4CEC-A7F4-92CF76D058D2
 ---
 
 # Add-CMIntuneSubscription
@@ -55,6 +55,7 @@ Specifies a color scheme for the company portal.
 Type: Color
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -69,6 +70,7 @@ Specifies the path to the company logo to use when the company portal background
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -83,6 +85,7 @@ Specifies the path to the company logo to use when the company portal background
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +100,7 @@ Specifies a company name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -111,6 +115,7 @@ Indicates that the company name is displayed next to the company logo.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +130,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -139,6 +145,7 @@ Specifies additional company contact information.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +160,7 @@ Specifies the IT department email address.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +175,7 @@ Specifies the IT department contact name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +190,7 @@ Specifies the IT department phone number.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -189,12 +199,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +220,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -217,12 +229,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +250,7 @@ Specifies, as a **PSCredential**, a Microsoft Intune organizational account and 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: Credentials, Credential
+
 Required: True
 Position: Named
 Default value: None
@@ -251,6 +265,7 @@ Specifies the maximum number of devices that a user can enroll.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -266,6 +281,7 @@ This applies to Windows 8.1 or later and Windows Phone 8.1 or later device enrol
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -281,6 +297,7 @@ Information from devices on premises do not replicate to the cloud.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -295,6 +312,7 @@ Specifies the URL to company privacy documentation.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -309,6 +327,7 @@ Specifies the Configuration Manager site code for device assignment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -324,6 +343,7 @@ The website name is displayed to users.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -339,6 +359,7 @@ The URL is not displayed to users.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -355,6 +376,7 @@ Members of this user collection will be able to enroll their devices for managem
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -370,6 +392,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

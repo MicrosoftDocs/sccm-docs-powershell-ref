@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 2F55B5DB-DAE2-4049-9231-3B2313E6B30F
 online version: https://go.microsoft.com/fwlink/?linkid=833794
 schema: 2.0.0
-ms.assetid: 2F55B5DB-DAE2-4049-9231-3B2313E6B30F
 ---
 
 # New-CMTaskSequence
@@ -18,13 +18,14 @@ New-CMTaskSequence [-BuildOperatingSystemImage] -Name <String> [-Description <St
  -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
  [-ApplyAll <Boolean>] [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>]
  [-MaximumServerConnection <Int32>] [-GeneratePassword <Boolean>] [-LocalAdminPassword <SecureString>]
- -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
- [-DomainAccount <String>] [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>]
- [-InstallationProperty <String>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>]
- [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>] [-CreatedBy <String>]
- [-ImageVersion <String>] [-ImageDescription <String>] -OperatingSystemFilePath <String>
- -OperatingSystemFileAccount <String> [-OperatingSystemFileAccountPassword <SecureString>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TimeZone <TimeZoneInfo>] -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>]
+ [-DomainOrganizationUnit <String>] [-DomainAccount <String>] [-DomainPassword <SecureString>]
+ [-ClientPackagePackageId <String>] [-InstallationProperty <String>]
+ [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-ApplicationName <String[]>]
+ [-IgnoreInvalidApplication <Boolean>] [-CreatedBy <String>] [-ImageVersion <String>]
+ [-ImageDescription <String>] -OperatingSystemFilePath <String> -OperatingSystemFileAccount <String>
+ [-OperatingSystemFileAccountPassword <SecureString>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewInstallOSImage
@@ -33,11 +34,11 @@ New-CMTaskSequence [-InstallOperatingSystemImage] -Name <String> [-Description <
  -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
  [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>] [-ConfigureBitLocker <Boolean>]
  [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>] [-GeneratePassword <Boolean>]
- [-LocalAdminPassword <SecureString>] -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>]
- [-DomainOrganizationUnit <String>] [-DomainAccount <String>] [-DomainPassword <SecureString>]
- [-ClientPackagePackageId <String>] [-InstallationProperty <String>] [-CaptureUserSetting <Boolean>]
- [-UserStateMigrationToolPackageId <String>] [-SaveLocally <Boolean>] [-CaptureLocallyUsingLink <Boolean>]
- [-CaptureNetworkSetting <Boolean>] [-CaptureWindowsSetting <Boolean>]
+ [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>] -JoinDomain <JoinType>
+ [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>] [-DomainAccount <String>]
+ [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>] [-InstallationProperty <String>]
+ [-CaptureUserSetting <Boolean>] [-UserStateMigrationToolPackageId <String>] [-SaveLocally <Boolean>]
+ [-CaptureLocallyUsingLink <Boolean>] [-CaptureNetworkSetting <Boolean>] [-CaptureWindowsSetting <Boolean>]
  [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-ApplicationName <String[]>]
  [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -49,11 +50,11 @@ New-CMTaskSequence [-InstallOperatingSystemImageVhd] -Name <String> [-Descriptio
  -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
  [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>] [-ConfigureBitLocker <Boolean>]
  [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>] [-GeneratePassword <Boolean>]
- [-LocalAdminPassword <SecureString>] -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>]
- [-DomainOrganizationUnit <String>] [-DomainAccount <String>] [-DomainPassword <SecureString>]
- [-ClientPackagePackageId <String>] [-InstallationProperty <String>] [-ApplicationName <String[]>]
- [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>] -JoinDomain <JoinType>
+ [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>] [-DomainAccount <String>]
+ [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>] [-InstallationProperty <String>]
+ [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpgradeOSImage
@@ -120,6 +121,7 @@ Specifies an array of names for applications.
 Type: String[]
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, UpgradeOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +136,7 @@ Indicates whether to apply all of the images.
 Type: Boolean
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: ApplyAllImages
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +151,7 @@ Specifies the ID of a boot image package.
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -159,6 +163,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: NewCustom
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -173,6 +178,7 @@ Indicates that the task sequence builds and captures a reference operating syste
 Type: SwitchParameter
 Parameter Sets: NewBuildOSImage
 Aliases: BuildOperatingSystemImageOption
+
 Required: True
 Position: Named
 Default value: None
@@ -191,6 +197,7 @@ The hard-links are then used to restore user data after the new operating system
 Type: Boolean
 Parameter Sets: NewInstallOSImage
 Aliases: CaptureLocallyUsingLinks
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +212,7 @@ Indicates whether the task sequence captures network settings from the computer 
 Type: Boolean
 Parameter Sets: NewInstallOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +228,7 @@ If you specify this parameter, also specify the *UserStateMigrationToolPackageId
 Type: Boolean
 Parameter Sets: NewInstallOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +244,7 @@ You can capture the computer name, registered user and organization name, and th
 Type: Boolean
 Parameter Sets: NewInstallOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -249,6 +259,7 @@ Specifies the ID of the client package to install on the destination computer.
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -263,6 +274,7 @@ Indicates whether the task sequence enables BitLocker encryption on the hard dri
 Type: Boolean
 Parameter Sets: NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -277,6 +289,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -291,6 +304,7 @@ Specifies the name of the user that created the operating system image that the 
 Type: String
 Parameter Sets: NewBuildOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -305,6 +319,7 @@ Indicates that the cmdlet creates a custom task sequence.
 Type: SwitchParameter
 Parameter Sets: NewCustom
 Aliases: CustomOption
+
 Required: True
 Position: Named
 Default value: None
@@ -319,6 +334,7 @@ Specifies a description for the task sequence.
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, NewCustom
 Aliases: TaskSequenceDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -327,12 +343,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -347,6 +364,7 @@ Specifies an account, in the format Domain\User, that has the necessary permissi
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -362,6 +380,7 @@ Include this parameter to have the target computer join the specified domain.
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -380,6 +399,7 @@ If the computer is already a member of some other OU, Active Directory Domain Se
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -394,6 +414,7 @@ Specifies, as a secure string, the password for the user account that you specif
 Type: SecureString
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -402,12 +423,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -422,6 +444,7 @@ Indicates whether Configuration Manager randomly generates a password for the lo
 Type: Boolean
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -439,6 +462,7 @@ If you do not specify this parameter, the task sequence step ends immediately wh
 Type: Boolean
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, UpgradeOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -453,6 +477,7 @@ Specifies a description of the operating system image that the task sequence cap
 Type: String
 Parameter Sets: NewBuildOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -467,6 +492,7 @@ Specifies the user-defined version of the operating system that the task sequenc
 Type: String
 Parameter Sets: NewBuildOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -481,6 +507,7 @@ Indicates that the task sequence installs an operating system image.
 Type: SwitchParameter
 Parameter Sets: NewInstallOSImage
 Aliases: InstallOperatingSystemImageOption
+
 Required: True
 Position: Named
 Default value: None
@@ -495,6 +522,7 @@ Indicates that the task sequence installs an existing operating system image to 
 Type: SwitchParameter
 Parameter Sets: NewInstallOSImageVhd
 Aliases: InstallOperatingSystemImageVhdOption
+
 Required: True
 Position: Named
 Default value: None
@@ -515,6 +543,7 @@ Type: ServerLicensingMode
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
 Accepted values: NonSpecify, PerSeat, PerServer
+
 Required: False
 Position: Named
 Default value: None
@@ -534,6 +563,7 @@ If a property contains spaces, surround it by quotation marks ("").
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -553,6 +583,7 @@ Type: JoinType
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
 Accepted values: DomainType, WorkgroupType
+
 Required: True
 Position: Named
 Default value: None
@@ -567,6 +598,7 @@ Specifies, as a secure string, the local administrator password for the destinat
 Type: SecureString
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -582,6 +614,7 @@ Specify this parameter if you use the PerServer value for the *InstallationLicen
 Type: Int32
 Parameter Sets: NewBuildOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -596,6 +629,7 @@ Specifies a name for the task sequence.
 Type: String
 Parameter Sets: (All)
 Aliases: TaskSequenceName
+
 Required: True
 Position: Named
 Default value: None
@@ -609,7 +643,8 @@ Specifies the Windows account that has permissions to the network share that you
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage
-Aliases: 
+Aliases: CaptureOperatingSystemFileAccount
+
 Required: True
 Position: Named
 Default value: None
@@ -624,6 +659,7 @@ Specifies as a secure string the password for the account that you specify in th
 Type: SecureString
 Parameter Sets: NewBuildOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -637,7 +673,8 @@ Specifies the file system path to the location that Configuration Manager uses w
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage
-Aliases: 
+Aliases: CaptureOperatingSystemFilePath
+
 Required: True
 Position: Named
 Default value: None
@@ -653,6 +690,7 @@ Use this parameter if the operating system image package has multiple images.
 Type: UInt32
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -667,6 +705,7 @@ Specifies the ID of the package that contains the operating system image to inst
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -681,6 +720,7 @@ Indicates whether the task sequence partitions and formats the destination compu
 Type: Boolean
 Parameter Sets: NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -695,6 +735,7 @@ Specifies the Windows product key for the operating system installation.
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, UpgradeOSImage
 Aliases: InstallationProductKey
+
 Required: False
 Position: Named
 Default value: None
@@ -709,6 +750,7 @@ This parameter has been deprecated.
 Type: Boolean
 Parameter Sets: NewInstallOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -729,6 +771,22 @@ Type: SoftwareUpdateStyleType
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, UpgradeOSImage
 Aliases: 
 Accepted values: All, Mandatory, NoInstall
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeZone
+{{Fill TimeZone Description}}
+
+```yaml
+Type: TimeZoneInfo
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -743,6 +801,7 @@ Indicates that the task sequence upgrades the operating system from an upgrade p
 Type: SwitchParameter
 Parameter Sets: UpgradeOSImage
 Aliases: UpgradeOperatingSystemOption
+
 Required: True
 Position: Named
 Default value: None
@@ -757,6 +816,7 @@ Specifies the ID for an upgrade package.
 Type: String
 Parameter Sets: UpgradeOSImage
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -773,6 +833,7 @@ To store the user state data locally or on a state migration point, you must cre
 Type: String
 Parameter Sets: NewInstallOSImage
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -788,6 +849,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -803,6 +865,7 @@ Specify this parameter if you use the WorkgroupType value for the *JoinDomain* p
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

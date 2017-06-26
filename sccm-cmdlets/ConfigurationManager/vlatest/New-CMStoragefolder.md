@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 1B4D2568-7D6A-4DFF-891B-9EDB54B3DFF0
 online version: https://go.microsoft.com/fwlink/?linkid=833790
 schema: 2.0.0
-ms.assetid: 1B4D2568-7D6A-4DFF-891B-9EDB54B3DFF0
 ---
 
 # New-CMStorageFolder
@@ -42,6 +42,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -50,12 +51,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -64,12 +66,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +89,7 @@ Valid values are: numbers between 1 and 99999.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +105,7 @@ Valid values are: numbers between 1 - 99999 when specifying a byte value, or num
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +121,7 @@ Type: MinSpaceType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Megabyte, Gigabyte, Percent
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +137,7 @@ The associated state migration point site system role in Configuration Manager u
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +153,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -163,5 +171,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

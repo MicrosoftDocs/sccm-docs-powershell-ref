@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 5DC5CD9E-DF35-4BB7-9AA4-79476C013FF4
 online version: https://go.microsoft.com/fwlink/?linkid=834138
 schema: 2.0.0
-ms.assetid: 5DC5CD9E-DF35-4BB7-9AA4-79476C013FF4
 ---
 
 # Get-CMBaselineSummarizationSchedule
@@ -31,12 +31,13 @@ This command gets the update schedule for configuration baseline data.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -45,12 +46,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

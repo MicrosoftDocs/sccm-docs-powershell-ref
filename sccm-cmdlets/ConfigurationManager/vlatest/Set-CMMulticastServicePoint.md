@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: B0A665E8-148A-4848-9923-7F80EAB27A4F
 online version: https://go.microsoft.com/fwlink/?linkid=833947
 schema: 2.0.0
-ms.assetid: B0A665E8-148A-4848-9923-7F80EAB27A4F
 ---
 
 # Set-CMMulticastServicePoint
@@ -17,8 +17,8 @@ Sets a multicast service point.
 Set-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EndIPAddress <String>]
  [-EndUdpPort <Int32>] [-InputObject] <IResultObject> [-EnableScheduledMulticast <Boolean>]
  [-MinimumClientCount <Int32>] [-MaximumClientCount <Int32>] [-PassThru] [-SessionStartDelayMins <Int32>]
- [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UserName <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UseAnyRangeIP] [-UserName <String>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
@@ -26,8 +26,9 @@ Set-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EndIPAddres
 Set-CMMulticastServicePoint [-ClientTransferRate <NetworkProfile>] [-EndIPAddress <String>]
  [-EndUdpPort <Int32>] [-EnableScheduledMulticast <Boolean>] [-MinimumClientCount <Int32>]
  [-MaximumClientCount <Int32>] [-PassThru] [-SessionStartDelayMins <Int32>] [-SiteCode <String>]
- [-SiteSystemServerName] <String> [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UserName <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SiteSystemServerName] <String> [-StartIPAddress <String>] [-StartUdpPort <Int32>] [-UseAnyRangeIP]
+ [-UserName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,6 +74,7 @@ Type: NetworkProfile
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, ProfileCustom, Profile10Mbps, Profile100Mbps, Profile1Gbps
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +89,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -95,12 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +119,7 @@ Indicates whether you can schedule when Configuration Manager deploys the operat
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -129,6 +134,7 @@ Specifies the ending IP address in the range of IP addresses that Configuration 
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +149,7 @@ Specifies the ending port in the range of user datagram protocol (UDP) ports tha
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -151,12 +158,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +180,7 @@ To obtain a multicast service point object, use the [Get-CMMulticastServicePoint
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: MulticastServicePoint
+
 Required: True
 Position: 0
 Default value: None
@@ -186,6 +195,7 @@ Specifies the maximum number of destination computers that can download the oper
 Type: Int32
 Parameter Sets: (All)
 Aliases: MulticastMaximumClientCount
+
 Required: False
 Position: Named
 Default value: None
@@ -200,6 +210,7 @@ Specifies the minimum number of requests that must be received before Configurat
 Type: Int32
 Parameter Sets: (All)
 Aliases: MinimumSessionSize
+
 Required: False
 Position: Named
 Default value: None
@@ -215,6 +226,7 @@ By default, this cmdlet does not generate any output.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +241,7 @@ Specifies the number of minutes that Configuration Manager waits before it respo
 Type: Int32
 Parameter Sets: (All)
 Aliases: SessionStartDelayMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -243,6 +256,7 @@ Specifies the site code for the Configuration Manager site that hosts the site s
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +271,7 @@ Specifies the name of the server that hosts a site system role.
 Type: String
 Parameter Sets: ByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -271,6 +286,7 @@ Specifies the starting IP address in the range of IP addresses that Configuratio
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -285,6 +301,22 @@ Specifies the starting port in the range of UDP ports that Configuration Manager
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseAnyRangeIP
+{{Fill UseAnyRangeIP Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +332,7 @@ If the *UserName* parameter is not specified, the cmdlet uses the computer accou
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -315,6 +348,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

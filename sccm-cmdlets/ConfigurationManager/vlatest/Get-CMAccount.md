@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Accounts.dll-Help.xml
+ms.assetid: 37B4DA45-91D4-47B0-AD08-F7D68D98FF8D
 online version: https://go.microsoft.com/fwlink/?linkid=834057
 schema: 2.0.0
-ms.assetid: 37B4DA45-91D4-47B0-AD08-F7D68D98FF8D
 ---
 
 # Get-CMAccount
@@ -34,12 +34,13 @@ This command gets a user account.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -48,12 +49,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -62,12 +64,11 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,12 +77,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: 0
 Default value: None

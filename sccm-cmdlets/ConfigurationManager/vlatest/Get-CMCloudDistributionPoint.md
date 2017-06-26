@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Content.dll-Help.xml
+ms.assetid: A636E1DD-49D4-4A9D-94BE-167F3D9A4D5D
 online version: https://go.microsoft.com/fwlink/?linkid=834205
 schema: 2.0.0
-ms.assetid: A636E1DD-49D4-4A9D-94BE-167F3D9A4D5D
 ---
 
 # Get-CMCloudDistributionPoint
@@ -78,12 +78,13 @@ This command gets a distribution point with the specified ID.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -99,6 +100,7 @@ To get a **CMDistributionPointGroup** object, use the [Get-CMDistributionPointGr
 Type: IResultObject
 Parameter Sets: SearchByGroup
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -113,6 +115,7 @@ Specifies the ID of a distribution point group.
 Type: String
 Parameter Sets: SearchByGroupId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -127,6 +130,7 @@ Specifies the name of a distribution point group.
 Type: String
 Parameter Sets: SearchByGroupName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -135,12 +139,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -156,6 +161,7 @@ You can use a comma separated list.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: AzureServiceId
+
 Required: True
 Position: Named
 Default value: None
@@ -170,6 +176,7 @@ Specifies the name of a cloud distribution point.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

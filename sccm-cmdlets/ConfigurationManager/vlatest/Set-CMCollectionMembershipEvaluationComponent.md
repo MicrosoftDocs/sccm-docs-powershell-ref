@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: DC548AD7-17F7-4455-8857-6342043439FA
 online version: https://go.microsoft.com/fwlink/?linkid=833744
 schema: 2.0.0
-ms.assetid: DC548AD7-17F7-4455-8857-6342043439FA
 ---
 
 # Set-CMCollectionMembershipEvaluationComponent
@@ -48,6 +48,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -56,12 +57,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -70,12 +72,11 @@ Accept wildcard characters: False
 ```
 
 ### -EvaluationMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: MinutesInterval
+
 Required: True
 Position: Named
 Default value: None
@@ -84,12 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -98,13 +100,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +121,8 @@ Specifies an array of a site codes for Configuration Manager sites.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +137,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +153,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

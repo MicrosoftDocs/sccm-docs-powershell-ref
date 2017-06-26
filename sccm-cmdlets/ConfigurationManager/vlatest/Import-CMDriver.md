@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 3E3C8B28-7093-4BCC-8576-0DB94EEF4367
 online version: https://go.microsoft.com/fwlink/?linkid=834059
 schema: 2.0.0
-ms.assetid: 3E3C8B28-7093-4BCC-8576-0DB94EEF4367
 ---
 
 # Import-CMDriver
@@ -13,10 +13,9 @@ Imports a device driver into Configuration Manager.
 ## SYNTAX
 
 ```
-Import-CMDriver -UncFileLocation <String> [-ImportFolder]
- [-ImportDuplicateDriverOption <ImportDuplicateDriverOption>] [-EnableAndAllowInstall <Boolean>]
- [-AdministrativeCategory <IResultObject[]>] [-SupportedPlatformName <String[]>]
- [-SupportedPlatform <IResultObject[]>] [-DriverPackage <IResultObject[]>]
+Import-CMDriver -Path <String> [-ImportFolder] [-ImportDuplicateDriverOption <ImportDuplicateDriverOption>]
+ [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
+ [-SupportedPlatformName <String[]>] [-SupportedPlatform <IResultObject[]>] [-DriverPackage <IResultObject[]>]
  [-UpdateDriverPackageDistributionPoint <Boolean>] [-BootImagePackage <IResultObject[]>]
  [-UpdateBootImageDistributionPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -59,6 +58,7 @@ Assign the device drivers to an administrative category for filtering purposes, 
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AdministrativeCategories
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +76,7 @@ Use this parameter to specify the boot images that can install the imported devi
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: BootImagePackages
+
 Required: False
 Position: Named
 Default value: None
@@ -90,6 +91,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -98,12 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -121,6 +124,7 @@ Use this parameter to specify the driver packages that Configuration Manager use
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: DriverPackages
+
 Required: False
 Position: Named
 Default value: None
@@ -136,6 +140,7 @@ Drivers added to the driver package are not affected.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,12 +149,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -171,6 +177,7 @@ Type: ImportDuplicateDriverOption
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NotImport, AppendCategory, KeepExistingCategory, OverwriteCategory
+
 Required: False
 Position: Named
 Default value: None
@@ -185,7 +192,23 @@ Indicates that Configuration Manager imports all the device drivers in the impor
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+{{Fill Path Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: UncFileLocation, Location
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -199,6 +222,7 @@ Specifies a platform object on which the device driver can run.
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: SupportedPlatforms
+
 Required: False
 Position: Named
 Default value: None
@@ -213,25 +237,8 @@ Specifies an array of names of platforms on which the device driver can run.
 Type: String[]
 Parameter Sets: (All)
 Aliases: SupportedPlatformNames
+
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UncFileLocation
-Specifies the network path (UNC) of device drivers.
-
-To import all of the device drivers that are contained in a specific folder, specify the network path to the device driver folder.
-For example: \\\\servername\folder.
-To import a specific driver from a folder, specify the network path (UNC) to the Windows device driver INF file or the mass storage Txtsetup.oem file of the driver.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -245,6 +252,7 @@ Indicates whether Configuration Manager updates boot images on their distributio
 Type: Boolean
 Parameter Sets: (All)
 Aliases: UpdateDistributionPointsForBootImagePackage, UpdateBootImageDistributionPoints
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +267,7 @@ Indicates whether Configuration Manager adds the drivers to packages and deploys
 Type: Boolean
 Parameter Sets: (All)
 Aliases: UpdateDistributionPointsforDriverPackage
+
 Required: False
 Position: Named
 Default value: None
@@ -274,6 +283,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

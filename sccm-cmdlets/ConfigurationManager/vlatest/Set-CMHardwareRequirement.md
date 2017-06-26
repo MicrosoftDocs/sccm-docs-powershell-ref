@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: EBE1B874-1B5D-458D-9BBF-FDC66BA81FBA
 online version: https://go.microsoft.com/fwlink/?linkid=833871
 schema: 2.0.0
-ms.assetid: EBE1B874-1B5D-458D-9BBF-FDC66BA81FBA
 ---
 
 # Set-CMHardwareRequirement
@@ -63,6 +63,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -71,12 +72,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -85,12 +87,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -106,6 +109,7 @@ To obtain a hardware requirement object, use the [Get-CMHardwareRequirement](./G
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -120,6 +124,7 @@ Specifies a minimum CPU speed, in megahertz (MHz), required for a software produ
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +139,7 @@ Specifies a minimum amount of available disk memory, in kilobytes (KB), required
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +154,7 @@ Specifies a minimum disk size, in kilobytes, required for a software product.
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +169,7 @@ Specifies a minimum amount of random access memory (RAM), in kilobytes, required
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -176,6 +184,7 @@ Specifies the name of a software product name.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -191,6 +200,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

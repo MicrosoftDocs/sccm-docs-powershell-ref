@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 634952FD-0028-44EB-A3E8-D6907CDA26DD
 online version: https://go.microsoft.com/fwlink/?linkid=833826
 schema: 2.0.0
-ms.assetid: 634952FD-0028-44EB-A3E8-D6907CDA26DD
 ---
 
 # Set-CMDriverBootImage
@@ -19,18 +19,18 @@ Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -Dr
  [<CommonParameters>]
 ```
 
-### SetDriverBootImagesById_Object
-```
-Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverId <Int32>
- -BootImage <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
 ### SetDriverBootImagesById_Name
 ```
 Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverId <Int32>
  -BootImageName <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
+```
+
+### SetDriverBootImagesById_Object
+```
+Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -DriverId <Int32>
+ -BootImage <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDriverBootImagesByName_Id
@@ -106,6 +106,7 @@ To obtain a **CMBootImage** object, use the [Get-CMBootImage](./Get-CMBootImage.
 Type: IResultObject
 Parameter Sets: SetDriverBootImagesById_Object, SetDriverBootImagesByName_Object, SetDriverBootImagesByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -120,6 +121,7 @@ Specifies the ID of a boot image.
 Type: String
 Parameter Sets: SetDriverBootImagesById_Id, SetDriverBootImagesByName_Id, SetDriverBootImagesByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -134,6 +136,7 @@ Specifies the name of a boot image.
 Type: String
 Parameter Sets: SetDriverBootImagesById_Name, SetDriverBootImagesByName_Name, SetDriverBootImagesByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -148,6 +151,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -156,12 +160,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +182,7 @@ To obtain a **CMDriver** object, use the [Get-CMDriver](./Get-CMDriver.md) cmdle
 Type: IResultObject
 Parameter Sets: SetDriverBootImagesByObject_Id, SetDriverBootImagesByObject_Name, SetDriverBootImagesByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -189,8 +195,9 @@ Specifies the ID of a driver.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetDriverBootImagesById_Id, SetDriverBootImagesById_Object, SetDriverBootImagesById_Name
+Parameter Sets: SetDriverBootImagesById_Id, SetDriverBootImagesById_Name, SetDriverBootImagesById_Object
 Aliases: Id, CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -205,6 +212,7 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: SetDriverBootImagesByName_Id, SetDriverBootImagesByName_Name, SetDriverBootImagesByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -213,12 +221,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -227,13 +236,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +263,7 @@ Type: SetDriveBootImageActionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AddDriverToBootImage, RemoveDriverFromBootImage
+
 Required: True
 Position: Named
 Default value: None
@@ -268,6 +279,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

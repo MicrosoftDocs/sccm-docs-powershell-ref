@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 3057C77C-7B9C-4413-AC06-DF8A17AD448C
 online version: https://go.microsoft.com/fwlink/?linkid=833793
 schema: 2.0.0
-ms.assetid: 3057C77C-7B9C-4413-AC06-DF8A17AD448C
 ---
 
 # Get-CMOperatingSystemImageUpdateSchedule
@@ -45,12 +45,13 @@ This command retrieves the operating system image update schedule identified by 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -59,12 +60,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -79,6 +81,7 @@ Specifies an array of IDs of operating system image update schedules in Configur
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: PackageId
+
 Required: True
 Position: Named
 Default value: None
@@ -93,6 +96,7 @@ Specifies an operating system image update schedule object in Configuration Mana
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -107,6 +111,7 @@ Specifies a name of an operating system image update schedule in Configuration M
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

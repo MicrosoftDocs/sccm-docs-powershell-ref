@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 03B638BE-FB62-443F-897D-09A4E7555C23
 online version: https://go.microsoft.com/fwlink/?linkid=833923
 schema: 2.0.0
-ms.assetid: 03B638BE-FB62-443F-897D-09A4E7555C23
 ---
 
 # Set-CMManagementPointComponent
@@ -52,6 +52,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -60,12 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -74,12 +76,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +98,7 @@ To obtain an input object, use the [Get-CMManagementPointComponent](./Get-CMMana
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -109,6 +113,7 @@ Specifies a name in Configuration Manager.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: SiteName
+
 Required: True
 Position: Named
 Default value: None
@@ -130,6 +135,7 @@ You must assign clients to a specific site and configure the clients to use the 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +150,7 @@ Specifies a site code in Configuration Manager.
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -159,6 +166,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

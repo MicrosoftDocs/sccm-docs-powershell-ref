@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 17573093-E2AE-4B48-8B64-2A239FBA3FC5
 online version: https://go.microsoft.com/fwlink/?linkid=833691
 schema: 2.0.0
-ms.assetid: 17573093-E2AE-4B48-8B64-2A239FBA3FC5
 ---
 
 # New-CMHardwareRequirement
@@ -52,6 +52,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -60,12 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -74,12 +76,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -94,6 +97,7 @@ Specifies the minimum CPU speed, in megahertz (MHz), required for a software pro
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -108,6 +112,7 @@ Specifies the minimum amount of available disk memory, in kilobytes (KB), requir
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -122,6 +127,7 @@ Specifies the minimum disk size, in kilobytes, required for a software product.
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -136,6 +142,7 @@ Specifies the minimum amount of random access memory (RAM), in kilobytes, requir
 Type: Int64
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -150,6 +157,7 @@ Specifies the name of a software product.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -165,6 +173,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

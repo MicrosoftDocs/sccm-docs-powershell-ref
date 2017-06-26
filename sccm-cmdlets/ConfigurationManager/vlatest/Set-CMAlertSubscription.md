@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
+ms.assetid: 5CA304C5-4BF7-42C7-82A1-400B7E1D4D59
 online version: https://go.microsoft.com/fwlink/?linkid=833616
 schema: 2.0.0
-ms.assetid: 5CA304C5-4BF7-42C7-82A1-400B7E1D4D59
 ---
 
 # Set-CMAlertSubscription
@@ -15,22 +15,22 @@ Changes the properties of an alert subscription.
 ### SetByValueMandatory (Default)
 ```
 Set-CMAlertSubscription -InputObject <IResultObject> [-NewName <String>] [-AlertId <Int32[]>]
- [-EmailAddress <String[]>] [-LocaleId <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EmailAddress <String[]>] [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
 Set-CMAlertSubscription -Id <String> [-NewName <String>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
- [-LocaleId <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMAlertSubscription -Name <String> [-NewName <String>] [-AlertId <Int32[]>] [-EmailAddress <String[]>]
- [-LocaleId <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AddEmailAddress <String[]>] [-RemoveEmailAddress <String[]>] [-LocaleId <Int32>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,6 +80,21 @@ This command removes the alert subscription named Subscription01 from the securi
 
 ## PARAMETERS
 
+### -AddEmailAddress
+{{Fill AddEmailAddress Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddEmailAddresses
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AlertId
 Specifies an array of alert IDs for subscriptions.
 
@@ -87,6 +102,7 @@ Specifies an array of alert IDs for subscriptions.
 Type: Int32[]
 Parameter Sets: (All)
 Aliases: AlertIds
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +117,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -109,12 +126,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +148,7 @@ You can separate multiple email addresses by using a semicolon.
 Type: String[]
 Parameter Sets: (All)
 Aliases: EmailAddresses
+
 Required: False
 Position: Named
 Default value: None
@@ -138,12 +157,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +178,7 @@ Specifies the identifier for a subscription object.
 Type: String
 Parameter Sets: SetById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -172,6 +193,7 @@ Specifies an alert notification object in Configuration Manager.
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -187,6 +209,7 @@ For more information and a list of locale identifiers, see the Locale IDs Assign
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +224,7 @@ Specifies the name of an alert subscription object.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -215,6 +239,7 @@ Specifies a new name for an alert subscription object.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -223,13 +248,29 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveEmailAddress
+{{Fill RemoveEmailAddress Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveEmailAddresses
+
 Required: False
 Position: Named
 Default value: None
@@ -245,6 +286,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

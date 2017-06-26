@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: 346AC378-4A7D-4F06-BE42-EBB231762E27
 online version: https://go.microsoft.com/fwlink/?linkid=833890
 schema: 2.0.0
-ms.assetid: 346AC378-4A7D-4F06-BE42-EBB231762E27
 ---
 
 # Set-CMIntuneSubscriptionAppleProperty
@@ -39,6 +39,7 @@ Specifies, as a secure string, the password for the APNs certificate.
 Type: SecureString
 Parameter Sets: (All)
 Aliases: CertificatePassword
+
 Required: False
 Position: Named
 Default value: None
@@ -53,6 +54,7 @@ Specifies the path to the Apple Push Notification service (APNs) certificate.
 Type: String
 Parameter Sets: (All)
 Aliases: Path, CertificatePath
+
 Required: False
 Position: Named
 Default value: None
@@ -67,6 +69,7 @@ Specifies the number of days before the APNs certificate expires to show an aler
 Type: Int32
 Parameter Sets: (All)
 Aliases: ApnsCertificateExpiryAlertDays
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +84,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -89,12 +93,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -109,6 +114,7 @@ Indicates whether iOS and Mac OS X (MDM) enrollment is enabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: Enabled, EnableIosEnrollment, EnableMacEnrollment, EnableMdmEnrollment
+
 Required: False
 Position: Named
 Default value: None
@@ -117,12 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -131,13 +138,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +161,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

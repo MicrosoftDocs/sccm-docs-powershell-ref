@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 0FF11819-7D5A-499F-9E7C-E332117BE0E6
 online version: https://go.microsoft.com/fwlink/?linkid=833628
 schema: 2.0.0
-ms.assetid: 0FF11819-7D5A-499F-9E7C-E332117BE0E6
 ---
 
 # Set-CMApplication
@@ -16,52 +16,56 @@ Sets the properties of an application.
 ```
 Set-CMApplication [-InputObject] <IResultObject> [-Description <String>] [-Publisher <String>]
  [-SoftwareVersion <String>] [-NewName <String>] [-OptionalReference <String>] [-ReleaseDate <DateTime>]
- [-AutoInstall <Boolean>] [-Owner <String>] [-SupportContact <String>] [-LocalizedApplicationName <String>]
- [-UserDocumentation <String>] [-LinkText <String>] [-LocalizedDescription <String>] [-Keyword <String>]
- [-DistributionPriority <DistributionPriorityType>] [-SendToProtectedDistributionPoint <Boolean>]
- [-DistributionPointSetting <DistributionPointSettingType>] [-UserCategory <String[]>]
- [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>] [-IconLocationFile <String>]
- [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AutoInstall <Boolean>] [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner]
+ [-SupportContact <String>] [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>]
+ [-ClearSupportContact] [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
+ [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
+ [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
+ [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
 Set-CMApplication [-Id] <Int32> [-Description <String>] [-Publisher <String>] [-SoftwareVersion <String>]
  [-NewName <String>] [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>]
- [-Owner <String>] [-SupportContact <String>] [-LocalizedApplicationName <String>]
- [-UserDocumentation <String>] [-LinkText <String>] [-LocalizedDescription <String>] [-Keyword <String>]
- [-DistributionPriority <DistributionPriorityType>] [-SendToProtectedDistributionPoint <Boolean>]
- [-DistributionPointSetting <DistributionPointSettingType>] [-UserCategory <String[]>]
- [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>] [-IconLocationFile <String>]
- [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
+ [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
+ [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
+ [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
+ [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
+ [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMApplication [-Name] <String> [-Description <String>] [-Publisher <String>] [-SoftwareVersion <String>]
  [-NewName <String>] [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>]
- [-Owner <String>] [-SupportContact <String>] [-LocalizedApplicationName <String>]
- [-UserDocumentation <String>] [-LinkText <String>] [-LocalizedDescription <String>] [-Keyword <String>]
- [-DistributionPriority <DistributionPriorityType>] [-SendToProtectedDistributionPoint <Boolean>]
- [-DistributionPointSetting <DistributionPointSettingType>] [-UserCategory <String[]>]
- [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>] [-IconLocationFile <String>]
- [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
+ [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
+ [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
+ [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
+ [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
+ [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByModelName
 ```
 Set-CMApplication -ModelName <String> [-Description <String>] [-Publisher <String>] [-SoftwareVersion <String>]
  [-NewName <String>] [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>]
- [-Owner <String>] [-SupportContact <String>] [-LocalizedApplicationName <String>]
- [-UserDocumentation <String>] [-LinkText <String>] [-LocalizedDescription <String>] [-Keyword <String>]
- [-DistributionPriority <DistributionPriorityType>] [-SendToProtectedDistributionPoint <Boolean>]
- [-DistributionPointSetting <DistributionPointSettingType>] [-UserCategory <String[]>]
- [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>] [-IconLocationFile <String>]
- [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
+ [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
+ [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
+ [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
+ [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
+ [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,6 +90,36 @@ This command gets the application named Application01, renames it to Application
 
 ## PARAMETERS
 
+### -AddOwner
+{{Fill AddOwner Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddOwners
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSupportContact
+{{Fill AddSupportContact Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddSupportContacts
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AppCategory
 Specifies an array of administrative categories assigned to the application.
 Provide the categories by their name.
@@ -95,6 +129,7 @@ Only categories of the type AppCategories are supported.
 Type: String[]
 Parameter Sets: (All)
 Aliases: AppCategories
+
 Required: False
 Position: Named
 Default value: None
@@ -109,6 +144,37 @@ Indicates whether a task sequence action can install the application.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearOwner
+{{Fill ClearOwner Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: CleanOwners
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearSupportContact
+{{Fill ClearSupportContact Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: CleanSupportContacts
+
 Required: False
 Position: Named
 Default value: None
@@ -123,6 +189,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -138,6 +205,7 @@ The description appears in the Configuration Manager console
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -146,12 +214,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -166,6 +235,7 @@ Indicates whether the application displays supersedence in the Application Catal
 Type: Boolean
 Parameter Sets: (All)
 Aliases: DisplaySupersedencesInApplicationCatalog
+
 Required: False
 Position: Named
 Default value: None
@@ -191,6 +261,7 @@ Type: DistributionPointSettingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AutoDownload, DeltaCopy, NoDownload
+
 Required: False
 Position: Named
 Default value: None
@@ -214,6 +285,7 @@ Type: DistributionPriorityType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: High, Medium, Low
+
 Required: False
 Position: Named
 Default value: None
@@ -222,12 +294,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -243,6 +316,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -257,6 +331,7 @@ Specifies the CI_ID and ModelID properties (the same value) of an application.
 Type: Int32
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -272,6 +347,7 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: Application
+
 Required: True
 Position: 0
 Default value: None
@@ -286,6 +362,7 @@ Indicates whether the application displays as a featured app and is highlighted 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -304,6 +381,7 @@ This keyword will help users of Software Center search for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -319,6 +397,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +412,7 @@ Specifies a localized name string that appears in the client software center or 
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -348,6 +428,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedApplicationDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -362,6 +443,7 @@ Specifies the model name of the application.
 Type: String
 Parameter Sets: SetByModelName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -376,6 +458,7 @@ Specifies the name of the application.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName, ApplicationName
+
 Required: True
 Position: 0
 Default value: None
@@ -390,6 +473,7 @@ Specifies a new name for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -404,6 +488,7 @@ Specifies optional reference information for this application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -418,6 +503,7 @@ Specifies an owner for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -426,13 +512,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -448,6 +535,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -462,6 +550,7 @@ Specifies the name of a software publisher.
 Type: String
 Parameter Sets: (All)
 Aliases: Manufacturer
+
 Required: False
 Position: Named
 Default value: None
@@ -476,6 +565,37 @@ Specifies a release date for the application.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOwner
+{{Fill RemoveOwner Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveOwners
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSupportContact
+{{Fill RemoveSupportContact Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveSupportContacts
+
 Required: False
 Position: Named
 Default value: None
@@ -490,6 +610,7 @@ Indicates whether to copy this application to protected distribution points.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -504,6 +625,7 @@ Specifies a software version for an application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -518,6 +640,7 @@ Specifies one or more administrative users who are support contacts for the appl
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -533,6 +656,7 @@ You can use this parameter to identify a group or category of software, such as 
 Type: String[]
 Parameter Sets: (All)
 Aliases: UserCategories
+
 Required: False
 Position: Named
 Default value: None
@@ -548,6 +672,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -563,6 +688,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

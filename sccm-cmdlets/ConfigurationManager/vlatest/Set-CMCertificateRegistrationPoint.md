@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 37602013-704A-4D5E-8EFF-BA9F722FBD0A
 online version: https://go.microsoft.com/fwlink/?linkid=833707
 schema: 2.0.0
-ms.assetid: 37602013-704A-4D5E-8EFF-BA9F722FBD0A
 ---
 
 # Set-CMCertificateRegistrationPoint
@@ -12,7 +12,7 @@ Sets a certificate registration point role on a site system server.
 
 ## SYNTAX
 
-### SetByValue
+### SetByValue (Default)
 ```
 Set-CMCertificateRegistrationPoint [-AddCertificate <Hashtable>] [-ConnectionAccountUserName <String>]
  -InputObject <IResultObject> [-PassThru] [-Port <Int32>] [-RemoveCertificate <String[]>]
@@ -95,12 +95,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -110,12 +110,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -141,13 +141,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ Specifies the HTTPS port number used by the certificate registration point to co
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ Specifies the site code of the Configuration Manager site server.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+ms.assetid: 8316BA4A-1758-4255-A911-D5749FC64971
 online version: https://go.microsoft.com/fwlink/?linkid=834191
 schema: 2.0.0
-ms.assetid: 8316BA4A-1758-4255-A911-D5749FC64971
 ---
 
 # Get-CMClientSetting
@@ -14,14 +14,14 @@ Gets client settings.
 
 ### SearchByName (Default)
 ```
-Get-CMClientSetting [-Setting <SettingType>] [-SettingType <Types>] [-Name <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMClientSetting [-Setting <SettingType>] [-SettingType <Types>] [-Name <String>] [-Raw]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMClientSetting [-Setting <SettingType>] [-SettingType <Types>] -Id <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMClientSetting [-Setting <SettingType>] [-SettingType <Types>] -Id <String> [-Raw]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,12 +57,13 @@ This command gets client settings that have the specified name.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -71,12 +72,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -91,6 +93,7 @@ Specifies an array of identifiers for one or more collections of client settings
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SettingsId
+
 Required: True
 Position: Named
 Default value: None
@@ -105,6 +108,22 @@ Specifies a name for customized client settings.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Raw
+{{Fill Raw Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +160,8 @@ Valid values are:
 Type: SettingType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: BackgroundIntelligentTransfer, Cloud, ClientPolicy, ComplianceSettings, ComputerAgent, ComputerRestart, EndpointProtection, HardwareInventory, MeteredNetwork, MobileDevice, NetworkAccessProtection, PowerManagement, RemoteTools, SoftwareDeployment, SoftwareInventory, SoftwareMetering, SoftwareUpdates, StateMessaging, UserAndDeviceAffinity
+Accepted values: BackgroundIntelligentTransfer, Cloud, ClientCache, ClientPolicy, ComplianceSettings, ComputerAgent, ComputerRestart, EndpointProtection, HardwareInventory, MeteredNetwork, MobileDevice, NetworkAccessProtection, PowerManagement, RemoteTools, SoftwareDeployment, SoftwareInventory, SoftwareMetering, SoftwareUpdates, StateMessaging, UserAndDeviceAffinity
+
 Required: False
 Position: Named
 Default value: None
@@ -150,13 +170,12 @@ Accept wildcard characters: False
 ```
 
 ### -SettingType
-
-
 ```yaml
 Type: Types
 Parameter Sets: (All)
 Aliases: Type
 Accepted values: Default, Device, User
+
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 650A9CD9-5313-4411-86B3-A9B793760CB2
 online version: https://go.microsoft.com/fwlink/?linkid=833797
 schema: 2.0.0
-ms.assetid: 650A9CD9-5313-4411-86B3-A9B793760CB2
 ---
 
 # New-CMTaskSequenceMedia
@@ -78,20 +78,6 @@ New-CMTaskSequenceMedia [-CaptureMedia] -MediaPath <String> [-MediaInputType <Me
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### NewPrestagedMediaByValue
-```
-New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
- [-ProtectPassword <Boolean>] -TaskSequence <IResultObject> -TaskSequenceDistributionPoint <IResultObject[]>
- [-Variable <Hashtable>] [-PrestartCommandLine <String>] [-CommandIncludeFile <Boolean>]
- [-CommandPackage <IResultObject>] [-CommandPackageDistributionPoint <IResultObject>]
- -BootImage <IResultObject> -BootImageDistributionPoint <IResultObject>
- -BootImageManagementPoint <IResultObject[]> -MediaMode <MediaMode> [-CreatedBy <String>] [-Version <String>]
- [-Comment <String>] [-OperatingSystemImagePackage <IResultObject>]
- -OperatingSystemImageDistributionPoint <IResultObject> [-Application <IResultObject[]>]
- [-Package <IResultObject[]>] [-DriverPackage <IResultObject[]>] [-AllowUacPrompt] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### NewPrestagedMedia
 ```
 New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
@@ -104,6 +90,20 @@ New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedD
  -OperatingSystemImageDistributionPointServerName <String> [-Application <IResultObject[]>]
  [-Package <IResultObject[]>] [-DriverPackage <IResultObject[]>] [-ApplicationName <String[]>]
  [-PackageName <String[]>] [-DriverPackageName <String[]>] [-AllowUacPrompt] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewPrestagedMediaByValue
+```
+New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
+ [-ProtectPassword <Boolean>] -TaskSequence <IResultObject> -TaskSequenceDistributionPoint <IResultObject[]>
+ [-Variable <Hashtable>] [-PrestartCommandLine <String>] [-CommandIncludeFile <Boolean>]
+ [-CommandPackage <IResultObject>] [-CommandPackageDistributionPoint <IResultObject>]
+ -BootImage <IResultObject> -BootImageDistributionPoint <IResultObject>
+ -BootImageManagementPoint <IResultObject[]> -MediaMode <MediaMode> [-CreatedBy <String>] [-Version <String>]
+ [-Comment <String>] [-OperatingSystemImagePackage <IResultObject>]
+ -OperatingSystemImageDistributionPoint <IResultObject> [-Application <IResultObject[]>]
+ [-Package <IResultObject[]>] [-DriverPackage <IResultObject[]>] [-AllowUacPrompt] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -147,12 +147,11 @@ This command uses the **New-CMTaskSequenceMedia** cmdlet to create task sequence
 ## PARAMETERS
 
 ### -AllowUacPrompt
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -165,8 +164,9 @@ Indicates whether you allow unattended operating system deployment, which does n
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -175,12 +175,11 @@ Accept wildcard characters: False
 ```
 
 ### -Application
-
-
 ```yaml
 Type: IResultObject[]
-Parameter Sets: NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: Applications
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +194,7 @@ Specifies an array of names of applications included in the task sequence.
 Type: String[]
 Parameter Sets: NewPrestagedMedia
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -203,12 +203,11 @@ Accept wildcard characters: False
 ```
 
 ### -BootImage
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: NewBootableMediaByValue, NewCaptureMediaByValue, NewPrestagedMediaByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -217,12 +216,11 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageDistributionPoint
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: NewBootableMediaByValue, NewCaptureMediaByValue, NewPrestagedMediaByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -231,12 +229,11 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageDistributionPointServerName
-
-
 ```yaml
 Type: String
 Parameter Sets: NewBootableMedia, NewCaptureMedia, NewPrestagedMedia
 Aliases: DistributionPointServerName
+
 Required: True
 Position: Named
 Default value: None
@@ -251,6 +248,7 @@ Specifies the ID of the boot image package associated with the task sequence med
 Type: String
 Parameter Sets: NewBootableMedia, NewCaptureMedia, NewPrestagedMedia
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -259,12 +257,11 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageManagementPoint
-
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: NewBootableMediaByValue, NewPrestagedMediaByValue
 Aliases: BootImageManagementPoints
+
 Required: True
 Position: Named
 Default value: None
@@ -273,12 +270,11 @@ Accept wildcard characters: False
 ```
 
 ### -BootImageManagementPointServerName
-
-
 ```yaml
 Type: String[]
 Parameter Sets: NewBootableMedia, NewPrestagedMedia
 Aliases: ManagementPointServerName, BootImageManagementPointServerNames
+
 Required: True
 Position: Named
 Default value: None
@@ -287,12 +283,11 @@ Accept wildcard characters: False
 ```
 
 ### -BootableMedia
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
 Aliases: BootableMediaOption
+
 Required: True
 Position: Named
 Default value: None
@@ -301,12 +296,11 @@ Accept wildcard characters: False
 ```
 
 ### -CaptureMedia
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewCaptureMedia, NewCaptureMediaByValue
 Aliases: CaptureMediaOption
+
 Required: True
 Position: Named
 Default value: None
@@ -322,6 +316,7 @@ The *CommandPackageName* parameter specifies the package name.
 Type: String
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewPrestagedMedia
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -334,8 +329,9 @@ Indicates whether to include a file.
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -344,12 +340,11 @@ Accept wildcard characters: False
 ```
 
 ### -CommandPackage
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -358,12 +353,11 @@ Accept wildcard characters: False
 ```
 
 ### -CommandPackageDistributionPoint
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -378,6 +372,7 @@ Specifies a package name for the command specified by the *CommandLine* paramete
 Type: String
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewPrestagedMedia
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -390,8 +385,9 @@ Specifies a comment for a prestaged media file.
 
 ```yaml
 Type: String
-Parameter Sets: NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -406,6 +402,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -421,6 +418,7 @@ Use this parameter only in mixed-mode environments.
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -433,8 +431,9 @@ Specifies the name of an individual or organization responsible for the creation
 
 ```yaml
 Type: String
-Parameter Sets: NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -443,12 +442,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -463,6 +463,7 @@ Specifies a drive name.
 Type: String
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewCaptureMedia, NewCaptureMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -471,12 +472,11 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackage
-
-
 ```yaml
 Type: IResultObject[]
-Parameter Sets: NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: DriverPackages, PackageDriver, PackageDrivers
+
 Required: False
 Position: Named
 Default value: None
@@ -485,12 +485,11 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackageName
-
-
 ```yaml
 Type: String[]
 Parameter Sets: NewPrestagedMedia
 Aliases: PackageDriverName
+
 Required: False
 Position: Named
 Default value: None
@@ -506,6 +505,7 @@ A prestart command is a script or executable that runs before the task sequence.
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -520,6 +520,7 @@ Indicates whether to provision unknown systems for operating system deployment.
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -534,6 +535,7 @@ Specifies an expiration date, in D.HH:MM:SS format, for bootable media.
 Type: DateTime
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -542,12 +544,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -563,6 +566,7 @@ An import certificate is a PKI-issued certificate added to the boot media for cl
 Type: SecureString
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -577,6 +581,7 @@ Specifies a path for an import certificate to add to the boot media.
 Type: String
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -585,12 +590,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeApplicationDependency
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: NewStandAloneMedia, NewStandAloneMediaByValue
 Aliases: IncludeApplicationDependencies
+
 Required: False
 Position: Named
 Default value: None
@@ -610,6 +614,7 @@ Type: MediaInputType
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewCaptureMedia
 Aliases: 
 Accepted values: Usb, CdDvd, Hd
+
 Required: True
 Position: Named
 Default value: None
@@ -622,6 +627,7 @@ Type: MediaInputType
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewCaptureMediaByValue
 Aliases: 
 Accepted values: Usb, CdDvd, Hd
+
 Required: False
 Position: Named
 Default value: None
@@ -638,9 +644,10 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: MediaMode
-Parameter Sets: NewBootableMedia, NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewBootableMedia, NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: 
 Accepted values: Dynamic, SiteBased
+
 Required: True
 Position: Named
 Default value: None
@@ -653,6 +660,7 @@ Type: MediaMode
 Parameter Sets: NewBootableMediaByValue
 Aliases: 
 Accepted values: Dynamic, SiteBased
+
 Required: False
 Position: Named
 Default value: None
@@ -667,6 +675,7 @@ Specifies a path to the media.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -689,6 +698,7 @@ Type: MediaSize
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue
 Aliases: 
 Accepted values: None, Size650MB, Size4GB, Size8GB, SizeUnlimited
+
 Required: False
 Position: Named
 Default value: None
@@ -697,12 +707,11 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageDistributionPoint
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: NewPrestagedMediaByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -717,6 +726,7 @@ Specifies the name of a distribution point server for an operating system image.
 Type: String
 Parameter Sets: NewPrestagedMedia
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -731,6 +741,7 @@ Specifies the name of an operating system image.
 Type: String
 Parameter Sets: NewPrestagedMedia
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -739,12 +750,11 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImagePackage
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -759,6 +769,7 @@ Specifies the identifier of an operating system image package.
 Type: String
 Parameter Sets: NewPrestagedMedia
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -767,12 +778,11 @@ Accept wildcard characters: False
 ```
 
 ### -Package
-
-
 ```yaml
 Type: IResultObject[]
-Parameter Sets: NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: Packages
+
 Required: False
 Position: Named
 Default value: None
@@ -787,6 +797,7 @@ Specifies an array of package names.
 Type: String[]
 Parameter Sets: NewPrestagedMedia
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -801,6 +812,7 @@ Specifies a password, as a secure string.
 Type: SecureString
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -809,12 +821,11 @@ Accept wildcard characters: False
 ```
 
 ### -PrestagedMedia
-
-
 ```yaml
 Type: SwitchParameter
-Parameter Sets: NewPrestagedMediaByValue, NewPrestagedMedia
-Aliases: PrestagedMediaOption
+Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
+Aliases: PrestagedMediaOption, PrestageMedia
+
 Required: True
 Position: Named
 Default value: None
@@ -823,12 +834,11 @@ Accept wildcard characters: False
 ```
 
 ### -PrestartCommandLine
-
-
 ```yaml
 Type: String
-Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: CommandLine
+
 Required: False
 Position: Named
 Default value: None
@@ -843,6 +853,7 @@ Indicates whether to protect the media with a password.
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewPrestagedMedia
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -854,6 +865,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -862,12 +874,11 @@ Accept wildcard characters: False
 ```
 
 ### -StandaloneMedia
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewStandAloneMedia, NewStandAloneMediaByValue
 Aliases: StandAloneMediaOption
+
 Required: True
 Position: Named
 Default value: None
@@ -882,6 +893,7 @@ Specifies a start date and time, in D.HH:MM:SS format.
 Type: DateTime
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -890,12 +902,11 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequence
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: NewStandAloneMediaByValue, NewPrestagedMediaByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -904,12 +915,11 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceDistributionPoint
-
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: NewStandAloneMediaByValue, NewPrestagedMediaByValue
 Aliases: TaskSequenceDistributionPoints
+
 Required: True
 Position: Named
 Default value: None
@@ -924,6 +934,7 @@ Specifies an array of available distribution point servers for a task sequence.
 Type: String[]
 Parameter Sets: NewStandAloneMedia, NewPrestagedMedia
 Aliases: TaskSequenceDistributionPointServerNames
+
 Required: True
 Position: Named
 Default value: None
@@ -938,6 +949,7 @@ Specifies an ID for a task sequence.
 Type: String
 Parameter Sets: NewStandAloneMedia, NewPrestagedMedia
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -959,6 +971,7 @@ Type: UserDeviceAffinityType
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
 Aliases: 
 Accepted values: DoNotAllow, AdministratorApproval, AutoApproval
+
 Required: False
 Position: Named
 Default value: None
@@ -972,8 +985,9 @@ The task sequence variable consists of a name and a value.
 
 ```yaml
 Type: Hashtable
-Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -986,8 +1000,9 @@ Specifies the version information for the media.
 
 ```yaml
 Type: String
-Parameter Sets: NewPrestagedMediaByValue, NewPrestagedMedia
+Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1003,6 +1018,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

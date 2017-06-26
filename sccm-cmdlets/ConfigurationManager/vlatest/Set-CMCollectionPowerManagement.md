@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 4BCE08DA-01DE-4CF2-86A8-F6CA8DD022E2
 online version: https://go.microsoft.com/fwlink/?linkid=833749
 schema: 2.0.0
-ms.assetid: 4BCE08DA-01DE-4CF2-86A8-F6CA8DD022E2
 ---
 
 # Set-CMCollectionPowerManagement
@@ -19,13 +19,6 @@ Set-CMCollectionPowerManagement -InputObject <IResultObject> [-Apply] [-PeakStar
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByNameApply
-```
-Set-CMCollectionPowerManagement -CollectionName <String> [-Apply] [-PeakStartTime <DateTime>]
- [-PeakEndTime <DateTime>] [-WakeupTime <DateTime>] [-PeakPlan <PowerSchema>] [-NonPeakPlan <PowerSchema>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### ByNameNone
 ```
 Set-CMCollectionPowerManagement -CollectionName <String> [-None] [-PassThru] [-DisableWildcardHandling]
@@ -35,6 +28,19 @@ Set-CMCollectionPowerManagement -CollectionName <String> [-None] [-PassThru] [-D
 ### ByNameNever
 ```
 Set-CMCollectionPowerManagement -CollectionName <String> [-NeverApply] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByNameApply
+```
+Set-CMCollectionPowerManagement -CollectionName <String> [-Apply] [-PeakStartTime <DateTime>]
+ [-PeakEndTime <DateTime>] [-WakeupTime <DateTime>] [-PeakPlan <PowerSchema>] [-NonPeakPlan <PowerSchema>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByIdNone
+```
+Set-CMCollectionPowerManagement -CollectionId <String> [-None] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,9 +57,9 @@ Set-CMCollectionPowerManagement -CollectionId <String> [-Apply] [-PeakStartTime 
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByIdNone
+### ByValueNone
 ```
-Set-CMCollectionPowerManagement -CollectionId <String> [-None] [-PassThru] [-DisableWildcardHandling]
+Set-CMCollectionPowerManagement -InputObject <IResultObject> [-None] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -61,12 +67,6 @@ Set-CMCollectionPowerManagement -CollectionId <String> [-None] [-PassThru] [-Dis
 ```
 Set-CMCollectionPowerManagement -InputObject <IResultObject> [-NeverApply] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByValueNone
-```
-Set-CMCollectionPowerManagement -InputObject <IResultObject> [-None] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -114,7 +114,7 @@ Specifies the collection ID of the device collection.
 
 ```yaml
 Type: String
-Parameter Sets: ByIdNever, ByIdApply, ByIdNone
+Parameter Sets: ByIdNone, ByIdNever, ByIdApply
 Aliases: 
 
 Required: True
@@ -129,7 +129,7 @@ Specifies the name of the device collection.
 
 ```yaml
 Type: String
-Parameter Sets: ByNameApply, ByNameNone, ByNameNever
+Parameter Sets: ByNameNone, ByNameNever, ByNameApply
 Aliases: 
 
 Required: True
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -190,7 +190,7 @@ To obtain a device collection object, use the Get-CMCollection or the Get-CMDevi
 
 ```yaml
 Type: IResultObject
-Parameter Sets: ByValueApply, ByValueNever, ByValueNone
+Parameter Sets: ByValueApply, ByValueNone, ByValueNever
 Aliases: Collection, CollectionSettings
 
 Required: True
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 3717A6BD-D2E1-435B-8A8E-F3AF9B632108
 online version: https://go.microsoft.com/fwlink/?linkid=834271
 schema: 2.0.0
-ms.assetid: 3717A6BD-D2E1-435B-8A8E-F3AF9B632108
 ---
 
 # Get-CMConfigurationItemHistory
@@ -59,12 +59,13 @@ This command gets the previous version of a configuration item with the specifie
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -73,12 +74,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +95,7 @@ Specifies an ID for a configuration item revision.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -108,6 +111,7 @@ To obtain a configuration item object, use the [Get-CMConfigurationItem](./Get-C
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -122,6 +126,7 @@ Specifies an array of names of configuration items.
 Type: String
 Parameter Sets: SearchByNameMandatoryNoWildcards
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -136,6 +141,7 @@ Specifies the version of a configuration item as an integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

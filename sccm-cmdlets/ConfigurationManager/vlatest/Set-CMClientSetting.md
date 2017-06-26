@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+ms.assetid: 0F088B51-F0AF-4A8C-AD75-8FD1665B8CDF
 online version: https://go.microsoft.com/fwlink/?linkid=833719
 schema: 2.0.0
-ms.assetid: 0F088B51-F0AF-4A8C-AD75-8FD1665B8CDF
 ---
 
 # Set-CMClientSetting
@@ -18,22 +18,6 @@ Set-CMClientSetting -Name <String> [-NewName <String>] [-Description <String>] [
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetSoftwareInventorySettingsByName
-```
-Set-CMClientSetting [-Enable <Boolean>] [-Schedule <IResultObject>] -Name <String> [-SoftwareInventory]
- [-SoftwareInventoryFileName <String>] [-SoftwareInventoryFileDisplayName <String>]
- [-SoftwareInventoryFileInventoriedName <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetSoftwareUpdatesSettingsByName
-```
-Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-SoftwareUpdate] [-ScanSchedule <IResultObject>]
- [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
- [-TimeUnit <BatchingTimeoutType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
 ### SetEndpointProtectionSettingsByName
 ```
 Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-EndpointProtection]
@@ -45,9 +29,9 @@ Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-EndpointProtection]
 ### SetPowerManagementSettingsByName
 ```
 Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-PowerManagement]
- [-AllowUserToOptOutFromPowerPlan <Boolean>] [-EnableWakeUpProxy <Boolean>] [-WakeUpProxyPort <Int32>]
- [-WakeOnLanPort <Int32>] [-FirewallExceptionForWakeUpProxy <WakeUpProxyFirewallExceptionTypes>]
- [-WakeUpProxyDirectAccessPrefix <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-AllowUserToOptOutFromPowerPlan <Boolean>] [-EnableWakeupProxy <Boolean>] [-WakeupProxyPort <Int32>]
+ [-WakeOnLanPort <Int32>] [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
+ [-WakeupProxyDirectAccessPrefix <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -77,6 +61,28 @@ Set-CMClientSetting [-Enable <Boolean>] [-Schedule <IResultObject>] -Name <Strin
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### SetSoftwareUpdatesSettingsByName
+```
+Set-CMClientSetting [-Enable <Boolean>] -Name <String> [-SoftwareUpdate] [-ScanSchedule <IResultObject>]
+ [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
+ [-TimeUnit <BatchingTimeoutType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SetSoftwareInventorySettingsByName
+```
+Set-CMClientSetting [-Enable <Boolean>] [-Schedule <IResultObject>] -Name <String> [-SoftwareInventory]
+ [-SoftwareInventoryFileName <String>] [-SoftwareInventoryFileDisplayName <String>]
+ [-SoftwareInventoryFileInventoriedName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetSoftwareDeploymentSettingsByName
+```
+Set-CMClientSetting [-Schedule <IResultObject>] -Name <String> [-SoftwareDeployment] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### SetComplianceSettingsByName
 ```
 Set-CMClientSetting [-Schedule <IResultObject>] -Name <String> [-Compliance]
@@ -84,10 +90,37 @@ Set-CMClientSetting [-Schedule <IResultObject>] -Name <String> [-Compliance]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetSoftwareDeploymentSettingsByName
+### SetCloudSettingsByName
 ```
-Set-CMClientSetting [-Schedule <IResultObject>] -Name <String> [-SoftwareDeployment] [-PassThru]
+Set-CMClientSetting -Name <String> [-CloudService] [-AllowCloudDistributionPoint <Boolean>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetSecurityScopeByName
+```
+Set-CMClientSetting -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### SetStateMessagingSettingsByName
+```
+Set-CMClientSetting -Name <String> [-StateMessage] [-ReportingCycleMins <Int32>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetUserDeviceAffinitySettingsByName
+```
+Set-CMClientSetting -Name <String> [-UserDeviceAffinity] [-LogOnThresholdMins <Int32>]
+ [-UsageThresholdDays <Int32>] [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetBackgroundIntelligentTransferSettingsByName
+```
+Set-CMClientSetting -Name <String> [-Bits] [-EnableBitsMaxBandwidth <Boolean>] [-MaxBandwidthBeginHr <Int32>]
+ [-MaxBandwidthEndHr <Int32>] [-MaxTransferRateOnSchedule <Int32>] [-EnableDownloadOffSchedule <Boolean>]
+ [-MaxTransferRateOffSchedule <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetClientPolicySettingsByName
@@ -97,12 +130,18 @@ Set-CMClientSetting -Name <String> [-ClientPolicy] [-PolicyPollingMins <Int32>] 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetBackgroundIntelligentTransferSettingsByName
+### SetComputerAgentSettingsByName
 ```
-Set-CMClientSetting -Name <String> [-Bits] [-EnableBitsMaxBandwidth <Boolean>] [-MaxBandwidthBeginHr <Int32>]
- [-MaxBandwidthEndHr <Int32>] [-MaxTransferRateOnSchedule <Int32>] [-EnableDownloadOffSchedule <Boolean>]
- [-MaxTransferRateOffSchedule <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientSetting -Name <String> [-ComputerAgent] [-InitialReminderHours <Int32>]
+ [-InterimReminderHours <Int32>] [-FinalReminderMins <Int32>] [-PortalUrl <String>]
+ [-AddPortalToTrustedSiteList <Boolean>] [-AllowPortalToHaveElevatedTrust <Boolean>]
+ [-SelectApplicationCatalogWebsitePoint <ApplicationCatalogWebsitePointType>]
+ [-ApplicationCatalogWebsitePointServerName <String>] [-BrandingTitle <String>]
+ [-UseNewSoftwareCenter <Boolean>] [-InstallRestriction <InstallRestrictionType>]
+ [-SuspendBitLocker <SuspendBitLockerType>]
+ [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>]
+ [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>] [-DisplayNewProgramNotification <Boolean>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetComputerRestartSettingsByName
@@ -129,45 +168,6 @@ Set-CMClientSetting -Name <String> [-RemoteControl]
  [-ManageSolicitedRemoteAssistance <Boolean>] [-RemoteAssistanceAccessLevel <RemoteAssistanceAccessLevelType>]
  [-ManageRemoteDesktopSetting <Boolean>] [-AllowPermittedViewer <Boolean>] [-RequireAuthentication <Boolean>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetUserDeviceAffinitySettingsByName
-```
-Set-CMClientSetting -Name <String> [-UserDeviceAffinity] [-LogOnThresholdMins <Int32>]
- [-UsageThresholdDays <Int32>] [-AutoApproveAffinity <Boolean>] [-AllowUserAffinity <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetComputerAgentSettingsByName
-```
-Set-CMClientSetting -Name <String> [-ComputerAgent] [-InitialReminderHours <Int32>]
- [-InterimReminderHours <Int32>] [-FinalReminderMins <Int32>] [-PortalUrl <String>]
- [-AddPortalToTrustedSiteList <Boolean>] [-AllowPortalToHaveElevatedTrust <Boolean>]
- [-SelectApplicationCatalogWebsitePoint <ApplicationCatalogWebsitePointType>]
- [-ApplicationCatalogWebsitePointServerName <String>] [-BrandingTitle <String>]
- [-UseNewSoftwareCenter <Boolean>] [-InstallRestriction <InstallRestrictionType>]
- [-SuspendBitLocker <SuspendBitLockerType>]
- [-EnableThirdPartyOrchestration <EnableThirdPartyOrchestrationType>]
- [-PowerShellExecutionPolicy <PowerShellExecutionPolicyType>] [-DisplayNewProgramNotification <Boolean>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetCloudSettingsByName
-```
-Set-CMClientSetting -Name <String> [-CloudService] [-AllowCloudDistributionPoint <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetSecurityScopeByName
-```
-Set-CMClientSetting -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetStateMessagingSettingsByName
-```
-Set-CMClientSetting -Name <String> [-StateMessage] [-ReportingCycleMins <Int32>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -304,8 +304,9 @@ Valid values are:
 ```yaml
 Type: AccessLevelType
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
 Accepted values: NoAccess, ViewOnly, FullControl
+
 Required: False
 Position: Named
 Default value: None
@@ -319,7 +320,8 @@ Indicates whether to add the default Application Catalog website to the Internet
 ```yaml
 Type: Boolean
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -333,7 +335,8 @@ Indicates whether users can change policy or notification settings in Software C
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -347,7 +350,8 @@ Indicates whether a device or user can access content from a cloud-based distrib
 ```yaml
 Type: Boolean
 Parameter Sets: SetCloudSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -356,12 +360,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPermittedViewer
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
 Aliases: AllowPermittedViewersToRemoteDesktop
+
 Required: False
 Position: Named
 Default value: None
@@ -375,7 +378,8 @@ Indicates whether to allow a portal to have elevated trust.
 ```yaml
 Type: Boolean
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -389,7 +393,8 @@ Indicates whether to allow remote control of a computer with no user logged onto
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -403,7 +408,8 @@ Indicates whether users can define their primary devices.
 ```yaml
 Type: Boolean
 Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -417,7 +423,8 @@ Indicates whether to allow users to exclude a device from power management setti
 ```yaml
 Type: Boolean
 Parameter Sets: SetPowerManagementSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -426,12 +433,11 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationCatalogWebsitePointServerName
-
-
 ```yaml
 Type: String
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -452,8 +458,9 @@ Valid values are:
 ```yaml
 Type: AudibleSignalType
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
 Accepted values: PlayNoSound, PlaySoundAtBeginAndEnd, PlaySoundRepeatedly
+
 Required: False
 Position: Named
 Default value: None
@@ -467,7 +474,8 @@ Indicates whether the client automatically configures user device affinity from 
 ```yaml
 Type: Boolean
 Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -483,7 +491,8 @@ When an update deadline passes, Configuration Manager deploys all updates pendin
 ```yaml
 Type: Int32
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -492,12 +501,11 @@ Accept wildcard characters: False
 ```
 
 ### -Bits
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
 Aliases: BitsSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -512,7 +520,8 @@ This branding information helps users identify Configuration Manager as a truste
 ```yaml
 Type: String
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -521,12 +530,11 @@ Accept wildcard characters: False
 ```
 
 ### -ClientPolicy
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetClientPolicySettingsByName
 Aliases: ClientPolicySettings
+
 Required: True
 Position: Named
 Default value: None
@@ -535,12 +543,11 @@ Accept wildcard characters: False
 ```
 
 ### -CloudService
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetCloudSettingsByName
 Aliases: CloudServicesSettings, CloudServices
+
 Required: True
 Position: Named
 Default value: None
@@ -549,12 +556,11 @@ Accept wildcard characters: False
 ```
 
 ### -Compliance
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetComplianceSettingsByName
 Aliases: ComplianceSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -563,12 +569,11 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerAgent
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetComputerAgentSettingsByName
 Aliases: ComputerAgentSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -577,12 +582,11 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerRestart
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetComputerRestartSettingsByName
 Aliases: ComputerRestartSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -597,6 +601,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -611,7 +616,8 @@ To obtain a schedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdle
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -625,7 +631,8 @@ Specifies a description for client settings.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -639,7 +646,8 @@ Indicates whether to disable the first signature update on client from a remote 
 ```yaml
 Type: Boolean
 Parameter Sets: SetEndpointProtectionSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -648,12 +656,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -668,7 +677,8 @@ If this parameter has a value of $False, the user sees only restart notification
 ```yaml
 Type: Boolean
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -681,8 +691,9 @@ Indicates whether to enable client settings.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetSoftwareInventorySettingsByName, SetSoftwareUpdatesSettingsByName, SetEndpointProtectionSettingsByName, SetPowerManagementSettingsByName, SetHardwareInventorySettingsByName, SetMobileDeviceSettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName
+Parameter Sets: SetEndpointProtectionSettingsByName, SetPowerManagementSettingsByName, SetHardwareInventorySettingsByName, SetMobileDeviceSettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareUpdatesSettingsByName, SetSoftwareInventorySettingsByName
 Aliases: EnableEndpointProtection, EnablePowerManagement, EnableHardwareInventory, EnableDeviceEnrollment, EnableNetworkAccessProtection, EnableSoftwareMetering, EnableSoftwareUpdatesOnClient, EnableSoftwareInventory
+
 Required: False
 Position: Named
 Default value: None
@@ -696,7 +707,8 @@ Specifies whether to enable maximum bandwidth for Background Intelligent Transfe
 ```yaml
 Type: Boolean
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -710,7 +722,8 @@ Indicates whether to enable compliance evaluation for this client.
 ```yaml
 Type: Boolean
 Parameter Sets: SetComplianceSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -724,7 +737,8 @@ Specifies whether allow BITS downloads outside of a throttling window.
 ```yaml
 Type: Boolean
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -740,8 +754,9 @@ Valid values are: Yes and No.
 ```yaml
 Type: EnableThirdPartyOrchestrationType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
 Accepted values: No, Yes
+
 Required: False
 Position: Named
 Default value: None
@@ -755,7 +770,8 @@ Indicates whether to enable user data and profile settings.
 ```yaml
 Type: Boolean
 Parameter Sets: SetComplianceSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -764,12 +780,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserPolicy
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: SetClientPolicySettingsByName
 Aliases: EnableUserPolicyPolling
+
 Required: False
 Position: Named
 Default value: None
@@ -786,7 +801,8 @@ An Internet-based management point must authenticate the user.
 ```yaml
 Type: Boolean
 Parameter Sets: SetClientPolicySettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -794,13 +810,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableWakeUpProxy
-
-
+### -EnableWakeupProxy
 ```yaml
 Type: Boolean
 Parameter Sets: SetPowerManagementSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -809,12 +824,11 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointProtection
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetEndpointProtectionSettingsByName
 Aliases: EndpointProtectionSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -828,7 +842,8 @@ Indicates whether to enforce all mandatory software update deployments that have
 ```yaml
 Type: Boolean
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -837,12 +852,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enrollment
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetMobileDeviceSettingsByName
 Aliases: EnrollmentSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -851,12 +865,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnrollmentProfileName
-
-
 ```yaml
 Type: String
 Parameter Sets: SetMobileDeviceSettingsByName
 Aliases: DeviceEnrollmentProfileName
+
 Required: False
 Position: Named
 Default value: None
@@ -865,12 +878,11 @@ Accept wildcard characters: False
 ```
 
 ### -FinalReminderMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetComputerAgentSettingsByName
 Aliases: FinalReminderMinutesInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -878,14 +890,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FirewallExceptionForWakeUpProxy
-
-
+### -FirewallExceptionForWakeupProxy
 ```yaml
 Type: WakeUpProxyFirewallExceptionTypes
 Parameter Sets: SetPowerManagementSettingsByName
 Aliases: WindowsFirewallExceptionsForWakeUpProxy
 Accepted values: None, Public, Private, Domain
+
 Required: False
 Position: Named
 Default value: None
@@ -905,8 +916,9 @@ Valid values are:
 ```yaml
 Type: FirewallExceptionProfileType[]
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
 Accepted values: Disabled, Public, Private, Domain
+
 Required: False
 Position: Named
 Default value: None
@@ -915,12 +927,11 @@ Accept wildcard characters: False
 ```
 
 ### -ForceRebootHr
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetEndpointProtectionSettingsByName
 Aliases: ForceRebootPeriod, ForceRebootHours
+
 Required: False
 Position: Named
 Default value: None
@@ -934,7 +945,8 @@ Indicates whether to enable force scan.
 ```yaml
 Type: Boolean
 Parameter Sets: SetNetworkAccessProtectionSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -943,12 +955,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -962,7 +975,8 @@ Indicates whether local administrators on the server initiating a remote control
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -971,12 +985,11 @@ Accept wildcard characters: False
 ```
 
 ### -HardwareInventory
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetHardwareInventorySettingsByName
 Aliases: HardwareInventorySettings
+
 Required: True
 Position: Named
 Default value: None
@@ -985,12 +998,11 @@ Accept wildcard characters: False
 ```
 
 ### -InitialReminderHours
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetComputerAgentSettingsByName
 Aliases: InitialReminderHoursInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -1004,7 +1016,8 @@ Indicates whether to install and enable the Endpoint Protection client on this c
 ```yaml
 Type: Boolean
 Parameter Sets: SetEndpointProtectionSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1024,8 +1037,9 @@ Valid values are:
 ```yaml
 Type: InstallRestrictionType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
 Accepted values: AllUsers, OnlyAdministrators, OnlyAdministratorsAndPrimaryUsers, NoUsers
+
 Required: False
 Position: Named
 Default value: None
@@ -1034,12 +1048,11 @@ Accept wildcard characters: False
 ```
 
 ### -InterimReminderHours
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetComputerAgentSettingsByName
 Aliases: InterimReminderHoursInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -1053,7 +1066,8 @@ Specifies an inventory report ID.
 ```yaml
 Type: String
 Parameter Sets: SetHardwareInventorySettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1062,12 +1076,11 @@ Accept wildcard characters: False
 ```
 
 ### -LogOnThresholdMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetUserDeviceAffinitySettingsByName
 Aliases: UserAffinityLogOnThresholdMinutes, UserAffinityLogOnThresholdMins
+
 Required: False
 Position: Named
 Default value: None
@@ -1081,7 +1094,8 @@ Indicates whether to allow Configuration Manager to manage Remote Desktop sessio
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1095,7 +1109,8 @@ Indicates whether to allow Configuration Manager to manage solicited remote assi
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1109,7 +1124,8 @@ Indicates whether to allow Configuration Manager to manage unsolicited remote as
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1118,12 +1134,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxBandwidthBeginHr
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
 Aliases: MaxBandwidthValidFrom
+
 Required: False
 Position: Named
 Default value: None
@@ -1132,12 +1147,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxBandwidthEndHr
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
 Aliases: MaxBandwidthValidTo
+
 Required: False
 Position: Named
 Default value: None
@@ -1151,7 +1165,8 @@ Specifies an integer value for maximum transfer rate off schedule.
 ```yaml
 Type: Int32
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1165,7 +1180,8 @@ Specifies an integer value for maximum transfer rate on schedule.
 ```yaml
 Type: Int32
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1174,12 +1190,11 @@ Accept wildcard characters: False
 ```
 
 ### -MeteredNetwork
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetMeteredNetworksSettingsByName
 Aliases: MeteredNetworkSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1199,8 +1214,9 @@ Valid values are:
 ```yaml
 Type: MeteredNetworkUsageType
 Parameter Sets: SetMeteredNetworksSettingsByName
-Aliases:
+Aliases: 
 Accepted values: None, Allow, Limit, Block
+
 Required: False
 Position: Named
 Default value: None
@@ -1214,7 +1230,8 @@ Specifies a name for a client setting.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -1223,12 +1240,11 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkAccessProtection
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetNetworkAccessProtectionSettingsByName
 Aliases: NetworkAccessProtectionSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1242,7 +1258,8 @@ Specifies a new name for a client setting.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1251,13 +1268,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1272,6 +1290,7 @@ Specifies an array of names of users who can establish remote control sessions t
 Type: String[]
 Parameter Sets: SetRemoteToolsSettingsByName
 Aliases: PermittedViewers
+
 Required: False
 Position: Named
 Default value: None
@@ -1280,12 +1299,11 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyPollingMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetClientPolicySettingsByName
 Aliases: PolicyPollingInterval, PollingIntervalMins
+
 Required: False
 Position: Named
 Default value: None
@@ -1299,7 +1317,8 @@ Specifies a link, as a URL, for a portal for a client.
 ```yaml
 Type: String
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1308,12 +1327,11 @@ Accept wildcard characters: False
 ```
 
 ### -PowerManagement
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetPowerManagementSettingsByName
 Aliases: PowerManagementSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1336,8 +1354,9 @@ When you select Restricted, the Configuration Manager client uses the current Wi
 ```yaml
 Type: PowerShellExecutionPolicyType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
 Accepted values: AllSigned, Bypass, Restricted
+
 Required: False
 Position: Named
 Default value: None
@@ -1352,8 +1371,9 @@ Valid values are: Decrease and Increase.
 ```yaml
 Type: PriorityChangeType
 Parameter Sets: SetByName
-Aliases:
+Aliases: 
 Accepted values: Increase, Decrease
+
 Required: False
 Position: Named
 Default value: None
@@ -1367,7 +1387,8 @@ Indicates whether a client computer displays a message asking for user permissio
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1376,12 +1397,11 @@ Accept wildcard characters: False
 ```
 
 ### -RebootLogoffNotificationCountdownMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetComputerRestartSettingsByName
 Aliases: RebootLogoffNotificationCountdownDurationMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -1390,12 +1410,11 @@ Accept wildcard characters: False
 ```
 
 ### -RebootLogoffNotificationFinalWindowMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetComputerRestartSettingsByName
 Aliases: RebootLogoffNotificationFinalWindowMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -1415,8 +1434,9 @@ Valid values are:
 ```yaml
 Type: RemoteAssistanceAccessLevelType
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
 Accepted values: None, RemoteViewing, FullControl
+
 Required: False
 Position: Named
 Default value: None
@@ -1425,12 +1445,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteControl
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetRemoteToolsSettingsByName
 Aliases: RemoteToolsSettings, RemoteTools
+
 Required: True
 Position: Named
 Default value: None
@@ -1444,7 +1463,8 @@ Indicates whether to remove third party.
 ```yaml
 Type: Boolean
 Parameter Sets: SetEndpointProtectionSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1453,12 +1473,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingCycleMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetStateMessagingSettingsByName
 Aliases: StateMessagingReportingCycleMinutes, StateMessagingReportingCycleMins
+
 Required: False
 Position: Named
 Default value: None
@@ -1472,7 +1491,8 @@ Indicates whether to use network-level authentication to establish Remote Deskto
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1487,7 +1507,8 @@ To obtain a schedule object, use the **New-CMSchedule** cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1501,8 +1522,9 @@ To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md)
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SetSoftwareInventorySettingsByName, SetHardwareInventorySettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName, SetComplianceSettingsByName, SetSoftwareDeploymentSettingsByName
+Parameter Sets: SetHardwareInventorySettingsByName, SetNetworkAccessProtectionSettingsByName, SetSoftwareMeteringSettingsByName, SetSoftwareInventorySettingsByName, SetSoftwareDeploymentSettingsByName, SetComplianceSettingsByName
 Aliases: InventorySchedule, NapEvaluationSchedule, EvaluationSchedule, DataCollectionSchedule, SoftwareInventorySchedule
+
 Required: False
 Position: Named
 Default value: None
@@ -1511,13 +1533,12 @@ Accept wildcard characters: False
 ```
 
 ### -SelectApplicationCatalogWebsitePoint
-
-
 ```yaml
 Type: ApplicationCatalogWebsitePointType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
 Accepted values: Fqdn, AutoDetect, NetBios
+
 Required: False
 Position: Named
 Default value: None
@@ -1531,7 +1552,8 @@ Indicates whether to display an icon on the taskbar of a client computer to indi
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1545,7 +1567,8 @@ Indicates whether to display a high-visibility session connection bar on a clien
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1554,12 +1577,11 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareDeployment
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetSoftwareDeploymentSettingsByName
 Aliases: SoftwareDeploymentSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1568,12 +1590,11 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInventory
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetSoftwareInventorySettingsByName
 Aliases: SoftwareInventorySettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1588,7 +1609,8 @@ This parameter allows you to standardize inventory information for software name
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareInventorySettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1603,7 +1625,8 @@ During software inventory, Configuration Manager gets inventoried names from hea
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareInventorySettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1618,7 +1641,8 @@ You can use the wildcard (*) to represent any string of text and the question ma
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareInventorySettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1627,12 +1651,11 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareMetering
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetSoftwareMeteringSettingsByName
 Aliases: SoftwareMeteringSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1641,12 +1664,11 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetSoftwareUpdatesSettingsByName
 Aliases: SoftwareUpdatesSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1655,12 +1677,11 @@ Accept wildcard characters: False
 ```
 
 ### -StateMessage
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetStateMessagingSettingsByName
 Aliases: StateMessageSettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1674,7 +1695,8 @@ Indicates whether to bypass a required computer restart after installing the Sys
 ```yaml
 Type: Boolean
 Parameter Sets: SetEndpointProtectionSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1697,8 +1719,9 @@ If you select Never, the software installation cannot finish until the user ente
 ```yaml
 Type: SuspendBitLockerType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
 Accepted values: Never, Always
+
 Required: False
 Position: Named
 Default value: None
@@ -1713,8 +1736,9 @@ Valid values are: Hours and Days.
 ```yaml
 Type: BatchingTimeoutType
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases:
+Aliases: 
 Accepted values: Days, Hours
+
 Required: False
 Position: Named
 Default value: None
@@ -1723,12 +1747,11 @@ Accept wildcard characters: False
 ```
 
 ### -UsageThresholdDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetUserDeviceAffinitySettingsByName
 Aliases: UserAffinityUsageThresholdDays
+
 Required: False
 Position: Named
 Default value: None
@@ -1737,12 +1760,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseNewSoftwareCenter
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1757,7 +1779,8 @@ If you specify $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: SetNetworkAccessProtectionSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1766,12 +1789,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserDeviceAffinity
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetUserDeviceAffinitySettingsByName
 Aliases: UserDeviceAffinitySettings
+
 Required: True
 Position: Named
 Default value: None
@@ -1780,12 +1802,11 @@ Accept wildcard characters: False
 ```
 
 ### -WakeOnLanPort
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetPowerManagementSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1793,13 +1814,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WakeUpProxyDirectAccessPrefix
-
-
+### -WakeupProxyDirectAccessPrefix
 ```yaml
 Type: String
 Parameter Sets: SetPowerManagementSettingsByName
 Aliases: IPv6PrefixesForDirectAccessOrInterveningNetworkDevices
+
 Required: False
 Position: Named
 Default value: None
@@ -1807,13 +1827,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WakeUpProxyPort
-
-
+### -WakeupProxyPort
 ```yaml
 Type: Int32
 Parameter Sets: SetPowerManagementSettingsByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -1829,6 +1848,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

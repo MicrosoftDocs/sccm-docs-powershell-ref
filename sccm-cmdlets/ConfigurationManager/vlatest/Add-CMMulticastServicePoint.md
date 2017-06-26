@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: D13CE329-6515-4DD1-8D5D-4E9C738EA32B
 online version: https://go.microsoft.com/fwlink/?linkid=833720
 schema: 2.0.0
-ms.assetid: D13CE329-6515-4DD1-8D5D-4E9C738EA32B
 ---
 
 # Add-CMMulticastServicePoint
@@ -72,6 +72,7 @@ Type: NetworkProfile
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, ProfileCustom, Profile10Mbps, Profile100Mbps, Profile1Gbps
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +87,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -94,12 +96,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +117,7 @@ Specifies the ending IP address in the range of IP addresses that Configuration 
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +132,7 @@ Specifies the ending port in the range of user datagram protocol (UDP) ports tha
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -136,12 +141,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -157,6 +163,7 @@ To obtain a multicast service point object, use the Get-CMMulticastServicePoint 
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: SiteServer
+
 Required: True
 Position: Named
 Default value: None
@@ -171,6 +178,7 @@ Specifies the maximum number of destination computers that can download the oper
 Type: Int32
 Parameter Sets: (All)
 Aliases: MulticastMaximumClientCount
+
 Required: False
 Position: Named
 Default value: None
@@ -185,6 +193,7 @@ Specifies the minimum number of requests that must be received before Configurat
 Type: Int32
 Parameter Sets: (All)
 Aliases: MinimumSessionSize
+
 Required: False
 Position: Named
 Default value: None
@@ -199,6 +208,7 @@ Specifies the number of minutes that Configuration Manager waits before it respo
 Type: Int32
 Parameter Sets: (All)
 Aliases: SessionStartDelayMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -213,6 +223,7 @@ Specifies the site code for the Configuration Manager site that hosts the site s
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -227,6 +238,7 @@ Specifies the name of the server that hosts a site system role.
 Type: String
 Parameter Sets: ByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -241,6 +253,7 @@ Specifies the starting IP address in the range of IP addresses that Configuratio
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -255,6 +268,7 @@ Specifies the starting port in the range of UDP ports that Configuration Manager
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -270,6 +284,7 @@ If UserName is not specified, the cmdlet uses the computer account of the distri
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -285,6 +300,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
