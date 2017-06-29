@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: ED2B0513-DEEB-472B-B863-3E456B8182CF
 online version: https://go.microsoft.com/fwlink/?linkid=833922
 schema: 2.0.0
-ms.assetid: ED2B0513-DEEB-472B-B863-3E456B8182CF
 ---
 
 # Copy-CMSecurityRole
@@ -70,6 +70,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -84,6 +85,7 @@ Specifies the description of a security role.
 Type: String
 Parameter Sets: (All)
 Aliases: RoleDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -92,12 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -106,12 +109,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -127,6 +131,7 @@ To obtain a **CMSecurityRole** object, use the [Get-CMSecurityRole](./Get-CMSecu
 Type: IResultObject
 Parameter Sets: CopyFromValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -141,6 +146,7 @@ Specifies a name for the new security scope.
 Type: String
 Parameter Sets: (All)
 Aliases: RoleName
+
 Required: True
 Position: Named
 Default value: None
@@ -155,6 +161,7 @@ Specifies the ID of a security role.
 Type: String
 Parameter Sets: CopyFromId
 Aliases: CopiedFromId
+
 Required: True
 Position: Named
 Default value: None
@@ -169,6 +176,7 @@ Specifies the name of a security role.
 Type: String
 Parameter Sets: CopyFromName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -184,6 +192,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

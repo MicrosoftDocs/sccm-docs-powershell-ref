@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: B5D0F1F5-75B0-42FF-8C3E-9FEB9551C18D
 online version: https://go.microsoft.com/fwlink/?linkid=834169
 schema: 2.0.0
-ms.assetid: B5D0F1F5-75B0-42FF-8C3E-9FEB9551C18D
 ---
 
 # Invoke-CMSoftwareUpdateAutoDeploymentRule
@@ -14,19 +14,19 @@ Runs a Configuration Manager deployment rule for automatic software updates.
 
 ### SearchByIdMandatory (Default)
 ```
-Invoke-CMSoftwareUpdateAutoDeploymentRule -Id <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMSoftwareUpdateAutoDeploymentRule -Id <Int32[]> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Invoke-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Invoke-CMSoftwareUpdateAutoDeploymentRule -InputObject <IResultObject> [-DisableWildcardHandling]
+Invoke-CMSoftwareUpdateAutoDeploymentRule -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -59,6 +59,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -67,12 +68,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,12 +83,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -99,9 +102,10 @@ Specifies an array of IDs for rules for automatic deployment of software updates
 This value is the **AutoDeploymentID** property of the deployment rule object.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: SearchByIdMandatory
 Aliases: AutoDeploymentId
+
 Required: True
 Position: Named
 Default value: None
@@ -117,6 +121,7 @@ To obtain a deployment rule object, use the **Get-CMSoftwareUpdateAutoDeployment
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -131,7 +136,23 @@ Specifies a name of a rule for automatic deployment of software updates.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+{{Fill PassThru Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -146,6 +167,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

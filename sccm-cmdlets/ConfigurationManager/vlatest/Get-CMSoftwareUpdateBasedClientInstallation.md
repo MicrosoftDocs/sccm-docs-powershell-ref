@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 3E004486-ADA5-4109-BBB7-035A2FE790AA
 online version: https://go.microsoft.com/fwlink/?linkid=833904
 schema: 2.0.0
-ms.assetid: 3E004486-ADA5-4109-BBB7-035A2FE790AA
 ---
 
 # Get-CMSoftwareUpdateBasedClientInstallation
@@ -38,12 +38,13 @@ This command gets the client installation for the site that has the site code CM
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -52,12 +53,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +74,7 @@ Specifies a site code for a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +89,7 @@ Specifies an array of names of servers that host a software update point role.
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: Named
 Default value: None

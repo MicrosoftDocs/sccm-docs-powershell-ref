@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 86BEA428-375A-470C-8F80-36DA8B5626A9
 online version: https://go.microsoft.com/fwlink/?linkid=833761
 schema: 2.0.0
-ms.assetid: 86BEA428-375A-470C-8F80-36DA8B5626A9
 ---
 
 # Add-CMSoftwareUpdateToGroup
@@ -12,57 +12,57 @@ Adds a software update to a software update group in Configuration Manager.
 
 ## SYNTAX
 
-### AddSoftwareUpdateToGroupById_Id (Default)
+### ById_Id (Default)
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdateId <String[]> -SoftwareUpdateGroupId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddSoftwareUpdateToGroupById_Name
+### ById_Name
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdateId <String[]> -SoftwareUpdateGroupName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddSoftwareUpdateToGroupById_Object
+### ById_Object
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdateId <String[]> -SoftwareUpdateGroup <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddSoftwareUpdateToGroupByName_Id
+### ByName_Id
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdateName <String[]> -SoftwareUpdateGroupId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddSoftwareUpdateToGroupByName_Name
+### ByName_Name
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdateName <String[]> -SoftwareUpdateGroupName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddSoftwareUpdateToGroupByName_Object
+### ByName_Object
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdateName <String[]> -SoftwareUpdateGroup <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddSoftwareUpdateToGroupByObject_Name
+### ByObject_Id
+```
+Add-CMSoftwareUpdateToGroup -SoftwareUpdate <IResultObject[]> -SoftwareUpdateGroupId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByObject_Name
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdate <IResultObject[]> -SoftwareUpdateGroupName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddSoftwareUpdateToGroupByObject_Object
+### ByObject_Object
 ```
 Add-CMSoftwareUpdateToGroup -SoftwareUpdate <IResultObject[]> -SoftwareUpdateGroup <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddSoftwareUpdateToGroupByObject_Id
-```
-Add-CMSoftwareUpdateToGroup -SoftwareUpdate <IResultObject[]> -SoftwareUpdateGroupId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -96,6 +96,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -104,12 +105,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -118,12 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -137,8 +140,9 @@ To obtain a software update object, use **Get-CMSoftwareUpdate**.
 
 ```yaml
 Type: IResultObject[]
-Parameter Sets: AddSoftwareUpdateToGroupByObject_Name, AddSoftwareUpdateToGroupByObject_Object, AddSoftwareUpdateToGroupByObject_Id
+Parameter Sets: ByObject_Id, ByObject_Name, ByObject_Object
 Aliases: SoftwareUpdates
+
 Required: True
 Position: Named
 Default value: None
@@ -152,8 +156,9 @@ To obtain a software update group object, use **Get-CMSoftwareUpdateGroup**.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: AddSoftwareUpdateToGroupById_Object, AddSoftwareUpdateToGroupByName_Object, AddSoftwareUpdateToGroupByObject_Object
+Parameter Sets: ById_Object, ByName_Object, ByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -166,8 +171,9 @@ Specifies an ID of a software group.
 
 ```yaml
 Type: String
-Parameter Sets: AddSoftwareUpdateToGroupById_Id, AddSoftwareUpdateToGroupByName_Id, AddSoftwareUpdateToGroupByObject_Id
+Parameter Sets: ById_Id, ByName_Id, ByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -180,8 +186,9 @@ Specifies a name of a software group.
 
 ```yaml
 Type: String
-Parameter Sets: AddSoftwareUpdateToGroupById_Name, AddSoftwareUpdateToGroupByName_Name, AddSoftwareUpdateToGroupByObject_Name
+Parameter Sets: ById_Name, ByName_Name, ByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -194,8 +201,9 @@ Specifies an ID of a software update.
 
 ```yaml
 Type: String[]
-Parameter Sets: AddSoftwareUpdateToGroupById_Id, AddSoftwareUpdateToGroupById_Name, AddSoftwareUpdateToGroupById_Object
+Parameter Sets: ById_Id, ById_Name, ById_Object
 Aliases: SoftwareUpdateIds
+
 Required: True
 Position: Named
 Default value: None
@@ -208,8 +216,9 @@ Specifies a name of a software update.
 
 ```yaml
 Type: String[]
-Parameter Sets: AddSoftwareUpdateToGroupByName_Id, AddSoftwareUpdateToGroupByName_Name, AddSoftwareUpdateToGroupByName_Object
+Parameter Sets: ByName_Id, ByName_Name, ByName_Object
 Aliases: SoftwareUpdateNames
+
 Required: True
 Position: Named
 Default value: None
@@ -225,6 +234,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

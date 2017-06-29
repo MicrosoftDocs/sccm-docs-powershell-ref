@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 5F3481E0-3965-445D-9416-D45E4C8C5B59
 online version: https://go.microsoft.com/fwlink/?linkid=834019
 schema: 2.0.0
-ms.assetid: 5F3481E0-3965-445D-9416-D45E4C8C5B59
 ---
 
 # Remove-CMDeploymentType
@@ -56,6 +56,7 @@ Specifies the name of an application that is associated to the deployment type.
 Type: String
 Parameter Sets: SearchByInputObjectMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,6 +68,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SearchByIdMandatory, SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -81,6 +83,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -95,6 +98,7 @@ Specifies the ID of a deployment type.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID, Id
+
 Required: True
 Position: Named
 Default value: None
@@ -109,6 +113,7 @@ Specifies the name of a deployment type.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName, Name
+
 Required: True
 Position: 0
 Default value: None
@@ -117,12 +122,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +143,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -145,12 +152,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -166,6 +174,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByInputObjectMandatory
 Aliases: DeploymentType
+
 Required: True
 Position: Named
 Default value: None
@@ -181,6 +190,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

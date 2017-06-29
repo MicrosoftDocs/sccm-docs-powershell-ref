@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: 7B562CA1-B1D1-49AF-A7C2-1E47BF36BBB7
 online version: https://go.microsoft.com/fwlink/?linkid=833615
 schema: 2.0.0
-ms.assetid: 7B562CA1-B1D1-49AF-A7C2-1E47BF36BBB7
 ---
 
 # Get-CMDeviceActionState
@@ -66,6 +66,7 @@ Type: DeviceActionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Lock, PinReset, BypassActivationLock, RequestNewActivationLockCode
+
 Required: False
 Position: 1
 Default value: None
@@ -74,12 +75,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +99,7 @@ If lazy properties are not used, this parameter should be specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -105,12 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +129,7 @@ Specifies the ID of a device.
 Type: Int32
 Parameter Sets: ById
 Aliases: ResourceId
+
 Required: True
 Position: 0
 Default value: None
@@ -140,6 +145,7 @@ To obtain a device object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: Device
+
 Required: True
 Position: 0
 Default value: None
@@ -154,6 +160,7 @@ Specifies the name of a device.
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: 0
 Default value: None

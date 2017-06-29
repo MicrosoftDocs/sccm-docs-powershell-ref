@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: C1210FA1-5B24-439D-858B-D97280BA8236
 online version: https://go.microsoft.com/fwlink/?linkid=834081
 schema: 2.0.0
-ms.assetid: C1210FA1-5B24-439D-858B-D97280BA8236
 ---
 
 # Remove-CMDriverFromDriverPackage
@@ -18,15 +18,15 @@ Remove-CMDriverFromDriverPackage [-Force] -DriverId <Int32> -DriverPackageId <St
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveDriverFromDriverPackageById_Object
-```
-Remove-CMDriverFromDriverPackage [-Force] -DriverId <Int32> -DriverPackage <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### RemoveDriverFromDriverPackageById_Name
 ```
 Remove-CMDriverFromDriverPackage [-Force] -DriverId <Int32> -DriverPackageName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveDriverFromDriverPackageById_Object
+```
+Remove-CMDriverFromDriverPackage [-Force] -DriverId <Int32> -DriverPackage <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -48,15 +48,15 @@ Remove-CMDriverFromDriverPackage [-Force] -DriverName <String> -DriverPackage <I
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveDriverFromDriverPackageByObject_Name
-```
-Remove-CMDriverFromDriverPackage [-Force] -Driver <IResultObject> -DriverPackageName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### RemoveDriverFromDriverPackageByObject_Id
 ```
 Remove-CMDriverFromDriverPackage [-Force] -Driver <IResultObject> -DriverPackageId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveDriverFromDriverPackageByObject_Name
+```
+Remove-CMDriverFromDriverPackage [-Force] -Driver <IResultObject> -DriverPackageName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -88,6 +88,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -96,12 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -115,8 +117,9 @@ To obtain a **CMDriver** object, use the [Get-CMDriver](./Get-CMDriver.md) cmdle
 
 ```yaml
 Type: IResultObject
-Parameter Sets: RemoveDriverFromDriverPackageByObject_Name, RemoveDriverFromDriverPackageByObject_Id, RemoveDriverFromDriverPackageByObject_Object
+Parameter Sets: RemoveDriverFromDriverPackageByObject_Id, RemoveDriverFromDriverPackageByObject_Name, RemoveDriverFromDriverPackageByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -129,8 +132,9 @@ Specifies the ID of a driver.
 
 ```yaml
 Type: Int32
-Parameter Sets: RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageById_Object, RemoveDriverFromDriverPackageById_Name
+Parameter Sets: RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageById_Name, RemoveDriverFromDriverPackageById_Object
 Aliases: CIId, Id, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -145,6 +149,7 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: RemoveDriverFromDriverPackageByName_Id, RemoveDriverFromDriverPackageByName_Name, RemoveDriverFromDriverPackageByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -160,6 +165,7 @@ To obtain a **CMDriverPackage** object, use the [Get-CMDriverPackage](./Get-CMDr
 Type: IResultObject
 Parameter Sets: RemoveDriverFromDriverPackageById_Object, RemoveDriverFromDriverPackageByName_Object, RemoveDriverFromDriverPackageByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -174,6 +180,7 @@ Specifies the ID of a driver package.
 Type: String
 Parameter Sets: RemoveDriverFromDriverPackageById_Id, RemoveDriverFromDriverPackageByName_Id, RemoveDriverFromDriverPackageByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -188,6 +195,7 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: RemoveDriverFromDriverPackageById_Name, RemoveDriverFromDriverPackageByName_Name, RemoveDriverFromDriverPackageByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -202,6 +210,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -210,12 +219,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -231,6 +241,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

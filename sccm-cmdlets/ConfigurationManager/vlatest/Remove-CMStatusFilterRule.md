@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 8B1C6216-49C0-4D0E-A77B-CF7C29E706C9
 online version: https://go.microsoft.com/fwlink/?linkid=834237
 schema: 2.0.0
-ms.assetid: 8B1C6216-49C0-4D0E-A77B-CF7C29E706C9
 ---
 
 # Remove-CMStatusFilterRule
@@ -54,6 +54,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -62,12 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -90,12 +93,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +115,7 @@ To obtain a status filter rule object, use the [Get-CMStatusFilterRule](./Get-CM
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -125,6 +130,7 @@ Specifies a name of a rule.
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -139,6 +145,7 @@ Specifies a site code for the Configuration Manager site.
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +161,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 0F19406F-06D0-4A41-8B99-7EE68F379737
 online version: https://go.microsoft.com/fwlink/?linkid=833847
 schema: 2.0.0
-ms.assetid: 0F19406F-06D0-4A41-8B99-7EE68F379737
 ---
 
 # Get-CMSecurityScope
@@ -46,12 +46,13 @@ This command gets all security scope objects that have a name beginning with "S"
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -60,12 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +82,7 @@ Specifies the ID of a security scope.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: CategoryId
+
 Required: True
 Position: Named
 Default value: None
@@ -94,6 +97,7 @@ Specifies the name of a security scope.
 Type: String
 Parameter Sets: SearchByName
 Aliases: CategoryName
+
 Required: False
 Position: Named
 Default value: None

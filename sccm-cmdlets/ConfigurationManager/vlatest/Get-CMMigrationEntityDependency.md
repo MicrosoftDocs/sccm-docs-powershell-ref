@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: E9057BB2-EFBE-45F9-AF07-71933FF4BB4E
 online version: https://go.microsoft.com/fwlink/?linkid=833766
 schema: 2.0.0
-ms.assetid: E9057BB2-EFBE-45F9-AF07-71933FF4BB4E
 ---
 
 # Get-CMMigrationEntityDependency
@@ -47,12 +47,13 @@ This command returns information about the migration entity dependency that has 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -61,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +83,7 @@ Specifies an ID in Configuration Manager.
 Type: String
 Parameter Sets: SearchById
 Aliases: EntityId
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +98,7 @@ Specifies a type in Configuration Manager.
 Type: String
 Parameter Sets: SearchByType
 Aliases: DependencyType
+
 Required: False
 Position: Named
 Default value: None
@@ -112,5 +116,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

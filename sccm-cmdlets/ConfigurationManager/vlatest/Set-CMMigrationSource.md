@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: CBAB4B86-8A08-4BB6-B5F5-C6C24628AB25
 online version: https://go.microsoft.com/fwlink/?linkid=833934
 schema: 2.0.0
-ms.assetid: CBAB4B86-8A08-4BB6-B5F5-C6C24628AB25
 ---
 
 # Set-CMMigrationSource
@@ -46,6 +46,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -54,12 +55,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -74,6 +76,7 @@ Indicates whether Configuration Manager shares distribution points between sourc
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,12 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +107,7 @@ The top-level site uses these connections to retrieve objects and distribution p
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +122,7 @@ Specifies the name of a server that contains a source site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +138,7 @@ The account must have read and run permissions for this database.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +154,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

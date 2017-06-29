@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 93625B5F-18C6-48F8-9BB2-6CF6BC0E4590
 online version: https://go.microsoft.com/fwlink/?linkid=834188
 schema: 2.0.0
-ms.assetid: 93625B5F-18C6-48F8-9BB2-6CF6BC0E4590
 ---
 
 # Get-CMClientPushInstallation
@@ -37,12 +37,13 @@ This command gets the client push installation for the site system server named 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -51,12 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +73,7 @@ Specifies an array of site codes that identify sites on which Configuration Mana
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +89,7 @@ Site system servers contain roles that define the operations that each site can 
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: Named
 Default value: None

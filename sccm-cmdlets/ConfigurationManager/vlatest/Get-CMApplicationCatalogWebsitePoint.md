@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 4381D90C-738B-4526-A0FF-7B1A36851F41
 online version: https://go.microsoft.com/fwlink/?linkid=834091
 schema: 2.0.0
-ms.assetid: 4381D90C-738B-4526-A0FF-7B1A36851F41
 ---
 
 # Get-CMApplicationCatalogWebsitePoint
@@ -12,15 +12,15 @@ Gets a Configuration Manager Application Catalog website point.
 
 ## SYNTAX
 
-### SearchByName
+### SearchByName (Default)
 ```
-Get-CMApplicationCatalogWebsitePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>]
+Get-CMApplicationCatalogWebsitePoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMApplicationCatalogWebsitePoint -InputObject <IResultObject> [-DisableWildcardHandling]
+Get-CMApplicationCatalogWebsitePoint [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -49,13 +49,29 @@ This command gets the website point role that the computer WesternACWP.Contoso.c
 
 ## PARAMETERS
 
+### -AllSite
+{{Fill AllSite Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: AllSites
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -64,12 +80,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +102,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -99,6 +117,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +132,7 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: SearchByName
 Aliases: Name, ServerName
+
 Required: False
 Position: 0
 Default value: None

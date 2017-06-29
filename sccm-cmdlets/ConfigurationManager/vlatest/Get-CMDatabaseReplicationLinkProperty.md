@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+ms.assetid: CC332293-14EF-4E4A-8F5B-0D16FD9EA33D
 online version: https://go.microsoft.com/fwlink/?linkid=834299
 schema: 2.0.0
-ms.assetid: CC332293-14EF-4E4A-8F5B-0D16FD9EA33D
 ---
 
 # Get-CMDatabaseReplicationLinkProperty
@@ -43,6 +43,7 @@ This parameter refers to the child site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site2
+
 Required: True
 Position: Named
 Default value: None
@@ -51,12 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -65,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +89,7 @@ This parameter refers to the parent site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site1
+
 Required: True
 Position: Named
 Default value: None

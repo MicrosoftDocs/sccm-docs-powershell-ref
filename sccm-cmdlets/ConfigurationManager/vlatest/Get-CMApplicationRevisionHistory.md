@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: C77E2084-F298-4B89-AA9B-89A8DB91715D
 online version: https://go.microsoft.com/fwlink/?linkid=834099
 schema: 2.0.0
-ms.assetid: C77E2084-F298-4B89-AA9B-89A8DB91715D
 ---
 
 # Get-CMApplicationRevisionHistory
@@ -47,12 +47,13 @@ This command gets the application revision history named MSXML 6.0 Parser.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -61,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +83,7 @@ Specifies an array of IDs of application revision histories.
 Type: Int32
 Parameter Sets: SearchBySingleIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -96,6 +99,7 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Application
+
 Required: True
 Position: Named
 Default value: None
@@ -110,6 +114,7 @@ Specifies an array of names of application revision histories.
 Type: String
 Parameter Sets: SearchBySingleNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -124,6 +129,7 @@ Specifies the version number of an application revision.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

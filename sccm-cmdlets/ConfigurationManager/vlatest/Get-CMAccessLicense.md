@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.CalTracking.dll-Help.xml
+ms.assetid: F4A560C6-BF3A-423B-B6FB-F779E2863F4F
 online version: https://go.microsoft.com/fwlink/?linkid=834053
 schema: 2.0.0
-ms.assetid: F4A560C6-BF3A-423B-B6FB-F779E2863F4F
 ---
 
 # Get-CMAccessLicense
@@ -17,15 +17,15 @@ Gets license usage information.
 Get-CMAccessLicense [-License] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
-### ByValue
-```
-Get-CMAccessLicense -LicenseName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
-```
-
 ### ByCount
 ```
 Get-CMAccessLicense -LicenseName <String> [-Count] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
+```
+
+### ByValue
+```
+Get-CMAccessLicense -LicenseName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -58,6 +58,7 @@ Indicates that the cmdlet returns a count of unique users and devices for the sp
 Type: SwitchParameter
 Parameter Sets: ByCount
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -66,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +104,7 @@ You can specify the name of the license that is returned for the *LicenseName* p
 Type: SwitchParameter
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -119,9 +123,10 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: String
-Parameter Sets: ByValue, ByCount
+Parameter Sets: ByCount, ByValue
 Aliases: 
 Accepted values: ConfigMgr_2012_CoreServer, ConfigMgr_2012_CoreClient, ConfigMgr_2012_EndpointClient
+
 Required: True
 Position: Named
 Default value: None
@@ -139,5 +144,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

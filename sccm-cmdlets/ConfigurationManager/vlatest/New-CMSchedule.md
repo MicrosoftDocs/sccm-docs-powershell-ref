@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: D74177C5-D6E5-4B71-8864-02CF2E56C2C6
 online version: https://go.microsoft.com/fwlink/?linkid=833742
 schema: 2.0.0
-ms.assetid: D74177C5-D6E5-4B71-8864-02CF2E56C2C6
 ---
 
 # New-CMSchedule
@@ -24,6 +24,13 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### RecurrenceWeeklyWithEnd
+```
+New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
+ -DayOfWeek <DayOfWeek> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### RecurrenceMonthlyByDateWithEnd
 ```
 New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
@@ -31,17 +38,10 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-
  [<CommonParameters>]
 ```
 
-### RecurrenceIntervalWithEnd
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] -RecurCount <Int32>
- -RecurInterval <ScheduleInterval> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RecurrenceWeeklyWithEnd
+### RecurMonthlyLastDayOfMonthWithEnd
 ```
 New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
- -DayOfWeek <DayOfWeek> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-LastDayOfMonth] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -52,18 +52,11 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RecurMonthlyLastDayOfMonthWithEnd
+### RecurrenceIntervalWithEnd
 ```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
- [-LastDayOfMonth] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] -RecurCount <Int32>
+ -RecurInterval <ScheduleInterval> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
-```
-
-### RecurrenceMonthlyByDateWithDuration
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
- -DurationCount <Int32> [-RecurCount <Int32>] -DayOfMonth <Int32> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecurrenceNoneWithDuration
@@ -73,17 +66,17 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval 
  [-Confirm] [<CommonParameters>]
 ```
 
-### RecurrenceIntervalWithDuration
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
- -DurationCount <Int32> -RecurCount <Int32> -RecurInterval <ScheduleInterval> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### RecurrenceWeeklyWithDuration
 ```
 New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
  -DurationCount <Int32> [-RecurCount <Int32>] -DayOfWeek <DayOfWeek> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RecurrenceMonthlyByDateWithDuration
+```
+New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
+ -DurationCount <Int32> [-RecurCount <Int32>] -DayOfMonth <Int32> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -101,24 +94,17 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval 
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### RecurrenceIntervalWithDuration
+```
+New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
+ -DurationCount <Int32> -RecurCount <Int32> -RecurInterval <ScheduleInterval> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### RecurrenceWeekly
 ```
 New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] -DayOfWeek <DayOfWeek>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### RecurrenceInterval
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -RecurCount <Int32>
- -RecurInterval <ScheduleInterval> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### RecurMonthlyByWeekday
-```
-New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] -DayOfWeek <DayOfWeek>
- -WeekOrder <ScheduleWeekOrder> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
 ```
 
 ### RecurrenceMonthlyByDate
@@ -131,6 +117,20 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int3
 ```
 New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] [-LastDayOfMonth]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RecurMonthlyByWeekday
+```
+New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] -DayOfWeek <DayOfWeek>
+ -WeekOrder <ScheduleWeekOrder> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RecurrenceInterval
+```
+New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -RecurCount <Int32>
+ -RecurInterval <ScheduleInterval> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -159,6 +159,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -175,6 +176,7 @@ The default value is 0, which indicates the last day of the month.
 Type: Int32
 Parameter Sets: RecurrenceMonthlyByDateWithEnd, RecurrenceMonthlyByDateWithDuration, RecurrenceMonthlyByDate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -199,6 +201,7 @@ Type: DayOfWeek
 Parameter Sets: RecurrenceWeeklyWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceWeeklyWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceWeekly, RecurMonthlyByWeekday
 Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+
 Required: True
 Position: Named
 Default value: None
@@ -207,12 +210,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -227,8 +231,9 @@ The default value is 0, which indicates that the scheduled action continues inde
 
 ```yaml
 Type: Int32
-Parameter Sets: RecurrenceMonthlyByDateWithDuration, RecurrenceNoneWithDuration, RecurrenceIntervalWithDuration, RecurrenceWeeklyWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration
+Parameter Sets: RecurrenceNoneWithDuration, RecurrenceWeeklyWithDuration, RecurrenceMonthlyByDateWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceIntervalWithDuration
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -241,9 +246,10 @@ Specifies the time when the event occurs.
 
 ```yaml
 Type: ScheduleInterval
-Parameter Sets: RecurrenceMonthlyByDateWithDuration, RecurrenceNoneWithDuration, RecurrenceIntervalWithDuration, RecurrenceWeeklyWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration
+Parameter Sets: RecurrenceNoneWithDuration, RecurrenceWeeklyWithDuration, RecurrenceMonthlyByDateWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceIntervalWithDuration
 Aliases: 
 Accepted values: Minutes, Hours, Days
+
 Required: True
 Position: Named
 Default value: None
@@ -256,8 +262,9 @@ Specifies the date and time when the scheduled event ends.
 
 ```yaml
 Type: DateTime
-Parameter Sets: RecurrenceNoneWithEnd, RecurrenceMonthlyByDateWithEnd, RecurrenceIntervalWithEnd, RecurrenceWeeklyWithEnd, RecurMonthlyByWeekdayWithEnd, RecurMonthlyLastDayOfMonthWithEnd
+Parameter Sets: RecurrenceNoneWithEnd, RecurrenceWeeklyWithEnd, RecurrenceMonthlyByDateWithEnd, RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceIntervalWithEnd
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -266,12 +273,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -286,6 +294,7 @@ Indicates that the time is Coordinated Universal Time (UTC).
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +309,7 @@ Indicates that the event occurs monthly on the last day of the month.
 Type: SwitchParameter
 Parameter Sets: RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyLastDayOfMonth
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -314,6 +324,7 @@ Indicates that the scheduled event does not recur.
 Type: SwitchParameter
 Parameter Sets: RecurrenceNone, RecurrenceNoneWithEnd, RecurrenceNoneWithDuration
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -326,8 +337,9 @@ Specifies the number of recurrences of the scheduled event.
 
 ```yaml
 Type: Int32
-Parameter Sets: RecurrenceMonthlyByDateWithEnd, RecurrenceWeeklyWithEnd, RecurMonthlyByWeekdayWithEnd, RecurMonthlyLastDayOfMonthWithEnd, RecurrenceMonthlyByDateWithDuration, RecurrenceWeeklyWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceWeekly, RecurMonthlyByWeekday, RecurrenceMonthlyByDate, RecurMonthlyLastDayOfMonth
+Parameter Sets: RecurrenceWeeklyWithEnd, RecurrenceMonthlyByDateWithEnd, RecurMonthlyLastDayOfMonthWithEnd, RecurMonthlyByWeekdayWithEnd, RecurrenceWeeklyWithDuration, RecurrenceMonthlyByDateWithDuration, RecurMonthlyLastDayOfMonthWithDuration, RecurMonthlyByWeekdayWithDuration, RecurrenceWeekly, RecurrenceMonthlyByDate, RecurMonthlyLastDayOfMonth, RecurMonthlyByWeekday
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -339,6 +351,7 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: RecurrenceIntervalWithEnd, RecurrenceIntervalWithDuration, RecurrenceInterval
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -354,6 +367,7 @@ Type: ScheduleInterval
 Parameter Sets: RecurrenceIntervalWithEnd, RecurrenceIntervalWithDuration, RecurrenceInterval
 Aliases: 
 Accepted values: Minutes, Hours, Days
+
 Required: True
 Position: Named
 Default value: None
@@ -368,6 +382,7 @@ Indicates that the schedule token is converted to an interval string.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -382,6 +397,7 @@ Specifies the date and time when the scheduled event occurs.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -409,6 +425,7 @@ Type: ScheduleWeekOrder
 Parameter Sets: RecurMonthlyByWeekdayWithEnd, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekday
 Aliases: 
 Accepted values: Last, First, Second, Third, Fourth
+
 Required: True
 Position: Named
 Default value: None
@@ -424,6 +441,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

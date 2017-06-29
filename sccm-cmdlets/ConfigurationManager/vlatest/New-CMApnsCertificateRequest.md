@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: B955A6FD-38A4-4AEA-889D-A4AF76CFCEB0
 online version: https://go.microsoft.com/fwlink/?linkid=834245
 schema: 2.0.0
-ms.assetid: B955A6FD-38A4-4AEA-889D-A4AF76CFCEB0
 ---
 
 # New-CMApnsCertificateRequest
@@ -13,7 +13,7 @@ Creates an APNS certificate request.
 ## SYNTAX
 
 ```
-New-CMApnsCertificateRequest -IntuneCredential <PSCredential> [-Path <String>] [-PassThru]
+New-CMApnsCertificateRequest -IntuneCredential <PSCredential> [-OutputPath <String>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -45,6 +45,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -53,12 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,12 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +90,7 @@ Specifies a **PSCredential** object that contains a Microsoft Intune organizatio
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: Credential
+
 Required: True
 Position: Named
 Default value: None
@@ -94,14 +98,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+### -OutputPath
+{{Fill OutputPath Description}}
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: ApnsCertificateRequestPath, Path
+
 Required: False
 Position: Named
 Default value: None
@@ -109,13 +113,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Path
-Specifies a location where the cmdlet saves the downloaded certificate signing request (.csr) file.
+### -PassThru
+Returns the current working object.
+By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: ApnsCertificateRequestPath
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +137,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

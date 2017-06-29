@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 8F146039-6CB8-4A79-AABF-8C8DA90EB182
 online version: https://go.microsoft.com/fwlink/?linkid=834158
 schema: 2.0.0
-ms.assetid: 8F146039-6CB8-4A79-AABF-8C8DA90EB182
 ---
 
 # Get-CMCategory
@@ -53,6 +53,7 @@ Type: CategoryType
 Parameter Sets: GetCategoryByName
 Aliases: 
 Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
+
 Required: False
 Position: Named
 Default value: None
@@ -61,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -75,12 +77,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +98,7 @@ Specifies an array of IDs of configuration categories.
 Type: String[]
 Parameter Sets: GetCategoryById
 Aliases: CategoryInstanceUniqueid, CategoryId
+
 Required: True
 Position: Named
 Default value: None
@@ -109,6 +113,7 @@ Specifies an array of names of configuration categories.
 Type: String
 Parameter Sets: GetCategoryByName
 Aliases: LocalizedCategoryInstanceName, CategoryName
+
 Required: False
 Position: Named
 Default value: None

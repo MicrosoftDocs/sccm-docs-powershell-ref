@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F459D8AF-0C31-4E95-8EF1-AF9FF31167BD
 online version: https://go.microsoft.com/fwlink/?linkid=834229
 schema: 2.0.0
-ms.assetid: F459D8AF-0C31-4E95-8EF1-AF9FF31167BD
 ---
 
 # Remove-CMSoftwareUpdatePoint
@@ -65,6 +65,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -73,12 +74,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +95,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -101,12 +104,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +126,7 @@ To obtain a software update point object, use the **Get-CMSoftwareUpdatePoint** 
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: SoftwareUpdatePoint
+
 Required: True
 Position: Named
 Default value: None
@@ -136,6 +141,7 @@ Specifies a site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +156,7 @@ Specifies the name of a computer that hosts the software update point site syste
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -165,6 +172,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 51F673B9-5558-4865-8AF8-B0B67296F729
 online version: https://go.microsoft.com/fwlink/?linkid=833690
 schema: 2.0.0
-ms.assetid: 51F673B9-5558-4865-8AF8-B0B67296F729
 ---
 
 # Set-CMBoundaryGroup
@@ -15,25 +15,25 @@ Modifies the properties of a boundary group.
 ### SetByValueMandatory (Default)
 ```
 Set-CMBoundaryGroup -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-DefaultSiteCode <String>] [-AddSiteSystemServer <Hashtable>] [-RemoveSiteSystemServer <IResultObject[]>]
- [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultSiteCode <String>] [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
 Set-CMBoundaryGroup -Id <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
- [-AddSiteSystemServer <Hashtable>] [-RemoveSiteSystemServer <IResultObject[]>]
- [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMBoundaryGroup -Name <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
- [-AddSiteSystemServer <Hashtable>] [-RemoveSiteSystemServer <IResultObject[]>]
- [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
+ [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,9 +71,25 @@ For example: @{"Server01.contoso.com" = "FastLink"}
 **Important**: Starting in version 1610, FastLink is the only supported value for the hash table.
 
 ```yaml
-Type: Hashtable
+Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: AddSiteSystemServers
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSiteSystemServerName
+{{Fill AddSiteSystemServerName Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddSiteSystemServerNames
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +104,7 @@ Indicates that the site system server is removed from the boundary group.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearSiteSystemServers
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +119,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -115,7 +133,8 @@ Specifies the default site code of a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +148,8 @@ Specifies a description for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -138,12 +158,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -152,12 +173,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +194,7 @@ Specifies an array of identifiers for one or more boundary groups.
 Type: String
 Parameter Sets: SetById
 Aliases: GroupId
+
 Required: True
 Position: Named
 Default value: None
@@ -186,7 +209,8 @@ To obtain a boundary group object, use the [Get-CMBoundaryGroup](./Get-CMBoundar
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases:
+Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -200,7 +224,8 @@ Specifies a name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases:
+Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -214,7 +239,8 @@ Specifies a new name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -223,13 +249,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -245,6 +272,7 @@ To obtain a site system server, use the [Get-CMSiteSystemServer](./Get-CMSiteSys
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: RemoveSiteSystemServers
+
 Required: False
 Position: Named
 Default value: None
@@ -259,6 +287,7 @@ Specifies the name of a site system server to remove from the boundary group.
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveSiteSystemServerNames
+
 Required: False
 Position: Named
 Default value: None
@@ -274,6 +303,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

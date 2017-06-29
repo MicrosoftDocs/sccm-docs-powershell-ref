@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: EFE32915-8FDB-4B03-9206-5338A0F0E5A5
 online version: https://go.microsoft.com/fwlink/?linkid=833786
 schema: 2.0.0
-ms.assetid: EFE32915-8FDB-4B03-9206-5338A0F0E5A5
 ---
 
 # Get-CMObjectSecurityScope
@@ -46,12 +46,13 @@ This command gets the security scope named Scope1 that is associated with the ap
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -60,12 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +82,7 @@ Specifies the ID of a security scope that is associated with a Configuration Man
 Type: String
 Parameter Sets: FilterById
 Aliases: CategoryId
+
 Required: False
 Position: Named
 Default value: None
@@ -94,6 +97,7 @@ Specifies a Configuration Manager object that is associated with a security scop
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -108,6 +112,7 @@ Specifies the name of a security scope that is associated with a Configuration M
 Type: String
 Parameter Sets: FilterByName
 Aliases: CategoryName
+
 Required: False
 Position: Named
 Default value: None

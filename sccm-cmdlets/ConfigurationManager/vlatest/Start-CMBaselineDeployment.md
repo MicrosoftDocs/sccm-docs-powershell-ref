@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 4EA07297-564A-4DA0-957D-5ADE49683D74
 online version: https://go.microsoft.com/fwlink/?linkid=834199
 schema: 2.0.0
-ms.assetid: 4EA07297-564A-4DA0-957D-5ADE49683D74
 ---
 
 # Start-CMBaselineDeployment
@@ -65,6 +65,7 @@ The deployment applies to this collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -79,6 +80,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -87,12 +89,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +111,7 @@ During enforcement, a client reports compliance information about a deployment.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -116,12 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -136,6 +141,7 @@ Indicates whether Configuration Manager generates alerts during the deployment.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +156,7 @@ Specifies an array of IDs of baseline deployments.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -164,6 +171,7 @@ Specifies a baseline deployment object.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -178,6 +186,7 @@ Specifies whether to apply System Center 2016 - Operations Manager monitoring cr
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +201,7 @@ Specifies an array of names for baseline deployments.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -207,6 +217,7 @@ Service windows are periods of time allocated for maintenance.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -222,6 +233,7 @@ This is the parameter value.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -239,6 +251,7 @@ This is the date for the deployment if postponed.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -255,6 +268,7 @@ This is the time for the deployment if postponed.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -270,6 +284,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md)
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -285,6 +300,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

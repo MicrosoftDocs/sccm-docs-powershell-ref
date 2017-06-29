@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
+ms.assetid: 20865371-37E6-4090-9921-E2051D26D873
 online version: https://go.microsoft.com/fwlink/?linkid=834161
 schema: 2.0.0
-ms.assetid: 20865371-37E6-4090-9921-E2051D26D873
 ---
 
 # Get-CMCertificate
@@ -49,7 +49,7 @@ Valid values are:
 ```yaml
 Type: CertificateType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: BootMedia, DistributionPoint, IsvProxy
 
 Required: False
@@ -60,12 +60,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -93,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Valid values are:
 ```yaml
 Type: KeyType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: SelfSigned, Issued
 
 Required: False
@@ -148,7 +148,7 @@ Specifies the thumbprint of the certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

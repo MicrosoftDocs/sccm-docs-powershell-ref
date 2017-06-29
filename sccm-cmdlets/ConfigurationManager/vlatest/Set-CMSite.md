@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: CED257A6-E5DE-4D3D-97FA-861AEA295DE3
 online version: https://go.microsoft.com/fwlink/?linkid=834034
 schema: 2.0.0
-ms.assetid: CED257A6-E5DE-4D3D-97FA-861AEA295DE3
 ---
 
 # Set-CMSite
@@ -32,14 +32,9 @@ Set-CMSite -InputObject <IResultObject> [-Comment <String>] [-EnableWakeOnLan <B
  [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>] [-AddCertificateByPath <String[]>]
  [-RemoveCertificateByKey <String[]>] [-EnableLowFreeSpaceAlert <Boolean>]
  [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
- [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetSecurityScopeByName
-```
-Set-CMSite -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
+ [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
@@ -62,8 +57,9 @@ Set-CMSite -Name <String> [-Comment <String>] [-EnableWakeOnLan <Boolean>] [-Wak
  [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>] [-AddCertificateByPath <String[]>]
  [-RemoveCertificateByKey <String[]>] [-EnableLowFreeSpaceAlert <Boolean>]
  [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
- [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
+ [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetBySiteCodeMandatory
@@ -86,20 +82,9 @@ Set-CMSite [-SiteCode <String>] [-Comment <String>] [-EnableWakeOnLan <Boolean>]
  [-ClientCheckCertificateRevocationListForSiteSystem <Boolean>] [-AddCertificateByPath <String[]>]
  [-RemoveCertificateByKey <String[]>] [-EnableLowFreeSpaceAlert <Boolean>]
  [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
- [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetSecurityScopeBySiteCode
-```
-Set-CMSite [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### SetSecurityScopeByValue
-```
-Set-CMSite -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
+ [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,8 +117,9 @@ To obtain an Active Directory Forest object, use the [Get-ADForest](./Get-ADFore
 
 ```yaml
 Type: IResultObject[]
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -146,8 +132,9 @@ Specifies an array of paths to certificates.
 
 ```yaml
 Type: String[]
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -168,9 +155,10 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: ClientRequestServiceType
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases:
+Parameter Sets: (All)
+Aliases: 
 Accepted values: WakeOnLanUdp, ClientNotificationTcp, ClientRequestHttpTcp, ClientRequestsHttpsTcp, ClientRequestHttpTcpDefault, ClientRequestsHttpsTcpDefault
+
 Required: False
 Position: Named
 Default value: None
@@ -183,8 +171,9 @@ Specifies the name of a custom store that contains client certificates.
 
 ```yaml
 Type: String
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -197,9 +186,10 @@ Specifies the criteria type to match in a client certificate, such as a string o
 
 ```yaml
 Type: ClientCertificateSelectionCriteriaType
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases:
-Accepted values: ClientAuthentication, CertificateSubjectContainsString, CertificateSubjectOrSanIncludesAtrributes
+Parameter Sets: (All)
+Aliases: 
+Accepted values: ClientAuthentication, CertificateSubjectContainsString, CertificateSubjectOrSanIncludesAttributes, CertificateSubjectOrSanIncludesAtrributes
+
 Required: False
 Position: Named
 Default value: None
@@ -212,8 +202,9 @@ Specifies a value for the *ClientCertificateSelectionCriteriaType* parameter.
 
 ```yaml
 Type: String
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -226,8 +217,9 @@ Indicates whether to check the Certificate Revocation List (CRL) for a certifica
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -241,9 +233,10 @@ The acceptable values for this parameter are: HttpsOnly and HttpsOrHttp.
 
 ```yaml
 Type: ClientComputerCommunicationType
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases:
+Parameter Sets: (All)
+Aliases: 
 Accepted values: HttpsOnly, HttpsOrHttp
+
 Required: False
 Position: Named
 Default value: None
@@ -256,8 +249,9 @@ Specifies a comment for a Configuration Manager site.
 
 ```yaml
 Type: String
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -266,12 +260,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentSendingDelayBeforeRetryingMins
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: ConcurrentSendingDelayBeforeRetryingMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -286,6 +279,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -294,12 +288,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -308,12 +303,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLowFreeSpaceAlert
-
-
 ```yaml
 Type: Boolean
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: GenerateAlertWhenFreeDiskSpaceOnSiteDatabaseIsLow
+
 Required: False
 Position: Named
 Default value: None
@@ -326,8 +320,9 @@ Indicates whether to send Wake On LAN packets for scheduled activities such as d
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -336,12 +331,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -350,12 +346,11 @@ Accept wildcard characters: False
 ```
 
 ### -FreeSpaceThresholdCriticalGB
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: CriticalAlertWhenFreeDiskSpaceFallBelowFollowingValueGB
+
 Required: False
 Position: Named
 Default value: None
@@ -364,12 +359,11 @@ Accept wildcard characters: False
 ```
 
 ### -FreeSpaceThresholdWarningGB
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: WarningAlertWhenFreeDiskSpaceFallBelowFollowingValueGB
+
 Required: False
 Position: Named
 Default value: None
@@ -383,8 +377,9 @@ To obtain a Configuration Manager site object, use the [Get-CMSite](./Get-CMSite
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SetByObject, SetSecurityScopeByValue
+Parameter Sets: SetByObject
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -397,8 +392,9 @@ Specifies the maximum number of simultaneous communications to all sites.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -411,8 +407,9 @@ Specifies the maximum number of simultaneous communications to any single site.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -425,8 +422,9 @@ Specifies the maximum number of wake up packets transmitted by this site server 
 
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -439,8 +437,9 @@ Specifies the name of a Configuration Manager site.
 
 ```yaml
 Type: String
-Parameter Sets: SetSecurityScopeByName, SetByNameMandatory
+Parameter Sets: SetByNameMandatory
 Aliases: SiteName
+
 Required: True
 Position: Named
 Default value: None
@@ -449,13 +448,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -468,8 +468,9 @@ Specifies a port number, such as 80 or 8080, for client requests.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -482,8 +483,9 @@ Specifies an array of Active Directory Forest objects to remove from Active Dire
 
 ```yaml
 Type: IResultObject[]
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -496,8 +498,9 @@ Specifies an array of certificates to remove.
 
 ```yaml
 Type: String[]
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -518,9 +521,10 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: ClientRequestServiceType
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases:
+Parameter Sets: (All)
+Aliases: 
 Accepted values: WakeOnLanUdp, ClientNotificationTcp, ClientRequestHttpTcp, ClientRequestsHttpsTcp, ClientRequestHttpTcpDefault, ClientRequestsHttpsTcpDefault
+
 Required: False
 Position: Named
 Default value: None
@@ -533,8 +537,9 @@ Indicates whether to use the SHA-256 algorithm to sign communications.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -547,8 +552,9 @@ Indicates whether to require Configuration Manager sites to sign communications 
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -561,8 +567,9 @@ Specifies the number of times to retry a failed communication.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -575,8 +582,9 @@ Specifies the number of times a wake up packet is sent to a target computer.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -585,12 +593,11 @@ Accept wildcard characters: False
 ```
 
 ### -SendingWakeupPacketBeforePausingWaitSec
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: SendingWakeupPacketBeforePausingWaitSeconds
+
 Required: False
 Position: Named
 Default value: None
@@ -599,12 +606,11 @@ Accept wildcard characters: False
 ```
 
 ### -SendingWakeupPacketTransmissionDelayMins
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: SendingWakeupPacketTransmissionDelayMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -613,12 +619,11 @@ Accept wildcard characters: False
 ```
 
 ### -SendingWakeupPacketTransmissionOffsetMins
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: SendingWakeupPacketTransmissionOffsetMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -631,8 +636,25 @@ Specifies a site code for a Configuration Manager site to which you assign secur
 
 ```yaml
 Type: String
-Parameter Sets: SetBySiteCodeMandatory, SetSecurityScopeBySiteCode
+Parameter Sets: SetBySiteCodeMandatory
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteSystemCollectionBehavior
+{{Fill SiteSystemCollectionBehavior Description}}
+
+```yaml
+Type: CollectionBehaviorType
+Parameter Sets: (All)
+Aliases: BehaviorWhenCollectionIncludesComputerHostSiteSystemRole
+Accepted values: Block, Warn
+
 Required: False
 Position: Named
 Default value: None
@@ -645,9 +667,10 @@ Specifies the action to take for multiple matches of certificate criteria.
 
 ```yaml
 Type: TakeActionForMultipleCertificateMatchCriteria
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases:
+Parameter Sets: (All)
+Aliases: 
 Accepted values: FailSelectionAndSendErrorMessage, SelectCertificateWithLongestValidityPeriod
+
 Required: False
 Position: Named
 Default value: None
@@ -660,8 +683,39 @@ Specifies the number of threads a site server uses when sending wake up packets.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThresholdOfSelectCollectionByDefault
+{{Fill ThresholdOfSelectCollectionByDefault Description}}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: SizeOfCustomCollectionCanSelectByDefault
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThresholdOfSelectCollectionMax
+{{Fill ThresholdOfSelectCollectionMax Description}}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: SizeOfCustomCollectionCanSelectMaximum
+
 Required: False
 Position: Named
 Default value: None
@@ -675,8 +729,9 @@ Use a custom web site when you do not want to use the default web site.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -689,8 +744,9 @@ Indicates whether to use encryption for communication between sites.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -703,8 +759,9 @@ Indicates whether to use a PKI certificate management solution.
 
 ```yaml
 Type: Boolean
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
+Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -717,9 +774,10 @@ Specifies the type of transmission method to use for Wake On LAN transmissions.
 
 ```yaml
 Type: WakeOnLanTransmissionMethodType
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases:
+Parameter Sets: (All)
+Aliases: 
 Accepted values: Unicast, SubnetDirectedBroadcasts
+
 Required: False
 Position: Named
 Default value: None
@@ -732,9 +790,10 @@ Specifies the type of Wake On LAN packet to use.
 
 ```yaml
 Type: WakeOnLanType
-Parameter Sets: SetByObject, SetByNameMandatory, SetBySiteCodeMandatory
-Aliases:
+Parameter Sets: (All)
+Aliases: 
 Accepted values: UseAmtPowerOnCommandsOrWakeupPackets, UseAmtPowerOnCommandsOnly, UseWakeupPacketsOnly
+
 Required: False
 Position: Named
 Default value: None
@@ -750,6 +809,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

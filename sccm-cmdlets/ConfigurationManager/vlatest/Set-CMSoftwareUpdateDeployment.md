@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
+ms.assetid: B274271A-FA5D-4272-A981-049DE05A419C
 online version: https://go.microsoft.com/fwlink/?linkid=834074
 schema: 2.0.0
-ms.assetid: B274271A-FA5D-4272-A981-049DE05A419C
 ---
 
 # Set-CMSoftwareUpdateDeployment
@@ -12,100 +12,84 @@ Modifies a software update deployment in Configuration Manager.
 
 ## SYNTAX
 
-### SetSoftwareUpdateDeploymentByValueMandatory (Default)
+### SetByValueMandatory (Default)
 ```
-Set-CMSoftwareUpdateDeployment -SoftwareUpdate <IResultObject> -DeploymentName <String>
- [-NewDeploymentName <String>] [-Description <String>] [-CollectionName <String>]
- [-DeploymentType <DeploymentType>] [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>]
- [-TimeBasedOn <TimeType>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
- [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>]
+Set-CMSoftwareUpdateDeployment -InputObject <IResultObject> [-DeploymentName <String>]
+ [-NewDeploymentName <String>] [-Description <String>] [-DeploymentType <DeploymentType>]
+ [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>] [-TimeBasedOn <TimeType>]
+ [-AvailableDateTime <DateTime>] [-AlertDateTime <DateTime>] [-DeploymentExpireDateTime <DateTime>]
  [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>] [-AllowRestart <Boolean>]
  [-RestartServer <Boolean>] [-RestartWorkstation <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-AlertDay <DateTime>] [-AlertTime <DateTime>]
- [-DisableOperationsManagerAlert <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
- [-ProtectedType <ProtectedType>] [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
+ [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdateDeploymentByNameMandatory
 ```
-Set-CMSoftwareUpdateDeployment -SoftwareUpdateName <String> -DeploymentName <String>
- [-NewDeploymentName <String>] [-Description <String>] [-CollectionName <String>]
- [-DeploymentType <DeploymentType>] [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>]
- [-TimeBasedOn <TimeType>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
- [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>]
+Set-CMSoftwareUpdateDeployment -SoftwareUpdateName <String> [-DeploymentName <String>]
+ [-NewDeploymentName <String>] [-Description <String>] [-DeploymentType <DeploymentType>]
+ [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>] [-TimeBasedOn <TimeType>]
+ [-AvailableDateTime <DateTime>] [-AlertDateTime <DateTime>] [-DeploymentExpireDateTime <DateTime>]
  [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>] [-AllowRestart <Boolean>]
  [-RestartServer <Boolean>] [-RestartWorkstation <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-AlertDay <DateTime>] [-AlertTime <DateTime>]
- [-DisableOperationsManagerAlert <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
- [-ProtectedType <ProtectedType>] [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
+ [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdateDeploymentByIdMandatory
 ```
-Set-CMSoftwareUpdateDeployment -SoftwareUpdateId <String> -DeploymentName <String>
- [-NewDeploymentName <String>] [-Description <String>] [-CollectionName <String>]
- [-DeploymentType <DeploymentType>] [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>]
- [-TimeBasedOn <TimeType>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
- [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>]
+Set-CMSoftwareUpdateDeployment -SoftwareUpdateId <String> [-DeploymentName <String>]
+ [-NewDeploymentName <String>] [-Description <String>] [-DeploymentType <DeploymentType>]
+ [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>] [-TimeBasedOn <TimeType>]
+ [-AvailableDateTime <DateTime>] [-AlertDateTime <DateTime>] [-DeploymentExpireDateTime <DateTime>]
  [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>] [-AllowRestart <Boolean>]
  [-RestartServer <Boolean>] [-RestartWorkstation <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-AlertDay <DateTime>] [-AlertTime <DateTime>]
- [-DisableOperationsManagerAlert <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
- [-ProtectedType <ProtectedType>] [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
+ [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdateGroupDeploymentByNameMandatory
 ```
-Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupName <String> -DeploymentName <String>
- [-NewDeploymentName <String>] [-Description <String>] [-CollectionName <String>]
- [-DeploymentType <DeploymentType>] [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>]
- [-TimeBasedOn <TimeType>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
- [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>]
+Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupName <String> [-DeploymentName <String>]
+ [-NewDeploymentName <String>] [-Description <String>] [-DeploymentType <DeploymentType>]
+ [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>] [-TimeBasedOn <TimeType>]
+ [-AvailableDateTime <DateTime>] [-AlertDateTime <DateTime>] [-DeploymentExpireDateTime <DateTime>]
  [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>] [-AllowRestart <Boolean>]
  [-RestartServer <Boolean>] [-RestartWorkstation <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-AlertDay <DateTime>] [-AlertTime <DateTime>]
- [-DisableOperationsManagerAlert <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
- [-ProtectedType <ProtectedType>] [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
+ [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdateGroupDeploymentByIdMandatory
 ```
-Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupId <String> -DeploymentName <String>
- [-NewDeploymentName <String>] [-Description <String>] [-CollectionName <String>]
- [-DeploymentType <DeploymentType>] [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>]
- [-TimeBasedOn <TimeType>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
- [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>]
+Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupId <String> [-DeploymentName <String>]
+ [-NewDeploymentName <String>] [-Description <String>] [-DeploymentType <DeploymentType>]
+ [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>] [-TimeBasedOn <TimeType>]
+ [-AvailableDateTime <DateTime>] [-AlertDateTime <DateTime>] [-DeploymentExpireDateTime <DateTime>]
  [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>] [-AllowRestart <Boolean>]
  [-RestartServer <Boolean>] [-RestartWorkstation <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-AlertDay <DateTime>] [-AlertTime <DateTime>]
- [-DisableOperationsManagerAlert <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
- [-ProtectedType <ProtectedType>] [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetSoftwareUpdateGroupDeploymentByValueMandatory
-```
-Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroup <IResultObject> -DeploymentName <String>
- [-NewDeploymentName <String>] [-Description <String>] [-CollectionName <String>]
- [-DeploymentType <DeploymentType>] [-SendWakeupPacket <Boolean>] [-VerbosityLevel <VerbosityLevelType>]
- [-TimeBasedOn <TimeType>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
- [-DeploymentExpireDay <DateTime>] [-DeploymentExpireTime <DateTime>]
- [-UserNotification <UserNotificationType>] [-SoftwareInstallation <Boolean>] [-AllowRestart <Boolean>]
- [-RestartServer <Boolean>] [-RestartWorkstation <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-AlertDay <DateTime>] [-AlertTime <DateTime>]
- [-DisableOperationsManagerAlert <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
- [-ProtectedType <ProtectedType>] [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
+ [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
+ [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -143,27 +127,14 @@ This command starts a software update deployment by using a software update grou
 
 ## PARAMETERS
 
-### -AlertDay
-Specifies a day, in MM/DD/YYYY format, to notify clients of new software updates.
+### -AlertDateTime
+{{Fill AlertDateTime Description}}
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -AlertTime
-Specifies a time, in HH:MM format, to notify clients of new software updates.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +149,7 @@ Indicates whether to allow a restart following installation.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +164,52 @@ Indicates whether to allow clients to use a metered network to download updates.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AvailableDateTime
+{{Fill AvailableDateTime Description}}
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Collection
+{{Fill Collection Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CollectionId
+{{Fill CollectionId Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +225,7 @@ A collection is a group of client computers.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -221,6 +240,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -228,59 +248,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DeploymentAvailableDay
-Specifies a day, in MM/DD/YYYY format, when a software update becomes available to clients.
-By default, the update is available immediately.
+### -DeploymentExpireDateTime
+{{Fill DeploymentExpireDateTime Description}}
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -DeploymentAvailableTime
-Specifies a time, in HH:MM format, when a software update becomes available to clients.
-By default, the update is available immediately.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentExpireDay
-Specifies a day, in MM/DD/YYYY format, when a software update expires.
-To expire a software update on a certain day, set this parameter.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentExpireTime
-Specifies a time, in HH:MM format, when a software update expires.
-To expire a software update at a certain time, set this parameter.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +270,8 @@ Specifies a name for a software update deployment in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Required: True
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -308,8 +284,9 @@ Specifies a deployment type in Configuration Manager.
 ```yaml
 Type: DeploymentType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Required, Available
+
 Required: False
 Position: Named
 Default value: None
@@ -324,6 +301,7 @@ Specifies a description for a software update deployment.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -338,6 +316,7 @@ Indicates whether to disable System Center 2016 - Operations Manager alerts duri
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -346,12 +325,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -366,6 +346,7 @@ Indicates whether clients download updates directly from Microsoft Update.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -380,6 +361,7 @@ Indicates whether the cmdlet enables software updates in Configuration Manager.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -388,12 +370,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -408,6 +391,7 @@ Indicates whether to generate Operations Manager alerts when a software installa
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -422,10 +406,26 @@ Indicates whether to generate alerts when a software installation succeeds.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: SetByValueMandatory
+Aliases: SoftwareUpdate, DeploymentSummary, SoftwareUpdateGroup, Assignment
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -436,6 +436,22 @@ Specifies a name for a new deployment in Configuration Manager.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+{{Fill PassThru Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -450,6 +466,7 @@ Specifies a percentage of the update.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -464,6 +481,7 @@ Indicates whether to install a software update on the temporary overlay and comm
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -477,8 +495,24 @@ Specifies a protected type.
 ```yaml
 Type: ProtectedType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: NoInstall, RemoteDistributionPoint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequirePostRebootFullScan
+{{Fill RequirePostRebootFullScan Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -493,6 +527,7 @@ Indicates whether to allow a server to restart following a software update.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -507,6 +542,7 @@ Indicates whether to allow a workstation to restart following a software update.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -524,6 +560,7 @@ For computers to wake, you must first configure Wake On LAN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -538,37 +575,8 @@ Indicates whether to allow the software update to install, even if the installat
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SoftwareUpdate
-Specifies a software update deployment object.
-To obtain a software update deployment object, use the [Get-CMSoftwareUpdate](./Get-CMSoftwareUpdate.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SetSoftwareUpdateDeploymentByValueMandatory
-Aliases: 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -SoftwareUpdateGroup
-Specifies a software update group object.
-To obtain a software update group object, use the [Get-CMSoftwareUpdateGroup](./Get-CMSoftwareUpdateGroup.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SetSoftwareUpdateGroupDeploymentByValueMandatory
-Aliases: 
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -583,6 +591,7 @@ A software update group contains individual software updates.
 Type: String
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -597,6 +606,7 @@ Specifies a name for a software update group.
 Type: String
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -611,6 +621,7 @@ Specifies an ID for a software update in Configuration Manager.
 Type: String
 Parameter Sets: SetSoftwareUpdateDeploymentByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -625,6 +636,7 @@ Specifies a name for a software update in Configuration Manager.
 Type: String
 Parameter Sets: SetSoftwareUpdateDeploymentByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -639,8 +651,9 @@ UTC time makes the software update available at the same time for all computers.
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: LocalTime, Utc
+
 Required: False
 Position: Named
 Default value: None
@@ -654,8 +667,9 @@ Specifies an unprotected type.
 ```yaml
 Type: UnprotectedType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: NoInstall, UnprotectedDistributionPoint
+
 Required: False
 Position: Named
 Default value: None
@@ -670,6 +684,7 @@ Indicates whether to use Branch Cache as a distribution point for updates.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -683,8 +698,9 @@ Specifies a user notification type.
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
+
 Required: False
 Position: Named
 Default value: None
@@ -703,8 +719,9 @@ The acceptable values for this parameter are:
 ```yaml
 Type: VerbosityLevelType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: AllMessages, OnlySuccessAndErrorMessages, OnlyErrorMessages
+
 Required: False
 Position: Named
 Default value: None
@@ -720,6 +737,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

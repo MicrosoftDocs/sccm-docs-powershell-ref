@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: CA239E73-691E-4A34-852A-8417420E68E1
 online version: https://go.microsoft.com/fwlink/?linkid=833918
 schema: 2.0.0
-ms.assetid: CA239E73-691E-4A34-852A-8417420E68E1
 ---
 
 # Copy-CMConfigurationPolicy
@@ -60,6 +60,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -68,12 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,12 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +105,7 @@ Specifies the CI_ID of a configuration policy.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -117,6 +121,7 @@ To obtain a configuration policy object, use the Get-CMConfigurationPolicy cmdle
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: ConfigurationPolicy
+
 Required: True
 Position: 0
 Default value: None
@@ -131,6 +136,7 @@ Specifies the name of a configuration policy.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -145,6 +151,7 @@ Specifies a name for the copy of the configuration policy.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: 1
 Default value: None
@@ -153,13 +160,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -175,6 +183,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

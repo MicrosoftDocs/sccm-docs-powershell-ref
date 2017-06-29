@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 5FFC0EF0-B499-4511-B2B0-FF6D69D84E6F
 online version: https://go.microsoft.com/fwlink/?linkid=833899
 schema: 2.0.0
-ms.assetid: 5FFC0EF0-B499-4511-B2B0-FF6D69D84E6F
 ---
 
 # Remove-CMApplicationCatalogWebsitePoint
@@ -61,6 +61,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -69,12 +70,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +89,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,12 +98,11 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +118,7 @@ To get an Application Catalog website point object, use the Get-CMApplicationCat
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: ApplicationCatalogWebSitePoint
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +133,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -146,6 +148,7 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -161,6 +164,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

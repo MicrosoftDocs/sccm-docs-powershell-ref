@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: B2B9CF97-719D-4F30-87C9-9ED6F3A5A798
 online version: https://go.microsoft.com/fwlink/?linkid=833598
 schema: 2.0.0
-ms.assetid: B2B9CF97-719D-4F30-87C9-9ED6F3A5A798
 ---
 
 # Add-CMAssetIntelligenceSynchronizationPoint
@@ -14,15 +14,15 @@ Installs an Asset Intelligence synchronization point.
 
 ### AISyncPointByValue (Default)
 ```
-Add-CMAssetIntelligenceSynchronizationPoint [-CertificateFile <String>] [-Schedule <IResultObject>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMAssetIntelligenceSynchronizationPoint [-CertificateFile <String>] -InputObject <IResultObject>
+ [-Schedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### AISyncPoint
 ```
-Add-CMAssetIntelligenceSynchronizationPoint [-SiteSystemServerName] <String> [-CertificateFile <String>]
- [-Schedule <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Add-CMAssetIntelligenceSynchronizationPoint [-CertificateFile <String>] [-Schedule <IResultObject>]
+ [-SiteSystemServerName] <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -61,7 +61,8 @@ Specifies the path to a System Center Online authentication certificate (.pfx) f
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +77,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -84,12 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -98,12 +99,11 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -119,6 +119,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: AISyncPointByValue
 Aliases: SiteServer
+
 Required: True
 Position: Named
 Default value: None
@@ -135,6 +136,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md)
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: ScheduleToken
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +151,7 @@ Specifies an array of fully qualified domain names (FQDN) of the servers that ho
 Type: String
 Parameter Sets: AISyncPoint
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -164,6 +167,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

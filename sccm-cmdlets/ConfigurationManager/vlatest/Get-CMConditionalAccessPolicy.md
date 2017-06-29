@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: 9C9C7C89-BEC9-4B9D-838B-250771C23C44
 online version: https://go.microsoft.com/fwlink/?linkid=834263
 schema: 2.0.0
-ms.assetid: 9C9C7C89-BEC9-4B9D-838B-250771C23C44
 ---
 
 # Get-CMConditionalAccessPolicy
@@ -59,6 +59,7 @@ This rule overrides the default Exchange access rule, which means that even if y
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,12 +68,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -90,6 +92,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: ExecludedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -106,6 +109,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: ById
 Aliases: ExecludedCollectionIds
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +126,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: ByName
 Aliases: ExecludedCollectionNames
+
 Required: False
 Position: Named
 Default value: None
@@ -130,12 +135,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +159,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: TargetedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +176,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: ById
 Aliases: TargetedCollectionIds
+
 Required: False
 Position: Named
 Default value: None
@@ -185,6 +193,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: ByName
 Aliases: TargetedCollectionNames
+
 Required: False
 Position: Named
 Default value: None

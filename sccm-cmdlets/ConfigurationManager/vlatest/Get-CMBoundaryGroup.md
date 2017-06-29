@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 26841EEA-B0CF-4D0A-A84E-EB713CC493AC
 online version: https://go.microsoft.com/fwlink/?linkid=834154
 schema: 2.0.0
-ms.assetid: 26841EEA-B0CF-4D0A-A84E-EB713CC493AC
 ---
 
 # Get-CMBoundaryGroup
@@ -90,12 +90,13 @@ This command gets multiple boundary groups that are specified by the names BGrou
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,12 +105,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -124,6 +126,7 @@ Specifies an array of identifiers (IDs) for one or more boundary groups.
 Type: String[]
 Parameter Sets: SearchByIdMandatory
 Aliases: GroupId
+
 Required: True
 Position: Named
 Default value: None
@@ -138,6 +141,7 @@ Specifies the name for a boundary group.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

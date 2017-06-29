@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 1A94F9DA-050E-442B-A30F-AD506DEDD42A
 online version: https://go.microsoft.com/fwlink/?linkid=833852
 schema: 2.0.0
-ms.assetid: 1A94F9DA-050E-442B-A30F-AD506DEDD42A
 ---
 
 # Get-CMServiceConnectionPoint
@@ -12,16 +12,16 @@ Gets a service connection point.
 
 ## SYNTAX
 
-### SearchByName
+### SearchByName (Default)
 ```
-Get-CMServiceConnectionPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMServiceConnectionPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMServiceConnectionPoint -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMServiceConnectionPoint [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,8 +48,23 @@ The second command gets the service connection point for the server stored in $S
 
 ## PARAMETERS
 
+### -AllSite
+{{Fill AllSite Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: AllSites
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter

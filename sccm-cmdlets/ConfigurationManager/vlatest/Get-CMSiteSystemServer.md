@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 099289E2-E483-4312-B9E4-0CA86E6CE904
 online version: https://go.microsoft.com/fwlink/?linkid=833881
 schema: 2.0.0
-ms.assetid: 099289E2-E483-4312-B9E4-0CA86E6CE904
 ---
 
 # Get-CMSiteSystemServer
@@ -12,16 +12,16 @@ Gets a site system server.
 
 ## SYNTAX
 
-### SearchByName
+### SearchByName (Default)
 ```
-Get-CMSiteSystemServer [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMSiteSystemServer [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMSiteSystemServer -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMSiteSystemServer [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,13 +38,29 @@ This command gets the site system server named Server2.contoso.com for site code
 
 ## PARAMETERS
 
+### -AllSite
+{{Fill AllSite Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: AllSites
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -53,12 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -73,6 +90,7 @@ Specifies a site system object.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -87,6 +105,7 @@ Specifies a site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +120,7 @@ Specifies a server name for the site system.
 Type: String
 Parameter Sets: SearchByName
 Aliases: Name, ServerName
+
 Required: False
 Position: 0
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 523AADB5-3AAE-410A-AFCA-5B3C56138653
 online version: https://go.microsoft.com/fwlink/?linkid=834248
 schema: 2.0.0
-ms.assetid: 523AADB5-3AAE-410A-AFCA-5B3C56138653
 ---
 
 # New-CMApplication
@@ -42,6 +42,7 @@ Indicates whether a task sequence action can install the application.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -56,6 +57,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -71,6 +73,7 @@ The description appears in the Configuration Manager console.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -79,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -99,6 +103,7 @@ Indicates whether the application displays supersedence in the Application Catal
 Type: Boolean
 Parameter Sets: (All)
 Aliases: DisplaySupersedencesInApplicationCatalog
+
 Required: False
 Position: Named
 Default value: None
@@ -107,12 +112,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +134,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +149,7 @@ Indicates whether the application displays as a featured app and is highlighted 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +168,7 @@ This keyword will help users of Software Center search for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -175,6 +184,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +200,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedApplicationDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +216,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedApplicationName
+
 Required: False
 Position: Named
 Default value: None
@@ -219,6 +231,7 @@ Specifies a name for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -233,6 +246,7 @@ Specifies optional reference information for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -247,6 +261,7 @@ Specifies an owner for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -262,6 +277,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -276,6 +292,7 @@ Specifies the name of the software publisher.
 Type: String
 Parameter Sets: (All)
 Aliases: Manufacturer
+
 Required: False
 Position: Named
 Default value: None
@@ -290,6 +307,7 @@ Specifies a release date for the application.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -304,6 +322,7 @@ Specifies a software version for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -318,6 +337,7 @@ Specifies one or more administrative users who are support contacts for the appl
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +353,7 @@ This is set to the single default language.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -348,6 +369,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

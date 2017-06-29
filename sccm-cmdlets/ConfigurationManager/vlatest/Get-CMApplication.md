@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: E128EE13-5EAA-41C2-B93B-EE60F09099DE
 online version: https://go.microsoft.com/fwlink/?linkid=834083
 schema: 2.0.0
-ms.assetid: E128EE13-5EAA-41C2-B93B-EE60F09099DE
 ---
 
 # Get-CMApplication
@@ -60,12 +60,13 @@ The second command uses the pipeline operator to pass the deployment type stored
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -83,6 +84,7 @@ If lazy properties are not used, this parameter should be specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -91,12 +93,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +114,7 @@ Specifies the CI_ID and ModelID properties (the same value) of an application.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -126,6 +130,7 @@ To obtain a deployment type object, use the [Get-CMDeploymentType](./Get-CMDeplo
 Type: IResultObject
 Parameter Sets: SearchByDeploymentType
 Aliases: DeploymentType
+
 Required: True
 Position: Named
 Default value: None
@@ -140,6 +145,7 @@ Specifies the model name of an application.
 Type: String
 Parameter Sets: SearchByModelName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -154,6 +160,7 @@ Specifies the name of an application.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName, ApplicationName
+
 Required: False
 Position: 0
 Default value: None

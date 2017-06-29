@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: 3AABF576-B504-4756-A8B8-412E842306C3
 online version: https://go.microsoft.com/fwlink/?linkid=834250
 schema: 2.0.0
-ms.assetid: 3AABF576-B504-4756-A8B8-412E842306C3
 ---
 
 # Get-CMComponentStatusMessage
@@ -47,6 +47,7 @@ A thread or process sends a component status message.
 Type: String
 Parameter Sets: (All)
 Aliases: Component
+
 Required: False
 Position: Named
 Default value: None
@@ -62,6 +63,7 @@ A computer hosts a component that sends a status message.
 Type: String
 Parameter Sets: (All)
 Aliases: MachineName
+
 Required: False
 Position: Named
 Default value: None
@@ -70,12 +72,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -84,12 +87,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +115,7 @@ Type: Severity
 Parameter Sets: (All)
 Aliases: 
 Accepted values: All, Error, Warning, Information
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +130,7 @@ Specifies an array of a site codes for Configuration Manager sites.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -133,12 +139,11 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: ViewingPeriod
+
 Required: True
 Position: Named
 Default value: None

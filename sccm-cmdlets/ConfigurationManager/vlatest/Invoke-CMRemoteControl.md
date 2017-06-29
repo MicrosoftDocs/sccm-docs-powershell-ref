@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Oob.dll-Help.xml
+ms.assetid: 072CB4A9-2915-4126-99E2-A595A94C57F4
 online version: https://go.microsoft.com/fwlink/?linkid=834157
 schema: 2.0.0
-ms.assetid: 072CB4A9-2915-4126-99E2-A595A94C57F4
 ---
 
 # Invoke-CMRemoteControl
@@ -62,6 +62,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -76,6 +77,7 @@ Specifies an array of device IDs.
 Type: String
 Parameter Sets: InvokeDeviceByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -90,6 +92,7 @@ Specifies an array of device names.
 Type: String
 Parameter Sets: InvokeDeviceByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -98,12 +101,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -112,12 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +138,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: InvokeDeviceByValueMandatory
 Aliases: Device, SiteStatus
+
 Required: True
 Position: Named
 Default value: None
@@ -141,13 +147,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -162,6 +169,7 @@ Specifies an array of site codes of Configuration Manager sites that host the si
 Type: String
 Parameter Sets: InvokeSiteStatusByNameMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -176,6 +184,7 @@ Specifies an array of Configuration Manager roles that the site system performs.
 Type: String
 Parameter Sets: InvokeSiteStatusByNameMandatory
 Aliases: Role
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +199,7 @@ Specifies an array of fully qualified domain names (FQDN) of the servers that ho
 Type: String
 Parameter Sets: InvokeSiteStatusByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -205,6 +215,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

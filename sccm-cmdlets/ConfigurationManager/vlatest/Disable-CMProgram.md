@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: B4E99D6B-B50F-496B-AFA7-AD795ADA8C8A
 online version: https://go.microsoft.com/fwlink/?linkid=833949
 schema: 2.0.0
-ms.assetid: B4E99D6B-B50F-496B-AFA7-AD795ADA8C8A
 ---
 
 # Disable-CMProgram
@@ -58,6 +58,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -66,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +104,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: Program
+
 Required: True
 Position: Named
 Default value: None
@@ -115,6 +119,7 @@ Specifies an array of package IDs.
 Type: String
 Parameter Sets: SearchByIdAndNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +134,7 @@ Specifies an array of package names.
 Type: String
 Parameter Sets: SearchByNameAndNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -137,13 +143,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +165,7 @@ Specifies an array of program names.
 Type: String
 Parameter Sets: SearchByIdAndNameMandatory, SearchByNameAndNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -173,6 +181,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: F460F99B-D44F-4B83-94AB-B84BE510AC37
 online version: https://go.microsoft.com/fwlink/?linkid=833617
 schema: 2.0.0
-ms.assetid: F460F99B-D44F-4B83-94AB-B84BE510AC37
 ---
 
 # New-CMDeviceCollection
@@ -63,12 +63,11 @@ The *LimitingCollectionName* parameter specifies that any device in the All Syst
 ## PARAMETERS
 
 ### -Comment
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -83,6 +82,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -98,6 +98,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: LimitingCollection
+
 Required: True
 Position: Named
 Default value: None
@@ -106,12 +107,11 @@ Accept wildcard characters: False
 ```
 
 ### -LimitingCollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -120,12 +120,11 @@ Accept wildcard characters: False
 ```
 
 ### -LimitingCollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -134,12 +133,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -148,12 +146,11 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshSchedule
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -162,13 +159,12 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshType
-
-
 ```yaml
 Type: CollectionRefreshType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Manual, Periodic, Continuous, Both
+
 Required: False
 Position: Named
 Default value: None
@@ -184,6 +180,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

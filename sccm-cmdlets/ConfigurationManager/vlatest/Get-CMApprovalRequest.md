@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: F564E6AA-E38D-4F5A-B030-2A71844EFF6D
 online version: https://go.microsoft.com/fwlink/?linkid=834103
 schema: 2.0.0
-ms.assetid: F564E6AA-E38D-4F5A-B030-2A71844EFF6D
 ---
 
 # Get-CMApprovalRequest
@@ -14,26 +14,32 @@ Gets a request to allow the installation of an application.
 
 ### SearchByName (Default)
 ```
-Get-CMApprovalRequest [-ApplicationName <String[]>] [-User <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMApprovalRequest [-ApplicationName <String[]>] [-User <String>] [-CurrentState <RequestState>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
 ```
-Get-CMApprovalRequest -Id <String[]> [-User <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMApprovalRequest -Id <String[]> [-User <String>] [-CurrentState <RequestState>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByModelName
 ```
-Get-CMApprovalRequest [-User <String>] -ModelName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMApprovalRequest [-User <String>] -ModelName <String> [-CurrentState <RequestState>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+```
+
+### SearchByGuid
+```
+Get-CMApprovalRequest [-User <String>] -RequestGuid <String> [-CurrentState <RequestState>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMApprovalRequest [-User <String>] -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMApprovalRequest [-User <String>] -InputObject <IResultObject> [-CurrentState <RequestState>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,6 +78,23 @@ Specifies an array of names of applications.
 Type: String[]
 Parameter Sets: SearchByName
 Aliases: Application
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CurrentState
+{{Fill CurrentState Description}}
+
+```yaml
+Type: RequestState
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Unknown, Requested, Canceled, Denied, Approved
+
 Required: False
 Position: Named
 Default value: None
@@ -80,12 +103,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -94,12 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +139,7 @@ Specifies an array of IDs of applications.
 Type: String[]
 Parameter Sets: SearchById
 Aliases: CIUniqueId
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +155,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -137,12 +164,26 @@ Accept wildcard characters: False
 ```
 
 ### -ModelName
-
-
 ```yaml
 Type: String
 Parameter Sets: SearchByModelName
 Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestGuid
+{{Fill RequestGuid Description}}
+
+```yaml
+Type: String
+Parameter Sets: SearchByGuid
+Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -158,6 +199,7 @@ Use the format domain\user.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

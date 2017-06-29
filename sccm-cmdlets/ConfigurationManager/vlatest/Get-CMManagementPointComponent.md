@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 69AC1D24-491C-4095-B924-5D78E948342B
 online version: https://go.microsoft.com/fwlink/?linkid=833745
 schema: 2.0.0
-ms.assetid: 69AC1D24-491C-4095-B924-5D78E948342B
 ---
 
 # Get-CMManagementPointComponent
@@ -34,12 +34,13 @@ The command directs the output to the file Get-CMManagementPointComponent_data.t
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -48,12 +49,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -68,6 +70,7 @@ Specifies the site code for the management point.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +85,7 @@ Specifies a fully qualified domain name (FQDN) of the server that hosts the site
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: Named
 Default value: None

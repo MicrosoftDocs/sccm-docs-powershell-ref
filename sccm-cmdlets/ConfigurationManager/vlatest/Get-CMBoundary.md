@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: B3E5550C-8A64-46FA-8D31-1E89FE83BC71
 online version: https://go.microsoft.com/fwlink/?linkid=834150
 schema: 2.0.0
-ms.assetid: B3E5550C-8A64-46FA-8D31-1E89FE83BC71
 ---
 
 # Get-CMBoundary
@@ -97,6 +97,7 @@ You can get a boundary group ID by using the **Get-CMBoundaryGroup** cmdlet.
 Type: UInt32
 Parameter Sets: SearchByBoundaryGroupIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -105,12 +106,11 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryGroupInputObject
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByBoundaryGroup
 Aliases: BoundaryGroup
+
 Required: True
 Position: Named
 Default value: None
@@ -126,6 +126,7 @@ You can get a boundary group name by using the **Get-CMBoundaryGroup** cmdlet.
 Type: String
 Parameter Sets: SearchByBoundaryGroupNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -134,12 +135,11 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryId
-
-
 ```yaml
 Type: UInt32
 Parameter Sets: SearchByIdMandatory
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -148,12 +148,11 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryName
-
-
 ```yaml
 Type: String
 Parameter Sets: SearchByName
 Aliases: DisplayName, Name
+
 Required: False
 Position: Named
 Default value: None
@@ -162,12 +161,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -176,12 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

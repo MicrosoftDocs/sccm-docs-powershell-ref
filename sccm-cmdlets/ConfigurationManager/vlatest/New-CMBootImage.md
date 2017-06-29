@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 94BE72CA-AAE0-47C1-8C05-1BAF02B798A0
 online version: https://go.microsoft.com/fwlink/?linkid=834274
 schema: 2.0.0
-ms.assetid: 94BE72CA-AAE0-47C1-8C05-1BAF02B798A0
 ---
 
 # New-CMBootImage
@@ -45,6 +45,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -59,6 +60,7 @@ Specifies a description of the boot image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,12 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,12 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +106,7 @@ An index is the number of an image in a .wim file.
 Type: Int32
 Parameter Sets: (All)
 Aliases: ImageIndex
+
 Required: True
 Position: Named
 Default value: None
@@ -116,6 +121,7 @@ Specifies the name of a new boot image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -130,6 +136,7 @@ Specifies the location of the original WIM file for the boot image.
 Type: String
 Parameter Sets: (All)
 Aliases: ImagePath
+
 Required: True
 Position: Named
 Default value: None
@@ -144,6 +151,7 @@ Specifies the version of the boot image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -159,6 +167,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 2CA8797E-6B30-4B19-A6A5-7FC938EC28A4
 online version: https://go.microsoft.com/fwlink/?linkid=833781
 schema: 2.0.0
-ms.assetid: 2CA8797E-6B30-4B19-A6A5-7FC938EC28A4
 ---
 
 # Get-CMObjectLockDetails
@@ -42,12 +42,12 @@ The second object gets the object lock details for the application stored in $Ap
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -57,12 +57,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -77,7 +77,7 @@ Specifies a Configuration Manager object output from another cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: AC599011-1C6E-4A45-8BF3-C1E1A2F1F4E0
 online version: https://go.microsoft.com/fwlink/?linkid=833998
 schema: 2.0.0
-ms.assetid: AC599011-1C6E-4A45-8BF3-C1E1A2F1F4E0
 ---
 
 # Remove-CMComputerAssociation
@@ -71,6 +71,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -85,6 +86,7 @@ Specifies the name of a destination computer.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: RestoreName
+
 Required: True
 Position: Named
 Default value: None
@@ -93,12 +95,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +116,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -121,12 +125,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -142,6 +147,7 @@ To obtain a computer association object, use the Get-CMComputerAssociation cmdle
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -156,6 +162,7 @@ Specifies the ID of a computer association.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -170,6 +177,7 @@ Specifies the name of the source computer.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: SourceName
+
 Required: True
 Position: Named
 Default value: None
@@ -185,6 +193,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

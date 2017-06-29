@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 37712E99-06A4-4F70-B7C2-1CE8156D44F8
 online version: https://go.microsoft.com/fwlink/?linkid=833952
 schema: 2.0.0
-ms.assetid: 37712E99-06A4-4F70-B7C2-1CE8156D44F8
 ---
 
 # Remove-CMClientCertificatePfx
@@ -53,7 +53,7 @@ To obtain a PFX certificate object, use the Get-CMCertificateProfilePfx cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -78,12 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -108,12 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ To obtain a client PFX certificate object, use the Get-CMClientCertificatePfx cm
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -144,7 +144,7 @@ Specifies the thumbprint of a client PFX certificate.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ To set a vaule to the parameter, you can use `(get-cmuser -name domain\username)
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

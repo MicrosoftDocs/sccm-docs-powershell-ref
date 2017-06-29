@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum-help.xml
+ms.assetid: A33A1535-F234-4E1A-896D-2832DDA6B2A3
 online version: https://go.microsoft.com/fwlink/?linkid=834020
 schema: 2.0.0
-ms.assetid: A33A1535-F234-4E1A-896D-2832DDA6B2A3
 ---
 
 # Get-CMWindowsServicingPlan

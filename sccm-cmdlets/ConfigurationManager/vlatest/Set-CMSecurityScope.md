@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 625C4356-E131-46E4-B0AA-A4E1BB6996A7
 online version: https://go.microsoft.com/fwlink/?linkid=834023
 schema: 2.0.0
-ms.assetid: 625C4356-E131-46E4-B0AA-A4E1BB6996A7
 ---
 
 # Set-CMSecurityScope
@@ -61,6 +61,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -75,6 +76,7 @@ Specifies a description for the security scope.
 Type: String
 Parameter Sets: (All)
 Aliases: CategoryDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -83,12 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,12 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +121,7 @@ Specifies the ID of a security scope.
 Type: String
 Parameter Sets: SetById
 Aliases: CategoryId
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +137,7 @@ To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurit
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +152,7 @@ Specifies the name of a security scope.
 Type: String
 Parameter Sets: SetByName
 Aliases: CategoryName
+
 Required: True
 Position: Named
 Default value: None
@@ -160,6 +167,7 @@ Specifies a new name for the security scope.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -175,6 +183,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

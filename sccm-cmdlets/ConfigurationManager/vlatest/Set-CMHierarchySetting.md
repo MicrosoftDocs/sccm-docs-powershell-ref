@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 9502FE38-91CD-49ED-A267-7F8E74695968
 online version: https://go.microsoft.com/fwlink/?linkid=833875
 schema: 2.0.0
-ms.assetid: 9502FE38-91CD-49ED-A267-7F8E74695968
 ---
 
 # Set-CMHierarchySetting
@@ -16,7 +16,11 @@ Sets hierarchy settings in System Center Configuration Manager.
 Set-CMHierarchySetting [-UseFallbackSite <Boolean>] [-FallbackSiteCode <String>]
  [-ApprovalMethod <ApprovalMethodType>] [-AutoResolveClientConflict <Boolean>]
  [-EnableAutoClientUpgrade <Boolean>] [-AutoUpgradeDays <Int32>] [-AllowPrestage <Boolean>]
- [-ExcludeServer <Boolean>] [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-ExcludeServer <Boolean>] [-EnablePreProduction <Boolean>] [-TargetCollectionId <String>]
+ [-TargetCollectionName <String>] [-TargetCollection <IResultObject>] [-UnlimitTargetCollectionMember]
+ [-EnableExclusionCollection <Boolean>] [-ExclusionCollectionId <String>] [-ExclusionCollectionName <String>]
+ [-ExclusionCollection <IResultObject>] [-Force] [-PassThru] [-EnablePrereleaseFeature]
+ [-PreferBoundaryGroupManagementPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,6 +46,7 @@ Indicates whether to allow prestaging.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -62,6 +67,7 @@ Type: ApprovalMethodType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AutomaticallyApproveComputersInTrustedDomains, ManuallyApproveEachComputer, AutomaticallyApproveAllComputers
+
 Required: False
 Position: Named
 Default value: None
@@ -70,12 +76,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoResolveClientConflict
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AutomaticallyResolveConfictingRecord, AutomaticallyResolveConflictingRecord
+
 Required: False
 Position: Named
 Default value: None
@@ -84,12 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoUpgradeDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: AutomaticallyUpgradeDays
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +108,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -112,12 +117,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -126,12 +132,56 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoClientUpgrade
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableProgram
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableExclusionCollection
+{{Fill EnableExclusionCollection Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePreProduction
+{{Fill EnablePreProduction Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePrereleaseFeature
+{{Fill EnablePrereleaseFeature Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: EnablePrereleaseFeatures
+
 Required: False
 Position: Named
 Default value: None
@@ -146,6 +196,52 @@ Indicates whether the cmdlet excludes the server.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: ExcludeServers
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExclusionCollection
+{{Fill ExclusionCollection Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExclusionCollectionId
+{{Fill ExclusionCollectionId Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExclusionCollectionName
+{{Fill ExclusionCollectionName Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +256,7 @@ Specifies the site code for a fallback site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -174,6 +271,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -182,12 +280,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -196,13 +295,89 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferBoundaryGroupManagementPoint
+{{Fill PreferBoundaryGroupManagementPoint Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: PreferBoundaryGroupManagementPoints
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetCollection
+{{Fill TargetCollection Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases: PreProductionCollection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetCollectionId
+{{Fill TargetCollectionId Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: PreProductionCollectionId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetCollectionName
+{{Fill TargetCollectionName Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: PreProductionCollectionName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UnlimitTargetCollectionMember
+{{Fill UnlimitTargetCollectionMember Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: UnlimitPreProductionCollectionMemberCount
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +392,7 @@ Indicates whether to use a fallback site.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -232,6 +408,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -249,3 +426,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

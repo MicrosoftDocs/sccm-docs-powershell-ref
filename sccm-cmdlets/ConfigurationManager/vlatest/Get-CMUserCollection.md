@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 8AD90CCA-3F40-4D64-8FD9-C9028A0E15E7
 online version: https://go.microsoft.com/fwlink/?linkid=833980
 schema: 2.0.0
-ms.assetid: 8AD90CCA-3F40-4D64-8FD9-C9028A0E15E7
 ---
 
 # Get-CMUserCollection
@@ -53,12 +53,11 @@ This command gets the user collection that has the ID 9990000D.
 ## PARAMETERS
 
 ### -DistributionPointGroup
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByDPGroup
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -67,12 +66,11 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByDPGroupId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -81,12 +79,11 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByDPGroupName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -95,12 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
-
 ```yaml
 Type: String
 Parameter Sets: ById
 Aliases: CollectionId
+
 Required: True
 Position: Named
 Default value: None
@@ -109,12 +105,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
-
 ```yaml
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: C76A60B1-D65B-4F19-BD71-E96060E497AA
 online version: https://go.microsoft.com/fwlink/?linkid=834300
 schema: 2.0.0
-ms.assetid: C76A60B1-D65B-4F19-BD71-E96060E497AA
 ---
 
 # Restore-CMApplicationRevisionHistory
@@ -55,6 +55,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -63,12 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -77,12 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +100,7 @@ Specifies an array of IDs of application revision histories.
 Type: UInt32
 Parameter Sets: SearchBySingleIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -112,6 +116,7 @@ To get this object, use the Get-CMApplicationRevisionHistory cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Application
+
 Required: True
 Position: 0
 Default value: None
@@ -126,6 +131,7 @@ Specifies an array of names of application revision histories.
 Type: String
 Parameter Sets: SearchBySingleNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -134,13 +140,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -155,6 +162,7 @@ Specifies the version number of the application revision that you restore.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: 1
 Default value: None
@@ -170,6 +178,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Content.dll-Help.xml
+ms.assetid: 4C9E537F-007B-45FE-B82F-CE17CB39B29B
 online version: https://go.microsoft.com/fwlink/?linkid=834235
 schema: 2.0.0
-ms.assetid: 4C9E537F-007B-45FE-B82F-CE17CB39B29B
 ---
 
 # Stop-CMCloudDistributionPoint
@@ -74,6 +74,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -82,12 +83,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -96,12 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +120,7 @@ You can use a comma separated list.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: AzureServiceId
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +136,7 @@ To get a cloud distribution point object, you can use the **Get-CMCloudDistribut
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +151,7 @@ Specifies the name of a cloud distribution point.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -161,6 +167,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

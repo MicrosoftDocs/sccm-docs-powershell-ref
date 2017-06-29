@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 5291A714-9843-41D3-9C74-2BAC7CED0E75
 online version: https://go.microsoft.com/fwlink/?linkid=833775
 schema: 2.0.0
-ms.assetid: 5291A714-9843-41D3-9C74-2BAC7CED0E75
 ---
 
 # Set-CMDatabaseProperty
@@ -44,6 +44,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -52,12 +53,11 @@ Accept wildcard characters: False
 ```
 
 ### -DataRetentionDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: DataRetentionPeriodDays
+
 Required: False
 Position: Named
 Default value: None
@@ -66,12 +66,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +87,7 @@ Specifies whether the database uses data compression.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -94,12 +96,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +117,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -128,6 +132,7 @@ Specifies the port that the computer running SQL Server uses as a Service Broker
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -143,6 +148,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

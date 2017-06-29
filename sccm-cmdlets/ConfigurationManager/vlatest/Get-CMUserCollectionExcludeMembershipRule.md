@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 94DE6A0D-6D37-4D87-ACD6-584E4F3FB65D
 online version: https://go.microsoft.com/fwlink/?linkid=833988
 schema: 2.0.0
-ms.assetid: 94DE6A0D-6D37-4D87-ACD6-584E4F3FB65D
 ---
 
 # Get-CMUserCollectionExcludeMembershipRule
@@ -86,12 +86,11 @@ This command gets the rule that excludes the members of the collection that has 
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -100,12 +99,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -114,12 +112,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollection
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -128,12 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -142,12 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +158,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None

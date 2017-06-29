@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 72166BF0-B4CD-4571-92FC-D42CF98BC1AE
 online version: https://go.microsoft.com/fwlink/?linkid=833741
 schema: 2.0.0
-ms.assetid: 72166BF0-B4CD-4571-92FC-D42CF98BC1AE
 ---
 
 # Get-CMManagementPoint
@@ -12,16 +12,16 @@ Gets a management point.
 
 ## SYNTAX
 
-### SearchByName
+### SearchByName (Default)
 ```
-Get-CMManagementPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMManagementPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMManagementPoint -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMManagementPoint [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,13 +40,29 @@ The command directs the output to the file Get-CMOutOfBandServicePoint_data.txt.
 
 ## PARAMETERS
 
+### -AllSite
+{{Fill AllSite Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: AllSites
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -55,12 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +93,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -90,6 +108,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +123,7 @@ Specifies the name of the server that hosts the site system role.
 Type: String
 Parameter Sets: SearchByName
 Aliases: Name, ServerName
+
 Required: False
 Position: 0
 Default value: None

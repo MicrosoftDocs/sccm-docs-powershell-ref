@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 621E70A5-817B-46A2-ADEA-3D5F5012788F
 online version: https://go.microsoft.com/fwlink/?linkid=834259
 schema: 2.0.0
-ms.assetid: 621E70A5-817B-46A2-ADEA-3D5F5012788F
 ---
 
 # Get-CMComputerAssociation
@@ -62,6 +62,7 @@ Specifies the name of a destination computer.
 Type: String
 Parameter Sets: SearchByName
 Aliases: RestoreName
+
 Required: False
 Position: Named
 Default value: None
@@ -70,12 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -84,12 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Specifies the ID of a computer association.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +122,7 @@ Specifies the name of a source computer.
 Type: String
 Parameter Sets: SearchByName
 Aliases: SourceName
+
 Required: False
 Position: Named
 Default value: None

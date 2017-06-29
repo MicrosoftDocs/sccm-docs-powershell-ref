@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 5647FB87-7F94-4AEA-95A1-A8AF521325E9
 online version: https://go.microsoft.com/fwlink/?linkid=834196
 schema: 2.0.0
-ms.assetid: 5647FB87-7F94-4AEA-95A1-A8AF521325E9
 ---
 
 # Remove-CMSecurityScopeFromAdministrativeUser
@@ -18,16 +18,16 @@ Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeName <String> -Admini
  [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveScopeFromAdminById_Name
-```
-Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeId <String> -AdministrativeUserName <String>
- [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### RemoveScopeFromAdminById_Id
 ```
 Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeId <String> -AdministrativeUserId <Int32> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveScopeFromAdminById_Name
+```
+Remove-CMSecurityScopeFromAdministrativeUser -SecurityScopeId <String> -AdministrativeUserName <String>
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveScopeFromAdminById_Object
@@ -90,6 +90,7 @@ To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](
 Type: IResultObject
 Parameter Sets: RemoveScopeFromAdminById_Object, RemoveScopeFromAdminByName_Object, RemoveScopeFromAdminByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -104,6 +105,7 @@ Specifies the ID of an administrative user.
 Type: Int32
 Parameter Sets: RemoveScopeFromAdminById_Id, RemoveScopeFromAdminByName_Id, RemoveScopeFromAdminByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +120,7 @@ Specifies the name of an administrative user.
 Type: String
 Parameter Sets: RemoveScopeFromAdminByName_Name, RemoveScopeFromAdminById_Name, RemoveScopeFromAdminByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +135,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -140,12 +144,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -160,6 +165,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -168,12 +174,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +196,7 @@ To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurit
 Type: IResultObject
 Parameter Sets: RemoveScopeFromAdminByObject_Id, RemoveScopeFromAdminByObject_Name, RemoveScopeFromAdminByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -201,8 +209,9 @@ Specifies the ID of a security scope.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveScopeFromAdminById_Name, RemoveScopeFromAdminById_Id, RemoveScopeFromAdminById_Object
+Parameter Sets: RemoveScopeFromAdminById_Id, RemoveScopeFromAdminById_Name, RemoveScopeFromAdminById_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -218,6 +227,7 @@ A security scope name can be Default or the name of a custom security scope.
 Type: String
 Parameter Sets: RemoveScopeFromAdminByName_Name, RemoveScopeFromAdminByName_Id, RemoveScopeFromAdminByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -233,6 +243,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

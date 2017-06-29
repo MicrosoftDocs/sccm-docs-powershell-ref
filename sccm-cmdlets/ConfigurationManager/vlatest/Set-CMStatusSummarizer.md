@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: BC02FCFC-70B2-4DAD-BF1E-F6D11EA68D4B
 online version: https://go.microsoft.com/fwlink/?linkid=834119
 schema: 2.0.0
-ms.assetid: BC02FCFC-70B2-4DAD-BF1E-F6D11EA68D4B
 ---
 
 # Set-CMStatusSummarizer
@@ -19,12 +19,11 @@ Set-CMStatusSummarizer [-SiteCode <String>] [-ComponentStatusSummarizer] [-Enabl
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetSiteSystemStatusSummarizer
+### SetAppDeploymentSummarizer
 ```
-Set-CMStatusSummarizer [-SiteCode <String>] [-EnableStatusSummarizer <Boolean>]
- [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriorityType>]
- [-SiteSystemStatusSummarizer] [-Schedule <IResultObject>] [-WarningSizeKB <Int32>] [-CriticalSizeKB <Int32>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMStatusSummarizer [-SiteCode <String>] [-ApplicationDeploymentSummarizer] [-Minutes <Int32>]
+ [-Hours <Int32>] [-Days <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetAppStatisticsSummarizer
@@ -34,11 +33,12 @@ Set-CMStatusSummarizer [-SiteCode <String>] [-ApplicationStatisticSummarizer] [-
  [-Confirm] [<CommonParameters>]
 ```
 
-### SetAppDeploymentSummarizer
+### SetSiteSystemStatusSummarizer
 ```
-Set-CMStatusSummarizer [-SiteCode <String>] [-ApplicationDeploymentSummarizer] [-Minutes <Int32>]
- [-Hours <Int32>] [-Days <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CMStatusSummarizer [-SiteCode <String>] [-EnableStatusSummarizer <Boolean>]
+ [-ReplicateToParentSite <Boolean>] [-ReplicationPriority <ReplicationPriorityType>]
+ [-SiteSystemStatusSummarizer] [-Schedule <IResultObject>] [-WarningSizeKB <Int32>] [-CriticalSizeKB <Int32>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,6 +63,7 @@ Indicates that the summarizer is an application deployment status summarizer.
 Type: SwitchParameter
 Parameter Sets: SetAppDeploymentSummarizer
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -77,6 +78,7 @@ Indicates that the summarizer is an application statistic status summarizer.
 Type: SwitchParameter
 Parameter Sets: SetAppStatisticsSummarizer
 Aliases: ApplicationStatisticsSummarizer
+
 Required: True
 Position: Named
 Default value: None
@@ -91,6 +93,7 @@ Indicates that the summarizer is a component status summarizer.
 Type: SwitchParameter
 Parameter Sets: SetComponentStatusSummarizer
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -105,6 +108,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -120,6 +124,7 @@ This parameter applies to site system status summarizers.
 Type: Int32
 Parameter Sets: SetSiteSystemStatusSummarizer
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -128,12 +133,11 @@ Accept wildcard characters: False
 ```
 
 ### -Days
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetAppStatisticsSummarizer, SetAppDeploymentSummarizer
+Parameter Sets: SetAppDeploymentSummarizer, SetAppStatisticsSummarizer
 Aliases: DayInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -142,12 +146,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +168,7 @@ This parameter applies to component status summarizers and site system status su
 Type: Boolean
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -171,12 +177,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -185,12 +192,11 @@ Accept wildcard characters: False
 ```
 
 ### -Hours
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetAppStatisticsSummarizer, SetAppDeploymentSummarizer
+Parameter Sets: SetAppDeploymentSummarizer, SetAppStatisticsSummarizer
 Aliases: HourInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -199,12 +205,11 @@ Accept wildcard characters: False
 ```
 
 ### -Minutes
-
-
 ```yaml
 Type: Int32
-Parameter Sets: SetAppStatisticsSummarizer, SetAppDeploymentSummarizer
+Parameter Sets: SetAppDeploymentSummarizer, SetAppStatisticsSummarizer
 Aliases: MinuteInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -213,13 +218,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -236,6 +242,7 @@ If you specify a value of $True for this parameter, specify a priority by using 
 Type: Boolean
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -251,8 +258,9 @@ Specify this parameter if you specify $True for the *ReplicateToParentSite* para
 ```yaml
 Type: ReplicationPriorityType
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases:
+Aliases: 
 Accepted values: Low, Normal, High
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +276,7 @@ To obtain a schedule object, use the [New-CMSchedule](./New-CMSchedule.md) cmdle
 Type: IResultObject
 Parameter Sets: SetSiteSystemStatusSummarizer
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -282,6 +291,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -296,6 +306,7 @@ Indicates that the summarizer is a site system status summarizer.
 Type: SwitchParameter
 Parameter Sets: SetSiteSystemStatusSummarizer
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -304,13 +315,12 @@ Accept wildcard characters: False
 ```
 
 ### -TimeThreshold
-
-
 ```yaml
 Type: String
 Parameter Sets: SetComponentStatusSummarizer
 Aliases: ThresholdPeriod
 Accepted values: Since 0:00:00, Since 4:00:00, Since 8:00:00, Since 12:00:00, Since 16:00:00, Since 20:00:00, Since Sunday, Since Monday, Since Tuesday, Since Wednesday, Since Thursday, Since Friday, Since Saturday, Since 15th of the Month, Since 1st of the Month, Since Site Installation
+
 Required: False
 Position: Named
 Default value: None
@@ -326,6 +336,7 @@ This parameter applies to site system status summarizers.
 Type: Int32
 Parameter Sets: SetSiteSystemStatusSummarizer
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -341,6 +352,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

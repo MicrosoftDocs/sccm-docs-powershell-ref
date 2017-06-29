@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 101E23A6-5318-4AA7-81EF-59AA9CE44B67
 online version: https://go.microsoft.com/fwlink/?linkid=834098
 schema: 2.0.0
-ms.assetid: 101E23A6-5318-4AA7-81EF-59AA9CE44B67
 ---
 
 # Remove-CMEnrollmentProxyPoint
@@ -47,6 +47,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -55,12 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -75,6 +77,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -83,12 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +108,7 @@ You can get an input object by using the Get-CMEnrollmentProxyPoint cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: EnrollmentProxyPoint
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +123,7 @@ Specifies a site code.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +138,7 @@ Specifies the fully qualified domain name (FQDN) of the server that hosts the si
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -147,6 +154,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

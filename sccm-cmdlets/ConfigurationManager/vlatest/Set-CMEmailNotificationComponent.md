@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 492BE510-2A4E-485F-A4BE-ED5BD5303085
 online version: https://go.microsoft.com/fwlink/?linkid=833834
 schema: 2.0.0
-ms.assetid: 492BE510-2A4E-485F-A4BE-ED5BD5303085
 ---
 
 # Set-CMEmailNotificationComponent
@@ -14,8 +14,8 @@ Changes configuration settings of an email notification component.
 
 ### Enable (Default)
 ```
-Set-CMEmailNotificationComponent [-EnableEmailNotification] -SmtpServerFqdn <String> [-Port <Int32>]
- -TypeOfAuthentication <AuthenticationMethod> [-UserName <String>] -SendFrom <String>
+Set-CMEmailNotificationComponent [-EnableEmailNotification] -SmtpServerFqdn <String> [-UseSsl <Boolean>]
+ [-Port <Int32>] -TypeOfAuthentication <AuthenticationMethod> [-UserName <String>] -SendFrom <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -64,6 +64,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -78,6 +79,7 @@ Indicates that email notification is disabled.
 Type: SwitchParameter
 Parameter Sets: Disable
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -86,12 +88,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -106,6 +109,7 @@ Indicates that Configuration Manager uses an SMTP server to send email alerts.
 Type: SwitchParameter
 Parameter Sets: Enable
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -114,12 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +139,7 @@ Specifies the outgoing SMTP port for sending email alerts.
 Type: Int32
 Parameter Sets: Enable
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -148,6 +154,7 @@ Specifies the email address from which Configuration Manager sends email alerts.
 Type: String
 Parameter Sets: Enable
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -162,6 +169,7 @@ Specifies the fully qualified domain name (FQDN) of the SMTP server.
 Type: String
 Parameter Sets: Enable
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -182,7 +190,23 @@ Type: AuthenticationMethod
 Parameter Sets: Enable
 Aliases: 
 Accepted values: Anonymous, DefaultServiceAccount, Other
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseSsl
+{{Fill UseSsl Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: Enable
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -197,6 +221,7 @@ This parameter also specifies the SMTP Server Connection account.
 Type: String
 Parameter Sets: Enable
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -212,6 +237,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

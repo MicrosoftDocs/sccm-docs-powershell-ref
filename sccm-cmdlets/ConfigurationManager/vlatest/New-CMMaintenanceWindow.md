@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 0F23554E-0127-4B10-A3B2-3F9AF0D639C5
 online version: https://go.microsoft.com/fwlink/?linkid=833697
 schema: 2.0.0
-ms.assetid: 0F23554E-0127-4B10-A3B2-3F9AF0D639C5
 ---
 
 # New-CMMaintenanceWindow
@@ -12,25 +12,28 @@ Creates a maintenance window for a collection.
 
 ## SYNTAX
 
-### ByCollection (Default)
+### ByValue (Default)
 ```
 New-CMMaintenanceWindow [-InputObject] <IResultObject> [-IsEnabled <Boolean>] -Schedule <IResultObject>
  -Name <String> [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToTaskSequenceOnly] [-ApplyToSoftwareUpdateOnly]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IsUtc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByCollectionId
 ```
 New-CMMaintenanceWindow [-CollectionId] <String> [-IsEnabled <Boolean>] -Schedule <IResultObject>
  -Name <String> [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToTaskSequenceOnly] [-ApplyToSoftwareUpdateOnly]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IsUtc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByCollectionName
 ```
 New-CMMaintenanceWindow [-CollectionName] <String> [-IsEnabled <Boolean>] -Schedule <IResultObject>
  -Name <String> [-ApplyTo <MaintenanceWindowApplyTo>] [-ApplyToTaskSequenceOnly] [-ApplyToSoftwareUpdateOnly]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IsUtc <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,13 +56,12 @@ The maintenance window uses the schedule stored in the $MWSchedule variable.
 ## PARAMETERS
 
 ### -ApplyTo
-
-
 ```yaml
 Type: MaintenanceWindowApplyTo
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Any, SoftwareUpdatesOnly, TaskSequencesOnly
+
 Required: False
 Position: Named
 Default value: None
@@ -74,6 +76,7 @@ Indicates that the maintenance window is used to apply software updates only.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +91,7 @@ Indicates that the maintenance window is used to apply task sequences only.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +106,7 @@ Specifies the ID of the collection that the maintenance window applies to.
 Type: String
 Parameter Sets: ByCollectionId
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -110,12 +115,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -130,6 +134,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -138,12 +143,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -152,12 +158,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -171,8 +178,9 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: ByCollection
-Aliases: Collection
+Parameter Sets: ByValue
+Aliases: Collection, Site
+
 Required: True
 Position: 0
 Default value: None
@@ -181,12 +189,26 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsUtc
+{{Fill IsUtc Description}}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -201,6 +223,7 @@ Specifies the name of the maintenance window.
 Type: String
 Parameter Sets: (All)
 Aliases: MaintenanceWindowName
+
 Required: True
 Position: Named
 Default value: None
@@ -217,6 +240,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](./New-CMSchedule.md)
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -232,6 +256,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

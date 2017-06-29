@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: A5D0AF1A-BDAF-419D-9020-A1D34AB3A5FC
 online version: https://go.microsoft.com/fwlink/?linkid=833698
 schema: 2.0.0
-ms.assetid: A5D0AF1A-BDAF-419D-9020-A1D34AB3A5FC
 ---
 
 # Get-CMExchangeServer
@@ -48,12 +48,13 @@ This command gets the Exchange Server with the specified address.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -62,12 +63,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeServerUrl
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Address
+
 Required: False
 Position: Named
 Default value: None
@@ -76,12 +76,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +97,7 @@ Specifies the site code for a Configuration Manager site associated with the Exc
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

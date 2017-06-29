@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: EE51B872-1986-4551-B4C0-7E92529AA20C
 online version: https://go.microsoft.com/fwlink/?linkid=834277
 schema: 2.0.0
-ms.assetid: EE51B872-1986-4551-B4C0-7E92529AA20C
 ---
 
 # Remove-CMUserCollectionQueryMembershipRule
@@ -48,12 +48,11 @@ This command removes the rule named Remote Users by Domain from the collection n
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ById
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -62,12 +61,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByName
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -82,6 +80,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -90,12 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,12 +102,11 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -118,12 +115,11 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -139,6 +135,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

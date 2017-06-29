@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
+ms.assetid: CD441955-3619-4CCE-B1AA-E012BC7A6C99
 online version: https://go.microsoft.com/fwlink/?linkid=834261
 schema: 2.0.0
-ms.assetid: CD441955-3619-4CCE-B1AA-E012BC7A6C99
 ---
 
 # Unblock-CMCertificate
@@ -39,12 +39,11 @@ This command unblocks the PKI certificate named BaseCert.
 ## PARAMETERS
 
 ### -Certificate
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: InputObject
+
 Required: True
 Position: Named
 Default value: None
@@ -59,6 +58,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -67,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -101,6 +103,7 @@ Specifies an array of IDs of certificates.
 Type: String
 Parameter Sets: ById
 Aliases: SMSID
+
 Required: True
 Position: Named
 Default value: None
@@ -109,13 +112,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +135,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

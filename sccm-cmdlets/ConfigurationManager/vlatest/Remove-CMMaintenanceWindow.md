@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 64883A65-5691-40B6-B8DE-C2DE4EDEEB23
 online version: https://go.microsoft.com/fwlink/?linkid=834126
 schema: 2.0.0
-ms.assetid: 64883A65-5691-40B6-B8DE-C2DE4EDEEB23
 ---
 
 # Remove-CMMaintenanceWindow
@@ -12,9 +12,9 @@ Removes a maintenance window.
 
 ## SYNTAX
 
-### ByCollection (Default)
+### ByValue (Default)
 ```
-Remove-CMMaintenanceWindow [-Collection] <IResultObject> -MaintenanceWindowName <String> [-Force]
+Remove-CMMaintenanceWindow [-InputObject] <IResultObject> -MaintenanceWindowName <String> [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -46,20 +46,6 @@ The window is part of the collection AAA0004D.
 
 ## PARAMETERS
 
-### -Collection
-
-
-```yaml
-Type: IResultObject
-Parameter Sets: ByCollection
-Aliases: 
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -CollectionId
 Specifies the ID of the collection that the maintenance window applies to.
 
@@ -67,6 +53,7 @@ Specifies the ID of the collection that the maintenance window applies to.
 Type: String
 Parameter Sets: ByCollectionId
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -75,12 +62,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -95,6 +81,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -103,12 +90,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -123,6 +111,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -131,12 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,13 +134,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: ByValue
+Aliases: Collection, Site
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -MaintenanceWindowName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -166,6 +170,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

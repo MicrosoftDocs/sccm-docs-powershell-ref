@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 1851328A-D7D3-40E2-B3D5-7EA9454B5D02
 online version: https://go.microsoft.com/fwlink/?linkid=834011
 schema: 2.0.0
-ms.assetid: 1851328A-D7D3-40E2-B3D5-7EA9454B5D02
 ---
 
 # Remove-CMContentDistribution
@@ -14,10 +14,16 @@ Removes packages from a distribution point.
 
 ### SearchByValueMandatory_Application (Default)
 ```
-Remove-CMContentDistribution [-Force] -Application <IResultObject> [-CollectionName <String[]>]
- [-DisableContentDependencyDetection] [-DistributionPointGroupName <String[]>]
- [-DistributionPointName <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DisableContentDependencyDetection]
+ [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByValueMandatory
+```
+Remove-CMContentDistribution [-Force] -InputObject <IResultObject> [-CollectionName <String[]>]
+ [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_Application
@@ -36,13 +42,6 @@ Remove-CMContentDistribution [-Force] -ApplicationName <String[]> [-CollectionNa
  [<CommonParameters>]
 ```
 
-### SearchByValueMandatory_BootImage
-```
-Remove-CMContentDistribution [-Force] -BootImage <IResultObject> [-CollectionName <String[]>]
- [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory_BootImage
 ```
 Remove-CMContentDistribution [-Force] -BootImageId <String[]> [-CollectionName <String[]>]
@@ -53,13 +52,6 @@ Remove-CMContentDistribution [-Force] -BootImageId <String[]> [-CollectionName <
 ### SearchByNameMandatory_BootImage
 ```
 Remove-CMContentDistribution [-Force] -BootImageName <String[]> [-CollectionName <String[]>]
- [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory_DeploymentPackage
-```
-Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] -DeploymentPackage <IResultObject>
  [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -75,13 +67,6 @@ Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] -DeploymentPa
 ```
 Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] -DeploymentPackageName <String[]>
  [-DistributionPointGroupName <String[]>] [-DistributionPointName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory_DriverPackage
-```
-Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
- [-DistributionPointName <String[]>] -DriverPackage <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -120,13 +105,6 @@ Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-Distributio
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByValueMandatory_OperatingSystemInstaller
-```
-Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
- [-DistributionPointName <String[]>] -OperatingSystemInstaller <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory_OperatingSystemInstaller
 ```
 Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
@@ -141,13 +119,6 @@ Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-Distributio
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByValueMandatory_Package
-```
-Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
- [-DistributionPointName <String[]>] -Package <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByIdMandatory_Package
 ```
 Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
@@ -159,13 +130,6 @@ Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-Distributio
 ```
 Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
  [-DistributionPointName <String[]>] -PackageName <String[]> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory_TaskSequence
-```
-Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-DistributionPointGroupName <String[]>]
- [-DistributionPointName <String[]>] -TaskSequence <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -197,21 +161,6 @@ This command removes the driver package PCO00019 from the distribution point dis
 
 ## PARAMETERS
 
-### -Application
-Specifies a Configuration Manager application object.
-To get a **CMApplication** object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByValueMandatory_Application
-Aliases: 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ApplicationId
 Specifies an array of application IDs.
 
@@ -219,6 +168,7 @@ Specifies an array of application IDs.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_Application
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -233,21 +183,7 @@ Specifies an array of application names.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_Application
 Aliases: 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -BootImage
-Specifies a boot image object.
-To get a **CMBootImage** object, use the [Get-CMBootImage](./Get-CMBootImage.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByValueMandatory_BootImage
-Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -262,6 +198,7 @@ Specifies an array of IDs of boot images.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_BootImage
 Aliases: BootImageIds
+
 Required: True
 Position: Named
 Default value: None
@@ -276,6 +213,7 @@ Specifies an array of names of boot images.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_BootImage
 Aliases: BootImageNames
+
 Required: True
 Position: Named
 Default value: None
@@ -290,6 +228,7 @@ Specifies the name of a Configuration Manager collection.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -304,24 +243,10 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentPackage
-Specifies a deployment package object.
-To get a **CMDeploymentPackage** object, use the [Get-CMDeploymentPackage](./Get-CMDeploymentPackage.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByValueMandatory_DeploymentPackage
-Aliases: 
-Required: True
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -333,6 +258,7 @@ Specifies an array of IDs of deployment packages.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_DeploymentPackage
 Aliases: DeploymentPackageIds
+
 Required: True
 Position: Named
 Default value: None
@@ -347,6 +273,7 @@ Specifies an array of names of deployment packages.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_DeploymentPackage
 Aliases: DeploymentPackageNames
+
 Required: True
 Position: Named
 Default value: None
@@ -355,12 +282,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableContentDependencyDetection
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByValueMandatory_Application, SearchByIdMandatory_Application, SearchByNameMandatory_Application
 Aliases: DisableDetectAssociatedContentDependencies
+
 Required: False
 Position: Named
 Default value: None
@@ -369,12 +295,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -389,6 +316,7 @@ Specifies the name of a distribution point group.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -403,22 +331,8 @@ Specifies the name of a distribution point that is associated with the deploymen
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DriverPackage
-Specifies a driver package object.
-To get a **CMDriverPackage** object, use the [Get-CMDriverPackage](./Get-CMDriverPackage.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByValueMandatory_DriverPackage
-Aliases: 
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -432,6 +346,7 @@ Specifies an array of IDs of driver packages.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_DriverPackage
 Aliases: DriverPackageIds
+
 Required: True
 Position: Named
 Default value: None
@@ -446,6 +361,7 @@ Specifies an array of names of driver packages.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_DriverPackage
 Aliases: DriverPackageNames
+
 Required: True
 Position: Named
 Default value: None
@@ -460,6 +376,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -468,16 +385,32 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: SearchByValueMandatory
+Aliases: Application, Package, BootImage, DeploymentPackage, SoftwareUpdatePackage, DriverPackage, ImagePackage, OperatingSystemInstaller, TaskSequence
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -489,6 +422,7 @@ To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage]
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemImage
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -503,6 +437,7 @@ Specifies an array of IDs of operating system images.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_OperatingSystemImage
 Aliases: OperatingSystemImageIds
+
 Required: True
 Position: Named
 Default value: None
@@ -517,21 +452,7 @@ Specifies an array of names of operating system images.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_OperatingSystemImage
 Aliases: OperatingSystemImageNames
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -OperatingSystemInstaller
-Specifies an operating system installer object.
-To get a **CMOperatingSystemInstaller** object, use the [Get-CMOperatingSystemInstaller](./Get-CMOperatingSystemInstaller.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByValueMandatory_OperatingSystemInstaller
-Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -546,6 +467,7 @@ Specifies an array of IDs of operating system installers.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_OperatingSystemInstaller
 Aliases: OperatingSystemInstallerIds
+
 Required: True
 Position: Named
 Default value: None
@@ -560,21 +482,7 @@ Specifies an array of names of operating system installers.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_OperatingSystemInstaller
 Aliases: OperatingSystemImageInstallerNames
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -Package
-Specifies a package object.
-To get a **CMPackage** object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByValueMandatory_Package
-Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -589,6 +497,7 @@ Specifies an array of IDs of packages.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_Package
 Aliases: PackageIds
+
 Required: True
 Position: Named
 Default value: None
@@ -603,21 +512,7 @@ Specifies an array of names of packages.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_Package
 Aliases: PackageNames
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -TaskSequence
-Specifies a task sequence object.
-To get a **CMTaskSequence** object, use the [Get-CMTaskSequence](./Get-CMTaskSequence.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByValueMandatory_TaskSequence
-Aliases: 
 Required: True
 Position: Named
 Default value: None
@@ -632,6 +527,7 @@ Specifies an array of IDs of task sequences.
 Type: String[]
 Parameter Sets: SearchByIdMandatory_TaskSequence
 Aliases: TaskSequenceIds
+
 Required: True
 Position: Named
 Default value: None
@@ -646,6 +542,7 @@ Specifies an array of names of task sequences.
 Type: String[]
 Parameter Sets: SearchByNameMandatory_TaskSequence
 Aliases: TaskSequenceNames
+
 Required: True
 Position: Named
 Default value: None
@@ -661,6 +558,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

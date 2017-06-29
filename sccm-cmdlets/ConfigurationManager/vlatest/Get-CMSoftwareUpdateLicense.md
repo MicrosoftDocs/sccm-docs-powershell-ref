@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: EFF80160-0FF7-4F76-A09A-2C55C29D7972
 online version: https://go.microsoft.com/fwlink/?linkid=833917
 schema: 2.0.0
-ms.assetid: EFF80160-0FF7-4F76-A09A-2C55C29D7972
 ---
 
 # Get-CMSoftwareUpdateLicense
@@ -41,12 +41,13 @@ This command gets the EULA or SLT for a software update named UpdatePkg01 for th
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -55,13 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -EulaAcceptance
-
-
 ```yaml
 Type: EulaAcceptance
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Declined, Accepted, Unknown
+
 Required: False
 Position: Named
 Default value: None
@@ -70,12 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -91,6 +92,7 @@ To obtain a software update object, use the **Get-CMSoftwareUpdate** cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -105,6 +107,7 @@ Specifies an array of names of software updates.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: Named
 Default value: None
@@ -113,13 +116,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

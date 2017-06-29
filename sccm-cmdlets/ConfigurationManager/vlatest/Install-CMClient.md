@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 5336F6B8-3B01-4D9B-8925-9FB913735BBB
 online version: https://go.microsoft.com/fwlink/?linkid=834094
 schema: 2.0.0
-ms.assetid: 5336F6B8-3B01-4D9B-8925-9FB913735BBB
 ---
 
 # Install-CMClient
@@ -12,11 +12,11 @@ Installs a Configuration Manager client.
 
 ## SYNTAX
 
-### SearchByDeviceValueMandatory (Default)
+### SearchByValueMandatory (Default)
 ```
-Install-CMClient -Device <IResultObject> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
- [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Install-CMClient -InputObject <IResultObject> [-IncludeDomainController <Boolean>]
+ [-AlwaysInstallClient <Boolean>] [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
@@ -31,13 +31,6 @@ Install-CMClient -Name <String> [-IncludeDomainController <Boolean>] [-AlwaysIns
 Install-CMClient -CollectionId <String> [-IncludeDomainController <Boolean>] [-AlwaysInstallClient <Boolean>]
  [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
-```
-
-### SearchByValueMandatory
-```
-Install-CMClient -InputObject <IResultObject> [-IncludeDomainController <Boolean>]
- [-AlwaysInstallClient <Boolean>] [-ForceReinstall <Boolean>] [-SiteCode <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByDeviceNameMandatory
@@ -75,6 +68,7 @@ Indicates whether Configuration Manager always installs the client.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +83,7 @@ Specifies the ID of the collection to which the client belongs.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -103,25 +98,11 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Device
-Specifies a Configuration Manager device object.
-You can get a Configuration Manager device object by using the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByDeviceValueMandatory
-Aliases: 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -132,6 +113,7 @@ Specifies the ID for the device to which Configuration Manager installs the clie
 Type: String
 Parameter Sets: SearchByDeviceIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +128,7 @@ Specifies the name of the device to which Configuration Manager installs the cli
 Type: String
 Parameter Sets: SearchByDeviceNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -154,12 +137,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -174,6 +158,7 @@ Indicates whether the cmdlet reinstalls the client.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -182,12 +167,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +188,7 @@ Indicates whether Configuration Manager authenticates and authorizes the client 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -216,7 +203,8 @@ You can get a Configuration Manager client object by using the [Get-CMBaseline](
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases: Collection, Device
+
 Required: True
 Position: Named
 Default value: None
@@ -231,6 +219,7 @@ Specifies the name of a Configuration Manager client.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -245,6 +234,7 @@ Specifies the site code for the Configuration Manager site that hosts this site 
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -260,6 +250,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

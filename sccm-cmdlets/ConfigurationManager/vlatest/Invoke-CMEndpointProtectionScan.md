@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 106F4D21-3C52-432C-B2CE-C925FF402DB3
 online version: https://go.microsoft.com/fwlink/?linkid=834137
 schema: 2.0.0
-ms.assetid: 106F4D21-3C52-432C-B2CE-C925FF402DB3
 ---
 
 # Invoke-CMEndpointProtectionScan
@@ -72,6 +72,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -86,6 +87,7 @@ Specifies the device that is scanned for malware.
 Type: IResultObject
 Parameter Sets: SearchByDeviceValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +102,7 @@ Specifies an object that represents a device collection whose members are scanne
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -114,6 +117,7 @@ Specifies the ID of a device collection whose members are scanned for malware.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -128,6 +132,7 @@ Specifies the name of a device collection whose members are scanned for malware.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -142,6 +147,7 @@ Specifies the ID of a device that is scanned for malware.
 Type: String
 Parameter Sets: SearchByDeviceIdMandatory
 Aliases: ResourceID
+
 Required: True
 Position: Named
 Default value: None
@@ -156,6 +162,7 @@ Specifies the name of a device that is scanned for malware.
 Type: String
 Parameter Sets: SearchByDeviceNameMandatory
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -164,12 +171,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -178,12 +186,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -202,6 +211,7 @@ Type: ScanType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Full, Quick
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +227,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

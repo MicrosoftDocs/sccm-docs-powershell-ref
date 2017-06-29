@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: C12620B8-D0BF-464F-BF90-BB1658ABE0B4
 online version: https://go.microsoft.com/fwlink/?linkid=833892
 schema: 2.0.0
-ms.assetid: C12620B8-D0BF-464F-BF90-BB1658ABE0B4
 ---
 
 # Get-CMSoftwareMeteringRule
@@ -47,12 +47,13 @@ This command gets software metering rules for the product named Accounting Packa
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -61,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +83,7 @@ Specifies an array of IDs for software metering rules.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: RuleId
+
 Required: True
 Position: Named
 Default value: None
@@ -95,6 +98,7 @@ Specifies a name for a product that a rule meters.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

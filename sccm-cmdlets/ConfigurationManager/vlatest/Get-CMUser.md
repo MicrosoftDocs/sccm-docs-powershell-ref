@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 381B444E-D2CA-4351-9EDF-036291F23E7D
 online version: https://go.microsoft.com/fwlink/?linkid=833975
 schema: 2.0.0
-ms.assetid: 381B444E-D2CA-4351-9EDF-036291F23E7D
 ---
 
 # Get-CMUser
@@ -68,6 +68,7 @@ Specifies the ID of a user collection.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -82,6 +83,7 @@ Specifies the name of a user collection.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -90,12 +92,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,12 +107,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +129,7 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -139,6 +144,7 @@ Specifies the name of a user.
 Type: String
 Parameter Sets: ByName, SearchByValueMandatory, SearchByIdMandatory, SearchByNameMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +159,7 @@ Specifies the resource ID of a user.
 Type: Int32
 Parameter Sets: ById
 Aliases: Id, UserId
+
 Required: True
 Position: Named
 Default value: None

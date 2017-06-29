@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.ClientStatus.dll-Help.xml
+ms.assetid: C361CE49-5461-4CC1-8660-9EE840B3F6B8
 online version: https://go.microsoft.com/fwlink/?linkid=833723
 schema: 2.0.0
-ms.assetid: C361CE49-5461-4CC1-8660-9EE840B3F6B8
 ---
 
 # Set-CMClientStatusSetting
@@ -44,12 +44,11 @@ This command modifies the client policy day setting only.
 ## PARAMETERS
 
 ### -ClientPolicyDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: PolicyInactiveInterval, ClientPolicyDayInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -64,6 +63,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -72,12 +72,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,12 +87,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -100,12 +102,11 @@ Accept wildcard characters: False
 ```
 
 ### -HardwareInventoryDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: HWInactiveInterval, HardwareInventoryDayInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -114,12 +115,11 @@ Accept wildcard characters: False
 ```
 
 ### -HeartbeatDiscoveryDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: DdrInactiveInterval, HeartbeatDiscoveryDayInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -128,12 +128,11 @@ Accept wildcard characters: False
 ```
 
 ### -HistoryCleanupDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: CleanUpInterval, HistoryCleanupDayInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -142,13 +141,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -157,12 +157,11 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInventoryDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: SWInactiveInterval, SoftwareInventoryDayInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -171,12 +170,11 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMessageDays
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: StatusInactiveInterval, StatusMessageDayInterval
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +190,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

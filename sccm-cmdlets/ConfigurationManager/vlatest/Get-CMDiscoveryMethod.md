@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 7CBBD8FA-3534-46FC-829C-14A7C95BAB47
 online version: https://go.microsoft.com/fwlink/?linkid=833648
 schema: 2.0.0
-ms.assetid: 7CBBD8FA-3534-46FC-829C-14A7C95BAB47
 ---
 
 # Get-CMDiscoveryMethod
@@ -37,12 +37,13 @@ This command gets a System Center Configuration Manager method that discovers us
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -51,12 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +82,7 @@ Type: DiscoveryType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: ActiveDirectoryForestDiscovery, ActiveDirectoryGroupDiscovery, ActiveDirectorySystemDiscovery, ActiveDirectoryUserDiscovery, NetworkDiscovery, HeartbeatDiscovery
+
 Required: False
 Position: Named
 Default value: None
@@ -94,6 +97,7 @@ Specifies a site code.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

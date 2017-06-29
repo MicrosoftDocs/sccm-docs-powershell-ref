@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: EA722095-C1A2-4454-9936-19EFB7088C47
 online version: https://go.microsoft.com/fwlink/?linkid=834084
 schema: 2.0.0
-ms.assetid: EA722095-C1A2-4454-9936-19EFB7088C47
 ---
 
 # Set-CMSoftwareUpdateDeploymentPackage
@@ -69,6 +69,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -83,6 +84,7 @@ Specifies a description for the deployment package.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -91,12 +93,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -105,12 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -125,6 +129,7 @@ Specifies an array of identifiers for the deployment package.
 Type: String
 Parameter Sets: SetById
 Aliases: PackageId
+
 Required: True
 Position: Named
 Default value: None
@@ -140,6 +145,7 @@ To obtain an **CMSoftwareUpdateDeploymentPackage** object, use the [Get-CMSoftwa
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -154,6 +160,7 @@ Specifies a name for the deployment package.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -168,6 +175,7 @@ Specifies a new name for the deployment package.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -176,13 +184,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -197,6 +206,7 @@ Specifies a package source (URL) for the deployment package.
 Type: String
 Parameter Sets: (All)
 Aliases: PackageSourcePath, PkgSourcePath
+
 Required: False
 Position: Named
 Default value: None
@@ -210,8 +220,9 @@ Specifies a distribution priority for the deployment package.
 ```yaml
 Type: Priorities
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: High, Normal, Low
+
 Required: False
 Position: Named
 Default value: None
@@ -220,12 +231,11 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshDistributionPoint
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: RefreshDistributionPointAfterRemoveSoftwareUpdateFromPackage
+
 Required: False
 Position: Named
 Default value: None
@@ -234,12 +244,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExpired
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: RemoveDownloadedExpiredSoftwareUpdateFromPackage
+
 Required: False
 Position: Named
 Default value: None
@@ -248,12 +257,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSuperseded
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: RemoveDownloadedSupersededSoftwareUpdateFromPackage
+
 Required: False
 Position: Named
 Default value: None
@@ -269,6 +277,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

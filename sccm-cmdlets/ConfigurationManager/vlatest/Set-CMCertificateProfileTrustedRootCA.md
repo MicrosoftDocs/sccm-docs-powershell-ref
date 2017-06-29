@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: DE269D9A-EC2F-4DAE-859E-76E39BA4F9AF
 online version: https://go.microsoft.com/fwlink/?linkid=833702
 schema: 2.0.0
-ms.assetid: DE269D9A-EC2F-4DAE-859E-76E39BA4F9AF
 ---
 
 # Set-CMCertificateProfileTrustedRootCA
@@ -78,7 +78,7 @@ Specifies a description for the trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -109,12 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -124,12 +124,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ To obtain a trusted CA certificate profile object, use the Get-CMCertificateProf
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -175,7 +175,7 @@ Specifies the name of a trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -190,7 +190,7 @@ Specifies a new name for the trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -200,13 +200,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

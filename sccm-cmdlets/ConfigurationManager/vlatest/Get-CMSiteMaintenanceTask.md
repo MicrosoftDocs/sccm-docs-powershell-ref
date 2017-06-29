@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 3F2EAC38-7AA8-4DC7-BB4B-4F5C3D3A87BE
 online version: https://go.microsoft.com/fwlink/?linkid=833870
 schema: 2.0.0
-ms.assetid: 3F2EAC38-7AA8-4DC7-BB4B-4F5C3D3A87BE
 ---
 
 # Get-CMSiteMaintenanceTask
@@ -33,12 +33,13 @@ This command gets the maintenance task named Backup for the Configuration Manage
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -47,12 +48,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,6 +69,7 @@ Specifies an array of names for maintenance tasks.
 Type: String
 Parameter Sets: (All)
 Aliases: ItemName
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +84,7 @@ Specifies the site code of the Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

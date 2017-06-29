@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F3A129C9-055F-493E-A96D-8FC71ED5E233
 online version: https://go.microsoft.com/fwlink/?linkid=833695
 schema: 2.0.0
-ms.assetid: F3A129C9-055F-493E-A96D-8FC71ED5E233
 ---
 
 # New-CMInstallationSourceFile
@@ -54,6 +54,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -68,6 +69,7 @@ Indicates that Configuration Manager copies the installation files for a seconda
 Type: SwitchParameter
 Parameter Sets: NewInstallationSourceFilesByNetworkLocation
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Indicates that Configuration Manager copies the installation files for a seconda
 Type: SwitchParameter
 Parameter Sets: NewInstallationSourceFilesByParent
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -96,6 +99,7 @@ Indicates that the installation files for a secondary site installation reside o
 Type: SwitchParameter
 Parameter Sets: NewInstallationSourceFilesBySecondaryLocation
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -104,12 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -118,12 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +144,7 @@ Specifies a path to source files in the local file system of the secondary site 
 Type: String
 Parameter Sets: NewInstallationSourceFilesBySecondaryLocation
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -152,6 +159,7 @@ Specifies a UNC path to source files in the local file system of the secondary s
 Type: String
 Parameter Sets: NewInstallationSourceFilesByNetworkLocation
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -167,6 +175,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -184,5 +193,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

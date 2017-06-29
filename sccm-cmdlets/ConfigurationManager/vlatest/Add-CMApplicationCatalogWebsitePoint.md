@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: E45EF36A-ED49-4B86-B635-B299D124D14B
 online version: https://go.microsoft.com/fwlink/?linkid=833586
 schema: 2.0.0
-ms.assetid: E45EF36A-ED49-4B86-B635-B299D124D14B
 ---
 
 # Add-CMApplicationCatalogWebsitePoint
@@ -15,55 +15,59 @@ Adds an Application Catalog website point to a Configuration Manager site.
 ### AppWebSitePointByValue (Default)
 ```
 Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] -ApplicationWebServicePointServerName <String> [-Http]
- [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>]
- [-ClientConnectionType <ClientConnectionTypes>] -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AppWebSitePointWithSsl
-```
-Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] [-SiteSystemServerName] <String> [-SiteCode <String>]
- -ApplicationWebServicePointServerName <String> [-Https] [-Port <Int32>] [-ColorRed <Int32>]
+ [-NetBiosName <String>] [-OrganizationName <String>] [-ApplicationWebServicePointServerName <String>]
+ [-ApplicationWebServicePointServer <IResultObject>] [-Http] [-Port <Int32>] [-ColorRed <Int32>]
  [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>] [-ClientConnectionType <ClientConnectionTypes>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AppWebSite
 ```
 Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
  [-NetBiosName <String>] [-OrganizationName <String>] [-SiteSystemServerName] <String> [-SiteCode <String>]
- -ApplicationWebServicePointServerName <String> -CommunicationType <ComputerCommunicationType> [-Port <Int32>]
- [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>]
- [-ClientConnectionType <ClientConnectionTypes>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-ApplicationWebServicePointServerName <String>] [-ApplicationWebServicePointServer <IResultObject>]
+ -CommunicationType <ComputerCommunicationType> [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>]
+ [-ColorBlue <Int32>] [-Color <Color>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AppWebSitePoint
 ```
 Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
  [-NetBiosName <String>] [-OrganizationName <String>] [-SiteSystemServerName] <String> [-SiteCode <String>]
- -ApplicationWebServicePointServerName <String> [-Http] [-Port <Int32>] [-ColorRed <Int32>]
- [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>] [-ClientConnectionType <ClientConnectionTypes>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ApplicationWebServicePointServerName <String>] [-ApplicationWebServicePointServer <IResultObject>] [-Http]
+ [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
-### AppWebSitePointWithSslByValue
+### AppWebSitePointWithSsl
 ```
 Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] -ApplicationWebServicePointServerName <String> [-Https]
+ [-NetBiosName <String>] [-OrganizationName <String>] [-SiteSystemServerName] <String> [-SiteCode <String>]
+ [-ApplicationWebServicePointServerName <String>] [-ApplicationWebServicePointServer <IResultObject>] [-Https]
  [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>]
- [-ClientConnectionType <ClientConnectionTypes>] -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### AppWebSiteByValue
 ```
 Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
- [-NetBiosName <String>] [-OrganizationName <String>] -ApplicationWebServicePointServerName <String>
- -CommunicationType <ComputerCommunicationType> [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>]
- [-ColorBlue <Int32>] [-Color <Color>] [-ClientConnectionType <ClientConnectionTypes>]
+ [-NetBiosName <String>] [-OrganizationName <String>] [-ApplicationWebServicePointServerName <String>]
+ [-ApplicationWebServicePointServer <IResultObject>] -CommunicationType <ComputerCommunicationType>
+ [-Port <Int32>] [-ColorRed <Int32>] [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>]
+ [-ClientConnectionType <ClientConnectionTypes>] -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AppWebSitePointWithSslByValue
+```
+Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName <String>]
+ [-NetBiosName <String>] [-OrganizationName <String>] [-ApplicationWebServicePointServerName <String>]
+ [-ApplicationWebServicePointServer <IResultObject>] [-Https] [-Port <Int32>] [-ColorRed <Int32>]
+ [-ColorGreen <Int32>] [-ColorBlue <Int32>] [-Color <Color>] [-ClientConnectionType <ClientConnectionTypes>]
  -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -93,14 +97,28 @@ The command specifies values for the three colors.
 
 ## PARAMETERS
 
+### -ApplicationWebServicePointServer
+{{Fill ApplicationWebServicePointServer Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplicationWebServicePointServerName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: SiteSystemServerNameConfiguredForApplicationCatalogWebServicePoint
-Required: True
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -120,6 +138,7 @@ Type: ClientConnectionTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Intranet, Internet, InternetAndIntranet
+
 Required: False
 Position: Named
 Default value: None
@@ -128,12 +147,11 @@ Accept wildcard characters: False
 ```
 
 ### -Color
-
-
 ```yaml
 Type: Color
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +167,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +183,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +199,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -187,13 +208,12 @@ Accept wildcard characters: False
 ```
 
 ### -CommunicationType
-
-
 ```yaml
 Type: ComputerCommunicationType
 Parameter Sets: AppWebSite, AppWebSiteByValue
 Aliases: ClientCommunicationType
 Accepted values: Http, Https
+
 Required: True
 Position: Named
 Default value: None
@@ -208,6 +228,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -216,12 +237,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -230,12 +250,11 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -244,12 +263,11 @@ Accept wildcard characters: False
 ```
 
 ### -Http
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AppWebSitePointByValue, AppWebSitePoint
 Aliases: ConfiguredAsHttpConnection
+
 Required: True
 Position: Named
 Default value: None
@@ -258,12 +276,11 @@ Accept wildcard characters: False
 ```
 
 ### -Https
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AppWebSitePointWithSsl, AppWebSitePointWithSslByValue
 Aliases: ConfiguredAsHttpsConnection
+
 Required: True
 Position: Named
 Default value: None
@@ -278,6 +295,7 @@ Specifies the Internet Information Services (IIS) website installed on the Appli
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -291,8 +309,9 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
-Parameter Sets: AppWebSitePointByValue, AppWebSitePointWithSslByValue, AppWebSiteByValue
+Parameter Sets: AppWebSitePointByValue, AppWebSiteByValue, AppWebSitePointWithSslByValue
 Aliases: SiteServer
+
 Required: True
 Position: Named
 Default value: None
@@ -307,6 +326,7 @@ Specifies the NetBIOS name of the server that hosts the Application Catalog webs
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -322,6 +342,7 @@ This name appears to users who access the Application Catalog.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -330,12 +351,11 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: PortForHttpConnection, PortForHttpsConnection
+
 Required: False
 Position: Named
 Default value: None
@@ -348,8 +368,9 @@ Specifies the site code for a Configuration Manager site.
 
 ```yaml
 Type: String
-Parameter Sets: AppWebSitePointWithSsl, AppWebSite, AppWebSitePoint
+Parameter Sets: AppWebSite, AppWebSitePoint, AppWebSitePointWithSsl
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -362,8 +383,9 @@ Specifies the name of a server that hosts a site system role.
 
 ```yaml
 Type: String
-Parameter Sets: AppWebSitePointWithSsl, AppWebSite, AppWebSitePoint
+Parameter Sets: AppWebSite, AppWebSitePoint, AppWebSitePointWithSsl
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -378,6 +400,7 @@ Specifies the name of the web application used for the application catalog.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -393,6 +416,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

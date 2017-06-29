@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: F4A29E0D-6DDA-4E86-A836-9F148B38836F
 online version: https://go.microsoft.com/fwlink/?linkid=833653
 schema: 2.0.0
-ms.assetid: F4A29E0D-6DDA-4E86-A836-9F148B38836F
 ---
 
 # Add-CMDeviceCollectionQueryMembershipRule
@@ -59,6 +59,7 @@ To obtain a device collection object, use the **Get-CMDeviceCollection** cmdlet.
 Type: IResultObject
 Parameter Sets: ByCollectionValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -73,6 +74,7 @@ Specifies the ID of the device collection where the rule is applied.
 Type: String
 Parameter Sets: ByCollectionId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -87,6 +89,7 @@ Specifies the name of the device collection where the rule is applied.
 Type: String
 Parameter Sets: ByCollectionName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -101,6 +104,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -109,12 +113,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -123,12 +128,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -137,13 +143,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +165,7 @@ Specifies the query expression that Configuration Manager uses to update the dev
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -172,6 +180,7 @@ Specifies the name for the rule.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -187,6 +196,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

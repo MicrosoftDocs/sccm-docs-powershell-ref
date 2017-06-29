@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: DF2D6142-9B3F-429B-91F5-61300D7F9D97
 online version: https://go.microsoft.com/fwlink/?linkid=834262
 schema: 2.0.0
-ms.assetid: DF2D6142-9B3F-429B-91F5-61300D7F9D97
 ---
 
 # New-CMAutoDeploymentRuleDeployment
@@ -87,7 +87,7 @@ Specifies the number of time units for the offset from the deadline.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -124,7 +124,7 @@ Indicates whether a system restart is allowed to be performed outside of any def
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ Indicates whether software installation is allowed to be performed outside of an
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Indicates whether software updates are available to install as soon as possible 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Specifies the number of time units for the software available time.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -190,7 +190,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -207,7 +207,7 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ Specifies the ID of the target collection for the software update deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ Specifies the name of the target collection for the software update deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -267,7 +267,7 @@ Indicates whether required software updates are installed as soon as possible wh
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ Specifies the number of time units for the deadline.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -303,7 +303,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -329,12 +329,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -360,12 +360,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -395,7 +395,7 @@ Indicates whether an alert is generated when this rule runs successfully.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -456,7 +456,7 @@ Indicates whether to install software updates when the updates are not available
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -471,7 +471,7 @@ Indicates whether to install software updates when the updates are not available
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -502,7 +502,7 @@ When client compliance falls below this percentage, an alert is generated.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -517,7 +517,7 @@ Indicates whether a system restart is suppressed on servers when a software upda
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -532,7 +532,7 @@ Indicates whether a system restart is suppressed on workstations when a software
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -547,7 +547,7 @@ Indicates whether clients are allowed to share content with other clients on the
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -562,7 +562,7 @@ Indicates whether the schedule for this deployment is evaluated based upon Unive
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -582,7 +582,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: UserNotificationOption
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -603,7 +603,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: VerboseLevelType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: OnlyErrorMessages, OnlySuccessAndErrorMessages, AllMessages
 
 Required: False
@@ -636,7 +636,7 @@ If set to $False, content is applied on the overlay and committed later.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

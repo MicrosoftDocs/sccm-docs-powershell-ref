@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: AB985DAA-B7DE-4FC1-8429-20398128AA1E
 online version: https://go.microsoft.com/fwlink/?linkid=834264
 schema: 2.0.0
-ms.assetid: AB985DAA-B7DE-4FC1-8429-20398128AA1E
 ---
 
 # Remove-CMUserCollectionDirectMembershipRule
@@ -84,12 +84,11 @@ This command removes all the direct membership rules of the user collection that
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -98,12 +97,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +116,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -126,12 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -140,12 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -154,12 +151,11 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -168,12 +164,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -182,12 +177,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -203,6 +197,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm-help.xml
+ms.assetid: E9001728-AB67-49A6-BFBA-5CDC37B64185
 online version: https://go.microsoft.com/fwlink/?linkid=833677
 schema: 2.0.0
-ms.assetid: E9001728-AB67-49A6-BFBA-5CDC37B64185
 ---
 
 # Get-CMEmailProfile

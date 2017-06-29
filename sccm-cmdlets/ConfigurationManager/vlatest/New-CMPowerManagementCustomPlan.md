@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: AA864A00-4726-4284-8F25-958C1B3375D9
 online version: https://go.microsoft.com/fwlink/?linkid=833721
 schema: 2.0.0
-ms.assetid: AA864A00-4726-4284-8F25-958C1B3375D9
 ---
 
 # New-CMPowerManagementCustomPlan
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 651B7552-B84A-4097-A162-BE420A5A1DC0
 online version: https://go.microsoft.com/fwlink/?linkid=834193
 schema: 2.0.0
-ms.assetid: 651B7552-B84A-4097-A162-BE420A5A1DC0
 ---
 
 # Start-CMApplicationDeployment
@@ -69,12 +69,11 @@ This command starts an application deployment named 7zip.
 ## PARAMETERS
 
 ### -ApprovalRequired
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: AppRequiresApproval
+
 Required: False
 Position: Named
 Default value: None
@@ -83,12 +82,11 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDate
-
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: AvailiableDate
+
 Required: False
 Position: Named
 Default value: None
@@ -97,12 +95,11 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
-
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,12 +108,11 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableTime
-
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: AvailiableTime
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +127,7 @@ Specifies a target collection to deploy this application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -145,6 +142,7 @@ Specifies a comment for the application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -159,6 +157,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -174,6 +173,7 @@ Autoinstall performs the installation if the application is not installed.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -182,12 +182,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineDateTime
-
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +202,7 @@ Autoinstall performs the installation if the application is not installed.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -223,8 +223,9 @@ Uninstall the application.
 ```yaml
 Type: DeployActionType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Install, Uninstall
+
 Required: False
 Position: Named
 Default value: None
@@ -247,8 +248,9 @@ Installation occurs when the deadline passes.
 ```yaml
 Type: DeployPurposeType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Available, Required
+
 Required: False
 Position: Named
 Default value: None
@@ -257,12 +259,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -277,6 +280,7 @@ Indicates whether to enable Operations Manager maintenance mode.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -291,6 +295,7 @@ Specifies a value that generates a deployment alert when exceeded.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -299,12 +304,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -313,12 +319,11 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateScomAlertOnFailure
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: RaiseMomAlertsOnFailure
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +338,7 @@ Specifies an array of IDs.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -347,6 +353,7 @@ Specifies an application deployment object.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -361,6 +368,7 @@ Specifies an array of names for the application deployment.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -375,6 +383,7 @@ Indicates whether an application installation occurs outside of a maintenance wi
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -383,13 +392,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -405,6 +415,7 @@ Otherwise, changes are written on the overlay and committed later.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -419,6 +430,7 @@ Specifies a date after which to create an alert.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -427,12 +439,11 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
-
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -447,6 +458,7 @@ Specifies a time after which to create an alert.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -462,6 +474,7 @@ To use this parameter, set the *DeployPurpose* parameter to Required.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -479,6 +492,7 @@ If this value is $False, the computer does not restart outside a service window.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -496,6 +510,7 @@ For computers to wake, you must first configure Wake On LAN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -510,6 +525,7 @@ Specifies a value that the threshold must exceed before an alert is created.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -530,8 +546,9 @@ Use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: LocalTime, Utc
+
 Required: False
 Position: Named
 Default value: None
@@ -547,6 +564,7 @@ Clients may incur additional costs.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -571,8 +589,9 @@ Do not display in Software Center and do not show notifications.
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
+
 Required: False
 Position: Named
 Default value: None
@@ -588,6 +607,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

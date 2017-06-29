@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 1E63FED9-D574-44F1-B056-7AB5BACFEA24
 online version: https://go.microsoft.com/fwlink/?linkid=834243
 schema: 2.0.0
-ms.assetid: 1E63FED9-D574-44F1-B056-7AB5BACFEA24
 ---
 
 # Suspend-CMApplication
@@ -62,6 +62,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -70,12 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -84,12 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Specifies the CI_ID and ModelID properties (the same value) of an application.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -119,6 +123,7 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Application
+
 Required: True
 Position: 0
 Default value: None
@@ -133,6 +138,7 @@ Specifies the name of the application.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName, ApplicationName
+
 Required: True
 Position: 0
 Default value: None
@@ -148,6 +154,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

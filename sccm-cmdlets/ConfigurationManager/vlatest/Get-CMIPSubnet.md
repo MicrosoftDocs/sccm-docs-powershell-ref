@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 97B5236A-E4F2-4EA4-A45F-53F60F082705
 online version: https://go.microsoft.com/fwlink/?linkid=833732
 schema: 2.0.0
-ms.assetid: 97B5236A-E4F2-4EA4-A45F-53F60F082705
 ---
 
 # Get-CMIPSubnet
@@ -41,12 +41,13 @@ This command gets the IP subnet object named West07Subnet.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -55,12 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +78,7 @@ This is a Configuration Manager name, not an IP address or IP address and subnet
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SubnetId
+
 Required: True
 Position: Named
 Default value: None
@@ -90,6 +93,7 @@ Specifies an array of names for IP subnets.
 Type: String
 Parameter Sets: SearchByName
 Aliases: ADSubnetName
+
 Required: False
 Position: Named
 Default value: None

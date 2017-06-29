@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: CAC293F8-F168-4D53-8C74-E33A077BE0D1
 online version: https://go.microsoft.com/fwlink/?linkid=833747
 schema: 2.0.0
-ms.assetid: CAC293F8-F168-4D53-8C74-E33A077BE0D1
 ---
 
 # Add-CMSecurityScopeToAdministrativeUser
@@ -36,21 +36,15 @@ Add-CMSecurityScopeToAdministrativeUser -SecurityScopeId <String> -Administrativ
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddScopeToAdminByName_Object
-```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScopeName <String> -AdministrativeUser <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### AddScopeToAdminByName_Id
 ```
 Add-CMSecurityScopeToAdministrativeUser -SecurityScopeName <String> -AdministrativeUserId <Int32>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddScopeToAdminByObject_Object
+### AddScopeToAdminByName_Object
 ```
-Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUser <IResultObject>
+Add-CMSecurityScopeToAdministrativeUser -SecurityScopeName <String> -AdministrativeUser <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -63,6 +57,12 @@ Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -Administ
 ### AddScopeToAdminByObject_Name
 ```
 Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUserName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddScopeToAdminByObject_Object
+```
+Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -AdministrativeUser <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -100,6 +100,7 @@ To get an administrative user or administrative group object, use the [Get-CMAdm
 Type: IResultObject
 Parameter Sets: AddScopeToAdminById_Object, AddScopeToAdminByName_Object, AddScopeToAdminByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -114,6 +115,7 @@ Specifies an ID of an administrative user or administrative group.
 Type: Int32
 Parameter Sets: AddScopeToAdminById_Id, AddScopeToAdminByName_Id, AddScopeToAdminByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -128,6 +130,7 @@ Specifies a name of an administrative user or administrative group.
 Type: String
 Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminById_Name, AddScopeToAdminByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -142,6 +145,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -150,12 +154,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -164,12 +169,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -183,8 +189,9 @@ To obtain a security scope object, use the [Get-CMSecurityScope](./Get-CMSecurit
 
 ```yaml
 Type: IResultObject
-Parameter Sets: AddScopeToAdminByObject_Object, AddScopeToAdminByObject_Id, AddScopeToAdminByObject_Name
+Parameter Sets: AddScopeToAdminByObject_Id, AddScopeToAdminByObject_Name, AddScopeToAdminByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -199,6 +206,7 @@ Specifies the ID of a security scope.
 Type: String
 Parameter Sets: AddScopeToAdminById_Id, AddScopeToAdminById_Name, AddScopeToAdminById_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -212,8 +220,9 @@ A security scope name can be Default or the name of a custom security scope.
 
 ```yaml
 Type: String
-Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminByName_Object, AddScopeToAdminByName_Id
+Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminByName_Id, AddScopeToAdminByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -229,6 +238,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

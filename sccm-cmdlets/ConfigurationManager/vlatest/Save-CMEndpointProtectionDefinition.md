@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 762F1090-8DA6-46BC-A4E7-876E1A7A5511
 online version: https://go.microsoft.com/fwlink/?linkid=833587
 schema: 2.0.0
-ms.assetid: 762F1090-8DA6-46BC-A4E7-876E1A7A5511
 ---
 
 # Save-CMEndpointProtectionDefinition
@@ -57,6 +57,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -73,6 +74,7 @@ This object identifies the device to which you save the Endpoint Protection defi
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +91,7 @@ This object identifies the device collection to which you save the Endpoint Prot
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -103,6 +106,7 @@ Specifies an ID for a Configuration Manager device collection to which you add t
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -117,6 +121,7 @@ Specifies a name for a Configuration Manager device collection to which you add 
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -131,6 +136,7 @@ Specifies the ID of a Configuration Manager device to which you add the Endpoint
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceID
+
 Required: False
 Position: Named
 Default value: None
@@ -145,6 +151,7 @@ Specifies the name of a Configuration Manager device to which you save the Endpo
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: Named
 Default value: None
@@ -153,12 +160,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -167,12 +175,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +197,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

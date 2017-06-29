@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Oob.dll-Help.xml
+ms.assetid: 3F0D9D7A-5FD0-436C-BB6D-A28806F8A4F6
 online version: https://go.microsoft.com/fwlink/?linkid=834086
 schema: 2.0.0
-ms.assetid: 3F0D9D7A-5FD0-436C-BB6D-A28806F8A4F6
 ---
 
 # Import-CMUserDeviceAffinity
@@ -13,7 +13,7 @@ Imports a file that contains user and device affinities to Configuration Manager
 ## SYNTAX
 
 ```
-Import-CMUserDeviceAffinity [-EnableColumnHeading <Boolean>] -FileName <String> [-MappingOrders <Mapping[]>]
+Import-CMUserDeviceAffinity [-EnableColumnHeading <Boolean>] -FileName <String> [-MappingOrder <Mapping[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,6 +43,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -51,12 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -65,12 +67,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableColumnHeading
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableColumnHeadings
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +88,7 @@ Use the format \<Domain\>\\\<user name\>,\<device NetBIOS name\>.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -95,12 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -108,14 +111,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MappingOrders
-
+### -MappingOrder
+{{Fill MappingOrder Description}}
 
 ```yaml
 Type: Mapping[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: MappingOrders
 Accepted values: Users, Devices, Ignored
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +135,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
