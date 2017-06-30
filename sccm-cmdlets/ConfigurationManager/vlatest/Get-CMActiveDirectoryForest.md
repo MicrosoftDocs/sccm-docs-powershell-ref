@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 2626D1D7-FB5C-4563-8694-CD8E19DA371B
 online version: https://go.microsoft.com/fwlink/?linkid=834061
 schema: 2.0.0
-ms.assetid: 2626D1D7-FB5C-4563-8694-CD8E19DA371B
 ---
 
 # Get-CMActiveDirectoryForest
@@ -54,12 +54,13 @@ This command gets an Active Directory forest object that has the FQDN tsqa.conto
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -68,12 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +90,7 @@ Specifies the FQDN of a Configuration Manager object.
 Type: String
 Parameter Sets: SearchByFQDN
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +106,7 @@ You can find the identifier value in the **ForestID** property of an Active Dire
 Type: String[]
 Parameter Sets: SearchByIdMandatory
 Aliases: ForestId
+
 Required: True
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: ABD06920-8C34-4C90-8E38-929E2897A780
 online version: https://go.microsoft.com/fwlink/?linkid=833815
 schema: 2.0.0
-ms.assetid: ABD06920-8C34-4C90-8E38-929E2897A780
 ---
 
 # New-CMVhd
@@ -40,6 +40,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -54,6 +55,7 @@ Specifies a description for the VHD.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -62,12 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,12 +79,11 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointServerName
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: DistributionPointServerNames
+
 Required: True
 Position: Named
 Default value: None
@@ -90,12 +92,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +113,7 @@ Specifies the name of a VHD image.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -124,6 +128,7 @@ Specifies an ID for a task sequence package.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -132,12 +137,11 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-
-
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +157,7 @@ Use any string.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -161,12 +166,11 @@ Accept wildcard characters: False
 ```
 
 ### -VhdFilePath
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: PackageSourcePath, Path
+
 Required: True
 Position: Named
 Default value: None
@@ -175,12 +179,11 @@ Accept wildcard characters: False
 ```
 
 ### -VhdSizeGB
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: VhdSize
+
 Required: False
 Position: Named
 Default value: None
@@ -196,6 +199,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

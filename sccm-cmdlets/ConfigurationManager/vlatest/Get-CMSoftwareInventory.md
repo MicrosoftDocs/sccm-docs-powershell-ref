@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: A94D2654-D7A1-41D1-AA53-C6DD0E346891
 online version: https://go.microsoft.com/fwlink/?linkid=833889
 schema: 2.0.0
-ms.assetid: A94D2654-D7A1-41D1-AA53-C6DD0E346891
 ---
 
 # Get-CMSoftwareInventory
@@ -38,12 +38,13 @@ This command gets the software inventory object named MSXML 6.0 Parser.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -52,12 +53,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +74,7 @@ Specifies an array of IDs of software files.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: SoftwareKey
+
 Required: True
 Position: Named
 Default value: None
@@ -86,6 +89,7 @@ Specifies an array of names of software files.
 Type: String
 Parameter Sets: SearchByName
 Aliases: CommonName
+
 Required: False
 Position: Named
 Default value: None

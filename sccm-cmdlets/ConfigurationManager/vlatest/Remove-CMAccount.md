@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Accounts.dll-Help.xml
+ms.assetid: D9CF99B8-E30E-481E-A44C-D3BBAA2A9F19
 online version: https://go.microsoft.com/fwlink/?linkid=833865
 schema: 2.0.0
-ms.assetid: D9CF99B8-E30E-481E-A44C-D3BBAA2A9F19
 ---
 
 # Remove-CMAccount
@@ -47,6 +47,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -55,12 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -75,6 +77,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -83,12 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +108,7 @@ You can get a user account object by using the Get-CMAccount cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Account
+
 Required: True
 Position: Named
 Default value: None
@@ -112,12 +117,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
-
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -133,6 +137,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

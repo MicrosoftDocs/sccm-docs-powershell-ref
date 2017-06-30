@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 2DFC0BFA-2097-4838-949D-94AB419A2BD7
 online version: https://go.microsoft.com/fwlink/?linkid=833671
 schema: 2.0.0
-ms.assetid: 2DFC0BFA-2097-4838-949D-94AB419A2BD7
 ---
 
 # Set-CMBaseline
@@ -15,27 +15,42 @@ Changes the settings of configuration baselines.
 ### SetByIdMandatory (Default)
 ```
 Set-CMBaseline -Id <Int32> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
- [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>]
+ [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>] [-ClearRequiredConfigurationItem]
+ [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
+ [-ClearSoftwareUpdate] [-ClearBaseline] [-RemoveRequiredConfigurationItem <String[]>]
+ [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveOptionalConfigurationItem <String[]>]
+ [-RemoveOSConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>]
  [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
- [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>]
+ [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
 ```
 Set-CMBaseline -Name <String> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
- [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>]
+ [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>] [-ClearRequiredConfigurationItem]
+ [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem] [-ClearOSConfigurationItem]
+ [-ClearSoftwareUpdate] [-ClearBaseline] [-RemoveRequiredConfigurationItem <String[]>]
+ [-RemoveProhibitedConfigurationItem <String[]>] [-RemoveOptionalConfigurationItem <String[]>]
+ [-RemoveOSConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>]
  [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
- [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>]
+ [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
 Set-CMBaseline -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
  [-AddCategory <String[]>] [-RemoveCategory <String[]>] [-DesiredConfigurationDigestPath <String>]
- [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
- [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>] [-PassThru]
+ [-ClearRequiredConfigurationItem] [-ClearProhibitedConfigurationItem] [-ClearOptionalConfigurationItem]
+ [-ClearOSConfigurationItem] [-ClearSoftwareUpdate] [-ClearBaseline]
+ [-RemoveRequiredConfigurationItem <String[]>] [-RemoveProhibitedConfigurationItem <String[]>]
+ [-RemoveOptionalConfigurationItem <String[]>] [-RemoveOSConfigurationItem <String[]>]
+ [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>] [-AddRequiredConfigurationItem <String[]>]
+ [-AddProhibitedConfigurationItem <String[]>] [-AddOptionalConfigurationItem <String[]>]
+ [-AddOSConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -60,6 +75,21 @@ This command removes membership to the security scope named SecScope02 for the c
 
 ## PARAMETERS
 
+### -AddBaseline
+{{Fill AddBaseline Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddBaselines
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AddCategory
 Specifies an array of names of configuration categories to add to the configuration baselines.
 
@@ -67,6 +97,7 @@ Specifies an array of names of configuration categories to add to the configurat
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -75,12 +106,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddOSConfigurationItem
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddOSConfigurationItems
+
 Required: False
 Position: Named
 Default value: None
@@ -89,12 +119,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddOptionalConfigurationItem
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddOptionalConfigurationItems
+
 Required: False
 Position: Named
 Default value: None
@@ -103,12 +132,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddProhibitedConfigurationItem
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddProhibitedConfigurationItems
+
 Required: False
 Position: Named
 Default value: None
@@ -117,12 +145,116 @@ Accept wildcard characters: False
 ```
 
 ### -AddRequiredConfigurationItem
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddRequiredConfigurationItems
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSoftwareUpdate
+{{Fill AddSoftwareUpdate Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddSoftwareUpdates
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearBaseline
+{{Fill ClearBaseline Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearOSConfigurationItem
+{{Fill ClearOSConfigurationItem Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearOptionalConfigurationItem
+{{Fill ClearOptionalConfigurationItem Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearProhibitedConfigurationItem
+{{Fill ClearProhibitedConfigurationItem Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearRequiredConfigurationItem
+{{Fill ClearRequiredConfigurationItem Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearSoftwareUpdate
+{{Fill ClearSoftwareUpdate Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +269,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -151,6 +284,7 @@ Specifies a description of the configuration baseline.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +299,7 @@ Specifies a path to the configuration data stored as a digest.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -173,12 +308,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -187,12 +323,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +344,7 @@ Specifies an array of IDs of configuration baselines.
 Type: Int32
 Parameter Sets: SetByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -222,6 +360,7 @@ To obtain a CMBaseline object, use the [Get-CMBaseline](./Get-CMBaseline.md) cmd
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -236,6 +375,7 @@ Specifies an array of names of configuration baselines.
 Type: String
 Parameter Sets: SetByNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: Named
 Default value: None
@@ -250,6 +390,7 @@ Specifies a new name for the configuration baseline.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -258,13 +399,29 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveBaseline
+{{Fill RemoveBaseline Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveBaselines
+
 Required: False
 Position: Named
 Default value: None
@@ -279,6 +436,82 @@ Specifies an array of names of configuration categories to remove from the confi
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOSConfigurationItem
+{{Fill RemoveOSConfigurationItem Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveOSConfigurationItems
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOptionalConfigurationItem
+{{Fill RemoveOptionalConfigurationItem Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveOptionalConfigurationItems
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveProhibitedConfigurationItem
+{{Fill RemoveProhibitedConfigurationItem Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveProhibitedConfigurationItems
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveRequiredConfigurationItem
+{{Fill RemoveRequiredConfigurationItem Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveRequiredConfigurationItems
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSoftwareUpdate
+{{Fill RemoveSoftwareUpdate Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveSoftwareUpdates
+
 Required: False
 Position: Named
 Default value: None
@@ -294,6 +527,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

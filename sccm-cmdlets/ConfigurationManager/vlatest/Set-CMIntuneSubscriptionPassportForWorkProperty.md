@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: B62E719D-4285-49C7-803B-E5E4CEFECB45
 online version: https://go.microsoft.com/fwlink/?linkid=833894
 schema: 2.0.0
-ms.assetid: B62E719D-4285-49C7-803B-E5E4CEFECB45
 ---
 
 # Set-CMIntuneSubscriptionPassportForWorkProperty
@@ -16,7 +16,7 @@ Updates a Microsoft Intune subscription to enable Windows Hello for business.
 Set-CMIntuneSubscriptionPassportForWorkProperty [-Enable <Boolean>] [-RequireTpm <Boolean>]
  [-MinPinLength <Int32>] [-MaxPinLength <Int32>] [-AllowUppercase <Boolean>] [-AllowLowercase <Boolean>]
  [-AllowSpecialChar <Boolean>] [-PinExpirationDays <Int32>] [-PreventPinReuseCount <Int32>]
- [-EnableBiometrics <Boolean>] [-EnableEnhancedBiometrics <Boolean>] [-UseRemotePassport <Boolean>] [-PassThru]
+ [-EnableBiometric <Boolean>] [-EnableEnhancedBiometric <Boolean>] [-UseRemotePassport <Boolean>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,6 +43,7 @@ Indicates whether lower-case letters are allowed in the PIN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: RequireLowercase
+
 Required: False
 Position: Named
 Default value: None
@@ -57,6 +58,7 @@ Indicates whether special characters are allowed in the PIN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: RequireSpecialChar
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +73,7 @@ Indicates whether upper-case letters are allowed in the PIN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: RequireUppercase
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +88,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -93,12 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +118,7 @@ Indicates whether Windows Hello for business for enrolled devices is enabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: Enabled
+
 Required: False
 Position: Named
 Default value: None
@@ -120,13 +126,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableBiometrics
-Indicates whether biometric gestures is enabled.
+### -EnableBiometric
+{{Fill EnableBiometric Description}}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: EnableGestures
+Aliases: EnableGestures, EnableBiometrics
+
 Required: False
 Position: Named
 Default value: None
@@ -134,13 +141,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableEnhancedBiometrics
-Indicates whether enhanced anti-spoofing is enabled, when available.
+### -EnableEnhancedBiometric
+{{Fill EnableEnhancedBiometric Description}}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: EnableEnhancedAntiSpoofing
+Aliases: EnableEnhancedAntiSpoofing, EnableEnhancedBiometrics
+
 Required: False
 Position: Named
 Default value: None
@@ -149,12 +157,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +177,8 @@ Specifies the maximum required PIN length.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +192,8 @@ Specifies the minimum required PIN length.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -191,13 +202,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -211,7 +223,8 @@ Specifies the number of days before the PIN expires.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +238,8 @@ Specifies the number of previous PINs that the user is prevented from reusing.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +253,8 @@ Indicates whether a Trusted Platform Module (TPM) is used.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -253,7 +268,8 @@ Indicates whether Phone Sign In is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -269,6 +285,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

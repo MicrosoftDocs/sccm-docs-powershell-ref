@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 22B77C84-02CE-4101-8EAB-44700D126880
 online version: https://go.microsoft.com/fwlink/?linkid=834036
 schema: 2.0.0
-ms.assetid: 22B77C84-02CE-4101-8EAB-44700D126880
 ---
 
 # Export-CMSecurityRole
@@ -14,8 +14,8 @@ Exports a security role to an XML file.
 
 ### ByValue (Default)
 ```
-Export-CMSecurityRole -Path <String> -Role <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Export-CMSecurityRole -Path <String> -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
@@ -51,6 +51,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -59,12 +60,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -73,16 +75,32 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: IResultObject
+Parameter Sets: ByValue
+Aliases: Role
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -92,25 +110,12 @@ Specifies the path to which you export the XML file for the security role.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ExportFilePath
+
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Role
-
-
-```yaml
-Type: IResultObject
-Parameter Sets: ByValue
-Aliases: 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -121,6 +126,7 @@ Specifies the ID of a role.
 Type: String
 Parameter Sets: ById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -129,12 +135,11 @@ Accept wildcard characters: False
 ```
 
 ### -RoleName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -150,6 +155,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

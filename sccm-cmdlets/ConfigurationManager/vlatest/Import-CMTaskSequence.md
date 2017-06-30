@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: B63CE9E9-C730-4BAD-A561-4B09B2FEB4D2
 online version: https://go.microsoft.com/fwlink/?linkid=834082
 schema: 2.0.0
-ms.assetid: B63CE9E9-C730-4BAD-A561-4B09B2FEB4D2
 ---
 
 # Import-CMTaskSequence
@@ -13,8 +13,8 @@ Imports a task sequence.
 ## SYNTAX
 
 ```
-Import-CMTaskSequence -ImportFilePath <String> [-IgnoreDependency] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-CMTaskSequence [-IgnoreDependency] [-ImportActionType <ImportActionType>] -Path <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,6 +38,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -46,12 +47,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -60,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +83,7 @@ Indicates that the import process ignores dependencies in the task sequence.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -87,14 +91,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ImportFilePath
-Specifies a path to the file to import.
-To create a file to import, use the Export-CMTaskSequence cmdlet.
+### -ImportActionType
+{{Fill ImportActionType Description}}
+
+```yaml
+Type: ImportActionType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: NotSet, Skip, DirectImport, Rename, Overwrite, ImportFail, IgnoreDependencyFailure, AppendDriverCategories, OverwriteIgnoreDependencyFailure
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+{{Fill Path Description}}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ImportFilePath
+
 Required: True
 Position: Named
 Default value: None
@@ -110,6 +130,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

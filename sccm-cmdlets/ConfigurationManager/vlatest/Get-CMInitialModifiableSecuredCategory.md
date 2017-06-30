@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: 34B1F9D6-3D89-46FF-AA23-A9B40E4433B0
 online version: https://go.microsoft.com/fwlink/?linkid=833722
 schema: 2.0.0
-ms.assetid: 34B1F9D6-3D89-46FF-AA23-A9B40E4433B0
 ---
 
 # Get-CMInitialModifiableSecuredCategory
@@ -48,12 +48,13 @@ This command returns information about the modifiable secured category that has 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -62,12 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Specifies an identifier in Configuration Manager.
 Type: String
 Parameter Sets: SearchById
 Aliases: CategoryId
+
 Required: False
 Position: Named
 Default value: None
@@ -96,6 +99,7 @@ Specifies a name in Configuration Manager.
 Type: String
 Parameter Sets: SearchByName
 Aliases: CategoryName
+
 Required: False
 Position: Named
 Default value: None
@@ -110,6 +114,7 @@ Specifies an ID for an object type.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

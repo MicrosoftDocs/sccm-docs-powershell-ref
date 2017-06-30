@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: D8EA1510-9DA9-4DE1-BCBB-D5AA2D737E58
 online version: https://go.microsoft.com/fwlink/?linkid=833944
 schema: 2.0.0
-ms.assetid: D8EA1510-9DA9-4DE1-BCBB-D5AA2D737E58
 ---
 
 # Get-CMStatusReportingComponent
@@ -33,12 +33,13 @@ This command gets the status reporting components that Set-CMStatusReportingComp
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -47,12 +48,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,6 +69,7 @@ Specifies a site code of a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +84,7 @@ Specifies an array of site system server names.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

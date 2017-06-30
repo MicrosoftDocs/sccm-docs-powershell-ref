@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 196CA882-2AC7-42C3-9E79-1CCE583C8079
 online version: https://go.microsoft.com/fwlink/?linkid=834219
 schema: 2.0.0
-ms.assetid: 196CA882-2AC7-42C3-9E79-1CCE583C8079
 ---
 
 # New-CMActiveDirectoryForest
@@ -14,8 +14,8 @@ Creates one or more Active Directory forest objects in Configuration Manager.
 
 ```
 New-CMActiveDirectoryForest -ForestFqdn <String> [-Description <String>] [-EnableDiscovery <Boolean>]
- [-PublishingPath <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-UserName <String>] [-PublishingPath <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,6 +45,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -59,6 +60,7 @@ Specifies a description for an Active Directory forest object.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,12 +69,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +90,7 @@ The default value is $False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,12 +99,11 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +118,7 @@ Specifies an FQDN of a Configuration Manager object.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +134,22 @@ You can use a comma-separated list in quotation marks to specify more than one s
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserName
+{{Fill UserName Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +165,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

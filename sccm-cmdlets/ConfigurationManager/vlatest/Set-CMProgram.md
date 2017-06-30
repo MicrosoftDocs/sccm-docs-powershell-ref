@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 814A673E-A28D-4123-9A6C-A173188FE26B
 online version: https://go.microsoft.com/fwlink/?linkid=833989
 schema: 2.0.0
-ms.assetid: 814A673E-A28D-4123-9A6C-A173188FE26B
 ---
 
 # Set-CMProgram
@@ -21,8 +21,9 @@ Set-CMProgram -InputObject <IResultObject> [-StandardProgram] [-Comment <String>
  [-UserInteraction <Boolean>] [-DriveMode <DriveModeType>] [-DriveLetter <String>] [-Reconnect <Boolean>]
  [-ProgramAssignedType <ProgramAssignedType>] [-SuppressProgramNotification <Boolean>]
  [-DisableProgram <Boolean>] [-EnableTaskSequence <Boolean>] [-DisableMomAlertOnRun <Boolean>]
- [-GenerateMomAlertOnFail <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-GenerateMomAlertOnFail <Boolean>] [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
+ [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetStandardProgramByName
@@ -35,8 +36,9 @@ Set-CMProgram -PackageName <String> [-StandardProgram] -ProgramName <String> [-C
  [-DriveMode <DriveModeType>] [-DriveLetter <String>] [-Reconnect <Boolean>]
  [-ProgramAssignedType <ProgramAssignedType>] [-SuppressProgramNotification <Boolean>]
  [-DisableProgram <Boolean>] [-EnableTaskSequence <Boolean>] [-DisableMomAlertOnRun <Boolean>]
- [-GenerateMomAlertOnFail <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-GenerateMomAlertOnFail <Boolean>] [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
+ [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramByName
@@ -58,22 +60,14 @@ Set-CMProgram -PackageId <String> [-StandardProgram] -ProgramName <String> [-Com
  [-DriveMode <DriveModeType>] [-DriveLetter <String>] [-Reconnect <Boolean>]
  [-ProgramAssignedType <ProgramAssignedType>] [-SuppressProgramNotification <Boolean>]
  [-DisableProgram <Boolean>] [-EnableTaskSequence <Boolean>] [-DisableMomAlertOnRun <Boolean>]
- [-GenerateMomAlertOnFail <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-GenerateMomAlertOnFail <Boolean>] [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
+ [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramById
 ```
 Set-CMProgram -PackageId <String> [-DeviceProgram] -ProgramName <String> [-Comment <String>]
- [-CommandLine <String>] [-WorkingDirectory <String>] [-DiskSpaceRequirement <String>]
- [-DiskSpaceUnit <DiskSpaceUnitType>] [-Requirement <String>] [-CommandLineFolder <String>]
- [-DownloadProgramType <DownloadProgramType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetDeviceProgramByValue
-```
-Set-CMProgram -InputObject <IResultObject> [-DeviceProgram] -ProgramName <String> [-Comment <String>]
  [-CommandLine <String>] [-WorkingDirectory <String>] [-DiskSpaceRequirement <String>]
  [-DiskSpaceUnit <DiskSpaceUnitType>] [-Requirement <String>] [-CommandLineFolder <String>]
  [-DownloadProgramType <DownloadProgramType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -90,8 +84,18 @@ Set-CMProgram -InputObject <IResultObject> [-StandardProgram] -ProgramName <Stri
  [-DriveMode <DriveModeType>] [-DriveLetter <String>] [-Reconnect <Boolean>]
  [-ProgramAssignedType <ProgramAssignedType>] [-SuppressProgramNotification <Boolean>]
  [-DisableProgram <Boolean>] [-EnableTaskSequence <Boolean>] [-DisableMomAlertOnRun <Boolean>]
- [-GenerateMomAlertOnFail <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-GenerateMomAlertOnFail <Boolean>] [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
+ [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetDeviceProgramByValue
+```
+Set-CMProgram -InputObject <IResultObject> [-DeviceProgram] -ProgramName <String> [-Comment <String>]
+ [-CommandLine <String>] [-WorkingDirectory <String>] [-DiskSpaceRequirement <String>]
+ [-DiskSpaceUnit <DiskSpaceUnitType>] [-Requirement <String>] [-CommandLineFolder <String>]
+ [-DownloadProgramType <DownloadProgramType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramByProgramValue
@@ -126,6 +130,21 @@ This command modifies a device program.
 
 ## PARAMETERS
 
+### -AddSupportedOperatingSystemPlatform
+{{Fill AddSupportedOperatingSystemPlatform Description}}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
+Aliases: AddSupportedOperatingSystemPlatforms
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AfterRunningType
 Specifies the action that occurs after the program completes successfully.
 The acceptable values for this parameter are:
@@ -140,6 +159,7 @@ Type: AfterRunningType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
 Accepted values: NoActionRequired, ConfigurationManagerRestartsComputer, ProgramControlsRestart, ConfigurationManagerLogsUserOff
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +174,7 @@ Specifies the category under which the program is displayed on the client comput
 Type: String
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +189,7 @@ Specifies the command line for the program.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +205,7 @@ This folder can be an absolute path on the client, or a path relative to the dis
 Type: String
 Parameter Sets: SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -198,6 +221,7 @@ On client computers, this text appears in Run Advertised Programs in Control Pan
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -212,6 +236,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -220,12 +245,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceProgram
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -241,6 +265,7 @@ When in maintenance mode, Microsoft Operations Manager (MOM) disables alerts whi
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -256,6 +281,7 @@ If this option is selected, the program is removed from the list of available pr
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -264,12 +290,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -286,6 +313,7 @@ The value must be greater than or equal to zero.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -302,6 +330,7 @@ Type: DiskSpaceUnitType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: KB, MB, GB
+
 Required: False
 Position: Named
 Default value: None
@@ -322,6 +351,7 @@ Type: DownloadProgramType
 Parameter Sets: SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
 Aliases: 
 Accepted values: AsSoonAsPossible, OnlyOverFastNetwork, OnlyWhenTheDeviceIsDocked
+
 Required: False
 Position: Named
 Default value: None
@@ -336,6 +366,7 @@ Specifies a drive letter to qualify the location if the *DriveMode* parameter is
 Type: String
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -354,6 +385,7 @@ Type: DriveModeType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
 Accepted values: RenameWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
+
 Required: False
 Position: Named
 Default value: None
@@ -369,6 +401,7 @@ The default value is 120 minutes.
 Type: Int32
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -383,6 +416,7 @@ Indicates whether this program can be installed from the Install Software task s
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -391,12 +425,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -411,6 +446,7 @@ Indicates whether Configuration Manager generates an application log event entry
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -424,8 +460,9 @@ To obtain a **CMProgram** object, use the [Get-CMProgram](./Get-CMProgram.md) cm
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SetStandardProgramByProgramValue, SetDeviceProgramByValue, SetStandardProgramByValue, SetDeviceProgramByProgramValue
+Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByValue, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
 Aliases: ProgramPackage, Package, Program
+
 Required: True
 Position: Named
 Default value: None
@@ -440,6 +477,7 @@ Specifies a package ID.
 Type: String
 Parameter Sets: SetStandardProgramById, SetDeviceProgramById
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -454,6 +492,7 @@ Specifies a package name.
 Type: String
 Parameter Sets: SetStandardProgramByName, SetDeviceProgramByName
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -462,13 +501,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -486,6 +526,7 @@ Type: ProgramAssignedType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
 Accepted values: RunOnceForTheComputer, RunOnceForEveryUserWhoLogsOn
+
 Required: False
 Position: Named
 Default value: None
@@ -498,8 +539,9 @@ Specifies the name of the program.
 
 ```yaml
 Type: String
-Parameter Sets: SetStandardProgramByName, SetDeviceProgramByName, SetStandardProgramById, SetDeviceProgramById, SetDeviceProgramByValue, SetStandardProgramByValue
+Parameter Sets: SetStandardProgramByName, SetDeviceProgramByName, SetStandardProgramById, SetDeviceProgramById, SetStandardProgramByValue, SetDeviceProgramByValue
 Aliases: StandardProgramName, DeviceProgramName
+
 Required: True
 Position: Named
 Default value: None
@@ -522,6 +564,7 @@ Type: ProgramRunType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
 Accepted values: OnlyWhenUserIsLoggedOn, WhetherOrNotUserIsLoggedOn, OnlyWhenNoUserIsLoggedOn
+
 Required: False
 Position: Named
 Default value: None
@@ -536,6 +579,22 @@ Indicates whether the client computer reconnects to the distribution point when 
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSupportedOperatingSystemPlatform
+{{Fill RemoveSupportedOperatingSystemPlatform Description}}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
+Aliases: RemoveSupportedOperatingSystemPlatforms
+
 Required: False
 Position: Named
 Default value: None
@@ -550,6 +609,7 @@ Specifies any additional requirements for standard or device programs.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -566,6 +626,22 @@ Type: RunModeType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
 Accepted values: RunWithUserRights, RunWithAdministrativeRights
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RunOnAnyPlatform
+{{Fill RunOnAnyPlatform Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
+Aliases: ClearSupportedOperatingSystemPlatforms
+
 Required: False
 Position: Named
 Default value: None
@@ -589,6 +665,7 @@ Type: RunType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
 Accepted values: Normal, Minimized, Maximized, Hidden
+
 Required: False
 Position: Named
 Default value: None
@@ -603,6 +680,7 @@ Indicates that the program type in the deployment package is standard program.
 Type: SwitchParameter
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -611,12 +689,11 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressProgramNotification
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -631,6 +708,7 @@ Indicates whether to allow users to interact with the program.
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -646,6 +724,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -660,6 +739,7 @@ Specifies a working directory for the program.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

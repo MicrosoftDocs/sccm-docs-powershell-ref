@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: 5B0C478D-55DA-4A57-9176-47B810CEA35B
 online version: https://go.microsoft.com/fwlink/?linkid=834286
 schema: 2.0.0
-ms.assetid: 5B0C478D-55DA-4A57-9176-47B810CEA35B
 ---
 
 # Get-CMConflictingRecord
@@ -54,12 +54,13 @@ This command gets a conflict named CR07.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -68,12 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +90,7 @@ Specifies an ID for the conflicting records.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: Smsid
+
 Required: True
 Position: Named
 Default value: None
@@ -102,6 +105,7 @@ Specifies a name for the conflicting records.
 Type: String
 Parameter Sets: SearchByName
 Aliases: AgentName
+
 Required: False
 Position: Named
 Default value: None

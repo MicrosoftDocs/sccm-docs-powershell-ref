@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 14F033E4-B272-4B91-AFAA-E8CDF38CB217
 online version: https://go.microsoft.com/fwlink/?linkid=833715
 schema: 2.0.0
-ms.assetid: 14F033E4-B272-4B91-AFAA-E8CDF38CB217
 ---
 
 # Set-CMClientPushInstallation
@@ -14,38 +14,42 @@ Changes settings of a client push installation.
 
 ### SearchByValueMandatory (Default)
 ```
-Set-CMClientPushInstallation -InputObject <IResultObject> [-ChosenAccount <String[]>]
- [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
- [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>]
- [-InstallClientToDomainController <Boolean>] [-InstallationProperty <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientPushInstallation -InputObject <IResultObject> [-ChosenAccount <String[]>] [-ClearAccount]
+ [-RemoveAccount <String[]>] [-AddAccount <String[]>] [-EnableAutomaticClientPushInstallation <Boolean>]
+ [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
+ [-EnableSystemTypeWorkstation <Boolean>] [-InstallClientToDomainController <Boolean>]
+ [-InstallationProperty <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchBySiteCodeMandatory
 ```
-Set-CMClientPushInstallation [-SiteCode <String>] [-ChosenAccount <String[]>]
- [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
- [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>]
- [-InstallClientToDomainController <Boolean>] [-InstallationProperty <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientPushInstallation [-SiteCode <String>] [-ChosenAccount <String[]>] [-ClearAccount]
+ [-RemoveAccount <String[]>] [-AddAccount <String[]>] [-EnableAutomaticClientPushInstallation <Boolean>]
+ [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
+ [-EnableSystemTypeWorkstation <Boolean>] [-InstallClientToDomainController <Boolean>]
+ [-InstallationProperty <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Set-CMClientPushInstallation -Name <String> [-ChosenAccount <String[]>]
- [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
- [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>]
- [-InstallClientToDomainController <Boolean>] [-InstallationProperty <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientPushInstallation -Name <String> [-ChosenAccount <String[]>] [-ClearAccount]
+ [-RemoveAccount <String[]>] [-AddAccount <String[]>] [-EnableAutomaticClientPushInstallation <Boolean>]
+ [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
+ [-EnableSystemTypeWorkstation <Boolean>] [-InstallClientToDomainController <Boolean>]
+ [-InstallationProperty <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByComponentValueMandatory
 ```
-Set-CMClientPushInstallation -InputObject <IResultObject> [-ChosenAccount <String[]>]
- [-EnableAutomaticClientPushInstallation <Boolean>] [-EnableSystemTypeConfigurationManager <Boolean>]
- [-EnableSystemTypeServer <Boolean>] [-EnableSystemTypeWorkstation <Boolean>]
- [-InstallClientToDomainController <Boolean>] [-InstallationProperty <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMClientPushInstallation -InputObject <IResultObject> [-ChosenAccount <String[]>] [-ClearAccount]
+ [-RemoveAccount <String[]>] [-AddAccount <String[]>] [-EnableAutomaticClientPushInstallation <Boolean>]
+ [-EnableSystemTypeConfigurationManager <Boolean>] [-EnableSystemTypeServer <Boolean>]
+ [-EnableSystemTypeWorkstation <Boolean>] [-InstallClientToDomainController <Boolean>]
+ [-InstallationProperty <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,6 +74,21 @@ This setting assigns the client to the site that has the site code CM1.
 
 ## PARAMETERS
 
+### -AddAccount
+{{Fill AddAccount Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddAccounts
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ChosenAccount
 Specifies an array of accounts for Configuration Manager to use when it connects to the computer to install the client software.
 
@@ -77,6 +96,22 @@ Specifies an array of accounts for Configuration Manager to use when it connects
 Type: String[]
 Parameter Sets: (All)
 Aliases: ChosenAccounts
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearAccount
+{{Fill ClearAccount Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ClearAccounts
+
 Required: False
 Position: Named
 Default value: None
@@ -91,6 +126,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -99,12 +135,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -119,6 +156,7 @@ Indicates whether Configuration Manager automatically uses client push for disco
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -133,6 +171,7 @@ Indicates whether Configuration Manager pushes the client software to Configurat
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +186,7 @@ Indicates whether Configuration Manager pushes the client software to servers.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -161,6 +201,7 @@ Indicates whether Configuration Manager pushes the client software to workstatio
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -169,12 +210,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -190,6 +232,7 @@ To obtain a client push installation object, use the [Get-CMClientPushInstallati
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory, SearchByComponentValueMandatory
 Aliases: ClientPushComponent
+
 Required: True
 Position: Named
 Default value: None
@@ -204,6 +247,7 @@ Indicates whether to use automatic site-wide client push installation to install
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -229,6 +273,7 @@ For System Center Configuration Manager SP1: You can specify installation proper
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -243,7 +288,23 @@ Specifies a name for the client push installation.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: SiteName
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAccount
+{{Fill RemoveAccount Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveAccounts
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -257,6 +318,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -272,6 +334,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

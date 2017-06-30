@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 7D654E76-C29F-49C5-9795-A9B845086DAE
 online version: https://go.microsoft.com/fwlink/?linkid=834233
 schema: 2.0.0
-ms.assetid: 7D654E76-C29F-49C5-9795-A9B845086DAE
 ---
 
 # Get-CMCollectionMembershipEvaluationComponent
@@ -41,12 +41,13 @@ This command gets the evaluation frequency for the server named CM01.West01.Cont
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -55,12 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -75,6 +77,7 @@ Specifies a site codes for a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +92,7 @@ Specifies an array of names for Configuration Manager servers.
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: False
 Position: Named
 Default value: None

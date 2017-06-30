@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: C0E6FBD0-E779-48D5-8C2D-886E5C02866E
 online version: https://go.microsoft.com/fwlink/?linkid=834056
 schema: 2.0.0
-ms.assetid: C0E6FBD0-E779-48D5-8C2D-886E5C02866E
 ---
 
 # Remove-CMDeviceCollectionQueryMembershipRule
@@ -48,12 +48,11 @@ This command removes the query membership rule named TPM Information from the de
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ById
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -62,12 +61,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByName
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -82,6 +80,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -90,12 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +109,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -119,12 +118,11 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -140,6 +138,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

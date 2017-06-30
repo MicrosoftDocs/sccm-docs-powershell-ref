@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 89EBC6C7-BDB2-4AB6-B54D-62361D0B6620
 online version: https://go.microsoft.com/fwlink/?linkid=834178
 schema: 2.0.0
-ms.assetid: 89EBC6C7-BDB2-4AB6-B54D-62361D0B6620
 ---
 
 # Get-CMCertificateRegistrationPoint
@@ -12,15 +12,15 @@ Gets a certificate registration point.
 
 ## SYNTAX
 
-### SearchByName
+### SearchByName (Default)
 ```
-Get-CMCertificateRegistrationPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>]
+Get-CMCertificateRegistrationPoint [-SiteCode <String>] [[-SiteSystemServerName] <String>] [-AllSite]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
 ```
-Get-CMCertificateRegistrationPoint -InputObject <IResultObject> [-DisableWildcardHandling]
+Get-CMCertificateRegistrationPoint [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -45,8 +45,23 @@ This command gets the site system server object named SiteServer01.Contoso.com a
 
 ## PARAMETERS
 
+### -AllSite
+{{Fill AllSite Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: AllSites
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -61,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter

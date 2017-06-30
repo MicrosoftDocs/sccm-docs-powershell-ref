@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+ms.assetid: C3D5A011-7F5C-4151-BB10-112E9A0E78CA
 online version: https://go.microsoft.com/fwlink/?linkid=833779
 schema: 2.0.0
-ms.assetid: C3D5A011-7F5C-4151-BB10-112E9A0E78CA
 ---
 
 # Set-CMDatabaseReplicationLinkProperty
@@ -74,6 +74,7 @@ Type: InvAvailabilityLevel
 Parameter Sets: SetScheduleBySiteCodeMandatory
 Aliases: 
 Accepted values: Closed, HINV, SINV, HINVSINV, StatMSG, HINVStatMSG, SINVStatMSG, HINVSINVStatMSG
+
 Required: True
 Position: Named
 Default value: None
@@ -89,6 +90,7 @@ This parameter refers to the child site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site2
+
 Required: True
 Position: Named
 Default value: None
@@ -103,6 +105,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -127,6 +130,7 @@ Type: DaysOfWeek[]
 Parameter Sets: SetScheduleBySiteCodeMandatory
 Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+
 Required: True
 Position: Named
 Default value: None
@@ -141,6 +145,7 @@ Specifies a retry count when a replication group or object is delayed due to deg
 Type: Int32
 Parameter Sets: SetBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -149,12 +154,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +175,7 @@ Indicates whether Configuration Manager configures the SQL Server distributed pa
 Type: Boolean
 Parameter Sets: SetBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -183,6 +190,7 @@ Indicates whether Configuration Manager configures the SQL Server distributed pa
 Type: Boolean
 Parameter Sets: SetBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -197,6 +205,7 @@ Indicates whether Configuration Manager configures the SQL Server distributed pa
 Type: Boolean
 Parameter Sets: SetBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -211,6 +220,7 @@ Specifies a retry count when a replication group or object is delayed by failed 
 Type: Int32
 Parameter Sets: SetBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -219,12 +229,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -239,6 +250,7 @@ Indicates whether to generate a replication down alert.
 Type: Boolean
 Parameter Sets: SetBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -254,6 +266,7 @@ This parameter refers to the parent site.
 Type: String
 Parameter Sets: (All)
 Aliases: Site1
+
 Required: True
 Position: Named
 Default value: None
@@ -262,12 +275,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationDataTrafficSummarizationMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetBySiteCodeMandatory
 Aliases: ReplicationDataTrafficSummarizationIntervalMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -276,12 +288,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationDownAlertMins
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetBySiteCodeMandatory
 Aliases: ReplicationDownAlertThresholdMinutes
+
 Required: False
 Position: Named
 Default value: None
@@ -290,12 +301,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationEndHr
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetScheduleBySiteCodeMandatory
 Aliases: TimePeriodEnd, ReplicationEndHour
+
 Required: True
 Position: Named
 Default value: None
@@ -304,12 +314,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationStartHr
-
-
 ```yaml
 Type: Int32
 Parameter Sets: SetScheduleBySiteCodeMandatory
 Aliases: TimePeriodStart, ReplicationStartHour
+
 Required: True
 Position: Named
 Default value: None
@@ -325,6 +334,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

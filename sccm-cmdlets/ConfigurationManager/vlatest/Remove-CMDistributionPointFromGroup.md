@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Content.dll-Help.xml
+ms.assetid: 6633EFD1-D89B-4115-B23E-0A0A71BF5C02
 online version: https://go.microsoft.com/fwlink/?linkid=834072
 schema: 2.0.0
-ms.assetid: 6633EFD1-D89B-4115-B23E-0A0A71BF5C02
 ---
 
 # Remove-CMDistributionPointFromGroup
@@ -19,13 +19,6 @@ Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
  [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveDistributionPointFromGroupById_Object
-```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPointId <String>
- -DistributionPointGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
 ### RemoveDistributionPointFromGroupById_Id
 ```
 Remove-CMDistributionPointFromGroup [-Force] -DistributionPointId <String> -DistributionPointGroupId <String>
@@ -38,9 +31,9 @@ Remove-CMDistributionPointFromGroup [-Force] -DistributionPointId <String> -Dist
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveDistributionPointFromGroupByName_Object
+### RemoveDistributionPointFromGroupById_Object
 ```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPointName <String>
+Remove-CMDistributionPointFromGroup [-Force] -DistributionPointId <String>
  -DistributionPointGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -58,17 +51,24 @@ Remove-CMDistributionPointFromGroup [-Force] -DistributionPointName <String>
  [<CommonParameters>]
 ```
 
-### RemoveDistributionPointFromGroupByObject_Name
+### RemoveDistributionPointFromGroupByName_Object
 ```
-Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
- -DistributionPointGroupName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CMDistributionPointFromGroup [-Force] -DistributionPointName <String>
+ -DistributionPointGroup <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveDistributionPointFromGroupByObject_Id
 ```
 Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
  -DistributionPointGroupId <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RemoveDistributionPointFromGroupByObject_Name
+```
+Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
+ -DistributionPointGroupName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -105,6 +105,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -113,12 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -132,8 +134,9 @@ To obtain a distribution point object, use the **Get-CMDistributionPoint** cmdle
 
 ```yaml
 Type: IResultObject
-Parameter Sets: RemoveDistributionPointFromGroupByObject_Object, RemoveDistributionPointFromGroupByObject_Name, RemoveDistributionPointFromGroupByObject_Id
+Parameter Sets: RemoveDistributionPointFromGroupByObject_Object, RemoveDistributionPointFromGroupByObject_Id, RemoveDistributionPointFromGroupByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -149,6 +152,7 @@ To obtain a distribution point group object, use the **Get-CMDistributionPointGr
 Type: IResultObject
 Parameter Sets: RemoveDistributionPointFromGroupByObject_Object, RemoveDistributionPointFromGroupById_Object, RemoveDistributionPointFromGroupByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -163,6 +167,7 @@ Specifies the ID of a distribution point group.
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -177,6 +182,7 @@ Specifies the name of a distribution point group.
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -189,8 +195,9 @@ Specifies the ID of a distribution point.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveDistributionPointFromGroupById_Object, RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupById_Name
+Parameter Sets: RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupById_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -203,8 +210,9 @@ Specifies the name of a distribution point.
 
 ```yaml
 Type: String
-Parameter Sets: RemoveDistributionPointFromGroupByName_Object, RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByName_Name
+Parameter Sets: RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -219,6 +227,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -227,12 +236,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -248,6 +258,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

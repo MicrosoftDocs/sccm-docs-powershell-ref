@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Accounts.dll-Help.xml
+ms.assetid: 5DA6777B-C1CC-4FC0-A85C-6185F7AB69BE
 online version: https://go.microsoft.com/fwlink/?linkid=833605
 schema: 2.0.0
-ms.assetid: 5DA6777B-C1CC-4FC0-A85C-6185F7AB69BE
 ---
 
 # Set-CMAccount
@@ -50,6 +50,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -58,12 +59,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -72,12 +74,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +96,7 @@ You can get a user account object by using the Get-CMAccount cmdlet.
 Type: IResultObject
 Parameter Sets: SetAccountByObject
 Aliases: Account
+
 Required: True
 Position: Named
 Default value: None
@@ -106,7 +110,8 @@ Specifies a secure string that contains the password for the user account.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +125,8 @@ Specifies a Configuration Manager site code.
 ```yaml
 Type: String
 Parameter Sets: SetAccountByName
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -129,12 +135,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
-
 ```yaml
 Type: String
 Parameter Sets: SetAccountByName
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -150,6 +155,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: FA67EA36-5834-4957-BF85-08B2C9E61193
 online version: https://go.microsoft.com/fwlink/?linkid=834049
 schema: 2.0.0
-ms.assetid: FA67EA36-5834-4957-BF85-08B2C9E61193
 ---
 
 # Get-CMAccessAccount
@@ -154,6 +154,7 @@ Specifies the ID of an application.
 Type: String
 Parameter Sets: SearchByApplicationId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -168,6 +169,7 @@ Specifies the name of an application object.
 Type: String
 Parameter Sets: SearchByApplicationName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -182,6 +184,7 @@ Specifies the ID of a boot image object.
 Type: String
 Parameter Sets: SearchByBootImageId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -196,6 +199,7 @@ Specifies the name of a boot image object.
 Type: String
 Parameter Sets: SearchByBootImageName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -204,12 +208,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +229,7 @@ Specifies the ID of a driver package.
 Type: String
 Parameter Sets: SearchByDriverPackageId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -238,6 +244,7 @@ Specifies the name of a driver package.
 Type: String
 Parameter Sets: SearchByDriverPackageName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -246,12 +253,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -267,6 +275,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: DriverPackage, Application, OperatingSystemImage, OperatingSystemInstaller, Package, SoftwareUpdateDeploymentPackage, BootImage
+
 Required: True
 Position: 0
 Default value: None
@@ -281,6 +290,7 @@ Specifies the ID of an operating system image.
 Type: String
 Parameter Sets: SearchByOSImageId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -295,6 +305,7 @@ Specifies the name of an operating system image.
 Type: String
 Parameter Sets: SearchByOSImageName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -309,6 +320,7 @@ Specifies the ID of an operating system installer.
 Type: String
 Parameter Sets: SearchByOSInstallerId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -323,6 +335,7 @@ Specifies the name of an operating system installer object.
 Type: String
 Parameter Sets: SearchByOSInstallerName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -337,6 +350,7 @@ Specifies the ID of a deployed software script or program object.
 Type: String
 Parameter Sets: SearchByPackageId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -351,6 +365,7 @@ Specifies the name of a deployed software script or program object.
 Type: String
 Parameter Sets: SearchByPackageName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -365,6 +380,7 @@ Specifies the ID of a software update deployment object.
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -379,6 +395,7 @@ Specifies the name of a deployed software update object.
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -393,6 +410,7 @@ Specifies a Windows user account name in domain\user format.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

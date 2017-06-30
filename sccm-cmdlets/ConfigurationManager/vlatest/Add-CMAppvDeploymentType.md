@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: D3C9742D-2955-4C19-B6E4-3D8A3484D97A
 online version: https://go.microsoft.com/fwlink/?linkid=833594
 schema: 2.0.0
-ms.assetid: D3C9742D-2955-4C19-B6E4-3D8A3484D97A
 ---
 
 # Add-CMAppvDeploymentType
@@ -70,6 +70,7 @@ For more information about the **CultureInfo.Name** property, see [https://msdn.
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddLanguages, Languages, Language
+
 Required: False
 Position: Named
 Default value: None
@@ -84,6 +85,7 @@ Adds an array of requirements for this deployment type.
 Type: Rule[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -98,6 +100,7 @@ Specifies the ID of the application that is associated with this deployment type
 Type: Int32
 Parameter Sets: ByAppId
 Aliases: CI_ID, CIId
+
 Required: True
 Position: Named
 Default value: None
@@ -112,6 +115,7 @@ Specifies the name of the application that is associated with this deployment ty
 Type: String
 Parameter Sets: ByAppName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -126,6 +130,7 @@ Specifies a description for this deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: AdministratorComment
+
 Required: False
 Position: Named
 Default value: None
@@ -140,6 +145,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -154,6 +160,7 @@ Indicates that clients are allowed to use a fallback source location for content
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: EnableContentLocationFallback, AllowClientsToUseFallbackSourceLocationForContent
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +176,7 @@ The site system server requires permissions to read the content files.
 Type: String
 Parameter Sets: (All)
 Aliases: InstallationFileLocation
+
 Required: True
 Position: Named
 Default value: None
@@ -183,6 +191,7 @@ Specifies a display name for this deployment type.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -191,12 +200,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -217,6 +227,7 @@ Type: ContentHandlingMode
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DownloadContentForStreaming, Download
+
 Required: False
 Position: Named
 Default value: None
@@ -231,6 +242,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ForceForUnknownPublisher
+
 Required: False
 Position: Named
 Default value: None
@@ -239,12 +251,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -260,6 +273,7 @@ To obtain an application object, use the [Get-CMApplication](./Get-CMApplication
 Type: IResultObject
 Parameter Sets: ByAppValue
 Aliases: Application
+
 Required: True
 Position: Named
 Default value: None
@@ -275,6 +289,7 @@ Provide the languages in the "languagecode2-country" or "languagecode2" format, 
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveLanguages
+
 Required: False
 Position: Named
 Default value: None
@@ -289,6 +304,7 @@ Removes the existing installation requirements from this deployment type.
 Type: Rule[]
 Parameter Sets: (All)
 Aliases: RemoveRequirements
+
 Required: False
 Position: Named
 Default value: None
@@ -309,6 +325,7 @@ Type: ContentHandlingMode
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DoNothing, Download, DownloadContentForStreaming
+
 Required: False
 Position: Named
 Default value: None
@@ -324,6 +341,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

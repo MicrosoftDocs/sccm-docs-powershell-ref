@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: C3950252-6811-4EE6-B4FD-212F8523BFAD
 online version: https://go.microsoft.com/fwlink/?linkid=833699
 schema: 2.0.0
-ms.assetid: C3950252-6811-4EE6-B4FD-212F8523BFAD
 ---
 
 # Set-CMCertificateProfileScep
@@ -80,7 +80,7 @@ Indicates whether to allow certificate enrollment on any device.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Valid values are:
 ```yaml
 Type: CertificateStoreType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Machine, User
 
 Required: False
@@ -115,7 +115,7 @@ Specifies the name of a certificate template.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ Specifies, in number of days, the certificate validity period.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Specifies a description for the SCEP certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -170,12 +170,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ Specifies the percentage of the certificate lifetime that remains before the dev
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ Specifies the number of times that the device automatically retries the certific
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -236,7 +236,7 @@ Specifies the interval, in minutes, between each enrollment attempt when you use
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -246,12 +246,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -304,7 +304,7 @@ To obtain a SCEP certificate profile object, use the Get-CMCertificateProfileSce
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -323,8 +323,8 @@ Valid values are:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
-Accepted values: 1024, 2048
+Aliases: 
+Accepted values: 1024, 2048, 4096
 
 Required: False
 Position: Named
@@ -346,7 +346,7 @@ Valid values are:
 ```yaml
 Type: KeyStorageProviderSettingType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: None, InstallToTPM_FailIfNotPresent, InstallToTPM_IfPresent, InstallToSoftwareKeyStorageProvider, InstallToNGC_FailIfNotPresent
 
 Required: False
@@ -390,7 +390,7 @@ Specifies a name for the SCEP certificate profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -405,7 +405,7 @@ Specifies a new name for the SCEP certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -415,13 +415,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -437,7 +437,7 @@ This parameter can be used when the InstallToNGC_FailIfNotPresent value is set f
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -453,7 +453,7 @@ To get a trusted root CA certificate, use the Get-CMCertificateProfileTrustedRoo
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -475,7 +475,7 @@ Valid values are:
 Type: SubjectAlternativeNameFormatTypes
 Parameter Sets: (All)
 Aliases: SanTypes
-Accepted values: SubjectAltRequireSpn, SubjectAltRequireUpn, SubjectAltReqiureEmail, SubjectAltRequireDns
+Accepted values: SubjectAltRequireCustom, SubjectAltRequireSpn, SubjectAltRequireAAD, SubjectAltRequireUpn, SubjectAltReqiureEmail, SubjectAltRequireDns
 
 Required: False
 Position: Named

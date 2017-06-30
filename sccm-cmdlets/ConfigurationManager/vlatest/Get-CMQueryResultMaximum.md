@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: D37F399D-6BD8-4C5F-AAC9-1B5DFB6684EF
 online version: https://go.microsoft.com/fwlink/?linkid=833830
 schema: 2.0.0
-ms.assetid: D37F399D-6BD8-4C5F-AAC9-1B5DFB6684EF
 ---
 
 # Get-CMQueryResultMaximum
@@ -35,12 +35,13 @@ This command gets the maximum number of rows that a Configuration Manager report
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -49,12 +50,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

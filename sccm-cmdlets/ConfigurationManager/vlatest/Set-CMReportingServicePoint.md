@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 06BFF15B-79D8-46D1-99F3-CE319F2BF432
 online version: https://go.microsoft.com/fwlink/?linkid=834010
 schema: 2.0.0
-ms.assetid: 06BFF15B-79D8-46D1-99F3-CE319F2BF432
 ---
 
 # Set-CMReportingServicePoint
@@ -65,6 +65,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -79,6 +80,7 @@ Specifies the name of the Configuration Manager database that you want to use as
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -94,6 +96,7 @@ To specify a database instance, use the format \<Server Name\>\\\<Instance Name\
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -102,12 +105,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -116,12 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +142,7 @@ To obtain an input object, use the [Get-CMReportingServicePoint](./Get-CMReporti
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: ReportingServicePoint
+
 Required: True
 Position: Named
 Default value: None
@@ -145,13 +151,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -166,6 +173,7 @@ Specifies a site code of a Configuration Manager site that hosts this system rol
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -180,6 +188,7 @@ Specifies the name of a server hosting the site system role.
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -194,6 +203,7 @@ Specifies a user name that Configuration Manager uses to connect with Microsoft 
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +219,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

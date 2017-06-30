@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F07B1E32-8C9F-4625-ABE9-A6A75E688700
 online version: https://go.microsoft.com/fwlink/?linkid=833606
 schema: 2.0.0
-ms.assetid: F07B1E32-8C9F-4625-ABE9-A6A75E688700
 ---
 
 # Add-CMCertificateRegistrationPoint
@@ -12,7 +12,7 @@ Adds a certificate registration point role to a site system server.
 
 ## SYNTAX
 
-### ByValue
+### ByValue (Default)
 ```
 Add-CMCertificateRegistrationPoint -Certificate <Hashtable> [-ConnectionAccountUserName <String>]
  -InputObject <IResultObject> [-IisWebsite <String>] [-WebApplicationName <String>] [-Port <Int32>]
@@ -94,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -109,12 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ Specifies the website name used by the certificate registration point.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Specifies the HTTPS port number used by the certificate registration point to co
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ Specifies the site code of the Configuration Manager site server.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ Specifies the web application name used by the certificate registration point.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

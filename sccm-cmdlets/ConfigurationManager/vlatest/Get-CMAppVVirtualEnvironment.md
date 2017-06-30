@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 0249609D-987D-4F8C-85AD-B4BFD4970484
 online version: https://go.microsoft.com/fwlink/?linkid=834106
 schema: 2.0.0
-ms.assetid: 0249609D-987D-4F8C-85AD-B4BFD4970484
 ---
 
 # Get-CMAppVVirtualEnvironment
@@ -54,12 +54,11 @@ This command gets an App-V virtual environment that has the ID 16781806.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -68,12 +67,11 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +86,7 @@ Specifies an array of IDs of virtual environments.
 Type: Int32[]
 Parameter Sets: SearchById
 Aliases: CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -103,6 +102,7 @@ You can use a wildcard.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: Named
 Default value: None

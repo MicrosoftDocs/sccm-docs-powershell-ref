@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 7B354232-530E-4DD6-A439-4183A9320EE3
 online version: https://go.microsoft.com/fwlink/?linkid=834078
 schema: 2.0.0
-ms.assetid: 7B354232-530E-4DD6-A439-4183A9320EE3
 ---
 
 # Import-CMSoftwareLicense
@@ -38,6 +38,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -46,12 +47,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -60,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -85,6 +88,7 @@ Type: ImportType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: MicrosoftVolumeLicenseStatement, GeneralLicenseStatement
+
 Required: True
 Position: Named
 Default value: None
@@ -99,6 +103,7 @@ Specifies the Universal Naming Convention (UNC) path of a valid XML-formatted li
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -114,6 +119,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -131,5 +137,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

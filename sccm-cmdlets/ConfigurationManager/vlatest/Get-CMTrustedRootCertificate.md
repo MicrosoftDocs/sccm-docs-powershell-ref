@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 611213A2-DA3D-4A5C-8769-2E9B92EF1B7A
 online version: https://go.microsoft.com/fwlink/?linkid=833967
 schema: 2.0.0
-ms.assetid: 611213A2-DA3D-4A5C-8769-2E9B92EF1B7A
 ---
 
 # Get-CMTrustedRootCertificate
@@ -39,12 +39,11 @@ This command gets a trusted root certificate from the internal server named Cont
 ## PARAMETERS
 
 ### -CAServerName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: CertificationAuthorityServerName
+
 Required: False
 Position: Named
 Default value: None
@@ -53,12 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -90,5 +91,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

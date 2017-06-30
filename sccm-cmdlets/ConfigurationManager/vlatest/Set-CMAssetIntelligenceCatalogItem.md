@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 55D600D1-7CFB-4F4C-BCAC-81F19FF7B8A3
 online version: https://go.microsoft.com/fwlink/?linkid=833651
 schema: 2.0.0
-ms.assetid: 55D600D1-7CFB-4F4C-BCAC-81F19FF7B8A3
 ---
 
 # Set-CMAssetIntelligenceCatalogItem
@@ -74,6 +74,7 @@ Specifies the name of a category, family, or label in the Asset Intelligence cat
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -88,6 +89,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -102,6 +104,7 @@ Specifies the description of a category, family, or label in the Asset Intellige
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -110,12 +113,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -124,12 +128,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +149,7 @@ Specifies an array of IDs of asset intelligence catalog items.
 Type: String
 Parameter Sets: SetById
 Aliases: CategoryId
+
 Required: True
 Position: Named
 Default value: None
@@ -159,6 +165,7 @@ To get an Asset Intelligence catalog item, use the Get-CMAssetIntelligenceCatalo
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -174,6 +181,7 @@ For more information and a list of locale IDs, see [Locale IDs Assigned by Micro
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +196,7 @@ Specifies a new category name for a category, family, or label in the Asset Inte
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -203,6 +212,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

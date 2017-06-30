@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 28331CBC-88B0-42DE-B4E6-5109D2A03D7F
 online version: https://go.microsoft.com/fwlink/?linkid=833821
 schema: 2.0.0
-ms.assetid: 28331CBC-88B0-42DE-B4E6-5109D2A03D7F
 ---
 
 # Get-CMProgram
@@ -55,12 +55,13 @@ This command gets the program named ProgramD02 in the package that has the ID ST
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -69,12 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -83,12 +85,11 @@ Accept wildcard characters: False
 ```
 
 ### -Package
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -103,6 +104,7 @@ Specifies the package that contains the program by using an ID.
 Type: String
 Parameter Sets: SearchById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -111,12 +113,11 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-
-
 ```yaml
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -131,6 +132,7 @@ Specifies the program within the package by using a name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 73C221D9-2219-4362-A22C-69D65EA490F5
 online version: https://go.microsoft.com/fwlink/?linkid=834142
 schema: 2.0.0
-ms.assetid: 73C221D9-2219-4362-A22C-69D65EA490F5
 ---
 
 # Get-CMBaselineXMLDefinition
@@ -48,12 +48,13 @@ The second command gets the XML definition of the configuration baseline stored 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -62,12 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Specifies an array of IDs of baseline configurations.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -97,6 +100,7 @@ To obtain a **CMBaseline** object, use the [Get-CMBaseline](./Get-CMBaseline.md)
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -111,6 +115,7 @@ Specifies an array of baseline configuration names.
 Type: String
 Parameter Sets: SearchByName
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: 0
 Default value: None

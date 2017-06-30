@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 020CF218-583F-4419-8AFB-09C8CD67D755
 online version: https://go.microsoft.com/fwlink/?linkid=834190
 schema: 2.0.0
-ms.assetid: 020CF218-583F-4419-8AFB-09C8CD67D755
 ---
 
 # Invoke-CMWmiQuery
@@ -112,7 +112,7 @@ Specifies the Configuration Manager WMI class that contains the static method yo
 ```yaml
 Type: String
 Parameter Sets: BySearch
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -143,7 +143,7 @@ This is a list of name/value pairs that are passed to a WMI provider that suppor
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -153,12 +153,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -168,12 +168,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ Specifies a WMI Query Language (WQL) statement.
 ```yaml
 Type: String
 Parameter Sets: ByWql
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -233,7 +233,7 @@ Specifies an **SMSProviderSearch** object.
 ```yaml
 Type: SmsProviderSearch
 Parameter Sets: BySearch
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

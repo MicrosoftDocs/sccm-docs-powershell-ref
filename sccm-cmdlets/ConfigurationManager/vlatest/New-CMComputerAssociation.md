@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 563284E4-67DD-46B5-B098-83CC215C8463
 online version: https://go.microsoft.com/fwlink/?linkid=833596
 schema: 2.0.0
-ms.assetid: 563284E4-67DD-46B5-B098-83CC215C8463
 ---
 
 # New-CMComputerAssociation
@@ -45,6 +45,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -59,6 +60,7 @@ Specifies the name of a destination computer.
 Type: String
 Parameter Sets: (All)
 Aliases: RestoreName
+
 Required: True
 Position: Named
 Default value: None
@@ -67,12 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,12 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -115,6 +119,7 @@ Type: MigrationBehavior
 Parameter Sets: (All)
 Aliases: 
 Accepted values: CaptureAndRestoreAllUserAccounts, CaptureAllUserAccountsAndRestoreSpecifiedAccounts, CaptureAndRestoreSpecifiedUserAccounts
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +135,7 @@ The specified user names, along with the *MigrationBehavior* parameter setting, 
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +150,7 @@ Specifies the name of the source computer.
 Type: String
 Parameter Sets: (All)
 Aliases: SourceName
+
 Required: True
 Position: Named
 Default value: None
@@ -159,6 +166,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

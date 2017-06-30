@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: D7E96763-967E-4FAA-BF63-F5D1DC4AEC2D
 online version: https://go.microsoft.com/fwlink/?linkid=833600
 schema: 2.0.0
-ms.assetid: D7E96763-967E-4FAA-BF63-F5D1DC4AEC2D
 ---
 
 # New-CMConditionalAccessPolicy
@@ -73,6 +73,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -87,7 +88,8 @@ This rule overrides the default Exchange access rule, which means that even if y
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -96,12 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -119,6 +122,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: ExcludedCollections
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +139,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: ById
 Aliases: ExcludedCollectionIds
+
 Required: False
 Position: Named
 Default value: None
@@ -151,6 +156,7 @@ Members of these collections do not have to enroll their devices in Microsoft In
 Type: String[]
 Parameter Sets: ByName
 Aliases: ExcludedCollectionNames
+
 Required: False
 Position: Named
 Default value: None
@@ -159,12 +165,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +185,8 @@ Specifies the text of the email that Exchange sends to users when their device i
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -196,6 +204,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: IResultObject[]
 Parameter Sets: ByValue
 Aliases: TargetedCollections
+
 Required: True
 Position: Named
 Default value: None
@@ -212,6 +221,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: ById
 Aliases: TargetedCollectionIds
+
 Required: True
 Position: Named
 Default value: None
@@ -228,6 +238,7 @@ Members of these collections must enroll their devices in Microsoft Intune and b
 Type: String[]
 Parameter Sets: ByName
 Aliases: TargetedCollectionNames
+
 Required: True
 Position: Named
 Default value: None
@@ -243,6 +254,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: B6C78C9A-D8A3-43CB-9F35-D6EE842A6962
 online version: https://go.microsoft.com/fwlink/?linkid=834184
 schema: 2.0.0
-ms.assetid: B6C78C9A-D8A3-43CB-9F35-D6EE842A6962
 ---
 
 # Set-CMWirelessProfileConfigurationItem
@@ -56,6 +56,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -70,6 +71,7 @@ Specifies the description of the wireless profile that this cmdlet modifies.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -78,12 +80,11 @@ Accept wildcard characters: False
 ```
 
 ### -Digest
-
-
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -92,12 +93,11 @@ Accept wildcard characters: False
 ```
 
 ### -DigestPath
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: DesiredConfigurationDigestPath
+
 Required: False
 Position: Named
 Default value: None
@@ -106,12 +106,11 @@ Accept wildcard characters: False
 ```
 
 ### -DigestXml
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -120,12 +119,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -134,12 +134,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +155,7 @@ Specifies an array of IDs of wireless profiles.
 Type: Int32
 Parameter Sets: SetById
 Aliases: CIId, CI_ID
+
 Required: True
 Position: 0
 Default value: None
@@ -169,6 +171,7 @@ To obtain a wireless profile object, use the [Get-CMWirelessProfileConfiguration
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -183,6 +186,7 @@ Specifies an array of names of wireless profiles.
 Type: String
 Parameter Sets: SetByName
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: 0
 Default value: None
@@ -191,12 +195,11 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -205,13 +208,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -227,6 +231,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

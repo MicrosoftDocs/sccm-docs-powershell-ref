@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: FE6AD178-6DBE-4DAF-AA8A-33BC4C0C57CB
 online version: https://go.microsoft.com/fwlink/?linkid=833984
 schema: 2.0.0
-ms.assetid: FE6AD178-6DBE-4DAF-AA8A-33BC4C0C57CB
 ---
 
 # Get-CMUserCollectionDirectMembershipRule
@@ -79,12 +79,11 @@ This command gets the direct membership rule that has the Id Res_94412512 for th
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -93,12 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -114,6 +112,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -122,12 +121,11 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -136,12 +134,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -150,12 +147,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

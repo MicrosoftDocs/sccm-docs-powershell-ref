@@ -1,11 +1,11 @@
 ---
-ms.assetid:
 ms.title: Get started with SCCM cmdlets | Microsoft Docs
 ms.prod: configuration-manager
 ms.service:
-author: shill-ms
-ms.author: v-suhill
-ms.manager: mbaldwin
+author: lleonard-msft
+ms.author: alleonar
+ms.manager: angrobe
+ms.date: 06/26/2017
 ms.assetid: 63712bbf-0f8a-4cdb-8998-e7d41257981e
 ---
 

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 27F14916-98BF-4FF5-8848-EFB4EF0F93A3
 online version: https://go.microsoft.com/fwlink/?linkid=834221
 schema: 2.0.0
-ms.assetid: 27F14916-98BF-4FF5-8848-EFB4EF0F93A3
 ---
 
 # Remove-CMSoftwareUpdateDeploymentPackage
@@ -53,6 +53,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -61,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,6 +83,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,12 +92,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -109,6 +113,7 @@ Specifies an array of IDs of deployment packages.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: PackageId
+
 Required: True
 Position: Named
 Default value: None
@@ -124,6 +129,7 @@ To obtain an **CMSoftwareUpdateDeploymentPackage** object, use the Get-CMSoftwar
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -138,6 +144,7 @@ Specifies a name of a deployment package.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -153,6 +160,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

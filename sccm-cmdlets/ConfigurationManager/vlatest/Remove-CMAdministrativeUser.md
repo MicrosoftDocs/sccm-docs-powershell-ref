@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: FE92047B-B040-478C-B886-6C67FAD3A4E4
 online version: https://go.microsoft.com/fwlink/?linkid=833873
 schema: 2.0.0
-ms.assetid: FE92047B-B040-478C-B886-6C67FAD3A4E4
 ---
 
 # Remove-CMAdministrativeUser
@@ -20,14 +20,14 @@ Remove-CMAdministrativeUser -InputObject <IResultObject> [-Force] [-DisableWildc
 
 ### SearchByName
 ```
-Remove-CMAdministrativeUser -Name <String> [-Force] [-RoleName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMAdministrativeUser -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Remove-CMAdministrativeUser [-Force] -Id <String> [-RoleName <String[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CMAdministrativeUser [-Force] -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,6 +61,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -69,12 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +91,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,12 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -117,6 +121,7 @@ Specifies the ID of an administrative user.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: AdminId
+
 Required: True
 Position: Named
 Default value: None
@@ -132,6 +137,7 @@ To obtain an administrative user object, use the [Get-CMAdministrativeUser](./Ge
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -146,39 +152,8 @@ Specifies an array of administrative user names in the format of \<domain\>\\\<u
 Type: String
 Parameter Sets: SearchByName
 Aliases: DisplayName, LogonName, UserName
+
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoleName
-Specifies an array of names of security roles.
-Valid values are: 
-
-- Application Administrator
-- Application Author
-- Application Deployment Manager
-- Asset Manager
-- Compliance Settings Manager
-- Discovery Operator
-- Endpoint Protection Manager
-- Full Administrator
-- Infrastructure Administrator
-- Operating System Deployment Manager
-- Operations Administrator
-- Read-only Analyst
-- Remote Tools Operator
-- Security Administrator
-- Software Update Manager
-- Custom-defined security roles
-
-```yaml
-Type: String[]
-Parameter Sets: SearchByName, SearchByIdMandatory
-Aliases: RoleNames
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -193,6 +168,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

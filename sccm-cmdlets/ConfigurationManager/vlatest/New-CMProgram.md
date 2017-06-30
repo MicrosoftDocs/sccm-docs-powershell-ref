@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: B063DC6D-E23D-4E78-ABC8-2331BA03B0FA
 online version: https://go.microsoft.com/fwlink/?linkid=833729
 schema: 2.0.0
-ms.assetid: B063DC6D-E23D-4E78-ABC8-2331BA03B0FA
 ---
 
 # New-CMProgram
@@ -18,7 +18,8 @@ New-CMProgram [-DriveLetter <String>] [-WorkingDirectory <String>] -CommandLine 
  [-DiskSpaceRequirement <String>] [-Duration <Int32>] -PackageName <String> -StandardProgramName <String>
  [-RunType <RunType>] [-ProgramRunType <ProgramRunType>] [-RunMode <RunModeType>] [-UserInteraction <Boolean>]
  [-Reconnect <Boolean>] [-DriveMode <DriveModeType>] [-DiskSpaceUnit <DiskSpaceUnitType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewStandardProgramById
@@ -27,6 +28,15 @@ New-CMProgram [-DriveLetter <String>] [-WorkingDirectory <String>] -CommandLine 
  [-DiskSpaceRequirement <String>] [-Duration <Int32>] -PackageId <String> -StandardProgramName <String>
  [-RunType <RunType>] [-ProgramRunType <ProgramRunType>] [-RunMode <RunModeType>] [-UserInteraction <Boolean>]
  [-Reconnect <Boolean>] [-DriveMode <DriveModeType>] [-DiskSpaceUnit <DiskSpaceUnitType>]
+ [-AddSupportedOperatingSystemPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### NewDeviceProgram
+```
+New-CMProgram [-WorkingDirectory <String>] -CommandLine <String> [-DiskSpaceRequirement <String>]
+ [-Requirement <String>] -PackageName <String> [-DiskSpaceUnit <DiskSpaceUnitType>] -DeviceProgramName <String>
+ [-Comment <String>] [-CommandLineFolder <String>] [-DownloadProgramType <DownloadProgramType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,14 +44,6 @@ New-CMProgram [-DriveLetter <String>] [-WorkingDirectory <String>] -CommandLine 
 ```
 New-CMProgram [-WorkingDirectory <String>] -CommandLine <String> [-DiskSpaceRequirement <String>]
  [-Requirement <String>] -PackageId <String> [-DiskSpaceUnit <DiskSpaceUnitType>] -DeviceProgramName <String>
- [-Comment <String>] [-CommandLineFolder <String>] [-DownloadProgramType <DownloadProgramType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewDeviceProgram
-```
-New-CMProgram [-WorkingDirectory <String>] -CommandLine <String> [-DiskSpaceRequirement <String>]
- [-Requirement <String>] -PackageName <String> [-DiskSpaceUnit <DiskSpaceUnitType>] -DeviceProgramName <String>
  [-Comment <String>] [-CommandLineFolder <String>] [-DownloadProgramType <DownloadProgramType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -70,6 +72,21 @@ This command creates a device program in Configuration Manager.
 
 ## PARAMETERS
 
+### -AddSupportedOperatingSystemPlatform
+{{Fill AddSupportedOperatingSystemPlatform Description}}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: NewStandardProgram, NewStandardProgramById
+Aliases: AddSupportedOperatingSystemPlatforms
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CommandLine
 Specifies the command line for the program.
 
@@ -77,6 +94,7 @@ Specifies the command line for the program.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -90,8 +108,9 @@ This folder can be an absolute path on the client, or a path relative to the dis
 
 ```yaml
 Type: String
-Parameter Sets: NewDeviceProgramById, NewDeviceProgram
+Parameter Sets: NewDeviceProgram, NewDeviceProgramById
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -105,8 +124,9 @@ On client computers, this text is displayed in Run Advertised Programs in Contro
 
 ```yaml
 Type: String
-Parameter Sets: NewDeviceProgramById, NewDeviceProgram
+Parameter Sets: NewDeviceProgram, NewDeviceProgramById
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -121,6 +141,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -133,8 +154,9 @@ Specifies a device program name.
 
 ```yaml
 Type: String
-Parameter Sets: NewDeviceProgramById, NewDeviceProgram
+Parameter Sets: NewDeviceProgram, NewDeviceProgramById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -143,12 +165,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -165,6 +188,7 @@ The value must be greater than or equal to zero.
 Type: String
 Parameter Sets: (All)
 Aliases: DiskSpaceReq
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +205,7 @@ Type: DiskSpaceUnitType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: KB, MB, GB
+
 Required: False
 Position: Named
 Default value: None
@@ -198,9 +223,10 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: DownloadProgramType
-Parameter Sets: NewDeviceProgramById, NewDeviceProgram
+Parameter Sets: NewDeviceProgram, NewDeviceProgramById
 Aliases: 
 Accepted values: AsSoonAsPossible, OnlyOverFastNetwork, OnlyWhenTheDeviceIsDocked
+
 Required: False
 Position: Named
 Default value: None
@@ -215,6 +241,7 @@ Specifies a drive letter to qualify the location if the *DriveMode* parameter is
 Type: String
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -233,6 +260,7 @@ Type: DriveModeType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
 Accepted values: RenameWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
+
 Required: False
 Position: Named
 Default value: None
@@ -248,6 +276,7 @@ The default value is 120 minutes.
 Type: Int32
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -256,12 +285,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -270,12 +300,11 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-
-
 ```yaml
 Type: String
 Parameter Sets: NewStandardProgramById, NewDeviceProgramById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -290,6 +319,7 @@ Specifies a package name.
 Type: String
 Parameter Sets: NewStandardProgram, NewDeviceProgram
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -312,6 +342,7 @@ Type: ProgramRunType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
 Accepted values: OnlyWhenUserIsLoggedOn, WhetherOrNotUserIsLoggedOn, OnlyWhenNoUserIsLoggedOn
+
 Required: False
 Position: Named
 Default value: None
@@ -326,6 +357,7 @@ Indicates whether the client computer reconnects to the distribution point when 
 Type: Boolean
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -338,8 +370,9 @@ Specifies additional requirements for standard or device programs.
 
 ```yaml
 Type: String
-Parameter Sets: NewDeviceProgramById, NewDeviceProgram
+Parameter Sets: NewDeviceProgram, NewDeviceProgramById
 Aliases: Requirements
+
 Required: False
 Position: Named
 Default value: None
@@ -356,6 +389,7 @@ Type: RunModeType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
 Accepted values: RunWithUserRights, RunWithAdministrativeRights
+
 Required: False
 Position: Named
 Default value: None
@@ -379,6 +413,7 @@ Type: RunType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
 Accepted values: Normal, Minimized, Maximized, Hidden
+
 Required: False
 Position: Named
 Default value: None
@@ -393,6 +428,7 @@ Specifies the standard program name.
 Type: String
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -407,6 +443,7 @@ Indicates whether to allow users to interact with the program.
 Type: Boolean
 Parameter Sets: NewStandardProgram, NewStandardProgramById
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -422,6 +459,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -436,6 +474,7 @@ Specifies a working directory for the program.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

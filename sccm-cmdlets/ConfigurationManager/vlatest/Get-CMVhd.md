@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 19F2832A-607E-4626-B0BC-A8970D87E46C
 online version: https://go.microsoft.com/fwlink/?linkid=834008
 schema: 2.0.0
-ms.assetid: 19F2832A-607E-4626-B0BC-A8970D87E46C
 ---
 
 # Get-CMVhd
@@ -37,12 +37,13 @@ This command gets the virtual hard disk (VHD) image named VHDAccounting08.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -51,12 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +73,7 @@ Specifies an array of IDs of VHD images.
 Type: String[]
 Parameter Sets: SearchByIdMandatory
 Aliases: PackageId
+
 Required: True
 Position: Named
 Default value: None
@@ -85,6 +88,7 @@ Specifies the name of a VHD image.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: FA669383-9E20-4F2B-B18E-1DB9BC3558C2
 online version: https://go.microsoft.com/fwlink/?linkid=833997
 schema: 2.0.0
-ms.assetid: FA669383-9E20-4F2B-B18E-1DB9BC3558C2
 ---
 
 # Get-CMUserCollectionQueryMembershipRule
@@ -47,12 +47,11 @@ This command gets the rule named Remote Users by Domain that belongs to the coll
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ById
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -61,12 +60,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByName
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -82,6 +80,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -90,12 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

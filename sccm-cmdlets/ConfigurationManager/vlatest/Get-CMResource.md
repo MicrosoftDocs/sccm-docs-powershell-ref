@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 8C04D094-EAB1-4579-A0BF-51394304F2FD
 online version: https://go.microsoft.com/fwlink/?linkid=833838
 schema: 2.0.0
-ms.assetid: 8C04D094-EAB1-4579-A0BF-51394304F2FD
 ---
 
 # Get-CMResource
@@ -42,7 +42,7 @@ It does not return lazy properties.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter

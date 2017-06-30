@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 388164F7-DE65-45A1-B3D9-1D0BB6B7AEBD
 online version: https://go.microsoft.com/fwlink/?linkid=833621
 schema: 2.0.0
-ms.assetid: 388164F7-DE65-45A1-B3D9-1D0BB6B7AEBD
 ---
 
 # New-CMDeviceCollectionVariable
@@ -59,6 +59,7 @@ Specifies the ID of a device collection.
 Type: String
 Parameter Sets: NewByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -73,6 +74,7 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: NewByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -87,6 +89,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -95,12 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -109,12 +113,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -130,6 +135,7 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 Type: IResultObject
 Parameter Sets: NewByValueMandatory
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -144,6 +150,7 @@ Indicates whether the collection variable value displays in the Configuration Ma
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -158,6 +165,7 @@ Specifies a value for the collection variable.
 Type: String
 Parameter Sets: (All)
 Aliases: VariableValue
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +180,7 @@ Specifies a name for the collection variable.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -187,6 +196,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

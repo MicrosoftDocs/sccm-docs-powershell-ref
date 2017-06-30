@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: D02E7E60-2F2E-4EBE-9EB3-CA8CA9914289
 online version: https://go.microsoft.com/fwlink/?linkid=833758
 schema: 2.0.0
-ms.assetid: D02E7E60-2F2E-4EBE-9EB3-CA8CA9914289
 ---
 
 # Get-CMMigrationEntity
@@ -58,12 +58,13 @@ This command returns information about all of your active migration entities.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -72,12 +73,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +94,7 @@ Specifies an identifier in Configuration Manager.
 Type: String
 Parameter Sets: SearchById
 Aliases: EntityId
+
 Required: False
 Position: Named
 Default value: None
@@ -106,6 +109,7 @@ Specifies that this migration entity is active.
 Type: String
 Parameter Sets: SearchByOthers
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +124,7 @@ Specifies a name in Configuration Manager.
 Type: String
 Parameter Sets: SearchByName
 Aliases: EntityName
+
 Required: False
 Position: Named
 Default value: None
@@ -134,6 +139,7 @@ Specifies a type in Configuration Manager.
 Type: String
 Parameter Sets: SearchByOthers
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

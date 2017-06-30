@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Oob.dll-Help.xml
+ms.assetid: 98AE4491-7551-417F-9D80-E310C90AE6D9
 online version: https://go.microsoft.com/fwlink/?linkid=834052
 schema: 2.0.0
-ms.assetid: 98AE4491-7551-417F-9D80-E310C90AE6D9
 ---
 
 # Import-CMComputerInformation
@@ -14,18 +14,18 @@ Imports computer information into a Configuration Manager database.
 
 ### ImportSingleComputer (Default)
 ```
-Import-CMComputerInformation [-CollectionName <String>] -ComputerName <String> [-MacAddress <String>]
+Import-CMComputerInformation [-CollectionName <String[]>] -ComputerName <String> [-MacAddress <String>]
  [-SMBiosGuid <String>] [-SourceComputerName <String>] [-WindowsToGoUniqueKey <String>]
- [-CollectionId <String>] [-InputObject <IResultObject>] [-UserName <String[]>]
- [-UserAccountMigrationBehavior <MigrationBehavior>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CollectionId <String[]>] [-InputObject <IResultObject[]>] [-UserName <String[]>]
+ [-UserAccountMigrationBehavior <MigrationBehavior>] [-MergeIfExist] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ImportComputerByUsingFile
 ```
-Import-CMComputerInformation [-CollectionName <String>] [-EnableColumnHeading <Boolean>] -FileName <String>
- [-VariableName <String>] [-CollectionId <String>] [-InputObject <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-CMComputerInformation [-CollectionName <String[]>] [-EnableColumnHeading <Boolean>] -FileName <String>
+ [-VariableName <String>] [-CollectionId <String[]>] [-InputObject <IResultObject[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,12 +73,11 @@ The command also includes a reference computer to associate with the new compute
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: CollectionIds
+
 Required: False
 Position: Named
 Default value: None
@@ -90,9 +89,10 @@ Accept wildcard characters: False
 Specifies a name of a Configuration Manager device collection.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: CollectionNames
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +107,7 @@ Specifies the name of a computer that this cmdlet imports information from.
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -121,6 +122,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -129,12 +131,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -143,12 +146,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableColumnHeading
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: ImportComputerByUsingFile
 Aliases: EnableColumnHeadings
+
 Required: False
 Position: Named
 Default value: None
@@ -164,6 +166,7 @@ The file must contain the name and MAC address of each computer to be imported.
 Type: String
 Parameter Sets: ImportComputerByUsingFile
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -172,12 +175,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -190,9 +194,10 @@ Specifies the input to this cmdlet.
 You can use this parameter, or you can pipe the input to this cmdlet. 
 
 ```yaml
-Type: IResultObject
+Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: Collection
+Aliases: Collection, Collections
+
 Required: False
 Position: Named
 Default value: None
@@ -208,6 +213,22 @@ The Windows Preinstallation Environment (Windows PE) must have a driver for the 
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MergeIfExist
+{{Fill MergeIfExist Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ImportSingleComputer
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -222,6 +243,7 @@ Specifies a GUID for the system management BIOS (SMBIOS) of a computer.
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: SMBIOSID
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +259,7 @@ Configuration Manager migrates user state and settings from the reference comput
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -245,13 +268,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserAccountMigrationBehavior
-
-
 ```yaml
 Type: MigrationBehavior
 Parameter Sets: ImportSingleComputer
 Aliases: 
 Accepted values: CaptureAllUserAccountsAndRestoreSpecifiedAccounts, CaptureAndRestoreSpecifiedUserAccounts
+
 Required: False
 Position: Named
 Default value: None
@@ -260,12 +282,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
-
 ```yaml
 Type: String[]
 Parameter Sets: ImportSingleComputer
 Aliases: UserNames
+
 Required: False
 Position: Named
 Default value: None
@@ -282,6 +303,7 @@ A variable allows you to assign a column to a variable.
 Type: String
 Parameter Sets: ImportComputerByUsingFile
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -297,6 +319,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -305,12 +328,11 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsToGoUniqueKey
-
-
 ```yaml
 Type: String
 Parameter Sets: ImportSingleComputer
 Aliases: WtgUniqueKey
+
 Required: False
 Position: Named
 Default value: None

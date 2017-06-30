@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 1FE8E572-8FBA-48C3-8250-1885951B073D
 online version: https://go.microsoft.com/fwlink/?linkid=833880
 schema: 2.0.0
-ms.assetid: 1FE8E572-8FBA-48C3-8250-1885951B073D
 ---
 
 # ConvertFrom-CMIResultObject
@@ -42,12 +42,12 @@ This command gets the site with the code PS2 and then converts the site to a Man
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -57,12 +57,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -77,7 +77,7 @@ Specifies the **IResultObject** to convert to a **ManagementBaseObject**.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

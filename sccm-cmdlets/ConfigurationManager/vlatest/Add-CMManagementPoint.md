@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 4FDCA14B-25A9-4224-AD46-F204C1F525F2
 online version: https://go.microsoft.com/fwlink/?linkid=833704
 schema: 2.0.0
-ms.assetid: 4FDCA14B-25A9-4224-AD46-F204C1F525F2
 ---
 
 # Add-CMManagementPoint
@@ -14,7 +14,7 @@ Adds a management point to Configuration Manager.
 
 ### ByValueNoReplica (Default)
 ```
-Add-CMManagementPoint [-EnableSsl] [-CommunicationType <ComputerCommunicationType>]
+Add-CMManagementPoint [-EnableSsl] [-EnableCloudGateway] [-CommunicationType <ComputerCommunicationType>]
  [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice] [-GenerateAlert]
  [-ConnectionAccountUserName <String>] [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -22,7 +22,7 @@ Add-CMManagementPoint [-EnableSsl] [-CommunicationType <ComputerCommunicationTyp
 
 ### ByNameNoReplica
 ```
-Add-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-EnableSsl]
+Add-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-EnableSsl] [-EnableCloudGateway]
  [-CommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
  [-AllowDevice] [-GenerateAlert] [-ConnectionAccountUserName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -30,7 +30,7 @@ Add-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-En
 
 ### ByNameReplica
 ```
-Add-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-EnableSsl]
+Add-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-EnableSsl] [-EnableCloudGateway]
  [-CommunicationType <ComputerCommunicationType>] [-ClientConnectionType <ClientConnectionTypes>]
  [-AllowDevice] [-GenerateAlert] -SqlServerFqdn <String> [-SqlServerInstanceName <String>]
  -DatabaseName <String> [-ConnectionAccountUserName <String>] [-DisableWildcardHandling]
@@ -39,7 +39,7 @@ Add-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-En
 
 ### ByValueReplica
 ```
-Add-CMManagementPoint [-EnableSsl] [-CommunicationType <ComputerCommunicationType>]
+Add-CMManagementPoint [-EnableSsl] [-EnableCloudGateway] [-CommunicationType <ComputerCommunicationType>]
  [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice] [-GenerateAlert] -SqlServerFqdn <String>
  [-SqlServerInstanceName <String>] -DatabaseName <String> [-ConnectionAccountUserName <String>]
  [-InputObject] <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
@@ -77,6 +77,7 @@ Indicates that the management point supports device clients.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +98,7 @@ Type: ClientConnectionTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Internet, Intranet, InternetAndIntranet
+
 Required: False
 Position: Named
 Default value: None
@@ -105,13 +107,12 @@ Accept wildcard characters: False
 ```
 
 ### -CommunicationType
-
-
 ```yaml
 Type: ComputerCommunicationType
 Parameter Sets: (All)
 Aliases: ClientCommunicationType
 Accepted values: Http, Https
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +127,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -134,12 +136,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionAccountUserName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: UserName
+
 Required: False
 Position: Named
 Default value: None
@@ -154,6 +155,7 @@ Specifies the name of the site database or site database replica that the manage
 Type: String
 Parameter Sets: ByNameReplica, ByValueReplica
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -162,12 +164,28 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCloudGateway
+{{Fill EnableCloudGateway Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +200,7 @@ Indicates that the cmdlet enables SSL for the management point.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -190,12 +209,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -210,6 +230,7 @@ Indicates that Configuration Manager generates an alert when the management poin
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -225,6 +246,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValueNoReplica, ByValueReplica
 Aliases: SiteServer
+
 Required: True
 Position: 0
 Default value: None
@@ -239,6 +261,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 Type: String
 Parameter Sets: ByNameNoReplica, ByNameReplica
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -253,6 +276,7 @@ Specifies the name of the server that hosts the site system role.
 Type: String
 Parameter Sets: ByNameNoReplica, ByNameReplica
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -261,12 +285,11 @@ Accept wildcard characters: False
 ```
 
 ### -SqlServerFqdn
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameReplica, ByValueReplica
 Aliases: SqlServerFqdnName
+
 Required: True
 Position: Named
 Default value: None
@@ -281,6 +304,7 @@ Specifies the name of the SQL Server instance that clients use to communicate wi
 Type: String
 Parameter Sets: ByNameReplica, ByValueReplica
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -296,6 +320,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 530F83FB-CCDC-4B2A-AE45-250D828201A9
 online version: https://go.microsoft.com/fwlink/?linkid=834102
 schema: 2.0.0
-ms.assetid: 530F83FB-CCDC-4B2A-AE45-250D828201A9
 ---
 
 # Set-CMStateMigrationPoint
@@ -86,6 +86,7 @@ During migration, clients in a boundary group use this site as a source location
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +105,7 @@ A state migration point stores user state data when it migrates a computer to a 
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +120,7 @@ Indicates whether a fallback source location is available.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +135,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -147,6 +151,7 @@ If you select a value of $False, specify how long to wait by using the *TimeDele
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -155,12 +160,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -176,6 +182,7 @@ In restore only mode, Configuration Manager refuses new requests to store client
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -184,12 +191,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -205,6 +213,7 @@ To obtain a state migration point object, use the [Get-CMStateMigrationPoint](./
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: StateMigrationPoint
+
 Required: True
 Position: Named
 Default value: None
@@ -213,13 +222,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -236,6 +246,7 @@ During migration, clients in a boundary group use this site as a source location
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -252,6 +263,7 @@ A state migration point stores user state data when it migrates a computer to a 
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -266,6 +278,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -280,6 +293,7 @@ Specifies the host name for a state migration point.
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -296,6 +310,7 @@ To delete data immediately, specify a value of $True for the *DeleteImmediately*
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -310,8 +325,9 @@ The acceptable values for this parameter are: Days and Hours.
 ```yaml
 Type: IntervalType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Hours, Days
+
 Required: False
 Position: Named
 Default value: None
@@ -327,6 +343,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

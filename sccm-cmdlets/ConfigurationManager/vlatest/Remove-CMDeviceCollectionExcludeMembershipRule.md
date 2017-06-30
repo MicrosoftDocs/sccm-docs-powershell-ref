@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 14D9B7C6-602E-4CA7-BCDE-5E5477462783
 online version: https://go.microsoft.com/fwlink/?linkid=834047
 schema: 2.0.0
-ms.assetid: 14D9B7C6-602E-4CA7-BCDE-5E5477462783
 ---
 
 # Remove-CMDeviceCollectionExcludeMembershipRule
@@ -84,12 +84,11 @@ This command removes the rules that exclude the members of the collection that h
 ## PARAMETERS
 
 ### -CollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -98,12 +97,11 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +116,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -126,12 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollection
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -140,12 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollectionId
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -154,12 +151,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollectionName
-
-
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -168,12 +164,11 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -189,6 +184,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -204,6 +200,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: CC02B9EF-225A-46D8-BC9A-8CD46A64D7F3
 online version: https://go.microsoft.com/fwlink/?linkid=834024
 schema: 2.0.0
-ms.assetid: CC02B9EF-225A-46D8-BC9A-8CD46A64D7F3
 ---
 
 # Get-CMWinPEOptionalComponentInfo
@@ -55,7 +55,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases:
+Aliases: 
 Accepted values: X64, X86
 
 Required: True
@@ -66,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -81,12 +81,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Provide a locale ID, such as 1033.
 ```yaml
 Type: UInt32
 Parameter Sets: SearchByName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Specifies the name of a WinPE optional component.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Specifies the unique ID of a WinPE optional component.
 ```yaml
 Type: String
 Parameter Sets: SearchById
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -151,3 +151,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

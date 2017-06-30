@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 02B40786-6500-4F35-B8DC-531AAF099381
 online version: https://go.microsoft.com/fwlink/?linkid=833632
 schema: 2.0.0
-ms.assetid: 02B40786-6500-4F35-B8DC-531AAF099381
 ---
 
 # New-CMDriverPackage
@@ -38,6 +38,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -51,7 +52,8 @@ Specifies a description of a driver package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -60,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -74,12 +77,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +97,8 @@ Specifies a name for a driver package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -108,6 +113,7 @@ Specifies a file path to the location where Configuration Manager stores the com
 Type: String
 Parameter Sets: (All)
 Aliases: PackageSourcePath
+
 Required: True
 Position: Named
 Default value: None
@@ -123,6 +129,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

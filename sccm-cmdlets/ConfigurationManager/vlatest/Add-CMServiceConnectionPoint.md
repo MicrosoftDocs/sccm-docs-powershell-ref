@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 7889D303-FEA2-4E63-9189-A71C4D77FCF7
 online version: https://go.microsoft.com/fwlink/?linkid=833751
 schema: 2.0.0
-ms.assetid: 7889D303-FEA2-4E63-9189-A71C4D77FCF7
 ---
 
 # Add-CMServiceConnectionPoint
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter

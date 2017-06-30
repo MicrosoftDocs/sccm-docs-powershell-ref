@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
+ms.assetid: 0AC09C2B-42ED-4397-9786-B7B1126AF5DC
 online version: https://go.microsoft.com/fwlink/?linkid=834077
 schema: 2.0.0
-ms.assetid: 0AC09C2B-42ED-4397-9786-B7B1126AF5DC
 ---
 
 # Get-CMAlertSubscription
@@ -55,12 +55,13 @@ This command displays the System Center Configuration Manager alert subscription
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -69,12 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +91,7 @@ Specifies the ID of a subscription.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -103,6 +106,7 @@ Specifies the name of an alert subscription object.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
+ms.assetid: FECB6577-2499-441A-967F-FE505F41D1F7
 online version: https://go.microsoft.com/fwlink/?linkid=834040
 schema: 2.0.0
-ms.assetid: FECB6577-2499-441A-967F-FE505F41D1F7
 ---
 
 # Import-CMCertificate
@@ -45,6 +45,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -53,12 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,12 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -81,13 +84,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -102,6 +106,7 @@ Specifies a certification path.
 Type: String
 Parameter Sets: ByFile
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None
@@ -117,6 +122,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -125,12 +131,11 @@ Accept wildcard characters: False
 ```
 
 ### -X509Certificate
-
-
 ```yaml
 Type: X509Certificate
 Parameter Sets: ByValue
 Aliases: 
+
 Required: True
 Position: 0
 Default value: None

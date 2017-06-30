@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: DA3EDFA4-22E2-47AF-8084-BA9A8A7DBD39
 online version: https://go.microsoft.com/fwlink/?linkid=834206
 schema: 2.0.0
-ms.assetid: DA3EDFA4-22E2-47AF-8084-BA9A8A7DBD39
 ---
 
 # Move-CMObject
@@ -47,6 +47,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -55,12 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +78,7 @@ For example, a folder that is named LOB Apps for an application node at a sight 
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -84,12 +87,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +108,7 @@ Specifies an array of Configuration Manager objects to move.
 Type: IResultObject[]
 Parameter Sets: SearchByObjectMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -118,6 +123,7 @@ Specifies an array of IDs of objects to move.
 Type: String[]
 Parameter Sets: SearchByIdMandatory
 Aliases: InstanceKey
+
 Required: True
 Position: Named
 Default value: None
@@ -133,6 +139,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

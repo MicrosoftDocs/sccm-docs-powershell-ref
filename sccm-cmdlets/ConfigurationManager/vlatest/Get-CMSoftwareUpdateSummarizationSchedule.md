@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 62D4DFB1-3F7B-49A2-AEA8-8FA5747B743F
 online version: https://go.microsoft.com/fwlink/?linkid=833929
 schema: 2.0.0
-ms.assetid: 62D4DFB1-3F7B-49A2-AEA8-8FA5747B743F
 ---
 
 # Get-CMSoftwareUpdateSummarizationSchedule
@@ -38,12 +38,13 @@ In this case, the schedule is every 12 hours.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -52,12 +53,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -66,13 +68,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

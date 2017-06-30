@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: B6F92E41-4D32-44A1-9C3C-9748B30602B9
 online version: https://go.microsoft.com/fwlink/?linkid=833633
 schema: 2.0.0
-ms.assetid: B6F92E41-4D32-44A1-9C3C-9748B30602B9
 ---
 
 # Set-CMApplicationCatalogWebsitePoint
@@ -68,12 +68,11 @@ The command specifies that Configuration Manager displays the organization name 
 ## PARAMETERS
 
 ### -ApplicationWebServicePointServerName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: SiteSystemServerNameConfiguredForApplicationCatalogWebServicePoint
+
 Required: False
 Position: Named
 Default value: None
@@ -94,6 +93,7 @@ Type: ClientConnectionTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Intranet, Internet, InternetAndIntranet
+
 Required: False
 Position: Named
 Default value: None
@@ -102,12 +102,11 @@ Accept wildcard characters: False
 ```
 
 ### -Color
-
-
 ```yaml
 Type: Color
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -123,6 +122,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +138,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -153,6 +154,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -161,13 +163,12 @@ Accept wildcard characters: False
 ```
 
 ### -CommunicationType
-
-
 ```yaml
 Type: ComputerCommunicationType
 Parameter Sets: (All)
 Aliases: ClientCommunicationType
 Accepted values: Http, Https
+
 Required: False
 Position: Named
 Default value: None
@@ -182,6 +183,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -190,12 +192,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -204,12 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -225,6 +229,7 @@ To obtain Application Catalog website point object, use the Get-CMApplicationCat
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: ApplicationCatalogWebsitePoint
+
 Required: True
 Position: Named
 Default value: None
@@ -239,6 +244,7 @@ Specifies the NetBIOS name of the server that hosts the Application Catalog webs
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -254,6 +260,7 @@ This name appears to users who access the Application Catalog.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -262,13 +269,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -283,6 +291,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -297,6 +306,7 @@ Specifies the name of a server that hosts a site system role.
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -312,6 +322,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 80157719-BA02-42AD-9ACE-03D9112E3956
 online version: https://go.microsoft.com/fwlink/?linkid=833902
 schema: 2.0.0
-ms.assetid: 80157719-BA02-42AD-9ACE-03D9112E3956
 ---
 
 # Remove-CMApplicationRevisionHistory
@@ -58,6 +58,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -66,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,6 +88,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -94,12 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +118,7 @@ Specifies an array of IDs that identify the application revision histories that 
 Type: UInt32
 Parameter Sets: SearchBySingleIdMandatory
 Aliases: CIId
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +134,7 @@ To get an application object, use the [Get-CMApplication](./Get-CMApplication.md
 Type: IResultObject
 Parameter Sets: SearchByRevisionMandatory, SearchByValueMandatory
 Aliases: ApplicationRevision
+
 Required: True
 Position: Named
 Default value: None
@@ -143,6 +149,7 @@ Specifies an array of names for the application revision histories that you dele
 Type: String
 Parameter Sets: SearchBySingleNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: Named
 Default value: None
@@ -157,6 +164,7 @@ Specifies the version number of the revision that you delete from the history.
 Type: UInt32
 Parameter Sets: SearchBySingleNameMandatory, SearchByValueMandatory, SearchBySingleIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -172,6 +180,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

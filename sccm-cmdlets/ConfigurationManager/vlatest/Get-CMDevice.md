@@ -86,7 +86,7 @@ Specifies a device collection object. To obtain a device collection object, use 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -101,7 +101,7 @@ Specifies an ID for a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatoryForViewInfectedClients, SearchByNameMandatoryForViewInfectedClients, SearchByValueMandatoryForViewInfectedClients
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -138,12 +138,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Lazy properties contain values that are relatively inefficient to retrieve which
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -170,12 +170,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ Specifies the name of a device.
 ```yaml
 Type: String
 Parameter Sets: ByName, SearchByNameMandatory, SearchByIdMandatory, SearchByValueMandatory
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ Specifies a name of a threat.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatoryForViewInfectedClients
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

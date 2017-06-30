@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+ms.assetid: 6272F088-F019-471D-A1EC-D4B3383D6931
 online version: https://go.microsoft.com/fwlink/?linkid=834203
 schema: 2.0.0
-ms.assetid: 6272F088-F019-471D-A1EC-D4B3383D6931
 ---
 
 # Start-CMClientSettingDeployment
@@ -36,16 +36,16 @@ Start-CMClientSettingDeployment -ClientSettingId <String> -CollectionId <String>
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SearchByClientSettingId_CollectionValue
-```
-Start-CMClientSettingDeployment -ClientSettingId <String> -Collection <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### SearchByClientSettingId_CollectionName
 ```
 Start-CMClientSettingDeployment -ClientSettingId <String> -CollectionName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SearchByClientSettingId_CollectionValue
+```
+Start-CMClientSettingDeployment -ClientSettingId <String> -Collection <IResultObject>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByClientSettingValue_CollectionId
@@ -102,6 +102,7 @@ To obtain a client setting object, use the [Get-CMClientSetting](./Get-CMClientS
 Type: IResultObject
 Parameter Sets: SearchByClientSettingValue_CollectionId, SearchByClientSettingValue_CollectionName, SearchByClientSettingValue_CollectionValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -114,8 +115,9 @@ Specifies the ID of a client setting object.
 
 ```yaml
 Type: String
-Parameter Sets: SearchByClientSettingId_CollectionId, SearchByClientSettingId_CollectionValue, SearchByClientSettingId_CollectionName
+Parameter Sets: SearchByClientSettingId_CollectionId, SearchByClientSettingId_CollectionName, SearchByClientSettingId_CollectionValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -130,6 +132,7 @@ Specifies the name of a client setting object.
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingName_CollectionId, SearchByClientSettingName_CollectionName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -146,6 +149,7 @@ Configuration Manager applies the client settings to the members of this collect
 Type: IResultObject
 Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingId_CollectionValue, SearchByClientSettingValue_CollectionValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -161,6 +165,7 @@ Configuration Manager applies the client settings to the members of this collect
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionId, SearchByClientSettingId_CollectionId, SearchByClientSettingValue_CollectionId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -176,6 +181,7 @@ Configuration Manager applies the client settings to the members of this collect
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionName, SearchByClientSettingId_CollectionName, SearchByClientSettingValue_CollectionName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -190,6 +196,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -198,12 +205,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -212,12 +220,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -233,6 +242,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

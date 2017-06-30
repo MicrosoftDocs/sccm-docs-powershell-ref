@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: 25E1BFF0-57F9-41D0-9D13-4E8AF57A1570
 online version: https://go.microsoft.com/fwlink/?linkid=833878
 schema: 2.0.0
-ms.assetid: 25E1BFF0-57F9-41D0-9D13-4E8AF57A1570
 ---
 
 # Get-CMSiteStatusMessage
@@ -13,8 +13,10 @@ Gets site system status messages.
 ## SYNTAX
 
 ```
-Get-CMSiteStatusMessage [-ComputerName <String>] [-Severity <Severity>] [-SiteCode <String>]
- -StartDateTime <DateTime> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMSiteStatusMessage [-ComputerName <String[]>] [-Severity <Severity[]>] [-SiteCode <String[]>]
+ [-StartDateTime <DateTime>] [-MessageId <Int32[]>] [-Module <String[]>] [-Component <String[]>]
+ [-FilterHashtable <Hashtable>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,13 +37,29 @@ System Center Configuration Manager gets the status messages from the Configurat
 
 ## PARAMETERS
 
+### -Component
+{{Fill Component Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: ComponentName, Components, ComponentNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ComputerName
 Specifies the fully qualified domain name (FQDN) of the server that hosts the site system role.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: ComputerNames
+
 Required: False
 Position: Named
 Default value: None
@@ -50,12 +68,28 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilterHashtable
+{{Fill FilterHashtable Description}}
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -64,12 +98,58 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageId
+{{Fill MessageId Description}}
+
+```yaml
+Type: Int32[]
+Parameter Sets: (All)
+Aliases: MessageIds
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Module
+{{Fill Module Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: ModuleName, Modules, ModuleNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+{{Fill PassThru Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -87,10 +167,11 @@ The acceptable values for this parameter are:
 - Warning
 
 ```yaml
-Type: Severity
+Type: Severity[]
 Parameter Sets: (All)
-Aliases: 
-Accepted values: All, Error, Warning, Information
+Aliases: Severities
+Accepted values: All, Error, Information, Warning
+
 Required: False
 Position: Named
 Default value: None
@@ -102,9 +183,10 @@ Accept wildcard characters: False
 Specifies the site code of the Configuration Manager site that hosts the site system role.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: SiteCodes
+
 Required: False
 Position: Named
 Default value: None
@@ -113,13 +195,12 @@ Accept wildcard characters: False
 ```
 
 ### -StartDateTime
-
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: ViewingPeriod
-Required: True
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -136,5 +217,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

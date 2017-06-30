@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: BFDDAC90-E647-44EB-9C5F-1486E267EDD5
 online version: https://go.microsoft.com/fwlink/?linkid=833739
 schema: 2.0.0
-ms.assetid: BFDDAC90-E647-44EB-9C5F-1486E267EDD5
 ---
 
 # Set-CMCollection
@@ -67,6 +67,7 @@ Specifies a collection ID.
 Type: String
 Parameter Sets: SetById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Specifies a comment for the collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +97,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -103,12 +106,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -117,12 +121,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +143,7 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -153,6 +159,7 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +174,7 @@ Specifies the ID of a collection to use as a scope for this collection.
 Type: String
 Parameter Sets: (All)
 Aliases: LimitToCollectionId
+
 Required: False
 Position: Named
 Default value: None
@@ -181,6 +189,7 @@ Specifies the name of a collection to use as a scope for this collection.
 Type: String
 Parameter Sets: (All)
 Aliases: LimitToCollectionName
+
 Required: False
 Position: Named
 Default value: None
@@ -195,6 +204,7 @@ Specifies the name of a collection.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -209,6 +219,7 @@ Specifies a new name for the collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -217,13 +228,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -238,6 +250,7 @@ Specifies a schedule that determines when Configuration Manager refreshes the co
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -260,6 +273,7 @@ Type: CollectionRefreshType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Manual, Periodic, Continuous, Both
+
 Required: False
 Position: Named
 Default value: None
@@ -275,6 +289,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

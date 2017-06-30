@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Content.dll-Help.xml
+ms.assetid: A04B7F84-3E7F-4D68-A046-A6A4DEE09A98
 online version: https://go.microsoft.com/fwlink/?linkid=833818
 schema: 2.0.0
-ms.assetid: A04B7F84-3E7F-4D68-A046-A6A4DEE09A98
 ---
 
 # Set-CMDistributionPointGroup
@@ -58,6 +58,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -72,6 +73,7 @@ Specifies a description for the distribution point group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,12 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -94,12 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -114,6 +118,7 @@ Specifies an array of IDs for distribution point groups.
 Type: String
 Parameter Sets: SetById
 Aliases: GroupId
+
 Required: True
 Position: Named
 Default value: None
@@ -129,6 +134,7 @@ To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPoin
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -143,6 +149,7 @@ Specifies a name of a distribution point group.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -157,6 +164,7 @@ Specifies a new name for the distribution point group.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -172,6 +180,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

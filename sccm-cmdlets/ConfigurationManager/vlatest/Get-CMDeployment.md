@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
+ms.assetid: B8879874-7A8B-4D59-8CA3-B3DC69602546
 online version: https://go.microsoft.com/fwlink/?linkid=834304
 schema: 2.0.0
-ms.assetid: B8879874-7A8B-4D59-8CA3-B3DC69602546
 ---
 
 # Get-CMDeployment
@@ -46,6 +46,7 @@ Specifies the name of the collection associated with the deployment.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -60,6 +61,7 @@ Specifies the ID of a deployment.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -68,12 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -97,6 +100,7 @@ Type: DeploymentFeature
 Parameter Sets: SearchByName
 Aliases: 
 Accepted values: Application, Package, SoftwareUpdate, ConfigurationItem, TaskSequence, FirewallSetting
+
 Required: False
 Position: Named
 Default value: None
@@ -105,12 +109,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -126,6 +131,7 @@ Use this parameter with a legacy distribution program.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +147,7 @@ Use this parameter with a software update.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

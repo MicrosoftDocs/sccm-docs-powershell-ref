@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 1617E8AD-4023-423D-9A90-1616CD32E75E
 online version: https://go.microsoft.com/fwlink/?linkid=833655
 schema: 2.0.0
-ms.assetid: 1617E8AD-4023-423D-9A90-1616CD32E75E
 ---
 
 # Set-CMAssetIntelligenceClass
@@ -57,6 +57,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -85,6 +86,7 @@ Type: ClassNameType[]
 Parameter Sets: SetBySelectReportClass
 Aliases: 
 Accepted values: SMS_AutoStartSoftware, SMS_BrowserHelperObject, SMS_InstalledExecutable, SMS_InstalledSoftware, SMS_SoftwareShortcut, SMS_SystemConsoleUsage, SMS_SystemConsoleUser, SoftwareLicensingProduct, SoftwareLicensingService, Win32_USBDevice, SMS_SoftwareTag
+
 Required: False
 Position: Named
 Default value: None
@@ -93,12 +95,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +116,7 @@ Indicates that all Asset Intelligence reporting classes are enabled.
 Type: SwitchParameter
 Parameter Sets: SetByAllReportClass
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -141,6 +145,7 @@ Type: ClassNameType[]
 Parameter Sets: SetBySelectReportClass
 Aliases: 
 Accepted values: SMS_AutoStartSoftware, SMS_BrowserHelperObject, SMS_InstalledExecutable, SMS_InstalledSoftware, SMS_SoftwareShortcut, SMS_SystemConsoleUsage, SMS_SystemConsoleUser, SoftwareLicensingProduct, SoftwareLicensingService, Win32_USBDevice, SMS_SoftwareTag
+
 Required: False
 Position: Named
 Default value: None
@@ -149,12 +154,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -170,6 +176,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

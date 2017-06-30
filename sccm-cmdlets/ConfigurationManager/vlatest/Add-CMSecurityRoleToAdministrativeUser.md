@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: B521723C-DE6D-4EE3-9742-8BB6F8F44E72
 online version: https://go.microsoft.com/fwlink/?linkid=833743
 schema: 2.0.0
-ms.assetid: B521723C-DE6D-4EE3-9742-8BB6F8F44E72
 ---
 
 # Add-CMSecurityRoleToAdministrativeUser
@@ -24,27 +24,27 @@ Add-CMSecurityRoleToAdministrativeUser -RoleId <String> -AdministrativeUserId <I
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddRoleToAdminById_Object
-```
-Add-CMSecurityRoleToAdministrativeUser -RoleId <String> -AdministrativeUser <IResultObject>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### AddRoleToAdminById_Name
 ```
 Add-CMSecurityRoleToAdministrativeUser -RoleId <String> -AdministrativeUserName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddRoleToAdminByName_Object
+### AddRoleToAdminById_Object
 ```
-Add-CMSecurityRoleToAdministrativeUser -RoleName <String> -AdministrativeUser <IResultObject>
+Add-CMSecurityRoleToAdministrativeUser -RoleId <String> -AdministrativeUser <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddRoleToAdminByName_Id
 ```
 Add-CMSecurityRoleToAdministrativeUser -RoleName <String> -AdministrativeUserId <Int32>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddRoleToAdminByName_Object
+```
+Add-CMSecurityRoleToAdministrativeUser -RoleName <String> -AdministrativeUser <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -103,6 +103,7 @@ To obtain an administrative user or administrative group object, use the [Get-CM
 Type: IResultObject
 Parameter Sets: AddRoleToAdminById_Object, AddRoleToAdminByName_Object, AddRoleToAdminByObject_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -117,6 +118,7 @@ Specifies an ID of an administrative user or administrative group.
 Type: Int32
 Parameter Sets: AddRoleToAdminById_Id, AddRoleToAdminByName_Id, AddRoleToAdminByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -131,6 +133,7 @@ Specifies a name of an administrative user or administrative group.
 Type: String
 Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminById_Name, AddRoleToAdminByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -145,6 +148,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -153,12 +157,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -167,12 +172,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -188,6 +194,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: AddRoleToAdminByObject_Id, AddRoleToAdminByObject_Name, AddRoleToAdminByObject_Object
 Aliases: Role
+
 Required: True
 Position: Named
 Default value: None
@@ -201,8 +208,9 @@ A role represents Configuration Manager permissions granted to a user.
 
 ```yaml
 Type: String
-Parameter Sets: AddRoleToAdminById_Id, AddRoleToAdminById_Object, AddRoleToAdminById_Name
+Parameter Sets: AddRoleToAdminById_Id, AddRoleToAdminById_Name, AddRoleToAdminById_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -216,8 +224,9 @@ A role represents Configuration Manager permissions granted to a user.
 
 ```yaml
 Type: String
-Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminByName_Object, AddRoleToAdminByName_Id
+Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminByName_Id, AddRoleToAdminByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -233,6 +242,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

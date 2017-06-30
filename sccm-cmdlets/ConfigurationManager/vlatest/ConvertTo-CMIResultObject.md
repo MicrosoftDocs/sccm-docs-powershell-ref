@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 5F39BFCE-FF04-4DB0-BF85-4C495CAE7A23
 online version: https://go.microsoft.com/fwlink/?linkid=833914
 schema: 2.0.0
-ms.assetid: 5F39BFCE-FF04-4DB0-BF85-4C495CAE7A23
 ---
 
 # ConvertTo-CMIResultObject
@@ -45,12 +45,12 @@ The second command converts the site object stored in $WmiObject to an **IResult
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -60,12 +60,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -80,7 +80,7 @@ Specifies the **ManagementBaseObject** to convert to an **IResultObject**.
 ```yaml
 Type: ManagementBaseObject
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

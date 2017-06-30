@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: DC4B2713-2B9D-45B0-A595-00407274F314
 online version: https://go.microsoft.com/fwlink/?linkid=833945
 schema: 2.0.0
-ms.assetid: DC4B2713-2B9D-45B0-A595-00407274F314
 ---
 
 # Disable-CMDriver
@@ -62,6 +62,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -70,12 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -84,12 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ Specifies the ID of a driver.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -119,6 +123,7 @@ To obtain a driver object, use the [Get-CMDriver](./Get-CMDriver.md) cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -133,6 +138,7 @@ Specifies the name of a driver.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: Named
 Default value: None
@@ -148,6 +154,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

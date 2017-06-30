@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 3F9D178E-7C8B-4C41-BC6C-3A2092A95B71
 online version: https://go.microsoft.com/fwlink/?linkid=833856
 schema: 2.0.0
-ms.assetid: 3F9D178E-7C8B-4C41-BC6C-3A2092A95B71
 ---
 
 # Get-CMSite
@@ -34,12 +34,13 @@ This command gets a System Center Configuration Manager site by using the site n
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -48,12 +49,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -68,6 +70,7 @@ Specifies the name of a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: SiteName
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +85,7 @@ Specifies a site code for a Configuration Manager site.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: 0
 Default value: None

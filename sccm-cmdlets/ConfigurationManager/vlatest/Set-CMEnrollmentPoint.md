@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: A52F6FB6-F290-40F9-AE6C-2026EF88AF06
 online version: https://go.microsoft.com/fwlink/?linkid=833849
 schema: 2.0.0
-ms.assetid: A52F6FB6-F290-40F9-AE6C-2026EF88AF06
 ---
 
 # Set-CMEnrollmentPoint
@@ -64,6 +64,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -72,12 +73,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -86,12 +88,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +110,7 @@ To get an input object, use the [Get-CMEnrollmentPoint](./Get-CMEnrollmentPoint.
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: EnrollmentPoint
+
 Required: True
 Position: Named
 Default value: None
@@ -115,13 +119,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -136,6 +141,7 @@ Specifies the site code for a Configuration Manager site.
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -150,6 +156,7 @@ Specifies the fully qualified domain name (FQDN) of the server that hosts the si
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -164,6 +171,7 @@ Indicates that you use the computer account to connect to the Configuration Mana
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +186,7 @@ Specifies a user account that the enrollment point uses to connect to the Config
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -193,6 +202,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

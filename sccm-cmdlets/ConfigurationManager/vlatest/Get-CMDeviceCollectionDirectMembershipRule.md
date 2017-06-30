@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 3BDB9041-ADCF-44BA-A393-146E58845094
 online version: https://go.microsoft.com/fwlink/?linkid=833623
 schema: 2.0.0
-ms.assetid: 3BDB9041-ADCF-44BA-A393-146E58845094
 ---
 
 # Get-CMDeviceCollectionDirectMembershipRule
@@ -91,6 +91,7 @@ Specifies the ID of a device collection.
 Type: String
 Parameter Sets: ByIdAndValue, ByIdAndId, ByIdAndName
 Aliases: Id
+
 Required: True
 Position: Named
 Default value: None
@@ -105,6 +106,7 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: ByNameAndName, ByNameAndValue, ByNameAndId
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -120,6 +122,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: ByValueAndValue, ByValueAndId, ByValueAndName
 Aliases: Collection
+
 Required: True
 Position: Named
 Default value: None
@@ -135,6 +138,7 @@ To obtain a resource object, use the **Get-CMResource** cmdlet.
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -149,6 +153,7 @@ Specifies the ID of a resource.
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -163,6 +168,7 @@ Specifies the name of a resource.
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

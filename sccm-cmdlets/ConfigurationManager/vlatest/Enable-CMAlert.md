@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
+ms.assetid: 4E9F8E2E-9C21-46C9-8818-F1DF00616E4D
 online version: https://go.microsoft.com/fwlink/?linkid=833969
 schema: 2.0.0
-ms.assetid: 4E9F8E2E-9C21-46C9-8818-F1DF00616E4D
 ---
 
 # Enable-CMAlert
@@ -14,20 +14,20 @@ Enables Configuration Manager alerts.
 
 ### SearchByValueMandatory (Default)
 ```
-Enable-CMAlert -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Enable-CMAlert -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Enable-CMAlert -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Enable-CMAlert -Id <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 ```
-Enable-CMAlert -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Enable-CMAlert -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,6 +61,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -69,12 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -83,12 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -104,6 +107,7 @@ You can obtain the ID of an alert by using the [Get-CMAlert](./Get-CMAlert.md) c
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -119,6 +123,7 @@ To obtain a **CMAlert** object, use **Get-CMAlert**.
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Alert
+
 Required: True
 Position: Named
 Default value: None
@@ -134,7 +139,23 @@ You can obtain the name of an alert by using **Get-CMAlert**.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+{{Fill PassThru Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -149,6 +170,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

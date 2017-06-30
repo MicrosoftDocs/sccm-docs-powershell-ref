@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 06300983-C58D-4402-A33C-E37968FF9FD2
 online version: https://go.microsoft.com/fwlink/?linkid=834096
 schema: 2.0.0
-ms.assetid: 06300983-C58D-4402-A33C-E37968FF9FD2
 ---
 
 # Set-CMSoftwareUpdatePointComponent
@@ -23,8 +23,8 @@ Set-CMSoftwareUpdatePointComponent [-SiteCode <String>] [-DefaultWsusServer <Str
  [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-EnableCallWsusCleanupWizard <Boolean>] [-WaitMonth <Int32>] [-AddLanguageUpdateFile <String[]>]
  [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
- [-RemoveLanguageSummaryDetail <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
@@ -38,8 +38,8 @@ Set-CMSoftwareUpdatePointComponent -Name <String> [-DefaultWsusServer <String>]
  [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-EnableCallWsusCleanupWizard <Boolean>] [-WaitMonth <Int32>] [-AddLanguageUpdateFile <String[]>]
  [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
- [-RemoveLanguageSummaryDetail <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
@@ -52,8 +52,9 @@ Set-CMSoftwareUpdatePointComponent [-DefaultWsusServer <String>] [-SynchronizeAc
  [-Schedule <IResultObject>] [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-EnableCallWsusCleanupWizard <Boolean>] [-WaitMonth <Int32>] [-AddLanguageUpdateFile <String[]>]
  [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
- [-RemoveLanguageSummaryDetail <String[]>] -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>]
+ -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,12 +79,11 @@ The second command modifies the software update point component in **$CIObj**.
 ## PARAMETERS
 
 ### -AddCompany
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddCompanies
+
 Required: False
 Position: Named
 Default value: None
@@ -92,12 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddLanguageSummaryDetail
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddLanguageSummaryDetails
+
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +112,7 @@ The cmdlet adds these languages to the languages supported for software updates 
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -121,12 +121,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddProduct
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddProducts
+
 Required: False
 Position: Named
 Default value: None
@@ -135,12 +134,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddProductFamily
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddProductFamilies
+
 Required: False
 Position: Named
 Default value: None
@@ -155,8 +153,8 @@ This cmdlet adds these classifications to the classifications supported for soft
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
-Accepted values: Critical Updates, Definition Updates, Feature Packs, Security Updates, Service Packs, Tools, Update Rollups, Updates, Upgrades
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -171,6 +169,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -178,13 +177,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentFileOption
+{{Fill ContentFileOption Description}}
+
+```yaml
+Type: ContentFileOptions
+Parameter Sets: (All)
+Aliases: 
+Accepted values: FullFilesOnly, ExpressForWindows10Only
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultWsusServer
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -193,12 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -207,12 +222,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCallWsusCleanupWizard
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -227,6 +241,7 @@ Indicates whether Configuration Manager creates an alert when synchronization fa
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -242,6 +257,7 @@ Specify a schedule by using the *Schedule* parameter.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -250,12 +266,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -273,6 +290,7 @@ System Center 2016 Endpoint Protection definition updates and software updates t
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -288,6 +306,7 @@ To obtain a software update point component object, use the [Get-CMSoftwareUpdat
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: Site, SiteComponent
+
 Required: True
 Position: Named
 Default value: None
@@ -302,6 +321,7 @@ Specifies a name of a site system server in Configuration Manager.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: SiteName
+
 Required: True
 Position: Named
 Default value: None
@@ -309,13 +329,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PassThru
+{{Fill PassThru Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveCompany
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveCompanies
+
 Required: False
 Position: Named
 Default value: None
@@ -324,12 +358,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLanguageSummaryDetail
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveLanguageSummaryDetails
+
 Required: False
 Position: Named
 Default value: None
@@ -345,6 +378,7 @@ The cmdlet removes these languages from the languages supported for software upd
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -359,6 +393,7 @@ Specifies an array of products, as strings.
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveProducts
+
 Required: False
 Position: Named
 Default value: None
@@ -373,6 +408,7 @@ Specifies an array of product families, as strings.
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveProductFamilies
+
 Required: False
 Position: Named
 Default value: None
@@ -387,8 +423,8 @@ This cmdlet removes these classifications from the classifications supported for
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
-Accepted values: Critical Updates, Definition Updates, Feature Packs, Security Updates, Service Packs, Tools, Update Rollups, Updates, Upgrades
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -407,8 +443,9 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ReportingEventType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: DoNotCreateWsusReportingEvents, CreateOnlyWsusStatusReportingEvents, CreateAllWsusReportingEvents
+
 Required: False
 Position: Named
 Default value: None
@@ -425,6 +462,7 @@ To obtain a **Schedule** object, use the [New-CMSchedule](./New-CMSchedule.md) c
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -439,6 +477,7 @@ Specifies a site code in Configuration Manager.
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -459,8 +498,9 @@ If you select a value of SynchronizeFromAnUpstreamDataSourceLocation, specify th
 ```yaml
 Type: SynchronizeActionType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: SynchronizeFromMicrosoftUpdate, SynchronizeFromAnUpstreamDataSourceLocation, DoNotSynchronizeFromMicrosoftUpdateOrUpstreamDataSource
+
 Required: False
 Position: Named
 Default value: None
@@ -476,6 +516,7 @@ To use this location, specify a value of SynchronizeFromAnUpstreamDataSourceLoca
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -493,6 +534,7 @@ Endpoint Protection definition updates and software updates that Service Packs s
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -508,6 +550,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

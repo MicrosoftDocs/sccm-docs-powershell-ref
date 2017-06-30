@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 27AABF04-9A90-4997-8859-7D3BD360830B
 online version: https://go.microsoft.com/fwlink/?linkid=833684
 schema: 2.0.0
-ms.assetid: 27AABF04-9A90-4997-8859-7D3BD360830B
 ---
 
 # Get-CMEndpointProtectionSummarizationSchedule
@@ -33,12 +33,13 @@ This command gets an Endpoint Protection summarization schedule.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -47,12 +48,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

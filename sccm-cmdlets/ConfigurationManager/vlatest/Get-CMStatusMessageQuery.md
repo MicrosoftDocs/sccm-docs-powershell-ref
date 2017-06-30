@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: B7974D6F-DB94-41EC-87CA-8DB50C2F18D8
 online version: https://go.microsoft.com/fwlink/?linkid=833940
 schema: 2.0.0
-ms.assetid: B7974D6F-DB94-41EC-87CA-8DB50C2F18D8
 ---
 
 # Get-CMStatusMessageQuery
@@ -50,12 +50,13 @@ This command shows messages found by a query that has an ID of SMS551.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -64,12 +65,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -84,6 +86,7 @@ Specifies an ID of a status message query.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: QueryId
+
 Required: True
 Position: Named
 Default value: None
@@ -98,6 +101,7 @@ Specifies a name of a status message query.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -106,13 +110,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -121,12 +126,11 @@ Accept wildcard characters: False
 ```
 
 ### -ShowMessage
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ShowMessages
+
 Required: False
 Position: Named
 Default value: None

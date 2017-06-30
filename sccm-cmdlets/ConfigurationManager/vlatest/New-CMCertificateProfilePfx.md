@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: D4ADE497-4DDA-48FC-B727-B9FB14494F12
 online version: https://go.microsoft.com/fwlink/?linkid=834294
 schema: 2.0.0
-ms.assetid: D4ADE497-4DDA-48FC-B727-B9FB14494F12
 ---
 
 # New-CMCertificateProfilePfx
@@ -60,7 +60,7 @@ Specifies a description for the PFX certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -70,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -85,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ Valid values are:
 ```yaml
 Type: KeyStorageProviderSettingType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: None, InstallToTPM_FailIfNotPresent, InstallToTPM_IfPresent, InstallToSoftwareKeyStorageProvider, InstallToNGC_FailIfNotPresent
 
 Required: False
@@ -127,7 +127,7 @@ Specifies a name for the PFX certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

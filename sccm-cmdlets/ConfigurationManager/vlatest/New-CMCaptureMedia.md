@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: F3E1E495-47DC-4EA2-BC27-6BCB1F7A9B7B
 online version: https://go.microsoft.com/fwlink/?linkid=834285
 schema: 2.0.0
-ms.assetid: F3E1E495-47DC-4EA2-BC27-6BCB1F7A9B7B
 ---
 
 # New-CMCaptureMedia
@@ -14,8 +14,8 @@ Creates capture media.
 
 ```
 New-CMCaptureMedia [-AllowUacPrompt] -BootImage <IResultObject> -DistributionPoint <IResultObject[]> [-Force]
- [-FormatMedia] -MediaType <MediaInputType> -Path <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FormatMedia] -MediaType <MediaInputType> -Path <String> [-ProviderCredential <PSCredential>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +47,7 @@ Indicates that User Account Control (UAC) prompts are allowed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -62,6 +63,7 @@ To obtain a boot image object, use the [Get-CMBootImage](./Get-CMBootImage.md) c
 Type: IResultObject
 Parameter Sets: (All)
 Aliases: BootImagePackage
+
 Required: True
 Position: Named
 Default value: None
@@ -76,6 +78,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -84,12 +87,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -105,6 +109,7 @@ To obtain a distribution point object, use the [Get-CMDistributionPoint](./Get-C
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: DistributionPoints
+
 Required: True
 Position: Named
 Default value: None
@@ -119,6 +124,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -127,12 +133,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +154,7 @@ Indicates that the cmdlet formats the removable USB drive (FAT32), and makes it 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -167,6 +175,7 @@ Type: MediaInputType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Usb, CdDvd
+
 Required: True
 Position: Named
 Default value: None
@@ -181,7 +190,23 @@ Specifies the name and path where the output files are written.
 Type: String
 Parameter Sets: (All)
 Aliases: MediaPath, OutputPath, DriveName
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProviderCredential
+{{Fill ProviderCredential Description}}
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -196,6 +221,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

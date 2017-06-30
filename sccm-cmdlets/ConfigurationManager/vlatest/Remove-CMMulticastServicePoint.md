@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 23C2C811-714F-4B4C-A811-8FF6D837AF8B
 online version: https://go.microsoft.com/fwlink/?linkid=834139
 schema: 2.0.0
-ms.assetid: 23C2C811-714F-4B4C-A811-8FF6D837AF8B
 ---
 
 # Remove-CMMulticastServicePoint
@@ -54,6 +54,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -62,12 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -82,6 +84,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -90,12 +93,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -111,6 +115,7 @@ To obtain a multicast service point object, use the Get-CMMulticastServicePoint 
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: MulticastServicePoint
+
 Required: True
 Position: Named
 Default value: None
@@ -127,6 +132,7 @@ The default is to remove WDS.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +147,7 @@ Specifies the site code for the Configuration Manager site that hosts the site s
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -155,6 +162,7 @@ Specifies the name of the server that hosts a site system role.
 Type: String
 Parameter Sets: ByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -170,6 +178,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

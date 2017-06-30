@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 781F6A2C-9A81-48F4-92EE-171566F550CF
 online version: https://go.microsoft.com/fwlink/?linkid=834092
 schema: 2.0.0
-ms.assetid: 781F6A2C-9A81-48F4-92EE-171566F550CF
 ---
 
 # Set-CMSoftwareUpdatePoint
@@ -15,19 +15,19 @@ Changes settings for a Configuration Manager software update point.
 ### ByValue (Default)
 ```
 Set-CMSoftwareUpdatePoint [-HttpPort <Int32>] [-HttpsPort <Int32>] -InputObject <IResultObject>
- [-ClientConnectionType <ClientConnectionTypes>] [-EnableSsl <Boolean>] [-UseProxy <Boolean>]
- [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess] [-WsusAccessAccount <String>]
- [-NlbVirtualIP <String>] [-PublicVirtualIP <String>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ClientConnectionType <ClientConnectionTypes>] [-EnableSsl <Boolean>] [-EnableCloudGateway <Boolean>]
+ [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
+ [-WsusAccessAccount <String>] [-NlbVirtualIP <String>] [-PublicVirtualIP <String>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
 Set-CMSoftwareUpdatePoint [-HttpPort <Int32>] [-HttpsPort <Int32>] [-SiteSystemServerName] <String>
  [-SiteCode <String>] [-ClientConnectionType <ClientConnectionTypes>] [-EnableSsl <Boolean>]
- [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>] [-AnonymousWsusAccess]
- [-WsusAccessAccount <String>] [-NlbVirtualIP <String>] [-PublicVirtualIP <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableCloudGateway <Boolean>] [-UseProxy <Boolean>] [-UseProxyForAutoDeploymentRule <Boolean>]
+ [-AnonymousWsusAccess] [-WsusAccessAccount <String>] [-NlbVirtualIP <String>] [-PublicVirtualIP <String>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,6 +58,7 @@ Indicates that the software update point allows anonymous.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -78,8 +79,9 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Intranet, Internet, InternetAndIntranet
+
 Required: False
 Position: Named
 Default value: None
@@ -94,6 +96,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -102,12 +105,28 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCloudGateway
+{{Fill EnableCloudGateway Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +141,7 @@ Indicates that the cmdlet enables SSL for the update point.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: SslWsus, WsusSsl
+
 Required: False
 Position: Named
 Default value: None
@@ -130,12 +150,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,12 +165,11 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPort
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: WsusIisPort
+
 Required: False
 Position: Named
 Default value: None
@@ -158,12 +178,11 @@ Accept wildcard characters: False
 ```
 
 ### -HttpsPort
-
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: WsusIisSslPort
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +198,7 @@ To obtain a software update point object, use the [Get-CMSoftwareUpdatePoint](./
 Type: IResultObject
 Parameter Sets: ByValue
 Aliases: SoftwareUpdatePoint
+
 Required: True
 Position: Named
 Default value: None
@@ -194,6 +214,7 @@ If this software update point uses load balancing, this is the NLB address.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -202,13 +223,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -223,6 +245,7 @@ Specifies a public virtual IP address for a software update point that is connec
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -237,6 +260,7 @@ Specifies a site code for a Configuration Manager site.
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -251,6 +275,7 @@ Specifies the name of the computer that hosts the software update point site sys
 Type: String
 Parameter Sets: ByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -265,6 +290,7 @@ Specifies whether a software update point can use a proxy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -279,6 +305,7 @@ Indicates whether an auto deployment rule can use a proxy.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -294,6 +321,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -309,6 +337,7 @@ Unless a software update point allows anonymous access, use this access account 
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

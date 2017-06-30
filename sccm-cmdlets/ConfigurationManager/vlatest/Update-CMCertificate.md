@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
+ms.assetid: EEFF1F3A-F8F1-4A3A-9AA7-D9687B6EC008
 online version: https://go.microsoft.com/fwlink/?linkid=834288
 schema: 2.0.0
-ms.assetid: EEFF1F3A-F8F1-4A3A-9AA7-D9687B6EC008
 ---
 
 # Update-CMCertificate
@@ -52,6 +52,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -60,12 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -80,6 +82,7 @@ Forces the command to run without asking for user confirmation.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -88,12 +91,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +112,7 @@ Specifies the ID of a certificate.
 Type: String
 Parameter Sets: ById
 Aliases: SmsId
+
 Required: True
 Position: Named
 Default value: None
@@ -116,12 +121,11 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue, ByCertificate
 Aliases: Certificate
+
 Required: True
 Position: Named
 Default value: None
@@ -136,6 +140,7 @@ Specifies a certification path.
 Type: String
 Parameter Sets: ByValue, ById
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -151,6 +156,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -159,12 +165,11 @@ Accept wildcard characters: False
 ```
 
 ### -X509Certificate
-
-
 ```yaml
 Type: X509Certificate
 Parameter Sets: ByCertificate
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None

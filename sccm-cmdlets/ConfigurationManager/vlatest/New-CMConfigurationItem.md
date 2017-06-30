@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 3F7587DE-C592-49E8-8B14-8A9AA4DF93DC
 online version: https://go.microsoft.com/fwlink/?linkid=833604
 schema: 2.0.0
-ms.assetid: 3F7587DE-C592-49E8-8B14-8A9AA4DF93DC
 ---
 
 # New-CMConfigurationItem
@@ -52,6 +52,7 @@ Specifies an array of localized names of the categories to which the configurati
 Type: String[]
 Parameter Sets: (All)
 Aliases: LocalizedCategoryInstanceNames
+
 Required: False
 Position: Named
 Default value: None
@@ -66,6 +67,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -88,6 +90,7 @@ Type: CICreationType
 Parameter Sets: New
 Aliases: 
 Accepted values: None, WindowsApplication, WindowsOS, MacOS, MobileDevice
+
 Required: True
 Position: Named
 Default value: None
@@ -102,6 +105,7 @@ Specifies a description for a configuration item.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDescription
+
 Required: False
 Position: Named
 Default value: None
@@ -110,12 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -124,12 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,6 +150,7 @@ Specifies a name for the configuration item.
 Type: String
 Parameter Sets: (All)
 Aliases: LocalizedDisplayName
+
 Required: True
 Position: Named
 Default value: None
@@ -159,6 +166,7 @@ To obtain a **CMConfigurationItem** object, use the [Get-CMConfigurationItem](./
 Type: IResultObject
 Parameter Sets: NewChild
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -174,6 +182,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

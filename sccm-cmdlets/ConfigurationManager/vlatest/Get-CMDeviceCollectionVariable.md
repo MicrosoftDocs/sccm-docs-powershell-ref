@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 776836A3-581F-4989-8FBD-67C811B4983E
 online version: https://go.microsoft.com/fwlink/?linkid=833640
 schema: 2.0.0
-ms.assetid: 776836A3-581F-4989-8FBD-67C811B4983E
 ---
 
 # Get-CMDeviceCollectionVariable
@@ -52,6 +52,7 @@ To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md)
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -66,6 +67,7 @@ Specifies the ID of a device collection.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -80,6 +82,7 @@ Specifies the name of a device collection.
 Type: String
 Parameter Sets: SearchByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -88,12 +91,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -102,12 +106,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +127,7 @@ Specifies the name of a collection variable.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

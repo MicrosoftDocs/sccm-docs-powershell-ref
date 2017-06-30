@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: ED0B8420-DCA5-43D7-A48B-45A539486580
 online version: https://go.microsoft.com/fwlink/?linkid=833754
 schema: 2.0.0
-ms.assetid: ED0B8420-DCA5-43D7-A48B-45A539486580
 ---
 
 # Get-CMMigrationCollection
@@ -42,12 +42,13 @@ The command specifies the value PhoneCollection5 for the *Name* parameter.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -56,12 +57,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -76,6 +78,7 @@ Specifies an identifier for a collection in Configuration Manager.
 Type: String
 Parameter Sets: SearchById
 Aliases: CollectionEntityId
+
 Required: False
 Position: Named
 Default value: None
@@ -90,6 +93,7 @@ Specifies a name for a collection in Configuration Manager.
 Type: String
 Parameter Sets: SearchByName
 Aliases: CollectionName
+
 Required: False
 Position: Named
 Default value: None
@@ -107,5 +111,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

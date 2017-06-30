@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: DB311582-AD04-42ED-8330-6693CF3AADDB
 online version: https://go.microsoft.com/fwlink/?linkid=833709
 schema: 2.0.0
-ms.assetid: DB311582-AD04-42ED-8330-6693CF3AADDB
 ---
 
 # New-CMOperatingSystemImageUpdateSchedule
@@ -33,6 +33,13 @@ New-CMOperatingSystemImageUpdateSchedule -Id <String> [-ContinueOnError <Boolean
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### NewScheduleByName
+```
+New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
+ -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>] [-Utc <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### NewScheduleById
 ```
 New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
@@ -41,13 +48,6 @@ New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSc
 ```
 
 ### NewScheduleByScheduleInputObject
-```
-New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
- -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>] [-Utc <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### NewScheduleByName
 ```
 New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-CustomSchedule <DateTime>]
  -SoftwareUpdate <IResultObject[]> [-UpdateDistributionPoint <Boolean>] [-Utc <Boolean>]
@@ -110,7 +110,7 @@ Indicates whether software updates should be applied to the image even when ther
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -124,8 +124,8 @@ Specifies the date and time when the software updates are applied to the operati
 
 ```yaml
 Type: DateTime
-Parameter Sets: NewScheduleByInputObject, NewScheduleById, NewScheduleByScheduleInputObject, NewScheduleByName
-Aliases:
+Parameter Sets: NewScheduleByInputObject, NewScheduleByName, NewScheduleById, NewScheduleByScheduleInputObject
+Aliases: 
 
 Required: False
 Position: Named
@@ -135,12 +135,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -150,12 +150,12 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ To obtain an operating system image object, use the [Get-CMOperatingSystemImage]
 ```yaml
 Type: IResultObject
 Parameter Sets: NewScheduleByInputObject, NewScheduleByInputObjectRunNow
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -201,7 +201,7 @@ Specifies the name of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: NewScheduleByNameRunNow
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -216,7 +216,7 @@ Indicates that the update should run now.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewScheduleByNameRunNow, NewScheduleByIdRunNow, NewScheduleByInputObjectRunNow, NewScheduleByScheduleInputObjectRunNow
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ To obtain a software update object, use the [Get-CMSoftwareUpdate](./Get-CMSoftw
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -261,8 +261,8 @@ Indicates whether to use UTC time.
 
 ```yaml
 Type: Boolean
-Parameter Sets: NewScheduleByInputObject, NewScheduleById, NewScheduleByScheduleInputObject, NewScheduleByName
-Aliases:
+Parameter Sets: NewScheduleByInputObject, NewScheduleByName, NewScheduleById, NewScheduleByScheduleInputObject
+Aliases: 
 
 Required: False
 Position: Named

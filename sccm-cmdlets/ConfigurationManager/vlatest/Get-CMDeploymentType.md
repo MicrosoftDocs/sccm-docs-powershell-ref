@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: C79E32F6-CBDA-4F7D-A88C-B52EA286CF49
 online version: https://go.microsoft.com/fwlink/?linkid=833591
 schema: 2.0.0
-ms.assetid: C79E32F6-CBDA-4F7D-A88C-B52EA286CF49
 ---
 
 # Get-CMDeploymentType
@@ -67,6 +67,7 @@ Specifies the name of an application that is associated with the deployment type
 Type: String
 Parameter Sets: SearchByName, SearchByIdMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -81,6 +82,7 @@ Specifies the ID of a deployment type.
 Type: Int32
 Parameter Sets: SearchByIdMandatory
 Aliases: CIId, CI_ID
+
 Required: True
 Position: Named
 Default value: None
@@ -95,6 +97,7 @@ Specifies the name of a deployment type.
 Type: String
 Parameter Sets: SearchByName, SearchByDTValue
 Aliases: LocalizedDisplayName
+
 Required: False
 Position: Named
 Default value: None
@@ -103,12 +106,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -117,12 +121,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -138,6 +143,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByDTValue
 Aliases: Application
+
 Required: True
 Position: Named
 Default value: None

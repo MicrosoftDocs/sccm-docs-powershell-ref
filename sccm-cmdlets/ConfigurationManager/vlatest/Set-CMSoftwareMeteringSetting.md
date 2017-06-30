@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 8969DC7F-BF22-4F9C-860F-CFC807D696BE
 online version: https://go.microsoft.com/fwlink/?linkid=834058
 schema: 2.0.0
-ms.assetid: 8969DC7F-BF22-4F9C-860F-CFC807D696BE
 ---
 
 # Set-CMSoftwareMeteringSetting
@@ -75,6 +75,7 @@ You can use the values set by other parameters of this cmdlet to limit creation 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -91,6 +92,7 @@ Valid values are integers from 1 through 99.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -108,6 +110,7 @@ Valid values are integers from 1 through 1000.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +125,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -136,6 +140,7 @@ Specifies the number of days that Configuration Manager keeps software metering 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -144,12 +149,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -158,12 +164,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -179,6 +186,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: CBAF58CB-B602-4A3D-ACAD-61078090F657
 online version: https://go.microsoft.com/fwlink/?linkid=834029
 schema: 2.0.0
-ms.assetid: CBAF58CB-B602-4A3D-ACAD-61078090F657
 ---
 
 # Export-CMPackage
@@ -59,12 +59,11 @@ The second command exports the package to the path \\\\Deploy01\ExportPackages b
 ## PARAMETERS
 
 ### -Comment
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Comments
+
 Required: False
 Position: Named
 Default value: None
@@ -79,6 +78,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -87,12 +87,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -101,12 +102,11 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ExportFilePath
+
 Required: True
 Position: Named
 Default value: None
@@ -115,12 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -135,6 +136,7 @@ Specifies an array of IDs for packages.
 Type: String
 Parameter Sets: SearchPackageByIdMandatory
 Aliases: PackageId
+
 Required: True
 Position: Named
 Default value: None
@@ -150,6 +152,7 @@ To obtain a package object, use the [Get-CMPackage](./Get-CMPackage.md) cmdlet.
 Type: IResultObject
 Parameter Sets: SearchByValue
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -164,6 +167,7 @@ Specifies a name of a package.
 Type: String
 Parameter Sets: SearchPackageByNameMandatory
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -179,6 +183,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False
@@ -193,6 +198,7 @@ Indicates whether to include content in the package.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +213,7 @@ Indicates whether to include dependencies in the package.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

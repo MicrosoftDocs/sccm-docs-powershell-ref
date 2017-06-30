@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 4E6D3504-C65F-4EE1-A914-FDC1100584BD
 online version: https://go.microsoft.com/fwlink/?linkid=834089
 schema: 2.0.0
-ms.assetid: 4E6D3504-C65F-4EE1-A914-FDC1100584BD
 ---
 
 # Import-CMWirelessProfileConfigurationItem
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +142,7 @@ Specifies the path to the file that contains the wireless profile to import.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: DesiredConfigurationDigestPath
+Aliases: WifiProfileXmlPath
 
 Required: True
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 4D76D4D0-5D21-4320-BEA6-335CE01284A7
 online version: https://go.microsoft.com/fwlink/?linkid=833809
 schema: 2.0.0
-ms.assetid: 4D76D4D0-5D21-4320-BEA6-335CE01284A7
 ---
 
 # Get-CMPackage
@@ -53,12 +53,13 @@ This command gets the program named Configuration Manager Client Package.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -67,12 +68,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -87,6 +89,7 @@ Specifies an array of package IDs.
 Type: String
 Parameter Sets: SearchByIdMandatory
 Aliases: PackageId
+
 Required: True
 Position: Named
 Default value: None
@@ -101,6 +104,7 @@ Specifies the name of a package.
 Type: String
 Parameter Sets: SearchByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

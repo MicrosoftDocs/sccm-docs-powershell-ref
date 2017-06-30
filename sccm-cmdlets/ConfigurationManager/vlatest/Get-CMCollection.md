@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: B6EE1D79-4D2D-4971-8F24-F7EEADA0A292
 online version: https://go.microsoft.com/fwlink/?linkid=834212
 schema: 2.0.0
-ms.assetid: B6EE1D79-4D2D-4971-8F24-F7EEADA0A292
 ---
 
 # Get-CMCollection
@@ -77,6 +77,7 @@ Type: CollectionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: User, Device
+
 Required: False
 Position: Named
 Default value: None
@@ -85,12 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -106,6 +108,7 @@ To obtain a distribution point group object, use the [Get-CMDistributionPointGro
 Type: IResultObject
 Parameter Sets: ByDPGroup
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -120,6 +123,7 @@ Specifies the ID of the distribution point group that is associated with the col
 Type: String
 Parameter Sets: ByDPGroupId
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -134,6 +138,7 @@ Specifies the name of the distribution point group that is associated with a col
 Type: String
 Parameter Sets: ByDPGroupName
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -142,12 +147,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -163,6 +169,7 @@ If you do not specify a collection, all collections in the hierarchy are returne
 Type: String
 Parameter Sets: ById
 Aliases: CollectionId
+
 Required: True
 Position: Named
 Default value: None
@@ -178,6 +185,7 @@ If you do not specify a collection, all collections in the hierarchy are returne
 Type: String
 Parameter Sets: ByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None

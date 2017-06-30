@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Content.dll-Help.xml
+ms.assetid: DEDB28D8-E0D3-43B5-9EC7-B0F81B36652D
 online version: https://go.microsoft.com/fwlink/?linkid=833661
 schema: 2.0.0
-ms.assetid: DEDB28D8-E0D3-43B5-9EC7-B0F81B36652D
 ---
 
 # Add-CMDistributionPointToGroup
@@ -18,9 +18,9 @@ Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionP
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddDistributionPointToGroupById_Object
+### AddDistributionPointToGroupById_Id
 ```
-Add-CMDistributionPointToGroup -DistributionPointId <String> -DistributionPointGroup <IResultObject>
+Add-CMDistributionPointToGroup -DistributionPointId <String> -DistributionPointGroupId <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -30,15 +30,9 @@ Add-CMDistributionPointToGroup -DistributionPointId <String> -DistributionPointG
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddDistributionPointToGroupById_Id
+### AddDistributionPointToGroupById_Object
 ```
-Add-CMDistributionPointToGroup -DistributionPointId <String> -DistributionPointGroupId <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AddDistributionPointToGroupByName_Name
-```
-Add-CMDistributionPointToGroup -DistributionPointName <String> -DistributionPointGroupName <String>
+Add-CMDistributionPointToGroup -DistributionPointId <String> -DistributionPointGroup <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -48,21 +42,27 @@ Add-CMDistributionPointToGroup -DistributionPointName <String> -DistributionPoin
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### AddDistributionPointToGroupByName_Name
+```
+Add-CMDistributionPointToGroup -DistributionPointName <String> -DistributionPointGroupName <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### AddDistributionPointToGroupByName_Object
 ```
 Add-CMDistributionPointToGroup -DistributionPointName <String> -DistributionPointGroup <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### AddDistributionPointToGroupByObject_Name
-```
-Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionPointGroupName <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### AddDistributionPointToGroupByObject_Id
 ```
 Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionPointGroupId <String>
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddDistributionPointToGroupByObject_Name
+```
+Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionPointGroupName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -91,6 +91,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -99,12 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -118,8 +120,9 @@ To obtain a **CMDistributionPoint** object, use the [Get-CMDistributionPoint](./
 
 ```yaml
 Type: IResultObject
-Parameter Sets: AddDistributionPointToGroupByObject_Object, AddDistributionPointToGroupByObject_Name, AddDistributionPointToGroupByObject_Id
+Parameter Sets: AddDistributionPointToGroupByObject_Object, AddDistributionPointToGroupByObject_Id, AddDistributionPointToGroupByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -135,6 +138,7 @@ To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPoin
 Type: IResultObject
 Parameter Sets: AddDistributionPointToGroupByObject_Object, AddDistributionPointToGroupById_Object, AddDistributionPointToGroupByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -149,6 +153,7 @@ Specifies the ID of a distribution point group.
 Type: String
 Parameter Sets: AddDistributionPointToGroupById_Id, AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByObject_Id
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -163,6 +168,7 @@ Specifies the name of a distribution point group.
 Type: String
 Parameter Sets: AddDistributionPointToGroupById_Name, AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByObject_Name
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -175,8 +181,9 @@ Specifies the ID of a distribution point.
 
 ```yaml
 Type: String
-Parameter Sets: AddDistributionPointToGroupById_Object, AddDistributionPointToGroupById_Name, AddDistributionPointToGroupById_Id
+Parameter Sets: AddDistributionPointToGroupById_Id, AddDistributionPointToGroupById_Name, AddDistributionPointToGroupById_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -189,8 +196,9 @@ Specifies the name of a distribution point.
 
 ```yaml
 Type: String
-Parameter Sets: AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByName_Object
+Parameter Sets: AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByName_Object
 Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -199,12 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -220,6 +229,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

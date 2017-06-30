@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.Accounts.dll-Help.xml
+ms.assetid: 759B2F3E-8C83-44AB-9857-2EFF8FDF3338
 online version: https://go.microsoft.com/fwlink/?linkid=834215
 schema: 2.0.0
-ms.assetid: 759B2F3E-8C83-44AB-9857-2EFF8FDF3338
 ---
 
 # New-CMAccount
@@ -43,6 +43,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -51,12 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -65,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +87,8 @@ Specifies a secure string that contains the password for the user account.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: True
 Position: Named
 Default value: None
@@ -98,7 +102,8 @@ Specifies a Configuration Manager site code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -107,12 +112,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
 Required: True
 Position: Named
 Default value: None
@@ -128,6 +132,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

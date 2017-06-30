@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 5687A04C-C8E3-4902-A157-FC5807D7BFF9
 online version: https://go.microsoft.com/fwlink/?linkid=833919
 schema: 2.0.0
-ms.assetid: 5687A04C-C8E3-4902-A157-FC5807D7BFF9
 ---
 
 # Set-CMManagementPoint
@@ -14,9 +14,9 @@ Changes settings for a management point in Configuration Manager.
 
 ### SetByValue (Default)
 ```
-Set-CMManagementPoint -InputObject <IResultObject> [-EnableSsl <Boolean>]
+Set-CMManagementPoint -InputObject <IResultObject> [-EnableSsl <Boolean>] [-EnableCloudGateway <Boolean>]
  [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice <Boolean>] [-GenerateAlert <Boolean>]
- [-UseSiteDatabase <Boolean>] [-SqlServerFqdnName <String>] [-SqlServerInstanceName <String>]
+ [-UseSiteDatabase <Boolean>] [-SqlServerFqdn <String>] [-SqlServerInstanceName <String>]
  [-DatabaseName <String>] [-UserName <String>] [-UseComputerAccount] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -24,10 +24,10 @@ Set-CMManagementPoint -InputObject <IResultObject> [-EnableSsl <Boolean>]
 ### SetByName
 ```
 Set-CMManagementPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-EnableSsl <Boolean>]
- [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice <Boolean>] [-GenerateAlert <Boolean>]
- [-UseSiteDatabase <Boolean>] [-SqlServerFqdnName <String>] [-SqlServerInstanceName <String>]
- [-DatabaseName <String>] [-UserName <String>] [-UseComputerAccount] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableCloudGateway <Boolean>] [-ClientConnectionType <ClientConnectionTypes>] [-AllowDevice <Boolean>]
+ [-GenerateAlert <Boolean>] [-UseSiteDatabase <Boolean>] [-SqlServerFqdn <String>]
+ [-SqlServerInstanceName <String>] [-DatabaseName <String>] [-UserName <String>] [-UseComputerAccount]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,6 +73,7 @@ Indicates whether the management point supports device clients.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -93,6 +94,7 @@ Type: ClientConnectionTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Internet, Intranet, InternetAndIntranet
+
 Required: False
 Position: Named
 Default value: None
@@ -107,6 +109,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
 Required: False
 Position: Named
 Default value: False
@@ -121,6 +124,7 @@ Specifies the name of the site database or site database replica that the manage
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -129,12 +133,28 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCloudGateway
+{{Fill EnableCloudGateway Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -149,6 +169,7 @@ Indicates whether to enable SSL.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -157,12 +178,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -177,6 +199,7 @@ Indicates whether the management point generates health alerts.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -192,6 +215,7 @@ To obtain a management point object, use the [Get-CMManagementPoint](./Get-CMMan
 Type: IResultObject
 Parameter Sets: SetByValue
 Aliases: ManagementPoint
+
 Required: True
 Position: Named
 Default value: None
@@ -200,13 +224,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
+Returns the current working object.
 By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -221,6 +246,7 @@ Specifies the site code of the System Center Configuration Manager site that hos
 Type: String
 Parameter Sets: SetByName
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -235,6 +261,7 @@ Specifies the name of the server that hosts the site system role.
 Type: String
 Parameter Sets: SetByName
 Aliases: Name, ServerName
+
 Required: True
 Position: 0
 Default value: None
@@ -242,14 +269,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SqlServerFqdnName
-Specifies the server name of the site database or site database replica that the management point uses to query for site database information.
-You must specify this parameter if Internet-based client systems communicate with the site system.
+### -SqlServerFqdn
+{{Fill SqlServerFqdn Description}}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: SqlServerFqdnName
+
 Required: False
 Position: Named
 Default value: None
@@ -264,6 +291,7 @@ Specifies the name of the SQL Server instance that clients use to communicate wi
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -278,6 +306,7 @@ Indicates that the management point uses its own computer account instead of a d
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -292,6 +321,7 @@ Indicates whether the management point queries a site database instead of a site
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -306,6 +336,7 @@ Specifies a domain user account that the management point uses to access site in
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -321,6 +352,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
 Required: False
 Position: Named
 Default value: False

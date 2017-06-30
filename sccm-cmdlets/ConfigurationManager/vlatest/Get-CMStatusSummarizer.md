@@ -1,8 +1,8 @@
 ---
 external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: CB5EE603-74FA-4FF6-8063-06F257643B15
 online version: https://go.microsoft.com/fwlink/?linkid=833948
 schema: 2.0.0
-ms.assetid: CB5EE603-74FA-4FF6-8063-06F257643B15
 ---
 
 # Get-CMStatusSummarizer
@@ -40,12 +40,13 @@ This command gets the status summarizer for the component status.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -54,12 +55,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -68,12 +70,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
-
 ```yaml
 Type: String
 Parameter Sets: SearchByNameOrSiteCode
 Aliases: SiteName
+
 Required: False
 Position: Named
 Default value: None
@@ -88,6 +89,7 @@ Specifies a site code for the Configuration Manager site.
 Type: String
 Parameter Sets: SearchByNameOrSiteCode
 Aliases: 
+
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +105,7 @@ Type: StatusSummarizerType
 Parameter Sets: SearchBySiteCodeMandatory
 Aliases: 
 Accepted values: ApplicationDeploymentSummarizer, ApplicationStatisticsSummarizer, ComponentStatusSummarizer, SiteSystemStatusSummarizer
+
 Required: True
 Position: Named
 Default value: None
