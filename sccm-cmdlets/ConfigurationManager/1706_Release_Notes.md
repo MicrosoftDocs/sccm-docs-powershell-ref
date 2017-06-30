@@ -57,6 +57,16 @@ Cmdlet allows for combining the **CollectionName**, **Collection**, and **Collec
 #### Workaround
 Specify only **CollectionName**, **Collection**, or **CollectionId**. Do not combine these parameters.
 
+### Remove-CMStateMigrationPoint
+Cmdlet may fail with an ArgumentOutOfRangeException when removing a State Migration Point if there is content hosted by the site role.
+
+#### Workaround
+Directly remove the state migration point from the SMS Provider.
+``` powershell
+$smp = Get-CMStateMigrationPoint ... # Get the state migration point
+$smp.Delete() # Directly delete the object.
+```
+
 ## New cmdlets
 These are newly-added cmdlets for this release that add new functionality or enhance the functionality of existing cmdlets.
 
@@ -91,25 +101,25 @@ New cmdlets have been added to support creating settings and rules for configura
 - Remove-CMComplianceSetting
 
 #### Example 1: Create a registry key value setting with no rules
-```
+``` powershell
 # Creates a setting looking for HKLM\Software\Microsoft\Windows NT\CurrentVersion:ReleaseId
 $ci | Add-CMComplianceSettingRegistryKeyValue -SettingName "ReleaseId no rule" -DataType String -Hive LocalMachine -KeyName "SOFTWARE\Microsoft\Windows NT\CurrentVersion" -ValueName "ReleaseId" -NoRule
 ```
 
 #### Example 2: Create a registry key value setting with an existential rule
-```
+``` powershell
 # Creates a setting requiring the HKLM\Software\Microsoft\WindowsNT\CurrentVersion:ReleaseId registry key to exist
 $ci | Add-CMComplianceSettingRegistryKeyValue -SettingName "ReleaseId must exist" -DataType String -Hive LocalMachine -KeyName "SOFTWARE\Microsoft\Windows NT\CurrentVersion" -ValueName "ReleaseId" -ExistentialRule -Existence MustExist
 ```
 
 #### Example 3: Create a registry key value setting with a value rule
-```
+``` powershell
 # Creates a setting requiring the HKLM\Software\Microsoft\WindowsNT\CurrentVersion:ReleaseId registry key to be equal to "1703"
 $ci | Add-CMComplianceSettingRegistryKeyValue -SettingName "ReleaseId must be 1703" -DataType String -Hive LocalMachine -KeyName "SOFTWARE\Microsoft\Windows NT\CurrentVersion" -ValueName "ReleaseId" -ValueRule -ExpressionOperator IsEqual -ExpectedValue "1703"
 ```
 
-### Example 4: Create a file rule that requires the file to have a specific attribute set
-```
+#### Example 4: Create a file rule that requires the file to have a specific attribute set
+``` powershell
 $ci | Add-CMComplianceSettingFile -Path "C:\" -FileName "hiberfile.sys" -NoRule -SettingName "hiberfile.sys must have system attribute"
 $setting = $ci | Get-CMComplianceSetting -SettingName "hiberfile.sys must have system attribute" # Get the SDK setting object
 $rule = $setting | New-CMComplianceRuleFileFolderAttribute -RuleName "hiberfile.sys must be system" -System $true # Create the rule
@@ -131,12 +141,14 @@ New cmdlets have been added to support automating updates and servicing in Confi
 - Invoke-CMSiteUpdatePrerequisiteCheck
 
 #### Example 1: Download an update and monitor its status
-```
+``` powershell
 # Get the update object for the 1706 TP and invoke a download
 $update = Get-CMSiteUpdate -Name "Configuration Manager Technical Preview 1706" -Fast
 $update | Invoke-CMSiteUpdateDownload
+``` powershell
 
 # Now monitor the download status
+``` powershell
 while($true) {
     cls
     $update | Get-CMSiteUpdateInstallStatus  -Step Download | select orderid, progress, description | ft
@@ -145,7 +157,7 @@ while($true) {
 ```
 
 #### Example 2: Install an update and monitor its status
-```
+``` powershell
 $update = Get-CMSiteUpdate -Name "Configuration Manager Technical Preview 1706" -Fast
 $update | Install-CMSiteUpdate -IgnorePrerequisiteWarning -Force
 
@@ -170,7 +182,7 @@ New cmdlets have been added to support adding enhanced detection methods to Wind
     - New-CMDetectionClauseMacPackage
 
 #### Example: Add a detection clause requiring a specific product ID and directory name to be present for a Windows Installer deployment type.
-```
+``` powershell
 $clause1 = New-CMDetectionClauseWindowsInstaller -ProductCode $guid [Value -ExpressionOperator IsEquals -ExpectedValue "1.1.1.1" # Do a version check
 $clause2 = New-CMDetectionClauseDirectory -DirectoryName "mymsi" -Path "C:\" -Existence # c:\mymsi should exist
 $app | Add-CMMsiDeploymentType -ContentLocation "\\myserver\mypath\mymsi.msi" -Force -AddDetectionClause ($clause1, $clause2)
@@ -209,15 +221,15 @@ New cmdlets have been added to support modifying task sequence steps and groupin
     - New-CMTaskSequencePartitionSetting
 
 #### Example: Create a custom task sequence that runs two PowerShell scripts
-```
+``` powershell
 $step1 = New-CMTaskSequenceStepRunPowerShellScript -Name "Run script 1" -PackageID $PackageId -ScriptName "script1.ps1" -ExecutionPolicy Bypass
-$step1 = New-CMTaskSequenceStepRunPowerShellScript -Name "Run script 2" -PackageID $PackageId -ScriptName "script2.ps1" -ExecutionPolicy Bypass
+$step2 = New-CMTaskSequenceStepRunPowerShellScript -Name "Run script 2" -PackageID $PackageId -ScriptName "script2.ps1" -ExecutionPolicy Bypass
 $ts = New-CMTaskSequence -Name "Run scripts" -CustomTaskSequence
 $ts | Add-CMTaskSequenceStep -Step ($step1, $step2)
 ```
 
 #### Note
-Additional task sequence commands to be added in a future reelase.
+Additional task sequence commands to be added in a future release.
 
 ### iOS Bulk Enrollment
 New cmdlets have been added to support iOS bulk enrollment scenarios.
@@ -265,7 +277,7 @@ This is an experimental feature and may be subject to change or removal in a fut
 This cmdlet can be used to get client health information for a collection with an optional date range.
 
 #### Example: Gets client health for "All Systems" starting in January, 2017.
-```
+``` powershell
 Get-CMCollection -Name "All Systems" | Get-CMClientHealthSummary -StartDate "2017/01/01"
 ```
 ### Get-CMSoftwareUpdateSyncStatus
@@ -275,7 +287,7 @@ This cmdlet can be used to get the status of a synchronization with Windows Upda
 This cmdlet can be used to redistribute content that has already been deployed to a distribution point. This supports application, package, boot image, software update, driver, image, task sequence, and operating system content distributions.
 
 #### Example: Redistribute a package to a distribution point
-```
+``` powershell
 Get-CMPackage -Name Contoso | Invoke-CMContentRedistribution -DistributionPointName myserver.contoso.com
 ```
 
@@ -404,9 +416,12 @@ Cmdlet may fail with an ArgumentNullException if removing an incorrectly configu
 #### Bugs that were fixed
 **WhatIf** or **Confirm** may cause cmdlet to return an ItemNotFoundException error.
 
+<!-- This is currently not working correctly. -->
+<!--
 ### Remove-CMStateMigrationPoint
 #### Breaking changes
 Cmdlet will now ask for confirmation if there is existing user state that has not been restored. **Force** will prevent this from occurring.
+-->
 
 ### Remove-CMUpdateGroupDeployment
 #### Bugs that were fixed
