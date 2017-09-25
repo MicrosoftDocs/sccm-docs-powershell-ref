@@ -3,9 +3,9 @@
   homepage: /
   items:
   - name: System Center Configuration Manager
-    href: /sccm/
-    homepage: /sccm/index
+    href: /system-center/
+    homepage: /system-index/index
     items:
     - name: Configuration Manager PowerShell
-      tocHref: /powershell/sccm/
+      tocHref: /powershell/sccm-new/
       topicHref: /powershell/sccm-new/overview
