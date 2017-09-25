@@ -66,7 +66,7 @@ This command adds a device collection direct membership rule to the collection w
 PS C:\> Get-CMCollection -Name "testCollection" | Add-CMDeviceCollectionDirectMembershipRule -ResourceId 2097152004
 ```
 
-This command gets the collection object named testCollection and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionDirectMembershipRule**, which adds the direct membership rule to the collection object, and the resource with the ID of 2097152004 to the collection.This command gets the collection named Collection07 by using the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
+This command gets the collection object named testCollection and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionDirectMembershipRule**, which adds the direct membership rule to the collection object, and the resource with the ID of 2097152004 to the collection.This command gets the collection named Collection07 by using the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 The command passes the collection to the current cmdlet by using the pipeline operator.
 The cmdlet adds the direction membership rule that has the ID 2097152004 to that collection.
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a device collection object.
-To obtain a device collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
+To obtain a device collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -239,10 +239,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433)
 
-[Get-CMCollection](./Get-CMCollection.md)
+[Get-CMCollection](Get-CMCollection.md)
 
-[Get-CMDeviceCollectionDirectMembershipRule](./Get-CMDeviceCollectionDirectMembershipRule.md)
+[Get-CMDeviceCollectionDirectMembershipRule](Get-CMDeviceCollectionDirectMembershipRule.md)
 
-[Remove-CMDeviceCollectionDirectMembershipRule](./Remove-CMDeviceCollectionDirectMembershipRule.md)
+[Remove-CMDeviceCollectionDirectMembershipRule](Remove-CMDeviceCollectionDirectMembershipRule.md)
 
 

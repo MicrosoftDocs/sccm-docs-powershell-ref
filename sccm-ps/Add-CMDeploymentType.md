@@ -174,7 +174,7 @@ Add-CMDeploymentType [-AdministratorComment <String>] [-AndroidGooglePlayInstall
 
 ## DESCRIPTION
 This cmdlet is deprecated.
-Use one of the following cmdlets:  [Add-CMAndroidDeploymentType](./Add-CMAndroidDeploymentType.md),  [Add-CMAppv5XDeploymentType](./Add-CMAppv5XDeploymentType.md),  [Add-CMAppvDeploymentType](./Add-CMAppvDeploymentType.md),  [Add-CMGooglePlayDeploymentType](./Add-CMGooglePlayDeploymentType.md),  [Add-CMIosAppStoreDeploymentType](./Add-CMIosAppStoreDeploymentType.md),  [Add-CMIosDeploymentType](./Add-CMIosDeploymentType.md),  [Add-CMMacDeploymentType](./Add-CMMacDeploymentType.md),  [Add-CMMobileMsiDeploymentType](./Add-CMMobileMsiDeploymentType.md),  [Add-CMMsiDeploymentType](./Add-CMMsiDeploymentType.md),  [Add-CMNokiaDeploymentType](./Add-CMNokiaDeploymentType.md),  [Add-CMScriptDeploymentType](./Add-CMScriptDeploymentType.md),  [Add-CMWebApplicationDeploymentType](./Add-CMWebApplicationDeploymentType.md),  [Add-CMWindowsAppxDeploymentType](./Add-CMWindowsAppxDeploymentType.md),  [Add-CMWindowsMobileDeploymentType](./Add-CMWindowsMobileDeploymentType.md),  [Add-CMWindowsPhoneDeploymentType](./Add-CMWindowsPhoneDeploymentType.md),  [Add-CMWindowsPhoneStoreDeploymentType](./Add-CMWindowsPhoneStoreDeploymentType.md), or  [Add-CMWindowsStoreDeploymentType](./Add-CMWindowsStoreDeploymentType.md).
+Use one of the following cmdlets:  [Add-CMAndroidDeploymentType](Add-CMAndroidDeploymentType.md),  [Add-CMAppv5XDeploymentType](Add-CMAppv5XDeploymentType.md),  [Add-CMAppvDeploymentType](Add-CMAppvDeploymentType.md),  [Add-CMGooglePlayDeploymentType](Add-CMGooglePlayDeploymentType.md),  [Add-CMIosAppStoreDeploymentType](Add-CMIosAppStoreDeploymentType.md),  [Add-CMIosDeploymentType](Add-CMIosDeploymentType.md),  [Add-CMMacDeploymentType](Add-CMMacDeploymentType.md),  [Add-CMMobileMsiDeploymentType](Add-CMMobileMsiDeploymentType.md),  [Add-CMMsiDeploymentType](Add-CMMsiDeploymentType.md),  [Add-CMNokiaDeploymentType](Add-CMNokiaDeploymentType.md),  [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md),  [Add-CMWebApplicationDeploymentType](Add-CMWebApplicationDeploymentType.md),  [Add-CMWindowsAppxDeploymentType](Add-CMWindowsAppxDeploymentType.md),  [Add-CMWindowsMobileDeploymentType](Add-CMWindowsMobileDeploymentType.md),  [Add-CMWindowsPhoneDeploymentType](Add-CMWindowsPhoneDeploymentType.md),  [Add-CMWindowsPhoneStoreDeploymentType](Add-CMWindowsPhoneStoreDeploymentType.md), or  [Add-CMWindowsStoreDeploymentType](Add-CMWindowsStoreDeploymentType.md).
 
 The **Add-CMDeploymentType** cmdlet adds a deployment type for an application.
 A deployment type is contained within an application and contains the information that Microsoft System Center Configuration Manager requires to install software.
@@ -1144,8 +1144,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMDeploymentType](./Get-CMDeploymentType.md)
+[Get-CMDeploymentType](Get-CMDeploymentType.md)
 
-[Remove-CMDeploymentType](./Remove-CMDeploymentType.md)
+[Remove-CMDeploymentType](Remove-CMDeploymentType.md)
 
-[Set-CMDeploymentType](./Set-CMDeploymentType.md)
+[Set-CMDeploymentType](Set-CMDeploymentType.md)

@@ -158,10 +158,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Import-CMCertificate](./Import-CMCertificate.md)
+[Import-CMCertificate](Import-CMCertificate.md)
 
-[Unblock-CMCertificate](./Unblock-CMCertificate.md)
+[Unblock-CMCertificate](Unblock-CMCertificate.md)
 
-[Update-CMCertificate](./Update-CMCertificate.md)
+[Update-CMCertificate](Update-CMCertificate.md)
 
 

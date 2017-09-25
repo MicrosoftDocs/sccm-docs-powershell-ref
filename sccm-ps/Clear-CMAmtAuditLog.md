@@ -56,9 +56,9 @@ Depending on your Intel AMT version, when the audit log becomes 85 percent full,
 This cmdlet does not stop audit logging.
 You can use the Disable-CMAmtAuditLog cmdlet to stop logging.
 
-You can specify computers by using the Microsoft System Center Configuration Manager device name or device ID, or you can use the [Get-CMDevice](./Get-CMDevice.md) cmdlet to get a device object.
+You can specify computers by using the Microsoft System Center Configuration Manager device name or device ID, or you can use the [Get-CMDevice](Get-CMDevice.md) cmdlet to get a device object.
 You can also clear audit logs for all the devices in a System Center Configuration Manager collection.
-Specify a collection by using the collection name or collection ID, or you can use the [Get-CMDeviceCollection](./Get-CMDeviceCollection.md) cmdlet to get a device collection object.
+Specify a collection by using the collection name or collection ID, or you can use the [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlet to get a device collection object.
 
 ## EXAMPLES
 
@@ -258,12 +258,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CMAmtAuditLog](./Disable-CMAmtAuditLog.md)
+[Disable-CMAmtAuditLog](Disable-CMAmtAuditLog.md)
 
-[Enable-CMAmtAuditLog](./Enable-CMAmtAuditLog.md)
+[Enable-CMAmtAuditLog](Enable-CMAmtAuditLog.md)
 
-[Get-CMDevice](./Get-CMDevice.md)
+[Get-CMDevice](Get-CMDevice.md)
 
-[Get-CMDeviceCollection](./Get-CMDeviceCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 
 

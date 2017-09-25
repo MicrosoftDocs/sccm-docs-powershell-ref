@@ -176,16 +176,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Approve-CMUserDeviceAffinityRequest](./Approve-CMUserDeviceAffinityRequest.md)
+[Approve-CMUserDeviceAffinityRequest](Approve-CMUserDeviceAffinityRequest.md)
 
-[Deny-CMUserDeviceAffinityRequest](./Deny-CMUserDeviceAffinityRequest.md)
+[Deny-CMUserDeviceAffinityRequest](Deny-CMUserDeviceAffinityRequest.md)
 
-[Get-CMUserDeviceAffinity](./Get-CMUserDeviceAffinity.md)
+[Get-CMUserDeviceAffinity](Get-CMUserDeviceAffinity.md)
 
-[Get-CMUserDeviceAffinityRequest](./Get-CMUserDeviceAffinityRequest.md)
+[Get-CMUserDeviceAffinityRequest](Get-CMUserDeviceAffinityRequest.md)
 
-[Import-CMUserDeviceAffinity](./Import-CMUserDeviceAffinity.md)
+[Import-CMUserDeviceAffinity](Import-CMUserDeviceAffinity.md)
 
-[Remove-CMDeviceAffinityFromUser](./Remove-CMDeviceAffinityFromUser.md)
+[Remove-CMDeviceAffinityFromUser](Remove-CMDeviceAffinityFromUser.md)
 
 

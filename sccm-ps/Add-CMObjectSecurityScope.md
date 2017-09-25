@@ -188,14 +188,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMApplication](./Get-CMApplication.md)
+[Get-CMApplication](Get-CMApplication.md)
 
-[Get-CMObjectSecurityScope](./Get-CMObjectSecurityScope.md)
+[Get-CMObjectSecurityScope](Get-CMObjectSecurityScope.md)
 
-[New-CMSecurityScope](./New-CMSecurityScope.md)
+[New-CMSecurityScope](New-CMSecurityScope.md)
 
-[Remove-CMObjectSecurityScope](./Remove-CMObjectSecurityScope.md)
+[Remove-CMObjectSecurityScope](Remove-CMObjectSecurityScope.md)
 
-[Set-CMObjectSecurityScope](./Set-CMObjectSecurityScope.md)
+[Set-CMObjectSecurityScope](Set-CMObjectSecurityScope.md)
 
 

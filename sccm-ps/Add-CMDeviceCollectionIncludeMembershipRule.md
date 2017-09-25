@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -IncludeCollection
 Specifies a device collection object to include in the membership rule.
-To obtain a collection object, use the [Get-CMCollection](./Get-CMCollection.md) cmdlet.
+To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -241,10 +241,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433)
 
-[Get-CMCollection](./Get-CMCollection.md)
+[Get-CMCollection](Get-CMCollection.md)
 
-[Get-CMDeviceCollectionIncludeMembershipRule](./Get-CMDeviceCollectionIncludeMembershipRule.md)
+[Get-CMDeviceCollectionIncludeMembershipRule](Get-CMDeviceCollectionIncludeMembershipRule.md)
 
-[Remove-CMDeviceCollectionIncludeMembershipRule](./Remove-CMDeviceCollectionIncludeMembershipRule.md)
+[Remove-CMDeviceCollectionIncludeMembershipRule](Remove-CMDeviceCollectionIncludeMembershipRule.md)
 
 

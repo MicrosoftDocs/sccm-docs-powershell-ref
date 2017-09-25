@@ -435,8 +435,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMApplicationCatalogWebsitePoint](./Get-CMApplicationCatalogWebsitePoint.md)
+[Get-CMApplicationCatalogWebsitePoint](Get-CMApplicationCatalogWebsitePoint.md)
 
-[Remove-CMApplicationCatalogWebSitePoint](./Remove-CMApplicationCatalogWebSitePoint.md)
+[Remove-CMApplicationCatalogWebSitePoint](Remove-CMApplicationCatalogWebSitePoint.md)
 
-[Set-CMApplicationCatalogWebsitePoint](./Set-CMApplicationCatalogWebsitePoint.md)
+[Set-CMApplicationCatalogWebsitePoint](Set-CMApplicationCatalogWebsitePoint.md)

@@ -134,8 +134,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CMMigrationExclusionList](./Set-CMMigrationExclusionList.md)
+[Set-CMMigrationExclusionList](Set-CMMigrationExclusionList.md)
 
-[Set-CMMigrationSource](./Set-CMMigrationSource.md)
+[Set-CMMigrationSource](Set-CMMigrationSource.md)
 
 

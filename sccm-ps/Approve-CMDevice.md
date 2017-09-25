@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a device object.
-To obtain a device object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
+To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -170,12 +170,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Block-CMDevice](./Block-CMDevice.md)
+[Block-CMDevice](Block-CMDevice.md)
 
-[Get-CMDevice](./Get-CMDevice.md)
+[Get-CMDevice](Get-CMDevice.md)
 
-[Remove-CMDevice](./Remove-CMDevice.md)
+[Remove-CMDevice](Remove-CMDevice.md)
 
-[Unblock-CMDevice](./Unblock-CMDevice.md)
+[Unblock-CMDevice](Unblock-CMDevice.md)
 
 

@@ -411,12 +411,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMIntuneSubscription](./Get-CMIntuneSubscription.md)
+[Get-CMIntuneSubscription](Get-CMIntuneSubscription.md)
 
-[Get-CMUserCollection](./Get-CMUserCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
 
-[Remove-CMIntuneSubscription](./Remove-CMIntuneSubscription.md)
+[Remove-CMIntuneSubscription](Remove-CMIntuneSubscription.md)
 
-[Set-CMIntuneSubscription](./Set-CMIntuneSubscription.md)
+[Set-CMIntuneSubscription](Set-CMIntuneSubscription.md)
 
 

@@ -149,8 +149,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMSystemHealthValidatorPoint](./Get-CMSystemHealthValidatorPoint.md)
+[Get-CMSystemHealthValidatorPoint](Get-CMSystemHealthValidatorPoint.md)
 
-[Remove-CMSystemHealthValidatorPoint](./Remove-CMSystemHealthValidatorPoint.md)
+[Remove-CMSystemHealthValidatorPoint](Remove-CMSystemHealthValidatorPoint.md)
 
 

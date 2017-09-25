@@ -217,8 +217,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433)
 
-[Get-CMDeviceCollectionQueryMembershipRule](./Get-CMDeviceCollectionQueryMembershipRule.md)
+[Get-CMDeviceCollectionQueryMembershipRule](Get-CMDeviceCollectionQueryMembershipRule.md)
 
-[Remove-CMDeviceCollectionQueryMembershipRule](./Remove-CMDeviceCollectionQueryMembershipRule.md)
+[Remove-CMDeviceCollectionQueryMembershipRule](Remove-CMDeviceCollectionQueryMembershipRule.md)
 
-[Get-CMDeviceCollection](./Get-CMDeviceCollection.md)
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)

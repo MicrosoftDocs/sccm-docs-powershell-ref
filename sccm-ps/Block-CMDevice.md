@@ -35,7 +35,7 @@ The **Block-CMDevice** cmdlet blocks one or more client devices.
 You must block a device from the client's assigned site.
 You cannot block the device from sites higher in the hierarchy.
 Blocked devices are ignored by the Microsoft System Center Configuration Manager hierarchy.
-To unblock a device, use the [Unblock-CMDevice](./Unblock-CMDevice.md) cmdlet.
+To unblock a device, use the [Unblock-CMDevice](Unblock-CMDevice.md) cmdlet.
 
 ## EXAMPLES
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a device object.
-To obtain a device object, use the [Get-CMDevice](./Get-CMDevice.md) cmdlet.
+To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -173,10 +173,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Approve-CMDevice](./Approve-CMDevice.md)
+[Approve-CMDevice](Approve-CMDevice.md)
 
-[Get-CMDevice](./Get-CMDevice.md)
+[Get-CMDevice](Get-CMDevice.md)
 
-[Remove-CMDevice](./Remove-CMDevice.md)
+[Remove-CMDevice](Remove-CMDevice.md)
 
-[Unblock-CMDevice](./Unblock-CMDevice.md)
+[Unblock-CMDevice](Unblock-CMDevice.md)

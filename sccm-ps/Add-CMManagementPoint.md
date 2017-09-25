@@ -339,8 +339,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMManagementPoint](./Get-CMManagementPoint.md)
+[Get-CMManagementPoint](Get-CMManagementPoint.md)
 
-[Remove-CMManagementPoint](./Remove-CMManagementPoint.md)
+[Remove-CMManagementPoint](Remove-CMManagementPoint.md)
 
-[Set-CMManagementPoint](./Set-CMManagementPoint.md)
+[Set-CMManagementPoint](Set-CMManagementPoint.md)

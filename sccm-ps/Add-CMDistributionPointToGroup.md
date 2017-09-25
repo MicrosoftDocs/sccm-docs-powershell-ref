@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -DistributionPoint
 Specifies a distribution point object.
-To obtain a **CMDistributionPoint** object, use the [Get-CMDistributionPoint](./Get-CMDistributionPoint.md) cmdlet.
+To obtain a **CMDistributionPoint** object, use the [Get-CMDistributionPoint](Get-CMDistributionPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -DistributionPointGroup
 Specifies a distribution point group object.
-To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md) cmdlet.
+To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -248,10 +248,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CMDistributionPointFromGroup](./Remove-CMDistributionPointFromGroup.md)
+[Remove-CMDistributionPointFromGroup](Remove-CMDistributionPointFromGroup.md)
 
-[Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md)
+[Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md)
 
-[Get-CMDistributionPoint](./Get-CMDistributionPoint.md)
+[Get-CMDistributionPoint](Get-CMDistributionPoint.md)
 
 

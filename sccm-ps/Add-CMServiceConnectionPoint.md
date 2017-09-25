@@ -198,10 +198,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMServiceConnectionPoint](./Get-CMServiceConnectionPoint.md)
+[Get-CMServiceConnectionPoint](Get-CMServiceConnectionPoint.md)
 
-[Remove-CMServiceConnectionPoint](./Remove-CMServiceConnectionPoint.md)
+[Remove-CMServiceConnectionPoint](Remove-CMServiceConnectionPoint.md)
 
-[Set-CMServiceConnectionPoint](./Set-CMServiceConnectionPoint.md)
+[Set-CMServiceConnectionPoint](Set-CMServiceConnectionPoint.md)
 
 

@@ -53,7 +53,7 @@ The command specifies the query as a string.
 
 ### -Collection
 Specifies a Configuration Manager user collection object.
-To obtain a user collection object, use the [Get-CMUserCollection](./Get-CMUserCollection.md) cmdlet.
+To obtain a user collection object, use the [Get-CMUserCollection](Get-CMUserCollection.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -215,10 +215,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMUserCollection](./Get-CMUserCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
 
-[Get-CMUserCollectionQueryMembershipRule](./Get-CMUserCollectionQueryMembershipRule.md)
+[Get-CMUserCollectionQueryMembershipRule](Get-CMUserCollectionQueryMembershipRule.md)
 
-[Remove-CMUserCollectionQueryMembershipRule](./Remove-CMUserCollectionQueryMembershipRule.md)
+[Remove-CMUserCollectionQueryMembershipRule](Remove-CMUserCollectionQueryMembershipRule.md)
 
 

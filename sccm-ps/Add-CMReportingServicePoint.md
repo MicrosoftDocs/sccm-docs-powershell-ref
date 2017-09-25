@@ -236,10 +236,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMReportingServicePoint](./Get-CMReportingServicePoint.md)
+[Get-CMReportingServicePoint](Get-CMReportingServicePoint.md)
 
-[Remove-CMReportingServicePoint](./Remove-CMReportingServicePoint.md)
+[Remove-CMReportingServicePoint](Remove-CMReportingServicePoint.md)
 
-[Set-CMReportingServicePoint](./Set-CMReportingServicePoint.md)
+[Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
 
 

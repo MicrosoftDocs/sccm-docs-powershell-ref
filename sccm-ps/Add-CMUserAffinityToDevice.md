@@ -176,6 +176,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CMUserAffinityFromDevice](./Remove-CMUserAffinityFromDevice.md)
+[Remove-CMUserAffinityFromDevice](Remove-CMUserAffinityFromDevice.md)
 
 

@@ -405,7 +405,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an application object.
-To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
+To obtain an application object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -753,10 +753,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMApplication](./Get-CMApplication.md)
+[Get-CMApplication](Get-CMApplication.md)
 
-[New-CMApplication](./New-CMApplication.md)
+[New-CMApplication](New-CMApplication.md)
 
-[Set-CMScriptDeploymentType](./Set-CMScriptDeploymentType.md)
+[Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
 
 

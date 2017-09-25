@@ -226,12 +226,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-CMApplicationCatalogWebsitePoint](./Add-CMApplicationCatalogWebsitePoint.md)
+[Add-CMApplicationCatalogWebsitePoint](Add-CMApplicationCatalogWebsitePoint.md)
 
-[Get-CMApplicationCatalogWebServicePoint](./Get-CMApplicationCatalogWebServicePoint.md)
+[Get-CMApplicationCatalogWebServicePoint](Get-CMApplicationCatalogWebServicePoint.md)
 
-[Get-CMApplicationCatalogWebsitePoint](./Get-CMApplicationCatalogWebsitePoint.md)
+[Get-CMApplicationCatalogWebsitePoint](Get-CMApplicationCatalogWebsitePoint.md)
 
-[Remove-CMApplicationCatalogWebServicePoint](./Remove-CMApplicationCatalogWebServicePoint.md)
+[Remove-CMApplicationCatalogWebServicePoint](Remove-CMApplicationCatalogWebServicePoint.md)
 
 

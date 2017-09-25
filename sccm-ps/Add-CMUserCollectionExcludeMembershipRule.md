@@ -224,8 +224,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMUserCollection](./Get-CMUserCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
 
-[Get-CMUserCollectionExcludeMembershipRule](./Get-CMUserCollectionExcludeMembershipRule.md)
+[Get-CMUserCollectionExcludeMembershipRule](Get-CMUserCollectionExcludeMembershipRule.md)
 
-[Remove-CMUserCollectionExcludeMembershipRule](./Remove-CMUserCollectionExcludeMembershipRule.md)
+[Remove-CMUserCollectionExcludeMembershipRule](Remove-CMUserCollectionExcludeMembershipRule.md)

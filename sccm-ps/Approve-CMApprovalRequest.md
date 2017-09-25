@@ -39,7 +39,7 @@ Approve-CMApprovalRequest [-Comment <String>] -RequestGuid <String> [-DisableWil
 ## DESCRIPTION
 The **Approve-CMApprovalRequest** cmdlet approves a request from a user to install an application.
 You can specify an approval request by application name, application ID, or by user.
-You can also use the [Get-CMApprovalRequest](./Get-CMApprovalRequest.md) cmdlet to view approval requests.
+You can also use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to view approval requests.
 
 ## EXAMPLES
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an approval request object.
-To obtain an approval request object, use the [Get-CMApprovalRequest](./Get-CMApprovalRequest.md) cmdlet.
+To obtain an approval request object, use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -235,8 +235,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Deny-CMApprovalRequest](./Deny-CMApprovalRequest.md)
+[Deny-CMApprovalRequest](Deny-CMApprovalRequest.md)
 
-[Get-CMApprovalRequest](./Get-CMApprovalRequest.md)
+[Get-CMApprovalRequest](Get-CMApprovalRequest.md)
 
 

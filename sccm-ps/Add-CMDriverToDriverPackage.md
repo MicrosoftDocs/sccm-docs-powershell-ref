@@ -246,10 +246,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CMDriverFromDriverPackage](./Remove-CMDriverFromDriverPackage.md)
+[Remove-CMDriverFromDriverPackage](Remove-CMDriverFromDriverPackage.md)
 
-[Get-CMDriver](./Get-CMDriver.md)
+[Get-CMDriver](Get-CMDriver.md)
 
-[Get-CMDriverPackage](./Get-CMDriverPackage.md)
+[Get-CMDriverPackage](Get-CMDriverPackage.md)
 
 

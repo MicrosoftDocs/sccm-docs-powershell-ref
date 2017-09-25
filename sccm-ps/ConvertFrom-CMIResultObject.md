@@ -97,4 +97,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[ConvertTo-CMIResultObject](./ConvertTo-CMIResultObject.md)
+[ConvertTo-CMIResultObject](ConvertTo-CMIResultObject.md)

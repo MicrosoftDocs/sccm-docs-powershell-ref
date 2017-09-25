@@ -251,10 +251,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266225)
 
-[Get-CMBoundary](./Get-CMBoundary.md)
+[Get-CMBoundary](Get-CMBoundary.md)
 
-[Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md)
+[Get-CMBoundaryGroup](Get-CMBoundaryGroup.md)
 
-[Remove-CMBoundaryFromGroup](./Remove-CMBoundaryFromGroup.md)
+[Remove-CMBoundaryFromGroup](Remove-CMBoundaryFromGroup.md)
 
 

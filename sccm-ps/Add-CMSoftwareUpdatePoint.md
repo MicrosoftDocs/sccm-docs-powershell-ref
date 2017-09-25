@@ -302,12 +302,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMSoftwareUpdatePoint](./Get-CMSoftwareUpdatePoint.md)
+[Get-CMSoftwareUpdatePoint](Get-CMSoftwareUpdatePoint.md)
 
-[Remove-CMSoftwareUpdatePoint](./Remove-CMSoftwareUpdatePoint.md)
+[Remove-CMSoftwareUpdatePoint](Remove-CMSoftwareUpdatePoint.md)
 
-[Set-CMSoftwareUpdatePoint](./Set-CMSoftwareUpdatePoint.md)
+[Set-CMSoftwareUpdatePoint](Set-CMSoftwareUpdatePoint.md)
 
-[Get-CMSoftwareUpdatePointComponent](./Get-CMSoftwareUpdatePointComponent.md)
+[Get-CMSoftwareUpdatePointComponent](Get-CMSoftwareUpdatePointComponent.md)
 
 

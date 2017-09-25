@@ -281,10 +281,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMOutOfBandServicePoint](./Get-CMOutOfBandServicePoint.md)
+[Get-CMOutOfBandServicePoint](Get-CMOutOfBandServicePoint.md)
 
-[Remove-CMOutOfBandServicePoint](./Remove-CMOutOfBandServicePoint.md)
+[Remove-CMOutOfBandServicePoint](Remove-CMOutOfBandServicePoint.md)
 
-[Set-CMOutOfBandServicePoint](./Set-CMOutOfBandServicePoint.md)
+[Set-CMOutOfBandServicePoint](Set-CMOutOfBandServicePoint.md)
 
 

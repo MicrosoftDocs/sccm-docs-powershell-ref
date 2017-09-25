@@ -70,7 +70,7 @@ Accept wildcard characters: False
 
 ### -BoundaryGroupName
 Specifies an array of names of boundary groups.
-You can get a boundary group name by using the [Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md) cmdlet.
+You can get a boundary group name by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
 
 ```yaml
 Type: String[]
@@ -278,12 +278,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMStateMigrationPoint](./Get-CMStateMigrationPoint.md)
+[Get-CMStateMigrationPoint](Get-CMStateMigrationPoint.md)
 
-[Remove-CMStateMigrationPoint](./Remove-CMStateMigrationPoint.md)
+[Remove-CMStateMigrationPoint](Remove-CMStateMigrationPoint.md)
 
-[Set-CMStateMigrationPoint](./Set-CMStateMigrationPoint.md)
+[Set-CMStateMigrationPoint](Set-CMStateMigrationPoint.md)
 
-[Get-CMBoundaryGroup](./Get-CMBoundaryGroup.md)
+[Get-CMBoundaryGroup](Get-CMBoundaryGroup.md)
 
 

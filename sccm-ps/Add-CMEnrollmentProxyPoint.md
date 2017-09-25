@@ -209,10 +209,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-CMEnrollmentPoint](./Add-CMEnrollmentPoint.md)
+[Add-CMEnrollmentPoint](Add-CMEnrollmentPoint.md)
 
-[Get-CMEnrollmentProxyPoint](./Get-CMEnrollmentProxyPoint.md)
+[Get-CMEnrollmentProxyPoint](Get-CMEnrollmentProxyPoint.md)
 
-[Remove-CMEnrollmentProxyPoint](./Remove-CMEnrollmentProxyPoint.md)
+[Remove-CMEnrollmentProxyPoint](Remove-CMEnrollmentProxyPoint.md)
 
 

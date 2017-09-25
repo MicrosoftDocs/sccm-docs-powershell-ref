@@ -241,12 +241,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMCertificateRegistrationPoint](./Get-CMCertificateRegistrationPoint.md)
+[Get-CMCertificateRegistrationPoint](Get-CMCertificateRegistrationPoint.md)
 
-[Get-CMSiteSystemServer](./Get-CMSiteSystemServer.md)
+[Get-CMSiteSystemServer](Get-CMSiteSystemServer.md)
 
-[Get-CMUser](./Get-CMUser.md)
+[Get-CMUser](Get-CMUser.md)
 
-[Remove-CMCertificateRegistrationPoint](./Remove-CMCertificateRegistrationPoint.md)
+[Remove-CMCertificateRegistrationPoint](Remove-CMCertificateRegistrationPoint.md)
 
-[Set-CMCertificateRegistrationPoint](./Set-CMCertificateRegistrationPoint.md)
+[Set-CMCertificateRegistrationPoint](Set-CMCertificateRegistrationPoint.md)

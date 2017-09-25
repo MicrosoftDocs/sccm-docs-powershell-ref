@@ -141,8 +141,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CMClientOperation](./Remove-CMClientOperation.md)
+[Remove-CMClientOperation](Remove-CMClientOperation.md)
 
-[Invoke-CMClientOperationSummarization](./Invoke-CMClientOperationSummarization.md)
+[Invoke-CMClientOperationSummarization](Invoke-CMClientOperationSummarization.md)
 
 

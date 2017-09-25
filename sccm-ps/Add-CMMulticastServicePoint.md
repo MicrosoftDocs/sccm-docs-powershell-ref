@@ -319,12 +319,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMDistributionPoint](./Get-CMDistributionPoint.md)
+[Get-CMDistributionPoint](Get-CMDistributionPoint.md)
 
-[Get-CMMulticastServicePoint](./Get-CMMulticastServicePoint.md)
+[Get-CMMulticastServicePoint](Get-CMMulticastServicePoint.md)
 
-[Remove-CMMulticastServicePoint](./Remove-CMMulticastServicePoint.md)
+[Remove-CMMulticastServicePoint](Remove-CMMulticastServicePoint.md)
 
-[Set-CMMulticastServicePoint](./Set-CMMulticastServicePoint.md)
+[Set-CMMulticastServicePoint](Set-CMMulticastServicePoint.md)
 
 

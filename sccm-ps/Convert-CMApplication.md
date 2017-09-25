@@ -73,8 +73,8 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an application object or application SDK object.
-To obtain an application object, use the [Get-CMApplication](./Get-CMApplication.md) cmdlet.
-To obtain an application SDK object, use the [ConvertTo-CMApplication](./ConvertTo-CMApplication.md) cmdlet.
+To obtain an application object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
+To obtain an application SDK object, use the [ConvertTo-CMApplication](ConvertTo-CMApplication.md) cmdlet.
 
 ```yaml
 Type: PSObject
@@ -99,24 +99,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[ConvertFrom-CMApplication](./ConvertFrom-CMApplication.md)
+[ConvertFrom-CMApplication](ConvertFrom-CMApplication.md)
 
-[ConvertTo-CMApplication](./ConvertTo-CMApplication.md)
+[ConvertTo-CMApplication](ConvertTo-CMApplication.md)
 
-[Get-CMApplication](./Get-CMApplication.md)
+[Get-CMApplication](Get-CMApplication.md)
 
-[Export-CMApplication](./Export-CMApplication.md)
+[Export-CMApplication](Export-CMApplication.md)
 
-[Import-CMApplication](./Import-CMApplication.md)
+[Import-CMApplication](Import-CMApplication.md)
 
-[New-CMApplication](./New-CMApplication.md)
+[New-CMApplication](New-CMApplication.md)
 
-[Remove-CMApplication](./Remove-CMApplication.md)
+[Remove-CMApplication](Remove-CMApplication.md)
 
-[Resume-CMApplication](./Resume-CMApplication.md)
+[Resume-CMApplication](Resume-CMApplication.md)
 
-[Set-CMApplication](./Set-CMApplication.md)
+[Set-CMApplication](Set-CMApplication.md)
 
-[Suspend-CMApplication](./Suspend-CMApplication.md)
+[Suspend-CMApplication](Suspend-CMApplication.md)
 
 

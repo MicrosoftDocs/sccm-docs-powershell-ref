@@ -230,8 +230,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMUserCollection](./Get-CMUserCollection.md)
+[Get-CMUserCollection](Get-CMUserCollection.md)
 
-[Get-CMUserCollectionDirectMembershipRule](./Get-CMUserCollectionDirectMembershipRule.md)
+[Get-CMUserCollectionDirectMembershipRule](Get-CMUserCollectionDirectMembershipRule.md)
 
-[Remove-CMUserCollectionDirectMembershipRule](./Remove-CMUserCollectionDirectMembershipRule.md)
+[Remove-CMUserCollectionDirectMembershipRule](Remove-CMUserCollectionDirectMembershipRule.md)

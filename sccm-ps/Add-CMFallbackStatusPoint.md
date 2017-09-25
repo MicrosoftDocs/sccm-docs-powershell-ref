@@ -207,10 +207,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMFallbackStatusPoint](./Get-CMFallbackStatusPoint.md)
+[Get-CMFallbackStatusPoint](Get-CMFallbackStatusPoint.md)
 
-[Remove-CMFallbackStatusPoint](./Remove-CMFallbackStatusPoint.md)
+[Remove-CMFallbackStatusPoint](Remove-CMFallbackStatusPoint.md)
 
-[Set-CMFallbackStatusPoint](./Set-CMFallbackStatusPoint.md)
+[Set-CMFallbackStatusPoint](Set-CMFallbackStatusPoint.md)
 
 

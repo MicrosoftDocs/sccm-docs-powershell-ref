@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 ### -ContentValidationSchedule
 Specifies a schedule token object that the distribution point uses to validate content on a scheduled basis.
-To create a schedule token object, use the [New-CMSchedule](./New-CMSchedule.md) cmdlet.
+To create a schedule token object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -517,7 +517,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a site system server object.
-To obtain a site system server object, use the [Get-CMSiteSystemServer](./Get-CMSiteSystemServer.md) cmdlet.
+To obtain a site system server object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -892,18 +892,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMDistributionPoint](./Get-CMDistributionPoint.md)
+[Get-CMDistributionPoint](Get-CMDistributionPoint.md)
 
-[Get-CMSiteSystemServer](./Get-CMSiteSystemServer.md)
+[Get-CMSiteSystemServer](Get-CMSiteSystemServer.md)
 
-[New-CMSchedule](./New-CMSchedule.md)
+[New-CMSchedule](New-CMSchedule.md)
 
-[Set-CMDistributionPoint](./Set-CMDistributionPoint.md)
+[Set-CMDistributionPoint](Set-CMDistributionPoint.md)
 
-[Update-CMDistributionPoint](./Update-CMDistributionPoint.md)
+[Update-CMDistributionPoint](Update-CMDistributionPoint.md)
 
-[Remove-CMDistributionPoint](./Remove-CMDistributionPoint.md)
+[Remove-CMDistributionPoint](Remove-CMDistributionPoint.md)
 
-[Get-CMDistributionPointGroup](./Get-CMDistributionPointGroup.md)
+[Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md)
 
 

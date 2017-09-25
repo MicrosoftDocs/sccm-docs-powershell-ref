@@ -109,16 +109,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMClientStatusUpdateSchedule](./Get-CMClientStatusUpdateSchedule.md)
+[Get-CMClientStatusUpdateSchedule](Get-CMClientStatusUpdateSchedule.md)
 
-[Get-CMBaselineSummarizationSchedule](./Get-CMBaselineSummarizationSchedule.md)
+[Get-CMBaselineSummarizationSchedule](Get-CMBaselineSummarizationSchedule.md)
 
-[Get-CMOperatingSystemImageUpdateSchedule](./Get-CMOperatingSystemImageUpdateSchedule.md)
+[Get-CMOperatingSystemImageUpdateSchedule](Get-CMOperatingSystemImageUpdateSchedule.md)
 
-[Get-CMEndpointProtectionSummarizationSchedule](./Get-CMEndpointProtectionSummarizationSchedule.md)
+[Get-CMEndpointProtectionSummarizationSchedule](Get-CMEndpointProtectionSummarizationSchedule.md)
 
-[Get-CMSoftwareUpdateSummarizationSchedule](./Get-CMSoftwareUpdateSummarizationSchedule.md)
+[Get-CMSoftwareUpdateSummarizationSchedule](Get-CMSoftwareUpdateSummarizationSchedule.md)
 
-[New-CMSchedule](./New-CMSchedule.md)
+[New-CMSchedule](New-CMSchedule.md)
 
 

@@ -202,8 +202,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427)
 
-[Get-CMEndpointProtectionPoint](./Get-CMEndpointProtectionPoint.md)
+[Get-CMEndpointProtectionPoint](Get-CMEndpointProtectionPoint.md)
 
-[Remove-CMEndpointProtectionPoint](./Remove-CMEndpointProtectionPoint.md)
+[Remove-CMEndpointProtectionPoint](Remove-CMEndpointProtectionPoint.md)
 
-[Set-CMEndpointProtectionPoint](./Set-CMEndpointProtectionPoint.md)
+[Set-CMEndpointProtectionPoint](Set-CMEndpointProtectionPoint.md)
