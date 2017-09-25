@@ -113,12 +113,12 @@ This command removes the custom security scope in the previous example from a Sy
 
 ### -AddActiveDirectoryForest
 Specifies an array of Active Directory Forest objects to publish in Active Directory Domain Services.
-To obtain an Active Directory Forest object, use the [Get-ADForest](Get-ADForest.md) cmdlet.
+To obtain an Active Directory Forest object, use the [Get-ADForest](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adforest?view=win10-ps) cmdlet.
 
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ Specifies an array of paths to certificates.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ClientRequestServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: WakeOnLanUdp, ClientNotificationTcp, ClientRequestHttpTcp, ClientRequestsHttpsTcp, ClientRequestHttpTcpDefault, ClientRequestsHttpsTcpDefault
 
 Required: False
@@ -172,7 +172,7 @@ Specifies the name of a custom store that contains client certificates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Specifies the criteria type to match in a client certificate, such as a string o
 ```yaml
 Type: ClientCertificateSelectionCriteriaType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ClientAuthentication, CertificateSubjectContainsString, CertificateSubjectOrSanIncludesAttributes, CertificateSubjectOrSanIncludesAtrributes
 
 Required: False
@@ -203,7 +203,7 @@ Specifies a value for the *ClientCertificateSelectionCriteriaType* parameter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ Indicates whether to check the Certificate Revocation List (CRL) for a certifica
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ The acceptable values for this parameter are: HttpsOnly and HttpsOrHttp.
 ```yaml
 Type: ClientComputerCommunicationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: HttpsOnly, HttpsOrHttp
 
 Required: False
@@ -250,7 +250,7 @@ Specifies a comment for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -293,7 +293,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +321,7 @@ Indicates whether to send Wake On LAN packets for scheduled activities such as d
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -336,7 +336,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -378,7 +378,7 @@ To obtain a Configuration Manager site object, use the [Get-CMSite](Get-CMSite.m
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -393,7 +393,7 @@ Specifies the maximum number of simultaneous communications to all sites.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -408,7 +408,7 @@ Specifies the maximum number of simultaneous communications to any single site.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -423,7 +423,7 @@ Specifies the maximum number of wake up packets transmitted by this site server 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -454,7 +454,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -469,7 +469,7 @@ Specifies a port number, such as 80 or 8080, for client requests.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -484,7 +484,7 @@ Specifies an array of Active Directory Forest objects to remove from Active Dire
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -499,7 +499,7 @@ Specifies an array of certificates to remove.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -522,7 +522,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ClientRequestServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: WakeOnLanUdp, ClientNotificationTcp, ClientRequestHttpTcp, ClientRequestsHttpsTcp, ClientRequestHttpTcpDefault, ClientRequestsHttpsTcpDefault
 
 Required: False
@@ -538,7 +538,7 @@ Indicates whether to use the SHA-256 algorithm to sign communications.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -553,7 +553,7 @@ Indicates whether to require Configuration Manager sites to sign communications 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -568,7 +568,7 @@ Specifies the number of times to retry a failed communication.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -583,7 +583,7 @@ Specifies the number of times a wake up packet is sent to a target computer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -637,7 +637,7 @@ Specifies a site code for a Configuration Manager site to which you assign secur
 ```yaml
 Type: String
 Parameter Sets: SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -668,7 +668,7 @@ Specifies the action to take for multiple matches of certificate criteria.
 ```yaml
 Type: TakeActionForMultipleCertificateMatchCriteria
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: FailSelectionAndSendErrorMessage, SelectCertificateWithLongestValidityPeriod
 
 Required: False
@@ -684,7 +684,7 @@ Specifies the number of threads a site server uses when sending wake up packets.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -730,7 +730,7 @@ Use a custom web site when you do not want to use the default web site.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -745,7 +745,7 @@ Indicates whether to use encryption for communication between sites.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -760,7 +760,7 @@ Indicates whether to use a PKI certificate management solution.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -775,7 +775,7 @@ Specifies the type of transmission method to use for Wake On LAN transmissions.
 ```yaml
 Type: WakeOnLanTransmissionMethodType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unicast, SubnetDirectedBroadcasts
 
 Required: False
@@ -791,7 +791,7 @@ Specifies the type of Wake On LAN packet to use.
 ```yaml
 Type: WakeOnLanType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: UseAmtPowerOnCommandsOrWakeupPackets, UseAmtPowerOnCommandsOnly, UseWakeupPacketsOnly
 
 Required: False

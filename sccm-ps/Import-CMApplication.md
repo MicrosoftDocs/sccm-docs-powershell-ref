@@ -18,7 +18,7 @@ Import-CMApplication -FilePath <String> [-ImportActionType <ImportActionType>] [
 ```
 
 ## DESCRIPTION
-The **Import-CMApplication** cmdlet imports a package created by the [Export-CMApplication](Export-CMApplication.cm) cmdlet.
+The **Import-CMApplication** cmdlet imports a package created by the [Export-CMApplication](Export-CMApplication.md) cmdlet.
 A package contains one or more applications and related objects, such as catalogs.
 If the package contains content, the application package imports the content, or includes a reference to the content.
 
@@ -54,7 +54,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +69,7 @@ Specifies a file path for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ This option is not supported.
 ```yaml
 Type: ImportActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NotSet, Skip, DirectImport, Rename, Overwrite, ImportFail
 
 Required: False

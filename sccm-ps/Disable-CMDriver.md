@@ -76,7 +76,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,12 +117,12 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies a driver object.
-To obtain a driver object, use the [Get-CMDriver](Get-CMDriver.md) cmdlet.
+To obtain a driver object, use the [Enable-CMDriver](Enable-CMDriver.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
