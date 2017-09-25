@@ -1,0 +1,11 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: System Center Configuration Manager
+    href: /sccm/
+    homepage: /sccm/index
+    items:
+    - name: Configuration Manager PowerShell
+      tocHref: /powershell/sccm/
+      topicHref: /powershell/sccm-new/overview
