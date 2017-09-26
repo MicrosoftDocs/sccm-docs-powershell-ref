@@ -2,12 +2,13 @@
   href: /
   homepage: /
   items:
-  - name: System Center Configuration Manager
+  - name: SCCM
     href: /system-center/
     homepage: /system-center/index
-  - name: Configuration Manager PowerShell
-    tocHref: /powershell/sccm-new/
-    topicHref: /powershell/sccm-new/overview
-  - name: Configuration Manager PowerShell
-    tocHref: /powershell/module/configurationmanager
-    topicHref: /powershell/sccm-new/overview
+    items:
+    - name: Configuration Manager PowerShell
+      tocHref: /powershell/sccm-new/
+      topicHref: /powershell/sccm-new/overview
+    - name: Configuration Manager PowerShell
+      tocHref: /powershell/module/configurationmanager
+      topicHref: /powershell/sccm-new/overview
