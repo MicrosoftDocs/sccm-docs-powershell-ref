@@ -5,7 +5,6 @@
   - name: System Center Configuration Manager
     href: /system-center/
     homepage: /system-center/index
-    items:
   - name: Configuration Manager PowerShell
     tocHref: /powershell/sccm-new/
     topicHref: /powershell/sccm-new/overview
