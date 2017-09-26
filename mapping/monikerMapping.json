@@ -1,7 +1,7 @@
 {
     "sccm-ps": {
         "conceptualToc": "docs-conceptual/TOC.yml",
-        "conceptualTocUrl": "/powershell/sccm-new/mim/toc.json",
+        "conceptualTocUrl": "/powershell/sccm-new/sccm/toc.json",
         "referenceTocUrl": "/powershell/module/sccm-ps/toc.json",
         "packageRoot": "sccm-ps"
 
