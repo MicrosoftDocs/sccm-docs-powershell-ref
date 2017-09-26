@@ -1,4 +1,5 @@
 {
+  "build_entry_point": "docs",
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "docsets_to_publish": [
@@ -19,22 +20,23 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ],
       "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli" ],
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
         "customized_tasks": {
           "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"]
-          },
-         "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
+      }
     }
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
-  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -58,5 +60,6 @@
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     }
   ],
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "dest": "_site"
 }
