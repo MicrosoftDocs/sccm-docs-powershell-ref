@@ -5,11 +5,12 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799206
 Help Version: 5.0.1.0
 Locale: en-US
 ms.assetid: 0ADD6D91-97E0-4F79-ABE3-0174AA0C4750
+ms.service: powershell
 ---
 
 # ConfigurationManager Module
 ## Description
-This section contains the help topics and about topics for the Configuration Manager cmdlets.
+This section contains the help topics and about topics for the Configuration Manager Cmdlets.
 
 ## ConfigurationManager Cmdlets
 ### [Add-CMAndroidDeploymentType](Add-CMAndroidDeploymentType.md)
