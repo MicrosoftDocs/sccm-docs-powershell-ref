@@ -44,7 +44,7 @@ PS C:\> Set-CMOutOfBandManagementComponent -SiteCode "CM2" -EnableWiredNetworkAc
 
 The first command uses the [Get-CMTrustedRootCertificate](Get-CMTrustedRootCertificate.md) cmdlet to get a certificate, and stores the certificate in the $Cert variable.
 
-The second command uses the [New-CMWiredProfileObject](New-CMWiredProfileObject/,md) cmdlet to create a profile object, and stores the object in the $WiredP variable.
+The second command uses the [New-CMWiredProfileObject](New-CMWiredProfileObject/.md) cmdlet to create a profile object, and stores the object in the $WiredP variable.
 
 The third command uses the [New-CMWirelessProfileObject](New-CMWirelessProfileObject.md) cmdlet to create a wireless profile object, and stores the object in the $WirelessP variable.
 
@@ -101,7 +101,7 @@ Specifies an array of AMT user accounts to add.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +115,7 @@ Indicates whether to allow ping responses.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +129,7 @@ Specifies an organizational unit (OU) for an AMT account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -157,7 +157,7 @@ Specifies an AMT account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +171,7 @@ Specifies a secure string that contains a password.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +186,7 @@ To obtain an input object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -230,7 +230,7 @@ Specifies a certificate template.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -244,7 +244,7 @@ Specifies the name of a certification authority.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -272,7 +272,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -286,7 +286,7 @@ Indicates whether to bypass the BIOS password.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -300,7 +300,7 @@ Indicates whether to enable certificate revocation list (CRL) checking.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -315,7 +315,7 @@ Intel AMT uses IDE redirection to redirect serial and IDE communication from a m
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -329,7 +329,7 @@ Indicates whether to enable the Web interface.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -343,7 +343,7 @@ Indicates whether to enable wired network access.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +357,7 @@ Specifies an enrollment point in Configuration Manager.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +371,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -385,7 +385,7 @@ Specifies the issuing certification authority.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -414,7 +414,7 @@ The MEBx account provides authenticated access to the AMT firmware on AMT-based 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -428,7 +428,7 @@ Specifies a secure string that contains the password for the MEBx account.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +443,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -461,7 +461,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: PowerStateType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: HostIsOnS0, AlwaysOnS0S5
 Required: False
 Position: Named
@@ -476,7 +476,7 @@ Specifies an array of AMT user accounts to remove.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -490,7 +490,7 @@ Specifies a site code in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -504,7 +504,7 @@ Specifies the name of a universal security group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -533,7 +533,7 @@ Specifies a wired profile object.
 ```yaml
 Type: WiredProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None

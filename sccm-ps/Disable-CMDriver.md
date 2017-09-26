@@ -32,7 +32,7 @@ Disable-CMDriver -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandli
 
 ## DESCRIPTION
 The **Disable-CMDriver** cmdlet disables a device driver in Microsoft System Center Configuration Manager.
-To enable the driver, use the [Enable-CMDriver](EnableCMDriver.md) cmdlet.
+To enable the driver, use the [Enable-CMDriver](Enable-CMDriver.md) cmdlet.
 
 ## EXAMPLES
 
