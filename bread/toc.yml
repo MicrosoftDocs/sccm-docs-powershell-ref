@@ -10,5 +10,5 @@
       tocHref: /powershell/sccm-new/
       topicHref: /powershell/sccm-new/overview
     - name: Configuration Manager PowerShell
-      tocHref: /powershell/module/configurationmanager
+      tocHref: /powershell/module/configurationmanager/
       topicHref: /powershell/sccm-new/overview
