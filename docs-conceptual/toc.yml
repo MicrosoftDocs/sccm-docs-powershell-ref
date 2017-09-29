@@ -1,11 +1,12 @@
 - name: Overview
   href: overview.md
-- name: Release Notes
+  items:
+  - name: Release Notes
   href ''
   items:
-- name: 1610_Release Notes
-  href: 1610_Release_Notes.md
-- name: 1702_Release Notes
-  href: 1702_Release_Notes.md
-- name: 1706_Release Notes
-  href: 1706_Release_Notes.md
+  - name: 1610_Release Notes
+    href: 1610_Release_Notes.md
+  - name: 1702_Release Notes
+    href: 1702_Release_Notes.md
+  - name: 1706_Release Notes
+    href: 1706_Release_Notes.md
