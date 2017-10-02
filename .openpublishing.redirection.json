@@ -19,6 +19,11 @@
       "source_path": "sccm/configurationmanager/1706_release_notess.md",
       "redirect_url": "/powershell/sccm-new/1706_release_notes",
       "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm/configurationmanager/index.md",
+      "redirect_url": "/powershell/sccm-new/overview",
+      "redirect_document_id": "False"
     }
 
   ]
