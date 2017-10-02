@@ -1,4 +1,12 @@
-﻿# ConfigurationManager_Cmdlets
+---
+ms.date:  2017-10-02
+schema:  2.0.0
+locale:  en-us
+keywords:  powershell,cmdlet
+title:  about_Using
+---
+
+# ConfigurationManager_Cmdlets
 ## about_ConfigurationManager_Cmdlets
 
 # SHORT DESCRIPTION
