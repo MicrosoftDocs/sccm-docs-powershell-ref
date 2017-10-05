@@ -1,7 +1,7 @@
 {
   "redirections": [
     {
-      "source_path": "docs-conceptual/sccm/index.md",
+      "source_path": "docs-conceptual/index.md",
       "redirect_url": "/powershell/sccm/overview",
       "redirect_document_id": "False"
     },
