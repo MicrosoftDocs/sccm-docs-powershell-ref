@@ -5,6 +5,9 @@
         "files": [
           "**/*.md"
         ],
+        "src": "docs-conceptual",
+        "version": "sccm-ps",
+        "dest": "sccm-new",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -13,6 +16,45 @@
           "LICENSE-CODE",
           "ThirdPartyNotices"
         ]
+      },
+    {
+      "files": [
+        "toc.yml"
+      ],
+      "src": "docs-conceptual",
+      "version": "sccm-ps",
+      "dest": "sccm-new/sccm"
+    },
+    {
+      "files": [
+        "**/*.md"
+      ],
+      "src": "sccm-ps",
+      "version": "sccm-ps",
+      "dest": "module"
+    },
+    {
+      "files": [
+        "toc.yml"
+      ],
+      "src": "sccm-ps",
+      "version": "sccm-ps",
+      "dest": "module/sccm-ps"
+    },
+    {
+      "files": [
+        "**/*.md"
+      ],
+      "src": "virtual-directory",
+      "dest": "sccm-new"
+    },
+    {
+      "files": [
+        "toc.yml"
+      ],
+      "src": "bread",
+      "version": "sccm-ps",
+      "dest": "sccm-new/bread"
       }
     ],
     "resource": [
@@ -27,11 +69,21 @@
         ]
       }
     ],
+    "versions": {
+      "sccm-ps": {
+        "dest": "sccm-ps"
+      }
+    },
+
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "apiPlatform": "powershell",
+      "breadcrumb_path": "/powershell/sccm-new/bread/toc.json"
+    },
     "fileMetadata": {},
     "template": [],
     "dest": "sccm-powershell"
   }
 }
+

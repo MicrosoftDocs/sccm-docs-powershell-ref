@@ -1,4 +1,7 @@
 {
+  "build_entry_point": "docs",
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
       "docset_name": "sccm-powershell",
@@ -11,17 +14,29 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "AzurePsModulePage": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "version": 0,
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ],
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+        "customized_tasks": {
+          "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
+      }
     }
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
-  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -30,6 +45,21 @@
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false
+  "dependent_packages": [
+    {
+      "path_to_root": "_dependentPackages/azurecli.plugins",
+      "id": "opbuild.templates.azurecli",
+      "version": "latest",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    },
+    {
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
+  ],
+  "need_generate_pdf_url_template": false,
+  "dest": "_site"
 }

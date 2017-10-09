@@ -1,0 +1,30 @@
+{
+  "redirections": [
+    {
+      "source_path": "docs-conceptual/index.md",
+      "redirect_url": "/powershell/sccm/overview",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm/configurationmanager/1610_release_notes.md",
+      "redirect_url": "/powershell/sccm/1610_release_notes",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm/configurationmanager/1702_release_notes.md",
+      "redirect_url": "/powershell/sccm/1610_release_notes",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm/configurationmanager/1706_release_notess.md",
+      "redirect_url": "/powershell/sccm/1706_release_notes",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm/configurationmanager/index.md",
+      "redirect_url": "/powershell/sccm/overview",
+      "redirect_document_id": "False"
+    }
+
+  ]
+}
