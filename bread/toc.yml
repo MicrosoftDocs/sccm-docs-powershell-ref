@@ -7,8 +7,8 @@
     homepage: /system-center/index
     items:
     - name: Configuration Manager PowerShell
-      tocHref: /powershell/sccm-new/
-      topicHref: /powershell/sccm-new/overview
+      tocHref: /powershell/sccm/
+      topicHref: /powershell/sccm/overview
     - name: Configuration Manager PowerShell
       tocHref: /powershell/module/configurationmanager/
-      topicHref: /powershell/sccm-new/overview
+      topicHref: /powershell/sccm/overview

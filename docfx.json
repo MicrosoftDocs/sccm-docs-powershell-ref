@@ -7,7 +7,7 @@
         ],
         "src": "docs-conceptual",
         "version": "sccm-ps",
-        "dest": "sccm-new",
+        "dest": "sccm",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -23,7 +23,7 @@
       ],
       "src": "docs-conceptual",
       "version": "sccm-ps",
-      "dest": "sccm-new/sccm"
+      "dest": "sccm/sccm"
     },
     {
       "files": [
@@ -46,7 +46,7 @@
         "**/*.md"
       ],
       "src": "virtual-directory",
-      "dest": "sccm-new"
+      "dest": "sccm"
     },
     {
       "files": [
@@ -54,7 +54,7 @@
       ],
       "src": "bread",
       "version": "sccm-ps",
-      "dest": "sccm-new/bread"
+      "dest": "sccm/bread"
       }
     ],
     "resource": [
@@ -79,11 +79,10 @@
     "externalReference": [],
     "globalMetadata": {
       "apiPlatform": "powershell",
-      "breadcrumb_path": "/powershell/sccm-new/bread/toc.json"
+      "breadcrumb_path": "/powershell/sccm/bread/toc.json"
     },
     "fileMetadata": {},
     "template": [],
     "dest": "sccm-powershell"
   }
 }
-
