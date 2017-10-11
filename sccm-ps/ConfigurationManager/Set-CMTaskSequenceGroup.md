@@ -216,21 +216,21 @@ Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetC
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AddCondition
-{{Fill AddCondition Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddStep
-{{Fill AddStep Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
-{{Fill ClearCondition Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearStep
-{{Fill ClearStep Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-{{Fill Condition Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
-{{Fill ConditionVariableName Description}}
+ 
 
 ```yaml
 Type: String
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
-{{Fill ConditionVariableValue Description}}
+ 
 
 ```yaml
 Type: String
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
-{{Fill FileDateTimeOperator Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-{{Fill FilePath Description}}
+ 
 
 ```yaml
 Type: String
@@ -411,7 +411,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
-{{Fill FileTimestamp Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -426,7 +426,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
-{{Fill FileVersion Description}}
+ 
 
 ```yaml
 Type: String
@@ -441,7 +441,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
-{{Fill FolderDateTimeOperator Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType
@@ -457,7 +457,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
-{{Fill FolderPath Description}}
+ 
 
 ```yaml
 Type: String
@@ -472,7 +472,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
-{{Fill FolderTimestamp Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -502,7 +502,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -517,7 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
-{{Fill IsAnyVersion Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
-{{Fill IsContinueOnError Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -547,7 +547,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-{{Fill IsEnabled Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -562,7 +562,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-{{Fill MsiFilePath Description}}
+ 
 
 ```yaml
 Type: String
@@ -577,7 +577,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-{{Fill Namespace Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -592,7 +592,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
-{{Fill NewStepName Description}}
+ 
 
 ```yaml
 Type: String
@@ -607,7 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
-{{Fill OperatorType Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType
@@ -623,7 +623,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
-{{Fill Query Description}}
+ 
 
 ```yaml
 Type: String
@@ -638,7 +638,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
-{{Fill RegistryKey Description}}
+ 
 
 ```yaml
 Type: String
@@ -653,7 +653,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
-{{Fill RegistryOperator Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType
@@ -669,7 +669,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
-{{Fill RegistryValueData Description}}
+ 
 
 ```yaml
 Type: String
@@ -684,7 +684,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
-{{Fill RegistryValueName Description}}
+ 
 
 ```yaml
 Type: String
@@ -699,7 +699,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
-{{Fill RemoveConditionFile Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -714,7 +714,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
-{{Fill RemoveConditionFolder Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -729,7 +729,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
-{{Fill RemoveConditionIfStatement Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -744,7 +744,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
-{{Fill RemoveConditionOperatingSystem Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -759,7 +759,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
-{{Fill RemoveConditionQueryWmi Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -774,7 +774,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
-{{Fill RemoveConditionRegistry Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -789,7 +789,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
-{{Fill RemoveConditionSoftware Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -804,7 +804,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
-{{Fill RemoveConditionVariable Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -819,7 +819,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
-{{Fill RootKey Description}}
+ 
 
 ```yaml
 Type: RegistryRootKeyType
@@ -835,7 +835,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
-{{Fill SetConditionFile Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -850,7 +850,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
-{{Fill SetConditionFolder Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -865,7 +865,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
-{{Fill SetConditionIfStatement Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -880,7 +880,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
-{{Fill SetConditionOperatingSystem Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -895,7 +895,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
-{{Fill SetConditionQueryWmi Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -910,7 +910,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
-{{Fill SetConditionRegistry Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -925,7 +925,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
-{{Fill SetConditionSoftware Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -940,7 +940,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
-{{Fill SetConditionVariable Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -955,7 +955,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
-{{Fill StatementType Description}}
+ 
 
 ```yaml
 Type: ConditionStatementType
@@ -971,7 +971,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{Fill StepName Description}}
+ 
 
 ```yaml
 Type: String
@@ -986,7 +986,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
-{{Fill SupportedPlatform Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -1001,7 +1001,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{Fill TaskSequenceId Description}}
+ 
 
 ```yaml
 Type: String
@@ -1016,7 +1016,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{Fill TaskSequenceName Description}}
+ 
 
 ```yaml
 Type: String
@@ -1031,7 +1031,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
-{{Fill ValueType Description}}
+ 
 
 ```yaml
 Type: RegistryValueType
@@ -1047,7 +1047,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
-{{Fill VersionOperator Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType

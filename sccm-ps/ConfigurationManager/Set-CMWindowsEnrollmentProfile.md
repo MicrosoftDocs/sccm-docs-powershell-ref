@@ -28,21 +28,21 @@ Set-CMWindowsEnrollmentProfile [-Name] <String> [-Authority <ManagementAuthority
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Authority
-{{Fill Authority Description}}
+ 
 
 ```yaml
 Type: ManagementAuthority
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateProfile
-{{Fill CertificateProfile Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnrollmentProxyPoint
-{{Fill EnrollmentProxyPoint Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-{{Fill NewName Description}}
+ 
 
 ```yaml
 Type: String
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyServerUrl
-{{Fill ProxyServerUrl Description}}
+ 
 
 ```yaml
 Type: String
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{Fill SiteCode Description}}
+ 
 
 ```yaml
 Type: String
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -WifiProfile
-{{Fill WifiProfile Description}}
+ 
 
 ```yaml
 Type: IResultObject[]

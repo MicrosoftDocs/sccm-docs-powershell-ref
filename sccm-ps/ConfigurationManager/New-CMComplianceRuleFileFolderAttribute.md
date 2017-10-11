@@ -20,21 +20,21 @@ New-CMComplianceRuleFileFolderAttribute [-Archive <Boolean>] [-Compressed <Boole
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Archive
-{{Fill Archive Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Compressed
-{{Fill Compressed Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Encrypted
-{{Fill Encrypted Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Hidden
-{{Fill Hidden Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: ConfigurationItemSetting
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoncomplianceSeverity
-{{Fill NoncomplianceSeverity Description}}
+ 
 
 ```yaml
 Type: NoncomplianceSeverity
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadOnly
-{{Fill ReadOnly Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNoncompliance
-{{Fill ReportNoncompliance Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleDescription
-{{Fill RuleDescription Description}}
+ 
 
 ```yaml
 Type: String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-{{Fill RuleName Description}}
+ 
 
 ```yaml
 Type: String
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -System
-{{Fill System Description}}
+ 
 
 ```yaml
 Type: Boolean

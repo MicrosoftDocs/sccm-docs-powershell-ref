@@ -18,16 +18,16 @@ New-CMTSStepConditionFolder -FolderPath <String> [-FolderTimestamp <DateTime>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
-{{Fill FolderDateTimeOperator Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
-{{Fill FolderPath Description}}
+ 
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
-{{Fill FolderTimestamp Description}}
+ 
 
 ```yaml
 Type: DateTime

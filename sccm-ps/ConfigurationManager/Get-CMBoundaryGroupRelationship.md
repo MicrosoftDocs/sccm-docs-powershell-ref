@@ -24,21 +24,21 @@ Get-CMBoundaryGroupRelationship [-SourceGroupId <Int32>] [-DestinationGroupId <I
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -DestinationGroupId
-{{Fill DestinationGroupId Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationGroupName
-{{Fill DestinationGroupName Description}}
+ 
 
 ```yaml
 Type: String
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupId
-{{Fill SourceGroupId Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceGroupName
-{{Fill SourceGroupName Description}}
+ 
 
 ```yaml
 Type: String

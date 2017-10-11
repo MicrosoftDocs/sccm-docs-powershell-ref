@@ -66,21 +66,21 @@ Remove-CMCollectionExcludeMembershipRule -InputObject <IResultObject> -ExcludeCo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollection
-{{Fill ExcludeCollection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollectionId
-{{Fill ExcludeCollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeCollectionName
-{{Fill ExcludeCollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject

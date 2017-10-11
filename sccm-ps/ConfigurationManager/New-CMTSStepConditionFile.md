@@ -18,16 +18,16 @@ New-CMTSStepConditionFile -FilePath <String> [-FileVersion <String>] [-FileTimes
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
-{{Fill FileDateTimeOperator Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-{{Fill FilePath Description}}
+ 
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
-{{Fill FileTimestamp Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
-{{Fill FileVersion Description}}
+ 
 
 ```yaml
 Type: String
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
-{{Fill VersionOperator Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType

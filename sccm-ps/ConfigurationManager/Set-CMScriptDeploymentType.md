@@ -104,7 +104,7 @@ This command gets the script installer deployment type object named ScriptDT02 f
 ## PARAMETERS
 
 ### -AddDetectionClause
-{{Fill AddDetectionClause Description}}
+ 
 
 ```yaml
 Type: DetectionClause[]
@@ -544,7 +544,7 @@ Accept wildcard characters: False
 ```
 
 ### -RebootBehavior
-{{Fill RebootBehavior Description}}
+ 
 
 ```yaml
 Type: PostExecutionBehavior
@@ -560,7 +560,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveDetectionClause
-{{Fill RemoveDetectionClause Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -620,7 +620,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFile
-{{Fill ScriptFile Description}}
+ 
 
 ```yaml
 Type: String

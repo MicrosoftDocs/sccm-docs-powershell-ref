@@ -17,16 +17,16 @@ Invoke-CMUserDiscovery [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{Fill SiteCode Description}}
+ 
 
 ```yaml
 Type: String

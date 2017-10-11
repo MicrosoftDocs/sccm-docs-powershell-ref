@@ -73,7 +73,7 @@ The *PassThru* parameter indicates that an object will be returned from this com
 ## PARAMETERS
 
 ### -AddDetectionClause
-{{Fill AddDetectionClause Description}}
+ 
 
 ```yaml
 Type: DetectionClause[]
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveDetectionClause
-{{Fill RemoveDetectionClause Description}}
+ 
 
 ```yaml
 Type: String[]

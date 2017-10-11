@@ -28,16 +28,16 @@ Add-CMComplianceSettingDirectory -DirectoryName <String> [-IncludeSubfolders] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryName
-{{Fill DirectoryName Description}}
+ 
 
 ```yaml
 Type: String
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
-{{Fill Existence Description}}
+ 
 
 ```yaml
 Type: ExistenceType
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExistentialRule
-{{Fill ExistentialRule Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
-{{Fill ExpectedValue Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
-{{Fill ExpressionOperator Description}}
+ 
 
 ```yaml
 Type: RuleExpressionOperator
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSubfolders
-{{Fill IncludeSubfolders Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: PSObject
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Is64Bit
-{{Fill Is64Bit Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoRule
-{{Fill NoRule Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoncomplianceSeverity
-{{Fill NoncomplianceSeverity Description}}
+ 
 
 ```yaml
 Type: NoncomplianceSeverity
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{Fill Path Description}}
+ 
 
 ```yaml
 Type: String
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleDescription
-{{Fill RuleDescription Description}}
+ 
 
 ```yaml
 Type: String
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-{{Fill RuleName Description}}
+ 
 
 ```yaml
 Type: String

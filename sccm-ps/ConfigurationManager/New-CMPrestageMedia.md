@@ -51,7 +51,7 @@ The last command creates a dynamic prestaged media file named PrestargedMedia.wi
 ## PARAMETERS
 
 ### -AllowUacPrompt
-{{Fill AllowUacPrompt Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnattended
-{{Fill AllowUnattended Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnknownMachine
-{{Fill AllowUnknownMachine Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Application
-{{Fill Application Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -BootImage
-{{Fill BootImage Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateExpireTime
-{{Fill CertificateExpireTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-{{Fill CertificatePassword Description}}
+ 
 
 ```yaml
 Type: SecureString
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePath
-{{Fill CertificatePath Description}}
+ 
 
 ```yaml
 Type: String
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateStartTime
-{{Fill CertificateStartTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{Fill Comment Description}}
+ 
 
 ```yaml
 Type: String
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -CreatedBy
-{{Fill CreatedBy Description}}
+ 
 
 ```yaml
 Type: String
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPoint
-{{Fill DistributionPoint Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackage
-{{Fill DriverPackage Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -306,7 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeApplicationDependency
-{{Fill IncludeApplicationDependency Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementPoint
-{{Fill ManagementPoint Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaMode
-{{Fill MediaMode Description}}
+ 
 
 ```yaml
 Type: MediaMode
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaPassword
-{{Fill MediaPassword Description}}
+ 
 
 ```yaml
 Type: SecureString
@@ -367,7 +367,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImage
-{{Fill OperatingSystemImage Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageIndex
-{{Fill OperatingSystemImageIndex Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -397,7 +397,7 @@ Accept wildcard characters: False
 ```
 
 ### -Package
-{{Fill Package Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{Fill Path Description}}
+ 
 
 ```yaml
 Type: String
@@ -427,7 +427,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrestartCommand
-{{Fill PrestartCommand Description}}
+ 
 
 ```yaml
 Type: String
@@ -442,7 +442,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrestartPackage
-{{Fill PrestartPackage Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -457,7 +457,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderCredential
-{{Fill ProviderCredential Description}}
+ 
 
 ```yaml
 Type: PSCredential
@@ -472,7 +472,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequence
-{{Fill TaskSequence Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -487,7 +487,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserDeviceAffinity
-{{Fill UserDeviceAffinity Description}}
+ 
 
 ```yaml
 Type: UserDeviceAffinityType
@@ -503,7 +503,7 @@ Accept wildcard characters: False
 ```
 
 ### -Variable
-{{Fill Variable Description}}
+ 
 
 ```yaml
 Type: Hashtable
@@ -518,7 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-{{Fill Version Description}}
+ 
 
 ```yaml
 Type: String

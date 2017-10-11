@@ -67,16 +67,16 @@ Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdate <IResultObject[]>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
-{{Fill SoftwareUpdate Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroup
-{{Fill SoftwareUpdateGroup Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupId
-{{Fill SoftwareUpdateGroupId Description}}
+ 
 
 ```yaml
 Type: String
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupName
-{{Fill SoftwareUpdateGroupName Description}}
+ 
 
 ```yaml
 Type: String
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateId
-{{Fill SoftwareUpdateId Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateName
-{{Fill SoftwareUpdateName Description}}
+ 
 
 ```yaml
 Type: String[]

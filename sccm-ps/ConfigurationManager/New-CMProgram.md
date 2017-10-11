@@ -73,7 +73,7 @@ This command creates a device program in Configuration Manager.
 ## PARAMETERS
 
 ### -AddSupportedOperatingSystemPlatform
-{{Fill AddSupportedOperatingSystemPlatform Description}}
+ 
 
 ```yaml
 Type: IResultObject[]

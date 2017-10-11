@@ -18,21 +18,21 @@ New-CMTSStepInstallSoftware [-Program <IResultObject>] [-BaseVariableName <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -BaseVariableName
-{{Fill BaseVariableName Description}}
+ 
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-{{Fill Condition Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
-{{Fill ContinueOnError Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnInstallError
-{{Fill ContinueOnInstallError Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-{{Fill Disable Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -Program
-{{Fill Program Description}}
+ 
 
 ```yaml
 Type: IResultObject

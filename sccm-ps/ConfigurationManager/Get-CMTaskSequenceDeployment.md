@@ -39,21 +39,21 @@ Get-CMTaskSequenceDeployment [-InputObject <IResultObject>] [-Summary] [-Collect
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentId
-{{Fill DeploymentId Description}}
+ 
 
 ```yaml
 Type: String
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -Summary
-{{Fill Summary Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{Fill TaskSequenceId Description}}
+ 
 
 ```yaml
 Type: String

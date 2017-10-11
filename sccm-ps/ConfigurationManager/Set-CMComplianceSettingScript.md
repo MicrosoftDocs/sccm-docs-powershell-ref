@@ -20,16 +20,16 @@ Set-CMComplianceSettingScript [-DiscoveryScriptFile <String>] [-DiscoveryScriptL
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryScriptFile
-{{Fill DiscoveryScriptFile Description}}
+ 
 
 ```yaml
 Type: String
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryScriptLanguage
-{{Fill DiscoveryScriptLanguage Description}}
+ 
 
 ```yaml
 Type: ScriptingLanguage
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryScriptText
-{{Fill DiscoveryScriptText Description}}
+ 
 
 ```yaml
 Type: String
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: PSObject
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Is64Bit
-{{Fill Is64Bit Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsPerUser
-{{Fill IsPerUser Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewSettingName
-{{Fill NewSettingName Description}}
+ 
 
 ```yaml
 Type: String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemediationScriptFile
-{{Fill RemediationScriptFile Description}}
+ 
 
 ```yaml
 Type: String
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemediationScriptLanguage
-{{Fill RemediationScriptLanguage Description}}
+ 
 
 ```yaml
 Type: ScriptingLanguage
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemediationScriptText
-{{Fill RemediationScriptText Description}}
+ 
 
 ```yaml
 Type: String
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveRemediationScript
-{{Fill RemoveRemediationScript Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -SettingName
-{{Fill SettingName Description}}
+ 
 
 ```yaml
 Type: String

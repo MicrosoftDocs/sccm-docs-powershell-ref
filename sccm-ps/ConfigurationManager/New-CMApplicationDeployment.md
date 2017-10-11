@@ -60,21 +60,21 @@ New-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-Deploy
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -ApprovalRequired
-{{Fill ApprovalRequired Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
-{{Fill AvailableDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{Fill Comment Description}}
+ 
 
 ```yaml
 Type: String
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineDateTime
-{{Fill DeadlineDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeployAction
-{{Fill DeployAction Description}}
+ 
 
 ```yaml
 Type: DeployActionType
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeployPurpose
-{{Fill DeployPurpose Description}}
+ 
 
 ```yaml
 Type: DeployPurposeType
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableContentDependencyDetection
-{{Fill DisableContentDependencyDetection Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeCollectionName
-{{Fill DistributeCollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeContent
-{{Fill DistributeContent Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-{{Fill DistributionPointGroupName Description}}
+ 
 
 ```yaml
 Type: String
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-{{Fill DistributionPointName Description}}
+ 
 
 ```yaml
 Type: String
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMomAlert
-{{Fill EnableMomAlert Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSoftDeadline
-{{Fill EnableSoftDeadline Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -346,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailParameterValue
-{{Fill FailParameterValue Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateScomAlertOnFailure
-{{Fill GenerateScomAlertOnFailure Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -391,7 +391,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -406,7 +406,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -421,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -436,7 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideServiceWindow
-{{Fill OverrideServiceWindow Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -451,7 +451,7 @@ Accept wildcard characters: False
 ```
 
 ### -PersistOnWriteFilterDevice
-{{Fill PersistOnWriteFilterDevice Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -466,7 +466,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
-{{Fill PostponeDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -481,7 +481,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreDeploy
-{{Fill PreDeploy Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -496,7 +496,7 @@ Accept wildcard characters: False
 ```
 
 ### -RebootOutsideServiceWindow
-{{Fill RebootOutsideServiceWindow Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -511,7 +511,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
-{{Fill SendWakeupPacket Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 ```
 
 ### -Simulation
-{{Fill Simulation Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -541,7 +541,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuccessParameterValue
-{{Fill SuccessParameterValue Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -556,7 +556,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeBaseOn
-{{Fill TimeBaseOn Description}}
+ 
 
 ```yaml
 Type: TimeType
@@ -572,7 +572,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateSupersedence
-{{Fill UpdateSupersedence Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -587,7 +587,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMeteredNetwork
-{{Fill UseMeteredNetwork Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -602,7 +602,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserNotification
-{{Fill UserNotification Description}}
+ 
 
 ```yaml
 Type: UserNotificationType

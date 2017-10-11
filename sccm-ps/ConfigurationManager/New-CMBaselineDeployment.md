@@ -39,21 +39,21 @@ New-CMBaselineDeployment [-Name] <String> [-EnableEnforcement <Boolean>] [-Overr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEnforcement
-{{Fill EnableEnforcement Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateAlert
-{{Fill GenerateAlert Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoredByScom
-{{Fill MonitoredByScom Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideServiceWindow
-{{Fill OverrideServiceWindow Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParameterValue
-{{Fill ParameterValue Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
-{{Fill PostponeDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-{{Fill Schedule Description}}
+ 
 
 ```yaml
 Type: IResultObject

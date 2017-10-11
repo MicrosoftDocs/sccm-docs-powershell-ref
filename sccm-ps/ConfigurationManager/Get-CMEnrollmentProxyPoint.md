@@ -40,7 +40,7 @@ This command gets an enrollment proxy point.
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

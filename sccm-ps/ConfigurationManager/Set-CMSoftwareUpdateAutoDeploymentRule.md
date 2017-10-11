@@ -626,7 +626,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateFailureAlert
-{{Fill GenerateFailureAlert Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -1140,7 +1140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Vendor
-{{Fill Vendor Description}}
+ 
 
 ```yaml
 Type: String[]

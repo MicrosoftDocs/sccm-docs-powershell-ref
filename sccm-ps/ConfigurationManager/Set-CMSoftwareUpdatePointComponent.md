@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFileOption
-{{Fill ContentFileOption Description}}
+ 
 
 ```yaml
 Type: ContentFileOptions
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

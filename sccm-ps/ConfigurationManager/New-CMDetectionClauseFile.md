@@ -25,16 +25,16 @@ New-CMDetectionClauseFile -FileName <String> [-Is64Bit] -Path <String> [-Existen
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
-{{Fill Existence Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
-{{Fill ExpectedValue Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
-{{Fill ExpressionOperator Description}}
+ 
 
 ```yaml
 Type: RuleExpressionOperator
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-{{Fill FileName Description}}
+ 
 
 ```yaml
 Type: String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Is64Bit
-{{Fill Is64Bit Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{Fill Path Description}}
+ 
 
 ```yaml
 Type: String
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyType
-{{Fill PropertyType Description}}
+ 
 
 ```yaml
 Type: FileFolderProperty
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-{{Fill Value Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

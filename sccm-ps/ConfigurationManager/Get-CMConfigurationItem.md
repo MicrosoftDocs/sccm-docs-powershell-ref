@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-{{Fill Fast Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

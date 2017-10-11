@@ -19,16 +19,16 @@ New-CMAdvancedThreatProtectionPolicy -Name <String> [-Description <String>] -Pol
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-{{Fill FilePath Description}}
+ 
 
 ```yaml
 Type: String
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
-{{Fill PolicyType Description}}
+ 
 
 ```yaml
 Type: ConfigurationType
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -SampleSharingType
-{{Fill SampleSharingType Description}}
+ 
 
 ```yaml
 Type: SampleSharingType
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelemetryReportingFrequencyType
-{{Fill TelemetryReportingFrequencyType Description}}
+ 
 
 ```yaml
 Type: TelemetryReportingFrequencyType

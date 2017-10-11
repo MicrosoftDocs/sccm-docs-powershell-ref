@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsUtc
-{{Fill IsUtc Description}}
+ 
 
 ```yaml
 Type: Boolean

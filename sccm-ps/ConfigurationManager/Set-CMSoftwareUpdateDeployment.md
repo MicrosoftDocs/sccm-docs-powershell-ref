@@ -128,7 +128,7 @@ This command starts a software update deployment by using a software update grou
 ## PARAMETERS
 
 ### -AlertDateTime
-{{Fill AlertDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
-{{Fill AvailableDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentExpireDateTime
-{{Fill DeploymentExpireDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -506,7 +506,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePostRebootFullScan
-{{Fill RequirePostRebootFullScan Description}}
+ 
 
 ```yaml
 Type: Boolean

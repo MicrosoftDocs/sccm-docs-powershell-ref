@@ -18,21 +18,21 @@ New-CMQuery [-Comment <String>] -Expression <String> [-LimitToCollectionId <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Comment
-{{Fill Comment Description}}
+ 
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Expression
-{{Fill Expression Description}}
+ 
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -LimitToCollectionId
-{{Fill LimitToCollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetClassName
-{{Fill TargetClassName Description}}
+ 
 
 ```yaml
 Type: String

@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{Fill UserName Description}}
+ 
 
 ```yaml
 Type: String

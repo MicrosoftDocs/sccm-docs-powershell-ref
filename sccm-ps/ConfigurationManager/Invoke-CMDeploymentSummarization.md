@@ -56,7 +56,7 @@ This command runs a deployment summarization for the collection named CMWest.
 ## PARAMETERS
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareName
-{{Fill SoftwareName Description}}
+ 
 
 ```yaml
 Type: String

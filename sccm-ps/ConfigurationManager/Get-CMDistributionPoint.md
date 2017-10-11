@@ -64,7 +64,7 @@ This command gets the distribution point group object named DPGroup and uses the
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

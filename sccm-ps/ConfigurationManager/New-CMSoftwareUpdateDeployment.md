@@ -102,21 +102,21 @@ New-CMSoftwareUpdateDeployment -SoftwareUpdateGroupId <String> [-DeploymentName 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AcceptEula
-{{Fill AcceptEula Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRestart
-{{Fill AllowRestart Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
-{{Fill AvailableDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{Fill Comment Description}}
+ 
 
 ```yaml
 Type: String
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineDateTime
-{{Fill DeadlineDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentName
-{{Fill DeploymentName Description}}
+ 
 
 ```yaml
 Type: String
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentType
-{{Fill DeploymentType Description}}
+ 
 
 ```yaml
 Type: DeploymentType
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOperationsManagerAlert
-{{Fill DisableOperationsManagerAlert Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeCollectionName
-{{Fill DistributeCollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeContent
-{{Fill DistributeContent Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-{{Fill DistributionPointGroupName Description}}
+ 
 
 ```yaml
 Type: String
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-{{Fill DistributionPointName Description}}
+ 
 
 ```yaml
 Type: String
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadFromMicrosoftUpdate
-{{Fill DownloadFromMicrosoftUpdate Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -417,7 +417,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateOperationsManagerAlert
-{{Fill GenerateOperationsManagerAlert Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -432,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateSuccessAlert
-{{Fill GenerateSuccessAlert Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -447,7 +447,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -PercentSuccess
-{{Fill PercentSuccess Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### -PersistOnWriteFilterDevice
-{{Fill PersistOnWriteFilterDevice Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -492,7 +492,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectedType
-{{Fill ProtectedType Description}}
+ 
 
 ```yaml
 Type: ProtectedType
@@ -508,7 +508,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePostRebootFullScan
-{{Fill RequirePostRebootFullScan Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -523,7 +523,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestartServer
-{{Fill RestartServer Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -538,7 +538,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestartWorkstation
-{{Fill RestartWorkstation Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -553,7 +553,7 @@ Accept wildcard characters: False
 ```
 
 ### -SavedPackageId
-{{Fill SavedPackageId Description}}
+ 
 
 ```yaml
 Type: String
@@ -568,7 +568,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
-{{Fill SendWakeupPacket Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -583,7 +583,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
-{{Fill SoftwareInstallation Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -598,7 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupId
-{{Fill SoftwareUpdateGroupId Description}}
+ 
 
 ```yaml
 Type: String
@@ -613,7 +613,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupName
-{{Fill SoftwareUpdateGroupName Description}}
+ 
 
 ```yaml
 Type: String
@@ -628,7 +628,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateId
-{{Fill SoftwareUpdateId Description}}
+ 
 
 ```yaml
 Type: String
@@ -643,7 +643,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateName
-{{Fill SoftwareUpdateName Description}}
+ 
 
 ```yaml
 Type: String
@@ -658,7 +658,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeBasedOn
-{{Fill TimeBasedOn Description}}
+ 
 
 ```yaml
 Type: TimeType
@@ -674,7 +674,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeUnit
-{{Fill TimeUnit Description}}
+ 
 
 ```yaml
 Type: TimeUnitType
@@ -690,7 +690,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeValue
-{{Fill TimeValue Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -705,7 +705,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnprotectedType
-{{Fill UnprotectedType Description}}
+ 
 
 ```yaml
 Type: UnprotectedType
@@ -721,7 +721,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseBranchCache
-{{Fill UseBranchCache Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -736,7 +736,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMeteredNetwork
-{{Fill UseMeteredNetwork Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -751,7 +751,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserNotification
-{{Fill UserNotification Description}}
+ 
 
 ```yaml
 Type: UserNotificationType
@@ -767,7 +767,7 @@ Accept wildcard characters: False
 ```
 
 ### -VerbosityLevel
-{{Fill VerbosityLevel Description}}
+ 
 
 ```yaml
 Type: VerbosityLevelType

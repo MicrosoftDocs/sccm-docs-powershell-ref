@@ -18,21 +18,21 @@ New-CMExchangeConnectorGeneralSetting [-AllowDesktopSync <Boolean>] [-AllowInter
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AllowDesktopSync
-{{Fill AllowDesktopSync Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowInternetShare
-{{Fill AllowInternetShare Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNonProvision
-{{Fill AllowNonProvision Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshHours
-{{Fill RefreshHours Description}}
+ 
 
 ```yaml
 Type: Int32
