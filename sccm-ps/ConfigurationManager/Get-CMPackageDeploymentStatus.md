@@ -51,7 +51,7 @@ This command gets the status of a deployment that is distributed to Configuratio
 ## PARAMETERS
 
 ### -DeploymentId
-{{Fill DeploymentId Description}}
+ 
 
 ```yaml
 Type: String
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+ 
 
 ```yaml
 Type: String
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatusType
-{{Fill StatusType Description}}
+ 
 
 ```yaml
 Type: PackageDeploymentStatusType

@@ -76,7 +76,7 @@ This command removes membership to the security scope named SecScope02 for the c
 ## PARAMETERS
 
 ### -AddBaseline
-{{Fill AddBaseline Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSoftwareUpdate
-{{Fill AddSoftwareUpdate Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearBaseline
-{{Fill ClearBaseline Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearOSConfigurationItem
-{{Fill ClearOSConfigurationItem Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearOptionalConfigurationItem
-{{Fill ClearOptionalConfigurationItem Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearProhibitedConfigurationItem
-{{Fill ClearProhibitedConfigurationItem Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearRequiredConfigurationItem
-{{Fill ClearRequiredConfigurationItem Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSoftwareUpdate
-{{Fill ClearSoftwareUpdate Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveBaseline
-{{Fill RemoveBaseline Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOSConfigurationItem
-{{Fill RemoveOSConfigurationItem Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -460,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOptionalConfigurationItem
-{{Fill RemoveOptionalConfigurationItem Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -475,7 +475,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProhibitedConfigurationItem
-{{Fill RemoveProhibitedConfigurationItem Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -490,7 +490,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveRequiredConfigurationItem
-{{Fill RemoveRequiredConfigurationItem Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -505,7 +505,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSoftwareUpdate
-{{Fill RemoveSoftwareUpdate Description}}
+ 
 
 ```yaml
 Type: String[]

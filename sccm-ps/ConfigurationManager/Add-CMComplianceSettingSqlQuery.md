@@ -41,21 +41,21 @@ Add-CMComplianceSettingSqlQuery -ColumnName <String> -DatabaseName <String> -Dat
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -ColumnName
-{{Fill ColumnName Description}}
+ 
 
 ```yaml
 Type: String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataType
-{{Fill DataType Description}}
+ 
 
 ```yaml
 Type: SettingDataType
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-{{Fill DatabaseName Description}}
+ 
 
 ```yaml
 Type: String
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
-{{Fill Existence Description}}
+ 
 
 ```yaml
 Type: ExistenceType
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExistentialRule
-{{Fill ExistentialRule Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
-{{Fill ExpectedValue Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
-{{Fill ExpressionOperator Description}}
+ 
 
 ```yaml
 Type: RuleExpressionOperator
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: PSObject
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceName
-{{Fill InstanceName Description}}
+ 
 
 ```yaml
 Type: String
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceType
-{{Fill InstanceType Description}}
+ 
 
 ```yaml
 Type: TargetSqlInstance
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoRule
-{{Fill NoRule Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoncomplianceSeverity
-{{Fill NoncomplianceSeverity Description}}
+ 
 
 ```yaml
 Type: NoncomplianceSeverity
@@ -355,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNoncompliance
-{{Fill ReportNoncompliance Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -370,7 +370,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleDescription
-{{Fill RuleDescription Description}}
+ 
 
 ```yaml
 Type: String
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-{{Fill RuleName Description}}
+ 
 
 ```yaml
 Type: String
@@ -400,7 +400,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlStatementFile
-{{Fill SqlStatementFile Description}}
+ 
 
 ```yaml
 Type: String
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlStatementText
-{{Fill SqlStatementText Description}}
+ 
 
 ```yaml
 Type: String
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueRule
-{{Fill ValueRule Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

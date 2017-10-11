@@ -17,21 +17,21 @@ Get-CMWindowsEnrollmentProfile [[-Name] <String>] [-Authority <ManagementAuthori
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Authority
-{{Fill Authority Description}}
+ 
 
 ```yaml
 Type: ManagementAuthority
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String

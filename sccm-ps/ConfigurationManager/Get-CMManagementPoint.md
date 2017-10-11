@@ -41,7 +41,7 @@ The command directs the output to the file Get-CMOutOfBandServicePoint_data.txt.
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

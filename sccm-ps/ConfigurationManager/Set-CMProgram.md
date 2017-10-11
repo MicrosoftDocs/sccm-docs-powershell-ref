@@ -131,7 +131,7 @@ This command modifies a device program.
 ## PARAMETERS
 
 ### -AddSupportedOperatingSystemPlatform
-{{Fill AddSupportedOperatingSystemPlatform Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -588,7 +588,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupportedOperatingSystemPlatform
-{{Fill RemoveSupportedOperatingSystemPlatform Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -635,7 +635,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunOnAnyPlatform
-{{Fill RunOnAnyPlatform Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

@@ -116,21 +116,21 @@ New-CMPackageDeployment [-StandardProgram] [-Program] <IResultObject> [-DeployPu
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AllowSharedContent
-{{Fill AllowSharedContent Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
-{{Fill AvailableDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{Fill Comment Description}}
+ 
 
 ```yaml
 Type: String
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineDateTime
-{{Fill DeadlineDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeployPurpose
-{{Fill DeployPurpose Description}}
+ 
 
 ```yaml
 Type: DeployPurposeType
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceProgram
-{{Fill DeviceProgram Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeCollectionName
-{{Fill DistributeCollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeContent
-{{Fill DistributeContent Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-{{Fill DistributionPointGroupName Description}}
+ 
 
 ```yaml
 Type: String
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-{{Fill DistributionPointName Description}}
+ 
 
 ```yaml
 Type: String
@@ -356,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -FastNetworkOption
-{{Fill FastNetworkOption Description}}
+ 
 
 ```yaml
 Type: FastNetworkOptionType
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -Package
-{{Fill Package Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+ 
 
 ```yaml
 Type: String
@@ -417,7 +417,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
-{{Fill PackageName Description}}
+ 
 
 ```yaml
 Type: String
@@ -432,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -PersistOnWriteFilterDevice
-{{Fill PersistOnWriteFilterDevice Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -447,7 +447,7 @@ Accept wildcard characters: False
 ```
 
 ### -Program
-{{Fill Program Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-{{Fill ProgramName Description}}
+ 
 
 ```yaml
 Type: String
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecurUnit
-{{Fill RecurUnit Description}}
+ 
 
 ```yaml
 Type: RecurUnitType
@@ -493,7 +493,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecurValue
-{{Fill RecurValue Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -508,7 +508,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rerun
-{{Fill Rerun Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -523,7 +523,7 @@ Accept wildcard characters: False
 ```
 
 ### -RerunBehavior
-{{Fill RerunBehavior Description}}
+ 
 
 ```yaml
 Type: RerunBehaviorType
@@ -539,7 +539,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunFromSoftwareCenter
-{{Fill RunFromSoftwareCenter Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -554,7 +554,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-{{Fill Schedule Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -569,7 +569,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleEvent
-{{Fill ScheduleEvent Description}}
+ 
 
 ```yaml
 Type: ScheduleEventType
@@ -585,7 +585,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
-{{Fill SendWakeupPacket Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -600,7 +600,7 @@ Accept wildcard characters: False
 ```
 
 ### -SlowNetworkOption
-{{Fill SlowNetworkOption Description}}
+ 
 
 ```yaml
 Type: SlowNetworkOptionType
@@ -616,7 +616,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
-{{Fill SoftwareInstallation Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -631,7 +631,7 @@ Accept wildcard characters: False
 ```
 
 ### -StandardProgram
-{{Fill StandardProgram Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -646,7 +646,7 @@ Accept wildcard characters: False
 ```
 
 ### -SystemRestart
-{{Fill SystemRestart Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -661,7 +661,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMeteredNetwork
-{{Fill UseMeteredNetwork Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -676,7 +676,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtc
-{{Fill UseUtc Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -691,7 +691,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtcForAvailableSchedule
-{{Fill UseUtcForAvailableSchedule Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -706,7 +706,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtcForExpireSchedule
-{{Fill UseUtcForExpireSchedule Description}}
+ 
 
 ```yaml
 Type: Boolean

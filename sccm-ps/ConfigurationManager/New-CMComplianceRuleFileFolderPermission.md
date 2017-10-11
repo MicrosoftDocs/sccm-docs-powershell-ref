@@ -20,16 +20,16 @@ New-CMComplianceRuleFileFolderPermission -ExpectedPermission <FileSystemPermissi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedPermission
-{{Fill ExpectedPermission Description}}
+ 
 
 ```yaml
 Type: FileSystemPermissions[]
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedUserAccess
-{{Fill ExpectedUserAccess Description}}
+ 
 
 ```yaml
 Type: Hashtable
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: ConfigurationItemSetting
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsExclusive
-{{Fill IsExclusive Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoncomplianceSeverity
-{{Fill NoncomplianceSeverity Description}}
+ 
 
 ```yaml
 Type: NoncomplianceSeverity
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNoncompliance
-{{Fill ReportNoncompliance Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleDescription
-{{Fill RuleDescription Description}}
+ 
 
 ```yaml
 Type: String
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-{{Fill RuleName Description}}
+ 
 
 ```yaml
 Type: String

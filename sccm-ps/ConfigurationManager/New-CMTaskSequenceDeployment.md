@@ -46,21 +46,21 @@ New-CMTaskSequenceDeployment [-TaskSequencePackageId] <String> [-DeployPurpose <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AlertDateTime
-{{Fill AlertDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFallback
-{{Fill AllowFallback Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSharedContent
-{{Fill AllowSharedContent Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Availability
-{{Fill Availability Description}}
+ 
 
 ```yaml
 Type: MakeAvailableToType
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
-{{Fill AvailableDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{Fill Comment Description}}
+ 
 
 ```yaml
 Type: String
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineDateTime
-{{Fill DeadlineDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeployPurpose
-{{Fill DeployPurpose Description}}
+ 
 
 ```yaml
 Type: DeployPurposeType
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentOption
-{{Fill DeploymentOption Description}}
+ 
 
 ```yaml
 Type: DeploymentOptionType
@@ -273,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeCollectionName
-{{Fill DistributeCollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -288,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeContent
-{{Fill DistributeContent Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-{{Fill DistributionPointGroupName Description}}
+ 
 
 ```yaml
 Type: String
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-{{Fill DistributionPointName Description}}
+ 
 
 ```yaml
 Type: String
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -363,7 +363,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternetOption
-{{Fill InternetOption Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -378,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -PercentFailure
-{{Fill PercentFailure Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -393,7 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### -PercentSuccess
-{{Fill PercentSuccess Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -408,7 +408,7 @@ Accept wildcard characters: False
 ```
 
 ### -PersistOnWriteFilterDevice
-{{Fill PersistOnWriteFilterDevice Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -423,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### -RerunBehavior
-{{Fill RerunBehavior Description}}
+ 
 
 ```yaml
 Type: RerunBehaviorType
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunFromSoftwareCenter
-{{Fill RunFromSoftwareCenter Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -454,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-{{Fill Schedule Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleEvent
-{{Fill ScheduleEvent Description}}
+ 
 
 ```yaml
 Type: ScheduleEventType[]
@@ -485,7 +485,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
-{{Fill SendWakeupPacket Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -500,7 +500,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowTaskSequenceProgress
-{{Fill ShowTaskSequenceProgress Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
-{{Fill SoftwareInstallation Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -530,7 +530,7 @@ Accept wildcard characters: False
 ```
 
 ### -SystemRestart
-{{Fill SystemRestart Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -545,7 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequencePackageId
-{{Fill TaskSequencePackageId Description}}
+ 
 
 ```yaml
 Type: String
@@ -560,7 +560,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMeteredNetwork
-{{Fill UseMeteredNetwork Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -575,7 +575,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtcForAvailableSchedule
-{{Fill UseUtcForAvailableSchedule Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -590,7 +590,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtcForExpireSchedule
-{{Fill UseUtcForExpireSchedule Description}}
+ 
 
 ```yaml
 Type: Boolean

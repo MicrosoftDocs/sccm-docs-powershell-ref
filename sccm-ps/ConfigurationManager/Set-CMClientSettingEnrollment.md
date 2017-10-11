@@ -36,16 +36,16 @@ Set-CMClientSettingEnrollment [-EnableDevice <Boolean>] [-EnableModernDevice <Bo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{Fill DefaultSetting Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDevice
-{{Fill EnableDevice Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableModernDevice
-{{Fill EnableModernDevice Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnrollmentProfileName
-{{Fill EnrollmentProfileName Description}}
+ 
 
 ```yaml
 Type: String
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalDeviceHr
-{{Fill IntervalDeviceHr Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalDeviceMins
-{{Fill IntervalDeviceMins Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalModernMins
-{{Fill IntervalModernMins Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModernEnrollmentProfileName
-{{Fill ModernEnrollmentProfileName Description}}
+ 
 
 ```yaml
 Type: String
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String

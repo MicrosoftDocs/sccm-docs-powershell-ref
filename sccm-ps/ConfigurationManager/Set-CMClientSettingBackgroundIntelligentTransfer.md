@@ -36,16 +36,16 @@ Set-CMClientSettingBackgroundIntelligentTransfer [-EnableBitsMaxBandwidth <Boole
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{Fill DefaultSetting Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBitsMaxBandwidth
-{{Fill EnableBitsMaxBandwidth Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDownloadOffSchedule
-{{Fill EnableDownloadOffSchedule Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxBandwidthBeginHr
-{{Fill MaxBandwidthBeginHr Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxBandwidthEndHr
-{{Fill MaxBandwidthEndHr Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTransferRateOffSchedule
-{{Fill MaxTransferRateOffSchedule Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTransferRateOnSchedule
-{{Fill MaxTransferRateOnSchedule Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String

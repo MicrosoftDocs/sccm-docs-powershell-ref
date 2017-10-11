@@ -36,21 +36,21 @@ Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObj
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -BatchingTimeout
-{{Fill BatchingTimeout Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{Fill DefaultSetting Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentEvaluationSchedule
-{{Fill DeploymentEvaluationSchedule Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-{{Fill Enable Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceMandatory
-{{Fill EnforceMandatory Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -Office365ManagementType
-{{Fill Office365ManagementType Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanSchedule
-{{Fill ScanSchedule Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeUnit
-{{Fill TimeUnit Description}}
+ 
 
 ```yaml
 Type: BatchingTimeoutType

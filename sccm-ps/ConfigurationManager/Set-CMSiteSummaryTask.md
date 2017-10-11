@@ -32,16 +32,16 @@ Set-CMSiteSummaryTask [-RunNow] [-RunIntervalMins <Int32>] [-DisableFixedRun] -I
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFixedRun
-{{Fill DisableFixedRun Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunIntervalMins
-{{Fill RunIntervalMins Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunNow
-{{Fill RunNow Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{Fill SiteCode Description}}
+ 
 
 ```yaml
 Type: String
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskName
-{{Fill TaskName Description}}
+ 
 
 ```yaml
 Type: String

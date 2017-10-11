@@ -19,16 +19,16 @@ New-CMComplianceRuleExistential -Existence <ExistenceType> [-ExpressionOperator 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
-{{Fill Existence Description}}
+ 
 
 ```yaml
 Type: ExistenceType
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
-{{Fill ExpectedValue Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
-{{Fill ExpressionOperator Description}}
+ 
 
 ```yaml
 Type: RuleExpressionOperator
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: ConfigurationItemSetting
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoncomplianceSeverity
-{{Fill NoncomplianceSeverity Description}}
+ 
 
 ```yaml
 Type: NoncomplianceSeverity
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleDescription
-{{Fill RuleDescription Description}}
+ 
 
 ```yaml
 Type: String
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-{{Fill RuleName Description}}
+ 
 
 ```yaml
 Type: String

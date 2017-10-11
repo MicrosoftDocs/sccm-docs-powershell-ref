@@ -66,21 +66,21 @@ Remove-CMCollectionFromAdministrativeUser -InputObject <IResultObject> -User <IR
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{Fill User Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-{{Fill UserId Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{Fill UserName Description}}
+ 
 
 ```yaml
 Type: String

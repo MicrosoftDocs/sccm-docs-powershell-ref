@@ -30,16 +30,16 @@ Set-CMDataWarehouseServicePoint [-SiteCode <String>] [-SiteSystemServerName] <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataWarehouseDatabaseName
-{{Fill DataWarehouseDatabaseName Description}}
+ 
 
 ```yaml
 Type: String
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataWarehouseDatabaseServerName
-{{Fill DataWarehouseDatabaseServerName Description}}
+ 
 
 ```yaml
 Type: String
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataWarehouseInstanceName
-{{Fill DataWarehouseInstanceName Description}}
+ 
 
 ```yaml
 Type: String
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataWarehouseSqlPort
-{{Fill DataWarehouseSqlPort Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -DaysOfWeek
-{{Fill DaysOfWeek Description}}
+ 
 
 ```yaml
 Type: DataWarehouseDaysOfWeek
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{Fill SiteCode Description}}
+ 
 
 ```yaml
 Type: String
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
-{{Fill SiteSystemServerName Description}}
+ 
 
 ```yaml
 Type: String
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartAftertime
-{{Fill StartAftertime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -WeekFrequency
-{{Fill WeekFrequency Description}}
+ 
 
 ```yaml
 Type: Int32

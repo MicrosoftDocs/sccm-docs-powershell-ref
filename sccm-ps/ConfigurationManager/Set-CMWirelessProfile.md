@@ -63,21 +63,21 @@ Set-CMWirelessProfile -Name <String> [-Description <String>] [-Severity <Noncomp
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AddSupportedPlatform
-{{Fill AddSupportedPlatform Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationMode
-{{Fill AuthenticationMode Description}}
+ 
 
 ```yaml
 Type: AuthenticationMode
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDetectProxy
-{{Fill AutoDetectProxy Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoScriptUrl
-{{Fill AutoScriptUrl Description}}
+ 
 
 ```yaml
 Type: String
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassProxy
-{{Fill BypassProxy Description}}
+ 
 
 ```yaml
 Type: String
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSupportedPlatform
-{{Fill ClearSupportedPlatform Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigureProxy
-{{Fill ConfigureProxy Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectAutoNetworkInRange
-{{Fill ConnectAutoNetworkInRange Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectEvenNotBroadcasting
-{{Fill ConnectEvenNotBroadcasting Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -EapType
-{{Fill EapType Description}}
+ 
 
 ```yaml
 Type: EapType
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFipsCompliance
-{{Fill EnableFipsCompliance Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePmkCaching
-{{Fill EnablePmkCaching Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSingleSignOn
-{{Fill EnableSingleSignOn Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -364,7 +364,7 @@ Accept wildcard characters: False
 ```
 
 ### -LookOtherNetworkWhileConnected
-{{Fill LookOtherNetworkWhileConnected Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkName
-{{Fill NetworkName Description}}
+ 
 
 ```yaml
 Type: String
@@ -424,7 +424,7 @@ Accept wildcard characters: False
 ```
 
 ### -PmkCacheMaxEntries
-{{Fill PmkCacheMaxEntries Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### -PmkTimeToLiveMins
-{{Fill PmkTimeToLiveMins Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -454,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreAuthAttempts
-{{Fill PreAuthAttempts Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreAuthentication
-{{Fill PreAuthentication Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -484,7 +484,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyAddress
-{{Fill ProxyAddress Description}}
+ 
 
 ```yaml
 Type: String
@@ -499,7 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPort
-{{Fill ProxyPort Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -514,7 +514,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupportedPlatform
-{{Fill RemoveSupportedPlatform Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -529,7 +529,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityAuthentication
-{{Fill SecurityAuthentication Description}}
+ 
 
 ```yaml
 Type: SecurityAuthentication
@@ -545,7 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityEncryption
-{{Fill SecurityEncryption Description}}
+ 
 
 ```yaml
 Type: SecurityEncryption
@@ -561,7 +561,7 @@ Accept wildcard characters: False
 ```
 
 ### -Severity
-{{Fill Severity Description}}
+ 
 
 ```yaml
 Type: NoncomplianceSeverity
@@ -577,7 +577,7 @@ Accept wildcard characters: False
 ```
 
 ### -SingleSignOnAdditionalDialogs
-{{Fill SingleSignOnAdditionalDialogs Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -592,7 +592,7 @@ Accept wildcard characters: False
 ```
 
 ### -SingleSignOnImmediatelyBefore
-{{Fill SingleSignOnImmediatelyBefore Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -607,7 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### -SingleSignOnMaxDelaySec
-{{Fill SingleSignOnMaxDelaySec Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -622,7 +622,7 @@ Accept wildcard characters: False
 ```
 
 ### -SingleSignOnVlan
-{{Fill SingleSignOnVlan Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -637,7 +637,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ssid
-{{Fill Ssid Description}}
+ 
 
 ```yaml
 Type: String
@@ -652,7 +652,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedServerCertSubjectNames
-{{Fill TrustedServerCertSubjectNames Description}}
+ 
 
 ```yaml
 Type: String

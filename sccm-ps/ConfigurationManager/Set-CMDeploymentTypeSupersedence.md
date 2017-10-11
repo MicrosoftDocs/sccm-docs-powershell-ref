@@ -18,16 +18,16 @@ Set-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-IsUninstall <Boo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsUninstall
-{{Fill IsUninstall Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupersedingDeploymentType
-{{Fill SupersedingDeploymentType Description}}
+ 
 
 ```yaml
 Type: IResultObject

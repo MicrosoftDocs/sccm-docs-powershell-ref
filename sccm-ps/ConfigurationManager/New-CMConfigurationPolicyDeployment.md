@@ -87,21 +87,21 @@ New-CMConfigurationPolicyDeployment -RemoteConnectionProfile <IResultObject> [-E
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEnforcement
-{{Fill EnableEnforcement Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicy
-{{Fill FirewallPolicy Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicyId
-{{Fill FirewallPolicyId Description}}
+ 
 
 ```yaml
 Type: String
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicyName
-{{Fill FirewallPolicyName Description}}
+ 
 
 ```yaml
 Type: String
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateAlert
-{{Fill GenerateAlert Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoredByScom
-{{Fill MonitoredByScom Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideServiceWindow
-{{Fill OverrideServiceWindow Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParameterValue
-{{Fill ParameterValue Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
-{{Fill PostponeDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfile
-{{Fill RemoteConnectionProfile Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfileId
-{{Fill RemoteConnectionProfileId Description}}
+ 
 
 ```yaml
 Type: String
@@ -356,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfileName
-{{Fill RemoteConnectionProfileName Description}}
+ 
 
 ```yaml
 Type: String
@@ -371,7 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-{{Fill Schedule Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserDataAndProfile
-{{Fill UserDataAndProfile Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -401,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserDataAndProfileId
-{{Fill UserDataAndProfileId Description}}
+ 
 
 ```yaml
 Type: String
@@ -416,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserDataAndProfileName
-{{Fill UserDataAndProfileName Description}}
+ 
 
 ```yaml
 Type: String

@@ -128,7 +128,7 @@ This command gets the application object named testMsi and uses the pipeline ope
 ## PARAMETERS
 
 ### -AddDetectionClause
-{{Fill AddDetectionClause Description}}
+ 
 
 ```yaml
 Type: DetectionClause[]
@@ -522,7 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -RebootBehavior
-{{Fill RebootBehavior Description}}
+ 
 
 ```yaml
 Type: PostExecutionBehavior
@@ -583,7 +583,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFile
-{{Fill ScriptFile Description}}
+ 
 
 ```yaml
 Type: String

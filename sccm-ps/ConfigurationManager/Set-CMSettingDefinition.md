@@ -26,21 +26,21 @@ Set-CMSettingDefinition -CategoryInstanceId <String[]> [-Description <String>] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -CategoryInstanceId
-{{Fill CategoryInstanceId Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Digest
-{{Fill Digest Description}}
+ 
 
 ```yaml
 Type: ConfigurationItem
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -DigestPath
-{{Fill DigestPath Description}}
+ 
 
 ```yaml
 Type: String
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -DigestXml
-{{Fill DigestXml Description}}
+ 
 
 ```yaml
 Type: String
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-{{Fill NewName Description}}
+ 
 
 ```yaml
 Type: String

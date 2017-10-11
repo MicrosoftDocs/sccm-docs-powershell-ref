@@ -17,16 +17,16 @@ New-CMTSStepConditionQueryWmi [-Namespace <String[]>] -Query <String> [-DisableW
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-{{Fill Namespace Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
-{{Fill Query Description}}
+ 
 
 ```yaml
 Type: String

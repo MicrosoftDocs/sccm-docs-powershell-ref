@@ -17,16 +17,16 @@ Invoke-CMSitePromotePreproductionClient [-Force] [-DisableWildcardHandling] [-Fo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

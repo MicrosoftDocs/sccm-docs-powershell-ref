@@ -38,7 +38,7 @@ This command sets the following security options for a mobile device:
 ## PARAMETERS
 
 ### -Bluetooth
-{{Fill Bluetooth Description}}
+ 
 
 ```yaml
 Type: BluetoothConnectionType
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Browser
-{{Fill Browser Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Camera
-{{Fill Camera Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileEncrypt
-{{Fill FileEncrypt Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Infrared
-{{Fill Infrared Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDesktop
-{{Fill RemoteDesktop Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageCard
-{{Fill StorageCard Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageCardEncrypt
-{{Fill StorageCardEncrypt Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -TextMessage
-{{Fill TextMessage Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -WifiConnection
-{{Fill WifiConnection Description}}
+ 
 
 ```yaml
 Type: Boolean

@@ -39,7 +39,7 @@ This command gets the site system server named Server2.contoso.com for site code
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

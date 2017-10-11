@@ -35,7 +35,7 @@ This command sets these application options for an Exchange Server connector:
 ## PARAMETERS
 
 ### -BlockedApplication
-{{Fill BlockedApplication Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnsignedApplication
-{{Fill UnsignedApplication Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnsignedInstall
-{{Fill UnsignedInstall Description}}
+ 
 
 ```yaml
 Type: Boolean

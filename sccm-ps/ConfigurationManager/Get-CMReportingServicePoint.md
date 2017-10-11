@@ -41,7 +41,7 @@ The command directs the output to the file \Cmrsp01\Get-CMReportingServicePoint_
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

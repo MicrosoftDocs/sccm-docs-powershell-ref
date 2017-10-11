@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCloudGateway
-{{Fill EnableCloudGateway Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlServerFqdn
-{{Fill SqlServerFqdn Description}}
+ 
 
 ```yaml
 Type: String

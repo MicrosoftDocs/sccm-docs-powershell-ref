@@ -40,7 +40,7 @@ This command gets an Asset Intelligence synchronization point.
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

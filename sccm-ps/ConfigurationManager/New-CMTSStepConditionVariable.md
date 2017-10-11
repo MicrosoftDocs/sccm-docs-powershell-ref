@@ -18,21 +18,21 @@ New-CMTSStepConditionVariable -OperatorType <VariableOperatorType> -ConditionVar
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -ConditionVariableName
-{{Fill ConditionVariableName Description}}
+ 
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
-{{Fill ConditionVariableValue Description}}
+ 
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
-{{Fill OperatorType Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType

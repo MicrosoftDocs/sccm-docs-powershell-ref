@@ -22,21 +22,21 @@ New-CMIosEnrollmentProfile -Name <String> [-Description <String>] [-Department <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AddCertificatePath
-{{Fill AddCertificatePath Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Affinity
-{{Fill Affinity Description}}
+ 
 
 ```yaml
 Type: AffinitySetting
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPairingType
-{{Fill AllowPairingType Description}}
+ 
 
 ```yaml
 Type: PairingType
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppleId
-{{Fill AppleId Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplePay
-{{Fill ApplePay Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Department
-{{Fill Department Description}}
+ 
 
 ```yaml
 Type: String
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
-{{Fill Diagnostic Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDepEnable
-{{Fill IsDepEnable Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsMdmRemovable
-{{Fill IsMdmRemovable Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-{{Fill Location Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -Passcode
-{{Fill Passcode Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -Preparation
-{{Fill Preparation Description}}
+ 
 
 ```yaml
 Type: PreparationMode
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -Restore
-{{Fill Restore Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -Siri
-{{Fill Siri Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportPhone
-{{Fill SupportPhone Description}}
+ 
 
 ```yaml
 Type: String
@@ -339,7 +339,7 @@ Accept wildcard characters: False
 ```
 
 ### -TermAndCondition
-{{Fill TermAndCondition Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -TouchId
-{{Fill TouchId Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -Zoom
-{{Fill Zoom Description}}
+ 
 
 ```yaml
 Type: Boolean
