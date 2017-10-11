@@ -46,7 +46,7 @@ This command gets the site system server object named SiteServer01.Contoso.com a
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

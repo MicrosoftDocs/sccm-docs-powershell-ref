@@ -18,21 +18,21 @@ New-CMDetectionClauseMacBundle -BundleId <String> -ExpressionOperator <RuleExpre
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -BundleId
-{{Fill BundleId Description}}
+ 
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
-{{Fill ExpectedValue Description}}
+ 
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
-{{Fill ExpressionOperator Description}}
+ 
 
 ```yaml
 Type: RuleExpressionOperator
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyType
-{{Fill PropertyType Description}}
+ 
 
 ```yaml
 Type: SettingDataType
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-{{Fill Value Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

@@ -23,16 +23,16 @@ Get-CMSiteSummaryTask [[-Id] <Int32>] [-DisableWildcardHandling] [-ForceWildcard
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskName
-{{Fill TaskName Description}}
+ 
 
 ```yaml
 Type: String

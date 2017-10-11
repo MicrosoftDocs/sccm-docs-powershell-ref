@@ -19,16 +19,16 @@ Set-CMComplianceSettingActiveDirectoryQuery [-DistinguishedName <String>] [-Ldap
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistinguishedName
-{{Fill DistinguishedName Description}}
+ 
 
 ```yaml
 Type: String
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: PSObject
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -LdapPrefix
-{{Fill LdapPrefix Description}}
+ 
 
 ```yaml
 Type: String
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewSettingName
-{{Fill NewSettingName Description}}
+ 
 
 ```yaml
 Type: String
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Property
-{{Fill Property Description}}
+ 
 
 ```yaml
 Type: String
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchFilter
-{{Fill SearchFilter Description}}
+ 
 
 ```yaml
 Type: String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchScope
-{{Fill SearchScope Description}}
+ 
 
 ```yaml
 Type: SearchScope
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -SettingName
-{{Fill SettingName Description}}
+ 
 
 ```yaml
 Type: String

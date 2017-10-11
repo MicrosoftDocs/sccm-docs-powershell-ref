@@ -39,7 +39,7 @@ This command gets the multicast service point settings for the distribution poin
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

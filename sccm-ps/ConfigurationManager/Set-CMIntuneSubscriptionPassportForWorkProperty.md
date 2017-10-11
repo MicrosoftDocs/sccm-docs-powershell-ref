@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBiometric
-{{Fill EnableBiometric Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEnhancedBiometric
-{{Fill EnableEnhancedBiometric Description}}
+ 
 
 ```yaml
 Type: Boolean

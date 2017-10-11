@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Application
-{{Fill Application Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackage
-{{Fill DriverPackage Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaExpirationDate
-{{Fill MediaExpirationDate Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaStartDate
-{{Fill MediaStartDate Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -Package
-{{Fill Package Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -378,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderCredential
-{{Fill ProviderCredential Description}}
+ 
 
 ```yaml
 Type: PSCredential

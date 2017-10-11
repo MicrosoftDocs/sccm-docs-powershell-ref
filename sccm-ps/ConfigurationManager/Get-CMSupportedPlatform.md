@@ -17,16 +17,16 @@ Get-CMSupportedPlatform [-Fast] [-MaxVersion <String>] [-MinVersion <String>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-{{Fill Fast Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxVersion
-{{Fill MaxVersion Description}}
+ 
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinVersion
-{{Fill MinVersion Description}}
+ 
 
 ```yaml
 Type: String
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Platform
-{{Fill Platform Description}}
+ 
 
 ```yaml
 Type: String

@@ -20,21 +20,21 @@ New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -CommandLine
-{{Fill CommandLine Description}}
+ 
 
 ```yaml
 Type: String
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-{{Fill Condition Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
-{{Fill ContinueOnError Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-{{Fill Disable Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWow64Redirection
-{{Fill DisableWow64Redirection Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+ 
 
 ```yaml
 Type: String
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunAsUser
-{{Fill RunAsUser Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuccessCode
-{{Fill SuccessCode Description}}
+ 
 
 ```yaml
 Type: Int32[]
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-{{Fill Timeout Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{Fill UserName Description}}
+ 
 
 ```yaml
 Type: String
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPassword
-{{Fill UserPassword Description}}
+ 
 
 ```yaml
 Type: SecureString
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkingDirectory
-{{Fill WorkingDirectory Description}}
+ 
 
 ```yaml
 Type: String

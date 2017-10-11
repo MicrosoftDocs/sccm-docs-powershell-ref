@@ -19,16 +19,16 @@ Set-CMComplianceSettingRegistryKeyValue [-Is64Bit <Boolean>] [-KeyName <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Hive
-{{Fill Hive Description}}
+ 
 
 ```yaml
 Type: RegistryRootKey
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: PSObject
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Is64Bit
-{{Fill Is64Bit Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyName
-{{Fill KeyName Description}}
+ 
 
 ```yaml
 Type: String
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewSettingName
-{{Fill NewSettingName Description}}
+ 
 
 ```yaml
 Type: String
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -SettingName
-{{Fill SettingName Description}}
+ 
 
 ```yaml
 Type: String
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueName
-{{Fill ValueName Description}}
+ 
 
 ```yaml
 Type: String

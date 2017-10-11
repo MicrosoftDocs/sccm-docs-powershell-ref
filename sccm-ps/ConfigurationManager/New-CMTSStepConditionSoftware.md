@@ -17,16 +17,16 @@ New-CMTSStepConditionSoftware -MsiFilePath <String> [-IsAnyVersion <Boolean>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAnyVersion
-{{Fill IsAnyVersion Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-{{Fill MsiFilePath Description}}
+ 
 
 ```yaml
 Type: String

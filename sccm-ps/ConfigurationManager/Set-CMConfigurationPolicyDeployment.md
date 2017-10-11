@@ -92,7 +92,7 @@ This command creates a configuration policy deployment named Remote Firewall Pol
 ## PARAMETERS
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
-{{Fill PostponeDateTime Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfileId
-{{Fill RemoteConnectionProfileId Description}}
+ 
 
 ```yaml
 Type: String
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfileName
-{{Fill RemoteConnectionProfileName Description}}
+ 
 
 ```yaml
 Type: String

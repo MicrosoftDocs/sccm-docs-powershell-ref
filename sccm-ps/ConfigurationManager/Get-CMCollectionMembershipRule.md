@@ -33,21 +33,21 @@ Get-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObject <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -ChildSearchCriteria
-{{Fill ChildSearchCriteria Description}}
+ 
 
 ```yaml
 Type: SmsProviderSearch
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionType
-{{Fill CollectionType Description}}
+ 
 
 ```yaml
 Type: CollectionType
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtraArguments
-{{Fill ExtraArguments Description}}
+ 
 
 ```yaml
 Type: Object
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleClassName
-{{Fill RuleClassName Description}}
+ 
 
 ```yaml
 Type: String

@@ -42,21 +42,21 @@ Set-CMClientSettingSoftwareInventory [-Enable <Boolean>] [-Schedule <IResultObje
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AddCollectFile
-{{Fill AddCollectFile Description}}
+ 
 
 ```yaml
 Type: Hashtable[]
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddInventoryFileType
-{{Fill AddInventoryFileType Description}}
+ 
 
 ```yaml
 Type: Hashtable[]
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -CleanCollectFile
-{{Fill CleanCollectFile Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -CleanInventoryFileType
-{{Fill CleanInventoryFileType Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{Fill DefaultSetting Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-{{Fill Enable Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDisplayName
-{{Fill FileDisplayName Description}}
+ 
 
 ```yaml
 Type: String
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileInventoriedName
-{{Fill FileInventoriedName Description}}
+ 
 
 ```yaml
 Type: String
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-{{Fill FileName Description}}
+ 
 
 ```yaml
 Type: String
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveCollectFile
-{{Fill RemoveCollectFile Description}}
+ 
 
 ```yaml
 Type: Hashtable[]
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveInventoryFileType
-{{Fill RemoveInventoryFileType Description}}
+ 
 
 ```yaml
 Type: Hashtable[]
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportOption
-{{Fill ReportOption Description}}
+ 
 
 ```yaml
 Type: ReportOptionType
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-{{Fill Schedule Description}}
+ 
 
 ```yaml
 Type: IResultObject

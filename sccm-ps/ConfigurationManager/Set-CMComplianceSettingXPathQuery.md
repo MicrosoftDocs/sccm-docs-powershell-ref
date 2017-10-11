@@ -20,21 +20,21 @@ Set-CMComplianceSettingXPathQuery [-AddXmlNamespace <Hashtable>] [-ClearXmlNames
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AddXmlNamespace
-{{Fill AddXmlNamespace Description}}
+ 
 
 ```yaml
 Type: Hashtable
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearXmlNamespace
-{{Fill ClearXmlNamespace Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSubfolders
-{{Fill IncludeSubfolders Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: PSObject
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Is64Bit
-{{Fill Is64Bit Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewSettingName
-{{Fill NewSettingName Description}}
+ 
 
 ```yaml
 Type: String
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{Fill Path Description}}
+ 
 
 ```yaml
 Type: String
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveXmlNamespace
-{{Fill RemoveXmlNamespace Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -SettingName
-{{Fill SettingName Description}}
+ 
 
 ```yaml
 Type: String
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -XPathQueryFile
-{{Fill XPathQueryFile Description}}
+ 
 
 ```yaml
 Type: String
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -XPathQueryText
-{{Fill XPathQueryText Description}}
+ 
 
 ```yaml
 Type: String
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -XmlFileName
-{{Fill XmlFileName Description}}
+ 
 
 ```yaml
 Type: String

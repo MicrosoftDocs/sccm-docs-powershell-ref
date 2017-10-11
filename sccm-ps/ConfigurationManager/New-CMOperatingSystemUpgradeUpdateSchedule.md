@@ -68,16 +68,16 @@ New-CMOperatingSystemUpgradeUpdateSchedule [-ContinueOnError <Boolean>] [-RunNow
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
-{{Fill ContinueOnError Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomSchedule
-{{Fill CustomSchedule Description}}
+ 
 
 ```yaml
 Type: DateTime
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+ 
 
 ```yaml
 Type: String
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunNow
-{{Fill RunNow Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
-{{Fill SoftwareUpdate Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateDistributionPoint
-{{Fill UpdateDistributionPoint Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -Utc
-{{Fill Utc Description}}
+ 
 
 ```yaml
 Type: Boolean

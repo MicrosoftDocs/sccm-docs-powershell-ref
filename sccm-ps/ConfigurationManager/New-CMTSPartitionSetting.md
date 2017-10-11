@@ -56,16 +56,16 @@ New-CMTSPartitionSetting [-PartitionRecovery] [-Name <String>] [-Size <Int32>] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDriveLetterAssignment
-{{Fill EnableDriveLetterAssignment Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQuickFormat
-{{Fill EnableQuickFormat Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsBootPartition
-{{Fill IsBootPartition Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionEfi
-{{Fill PartitionEfi Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionExtended
-{{Fill PartitionExtended Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionFileSystem
-{{Fill PartitionFileSystem Description}}
+ 
 
 ```yaml
 Type: FileSystemType
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionHidden
-{{Fill PartitionHidden Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionLogical
-{{Fill PartitionLogical Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionMsr
-{{Fill PartitionMsr Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionPrimary
-{{Fill PartitionPrimary Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionRecovery
-{{Fill PartitionRecovery Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -Size
-{{Fill Size Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -SizeUnit
-{{Fill SizeUnit Description}}
+ 
 
 ```yaml
 Type: SizeUnitType
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -Variable
-{{Fill Variable Description}}
+ 
 
 ```yaml
 Type: String

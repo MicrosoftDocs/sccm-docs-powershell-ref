@@ -66,21 +66,21 @@ Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -Distributi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Collection
-{{Fill Collection Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{Fill CollectionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{Fill CollectionName Description}}
+ 
 
 ```yaml
 Type: String
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroup
-{{Fill DistributionPointGroup Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupId
-{{Fill DistributionPointGroupId Description}}
+ 
 
 ```yaml
 Type: String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-{{Fill DistributionPointGroupName Description}}
+ 
 
 ```yaml
 Type: String

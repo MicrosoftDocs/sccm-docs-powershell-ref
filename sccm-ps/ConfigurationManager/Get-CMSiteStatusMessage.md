@@ -38,7 +38,7 @@ System Center Configuration Manager gets the status messages from the Configurat
 ## PARAMETERS
 
 ### -Component
-{{Fill Component Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterHashtable
-{{Fill FilterHashtable Description}}
+ 
 
 ```yaml
 Type: Hashtable
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageId
-{{Fill MessageId Description}}
+ 
 
 ```yaml
 Type: Int32[]
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Module
-{{Fill Module Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

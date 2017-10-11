@@ -55,7 +55,7 @@ This command changes the description of an Active Directory forest that has the 
 ## PARAMETERS
 
 ### -AddPublishingSite
-{{Fill AddPublishingSite Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePublishingSite
-{{Fill RemovePublishingSite Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-{{Fill UserName Description}}
+ 
 
 ```yaml
 Type: String

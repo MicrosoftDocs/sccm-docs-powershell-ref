@@ -42,7 +42,7 @@ This command creates the following settings for a mobile device:
 ## PARAMETERS
 
 ### -AllowHtmlEmail
-{{Fill AllowHtmlEmail Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConsumerEmail
-{{Fill ConsumerEmail Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAttachmentPolicy
-{{Fill EmailAttachmentPolicy Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumCalendarAge
-{{Fill MaximumCalendarAge Description}}
+ 
 
 ```yaml
 Type: MaxCalendarAgeType
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumEmailAge
-{{Fill MaximumEmailAge Description}}
+ 
 
 ```yaml
 Type: MaxEmailAgeType
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSizeAttachment
-{{Fill MaximumSizeAttachment Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSizeHtmlEmail
-{{Fill MaximumSizeHtmlEmail Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSizeTextEmail
-{{Fill MaximumSizeTextEmail Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -PushWhenRoaming
-{{Fill PushWhenRoaming Description}}
+ 
 
 ```yaml
 Type: Boolean

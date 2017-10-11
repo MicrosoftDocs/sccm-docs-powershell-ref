@@ -33,16 +33,16 @@ Invoke-CMContentRedistribution [-DistributionPoint <IResultObject[]>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPoint
-{{Fill DistributionPoint Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroup
-{{Fill DistributionPointGroup Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
-{{Fill DistributionPointGroupName Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
-{{Fill DistributionPointName Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject

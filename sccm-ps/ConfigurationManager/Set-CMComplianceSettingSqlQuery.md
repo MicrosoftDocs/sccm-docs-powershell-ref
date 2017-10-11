@@ -19,21 +19,21 @@ Set-CMComplianceSettingSqlQuery [-ColumnName <String>] [-DatabaseName <String>] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -ColumnName
-{{Fill ColumnName Description}}
+ 
 
 ```yaml
 Type: String
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-{{Fill DatabaseName Description}}
+ 
 
 ```yaml
 Type: String
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: PSObject
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceName
-{{Fill InstanceName Description}}
+ 
 
 ```yaml
 Type: String
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceType
-{{Fill InstanceType Description}}
+ 
 
 ```yaml
 Type: TargetSqlInstance
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewSettingName
-{{Fill NewSettingName Description}}
+ 
 
 ```yaml
 Type: String
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -SettingName
-{{Fill SettingName Description}}
+ 
 
 ```yaml
 Type: String
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlStatementFile
-{{Fill SqlStatementFile Description}}
+ 
 
 ```yaml
 Type: String
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlStatementText
-{{Fill SqlStatementText Description}}
+ 
 
 ```yaml
 Type: String

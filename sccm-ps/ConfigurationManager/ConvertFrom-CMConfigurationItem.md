@@ -17,21 +17,21 @@ ConvertFrom-CMConfigurationItem [-ConfigurationItem <ConfigurationItem>] [-Disab
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -ConfigurationItem
-{{Fill ConfigurationItem Description}}
+ 
 
 ```yaml
 Type: ConfigurationItem

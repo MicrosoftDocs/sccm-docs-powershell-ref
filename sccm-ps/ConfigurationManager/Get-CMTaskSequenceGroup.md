@@ -30,16 +30,16 @@ Get-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-Disabl
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{Fill StepName Description}}
+ 
 
 ```yaml
 Type: String
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{Fill TaskSequenceId Description}}
+ 
 
 ```yaml
 Type: String
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{Fill TaskSequenceName Description}}
+ 
 
 ```yaml
 Type: String

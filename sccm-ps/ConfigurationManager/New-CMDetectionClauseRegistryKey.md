@@ -17,16 +17,16 @@ New-CMDetectionClauseRegistryKey [-Existence] -Hive <RegistryRootKey> [-Is64Bit]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
-{{Fill Existence Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Hive
-{{Fill Hive Description}}
+ 
 
 ```yaml
 Type: RegistryRootKey
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Is64Bit
-{{Fill Is64Bit Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyName
-{{Fill KeyName Description}}
+ 
 
 ```yaml
 Type: String

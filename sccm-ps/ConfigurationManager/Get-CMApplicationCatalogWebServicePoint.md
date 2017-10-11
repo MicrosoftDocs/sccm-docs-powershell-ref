@@ -42,7 +42,7 @@ This command gets an Application Catalog web service point named western.contoso
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowProxyTraffic
-{{Fill AllowProxyTraffic Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

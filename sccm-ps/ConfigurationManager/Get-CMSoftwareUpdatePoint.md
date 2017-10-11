@@ -45,7 +45,7 @@ The command gets a software update point that UpdateSystem.Western.Contoso.com h
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

@@ -33,21 +33,21 @@ Set-CMClientSettingCloudService [-AllowCloudDistributionPoint <Boolean>] [-AutoA
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AllowCloudDistributionPoint
-{{Fill AllowCloudDistributionPoint Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCloudManagementGateway
-{{Fill AllowCloudManagementGateway Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAzureADJoin
-{{Fill AutoAzureADJoin Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{Fill DefaultSetting Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String

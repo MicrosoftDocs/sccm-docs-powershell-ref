@@ -22,21 +22,21 @@ Set-CMAadConditionalAccessPolicy [-ClientType <AadServicePrincipalClientType>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AccountId
-{{Fill AccountId Description}}
+ 
 
 ```yaml
 Type: String
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorityId
-{{Fill AuthorityId Description}}
+ 
 
 ```yaml
 Type: String
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientType
-{{Fill ClientType Description}}
+ 
 
 ```yaml
 Type: AadServicePrincipalClientType
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{Fill Enabled Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedSecurityGroup
-{{Fill ExcludedSecurityGroup Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludedSecurityGroup
-{{Fill IncludedSecurityGroup Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntuneClientId
-{{Fill IntuneClientId Description}}
+ 
 
 ```yaml
 Type: String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntuneResourceId
-{{Fill IntuneResourceId Description}}
+ 
 
 ```yaml
 Type: String
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalType
-{{Fill ServicePrincipalType Description}}
+ 
 
 ```yaml
 Type: AadServicePrincipalType
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDevicePlatform
-{{Fill TargetedDevicePlatform Description}}
+ 
 
 ```yaml
 Type: AadServicePrincipalDevicePlatform[]
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCredential
-{{Fill UserCredential Description}}
+ 
 
 ```yaml
 Type: PSCredential
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsDeviceState
-{{Fill WindowsDeviceState Description}}
+ 
 
 ```yaml
 Type: AadServicePrincipalDeviceState

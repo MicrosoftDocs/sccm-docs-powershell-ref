@@ -19,16 +19,16 @@ New-CMTSStepConditionRegistry -RootKey <RegistryRootKeyType> -RegistryKey <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
-{{Fill RegistryKey Description}}
+ 
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
-{{Fill RegistryOperator Description}}
+ 
 
 ```yaml
 Type: VariableOperatorType
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
-{{Fill RegistryValueData Description}}
+ 
 
 ```yaml
 Type: String
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
-{{Fill RegistryValueName Description}}
+ 
 
 ```yaml
 Type: String
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
-{{Fill RootKey Description}}
+ 
 
 ```yaml
 Type: RegistryRootKeyType
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
-{{Fill ValueType Description}}
+ 
 
 ```yaml
 Type: RegistryValueType

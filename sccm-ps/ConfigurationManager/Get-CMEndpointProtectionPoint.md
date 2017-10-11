@@ -40,7 +40,7 @@ This command gets an Endpoint Protection point.
 ## PARAMETERS
 
 ### -AllSite
-{{Fill AllSite Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

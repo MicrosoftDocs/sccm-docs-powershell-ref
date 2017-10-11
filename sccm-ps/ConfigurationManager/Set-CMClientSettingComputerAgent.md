@@ -54,21 +54,21 @@ Set-CMClientSettingComputerAgent [-InitialReminderHr <Int32>] [-InterimReminderH
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AddPortalToTrustedSiteList
-{{Fill AddPortalToTrustedSiteList Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPortalToHaveElevatedTrust
-{{Fill AllowPortalToHaveElevatedTrust Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -BrandingTitle
-{{Fill BrandingTitle Description}}
+ 
 
 ```yaml
 Type: String
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{Fill DefaultSetting Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDeadlineRandom
-{{Fill DisableDeadlineRandom Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNewProgramNotification
-{{Fill DisplayNewProgramNotification Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHealthAttestation
-{{Fill EnableHealthAttestation Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyOrchestration
-{{Fill EnableThirdPartyOrchestration Description}}
+ 
 
 ```yaml
 Type: EnableThirdPartyOrchestrationType
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -FinalReminderMins
-{{Fill FinalReminderMins Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -HealthAttestationUrl
-{{Fill HealthAttestationUrl Description}}
+ 
 
 ```yaml
 Type: String
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -InitialReminderHr
-{{Fill InitialReminderHr Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstallRestriction
-{{Fill InstallRestriction Description}}
+ 
 
 ```yaml
 Type: InstallRestrictionType
@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -InterimReminderHr
-{{Fill InterimReminderHr Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -355,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortalUrl
-{{Fill PortalUrl Description}}
+ 
 
 ```yaml
 Type: String
@@ -370,7 +370,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerShellExecutionPolicy
-{{Fill PowerShellExecutionPolicy Description}}
+ 
 
 ```yaml
 Type: PowerShellExecutionPolicyType
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### -SelectWebsitePoint
-{{Fill SelectWebsitePoint Description}}
+ 
 
 ```yaml
 Type: ApplicationCatalogWebsitePointType
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendBitLocker
-{{Fill SuspendBitLocker Description}}
+ 
 
 ```yaml
 Type: SuspendBitLockerType
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseNewSoftwareCenter
-{{Fill UseNewSoftwareCenter Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseOnPremisesHealthAttestation
-{{Fill UseOnPremisesHealthAttestation Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebsitePointServerName
-{{Fill WebsitePointServerName Description}}
+ 
 
 ```yaml
 Type: String

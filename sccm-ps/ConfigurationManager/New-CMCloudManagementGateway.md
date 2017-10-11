@@ -22,21 +22,21 @@ New-CMCloudManagementGateway -SubscriptionId <String> [-GovernmentSubscription <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -CheckClientCertRevocation
-{{Fill CheckClientCertRevocation Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+ 
 
 ```yaml
 Type: String
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -GovernmentSubscription
-{{Fill GovernmentSubscription Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementCertificatePassword
-{{Fill ManagementCertificatePassword Description}}
+ 
 
 ```yaml
 Type: SecureString
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementCertificatePath
-{{Fill ManagementCertificatePath Description}}
+ 
 
 ```yaml
 Type: String
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -Region
-{{Fill Region Description}}
+ 
 
 ```yaml
 Type: AzureRegion
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootCertificatePath
-{{Fill RootCertificatePath Description}}
+ 
 
 ```yaml
 Type: String
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceCName
-{{Fill ServiceCName Description}}
+ 
 
 ```yaml
 Type: String
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceCertificatePassword
-{{Fill ServiceCertificatePassword Description}}
+ 
 
 ```yaml
 Type: SecureString
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceCertificatePath
-{{Fill ServiceCertificatePath Description}}
+ 
 
 ```yaml
 Type: String
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-{{Fill SubscriptionId Description}}
+ 
 
 ```yaml
 Type: String
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficCriticalPct
-{{Fill TrafficCriticalPct Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficOutGB
-{{Fill TrafficOutGB Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficWarningPct
-{{Fill TrafficWarningPct Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMInstanceCount
-{{Fill VMInstanceCount Description}}
+ 
 
 ```yaml
 Type: Int32

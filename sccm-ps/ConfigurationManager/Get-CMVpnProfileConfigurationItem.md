@@ -27,21 +27,21 @@ Get-CMVpnProfileConfigurationItem [-Name] <String> [-Fast] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Fast
-{{Fill Fast Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String

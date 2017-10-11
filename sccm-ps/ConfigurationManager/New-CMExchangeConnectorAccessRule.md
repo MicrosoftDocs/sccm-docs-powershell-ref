@@ -31,7 +31,7 @@ This command creates an access rule for a device type named AccessRule01 that ha
 ## PARAMETERS
 
 ### -AccessLevel
-{{Fill AccessLevel Description}}
+ 
 
 ```yaml
 Type: AccessLevelType
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Device
-{{Fill Device Description}}
+ 
 
 ```yaml
 Type: DeviceType
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-{{Fill RuleName Description}}
+ 
 
 ```yaml
 Type: String

@@ -25,16 +25,16 @@ New-CMDetectionClauseWindowsInstaller -ProductCode <Guid> [-Existence] [-Disable
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
-{{Fill Existence Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
-{{Fill ExpectedValue Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
-{{Fill ExpressionOperator Description}}
+ 
 
 ```yaml
 Type: RuleExpressionOperator
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductCode
-{{Fill ProductCode Description}}
+ 
 
 ```yaml
 Type: Guid
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyType
-{{Fill PropertyType Description}}
+ 
 
 ```yaml
 Type: MSIProperty
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-{{Fill Value Description}}
+ 
 
 ```yaml
 Type: SwitchParameter

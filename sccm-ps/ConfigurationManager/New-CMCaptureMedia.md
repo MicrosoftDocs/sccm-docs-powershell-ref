@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderCredential
-{{Fill ProviderCredential Description}}
+ 
 
 ```yaml
 Type: PSCredential

@@ -17,16 +17,16 @@ Add-CMComplianceSettingRule -InputObject <PSObject> -Rule <Rule> [-DisableWildca
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: PSObject
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rule
-{{Fill Rule Description}}
+ 
 
 ```yaml
 Type: Rule

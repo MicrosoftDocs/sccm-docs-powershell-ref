@@ -26,16 +26,16 @@ New-CMADGroupDiscoveryScope [-DiscoveryAccountUserName <String>] -LdapLocation <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryAccountUserName
-{{Fill DiscoveryAccountUserName Description}}
+ 
 
 ```yaml
 Type: String
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainControllerServerName
-{{Fill DomainControllerServerName Description}}
+ 
 
 ```yaml
 Type: String
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupDN
-{{Fill GroupDN Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -LdapLocation
-{{Fill LdapLocation Description}}
+ 
 
 ```yaml
 Type: String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecursiveSearch
-{{Fill RecursiveSearch Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{Fill SiteCode Description}}
+ 
 
 ```yaml
 Type: String

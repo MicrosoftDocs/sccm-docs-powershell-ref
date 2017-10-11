@@ -17,21 +17,21 @@ New-CMTSStepConditionIfStatement -StatementType <ConditionStatementType> [-Condi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -Condition
-{{Fill Condition Description}}
+ 
 
 ```yaml
 Type: IResultObject[]
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
-{{Fill StatementType Description}}
+ 
 
 ```yaml
 Type: ConditionStatementType

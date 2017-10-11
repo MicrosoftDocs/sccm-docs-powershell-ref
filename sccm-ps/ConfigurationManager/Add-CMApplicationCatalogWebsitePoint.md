@@ -98,7 +98,7 @@ The command specifies values for the three colors.
 ## PARAMETERS
 
 ### -ApplicationWebServicePointServer
-{{Fill ApplicationWebServicePointServer Description}}
+ 
 
 ```yaml
 Type: IResultObject

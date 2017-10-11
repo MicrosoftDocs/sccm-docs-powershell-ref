@@ -51,21 +51,21 @@ Set-CMClientSettingRemoteTool [-FirewallExceptionProfile <FirewallExceptionProfi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AccessLevel
-{{Fill AccessLevel Description}}
+ 
 
 ```yaml
 Type: AccessLevelType
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowClientChange
-{{Fill AllowClientChange Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPermittedViewer
-{{Fill AllowPermittedViewer Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnattendedComputer
-{{Fill AllowUnattendedComputer Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -AudibleSignal
-{{Fill AudibleSignal Description}}
+ 
 
 ```yaml
 Type: AudibleSignalType
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{Fill DefaultSetting Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallExceptionProfile
-{{Fill FirewallExceptionProfile Description}}
+ 
 
 ```yaml
 Type: FirewallExceptionProfileType[]
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantPermissionToLocalAdministrator
-{{Fill GrantPermissionToLocalAdministrator Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManageRemoteDesktopSetting
-{{Fill ManageRemoteDesktopSetting Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManageSolicitedRemoteAssistance
-{{Fill ManageSolicitedRemoteAssistance Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManageUnsolicitedRemoteAssistance
-{{Fill ManageUnsolicitedRemoteAssistance Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -PermittedViewer
-{{Fill PermittedViewer Description}}
+ 
 
 ```yaml
 Type: String[]
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -PromptUserForClipboardPermission
-{{Fill PromptUserForClipboardPermission Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -353,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -PromptUserForPermission
-{{Fill PromptUserForPermission Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteAssistanceAccessLevel
-{{Fill RemoteAssistanceAccessLevel Description}}
+ 
 
 ```yaml
 Type: RemoteAssistanceAccessLevelType
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireAuthentication
-{{Fill RequireAuthentication Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowNotificationIconOnTaskbar
-{{Fill ShowNotificationIconOnTaskbar Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -414,7 +414,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowSessionConnectionBar
-{{Fill ShowSessionConnectionBar Description}}
+ 
 
 ```yaml
 Type: Boolean

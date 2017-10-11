@@ -39,21 +39,21 @@ Set-CMClientSettingClientCache [-ConfigureBranchCache <Boolean>] [-EnableBranchC
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -BroadcastPort
-{{Fill BroadcastPort Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigureBranchCache
-{{Fill ConfigureBranchCache Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigureCacheSize
-{{Fill ConfigureCacheSize Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
-{{Fill DefaultSetting Description}}
+ 
 
 ```yaml
 Type: SwitchParameter
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadPort
-{{Fill DownloadPort Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBranchCache
-{{Fill EnableBranchCache Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHttps
-{{Fill EnableHttps Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSuperPeer
-{{Fill EnableSuperPeer Description}}
+ 
 
 ```yaml
 Type: Boolean
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+ 
 
 ```yaml
 Type: IResultObject
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxBranchCacheSizePercent
-{{Fill MaxBranchCacheSizePercent Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCacheSize
-{{Fill MaxCacheSize Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCacheSizePercent
-{{Fill MaxCacheSizePercent Description}}
+ 
 
 ```yaml
 Type: Int32
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+ 
 
 ```yaml
 Type: String

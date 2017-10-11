@@ -18,21 +18,21 @@ Get-CMAadConditionalAccessPolicy -ServicePrincipalType <AadServicePrincipalType>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+ 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>  
 ```
 
-{{ Add example description here }}
+ 
 
 ## PARAMETERS
 
 ### -AccountId
-{{Fill AccountId Description}}
+ 
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorityId
-{{Fill AuthorityId Description}}
+ 
 
 ```yaml
 Type: String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntuneClientId
-{{Fill IntuneClientId Description}}
+ 
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntuneResourceId
-{{Fill IntuneResourceId Description}}
+ 
 
 ```yaml
 Type: String
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalType
-{{Fill ServicePrincipalType Description}}
+ 
 
 ```yaml
 Type: AadServicePrincipalType
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCredential
-{{Fill UserCredential Description}}
+ 
 
 ```yaml
 Type: PSCredential
