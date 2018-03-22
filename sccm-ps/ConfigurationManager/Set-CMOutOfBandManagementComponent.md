@@ -44,7 +44,7 @@ PS C:\> Set-CMOutOfBandManagementComponent -SiteCode "CM2" -EnableWiredNetworkAc
 
 The first command uses the [Get-CMTrustedRootCertificate](Get-CMTrustedRootCertificate.md) cmdlet to get a certificate, and stores the certificate in the $Cert variable.
 
-The second command uses the [New-CMWiredProfileObject](New-CMWiredProfileObject/.md) cmdlet to create a profile object, and stores the object in the $WiredP variable.
+The second command uses the [New-CMWiredProfileObject](New-CMWiredProfileObject.md)  cmdlet to create a profile object, and stores the object in the $WiredP variable.  
 
 The third command uses the [New-CMWirelessProfileObject](New-CMWirelessProfileObject.md) cmdlet to create a wireless profile object, and stores the object in the $WirelessP variable.
 
@@ -574,4 +574,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMAmtProvisioningAccount](New-CMAmtProvisioningAccount.md)
 
-[New-CMWiredProfileObject](New-CMWiredProfileObject.md)
+[New-CMWiredProfileObject](New-CMWiredProfileObject.md)  
