@@ -565,9 +565,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
+<!--
 [Get-CMOutOfBandManagementComponent](Get-CMOutOfBandManagementComponent.md)
-
+-->
 [New-CMSchedule](New-CMSchedule.md)
 
 [Get-CMTrustedRootCertificate](Get-CMTrustedRootCertificate.md)
