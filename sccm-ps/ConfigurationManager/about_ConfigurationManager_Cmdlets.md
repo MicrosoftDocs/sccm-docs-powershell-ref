@@ -1,9 +1,9 @@
 ---
-ms.date:  2017-10-02
+ms.date: 10/02/2017
 schema:  2.0.0
-locale:  en-us
-keywords:  powershell,cmdlet
-title:  about_Using
+title: About Configuration Manager Cmdlets
+titleSuffix: Configuration Manager
+description: Learn about the Configuration Manager PowerShell cmdlets, provider, and updatable help
 ---
 
 # ConfigurationManager_Cmdlets
@@ -11,7 +11,7 @@ title:  about_Using
 
 # SHORT DESCRIPTION
 Provides information about the Microsoft System Center Configuration Manager
-cmdlets, provider, and updateable help.
+cmdlets, provider, and updatable help.
 
 # LONG DESCRIPTION
 The Windows PowerShell module for System Center Configuration Manager lets
