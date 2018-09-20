@@ -4,9 +4,9 @@
 - name: Release Notes
   href: ''
   items:
+  - name: 1806 Release Notes
+    href: 1806_Release_Notes.md
   - name: 1802 Release Notes
     href: 1802_Release_Notes.md
   - name: 1710 Release Notes
     href: 1710_Release_Notes.md
-  - name: 1706 Release Notes
-    href: 1706_Release_Notes.md
