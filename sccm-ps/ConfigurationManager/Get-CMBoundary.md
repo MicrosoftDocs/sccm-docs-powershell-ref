@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMBoundary
 
 ## SYNOPSIS
-Gets a boundary.
+Gets a Configuration Manager boundary.
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Get-CMBoundary -BoundaryGroupInputObject <IResultObject> [-DisableWildcardHandli
 ```
 
 ## DESCRIPTION
-The **Get-CMBoundary** cmdlet gets a boundary.
+The **Get-CMBoundary** cmdlet gets a System Center Configuration Manager boundary.
 
 In Microsoft System Center Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
 A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an IP address range.

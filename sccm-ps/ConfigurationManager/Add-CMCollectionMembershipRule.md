@@ -36,16 +36,10 @@ Add-CMCollectionMembershipRule -CollectionType <CollectionType> -InputObject <IR
 ```
 
 ## DESCRIPTION
- 
+This cmdlet is usually called by higher level wrapper cmdlets. It is not called directly.
+
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\>  
-```
-
- 
 
 ## PARAMETERS
 

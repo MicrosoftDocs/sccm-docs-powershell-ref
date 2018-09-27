@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMApplication
 
 ## SYNOPSIS
-Gets an application.
+Gets a Configuration Manager application.
 
 ## SYNTAX
 

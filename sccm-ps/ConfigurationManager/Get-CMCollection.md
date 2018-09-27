@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMCollection
 
 ## SYNOPSIS
-Gets a collection.
+Gets a Configuration Manager collection.
 
 ## SYNTAX
 

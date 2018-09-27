@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMApprovalRequest
 
 ## SYNOPSIS
-Gets a request to allow the installation of an application.
+Gets a request to allow the installation of a Configuration Manager application.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Get-CMApprovalRequest [-User <String>] -InputObject <IResultObject> [-CurrentSta
 ```
 
 ## DESCRIPTION
-The **Get-CMApprovalRequest** cmdlet gets a request from a user to install an application.
+The **Get-CMApprovalRequest** cmdlet gets a request from a user to install a Microsoft System Center Configuration Manager application.
 You can specify an approval request by application name, application ID, or by user name.
 
 ## EXAMPLES

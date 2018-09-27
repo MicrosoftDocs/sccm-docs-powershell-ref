@@ -8,7 +8,7 @@ schema: 2.0.0
 # Invoke-CMCollectionUpdate
 
 ## SYNOPSIS
-Updates the membership of a collection.
+Updates the membership of a Configuration Manager collection.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Invoke-CMCollectionUpdate -CollectionId <String> [-DisableWildcardHandling] [-Fo
 ```
 
 ## DESCRIPTION
-The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a collection.
+The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a Microsoft System Center Configuration Manager collection.
 
 ## EXAMPLES
 

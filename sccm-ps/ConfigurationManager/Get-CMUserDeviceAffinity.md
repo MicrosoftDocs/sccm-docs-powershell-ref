@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMUserDeviceAffinity
 
 ## SYNOPSIS
-Gets user device affinities.
+Gets a user's device affinities.
 
 ## SYNTAX
 
