@@ -7,7 +7,7 @@ schema: 2.0.0
 # Add-CMCollectionMembershipRule
 
 ## SYNOPSIS
-Adds a collection membership rule
+Adds a Configuration Manager collection membership rule.
 
 ## SYNTAX
 

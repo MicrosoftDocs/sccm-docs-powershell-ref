@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMDeploymentStatusDetails
 
 ## SYNOPSIS
-Gets a deployment status details
+Gets the status details of a Configuration Manager deployment.
 
 ## SYNTAX
 
@@ -18,15 +18,10 @@ Get-CMDeploymentStatusDetails -InputObject <IResultObject> [-DisableWildcardHand
 
 ## DESCRIPTION
  
+The **Get-CMDeploymentStatusDetails** cmdlet gets the status details of a Microsoft System Center Configuration Manager deployment.
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\>  
-```
-
- 
 
 ## PARAMETERS
 

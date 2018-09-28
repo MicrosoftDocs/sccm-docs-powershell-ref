@@ -7,7 +7,7 @@ schema: 2.0.0
 # Invoke-CMSiteUpdateDownload
 
 ## SYNOPSIS
-Invokes a site update download
+Invokes a site update download.
 
 ## SYNTAX
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CMDeviceVariable
 
 ## SYNOPSIS
-Modifies a device variable.
+Modifies a device variable of a Configuration Manager device.
 
 ## SYNTAX
 

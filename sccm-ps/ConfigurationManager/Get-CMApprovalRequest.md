@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMApprovalRequest
 
 ## SYNOPSIS
-Gets a request to allow the installation of a Configuration Manager application.
+Gets an approval request to allow the installation of a Configuration Manager application.
 
 ## SYNTAX
 

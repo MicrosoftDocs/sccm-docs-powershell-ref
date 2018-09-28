@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMCollectionMembershipRule
 
 ## SYNOPSIS
-Removes a collection membership rule
+Removes a Configuration Manager collection membership rule.
 
 ## SYNTAX
 

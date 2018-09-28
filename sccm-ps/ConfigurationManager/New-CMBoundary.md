@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CMBoundary
 
 ## SYNOPSIS
-Creates a boundary.
+Creates a Configuration Manager boundary.
 
 ## SYNTAX
 

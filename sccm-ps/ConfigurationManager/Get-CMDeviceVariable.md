@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMDeviceVariable
 
 ## SYNOPSIS
-Gets device variables.
+Gets device variables of a Configuration Manager device.
 
 ## SYNTAX
 

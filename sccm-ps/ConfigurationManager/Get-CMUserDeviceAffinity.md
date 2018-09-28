@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMUserDeviceAffinity
 
 ## SYNOPSIS
-Gets a user's device affinities.
+Gets a Configuration Manager user's device affinities.
 
 ## SYNTAX
 
@@ -37,7 +37,8 @@ Get-CMUserDeviceAffinity -UserId <String[]> [-DisableWildcardHandling] [-ForceWi
 ```
 
 ## DESCRIPTION
-The **Get-CMUserDeviceAffinity** cmdlet gets one or more user device affinities.
+The **Get-CMUserDeviceAffinity** cmdlet gets one or more user device affinities in Microsoft System Center Configuration Manager.
+
 User device affinity in Microsoft System Center Configuration Manager is a method of associating a user with one or more specified devices.
 
 ## EXAMPLES

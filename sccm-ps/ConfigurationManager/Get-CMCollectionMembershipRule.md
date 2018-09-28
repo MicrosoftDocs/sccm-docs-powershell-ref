@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMCollectionMembershipRule
 
 ## SYNOPSIS
-Get a collection membership rule
+Get a Configuration Manager collection membership rule.
 
 ## SYNTAX
 
