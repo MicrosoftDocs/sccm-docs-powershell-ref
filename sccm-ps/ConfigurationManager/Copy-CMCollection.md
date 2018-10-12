@@ -7,7 +7,7 @@ schema: 2.0.0
 # Copy-CMCollection
 
 ## SYNOPSIS
-Copys a collection
+Copys a Configuration Manager collection.
 
 ## SYNTAX
 
@@ -30,14 +30,18 @@ Copy-CMCollection -InputObject <IResultObject> [-NewName <String>] [-PassThru] [
 ```
 
 ## DESCRIPTION
- 
+The **Copy-CMCollection** cmdlet clone an existing collection object to a new one in Microsoft System Center Configuration Manager.
+
+Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS C:\> Copy-CMCollection -Name "testUser" -NewName "testUserNew"
 ```
+
+This command exports the collection named testUser to a new collection named testUserNew.
 
  
 

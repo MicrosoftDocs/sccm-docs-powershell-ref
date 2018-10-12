@@ -43,7 +43,7 @@ Get-CMCollection -DistributionPointGroup <IResultObject> [-CollectionType <Colle
 ```
 
 ## DESCRIPTION
-The **Get-CMCollection** cmdlet gets a Microsoft System Center Configuration Manager collection. 
+The **Get-CMCollection** cmdlet gets a Microsoft System Center Configuration Manager collection.
 
 Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 

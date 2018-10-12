@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CMCollection
 
 ## SYNOPSIS
-Removes a collection.
+Removes a Configuration Manager collection.
 
 ## SYNTAX
 
@@ -32,6 +32,8 @@ Remove-CMCollection -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWild
 
 ## DESCRIPTION
 The **Remove-CMCollection** cmdlet removes a collection from Microsoft System Center Configuration Manager.
+
+Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 
 ## EXAMPLES
 
