@@ -34,9 +34,9 @@ Set-CMDeviceVariable -DeviceName <String> -VariableName <String> [-NewVariableNa
 ```
 
 ## DESCRIPTION
-The **Set-CMDeviceVariable** cmdlet modifies a device variable.
-Individual devices have device variables.
-Task sequence processing uses device variables.
+The **Set-CMDeviceVariable** cmdlet modifies a device variable of a Microsoft System Center Configuration Manager device.
+
+Individual devices have device variables. Task sequence processing uses device variables.
 
 ## EXAMPLES
 
