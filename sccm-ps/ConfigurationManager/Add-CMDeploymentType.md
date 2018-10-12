@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-CMDeploymentType
 
 ## SYNOPSIS
-Adds a deployment type for an application.
+Adds a deployment type for a Configuration Manager deployment application. This cmdlet is deprecated.
 
 ## SYNTAX
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMDeploymentType
 
 ## SYNOPSIS
-Gets the deployment type of an application.
+Gets the deployment type of a Configuration Manager deployment application.
 
 ## SYNTAX
 
@@ -31,7 +31,8 @@ Get-CMDeploymentType [-DeploymentTypeName <String>] -InputObject <IResultObject>
 ```
 
 ## DESCRIPTION
-The **Get-CMDeploymentType** cmdlet gets the deployment type of an application.
+The **Get-CMDeploymentType** cmdlet gets the deployment type of a Microsoft System Center Configuration Manager application.
+
 A deployment type is contained within an application and contains the information that Microsoft System Center Configuration Manager requires to install software.
 A deployment type also contains rules that specify if and how the software is deployed.
 
