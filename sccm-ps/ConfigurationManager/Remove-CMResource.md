@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CMResource
 
 ## SYNOPSIS
-Removes a resource.
+Removes a Configuration Manager resource.
 
 ## SYNTAX
 
@@ -26,6 +26,7 @@ Remove-CMResource [-ResourceId] <Int32> [-Force] [-DisableWildcardHandling] [-Fo
 
 ## DESCRIPTION
 The **Remove-CMResource** cmdlet removes a resource.
+
 A resource can be a user or a device.
 
 ## EXAMPLES
