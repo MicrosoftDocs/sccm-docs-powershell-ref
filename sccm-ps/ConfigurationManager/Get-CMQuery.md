@@ -7,11 +7,12 @@ schema: 2.0.0
 # Get-CMQuery
 
 ## SYNOPSIS
-Gets a query
+Gets Configuration Manager queries.
 
 ## SYNTAX
 
 ### ByName (Default)
+
 ```
 Get-CMQuery [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -22,16 +23,18 @@ Get-CMQuery [-Id <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [
 ```
 
 ## DESCRIPTION
- 
+The **Get-CMQuery** cmdlet gets the queries stored in Microsoft System Center Configuration Manager.
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find. 
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\>  
+
+```powershell
+PS C:\> Get-CMQuery -Name "*ConfigMgr clients *"
 ```
 
- 
+This command gets the Configuration Manager queries with the names containing "ConfigMgr clients".
 
 ## PARAMETERS
 

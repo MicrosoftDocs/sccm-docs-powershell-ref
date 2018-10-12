@@ -7,7 +7,7 @@ schema: 2.0.0
 # Export-CMQuery
 
 ## SYNOPSIS
-Exports a query
+Exports a query from Configuration Manager.
 
 ## SYNTAX
 
@@ -30,15 +30,18 @@ Export-CMQuery [-InputObject] <IResultObject> -ExportFilePath <String> [-Comment
 ```
 
 ## DESCRIPTION
- 
+The **Export-CMQuery** cmdlet exports a query from Microsoft System Center Configuration Manager.
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find. 
+
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS C:\> Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.xml"
 ```
 
+This command exports a query called My Systems to an exported file called Query.xml
  
 
 ## PARAMETERS
