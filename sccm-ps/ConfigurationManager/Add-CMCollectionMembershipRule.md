@@ -36,7 +36,7 @@ Add-CMCollectionMembershipRule -CollectionType <CollectionType> -InputObject <IR
 ```
 
 ## DESCRIPTION
-This cmdlet is usually called by higher level wrapper cmdlets. It is not called directly.
+This cmdlet is usually called by higher level wrapper cmdlets. This cmdlet shall never be called directly.
 
 
 ## EXAMPLES
