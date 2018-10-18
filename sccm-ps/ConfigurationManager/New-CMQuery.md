@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMQuery
 
 ## SYNOPSIS
-Creates a query
+Creates a Configuration Manager query.
 
 ## SYNTAX
 
@@ -18,16 +18,18 @@ New-CMQuery [-Comment <String>] -Expression <String> [-LimitToCollectionId <Stri
 ```
 
 ## DESCRIPTION
- 
+The **New-CMQuery** cmdlet creates a query in Microsoft System Center Configuration Manager.
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find. When used against a Configuration Manager site database, a query is a specific set of instructions that extract information about a defined set of objects. You can create queries and store them in the Configuration Manager site database. By running a query, you search the database for information about the objects that match the query criteria.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS C:\> New-CMQuery -Name "My Systems" -Expression `
+"select * from SMS_R_System where Name LIKE 'ABC%' 
 ```
 
- 
+This command create a new Configuration Manager query with the name called "New Systems".
 
 ## PARAMETERS
 

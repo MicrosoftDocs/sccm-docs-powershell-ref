@@ -8,7 +8,7 @@ schema: 2.0.0
 # Import-CMCollection
 
 ## SYNOPSIS
-Imports a collection.
+Imports a Configuration Manager collection.
 
 ## SYNTAX
 
@@ -19,6 +19,8 @@ Import-CMCollection [-ImportFilePath] <String> [-DisableWildcardHandling] [-Forc
 
 ## DESCRIPTION
 The **Import-CMCollection** cmdlet imports a previously exported collection into Microsoft System Center Configuration Manager.
+
+Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 
 ## EXAMPLES
 

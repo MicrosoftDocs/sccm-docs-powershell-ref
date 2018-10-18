@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMCollectionMembershipRule
 
 ## SYNOPSIS
-Removes a collection membership rule
+Removes a Configuration Manager collection membership rule.
 
 ## SYNTAX
 
@@ -33,16 +33,10 @@ Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObjec
 ```
 
 ## DESCRIPTION
- 
+This cmdlet is usually called by higher level wrapper cmdlets. It is not called directly.
+
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\>  
-```
-
- 
 
 ## PARAMETERS
 

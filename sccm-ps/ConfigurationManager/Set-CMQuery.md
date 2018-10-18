@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CMQuery
 
 ## SYNOPSIS
-Sets a query
+Configure a Configuration Manager query.
 
 ## SYNTAX
 
@@ -33,16 +33,17 @@ Set-CMQuery -Name <String> [-NewName <String>] [-Comment <String>] [-Expression 
 ```
 
 ## DESCRIPTION
- 
+The **Set-CMQuery** cmdlet configures a query stored in Microsoft System Center Configuration Manager.
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find. 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS C:\>  Get-CMQuery -Name "My Systems" | Set-CMQuery -NewName "My ABC Systems"
 ```
 
- 
+This command updates the name of a query.
 
 ## PARAMETERS
 

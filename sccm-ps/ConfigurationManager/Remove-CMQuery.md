@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMQuery
 
 ## SYNOPSIS
-Removes a query
+Removes a Configuration Manager query.
 
 ## SYNTAX
 
@@ -30,14 +30,17 @@ Remove-CMQuery -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcar
 ```
 
 ## DESCRIPTION
- 
+The **Remove-CMQuery** cmdlet removes queries stored in Microsoft System Center Configuration Manager.
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find. 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS C:\>  Get-CMQuery -Name "My Systems" | Remove-CMQuery -Force
 ```
+
+This command removes the Configuration Manager queries with the name called "My Systems".
 
  
 

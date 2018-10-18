@@ -7,7 +7,7 @@ schema: 2.0.0
 # Invoke-CMQuery
 
 ## SYNOPSIS
-Invokes a query
+Invokes a Configuration Manager query. 
 
 ## SYNTAX
 
@@ -30,15 +30,16 @@ Invoke-CMQuery -Id <String> [-LimitToCollectionId <String>] [-DisableWildcardHan
 ```
 
 ## DESCRIPTION
- 
+The **Invoke-CMQuery** cmdlet runs a query stored in Microsoft System Center Configuration Manager.
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find. 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS C:\> Invoke-CMQuery -Name 'My Systems'
 ```
-
+This command runs a query with the name "My Systems".
  
 
 ## PARAMETERS

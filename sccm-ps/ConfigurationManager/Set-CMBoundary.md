@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CMBoundary
 
 ## SYNOPSIS
-Modifies boundary settings.
+Modifies Configuration Manager boundary settings.
 
 ## SYNTAX
 

@@ -26,6 +26,7 @@ Get-CMDeployment -DeploymentId <String> [-DisableWildcardHandling] [-ForceWildca
 
 ## DESCRIPTION
 **The Get-CMDeployment** cmdlet gets one or more Microsoft System Center Configuration Manager deployments.
+
 The cmdlet gets summary information about application, Software Update Management (SUM), or classic program deployments.
 
 ## EXAMPLES
