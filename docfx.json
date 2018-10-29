@@ -3,19 +3,58 @@
     "content": [
       {
         "files": [
-          "**/*.md",
-          "**/*.yml"
+          "**/*.md"
         ],
+        "src": "docs-conceptual",
+        "version": "sccm-ps",
+        "dest": "sccm",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices"
         ]
+      },
+    {
+      "files": [
+        "toc.yml"
+      ],
+      "src": "docs-conceptual",
+      "version": "sccm-ps",
+      "dest": "sccm/sccm"
+    },
+    {
+      "files": [
+        "**/*.md"
+      ],
+      "src": "sccm-ps",
+      "version": "sccm-ps",
+      "dest": "module"
+    },
+    {
+      "files": [
+        "toc.yml"
+      ],
+      "src": "sccm-ps",
+      "version": "sccm-ps",
+      "dest": "module/sccm-ps"
+    },
+    {
+      "files": [
+        "**/*.md"
+      ],
+      "src": "virtual-directory",
+      "dest": "sccm"
+    },
+    {
+      "files": [
+        "toc.yml"
+      ],
+      "src": "bread",
+      "version": "sccm-ps",
+      "dest": "sccm/bread"
       }
     ],
     "resource": [
@@ -26,18 +65,17 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**"
+          "**/includes/**"
         ]
       }
     ],
+
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/sccm-docs-powershell-ref/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
+      "apiPlatform": "powershell",
+      "breadcrumb_path": "/powershell/sccm/bread/toc.json",
+	  "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/sccm-docs-powershell-ref",
       "feedback_product_url": "https://configurationmanager.uservoice.com"
     },
