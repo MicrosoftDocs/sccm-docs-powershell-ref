@@ -1,7 +1,5 @@
 {
   "build_entry_point": "docs",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
       "docset_name": "sccm-powershell",
@@ -26,17 +24,21 @@
       "customized_template_paths": [
         "_dependentPackages/azurecli.plugins/azurecli"
       ],
-        "customized_tasks": {
-          "docset_prebuild": [
+      "customized_tasks": {
+        "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
         ]
       }
     }
   ],
   "notification_subscribers": [],
+  "sync_notification_subscribers": [],
   "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/sccm-docs-powershell-ref",
+  "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
+  "need_preview_pull_request": true,
+  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -45,6 +47,11 @@
       "branch_mapping": {}
     }
   ],
+  "branch_target_mapping": {},
+  "need_generate_pdf_url_template": false,
+  "targets": {},
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
@@ -60,6 +67,5 @@
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     }
   ],
-  "need_generate_pdf_url_template": false,
   "dest": "_site"
 }
