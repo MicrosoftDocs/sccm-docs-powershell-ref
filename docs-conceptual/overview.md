@@ -31,17 +31,17 @@ Run Configuration Manager cmdlets and scripts by using the Configuration Manager
 
 The easiest method to load Windows PowerShell is directly from the Configuration Manager console.  
 
-1.  Start by launching the Configuration Manager console. In the upper-left corner, there's a blue rectangle. Click the white arrow in the blue rectangle, and choose **Connect via Windows PowerShell**.  
+1.  Start by launching the Configuration Manager console. In the upper-left corner, there's a blue rectangle. Select the white arrow in the blue rectangle, and choose **Connect via Windows PowerShell**.  
 
 2.  After Windows PowerShell loads, you'll see a prompt that contains your site code. For example, if the site code is "ABC", the prompt looks like:  
 
-    ```  
+    ```  PowerShell
     PS ABC:\>  
     ```  
 
 3.  First verify everything is working by using the `Get-CMSite` cmdlet. This cmdlet returns information about the Configuration Manager site you're currently connected to. In your Windows PowerShell window you should see output similar to the following example:  
 
-    ```  
+    ```  PowerShell
     PS ABC:\> Get-CMSite  
 
     BuildNumber       : 7958  
@@ -72,7 +72,7 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
     The following example changes to the module's directory and then imports it:  
 
-    ```  
+    ```  PowerShell
     PS C:\>  
     PS C:\> CD 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin'  
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1  
@@ -80,7 +80,7 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
 3.  To run the Configuration Manager cmdlets, you need to switch the path to the Configuration Manager site. In the following example, the site code is `ABC`:  
 
-    ```  
+    ```  PowerShell
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> CD ABC:   
     PS ABC:\>  
     ```  
