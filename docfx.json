@@ -79,7 +79,10 @@
     "externalReference": [],
     "globalMetadata": {
       "apiPlatform": "powershell",
-      "breadcrumb_path": "/powershell/sccm/bread/toc.json"
+      "breadcrumb_path": "/powershell/sccm/bread/toc.json",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/sccm-docs-powershell-ref",
+      "feedback_product_url": "https://configurationmanager.uservoice.com"
     },
     "fileMetadata": {},
     "template": [],
