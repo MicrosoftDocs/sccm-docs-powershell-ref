@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CMDeviceVariable
 
 ## SYNOPSIS
-Creates a device variable.
+Creates a device variable for a Configuration Manager device.
 
 ## SYNTAX
 
@@ -32,8 +32,9 @@ New-CMDeviceVariable -DeviceName <String> -VariableName <String> [-VariableValue
 ```
 
 ## DESCRIPTION
-The **New-CMDeviceVariable** cmdlet creates a device variable for a device.
-Task sequence processing uses device variables.
+The **New-CMDeviceVariable** cmdlet creates a device variable for a Microsoft System Center Configuration Manager device.
+
+Individual devices have device variables. Task sequence processing uses device variables.
 
 ## EXAMPLES
 

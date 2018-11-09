@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CMDeploymentType
 
 ## SYNOPSIS
-Changes a deployment type.
+Changes a deployment type for a Configuration Manager deployment application.
 
 ## SYNTAX
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CMBoundary
 
 ## SYNOPSIS
-Removes a boundary.
+Removes a Configuration Manager boundary.
 
 ## SYNTAX
 

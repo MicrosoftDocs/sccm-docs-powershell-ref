@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-CMDriverToDriverPackage
 
 ## SYNOPSIS
-Adds a device driver to a driver package.
+Adds a device driver to a Configuration Manager driver package.
 
 ## SYNTAX
 
@@ -67,7 +67,10 @@ Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageName <String> 
 ```
 
 ## DESCRIPTION
-The **Add-CMDriverToDriverPackage** cmdlet adds a device driver to a driver package.
+The **Add-CMDriverToDriverPackage** cmdlet adds a device driver to a Microsoft System Center Configuration Manager driver package.
+
+A driver package contains the content associated with one or more device drivers. Device drivers must to be added to a driver package and copied to a distribution point before Configuration Manager clients can install them.
+
 You can add Windows device drivers that have been imported into the driver catalog to an existing driver package.
 When a device driver is added to a driver package, Microsoft System Center Configuration Manager copies the device driver content from the driver source location to the driver package.
 

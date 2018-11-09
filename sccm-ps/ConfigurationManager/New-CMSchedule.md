@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CMSchedule
 
 ## SYNOPSIS
-Creates a schedule token.
+Creates a Configuration Manager schedule token.
 
 ## SYNTAX
 
@@ -134,7 +134,8 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -RecurCount <Int32
 ```
 
 ## DESCRIPTION
-The **New-CMSchedule** cmdlet creates a schedule token.
+The **New-CMSchedule** cmdlet creates a schedule token in Microsoft System Center Configuration Manager.
+
 In Microsoft System Center Configuration Manager, you use schedule tokens to configure scheduling information.
 You can create schedule tokens to schedule events with differing frequencies such as daily, weekly, and monthly.
 

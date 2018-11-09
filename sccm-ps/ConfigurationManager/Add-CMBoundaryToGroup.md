@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-CMBoundaryToGroup
 
 ## SYNOPSIS
-Assigns boundaries to a boundary group.
+Assigns boundaries to a boundary group in Configuration Manager.
 
 ## SYNTAX
 

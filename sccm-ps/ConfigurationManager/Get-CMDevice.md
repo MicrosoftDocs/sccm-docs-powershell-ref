@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMDevice
 
 ## SYNOPSIS
-Gets a device.
+Gets a Configuration Manager device.
 
 ## SYNTAX
 

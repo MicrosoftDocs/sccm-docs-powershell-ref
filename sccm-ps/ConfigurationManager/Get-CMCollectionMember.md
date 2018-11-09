@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMCollectionMember
 
 ## SYNOPSIS
-Gets a member of a collection.
+Gets a member of a Configuration Manager collection.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Get-CMCollectionMember -InputObject <IResultObject> [-Name <String>] [-SmsId <St
 ```
 
 ## DESCRIPTION
-The **Get-CMCollectionMember** cmdlet gets a member of a collection.
+The **Get-CMCollectionMember** cmdlet gets a member of a Microsoft System Center Configuration Manager collection. Configuration Manager collections provide a way to manage users, computers, and other resources in your organization.
 
 ## EXAMPLES
 

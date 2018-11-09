@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMDeviceVariable
 
 ## SYNOPSIS
-Gets device variables.
+Gets device variables of a Configuration Manager device.
 
 ## SYNTAX
 
@@ -31,9 +31,9 @@ Get-CMDeviceVariable -DeviceName <String> [-VariableName <String>] [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Get-CMDeviceVariable** cmdlet gets device variables.
-Individual devices have device variables.
-Task sequence processing uses device variables.
+The **Get-CMDeviceVariable** cmdlet gets device variables of a Microsoft System Center Configuration Manager device.
+
+Individual devices have device variables. Task sequence processing uses device variables.
 
 ## EXAMPLES
 

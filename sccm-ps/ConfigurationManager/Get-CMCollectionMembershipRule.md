@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMCollectionMembershipRule
 
 ## SYNOPSIS
-Gets a collection membership rule
+Get a Configuration Manager collection membership rule.
 
 ## SYNTAX
 
@@ -33,16 +33,9 @@ Get-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObject <
 ```
 
 ## DESCRIPTION
- 
+This cmdlet is usually called by higher level wrapper cmdlets. It is not called directly.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\>  
-```
-
- 
 
 ## PARAMETERS
 

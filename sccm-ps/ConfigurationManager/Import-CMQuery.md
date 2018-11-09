@@ -7,7 +7,7 @@ schema: 2.0.0
 # Import-CMQuery
 
 ## SYNOPSIS
-Imports a query
+Imports a set of exported queries to Configuration Manager.
 
 ## SYNTAX
 
@@ -17,14 +17,18 @@ Import-CMQuery [-ImportFilePath] <String> [-DisableWildcardHandling] [-ForceWild
 ```
 
 ## DESCRIPTION
- 
+The **Import-CMQuery** cmdlet imports a set of exported queries to Microsoft System Center Configuration Manager.
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find. 
+
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS C:\>  Import-CMQuery -ImportFilePath "C:\Export\Query.xml"
 ```
+
+This command imports a set of queries from an exported file, C:\Export\Query.xml.
 
  
 

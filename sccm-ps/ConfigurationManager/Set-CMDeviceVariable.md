@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CMDeviceVariable
 
 ## SYNOPSIS
-Modifies a device variable.
+Modifies a device variable of a Configuration Manager device.
 
 ## SYNTAX
 
@@ -34,9 +34,9 @@ Set-CMDeviceVariable -DeviceName <String> -VariableName <String> [-NewVariableNa
 ```
 
 ## DESCRIPTION
-The **Set-CMDeviceVariable** cmdlet modifies a device variable.
-Individual devices have device variables.
-Task sequence processing uses device variables.
+The **Set-CMDeviceVariable** cmdlet modifies a device variable of a Microsoft System Center Configuration Manager device.
+
+Individual devices have device variables. Task sequence processing uses device variables.
 
 ## EXAMPLES
 

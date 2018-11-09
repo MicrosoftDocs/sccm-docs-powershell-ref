@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CMDeploymentType
 
 ## SYNOPSIS
-Removes a deployment type.
+Removes a deployment type for a Configuration Manager deployment application.
 
 ## SYNTAX
 

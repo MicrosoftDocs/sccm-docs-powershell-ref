@@ -161,6 +161,7 @@ Publish-CMPrestageContent -Application <IResultObject> [-DisableDependencyExport
 
 ## DESCRIPTION
 The **Publish-CMPrestageContent** cmdlet publishes files for applications, images, packages, or operating system installers to a distribution point without using the Microsoft System Center Configuration Manager distribution process.
+
 Specify the distribution site, the file name, and the item to publish.
 
 You can specify any of the following to publish to a distribution point: 

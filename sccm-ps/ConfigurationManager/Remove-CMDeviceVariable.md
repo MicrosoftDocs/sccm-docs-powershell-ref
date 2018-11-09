@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CMDeviceVariable
 
 ## SYNOPSIS
-Removes a variable defined for a device.
+Removes a variable defined for a Configuration Manager device.
 
 ## SYNTAX
 
@@ -31,7 +31,9 @@ Remove-CMDeviceVariable -DeviceName <String> -VariableName <String> [-Force] [-D
 ```
 
 ## DESCRIPTION
-The **Remove-CMDeviceVariable** cmdlet removes a variable defined for a device.
+The **Remove-CMDeviceVariable** cmdlet removes a variable defined for a Microsoft System Center Configuration Manager device.
+
+Individual devices have device variables. Task sequence processing uses device variables.
 
 ## EXAMPLES
 
