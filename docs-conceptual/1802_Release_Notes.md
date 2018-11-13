@@ -89,7 +89,7 @@ New cmdlets have been added to support modifying task sequence steps.
     - CMTSStepUpgradeOperatingSystem
 
 - Task sequence condition commands
-    - ```New-CMTSStepConditionOperatingSystemLangauge``` cmdlet for creation of an operating system language condition.
+    - ```New-CMTSStepConditionOperatingSystemLanguage``` cmdlet for creation of an operating system language condition.
 
 - Task sequence copying cmdlets
     - ```Copy-CMTaskSequence``` cmdlet for creating a copy of an existing task sequence.
