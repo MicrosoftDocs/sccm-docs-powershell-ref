@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -UserName
 Specifies the user for whom you want to remove a client PFX certificate.
-To set a vaule to the parameter, you can use `(get-cmuser -name domain\username).SMSID`.
+To set a value to the parameter, you can use `(get-cmuser -name domain\username).SMSID`.
 
 ```yaml
 Type: String
