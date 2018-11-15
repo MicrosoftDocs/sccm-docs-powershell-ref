@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.ClientOperations.dll-Help.xml
-Module Name: ConfigurationManager
-online version:
-schema: 2.0.0
+title: Approve-CMScript
+titleSuffix: Configuration Manager
+description: Approves a Configuration Manager PowerShell script.
+ms.date: 11/15/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Approve-CMScript
