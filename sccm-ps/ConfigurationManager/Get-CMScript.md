@@ -85,7 +85,10 @@ Accept wildcard characters: False
 
 ### -Fast
 
-{{Fill Fast Description}}
+Indicates that the cmdlet does not automatically refresh lazy properties.
+
+Lazy properties contain values that are relatively inefficient to retrieve which can cause additional network traffic and decrease cmdlet performance.
+If lazy properties are not used, this parameter should be specified.
 
 ```yaml
 Type: SwitchParameter
