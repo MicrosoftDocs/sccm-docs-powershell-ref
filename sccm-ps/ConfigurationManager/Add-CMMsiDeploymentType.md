@@ -522,7 +522,8 @@ Accept wildcard characters: False
 ```
 
 ### -RebootBehavior
- 
+
+Specifies the reboot behavior.
 
 ```yaml
 Type: PostExecutionBehavior
@@ -538,6 +539,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLanguage
+
 Removes the existing supported languages from this deployment type.
 
 ```yaml
@@ -553,6 +555,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveRequirement
+
 Removes the existing installation requirements from this deployment type.
 
 ```yaml

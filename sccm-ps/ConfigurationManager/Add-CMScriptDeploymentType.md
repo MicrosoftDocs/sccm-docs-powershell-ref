@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 024DC293-D966-4EF2-84A9-9DEEC6B652A1
-online version: https://go.microsoft.com/fwlink/?linkid=833740
-schema: 2.0.0
+title: Add-CMScriptDeploymentType
+titleSuffix: Configuration Manager
+description: Adds a script installer deployment type.
+ms.date: 11/15/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Add-CMScriptDeploymentType
@@ -114,7 +120,7 @@ Add-CMScriptDeploymentType [-ContentLocation <String>] -DeploymentTypeName <Stri
 
 ## DESCRIPTION
 
-The **Add-CMScriptDeploymentType** cmdlet adds a script installer deployment type to an application.
+The **Add-CMScriptDeploymentType** cmdlet adds a script installer deployment type to an application. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
 
 ## EXAMPLES
 
@@ -140,7 +146,8 @@ Specifying the *ForceScriptDetection32Bit* indicates that the deployment type wi
 ## PARAMETERS
 
 ### -AddDetectionClause
- 
+
+Specifies an array of detection method clauses that this deployment type supports.
 
 ```yaml
 Type: DetectionClause[]
@@ -558,7 +565,8 @@ Accept wildcard characters: False
 ```
 
 ### -RebootBehavior
- 
+
+Specifies the reboot behavior.
 
 ```yaml
 Type: PostExecutionBehavior
@@ -622,7 +630,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFile
- 
+
+Specifies the script file that you want to use to detect this deployment type.
 
 ```yaml
 Type: String
@@ -799,10 +808,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMApplication](Get-CMApplication.md)
-
-[New-CMApplication](New-CMApplication.md)
-
-[Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
-
-
+* [Approve-CMScript](Approve-CMScript.md)
+* [Deny-CMScript](Deny-CMScript.md)
+* [Invoke-CMScript](Invoke-CMScript.md)
+* [Remove-CMScript](Remove-CMScript.md)
+* [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
+* [Get-CMApplication](Get-CMApplication.md)
+* [New-CMApplication](New-CMApplication.md)

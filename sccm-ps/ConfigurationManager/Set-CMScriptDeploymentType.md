@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 449CA735-B682-4AF9-A35C-6FBBD1D0EE09
-online version: https://go.microsoft.com/fwlink/?linkid=834014
-schema: 2.0.0
+title: Set-CMScriptDeploymentType
+titleSuffix: Configuration Manager
+description: Sets a script installer deployment type.
+ms.date: 11/15/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Set-CMScriptDeploymentType
@@ -15,7 +21,7 @@ Sets a script installer deployment type.
 
 ### ByAppName (Default)
 
-```
+```powershell
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
  [-RemoveDetectionClause <String[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
  [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
@@ -33,7 +39,7 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 
 ### ByAppId
 
-```
+```powershell
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
  [-RemoveDetectionClause <String[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
  [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
@@ -51,7 +57,7 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 
 ### ByAppValue
 
-```
+```powershell
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
  [-RemoveDetectionClause <String[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
  [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
@@ -69,7 +75,7 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 
 ### ByDTValue
 
-```
+```powershell
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
  [-RemoveDetectionClause <String[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
  [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
@@ -87,13 +93,13 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 
 ## DESCRIPTION
 
-The **Set-CMScriptDeploymentType** cmdlet changes the settings for a script installer deployment type.
+The **Set-CMScriptDeploymentType** cmdlet changes the settings for a script installer deployment type. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
 
 ## EXAMPLES
 
 ### Example 1: Modify a script installer deployment type
 
-```
+```powershell
 PS C:\> Set-CMScriptDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT01" -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage Powershell -ScriptText "update script text"
 ```
 
@@ -102,7 +108,7 @@ The command also specifies the language of the script used to detect this deploy
 
 ### Example 2: Modify a script installer deployment type by using the pipeline
 
-```
+```powershell
 PS C:\> Get-CMDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT02" | Set-CMScriptDeploymentType -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage PowerShell -ScriptText "update script text"
 ```
 
@@ -112,7 +118,8 @@ This command gets the script installer deployment type object named ScriptDT02 f
 ## PARAMETERS
 
 ### -AddDetectionClause
- 
+
+Specifies an array of detection method clauses that the deployment type supports.
 
 ```yaml
 Type: DetectionClause[]
@@ -579,7 +586,8 @@ Accept wildcard characters: False
 ```
 
 ### -RebootBehavior
- 
+
+Specifies the reboot behavior.
 
 ```yaml
 Type: PostExecutionBehavior
@@ -595,7 +603,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveDetectionClause
- 
+
+Specifies an array of detection method clauses to be removed.
 
 ```yaml
 Type: String[]
@@ -658,7 +667,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFile
- 
+
+Specifies the script file to use to detect this deployment type.
 
 ```yaml
 Type: String
@@ -675,6 +685,7 @@ Accept wildcard characters: False
 ### -ScriptLanguage
 
 Specifies the script language that you want to use to detect this deployment type.
+
 Valid values are: 
 
 - PowerShell
@@ -834,10 +845,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
-
-[Get-CMApplication](Get-CMApplication.md)
-
-[Get-CMDeploymentType](Get-CMDeploymentType.md)
-
-
+* [Approve-CMScript](Approve-CMScript.md)
+* [Deny-CMScript](Deny-CMScript.md)
+* [Invoke-CMScript](Invoke-CMScript.md)
+* [Remove-CMScript](Remove-CMScript.md)
+* [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
+* [Get-CMApplication](Get-CMApplication.md)
+* [Get-CMDeploymentType](Get-CMDeploymentType.md)

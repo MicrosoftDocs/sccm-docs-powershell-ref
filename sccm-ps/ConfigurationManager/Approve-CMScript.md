@@ -35,10 +35,9 @@ Approve-CMScript -ScriptGuid <String> [-Comment <String>] [-DisableWildcardHandl
 
 ## DESCRIPTION
 
-The **Approve-CMScript** cmdlet approves a Microsoft System Center Configuration Manager Powershell script.
-You can approve a specific script by specifying the script object or the name of the script.
+The **Approve-CMScript** cmdlet approves a Microsoft System Center Configuration Manager Powershell script. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
 
-For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts). 
+You can approve a specific script by specifying the script object or the name of the script.
 
 ## EXAMPLES
 
@@ -193,3 +192,6 @@ Accept wildcard characters: False
 * [Get-CMScript](Invoke-CMScript.md)
 * [Invoke-CMScript](Invoke-CMScript.md)
 * [Remove-CMScript](Remove-CMScript.md)
+* [Approve-CMScript](Approve-CMScript.md)
+* [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
+* [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)

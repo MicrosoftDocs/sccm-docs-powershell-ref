@@ -35,10 +35,8 @@ Deny-CMScript -ScriptGuid <String> [-Comment <String>] [-DisableWildcardHandling
 
 ## DESCRIPTION
 
-The **Deny-CMScript** cmdlet denies a Microsoft System Center Configuration Manager Powershell script.
+The **Deny-CMScript** cmdlet denies a Microsoft System Center Configuration Manager Powershell script.  System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
 You can deny a specific script by specifying the script object or the name of the script.
-
-For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
 
 ## EXAMPLES
 
@@ -48,7 +46,7 @@ For more information, see [Create and run PowerShell scripts from the Configurat
 PS C:\> Deny-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"  
 ```
 
-This command denies a script that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80  .
+This command denies a script that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80.
 
 ### Example 2: Deny a script by using script object variable
 
@@ -193,3 +191,5 @@ Accept wildcard characters: False
 * [Get-CMScript](Get-CMScript.md)
 * [Invoke-CMScript](Invoke-CMScript.md)
 * [Remove-CMScript](Remove-CMScript.md)
+* [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
+* [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)

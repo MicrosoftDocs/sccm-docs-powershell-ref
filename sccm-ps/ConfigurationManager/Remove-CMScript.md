@@ -35,11 +35,9 @@ Remove-CMScript [-Force] -ScriptName <String> [-DisableWildcardHandling] [-Force
 
 ## DESCRIPTION
 
-The **Remove-CMScript** cmdlet removes one or more Microsoft System Center Configuration Manager scripts.
+The **Remove-CMScript** cmdlet removes one or more Microsoft System Center Configuration Manager scripts. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
 
 ## EXAMPLES
-
-### Example 1
 
 ### Example 1: Remove a script by using the script name
 
@@ -48,17 +46,6 @@ PS C:\> Remove-CMScript -ScriptName "getUsers"
 ```
 
 This command removes a script that has the name getUesrs.
-
-### Example 2: Remove a script by using script object variable
-
-```powershell
-PS C:\> $ScriptObj = Get-CMScript -Id "16777221"
-PS C:\> Remove-CMScript -InputObject $ScriptObj
-```
-
-The first command gets a **CMScript** object that has the ID 16777221, and then stores it in the $ScriptObj variable.
-
-The second command removes the script stored in the $ScriptObj variable.
 
 ## PARAMETERS
 
@@ -192,3 +179,5 @@ Accept wildcard characters: False
 * [Deny-CMScript](Deny-CMScript.md)
 * [Get-CMScript](Invoke-CMScript.md)
 * [Invoke-CMScript](Invoke-CMScript.md)
+* [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
+* [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
