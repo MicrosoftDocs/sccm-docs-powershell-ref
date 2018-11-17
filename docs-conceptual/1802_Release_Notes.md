@@ -56,7 +56,7 @@ The following items are newly added cmdlets for this release that add new functi
 
 ### <a name="gccmdlets"></a>Global condition cmdlets
 New cmdlets have been added to support creating and modifying global conditions. New, and Set verbs are supported.
-- CMGlobalConditionActiveDirecotryQuery
+- CMGlobalConditionActiveDirectoryQuery
 - CMGlobalConditionAssembly
 - CMGlobalConditionFile
 - CMGlobalConditionIisMetabase
