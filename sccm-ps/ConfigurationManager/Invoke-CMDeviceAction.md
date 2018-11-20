@@ -167,6 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
 Returns the current working object.
 By default, this cmdlet does not generate any output.
 
