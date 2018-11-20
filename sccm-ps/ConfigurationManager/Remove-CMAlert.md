@@ -131,6 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies a **CMAlert** object.
 To obtain a **CMAlert** object, use **Get-CMAlert**.
 
