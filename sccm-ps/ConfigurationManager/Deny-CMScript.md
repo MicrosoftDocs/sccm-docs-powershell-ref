@@ -183,8 +183,6 @@ Accept wildcard characters: False
 
 ### System.Object
 
-## NOTES
-
 ## RELATED LINKS
 
 * [Approve-CMScript](Approve-CMScript.md)

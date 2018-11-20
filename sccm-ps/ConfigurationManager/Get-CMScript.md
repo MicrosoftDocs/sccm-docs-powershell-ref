@@ -143,8 +143,6 @@ Accept wildcard characters: False
 
 IResultObject#SMS_Scripts
 
-## NOTES
-
 ## RELATED LINKS
 
 * [Approve-CMScript](Approve-CMScript.md)
