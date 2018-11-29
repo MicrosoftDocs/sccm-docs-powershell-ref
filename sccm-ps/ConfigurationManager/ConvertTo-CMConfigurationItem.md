@@ -42,7 +42,7 @@ The **ConvertTo-CMConfigurationItem** cmdlet converts a string which contains Co
 
 ```powershell
 PS C:\> $myCI = ConvertTo-CMConfigurationItem -DigestText $digestString 
-$myCI.Persist($myCI)    
+PS C:\> $myCI.Persist($myCI)    
 ```
 
 This command converts a digest into a ConfigurationItem object, and then save the object to the site.
