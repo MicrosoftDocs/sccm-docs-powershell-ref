@@ -2,7 +2,7 @@
 title: ConvertTo-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Convert a Configuration Manager management iResultObject to a configuration item object.
-ms.date: 11/15/2018
+ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -34,17 +34,18 @@ ConvertTo-CMConfigurationItem -DigestText <String> [-Force] [-DisableWildcardHan
 
 ## DESCRIPTION
 
-{{ Add cmdlet description here }}
+The **ConvertTo-CMConfigurationItem** cmdlet converts a string which contains Configuration Item digest XML definition into a ConfigurationItem object.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $myCI = ConvertTo-CMConfigurationItem -DigestText $digestString 
+$myCI.Persist($myCI)    
 ```
 
-{{ Add example description here }}
+This command converts a digest into a ConfigurationItem object, and then save the object to the site.
 
 ## PARAMETERS
 
@@ -137,7 +138,6 @@ Accept wildcard characters: False
 
 ### System.Object
 
-## NOTES
 
 ## RELATED LINKS
 

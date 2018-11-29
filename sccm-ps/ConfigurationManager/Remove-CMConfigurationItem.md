@@ -2,7 +2,7 @@
 title: Remove-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Removes configuration items from Configuration Manager.
-ms.date: 11/15/2018
+ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -47,6 +47,9 @@ You can specify items by ID, name, or by use of the  cmdlet.
 
 Configuration items contain one or more settings, along with compliance rules.
 Items usually define a unit of configuration you want to.
+
+If you remove a configuration item that has been deployed to a collection, the deployment will also be removed.
+
 For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014) on TechNet.
 
 ## EXAMPLES
@@ -214,12 +217,6 @@ Accept wildcard characters: False
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
 
 ## RELATED LINKS
 

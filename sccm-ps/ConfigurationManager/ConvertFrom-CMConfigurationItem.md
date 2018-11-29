@@ -2,7 +2,7 @@
 title: ConvertFrom-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: 
-ms.date: 11/15/2018
+ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -26,17 +26,7 @@ ConvertFrom-CMConfigurationItem [-ConfigurationItem <ConfigurationItem>] [-Disab
 
 ## DESCRIPTION
 
-{{ Add cmdlet description here }}
-
-## EXAMPLES
-
-### Example 1
-
-```powershell
-PS C:\>  
-```
-
-{{ Add example description here }}
+The **ConvertFrom-CMConfigurationItem** cmdlet converts a ConfigurationItem object into a string which contains the XML definition of the ConfigurationItem object.
 
 ## PARAMETERS
 
@@ -99,8 +89,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.String
-
-## NOTES
 
 ## RELATED LINKS
 

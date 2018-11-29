@@ -2,7 +2,7 @@
 title: Get-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Gets Configuration Manager configuration items.
-ms.date: 11/15/2018
+ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Indicates that the cmdlet does not automatically refresh lazy properties.
 
 Lazy properties contain values that are relatively inefficient to retrieve which can cause additional network traffic and decrease cmdlet performance.
-If lazy properties are not used, this parameter should be specified.
+If lazy properties are not needed, this parameter should be specified.
 
 ```yaml
 Type: SwitchParameter
@@ -153,12 +153,6 @@ Accept wildcard characters: False
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
 
 ## RELATED LINKS
 
