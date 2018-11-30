@@ -37,10 +37,11 @@ This cmdlet allows for getting a native DeploymentType object from an SMS_Deploy
 ### Example 1
 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> $cmdp = Get-CMDeploymentType -ApplicationName "CenterApp"
+PS C:\> Convert-CMDeploymentType $cmdp
 ```
 
-{{ Add example description here }}
+This command gets the deployment type for the application named CenterApp, and then convert the deployment type.
 
 ## PARAMETERS
 
@@ -99,8 +100,6 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
-
-## NOTES
 
 ## RELATED LINKS
 

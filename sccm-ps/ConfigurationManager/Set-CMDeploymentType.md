@@ -312,6 +312,8 @@ This command sets a deployment type named Configuration Manager Console - Window
 
 ### -AddRequirement
 
+Adds an array of requirements for this deployment type.
+
 ```yaml
 Type: Rule[]
 Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyOtherInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByValuePropertyAppVInstaller, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller
@@ -536,6 +538,7 @@ Accept wildcard characters: False
 
 ### -EnableContentLocationFallback
 
+Allows clients to use 
 ```yaml
 Type: Boolean
 Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByValuePropertyAppVInstaller
