@@ -1,5 +1,5 @@
 ---
-title: 
+title: New-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
 description: 
 ms.date: 11/29/2018
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Create a task sequence "Set Dynamic Variable" step in Configuration Manager.
 
 ## SYNTAX
 
@@ -27,14 +27,14 @@ New-CMTSStepSetDynamicVariable -AddRule <IResultObject[]> -Name <String> [-Descr
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **New-CMTSStepSetDynamicVariable** creates a task sequence "Set Dynamic Variable" step object with specific name, description, specific properties, options and conditions, which could be used by Add-CMTaskSequenceStep and Set-CMTaskSequenceGroup.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-CMTaskSequenceStepSetDynamicVariable -Name $name -Description $description -Condition ($cd1,$cd2) -AddRule ($rule1)
 ```
 
 {{ Add example description here }}
@@ -202,20 +202,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_SetDynamicVariablesAction
-
-
-## NOTES
 
 ## RELATED LINKS
 
 * [Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
 * [Set-CMTSStepSetDynamicVariable](./Set-CMTSStepSetDynamicVariable.md)
 * [Remove-CMTSStepSetDynamicVariable](./Remove-CMTSStepSetDynamicVariable.md)
+* [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+* [Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md)
