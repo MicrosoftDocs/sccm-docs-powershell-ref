@@ -52,7 +52,7 @@ A task sequence performs multiple steps or tasks on a Microsoft System Center Co
 PS C:\> $newTS = Copy-CMTaskSequence -Name "TaskSequence01"
 ```
 
-This command make a copy of the task sequence with the name TaskSequence01.
+This command makes a copy of the task sequence with the name TaskSequence01.
 
 ## PARAMETERS
 
