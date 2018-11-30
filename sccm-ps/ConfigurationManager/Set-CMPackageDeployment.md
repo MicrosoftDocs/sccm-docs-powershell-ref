@@ -1,19 +1,27 @@
 ---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
-ms.assetid: 6814743B-10B2-4A47-9BCD-7E52B54CC444
-online version: https://go.microsoft.com/fwlink/?linkid=833979
-schema: 2.0.0
+title: Set-CMPackageDeployment
+titleSuffix: Configuration Manager
+description: Changes values that define how Configuration Manager deploys a software package.
+ms.date: 11/30/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Set-CMPackageDeployment
 
 ## SYNOPSIS
+
 Changes values that define how Configuration Manager deploys a software package.
 
 ## SYNTAX
 
 ### SetStandardProgramDeploymentByPackageValue (Default)
-```
+
+```powershell
 Set-CMPackageDeployment -InputObject <IResultObject> -StandardProgramName <String> [-Comment <String>]
  [-SendWakeupPacket <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
  [-UseUtcForAvailableSchedule <Boolean>] [-EnableExpireSchedule <Boolean>]
@@ -27,7 +35,8 @@ Set-CMPackageDeployment -InputObject <IResultObject> -StandardProgramName <Strin
 ```
 
 ### SetStandardProgramDeploymentByPackageName
-```
+
+```powershell
 Set-CMPackageDeployment -PackageName <String> -StandardProgramName <String> [-Comment <String>]
  [-SendWakeupPacket <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
  [-UseUtcForAvailableSchedule <Boolean>] [-EnableExpireSchedule <Boolean>]
@@ -41,7 +50,8 @@ Set-CMPackageDeployment -PackageName <String> -StandardProgramName <String> [-Co
 ```
 
 ### SetDeviceProgramDeploymentByPackageName
-```
+
+```powershell
 Set-CMPackageDeployment -PackageName <String> -DeviceProgramName <String> [-Comment <String>]
  [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>] [-UseRecurrencePattern <Boolean>]
  [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>] [-PassThru] [-CollectionName <String>]
@@ -50,7 +60,8 @@ Set-CMPackageDeployment -PackageName <String> -DeviceProgramName <String> [-Comm
 ```
 
 ### SetStandardProgramDeploymentByPackageId
-```
+
+```powershell
 Set-CMPackageDeployment -PackageId <String> -StandardProgramName <String> [-Comment <String>]
  [-SendWakeupPacket <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
  [-UseUtcForAvailableSchedule <Boolean>] [-EnableExpireSchedule <Boolean>]
@@ -64,7 +75,8 @@ Set-CMPackageDeployment -PackageId <String> -StandardProgramName <String> [-Comm
 ```
 
 ### SetDeviceProgramDeploymentByPackageId
-```
+
+```powershell
 Set-CMPackageDeployment -PackageId <String> -DeviceProgramName <String> [-Comment <String>]
  [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>] [-UseRecurrencePattern <Boolean>]
  [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>] [-PassThru] [-CollectionName <String>]
@@ -73,7 +85,8 @@ Set-CMPackageDeployment -PackageId <String> -DeviceProgramName <String> [-Commen
 ```
 
 ### SetDeviceProgramDeploymentByPackageValue
-```
+
+```powershell
 Set-CMPackageDeployment -InputObject <IResultObject> -DeviceProgramName <String> [-Comment <String>]
  [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>] [-UseRecurrencePattern <Boolean>]
  [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>] [-PassThru] [-CollectionName <String>]
@@ -82,6 +95,7 @@ Set-CMPackageDeployment -InputObject <IResultObject> -DeviceProgramName <String>
 ```
 
 ## DESCRIPTION
+
 The **Set-CMPackageDeployment** cmdlet changes values that define how Microsoft System Center Configuration Manager deploys a software package.
 A deployment includes a collection of devices or users, a package to deploy, and either a device program name or a standard program name.
 To specify which deployment to modify, specify the collection name, package, and program name.
@@ -90,7 +104,8 @@ You can specify the package by name or ID, or you can use the [Get-CMPackage](Ge
 ## EXAMPLES
 
 ### Example 1: Set recurrence properties
-```
+
+```powershell
 PS C:\> Set-CMPackageDeployment -CollectionName "All Systems" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -RecurUnit Hours -RecurValue 7 -UseRecurrencePattern $True
 ```
 
@@ -100,7 +115,8 @@ The command specifies a recur unit of Hours and a recur value of seven.
 Therefore, the deployment recurs every seven hours.
 
 ### Example 2: Set availability day and time
-```
+
+```powershell
 PS C:\> Set-CMPackageDeployment -CollectionName "All Systems" -PackageName "User State Migration Tool for Windows 8" -StandardProgramName "SPM" -DeploymentAvailableDay 2012/10/18 -DeploymentAvailableTime 15:41 -UseUtcForAvailableSchedule $False
 ```
 
@@ -112,6 +128,7 @@ The schedule refers to the local time zone.
 ## PARAMETERS
 
 ### -AllowSharedContent
+
 Indicates whether clients use shared content.
 If this value is $True, clients attempt to download content from other clients that downloaded that content.
 If this value is $False, clients do not attempt to download from other clients.
@@ -129,7 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
- 
+
+Specifies the user collection.
 
 ```yaml
 Type: IResultObject
@@ -144,7 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
- 
+
+Specifies the ID of a device or user collection.
 
 ```yaml
 Type: String
@@ -159,6 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
 Specifies the ID of a device or user collection.
 
 ```yaml
@@ -174,6 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
+
 Specifies a comment for the deployment.
 
 ```yaml
@@ -189,6 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -204,7 +226,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentAvailableDateTime
- 
+
+Specifies, as a **DateTime** object, the date and time that the deployment becomes available.
+To obtain a **DateTime** object, use the Get-Date cmdlet.
 
 ```yaml
 Type: DateTime
@@ -219,7 +243,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentExpireDateTime
- 
+
+Specifies, as a **DateTime** object, the date and time that the deployment expires.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 
 ```yaml
 Type: DateTime
@@ -234,7 +260,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentStartDateTime
- 
+
+Specifies, as a **DateTime** object, the date and time that the deployment starts.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+
 
 ```yaml
 Type: DateTime
@@ -249,6 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceProgramName
+
 Specifies the name of a device program.
 
 ```yaml
@@ -264,6 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -279,6 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExpireSchedule
+
 Indicates whether to enable the schedule to expire the deployment.
 
 ```yaml
@@ -294,6 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -FastNetworkOption
+
 Specifies client behavior on a fast network.
 The acceptable values for this parameter are:
 
@@ -314,6 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -329,7 +363,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
+
+Specifies a package object.
 
 ```yaml
 Type: IResultObject
@@ -344,6 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
+
 Specifies the ID of a package.
 
 ```yaml
@@ -359,6 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
+
 Specifies the name of a package.
 
 ```yaml
@@ -374,7 +411,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
+
+Returns the current working object.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -389,6 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -PersistOnWriteFilterDevice
+
 Indicates whether to enable write filters for embedded devices.
 For a value of $True, the device commits changes during a maintenance window.
 This action requires a restart.
@@ -407,6 +447,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecurUnit
+
 Specifies a unit for a recurring deployment.
 The acceptable values for this parameter are:
 
@@ -428,6 +469,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecurValue
+
 Specifies how often a deployment recurs.
 This parameter depends on the unit type specified in the *RecurUnit* parameter.
 This value can be between 1 and 23 if the unit is Hours, between 1 and 31 if the unit is Days, or between 1 and 59 if the unit is Minutes.
@@ -445,6 +487,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rerun
+
 Indicates whether the deployment reruns.
 If this value is $True, the deployment runs again for clients as specified in the *RerunBehavior* parameter.
 If this value is $False, the deployment does not run again.
@@ -462,6 +505,7 @@ Accept wildcard characters: False
 ```
 
 ### -RerunBehavior
+
 Specifies how a deployment reruns on a client.
 The acceptable values for this parameter are:
 
@@ -490,6 +534,9 @@ Accept wildcard characters: False
 ```
 
 ### -RunFromSoftwareCenter
+
+Indicates whether to run from software center.
+
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
@@ -503,6 +550,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
+
 Specifies a **CMSchedule** object.
 The schedule specifies when the maintenance window occurs.
 To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
@@ -520,6 +568,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleEvent
+
 Specifies an array of schedule event types.
 The acceptable values for this parameter are:
 
@@ -542,6 +591,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
+
 Indicates whether to send a wake up packet to computers before the deployment begins.
 If this value is $True, Configuration Manager wakes a computer from sleep.
 If this value is $False, it does not wake computers from sleep.
@@ -560,6 +610,7 @@ Accept wildcard characters: False
 ```
 
 ### -SlowNetworkOption
+
 Specifies how Configuration Manager deploys this package in a slow network.
 The acceptable values for this parameter are:
 
@@ -581,6 +632,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
+
 Indicates whether to install the deployed software outside of maintenance windows.
 A maintenance window is a specified period of time used for computer maintenance and updates.
 If this value is $True, the Configuration Manager installs software according to schedule, even if the schedule falls outside a maintenance window.
@@ -599,6 +651,7 @@ Accept wildcard characters: False
 ```
 
 ### -StandardProgramName
+
 Specifies a standard program name.
 
 ```yaml
@@ -614,6 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### -SystemRestart
+
 Indicates whether a system restarts outside a maintenance window.
 A maintenance window is a specified period of time used for computer maintenance and updates.
 If this value is $True, any required restart takes place without regard to maintenance windows.
@@ -632,6 +686,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseRecurrencePattern
+
 Indicates whether to use a recurrence pattern.
 
 ```yaml
@@ -647,6 +702,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtc
+
 Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
 If this value is $True, Configuration Manager uses UTC for this deployment.
 If this value is $False, Configuration Manager uses local time.
@@ -664,6 +720,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtcForAvailableSchedule
+
 Indicates whether to use UTC for available schedule.
 If this value is $True, Configuration Manager uses UTC.
 If this value is $False, Configuration Manager uses local time.
@@ -681,6 +738,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtcForExpireSchedule
+
 Indicates whether to use UTC for expire schedule.
 If this value is $True, Configuration Manager uses UTC.
 If this value is $False, Configuration Manager uses local time.
@@ -698,6 +756,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -714,16 +773,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
-[Start-CMPackageDeployment](Start-CMPackageDeployment.md)
-
-[Get-CMPackage](Get-CMPackage.md)
+- [New-CMPackageDeployment](New-CMPackageDeployment.md)
+- [Start-CMPackageDeployment](Start-CMPackageDeployment.md)
+- [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
+- [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
+- [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
+- [Get-CMPackage](Get-CMPackage.md)
