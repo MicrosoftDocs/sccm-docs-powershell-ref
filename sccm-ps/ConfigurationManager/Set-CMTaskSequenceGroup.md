@@ -1172,7 +1172,7 @@ Accept wildcard characters: False
 
 ### -VersionOperator
 
-Specifes a version operator.
+Specifies a version operator.
 
 ```yaml
 Type: VariableOperatorType

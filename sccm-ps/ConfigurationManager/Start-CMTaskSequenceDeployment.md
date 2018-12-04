@@ -433,7 +433,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies an task sequence deployment object.
+Specifies a task sequence deployment object.
 To obtain a task sequence object, use the [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md) cmdlet.
 
 ```yaml
@@ -609,7 +609,7 @@ Accept wildcard characters: False
 
 ### -SendWakeupPacket
 
-Indicates whether to send a wake up packet to computers before the deployment begins.
+Indicates whether to send a wake-up packet to computers before the deployment begins.
 If this value is $True, Configuration Manager wakes a computer from sleep.
 If this value is $False, it does not wake computers from sleep.
 For computers to wake, you must first configure Wake On LAN.

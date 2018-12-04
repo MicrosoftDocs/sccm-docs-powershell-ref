@@ -43,7 +43,7 @@ The command creates a task sequence group with specific name, description, steps
 
 ### -Condition
 
-Specifies the conditions.
+Specifies condition objectss.
 
 ```yaml
 Type: IResultObject[]

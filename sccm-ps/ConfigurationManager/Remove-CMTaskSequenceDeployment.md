@@ -183,7 +183,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies an task sequence deployment object.
+Specifies a task sequence deployment object.
 To obtain a task sequence object, use the [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md) cmdlet.
 
 ```yaml
