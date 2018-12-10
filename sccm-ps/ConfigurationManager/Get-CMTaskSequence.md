@@ -1,29 +1,39 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 3D651458-AAB7-4D25-933A-935F8DE730D9
-online version: https://go.microsoft.com/fwlink/?linkid=833962
-schema: 2.0.0
+title: Get-CMTaskSequence
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager task sequences.
+ms.date: 11/30/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Get-CMTaskSequence
 
 ## SYNOPSIS
+
 Gets Configuration Manager task sequences.
 
 ## SYNTAX
 
 ### SearchByName (Default)
-```
+
+```powershell
 Get-CMTaskSequence [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-```
+
+```powershell
 Get-CMTaskSequence -TaskSequencePackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Get-CMTaskSequence** cmdlet gets Microsoft System Center Configuration Manager task sequences.
 A task sequence includes configuration and operating system deployment settings for a System Center Configuration Manager client computer.
 
@@ -33,7 +43,8 @@ You can also specify a security scope, by itself or with a name or ID, to get se
 ## EXAMPLES
 
 ### Example 1: Get a task sequence by name
-```
+
+```powershell
 PS C:\> Get-CMTaskSequence -Name "taskSequence"
 ```
 
@@ -42,6 +53,7 @@ This command gets the task sequence named taskSequence.
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -57,6 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -72,6 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies a name for a task sequence.
 
 ```yaml
@@ -87,6 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequencePackageId
+
 Specifies the ID of a task sequence package.
 
 ```yaml
@@ -102,28 +117,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
-[Disable-CMTaskSequence](Disable-CMTaskSequence.md)
-
-[Enable-CMTaskSequence](Enable-CMTaskSequence.md)
-
-[Export-CMTaskSequence](Export-CMTaskSequence.md)
-
-[Import-CMTaskSequence](Import-CMTaskSequence.md)
-
-[New-CMTaskSequence](New-CMTaskSequence.md)
-
-[Remove-CMTaskSequence](Remove-CMTaskSequence.md)
-
-[Set-CMTaskSequence](Set-CMTaskSequence.md)
-
-
+- [New-CMTaskSequence](Get-CMTaskSequence.md)
+- [Get-CMTaskSequence](Get-CMTaskSequence.md)
+- [Set-CMTaskSequence](Set-CMTaskSequence.md)
+- [Copy-CMTaskSequence](Copy-CMTaskSequence.md)
+- [Enable-CMTaskSequence](Enable-CMTaskSequence.md)
+- [Disable-CMTaskSequence](Disable-CMTaskSequence.md)
+- [Import-CMTaskSequence](Import-CMTaskSequence.md)
+- [Export-CMTaskSequence](Export-CMTaskSequence.md)
+- [Remove-CMTaskSequence](Remove-CMTaskSequence.md)
