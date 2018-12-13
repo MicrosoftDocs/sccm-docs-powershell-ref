@@ -62,7 +62,7 @@ The following cmdlets are no longer supported and have been removed:
 
 -   Update-CMAmtProvisioning
 
-###Support for importing the ConfigurationManager module by using the logical name
+### Support for importing the ConfigurationManager module by using the logical name
 There is now support for importing the ConfigurationManager module by using a logical name or path.
 
 If the C:\\Program Files (x86)\\Microsoft Configuration Manager\\AdminConsole\\bin or equivalent path is added to the
@@ -218,7 +218,7 @@ Certain combinations of changes to antimalware policies or client settings can c
 
 Cmdlets for configuring management points and software update points have added the *EnableCloudGateway* parameter to enable these roles for use with the cloud management gateway.
 
-###Site maintenance window configuration
+### Site maintenance window configuration
 #### Non-breaking changes
 CMMaintenanceWindow cmdlets now support configuring maintenance windows for sites. The output of **Get-CMSite** can be pipelined into **New**, **Remove**, or **Set-CMMaintenanceWindow** to configure the maintenance windows for a site.
 
@@ -378,17 +378,17 @@ Removal of a resource does not remove state migration associations.
 #### Bugs that were fixed
 **AmbiguousParameterSet** error may be raised when running the cmdlet.
 
-###Set-CMActiveDirectoryForest
+### Set-CMActiveDirectoryForest
 #### Non-breaking changes
 Added *UserName* parameter to allow for configuring the discovery account.
 
 Added *AddPublishingSite* and *RemovePublishingSite* parameters.
 
-###Set-CMAdvancedThreatProtectionPolicy
+### Set-CMAdvancedThreatProtectionPolicy
 #### Bugs that were fixed
 Increasing or decreasing priority may cause an **ObjectNotFound** error to be returned.
 
-###Set-CMAntimalwarePolicy
+### Set-CMAntimalwarePolicy
 #### Bugs that were fixed
 *WhatIf* may not display the expected policy name.
 
@@ -397,50 +397,50 @@ Real-time protection settings cannot be changed when using a pipelined object.
 #### Non-breaking changes
 Cmdlet now accepts pipelined input from **Get-CMAntimalwarePolicy**.
 
-###Set-CMApplication
+### Set-CMApplication
 #### Non-breaking changes
 Added *AddSupportContact*, *AddOwner*, *RemoveSupportContact*, *RemoveOwner*, *ClearSupportContact*, and *ClearOwner* parameters to support in-place modifications of support contacts or owners.
 
-###Set-CMAppVVirtualEnvironment
+### Set-CMAppVVirtualEnvironment
 #### Bugs that were fixed
 *PassThru* does not return the most up-to-date object.
 
-###Set-CMBaseline
+### Set-CMBaseline
 #### Bugs that were fixed
 *PassThru* does not return an SMS\_ConfigurationItem object.
 
 #### Non-breaking changes
 Added *ClearRequiredConfigurationItem*, *ClearProhibitedConfigurationItem*, *ClearOptionalConfigurationItem*, *ClearOSConfigurationItem*, *ClearSoftwareUpdate*, *ClearBaseline*, *RemoveRequiredConfigurationItem*, *RemoveOptionalConfigurationItem*, *RemoveProhibitedConfigurationItem* *RemoveOSConfigurationItem*, *RemoveSoftwareUpdate*, *RemoveBaseline*, *AddSoftwareUpdate*, and *AddBaseline* parameters.
 
-###Set-CMBoundaryGroup
+### Set-CMBoundaryGroup
 #### Breaking changes
 FastLink is the only supported value for the hash table in the *AddSiteSystemServer* parameter. Support for all other values has been removed.
 
-###Set-CMCertificateProfileTrustedRootCA
+### Set-CMCertificateProfileTrustedRootCA
 #### Bugs that were fixed
 Using object pipeline may cause a **ParameterBindingException** error.
 
-###Set-CMClientPushInstallation
+### Set-CMClientPushInstallation
 #### Non-breaking changes
 Added *AddAccount* and *RemoveAccount* parameters to support in-place modifications of client push accounts.
 
-###Set-CMClientSettingComputerAgent
+### Set-CMClientSettingComputerAgent
 #### Bugs that were fixed
 *HealthAttestationUrl* parameter value is not required if *EnableHealthAttestation* or *UseOnPremisesHealthAttestation* are set to true.
 
-###Set-CMComputerAssociation
+### Set-CMComputerAssociation
 #### Non-breaking changes
 Added *MigrationId* parameter.
 
-###Set-CMDeploymentType
+### Set-CMDeploymentType
 #### Breaking changes
 Support for modifying Nokia deployment types has been removed.
 
-###Set-CMDiscoveryMethod
+### Set-CMDiscoveryMethod
 #### Bugs that were fixed
 *PollingSchedule* value may not apply correctly to the discovery method.
 
-###Set-CMDistributionPoint
+### Set-CMDistributionPoint
 #### Bugs that were fixed
 Cmdlet allows you to configure a distribution point as Internet-capable when HTTPS is not enabled.
 
@@ -452,34 +452,34 @@ Previously unused *InstallInternetServer* parameter now changes distribution poi
 #### Deprecations
 *UseComputerAccount* parameter has been deprecated. To use a computer account, set *UserName* to $null.
 
-###Set-CMEmailNotificationComponent
+### Set-CMEmailNotificationComponent
 #### Non-breaking changes
 Added *UseSsl* parameter.
 
-###Set-CMFileReplicationRoute
+### Set-CMFileReplicationRoute
 #### Bugs that were fixed
 *FileReplicationAccountName* parameter cannot be set to null or empty value.
 
-###Set-CMHierarchySetting
+### Set-CMHierarchySetting
 #### Non-breaking changes
 Added *ExclusionCollection*, *ExclusionCollectionId*, *ExclusionCollectionName*, and *EnableExclusionCollection* parameters for configuring client upgrade exclusions.
 
-###Set-CMIntuneSubscription
+### Set-CMIntuneSubscription
 #### Bugs that were fixed
 *ContactEmail* parameter cannot be set to null or empty value.
 
 #### Non-breaking changes
 *MaximumUserDevice* parameter now supports a value between 1 and 15.
 
-###Set-CMIntuneSubscriptionWindowsPhoneProperty
+### Set-CMIntuneSubscriptionWindowsPhoneProperty
 #### Bugs that were fixed
 Cmdlet may unexpectedly fail with an **AetCleanupFailure** error.
 
-###Set-CMMaintenanceTask
+### Set-CMMaintenanceTask
 #### Bugs that were fixed
 *PassThru* parameter does not cause an object to be returned.
 
-###Set-CMMulticastServicePoint
+### Set-CMMulticastServicePoint
 #### Bugs that were fixed
 *UserName* parameter does not validate value for correct DOMAIN\\user formatting.
 
@@ -493,22 +493,22 @@ Cmdlet may unexpectedly fail with an **AetCleanupFailure** error.
 #### Deprecations
 *ClientTransferRate* parameter is no longer supported.
 
-###Set-CMProgram
+### Set-CMProgram
 #### Non-breaking changes
 Added *AddSupportedOperatingSystemPlatform*, *RemoveSupportedOperatingSystemPlatform*, and *RunOnAnyPlatform* parameters.
 
-###Set-CMSite
+### Set-CMSite
 #### Bugs that were fixed
 *RemoveClientRequestServiceType* may not properly remove the specified value.
 
 #### Non-breaking changes
 Added *SiteSystemCollectionBehavior*, *ThresholdOfSelectCollectionMax*, *ThresholdOfSelectCollectionByDefault*, and *ThresholdOfSelectCollectionMax* parameters to configure device collection thresholds for a site.
 
-###Set-CMSiteSummaryTask
+### Set-CMSiteSummaryTask
 #### Bugs that were fixed
 *PassThru* parameter does not cause an object to be returned.
 
-###Set-CMSoftwareUpdateAutoDeploymentRule
+### Set-CMSoftwareUpdateAutoDeploymentRule
 #### Bugs that were fixed
 *MicrosoftAsVendor* parameter value may not be applied to rule.
 
@@ -517,22 +517,22 @@ Added *Vendor* parameter to support third-party patches.
 
 Added *GenerateFailureAlert* parameter.
 
-###Set-CMSoftwareUpdateDeployment
+### Set-CMSoftwareUpdateDeployment
 #### Non-breaking changes
 Added *RequirePostRebootFullScan* parameter.
 
-###Set-CMSoftwareUpdatePointComponent
+### Set-CMSoftwareUpdatePointComponent
 #### Bugs that were fixed
 *EnableSynchronization* and *Schedule* parameter usage may cause improper warning to be generated, or schedule to not be modified as expected.
 
-###Set-CMStatusFilterRule
+### Set-CMStatusFilterRule
 #### Bugs that were fixed
 Changes to *Priority* parameter value may not apply to the status filter rule.
 
-###Set-CMTaskSequence
+### Set-CMTaskSequence
 #### Deprecations
 *UseDefaultText* parameter has been deprecated. To use the default text, set *CustomText* to $null.
 
-###Set-CMWindowsEnrollmentProfile
+### Set-CMWindowsEnrollmentProfile
 #### Bugs that were fixed
 *Authority* parameter is not available in all parameter sets.

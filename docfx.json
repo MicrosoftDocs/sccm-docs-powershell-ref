@@ -17,44 +17,44 @@
           "ThirdPartyNotices"
         ]
       },
-    {
-      "files": [
-        "toc.yml"
-      ],
-      "src": "docs-conceptual",
-      "version": "sccm-ps",
-      "dest": "sccm/sccm"
-    },
-    {
-      "files": [
-        "**/*.md"
-      ],
-      "src": "sccm-ps",
-      "version": "sccm-ps",
-      "dest": "module"
-    },
-    {
-      "files": [
-        "toc.yml"
-      ],
-      "src": "sccm-ps",
-      "version": "sccm-ps",
-      "dest": "module/sccm-ps"
-    },
-    {
-      "files": [
-        "**/*.md"
-      ],
-      "src": "virtual-directory",
-      "dest": "sccm"
-    },
-    {
-      "files": [
-        "toc.yml"
-      ],
-      "src": "bread",
-      "version": "sccm-ps",
-      "dest": "sccm/bread"
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version": "sccm-ps",
+        "dest": "sccm/sccm"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "sccm-ps",
+        "version": "sccm-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "sccm-ps",
+        "version": "sccm-ps",
+        "dest": "module/sccm-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-directory",
+        "dest": "sccm"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "bread",
+        "version": "sccm-ps",
+        "dest": "sccm/bread"
       }
     ],
     "resource": [
@@ -74,7 +74,6 @@
         "dest": "sccm-ps"
       }
     },
-
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
@@ -86,6 +85,7 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "sccm-powershell"
+    "dest": "sccm-powershell",
+    "markdownEngineName": "markdig"
   }
 }
