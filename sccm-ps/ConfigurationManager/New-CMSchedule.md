@@ -410,16 +410,11 @@ Accept wildcard characters: False
 Specifies the week of the month when the event occurs.
 The acceptable values for this parameter are:
 
-- 0.
-Last (default) 
-- 1.
-First
-- 2.
-Second
-- 3.
-Third
-- 4.
-Fourth
+- 0: Last (default) 
+- 1: First
+- 2: Second
+- 3: Third
+- 4: Fourth
 
 ```yaml
 Type: ScheduleWeekOrder

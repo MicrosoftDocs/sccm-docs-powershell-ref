@@ -385,39 +385,39 @@ Cmdlet supports *DisableWildcardHandling* parameter hint for *Name* parameter.
 #### Bugs that were fixed
 Specifying the parameter *RemoveWDS* with a value of **false** may still cause the WDS feature to be removed.
 
-###Set-CMAppVVirtualEnvironment
+### Set-CMAppVVirtualEnvironment
 #### Bugs that were fixed
 *AddApplicationGroup* parameter does not verify whether the group has already been added.
 
-###Set-CMBaselineDeployment
+### Set-CMBaselineDeployment
 #### Bugs that were fixed
 Cmdlet may silently ignore *OverrideServiceWindow* if enforcement is not enabled for the deployment.
 
-###Set-CMBoundaryGroup
+### Set-CMBoundaryGroup
 #### Bugs that were fixed
 *DefaultSiteCode* parameter does not allow null value for clearing the setting.
 
-###Set-CMClientSetting
+### Set-CMClientSetting
 #### Deprecations
 Cmdlet has been deprecated and replaced with a feature-specific cmdlet. See [New Cmdlets](#New-Cmdlets) for more details.
 
-###Set-CMCollectionMembershipEvaluationComponent
+### Set-CMCollectionMembershipEvaluationComponent
 #### Deprecations
 *SiteSystemServerName* parameter has been deprecated.
 
-###Set-CMCollectionPowerManagement
+### Set-CMCollectionPowerManagement
 #### Bugs that were fixed
 Cannot change a power management policy from NeverApply to Apply.
 
-###Set-CMConditionalAccessPolicy
+### Set-CMConditionalAccessPolicy
 #### Bugs that were fixed
 Cmdlet may fail to modify excluded collections when specifying a policy by using the *Name* or *Id* parameters.
 
-###Set-CMDeploymentType
+### Set-CMDeploymentType
 #### Bugs that were fixed
 Cmdlet may return an "Unexpected site version" warning.
 
-###Set-CMDeviceVariable
+### Set-CMDeviceVariable
 #### Bugs that were fixed
 Cmdlet will silently fail if trying to set a variable that does not exist.
 
@@ -428,61 +428,61 @@ Cmdlet may reject a valid pipelined collection member object.
 #### Non-breaking changes
 New *PassThru* parameter to return the resultant device variable.
 
-###Set-CMDistributionPoint
+### Set-CMDistributionPoint
 #### Bugs that were fixed
 Cmdlet may return unexpected warnings about multicast service point configuration.
 
-###Set-CMFileReplicationRoute
+### Set-CMFileReplicationRoute
 #### Bugs that were fixed
 Cannot set *FileReplicationAccountName* without specifying a replication mode.
 
-###Set-CMGlobalCondition
+### Set-CMGlobalCondition
 #### Bugs that were fixed
 *InstanceName* parameter value length is not validated.
 
-###Set-CMIntuneSubscription
+### Set-CMIntuneSubscription
 #### Bugs that were fixed
 *ContactEmail* parameter does not perform validation for correctness.
 
-###Set-CMIntuneSubscriptionAppleMdmProperty
+### Set-CMIntuneSubscriptionAppleMdmProperty
 #### Bugs that were fixed
 Cmdlet may not warn when certain required parameter dependencies are not met.
 
-###Set-CMIntuneSubscriptionPassportForWorkProperty
+### Set-CMIntuneSubscriptionPassportForWorkProperty
 #### Bugs that were fixed
 *EnableBiometrics* parameter value may be ignored.
 
-###Set-CMIntuneSubscriptionWindowsPhoneProperty
+### Set-CMIntuneSubscriptionWindowsPhoneProperty
 #### Bugs that were fixed
 Cmdlet may not fail when certain invalid parameter combinations are used.
 
-###Set-CMMigrationJob
+### Set-CMMigrationJob
 #### Bugs that were fixed
 Specifying the *UtcTime* parameter without the *MigrationJobSchedule* parameter may result in an invalid migration job configuration.
 
-###Set-CMMigrationSource
+### Set-CMMigrationSource
 #### Bugs that were fixed
 Cmdlet will silently fail if trying to create a migration source with a name that already exists.
 
 #### Non-breaking changes
 Cmdlet will attempt to expand the *SourceSiteServerName* parameter value if a fully qualified domain name is not used.
 
-###Set-CMMsiDeploymentType
+### Set-CMMsiDeploymentType
 #### Non-breaking changes
 Added *InstallationBehaviorType* parameter.
 
-###Set-CMScriptDeploymentType
+### Set-CMScriptDeploymentType
 #### Non-breaking changes
 Added *InstallationBehaviorType* parameter.
 
-###Set-CMSite
+### Set-CMSite
 #### Bugs that were fixed
 Cmdlet may fail if *SiteCode* parameter is used.
 
 #### Non-breaking changes
 Removed unused extra parameter sets (SetSecurityScopeByName, SetSecurityScopeBySiteCode, and SetSecurityScopeByValue).
 
-###Set-CMSiteMaintenanceTask
+### Set-CMSiteMaintenanceTask
 #### Breaking changes
 *SiteCode* parameter has been removed.
 
@@ -496,27 +496,27 @@ Several usability improvements.
 
 Added *TaskName* parameter for setting a task by its name.
 
-###Set-CMSoftwareUpdateDeployment
+### Set-CMSoftwareUpdateDeployment
 #### Non-breaking changes
 Improved the output when using Confirm or WhatIf.
 
-###Set-CMSoftwareUpdatePointComponent
+### Set-CMSoftwareUpdatePointComponent
 #### Bugs that were fixed
 Cannot specify "Local Publisher" as a value for the *AddCompany* parameter.
 
-###Set-CMSoftwareUpdateSummarizationSchedule
+### Set-CMSoftwareUpdateSummarizationSchedule
 #### Non-breaking changes
 Improved the output when using *Confirm* or *WhatIf*.
 
-###Start-CMBaselineDeployment
+### Start-CMBaselineDeployment
 #### Bugs that were fixed
 Cmdlet may will silently ignore OverrideServiceWindow if enforcement is not enabled for the deployment.
 
-###Start-CMContentDistribution
+### Start-CMContentDistribution
 ### Bugs that were fixed
 Pipelined object may be disposed by the cmdlet.
 
-###Start-CMTaskSequenceDeployment
+### Start-CMTaskSequenceDeployment
 #### Bugs that were fixed
 Deployment may not be correctly created if the *DeploymentOption* parameter is not specified.
 
