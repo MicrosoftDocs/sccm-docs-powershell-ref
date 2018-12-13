@@ -109,7 +109,7 @@ The following changes have been made to existing cmdlets for this release. Chang
 - Add-CMComplianceSettingRegistryKeyValue may not honor **DataType** parameter value.
 - Certain values for **ExpressionOperator** may cause the console to unexpectedly quit when the setting is viewed.
 - ConvertFrom-CMConfigurationItem may fail with a NullReferenceException.
-#### Non-breaking changes
+  #### Non-breaking changes
 - New/Set-CMGlobalConditionActiveDirectoryQuery improved error messages when validation failures occur.
 - Improved validation to better align with console.
 
@@ -117,25 +117,25 @@ The following changes have been made to existing cmdlets for this release. Chang
 #### Breaking changes
 - New-CMTSStepPrestartCheck **CheckSpace** value will be set to true in the created task sequence step if it not specified.
 - Get-CMTSStep* no longer accept **WhatIf** and **Confirm** parameters.
-#### Bugs that were fixed
+  #### Bugs that were fixed
 - New-CMTSStep* cmdlets may ignore **WhatIf** and **Confirm** parameters if specified.
-#### Non-breaking changes
+  #### Non-breaking changes
 - New/Set-CMTSStepSetVariable new **IsMasked** parameter to hide variable values.
 - Improved validation to better align with console.
 
 ### Export cmdlets improvements
 - Changes affect Export-CMPackage, Export-CMAntimalwarePolicy, Export-CMDriverPackage, Export-CMTaskSequence, Export-CMDeviceCollection, and Export-CMUserCollection.
-#### Bugs that were fixed
+  #### Bugs that were fixed
 - Improved file path validation.
 - Improved handling of I/O errors.
 - Export-CMDriverPackage may create an empty driver package.
-#### Non-breaking changes
+  #### Non-breaking changes
 - New **Force** parameter can be used to force overwriting an existing file.
 
 ### Add-CMApplication
 #### Bugs that were fixed
 - Publisher and Software Version as configured by this cmdlet may not show in Software Center.
-#### Non-breaking changes
+  #### Non-breaking changes
 - **Keyword** parameter now supports array of strings.
 - **AppCatalog** parameter now supports an array of application catalogs.
 
@@ -158,7 +158,7 @@ The following changes have been made to existing cmdlets for this release. Chang
 
 ### Add-CMDriverToDriverPackage
 #### Non-breaking changes
-- New ***UpdateDistributionPoint** parameter allows suppressing distribution point updates.
+- New <em>**UpdateDistributionPoint</em>* parameter allows suppressing distribution point updates.
 
 ### Add-CMReportingServicePoint
 #### Bugs that were fixed
@@ -207,7 +207,7 @@ The following changes have been made to existing cmdlets for this release. Chang
 
 ### Remove-CMDriverFromDriverPackage
 #### Non-breaking changes
-- New ***UpdateDistributionPoint** parameter allows suppressing distribution point updates.
+- New <em>**UpdateDistributionPoint</em>* parameter allows suppressing distribution point updates.
 
 ### Remove-CMUserAffinityToDevice
 #### Non-breaking changes
@@ -220,7 +220,7 @@ The following changes have been made to existing cmdlets for this release. Chang
 ### Set-CMApplication
 #### Bugs that were fixed
 - Publisher and Software Version as configured by this cmdlet may not show in Software Center.
-#### Non-breaking changes
+  #### Non-breaking changes
 - **Keyword** parameter now supports array of strings.
 - New **AddAppCatalog**, **RemoveAppCatalog**, and **ClearAppCatalog** parameters for modifying the application catalogs associated with the application.
 
@@ -235,7 +235,7 @@ The following changes have been made to existing cmdlets for this release. Chang
 ### Set-CMDistributionPoint
 #### Bugs that were fixed
 - Cmdlet may fail if updating a distribution point with a certificate that already exists.
-#### Non-breaking changes
+  #### Non-breaking changes
 - New **EnableNonWdsPxe** parameter allows for WDS-less PXE configuration.
 - Improved validation for **\*ContentLibraryLocation** and **\*ContentShare** parameters.
 

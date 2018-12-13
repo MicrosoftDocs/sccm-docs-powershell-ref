@@ -411,15 +411,15 @@ Specifies the week of the month when the event occurs.
 The acceptable values for this parameter are:
 
 - 0.
-Last (default) 
+  Last (default) 
 - 1.
-First
+  First
 - 2.
-Second
+  Second
 - 3.
-Third
+  Third
 - 4.
-Fourth
+  Fourth
 
 ```yaml
 Type: ScheduleWeekOrder
