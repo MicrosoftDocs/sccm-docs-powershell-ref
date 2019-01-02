@@ -1,33 +1,43 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 51B2F354-3AD4-4A67-B567-E76938D445E5
-online version: https://go.microsoft.com/fwlink/?linkid=833767
-schema: 2.0.0
+title: Set-CMConfigurationItem
+titleSuffix: Configuration Manager
+description: Changes settings for a Configuration Manager configuration item.
+ms.date: 11/29/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Set-CMConfigurationItem
 
 ## SYNOPSIS
+
 Changes settings for a Configuration Manager configuration item.
 
 ## SYNTAX
 
 ### SetByIdMandatory (Default)
-```
+
+```powershell
 Set-CMConfigurationItem [-Id] <Int32> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
  [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>] [-Digest <ConfigurationItem>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
-```
+
+```powershell
 Set-CMConfigurationItem [-Name] <String> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
  [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>] [-Digest <ConfigurationItem>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
-```
+
+```powershell
 Set-CMConfigurationItem [-InputObject] <IResultObject> [-NewName <String>] [-Description <String>]
  [-AddCategory <String[]>] [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>]
  [-Digest <ConfigurationItem>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
@@ -35,6 +45,7 @@ Set-CMConfigurationItem [-InputObject] <IResultObject> [-NewName <String>] [-Des
 ```
 
 ## DESCRIPTION
+
 The **Set-CMConfigurationItem** cmdlet changes settings for a Microsoft System Center Configuration Manager configuration item.
 
 Configuration items contain one or more settings, along with compliance rules.
@@ -44,21 +55,24 @@ For more information about configuration items, see [Introduction to Compliance 
 ## EXAMPLES
 
 ### Example 1: Change the name of a configuration item
-```
+
+```powershell
 PS C:\> Set-CMConfigurationItem -Name "CITest" -NewName "CITest01"
 ```
 
 This command changes the name of the configuration item named CITest to CITest01.
 
 ### Example 2: Set item settings
-```
+
+```powershell
 PS C:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction AddMembership -SecurityScopeName "DefaultScope"
 ```
 
 This command sets the security scope action to AddMembership and the security scope name to DefaultScope for the item named CITest01.
 
 ### Example 3: Change item settings
-```
+
+```powershell
 PS C:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction RemoveMembership -SecurityScopeName "DefaultScope"
 ```
 
@@ -67,6 +81,7 @@ This command sets the security scope action to RemoveMembership and the security
 ## PARAMETERS
 
 ### -AddCategory
+
 Specifies an array of localized names of the categories to which the configuration item belongs.
 
 ```yaml
@@ -82,6 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -97,6 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies a description for a configuration item.
 
 ```yaml
@@ -112,6 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -Digest
+
+Specifies the Digest that contain the configuration item.
+
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
@@ -125,6 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -DigestPath
+
+Specifies the path of the Digest.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -138,6 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -DigestXml
+
+Specifies the XML definition.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -151,6 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -166,6 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -181,6 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
 Specifies an array of identifiers for one or more configuration items.
 You can use a comma separated list.
 
@@ -197,6 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies a configuration item object.
 To obtain a configuration item object, you can use the [Get-CMConfigurationItem](Get-CMConfigurationItem.md) cmdlet.
 
@@ -213,6 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies an array of names for configuration items.
 
 ```yaml
@@ -228,6 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
+
 Specifies a new name for a configuration item.
 
 ```yaml
@@ -243,6 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
 Returns the current working object.
 By default, this cmdlet does not generate any output.
 
@@ -259,6 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveCategory
+
 Specifies an array of localized names of the categories from which to remove the configuration item.
 
 ```yaml
@@ -274,6 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -290,28 +325,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
-
-[Export-CMConfigurationItem](Export-CMConfigurationItem.md)
-
-[Get-CMConfigurationItem](Get-CMConfigurationItem.md)
-
-[Get-CMConfigurationItemXMLDefinition](Get-CMConfigurationItemXMLDefinition.md)
-
-[Import-CMConfigurationItem](Import-CMConfigurationItem.md)
-
-[New-CMConfigurationItem](New-CMConfigurationItem.md)
-
-[Remove-CMConfigurationItem](Remove-CMConfigurationItem.md)
-
-[Get-CMConfigurationItemHistory](Get-CMConfigurationItemHistory.md)
+- [Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
+- [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
+- [Get-CMConfigurationItemXMLDefinition](Get-CMConfigurationItemXMLDefinition.md)
+- [Get-CMConfigurationItemHistory](Get-CMConfigurationItemHistory.md)
+- [New-CMConfigurationItem](New-CMConfigurationItem.md)
+- [Remove-CMConfigurationItem](Remove-CMConfigurationItem.md)
+- [Import-CMConfigurationItem](Import-CMConfigurationItem.md)
+- [Export-CMConfigurationItem](Export-CMConfigurationItem.md)
+- [ConvertTo-CMConfigurationItem](ConvertTo-CMConfigurationItem.md)
+- [ConvertFrom-CMConfigurationItem](ConvertFrom-CMConfigurationItem.md)

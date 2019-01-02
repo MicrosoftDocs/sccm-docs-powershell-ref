@@ -61,7 +61,8 @@ Using the *WhatIf* parameter returns a description of what would happen if you e
 ## PARAMETERS
 
 ### -AddDetectionClause
- 
+
+Specifies an array of detection method clauses that this deployment type supports.
 
 ```yaml
 Type: DetectionClause[]
@@ -76,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddLanguage
+
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 

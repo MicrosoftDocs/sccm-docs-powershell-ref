@@ -1,7 +1,7 @@
 ---
-title: Import-CMTaskSequence
+title: Copy-CMTaskSequence
 titleSuffix: Configuration Manager
-description: Imports a Configuration Manager task sequence.
+description: 
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,32 +11,48 @@ ms.author: jgao
 manager: dougeby
 ---
 
-# Import-CMTaskSequence
+# Copy-CMTaskSequence
 
 ## SYNOPSIS
 
-Imports a Configuration Manager task sequence.
+Create a copy of an existing task sequence in Configuration Manager.
 
 ## SYNTAX
 
+### SearchById (Default)
+
 ```powershell
-Import-CMTaskSequence [-IgnoreDependency] [-ImportActionType <ImportActionType>] -Path <String>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Copy-CMTaskSequence -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+```
+
+### SearchByName
+
+```powershell
+Copy-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+```
+
+### SearchByValue
+
+```powershell
+Copy-CMTaskSequence -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm]
 ```
 
 ## DESCRIPTION
 
-The **Import-CMTaskSequence** cmdlet imports a task sequence into Microsoft System Center Configuration Manager.
+The **Copy-CMTaskSequence** cmdlet creates a copy of an existing task sequence in Microsoft System Center Configuration Manager.
+
+A task sequence performs multiple steps or tasks on a Microsoft System Center Configuration Manager client computer without user intervention.
 
 ## EXAMPLES
 
-### Example 1: Import a task sequence
+### Example 1
 
 ```powershell
-PS C:\>Import-CMTaskSequence -ImportFilePath "\\Server1\TS\TaskSequence.zip"
+PS C:\> $newTS = Copy-CMTaskSequence -Name "TaskSequence01"
 ```
 
-This command imports a task sequence from the specified location.
+This command makes a copy of the task sequence with the name TaskSequence01.
 
 ## PARAMETERS
 
@@ -47,7 +63,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,7 +79,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,47 +88,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IgnoreDependency
+### -Id
 
-Indicates that the import process ignores dependencies in the task sequence.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImportActionType
-
-Controls the behavior when a package already exists.
-
-```yaml
-Type: ImportActionType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: NotSet, Skip, DirectImport, Rename, Overwrite, ImportFail, IgnoreDependencyFailure, AppendDriverCategories, OverwriteIgnoreDependencyFailure
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Path
-
-Specifies the path of the import file.
+Specifies a task sequence ID.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: ImportFilePath
+Parameter Sets: SearchById
+Aliases: PackageId, TaskSequencePackageId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+
+Specifies a task sequence object.
+
+```yaml
+Type: IResultObject
+Parameter Sets: SearchByValue
+Aliases: TaskSequence
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+
+Specifies a task sequence name.
+
+```yaml
+Type: String
+Parameter Sets: SearchByName
+Aliases: TaskSequenceName
 
 Required: True
 Position: Named
@@ -132,7 +147,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -149,14 +164,18 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
+## INPUTS
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
+## OUTPUTS
+
+### IResultObject#SMS_TaskSequencePackage
 
 ## RELATED LINKS
 
