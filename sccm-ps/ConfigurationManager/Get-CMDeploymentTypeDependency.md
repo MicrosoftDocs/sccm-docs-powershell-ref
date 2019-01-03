@@ -26,7 +26,7 @@ Get-CMDeploymentTypeDependency -InputObject <DeploymentTypeDependencyGroup> [-Di
 
 ## DESCRIPTION
 
-The **Get-CMDeploymentTypeDependency** cmdlet gets existing dependent deployment types from a dependency group. Required input is a dependency group object from Get-CMDeploymentTypeDependencyGroup.
+The **Get-CMDeploymentTypeDependency** cmdlet gets existing dependent deployment types from a dependency group. Required input is a dependency group object from [Get-CMDeploymentTypeDependencyGroup](./Get-CMDeploymentTypeDependencyGroup.md).
 
 ## EXAMPLES
 

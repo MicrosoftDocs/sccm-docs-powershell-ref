@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a SMS DeploymentType object. To obtain a SMS DeploymentType object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
+Specifies an SMS DeploymentType object. To obtain an SMS DeploymentType object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: PSObject

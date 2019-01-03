@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -NewName
 
-Specifies a new denpendency group name.
+Specifies a new dependency group name.
 
 ```yaml
 Type: String

@@ -27,7 +27,7 @@ Add-CMDeploymentTypeDependency [-IsAutoInstall <Boolean>] -DeploymentTypeDepende
 
 ## DESCRIPTION
 
-The **Add-CMDeploymentTypeDependency** adds a deployment type as a dependency to a dependency group. Required input is a deployment type object from Get-CMDeploymentType and a dependency group from [Get|New]-CMDeploymentTypeDependencyGroup.
+The **Add-CMDeploymentTypeDependency** adds a deployment type as a dependency to a dependency group. Required input is a deployment type object from [Get-CMDeploymentType](./Get-CMDeploymentType.md) and a dependency group from [Get-CMDeploymentTypeDependencyGroup](./Get-CMDeploymentTypeDependencyGroup.md) and [New-CMDeploymentTypeDependencyGroup](./New-CMDeploymentTypeDependencyGroup.md).
 
 ## EXAMPLES
 

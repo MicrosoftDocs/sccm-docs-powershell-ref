@@ -26,7 +26,7 @@ Get-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-DisableWildcardH
 
 ## DESCRIPTION
 
-The **Get-CMDeploymentTypeSupersedence** cmdlet gets supersedences for a superseded deployment type. Required input is a superseded deployment type.
+The **Get-CMDeploymentTypeSupersedence** cmdlet gets supersedence objects for a superseded deployment type. Required input is a superseded deployment type.
 
 ## EXAMPLES
 
