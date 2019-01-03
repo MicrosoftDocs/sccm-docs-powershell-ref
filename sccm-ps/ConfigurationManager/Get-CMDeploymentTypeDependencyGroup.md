@@ -1,36 +1,47 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMDeploymentTypeDependencyGroup
+titleSuffix: Configuration Manager
+description: Gets a deployment type dependency group from Configuration Manager.
+ms.date: 12/03/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Get-CMDeploymentTypeDependencyGroup
 
 ## SYNOPSIS
-Gets a deployment type dependency group
+
+Gets a deployment type dependency group from Configuration Manager.
 
 ## SYNTAX
 
-```
+```powershell
 Get-CMDeploymentTypeDependencyGroup [-GroupName <String>] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
- 
+
+The **Get-CMDeploymentTypeDependencyGroup** cmdlet gets a deployment type dependency group from the Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\>  
+
+```powershell
+PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup
 ```
 
- 
+This command returns the dependency groups of a deployment type.
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -46,6 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -61,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupName
- 
+
+Specifies a dependency group name.
 
 ```yaml
 Type: String
@@ -76,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
+
+Specifies a deployment type object.
 
 ```yaml
 Type: IResultObject
@@ -91,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -100,9 +115,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### DeploymentTypeDependencyGroup[]
-DeploymentTypeDependency
 
-## NOTES
+DeploymentTypeDependency
 
 ## RELATED LINKS
 
+- [New-CMDeploymentTypeDependencyGroup](./New-CMDeploymentTypeDependencyGroup.md)
+- [Set-CMDeploymentTypeDependencyGroup](./Set-CMDeploymentTypeDependencyGroup.md)
+- [Remove-CMDeploymentTypeDependencyGroup](./Remove-CMDeploymentTypeDependencyGroup.md)
