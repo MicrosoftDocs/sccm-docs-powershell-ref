@@ -1,19 +1,27 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: 97AD7791-97A7-492A-BD08-274EDAED0F2B
-online version: https://go.microsoft.com/fwlink/?linkid=834222
-schema: 2.0.0
+title: Start-CMPackageDeployment
+titleSuffix: Configuration Manager
+description: Starts deployment of a software package to a Configuration Manager collection.
+ms.date: 11/30/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Start-CMPackageDeployment
 
 ## SYNOPSIS
+
 Starts deployment of a software package to a Configuration Manager collection.
 
 ## SYNTAX
 
 ### DeployStandardProgramByPackageValue (Default)
-```
+
+```powershell
 Start-CMPackageDeployment [-StandardProgram] [-Package] <IResultObject> -ProgramName <String>
  -CollectionName <String> [-Comment <String>] [-DeployPurpose <DeployPurposeType>]
  [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDay <DateTime>]
@@ -28,7 +36,8 @@ Start-CMPackageDeployment [-StandardProgram] [-Package] <IResultObject> -Program
 ```
 
 ### DeployDeviceProgramByPackageName
-```
+
+```powershell
 Start-CMPackageDeployment [-DeviceProgram] -PackageName <String> -ProgramName <String> -CollectionName <String>
  [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-UseMeteredNetwork <Boolean>]
  [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>] [-DeploymentStartDateTime <DateTime>]
@@ -37,7 +46,8 @@ Start-CMPackageDeployment [-DeviceProgram] -PackageName <String> -ProgramName <S
 ```
 
 ### DeployDeviceProgramByPackageId
-```
+
+```powershell
 Start-CMPackageDeployment [-DeviceProgram] -PackageId <String> -ProgramName <String> -CollectionName <String>
  [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-UseMeteredNetwork <Boolean>]
  [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>] [-DeploymentStartDateTime <DateTime>]
@@ -46,7 +56,8 @@ Start-CMPackageDeployment [-DeviceProgram] -PackageId <String> -ProgramName <Str
 ```
 
 ### DeployDeviceProgramByPackageValue
-```
+
+```powershell
 Start-CMPackageDeployment [-DeviceProgram] [-Package] <IResultObject> -ProgramName <String>
  -CollectionName <String> [-Comment <String>] [-DeployPurpose <DeployPurposeType>]
  [-UseMeteredNetwork <Boolean>] [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>]
@@ -56,7 +67,8 @@ Start-CMPackageDeployment [-DeviceProgram] [-Package] <IResultObject> -ProgramNa
 ```
 
 ### DeployDeviceProgramByProgramValue
-```
+
+```powershell
 Start-CMPackageDeployment [-DeviceProgram] [-Program] <IResultObject> -CollectionName <String>
  [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>]
  [-UseMeteredNetwork <Boolean>] [-DeploymentStartDay <DateTime>] [-DeploymentStartTime <DateTime>]
@@ -66,7 +78,8 @@ Start-CMPackageDeployment [-DeviceProgram] [-Program] <IResultObject> -Collectio
 ```
 
 ### DeployStandardProgramByPackageName
-```
+
+```powershell
 Start-CMPackageDeployment [-StandardProgram] -PackageName <String> -ProgramName <String>
  -CollectionName <String> [-Comment <String>] [-DeployPurpose <DeployPurposeType>]
  [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDay <DateTime>]
@@ -81,7 +94,8 @@ Start-CMPackageDeployment [-StandardProgram] -PackageName <String> -ProgramName 
 ```
 
 ### DeployStandardProgramByPackageId
-```
+
+```powershell
 Start-CMPackageDeployment [-StandardProgram] -PackageId <String> -ProgramName <String> -CollectionName <String>
  [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>]
  [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
@@ -96,7 +110,8 @@ Start-CMPackageDeployment [-StandardProgram] -PackageId <String> -ProgramName <S
 ```
 
 ### DeployStandardProgramByProgramValue
-```
+
+```powershell
 Start-CMPackageDeployment [-StandardProgram] [-Program] <IResultObject> -CollectionName <String>
  [-Comment <String>] [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>]
  [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDay <DateTime>] [-DeploymentAvailableTime <DateTime>]
@@ -111,6 +126,7 @@ Start-CMPackageDeployment [-StandardProgram] [-Program] <IResultObject> -Collect
 ```
 
 ## DESCRIPTION
+
 The **Start-CMPackageDeployment** cmdlet starts deployment of a specified software package to computers that belong to a Microsoft System Center Configuration Manager collection.
 You can choose when the package becomes available and when the package deployment expires.
 You can specify whether System Center Configuration Manager deploys the package only once or repeatedly and what happens when installation fails for a computer.
@@ -118,7 +134,8 @@ You can specify whether System Center Configuration Manager deploys the package 
 ## EXAMPLES
 
 ### Example 1: Start a recurring deployment
-```
+
+```powershell
 PS C:\> Start-CMPackageDeployment -CollectionName "All Systems" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "DPM for all systems." -DeploymentStartDay 2012/10/26 -DeploymentStartTime 12:12 -RecurUnit Days -RecurValue 7 -Rerun $True -UseMeteredNetwork $True -UseUtc $True
 ```
 
@@ -130,7 +147,8 @@ The deployment uses metered network.
 The deployment uses UTC time.
 
 ### Example 2: Start a recurring deployment for an available package
-```
+
+```powershell
 PS C:\> Start-CMPackageDeployment -CollectionName "Western Computers" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "Deployment for Western office." -DeployPurpose Available -Rerun $True -UseUtc $True
 ```
 
@@ -141,7 +159,8 @@ The *Rerun* parameter has a value of $True.
 The deployment uses UTC time.
 
 ### Example 3: Start a deployment for a standard program
-```
+
+```powershell
 PS C:\> Start-CMPackageDeployment -CollectionName "All Systems" -PackageName "User State Migration Tool for Windows 8" -StandardProgramName "SPM" AllowSharedContent $False
 ```
 
@@ -151,6 +170,7 @@ The command does not allow computers to use shared content.
 ## PARAMETERS
 
 ### -AllowSharedContent
+
 Indicates whether clients use shared content.
 If this value is $True, clients attempt to download content from other clients that downloaded that content.
 If this value is $False, clients do not attempt to download from other clients.
@@ -168,6 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
 Specifies the ID of a device or user collection.
 
 ```yaml
@@ -183,6 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
+
 Specifies a comment for the deployment.
 
 ```yaml
@@ -198,6 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -213,6 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeployPurpose
+
 Specifies the purpose for the deployment.
 The acceptable values for this parameter are:
 
@@ -233,6 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentAvailableDateTime
+
 Specifies, as a **DateTime** object, the date and time that the deployment becomes available.
 To obtain a **DateTime** object, use the Get-Date cmdlet.
 
@@ -249,8 +274,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentAvailableDay
-Obsolete.
-Use *DeploymentAvailableDateTime*.
+
+Obsolete. Use *DeploymentAvailableDateTime*.
 
 ```yaml
 Type: DateTime
@@ -265,8 +290,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentAvailableTime
-Obsolete.
-Use *DeploymentAvailableDateTime*.
+
+Obsolete. Use *DeploymentAvailableDateTime* instead.
 
 ```yaml
 Type: DateTime
@@ -281,6 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentExpireDateTime
+
 Specifies, as a **DateTime** object, the date and time that the deployment expires.
 To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 
@@ -297,8 +323,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentExpireDay
-Obsolete.
-Use *DeploymentExpireDateTime*.
+
+Obsolete. Use *DeploymentExpireDateTime* instead.
 
 ```yaml
 Type: DateTime
@@ -313,8 +339,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentExpireTime
-Obsolete.
-Use *DeploymentExpireDateTime*.
+
+Obsolete. Use *DeploymentExpireDateTime*.
 
 ```yaml
 Type: DateTime
@@ -329,6 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentStartDateTime
+
 Specifies, as a **DateTime** object, the date and time that the deployment starts.
 To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 
@@ -345,8 +372,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentStartDay
-Obsolete.
-Use *DeploymentStartDateTime*.
+
+Obsolete. Use *DeploymentStartDateTime*.
 
 ```yaml
 Type: DateTime
@@ -361,8 +388,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentStartTime
-Obsolete.
-Use *DeploymentStartDateTime*.
+
+Obsolete. Use *DeploymentStartDateTime*.
 
 ```yaml
 Type: DateTime
@@ -377,6 +404,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceProgram
+
+Specifies a device program.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageId, DeployDeviceProgramByPackageValue, DeployDeviceProgramByProgramValue
@@ -390,6 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -405,6 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -FastNetworkOption
+
 Specifies client behavior on a fast network.
 The acceptable values for this parameter are:
 
@@ -425,6 +457,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -440,6 +473,7 @@ Accept wildcard characters: False
 ```
 
 ### -Package
+
 Specifies a package object.
 To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
@@ -456,6 +490,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
+
 Specifies the ID of a package.
 
 ```yaml
@@ -471,6 +506,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageName
+
 Specifies the name of a package.
 
 ```yaml
@@ -486,6 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
 Returns the current working object.
 By default, this cmdlet does not generate any output.
 
@@ -502,6 +539,7 @@ Accept wildcard characters: False
 ```
 
 ### -PersistOnWriteFilterDevice
+
 Indicates whether to enable write filters for embedded devices.
 For a value of $True, the device commits changes during a maintenance window.
 This action requires a restart.
@@ -520,6 +558,9 @@ Accept wildcard characters: False
 ```
 
 ### -Program
+
+Specifies a program.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployDeviceProgramByProgramValue, DeployStandardProgramByProgramValue
@@ -533,6 +574,9 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
+
+Specifies the name of a program.
+
 ```yaml
 Type: String
 Parameter Sets: DeployStandardProgramByPackageValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageId, DeployDeviceProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByPackageId
@@ -546,6 +590,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecurUnit
+
 Specifies a unit for a recurring deployment.
 The acceptable values for this parameter are:
 
@@ -567,6 +612,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecurValue
+
 Specifies how often a deployment recurs.
 This parameter depends on the unit type specified in the *RecurUnit* parameter.
 This value can be between 1 and 23 if the unit is Hours, between 1 and 31 if the unit is Days, or between 1 and 59 if the unit is Minutes.
@@ -584,6 +630,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rerun
+
 Indicates whether the deployment reruns.
 If this value is $True, the deployment runs again for clients as specified in the *RerunBehavior* parameter.
 If this value is $False, the deployment does not run again.
@@ -601,6 +648,7 @@ Accept wildcard characters: False
 ```
 
 ### -RerunBehavior
+
 Specifies how a deployment reruns on a client.
 The acceptable values for this parameter are:
 
@@ -629,6 +677,9 @@ Accept wildcard characters: False
 ```
 
 ### -RunFromSoftwareCenter
+
+Indicates whether to run from Software Center.
+
 ```yaml
 Type: Boolean
 Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByPackageId, DeployStandardProgramByProgramValue
@@ -642,6 +693,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
+
 Specifies a schedule object for the deployment.
 
 ```yaml
@@ -657,6 +709,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleEvent
+
 Specifies an array of schedule event types.
 The acceptable values for this parameter are:
 
@@ -679,6 +732,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
+
 Indicates whether to send a wake up packet to computers before the deployment begins.
 If this value is $True, Configuration Manager wakes a computer from sleep.
 If this value is $False, it does not wake computers from sleep.
@@ -697,6 +751,7 @@ Accept wildcard characters: False
 ```
 
 ### -SlowNetworkOption
+
 Specifies how Configuration Manager deploys this package in a slow network.
 The acceptable values for this parameter are:
 
@@ -718,6 +773,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
+
 Indicates whether to install the deployed software outside of maintenance windows.
 A maintenance window is a specified period of time used for computer maintenance and updates.
 If this value is $True, the Configuration Manager installs software according to schedule, even if the schedule falls outside a maintenance window.
@@ -736,6 +792,7 @@ Accept wildcard characters: False
 ```
 
 ### -StandardProgram
+
 Indicates that the program type in the deployment package is standard program.
 
 ```yaml
@@ -751,6 +808,7 @@ Accept wildcard characters: False
 ```
 
 ### -SystemRestart
+
 Indicates whether a system restarts outside a maintenance window.
 A maintenance window is a specified period of time used for computer maintenance and updates.
 If this value is $True, any required restart takes place without regard to maintenance windows.
@@ -769,6 +827,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMeteredNetwork
+
 Indicates whether to allow clients to download content over a metered Internet connection after the deadline, which may incur additional expense.
 
 ```yaml
@@ -784,6 +843,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtc
+
 Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
 If this value is $True, Configuration Manager uses UTC for this deployment.
 If this value is $False, Configuration Manager uses local time.
@@ -801,6 +861,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtcForAvailableSchedule
+
 Indicates whether to use UTC for available schedule.
 If this value is $True, Configuration Manager uses UTC.
 If this value is $False, Configuration Manager uses local time.
@@ -818,6 +879,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtcForExpireSchedule
+
 Indicates whether to use UTC for expire schedule.
 If this value is $True, Configuration Manager uses UTC.
 If this value is $False, Configuration Manager uses local time.
@@ -835,6 +897,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -851,16 +914,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
-[Set-CMPackageDeployment](Set-CMPackageDeployment.md)
-
-[Get-CMPackage](Get-CMPackage.md)
+- [New-CMPackageDeployment](New-CMPackageDeployment.md)
+- [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
+- [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
+- [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
+- [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
+- [Get-CMPackage](Get-CMPackage.md)

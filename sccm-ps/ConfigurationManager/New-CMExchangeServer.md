@@ -49,7 +49,7 @@ PS C:\> $schedule = New-CMSchedule -Start "03/01/2016 11:59 PM" -RecurInterval D
 PS C:\> New-CMExchangeServer -ServerAddress "http://exchange.contoso.com" -DeltaSyncInterval 120 -FullSyncSchedule $schedule -IsHosted -SiteCode "ContosoSite"
 ```
 
-These commands create an Exchange Server with the server address http://exchange,contoso.com.
+These commands create an Exchange Server with the server address `http://exchange.contoso.com`.
 To do this, the first command in the example uses the **New-CMSchedule** cmdlet to create a schedule for doing Exchange synchronizations.
 This schedule object is stored in a variable $schedule.
 

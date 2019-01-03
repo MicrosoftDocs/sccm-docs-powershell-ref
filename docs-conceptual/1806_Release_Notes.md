@@ -158,7 +158,7 @@ The following changes have been made to existing cmdlets for this release. Chang
 
 ### Add-CMDriverToDriverPackage
 #### Non-breaking changes
-- New ***UpdateDistributionPoint** parameter allows suppressing distribution point updates.
+- New <em>**UpdateDistributionPoint</em>* parameter allows suppressing distribution point updates.
 
 ### Add-CMReportingServicePoint
 #### Bugs that were fixed
@@ -207,7 +207,7 @@ The following changes have been made to existing cmdlets for this release. Chang
 
 ### Remove-CMDriverFromDriverPackage
 #### Non-breaking changes
-- New ***UpdateDistributionPoint** parameter allows suppressing distribution point updates.
+- New <em>**UpdateDistributionPoint</em>* parameter allows suppressing distribution point updates.
 
 ### Remove-CMUserAffinityToDevice
 #### Non-breaking changes
