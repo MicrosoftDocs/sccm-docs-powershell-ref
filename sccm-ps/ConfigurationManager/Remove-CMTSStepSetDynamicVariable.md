@@ -1,7 +1,7 @@
 ---
-title: 
+title: Remove-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
-description: 
+description: Remove task sequence "Set Dynamic Variable" steps from a task sequence in Configuration Manager.
 ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Remove task sequence "Set Dynamic Variable" steps from a task sequence in Configuration Manager.
 
 ## SYNTAX
 
@@ -41,23 +41,23 @@ Remove-CMTSStepSetDynamicVariable [-TaskSequenceName] <String> [-StepName <Strin
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+Remove task sequence “Set Dynamic Variable” step(s) from a specific task sequence, it supports pipeline from a task sequence object, and could be filtered by the name of the step.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ReferencedTaskSequence | Remove-CMTaskSequenceStepSetDynamicVariable -StepName $st1.Name -Force
 ```
 
-{{ Add example description here }}
+This command removes a task sequence "Set Dynamic Variables" steps.
 
 ## PARAMETERS
 
 ### -Force
 
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-{{Fill InputObject Description}}
+Specifies a task sequence object.
 
 ```yaml
 Type: IResultObject
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-{{Fill StepName Description}}
+Specifies a name for the step.
 
 ```yaml
 Type: String
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-{{Fill TaskSequenceId Description}}
+Specifies a task sequence ID.
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-{{Fill TaskSequenceName Description}}
+Specifies a task sequence name.
 
 ```yaml
 Type: String
@@ -172,12 +172,9 @@ Accept wildcard characters: False
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
-
 ## OUTPUTS
 
 ### System.Object
-
-## NOTES
 
 ## RELATED LINKS
 

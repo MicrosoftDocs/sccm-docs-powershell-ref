@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
-description: 
+description: Sets properties, options, specific conditions for “Set Dynamic Variable” steps in a task sequence. 
 ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets properties, options, specific conditions for “Set Dynamic Variable” steps in a task sequence. 
 
 ## SYNTAX
 
@@ -252,23 +252,21 @@ Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>]
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMTSStepSetDynamicVariable** cmdlet sets properties, options, specific conditions for “Set Dynamic Variable” steps in a task sequence.  The cmdlet supports pipeline from a task sequence object, and could be filtered by the name of the step.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -ClearCondition -AddCondition $cd1 -CleanRule -AddRule ($rule5,$rule6)
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AddCondition
 
-{{Fill AddCondition Description}}
+Specifies the conditions objects to be added.
 
 ```yaml
 Type: IResultObject[]
@@ -284,7 +282,7 @@ Accept wildcard characters: False
 
 ### -AddRule
 
-{{Fill AddRule Description}}
+Specifies the rules to be added.
 
 ```yaml
 Type: IResultObject[]
@@ -332,7 +330,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-{{Fill Condition Description}}
+Specifies conditions.
 
 ```yaml
 Type: IResultObject[]
@@ -348,7 +346,7 @@ Accept wildcard characters: False
 
 ### -ConditionVariableName
 
-{{Fill ConditionVariableName Description}}
+Specifies a condition variable name.
 
 ```yaml
 Type: String
@@ -364,7 +362,7 @@ Accept wildcard characters: False
 
 ### -ConditionVariableValue
 
-{{Fill ConditionVariableValue Description}}
+Specifies condition variable value.
 
 ```yaml
 Type: String
@@ -380,7 +378,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-{{Fill Description Description}}
+Specifies a description.
 
 ```yaml
 Type: String
@@ -396,7 +394,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-{{Fill DisableWildcardHandling Description}}
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -412,7 +410,7 @@ Accept wildcard characters: False
 
 ### -FileDateTimeOperator
 
-{{Fill FileDateTimeOperator Description}}
+Specifies a file date time operator.
 
 ```yaml
 Type: VariableOperatorType
@@ -429,7 +427,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-{{Fill FilePath Description}}
+Specifies a file path.
 
 ```yaml
 Type: String
@@ -445,7 +443,7 @@ Accept wildcard characters: False
 
 ### -FileTimestamp
 
-{{Fill FileTimestamp Description}}
+Specifies a file time stamp.
 
 ```yaml
 Type: DateTime
@@ -461,7 +459,7 @@ Accept wildcard characters: False
 
 ### -FileVersion
 
-{{Fill FileVersion Description}}
+Specifies a file version.
 
 ```yaml
 Type: String
@@ -477,7 +475,7 @@ Accept wildcard characters: False
 
 ### -FolderDateTimeOperator
 
-{{Fill FolderDateTimeOperator Description}}
+Specifies a folder date time operator.
 
 ```yaml
 Type: VariableOperatorType
@@ -494,7 +492,7 @@ Accept wildcard characters: False
 
 ### -FolderPath
 
-{{Fill FolderPath Description}}
+Specifies a folder path.
 
 ```yaml
 Type: String
@@ -510,7 +508,7 @@ Accept wildcard characters: False
 
 ### -FolderTimestamp
 
-{{Fill FolderTimestamp Description}}
+Specifies a folder time stamp.
 
 ```yaml
 Type: DateTime
@@ -526,7 +524,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-{{Fill ForceWildcardHandling Description}}
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -542,7 +540,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-{{Fill InputObject Description}}
+Specifies a task sequence object.
 
 ```yaml
 Type: IResultObject
@@ -622,7 +620,7 @@ Accept wildcard characters: False
 
 ### -MsiFilePath
 
-{{Fill MsiFilePath Description}}
+Specifies a MSI file path.
 
 ```yaml
 Type: String
@@ -638,7 +636,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 
-{{Fill Namespace Description}}
+Specifies a namespace.
 
 ```yaml
 Type: String[]
@@ -654,7 +652,7 @@ Accept wildcard characters: False
 
 ### -NewStepName
 
-{{Fill NewStepName Description}}
+Specifies a new step name.
 
 ```yaml
 Type: String
@@ -670,7 +668,7 @@ Accept wildcard characters: False
 
 ### -OperatorType
 
-{{Fill OperatorType Description}}
+Specifies a operator type.
 
 ```yaml
 Type: VariableOperatorType
@@ -687,7 +685,7 @@ Accept wildcard characters: False
 
 ### -Query
 
-{{Fill Query Description}}
+Specifies a query.
 
 ```yaml
 Type: String
@@ -703,7 +701,7 @@ Accept wildcard characters: False
 
 ### -RegistryKey
 
-{{Fill RegistryKey Description}}
+Specifies a registry key.
 
 ```yaml
 Type: String
@@ -719,7 +717,7 @@ Accept wildcard characters: False
 
 ### -RegistryOperator
 
-{{Fill RegistryOperator Description}}
+Specifies a registry operator.
 
 ```yaml
 Type: VariableOperatorType
@@ -736,7 +734,7 @@ Accept wildcard characters: False
 
 ### -RegistryValueData
 
-{{Fill RegistryValueData Description}}
+Specifies registry value data.
 
 ```yaml
 Type: String
@@ -752,7 +750,7 @@ Accept wildcard characters: False
 
 ### -RegistryValueName
 
-{{Fill RegistryValueName Description}}
+Specifies registry value name.
 
 ```yaml
 Type: String
@@ -1009,8 +1007,6 @@ Accept wildcard characters: False
 
 ### -SetConditionSoftware
 
-{{Fill SetConditionSoftware Description}}
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
@@ -1025,7 +1021,7 @@ Accept wildcard characters: False
 
 ### -SetConditionVariable
 
-{{Fill SetConditionVariable Description}}
+Specifies a set condition variable.
 
 ```yaml
 Type: SwitchParameter
@@ -1041,7 +1037,7 @@ Accept wildcard characters: False
 
 ### -StatementType
 
-{{Fill StatementType Description}}
+Specifies statement type.
 
 ```yaml
 Type: ConditionStatementType
@@ -1058,7 +1054,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-{{Fill StepName Description}}
+Specifies a step name.
 
 ```yaml
 Type: String
@@ -1074,7 +1070,7 @@ Accept wildcard characters: False
 
 ### -StepOrder
 
-{{Fill StepOrder Description}}
+Specifies a step order.
 
 ```yaml
 Type: ReorderType
@@ -1091,7 +1087,7 @@ Accept wildcard characters: False
 
 ### -SupportedPlatform
 
-{{Fill SupportedPlatform Description}}
+Specifies supported platforms.
 
 ```yaml
 Type: IResultObject[]
@@ -1107,7 +1103,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-{{Fill TaskSequenceId Description}}
+Specifies a task sequence ID.
 
 ```yaml
 Type: String
@@ -1123,7 +1119,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-{{Fill TaskSequenceName Description}}
+Specifies a task sequence name.
 
 ```yaml
 Type: String
@@ -1139,7 +1135,7 @@ Accept wildcard characters: False
 
 ### -ValueType
 
-{{Fill ValueType Description}}
+Secifies a value type.
 
 ```yaml
 Type: RegistryValueType
@@ -1156,7 +1152,7 @@ Accept wildcard characters: False
 
 ### -VersionOperator
 
-{{Fill VersionOperator Description}}
+Specifies a version operator.
 
 ```yaml
 Type: VariableOperatorType
@@ -1208,12 +1204,9 @@ Accept wildcard characters: False
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
-
 ## OUTPUTS
 
 ### System.Object
-
-## NOTES
 
 ## RELATED LINKS
 

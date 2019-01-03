@@ -1,7 +1,7 @@
 ---
-title: 
+title: Get-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
-description: 
+description: Gets task sequence “Set Dynamic Variable” step(s) in a task sequence in Configuration Manager.
 ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Gets task sequence “Set Dynamic Variable” step(s) in a task sequence in Configuration Manager.
 
 ## SYNTAX
 
@@ -39,23 +39,23 @@ Get-CMTSStepSetDynamicVariable [-TaskSequenceName] <String> [-StepName <String>]
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Get-CMTSStepSetDynamicVariable** gets task sequence "Set Dynamic Variable" step(s) in a task sequence. This command supports pipeline from a task sequence object, and could be filtered by the name of the step.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ReferencedTaskSequence | Get-CMTaskSequenceStepSetDynamicVariable -StepName $st1.Name
 ```
 
-{{ Add example description here }}
+This command gets task sequence "Set Dynamic Variable" steps in a task sequence. 
 
 ## PARAMETERS
 
 ### -InputObject
 
-{{Fill InputObject Description}}
+Specifies a task sequence object.
 
 ```yaml
 Type: IResultObject
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -StepName
 
-{{Fill StepName Description}}
+Specifies a name for the step.
 
 ```yaml
 Type: String
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceId
 
-{{Fill TaskSequenceId Description}}
+Specifies a task sequence ID.
 
 ```yaml
 Type: String
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-{{Fill TaskSequenceName Description}}
+Sepcifies a task sequence name.
 
 ```yaml
 Type: String
@@ -157,8 +157,6 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
-
-## NOTES
 
 ## RELATED LINKS
 

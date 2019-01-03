@@ -27,7 +27,7 @@ New-CMTSStepSetDynamicVariable -AddRule <IResultObject[]> -Name <String> [-Descr
 
 ## DESCRIPTION
 
-The **New-CMTSStepSetDynamicVariable** creates a task sequence "Set Dynamic Variable" step object with specific name, description, specific properties, options and conditions, which could be used by Add-CMTaskSequenceStep and Set-CMTaskSequenceGroup.
+The **New-CMTSStepSetDynamicVariable** creates a task sequence "Set Dynamic Variable" step object with specific name, description, specific properties, options and conditions, which could be used by [Add-CMTaskSequenceStep](./Add-CMTaskSequenceStep.md) and [Set-CMTaskSequenceGroup](./Set-CMTaskSequenceGroup.md).
 
 ## EXAMPLES
 
@@ -37,13 +37,13 @@ The **New-CMTSStepSetDynamicVariable** creates a task sequence "Set Dynamic Vari
 PS C:\> New-CMTaskSequenceStepSetDynamicVariable -Name $name -Description $description -Condition ($cd1,$cd2) -AddRule ($rule1)
 ```
 
-{{ Add example description here }}
+This command create a task sequence "Set Dynamic Variable" step.
 
 ## PARAMETERS
 
 ### -AddRule
 
-{{Fill AddRule Description}}
+Specifies the rules to be added.
 
 ```yaml
 Type: IResultObject[]
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-{{Fill Condition Description}}
+Specifies the conditions.
 
 ```yaml
 Type: IResultObject[]
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -ContinueOnError
 
-{{Fill ContinueOnError Description}}
+Indicates whether the operation continues when there is an error.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-{{Fill Description Description}}
+Specifies a description.
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -Disable
 
-{{Fill Disable Description}}
+Indicates whether the step shall be disabled.
 
 ```yaml
 Type: SwitchParameter
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-{{Fill DisableWildcardHandling Description}}
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-{{Fill ForceWildcardHandling Description}}
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{Fill Name Description}}
+Specifies a name.
 
 ```yaml
 Type: String
