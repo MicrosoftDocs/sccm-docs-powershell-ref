@@ -2,8 +2,7 @@
 title: Set-CMDeploymentType
 titleSuffix: Configuration Manager
 description: Changes a deployment type for a Configuration Manager deployment application.
-
-ms.date: 11/15/2018
+ms.date: 01/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -538,7 +537,8 @@ Accept wildcard characters: False
 
 ### -EnableContentLocationFallback
 
-Allows clients to use 
+Indicate whether allows clients to use fall back source location for the content.
+
 ```yaml
 Type: Boolean
 Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByValuePropertyAppVInstaller
@@ -569,6 +569,8 @@ Accept wildcard characters: False
 
 ### -EnableUserUninstall
 
+Indicate whether to enable user uninstall.
+
 ```yaml
 Type: Boolean
 Parameter Sets: SetByNamePropertyWmInstaller, SetByValuePropertyWmInstaller
@@ -582,6 +584,8 @@ Accept wildcard characters: False
 ```
 
 ### -EstimatedInstallationTimeMins
+
+Specifies an estimated installation time in minutes.
 
 ```yaml
 Type: Int32
@@ -597,6 +601,8 @@ Accept wildcard characters: False
 
 ### -Force32BitDetectionScript
 
+Indicates whether to run script as 32-bit process on 64-bit clients.
+
 ```yaml
 Type: Boolean
 Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByValuePropertyMsiConfigureRule
@@ -610,6 +616,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force32BitInstaller
+
+Indicates whether to run installer as 32-bit process on 64-bit clients.
 
 ```yaml
 Type: Boolean
@@ -849,6 +857,8 @@ Accept wildcard characters: False
 
 ### -MaximumAllowedRunTimeMins
 
+Specifies the maximum run time in minutes.
+
 ```yaml
 Type: Int32
 Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyWindows8Installer, SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyMsiConfigureRule, SetByValuePropertyWindows8Installer, SetByValuePropertyWindowsStoreInstaller
@@ -1052,6 +1062,8 @@ Accept wildcard characters: False
 
 ### -RemoveRequirement
 
+Removes the existing installation requirements from this deployment type.
+
 ```yaml
 Type: Rule[]
 Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyOtherInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByValuePropertyAppVInstaller, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller
@@ -1065,6 +1077,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequireUserInteraction
+
+Indicates whether a user can interact with the deployment type installation to configure the installation options.
 
 ```yaml
 Type: Boolean
@@ -1271,12 +1285,6 @@ Accept wildcard characters: False
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
 
 ## RELATED LINKS
 

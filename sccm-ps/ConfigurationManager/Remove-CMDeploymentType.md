@@ -2,7 +2,7 @@
 title: Remove-CMDeploymentType
 titleSuffix: Configuration Manager
 description: Removes a deployment type for a Configuration Manager deployment application.
-ms.date: 11/15/2018
+ms.date: 01/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference

@@ -1,13 +1,21 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMDeploymentTypeSupersedence
+titleSuffix: Configuration Manager
+description: Gets a deployment type supersedence in Configuration Manager.
+ms.date: 01/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Get-CMDeploymentTypeSupersedence
 
 ## SYNOPSIS
-Gets a deployment type supersedence
+
+Gets a deployment type supersedence in Configuration Manager.
 
 ## SYNTAX
 
@@ -17,20 +25,21 @@ Get-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-DisableWildcardH
 ```
 
 ## DESCRIPTION
- 
+
+The **Get-CMDeploymentTypeSupersedence** cmdlet gets supersedences for a superseded deployment type. Required input is a superseded deployment type.
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\>  
-```
 
- 
+```powershell
+PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeSupersedence
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -46,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -61,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
+
+Specifies a superseded deployment type object. 
 
 ```yaml
 Type: IResultObject
@@ -76,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -85,9 +97,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject[]#SMS_DeploymentType
-IResultObject#SMS_DeploymentType
 
-## NOTES
+IResultObject#SMS_DeploymentType
 
 ## RELATED LINKS
 
+- [Add-CMDeploymentTypeSupersedence](./Add-CMDeploymentTypeSupersedence.md)
+- [Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
+- [Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)

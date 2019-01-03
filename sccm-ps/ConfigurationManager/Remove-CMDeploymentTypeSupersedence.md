@@ -1,13 +1,22 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMDeploymentTypeSupersedence
+titleSuffix: Configuration Manager
+description: Removes a deployment type supersedence in Configuration Manager.
+
+ms.date: 01/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Remove-CMDeploymentTypeSupersedence
 
 ## SYNOPSIS
-Removes a deployment type supersedence
+
+Removes a deployment type supersedence in Configuration Manager.
 
 ## SYNTAX
 
@@ -18,20 +27,21 @@ Remove-CMDeploymentTypeSupersedence [-SupersedingDeploymentType] <IResultObject>
 ```
 
 ## DESCRIPTION
- 
+
+The **Remove-CMDeploymentTypeSupersedence** cmdlet removes a superseding deployment type from a superseded deployment type. Required input is a superseding type from [Get-CMDeploymentType](./Get-CMDeploymentType.md) or [Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md) and superseded deployment type from [Get-CMDeploymentType](./Get-CMDeploymentType.md).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\>  
-```
 
- 
+```
+PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Remove-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp)
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -47,6 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -62,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- 
+
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -77,6 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -92,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupersededDeploymentType
- 
+
+Specifies a superseded deployment type.
 
 ```yaml
 Type: IResultObject
@@ -107,7 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupersedingDeploymentType
- 
+
+Specifies a superseding deployment type.
 
 ```yaml
 Type: IResultObject
@@ -122,6 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -138,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -148,7 +165,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-## NOTES
-
 ## RELATED LINKS
 
+- [Add-CMDeploymentTypeSupersedence](./Add-CMDeploymentTypeSupersedence.md)
+- [Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md)
+- [Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
