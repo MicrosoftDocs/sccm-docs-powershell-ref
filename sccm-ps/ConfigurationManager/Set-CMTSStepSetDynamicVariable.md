@@ -266,7 +266,7 @@ PS C:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -Clea
 
 ### -AddCondition
 
-Specifies the conditions objects to be added.
+Specifies the conditions and the order conditions to be added as a group.
 
 ```yaml
 Type: IResultObject[]
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 
 ### -AddRule
 
-Specifies the rules to be added.
+Specifies the rules and order rules to be added as a group.
 
 ```yaml
 Type: IResultObject[]
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 
 ### -CleanRule
 
-{{Fill CleanRule Description}}
+Indicates removing all rules. This parameter must be used in conjunction with the **AddRule** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 ### -ClearCondition
 
-{{Fill ClearCondition Description}}
+Indicates removing all conditions.
 
 ```yaml
 Type: SwitchParameter
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-Specifies conditions.
+Specifies the conditions to be added.
 
 ```yaml
 Type: IResultObject[]
@@ -556,7 +556,7 @@ Accept wildcard characters: False
 
 ### -IsAnyVersion
 
-{{Fill IsAnyVersion Description}}
+Indicates a sub-parameter of ConditionFile.
 
 ```yaml
 Type: Boolean
@@ -572,7 +572,7 @@ Accept wildcard characters: False
 
 ### -IsContinueOnError
 
-{{Fill IsContinueOnError Description}}
+Indicates the command continues when there is an error.
 
 ```yaml
 Type: Boolean
@@ -588,7 +588,7 @@ Accept wildcard characters: False
 
 ### -IsEnabled
 
-{{Fill IsEnabled Description}}
+Indicates whether this step can be ran.
 
 ```yaml
 Type: Boolean
@@ -604,7 +604,7 @@ Accept wildcard characters: False
 
 ### -MoveToIndex
 
-{{Fill MoveToIndex Description}}
+Specifies the order of this step. This parameter must be used in conjunction with the StepOrder parameter.
 
 ```yaml
 Type: Int32
@@ -766,7 +766,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionFile
 
-{{Fill RemoveConditionFile Description}}
+Indicates removing the condition file.
 
 ```yaml
 Type: SwitchParameter
@@ -782,7 +782,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionFolder
 
-{{Fill RemoveConditionFolder Description}}
+Indicates removing the condition folder.
 
 ```yaml
 Type: SwitchParameter
@@ -798,7 +798,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionIfStatement
 
-{{Fill RemoveConditionIfStatement Description}}
+Indicates removing the condition IF statement.
 
 ```yaml
 Type: SwitchParameter
@@ -814,7 +814,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionOperatingSystem
 
-{{Fill RemoveConditionOperatingSystem Description}}
+Indicates removing the condition operating system.
 
 ```yaml
 Type: SwitchParameter
@@ -830,7 +830,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionQueryWmi
 
-{{Fill RemoveConditionQueryWmi Description}}
+Indicates removing the condition query WMI.
 
 ```yaml
 Type: SwitchParameter
@@ -846,7 +846,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionRegistry
 
-{{Fill RemoveConditionRegistry Description}}
+Indicates removing the condition registry.
 
 ```yaml
 Type: SwitchParameter
@@ -862,7 +862,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionSoftware
 
-{{Fill RemoveConditionSoftware Description}}
+Indicates removing the condition software.
 
 ```yaml
 Type: SwitchParameter
@@ -878,7 +878,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionVariable
 
-{{Fill RemoveConditionVariable Description}}
+Indicates removing the condition variable.
 
 ```yaml
 Type: SwitchParameter
@@ -894,7 +894,7 @@ Accept wildcard characters: False
 
 ### -RootKey
 
-{{Fill RootKey Description}}
+Specifies a sub-arameter of ConditionRegistry.
 
 ```yaml
 Type: RegistryRootKeyType
@@ -911,7 +911,7 @@ Accept wildcard characters: False
 
 ### -SetConditionFile
 
-{{Fill SetConditionFile Description}}
+If there is a ConditionFile in step, set other value to it. Comment1
 
 ```yaml
 Type: SwitchParameter
@@ -1006,6 +1006,8 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
+
+{{Fill SetConditionRegistry Description}}
 
 ```yaml
 Type: SwitchParameter
