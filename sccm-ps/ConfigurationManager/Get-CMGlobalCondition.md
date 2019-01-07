@@ -1,7 +1,8 @@
 ---
-title: 
+title: Get-CMGlobalCondition
 titleSuffix: Configuration Manager
-description: 
+description: Gets Configuration Manager global condition objects.
+
 ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,20 +16,20 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Gets global condition objects.
+Gets Configuration Manager global condition objects.
 
 ## SYNTAX
 
 ### SearchByName (Default)
 
-```
+```powershell
 Get-CMGlobalCondition [-Name <String>] [-AsDcmSdkObject] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 
-```
+```powershell
 Get-CMGlobalCondition -Id <String> [-AsDcmSdkObject] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -49,7 +50,7 @@ For instance, you might specify an array of global condition names and specify a
 
 ### Example 1: Get a global condition by name
 
-```
+```powershell
 PS C:\> Get-CMGlobalCondition -Name "CPU speed"
 ```
 
@@ -57,7 +58,7 @@ This command gets the global condition named CPU speed.
 
 ### Example 2: Get a global condition by name and security scope
 
-```
+```powershell
 PS C:\> Get-CMGlobalCondition -Name "CPU speed" -SecuredScopeNames "Scope22"
 ```
 
@@ -70,7 +71,7 @@ This command gets the global condition named CPU speed that has a security scope
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,4 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 - [New-CMGlobalCondition](./Get-CMGlobalCondition.md)
 - [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
 - [Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
-

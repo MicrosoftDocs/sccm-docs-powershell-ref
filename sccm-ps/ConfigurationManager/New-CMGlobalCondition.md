@@ -1,7 +1,7 @@
 ---
 title: New-CMGlobalCondition
 titleSuffix: Configuration Manager
-description: Creates a global condition in Configuration Manager.
+description: Creates a Configuration Manager global condition object.
 ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Creates a global condition in Configuration Manager.
+Creates a Configuration Manager global condition object.
 
 ## SYNTAX
 

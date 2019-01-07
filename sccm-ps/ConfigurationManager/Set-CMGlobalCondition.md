@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalCondition
 titleSuffix: Configuration Manager
-description: 
+description: Modifies settings for a Configuration Manager global condition.
 ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -21,14 +21,14 @@ Modifies settings for a Configuration Manager global condition.
 
 ### SetGeneral (Default)
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-NewName <String>] [-Description <String>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetADQuery
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-LdapPrefix <String>] [-DistinguishedName <String>]
  [-LdapFilter <String>] [-SearchScope <SearchScope>] [-Property <String>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -36,7 +36,7 @@ Set-CMGlobalCondition -Name <String> [-LdapPrefix <String>] [-DistinguishedName 
 
 ### SetWqlQuery
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-Property <String>] [-Namespace <String>] [-Class <String>]
  [-WhereClause <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -44,14 +44,14 @@ Set-CMGlobalCondition -Name <String> [-Property <String>] [-Namespace <String>] 
 
 ### SetAssembly
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-AssemblyName <String>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetFileSystem
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-Path <String>] [-FileOrFolderName <String>]
  [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -59,14 +59,14 @@ Set-CMGlobalCondition -Name <String> [-Path <String>] [-FileOrFolderName <String
 
 ### SetFileSystemFile
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetScript
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-ScriptLanguage <ScriptingLanguage>]
  [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -74,7 +74,7 @@ Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-ScriptLanguage <Scri
 
 ### SetSqlQueryDefaultInstance
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-UseDefaultInstance] [-Database <String>]
  [-Column <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -82,7 +82,7 @@ Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-UseDefaultInstance] 
 
 ### SetSqlQueryAllInstances
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-UseAllInstances] [-Database <String>]
  [-Column <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -90,7 +90,7 @@ Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-UseAllInstances] [-D
 
 ### SetSqlQuerySpecificInstance
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-InstanceName <String>] [-Database <String>]
  [-Column <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -98,7 +98,7 @@ Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-InstanceName <String
 
 ### SetXPathQuery
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
  [-XmlFilePath <String>] [-XPathQuery <String>] [-XmlNamespace <String[]>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -106,14 +106,14 @@ Set-CMGlobalCondition -Name <String> [-FilePath <String>] [-IncludeSubfolder <Bo
 
 ### SetRegistryKey
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] [-KeyName <String>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetRegistryValue
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] [-KeyName <String>]
  [-ValueName <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -121,14 +121,14 @@ Set-CMGlobalCondition -Name <String> [-Is64Bit <Boolean>] [-RegistryHive <Regist
 
 ### SetIisMetabase
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> [-MetabasePath <String>] [-PropertyId <String>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetOmaUri
 
-```
+```powershell
 Set-CMGlobalCondition -Name <String> -OmaUri <String> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -148,7 +148,7 @@ Each global condition must have at least one security scope.
 
 ### Example 1: Add a security scope
 
-```
+```powershell
 PS C:\> Set-CMGlobalCondition -Name "CPU speed" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
 ```
 
@@ -156,7 +156,7 @@ This command adds the security scope named Scope22 to the global condition named
 
 ### Example 2: Remove a security scope by using a variable
 
-```
+```powershell
 PS C:\> $CMGC = Get-CMGlobalCondition -Name "CPU speed"
 PS C:\> Set-CMGlobalCondition -InputObject $CMGC -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22"
 ```
@@ -780,6 +780,8 @@ Accept wildcard characters: False
 ```
 
 ### -XPathQuery
+
+Specifies a XPath query.
 
 ```yaml
 Type: String

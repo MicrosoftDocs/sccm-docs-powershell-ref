@@ -1,7 +1,8 @@
 ---
-title: 
+title: Remove-CMGlobalCondition
 titleSuffix: Configuration Manager
-description: 
+description: Removes a Configuration Manager global condition object.
+
 ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,27 +16,27 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Removes a global condition object.
+Removes a Configuration Manager global condition object.
 
 ## SYNTAX
 
 ### SearchByValueMandatory (Default)
 
-```
+```powershell 
 Remove-CMGlobalCondition -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 
-```
+```powershell
 Remove-CMGlobalCondition -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
 
-```
+```powershell
 Remove-CMGlobalCondition -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -54,7 +55,7 @@ You cannot remove read-only global conditions.
 
 ### Example 1: Remove a global condition
 
-```
+```powershell
 PS C:\> Remove-CMGlobalCondition -Name "GC56" -Force
 ```
 
@@ -63,7 +64,7 @@ Because the command uses the *Force* parameter, the system does not prompt you b
 
 ### Example 2: Remove a global condition using a variable
 
-```
+```powershell
 PS C:\> $CMGC = Get-CMGlobalCondition -Name "GC57"
 PS C:\> Remove-CMGlobalCondition -InputObject $CMGC
 Remove
