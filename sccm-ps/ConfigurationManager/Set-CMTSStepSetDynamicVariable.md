@@ -894,7 +894,7 @@ Accept wildcard characters: False
 
 ### -RootKey
 
-Specifies a sub-arameter of ConditionRegistry.
+Specifies a sub-parameter of ConditionRegistry.
 
 ```yaml
 Type: RegistryRootKeyType
