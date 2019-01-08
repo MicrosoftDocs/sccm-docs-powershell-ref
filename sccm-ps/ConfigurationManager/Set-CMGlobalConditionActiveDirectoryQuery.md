@@ -1,4 +1,14 @@
 ---
+title: 
+titleSuffix: Configuration Manager
+description: 
+ms.date: 01/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Set-CMGlobalConditionActiveDirectoryQuery
