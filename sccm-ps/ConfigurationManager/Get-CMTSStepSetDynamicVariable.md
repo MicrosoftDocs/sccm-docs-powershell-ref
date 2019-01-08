@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -TaskSequenceName
 
-Sepcifies a task sequence name.
+Specifies a task sequence name.
 
 ```yaml
 Type: String

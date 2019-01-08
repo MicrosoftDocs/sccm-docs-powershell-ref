@@ -266,7 +266,7 @@ PS C:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -Clea
 
 ### -AddCondition
 
-Specifies the conditions. The type of the conditions include: task sequence variable, operating system version, operating system language, file properties, folder properties, registry setting, query WMI, and installed software.
+Specifies the conditions. The types of the conditions include: task sequence variable, operating system version, operating system language, file properties, folder properties, registry setting, query WMI, and installed software.
 
 ```yaml
 Type: IResultObject[]
@@ -620,7 +620,7 @@ Accept wildcard characters: False
 
 ### -MsiFilePath
 
-Specifies a MSI file path.
+Specifies an MSI file path.
 
 ```yaml
 Type: String
@@ -668,7 +668,7 @@ Accept wildcard characters: False
 
 ### -OperatorType
 
-Specifies a operator type.
+Specifies an operator type.
 
 ```yaml
 Type: VariableOperatorType

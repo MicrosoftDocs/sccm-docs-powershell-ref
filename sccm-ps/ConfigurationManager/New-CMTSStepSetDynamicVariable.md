@@ -37,7 +37,7 @@ The **New-CMTSStepSetDynamicVariable** creates a task sequence "Set Dynamic Vari
 PS C:\> New-CMTaskSequenceStepSetDynamicVariable -Name $name -Description $description -Condition ($cd1,$cd2) -AddRule ($rule1)
 ```
 
-This command create a task sequence "Set Dynamic Variable" step.
+This command creates a task sequence "Set Dynamic Variable" step.
 
 ## PARAMETERS
 
