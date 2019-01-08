@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
-description: Gets task sequence “Set Dynamic Variable” step(s) in a task sequence in Configuration Manager.
+description: Gets task sequence Set Dynamic Variable steps in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Gets task sequence “Set Dynamic Variable” step(s) in a task sequence in Configuration Manager.
+Gets task sequence Set Dynamic Variable steps in Configuration Manager.
 
 ## SYNTAX
 

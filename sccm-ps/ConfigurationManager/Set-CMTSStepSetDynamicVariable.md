@@ -1,7 +1,7 @@
 ---
 title: Set-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
-description: Sets properties, options, specific conditions for “Set Dynamic Variable” steps in a task sequence. 
+description: Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager. 
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Sets properties, options, specific conditions for “Set Dynamic Variable” steps in a task sequence. 
+Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager. 
 
 ## SYNTAX
 

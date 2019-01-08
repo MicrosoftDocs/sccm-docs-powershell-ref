@@ -1,7 +1,7 @@
 ---
 title: New-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
-description: 
+description: Create a task sequence Set Dynamic Variable step in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Create a task sequence "Set Dynamic Variable" step in Configuration Manager.
+Create a task sequence Set Dynamic Variable step in Configuration Manager.
 
 ## SYNTAX
 

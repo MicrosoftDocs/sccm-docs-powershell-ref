@@ -1,7 +1,7 @@
 ---
 title: Remove-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
-description: Remove task sequence "Set Dynamic Variable" steps from a task sequence in Configuration Manager.
+description: Remove Set Dynamic Variable steps from a Configuration Manager task sequence.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Remove task sequence "Set Dynamic Variable" steps from a task sequence in Configuration Manager.
+Remove Set Dynamic Variable steps from a Configuration Manager task sequence.
 
 ## SYNTAX
 
