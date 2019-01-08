@@ -266,7 +266,7 @@ PS C:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -Clea
 
 ### -AddCondition
 
-Specifies the conditions and the order conditions to be added as a group.
+Specifies the conditions. The type of the conditions include: task sequence variable, operating system version, operating system language, file properties, folder properties, registry setting, query WMI, and installed software.
 
 ```yaml
 Type: IResultObject[]
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 
 ### -AddRule
 
-Specifies the rules and order rules to be added as a group.
+Specifies the rules and the order of the rules.
 
 ```yaml
 Type: IResultObject[]
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 
 ### -CleanRule
 
-Indicates removing all rules. This parameter must be used in conjunction with the **AddRule** parameter.
+Indicates removing all the existing rules. This parameter must be used in conjunction with the **AddRule** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 ### -ClearCondition
 
-Indicates removing all conditions.
+Indicates removing all the existing conditions.
 
 ```yaml
 Type: SwitchParameter
@@ -572,7 +572,7 @@ Accept wildcard characters: False
 
 ### -IsContinueOnError
 
-Indicates the command continues when there is an error.
+Indicates the command continues when there is an exception.
 
 ```yaml
 Type: Boolean
@@ -604,7 +604,7 @@ Accept wildcard characters: False
 
 ### -MoveToIndex
 
-Specifies the order of this step. This parameter must be used in conjunction with the StepOrder parameter.
+Specifies the order of this step. The order index is 0 based. This parameter must be used in conjunction with the **StepOrder** parameter.
 
 ```yaml
 Type: Int32
@@ -766,7 +766,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionFile
 
-Indicates removing the condition file.
+Indicates removing the conditions of the file type.
 
 ```yaml
 Type: SwitchParameter
@@ -782,7 +782,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionFolder
 
-Indicates removing the condition folder.
+Indicates removing the conditions of the folder type.
 
 ```yaml
 Type: SwitchParameter
@@ -798,7 +798,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionIfStatement
 
-Indicates removing the condition IF statement.
+Indicates removing the conditions of the IF statement type.
 
 ```yaml
 Type: SwitchParameter
@@ -814,7 +814,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionOperatingSystem
 
-Indicates removing the condition operating system.
+Indicates removing the conditions of the operating system type.
 
 ```yaml
 Type: SwitchParameter
@@ -830,7 +830,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionQueryWmi
 
-Indicates removing the condition query WMI.
+Indicates removing the conditions of the query WMI type.
 
 ```yaml
 Type: SwitchParameter
@@ -846,7 +846,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionRegistry
 
-Indicates removing the condition registry.
+Indicates removing the conditions of the registry type.
 
 ```yaml
 Type: SwitchParameter
@@ -862,7 +862,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionSoftware
 
-Indicates removing the condition software.
+Indicates removing the conditions of the software type.
 
 ```yaml
 Type: SwitchParameter
@@ -878,7 +878,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionVariable
 
-Indicates removing the condition variable.
+Indicates removing the conditions of the variable type.
 
 ```yaml
 Type: SwitchParameter
@@ -894,7 +894,7 @@ Accept wildcard characters: False
 
 ### -RootKey
 
-Specifies a sub-parameter of ConditionRegistry.
+Specifies a root key of a registry type condition.
 
 ```yaml
 Type: RegistryRootKeyType
@@ -911,7 +911,7 @@ Accept wildcard characters: False
 
 ### -SetConditionFile
 
-If there is a ConditionFile in step, set other value to it. Comment1
+Indicate setting all the conditions of the File type.
 
 ```yaml
 Type: SwitchParameter
@@ -927,7 +927,7 @@ Accept wildcard characters: False
 
 ### -SetConditionFolder
 
-{{Fill SetConditionFolder Description}}
+Indicate setting all the conditions of the Folder type.
 
 ```yaml
 Type: SwitchParameter
@@ -943,7 +943,7 @@ Accept wildcard characters: False
 
 ### -SetConditionIfStatement
 
-{{Fill SetConditionIfStatement Description}}
+Indicate setting all the conditions of the IF Statement type.
 
 ```yaml
 Type: SwitchParameter
@@ -959,7 +959,7 @@ Accept wildcard characters: False
 
 ### -SetConditionOperatingSystem
 
-{{Fill SetConditionOperatingSystem Description}}
+Indicate setting all the conditions of the Operating System type.
 
 ```yaml
 Type: SwitchParameter
@@ -975,7 +975,7 @@ Accept wildcard characters: False
 
 ### -SetConditionQueryWmi
 
-{{Fill SetConditionQueryWmi Description}}
+Indicate setting all the conditions of the Query WMI type.
 
 ```yaml
 Type: SwitchParameter
@@ -991,7 +991,7 @@ Accept wildcard characters: False
 
 ### -SetConditionRegistry
 
-{{Fill SetConditionRegistry Description}}
+Indicate setting all the conditions of the Registry type.
 
 ```yaml
 Type: SwitchParameter
@@ -1007,7 +1007,7 @@ Accept wildcard characters: False
 
 ### -SetConditionSoftware
 
-{{Fill SetConditionRegistry Description}}
+Indicate setting all the conditions of the Software type.
 
 ```yaml
 Type: SwitchParameter
@@ -1023,7 +1023,7 @@ Accept wildcard characters: False
 
 ### -SetConditionVariable
 
-Specifies a set condition variable.
+Indicate setting all the conditions of the Variable type.
 
 ```yaml
 Type: SwitchParameter
@@ -1039,7 +1039,7 @@ Accept wildcard characters: False
 
 ### -StatementType
 
-Specifies statement type.
+Specifies a statement type.
 
 ```yaml
 Type: ConditionStatementType
@@ -1072,7 +1072,7 @@ Accept wildcard characters: False
 
 ### -StepOrder
 
-Specifies a step order.
+Specifies the order of a step. If MoveToIndex is specified, you must also specify the MoveToIndex parameter.
 
 ```yaml
 Type: ReorderType
@@ -1137,7 +1137,7 @@ Accept wildcard characters: False
 
 ### -ValueType
 
-Secifies a value type.
+Specifies a value type.
 
 ```yaml
 Type: RegistryValueType
