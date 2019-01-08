@@ -287,7 +287,7 @@ $ReferencedTaskSequence | Set-CMTaskSequenceGroup -StepName $gpName2 -StepOrder 
 
 ### -AddCondition
 
-Specifies the conditions objects to be added.
+Specifies the condition objects to be added.
 
 ```yaml
 Type: IResultObject[]

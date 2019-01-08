@@ -2,7 +2,7 @@
 title: New-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
 description: 
-ms.date: 11/29/2018
+ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -43,7 +43,7 @@ This command create a task sequence "Set Dynamic Variable" step.
 
 ### -AddRule
 
-Specifies the rules to be added.
+Specifies the rules and the order of the rules.
 
 ```yaml
 Type: IResultObject[]

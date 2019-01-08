@@ -2,7 +2,7 @@
 title: Set-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
 description: Sets properties, options, specific conditions for “Set Dynamic Variable” steps in a task sequence. 
-ms.date: 11/29/2018
+ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-Specifies the conditions to be added.
+Specifies the conditions. This parameter is used with one of the following parameters: SetConditionIfStatement, SetConditionQueryWmi, SetConditionVariable, SetConditionOperatingSystem, SetConditionFile, SetConditionFolder, SetConditionRegistry, and SetConditionSoftware. 
 
 ```yaml
 Type: IResultObject[]
@@ -556,7 +556,7 @@ Accept wildcard characters: False
 
 ### -IsAnyVersion
 
-Indicates a sub-parameter of ConditionFile.
+Indicates whether you want to match any version of the product (upgrade code only). This is parameter is used for the Software condition.
 
 ```yaml
 Type: Boolean
@@ -636,7 +636,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 
-Specifies a namespace.
+Specifies a WMI namespace. This parameter is used for the Query WMI condition.
 
 ```yaml
 Type: String[]
@@ -766,7 +766,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionFile
 
-Indicates removing the conditions of the file type.
+Indicates removing the conditions of the File Properties type.
 
 ```yaml
 Type: SwitchParameter
@@ -782,7 +782,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionFolder
 
-Indicates removing the conditions of the folder type.
+Indicates removing the conditions of the Folder Properties type.
 
 ```yaml
 Type: SwitchParameter
@@ -798,7 +798,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionIfStatement
 
-Indicates removing the conditions of the IF statement type.
+Indicates removing the conditions of the If Statement type.
 
 ```yaml
 Type: SwitchParameter
@@ -814,7 +814,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionOperatingSystem
 
-Indicates removing the conditions of the operating system type.
+Indicates removing the conditions of the Operating System type.
 
 ```yaml
 Type: SwitchParameter
@@ -830,7 +830,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionQueryWmi
 
-Indicates removing the conditions of the query WMI type.
+Indicates removing the conditions of the Query WMI type.
 
 ```yaml
 Type: SwitchParameter
@@ -846,7 +846,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionRegistry
 
-Indicates removing the conditions of the registry type.
+Indicates removing the conditions of the Registry Setting type.
 
 ```yaml
 Type: SwitchParameter
@@ -862,7 +862,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionSoftware
 
-Indicates removing the conditions of the software type.
+Indicates removing the conditions of the Installed Software type.
 
 ```yaml
 Type: SwitchParameter
@@ -878,7 +878,7 @@ Accept wildcard characters: False
 
 ### -RemoveConditionVariable
 
-Indicates removing the conditions of the variable type.
+Indicates removing the conditions of the Task Sequence Variable type.
 
 ```yaml
 Type: SwitchParameter
@@ -894,7 +894,7 @@ Accept wildcard characters: False
 
 ### -RootKey
 
-Specifies a root key of a registry type condition.
+Specifies a root key of a Registry Setting type condition.
 
 ```yaml
 Type: RegistryRootKeyType
@@ -911,7 +911,7 @@ Accept wildcard characters: False
 
 ### -SetConditionFile
 
-Indicate setting all the conditions of the File type.
+Indicate setting all the conditions of the File Properties type.
 
 ```yaml
 Type: SwitchParameter
@@ -927,7 +927,7 @@ Accept wildcard characters: False
 
 ### -SetConditionFolder
 
-Indicate setting all the conditions of the Folder type.
+Indicate setting all the conditions of the Folder Properties type.
 
 ```yaml
 Type: SwitchParameter
@@ -943,7 +943,7 @@ Accept wildcard characters: False
 
 ### -SetConditionIfStatement
 
-Indicate setting all the conditions of the IF Statement type.
+Indicate setting all the conditions of the If Statement type.
 
 ```yaml
 Type: SwitchParameter
@@ -991,7 +991,7 @@ Accept wildcard characters: False
 
 ### -SetConditionRegistry
 
-Indicate setting all the conditions of the Registry type.
+Indicate setting all the conditions of the Registry Setting type.
 
 ```yaml
 Type: SwitchParameter
@@ -1007,7 +1007,7 @@ Accept wildcard characters: False
 
 ### -SetConditionSoftware
 
-Indicate setting all the conditions of the Software type.
+Indicate setting all the conditions of the Installed Software type.
 
 ```yaml
 Type: SwitchParameter
@@ -1023,7 +1023,7 @@ Accept wildcard characters: False
 
 ### -SetConditionVariable
 
-Indicate setting all the conditions of the Variable type.
+Indicate setting all the conditions of the Task Sequence Variable type.
 
 ```yaml
 Type: SwitchParameter
