@@ -1,15 +1,25 @@
 ---
+title: New-CMGlobalConditionRegistryValue
+titleSuffix: Configuration Manager
+description: Creates a Registry Value type global condition in Configuration Manager.
+ms.date: 01/08/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # New-CMGlobalConditionRegistryValue
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Creates a Registry Value type global condition in Configuration Manager.
 
 ## SYNTAX
 
-```
+```powershell
 New-CMGlobalConditionRegistryValue -DataType <GlobalConditionDataType> [-Is64Bit <Boolean>]
  [-RegistryHive <RegistryRootKey>] -KeyName <String> [-ValueName <String>] -Name <String>
  [-Description <String>] -DeviceType <GlobalConditionDeviceType> [-DisableWildcardHandling]
@@ -18,13 +28,15 @@ New-CMGlobalConditionRegistryValue -DataType <GlobalConditionDataType> [-Is64Bit
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **New-CMGlobalConditionRegistryValue** cmdlet creates a Registry Value type global condition in Microsoft System Center Configuration Manager.
+
+A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -34,7 +46,7 @@ PS C:\> {{ Add example code here }}
 
 ### -DataType
 
-{{Fill DataType Description}}
+Specifies a data type.
 
 ```yaml
 Type: GlobalConditionDataType
@@ -51,7 +63,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-{{Fill Description Description}}
+Specifies a description.
 
 ```yaml
 Type: String
@@ -67,7 +79,7 @@ Accept wildcard characters: False
 
 ### -DeviceType
 
-{{Fill DeviceType Description}}
+Specifies a device type.
 
 ```yaml
 Type: GlobalConditionDeviceType
@@ -84,7 +96,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-{{Fill DisableWildcardHandling Description}}
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -100,7 +112,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-{{Fill ForceWildcardHandling Description}}
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -116,7 +128,7 @@ Accept wildcard characters: False
 
 ### -Is64Bit
 
-{{Fill Is64Bit Description}}
+Specifies whether the 64-bit registry keys should be searched in addition to the 32-bit registry keys on clients that run a 64-bit version of Windows.
 
 ```yaml
 Type: Boolean
@@ -132,7 +144,7 @@ Accept wildcard characters: False
 
 ### -KeyName
 
-{{Fill KeyName Description}}
+Specify the registry key name that you want to search for. The format used should be key\subkey.
 
 ```yaml
 Type: String
@@ -148,7 +160,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{Fill Name Description}}
+Specifies a name.
 
 ```yaml
 Type: String
@@ -164,7 +176,7 @@ Accept wildcard characters: False
 
 ### -RegistryHive
 
-{{Fill RegistryHive Description}}
+Specifies the registry hive that you want to search in.
 
 ```yaml
 Type: RegistryRootKey
@@ -181,7 +193,7 @@ Accept wildcard characters: False
 
 ### -ValueName
 
-{{Fill ValueName Description}}
+Specify the value that must be contained within the specified registry key.
 
 ```yaml
 Type: String
@@ -195,14 +207,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
+- [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)

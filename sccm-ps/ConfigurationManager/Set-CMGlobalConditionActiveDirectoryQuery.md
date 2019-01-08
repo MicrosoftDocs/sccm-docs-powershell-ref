@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionActiveDirectoryQuery
 titleSuffix: Configuration Manager
-description: 
+description: Sets an Active Directory Query type global condition in Configuration Manager.
 ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,11 +15,11 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets an Active Directory Query type global condition in Configuration Manager.
 
 ## SYNTAX
 
-```
+```powershell
 Set-CMGlobalConditionActiveDirectoryQuery [-LdapPrefix <String>] [-DistinguishedName <String>]
  [-LdapFilter <String>] [-SearchScope <SearchScope>] [-Property <String>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
@@ -27,7 +27,7 @@ Set-CMGlobalConditionActiveDirectoryQuery [-LdapPrefix <String>] [-Distinguished
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMGlobalConditionActiveDirectoryQuery** cmdlet modifies settings for an Active Directory Query global condition in Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ PS C:\> {{ Add example code here }}
 
 ### -DisableWildcardHandling
 
-{{Fill DisableWildcardHandling Description}}
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 
 ### -DistinguishedName
 
-{{Fill DistinguishedName Description}}
+Specifies a distinguished name.
 
 ```yaml
 Type: String
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-{{Fill ForceWildcardHandling Description}}
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -LdapFilter
 
-{{Fill LdapFilter Description}}
+Specifies a LDAP filter to refine the results from the Active Directory Domain Services query to assess compliance on client computers.
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -LdapPrefix
 
-{{Fill LdapPrefix Description}}
+Specifies a valid LDAP prefix to the Active Directory Domain Services query to assess compliance on client computers. You can use either LDAP:// or GC://.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{Fill Name Description}}
+Specifies a name for the Active Directory Query global condition.
 
 ```yaml
 Type: String
@@ -139,7 +139,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-{{Fill PassThru Description}}
+Returns the current working object.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -155,7 +156,7 @@ Accept wildcard characters: False
 
 ### -Property
 
-{{Fill Property Description}}
+Specifies the property of the Active Directory Domain Services object that will be used to assess compliance on client computers.
 
 ```yaml
 Type: String
@@ -171,7 +172,11 @@ Accept wildcard characters: False
 
 ### -SearchScope
 
-{{Fill SearchScope Description}}
+Specify the search scope in Active Directory Domain Services:
+
+- **Base** - Queries only the specified object.
+- **One Level** - This option is not used in this version of Configuration Manager.
+- **Subtree** - Queries the specified object and its complete subtree in the directory.
 
 ```yaml
 Type: SearchScope
@@ -219,14 +224,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)

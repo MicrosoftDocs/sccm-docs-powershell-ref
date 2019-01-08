@@ -1,17 +1,27 @@
 ---
+title: New-CMGlobalConditionXPathQuery
+titleSuffix: Configuration Manager
+description: Creates a XPath Query type global condition in Configuration Manager.
+ms.date: 01/08/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # New-CMGlobalConditionXPathQuery
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Creates a XPath Query type global condition in Configuration Manager.
 
 ## SYNTAX
 
 ### NewQueryFromFile (Default)
 
-```
+```powershell
 New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> -XmlFilePath <String>
  -XPathQueryFilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-XmlNamespace <String[]>]
  -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -19,7 +29,7 @@ New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> -XmlFilePath
 
 ### NewQueryFromText
 
-```
+```powershell
 New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> -XmlFilePath <String>
  [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-XmlNamespace <String[]>] -XPathQuery <String>
  -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -27,13 +37,15 @@ New-CMGlobalConditionXPathQuery -DataType <GlobalConditionDataType> -XmlFilePath
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **New-CMGlobalConditionXPathQuery** cmdlet creates a XPath Query type global condition in Microsoft System Center Configuration Manager.
+
+A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -43,7 +55,7 @@ PS C:\> {{ Add example code here }}
 
 ### -DataType
 
-{{Fill DataType Description}}
+Specifies a data type.
 
 ```yaml
 Type: GlobalConditionDataType
@@ -60,7 +72,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-{{Fill Description Description}}
+Specifies a description.
 
 ```yaml
 Type: String
@@ -76,7 +88,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-{{Fill DisableWildcardHandling Description}}
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +104,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-{{Fill ForceWildcardHandling Description}}
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +120,7 @@ Accept wildcard characters: False
 
 ### -IncludeSubfolder
 
-{{Fill IncludeSubfolder Description}}
+Enable this option if you also want to search any sub-folders under the specified path.
 
 ```yaml
 Type: Boolean
@@ -124,7 +136,7 @@ Accept wildcard characters: False
 
 ### -Is64Bit
 
-{{Fill Is64Bit Description}}
+Indicate whether the 64-bit system file location (%windir%\system32) should be searched in addition to the 32-bit system file location (%windir%\syswow64) on Configuration Manager clients that run a 64-bit version of Windows.
 
 ```yaml
 Type: Boolean
@@ -140,7 +152,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{Fill Name Description}}
+Specifies a name.
 
 ```yaml
 Type: String
@@ -156,7 +168,7 @@ Accept wildcard characters: False
 
 ### -XmlFilePath
 
-{{Fill XmlFilePath Description}}
+Specify the path to the XML file on client computers that will be used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the %USERPROFILE% user variable in the path name.
 
 ```yaml
 Type: String
@@ -172,7 +184,7 @@ Accept wildcard characters: False
 
 ### -XmlNamespace
 
-{{Fill XmlNamespace Description}}
+Specifies namespaces to use during the XPath query.
 
 ```yaml
 Type: String[]
@@ -188,7 +200,7 @@ Accept wildcard characters: False
 
 ### -XPathQuery
 
-{{Fill XPathQuery Description}}
+Specify a valid full XML path language (XPath) query to use to assess compliance on client computers.
 
 ```yaml
 Type: String
@@ -204,7 +216,7 @@ Accept wildcard characters: False
 
 ### -XPathQueryFilePath
 
-{{Fill XPathQueryFilePath Description}}
+Specifies an XPath query file path.
 
 ```yaml
 Type: String
@@ -218,14 +230,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)
+- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
+- [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)

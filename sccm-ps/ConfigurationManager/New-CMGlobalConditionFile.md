@@ -1,17 +1,27 @@
 ---
+title: New-CMGlobalConditionFile
+titleSuffix: Configuration Manager
+description: Creates a File System type global condition in Configuration Manager.
+ms.date: 01/08/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # New-CMGlobalConditionFile
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Creates a File System type global condition in Configuration Manager.
 
 ## SYNTAX
 
 ### NewFileSystem (Default)
 
-```
+```powershell
 New-CMGlobalConditionFile [-IsFolder] -Path <String> -FileOrFolderName <String> [-IncludeSubfolder <Boolean>]
  [-Is64Bit <Boolean>] -Name <String> [-Description <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling]
@@ -19,20 +29,22 @@ New-CMGlobalConditionFile [-IsFolder] -Path <String> -FileOrFolderName <String> 
 
 ### NewFileSystemFile
 
-```
+```powershell
 New-CMGlobalConditionFile -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] -Name <String>
  [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
 ```
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **New-CMGlobalConditionFile** cmdlet creates a File System type global condition in Microsoft System Center Configuration Manager.
+
+A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -42,7 +54,7 @@ PS C:\> {{ Add example code here }}
 
 ### -Description
 
-{{Fill Description Description}}
+Specifies a description.
 
 ```yaml
 Type: String
@@ -58,7 +70,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-{{Fill DisableWildcardHandling Description}}
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -74,7 +86,7 @@ Accept wildcard characters: False
 
 ### -FileOrFolderName
 
-{{Fill FileOrFolderName Description}}
+Specify the name of the file or folder object that will be searched for. You can specify system environment variables and the %USERPROFILE% environment variable in the file or folder name. You can also use the * and ? wildcards in the file name.
 
 ```yaml
 Type: String
@@ -90,7 +102,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-{{Fill FilePath Description}}
+Specify the path to the specified file on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
 
 ```yaml
 Type: String
@@ -106,7 +118,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-{{Fill ForceWildcardHandling Description}}
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +134,7 @@ Accept wildcard characters: False
 
 ### -IncludeSubfolder
 
-{{Fill IncludeSubfolder Description}}
+Enable this option if you also want to search any sub-folders under the specified path.
 
 ```yaml
 Type: Boolean
@@ -138,7 +150,7 @@ Accept wildcard characters: False
 
 ### -Is64Bit
 
-{{Fill Is64Bit Description}}
+Indicates whether the 64-bit system file location (%windir%\system32) should be searched in addition to the 32-bit system file location (%windir%\syswow64) on Configuration Manager clients that run a 64-bit version of Windows.
 
 ```yaml
 Type: Boolean
@@ -154,7 +166,7 @@ Accept wildcard characters: False
 
 ### -IsFolder
 
-{{Fill IsFolder Description}}
+Indicate whether it is a folder.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +182,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{Fill Name Description}}
+Specifies a name.
 
 ```yaml
 Type: String
@@ -186,7 +198,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-{{Fill Path Description}}
+Specify the path to the specified  folder on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
 
 ```yaml
 Type: String
@@ -200,14 +212,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
+
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
+- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)
 

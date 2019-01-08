@@ -1,17 +1,27 @@
 ---
+title: 
+titleSuffix: Configuration Manager
+description: 
+ms.date: 01/08/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # New-CMGlobalConditionSqlQuery
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Creates a SQL Query type global condition in Configuration Manager.
 
 ## SYNTAX
 
 ### NewQueryFromFile (Default)
 
-```
+```powershell
 New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -FilePath <String> [-AllInstances]
  [-InstanceName <String>] -Database <String> -Column <String> -Name <String> [-Description <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -19,7 +29,7 @@ New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -FilePath <Str
 
 ### NewQueryFromText
 
-```
+```powershell
 New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -QueryText <String> [-AllInstances]
  [-InstanceName <String>] -Database <String> -Column <String> -Name <String> [-Description <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -27,13 +37,15 @@ New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -QueryText <St
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **New-CMGlobalConditionSqlQuery** cmdlet creates a SQL Query type global condition in Microsoft System Center Configuration Manager.
+
+A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -108,7 +120,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-{{Fill Description Description}}
+Specifies a description.
 
 ```yaml
 Type: String
@@ -124,7 +136,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-{{Fill DisableWildcardHandling Description}}
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -140,7 +152,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-{{Fill FilePath Description}}
+Specifies a file path.
 
 ```yaml
 Type: String
@@ -156,7 +168,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-{{Fill ForceWildcardHandling Description}}
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -172,7 +184,7 @@ Accept wildcard characters: False
 
 ### -InstanceName
 
-{{Fill InstanceName Description}}
+Specifies a instance where you want to run the SQL Query.
 
 ```yaml
 Type: String
@@ -188,7 +200,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{Fill Name Description}}
+Specifies a name.
 
 ```yaml
 Type: String
@@ -204,7 +216,7 @@ Accept wildcard characters: False
 
 ### -QueryText
 
-{{Fill QueryText Description}}
+Specify the full SQL query to use for the global condition.
 
 ```yaml
 Type: String
@@ -218,14 +230,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
+- [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)
