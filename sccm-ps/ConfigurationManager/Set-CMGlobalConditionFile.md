@@ -36,7 +36,7 @@ Set-CMGlobalConditionFile [-Path <String>] [-FileOrFolderName <String>] [-Includ
 
 ## DESCRIPTION
 
-The **Set-CMGlobalConditionAssembly** cmdlet modifies settings for an Assembly type global condition in Microsoft System Center Configuration Manager.
+The **Set-CMGlobalConditionFile** cmdlet modifies settings for a File System type global condition in Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -FileOrFolderName
 
-{{Fill FileOrFolderName Description}}
+Specify the name of the file or folder object that will be searched for. You can specify system environment variables and the %USERPROFILE% environment variable in the file or folder name. You can also use the * and ? wildcards in the file name.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-{{Fill FilePath Description}}
+Specifies the path to the specified file or folder on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
 
 ```yaml
 Type: String
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -IncludeSubfolder
 
-{{Fill IncludeSubfolder Description}}
+Indicates whether you also want to search any subfolders under the specified path.
 
 ```yaml
 Type: Boolean
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -Is64Bit
 
-{{Fill Is64Bit Description}}
+Indicates whether the 64-bit system file location (%windir%\system32) should be searched in addition to the 32-bit system file location (%windir%\syswow64) on Configuration Manager clients that run a 64-bit version of Windows.
 
 ```yaml
 Type: Boolean
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-{{Fill Path Description}}
+Specify the path to the specified file or folder on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
 
 ```yaml
 Type: String
@@ -227,11 +227,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-## INPUTS
-
-### None
-
 
 ## OUTPUTS
 

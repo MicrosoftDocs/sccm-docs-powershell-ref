@@ -27,7 +27,7 @@ Set-CMGlobalConditionRegistryValue [-Is64Bit <Boolean>] [-RegistryHive <Registry
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMGlobalConditionRegistryValue** cmdlet modifies settings for a Registry Value type global condition in Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 

@@ -42,7 +42,7 @@ PS C:\> {{ Add example code here }}
 
 ### -Description
 
-{{Fill Description Description}}
+Specifies a description.
 
 ```yaml
 Type: String
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -NewName
 
-{{Fill NewName Description}}
+Specifies a new name.
 
 ```yaml
 Type: String
@@ -170,14 +170,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
-## NOTES
 

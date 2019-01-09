@@ -26,7 +26,7 @@ Set-CMGlobalConditionRegistryKey [-Is64Bit <Boolean>] [-RegistryHive <RegistryRo
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMGlobalConditionRegistryKey** cmdlet modifies settings for a Registry Key type global condition in Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 

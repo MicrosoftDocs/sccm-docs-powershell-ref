@@ -26,7 +26,7 @@ Set-CMGlobalConditionOmaUri -OmaUri <String> -Name <String> [-PassThru] [-Disabl
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMGlobalConditionOmaUri** cmdlet modifies settings for an OMA URI type global condition in Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 

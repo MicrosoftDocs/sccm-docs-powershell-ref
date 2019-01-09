@@ -27,7 +27,7 @@ Set-CMGlobalConditionWqlQuery [-Property <String>] [-Namespace <String>] [-Class
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMGlobalConditionWqlQuery** cmdlet modifies settings for a WQL Query type global condition in Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 

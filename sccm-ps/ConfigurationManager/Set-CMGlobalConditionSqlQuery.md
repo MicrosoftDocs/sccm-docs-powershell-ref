@@ -37,7 +37,7 @@ Set-CMGlobalConditionSqlQuery [-QueryText <String>] [-UseDefaultInstance] [-UseA
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMGlobalConditionSqlQuery** cmdlet modifies settings for a SQL Query type global condition in Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 

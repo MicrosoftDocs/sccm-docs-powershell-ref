@@ -26,7 +26,7 @@ Set-CMGlobalConditionIisMetabase [-MetabasePath <String>] [-PropertyId <Int32>] 
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMGlobalConditionIisMetabase** cmdlet modifies settings for an IIS Metabase type global condition in Microsoft System Center Configuration Manager.
 
 ## EXAMPLES
 
