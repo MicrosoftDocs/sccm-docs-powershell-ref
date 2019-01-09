@@ -215,5 +215,15 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
 - [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
+- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)

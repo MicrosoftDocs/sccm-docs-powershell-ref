@@ -1,4 +1,14 @@
 ---
+title: 
+titleSuffix: Configuration Manager
+description: 
+ms.date: 01/08/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Set-CMGlobalConditionIisMetabase
@@ -9,7 +19,7 @@
 
 ## SYNTAX
 
-```
+```powershell
 Set-CMGlobalConditionIisMetabase [-MetabasePath <String>] [-PropertyId <Int32>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
 ```
@@ -22,7 +32,7 @@ Set-CMGlobalConditionIisMetabase [-MetabasePath <String>] [-PropertyId <Int32>] 
 
 ### Example 1
 
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -32,7 +42,7 @@ PS C:\> {{ Add example code here }}
 
 ### -DisableWildcardHandling
 
-{{Fill DisableWildcardHandling Description}}
+DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -48,7 +58,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-{{Fill ForceWildcardHandling Description}}
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -80,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{Fill Name Description}}
+Specifies a name.
 
 ```yaml
 Type: String
@@ -96,7 +106,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-{{Fill PassThru Description}}
+Returns the current working object.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter

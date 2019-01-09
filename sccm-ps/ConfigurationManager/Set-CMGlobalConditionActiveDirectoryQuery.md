@@ -33,7 +33,7 @@ The **Set-CMGlobalConditionActiveDirectoryQuery** cmdlet modifies settings for a
 
 ### Example 1
 
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 

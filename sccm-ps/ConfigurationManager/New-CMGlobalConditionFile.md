@@ -220,6 +220,7 @@ Accept wildcard characters: False
 
 - [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
 - [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
 - [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
 - [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)

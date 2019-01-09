@@ -131,6 +131,7 @@ Accept wildcard characters: False
 
 - [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
 - [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
 - [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
 - [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)

@@ -163,6 +163,7 @@ Accept wildcard characters: False
 
 - [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
 - [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
 - [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
 - [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
