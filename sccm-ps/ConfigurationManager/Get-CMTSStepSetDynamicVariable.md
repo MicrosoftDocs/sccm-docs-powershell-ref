@@ -46,7 +46,7 @@ The **Get-CMTSStepSetDynamicVariable** gets task sequence "Set Dynamic Variable"
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Get-CMTaskSequenceStepSetDynamicVariable -StepName $st1.Name
+PS C:\> $ReferencedTaskSequence | Get-CMTaskSequenceStepSetDynamicVariable -StepName $stepName
 ```
 
 This command gets task sequence "Set Dynamic Variable" steps in a task sequence. 
