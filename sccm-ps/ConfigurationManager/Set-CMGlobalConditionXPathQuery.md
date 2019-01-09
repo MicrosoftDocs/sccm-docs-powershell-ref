@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionXPathQuery
 titleSuffix: Configuration Manager
-description: 
+description: Sets a XPath Query type global condition in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets a XPath Query type global condition in Configuration Manager.
 
 ## SYNTAX
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -IncludeSubfolder
 
-{{Fill IncludeSubfolder Description}}
+Indicates whether to search any sub-folders under the specified path.
 
 ```yaml
 Type: Boolean
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Is64Bit
 
-{{Fill Is64Bit Description}}
+Indicate whether the 64-bit system file location (%windir%\system32) should be searched in addition to the 32-bit system file location (%windir%\syswow64) on Configuration Manager clients that run a 64-bit version of Windows.
 
 ```yaml
 Type: Boolean
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -XmlFilePath
 
-{{Fill XmlFilePath Description}}
+Specifies the path to the XML file on client computers that will be used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the %USERPROFILE% user variable in the path name.
 
 ```yaml
 Type: String
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -XmlNamespace
 
-{{Fill XmlNamespace Description}}
+Specifies namespaces to use during the XPath query.
 
 ```yaml
 Type: String[]
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -XPathQuery
 
-{{Fill XPathQuery Description}}
+Specifies a valid full XML path language (XPath) query to use to assess compliance on client computers.
 
 ```yaml
 Type: String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### -XPathQueryFilePath
 
-{{Fill XPathQueryFilePath Description}}
+Specifies a XPath query file path.
 
 ```yaml
 Type: String
@@ -245,14 +245,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXPathQuery.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)

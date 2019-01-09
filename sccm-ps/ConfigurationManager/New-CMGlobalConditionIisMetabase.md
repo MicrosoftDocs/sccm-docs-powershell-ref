@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -PropertyId
 
-Specify the numeric property of the IIS Metabase setting.
+Specifies the numeric property of the IIS Metabase setting.
 
 ```yaml
 Type: Int32
@@ -165,11 +165,11 @@ Accept wildcard characters: False
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
 - [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
 - [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
-- [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
-- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
-- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)
+- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)

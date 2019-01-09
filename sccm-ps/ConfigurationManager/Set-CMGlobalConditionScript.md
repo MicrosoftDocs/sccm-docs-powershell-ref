@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionScript
 titleSuffix: Configuration Manager
-description: 
+description: Sets a Script type global condition in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets a Script type global condition in Configuration Manager.
 
 ## SYNTAX
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-{{Fill FilePath Description}}
+Specifies the script file path. You can use Windows PowerShell, VBScript, or JScript scripts.
 
 ```yaml
 Type: String
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -ScriptLanguage
 
-{{Fill ScriptLanguage Description}}
+Specifies the script language. You can use Windows PowerShell, VBScript, or JScript scripts.
 
 ```yaml
 Type: ScriptingLanguage
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -ScriptText
 
-{{Fill ScriptText Description}}
+Specifies script text.
 
 ```yaml
 Type: String
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Use32BitHost
 
-{{Fill Use32BitHost Description}}
+Indicates whether to use a 32-bit host.
 
 ```yaml
 Type: Boolean
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 
 ### -UseLoggedOnUserCredential
 
-{{Fill UseLoggedOnUserCredential Description}}
+If you enable this option, the script will run on client computers by using the credentials of the user who is signed in.
 
 ```yaml
 Type: Boolean
@@ -230,14 +230,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionRegistryKey
 titleSuffix: Configuration Manager
-description: 
+description: Sets a Registry Key type global condition in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets a Registry Key type global condition in Configuration Manager.
 
 ## SYNTAX
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ### -Is64Bit
 
-{{Fill Is64Bit Description}}
+Indicates whether the 64-bit registry keys should be searched in addition to the 32-bit registry keys on clients that run a 64-bit version of Windows.
 
 ```yaml
 Type: Boolean
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -KeyName
 
-{{Fill KeyName Description}}
+Specifies the registry key name that you want to search for. The format used should be key\subkey.
 
 ```yaml
 Type: String
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -RegistryHive
 
-{{Fill RegistryHive Description}}
+Specifies the registry hive that you want to search in.
 
 ```yaml
 Type: RegistryRootKey
@@ -187,14 +187,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
+
+- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)
 

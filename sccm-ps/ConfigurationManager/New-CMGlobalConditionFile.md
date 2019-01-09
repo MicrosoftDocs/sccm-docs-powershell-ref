@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -FileOrFolderName
 
-Specify the name of the file or folder object that will be searched for. You can specify system environment variables and the %USERPROFILE% environment variable in the file or folder name. You can also use the * and ? wildcards in the file name.
+Specifies the name of the file or folder object that will be searched for. You can specify system environment variables and the %USERPROFILE% environment variable in the file or folder name. You can also use the * and ? wildcards in the file name.
 
 ```yaml
 Type: String
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-Specify the path to the specified file on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
+Specifies the path to the specified file on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
 
 ```yaml
 Type: String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-Specify the path to the specified  folder on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
+Specifies the path to the specified  folder on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
 
 ```yaml
 Type: String
@@ -222,12 +222,12 @@ Accept wildcard characters: False
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
 - [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
 - [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
-- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
-- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)
+- [New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)
 

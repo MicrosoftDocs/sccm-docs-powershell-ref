@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -SearchScope
 
-Specify the search scope in Active Directory Domain Services:
+Specifies the search scope in Active Directory Domain Services:
 
 - **Base** - Queries only the specified object.
 - **One Level** - This option is not used in this version of Configuration Manager.
@@ -230,5 +230,15 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
 - [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

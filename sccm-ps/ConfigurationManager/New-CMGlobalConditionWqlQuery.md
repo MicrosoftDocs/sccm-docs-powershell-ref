@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 
-Specify the WMI namespace that will be used to build a WQL query that will be assessed for compliance on client computers. The default value is Root\cimv2.
+Specifies the WMI namespace that will be used to build a WQL query that will be assessed for compliance on client computers. The default value is Root\cimv2.
 
 ```yaml
 Type: String
@@ -198,11 +198,11 @@ Accept wildcard characters: False
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
 - [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
 - [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
-- [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
-- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)
+- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+- [New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)

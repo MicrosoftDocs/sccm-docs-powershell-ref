@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionFile
 titleSuffix: Configuration Manager
-description: 
+description: Sets a File System type global condition in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets a File System type global condition in Configuration Manager.
 
 ## SYNTAX
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -FileOrFolderName
 
-Specify the name of the file or folder object that will be searched for. You can specify system environment variables and the %USERPROFILE% environment variable in the file or folder name. You can also use the * and ? wildcards in the file name.
+Specifies the name of the file or folder object that will be searched for. You can specify system environment variables and the %USERPROFILE% environment variable in the file or folder name. You can also use the * and ? wildcards in the file name.
 
 ```yaml
 Type: String
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-Specify the path to the specified file or folder on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
+Specifies the path to the specified file or folder on client computers. You can specify system environment variables and the %USERPROFILE% environment variable in the path.
 
 ```yaml
 Type: String
@@ -232,5 +232,17 @@ Accept wildcard characters: False
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -SearchScope
 
-Specify the search scope in Active Directory Domain Services:
+Specifies the search scope in Active Directory Domain Services:
 
 - **Base** - Queries only the specified object.
 - **One Level** - This option is not used in this version of Configuration Manager.
@@ -219,11 +219,11 @@ Accept wildcard characters: False
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
 - [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
 - [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
-- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
-- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)
+- [New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)

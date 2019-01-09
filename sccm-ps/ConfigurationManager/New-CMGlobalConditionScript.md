@@ -219,19 +219,17 @@ Accept wildcard characters: False
 
 ### System.Object
 
-## NOTES
-
 ## RELATED LINKS
 
 - [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
 - [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
 - [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
-- [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
-- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
-- [New-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXpathQuery.md)
+- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+- [New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXPathQuery.md)

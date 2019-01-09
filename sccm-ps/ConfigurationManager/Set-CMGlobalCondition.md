@@ -284,8 +284,7 @@ Accept wildcard characters: False
 
 ### -FileOrFolderName
 
-Specifies the name of a file or folder.
-Specify the *IsFolder* parameter to search for a folder.
+Specifies the name of a file or folder. Specify the *IsFolder* parameter to search for a folder.
 
 ```yaml
 Type: String
@@ -837,3 +836,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 - [New-CMGlobalCondition](./Get-CMGlobalCondition.md)
 - [Get-CMGlobalCondition](./Set-CMGlobalCondition.md)
 - [Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -XmlFilePath
 
-Specify the path to the XML file on client computers that will be used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the %USERPROFILE% user variable in the path name.
+Specifies the path to the XML file on client computers that will be used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the %USERPROFILE% user variable in the path name.
 
 ```yaml
 Type: String
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ### -XPathQuery
 
-Specify a valid full XML path language (XPath) query to use to assess compliance on client computers.
+Specifies a valid full XML path language (XPath) query to use to assess compliance on client computers.
 
 ```yaml
 Type: String
@@ -236,14 +236,15 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXPathQuery.md)
 - [New-CMGlobalCondition](./New-CMGlobalCondition.md)
+- [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
 - [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
-- [New-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
-- [New-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [New-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [New-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+- [New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
+- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)

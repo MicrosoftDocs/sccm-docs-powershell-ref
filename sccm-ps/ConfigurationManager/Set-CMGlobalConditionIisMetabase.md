@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionIisMetabase
 titleSuffix: Configuration Manager
-description: 
+description: Sets a IIS Metabase type global condition in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets a IIS Metabase type global condition in Configuration Manager.
 
 ## SYNTAX
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ### -MetabasePath
 
-{{Fill MetabasePath Description}}
+Specifies a valid path to the IIS Metabase.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -PropertyId
 
-{{Fill PropertyId Description}}
+Specifies the numeric property of the IIS Metabase setting.
 
 ```yaml
 Type: Int32
@@ -170,14 +170,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

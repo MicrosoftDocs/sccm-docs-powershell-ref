@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionWqlQuery
 titleSuffix: Configuration Manager
-description: 
+description: Sets a WQL Query type global condition in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets a WQL Query type global condition in Configuration Manager.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ PS C:\> {{ Add example code here }}
 
 ### -Class
 
-{{Fill Class Description}}
+Specifies the WMI class that will be used to build a WQL query that will be assessed for compliance on client computers.
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 
-{{Fill Namespace Description}}
+Specifies the WMI namespace that will be used to build a WQL query that will be assessed for compliance on client computers. The default value is Root\cimv2.
 
 ```yaml
 Type: String
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -Property
 
-{{Fill Property Description}}
+Specifies the WMI property that will be used to build a WQL query that will be assessed for compliance on client computers.
 
 ```yaml
 Type: String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -WhereClause
 
-{{Fill WhereClause Description}}
+Specifies a WHERE clause to be applied to the specified namespace, class, and property on client computers.
 
 ```yaml
 Type: String
@@ -203,14 +203,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionSqlQuery
 titleSuffix: Configuration Manager
-description: 
+description: Sets a SQL Query type global condition in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Sets a SQL Query type global condition in Configuration Manager.
 
 ## SYNTAX
 
@@ -53,7 +53,7 @@ PS C:\> {{ Add example code here }}
 
 ### -Column
 
-{{Fill Column Description}}
+Specifies the column name returned by the Transact-SQL statement to use to assess the compliance of the global condition.
 
 ```yaml
 Type: String
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 
 ### -Database
 
-{{Fill Database Description}}
+Specifies the name of the Microsoft SQL Server database for which the SQL query will be run.
 
 ```yaml
 Type: String
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-{{Fill FilePath Description}}
+Specifies a file path.
 
 ```yaml
 Type: String
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -InstanceName
 
-{{Fill InstanceName Description}}
+Specifies a SQL Server instance where you want the SQL Query to run on.
 
 ```yaml
 Type: String
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -QueryText
 
-{{Fill QueryText Description}}
+Specifies the full SQL query to use for the global condition. 
 
 ```yaml
 Type: String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### -UseAllInstances
 
-{{Fill UseAllInstances Description}}
+Indicates running the SQL query on all instances.
 
 ```yaml
 Type: SwitchParameter
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 
 ### -UseDefaultInstance
 
-{{Fill UseDefaultInstance Description}}
+Indicates running the SQL query on the default instance.
 
 ```yaml
 Type: SwitchParameter
@@ -261,14 +261,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## INPUTS
-
-### None
-
-
 ## OUTPUTS
 
 ### System.Object
 
-## NOTES
+## RELATED LINKS
 
+- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

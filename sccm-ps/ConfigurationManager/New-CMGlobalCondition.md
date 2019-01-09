@@ -361,8 +361,7 @@ Accept wildcard characters: False
 
 ### -FileOrFolderName
 
-Specifies the name of a file or folder.
-Specify the *IsFolder* parameter to search for a folder.
+Specifies the name of a file or folder. Specify the *IsFolder* parameter to search for a folder.
 
 ```yaml
 Type: String
