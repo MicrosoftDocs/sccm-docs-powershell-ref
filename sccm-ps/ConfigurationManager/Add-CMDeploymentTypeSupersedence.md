@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Add-CMDeploymentTypeSupersedence
@@ -164,6 +166,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md)
-- [Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
-- [Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)
+[Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md)
+
+[Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
+
+[Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)

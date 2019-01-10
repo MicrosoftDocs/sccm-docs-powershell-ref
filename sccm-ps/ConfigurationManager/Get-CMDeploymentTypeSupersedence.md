@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Get-CMDeploymentTypeSupersedence
@@ -102,6 +104,8 @@ IResultObject#SMS_DeploymentType
 
 ## RELATED LINKS
 
-- [Add-CMDeploymentTypeSupersedence](./Add-CMDeploymentTypeSupersedence.md)
-- [Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
-- [Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)
+[Add-CMDeploymentTypeSupersedence](./Add-CMDeploymentTypeSupersedence.md)
+
+[Set-CMDeploymentTypeSupersedence](./Set-CMDeploymentTypeSupersedence.md)
+
+[Remove-CMDeploymentTypeSupersedence](./Remove-CMDeploymentTypeSupersedence.md)

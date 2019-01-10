@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Get-CMDeploymentTypeDependency
@@ -104,6 +106,8 @@ IResultObject#SMS_DeploymentType
 
 ## RELATED LINKS
 
-- [Add-CMDeploymentTypeDependency](./Add-CMDeploymentTypeDependency.md)
-- [Set-CMDeploymentTypeDependency](./Set-CMDeploymentTypeDependency.md)
-- [Remove-CMDeploymentTypeDependency](./Remove-CMDeploymentTypeDependency.md)
+[Add-CMDeploymentTypeDependency](./Add-CMDeploymentTypeDependency.md)
+
+[Set-CMDeploymentTypeDependency](./Set-CMDeploymentTypeDependency.md)
+
+[Remove-CMDeploymentTypeDependency](./Remove-CMDeploymentTypeDependency.md)
