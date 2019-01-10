@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Convert-CMDeploymentType
@@ -103,7 +105,10 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-* [Add-CMDeploymentType](Add-CMDeploymentType.md)
-* [Get-CMDeploymentType](Add-CMDeploymentType.md)
-* [Remove-CMDeploymentType](Remove-CMDeploymentType.md)
-* [Set-CMDeploymentType](Set-CMDeploymentType.md)
+[Add-CMDeploymentType](Add-CMDeploymentType.md)
+
+[Get-CMDeploymentType](Add-CMDeploymentType.md)
+
+[Remove-CMDeploymentType](Remove-CMDeploymentType.md)
+
+[Set-CMDeploymentType](Set-CMDeploymentType.md)

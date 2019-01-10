@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Set-CMDeploymentTypeDependency
@@ -224,6 +226,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-CMDeploymentTypeDependency](./Add-CMDeploymentTypeDependency.md)
-- [Get-CMDeploymentTypeDependency](./Get-CMDeploymentTypeDependency.md)
-- [Remove-CMDeploymentTypeDependency](./Remove-CMDeploymentTypeDependency.md)
+[Add-CMDeploymentTypeDependency](./Add-CMDeploymentTypeDependency.md)
+
+[Get-CMDeploymentTypeDependency](./Get-CMDeploymentTypeDependency.md)
+
+[Remove-CMDeploymentTypeDependency](./Remove-CMDeploymentTypeDependency.md)

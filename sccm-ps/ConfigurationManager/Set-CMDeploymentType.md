@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Set-CMDeploymentType
@@ -1288,6 +1290,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-CMDeploymentType](Add-CMDeploymentType.md)
-- [Get-CMDeploymentType](Get-CMDeploymentType.md)
-- [Remove-CMDeploymentType](Remove-CMDeploymentType.md)
+[Add-CMDeploymentType](Add-CMDeploymentType.md)
+
+[Get-CMDeploymentType](Get-CMDeploymentType.md)
+
+[Remove-CMDeploymentType](Remove-CMDeploymentType.md)
