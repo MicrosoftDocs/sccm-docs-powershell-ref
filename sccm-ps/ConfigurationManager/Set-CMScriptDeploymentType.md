@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Set-CMScriptDeploymentType
@@ -839,10 +841,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-* [Approve-CMScript](Approve-CMScript.md)
-* [Deny-CMScript](Deny-CMScript.md)
-* [Invoke-CMScript](Invoke-CMScript.md)
-* [Remove-CMScript](Remove-CMScript.md)
-* [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
-* [Get-CMApplication](Get-CMApplication.md)
-* [Get-CMDeploymentType](Get-CMDeploymentType.md)
+[Approve-CMScript](Approve-CMScript.md)
+
+[Deny-CMScript](Deny-CMScript.md)
+
+[Invoke-CMScript](Invoke-CMScript.md)
+
+[Remove-CMScript](Remove-CMScript.md)
+
+[Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
+
+[Get-CMApplication](Get-CMApplication.md)
+
+[Get-CMDeploymentType](Get-CMDeploymentType.md)

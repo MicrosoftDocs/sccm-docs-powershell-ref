@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Get-CMPackageDeployment
@@ -259,9 +261,9 @@ IResultObject#SMS_Advertisement
 
 ## RELATED LINKS
 
-- [New-CMPackageDeployment](New-CMPackageDeployment.md)
-- [Start-CMPackageDeployment](Start-CMPackageDeployment.md)
-- [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
-- [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
-- [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
-- [Get-CMPackage](Get-CMPackage.md)
+[New-CMPackageDeployment](New-CMPackageDeployment.md)
+[Start-CMPackageDeployment](Start-CMPackageDeployment.md)
+[Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
+[Set-CMPackageDeployment](Set-CMPackageDeployment.md)
+[Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
+[Get-CMPackage](Get-CMPackage.md)

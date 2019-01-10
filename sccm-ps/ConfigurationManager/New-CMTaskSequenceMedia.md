@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # New-CMTaskSequenceMedia
@@ -1141,4 +1143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-CMTaskSequence](Get-CMTaskSequence.md)
+[Get-CMTaskSequence](Get-CMTaskSequence.md)

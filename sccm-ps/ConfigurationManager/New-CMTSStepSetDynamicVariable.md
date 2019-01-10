@@ -1,8 +1,8 @@
 ---
-title: New-CMTaskSequenceGroup
+title: New-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
-description: Creates a Configuration Manager task sequence group.
-ms.date: 11/30/2018
+description: Create a task sequence Set Dynamic Variable step in Configuration Manager.
+ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -13,39 +13,55 @@ manager: dougeby
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
-# New-CMTaskSequenceGroup
+# New-CMTSStepSetDynamicVariable
 
 ## SYNOPSIS
 
-Creates a Configuration Manager task sequence group.
+Create a task sequence Set Dynamic Variable step in Configuration Manager.
 
 ## SYNTAX
 
 ```powershell
-New-CMTaskSequenceGroup [-Step <IResultObject[]>] -Name <String> [-Description <String>] [-ContinueOnError]
- [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CMTSStepSetDynamicVariable -AddRule <IResultObject[]> -Name <String> [-Description <String>]
+ [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
 
-The **New-CMTaskSequenceGroup** cmdlet creates a new task sequence group object with specific name, description, options, conditions and steps/sub-groups.
+The **New-CMTSStepSetDynamicVariable** creates a task sequence "Set Dynamic Variable" step object with specific name, description, specific properties, options and conditions, which could be used by [Add-CMTaskSequenceStep](./Add-CMTaskSequenceStep.md) and [Set-CMTaskSequenceGroup](./Set-CMTaskSequenceGroup.md).
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> New-CMTaskSequenceGroup -Name $gpName -Description $gpDescription -ContinueOnError -Step ($st1, $st2) -Condition ($cd1, $cd2)
+PS C:\> Add-CMTaskSequenceStep -TaskSequenceName $TSName | New-CMTaskSequenceStepSetDynamicVariable -Name $name -Description $description -Condition ($cd1,$cd2) -AddRule ($rule1)
 ```
 
-The command creates a task sequence group with specific name, description, steps, and conditions.
+This command creates a task sequence "Set Dynamic Variable" step.
 
 ## PARAMETERS
 
+### -AddRule
+
+Specifies the rules and the order of the rules.
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases: AddRules
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Condition
 
-Specifies condition objectss.
+Specifies the conditions.
 
 ```yaml
 Type: IResultObject[]
@@ -61,12 +77,12 @@ Accept wildcard characters: False
 
 ### -ContinueOnError
 
-Indicates whether the creation should continue when there is an error.
+Indicates whether the operation continues when there is an error.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +98,7 @@ Specifies a description.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +130,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +146,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +157,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies the name of a step.
+Specifies a name.
 
 ```yaml
 Type: String
@@ -149,22 +165,6 @@ Parameter Sets: (All)
 Aliases: StepName
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Step
-
-Specifies the step objects.
-
-```yaml
-Type: IResultObject[]
-Parameter Sets: (All)
-Aliases: Steps
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -204,16 +204,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## OUTPUTS
 
-### IResultObject#SMS_TaskSequence_Group
+### IResultObject#SMS_TaskSequence_SetDynamicVariablesAction
 
 ## RELATED LINKS
 
-[Get-CMTaskSequenceGroup](./Get-CMTaskSequenceGroup.md)
-[Set-CMTaskSequenceGroup](./Set-CMTaskSequenceGroup.md)
-[Remove-CMTaskSequenceGroup](./Remove-CMTaskSequenceGroup.md)
+[Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
+
+[Set-CMTSStepSetDynamicVariable](./Set-CMTSStepSetDynamicVariable.md)
+
+[Remove-CMTSStepSetDynamicVariable](./Remove-CMTSStepSetDynamicVariable.md)
+
+[Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+[Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md)

@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Remove-CMScript
@@ -173,9 +175,14 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-* [Approve-CMScript](Approve-CMScript.md)
-* [Deny-CMScript](Deny-CMScript.md)
-* [Get-CMScript](Invoke-CMScript.md)
-* [Invoke-CMScript](Invoke-CMScript.md)
-* [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
-* [Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
+[Approve-CMScript](Approve-CMScript.md)
+
+[Deny-CMScript](Deny-CMScript.md)
+
+[Get-CMScript](Invoke-CMScript.md)
+
+[Invoke-CMScript](Invoke-CMScript.md)
+
+[Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
+
+[Add-CMScriptDeploymentType](Add-CMScriptDeploymentType.md)
