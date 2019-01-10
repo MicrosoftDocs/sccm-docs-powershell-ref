@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Import-CMConfigurationItem
@@ -182,13 +184,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
-- [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
-- [Get-CMConfigurationItemXMLDefinition](Get-CMConfigurationItemXMLDefinition.md)
-- [Get-CMConfigurationItemHistory](Get-CMConfigurationItemHistory.md)
-- [New-CMConfigurationItem](New-CMConfigurationItem.md)
-- [Set-CMConfigurationItem](Set-CMConfigurationItem.md)
-- [Remove-CMConfigurationItem](Remove-CMConfigurationItem.md)
-- [Export-CMConfigurationItem](Export-CMConfigurationItem.md)
-- [ConvertTo-CMConfigurationItem](ConvertTo-CMConfigurationItem.md)
-- [ConvertFrom-CMConfigurationItem](ConvertFrom-CMConfigurationItem.md)
+[Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
+
+[Get-CMConfigurationItem](Get-CMConfigurationItem.md)
+
+[Get-CMConfigurationItemXMLDefinition](Get-CMConfigurationItemXMLDefinition.md)
+
+[Get-CMConfigurationItemHistory](Get-CMConfigurationItemHistory.md)
+
+[New-CMConfigurationItem](New-CMConfigurationItem.md)
+
+[Set-CMConfigurationItem](Set-CMConfigurationItem.md)
+
+[Remove-CMConfigurationItem](Remove-CMConfigurationItem.md)
+
+[Export-CMConfigurationItem](Export-CMConfigurationItem.md)
+
+[ConvertTo-CMConfigurationItem](ConvertTo-CMConfigurationItem.md)
+
+[ConvertFrom-CMConfigurationItem](ConvertFrom-CMConfigurationItem.md)
