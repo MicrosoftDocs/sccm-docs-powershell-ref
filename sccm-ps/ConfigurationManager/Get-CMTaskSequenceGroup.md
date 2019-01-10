@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Get-CMTaskSequenceGroup
@@ -168,6 +170,8 @@ IResultObject#SMS_TaskSequence_Group
 
 ## RELATED LINKS
 
-- [New-CMTaskSequenceGroup](./New-CMTaskSequenceGroup.md)
-- [Set-CMTaskSequenceGroup](./Set-CMTaskSequenceGroup.md)
-- [Remove-CMTaskSequenceGroup](./Remove-CMTaskSequenceGroup.md)
+[New-CMTaskSequenceGroup](./New-CMTaskSequenceGroup.md)
+
+[Set-CMTaskSequenceGroup](./Set-CMTaskSequenceGroup.md)
+
+[Remove-CMTaskSequenceGroup](./Remove-CMTaskSequenceGroup.md)

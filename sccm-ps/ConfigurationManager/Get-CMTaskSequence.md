@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Get-CMTaskSequence
@@ -122,12 +124,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [New-CMTaskSequence](Get-CMTaskSequence.md)
-- [Get-CMTaskSequence](Get-CMTaskSequence.md)
-- [Set-CMTaskSequence](Set-CMTaskSequence.md)
-- [Copy-CMTaskSequence](Copy-CMTaskSequence.md)
-- [Enable-CMTaskSequence](Enable-CMTaskSequence.md)
-- [Disable-CMTaskSequence](Disable-CMTaskSequence.md)
-- [Import-CMTaskSequence](Import-CMTaskSequence.md)
-- [Export-CMTaskSequence](Export-CMTaskSequence.md)
-- [Remove-CMTaskSequence](Remove-CMTaskSequence.md)
+[New-CMTaskSequence](Get-CMTaskSequence.md)
+[Get-CMTaskSequence](Get-CMTaskSequence.md)
+[Set-CMTaskSequence](Set-CMTaskSequence.md)
+[Copy-CMTaskSequence](Copy-CMTaskSequence.md)
+[Enable-CMTaskSequence](Enable-CMTaskSequence.md)
+[Disable-CMTaskSequence](Disable-CMTaskSequence.md)
+[Import-CMTaskSequence](Import-CMTaskSequence.md)
+[Export-CMTaskSequence](Export-CMTaskSequence.md)
+[Remove-CMTaskSequence](Remove-CMTaskSequence.md)

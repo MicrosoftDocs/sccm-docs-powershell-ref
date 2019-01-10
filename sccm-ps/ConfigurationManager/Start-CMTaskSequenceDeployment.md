@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Start-CMTaskSequenceDeployment
@@ -780,7 +782,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [New-CMTaskSequenceDeployment](./New-CMTaskSequenceDeployment.md)
-- [Get-CMTaskSequenceDeployment](./Get-CMTaskSequenceDeployment.md)
-- [Set-CMTaskSequenceDeployment](./Set-CMTaskSequenceDeployment.md)
-- [Remove-CMTaskSequenceDeployment](./Remove-CMTaskSequenceDeployment.md)
+[New-CMTaskSequenceDeployment](./New-CMTaskSequenceDeployment.md)
+[Get-CMTaskSequenceDeployment](./Get-CMTaskSequenceDeployment.md)
+[Set-CMTaskSequenceDeployment](./Set-CMTaskSequenceDeployment.md)
+[Remove-CMTaskSequenceDeployment](./Remove-CMTaskSequenceDeployment.md)

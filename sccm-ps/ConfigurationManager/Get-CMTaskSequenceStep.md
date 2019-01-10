@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Get-CMTaskSequenceStep
@@ -181,6 +183,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-CMTaskSequenceStep](./Add-CMTaskSequenceStep.md)
-- [Get-CMTaskSequenceStepCondition](./Get-CMTaskSequenceStepCondition.md)
-- [Remove-CMTaskSequenceStep](./Remove-CMTaskSequenceStep.md)
+[Add-CMTaskSequenceStep](./Add-CMTaskSequenceStep.md)
+
+[Get-CMTaskSequenceStepCondition](./Get-CMTaskSequenceStepCondition.md)
+
+[Remove-CMTaskSequenceStep](./Remove-CMTaskSequenceStep.md)
