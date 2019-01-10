@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Get-CMPackageDeploymentStatus
@@ -191,11 +193,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [New-CMPackageDeployment](New-CMPackageDeployment.md)
-- [Start-CMPackageDeployment](Start-CMPackageDeployment.md)
-- [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
-- [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
-- [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
-- [Get-CMPackage](Get-CMPackage.md)
-- [Invoke-CMDeploymentSummarization](Invoke-CMDeploymentSummarization.md)
-- [Remove-CMDeployment](Remove-CMDeployment.md)
+[New-CMPackageDeployment](New-CMPackageDeployment.md)
+[Start-CMPackageDeployment](Start-CMPackageDeployment.md)
+[Get-CMPackageDeployment](Get-CMPackageDeployment.md)
+[Set-CMPackageDeployment](Set-CMPackageDeployment.md)
+[Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
+[Get-CMPackage](Get-CMPackage.md)
+[Invoke-CMDeploymentSummarization](Invoke-CMDeploymentSummarization.md)
+[Remove-CMDeployment](Remove-CMDeployment.md)
