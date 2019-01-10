@@ -180,6 +180,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-* [New-CMTSStepSetDynamicVariable](./New-CMTSStepSetDynamicVariable.md)
-* [Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
-* [Set-CMTSStepSetDynamicVariable](./Set-CMTSStepSetDynamicVariable.md)
+[New-CMTSStepSetDynamicVariable](./New-CMTSStepSetDynamicVariable.md)
+
+[Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
+
+[Set-CMTSStepSetDynamicVariable](./Set-CMTSStepSetDynamicVariable.md)

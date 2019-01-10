@@ -210,8 +210,12 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-* [Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
-* [Set-CMTSStepSetDynamicVariable](./Set-CMTSStepSetDynamicVariable.md)
-* [Remove-CMTSStepSetDynamicVariable](./Remove-CMTSStepSetDynamicVariable.md)
-* [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
-* [Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md)
+[Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
+
+[Set-CMTSStepSetDynamicVariable](./Set-CMTSStepSetDynamicVariable.md)
+
+[Remove-CMTSStepSetDynamicVariable](./Remove-CMTSStepSetDynamicVariable.md)
+
+[Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+[Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md)

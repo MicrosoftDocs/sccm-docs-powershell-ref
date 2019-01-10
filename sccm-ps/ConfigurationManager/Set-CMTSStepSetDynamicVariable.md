@@ -1214,6 +1214,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-* [New-CMTSStepSetDynamicVariable](./New-CMTSStepSetDynamicVariable.md)
-* [Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
-* [Remove-CMTSStepSetDynamicVariable](./Remove-CMTSStepSetDynamicVariable.md)
+[New-CMTSStepSetDynamicVariable](./New-CMTSStepSetDynamicVariable.md)
+
+[Get-CMTSStepSetDynamicVariable](./Get-CMTSStepSetDynamicVariable.md)
+
+[Remove-CMTSStepSetDynamicVariable](./Remove-CMTSStepSetDynamicVariable.md)
