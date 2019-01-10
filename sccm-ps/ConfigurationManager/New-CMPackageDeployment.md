@@ -9,6 +9,8 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
+
+external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # New-CMPackageDeployment
@@ -887,9 +889,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Start-CMPackageDeployment](Start-CMPackageDeployment.md)
-- [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
-- [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
-- [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
-- [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
-- [Get-CMPackage](Get-CMPackage.md)
+[Start-CMPackageDeployment](Start-CMPackageDeployment.md)
+[Get-CMPackageDeployment](Get-CMPackageDeployment.md)
+[Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
+[Set-CMPackageDeployment](Set-CMPackageDeployment.md)
+[Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
+[Get-CMPackage](Get-CMPackage.md)
