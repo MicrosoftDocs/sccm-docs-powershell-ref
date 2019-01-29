@@ -43,11 +43,11 @@ The **Set-CMGlobalConditionScript** cmdlet modifies settings for a Script type g
 
 ### Example 1
 
-```
-PS C:\> {{ Add example code here }}
+```powershell
+PS C:\> $GlobalScript = Set-CMGlobalConditionScript -DataType String -ScriptText $string -ScriptLanguage JScript -Name GC5
 ```
 
-{{ Add example description here }}
+This command sets a Script type global condition in Configuration Manager.
 
 ## PARAMETERS
 

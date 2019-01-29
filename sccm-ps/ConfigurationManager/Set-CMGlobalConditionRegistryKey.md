@@ -33,10 +33,10 @@ The **Set-CMGlobalConditionRegistryKey** cmdlet modifies settings for a Registry
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalRegKey = Set-CMGlobalConditionRegistryKey -KeyName key -Name GC3 -RegistryHive LocalMachine -Description $String
 ```
 
-{{ Add example description here }}
+This command sets a Registry Key type global condition in Configuration Manager.
 
 ## PARAMETERS
 

@@ -46,10 +46,10 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+$GlobalScript = New-CMGlobalConditionScript -DataType String -ScriptText $string -ScriptLanguage JScript -Name GC5
 ```
 
-{{ Add example description here }}
+This command creates a Script type global condition in Configuration Manager.
 
 ## PARAMETERS
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ### -ScriptText
 
-Specifies script text.
+Specifies a script string.
 
 ```yaml
 Type: String

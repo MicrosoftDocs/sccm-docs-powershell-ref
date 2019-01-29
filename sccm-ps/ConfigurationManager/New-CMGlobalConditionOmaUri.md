@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Creates an OMA URI type global condition in Configuration Manager.
+Creates an OMA URI type global condition in Configuration Manager. This cmdlet is for Windows Mobile.  It is obsolete.
 
 ## SYNTAX
 
@@ -29,16 +29,6 @@ New-CMGlobalConditionOmaUri -DataType <GlobalConditionDataType> -OmaUri <String>
 The **New-CMGlobalConditionOmaUri** cmdlet creates an Oma Uri type global condition in Microsoft System Center Configuration Manager.
 
 A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
-
-## EXAMPLES
-
-### Example 1
-
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 

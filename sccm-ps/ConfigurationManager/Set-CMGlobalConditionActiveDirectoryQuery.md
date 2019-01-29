@@ -34,10 +34,10 @@ The **Set-CMGlobalConditionActiveDirectoryQuery** cmdlet modifies settings for a
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalQuery = Set-CMGlobalConditionActiveDirectoryQuery -Name GC1 -DataType String -DistinguishedName “CN=Users” -LdapPrefix “LDAP://” -LdapFilter “DC=Vlan123DOM” -Property “DC=net” -SearchScope Base -Description $String
 ```
 
-{{ Add example description here }}
+This command sets an Active Directory Query type global condition in Configuration Manager.
 
 ## PARAMETERS
 

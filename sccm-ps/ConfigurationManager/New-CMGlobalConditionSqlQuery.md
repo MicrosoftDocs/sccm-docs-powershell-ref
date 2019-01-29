@@ -1,7 +1,7 @@
 ---
-title: 
+title: New-CMGlobalConditionSqlQuery
 titleSuffix: Configuration Manager
-description: 
+description: Creates a SQL Query type global condition in Configuration Manager.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -46,16 +46,18 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+$GlobalSql = New-CMGlobalConditionSqlQuery -DataType String -QueryText $string -Database ss -Column aa –Name GC6
 ```
 
-{{ Add example description here }}
+This command creates a SQL Query type global condition in Configuration Manager.
 
 ## PARAMETERS
 
 ### -AllInstances
 
-{{Fill AllInstances Description}}
+Indicates that the global condition searches all database instances.
+To search a named instance, specify the *InstanceName* parameter.
+To search the default instance, specify the *UseDefaultInstance* parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -71,7 +73,7 @@ Accept wildcard characters: False
 
 ### -Column
 
-{{Fill Column Description}}
+Specifies the column name used to assess the compliance of the global condition.
 
 ```yaml
 Type: String
@@ -87,7 +89,7 @@ Accept wildcard characters: False
 
 ### -Database
 
-{{Fill Database Description}}
+Specifies a database name.
 
 ```yaml
 Type: String
@@ -103,7 +105,7 @@ Accept wildcard characters: False
 
 ### -DataType
 
-{{Fill DataType Description}}
+Specifies a data type.
 
 ```yaml
 Type: GlobalConditionDataType

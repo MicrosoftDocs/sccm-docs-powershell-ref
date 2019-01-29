@@ -34,10 +34,10 @@ The **Set-CMGlobalConditionRegistryValue** cmdlet modifies settings for a Regist
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalRegValue = Set-CMGlobalConditionRegistryValue -DataType String -KeyName key -Name GC4 -DeviceType WindowsMobile -RegistryHive LocalMachine -ValueName VName 
 ```
 
-{{ Add example description here }}
+This command sets a Registry Value type global condition in Configuration Manager.
 
 ## PARAMETERS
 

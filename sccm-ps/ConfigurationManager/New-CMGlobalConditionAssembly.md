@@ -36,10 +36,10 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalAssembly =  New-CMGlobalConditionAssembly -AssemblyName $AssemblyName -Name GC2
 ```
 
-{{ Add example description here }}
+This command creates an Assembly type global condition in Configuration Manager.
 
 ## PARAMETERS
 

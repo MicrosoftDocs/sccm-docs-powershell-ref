@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Creates an IIS Metabase type global condition in Configuration Manager.
+Creates an IIS Metabase type global condition in Configuration Manager. 
 
 ## SYNTAX
 
@@ -35,10 +35,10 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+$GlobalIIS = New-CMGlobalConditionIisMetabase -DataType String -PropertyId $int -Name GC3
 ```
 
-{{ Add example description here }}
+This command creates an IIS Metabase type global condition in Configuration Manager. 
 
 ## PARAMETERS
 

@@ -34,10 +34,10 @@ The **Set-CMGlobalConditionWqlQuery** cmdlet modifies settings for a WQL Query t
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalWql = Set-CMGlobalConditionWqlQuery -DataType String -Class $aa -Property $aa -Namespace root\aaa -Name GC7
 ```
 
-{{ Add example description here }}
+This command sets a WQL Query type global condition in Configuration Manager.
 
 ## PARAMETERS
 

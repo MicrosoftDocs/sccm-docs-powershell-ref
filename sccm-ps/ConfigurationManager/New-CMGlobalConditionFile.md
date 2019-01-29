@@ -45,10 +45,18 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+$GlobalFloder = New-CMGlobalConditionFile -Path c:\ -FileOrFolderName test -IsFolder $true -Name Folder 
 ```
 
-{{ Add example description here }}
+This command creates a File System type folder global condition in Configuration Manager.
+
+### Example 1
+
+```powershell
+$GlobalFile = New-CMGlobalConditionFile -FilePath c:\test  -Name file
+```
+
+This command creates a File System type file global condition in Configuration Manager.
 
 ## PARAMETERS
 

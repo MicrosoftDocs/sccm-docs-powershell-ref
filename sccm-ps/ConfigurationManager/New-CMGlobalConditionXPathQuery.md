@@ -46,10 +46,10 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalXpath = New-CMGlobalConditionXPathQuery -DataType String -XmlFilePath "c:\A" -XPathQuery "/" -Name GC8
 ```
 
-{{ Add example description here }}
+This command creates a XPath Query type global condition in Configuration Manager.
 
 ## PARAMETERS
 

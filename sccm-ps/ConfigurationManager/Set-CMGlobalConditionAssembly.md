@@ -33,10 +33,10 @@ The **Set-CMGlobalConditionAssembly** cmdlet modifies settings for an Assembly t
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalAssembly =  Set-CMGlobalConditionAssembly -AssemblyName $AssemblyName -Name GC2
 ```
 
-{{ Add example description here }}
+This command sets an Assembly type global condition in Configuration Manager.
 
 ## PARAMETERS
 

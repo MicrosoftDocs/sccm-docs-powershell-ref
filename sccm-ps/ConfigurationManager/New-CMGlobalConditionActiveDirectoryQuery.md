@@ -36,10 +36,10 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+$GlobalQuery = New-CMGlobalConditionActiveDirectoryQuery -Name GC1 -DataType String -DistinguishedName “CN=Users” -LdapPrefix “LDAP://” -LdapFilter “DC=Vlan123DOM” -Property “DC=net” -SearchScope Base -Description $String
 ```
 
-{{ Add example description here }}
+This command creates a new Active Directory Query type global condition in Configuration Manager.
 
 ## PARAMETERS
 

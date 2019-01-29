@@ -33,10 +33,10 @@ The **Set-CMGlobalConditionIisMetabase** cmdlet modifies settings for an IIS Met
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalIIS = Set-CMGlobalConditionIisMetabase -DataType String -PropertyId $int -Name GC3
 ```
 
-{{ Add example description here }}
+This command sets a IIS Metabase type global condition in Configuration Manager.
 
 ## PARAMETERS
 

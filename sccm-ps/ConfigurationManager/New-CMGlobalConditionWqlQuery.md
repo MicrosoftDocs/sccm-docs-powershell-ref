@@ -36,10 +36,10 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalWql = New-CMGlobalConditionWqlQuery -DataType String -Class $aa -Property $aa -Namespace root\aaa -Name GC7
 ```
 
-{{ Add example description here }}
+This command creates a WQL Query type global condition in Configuration Manager.
 
 ## PARAMETERS
 

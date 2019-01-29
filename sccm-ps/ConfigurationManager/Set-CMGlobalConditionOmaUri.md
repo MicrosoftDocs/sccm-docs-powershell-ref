@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-Sets a OMA URI type global condition in Configuration Manager.
+Sets a OMA URI type global condition in Configuration Manager. This cmdlet is for Windows Mobile. It is obsolete.
 
 ## SYNTAX
 
@@ -27,16 +27,6 @@ Set-CMGlobalConditionOmaUri -OmaUri <String> -Name <String> [-PassThru] [-Disabl
 ## DESCRIPTION
 
 The **Set-CMGlobalConditionOmaUri** cmdlet modifies settings for an OMA URI type global condition in Microsoft System Center Configuration Manager.
-
-## EXAMPLES
-
-### Example 1
-
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 

@@ -35,10 +35,10 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $GlobalRegKey = New-CMGlobalConditionRegistryKey -KeyName key -Name GC3 -RegistryHive LocalMachine -Description $String
 ```
 
-{{ Add example description here }}
+This command creates a Registry Key type global condition in Configuration Manager.
 
 ## PARAMETERS
 
