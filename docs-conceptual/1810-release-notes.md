@@ -16,7 +16,7 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!NOTE]  
-> Configuration Manager current branch version 1806 is the baseline for these changes. For more information, see [# Configuration Manager Cmdlet Library changes for version 1806](https://docs.microsoft.com/powershell/sccm/1806_release_notes).
+> Configuration Manager current branch version 1806 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1806](https://docs.microsoft.com/powershell/sccm/1806_release_notes).
 
 ## Important changes
 
@@ -88,14 +88,6 @@ None
 
 ### Deprecated cmdlets
 None
-
-
-
-## How to provide feedback or report issues
-
-Many of the fixes and improvements described in this article are a result of your feedback.
-
-To submit bug reports, use [send a smile in the Configuration Manager console](https://docs.microsoft.com/sccm/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
 
 
 
@@ -273,5 +265,14 @@ The following changes have been made to existing cmdlets in this version. Change
 ### Start-CMAntimalwarePolicyDeployment
 #### Bugs that were fixed
 - Cmdlet allows a user collection to be specified as a deployment target
+
+
+
+## How to provide feedback or report issues
+
+Many of the fixes and improvements described in this article are a result of your feedback.
+
+To submit bug reports, use [send a smile in the Configuration Manager console](https://docs.microsoft.com/sccm/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
+
 
 
