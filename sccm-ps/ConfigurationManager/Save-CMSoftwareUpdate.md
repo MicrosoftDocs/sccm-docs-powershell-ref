@@ -58,7 +58,7 @@ Save-CMSoftwareUpdate -SoftwareUpdateGroup <IResultObject> [-Location <String>] 
 The **Save-CMSoftwareUpdate** cmdlet saves one or more software updates to update groups and packages.
 
 You can specify one or more software updates associated with deployment packages.
-You can also specify the location to save the updates and the language of the software updates.
+You can also specify the download source location of updates and the language of the software updates.
 Languages determine which summary details a software update synchronizes and the file languages to be downloaded for software updates.
 
 ## EXAMPLES
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies a location to save a software update.
+Specifies a download source location for software updates.
 
 ```yaml
 Type: String
