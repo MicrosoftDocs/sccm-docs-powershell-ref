@@ -1,7 +1,7 @@
 ---
-title: 
+title: Set-CMGlobalConditionGeneral
 titleSuffix: Configuration Manager
-description: 
+description: Modifies general settings for a Configuration Manager global condition.
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -15,7 +15,7 @@ manager: dougeby
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Modifies general settings for a Configuration Manager global condition.
 
 ## SYNTAX
 
@@ -26,17 +26,17 @@ Set-CMGlobalConditionGeneral [-NewName <String>] [-Description <String>] -Name <
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+The **Set-CMGlobalConditionGeneral** cmdlet modifies general settings for a global condition.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CMGlobalConditionGeneral -Name newscript -NewName newscript2 -Description Description2
 ```
 
-{{ Add example description here }}
+This command modifies the name and the description.
 
 ## PARAMETERS
 

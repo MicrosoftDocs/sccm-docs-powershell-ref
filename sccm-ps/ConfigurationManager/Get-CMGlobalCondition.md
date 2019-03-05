@@ -56,13 +56,12 @@ PS C:\> Get-CMGlobalCondition -Name "CPU speed"
 
 This command gets the global condition named CPU speed.
 
-### Example 2: Get a global condition by name and security scope
+### Example 2: Get a global condition by id (CI_ID)
 
 ```powershell
-PS C:\> Get-CMGlobalCondition -Name "CPU speed" -SecuredScopeNames "Scope22"
+PS C:\> $test = Get-CMGlobalCondition -Id 16777504
+        $test.CI_ID
 ```
-
-This command gets the global condition named CPU speed that has a security scope named Scope22.
 
 ## PARAMETERS
 
