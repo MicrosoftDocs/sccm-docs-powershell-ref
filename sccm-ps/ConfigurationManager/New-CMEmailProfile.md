@@ -338,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
-Specifies the the operating systems on which the email profile will be installed.
+Specifies the operating systems on which the email profile will be installed.
 To obtain a supported platform object, use the Get-CMSupportedPlatform cmdlet.
 
 ```yaml

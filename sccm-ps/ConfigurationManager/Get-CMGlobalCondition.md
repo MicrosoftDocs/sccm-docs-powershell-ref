@@ -1,30 +1,41 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: FFCE8AD9-01ED-42FC-9638-D74CA31F453A
-online version: https://go.microsoft.com/fwlink/?linkid=833710
-schema: 2.0.0
+title: Get-CMGlobalCondition
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager global condition objects.
+
+ms.date: 01/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Get-CMGlobalCondition
 
 ## SYNOPSIS
-Gets global condition objects.
+
+Gets Configuration Manager global condition objects.
 
 ## SYNTAX
 
 ### SearchByName (Default)
-```
+
+```powershell
 Get-CMGlobalCondition [-Name <String>] [-AsDcmSdkObject] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-```
+
+```powershell
 Get-CMGlobalCondition -Id <String> [-AsDcmSdkObject] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Get-CMGlobalCondition** cmdlet gets global condition objects.
 You can pass the results of this cmdlet to the **Set-CMGlobalCondition** cmdlet or the **Remove-CMGlobalCondition** cmdlet.
 
@@ -38,26 +49,28 @@ For instance, you might specify an array of global condition names and specify a
 ## EXAMPLES
 
 ### Example 1: Get a global condition by name
-```
+
+```powershell
 PS C:\> Get-CMGlobalCondition -Name "CPU speed"
 ```
 
 This command gets the global condition named CPU speed.
 
-### Example 2: Get a global condition by name and security scope
-```
-PS C:\> Get-CMGlobalCondition -Name "CPU speed" -SecuredScopeNames "Scope22"
-```
+### Example 2: Get a global condition by id (CI_ID)
 
-This command gets the global condition named CPU speed that has a security scope named Scope22.
+```powershell
+PS C:\> $test = Get-CMGlobalCondition -Id 16777504
+        $test.CI_ID
+```
 
 ## PARAMETERS
 
 ### -AsDcmSdkObject
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -67,6 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -82,6 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -97,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
 Specifies an array of identifiers of global conditions.
 This value corresponds to the **CI_ID** property of a global condition object.
 
@@ -113,6 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies an array of names for global conditions.
 This value corresponds to the **LocalizedDisplayName** property of a global condition object.
 
@@ -129,20 +146,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
-[New-CMGlobalCondition](New-CMGlobalCondition.md)
-
-[Remove-CMGlobalCondition](Remove-CMGlobalCondition.md)
-
-[Set-CMGlobalCondition](Set-CMGlobalCondition.md)
-
-
+- [New-CMGlobalCondition](./Get-CMGlobalCondition.md)
+- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
