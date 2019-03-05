@@ -1,36 +1,48 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: 607E38C4-5D67-42E4-8D3F-3D636EF15FC0
-online version: https://go.microsoft.com/fwlink/?linkid=834116
-schema: 2.0.0
+title: Remove-CMGlobalCondition
+titleSuffix: Configuration Manager
+description: Removes a Configuration Manager global condition object.
+
+ms.date: 01/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: reference
+author: mumian
+ms.author: jgao
+manager: dougeby
 ---
 
 # Remove-CMGlobalCondition
 
 ## SYNOPSIS
-Removes a global condition object.
+
+Removes a Configuration Manager global condition object.
 
 ## SYNTAX
 
 ### SearchByValueMandatory (Default)
-```
+
+```powershell 
 Remove-CMGlobalCondition -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-```
+
+```powershell
 Remove-CMGlobalCondition -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
-```
+
+```powershell
 Remove-CMGlobalCondition -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Remove-CMGlobalCondition** cmdlet removes a global condition object.
 
 Microsoft System Center Configuration Manager uses global conditions to represent business or technical conditions.
@@ -42,7 +54,8 @@ You cannot remove read-only global conditions.
 ## EXAMPLES
 
 ### Example 1: Remove a global condition
-```
+
+```powershell
 PS C:\> Remove-CMGlobalCondition -Name "GC56" -Force
 ```
 
@@ -50,7 +63,8 @@ This command removes a global condition named GC56.
 Because the command uses the *Force* parameter, the system does not prompt you before it removes the condition.
 
 ### Example 2: Remove a global condition using a variable
-```
+
+```powershell
 PS C:\> $CMGC = Get-CMGlobalCondition -Name "GC57"
 PS C:\> Remove-CMGlobalCondition -InputObject $CMGC
 Remove
@@ -66,22 +80,8 @@ This command does not use the *Force* parameter, so it prompts you for confirmat
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -97,6 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Performs the action without a confirmation message.
 
 ```yaml
@@ -112,6 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -127,6 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
 Specifies an array of identifiers of global conditions.
 This value corresponds to the **CI_ID** property of a global condition object.
 
@@ -143,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies a global condition object.
 To obtain a global condition object, use the **Get-CMGlobalCondition** cmdlet.
 
@@ -159,6 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies an array of names for global conditions.
 This value corresponds to the **LocalizedDisplayName** property of a global condition object.
 
@@ -174,7 +179,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -191,20 +213,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
-[Get-CMGlobalCondition](Get-CMGlobalCondition.md)
-
-[New-CMGlobalCondition](New-CMGlobalCondition.md)
-
-[Set-CMGlobalCondition](Set-CMGlobalCondition.md)
-
-
+- [New-CMGlobalCondition](./Get-CMGlobalCondition.md)
+- [Get-CMGlobalCondition](./Set-CMGlobalCondition.md)
+- [Set-CMGlobalCondition](./Remove-CMGlobalCondition.md)
