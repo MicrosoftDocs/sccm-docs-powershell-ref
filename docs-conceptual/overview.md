@@ -2,7 +2,7 @@
 title: Get started with ConfigMgr cmdlets
 titleSuffix: Configuration Manager
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 09/19/2018
+ms.date: 04/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -100,5 +100,5 @@ After you have installed the Configuration Manager cmdlet help, you can get help
 
 For more information about what's changed in the most recent release of Configuration Manager, select the latest **Release Notes** from the table of contents to the left. 
 
-For more information on individual cmdlets, see the [Configuration Manager cmdlet reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
+For more information on individual cmdlets, see the [Configuration Manager cmdlet reference](https://docs.microsoft.com/powershell/module/configurationmanager/about_configurationmanager_cmdlets?view=sccm-ps).
 
