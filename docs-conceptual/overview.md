@@ -2,7 +2,7 @@
 title: Get started with ConfigMgr cmdlets
 titleSuffix: Configuration Manager
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 09/19/2018
+ms.date: 04/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
