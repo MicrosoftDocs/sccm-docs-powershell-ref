@@ -162,7 +162,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CMTaskSequence](Get-CMTaskSequence.md)
+[New-CMTaskSequence](Net-CMTaskSequence.md)
 
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 
