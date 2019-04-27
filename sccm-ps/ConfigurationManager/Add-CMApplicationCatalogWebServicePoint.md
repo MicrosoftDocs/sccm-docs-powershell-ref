@@ -1,7 +1,7 @@
 ---
 title: Add-CMApplicationCatalogWebServicePoint
 titleSuffix: Configuration Manager
-description: The **Add-CMApplicationCatalogWebServicePoint** cmdlet adds an Application Catalog web service point to a Microsoft System Center Configuration Manager site.
+description: Adds an Application Catalog web service point to a Microsoft System Center Configuration Manager site.
 ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other

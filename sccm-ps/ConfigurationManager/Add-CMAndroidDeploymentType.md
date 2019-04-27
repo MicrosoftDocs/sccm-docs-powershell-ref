@@ -1,7 +1,7 @@
 ---
 title: Add-CMAndroidDeploymentType
 titleSuffix: Configuration Manager
-description: The **Add-CMAndroidDeploymentType** cmdlet adds an Android deployment type to an application.
+description: Adds an Android deployment type to an application.
 ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other

@@ -1,7 +1,7 @@
 ---
 title: Add-CMApplicationCatalogWebsitePoint
 titleSuffix: Configuration Manager
-description: The **Add-CMAppv5XDeploymentType** cmdlet adds a Microsoft Application Virtualization (App-V) 5X deployment type to an application.
+description: Adds a Microsoft Application Virtualization (App-V) 5X deployment type to an application.
 ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
