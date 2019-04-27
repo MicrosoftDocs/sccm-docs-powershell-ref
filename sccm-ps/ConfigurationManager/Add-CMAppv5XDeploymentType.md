@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 7BC6E2D5-6E48-4FFE-AEE0-A95D31C6AE55
-online version: https://go.microsoft.com/fwlink/?linkid=833590
-schema: 2.0.0
+title: Add-CMApplicationCatalogWebsitePoint
+titleSuffix: Configuration Manager
+description: The **Add-CMAppv5XDeploymentType** cmdlet adds a Microsoft Application Virtualization (App-V) 5X deployment type to an application.
+ms.date: 04/27/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMAppv5XDeploymentType

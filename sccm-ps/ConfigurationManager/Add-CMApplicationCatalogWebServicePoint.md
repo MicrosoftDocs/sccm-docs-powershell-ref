@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: FF20CB6D-729B-409C-A5E5-CBF1B3299EEC
-online version: https://go.microsoft.com/fwlink/?linkid=833583
-schema: 2.0.0
+title: Add-CMApplicationCatalogWebServicePoint
+titleSuffix: Configuration Manager
+description: The **Add-CMApplicationCatalogWebServicePoint** cmdlet adds an Application Catalog web service point to a Microsoft System Center Configuration Manager site.
+ms.date: 04/27/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMApplicationCatalogWebServicePoint
