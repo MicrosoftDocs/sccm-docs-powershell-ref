@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: F07B1E32-8C9F-4625-ABE9-A6A75E688700
-online version: https://go.microsoft.com/fwlink/?linkid=833606
-schema: 2.0.0
+title: Add-CMCertificateRegistrationPoint
+titleSuffix: Configuration Manager
+description: Adds a certificate registration point role to a site system server.
+ms.date: 04/27/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMCertificateRegistrationPoint
