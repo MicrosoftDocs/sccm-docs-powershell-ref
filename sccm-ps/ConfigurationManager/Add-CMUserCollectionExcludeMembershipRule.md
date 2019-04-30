@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: 77F63813-BD92-4AB2-B64E-76E09AB9BB60
-online version: https://go.microsoft.com/fwlink/?linkid=833772
-schema: 2.0.0
+title: Add-CMUserCollectionExcludeMembershipRule
+titleSuffix: Configuration Manager
+description: Adds an exclude membership rule to one or more Configuration Manager user collections.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMUserCollectionExcludeMembershipRule
