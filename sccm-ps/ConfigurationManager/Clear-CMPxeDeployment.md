@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: A5700EDF-92D7-48DE-B942-F0C3274E2331
-online version: https://go.microsoft.com/fwlink/?linkid=833850
-schema: 2.0.0
+title: Clear-CMPxeDeployment
+titleSuffix: Configuration Manager
+description: Clears the status of the most recent PXE deployment in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Clear-CMPxeDeployment
