@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 654933B9-A75A-449B-8653-966A60DEFAA1
-online version: https://go.microsoft.com/fwlink/?linkid=833579
-schema: 2.0.0
+title: Add-CMAndroidDeploymentType
+titleSuffix: Configuration Manager
+description: Adds an Android deployment type.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMAndroidDeploymentType

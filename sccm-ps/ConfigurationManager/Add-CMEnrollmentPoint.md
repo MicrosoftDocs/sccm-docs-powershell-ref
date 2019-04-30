@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: E9F24F2A-DE9D-4482-9C84-47801238F419
-online version: https://go.microsoft.com/fwlink/?linkid=833673
-schema: 2.0.0
+title: Add-CMEnrollmentPoint
+titleSuffix: Configuration Manager
+description: Adds an enrollment point to Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMEnrollmentPoint

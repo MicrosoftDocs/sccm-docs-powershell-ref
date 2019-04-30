@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: F0E16254-CBE7-4323-B877-2BBBA28E9E24
-online version: https://go.microsoft.com/fwlink/?linkid=833665
-schema: 2.0.0
+title: Add-CMDriverToDriverPackage
+titleSuffix: Configuration Manager
+description: Adds a device driver to a Configuration Manager driver package.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMDriverToDriverPackage
