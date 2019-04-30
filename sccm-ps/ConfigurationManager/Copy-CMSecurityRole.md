@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: ED2B0513-DEEB-472B-B863-3E456B8182CF
-online version: https://go.microsoft.com/fwlink/?linkid=833922
-schema: 2.0.0
+title: Copy-CMSecurityRole
+titleSuffix: Configuration Manager
+description: Creates a custom security role.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Copy-CMSecurityRole

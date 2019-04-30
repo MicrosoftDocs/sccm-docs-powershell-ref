@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 29E31091-FF04-446F-82EC-FD3FFF90B526
-online version: https://go.microsoft.com/fwlink/?linkid=833872
-schema: 2.0.0
+title: ConvertFrom-CMApplication
+titleSuffix: Configuration Manager
+description: Converts an application SDK object to an application object.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # ConvertFrom-CMApplication
