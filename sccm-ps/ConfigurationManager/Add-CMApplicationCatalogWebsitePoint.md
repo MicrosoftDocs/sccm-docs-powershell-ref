@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: E45EF36A-ED49-4B86-B635-B299D124D14B
-online version: https://go.microsoft.com/fwlink/?linkid=833586
-schema: 2.0.0
+title: Add-CMApplicationCatalogWebsitePoint
+titleSuffix: Configuration Manager
+description: Adds an Application Catalog website point to a Microsoft System Center Configuration Manager site.
+ms.date: 04/27/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMApplicationCatalogWebsitePoint

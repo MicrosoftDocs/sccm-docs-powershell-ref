@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: D3C9742D-2955-4C19-B6E4-3D8A3484D97A
-online version: https://go.microsoft.com/fwlink/?linkid=833594
-schema: 2.0.0
+title: Add-CMAppvDeploymentType
+titleSuffix: Configuration Manager
+description: Adds a Microsoft Application Virtualization (App-V) 4 deployment type to an application.
+ms.date: 04/27/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMAppvDeploymentType
