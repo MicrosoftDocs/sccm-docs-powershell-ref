@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: 3075773B-6EDE-4F06-96B1-9B909098F9F6
-online version: https://go.microsoft.com/fwlink/?linkid=833987
-schema: 2.0.0
+title: Enable-CMProgram
+titleSuffix: Configuration Manager
+description: Enables programs in Configuration Manager packages.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Enable-CMProgram

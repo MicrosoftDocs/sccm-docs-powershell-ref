@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Alerts.dll-Help.xml
-ms.assetid: 4E9F8E2E-9C21-46C9-8818-F1DF00616E4D
-online version: https://go.microsoft.com/fwlink/?linkid=833969
-schema: 2.0.0
+title: Enable-CMAlert
+titleSuffix: Configuration Manager
+description: Enables Configuration Manager alerts.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Enable-CMAlert
