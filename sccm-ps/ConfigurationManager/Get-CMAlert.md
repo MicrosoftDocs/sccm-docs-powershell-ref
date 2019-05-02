@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Alerts.dll-Help.xml
-ms.assetid: AB20D6C3-3817-400F-B098-371536B4513C
-online version: https://go.microsoft.com/fwlink/?linkid=834073
-schema: 2.0.0
+title: Get-CMAlert
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager alerts.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMAlert

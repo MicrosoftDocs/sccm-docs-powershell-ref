@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: FA67EA36-5834-4957-BF85-08B2C9E61193
-online version: https://go.microsoft.com/fwlink/?linkid=834049
-schema: 2.0.0
+title: Get-CMAccessAccount
+titleSuffix: Configuration Manager
+description: Gets an access account.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMAccessAccount
