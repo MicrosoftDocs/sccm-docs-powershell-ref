@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMSoftwareUpdateCategory
+titleSuffix: Configuration Manager
+description: Gets a software update category.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMSoftwareUpdateCategory
 
 ## SYNOPSIS
-Gets a software update category
+Gets a software update category.
 
 ## SYNTAX
 

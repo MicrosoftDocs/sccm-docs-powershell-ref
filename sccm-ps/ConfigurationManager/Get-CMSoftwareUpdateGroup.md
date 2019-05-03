@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: F8EFAEC4-2716-4761-BA06-D4B32F6ECB15
-online version: https://go.microsoft.com/fwlink/?linkid=833913
-schema: 2.0.0
+title: Get-CMSoftwareUpdateGroup
+titleSuffix: Configuration Manager
+description: Gets software update groups.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMSoftwareUpdateGroup
