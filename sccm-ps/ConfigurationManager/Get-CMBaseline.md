@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: C01E6314-2F4A-4D25-B420-F73CA7F48CBD
-online version: https://go.microsoft.com/fwlink/?linkid=834130
-schema: 2.0.0
+title: Get-CMBaseline
+titleSuffix: Configuration Manager
+description: Gets configuration baselines.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMBaseline

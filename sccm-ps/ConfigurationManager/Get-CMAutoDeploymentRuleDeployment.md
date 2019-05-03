@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: D3A68B3C-24E1-4F30-9395-C8FDAC2CE30E
-online version: https://go.microsoft.com/fwlink/?linkid=834124
-schema: 2.0.0
+title: Get-CMAutoDeploymentRuleDeployment
+titleSuffix: Configuration Manager
+description: Gets the deployments associated with an automatic deployment rule.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMAutoDeploymentRuleDeployment
