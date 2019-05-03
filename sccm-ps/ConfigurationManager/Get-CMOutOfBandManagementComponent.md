@@ -111,8 +111,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-## RELATED LINKS
-
-[Set-CMOutOfBandManagementComponent](Set-CMOutOfBandManagementComponent.md)
 
 
