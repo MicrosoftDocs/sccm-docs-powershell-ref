@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Migration.dll-Help.xml
-ms.assetid: 34B1F9D6-3D89-46FF-AA23-A9B40E4433B0
-online version: https://go.microsoft.com/fwlink/?linkid=833722
-schema: 2.0.0
+title: Get-CMInitialModifiableSecuredCategory
+titleSuffix: Configuration Manager
+description: Gets modifiable secured categories.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMInitialModifiableSecuredCategory

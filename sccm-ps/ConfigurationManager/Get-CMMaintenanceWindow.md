@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 78ED339E-4DB8-4C21-B704-85031ECF01F8
-online version: https://go.microsoft.com/fwlink/?linkid=833736
-schema: 2.0.0
+title: Get-CMMaintenanceWindow
+titleSuffix: Configuration Manager
+description: Gets the maintenance windows for a collection.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMMaintenanceWindow

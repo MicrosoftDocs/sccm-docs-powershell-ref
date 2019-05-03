@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 72166BF0-B4CD-4571-92FC-D42CF98BC1AE
-online version: https://go.microsoft.com/fwlink/?linkid=833741
-schema: 2.0.0
+title: Get-CMManagementPoint
+titleSuffix: Configuration Manager
+description: Gets a management point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMManagementPoint

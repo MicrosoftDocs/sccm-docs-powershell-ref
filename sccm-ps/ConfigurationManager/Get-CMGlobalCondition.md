@@ -2,7 +2,6 @@
 title: Get-CMGlobalCondition
 titleSuffix: Configuration Manager
 description: Gets Configuration Manager global condition objects.
-
 ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
