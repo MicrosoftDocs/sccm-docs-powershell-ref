@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: D8EA1510-9DA9-4DE1-BCBB-D5AA2D737E58
-online version: https://go.microsoft.com/fwlink/?linkid=833944
-schema: 2.0.0
+title: Get-CMStatusReportingComponent
+titleSuffix: Configuration Manager
+description: Gets an object representing a status reporting component.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMStatusReportingComponent
