@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: 8AD90CCA-3F40-4D64-8FD9-C9028A0E15E7
-online version: https://go.microsoft.com/fwlink/?linkid=833980
-schema: 2.0.0
+title: Get-CMUserCollection
+titleSuffix: Configuration Manager
+description: Gets one or more user collections in the Configuration Manager hierarchy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMUserCollection

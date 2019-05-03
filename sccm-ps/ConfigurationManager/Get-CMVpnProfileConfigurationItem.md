@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Dcm-help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMVpnProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Gets a vpn profile configuration item.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMVpnProfileConfigurationItem
 
 ## SYNOPSIS
-Gets a vpn profile configuration item
+Gets a vpn profile configuration item.
 
 ## SYNTAX
 

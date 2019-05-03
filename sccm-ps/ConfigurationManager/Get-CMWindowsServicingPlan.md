@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum-help.xml
-ms.assetid: A33A1535-F234-4E1A-896D-2832DDA6B2A3
-online version: https://go.microsoft.com/fwlink/?linkid=834020
-schema: 2.0.0
+title: Get-CMWindowsServicingPlan
+titleSuffix: Configuration Manager
+description: Gets a Windows 10 servicing plan.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMWindowsServicingPlan
