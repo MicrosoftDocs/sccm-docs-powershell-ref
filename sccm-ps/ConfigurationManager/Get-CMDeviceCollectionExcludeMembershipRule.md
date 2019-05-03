@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: 0FC57289-D6EF-48C3-A352-F1A3CE60687C
-online version: https://go.microsoft.com/fwlink/?linkid=833627
-schema: 2.0.0
+title: Get-CMDeviceCollectionExcludeMembershipRule
+titleSuffix: Configuration Manager
+description: Gets the exclude membership rules from one or more device collections in the Configuration Manager hierarchy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDeviceCollectionExcludeMembershipRule

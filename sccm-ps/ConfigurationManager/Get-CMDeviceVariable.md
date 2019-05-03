@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 783C11B5-AF37-4B77-A78D-C43C7E1330DE
-online version: https://go.microsoft.com/fwlink/?linkid=833644
-schema: 2.0.0
+title: Get-CMDeviceVariable
+titleSuffix: Configuration Manager
+description: Gets device variables of a Configuration Manager device.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDeviceVariable
