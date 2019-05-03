@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMTSStepConditionQueryWmi
+titleSuffix: Configuration Manager
+description: Gets a t s step condition query wmi.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMTSStepConditionQueryWmi
 
 ## SYNOPSIS
-Gets a t s step condition query wmi
+Gets a t s step condition query wmi.
 
 ## SYNTAX
 
