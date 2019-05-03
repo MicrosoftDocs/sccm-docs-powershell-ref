@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Migration.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMMigrationJob
+titleSuffix: Configuration Manager
+description: Gets a migration job.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMMigrationJob
 
 ## SYNOPSIS
-Gets a migration job
+Gets a migration job.
 
 ## SYNTAX
 

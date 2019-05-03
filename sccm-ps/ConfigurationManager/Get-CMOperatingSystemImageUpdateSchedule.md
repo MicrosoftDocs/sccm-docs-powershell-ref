@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 3057C77C-7B9C-4413-AC06-DF8A17AD448C
-online version: https://go.microsoft.com/fwlink/?linkid=833793
-schema: 2.0.0
+title: Get-CMOperatingSystemImageUpdateSchedule
+titleSuffix: Configuration Manager
+description: Retrieves an operating system image update schedule object in Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMOperatingSystemImageUpdateSchedule
