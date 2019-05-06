@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: BBCCCE7A-A366-4D6D-991E-198CCFED8A00
-online version: https://go.microsoft.com/fwlink/?linkid=834145
-schema: 2.0.0
+title: Invoke-CMForestDiscovery
+titleSuffix: Configuration Manager
+description: Starts a forest discovery operation in Active Directory.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMForestDiscovery

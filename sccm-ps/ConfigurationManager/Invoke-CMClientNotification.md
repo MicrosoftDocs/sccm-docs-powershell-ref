@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: C8BFF87E-662F-486D-9F4A-27428FD4DC7A
-online version: https://go.microsoft.com/fwlink/?linkid=834105
-schema: 2.0.0
+title: Invoke-CMClientNotification
+titleSuffix: Configuration Manager
+description: Sends a notification to client computers to trigger an immediate client action.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMClientNotification
