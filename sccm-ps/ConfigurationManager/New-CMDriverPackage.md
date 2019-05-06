@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 02B40786-6500-4F35-B8DC-531AAF099381
-online version: https://go.microsoft.com/fwlink/?linkid=833632
-schema: 2.0.0
+title: New-CMDriverPackage
+titleSuffix: Configuration Manager
+description: Creates a driver package.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMDriverPackage

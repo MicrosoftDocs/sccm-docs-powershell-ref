@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMComplianceRuleValue
+titleSuffix: Configuration Manager
+description: Creates a compliance rule value.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMComplianceRuleValue
 
 ## SYNOPSIS
-Creates a compliance rule value
+Creates a compliance rule value.
 
 ## SYNTAX
 
