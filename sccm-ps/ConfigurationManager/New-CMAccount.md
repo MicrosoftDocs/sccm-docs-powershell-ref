@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Accounts.dll-Help.xml
-ms.assetid: 759B2F3E-8C83-44AB-9857-2EFF8FDF3338
-online version: https://go.microsoft.com/fwlink/?linkid=834215
-schema: 2.0.0
+title: New-CMAccount
+titleSuffix: Configuration Manager
+description: Creates a Configuration Manager user account.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMAccount
