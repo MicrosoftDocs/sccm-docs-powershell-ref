@@ -48,28 +48,11 @@ Name:               BGroup01
 SiteSystemCount:    0
 ```
 
-This command gets a boundary group that is specified by the identifier 1600231.  
+This command gets a boundary group that is specified by the identifier 1600231.
 
-### Example 2: Get a boundary group by name
+### Example 2: Get multiple boundary groups that are specified by name
 ```
-PS C:\> Get-CMBoundaryGroup -Name "BGroup01"
-CreatedBy:          Contoso\ENarvaez
-CreatedOn           5/17/2012 07:13:02 AM
-DefaultSiteCode: 
-Description: 
-GroupID:            1600231
-MemberCount:        80
-ModifiedBy:         
-ModifiedOn:         
-Name:               BGroup01 
-SiteSystemCount:    0
-```
-
-This command gets the boundary group "BGroup01".
-
-### Example 3: Get multiple boundary groups using a wildcard
-```
-PS C:\> Get-CMBoundaryGroup -Name "BGroup0*"
+PS C:\> Get-CMBoundaryGroup -Name "BGroup01", "BGroup02", "BGroup03"
 CreatedBy:          Contoso\ENarvaez
 CreatedOn           5/17/2012 07:13:02 AM
 DefaultSiteCode: 
@@ -102,39 +85,9 @@ Name:               BGroup03
 SiteSystemCount:    0
 ```
 
-This command gets multiple boundary groups that match "BGroup0*".
+This command gets multiple boundary groups that are specified by the names BGroup01, BGroup02, and BGroup03.
 
 ## PARAMETERS
-
-### -Id
-Specifies an array of identifiers (IDs) for one or more boundary groups. This id is represented by the GroupID property of the object this cmdlet returns.
-
-```yaml
-Type: String[]
-Parameter Sets: SearchByIdMandatory
-Aliases: GroupId
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name for a boundary group.
-
-```yaml
-Type: String
-Parameter Sets: SearchByName
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: True
-```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -166,6 +119,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Id
+Specifies an array of identifiers (IDs) for one or more boundary groups.
+
+```yaml
+Type: String[]
+Parameter Sets: SearchByIdMandatory
+Aliases: GroupId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name for a boundary group.
+
+```yaml
+Type: String
+Parameter Sets: SearchByName
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
