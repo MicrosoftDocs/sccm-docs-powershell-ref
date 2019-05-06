@@ -35,19 +35,10 @@ The **Set-CMDistributionPointGroup** cmdlet changes the configuration settings o
 
 ## EXAMPLES
 
-### Example 1: Add a distribution point group to a security scope
+### Example 1: Rename Distribution Point Group and add a Description
 ```
-PS C:\> Set-CMDistributionPointGroup -SecurityScopeAction AddMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
+PS C:\> Set-CMDistributionPointGroup -Name "My DP Group" -NewName "All DPs" -Description "Contains all DPs"
 ```
-
-This command adds the distribution point group as a member of the security scope named CScope02.
-
-### Example 2: Remove a distribution point group from a security scope
-```
-PS C:\> Set-CMDistributionPointGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
-```
-
-This command removes the distribution point group named DpgDept01 as a member of the security scope named CScope02.
 
 ## PARAMETERS
 
