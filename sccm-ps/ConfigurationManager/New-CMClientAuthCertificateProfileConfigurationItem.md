@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=834303
-schema: 2.0.0
-ms.assetid: F5C5D86D-D784-4F14-A172-A57416465C12
+title: New-CMClientAuthCertificateProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Creates a certificate profile.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMClientAuthCertificateProfileConfigurationItem

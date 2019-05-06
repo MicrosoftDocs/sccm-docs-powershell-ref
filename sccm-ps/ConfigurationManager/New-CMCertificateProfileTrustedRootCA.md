@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 621AC1DA-C4DB-4559-90BF-B6EAEB9560D3
-online version: https://go.microsoft.com/fwlink/?linkid=834301
-schema: 2.0.0
+title: New-CMCertificateProfileTrustedRootCA
+titleSuffix: Configuration Manager
+description: Creates a trusted CA certificate profile.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMCertificateProfileTrustedRootCA
