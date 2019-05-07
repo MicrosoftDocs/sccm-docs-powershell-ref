@@ -72,7 +72,7 @@ If the C:\\Program Files (x86)\\Microsoft Configuration Manager\\AdminConsole\\b
 
 Otherwise, the following can be used:
 
-`Import-Module 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\ConfigurationManager'`
+`Import-Module $env:SMS_ADMIN_UI_PATH\..\ConfigurationManager`
 
 ## How to provide feedback or report issues
 Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, use
