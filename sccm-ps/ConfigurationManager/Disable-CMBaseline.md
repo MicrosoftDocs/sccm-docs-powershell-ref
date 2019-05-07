@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: A8CBD6AE-CE6E-4F46-91E1-9E206E798C57
 online version: https://go.microsoft.com/fwlink/?linkid=833943
@@ -36,9 +36,13 @@ After you disable a configuration baseline, System Center Configuration Manager 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Disable a configuration baseline
 ```
-PS C:\>Disable-CMBaseline -Name "BLconfig01"
+PS XYZ:\>Disable-CMBaseline -Name "BLconfig01"
 ```
 
 This command disables the configuration baseline named BLconfig01.

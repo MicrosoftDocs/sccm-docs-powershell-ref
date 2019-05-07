@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 0A99CDA6-73E7-4D69-8681-E0FCAD5E09FC
 online version: https://go.microsoft.com/fwlink/?linkid=834165
@@ -36,9 +36,13 @@ You can specify the site upgrade by using its name or ID, or by specifying an ob
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Invoke a secondary site upgrade by using a site name
 ```
-PS C:\>Invoke-CMSecondarySiteUpgrade -SiteName "ClientSecSiteUpgrade03" -Force
+PS XYZ:\>Invoke-CMSecondarySiteUpgrade -SiteName "ClientSecSiteUpgrade03" -Force
 ```
 
 This command invokes a secondary site upgrade from a site named ClientSecSiteUpgrade03.

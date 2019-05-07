@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Migration.dll-Help.xml
 ms.assetid: B4AFB52F-322C-446C-BE3D-6CB67373D957
 online version: https://go.microsoft.com/fwlink/?linkid=833926
@@ -26,9 +26,13 @@ Objects on the exclusion list are available for migration, but System Center Con
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Specify a migration exclusion list
 ```
-PS C:\> Set-CMMigrationExclusionList -Name "ContosoUsersWest01"
+PS XYZ:\> Set-CMMigrationExclusionList -Name "ContosoUsersWest01"
 ```
 
 This command adds the objects in the array ContosoUsersWest01 to the migration exclusion list.

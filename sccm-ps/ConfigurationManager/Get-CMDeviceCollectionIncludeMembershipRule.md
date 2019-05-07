@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 3CB9C62E-6B40-491C-9FB6-4328215AA7E9
 online version: https://go.microsoft.com/fwlink/?linkid=833631
@@ -71,16 +71,20 @@ The **Get-CMDeviceCollectionIncludeMembershipRule** cmdlet gets one or more Incl
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get all Include Collections membership rules
 ```
-PS C:\> Get-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device"
+PS XYZ:\> Get-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device"
 ```
 
 This command gets all Include Collections membership rules for the collection named Device.
 
 ### Example 2: Get Include Collections rules by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device" | Get-CMDeviceCollectionIncludeMembershipRule
+PS XYZ:\> Get-CMCollection -Name "Device" | Get-CMDeviceCollectionIncludeMembershipRule
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Get-CMDeviceCollectionIncludeMembershipRule**, which gets all Include Collections membership rules for the device collection object.

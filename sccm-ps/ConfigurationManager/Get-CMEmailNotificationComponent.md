@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: B1E83113-4742-40EC-A78F-EC46C8C50A5E
 online version: https://go.microsoft.com/fwlink/?linkid=833672
@@ -22,16 +22,20 @@ The **Get-CMEmailNotificationComponent** cmdlet gets one or more email notificat
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get an email notification component by using a site code
 ```
-PS C:\> Get-CMEmailNotificationComponent -SiteCode "CM2"
+PS XYZ:\> Get-CMEmailNotificationComponent -SiteCode "CM2"
 ```
 
 This command gets a notification component for the site that has the site code CM2.
 
 ### Example 2: Get an email notification component by using a site system server name
 ```
-PS C:\> Get-CMEmailNotificationComponent -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
+PS XYZ:\> Get-CMEmailNotificationComponent -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
 ```
 
 This command gets a notification component for the site that has the server that has the specified name.

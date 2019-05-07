@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 32230562-64EC-4AFD-A49F-5580589EE790
 online version: https://go.microsoft.com/fwlink/?linkid=834107
@@ -36,17 +36,21 @@ You can use this cmdlet to remove redundant fallback status points or to remove 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a specified fallback status point
 ```
-PS C:\> Remove-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
+PS XYZ:\> Remove-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
 ```
 
 This command removes the fallback status point for the site with the site code CM1 and the system name Server21.West01.Contoso.com.
 
 ### Example 2: Remove a fallback status point object
 ```
-PS C:\> $CMFSP = Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
-PS C:\> Remove-CMFallbackStatusPoint -InputObject $CMFSP
+PS XYZ:\> $CMFSP = Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
+PS XYZ:\> Remove-CMFallbackStatusPoint -InputObject $CMFSP
 ```
 
 The first command gets a fallback status point for the site with the site code CM1 and the system name Server21.West01.Contoso.com and stores that object in the $CMFSP variable.

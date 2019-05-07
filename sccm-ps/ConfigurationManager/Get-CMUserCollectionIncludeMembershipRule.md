@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 547CD0EB-6C44-45F5-9466-DEC1B9338C5E
 online version: https://go.microsoft.com/fwlink/?linkid=833992
@@ -75,9 +75,13 @@ For more information about membership rules, see [Introduction to Collections in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get the include membership rules from a user collection
 ```
-PS C:\> Get-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
+PS XYZ:\> Get-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
 ```
 
 This command gets the include membership rules for the collection that has the ID SMSDM001 from the user collection that has the ID 9990000D.

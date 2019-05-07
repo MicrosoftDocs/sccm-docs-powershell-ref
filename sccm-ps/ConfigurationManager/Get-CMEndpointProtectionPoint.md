@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 6B74ECA1-5193-46F2-8C2F-976B6E5D6EAD
 online version: https://go.microsoft.com/fwlink/?linkid=833681
@@ -30,9 +30,13 @@ For more information about Endpoint Protection in Microsoft System Center Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get an Endpoint Protection point
 ```
-PS C:\> Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
+PS XYZ:\> Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
 ```
 
 This command gets an Endpoint Protection point.

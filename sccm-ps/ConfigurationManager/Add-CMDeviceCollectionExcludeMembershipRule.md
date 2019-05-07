@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: E8A0B8E9-EDDF-4281-8DF4-C6D3C90EC3F5
 online version: https://go.microsoft.com/fwlink/?linkid=833645
@@ -76,9 +76,13 @@ For more information on these rules, see [Introduction to Collections in Configu
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add an exclude collection rule to a single device collection
 ```
-PS C:\>Add-CMDeviceCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS XYZ:\>Add-CMDeviceCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command excludes the members of the All Mobile Devices collection, which has the ID SMSDM001, from the device collection, which has the ID 9990000D0.

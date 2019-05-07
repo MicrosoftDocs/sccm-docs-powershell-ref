@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: F7D78486-A360-44AF-997A-37CDA8BB7844
 online version: https://go.microsoft.com/fwlink/?linkid=833703
@@ -33,9 +33,13 @@ You can use this cmdlet to get a fallback status point to use with other cmdlets
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a fallback status point
 ```
-PS C:\> Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
+PS XYZ:\> Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
 ```
 
 This command gets a fallback status point for the site with the site code cm1 and the system name Server21.West01.Contoso.com.

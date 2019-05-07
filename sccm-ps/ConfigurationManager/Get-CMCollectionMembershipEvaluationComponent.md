@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 7D654E76-C29F-49C5-9795-A9B845086DAE
 online version: https://go.microsoft.com/fwlink/?linkid=834233
@@ -24,16 +24,20 @@ You can specify which value to get by site server name or site code.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get an evaluation period for a site code
 ```
-PS C:\> Get-CMCollectionMembershipEvaluationComponent -SiteCode "CM4"
+PS XYZ:\> Get-CMCollectionMembershipEvaluationComponent -SiteCode "CM4"
 ```
 
 This command gets the evaluation frequency for collection membership for the specified site code.
 
 ### Example 2: Get an evaluation period for a system
 ```
-PS C:\> Get-CMCollectionMembershipEvaluationComponent -SiteSystemServerName "CM01.West01.Contoso.com"
+PS XYZ:\> Get-CMCollectionMembershipEvaluationComponent -SiteSystemServerName "CM01.West01.Contoso.com"
 ```
 
 This command gets the evaluation frequency for the server named CM01.West01.Contoso.com.

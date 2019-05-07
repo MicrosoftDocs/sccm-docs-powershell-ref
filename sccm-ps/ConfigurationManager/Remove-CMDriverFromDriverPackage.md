@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: C1210FA1-5B24-439D-858B-D97280BA8236
 online version: https://go.microsoft.com/fwlink/?linkid=834081
@@ -72,9 +72,13 @@ When you remove a driver from a driver package, the device driver content is del
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a driver from a driver package
 ```
-PS C:\> Remove-CMDriverfromDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -DriverPackageName "DrvPkg01"
+PS XYZ:\> Remove-CMDriverfromDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -DriverPackageName "DrvPkg01"
 ```
 
 This command removes the driver named Adaptec Embedded SCSI HostRAID Controller from the boot image named DrvPkg01.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A0E3C123-0943-4185-A255-37CE17B6D7F7
 online version: https://go.microsoft.com/fwlink/?linkid=833921
@@ -35,9 +35,13 @@ You can specify a software update point by site code or by the name of the compu
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a software update point
 ```
-PS C:\> Get-CMSoftwareUpdatePoint -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+PS XYZ:\> Get-CMSoftwareUpdatePoint -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
 ```
 
 The command gets a software update point that UpdateSystem.Western.Contoso.com hosts.

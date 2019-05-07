@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=834127
 schema: 2.0.0
@@ -35,9 +35,13 @@ The **Get-CMAutomaticAmtProvisioningStatus** cmdlet gets the current automatic p
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get the automatic provisioning status of a computer
 ```
-PS C:\> Get-CMAutomaticAmtProvisioningStatus -DeviceName "CMDIV-WEST03"
+PS XYZ:\> Get-CMAutomaticAmtProvisioningStatus -DeviceName "CMDIV-WEST03"
 ```
 
 This command gets the automatic provisioning status of a computer with an AMT management controller named CMDIV-WEST03.

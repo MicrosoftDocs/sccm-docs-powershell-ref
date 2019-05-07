@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: D8EA1510-9DA9-4DE1-BCBB-D5AA2D737E58
 online version: https://go.microsoft.com/fwlink/?linkid=833944
@@ -23,9 +23,13 @@ This object provides information about the client configuration and server confi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get status reporting components
 ```
-PS C:\> Get-CMStatusReportingComponent -SiteCode "CM1"
+PS XYZ:\> Get-CMStatusReportingComponent -SiteCode "CM1"
 ```
 
 This command gets the status reporting components that Set-CMStatusReportingComponent configures for the site.

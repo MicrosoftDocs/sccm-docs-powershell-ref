@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A4563737-1BF4-4AD1-A9D3-CFD2F5564586
 online version: https://go.microsoft.com/fwlink/?linkid=833676
@@ -38,9 +38,13 @@ For more information about site system roles, see [Install and Configure Site Sy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add an enrollment proxy point
 ```
-PS C:\>Add-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "CMEnrollmentProxyPoint.Western.Contoso.com"
+PS XYZ:\>Add-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "CMEnrollmentProxyPoint.Western.Contoso.com"
 ```
 
 This command adds an enrollment proxy point for the Configuration Manager site that has the site code CM1.

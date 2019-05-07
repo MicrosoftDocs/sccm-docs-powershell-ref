@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: CBAF58CB-B602-4A3D-ACAD-61078090F657
 online version: https://go.microsoft.com/fwlink/?linkid=834029
@@ -39,17 +39,21 @@ You can use this cmdlet in System Center Configuration Manager to create a packa
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Export a package by using an ID
 ```
-PS C:\>Export-CMPackage -Id "ST120001" -ExportFilePath "\\Deploy01\ExportPackages"
+PS XYZ:\>Export-CMPackage -Id "ST120001" -ExportFilePath "\\Deploy01\ExportPackages"
 ```
 
 This command exports a package that has the ID ST120001 to the output path \\\\Deploy01\ExportPackages.
 
 ### Example 2: Export a package by using a variable
 ```
-PS C:\> $DeplObj = Get-CMPackage -Id "ST120001"
-PS C:\> Export-CMPackage - "ST120001" -ExportFilePath"\\Deploy01\ExportPackages" -InputObject $DeplObj
+PS XYZ:\> $DeplObj = Get-CMPackage -Id "ST120001"
+PS XYZ:\> Export-CMPackage - "ST120001" -ExportFilePath"\\Deploy01\ExportPackages" -InputObject $DeplObj
 ```
 
 The first command gets the package that has the ID ST120001, and then stores it in the variable $DeplObj.

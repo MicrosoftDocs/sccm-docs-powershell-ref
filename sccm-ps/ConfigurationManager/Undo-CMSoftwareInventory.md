@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: CD47E9D6-4600-43D9-917C-77501237D683
 online version: https://go.microsoft.com/fwlink/?linkid=834273
@@ -35,9 +35,13 @@ The **Undo-CMSoftwareInventory** cmdlet stops collecting information about files
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Stop collecting software inventory data on a file
 ```
-PS C:\>Undo-CMSoftwareInventory -Name "MSXML 6.0 Parser"
+PS XYZ:\>Undo-CMSoftwareInventory -Name "MSXML 6.0 Parser"
 ```
 
 This command stops collecting software inventory data on the file named MSXML 6.0 Parser.

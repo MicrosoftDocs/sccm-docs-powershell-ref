@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 4046A417-80F5-4665-9258-AE12B85F6F09
 online version: https://go.microsoft.com/fwlink/?linkid=833612
@@ -22,11 +22,15 @@ The **New-DepTokenRequest** cmdlet requests a public certificate from Microsoft 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a DEP token request
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "password" -AsPlainText -Force
-PS C:\> $IntuneCreds = New-Object System.Management.Automation.PSCredential ("Username@CompanyName.onmicrosoft.com", $SecPasswd)
-PS C:\> New-CMDepTokenRequest -IntuneCredential $IntuneCreds -Path "c:\test.pem"
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "password" -AsPlainText -Force
+PS XYZ:\> $IntuneCreds = New-Object System.Management.Automation.PSCredential ("Username@CompanyName.onmicrosoft.com", $SecPasswd)
+PS XYZ:\> New-CMDepTokenRequest -IntuneCredential $IntuneCreds -Path "c:\test.pem"
 ```
 
 The first command converts a password to a secure string and stores it in the $SecPasswd variable.

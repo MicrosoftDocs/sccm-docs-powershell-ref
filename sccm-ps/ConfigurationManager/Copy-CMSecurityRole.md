@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: ED2B0513-DEEB-472B-B863-3E456B8182CF
 online version: https://go.microsoft.com/fwlink/?linkid=833922
@@ -37,24 +37,28 @@ If you require additional security roles, you can create a custom security role 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Copy a security role by using an ID
 ```
-PS C:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleId "SMS000CR"
+PS XYZ:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleId "SMS000CR"
 ```
 
 This command creates a new security role named SecRole02 by copying the security role that has the ID SMS000CR.
 
 ### Example 2: Copy a security role by using a name
 ```
-PS C:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleName "Software Update Manager"
+PS XYZ:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleName "Software Update Manager"
 ```
 
 This command creates a new security role named SecRole02 by copying the security role named Software Update Manager.
 
 ### Example 3: Copy a security role
 ```
-PS C:\> $Srole = Get-CMSecurityRole -Name "Software Update Manager"
-PS C:\> Copy-CMSecurityRole -InputObject $Srole -Name "SecRole02"
+PS XYZ:\> $Srole = Get-CMSecurityRole -Name "Software Update Manager"
+PS XYZ:\> Copy-CMSecurityRole -InputObject $Srole -Name "SecRole02"
 ```
 
 The first command gets the security role named Software Update Manager and stores it in the $Srole variable.

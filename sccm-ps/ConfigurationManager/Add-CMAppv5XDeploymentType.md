@@ -1,4 +1,4 @@
----
+﻿---
 title: Add-CMApplicationCatalogWebsitePoint
 titleSuffix: Configuration Manager
 description: Adds a Microsoft Application Virtualization (App-V) 5X deployment type to an application.
@@ -50,16 +50,20 @@ The **Add-CMAppv5XDeploymentType** cmdlet adds a Microsoft Application Virtualiz
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add an App-V 5X deployment type
 ```
-PS C:\>Add-CMAppv5XDeploymentType -ApplicationName "testApp" -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
+PS XYZ:\>Add-CMAppv5XDeploymentType -ApplicationName "testApp" -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
 ```
 
 This command adds an App-V 5X deployment type to the application named testApp.
 
 ### Example 2: Add an App-V 5X deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testApp" | Add-CMAppv5XDeploymentType -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
+PS XYZ:\> Get-CMApplication -Name "testApp" | Add-CMAppv5XDeploymentType -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
 ```
 
 This command gets the application object named testApp and uses the pipeline operator to pass the object to **Add-CMAppV5XDeploymentType**, which adds an App-V 5X deployment type to the application.

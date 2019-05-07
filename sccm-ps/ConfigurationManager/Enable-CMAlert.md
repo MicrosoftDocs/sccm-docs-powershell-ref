@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 ms.assetid: 4E9F8E2E-9C21-46C9-8818-F1DF00616E4D
 online version: https://go.microsoft.com/fwlink/?linkid=833969
@@ -35,17 +35,21 @@ The **Enable-CMAlert** cmdlet enables one or more Microsoft System Center Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Enable an alert by using alert ID
 ```
-PS C:\>Enable-CMAlert -Id "16777223"
+PS XYZ:\>Enable-CMAlert -Id "16777223"
 ```
 
 This command enables an alert that has the ID 16777223.
 
 ### Example 2: Enable an alert by using an alert object variable
 ```
-PS C:\> $AlertObj = Get-CMAlert -Id "16777218"
-PS C:\> Enable-CMAlert -InputObject $AlertObj
+PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777218"
+PS XYZ:\> Enable-CMAlert -InputObject $AlertObj
 ```
 
 The first command gets the alert object that has the ID 16777218, and then stores it in the $AlertObj variable.

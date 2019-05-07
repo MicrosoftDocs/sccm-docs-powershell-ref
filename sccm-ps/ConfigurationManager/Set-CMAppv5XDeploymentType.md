@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 36CD4461-59AB-4C25-9E1B-8EC5C7078EEB
 online version: https://go.microsoft.com/fwlink/?linkid=833639
@@ -53,10 +53,14 @@ The **Set-CMAppv5XDeploymentType** cmdlet changes the settings for a Microsoft A
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Change the name of the deployment type
 ```
-PS C:\> $application = Get-CMApplication -Name "testApp"
-PS C:\> Set-CMAppv5XDeploymentType -Application $application -DeploymentTypeName "Appv5X" -NewName "newAppv5X"
+PS XYZ:\> $application = Get-CMApplication -Name "testApp"
+PS XYZ:\> Set-CMAppv5XDeploymentType -Application $application -DeploymentTypeName "Appv5X" -NewName "newAppv5X"
 ```
 
 The first command gets the application object named testApp and stores the object in the $applicaton variable.
@@ -65,7 +69,7 @@ The second command changes the display name of the deployment type for the appli
 
 ### Example 2: Change the name of the deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -DeploymentTypeName "Appv5X" -ApplicationName "testApp" | Set-CMAppv5XDeploymentType -NewName "newAppv5X"
+PS XYZ:\> Get-CMDeploymentType -DeploymentTypeName "Appv5X" -ApplicationName "testApp" | Set-CMAppv5XDeploymentType -NewName "newAppv5X"
 ```
 
 This command gets the deployment type object named Appv5X for the application named testApp and uses the pipeline operator to pass the object to **Set-CMAppv5XDeployment**, which changes the name of the deployment type object to newAppv5X.

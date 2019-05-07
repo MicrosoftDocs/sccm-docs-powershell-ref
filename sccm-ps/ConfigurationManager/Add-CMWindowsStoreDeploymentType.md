@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 9FD6BC0A-60BE-43DA-9BA2-8555725281EF
 online version: https://go.microsoft.com/fwlink/?linkid=833804
@@ -41,9 +41,13 @@ The **Add-CMWindowsStoreDeploymentType** cmdlet adds a Windows app package (in t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Add-CMWindowsStoreDeploymentType -DeploymentTypeName "DT1" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -Comment "Windows Store Deployment Type" -AddLanguage "en-US","zh-CN"
+PS XYZ:\> Get-CMApplication -Name "Application1" | Add-CMWindowsStoreDeploymentType -DeploymentTypeName "DT1" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -Comment "Windows Store Deployment Type" -AddLanguage "en-US","zh-CN"
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Add-CMWindowsStoreDeploymentType**.
@@ -51,7 +55,7 @@ This command gets the application object named Application1 and uses the pipelin
 
 ### Example 2: Add a Windows app package deployment type
 ```
-PS C:\> Add-CMWindowsStoreDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT2" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -Comment "Windows Store Deployment Type" -AddLanguage "en-US","zh-CN"
+PS XYZ:\> Add-CMWindowsStoreDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT2" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -Comment "Windows Store Deployment Type" -AddLanguage "en-US","zh-CN"
 ```
 
 This command adds the Windows app package deployment type named DT2 from the specified URL to the application named Application1 in English and Chinese.

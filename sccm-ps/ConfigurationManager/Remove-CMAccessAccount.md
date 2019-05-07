@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: D9439146-832E-49E5-A105-B06F9B5B1296
 online version: https://go.microsoft.com/fwlink/?linkid=833861
@@ -115,9 +115,13 @@ For example, members in the Software Update Point Connection Access Account can 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a user from an access account for an application by using its name
 ```
-PS C:\> Remove-CMAccessAccount -ApplicationName "SharePoint 2010" -Type WindowsUser -UserName "CONTOSO\ENarvaez" -Confirm
+PS XYZ:\> Remove-CMAccessAccount -ApplicationName "SharePoint 2010" -Type WindowsUser -UserName "CONTOSO\ENarvaez" -Confirm
 ```
 
 This command removes a Windows user from the access account for an application that is specified by using its name.
@@ -125,8 +129,8 @@ You must confirm the action before the command performs it.
 
 ### Example 2: Remove a group from an access account for a package by using its ID
 ```
-PS C:\> $ID = Get-CMAccessAccount -PackageId "CM1100002" 
-PS C:\> Remove-CMAccessAccount -PackageId $ID -Type WindowsGroup -UserName "CONTOSO\Guest"
+PS XYZ:\> $ID = Get-CMAccessAccount -PackageId "CM1100002" 
+PS XYZ:\> Remove-CMAccessAccount -PackageId $ID -Type WindowsGroup -UserName "CONTOSO\Guest"
 ```
 
 The first command gets the package object ID, and then stores it in the variable $ID.

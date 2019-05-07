@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833724
 schema: 2.0.0
@@ -41,16 +41,20 @@ The **Add-CMNokiaDeploymentType** cmdlet adds a Nokia deployment type to an appl
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a Nokia deployment type
 ```
-PS C:\>Add-CMNokiaDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia" -ContentLocation "\\Server01\Resources\Applications\SIS\FileBrowser.sisx" -Force -AddLanguage "en-US","zh-CN" -Confirm
+PS XYZ:\>Add-CMNokiaDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia" -ContentLocation "\\Server01\Resources\Applications\SIS\FileBrowser.sisx" -Force -AddLanguage "en-US","zh-CN" -Confirm
 ```
 
 This command adds the Nokia deployment type named DTNokia from the specified location to the application named testNokia in English and Chinese.
 
 ### Example 2: Add a Nokia deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testNokia" | Add-CMNokiaDeploymentType -DeploymentTypeName "DTNokia01" -ContentLocation "\\Server01\Resources\Applications\SIS\FileBrowser.sisx" -Force -AddLanguage "en-US","zh-CN" -Confirm
+PS XYZ:\> Get-CMApplication -Name "testNokia" | Add-CMNokiaDeploymentType -DeploymentTypeName "DTNokia01" -ContentLocation "\\Server01\Resources\Applications\SIS\FileBrowser.sisx" -Force -AddLanguage "en-US","zh-CN" -Confirm
 ```
 
 This command gets the application object named testNokia and uses the pipeline operator to pass the object to **Add-CMNokiaDeploymentType**.

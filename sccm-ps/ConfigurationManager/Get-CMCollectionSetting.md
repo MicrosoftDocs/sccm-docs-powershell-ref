@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 3A9B87BA-CB44-4055-812E-BFC3DF7A8018
 online version: https://go.microsoft.com/fwlink/?linkid=834246
@@ -35,16 +35,20 @@ The **Get-CMCollectionSetting** cmdlet gets the settings for a collection.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get the settings for a collection by using the pipeline
 ```
-PS C:\> Get-CMCollection -Id MP500014 | Get-CMCollectionSetting -CollectionType Device
+PS XYZ:\> Get-CMCollection -Id MP500014 | Get-CMCollectionSetting -CollectionType Device
 ```
 
 This command gets the collection object with the ID of MP500014 and uses the pipeline operator to pass the object to **Get-CMCollectionSetting**, which gets the device collection settings for the collection object.
 
 ### Example 2: Get the settings for a collection by name
 ```
-PS C:\> Get-CMCollectionSetting -CollectionName "Devicecol1"
+PS XYZ:\> Get-CMCollectionSetting -CollectionName "Devicecol1"
 ```
 
 This command gets the collection settings for the device collection named Devicecol1.

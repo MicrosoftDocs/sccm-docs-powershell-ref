@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMDeploymentTypeDependency
 titleSuffix: Configuration Manager
 description: Removes a deployment type dependency from Configuration Manager.
@@ -32,12 +32,16 @@ The **Remove-CMDeploymentTypeDependency** cmdlet removes a deployment type depen
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $dpGroup = Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup
-PS C:\> $dpDeps = Get-CMDeploymentTypeDependency -Group $dpGroup
-PS C:\> Remove-CMDeploymentTypeDependency -Group $dpGroup -DeploymentTypeDependency $dpDeps[1] -Force
+PS XYZ:\> $dpGroup = Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup
+PS XYZ:\> $dpDeps = Get-CMDeploymentTypeDependency -Group $dpGroup
+PS XYZ:\> Remove-CMDeploymentTypeDependency -Group $dpGroup -DeploymentTypeDependency $dpDeps[1] -Force
 ```
 
 This command removes a deployment type dependency.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 119D3779-6B17-478C-B39B-22D58DD7100A
 online version: https://go.microsoft.com/fwlink/?linkid=834292
@@ -22,9 +22,13 @@ The **Update-CMClientStatus** cmdlet updates the client status on the local comp
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Update client status settings
 ```
-PS C:\>Update-CMClientStatus
+PS XYZ:\>Update-CMClientStatus
 ```
 
 This command updates the client status on the local computer.

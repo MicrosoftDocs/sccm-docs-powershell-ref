@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: A636E1DD-49D4-4A9D-94BE-167F3D9A4D5D
 online version: https://go.microsoft.com/fwlink/?linkid=834205
@@ -54,23 +54,27 @@ For example, you might want to get a distribution point and then use the [Stop-C
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get all cloud distribution points
 ```
-PS C:\> Get-CMCloudDistributionPoint
+PS XYZ:\> Get-CMCloudDistributionPoint
 ```
 
 This command gets all the cloud distribution points.
 
 ### Example 2: Get a cloud distribution point by name
 ```
-PS C:\> Get-CMCloudDistributionPoint -Name "West01"
+PS XYZ:\> Get-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command gets a distribution point named West01.
 
 ### Example 3: Get a cloud distribution point by ID
 ```
-PS C:\> Get-CMCloudDistributionPoint -Id "16777230"
+PS XYZ:\> Get-CMCloudDistributionPoint -Id "16777230"
 ```
 
 This command gets a distribution point with the specified ID.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: F43D2D81-0586-4B25-83CA-041B24C9D1DA
 online version: https://go.microsoft.com/fwlink/?linkid=833611
@@ -64,16 +64,20 @@ The **Get-CMDevice** cmdlet gets a Microsoft System Center Configuration Manager
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a device by collection ID
 ```
-PS C:\> Get-CMDevice -CollectionID "SMSDM003"
+PS XYZ:\> Get-CMDevice -CollectionID "SMSDM003"
 ```
 
 This command gets all the device objects in the device collection with the ID of SMSDM003.
 
 ### Example 2: Get a device by name
 ```
-PS C:\> Get-CMDevice -CollectionName "All systems" -Name "Win10-86-33"
+PS XYZ:\> Get-CMDevice -CollectionName "All systems" -Name "Win10-86-33"
 ```
 
 This command gets the device named Win10-86-33 in the device collection named All systems.

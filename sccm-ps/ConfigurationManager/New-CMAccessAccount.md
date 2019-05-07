@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: BAAFB5BA-EC7B-48DE-B029-4AA132BD9AEE
 online version: https://go.microsoft.com/fwlink/?linkid=834211
@@ -125,10 +125,14 @@ For example, members in the Software Update Point Connection access account can 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Modify access to an application by using the application ID
 ```
-PS C:\> $ID = Get-CMAccessAccount -ApplicationID "12994680"
-PS C:\> New-CMAccessAccount -ApplicationID $ID -Type WindowsUser Username "CONTOSO\EDaugherty" -Access "FullControl"
+PS XYZ:\> $ID = Get-CMAccessAccount -ApplicationID "12994680"
+PS XYZ:\> New-CMAccessAccount -ApplicationID $ID -Type WindowsUser Username "CONTOSO\EDaugherty" -Access "FullControl"
 ```
 
 The first command gets an application ID, and then stores it in the $ID variable.

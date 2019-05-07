@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 522EDC95-F732-4237-B269-59AE6D0CC370
 online version: https://go.microsoft.com/fwlink/?linkid=833846
@@ -38,17 +38,21 @@ You can use System Center Configuration Manager to define a schedule for updatin
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a schedule for updating an operating system image by using a name
 ```
-PS C:\>Clear-CMOperatingSystemUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
+PS XYZ:\>Clear-CMOperatingSystemUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
 ```
 
 This command removes a schedule named Win8UpdateSchedule that updates an operating system image.
 
 ### Example 2: Remove a schedule for updating an operating system image by using an object
 ```
-PS C:\> $Win8UpdateSchedule = Get-CMOperatingSystemUpdateSchedule -Id 1207
-PS C:\> Clear-CMOperatingSystemImageUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
+PS XYZ:\> $Win8UpdateSchedule = Get-CMOperatingSystemUpdateSchedule -Id 1207
+PS XYZ:\> Clear-CMOperatingSystemImageUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
 ```
 
 The first command gets the image update schedule by using the ID 1207.

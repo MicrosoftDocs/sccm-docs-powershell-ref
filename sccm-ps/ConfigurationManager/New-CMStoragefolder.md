@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 1B4D2568-7D6A-4DFF-891B-9EDB54B3DFF0
 online version: https://go.microsoft.com/fwlink/?linkid=833790
@@ -26,9 +26,13 @@ Use this cmdlet in conjunction with the [Add-CMStateMigrationPoint](Add-CMStateM
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a new storage folder
 ```
-PS C:\> New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
+PS XYZ:\> New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
 ```
 
 This command creates a new storage folder for migration data by using the maximum number of clients, minimum free space, and storage folder path parameters.

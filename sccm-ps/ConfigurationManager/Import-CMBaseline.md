@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 484FFAF5-FE27-4B04-93D0-A7F2337ADF86
 online version: https://go.microsoft.com/fwlink/?linkid=834035
@@ -30,16 +30,20 @@ You can modify that baseline in the future.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Import a baseline
 ```
-PS C:\>Import-CMBaseline -FileName "\\ContosoServer01\Public\CM\BaselineW2K8.cab"
+PS XYZ:\>Import-CMBaseline -FileName "\\ContosoServer01\Public\CM\BaselineW2K8.cab"
 ```
 
 This command imports a baseline from a file named BaselineW2K8.cab.
 
 ### Example 2: Import multiple baselines
 ```
-PS C:\>Import-CMBaseline -FileName "\\ContosoServer01\Public\CM\BaselineW2K8.cab","\\ContosoServer01\Public\CM\BaselineWin7.cab" -DuplicateWhileImporting
+PS XYZ:\>Import-CMBaseline -FileName "\\ContosoServer01\Public\CM\BaselineW2K8.cab","\\ContosoServer01\Public\CM\BaselineWin7.cab" -DuplicateWhileImporting
 ```
 
 This command imports baselines from .cab files named BaselineW2K8.cab and BaselineWin7.cab.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: DC548AD7-17F7-4455-8857-6342043439FA
 online version: https://go.microsoft.com/fwlink/?linkid=833744
@@ -25,16 +25,20 @@ You can specify which site to change by site server name or site code.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Set an evaluation period for a site code
 ```
-PS C:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 5 -SiteCode "CM4"
+PS XYZ:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 5 -SiteCode "CM4"
 ```
 
 This command sets the evaluation frequency to five minutes for the specified site code.
 
 ### Example 2: Set an evaluation period for a system
 ```
-PS C:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 6 -SiteSystemName "CM01.West01.Contoso.com"
+PS XYZ:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 6 -SiteSystemName "CM01.West01.Contoso.com"
 ```
 
 This command sets the evaluation frequency to six minutes for the server named CM01.West01.Contoso.com.

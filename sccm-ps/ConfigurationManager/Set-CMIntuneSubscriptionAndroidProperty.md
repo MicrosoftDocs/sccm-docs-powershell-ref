@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 14BD2A9D-635A-43C0-B477-B324BBB7FBC5
 online version: https://go.microsoft.com/fwlink/?linkid=833883
@@ -22,9 +22,13 @@ The **Set-CMIntuneSubscriptionAndroidProperty** updates the settings of a Micros
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Enable Android enrollment
 ```
-PS C:\> Set-CMIntuneSubscriptionAndroidProperty -Enable $True
+PS XYZ:\> Set-CMIntuneSubscriptionAndroidProperty -Enable $True
 ```
 
 This command enables Android enrollment for the Microsoft Intune subscription.

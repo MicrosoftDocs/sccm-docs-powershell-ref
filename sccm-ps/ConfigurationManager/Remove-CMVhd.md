@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: A8C92172-4378-49C6-8C57-1689DF406FD3
 online version: https://go.microsoft.com/fwlink/?linkid=834282
@@ -36,9 +36,13 @@ This cmdlet does not delete VHD images.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a VHD image
 ```
-PS C:\> Remove-CMVhd -Name "Windows 10 Enterprise" -Force
+PS XYZ:\> Remove-CMVhd -Name "Windows 10 Enterprise" -Force
 ```
 
 This command removes the virtual hard disk (VHD) image named Windows 10 Enterprise.

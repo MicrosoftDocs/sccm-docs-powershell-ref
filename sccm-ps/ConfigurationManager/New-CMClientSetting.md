@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 ms.assetid: 728F467C-C28D-428E-9C2F-8812F6A4F80F
 online version: https://go.microsoft.com/fwlink/?linkid=833581
@@ -25,9 +25,13 @@ For more information about client settings, see [About Client Settings in Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a customized collection of client settings
 ```
-PS C:\> New-CMClientSetting -Name "Win08ClientSettings" -Description "Windows 8 Client Computers Settings" -Type 1
+PS XYZ:\> New-CMClientSetting -Name "Win08ClientSettings" -Description "Windows 8 Client Computers Settings" -Type 1
 AgentConfigurations: {}
 AssignmentCount:     0
 CreatedBy:           Contoso\DChew
@@ -46,7 +50,7 @@ Type:                1
 UniqueID:            {0CCA6700-AE5E-4949-8FBC-AA6719775CC3}
 ```
 
-This command creates customized device settings for the group of client computers that run Windows® 8.
+This command creates customized device settings for the group of client computers that run WindowsÂ® 8.
 After the new collection of settings is created, the command displays an unpopulated list of setting properties.
 To refresh and view a populated list of properties, use **Get-CMClientSetting**.
 The output for this example shows a populated list.

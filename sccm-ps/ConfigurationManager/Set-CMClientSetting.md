@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 ms.assetid: 0F088B51-F0AF-4A8C-AD75-8FD1665B8CDF
 online version: https://go.microsoft.com/fwlink/?linkid=833719
@@ -201,9 +201,13 @@ To modify a client setting, specify it by name.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Rename a client setting
 ```
-PS C:\> Set-CMClientSetting -Name "Client Settings Main" -Description "Client settings for TSQA office site." -NewName "Client Settings TSQA"
+PS XYZ:\> Set-CMClientSetting -Name "Client Settings Main" -Description "Client settings for TSQA office site." -NewName "Client Settings TSQA"
 ```
 
 This command renames the client setting object.
@@ -212,21 +216,21 @@ The command also adds a description for the client setting object.
 
 ### Example 2: Configure power management
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA02" -AllowUserToOptOutFromPowerPlan $True -EnablePowerManagement $False
+PS XYZ:\> Set-CMClientSetting -Name "TSQA02" -AllowUserToOptOutFromPowerPlan $True -EnablePowerManagement $False
 ```
 
 This command allows users to opt out of power plans and disables power management for the clients with the setting named TSQA02.
 
 ### Example 3: Set state messaging reporting cycle value
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA02" -StateMessagingReportingCycleMinutes 10
+PS XYZ:\> Set-CMClientSetting -Name "TSQA02" -StateMessagingReportingCycleMinutes 10
 ```
 
 This command sets a state messaging reporting cycle value of 10 minutes.
 
 ### Example 4: Configure user affinity
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA03" -AutoApproveAffinity $False -UserAffinityLogOnThresholdMinutes 2800 -UserAffinityUsageThresholdDays 20
+PS XYZ:\> Set-CMClientSetting -Name "TSQA03" -AutoApproveAffinity $False -UserAffinityLogOnThresholdMinutes 2800 -UserAffinityUsageThresholdDays 20
 ```
 
 This command configures user affinity settings for a client setting named TSQA03.
@@ -235,14 +239,14 @@ The command sets the *UserAffinityLogOnThresholdMinutes* parameter to 2800 minut
 
 ### Example 5: Allow user affinity
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA04" -AllowUserAffinity $True
+PS XYZ:\> Set-CMClientSetting -Name "TSQA04" -AllowUserAffinity $True
 ```
 
 This command changes the client setting named TSQA04 to have a client automatically configure user device affinity from usage data.
 
 ### Example 6: Set bandwidth for client
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA05" -EnableBITSMaxBandwidth $True EnableDownloadOffSchedule $True -MaxBandwidthValidFrom 8 -MaxBandwidthValidTo 15 -MaxTransferRateOnSchedule 1500
+PS XYZ:\> Set-CMClientSetting -Name "TSQA05" -EnableBITSMaxBandwidth $True EnableDownloadOffSchedule $True -MaxBandwidthValidFrom 8 -MaxBandwidthValidTo 15 -MaxTransferRateOnSchedule 1500
 ```
 
 This command changes settings for the client settings object named TSQA05.
@@ -251,7 +255,7 @@ The command also specifies values for maximum bandwidth value from and to and ma
 
 ### Example 7: Configure user policies on the Internet
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA06" -EnableUserPolicyOnInternet $True -EnableUserPolicyPolling $False -EnableUserPolicyOnInternet $True -PolicyPollingInterval 50
+PS XYZ:\> Set-CMClientSetting -Name "TSQA06" -EnableUserPolicyOnInternet $True -EnableUserPolicyPolling $False -EnableUserPolicyOnInternet $True -PolicyPollingInterval 50
 ```
 
 This command changes settings for the client settings object named TSQA06.
@@ -259,14 +263,14 @@ The command enables user policy on the Internet, enables user policy polling, an
 
 ### Example 8: Disable compliance evaluation
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA07" -EnableComplianceEvaluation $False
+PS XYZ:\> Set-CMClientSetting -Name "TSQA07" -EnableComplianceEvaluation $False
 ```
 
 This command disables compliance evaluation for the setting named TSQA07.
 
 ### Example 9: Set computer agent settings
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA09" -AddPortalToTrustedSiteList $True -AllowPortalToHaveElevatedTrust $True -BrandingTitle "Contoso IT" -EnableThirdPartyOrchestration Yes -FinalReminderMinutesInterval 52 -InitialReminderHoursInterval 6 -InstallRestriction OnlyAdministrators -PortalUrl "http://NewInstall.Contoso.com" -PowerShellExecutionPolicy Bypass -SuspendBitLocker Always
+PS XYZ:\> Set-CMClientSetting -Name "TSQA09" -AddPortalToTrustedSiteList $True -AllowPortalToHaveElevatedTrust $True -BrandingTitle "Contoso IT" -EnableThirdPartyOrchestration Yes -FinalReminderMinutesInterval 52 -InitialReminderHoursInterval 6 -InstallRestriction OnlyAdministrators -PortalUrl "http://NewInstall.Contoso.com" -PowerShellExecutionPolicy Bypass -SuspendBitLocker Always
 ```
 
 This command changes settings for the client settings object named TSQA09.
@@ -278,14 +282,14 @@ The command also specifies that only administrators can install software, select
 
 ### Example 10: Configure restart settings
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA11" -RebootLogoffNotificationCountdownDuration 12 -RebootLogoffNotificationFinalWindowMinutes 80
+PS XYZ:\> Set-CMClientSetting -Name "TSQA11" -RebootLogoffNotificationCountdownDuration 12 -RebootLogoffNotificationFinalWindowMinutes 80
 ```
 
 This command sets restart logoff notification countdown duration and logoff notification final window duration for a client setting object named TSQA11.
 
 ### Example 11: Configure metered network usage
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA21" -MeteredNetworkUsage Limit
+PS XYZ:\> Set-CMClientSetting -Name "TSQA21" -MeteredNetworkUsage Limit
 ```
 
 This command specifies the type of metered network usage for the client setting object named TSQA21 as Limit.

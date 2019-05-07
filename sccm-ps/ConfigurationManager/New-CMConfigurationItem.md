@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Creates a Configuration Manager configuration item.
@@ -48,10 +48,14 @@ You cannot create child configuration items for mobile devices.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a configuration item
 
 ```powershell
-PS C:\> New-CMConfigurationItem -CreationType MobileDevice -Name "MD_Config88"
+PS XYZ:\> New-CMConfigurationItem -CreationType MobileDevice -Name "MD_Config88"
 ```
 
 This command creates a configuration item for mobile devices named MD_Config88.

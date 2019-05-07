@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 63BCD25A-C343-463F-820A-B3668CB7B22E
 online version: https://go.microsoft.com/fwlink/?linkid=833708
@@ -35,16 +35,20 @@ The **Add-CMMdmEnrollmentManager** cmdlet adds a Device Enrollment Manager to th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a device enrollment manager using the pipeline
 ```
-PS C:\> Get-CMUser -Name "Contoso\User01" | Add-CMMdmEnrollmentManager
+PS XYZ:\> Get-CMUser -Name "Contoso\User01" | Add-CMMdmEnrollmentManager
 ```
 
 This command gets the user object named User01 and uses the pipeline operator to pass the object to **Add-CMMdmEnrollmentManager**, which adds the user as a device enrollment manager.
 
 ### Example 2: Add a device enrollment manager by name
 ```
-PS C:\> Add-CMMdmEnrollmentManager -Name "Contoso\User02"
+PS XYZ:\> Add-CMMdmEnrollmentManager -Name "Contoso\User02"
 ```
 
 This command adds the user named User02 as a device enrollment manager.

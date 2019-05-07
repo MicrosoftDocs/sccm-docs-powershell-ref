@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: A250BE6D-1C96-4337-88F5-454CB95B0AA1
 online version: https://go.microsoft.com/fwlink/?linkid=833635
@@ -38,9 +38,13 @@ For more information about membership rules, see [Introduction to Collections in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get the query membership rules for a device collection
 ```
-PS C:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users By Domain"
+PS XYZ:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users By Domain"
 ```
 
 This command gets the query membership rule named Remote Users By Domain from device collection named Remote Users.

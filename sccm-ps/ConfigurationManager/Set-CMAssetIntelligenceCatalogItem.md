@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 55D600D1-7CFB-4F4C-BCAC-81F19FF7B8A3
 online version: https://go.microsoft.com/fwlink/?linkid=833651
@@ -44,23 +44,27 @@ You can also create custom software labels.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Change the properties of a catalog item by ID
 ```
-PS C:\> Set-CMAssetIntelligenceCatalogItem -Id "1211" -NewCategoryName "Windows Databases" -Description "Windows-based databases" -LanguageId 1033
+PS XYZ:\> Set-CMAssetIntelligenceCatalogItem -Id "1211" -NewCategoryName "Windows Databases" -Description "Windows-based databases" -LanguageId 1033
 ```
 
 This command changes the category name, description, and language ID for the Asset Intelligence catalog item that has the category ID 1211.
 
 ### Example 2: Change the properties of a catalog item category of items
 ```
-PS C:\> Set-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -NewCategoryName "Database Clients" -Description "Database client software" -LanguageId 1033
+PS XYZ:\> Set-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -NewCategoryName "Database Clients" -Description "Database client software" -LanguageId 1033
 ```
 
 This command changes the category name, description, and language ID for the Asset Intelligence catalog item that has the category name Database Tools.
 
 ### Example 3: Rename a category
 ```
-PS C:\> Set-CMAssetIntelligenceCatalogItem -CategoryName "Database Clients" -NewCategoryName "Database Server Tools"
+PS XYZ:\> Set-CMAssetIntelligenceCatalogItem -CategoryName "Database Clients" -NewCategoryName "Database Server Tools"
 ```
 
 This command changes the category name of the Asset Intelligence catalog item that has the category name Database Clients to Database Server Tools.

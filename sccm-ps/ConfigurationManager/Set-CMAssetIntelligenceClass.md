@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 1617E8AD-4023-423D-9A90-1616CD32E75E
 online version: https://go.microsoft.com/fwlink/?linkid=833655
@@ -34,16 +34,20 @@ After you modify the categorization information for predefined software, the val
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Change the Asset Intelligence hardware inventory reporting classes
 ```
-PS C:\> Set-CMAssetIntelligenceClass -EnableReportingClassName SMS_InstalledExecutable -DisableReportingClassName MS_InstalledSoftware
+PS XYZ:\> Set-CMAssetIntelligenceClass -EnableReportingClassName SMS_InstalledExecutable -DisableReportingClassName MS_InstalledSoftware
 ```
 
 This command enables the reporting class named SMS_InstalledExecutable and disables the reporting class named MS_InstalledSoftware.
 
 ### Example 2: Enable all Asset Intelligence hardware inventory reporting classes
 ```
-PS C:\> Set-CMAssetIntelligenceClass -EnableAllReportingClass
+PS XYZ:\> Set-CMAssetIntelligenceClass -EnableAllReportingClass
 ```
 
 This command enables all the Asset Intelligence hardware inventory reporting classes.

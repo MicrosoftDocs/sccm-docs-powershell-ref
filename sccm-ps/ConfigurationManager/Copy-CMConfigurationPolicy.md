@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: CA239E73-691E-4A34-852A-8417420E68E1
 online version: https://go.microsoft.com/fwlink/?linkid=833918
@@ -37,16 +37,20 @@ See the Alias section for additional policy items that you can use this cmdlet t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Copy a configuration policy by using the pipeline
 ```
-PS C:\> Get-CMConfigurationPolicy -Name "TrustedCACert01" -Fast | Copy-CMConfigurationPolicy -NewName "TrustedCACert01_copy"
+PS XYZ:\> Get-CMConfigurationPolicy -Name "TrustedCACert01" -Fast | Copy-CMConfigurationPolicy -NewName "TrustedCACert01_copy"
 ```
 
 This command gets the configuration policy object named TrustedCACert01 and uses the pipeline operator to pass the object to **Copy-CMConfiguratinPolicy**, which creates a copy of the policy and names it TrustedCACert01_copy.
 
 ### Example 2: Copy a configuration policy by ID
 ```
-PS C:\> Copy-CMConfigurationPolicy -Id 16777454 -NewName "EmailProfile1_copy"
+PS XYZ:\> Copy-CMConfigurationPolicy -Id 16777454 -NewName "EmailProfile1_copy"
 ```
 
 This command makes a copy of the configuration policy with the ID of 16777454 and names it EmailProfile1_copy.

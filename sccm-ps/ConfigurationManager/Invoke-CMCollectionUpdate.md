@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 789484FC-87E4-4EA3-946A-57659F622D05
 online version: https://go.microsoft.com/fwlink/?linkid=834113
@@ -35,16 +35,20 @@ The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a Microsoft S
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Update the membership of a collection using the pipeline
 ```
-PS C:\> Get-CMCollection -Id MP500014 | Invoke-CMCollectionUpdate
+PS XYZ:\> Get-CMCollection -Id MP500014 | Invoke-CMCollectionUpdate
 ```
 
 This command gets the collection object with the ID of MP500014 and uses the pipeline operator to pass the object to **Invoke-CMCollectionUpdate**, which updates the membership of the collection.
 
 ### Example 2: Update the membership of a collection by name
 ```
-PS C:\> Invoke-CMCollectionUpdate -Name "UserCol1"
+PS XYZ:\> Invoke-CMCollectionUpdate -Name "UserCol1"
 ```
 
 This command updates the membership of the collection named UserCol1.

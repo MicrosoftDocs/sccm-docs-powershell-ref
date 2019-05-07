@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 44F60651-6890-4A51-96C1-D2A835D7E24F
 online version: https://go.microsoft.com/fwlink/?linkid=833619
@@ -43,9 +43,13 @@ For more information about collections, see [Introduction to Collections in Conf
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a device collection by using an ID
 ```
-PS C:\> Get-CMDeviceCollection -CollectionId "9990000D"
+PS XYZ:\> Get-CMDeviceCollection -CollectionId "9990000D"
 ```
 
 This command gets the device collection that has the ID 9990000D.

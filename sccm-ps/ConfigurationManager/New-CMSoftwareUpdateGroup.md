@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 1343FB22-DB1A-4CBC-A26B-DFED53CF00A1
 online version: https://go.microsoft.com/fwlink/?linkid=833770
@@ -26,9 +26,13 @@ After you deploy a software update group, you can add new software updates to th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a software update group
 ```
-PS C:\> New-CMSoftwareUpdateGroup -Name "ClientUpdateGroup01" -UpdateID 100027 -Description "Client software update group 01 for Accounts Payable"
+PS XYZ:\> New-CMSoftwareUpdateGroup -Name "ClientUpdateGroup01" -UpdateID 100027 -Description "Client software update group 01 for Accounts Payable"
 ```
 
 This command creates a software update group named ClientUpdateGroup01 that includes the software update that has the update ID 100027.

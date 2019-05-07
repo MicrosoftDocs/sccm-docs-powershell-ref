@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A5A05130-1B29-4F27-8AC3-39BE3F13D305
 online version: https://go.microsoft.com/fwlink/?linkid=834090
@@ -30,17 +30,21 @@ For more information about Endpoint Protection in Configuration Manager, see [En
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove an Endpoint Protection point
 ```
-PS C:\> Remove-CMEndpointProtectionPoint -SiteSystemServerName "CMServer01.Contoso.com" -SiteCode "CM1"
+PS XYZ:\> Remove-CMEndpointProtectionPoint -SiteSystemServerName "CMServer01.Contoso.com" -SiteCode "CM1"
 ```
 
 This command removes an Endpoint Protection point.
 
 ### Example 2: Remove an Endpoint Protection point by using an input object
 ```
-PS C:\> $EPP = Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com" 
-PS C:\> Remove-CMEndpointProtectionPoint -InputObject $EPP
+PS XYZ:\> $EPP = Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com" 
+PS XYZ:\> Remove-CMEndpointProtectionPoint -InputObject $EPP
 ```
 
 The first command uses the **Get-CMEndpointProtectionPoint** cmdlet to get an Endpoint Protection point object and assign it to the variable $EPP.

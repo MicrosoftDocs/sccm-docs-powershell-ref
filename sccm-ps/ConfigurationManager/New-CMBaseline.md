@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 10D58015-8146-4A5F-8996-31BF2BD06DF9
 online version: https://go.microsoft.com/fwlink/?linkid=834266
@@ -24,9 +24,13 @@ After you create a baseline, you can deploy it to a collection so that devices i
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a configuration baseline
 ```
-PS C:\> New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
+PS XYZ:\> New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
 ```
 
 This command creates a baseline for compliance named Accounting Department baseline.

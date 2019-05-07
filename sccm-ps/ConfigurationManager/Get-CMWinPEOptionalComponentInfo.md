@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: CC02B9EF-225A-46D8-BC9A-8CD46A64D7F3
 online version: https://go.microsoft.com/fwlink/?linkid=834024
@@ -28,6 +28,10 @@ Get-CMWinPEOptionalComponentInfo -UniqueId <String> [-DisableWildcardHandling] [
 The **Get-CMWinPEOptionalComponentInfo** cmdlet gets Windows PE (Preinstallation Environment) optional component information.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
 
 ### Example 1: Get WinPE optional component information by name, architecture, and language ID
 ```

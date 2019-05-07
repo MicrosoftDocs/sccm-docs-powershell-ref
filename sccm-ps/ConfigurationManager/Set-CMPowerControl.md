@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 ms.assetid: C62ED04A-8E72-4A18-A7B0-DFBB57F5EC97
 online version: https://go.microsoft.com/fwlink/?linkid=833983
@@ -35,9 +35,13 @@ The **Set-CMPowerControl** cmdlet changes the power state for one or more Intel 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Change the power control setting for a client device
 ```
-PS C:\> Set-CMPowerControl -DeviceId "209224563" -PowerControl Restart
+PS XYZ:\> Set-CMPowerControl -DeviceId "209224563" -PowerControl Restart
 ```
 
 This command changes the power control setting to Restart for the client device that has the ID 209224563.

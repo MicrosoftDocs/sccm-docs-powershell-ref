@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: B4B866B4-15B3-46F0-A742-C892A96B99CD
 online version: https://go.microsoft.com/fwlink/?linkid=834256
@@ -35,10 +35,14 @@ The **Remove-CMUser** cmdlet removes user accounts from Microsoft System Center 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a user
 ```
-PS C:\> $User = Get-CMUser -CollectionName "All Users" -Name "Contoso\user01"
-PS C:\> Remove-CMUser -InputObject $User -Force
+PS XYZ:\> $User = Get-CMUser -CollectionName "All Users" -Name "Contoso\user01"
+PS XYZ:\> Remove-CMUser -InputObject $User -Force
 ```
 
 The first command gets the user object named user01 from the All Users collection and stores the object in the $User variable.
@@ -48,7 +52,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a user by using the pipeline
 ```
-PS C:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\user02" | Remove-CMUser -Force
+PS XYZ:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\user02" | Remove-CMUser -Force
 ```
 
 This command gets the user object named user02 from the All Users collection and uses the pipeline operator to pass the object to **Remove-CMUser**, which removes the user account.

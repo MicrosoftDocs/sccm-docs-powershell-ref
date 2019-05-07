@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMDeploymentTypeSupersedence
 titleSuffix: Configuration Manager
 description: Gets a deployment type supersedence in Configuration Manager.
@@ -32,10 +32,14 @@ The **Get-CMDeploymentTypeSupersedence** cmdlet gets supersedence objects for a 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeSupersedence
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeSupersedence
 ```
 
 ## PARAMETERS

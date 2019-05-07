@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 03B638BE-FB62-443F-897D-09A4E7555C23
 online version: https://go.microsoft.com/fwlink/?linkid=833923
@@ -35,9 +35,13 @@ The **Set-CMManagementPointComponent** cmdlet sets a component for a management 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Set a management point component
 ```
-PS C:\> Set-CMManagementPointComponent -SiteCode "CM1" -PublishDNS $True
+PS XYZ:\> Set-CMManagementPointComponent -SiteCode "CM1" -PublishDNS $True
 ```
 
 The command sets a management point component by using the *SiteCode* parameter.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: A5700EDF-92D7-48DE-B942-F0C3274E2331
 online version: https://go.microsoft.com/fwlink/?linkid=833850
@@ -57,9 +57,13 @@ System Center Configuration Manager redeploys the most recent required deploymen
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Clear a PXE deployment for a device collection
 ```
-PS C:\>Clear-CMPxeDeployment -DeviceCollectionId "SMS00072"
+PS XYZ:\>Clear-CMPxeDeployment -DeviceCollectionId "SMS00072"
 ```
 
 This command clears a PXE deployment identified with a device collection ID.

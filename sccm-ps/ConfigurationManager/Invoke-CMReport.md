@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Reporting.dll-Help.xml
 ms.assetid: 57DE1031-012E-4267-AA6B-A56450A98AB5
 online version: https://go.microsoft.com/fwlink/?linkid=834162
@@ -24,9 +24,13 @@ The reporting services point is a site system role that you install on a server 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Invoke a report
 ```
-PS C:\>Invoke-CMReport -ReportPath "/Reports/Data" -SiteCode "CM4"
+PS XYZ:\>Invoke-CMReport -ReportPath "/Reports/Data" -SiteCode "CM4"
 ```
 
 This command invokes a report by using a report path and a site code.

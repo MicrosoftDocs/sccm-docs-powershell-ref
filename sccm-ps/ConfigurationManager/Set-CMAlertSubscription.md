@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 ms.assetid: 5CA304C5-4BF7-42C7-82A1-400B7E1D4D59
 online version: https://go.microsoft.com/fwlink/?linkid=833616
@@ -40,24 +40,28 @@ You can also change the security scope membership of an alert subscription by ad
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Change the properties of an alert subscription by subscription ID
 ```
-PS C:\> Set-CMAlertSubscription -Id "16777217" -NewName "Subscription02" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 2057 -AlertIds 16777240
+PS XYZ:\> Set-CMAlertSubscription -Id "16777217" -NewName "Subscription02" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 2057 -AlertIds 16777240
 ```
 
 This command changes the name, email address, Windows locale ID, and alert ID of an alert subscription that has the ID 16777217.
 
 ### Example 2: Change the properties of an alert subscription by subscription name
 ```
-PS C:\> Set-CMAlertSubscription -Name "Subscription01" -NewName "Subscription02" -EmailAddress "elisa.daugherty@contoso.com" -LocaleId 2057 -AlertIds 16777240
+PS XYZ:\> Set-CMAlertSubscription -Name "Subscription01" -NewName "Subscription02" -EmailAddress "elisa.daugherty@contoso.com" -LocaleId 2057 -AlertIds 16777240
 ```
 
 This command changes the name, email address, Windows locale ID, and alert ID of an alert subscription named Subscription01.
 
 ### Example 3: Change the properties of an alert subscription by using the output from another cmdlet as input
 ```
-PS C:\> $SubObj = Get-CMAlertSubscription -Id "16777310"
-PS C:\> Set-CMAlertSubscription -AlertSubscription $SubObj -NewName "Subscription02" -EmailAddress "patti.fuller@contoso.com" -LocaleId 3081 -AlertIds 16777240
+PS XYZ:\> $SubObj = Get-CMAlertSubscription -Id "16777310"
+PS XYZ:\> Set-CMAlertSubscription -AlertSubscription $SubObj -NewName "Subscription02" -EmailAddress "patti.fuller@contoso.com" -LocaleId 3081 -AlertIds 16777240
 ```
 
 The first command gets an alert subscription object that has the ID 16777310, and then stores the object in the $SubObj variable.
@@ -66,14 +70,14 @@ The second command changes the properties of the alert subscription object, whic
 
 ### Example 4: Add an alert subscription to a security scope
 ```
-PS C:\> Set-CMAlertSubscription -SecurityScopeAction AddMembership -SecurityScopeName "Test" -Name "Subscription01"
+PS XYZ:\> Set-CMAlertSubscription -SecurityScopeAction AddMembership -SecurityScopeName "Test" -Name "Subscription01"
 ```
 
 This command adds the alert subscription named Subscription01 to the security scope named Test.
 
 ### Example 5: Remove an alert subscription from a security scope
 ```
-PS C:\> Set-CMAlertSubscription -SecurityScopeAction RemoveMembership -SecurityScopeName "Test" -Name "Subscription01"
+PS XYZ:\> Set-CMAlertSubscription -SecurityScopeAction RemoveMembership -SecurityScopeName "Test" -Name "Subscription01"
 ```
 
 This command removes the alert subscription named Subscription01 from the security scope named Test.

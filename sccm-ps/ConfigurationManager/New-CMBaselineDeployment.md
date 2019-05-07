@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 online version: 
 schema: 2.0.0
@@ -43,9 +43,13 @@ New-CMBaselineDeployment [-Name] <String> [-EnableEnforcement <Boolean>] [-Overr
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>  
 ```
 
  

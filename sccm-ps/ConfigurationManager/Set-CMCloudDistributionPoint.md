@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: F2F9DBD4-F429-4913-82E7-E3E160D4A926
 online version: https://go.microsoft.com/fwlink/?linkid=833730
@@ -47,9 +47,13 @@ You can provide a name and description for the cloud distribution point.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Set values for a distribution point
 ```
-PS C:\> Set-CMCloudDistributionPoint -Id 16777237 -Description "Western distribution point" -Name "West01" -StorageQuotaInGB 50 -TrafficOutInGB 50
+PS XYZ:\> Set-CMCloudDistributionPoint -Id 16777237 -Description "Western distribution point" -Name "West01" -StorageQuotaInGB 50 -TrafficOutInGB 50
 ```
 
 This command sets the description and name for a distribution point to the provided strings.

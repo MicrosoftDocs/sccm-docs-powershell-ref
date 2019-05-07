@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: E6AB814A-E29E-4DBB-AABF-63DF1F129E80
 online version: https://go.microsoft.com/fwlink/?linkid=833705
@@ -23,9 +23,13 @@ Operating system images are .wim format files and represent a compressed collect
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create an operating system image
 ```
-PS C:\> New-CMOperatingSystemImage -Name "STANDARD_WIN7" -Path "\\Contoso01\CM\Images\STANDARD_WIN7.wim"
+PS XYZ:\> New-CMOperatingSystemImage -Name "STANDARD_WIN7" -Path "\\Contoso01\CM\Images\STANDARD_WIN7.wim"
 ```
 
 This command creates the operating system image named STANDARD_WIN7 and specifies the network path to the installation source files of the operating system image.

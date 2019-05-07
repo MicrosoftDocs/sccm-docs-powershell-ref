@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 04AC8F78-1E8D-4FBC-B87E-732B52D09F9E
 online version: https://go.microsoft.com/fwlink/?linkid=834295
@@ -26,9 +26,13 @@ You can use the [Set-CMDatabaseProperty](Set-CMDatabaseProperty.md) cmdlet to ch
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a database property
 ```
-PS C:\> Get-CMDatabaseProperty -SiteCode "CM2"
+PS XYZ:\> Get-CMDatabaseProperty -SiteCode "CM2"
 Key                                     Value
 ---                                     -----
 SQL Server Service Broker Port          80 

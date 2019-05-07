@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 388164F7-DE65-45A1-B3D9-1D0BB6B7AEBD
 online version: https://go.microsoft.com/fwlink/?linkid=833621
@@ -40,10 +40,14 @@ Task sequence variables are a set of name and value pairs that provide a mechani
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a device collection variable
 ```
-PS C:\> $Collection = Get-CMCollection -Name "Device"
-PS C:\> New-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Value "test001"
+PS XYZ:\> $Collection = Get-CMCollection -Name "Device"
+PS XYZ:\> New-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Value "test001"
 ```
 
 The first command gets the device collection object named Device and stores the object in the $Collection variable.

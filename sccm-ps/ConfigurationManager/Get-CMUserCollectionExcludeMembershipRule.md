@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 94DE6A0D-6D37-4D87-ACD6-584E4F3FB65D
 online version: https://go.microsoft.com/fwlink/?linkid=833988
@@ -76,9 +76,13 @@ For more information about membership rules, see [Introduction to Collections in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get the exclude membership rule from a user collection
 ```
-PS C:\> Get-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS XYZ:\> Get-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command gets the rule that excludes the members of the collection that has the ID SMSDM001 from the user collection that has the ID 9990000D.

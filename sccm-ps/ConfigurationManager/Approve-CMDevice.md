@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: D6A79C88-CE68-45E7-88B3-43F94F73DDE9
 online version: https://go.microsoft.com/fwlink/?linkid=833812
@@ -36,16 +36,20 @@ You cannot approve a Configuration Manager client until you have installed the d
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Approve a device
 ```
-PS C:\>Approve-CMDevice -DeviceName "TestVlan-site2"
+PS XYZ:\>Approve-CMDevice -DeviceName "TestVlan-site2"
 ```
 
 This command approves the device named TestVlan-site2.
 
 ### Example 2: Get a device and approve it
 ```
-PS C:\> Get-CMDevice -Name "TestVlan-site2" | Approve-CMDevice
+PS XYZ:\> Get-CMDevice -Name "TestVlan-site2" | Approve-CMDevice
 ```
 
 This command gets the device object named TestVlan-site2 and uses the pipeline operator to pass the object to **Approve-CMDevice**, which approves the device object.

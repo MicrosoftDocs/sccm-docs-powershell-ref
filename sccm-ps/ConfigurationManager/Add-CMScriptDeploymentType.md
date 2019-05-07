@@ -1,4 +1,4 @@
----
+﻿---
 title: Add-CMScriptDeploymentType
 titleSuffix: Configuration Manager
 description: Adds a script installer deployment type.
@@ -126,10 +126,14 @@ The **Add-CMScriptDeploymentType** cmdlet adds a script installer deployment typ
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a script deployment type to an application
 
 ```powershell
-PS C:\>Add-CMScriptDeploymentType -ApplicationName "Application01" -DeploymentTypeName "ScriptDT01" -Comment "Div A script" -InstallCommand 'msiexec /i ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi"' -ScriptLanguage VBScript -ScriptContent "1231231" -ForceScriptDetection32Bit
+PS XYZ:\>Add-CMScriptDeploymentType -ApplicationName "Application01" -DeploymentTypeName "ScriptDT01" -Comment "Div A script" -InstallCommand 'msiexec /i ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi"' -ScriptLanguage VBScript -ScriptContent "1231231" -ForceScriptDetection32Bit
 ```
 
 This command adds the script deployment type named ScriptDT01 to the application named Application 01, providing the installation command, specifying the script language as VBScript, and providing the text of the script.
@@ -138,7 +142,7 @@ Specifying the *ForceScriptDetection32Bit* indicates that the deployment type wi
 ### Example 2: Add a script deployment type to an application by using the pipeline
 
 ```powershell
-PS C:\> Get-CMApplication -Name "Application01" | Add-CMScriptDeploymentType  -DeploymentTypeName "ScriptDT02" -Comment "Div A script" -InstallCommand 'msiexec /i ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi"' -ScriptLanguage VBScript -ScriptContent "1231231" -ForceScriptDetection32Bit
+PS XYZ:\> Get-CMApplication -Name "Application01" | Add-CMScriptDeploymentType  -DeploymentTypeName "ScriptDT02" -Comment "Div A script" -InstallCommand 'msiexec /i ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi"' -ScriptLanguage VBScript -ScriptContent "1231231" -ForceScriptDetection32Bit
 ```
 
 This command gets the application object named Application 01 and uses the pipeline operator to pass the object to **Add-CMScriptDeploymentType**.

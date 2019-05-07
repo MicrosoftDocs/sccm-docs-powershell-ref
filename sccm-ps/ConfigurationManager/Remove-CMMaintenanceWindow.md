@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 64883A65-5691-40B6-B8DE-C2DE4EDEEB23
 online version: https://go.microsoft.com/fwlink/?linkid=834126
@@ -36,9 +36,13 @@ If you remove a maintenance window during that window, the maintenance updates f
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a maintenance window
 ```
-PS C:\> Remove-CMMaintenanceWindow -Name "Distribution Point Maintenance" -CollectionId "AAA0004D"
+PS XYZ:\> Remove-CMMaintenanceWindow -Name "Distribution Point Maintenance" -CollectionId "AAA0004D"
 ```
 
 This command removes the maintenance window Distribution Point Maintenance.

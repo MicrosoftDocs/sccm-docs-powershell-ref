@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: B521723C-DE6D-4EE3-9742-8BB6F8F44E72
 online version: https://go.microsoft.com/fwlink/?linkid=833743
@@ -79,16 +79,20 @@ You can specify a role to add by name or by ID, or you can use the [Get-CMSecuri
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a named role to a named user group
 ```
-PS C:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators " -RoleName "SecurityRole17"
+PS XYZ:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators " -RoleName "SecurityRole17"
 ```
 
 This command adds a security role named SecurityRole17 to the administrative group named Western Administrators.
 
 ### Example 2: Add a role to a named user group identified by using an ID
 ```
-PS C:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators" -RoleId "SMS38973"
+PS XYZ:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators" -RoleId "SMS38973"
 ```
 
 This command adds a security role that has the specified ID to the administrative group named Western Administrators.

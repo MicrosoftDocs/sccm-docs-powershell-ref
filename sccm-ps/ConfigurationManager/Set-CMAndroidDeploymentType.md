@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 93B12651-7C2B-4387-902D-5046CDD71D00
 online version: https://go.microsoft.com/fwlink/?linkid=833620
@@ -49,16 +49,20 @@ The **Set-CMAndriodDeploymentType** cmdlet changes the settings for an Android d
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Change the name of the deployment type
 ```
-PS C:\> Set-CMAndroidDeploymentType -ApplicationName "ExpensesApp" -DeploymentTypeName "Expenses" -NewName "NewExpenses"
+PS XYZ:\> Set-CMAndroidDeploymentType -ApplicationName "ExpensesApp" -DeploymentTypeName "Expenses" -NewName "NewExpenses"
 ```
 
 This command changes the deployment type name for the application named ExpensesApp from Expenses to NewExpenses.
 
 ### Example 2: Change the name of the deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -DeploymentTypeName "Expenses" -ApplicationName "ExpensesApp2" | Set-CMAndroidDeploymentType -NewName "NewExpenses2"
+PS XYZ:\> Get-CMDeploymentType -DeploymentTypeName "Expenses" -ApplicationName "ExpensesApp2" | Set-CMAndroidDeploymentType -NewName "NewExpenses2"
 ```
 
 This command gets the deployment type object named Expenses for the application named ExpensesApp2 and uses the pipeline operator to pass the object to **Set-CMAndroidDeploymentType**.

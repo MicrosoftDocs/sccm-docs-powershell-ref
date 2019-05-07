@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A2AA9552-58E9-4C19-BD23-EE6816C90CDB
 online version: https://go.microsoft.com/fwlink/?linkid=833602
@@ -79,9 +79,13 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Assign a boundary group to a boundary
 ```
-PS C:\>Add-CMBoundaryToGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
+PS XYZ:\>Add-CMBoundaryToGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
 ```
 
 This command assigns the boundary named to CLBound03 to the boundary group that has the Id 16777219.

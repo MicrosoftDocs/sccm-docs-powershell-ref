@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: C8BFF87E-662F-486D-9F4A-27428FD4DC7A
 online version: https://go.microsoft.com/fwlink/?linkid=834105
@@ -54,9 +54,13 @@ You can specify one or more client computers, or send a notification to all the 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Send a notification to trigger an event
 ```
-PS C:\>Invoke-CMClientNotification -DeviceName "Computer073" -NotificationType RequestMachinePolicyNow
+PS XYZ:\>Invoke-CMClientNotification -DeviceName "Computer073" -NotificationType RequestMachinePolicyNow
 ```
 
 This command sends a notification of the type RequestMachinePolicyNow to the device named Computer073.

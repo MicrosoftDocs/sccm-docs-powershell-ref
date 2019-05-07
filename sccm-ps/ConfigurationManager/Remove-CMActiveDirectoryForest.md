@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: E1819266-4602-4752-A526-BA365AFA70C4
 online version: https://go.microsoft.com/fwlink/?linkid=833869
@@ -30,9 +30,13 @@ You can specify an Active Directory forest by using the ID property or the fully
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove an Active Directory forest object by ID
 ```
-PS C:\> Remove-CMActiveDirectoryForest -Id "16777217"
+PS XYZ:\> Remove-CMActiveDirectoryForest -Id "16777217"
 ```
 
 This command removes an Active Directory forest object that has the ID 16777217.

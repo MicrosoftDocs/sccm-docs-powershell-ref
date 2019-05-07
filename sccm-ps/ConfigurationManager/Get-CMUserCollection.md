@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 8AD90CCA-3F40-4D64-8FD9-C9028A0E15E7
 online version: https://go.microsoft.com/fwlink/?linkid=833980
@@ -43,9 +43,13 @@ For more information about collections, see [Introduction to Collections in Conf
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a user collection
 ```
-PS C:\> Get-CMUserCollection -CollectionId "9990000D"
+PS XYZ:\> Get-CMUserCollection -CollectionId "9990000D"
 ```
 
 This command gets the user collection that has the ID 9990000D.

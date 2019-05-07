@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 90208E20-E077-40AB-A50F-B7113BA07775
 online version: https://go.microsoft.com/fwlink/?linkid=834097
@@ -54,24 +54,28 @@ You can check individual computers or computers that belong to a Microsoft Syste
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Check a computer for Intel AMT hardware by using an ID
 ```
-PS C:\>Invoke-CMAmtProvisioningDiscovery -DeviceID "16777230"
+PS XYZ:\>Invoke-CMAmtProvisioningDiscovery -DeviceID "16777230"
 ```
 
 This command checks for Intel AMT-based hardware on a device that has the ID 16777230.
 
 ### Example 2: Check computers for Intel AMT hardware in a named device collection
 ```
-PS C:\>Invoke-CMAmtProvisioningDiscovery -DeviceCollectionName "Floor03"
+PS XYZ:\>Invoke-CMAmtProvisioningDiscovery -DeviceCollectionName "Floor03"
 ```
 
 This command checks for Intel AMT-based hardware on the devices that belong to the collection named Floor03.
 
 ### Example 3: Check for a computer for Intel AMT hardware by using a variable
 ```
-PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
-PS C:\> Invoke-CMAmtProvisioningDiscovery -Device $CMD
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS XYZ:\> Invoke-CMAmtProvisioningDiscovery -Device $CMD
 ```
 
 The first command gets a device object by using the **Get-CMDevice** command, and then stores it in the $CMD variable.

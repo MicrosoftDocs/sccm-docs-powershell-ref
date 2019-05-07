@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMDeploymentTypeDependencyGroup
 titleSuffix: Configuration Manager
 description: Sets a deployment type dependency group in Configuration Manager.
@@ -32,10 +32,14 @@ The **Set-CMDeploymentTypeDependencyGroup** cmdlet sets a deployment type depend
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Set-CMDeploymentTypeDependencyGroup -NewName MyNewGroup
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Set-CMDeploymentTypeDependencyGroup -NewName MyNewGroup
 ```
 
 ## PARAMETERS

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: C4F9B9A3-3D8E-49EC-9B36-6272EAE7F3C8
 online version: https://go.microsoft.com/fwlink/?linkid=834118
@@ -35,9 +35,13 @@ You can specify a product by name or obtain a requirement by using the **Get-CMH
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a hardware requirement
 ```
-PS C:\> Remove-CMHardwareRequirement -Product "Accounts Program"
+PS XYZ:\> Remove-CMHardwareRequirement -Product "Accounts Program"
 Remove
 Are you sure you wish to remove HardwareRequirement: Product="Accounts Program"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: B6EE1D79-4D2D-4971-8F24-F7EEADA0A292
 online version: https://go.microsoft.com/fwlink/?linkid=834212
@@ -49,16 +49,20 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a collection by name
 ```
-PS C:\> Get-CMCollection -Name "testUser"
+PS XYZ:\> Get-CMCollection -Name "testUser"
 ```
 
 This command gets the collection named testUser.
 
 ### Example 2: Get a collection for a distribution point group
 ```
-PS C:\> Get-CMDistributionPointGroup -Name "testDPGroup" | Get-CMCollection
+PS XYZ:\> Get-CMDistributionPointGroup -Name "testDPGroup" | Get-CMCollection
 ```
 
 This command gets the distribution point group object named testDPGroup and uses the pipeline operator to pass the object to **Get-CMCollection**, which gets the collection associated with the distribution point group.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: D3A68B3C-24E1-4F30-9395-C8FDAC2CE30E
 online version: https://go.microsoft.com/fwlink/?linkid=834124
@@ -35,16 +35,20 @@ The **Get-CMAutoDeploymentRuleDeployment** cmdlet gets the deployments associate
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a deployment object for an automatic deployment rule
 ```
-PS C:\>Get-CMAutoDeploymentRuleDeployment -Name "AutoDeploymentRule01"
+PS XYZ:\>Get-CMAutoDeploymentRuleDeployment -Name "AutoDeploymentRule01"
 ```
 
 This command gets the deployment object for the automatic deployment rule named AutoDeploymentRule01.
 
 ### Example 2: Get a deployment object for an automatic deployment rule using the pipeline
 ```
-PS C:\>Get-CMSoftwareUpdateAutoDeploymentRule -Name "TestRule01" | Get-CMAutoDeploymentRuleDeployment
+PS XYZ:\>Get-CMSoftwareUpdateAutoDeploymentRule -Name "TestRule01" | Get-CMAutoDeploymentRuleDeployment
 ```
 
 This command gets the automatic deployment rule object named TestRule01 and uses the pipeline operator to pass the object to **Get-CMAutoDeploymentRuleDeployment**, which gets the deployments associated with the automatic deployment rule named TestRule01.

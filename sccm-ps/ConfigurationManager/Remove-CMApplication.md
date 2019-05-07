@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: FCD17E0C-355E-4AE5-87E4-2ADA5754A7C3
 online version: https://go.microsoft.com/fwlink/?linkid=833893
@@ -42,9 +42,13 @@ This cmdlet does not remove any existing client installations.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get an application and remove it
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Remove-CMApplication -Force
+PS XYZ:\> Get-CMApplication -Name "Application1" | Remove-CMApplication -Force
 ```
 
 The first command gets the application object named Application1 and uses the pipeline operator to pass the object to **Remove-CMApplication**, which removes the application.
@@ -52,7 +56,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove an application by model name
 ```
-PS C:\> Remove-CMApplication -ModelName "ScopeId_5E88BBB4-B1D1-4B74-8A4F-9E8B03BC1EB0/Application_7aa0ed27-6240-4070-a098-3edc9281dd96" -Force
+PS XYZ:\> Remove-CMApplication -ModelName "ScopeId_5E88BBB4-B1D1-4B74-8A4F-9E8B03BC1EB0/Application_7aa0ed27-6240-4070-a098-3edc9281dd96" -Force
 ```
 
 This command removes the application object with the specified model name.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.CalTracking.dll-Help.xml
 ms.assetid: F4A560C6-BF3A-423B-B6FB-F779E2863F4F
 online version: https://go.microsoft.com/fwlink/?linkid=834053
@@ -35,16 +35,20 @@ This cmdlet returns a list of features able to be licensed and a list of unique 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get all licensable features for all servers and clients
 ```
-PS C:\> Get-CMAccessLicense -License
+PS XYZ:\> Get-CMAccessLicense -License
 ```
 
 This command gets all licensable features for all servers and clients within the scope of System Center Configuration Manager.
 
 ### Example 2: Get the unique users, devices, and license-specific unique ID for a specified license
 ```
-PS C:\> Get-CMAccessLicense -LicenseName ConfigMgr_2012_EndPointClient
+PS XYZ:\> Get-CMAccessLicense -LicenseName ConfigMgr_2012_EndPointClient
 ```
 
 This command gets the unique users, devices, and license-specific IDs for the license named ConfigMgr_2012_EndPointClient.

@@ -1,4 +1,4 @@
----
+﻿---
 title: Import-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Imports Configuration Manager configuration items.
@@ -40,10 +40,14 @@ Items usually define a unit of configuration you want to monitor.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Import configuration items
 
 ```powershell
-PS C:\>Import-CMConfigurationItem -FileName "\\atc-dist-01\Public\CM\AdminUITeam\CIData\7389_OSCI.cab","\\atc-dist-01\Public\CM\AdminUITeam\CIData\7452OS_1.cab"
+PS XYZ:\>Import-CMConfigurationItem -FileName "\\atc-dist-01\Public\CM\AdminUITeam\CIData\7389_OSCI.cab","\\atc-dist-01\Public\CM\AdminUITeam\CIData\7452OS_1.cab"
 ```
 
 This command imports configuration items from the files 7389_OSCI.cab and 7452OS_1.cab.
@@ -51,7 +55,7 @@ This command imports configuration items from the files 7389_OSCI.cab and 7452OS
 ### Example 2: Import configuration items and create duplicate configuration items
 
 ```powershell
-PS C:\>Import-CMConfigurationItem -FileName "\\Contoso01\Public\CM\7389_OSCI.cab","\\ Contoso01\Public\CM\7452OS_1.cab" -DuplicateWhileImporting
+PS XYZ:\>Import-CMConfigurationItem -FileName "\\Contoso01\Public\CM\7389_OSCI.cab","\\ Contoso01\Public\CM\7452OS_1.cab" -DuplicateWhileImporting
 ```
 
 This command imports configuration items from the files 7389_OSCI.cab and 7452OS_1.cab.

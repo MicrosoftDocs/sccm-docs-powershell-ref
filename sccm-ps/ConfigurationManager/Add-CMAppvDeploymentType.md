@@ -1,4 +1,4 @@
----
+﻿---
 title: Add-CMAppvDeploymentType
 titleSuffix: Configuration Manager
 description: Adds a Microsoft Application Virtualization (App-V) 4 deployment type to an application.
@@ -50,16 +50,20 @@ The **Add-CMAppvDeploymentType** cmdlet adds a Microsoft Application Virtualizat
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add an App-V deployment type
 ```
-PS C:\>Add-CMAppvDeploymentType -ApplicationName "testApp" -ContentLocation "\\Server1\Applications\Appv\OrcaV1\Orca_manifest.xml" -DeploymentTypeName "Appv"
+PS XYZ:\>Add-CMAppvDeploymentType -ApplicationName "testApp" -ContentLocation "\\Server1\Applications\Appv\OrcaV1\Orca_manifest.xml" -DeploymentTypeName "Appv"
 ```
 
 This command adds an App-V deployment type to the application named testApp.
 
 ### Example 2: Add an App-V deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testApp" | Add-CMAppvDeploymentType -ContentLocation "\\Server1\Applications\Appv\OrcaV1\Orca_manifest.xml" -DeploymentTypeName "Appv"
+PS XYZ:\> Get-CMApplication -Name "testApp" | Add-CMAppvDeploymentType -ContentLocation "\\Server1\Applications\Appv\OrcaV1\Orca_manifest.xml" -DeploymentTypeName "Appv"
 ```
 
 This command gets the application object named testApp and uses the pipeline operator to pass the object to **Add-CMAppvDeploymentType**, which adds an App-V deployment type to the application.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm-help.xml
 ms.assetid: B0351D61-35E9-42F7-BD61-DDB7A66039A3
 online version: https://go.microsoft.com/fwlink/?linkid=834174
@@ -32,16 +32,20 @@ The **Get-CMCertificateProfileTrustedRootCA** function gets a trusted CA certifi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a trusted CA certificate profile by ID
 ```
-PS C:\> Get-CMCertificateProfileTrustedRootCA -Id 16777479
+PS XYZ:\> Get-CMCertificateProfileTrustedRootCA -Id 16777479
 ```
 
 This command gets the trusted CA certificate profile with the ID 16777479.
 
 ### Example 2: Get a trusted CA certificate profile by name
 ```
-PS C:\> Get-CMCertificateProfileTrustedRootCA -Name "Test01" -Fast
+PS XYZ:\> Get-CMCertificateProfileTrustedRootCA -Name "Test01" -Fast
 ```
 
 This command gets the trusted CA certificate profile named Test01, but does not return lazy properties.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: BFDDAC90-E647-44EB-9C5F-1486E267EDD5
 online version: https://go.microsoft.com/fwlink/?linkid=833739
@@ -43,10 +43,14 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a collection and modify it
 ```
-PS C:\> $userCollection = Get-CMCollection -Name "testUser"
-PS C:\> Set-CMCollection -CollectionId $userCollection -NewName "newTestUser"
+PS XYZ:\> $userCollection = Get-CMCollection -Name "testUser"
+PS XYZ:\> Set-CMCollection -CollectionId $userCollection -NewName "newTestUser"
 ```
 
 The first command gets the collection object named testUser and stores the object in the $userCollection variable.
@@ -55,7 +59,7 @@ The second command updates the name of the collection in $userCollection.
 
 ### Example 2: Pass a collection and modify it
 ```
-PS C:\> Get-CMCollection -Name "testUser" | Set-CMCollection -NewName "newTestUser"
+PS XYZ:\> Get-CMCollection -Name "testUser" | Set-CMCollection -NewName "newTestUser"
 ```
 
 This command gets the collection object named testUser and uses the pipeline operator to pass the object to **Set-CMCollection**, which updates its name to newTestUser.

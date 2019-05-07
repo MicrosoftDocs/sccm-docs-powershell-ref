@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 5AAD5A9E-3547-47A3-8CB3-0E0DC066AACE
 online version: https://go.microsoft.com/fwlink/?linkid=833925
@@ -23,16 +23,20 @@ A software update point component interacts with WSUS services to configure upda
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Retrieve a software update point component by name
 ```
-PS C:\> Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
+PS XYZ:\> Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
 ```
 
 This command retrieves a software update point component by using the site system server name.
 
 ### Example 2: Retrieve a software update point component by site code
 ```
-PS C:\> Get-CMSoftwareUpdatePointComponent -SiteCode "CM1"
+PS XYZ:\> Get-CMSoftwareUpdatePointComponent -SiteCode "CM1"
 ```
 
 This command retrieves a software update point component by using the site code.

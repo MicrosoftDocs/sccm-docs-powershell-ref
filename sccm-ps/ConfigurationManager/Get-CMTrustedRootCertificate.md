@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 611213A2-DA3D-4A5C-8769-2E9B92EF1B7A
 online version: https://go.microsoft.com/fwlink/?linkid=833967
@@ -29,9 +29,13 @@ If you deploy your own PKI, install the required root certificate.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a trusted root certificate
 ```
-PS C:\> Get-CMTrustedRootCertificate -CertificationAuthorityServerName "ContosoCA.Contoso.com"
+PS XYZ:\> Get-CMTrustedRootCertificate -CertificationAuthorityServerName "ContosoCA.Contoso.com"
 ```
 
 This command gets a trusted root certificate from the internal server named ContosoCA.Contoso.com.

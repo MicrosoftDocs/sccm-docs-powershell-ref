@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: BD6E2FCF-CFEB-4111-AACB-B817E25915BF
 online version: https://go.microsoft.com/fwlink/?linkid=834068
@@ -30,9 +30,13 @@ When you remove a distribution point, you remove the designation of a site syste
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a distribution point by using the pipeline
 ```
-PS C:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Remove-CMDistributionPoint -Force
+PS XYZ:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Remove-CMDistributionPoint -Force
 ```
 
 This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and uses the pipeline operator to pass the object to **Remove-CMDistributionPoint**, which removes the distribution point object.
@@ -40,8 +44,8 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a distribution point by using an object variable
 ```
-PS C:\> $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
-PS C:\> Remove-CMDistributionPoint -InputObject $DP -Force
+PS XYZ:\> $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+PS XYZ:\> Remove-CMDistributionPoint -InputObject $DP -Force
 ```
 
 The first command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and stores the object in the $DP variable.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 9502FE38-91CD-49ED-A267-7F8E74695968
 online version: https://go.microsoft.com/fwlink/?linkid=833875
@@ -29,9 +29,13 @@ The **Set-CMHierarchySetting** cmdlet sets hierarchy settings in Microsoft Syste
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Modify the hierarchy setting
 ```
-PS C:\> Set-CMHierarchySetting -AllowPrestage -ApprovalMethod AutomaticallyApproveAllComputers
+PS XYZ:\> Set-CMHierarchySetting -AllowPrestage -ApprovalMethod AutomaticallyApproveAllComputers
 ```
 
 This command uses the **Set-CMHierarchySetting** cmdlet to modify the hierarchy setting.

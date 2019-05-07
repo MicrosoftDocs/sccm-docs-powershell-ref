@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: CB5EE603-74FA-4FF6-8063-06F257643B15
 online version: https://go.microsoft.com/fwlink/?linkid=833948
@@ -30,9 +30,13 @@ The Microsoft System Center Configuration Manager status summarizers apply to th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a status summarizer
 ```
-PS C:\> Get-CMStatusSummarizer -SiteCode "CM1" -StatusSummarizerType ComponentStatusSummarizer
+PS XYZ:\> Get-CMStatusSummarizer -SiteCode "CM1" -StatusSummarizerType ComponentStatusSummarizer
 ```
 
 This command gets the status summarizer for the component status.

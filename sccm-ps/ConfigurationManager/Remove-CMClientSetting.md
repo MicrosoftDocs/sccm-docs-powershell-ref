@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 ms.assetid: 3909FDAF-A2D9-4959-814C-D9F30E1DC014
 online version: https://go.microsoft.com/fwlink/?linkid=833960
@@ -36,9 +36,13 @@ For more information, see [About Client Settings in Configuration Manager](http:
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a collection of client settings that is specified by its ID
 ```
-PS C:\> Remove-CMClientSetting -Id "16777255"
+PS XYZ:\> Remove-CMClientSetting -Id "16777255"
 ```
 
 This command removes a collection of client settings that is specified by the ID 16777255.

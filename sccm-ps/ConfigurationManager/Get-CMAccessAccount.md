@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: FA67EA36-5834-4957-BF85-08B2C9E61193
 online version: https://go.microsoft.com/fwlink/?linkid=834049
@@ -111,10 +111,14 @@ You can get an access account to change the network access permissions for clien
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get an access account for a package by using the package ID
 ```
-PS C:\> $ID = Get-CMPackage -PackageName "Configuration Manager Client Package" 
-PS C:\> Get-CMAccessAcccount -PackageId $ID
+PS XYZ:\> $ID = Get-CMPackage -PackageName "Configuration Manager Client Package" 
+PS XYZ:\> Get-CMAccessAcccount -PackageId $ID
 Name:          Administrator
 Type:          Administrator
 Access:        FullControl
@@ -135,7 +139,7 @@ The command output describes all users and groups that can access this package.
 
 ### Example 2: Get an access account for a boot image by using the boot image name
 ```
-PS C:\> Get-CMAccessAccount -BootImageName "System Image (x64)"
+PS XYZ:\> Get-CMAccessAccount -BootImageName "System Image (x64)"
 Name:          CONTOSO\EDaugherty
 Type:          WindowsUser
 Access:        Read

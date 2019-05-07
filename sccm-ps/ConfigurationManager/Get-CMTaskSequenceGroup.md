@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMTaskSequenceGroup
 titleSuffix: Configuration Manager
 description: Gets a Configuration Manager task sequence group.
@@ -48,10 +48,14 @@ The **Get-CMTaskSequenceGroup** gets task sequence group(s) in a task sequence. 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Get-CMTaskSequenceGroup -StepName $gpName
+PS XYZ:\> $ReferencedTaskSequence | Get-CMTaskSequenceGroup -StepName $gpName
 ```
 
 The command gets the task sequence groups in a task sequence with name specified.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: C8F0AA23-CCFA-4D78-AABC-BE8664546C2C
 online version: https://go.microsoft.com/fwlink/?linkid=833782
@@ -28,9 +28,13 @@ The **New-CMStatusFilterRule** cmdlet creates a rule that triggers one or more a
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a status filter rule
 ```
-PS C:\> New-CMStatusFilterRule -SiteCode "Contoso2" -Name "11211" -TargetSiteCode "Contoso2" -Source "SMS Provider" -System "Contoso-test" -Component "1111" -MessageType Milestone -SeverityType Informational -MessageId "1234" -PropertyName "403" -PropertyValue "123" -WriteToDatabase $True -AllowDeleteMessagesTimeDays 20 -ReportToEventLog $False -ReplicateToParentSite $False -RunProgram $False -ForwardToStatusSummarizers $True -ProcessLowerPriorityRules $True
+PS XYZ:\> New-CMStatusFilterRule -SiteCode "Contoso2" -Name "11211" -TargetSiteCode "Contoso2" -Source "SMS Provider" -System "Contoso-test" -Component "1111" -MessageType Milestone -SeverityType Informational -MessageId "1234" -PropertyName "403" -PropertyValue "123" -WriteToDatabase $True -AllowDeleteMessagesTimeDays 20 -ReportToEventLog $False -ReplicateToParentSite $False -RunProgram $False -ForwardToStatusSummarizers $True -ProcessLowerPriorityRules $True
 ```
 
 This command creates a status filter rule.

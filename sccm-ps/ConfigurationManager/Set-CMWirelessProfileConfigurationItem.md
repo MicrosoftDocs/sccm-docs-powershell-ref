@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: B6C78C9A-D8A3-43CB-9F35-D6EE842A6962
 online version: https://go.microsoft.com/fwlink/?linkid=834184
@@ -39,9 +39,13 @@ Client computers use wireless profiles for configuration when they connect to a 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Modify a wireless profile configuration item
 ```
-PS C:\> Set-CMWirelessProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Wireless2.xml"
+PS XYZ:\> Set-CMWirelessProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Wireless2.xml"
 ```
 
 This command modifies the wireless profile configuration item that has the ID AAA0004D.

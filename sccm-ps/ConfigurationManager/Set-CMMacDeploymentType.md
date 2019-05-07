@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: EF0E00B2-B4C1-4DDB-A6D2-FC52E0A642F8
 online version: https://go.microsoft.com/fwlink/?linkid=833911
@@ -53,9 +53,13 @@ The **Set-CMMacDeploymentType** cmdlet changes the settings for a Mac deployment
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Rename a deployment type and add a description
 ```
-PS C:\> Set-CMMacDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac_updated" -NewName "DTMac" -ContentLocation "\\Server01\Resources\Applications\Mac\Bean.app\Bean.app.cmmac" -PassThru -Comment "test-set-CMMacDeploymentType"
+PS XYZ:\> Set-CMMacDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac_updated" -NewName "DTMac" -ContentLocation "\\Server01\Resources\Applications\Mac\Bean.app\Bean.app.cmmac" -PassThru -Comment "test-set-CMMacDeploymentType"
 ```
 
 This command changes the name of the deployment type named DTMac_Updated for the application named testMac to DTMac, and adds a description.
@@ -63,7 +67,7 @@ The *PassThru* parameter indicates that an object will be returned from this com
 
 ### Example 2: Rename a deployment type and add a description by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac" | Set-CMMacDeploymentType -NewName "DTMac_updated" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -PassThru -Comment "test-set-CMMacDeploymentType"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac" | Set-CMMacDeploymentType -NewName "DTMac_updated" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -PassThru -Comment "test-set-CMMacDeploymentType"
 ```
 
 This command gets the deployment type object named DTMac for the application named testMac and uses the pipeline operator to pass the object to **Set-CMMacDeploymentType**.

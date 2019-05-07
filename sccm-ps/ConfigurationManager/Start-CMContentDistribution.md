@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: CE48C113-8802-4088-AB60-2D9BE09B8EB5
 online version: https://go.microsoft.com/fwlink/?linkid=834214
@@ -155,9 +155,13 @@ You can distribute the content to distribution points, distribution point groups
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Distribute a boot image
 ```
-PS C:\> Start-CMContentDistribution -BootImageId "CM200004" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -BootImageId "CM200004" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the boot image that has the ID CM200004.
@@ -165,14 +169,14 @@ The command distributes the boot image to the collection named All Systems, the 
 
 ### Example 2: Distribute a task sequence
 ```
-PS C:\> Start-CMContentDistribution -TaskSequenceId "CM200007" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM"
+PS XYZ:\> Start-CMContentDistribution -TaskSequenceId "CM200007" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM"
 ```
 
 This command distributes the task sequence that has the ID CM200007 to the collection named All Systems and the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM.
 
 ### Example 3: Distribute an application
 ```
-PS C:\> Start-CMContentDistribution -ApplicationName "Dict.app" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -ApplicationName "Dict.app" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the application named Dict.app.
@@ -180,7 +184,7 @@ The command distributes the application to the collection named All Systems, the
 
 ### Example 4: Distribute a package
 ```
-PS C:\> Start-CMContentDistribution -PackageId "CM200001" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -PackageId "CM200001" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the package that has the ID CM200001.
@@ -188,7 +192,7 @@ The command distributes the package to the collection named All Systems, the dis
 
 ### Example 5: Distribute a deployment package
 ```
-PS C:\> Start-CMContentDistribution -DeploymentPackageName "DivDeployPkg01" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -DeploymentPackageName "DivDeployPkg01" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the deployment package named DivDeployPkg01.
@@ -196,7 +200,7 @@ The command distributes the deployment package to the collection named All Syste
 
 ### Example 6: Distribute a driver package
 ```
-PS C:\> Start-CMContentDistribution -DriverPackageName "DrvPkg02" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -DriverPackageName "DrvPkg02" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the driver package named DrvPkg02.
@@ -204,7 +208,7 @@ The command distributes the driver package to the collection named All Systems, 
 
 ### Example 7: Distribute an operating system image
 ```
-PS C:\> Start-CMContentDistribution -OperatingSystemImageId "CM200013" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -OperatingSystemImageId "CM200013" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the operating system image that has the ID CM200013.
@@ -212,7 +216,7 @@ The command distributes the operating system image to the collection named All S
 
 ### Example 8: Distribute an operating system installer
 ```
-PS C:\> Start-CMContentDistribution -OperatingSystemInstallerId "CM200017" -CollectionName "All Systems" -DistributionPointName CMDIV- TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -OperatingSystemInstallerId "CM200017" -CollectionName "All Systems" -DistributionPointName CMDIV- TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the operating system installer that has the ID CM200017.

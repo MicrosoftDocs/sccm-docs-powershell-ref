@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: DB992DC8-0D2B-4704-AA14-0CD157FFA1C2
 online version: https://go.microsoft.com/fwlink/?linkid=834111
@@ -63,23 +63,27 @@ You can specify a name or ID for a query or use the [Get-CMStatusMessageQuery](G
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a security scope
 ```
-PS C:\> Set-CMStatusMessageQuery -Name "All Status Messages" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
+PS XYZ:\> Set-CMStatusMessageQuery -Name "All Status Messages" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
 ```
 
 This command adds the security scope named Scope22 to the query named All Status Messages.
 
 ### Example 2: Delete messages
 ```
-PS C:\> Set-CMStatusMessageQuery -DeleteMessage -Name "All Active Directory Security Groups"
+PS XYZ:\> Set-CMStatusMessageQuery -DeleteMessage -Name "All Active Directory Security Groups"
 ```
 
 This command removes messages found by the query named All Active Directory Security Groups from the System Center Configuration Manager database.
 
 ### Example 3: Rename a query
 ```
-PS C:\> Set-CMStatusMessageQuery -Name "All Active Directory Security Groups" -NewName "Western Security Groups"
+PS XYZ:\> Set-CMStatusMessageQuery -Name "All Active Directory Security Groups" -NewName "Western Security Groups"
 ```
 
 This command renames the query All Active Directory Security Groups.

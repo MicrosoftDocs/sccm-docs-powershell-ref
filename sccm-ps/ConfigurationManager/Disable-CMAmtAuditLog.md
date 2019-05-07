@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833939
 schema: 2.0.0
@@ -39,24 +39,28 @@ If you want to delete the current log entries, use the [Clear-CMAmtAuditLog](Cle
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Disable audit logging for a device by using an ID
 ```
-PS C:\>Disable-CMAmtAuditLog -DeviceID "16777230"
+PS XYZ:\>Disable-CMAmtAuditLog -DeviceID "16777230"
 ```
 
 This command disables Intel AMT audit logging for a device that has the ID 16777230.
 
 ### Example 2: Disable audit logging for named device
 ```
-PS C:\>Disable-CMAmtAuditLog -DeviceName "Accn023.Contoso.com"
+PS XYZ:\>Disable-CMAmtAuditLog -DeviceName "Accn023.Contoso.com"
 ```
 
 This command disables Intel AMT audit logging for a device named Accn023.Contoso.com.
 
 ### Example 3: Disable audit logging by using a variable
 ```
-PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
-PS C:\> Disable-CMAmtAuditLog -Device $CMD
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS XYZ:\> Disable-CMAmtAuditLog -Device $CMD
 ```
 
 The first command gets a device object by using the **Get-CMDevice** command, and then stores it in the $CMD variable.

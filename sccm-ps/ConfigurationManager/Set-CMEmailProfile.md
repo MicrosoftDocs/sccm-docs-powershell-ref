@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 7376C05F-C498-475F-8F2B-6F1D1E861CFF
 online version: https://go.microsoft.com/fwlink/?linkid=833837
@@ -53,24 +53,28 @@ The **Set-CMEmailProfile** cmdlet updates the settings of an Exchange ActiveSync
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Update a profile by name
 ```
-PS C:\> Set-CMEmailProfile -Name "EmailProfile1" -NewName "newEmailProfile1"
+PS XYZ:\> Set-CMEmailProfile -Name "EmailProfile1" -NewName "newEmailProfile1"
 ```
 
 This command updates the name of the Exchange ActiveSync email profile from EmailProfile1 to newEmailProfile1.
 
 ### Example 2: Update a profile by ID
 ```
-PS C:\> Set-CMEmailProfile -Id 16795654 -NewName "newEmailProfile2"
+PS XYZ:\> Set-CMEmailProfile -Id 16795654 -NewName "newEmailProfile2"
 ```
 
 This command updates the name of the Exchange ActiveSync email profile with the ID of 16795654 to newEmailProfile2.
 
 ### Example 3: Update a profile as an input object
 ```
-PS C:\> $EmailProfile = Get-CMEmailProfile -Name "EmailProfile3"
-PS C:\> Set-CMEmailProfile -InputObject $EmailProfile -NewName "newEmailProfile3"
+PS XYZ:\> $EmailProfile = Get-CMEmailProfile -Name "EmailProfile3"
+PS XYZ:\> Set-CMEmailProfile -InputObject $EmailProfile -NewName "newEmailProfile3"
 ```
 
 The first command gets the Exchange ActiveSync email profile object named EmailProfile3 and stores the object in the $EmailProfile variable.
@@ -79,7 +83,7 @@ The second command changes the name of the email profile stored in $EmailProfile
 
 ### Example 4: Use the pipeline to update a profile
 ```
-PS C:\> Get-CMEmailProfile -Name "EmailProfile4" | Set-CMEmailProfile -NewName "newEmailProfile4"
+PS XYZ:\> Get-CMEmailProfile -Name "EmailProfile4" | Set-CMEmailProfile -NewName "newEmailProfile4"
 ```
 
 This command gets the Exchange ActiveSync email profile object named EmailProfile4 and uses the pipeline operator to pass the object to **Set-CMEmailProfile**, which changes the name of the email profile object to newEmailProfile4.

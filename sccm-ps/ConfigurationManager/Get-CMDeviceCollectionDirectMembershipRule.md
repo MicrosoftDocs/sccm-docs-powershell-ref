@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 3BDB9041-ADCF-44BA-A393-146E58845094
 online version: https://go.microsoft.com/fwlink/?linkid=833623
@@ -68,16 +68,20 @@ The **Get-CMDeviceCollectionDirectMembershipRule** cmdlet gets one or more direc
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a direct membership rule by its name
 ```
-PS C:\> Get-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01"
+PS XYZ:\> Get-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01"
 ```
 
 This command gets the direct membership rules for the device collection named Device01.
 
 ### Example 2: Get a direct membership rule by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device02" | Get-CMDeviceCollectionDirectMembershipRule
+PS XYZ:\> Get-CMCollection -Name "Device02" | Get-CMDeviceCollectionDirectMembershipRule
 ```
 
 This command gets the device collection object named Device02 and uses the pipeline operator to pass the object to Get-CMDeviceCollectionDirectMembershipRule which gets the direct membership rules for the device collection object.

@@ -1,4 +1,4 @@
----
+﻿---
 title: Add-CMTaskSequenceStep
 titleSuffix: Configuration Manager
 description: Adds a Configuration Manager task sequence step.
@@ -51,10 +51,14 @@ The **New-CMTaskSequenceStep** cmdlet adds task sequence group or step object(s)
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Add-CMTaskSequenceStep -Step ($gp1,$st1,$st2)
+PS XYZ:\>$ReferencedTaskSequence | Add-CMTaskSequenceStep -Step ($gp1,$st1,$st2)
 ```
 
 This command adds a task sequence group and two task sequence steps to a task sequence.
@@ -62,7 +66,7 @@ This command adds a task sequence group and two task sequence steps to a task se
 ### Example 2
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Add-CMTaskSequenceStep -Step $st3 -InsertStepStartIndex $index
+PS XYZ:\>$ReferencedTaskSequence | Add-CMTaskSequenceStep -Step $st3 -InsertStepStartIndex $index
 ```
 
 This command adds a step to a task sequence with a start index.

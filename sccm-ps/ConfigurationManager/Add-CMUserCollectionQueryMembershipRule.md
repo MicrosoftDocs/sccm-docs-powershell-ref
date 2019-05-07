@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: D4FECF42-937A-42F8-BB4C-EA3A17E04563
 online version: https://go.microsoft.com/fwlink/?linkid=833780
@@ -41,9 +41,13 @@ For more information on collection rules, see [Introduction to Collections in Co
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a rule to a collection by using a name
 ```
-PS C:\>Add-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -QueryExpression "select SMS_R_USER.ResourceID,SMS_R_USER.ResourceType,SMS_R_USER.Name,SMS_R_USER.UniqueUserName,SMS_R_USER.WindowsNTDomain from SMS_R_User" -RuleName "Remote Users by Domain"
+PS XYZ:\>Add-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -QueryExpression "select SMS_R_USER.ResourceID,SMS_R_USER.ResourceType,SMS_R_USER.Name,SMS_R_USER.UniqueUserName,SMS_R_USER.WindowsNTDomain from SMS_R_User" -RuleName "Remote Users by Domain"
 ```
 
 This command adds a rule named Remote Users by Domain to the collection named Remote Users.

@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Changes settings for a Configuration Manager configuration item.
@@ -56,10 +56,14 @@ For more information about configuration items, see [Introduction to Compliance 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Change the name of a configuration item
 
 ```powershell
-PS C:\> Set-CMConfigurationItem -Name "CITest" -NewName "CITest01"
+PS XYZ:\> Set-CMConfigurationItem -Name "CITest" -NewName "CITest01"
 ```
 
 This command changes the name of the configuration item named CITest to CITest01.
@@ -67,7 +71,7 @@ This command changes the name of the configuration item named CITest to CITest01
 ### Example 2: Set item settings
 
 ```powershell
-PS C:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction AddMembership -SecurityScopeName "DefaultScope"
+PS XYZ:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction AddMembership -SecurityScopeName "DefaultScope"
 ```
 
 This command sets the security scope action to AddMembership and the security scope name to DefaultScope for the item named CITest01.
@@ -75,7 +79,7 @@ This command sets the security scope action to AddMembership and the security sc
 ### Example 3: Change item settings
 
 ```powershell
-PS C:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction RemoveMembership -SecurityScopeName "DefaultScope"
+PS XYZ:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction RemoveMembership -SecurityScopeName "DefaultScope"
 ```
 
 This command sets the security scope action to RemoveMembership and the security scope name to DefaultScope for the item named CITest01.

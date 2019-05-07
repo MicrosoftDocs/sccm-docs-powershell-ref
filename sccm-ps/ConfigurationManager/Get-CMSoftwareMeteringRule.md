@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: C12620B8-D0BF-464F-BF90-BB1658ABE0B4
 online version: https://go.microsoft.com/fwlink/?linkid=833892
@@ -37,9 +37,13 @@ For more information about software metering in System Center Configuration Mana
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get rules for a product
 ```
-PS C:\> Get-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS XYZ:\> Get-CMSoftwareMeteringRule -ProductName "Accounting Package"
 ```
 
 This command gets software metering rules for the product named Accounting Package.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 1851328A-D7D3-40E2-B3D5-7EA9454B5D02
 online version: https://go.microsoft.com/fwlink/?linkid=834011
@@ -152,9 +152,13 @@ The **Remove-CMContentDistribution** cmdlet removes one or more packages from a 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a driver package from a distribution point
 ```
-PS C:\> Remove-CMContentDistribution -DriverPackageID "PCP00019" -DistributionPointName "distribution-server.contoso.com"
+PS XYZ:\> Remove-CMContentDistribution -DriverPackageID "PCP00019" -DistributionPointName "distribution-server.contoso.com"
 ```
 
 This command removes the driver package PCO00019 from the distribution point distribution-server.contoso.com.

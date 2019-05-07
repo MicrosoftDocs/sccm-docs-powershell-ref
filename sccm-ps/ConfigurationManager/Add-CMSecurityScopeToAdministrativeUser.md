@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: CAC293F8-F168-4D53-8C74-E33A077BE0D1
 online version: https://go.microsoft.com/fwlink/?linkid=833747
@@ -76,16 +76,20 @@ You can specify a security scope to add by name or by ID or you can use the [Get
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a named security scope to a named administrative group
 ```
-PS C:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName "Western Administrators" -SecurityScopeName "Scope22"
+PS XYZ:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName "Western Administrators" -SecurityScopeName "Scope22"
 ```
 
 This command adds a security scope named Scope22 to an administrative group named Western Administrators.
 
 ### Example 2: Add a security scope to an administrative group by using an ID
 ```
-PS C:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserId 345 -SecurityScopeId "SMS00067"
+PS XYZ:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserId 345 -SecurityScopeId "SMS00067"
 ```
 
 This command adds the security scope that has the ID SMS00067 to the administrative user that has the ID 345.

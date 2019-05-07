@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 ms.assetid: 6272F088-F019-471D-A1EC-D4B3383D6931
 online version: https://go.microsoft.com/fwlink/?linkid=834203
@@ -75,17 +75,21 @@ For more information about client settings, see [About Client Settings in Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Deploy a client setting object by using its ID to a named collection
 ```
-PS C:\> Start-CMClientSettingDeployment -ClientSettingId "CSI1023" -CollectionName "General Computer Collection"
+PS XYZ:\> Start-CMClientSettingDeployment -ClientSettingId "CSI1023" -CollectionName "General Computer Collection"
 ```
 
 This command starts deployment of the client setting object that has the ID CSI1023 for the collection named General Computer Collection.
 
 ### Example 2: Deploy a client setting object by using a variable
 ```
-PS C:\> $CSID = Get-CMClientSetting -Id "CSI1023"
-PS C:\> Start-CMClientSettingDeployment -ClientSetting $CSID -CollectionName "General Computer Collection"
+PS XYZ:\> $CSID = Get-CMClientSetting -Id "CSI1023"
+PS XYZ:\> Start-CMClientSettingDeployment -ClientSetting $CSID -CollectionName "General Computer Collection"
 ```
 
 The first command gets a client setting object that has the ID CSI1023, and saves it in the $CSID variable.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: B62E719D-4285-49C7-803B-E5E4CEFECB45
 online version: https://go.microsoft.com/fwlink/?linkid=833894
@@ -27,9 +27,13 @@ NOTE: Windows Hello for Business was previously known as Microsoft Passport for 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Enable Windows Hello for business
 ```
-PS C:\> Set-CMIntuneSubscriptionPassportForWorkProperty -Enable $True -RequireTpm $True -MinPinLength 5 -MaxPinLength 8 -AllowUpperCase $True -AllowLowerCase $True -AllowSpecialChar $True -PinExpirationDays 2 -PreventPinReuseCount 3 -EnableBiometrics $False -EnableEnhancedBiometrics $False -UseRemotePassport $False
+PS XYZ:\> Set-CMIntuneSubscriptionPassportForWorkProperty -Enable $True -RequireTpm $True -MinPinLength 5 -MaxPinLength 8 -AllowUpperCase $True -AllowLowerCase $True -AllowSpecialChar $True -PinExpirationDays 2 -PreventPinReuseCount 3 -EnableBiometrics $False -EnableEnhancedBiometrics $False -UseRemotePassport $False
 ```
 
 This command enables Windows Hello for business for enrolled devices.

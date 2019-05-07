@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 2FB8BE93-96D3-4BF9-B3F7-F1B2C6BEF109
 online version: https://go.microsoft.com/fwlink/?linkid=834143
@@ -35,10 +35,14 @@ The **Remove-CMObjectSecurityScope** cmdlet removes a security scope from a Micr
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a security scope from application objects by using the pipeline
 ```
-PS C:\> $Scope = Get-CMSecurityScope -Name "Scope1"
-PS C:\> Get-CMApplication -Name "Application*" | Remove-CMObjectSecurityScope -Scope $Scope -Force
+PS XYZ:\> $Scope = Get-CMSecurityScope -Name "Scope1"
+PS XYZ:\> Get-CMApplication -Name "Application*" | Remove-CMObjectSecurityScope -Scope $Scope -Force
 ```
 
 The first command gets the security scope object named Scope1 and stores the object in the $Scope variable.
@@ -49,7 +53,7 @@ The *Force* parameter indicates that the user is not prompted before the securit
 
 ### Example 2: Remove a security scope from application objects
 ```
-PS C:\> Remove-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Name "Scope1" -Force
+PS XYZ:\> Remove-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Name "Scope1" -Force
 ```
 
 This command gets all application objects that have a name beginning with Application and removes the security scope named Scope1 from each application object.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: CBC37447-1B97-4C05-B859-BC3AD90F816D
 online version: https://go.microsoft.com/fwlink/?linkid=833981
@@ -35,9 +35,13 @@ The **Enable-CMBaseline** cmdlet enables one or more configuration baselines for
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Enable a configuration baseline
 ```
-PS C:\>Enable-CMBaseline -Name "BLConfig01"
+PS XYZ:\>Enable-CMBaseline -Name "BLConfig01"
 ```
 
 This command enables the configuration baseline named BLconfig01.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 ms.assetid: 33A18314-C3D3-4457-9E93-7D5C3A46D621
 online version: https://go.microsoft.com/fwlink/?linkid=834109
@@ -23,9 +23,13 @@ This cmdlet does not change the regular schedule for summarizations.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Invoke summarization
 ```
-PS C:\>Invoke-CMClientOperationSummarization
+PS XYZ:\>Invoke-CMClientOperationSummarization
 ```
 
 This command performs a client operations summarization immediately.

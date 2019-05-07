@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 5457BE35-1591-44A8-8D2E-6624532F633D
 online version: https://go.microsoft.com/fwlink/?linkid=834276
@@ -25,9 +25,13 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a new IP Subnet site boundary
 ```
-PS C:\> New-CMBoundary -DisplayName "IPSubNetBoundary01" -BoundaryType IPSubNet -Value "172.16.50.0/24"
+PS XYZ:\> New-CMBoundary -DisplayName "IPSubNetBoundary01" -BoundaryType IPSubNet -Value "172.16.50.0/24"
 BoundaryFlags:      0
 BoundaryID:         6338009
 BoundaryType:       0
@@ -46,7 +50,7 @@ This command creates a new IP subnet site boundary that has a name of IPSubNetBo
 
 ### Example 2: Create a new Active Directory site boundary
 ```
-PS C:\> New-CMBoundary -DisplayName "ADSiteBoundary01" -BoundaryType ADSite -Value "Default-First-Site-Name"
+PS XYZ:\> New-CMBoundary -DisplayName "ADSiteBoundary01" -BoundaryType ADSite -Value "Default-First-Site-Name"
 BoundaryFlags:      0
 BoundaryID:         6339999
 BoundaryType:       1
@@ -64,7 +68,7 @@ This command creates a new Active Directory site boundary that has a name of ADS
 
 ### Example 3: Create a new IP v6 prefix site boundary
 ```
-PS C:\> New-CMBoundary -DisplayName "IPv6PrefixBoundary01" -BoundaryType IPv6Prefix -Value "FE80::/64".
+PS XYZ:\> New-CMBoundary -DisplayName "IPv6PrefixBoundary01" -BoundaryType IPv6Prefix -Value "FE80::/64".
 BoundaryFlags:      0
 BoundaryID:         63347110
 BoundaryType:       2
@@ -83,7 +87,7 @@ This command creates a new IP v6 prefix site boundary that has a name of IPv6Pre
 
 ### Example 4: Create a new IP range site boundary
 ```
-PS C:\> New-CMBoundary -DisplayName "IPRangeBoundary01" -BoundaryType IPRange -Value "10.255.255.0-10.255.255.255" 
+PS XYZ:\> New-CMBoundary -DisplayName "IPRangeBoundary01" -BoundaryType IPRange -Value "10.255.255.0-10.255.255.255" 
 BoundaryFlags:      0
 BoundaryID:         6334129
 BoundaryType:       3

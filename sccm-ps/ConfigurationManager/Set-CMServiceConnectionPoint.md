@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: F070D51A-7602-48DE-A367-95F647D42D3F
 online version: https://go.microsoft.com/fwlink/?linkid=834026
@@ -30,17 +30,21 @@ The **Set-CMServiceConnectionPoint** updates the settings of a connection servic
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Set a service connection point
 ```
-PS C:\> Set-CMServiceConnectionPoint -SiteSystemServerName "SiteSystemServer01.Contoso.com" -SiteCode PS1 -Mode Offline
+PS XYZ:\> Set-CMServiceConnectionPoint -SiteSystemServerName "SiteSystemServer01.Contoso.com" -SiteCode PS1 -Mode Offline
 ```
 
 This command sets the mode for the site system server named SiteSystemServer01.Contoso.com to offline.
 
 ### Example 2: Set a service connection point by using a variable
 ```
-PS C:\> $Server = Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer02.Contoso.com"
-PS C:\> Set-CMServiceConnectionPoint -InputObject $Server -Mode Offline
+PS XYZ:\> $Server = Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer02.Contoso.com"
+PS XYZ:\> Set-CMServiceConnectionPoint -InputObject $Server -Mode Offline
 ```
 
 The first command gets the site system server object named SiteSystemServer02.Contoso.com with the site code PS1 and stores the object in the $Server variable.
@@ -49,7 +53,7 @@ The second command sets the mode for the site system server stored in $Server to
 
 ### Example 3: Set a service connection point by using the pipeline
 ```
-PS C:\> Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer03.Contoso.com" | Set-CMServiceConnectionPoint -Mode Offline
+PS XYZ:\> Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer03.Contoso.com" | Set-CMServiceConnectionPoint -Mode Offline
 ```
 
 This command gets the site system server object named SiteSystemServer03.Contoso.com with the site code PS1 and uses the pipeline operator to pass the object to **Set-CMServiceConnectionPoint**, which sets the mode for the server object to offline.

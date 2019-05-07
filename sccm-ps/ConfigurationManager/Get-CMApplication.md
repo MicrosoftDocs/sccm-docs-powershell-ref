@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: E128EE13-5EAA-41C2-B93B-EE60F09099DE
 online version: https://go.microsoft.com/fwlink/?linkid=834083
@@ -40,17 +40,21 @@ The **Get-CMApplication** cmdlet gets a Microsoft System Center Configuration Ma
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get an application by name
 ```
-PS C:\> Get-CMApplication -Name "Application1"
+PS XYZ:\> Get-CMApplication -Name "Application1"
 ```
 
 This command gets the application object named Application1.
 
 ### Example 2: Get the application for a deployment type
 ```
-PS C:\> $DeploymentType = Get-CMDeploymentType -DeploymentTypeName "DT2" -ApplicationName "Application1"
-PS C:\> $DeploymentType | Get-CMApplication
+PS XYZ:\> $DeploymentType = Get-CMDeploymentType -DeploymentTypeName "DT2" -ApplicationName "Application1"
+PS XYZ:\> $DeploymentType | Get-CMApplication
 ```
 
 The first command gets the deployment type object named DT2 for the application named Application1 and stores the object in the $DeploymentType variable.

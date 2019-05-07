@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 06300983-C58D-4402-A33C-E37968FF9FD2
 online version: https://go.microsoft.com/fwlink/?linkid=834096
@@ -65,10 +65,14 @@ You can specify a software update point to modify by name, by site code, or by u
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Modify a software update point
 ```
-PS C:\> $CIObj = Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
-PS C:\> Set-CMSoftwareUpdatePointComponent -InputObject $CIObj
+PS XYZ:\> $CIObj = Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
+PS XYZ:\> Set-CMSoftwareUpdatePointComponent -InputObject $CIObj
 ```
 
 The first command retrieves a software update point component object on the server named Contoso-SiteSysSrv.TSQA.Contoso.com.

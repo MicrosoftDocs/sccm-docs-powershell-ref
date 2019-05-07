@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 51DF5E48-B29A-4A17-9DBD-29DAB1D5B1B8
 online version: https://go.microsoft.com/fwlink/?linkid=833853
@@ -23,9 +23,13 @@ The **Out-CMSignedWindowsMobileCab** cmdlet signs a Windows Mobile cabinet file 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Sign a Windows Mobile CAB file
 ```
-PS C:\>Out-CMSignedWindowsMobileCab -ContentLocation "\\Server1\Applications\Cab\Test.CAB" -PfxFilePath "\\Server1\Applications\sign\sign3.pfx" -PfxPassword $SecureString -OutputPath "\\Server1\Applications\Cab\TestSigned.CAB"
+PS XYZ:\>Out-CMSignedWindowsMobileCab -ContentLocation "\\Server1\Applications\Cab\Test.CAB" -PfxFilePath "\\Server1\Applications\sign\sign3.pfx" -PfxPassword $SecureString -OutputPath "\\Server1\Applications\Cab\TestSigned.CAB"
 ```
 
 This command signs the Windows Mobile CAB file named Test.CAB using the provided certificate and password.

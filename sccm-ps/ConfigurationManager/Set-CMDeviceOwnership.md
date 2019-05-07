@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 ms.assetid: A42E8F2E-F74F-4D26-9A13-761446253F83
 online version: https://go.microsoft.com/fwlink/?linkid=833801
@@ -37,9 +37,13 @@ For a company-owned device, additional information can be gathered and deleted d
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Identify a device as a company asset
 ```
-PS C:\> Set-CMDeviceOwnership -DeviceId "209846738" -OwnershipType Company
+PS XYZ:\> Set-CMDeviceOwnership -DeviceId "209846738" -OwnershipType Company
 ```
 
 This command identifies the specified device as a company asset.

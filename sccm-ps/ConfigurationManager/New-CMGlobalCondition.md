@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMGlobalCondition
 titleSuffix: Configuration Manager
 description: Creates a Configuration Manager global condition object.
@@ -153,10 +153,14 @@ A global condition is a setting or expression in System Center Configuration Man
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a global condition
 
 ```powershell
-PS C:\> New-CMGlobalCondition -AssemblyName "Microsoft.Office.Tools.Word.v9.0" -DeviceType $Windows
+PS XYZ:\> New-CMGlobalCondition -AssemblyName "Microsoft.Office.Tools.Word.v9.0" -DeviceType $Windows
 ```
 
 This command creates a global condition that searches the assembly named Microsoft.Office.Tools.Word.v9.0 on Windows devices.

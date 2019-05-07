@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 2EC18943-84E5-4291-BCD9-0EB15C9D31FA
 online version: https://go.microsoft.com/fwlink/?linkid=834131
@@ -34,17 +34,21 @@ Additionally, System Center Configuration Manager cannot receive inventory data,
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a management point
 ```
-PS C:\> Remove-CMManagementPoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1"
+PS XYZ:\> Remove-CMManagementPoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1"
 ```
 
 This command removes the management point from the Configuration Manager site that has the site code CM1 on the site system named cmcen-dist02.tsqa.contoso.com.
 
 ### Example 2: Remove a management point by using an object variable
 ```
-PS C:\> $Mp = Get-CMManagementPoint -SiteSystemServerName "dist02.tsqa.contoso.com" -SiteCode "CM1"
-PS C:\> Remove-CMManagementPoint -InputObject $Mp
+PS XYZ:\> $Mp = Get-CMManagementPoint -SiteSystemServerName "dist02.tsqa.contoso.com" -SiteCode "CM1"
+PS XYZ:\> Remove-CMManagementPoint -InputObject $Mp
 ```
 
 The first command gets the management point from the Configuration Manager site that has the site code CM1 on the site system named dist02.tsqa.contoso.com.

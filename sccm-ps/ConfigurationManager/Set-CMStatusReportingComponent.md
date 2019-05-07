@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: CCA28711-4E40-4FAC-8444-E007F9A1049A
 online version: https://go.microsoft.com/fwlink/?linkid=834114
@@ -53,9 +53,13 @@ You can configure the reporting component to check log files and monitor the sev
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Set status reporting component
 ```
-PS C:\> Set-CMStatusReportingComponent -SiteCode "CM1" -ClientReportType AllMilestones -ServerReportType AllMilestones
+PS XYZ:\> Set-CMStatusReportingComponent -SiteCode "CM1" -ClientReportType AllMilestones -ServerReportType AllMilestones
 ```
 
 This command sets a client report type and a server report type.

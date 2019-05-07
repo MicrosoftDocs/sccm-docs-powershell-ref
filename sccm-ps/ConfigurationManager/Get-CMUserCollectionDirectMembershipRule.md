@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: FE6AD178-6DBE-4DAF-AA8A-33BC4C0C57CB
 online version: https://go.microsoft.com/fwlink/?linkid=833984
@@ -69,9 +69,13 @@ For more information about collection rules, see [Introduction to Collections in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a direct membership rule
 ```
-PS C:\> Get-CMUserCollectionDirectMembershipRule -CollectionName "All Mobile Devices" -ResourceId "Res_94412512"
+PS XYZ:\> Get-CMUserCollectionDirectMembershipRule -CollectionName "All Mobile Devices" -ResourceId "Res_94412512"
 ```
 
 This command gets the direct membership rule that has the Id Res_94412512 for the collection named All Mobile Devices.

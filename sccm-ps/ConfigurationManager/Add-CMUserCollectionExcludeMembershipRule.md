@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 77F63813-BD92-4AB2-B64E-76E09AB9BB60
 online version: https://go.microsoft.com/fwlink/?linkid=833772
@@ -76,9 +76,13 @@ For more information on these rules, see [Introduction to Collections in Configu
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add an exclude membership rule to a user collection
 ```
-PS C:\>Add-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS XYZ:\>Add-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command adds an exclude membership rule that has the ID SMSDM001 to the Configuration Manager user collection that has the ID 9990000D.

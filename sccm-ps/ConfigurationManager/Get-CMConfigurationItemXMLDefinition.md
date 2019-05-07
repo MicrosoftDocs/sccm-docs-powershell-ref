@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMConfigurationItemXMLDefinition
 titleSuffix: Configuration Manager
 description: Gets an XML definition of a configuration item in Configuration Manager.
@@ -49,10 +49,14 @@ You can specify a configuration item with the configuration item ID, the configu
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get XML formatted item using an ID
 
 ```powershell
-PS C:\> Get-CMConfigurationItemXMLDefinition -Id "16777568"
+PS XYZ:\> Get-CMConfigurationItemXMLDefinition -Id "16777568"
 ```
 
 This command gets a configuration item formatted in XML for the item that has the specified identifier.
@@ -60,7 +64,7 @@ This command gets a configuration item formatted in XML for the item that has th
 ### Example 2: Get XML formatted item using a name
 
 ```powershell
-PS C:\> Get-CMConfigurationItemXMLDefinition -Name "ConfigItem76"
+PS XYZ:\> Get-CMConfigurationItemXMLDefinition -Name "ConfigItem76"
 ```
 
 This command gets a configuration item formatted in XML for the item named ConfigItem76.
@@ -68,8 +72,8 @@ This command gets a configuration item formatted in XML for the item named Confi
 ### Example 3: Get XML formatted item using a variable
 
 ```powershell
-PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
-PS C:\> Get-CMConfigurationItemXMLDefinition -InputObject $CIObj
+PS XYZ:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Get-CMConfigurationItemXMLDefinition -InputObject $CIObj
 ```
 
 The first command uses the [Get-CMConfigurationItem](Get-CMConfigurationItem.md) cmdlet to get a configuration item with the specified ID, and then stores it in the $CIObj variable.

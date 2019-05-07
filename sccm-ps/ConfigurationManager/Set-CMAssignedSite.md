@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 ms.assetid: 6141C593-89DD-4BEB-80B2-DD9B391EB045
 online version: https://go.microsoft.com/fwlink/?linkid=833663
@@ -37,9 +37,13 @@ This cmdlet assigns a client to a different primary site.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Reassign a client to a site
 ```
-PS C:\> Set-CMAssignedSite -DeviceId "2097152000" -SiteCode "CM7"
+PS XYZ:\> Set-CMAssignedSite -DeviceId "2097152000" -SiteCode "CM7"
 ```
 
 This command reassigns the client that has the device ID 2097152000 to the site that has the site code CM7.

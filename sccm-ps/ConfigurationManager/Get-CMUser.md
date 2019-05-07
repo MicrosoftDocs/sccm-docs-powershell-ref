@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 381B444E-D2CA-4351-9EDF-036291F23E7D
 online version: https://go.microsoft.com/fwlink/?linkid=833975
@@ -45,16 +45,20 @@ The **Get-CMUser** cmdlet gets a Microsoft System Center Configuration Manager u
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a user by name
 ```
-PS C:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\username01"
+PS XYZ:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\username01"
 ```
 
 This command gets the user named username01 from the All Users collection.
 
 ### Example 2: Pass a collection and get a user from it
 ```
-PS C:\> Get-CMCollection -Name "All Users" | Get-CMUser -Name "Contoso\testuser01"
+PS XYZ:\> Get-CMCollection -Name "All Users" | Get-CMUser -Name "Contoso\testuser01"
 ```
 
 This command gets the collection object named All Users and uses the pipeline operator to pass the object to **Get-CMUser**, which gets the user named testuser01 from the collection object.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 51F673B9-5558-4865-8AF8-B0B67296F729
 online version: https://go.microsoft.com/fwlink/?linkid=833690
@@ -43,16 +43,20 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Rename a boundary group
 ```
-PS C:\> Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
+PS XYZ:\> Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
 ```
 
 This command renames a boundary group.
 
 ### Example 2: Add a security scope to a boundary group
 ```
-PS C:\> Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
+PS XYZ:\> Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
 ```
 
 This command adds the security scope OSDeploymentScope to the boundary group BGroup02.

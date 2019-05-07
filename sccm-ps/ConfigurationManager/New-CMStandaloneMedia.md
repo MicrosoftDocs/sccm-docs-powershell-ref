@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 7715E46A-AE0E-47C1-86B5-AC56F7BAD28C
 online version: https://go.microsoft.com/fwlink/?linkid=833778
@@ -29,11 +29,15 @@ NOTE: This cmdlet requires elevated permissions to run.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create stand-alone media using variables
 ```
-PS C:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS C:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
-PS C:\> New-CMStandaloneMedia -MediaType CdDvd -Path \\server\share\standaloneMedia.iso -TaskSequence $TaskSequence -DistributionPoint $DistributionPoint
+PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+PS XYZ:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
+PS XYZ:\> New-CMStandaloneMedia -MediaType CdDvd -Path \\server\share\standaloneMedia.iso -TaskSequence $TaskSequence -DistributionPoint $DistributionPoint
 ```
 
 The first command gets the task sequence object named TaskSequence01 and stores the object in the $TaskSequence variable.

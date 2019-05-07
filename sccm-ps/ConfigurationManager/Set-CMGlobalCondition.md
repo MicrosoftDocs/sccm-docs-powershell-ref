@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalCondition
 titleSuffix: Configuration Manager
 description: Modifies settings for a Configuration Manager global condition.
@@ -146,10 +146,14 @@ Each global condition must have at least one security scope.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a security scope
 
 ```powershell
-PS C:\> Set-CMGlobalCondition -Name "CPU speed" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
+PS XYZ:\> Set-CMGlobalCondition -Name "CPU speed" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
 ```
 
 This command adds the security scope named Scope22 to the global condition named CPU speed.
@@ -157,8 +161,8 @@ This command adds the security scope named Scope22 to the global condition named
 ### Example 2: Remove a security scope by using a variable
 
 ```powershell
-PS C:\> $CMGC = Get-CMGlobalCondition -Name "CPU speed"
-PS C:\> Set-CMGlobalCondition -InputObject $CMGC -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22"
+PS XYZ:\> $CMGC = Get-CMGlobalCondition -Name "CPU speed"
+PS XYZ:\> Set-CMGlobalCondition -InputObject $CMGC -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22"
 ```
 
 The first command uses the **Get-CMGlobalCondition** cmdlet to get the global condition named CPU speed and store it in the $CMGC variable.

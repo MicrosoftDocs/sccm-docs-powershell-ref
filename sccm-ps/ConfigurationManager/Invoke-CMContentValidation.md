@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: CB1B6D39-7EE5-449E-92A5-357AD8F68922
 online version: https://go.microsoft.com/fwlink/?linkid=834117
@@ -153,9 +153,13 @@ Validating the content ensures that the entire set of files transferred successf
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Validate content for an application
 ```
-PS C:\>Invoke-CMContentValidation -ApplicationName "Dict.app" -DistributionPointName "DPServer01"
+PS XYZ:\>Invoke-CMContentValidation -ApplicationName "Dict.app" -DistributionPointName "DPServer01"
 ```
 
 This command validates the package for the application named Dict.app one the distribution point named DPServer01.

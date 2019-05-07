@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 19F2832A-607E-4626-B0BC-A8970D87E46C
 online version: https://go.microsoft.com/fwlink/?linkid=834008
@@ -27,9 +27,13 @@ The **Get-CMVhd** cmdlet gets one or more virtual hard disk (VHD) images that we
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a VHD image by using its name
 ```
-PS C:\> Get-CMVhd -Name "VHDAccounting08"
+PS XYZ:\> Get-CMVhd -Name "VHDAccounting08"
 ```
 
 This command gets the virtual hard disk (VHD) image named VHDAccounting08.

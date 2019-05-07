@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: AED2DBE6-6FC0-4A61-A055-236424BFE85C
 online version: https://go.microsoft.com/fwlink/?linkid=834186
@@ -29,9 +29,13 @@ The **Invoke-CMWmiMethod** cmdlet calls Windows Management Instrumentation (WMI)
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Call a WMI method by using the pipeline
 ```
-PS C:\> Get-CMBoundaryGroup -Name "Boundary1" | Invoke-CMWmiMethod -MethodName "AddBoundary" -Parameter @{BoundaryId = 16777217,16777218}
+PS XYZ:\> Get-CMBoundaryGroup -Name "Boundary1" | Invoke-CMWmiMethod -MethodName "AddBoundary" -Parameter @{BoundaryId = 16777217,16777218}
 ```
 
 This command uses a WMI method to add an array of boundaries to a boundary group.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3F2EAC38-7AA8-4DC7-BB4B-4F5C3D3A87BE
 online version: https://go.microsoft.com/fwlink/?linkid=833870
@@ -23,9 +23,13 @@ A maintenance task is a task in System Center Configuration Manager that perform
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a maintenance task
 ```
-PS C:\> Get-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup"
+PS XYZ:\> Get-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup"
 ```
 
 This command gets the maintenance task named Backup for the Configuration Manager site that has the site code CM1.

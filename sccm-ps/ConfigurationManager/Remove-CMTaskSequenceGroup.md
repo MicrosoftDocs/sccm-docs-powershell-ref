@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMTaskSequenceGroup
 titleSuffix: Configuration Manager
 description: Removes a Configuration Manager task sequence group.
@@ -48,10 +48,14 @@ The **Remove-CMTaskSequenceGroup** cmdlet removes task sequence group(s) from a 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Remove-CMTaskSequenceGroup -StepName $gpName -Force
+PS XYZ:\> $ReferencedTaskSequence | Remove-CMTaskSequenceGroup -StepName $gpName -Force
 ```
 
 The command removes the task sequence groups from a task sequence with the name specified.

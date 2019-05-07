@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3911D73C-E269-4160-8667-732DAFD7AB48
 online version: https://go.microsoft.com/fwlink/?linkid=834108
@@ -36,9 +36,13 @@ To change the priority of a rule, use the rule name to specify the rule.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Increase the priority of a rule
 ```
-PS C:\> Set-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1" -Priority Increase
+PS XYZ:\> Set-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1" -Priority Increase
 ```
 
 This command increases the priority of a filter rule that has the specified name in a site that has the site code CM1.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 46449F73-D5C2-440E-A775-5C2A01F9C1B3
 online version: https://go.microsoft.com/fwlink/?linkid=833887
@@ -23,9 +23,13 @@ A software distribution component consists of individual components such as the 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a software distribution component
 ```
-PS C:\> Get-CMSoftwareDistributionComponent -Name "CM2"
+PS XYZ:\> Get-CMSoftwareDistributionComponent -Name "CM2"
 ```
 
 This command gets the software distribution component.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 183D4DE8-9632-41D4-94D3-94CAED832637
 online version: https://go.microsoft.com/fwlink/?linkid=833909
@@ -30,16 +30,20 @@ A **CMSoftwareUpdateDeploymentPackage** object contains one or more software upd
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a deployment package by using a name
 ```
-PS C:\> Get-CMSoftwareUpdateDeploymentPackage -Name "Asdset"
+PS XYZ:\> Get-CMSoftwareUpdateDeploymentPackage -Name "Asdset"
 ```
 
 This command gets a deployment package named Asdset.
 
 ### Example 2: Get a deployment package by using an ID
 ```
-PS C:\> Get-CMSoftwareUpdateDeploymentPackage -Id "ST10000C"
+PS XYZ:\> Get-CMSoftwareUpdateDeploymentPackage -Id "ST10000C"
 ```
 
 This command gets a deployment package that has the ID ST10000C.

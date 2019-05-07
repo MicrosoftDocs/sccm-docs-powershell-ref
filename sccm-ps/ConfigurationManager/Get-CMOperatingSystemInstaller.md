@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 1C8CA4A9-A212-4C8C-95ED-E51675AE2F1A
 online version: https://go.microsoft.com/fwlink/?linkid=833798
@@ -30,9 +30,13 @@ An operating system installer is an installation package that contains all the f
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get an operating system installer
 ```
-PS C:\> Get-CMOperatingSystemInstaller -Name "OSInstPkg01"-SecuredScopeNames "SecScope02"
+PS XYZ:\> Get-CMOperatingSystemInstaller -Name "OSInstPkg01"-SecuredScopeNames "SecScope02"
 ```
 
 This command gets the operating system installer named OSInstPkg01 for the security scope named SecScope02.

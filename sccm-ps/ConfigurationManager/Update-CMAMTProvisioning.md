@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=834280
 schema: 2.0.0
@@ -39,24 +39,28 @@ You can specify computers to update by using the System Center Configuration Man
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Update provisioning for a device by using an ID
 ```
-PS C:\>Update-CMAmtProvisioning -DeviceID "16777230"
+PS XYZ:\>Update-CMAmtProvisioning -DeviceID "16777230"
 ```
 
 This command updates provisioning for an Intel AMT-based computer that has the device ID 16777230.
 
 ### Example 2: Update provisioning for a device by using an ID
 ```
-PS C:\>Update-CMAmtProvisioning -DeviceName "Accn023.Contoso.com"
+PS XYZ:\>Update-CMAmtProvisioning -DeviceName "Accn023.Contoso.com"
 ```
 
 This command updates provisioning for an Intel AMT-based computer named Accn023.Contoso.com.
 
 ### Example 3: Enable audit logging by using a variable
 ```
-PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
-PS C:\> Update-CMAmtProvisioning -Device $CMD
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS XYZ:\> Update-CMAmtProvisioning -Device $CMD
 ```
 
 The first command gets a device object by using the **Get-CMDevice** cmdlet, and then stores it in the $CMD variable.

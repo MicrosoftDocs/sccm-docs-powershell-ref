@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 ms.assetid: B8879874-7A8B-4D59-8CA3-B3DC69602546
 online version: https://go.microsoft.com/fwlink/?linkid=834304
@@ -31,9 +31,13 @@ The cmdlet gets summary information about application, Software Update Managemen
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a deployment for a collection
 ```
-PS C:\> Get-CMDeployment -CollectionName "deviceCol1" -FeatureType "Application"
+PS XYZ:\> Get-CMDeployment -CollectionName "deviceCol1" -FeatureType "Application"
 ```
 
 This command gets the Application deployment for the device collection named deviceCol1.

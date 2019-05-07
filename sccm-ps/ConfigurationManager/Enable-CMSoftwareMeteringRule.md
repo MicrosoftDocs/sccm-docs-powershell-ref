@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: BE43AAAD-ABF9-42DD-886C-D3224AAAB175
 online version: https://go.microsoft.com/fwlink/?linkid=833991
@@ -44,9 +44,13 @@ For more information about software metering in System Center Configuration Mana
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Enable rules for a specific product
 ```
-PS C:\>Enable-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS XYZ:\>Enable-CMSoftwareMeteringRule -ProductName "Accounting Package"
 ```
 
 This command enables software metering rules for a product named Accounting Package.
@@ -55,7 +59,7 @@ If you previously disabled some rules for this product, but not all, the cmdlet 
 
 ### Example 2: Enable a specific rule
 ```
-PS C:\>Enable-CMSoftwareMeteringRule -Id "16777229"
+PS XYZ:\>Enable-CMSoftwareMeteringRule -Id "16777229"
 ```
 
 This command enables a software metering rule that has the specified ID.

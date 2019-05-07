@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 781F6A2C-9A81-48F4-92EE-171566F550CF
 online version: https://go.microsoft.com/fwlink/?linkid=834092
@@ -42,9 +42,13 @@ These settings include Network Load Balancing (NLB), a virtual IP address, Inter
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Modify the server name
 ```
-PS C:\> Set-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "CMSoftwareUpdatePoint.TSQA.Contoso.com"
+PS XYZ:\> Set-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "CMSoftwareUpdatePoint.TSQA.Contoso.com"
 ```
 
 This command modifies the name for the site system server for the site code CM1.

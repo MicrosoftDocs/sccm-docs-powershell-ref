@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMGlobalConditionRegistryKey
 titleSuffix: Configuration Manager
 description: Creates a Registry Key type global condition in Configuration Manager.
@@ -32,10 +32,14 @@ A global condition is a setting or expression in System Center Configuration Man
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalRegKey = New-CMGlobalConditionRegistryKey -KeyName key -Name GC3 -RegistryHive LocalMachine -Description $String
+PS XYZ:\> $GlobalRegKey = New-CMGlobalConditionRegistryKey -KeyName key -Name GC3 -RegistryHive LocalMachine -Description $String
 ```
 
 This command creates a Registry Key type global condition in Configuration Manager.

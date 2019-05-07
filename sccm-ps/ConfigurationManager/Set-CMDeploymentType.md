@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMDeploymentType
 titleSuffix: Configuration Manager
 description: Changes a deployment type for a Configuration Manager deployment application.
@@ -293,10 +293,14 @@ Configuration Manager evaluates and installs dependencies of a deployment type i
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Increase the priority of a deployment application
 
 ```powershell
-PS C:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Increase
+PS XYZ:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Increase
 ```
 
 This command sets a deployment type named Configuration Manager Console - Windows Installer (Native) for a deployment application named 2 - Child and increases the priority of that application.
@@ -304,7 +308,7 @@ This command sets a deployment type named Configuration Manager Console - Window
 ### Example 2: Decrease the priority of a deployment application
 
 ```powershell
-PS C:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Decrease
+PS XYZ:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Decrease
 ```
 
 This command sets a deployment type named Configuration Manager Console - Windows Installer (Native) for a deployment application named 2 - Child and decreases the priority of that application.

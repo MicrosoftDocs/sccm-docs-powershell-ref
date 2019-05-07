@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 621AC1DA-C4DB-4559-90BF-B6EAEB9560D3
 online version: https://go.microsoft.com/fwlink/?linkid=834301
@@ -23,16 +23,20 @@ The **New-CMCertificateProfileTrustedRootCA** cmdlet creates a trusted certifica
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a trusted CA certificate profile
 ```
-PS C:\> New-CMCertificateProfileTrustedRootCA -Name "Test01" -Path "\\Server01\ShareFolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
+PS XYZ:\> New-CMCertificateProfileTrustedRootCA -Name "Test01" -Path "\\Server01\ShareFolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
 ```
 
 This command creates a trusted CA certificate profile named Test01 from the RootCA.cer certificate for all Windows 10 Client platforms.
 
 ### Example 2: Create a trusted CA certificate profile and set the destination store
 ```
-PS C:\> New-CMCertificateProfileTrustedRootCA -Name "Test02" -Path \\Server01\ShareFolder\RootCA.cer -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -Description "TestRootCertificate" -DestinationStore SystemIntermediate
+PS XYZ:\> New-CMCertificateProfileTrustedRootCA -Name "Test02" -Path \\Server01\ShareFolder\RootCA.cer -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -Description "TestRootCertificate" -DestinationStore SystemIntermediate
 ```
 
 This command creates a trusted CA certificate profile named Test02 from the RootCA.cer certificate for all Windows 10 Client platforms.

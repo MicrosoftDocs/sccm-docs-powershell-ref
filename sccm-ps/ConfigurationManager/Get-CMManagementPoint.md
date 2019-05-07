@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 72166BF0-B4CD-4571-92FC-D42CF98BC1AE
 online version: https://go.microsoft.com/fwlink/?linkid=833741
@@ -30,9 +30,13 @@ A management point is a site system role that provides policy and service locati
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a management point
 ```
-PS C:\> Get-CMManagementPoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1" >>\CMmgmt01\Get-CMManagementPoint_data.txt
+PS XYZ:\> Get-CMManagementPoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1" >>\CMmgmt01\Get-CMManagementPoint_data.txt
 ```
 
 This command gets a management point that is associated with the site system named cmcen-dist02.tsqa.contoso.com and the site code CM1.

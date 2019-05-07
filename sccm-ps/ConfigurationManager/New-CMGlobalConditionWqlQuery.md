@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMGlobalConditionWqlQuery
 titleSuffix: Configuration Manager
 description: Creates a WQL Query type global condition in Configuration Manager.
@@ -33,10 +33,14 @@ A global condition is a setting or expression in System Center Configuration Man
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalWql = New-CMGlobalConditionWqlQuery -DataType String -Class $aa -Property $aa -Namespace root\aaa -Name GC7
+PS XYZ:\> $GlobalWql = New-CMGlobalConditionWqlQuery -DataType String -Class $aa -Property $aa -Namespace root\aaa -Name GC7
 ```
 
 This command creates a WQL Query type global condition in Configuration Manager.

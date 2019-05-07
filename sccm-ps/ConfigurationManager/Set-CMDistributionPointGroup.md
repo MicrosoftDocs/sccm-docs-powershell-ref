@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: A04B7F84-3E7F-4D68-A046-A6A4DEE09A98
 online version: https://go.microsoft.com/fwlink/?linkid=833818
@@ -35,16 +35,20 @@ The **Set-CMDistributionPointGroup** cmdlet changes the configuration settings o
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Add a distribution point group to a security scope
 ```
-PS C:\> Set-CMDistributionPointGroup -SecurityScopeAction AddMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
+PS XYZ:\> Set-CMDistributionPointGroup -SecurityScopeAction AddMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
 ```
 
 This command adds the distribution point group as a member of the security scope named CScope02.
 
 ### Example 2: Remove a distribution point group from a security scope
 ```
-PS C:\> Set-CMDistributionPointGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
+PS XYZ:\> Set-CMDistributionPointGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
 ```
 
 This command removes the distribution point group named DpgDept01 as a member of the security scope named CScope02.

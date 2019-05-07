@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 ms.assetid: 123C38D0-2305-4753-BAB7-6FCC668669AA
 online version: https://go.microsoft.com/fwlink/?linkid=833956
@@ -29,9 +29,13 @@ The **Remove-CMClientOperation** cmdlet removes a Microsoft System Center Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a client operation
 ```
-PS C:\> Remove-CMClientOperation -Id "CMCO217" -Force
+PS XYZ:\> Remove-CMClientOperation -Id "CMCO217" -Force
 ```
 
 This command removes the client operation that has the ID CMCO217.

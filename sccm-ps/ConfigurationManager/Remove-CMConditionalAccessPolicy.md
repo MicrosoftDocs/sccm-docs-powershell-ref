@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 7CA627FC-5C81-490A-B347-045E955DCEA4
 online version: https://go.microsoft.com/fwlink/?linkid=834000
@@ -22,9 +22,13 @@ The **Remove-CMConditionalAccessPolicy** cmdlet removes a conditional access pol
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a conditional access policy by using the pipeline
 ```
-PS C:\> Get-CMConditionalAccessPolicy | Remove-CMConditionalAccessPolicy
+PS XYZ:\> Get-CMConditionalAccessPolicy | Remove-CMConditionalAccessPolicy
 ```
 
 This command gets the conditional access policy object and uses the pipeline operator to pass the object to **Remove-CMConditionalAccessPolicy**, which removes the conditional access policy.

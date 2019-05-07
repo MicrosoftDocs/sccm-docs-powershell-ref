@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 26C885E5-9C6F-4688-A2F5-D403BAF9EB81
 online version: https://go.microsoft.com/fwlink/?linkid=833646
@@ -21,6 +21,10 @@ New-CMEmbeddedProperty -PropertyName <String> [-Value <Int32>] [-Value1 <String>
 The **New-CMEmbeddedProperty** cmdlet creates an embedded property.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
 
 ### Example 1: Create an embedded property
 ```

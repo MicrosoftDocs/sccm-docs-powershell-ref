@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 69AC1D24-491C-4095-B924-5D78E948342B
 online version: https://go.microsoft.com/fwlink/?linkid=833745
@@ -23,9 +23,13 @@ A management point is a System Center Configuration Manager site that provides p
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a management point component
 ```
-PS C:\> Get-CMManagementPointComponent -SiteCode "CM1" >>\1\Get-CMManagementPointComponent_data.txt
+PS XYZ:\> Get-CMManagementPointComponent -SiteCode "CM1" >>\1\Get-CMManagementPointComponent_data.txt
 ```
 
 This command gets a component that is associated with the site that has the code CM1.

@@ -1,4 +1,4 @@
----
+﻿---
 title: Convert-CMDeploymentType
 titleSuffix: Configuration Manager
 description: Converts the deployment type of a Configuration Manager deployment application.
@@ -36,11 +36,15 @@ This cmdlet allows for getting a native DeploymentType object from an SMS_Deploy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $cmdp = Get-CMDeploymentType -ApplicationName "CenterApp"
-PS C:\> Convert-CMDeploymentType $cmdp
+PS XYZ:\> $cmdp = Get-CMDeploymentType -ApplicationName "CenterApp"
+PS XYZ:\> Convert-CMDeploymentType $cmdp
 ```
 
 This command gets the deployment type for the application named CenterApp, and then convert the deployment type.

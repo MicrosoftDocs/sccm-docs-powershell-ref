@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3FE27BD4-6193-4593-BCED-ABD609C55AC8
 online version: https://go.microsoft.com/fwlink/?linkid=834251
@@ -24,9 +24,13 @@ Configuration Manager works with Exchange Server to manage mobile devices that c
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Synchronize with an nextref_exchange
 ```
-PS C:\> Sync-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
+PS XYZ:\> Sync-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
 ```
 
 This command synchronizes mobile devices for the site that has the site code PE1 with the specified Exchange Server.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 73C221D9-2219-4362-A22C-69D65EA490F5
 online version: https://go.microsoft.com/fwlink/?linkid=834142
@@ -35,10 +35,14 @@ The **Get-CMBaselineXMLDefinition** cmdlet gets and displays the XML definition 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a configuration baseline XML definition
 ```
-PS C:\> $CIObj = Get-CMBaseline -Id "16777568"
-PS C:\> Get-CMBaselineXMLDefinition -InputObject $CIObj
+PS XYZ:\> $CIObj = Get-CMBaseline -Id "16777568"
+PS XYZ:\> Get-CMBaselineXMLDefinition -InputObject $CIObj
 ```
 
 The first command gets the configuration baseline object that has the ID 16777568, and stores the object in the $CIObj variable.

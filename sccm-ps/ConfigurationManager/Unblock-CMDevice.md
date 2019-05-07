@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: F51FCE47-CF79-4C56-8DBD-40F98BAF4370
 online version: https://go.microsoft.com/fwlink/?linkid=834268
@@ -37,16 +37,20 @@ You cannot unblock the device from sites higher in the hierarchy.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Unblock a device
 ```
-PS C:\>Unbock-CMDevice -DeviceName "Test-DIST02"
+PS XYZ:\>Unbock-CMDevice -DeviceName "Test-DIST02"
 ```
 
 This command unblocks the device named Test-DIST02.
 
 ### Example 2: Get a device and unblock it
 ```
-PS C:\> Get-CMDevice -Name "WIN10-86-33" | Unblock-CMDevice
+PS XYZ:\> Get-CMDevice -Name "WIN10-86-33" | Unblock-CMDevice
 ```
 
 This command gets the device object named WIN10-86-33 and uses the pipeline operator to pass the object to **Unblock-CMDevice**, which unblocks the device object.

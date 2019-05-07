@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Migration.dll-Help.xml
 ms.assetid: E9057BB2-EFBE-45F9-AF07-71933FF4BB4E
 online version: https://go.microsoft.com/fwlink/?linkid=833766
@@ -30,16 +30,20 @@ A migration entity dependency is an object upon which another object to be migra
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get information about all migration entity dependencies
 ```
-PS C:\> Get-CMMigrationEntityDependency
+PS XYZ:\> Get-CMMigrationEntityDependency
 ```
 
 This command returns information about all your migration entity dependencies.
 
 ### Example 2: Get information about a specific migration entity dependency
 ```
-PS C:\> Get-CMMigrationEntityDependency -Id "121989"
+PS XYZ:\> Get-CMMigrationEntityDependency -Id "121989"
 ```
 
 This command returns information about the migration entity dependency that has the ID 121989.

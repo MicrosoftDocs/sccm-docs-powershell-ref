@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 78A69AB1-BD8F-42A4-8A9B-B38810F81BD1
 online version: https://go.microsoft.com/fwlink/?linkid=833706
@@ -34,9 +34,13 @@ The functionality of file replication routes is the same as that of addresses in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a file replication route by using site codes
 ```
-PS C:\> Get-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode "IM1"
+PS XYZ:\> Get-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode "IM1"
 ```
 
 This command creates a file replication route from the site that has the site code IM1 to the site that has the site code IM5.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 ms.assetid: 3F0D9D7A-5FD0-436C-BB6D-A28806F8A4F6
 online version: https://go.microsoft.com/fwlink/?linkid=834086
@@ -26,9 +26,13 @@ If they do not exist, the import will fail.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Import a user device affinity
 ```
-PS C:\>Import-CMUserDeviceAffinity -FileName "Remote_Users.csv" -EnableColumnHeadings $True
+PS XYZ:\>Import-CMUserDeviceAffinity -FileName "Remote_Users.csv" -EnableColumnHeadings $True
 ```
 
 This command imports the user device affinity in the file named Remote_Users.csv.

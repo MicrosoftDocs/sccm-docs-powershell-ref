@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: 2382F219-2290-45C8-905B-E9C2D3BD6CB6
 online version: https://go.microsoft.com/fwlink/?linkid=834183
@@ -46,9 +46,13 @@ Before you remove a security role, make sure every user has a role in addition t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a security role by using a name
 ```
-PS C:\> Remove-CMSecurityRole -Name "MainSecurityRole" -Force
+PS XYZ:\> Remove-CMSecurityRole -Name "MainSecurityRole" -Force
 ```
 
 This command removes a security role named MainSecurityRole from Configuration Manager.
@@ -56,8 +60,8 @@ The command uses the *Force* parameter, so it does not prompt you for confirmati
 
 ### Example 2: Remove security roles by using a variable
 ```
-PS C:\> $Roles = Get-CMSecurityRole -Name *Role 
-PS C:\> Remove-CMSecurityRole -SecurityRole $Roles
+PS XYZ:\> $Roles = Get-CMSecurityRole -Name *Role 
+PS XYZ:\> Remove-CMSecurityRole -SecurityRole $Roles
 ```
 
 The first command uses the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to get each security role that has a name that ends in Role.

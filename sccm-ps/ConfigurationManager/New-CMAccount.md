@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Accounts.dll-Help.xml
 ms.assetid: 759B2F3E-8C83-44AB-9857-2EFF8FDF3338
 online version: https://go.microsoft.com/fwlink/?linkid=834215
@@ -24,10 +24,14 @@ For more information about user accounts, see [Technical Reference for Accounts 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create a user account by using name and password
 ```
-PS C:\> $Secure = ConvertTo-SecureString -String "Pas$W0rd" -AsPlainText -Force
-PS C:\> New-CMAccount -Name "TSQA\PFuller" -Password $Secure -SiteCode "CM2"
+PS XYZ:\> $Secure = ConvertTo-SecureString -String "Pas$W0rd" -AsPlainText -Force
+PS XYZ:\> New-CMAccount -Name "TSQA\PFuller" -Password $Secure -SiteCode "CM2"
 ```
 
 The first command creates a password as a secure string.

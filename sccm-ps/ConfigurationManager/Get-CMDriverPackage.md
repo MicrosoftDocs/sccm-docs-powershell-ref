@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: FFDDED71-D9A4-4974-A61E-F4325BCEADC4
 online version: https://go.microsoft.com/fwlink/?linkid=833668
@@ -27,9 +27,13 @@ The **Get-CMDriverPackage** cmdlet gets a driver package.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get a driver package that is specified by its identifier
 ```
-PS C:\> Get-CMDriverPackage -Id "CM100042"
+PS XYZ:\> Get-CMDriverPackage -Id "CM100042"
 ```
 
 This command gets a driver package that is specified by its identifier.

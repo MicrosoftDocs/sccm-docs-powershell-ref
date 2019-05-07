@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3087AF87-3AD6-4205-9740-0373A5C5C7DC
 online version: https://go.microsoft.com/fwlink/?linkid=834065
@@ -36,14 +36,18 @@ Get-CMActiveDirectorySite -ForestId <String[]> [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Get-CMActiveDirectorySite** cmdlet gets one or more Microsoft System Center Configuration Manager sites that are configured to publish site information to Active Directory® Domain Services (AD DS).
+The **Get-CMActiveDirectorySite** cmdlet gets one or more Microsoft System Center Configuration Manager sites that are configured to publish site information to Active DirectoryÂ® Domain Services (AD DS).
 You can get System Center Configuration Manager sites that publish site data to AD DS by using an identifier or a fully qualified domain name (FQDN).
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Get an Active Directory site
 ```
-PS C:\> Get-CMActiveDirectorySite
+PS XYZ:\> Get-CMActiveDirectorySite
 ```
 
 This command gets the Active Directory sites that are configured to publish site information.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 93E46F42-95D2-4D3C-9F94-A48982E1629A
 online version: https://go.microsoft.com/fwlink/?linkid=833858
@@ -59,9 +59,13 @@ The functionality of file replication routes is the same as that of addresses in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Specify a file replication route by using a replication account name
 ```
-PS C:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -FileReplicationAccountName "11\12" -Unlimited
+PS XYZ:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -FileReplicationAccountName "11\12" -Unlimited
 ```
 
 This command specifies a file replication route between the source site named CM2 and the destination site named SS2.
@@ -69,7 +73,7 @@ It uses the user account name 11\12 for file replication.
 
 ### Example 2: Specify a file replication route by using a source and destination site names
 ```
-PS C:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -ControlNetworkLoadSchedule -DaysOfWeek Friday, Sunday -AvailabilityLevel All
+PS XYZ:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -ControlNetworkLoadSchedule -DaysOfWeek Friday, Sunday -AvailabilityLevel All
 ```
 
 This command specifies a file replication route between the source site named CM2 and the destination site named SS2.

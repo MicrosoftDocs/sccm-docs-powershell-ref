@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 48839870-57C3-4450-B538-67066B32E2A3
 online version: https://go.microsoft.com/fwlink/?linkid=834159
@@ -41,17 +41,21 @@ If a compressed version of source files for the package exists, System Center Co
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Remove a package
 ```
-PS C:\> Remove-CMPackage -Id "CM10000D"
+PS XYZ:\> Remove-CMPackage -Id "CM10000D"
 ```
 
 This command removes the package that has the ID CM10000D.
 
 ### Example 2: Remove a package by using an object variable
 ```
-PS C:\> $Pkg = Get-CMPackage -Id "CM10000D"
-PS C:\> Remove-CMPackage -InputObject $Pkg
+PS XYZ:\> $Pkg = Get-CMPackage -Id "CM10000D"
+PS XYZ:\> Remove-CMPackage -InputObject $Pkg
 ```
 
 The first command gets the package that has the ID CM10000D, and then stores the results to the $Pkg variable.

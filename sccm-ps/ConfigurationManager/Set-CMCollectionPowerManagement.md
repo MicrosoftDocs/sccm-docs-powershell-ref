@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 4BCE08DA-01DE-4CF2-86A8-F6CA8DD022E2
 online version: https://go.microsoft.com/fwlink/?linkid=833749
@@ -74,9 +74,13 @@ The **Set-CMCollectionPowerManagement** cmdlet configures power management setti
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Configure power management settings by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "DeviceCol1" | Set-CMCollectionPowerManagement -NeverApply -PassThru
+PS XYZ:\> Get-CMCollection -Name "DeviceCol1" | Set-CMCollectionPowerManagement -NeverApply -PassThru
 ```
 
 This command gets the device collection object named DeviceCol1 and uses the pipeline operator to pass the object to **Set-CMCollectionPowerManagement**.
@@ -84,7 +88,7 @@ This command gets the device collection object named DeviceCol1 and uses the pip
 
 ### Example 2: Configure power management settings by name
 ```
-PS C:\> Set-CMCollectionPowerManagement -CollectionName "DeviceCol2" -Apply -PeakStartTime 8:00am -PeakEndTime 6:00pm -PeakPlan (Get-CMPowerManagementSchema -Peak -Name "Balanced (ConfigMgr)") -NonPeakPlan (Get-CMPowerManagementSchema -NonPeak -Name "Power Saver (ConfigMgr)") -WakeupTime 4:00am
+PS XYZ:\> Set-CMCollectionPowerManagement -CollectionName "DeviceCol2" -Apply -PeakStartTime 8:00am -PeakEndTime 6:00pm -PeakPlan (Get-CMPowerManagementSchema -Peak -Name "Balanced (ConfigMgr)") -NonPeakPlan (Get-CMPowerManagementSchema -NonPeak -Name "Power Saver (ConfigMgr)") -WakeupTime 4:00am
 ```
 
 This command specifies power management settings for the device collection DeviceCol2.

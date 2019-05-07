@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 66E1A4FB-1FF6-4DA5-8710-1A5AC6BEE641
 online version: https://go.microsoft.com/fwlink/?linkid=834278
@@ -27,10 +27,14 @@ While the lock is assigned to you, no other user or computer can edit the object
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Unlock a global object
 ```
-PS C:\> $CIObj = Get-CMDriverPackage -Id "CM100042"
-PS C:\> Unlock-CMObject $CIObj
+PS XYZ:\> $CIObj = Get-CMDriverPackage -Id "CM100042"
+PS XYZ:\> Unlock-CMObject $CIObj
 ```
 
 The first command gets the driver package object that has the ID CM100042, and stores the object in the $CIObj variable.

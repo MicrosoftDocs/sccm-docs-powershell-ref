@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: B955A6FD-38A4-4AEA-889D-A4AF76CFCEB0
 online version: https://go.microsoft.com/fwlink/?linkid=834245
@@ -22,11 +22,15 @@ The **New-CMApnsCertificateRequest** cmdlet downloads an Apple Push Notification
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+
+
 ### Example 1: Create an APNS certificate signing request
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
-PS C:\> $MyCreds = New-Object System.Management.Automation.PSCredential ("UserName@CompanyName.onmicrosoft.com", $SecPasswd)
-PS C:\> New-CMApnsCertificateRequest -IntuneCredential $MyCreds -Path "C:\Certificates\test.csr"
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
+PS XYZ:\> $MyCreds = New-Object System.Management.Automation.PSCredential ("UserName@CompanyName.onmicrosoft.com", $SecPasswd)
+PS XYZ:\> New-CMApnsCertificateRequest -IntuneCredential $MyCreds -Path "C:\Certificates\test.csr"
 ```
 
 The first command converts the password into a secure string and stores the secure string in the $SecPasswd variable.
