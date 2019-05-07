@@ -127,8 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -IconLocationFile
-Specifies the location of the icon file.
-This is set to the single default language.
+Specifies the location of the icon file. This is set to the single default language. The size of the icon image cannot be greater than 512x512.
 
 ```yaml
 Type: String
