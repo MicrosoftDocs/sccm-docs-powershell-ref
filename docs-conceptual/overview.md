@@ -87,7 +87,8 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
 4.  Confirm that PowerShell properly loaded the Configuration Manager module by using the `Get-CMSite` cmdlet.  
 
-
+> [!TIP]
+> If you're not certain about the site code, such as then you're testing code that could be used in any environment, the following PowerShell will connect to the first (or only) CM drive: `Set-Location "$((Get-PSDrive | Where-Object { $_.Provider.Name -eq "CMSITE" })[0].Name):"`
 
 ## Update help
 
