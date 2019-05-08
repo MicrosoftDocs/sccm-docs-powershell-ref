@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CMTSStepSetVariable
 
 ## SYNOPSIS
-Sets a t s step set variable
+Sets a TS step set variable
 
 ## SYNTAX
 

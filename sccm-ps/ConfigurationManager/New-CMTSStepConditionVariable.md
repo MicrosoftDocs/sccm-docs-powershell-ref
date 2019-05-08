@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepConditionVariable
 
 ## SYNOPSIS
-Creates a t s step condition variable
+Creates a TS step condition variable
 
 ## SYNTAX
 

@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Sets a t s step setup windows and config mgr
+Sets a TS step setup windows and config mgr
 
 ## SYNTAX
 

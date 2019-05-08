@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepConditionRegistry
 
 ## SYNOPSIS
-Gets a t s step condition registry
+Gets a TS step condition registry
 
 ## SYNTAX
 

@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepConditionIfStatement
 
 ## SYNOPSIS
-Gets a t s step condition if statement
+Gets a TS step condition if statement
 
 ## SYNTAX
 
