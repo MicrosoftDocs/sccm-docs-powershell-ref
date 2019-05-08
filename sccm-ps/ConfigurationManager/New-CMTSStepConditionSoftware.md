@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepConditionSoftware
 
 ## SYNOPSIS
-Creates a t s step condition software
+Creates a TS step condition software
 
 ## SYNTAX
 
