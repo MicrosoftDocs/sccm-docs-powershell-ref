@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: FE92047B-B040-478C-B886-6C67FAD3A4E4
-online version: https://go.microsoft.com/fwlink/?linkid=833873
-schema: 2.0.0
+title: Remove-CMAdministrativeUser
+titleSuffix: Configuration Manager
+description: Removes an administrative user.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMAdministrativeUser

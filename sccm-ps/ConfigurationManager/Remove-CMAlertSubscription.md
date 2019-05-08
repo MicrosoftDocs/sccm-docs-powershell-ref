@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Alerts.dll-Help.xml
-ms.assetid: AE138881-AB53-4272-B017-A936FD3DBF4C
-online version: https://go.microsoft.com/fwlink/?linkid=833882
-schema: 2.0.0
+title: Remove-CMAlertSubscription
+titleSuffix: Configuration Manager
+description: Removes an alert subscription object.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMAlertSubscription
