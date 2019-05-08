@@ -17,6 +17,9 @@ Import-CMApplication -FilePath <String> [-ImportActionType <ImportActionType>] [
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+> [!NOTE]
+> The -FilePath parameter must be a UNC path.  Importing from a local disk is not supported.
+
 ## DESCRIPTION
 The **Import-CMApplication** cmdlet imports a package created by the [Export-CMApplication](Export-CMApplication.md) cmdlet.
 A package contains one or more applications and related objects, such as catalogs.
@@ -64,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-Specifies a file path for the application.
+Specifies a file path for the application.  This must be a UNC path.
 
 ```yaml
 Type: String
