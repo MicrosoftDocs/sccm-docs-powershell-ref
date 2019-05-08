@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: E1789427-9146-4196-ABA0-758333913567
-online version: https://go.microsoft.com/fwlink/?linkid=834297
-schema: 2.0.0
+title: Resolve-CMInventoriedSoftwareConflict
+titleSuffix: Configuration Manager
+description: Resolves a conflict in Configuration Manager software inventory information.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Resolve-CMInventoriedSoftwareConflict

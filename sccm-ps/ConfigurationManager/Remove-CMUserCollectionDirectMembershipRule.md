@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: AB985DAA-B7DE-4FC1-8429-20398128AA1E
-online version: https://go.microsoft.com/fwlink/?linkid=834264
-schema: 2.0.0
+title: Remove-CMUserCollectionDirectMembershipRule
+titleSuffix: Configuration Manager
+description: Removes a direct membership rule from one or more user collections in the Configuration Manager hierarchy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMUserCollectionDirectMembershipRule

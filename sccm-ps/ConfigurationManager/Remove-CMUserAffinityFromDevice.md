@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 71F2E8B1-1E1C-45EB-82EF-F6B6F71790F1
-online version: https://go.microsoft.com/fwlink/?linkid=834260
-schema: 2.0.0
+title: Remove-CMUserAffinityFromDevice
+titleSuffix: Configuration Manager
+description: Removes a primary user from one or more devices in the Configuration Manager hierarchy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMUserAffinityFromDevice

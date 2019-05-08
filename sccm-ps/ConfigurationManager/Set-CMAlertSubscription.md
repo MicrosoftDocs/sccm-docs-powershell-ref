@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Alerts.dll-Help.xml
-ms.assetid: 5CA304C5-4BF7-42C7-82A1-400B7E1D4D59
-online version: https://go.microsoft.com/fwlink/?linkid=833616
-schema: 2.0.0
+title: Set-CMAlertSubscription
+titleSuffix: Configuration Manager
+description: Changes the properties of an alert subscription.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMAlertSubscription
