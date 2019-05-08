@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: C1210FA1-5B24-439D-858B-D97280BA8236
-online version: https://go.microsoft.com/fwlink/?linkid=834081
-schema: 2.0.0
+title: Remove-CMDriverFromDriverPackage
+titleSuffix: Configuration Manager
+description: Removes a driver from a driver package.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMDriverFromDriverPackage

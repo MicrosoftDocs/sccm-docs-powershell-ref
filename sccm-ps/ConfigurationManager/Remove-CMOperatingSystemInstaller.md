@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 3AA12DC1-E0BD-40C1-B5D3-3CB1C394045B
-online version: https://go.microsoft.com/fwlink/?linkid=834151
-schema: 2.0.0
+title: Remove-CMOperatingSystemInstaller
+titleSuffix: Configuration Manager
+description: Removes operating system installers.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMOperatingSystemInstaller
