@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: B063DC6D-E23D-4E78-ABC8-2331BA03B0FA
-online version: https://go.microsoft.com/fwlink/?linkid=833729
-schema: 2.0.0
+title: New-CMProgram
+titleSuffix: Configuration Manager
+description: Creates a new program in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMProgram

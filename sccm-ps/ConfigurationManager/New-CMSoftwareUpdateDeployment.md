@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMSoftwareUpdateDeployment
+titleSuffix: Configuration Manager
+description: Creates a software update deployment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMSoftwareUpdateDeployment
 
 ## SYNOPSIS
-Creates a software update deployment
+Creates a software update deployment.
 
 ## SYNTAX
 
