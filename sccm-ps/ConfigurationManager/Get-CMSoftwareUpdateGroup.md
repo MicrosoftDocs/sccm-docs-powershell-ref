@@ -48,7 +48,7 @@ This command gets a software update group that has the ID ST10000D.
 
 ### Example 3: Get a software update group by using a name
 ```
-PS C:\> Get-CMSoftwareUpdateGroup CMSoftwareUpdateGroup -Name "SUGroupD01"
+PS C:\> Get-CMSoftwareUpdateGroup -Name "SUGroupD01"
 ```
 
 This command gets a software update group object named SUGroupD01.
