@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepConditionVariable
 
 ## SYNOPSIS
-Gets a t s step condition variable
+Gets a TS step condition variable
 
 ## SYNTAX
 

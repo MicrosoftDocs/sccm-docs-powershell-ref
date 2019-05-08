@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CMTSStepInstallSoftware
 
 ## SYNOPSIS
-Sets a t s step install software
+Sets a TS step install software
 
 ## SYNTAX
 
