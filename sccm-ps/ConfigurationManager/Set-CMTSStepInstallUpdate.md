@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CMTSStepInstallUpdate
 
 ## SYNOPSIS
-Sets a t s step install update
+Sets a TS step install update
 
 ## SYNTAX
 

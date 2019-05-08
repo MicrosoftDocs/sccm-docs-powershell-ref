@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMTSStepRunPowerShellScript
 
 ## SYNOPSIS
-Removes a t s step run power shell script
+Removes a TS step run power shell script
 
 ## SYNTAX
 
