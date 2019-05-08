@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.ClientSettings.dll-Help.xml
-ms.assetid: 3909FDAF-A2D9-4959-814C-D9F30E1DC014
-online version: https://go.microsoft.com/fwlink/?linkid=833960
-schema: 2.0.0
+title: Remove-CMClientSetting
+titleSuffix: Configuration Manager
+description: Removes client settings.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMClientSetting

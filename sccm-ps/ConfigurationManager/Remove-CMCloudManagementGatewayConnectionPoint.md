@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMCloudManagementGatewayConnectionPoint
+titleSuffix: Configuration Manager
+description: Removes a cloud management gateway connection point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMCloudManagementGatewayConnectionPoint
 
 ## SYNOPSIS
-Removes a cloud management gateway connection point
+Removes a cloud management gateway connection point.
 
 ## SYNTAX
 

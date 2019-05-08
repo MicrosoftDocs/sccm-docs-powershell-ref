@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMCloudManagementGateway
+titleSuffix: Configuration Manager
+description: Removes a cloud management gateway.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMCloudManagementGateway
 
 ## SYNOPSIS
-Removes a cloud management gateway
+Removes a cloud management gateway.
 
 ## SYNTAX
 
