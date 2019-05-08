@@ -131,7 +131,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMExchangeConnectorApplicationSetting](New-CMExchangeConnectorApplicationSetting.md)
 
-[New-CMExchangeConnectorEmailManagementSetting](New-CMExchangConnectorEmailManagementSetting.md)
+[New-CMExchangeConnectorEmailManagementSetting](New-CMExchangeConnectorEmailManagementSetting.md)
 
 [New-CMExchangeConnectorPasswordSetting](New-CMExchangeConnectorPasswordSetting.md)
 
