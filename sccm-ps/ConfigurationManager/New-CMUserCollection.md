@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: 1543ACE3-2915-4522-9A1D-04902FB557DF
-online version: https://go.microsoft.com/fwlink/?linkid=833807
-schema: 2.0.0
+title: New-CMUserCollection
+titleSuffix: Configuration Manager
+description: Creates a collection for users and adds the collection to the Configuration Manager hierarchy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMUserCollection

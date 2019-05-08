@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMTSStepConditionFile
+titleSuffix: Configuration Manager
+description: Creates a t s step condition file.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMTSStepConditionFile
 
 ## SYNOPSIS
-Creates a t s step condition file
+Creates a t s step condition file.
 
 ## SYNTAX
 

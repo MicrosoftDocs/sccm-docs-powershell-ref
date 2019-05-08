@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMTSStepInstallApplication
+titleSuffix: Configuration Manager
+description: Creates a t s step install application.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMTSStepInstallApplication
 
 ## SYNOPSIS
-Creates a t s step install application
+Creates a t s step install application.
 
 ## SYNTAX
 
