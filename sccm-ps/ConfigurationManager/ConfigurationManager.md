@@ -1729,9 +1729,6 @@ Changes configuration settings of operating system images.
 ### [Set-CMOperatingSystemInstaller](Set-CMOperatingSystemInstaller.md)
 Changes configuration settings of operating system installers.
 
-### [Set-CMOutOfBandManagementComponent](Set-CMOutOfBandManagementComponent.md)
-Sets the site system server that hosts the out of band management role in System Center Configuration Manager.
-
 ### [Set-CMOutOfBandServicePoint](Set-CMOutOfBandServicePoint.md)
 Changes configuration settings for an out of band service point.
 
