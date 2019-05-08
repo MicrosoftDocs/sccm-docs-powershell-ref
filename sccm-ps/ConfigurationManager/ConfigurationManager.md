@@ -1953,3 +1953,980 @@ Updates client status.
 
 ### [Update-CMDistributionPoint](Update-CMDistributionPoint.md)
 Updates content on a distribution point.
+
+### [Add-CMCloudManagementGatewayConnectionPoint](Add-CMCloudManagementGatewayConnectionPoint.md)
+Adds a cloud management gateway connection point.
+
+### [Add-CMCollectionMembershipRule](Add-CMCollectionMembershipRule.md)
+Adds a Configuration Manager collection membership rule.
+
+### [Add-CMCollectionToAdministrativeUser](Add-CMCollectionToAdministrativeUser.md)
+Adds a collection to administrative user.
+
+### [Add-CMCollectionToDistributionPointGroup](Add-CMCollectionToDistributionPointGroup.md)
+Adds a collection to distribution point group.
+
+### [Add-CMComplianceSettingActiveDirectoryQuery](Add-CMComplianceSettingActiveDirectoryQuery.md)
+Adds a compliance setting active directory query.
+
+### [Add-CMComplianceSettingAssembly](Add-CMComplianceSettingAssembly.md)
+Adds a compliance setting assembly.
+
+### [Add-CMComplianceSettingDirectory](Add-CMComplianceSettingDirectory.md)
+Adds a compliance setting directory.
+
+### [Add-CMComplianceSettingFile](Add-CMComplianceSettingFile.md)
+Adds a compliance setting file.
+
+### [Add-CMComplianceSettingIisMetabase](Add-CMComplianceSettingIisMetabase.md)
+Adds a compliance setting iis metabase.
+
+### [Add-CMComplianceSettingRegistryKey](Add-CMComplianceSettingRegistryKey.md)
+Adds a compliance setting registry key.
+
+### [Add-CMComplianceSettingRegistryKeyValue](Add-CMComplianceSettingRegistryKeyValue.md)
+Adds a compliance setting registry key value.
+
+### [Add-CMComplianceSettingRule](Add-CMComplianceSettingRule.md)
+Adds a compliance setting rule.
+
+### [Add-CMComplianceSettingScript](Add-CMComplianceSettingScript.md)
+Adds a compliance setting script.
+
+### [Add-CMComplianceSettingSqlQuery](Add-CMComplianceSettingSqlQuery.md)
+Adds a compliance setting sql query.
+
+### [Add-CMComplianceSettingWqlQuery](Add-CMComplianceSettingWqlQuery.md)
+Adds a compliance setting wql query.
+
+### [Add-CMComplianceSettingXPathQuery](Add-CMComplianceSettingXPathQuery.md)
+Adds a compliance setting x path query.
+
+### [Add-CMDataWarehouseServicePoint](Add-CMDataWarehouseServicePoint.md)
+Adds a data warehouse service point.
+
+### [Add-CMDeploymentTypeDependency](Add-CMDeploymentTypeDependency.md)
+
+### [Add-CMDeploymentTypeSupersedence](Add-CMDeploymentTypeSupersedence.md)
+
+### [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
+
+### [Approve-CMScript](Approve-CMScript.md)
+
+### [Clear-CMOperatingSystemUpgradeUpdateSchedule](Clear-CMOperatingSystemUpgradeUpdateSchedule.md)
+Clears an operating system upgrade update schedule.
+
+### [Convert-CMDeploymentType](Convert-CMDeploymentType.md)
+
+### [ConvertFrom-CMConfigurationItem](ConvertFrom-CMConfigurationItem.md)
+
+### [ConvertTo-CMConfigurationItem](ConvertTo-CMConfigurationItem.md)
+
+### [Copy-CMCollection](Copy-CMCollection.md)
+Copys a Configuration Manager collection.
+
+### [Copy-CMTaskSequence](Copy-CMTaskSequence.md)
+
+### [Deny-CMScript](Deny-CMScript.md)
+
+### [Disconnect-CMTrackedObject](Disconnect-CMTrackedObject.md)
+Disconnects a tracked object.
+
+### [Enable-CMSiteFeature](Enable-CMSiteFeature.md)
+Enables a site feature.
+
+### [Export-CMQuery](Export-CMQuery.md)
+Exports a query from Configuration Manager.
+
+### [Export-CMWindowsEnrollmentProfile](Export-CMWindowsEnrollmentProfile.md)
+Exports a windows enrollment profile.
+
+### [Get-CMAadConditionalAccessPolicy](Get-CMAadConditionalAccessPolicy.md)
+Gets an aad conditional access policy.
+
+### [Get-CMAdvancedThreatProtectionPolicy](Get-CMAdvancedThreatProtectionPolicy.md)
+Gets an advanced threat protection policy.
+
+### [Get-CMApplicationDeployment](Get-CMApplicationDeployment.md)
+Gets an application deployment.
+
+### [Get-CMApplicationDeploymentStatus](Get-CMApplicationDeploymentStatus.md)
+Gets an application deployment status.
+
+### [Get-CMAssetIntelligenceProxy](Get-CMAssetIntelligenceProxy.md)
+Gets an asset intelligence proxy.
+
+### [Get-CMBaselineDeployment](Get-CMBaselineDeployment.md)
+Gets a baseline deployment.
+
+### [Get-CMBaselineDeploymentStatus](Get-CMBaselineDeploymentStatus.md)
+Gets a baseline deployment status.
+
+### [Get-CMBoundaryGroupRelationship](Get-CMBoundaryGroupRelationship.md)
+Gets a boundary group relationship.
+
+### [Get-CMCertificate](Get-CMCertificate.md)
+Gets a certificate.
+
+### [Get-CMClientCertificateProfileConfigurationItem](Get-CMClientCertificateProfileConfigurationItem.md)
+Gets a client certificate profile configuration item.
+
+### [Get-CMClientHealthSummary](Get-CMClientHealthSummary.md)
+Gets a client health summary.
+
+### [Get-CMClientOperation](Get-CMClientOperation.md)
+Gets a client operation.
+
+### [Get-CMCloudManagementGateway](Get-CMCloudManagementGateway.md)
+Gets a cloud management gateway.
+
+### [Get-CMCloudManagementGatewayConnectionPoint](Get-CMCloudManagementGatewayConnectionPoint.md)
+Gets a cloud management gateway connection point.
+
+### [Get-CMCollectionDirectMembershipRule](Get-CMCollectionDirectMembershipRule.md)
+Gets a collection direct membership rule.
+
+### [Get-CMCollectionExcludeMembershipRule](Get-CMCollectionExcludeMembershipRule.md)
+Gets a collection exclude membership rule.
+
+### [Get-CMCollectionIncludeMembershipRule](Get-CMCollectionIncludeMembershipRule.md)
+Gets a collection include membership rule.
+
+### [Get-CMCollectionMembershipRule](Get-CMCollectionMembershipRule.md)
+Get a Configuration Manager collection membership rule.
+
+### [Get-CMCollectionQueryMembershipRule](Get-CMCollectionQueryMembershipRule.md)
+Gets a collection query membership rule.
+
+### [Get-CMComplianceRule](Get-CMComplianceRule.md)
+Gets a compliance rule.
+
+### [Get-CMComplianceSetting](Get-CMComplianceSetting.md)
+Gets a compliance setting.
+
+### [Get-CMConfigurationPolicyDeployment](Get-CMConfigurationPolicyDeployment.md)
+Gets a configuration policy deployment.
+
+### [Get-CMConfigurationPolicyXml](Get-CMConfigurationPolicyXml.md)
+Gets a configuration policy xml.
+
+### [Get-CMCorpOwnedDevice](Get-CMCorpOwnedDevice.md)
+Gets a corp owned device.
+
+### [Get-CMDataWarehouseServicePoint](Get-CMDataWarehouseServicePoint.md)
+Gets a data warehouse service point.
+
+### [Get-CMDefaultBoundaryGroup](Get-CMDefaultBoundaryGroup.md)
+Gets a default boundary group.
+
+### [Get-CMDeploymentStatusDetails](Get-CMDeploymentStatusDetails.md)
+Gets the status details of a Configuration Manager deployment.
+
+### [Get-CMDeploymentTypeDependency](Get-CMDeploymentTypeDependency.md)
+
+### [Get-CMDeploymentTypeDependencyGroup](Get-CMDeploymentTypeDependencyGroup.md)
+
+### [Get-CMDeploymentTypeSupersedence](Get-CMDeploymentTypeSupersedence.md)
+
+### [Get-CMDistributionPointInfo](Get-CMDistributionPointInfo.md)
+Gets a distribution point info.
+
+### [Get-CMDistributionStatus](Get-CMDistributionStatus.md)
+Gets a distribution status.
+
+### [Get-CMHierarchySetting](Get-CMHierarchySetting.md)
+Gets a hierarchy setting.
+
+### [Get-CMIosEnrollmentProfile](Get-CMIosEnrollmentProfile.md)
+Gets an ios enrollment profile.
+
+### [Get-CMMigrationJob](Get-CMMigrationJob.md)
+Gets a migration job.
+
+### [Get-CMMigrationSource](Get-CMMigrationSource.md)
+Gets a migration source.
+
+### [Get-CMOperatingSystemUpgradeUpdateSchedule](Get-CMOperatingSystemUpgradeUpdateSchedule.md)
+Gets an operating system upgrade update schedule.
+
+### [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
+
+### [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
+
+### [Get-CMPowerManagementSchema](Get-CMPowerManagementSchema.md)
+Gets a power management schema.
+
+### [Get-CMQuery](Get-CMQuery.md)
+Gets Configuration Manager queries.
+
+### [Get-CMRemoteConnectionProfileConfigurationItem](Get-CMRemoteConnectionProfileConfigurationItem.md)
+Gets a remote connection profile configuration item.
+
+### [Get-CMResource](Get-CMResource.md)
+Gets a Configuration Manager resource.
+
+### [Get-CMResultantSettings](Get-CMResultantSettings.md)
+Gets a resultant settings.
+
+### [Get-CMScript](Get-CMScript.md)
+
+### [Get-CMSiteComponent](Get-CMSiteComponent.md)
+Gets a site component.
+
+### [Get-CMSiteDefinition](Get-CMSiteDefinition.md)
+Gets a site definition.
+
+### [Get-CMSiteFeature](Get-CMSiteFeature.md)
+Gets a site feature.
+
+### [Get-CMSiteRole](Get-CMSiteRole.md)
+Gets a site role.
+
+### [Get-CMSiteSummaryTask](Get-CMSiteSummaryTask.md)
+Gets a site summary task.
+
+### [Get-CMSiteUpdate](Get-CMSiteUpdate.md)
+Gets a site update.
+
+### [Get-CMSiteUpdateHistory](Get-CMSiteUpdateHistory.md)
+Gets a site update history.
+
+### [Get-CMSiteUpdateInstallStatus](Get-CMSiteUpdateInstallStatus.md)
+Gets a site update install status.
+
+### [Get-CMSoftwareUpdateCategory](Get-CMSoftwareUpdateCategory.md)
+Gets a software update category.
+
+### [Get-CMSoftwareUpdateDeployment](Get-CMSoftwareUpdateDeployment.md)
+Gets a software update deployment.
+
+### [Get-CMSoftwareUpdateDeploymentStatus](Get-CMSoftwareUpdateDeploymentStatus.md)
+Gets a software update deployment status.
+
+### [Get-CMSoftwareUpdateSyncStatus](Get-CMSoftwareUpdateSyncStatus.md)
+Gets a software update sync status.
+
+### [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md)
+Gets a supported platform.
+
+### [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md)
+
+### [Get-CMTaskSequenceGroup](Get-CMTaskSequenceGroup.md)
+
+### [Get-CMTaskSequenceStep](Get-CMTaskSequenceStep.md)
+
+### [Get-CMTaskSequenceStepCondition](Get-CMTaskSequenceStepCondition.md)
+
+### [Get-CMTermsAndConditionsConfigurationItem](Get-CMTermsAndConditionsConfigurationItem.md)
+Gets a terms and conditions configuration item.
+
+### [Get-CMTrackedObject](Get-CMTrackedObject.md)
+Gets a tracked object.
+
+### [Get-CMTSStepConditionFile](Get-CMTSStepConditionFile.md)
+Gets "a TS" step condition file.
+
+### [Get-CMTSStepConditionFolder](Get-CMTSStepConditionFolder.md)
+Gets "a TS" step condition folder.
+
+### [Get-CMTSStepConditionIfStatement](Get-CMTSStepConditionIfStatement.md)
+Gets "a TS" step condition if statement.
+
+### [Get-CMTSStepConditionOperatingSystem](Get-CMTSStepConditionOperatingSystem.md)
+Gets "a TS" step condition operating system.
+
+### [Get-CMTSStepConditionQueryWmi](Get-CMTSStepConditionQueryWmi.md)
+Gets "a TS" step condition query wmi.
+
+### [Get-CMTSStepConditionRegistry](Get-CMTSStepConditionRegistry.md)
+Gets "a TS" step condition registry.
+
+### [Get-CMTSStepConditionSoftware](Get-CMTSStepConditionSoftware.md)
+Gets "a TS" step condition software.
+
+### [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md)
+Gets "a TS" step condition variable.
+
+### [Get-CMTSStepInstallApplication](Get-CMTSStepInstallApplication.md)
+Gets "a TS" step install application.
+
+### [Get-CMTSStepInstallSoftware](Get-CMTSStepInstallSoftware.md)
+Gets "a TS" step install software.
+
+### [Get-CMTSStepInstallUpdate](Get-CMTSStepInstallUpdate.md)
+Gets "a TS" step install update.
+
+### [Get-CMTSStepPartitionDisk](Get-CMTSStepPartitionDisk.md)
+Gets "a TS" step partition disk.
+
+### [Get-CMTSStepReboot](Get-CMTSStepReboot.md)
+Gets "a TS" step reboot.
+
+### [Get-CMTSStepRunCommandLine](Get-CMTSStepRunCommandLine.md)
+Gets "a TS" step run command line.
+
+### [Get-CMTSStepRunPowerShellScript](Get-CMTSStepRunPowerShellScript.md)
+Gets "a TS" step run power shell script.
+
+### [Get-CMTSStepSetDynamicVariable](Get-CMTSStepSetDynamicVariable.md)
+
+### [Get-CMTSStepSetupWindowsAndConfigMgr](Get-CMTSStepSetupWindowsAndConfigMgr.md)
+Gets "a TS" step setup windows and config mgr.
+
+### [Get-CMTSStepSetVariable](Get-CMTSStepSetVariable.md)
+Gets "a TS" step set variable.
+
+### [Get-CMUpdateGroupDeployment](Get-CMUpdateGroupDeployment.md)
+Gets an update group deployment.
+
+### [Get-CMUserDataAndProfileConfigurationItem](Get-CMUserDataAndProfileConfigurationItem.md)
+Gets an user data and profile configuration item.
+
+### [Get-CMVpnProfileConfigurationItem](Get-CMVpnProfileConfigurationItem.md)
+Gets a vpn profile configuration item.
+
+### [Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md)
+Gets a windows edition upgrade configuration item.
+
+### [Get-CMWindowsEnrollmentProfile](Get-CMWindowsEnrollmentProfile.md)
+Gets a windows enrollment profile.
+
+### [Get-CMWindowsEnrollmentProfilePackage](Get-CMWindowsEnrollmentProfilePackage.md)
+Gets a windows enrollment profile package.
+
+### [Get-CMWindowsFirewallPolicy](Get-CMWindowsFirewallPolicy.md)
+Gets a windows firewall policy.
+
+### [Get-CMWindowsUpdate](Get-CMWindowsUpdate.md)
+Gets a windows update.
+
+### [Get-CMWirelessProfile](Get-CMWirelessProfile.md)
+Gets a wireless profile.
+
+### [Get-CMWirelessProfileConfigurationItem](Get-CMWirelessProfileConfigurationItem.md)
+Gets a wireless profile configuration item.
+
+### [Import-CMQuery](Import-CMQuery.md)
+Imports a set of exported queries to Configuration Manager.
+
+### [Install-CMSiteUpdate](Install-CMSiteUpdate.md)
+Installs a site update.
+
+### [Invoke-CMContentRedistribution](Invoke-CMContentRedistribution.md)
+Invokes a content redistribution.
+
+### [Invoke-CMGroupDiscovery](Invoke-CMGroupDiscovery.md)
+Invokes a group discovery.
+
+### [Invoke-CMPromotePreProductionClient](Invoke-CMPromotePreProductionClient.md)
+Invokes a promote pre production client.
+
+### [Invoke-CMQuery](Invoke-CMQuery.md)
+Invokes a Configuration Manager query. .
+
+### [Invoke-CMScript](Invoke-CMScript.md)
+
+### [Invoke-CMSitePromotePreproductionClient](Invoke-CMSitePromotePreproductionClient.md)
+Invokes a site promote preproduction client.
+
+### [Invoke-CMSiteUpdateCheck](Invoke-CMSiteUpdateCheck.md)
+Invokes a site update check.
+
+### [Invoke-CMSiteUpdateDownload](Invoke-CMSiteUpdateDownload.md)
+Invokes a site update download.
+
+### [Invoke-CMSiteUpdatePrerequisiteCheck](Invoke-CMSiteUpdatePrerequisiteCheck.md)
+Invokes a site update prerequisite check.
+
+### [Invoke-CMSystemDiscovery](Invoke-CMSystemDiscovery.md)
+Invokes a system discovery.
+
+### [Invoke-CMUserDiscovery](Invoke-CMUserDiscovery.md)
+Invokes an user discovery.
+
+### [New-CMADGroupDiscoveryScope](New-CMADGroupDiscoveryScope.md)
+Creates an a d group discovery scope.
+
+### [New-CMAdvancedThreatProtectionPolicy](New-CMAdvancedThreatProtectionPolicy.md)
+Creates an advanced threat protection policy.
+
+### [New-CMApplicationDeployment](New-CMApplicationDeployment.md)
+Creates an application deployment.
+
+### [New-CMBaselineDeployment](New-CMBaselineDeployment.md)
+Creates a baseline deployment.
+
+### [New-CMBoundaryGroupRelationship](New-CMBoundaryGroupRelationship.md)
+Creates a boundary group relationship.
+
+### [New-CMClientCertificateProfileConfigurationItem](New-CMClientCertificateProfileConfigurationItem.md)
+Creates a trusted CA certificate profile.
+
+### [New-CMClientSettingDeployment](New-CMClientSettingDeployment.md)
+Creates a client setting deployment.
+
+### [New-CMCloudManagementGateway](New-CMCloudManagementGateway.md)
+Creates a cloud management gateway.
+
+### [New-CMComplianceRuleAssembly](New-CMComplianceRuleAssembly.md)
+Creates a compliance rule assembly.
+
+### [New-CMComplianceRuleExistential](New-CMComplianceRuleExistential.md)
+Creates a compliance rule existential.
+
+### [New-CMComplianceRuleFileFolderAttribute](New-CMComplianceRuleFileFolderAttribute.md)
+Creates a compliance rule file folder attribute.
+
+### [New-CMComplianceRuleFileFolderDate](New-CMComplianceRuleFileFolderDate.md)
+Creates a compliance rule file folder date.
+
+### [New-CMComplianceRuleFileFolderPermission](New-CMComplianceRuleFileFolderPermission.md)
+Creates a compliance rule file folder permission.
+
+### [New-CMComplianceRuleFileFolderSimple](New-CMComplianceRuleFileFolderSimple.md)
+Creates a compliance rule file folder simple.
+
+### [New-CMComplianceRuleFileFolderSize](New-CMComplianceRuleFileFolderSize.md)
+Creates a compliance rule file folder size.
+
+### [New-CMComplianceRuleRegistryKeyPermission](New-CMComplianceRuleRegistryKeyPermission.md)
+Creates a compliance rule registry key permission.
+
+### [New-CMComplianceRuleValue](New-CMComplianceRuleValue.md)
+Creates a compliance rule value.
+
+### [New-CMComplianceRuleVersion](New-CMComplianceRuleVersion.md)
+Creates a compliance rule version.
+
+### [New-CMConfigurationPolicyDeployment](New-CMConfigurationPolicyDeployment.md)
+Creates a configuration policy deployment.
+
+### [New-CMDeploymentTypeDependencyGroup](New-CMDeploymentTypeDependencyGroup.md)
+
+### [New-CMDetectionClauseDirectory](New-CMDetectionClauseDirectory.md)
+Creates a detection clause directory.
+
+### [New-CMDetectionClauseFile](New-CMDetectionClauseFile.md)
+Creates a detection clause file.
+
+### [New-CMDetectionClauseMacBundle](New-CMDetectionClauseMacBundle.md)
+Creates a detection clause mac bundle.
+
+### [New-CMDetectionClauseMacPackage](New-CMDetectionClauseMacPackage.md)
+Creates a detection clause mac package.
+
+### [New-CMDetectionClauseRegistryKey](New-CMDetectionClauseRegistryKey.md)
+Creates a detection clause registry key.
+
+### [New-CMDetectionClauseRegistryKeyValue](New-CMDetectionClauseRegistryKeyValue.md)
+Creates a detection clause registry key value.
+
+### [New-CMDetectionClauseWindowsInstaller](New-CMDetectionClauseWindowsInstaller.md)
+Creates a detection clause windows installer.
+
+### [New-CMExchangeConnectorAccessRule](New-CMExchangeConnectorAccessRule.md)
+Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
+
+### [New-CMExchangeConnectorApplicationSetting](New-CMExchangeConnectorApplicationSetting.md)
+Creates application-related settings for a mobile device that uses a Exchange Server connector.
+
+### [New-CMExchangeConnectorEmailManagementSetting](New-CMExchangeConnectorEmailManagementSetting.md)
+Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
+
+### [New-CMExchangeConnectorGeneralSetting](New-CMExchangeConnectorGeneralSetting.md)
+Creates an exchange connector general setting.
+
+### [New-CMExchangeConnectorPasswordSetting](New-CMExchangeConnectorPasswordSetting.md)
+Adds new password settings to a Exchange Server connector in Configuration Manager.
+
+### [New-CMExchangeConnectorSecuritySetting](New-CMExchangeConnectorSecuritySetting.md)
+Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
+
+### [New-CMGlobalConditionActiveDirectoryQuery](New-CMGlobalConditionActiveDirectoryQuery.md)
+
+### [New-CMGlobalConditionAssembly](New-CMGlobalConditionAssembly.md)
+
+### [New-CMGlobalConditionFile](New-CMGlobalConditionFile.md)
+
+### [New-CMGlobalConditionIisMetabase](New-CMGlobalConditionIisMetabase.md)
+
+### [New-CMGlobalConditionOmaUri](New-CMGlobalConditionOmaUri.md)
+
+### [New-CMGlobalConditionRegistryKey](New-CMGlobalConditionRegistryKey.md)
+
+### [New-CMGlobalConditionRegistryValue](New-CMGlobalConditionRegistryValue.md)
+
+### [New-CMGlobalConditionScript](New-CMGlobalConditionScript.md)
+
+### [New-CMGlobalConditionSqlQuery](New-CMGlobalConditionSqlQuery.md)
+
+### [New-CMGlobalConditionWqlQuery](New-CMGlobalConditionWqlQuery.md)
+
+### [New-CMGlobalConditionXPathQuery](New-CMGlobalConditionXPathQuery.md)
+
+### [New-CMIosEnrollmentProfile](New-CMIosEnrollmentProfile.md)
+Creates an ios enrollment profile.
+
+### [New-CMOperatingSystemUpgradeUpdateSchedule](New-CMOperatingSystemUpgradeUpdateSchedule.md)
+Creates an operating system upgrade update schedule.
+
+### [New-CMPackageDeployment](New-CMPackageDeployment.md)
+
+### [New-CMPrestageMedia](New-CMPrestageMedia.md)
+Creates a prestage media.
+
+### [New-CMQuery](New-CMQuery.md)
+Creates a Configuration Manager query.
+
+### [New-CMRootCertificateProfileConfigurationItem](New-CMRootCertificateProfileConfigurationItem.md)
+Creates a root certificate profile.
+
+### [New-CMSoftwareUpdateDeployment](New-CMSoftwareUpdateDeployment.md)
+Creates a software update deployment.
+
+### [New-CMSoftwareUpdateDeploymentPackage](New-CMSoftwareUpdateDeploymentPackage.md)
+Creates a software update deployment package.
+
+### [New-CMTaskSequenceDeployment](New-CMTaskSequenceDeployment.md)
+
+### [New-CMTaskSequenceGroup](New-CMTaskSequenceGroup.md)
+
+### [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
+Creates "a TS" partition setting.
+
+### [New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
+Creates "a TS" step condition file.
+
+### [New-CMTSStepConditionFolder](New-CMTSStepConditionFolder.md)
+Creates "a TS" step condition folder.
+
+### [New-CMTSStepConditionIfStatement](New-CMTSStepConditionIfStatement.md)
+Creates "a TS" step condition if statement.
+
+### [New-CMTSStepConditionOperatingSystem](New-CMTSStepConditionOperatingSystem.md)
+Creates "a TS" step condition operating system.
+
+### [New-CMTSStepConditionQueryWmi](New-CMTSStepConditionQueryWmi.md)
+Creates "a TS" step condition query wmi.
+
+### [New-CMTSStepConditionRegistry](New-CMTSStepConditionRegistry.md)
+Creates "a TS" step condition registry.
+
+### [New-CMTSStepConditionSoftware](New-CMTSStepConditionSoftware.md)
+Creates "a TS" step condition software.
+
+### [New-CMTSStepConditionVariable](New-CMTSStepConditionVariable.md)
+Creates "a TS" step condition variable.
+
+### [New-CMTSStepInstallApplication](New-CMTSStepInstallApplication.md)
+Creates "a TS" step install application.
+
+### [New-CMTSStepInstallSoftware](New-CMTSStepInstallSoftware.md)
+Creates "a TS" step install software.
+
+### [New-CMTSStepInstallUpdate](New-CMTSStepInstallUpdate.md)
+Creates "a TS" step install update.
+
+### [New-CMTSStepPartitionDisk](New-CMTSStepPartitionDisk.md)
+Creates "a TS" step partition disk.
+
+### [New-CMTSStepReboot](New-CMTSStepReboot.md)
+Creates "a TS" step reboot.
+
+### [New-CMTSStepRunCommandLine](New-CMTSStepRunCommandLine.md)
+Creates "a TS" step run command line.
+
+### [New-CMTSStepRunPowerShellScript](New-CMTSStepRunPowerShellScript.md)
+Creates "a TS" step run power shell script.
+
+### [New-CMTSStepSetDynamicVariable](New-CMTSStepSetDynamicVariable.md)
+
+### [New-CMTSStepSetupWindowsAndConfigMgr](New-CMTSStepSetupWindowsAndConfigMgr.md)
+Creates "a TS" step setup windows and config mgr.
+
+### [New-CMTSStepSetVariable](New-CMTSStepSetVariable.md)
+Creates "a TS" step set variable.
+
+### [New-CMWindowsEnrollmentProfile](New-CMWindowsEnrollmentProfile.md)
+Creates a windows enrollment profile.
+
+### [New-CMWirelessProfile](New-CMWirelessProfile.md)
+ .
+
+### [Remove-CMApplicationDeployment](Remove-CMApplicationDeployment.md)
+Removes an application deployment.
+
+### [Remove-CMBaselineDeployment](Remove-CMBaselineDeployment.md)
+Removes a baseline deployment.
+
+### [Remove-CMBoundaryGroupRelationship](Remove-CMBoundaryGroupRelationship.md)
+Removes a boundary group relationship.
+
+### [Remove-CMCloudManagementGateway](Remove-CMCloudManagementGateway.md)
+Removes a cloud management gateway.
+
+### [Remove-CMCloudManagementGatewayConnectionPoint](Remove-CMCloudManagementGatewayConnectionPoint.md)
+Removes a cloud management gateway connection point.
+
+### [Remove-CMCollectionDirectMembershipRule](Remove-CMCollectionDirectMembershipRule.md)
+Removes a collection direct membership rule.
+
+### [Remove-CMCollectionExcludeMembershipRule](Remove-CMCollectionExcludeMembershipRule.md)
+Removes a collection exclude membership rule.
+
+### [Remove-CMCollectionFromAdministrativeUser](Remove-CMCollectionFromAdministrativeUser.md)
+Removes a collection from administrative user.
+
+### [Remove-CMCollectionFromDistributionPointGroup](Remove-CMCollectionFromDistributionPointGroup.md)
+Removes a collection from distribution point group.
+
+### [Remove-CMCollectionIncludeMembershipRule](Remove-CMCollectionIncludeMembershipRule.md)
+Removes a collection include membership rule.
+
+### [Remove-CMCollectionMembershipRule](Remove-CMCollectionMembershipRule.md)
+Removes a Configuration Manager collection membership rule.
+
+### [Remove-CMCollectionQueryMembershipRule](Remove-CMCollectionQueryMembershipRule.md)
+Removes a collection query membership rule.
+
+### [Remove-CMComplianceRule](Remove-CMComplianceRule.md)
+Removes a compliance rule.
+
+### [Remove-CMComplianceSetting](Remove-CMComplianceSetting.md)
+Removes a compliance setting.
+
+### [Remove-CMConfigurationPolicyDeployment](Remove-CMConfigurationPolicyDeployment.md)
+Removes a configuration policy deployment.
+
+### [Remove-CMCorpOwnedDevice](Remove-CMCorpOwnedDevice.md)
+Removes a corp owned device.
+
+### [Remove-CMDataWarehouseServicePoint](Remove-CMDataWarehouseServicePoint.md)
+Removes a data warehouse service point.
+
+### [Remove-CMDeploymentTypeDependency](Remove-CMDeploymentTypeDependency.md)
+
+### [Remove-CMDeploymentTypeDependencyGroup](Remove-CMDeploymentTypeDependencyGroup.md)
+
+### [Remove-CMDeploymentTypeSupersedence](Remove-CMDeploymentTypeSupersedence.md)
+
+### [Remove-CMIosEnrollmentProfile](Remove-CMIosEnrollmentProfile.md)
+Removes an ios enrollment profile.
+
+### [Remove-CMPackageDeployment](Remove-CMPackageDeployment.md)
+
+### [Remove-CMQuery](Remove-CMQuery.md)
+Removes a Configuration Manager query.
+
+### [Remove-CMResource](Remove-CMResource.md)
+Removes a Configuration Manager resource.
+
+### [Remove-CMScript](Remove-CMScript.md)
+
+### [Remove-CMSiteRole](Remove-CMSiteRole.md)
+Removes a site role.
+
+### [Remove-CMSoftwareUpdateDeployment](Remove-CMSoftwareUpdateDeployment.md)
+Removes a software update deployment.
+
+### [Remove-CMSoftwareUpdateFromGroup](Remove-CMSoftwareUpdateFromGroup.md)
+Removes a software update from group.
+
+### [Remove-CMTaskSequenceDeployment](Remove-CMTaskSequenceDeployment.md)
+
+### [Remove-CMTaskSequenceGroup](Remove-CMTaskSequenceGroup.md)
+
+### [Remove-CMTaskSequenceStep](Remove-CMTaskSequenceStep.md)
+
+### [Remove-CMTSStepInstallApplication](Remove-CMTSStepInstallApplication.md)
+Removes "a TS" step install application.
+
+### [Remove-CMTSStepInstallSoftware](Remove-CMTSStepInstallSoftware.md)
+Removes "a TS" step install software.
+
+### [Remove-CMTSStepInstallUpdate](Remove-CMTSStepInstallUpdate.md)
+Removes "a TS" step install update.
+
+### [Remove-CMTSStepPartitionDisk](Remove-CMTSStepPartitionDisk.md)
+Removes "a TS" step partition disk.
+
+### [Remove-CMTSStepReboot](Remove-CMTSStepReboot.md)
+Removes "a TS" step reboot.
+
+### [Remove-CMTSStepRunCommandLine](Remove-CMTSStepRunCommandLine.md)
+Removes "a TS" step run command line.
+
+### [Remove-CMTSStepRunPowerShellScript](Remove-CMTSStepRunPowerShellScript.md)
+Removes "a TS" step run power shell script.
+
+### [Remove-CMTSStepSetDynamicVariable](Remove-CMTSStepSetDynamicVariable.md)
+
+### [Remove-CMTSStepSetupWindowsAndConfigMgr](Remove-CMTSStepSetupWindowsAndConfigMgr.md)
+Removes "a TS" step setup windows and config mgr.
+
+### [Remove-CMTSStepSetVariable](Remove-CMTSStepSetVariable.md)
+Removes "a TS" step set variable.
+
+### [Remove-CMUpdateGroupDeployment](Remove-CMUpdateGroupDeployment.md)
+Removes an update group deployment.
+
+### [Remove-CMWindowsEnrollmentProfile](Remove-CMWindowsEnrollmentProfile.md)
+Removes a windows enrollment profile.
+
+### [Remove-CMWindowsEnrollmentProfilePackage](Remove-CMWindowsEnrollmentProfilePackage.md)
+Removes a windows enrollment profile package.
+
+### [Set-CMAadConditionalAccessPolicy](Set-CMAadConditionalAccessPolicy.md)
+Sets an aad conditional access policy.
+
+### [Set-CMAdvancedThreatProtectionPolicy](Set-CMAdvancedThreatProtectionPolicy.md)
+Sets an advanced threat protection policy.
+
+### [Set-CMBoundaryGroupRelationship](Set-CMBoundaryGroupRelationship.md)
+Sets a boundary group relationship.
+
+### [Set-CMClientCertificateProfileConfigurationItem](Set-CMClientCertificateProfileConfigurationItem.md)
+Modifies a certificate profile.
+
+### [Set-CMClientSettingBackgroundIntelligentTransfer](Set-CMClientSettingBackgroundIntelligentTransfer.md)
+Sets a client setting background intelligent transfer.
+
+### [Set-CMClientSettingClientCache](Set-CMClientSettingClientCache.md)
+Sets a client setting client cache.
+
+### [Set-CMClientSettingClientPolicy](Set-CMClientSettingClientPolicy.md)
+Sets a client setting client policy.
+
+### [Set-CMClientSettingCloudService](Set-CMClientSettingCloudService.md)
+Sets a client setting cloud service.
+
+### [Set-CMClientSettingComplianceSetting](Set-CMClientSettingComplianceSetting.md)
+Sets a client setting compliance setting.
+
+### [Set-CMClientSettingComputerAgent](Set-CMClientSettingComputerAgent.md)
+Sets a client setting computer agent.
+
+### [Set-CMClientSettingComputerRestart](Set-CMClientSettingComputerRestart.md)
+Sets a client setting computer restart.
+
+### [Set-CMClientSettingEndpointProtection](Set-CMClientSettingEndpointProtection.md)
+Sets a client setting endpoint protection.
+
+### [Set-CMClientSettingEnrollment](Set-CMClientSettingEnrollment.md)
+Sets a client setting enrollment.
+
+### [Set-CMClientSettingGeneral](Set-CMClientSettingGeneral.md)
+Sets a client setting general.
+
+### [Set-CMClientSettingHardwareInventory](Set-CMClientSettingHardwareInventory.md)
+Sets a client setting hardware inventory.
+
+### [Set-CMClientSettingMeteredInternetConnection](Set-CMClientSettingMeteredInternetConnection.md)
+Sets a client setting metered internet connection.
+
+### [Set-CMClientSettingPowerManagement](Set-CMClientSettingPowerManagement.md)
+Sets a client setting power management.
+
+### [Set-CMClientSettingRemoteTool](Set-CMClientSettingRemoteTool.md)
+Sets a client setting remote tool.
+
+### [Set-CMClientSettingSoftwareDeployment](Set-CMClientSettingSoftwareDeployment.md)
+Sets a client setting software deployment.
+
+### [Set-CMClientSettingSoftwareInventory](Set-CMClientSettingSoftwareInventory.md)
+Sets a client setting software inventory.
+
+### [Set-CMClientSettingSoftwareMetering](Set-CMClientSettingSoftwareMetering.md)
+Sets a client setting software metering.
+
+### [Set-CMClientSettingSoftwareUpdate](Set-CMClientSettingSoftwareUpdate.md)
+Sets a client setting software update.
+
+### [Set-CMClientSettingStateMessaging](Set-CMClientSettingStateMessaging.md)
+Sets a client setting state messaging.
+
+### [Set-CMClientSettingUserAndDeviceAffinity](Set-CMClientSettingUserAndDeviceAffinity.md)
+Sets a client setting user and device affinity.
+
+### [Set-CMCloudManagementGateway](Set-CMCloudManagementGateway.md)
+Sets a cloud management gateway.
+
+### [Set-CMCloudManagementGatewayConnectionPoint](Set-CMCloudManagementGatewayConnectionPoint.md)
+Sets a cloud management gateway connection point.
+
+### [Set-CMComplianceRuleAssembly](Set-CMComplianceRuleAssembly.md)
+Sets a compliance rule assembly.
+
+### [Set-CMComplianceRuleExistential](Set-CMComplianceRuleExistential.md)
+Sets a compliance rule existential.
+
+### [Set-CMComplianceRuleFileFolderAttribute](Set-CMComplianceRuleFileFolderAttribute.md)
+Sets a compliance rule file folder attribute.
+
+### [Set-CMComplianceRuleFileFolderDate](Set-CMComplianceRuleFileFolderDate.md)
+Sets a compliance rule file folder date.
+
+### [Set-CMComplianceRuleFileFolderPermission](Set-CMComplianceRuleFileFolderPermission.md)
+Sets a compliance rule file folder permission.
+
+### [Set-CMComplianceRuleFileFolderSimple](Set-CMComplianceRuleFileFolderSimple.md)
+Sets a compliance rule file folder simple.
+
+### [Set-CMComplianceRuleFileFolderSize](Set-CMComplianceRuleFileFolderSize.md)
+Sets a compliance rule file folder size.
+
+### [Set-CMComplianceRuleRegistryKeyPermission](Set-CMComplianceRuleRegistryKeyPermission.md)
+Sets a compliance rule registry key permission.
+
+### [Set-CMComplianceRuleValue](Set-CMComplianceRuleValue.md)
+Sets a compliance rule value.
+
+### [Set-CMComplianceRuleVersion](Set-CMComplianceRuleVersion.md)
+Sets a compliance rule version.
+
+### [Set-CMComplianceSettingActiveDirectoryQuery](Set-CMComplianceSettingActiveDirectoryQuery.md)
+Sets a compliance setting active directory query.
+
+### [Set-CMComplianceSettingAssembly](Set-CMComplianceSettingAssembly.md)
+Sets a compliance setting assembly.
+
+### [Set-CMComplianceSettingDirectory](Set-CMComplianceSettingDirectory.md)
+Sets a compliance setting directory.
+
+### [Set-CMComplianceSettingFile](Set-CMComplianceSettingFile.md)
+Sets a compliance setting file.
+
+### [Set-CMComplianceSettingIisMetabase](Set-CMComplianceSettingIisMetabase.md)
+Sets a compliance setting iis metabase.
+
+### [Set-CMComplianceSettingRegistryKey](Set-CMComplianceSettingRegistryKey.md)
+Sets a compliance setting registry key.
+
+### [Set-CMComplianceSettingRegistryKeyValue](Set-CMComplianceSettingRegistryKeyValue.md)
+Sets a compliance setting registry key value.
+
+### [Set-CMComplianceSettingScript](Set-CMComplianceSettingScript.md)
+Sets a compliance setting script.
+
+### [Set-CMComplianceSettingSqlQuery](Set-CMComplianceSettingSqlQuery.md)
+Sets a compliance setting sql query.
+
+### [Set-CMComplianceSettingWqlQuery](Set-CMComplianceSettingWqlQuery.md)
+Sets a compliance setting wql query.
+
+### [Set-CMComplianceSettingXPathQuery](Set-CMComplianceSettingXPathQuery.md)
+Sets a compliance setting x path query.
+
+### [Set-CMComplianceSupportedPlatform](Set-CMComplianceSupportedPlatform.md)
+Sets a compliance supported platform.
+
+### [Set-CMDataWarehouseServicePoint](Set-CMDataWarehouseServicePoint.md)
+Sets a data warehouse service point.
+
+### [Set-CMDeploymentTypeDependency](Set-CMDeploymentTypeDependency.md)
+
+### [Set-CMDeploymentTypeDependencyGroup](Set-CMDeploymentTypeDependencyGroup.md)
+
+### [Set-CMDeploymentTypeSupersedence](Set-CMDeploymentTypeSupersedence.md)
+
+### [Set-CMGlobalConditionActiveDirectoryQuery](Set-CMGlobalConditionActiveDirectoryQuery.md)
+
+### [Set-CMGlobalConditionAssembly](Set-CMGlobalConditionAssembly.md)
+
+### [Set-CMGlobalConditionFile](Set-CMGlobalConditionFile.md)
+
+### [Set-CMGlobalConditionGeneral](Set-CMGlobalConditionGeneral.md)
+
+### [Set-CMGlobalConditionIisMetabase](Set-CMGlobalConditionIisMetabase.md)
+
+### [Set-CMGlobalConditionOmaUri](Set-CMGlobalConditionOmaUri.md)
+
+### [Set-CMGlobalConditionRegistryKey](Set-CMGlobalConditionRegistryKey.md)
+
+### [Set-CMGlobalConditionRegistryValue](Set-CMGlobalConditionRegistryValue.md)
+
+### [Set-CMGlobalConditionScript](Set-CMGlobalConditionScript.md)
+
+### [Set-CMGlobalConditionSqlQuery](Set-CMGlobalConditionSqlQuery.md)
+
+### [Set-CMGlobalConditionWqlQuery](Set-CMGlobalConditionWqlQuery.md)
+
+### [Set-CMGlobalConditionXPathQuery](Set-CMGlobalConditionXPathQuery.md)
+
+### [Set-CMIosEnrollmentProfile](Set-CMIosEnrollmentProfile.md)
+Sets an ios enrollment profile.
+
+### [Set-CMIosEnrollmentProfileAssignment](Set-CMIosEnrollmentProfileAssignment.md)
+Sets an ios enrollment profile assignment.
+
+### [Set-CMMigrationJob](Set-CMMigrationJob.md)
+Sets a migration job.
+
+### [Set-CMQuery](Set-CMQuery.md)
+Configure a Configuration Manager query.
+
+### [Set-CMSettingDefinition](Set-CMSettingDefinition.md)
+Sets a setting definition.
+
+### [Set-CMSiteSummaryTask](Set-CMSiteSummaryTask.md)
+Sets a site summary task.
+
+### [Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md)
+
+### [Set-CMTSStepInstallApplication](Set-CMTSStepInstallApplication.md)
+Sets "a TS" step install application.
+
+### [Set-CMTSStepInstallSoftware](Set-CMTSStepInstallSoftware.md)
+Sets "a TS" step install software.
+
+### [Set-CMTSStepInstallUpdate](Set-CMTSStepInstallUpdate.md)
+Sets "a TS" step install update.
+
+### [Set-CMTSStepPartitionDisk](Set-CMTSStepPartitionDisk.md)
+Sets "a TS" step partition disk.
+
+### [Set-CMTSStepReboot](Set-CMTSStepReboot.md)
+Sets "a TS" step reboot.
+
+### [Set-CMTSStepRunCommandLine](Set-CMTSStepRunCommandLine.md)
+Sets "a TS" step run command line.
+
+### [Set-CMTSStepRunPowerShellScript](Set-CMTSStepRunPowerShellScript.md)
+Sets "a TS" step run power shell script.
+
+### [Set-CMTSStepSetDynamicVariable](Set-CMTSStepSetDynamicVariable.md)
+
+### [Set-CMTSStepSetupWindowsAndConfigMgr](Set-CMTSStepSetupWindowsAndConfigMgr.md)
+Sets "a TS" step setup windows and config mgr.
+
+### [Set-CMTSStepSetVariable](Set-CMTSStepSetVariable.md)
+Sets "a TS" step set variable.
+
+### [Set-CMUpdateGroupDeployment](Set-CMUpdateGroupDeployment.md)
+Sets an update group deployment.
+
+### [Set-CMWindowsEnrollmentProfile](Set-CMWindowsEnrollmentProfile.md)
+Sets a windows enrollment profile.
+
+### [Set-CMWirelessProfile](Set-CMWirelessProfile.md)
+Sets a wireless profile.
+
+### [Start-CMCloudManagementGateway](Start-CMCloudManagementGateway.md)
+Starts a cloud management gateway.
+
+### [Start-CMObjectTracking](Start-CMObjectTracking.md)
+Starts an object tracking.
+
+### [Stop-CMCloudManagementGateway](Stop-CMCloudManagementGateway.md)
+Stops a cloud management gateway.
+
+### [Stop-CMMigrationSource](Stop-CMMigrationSource.md)
+Stops a migration source.
+
+### [Stop-CMObjectTracking](Stop-CMObjectTracking.md)
+Stops an object tracking.
+
+### [Sync-CMMigrationSource](Sync-CMMigrationSource.md)
+Syncs a migration source.
+
+
