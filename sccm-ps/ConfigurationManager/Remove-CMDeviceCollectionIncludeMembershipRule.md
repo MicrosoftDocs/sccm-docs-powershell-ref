@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: D0AB3D9A-6F2D-4373-9FC7-60990D9D8CCD
-online version: https://go.microsoft.com/fwlink/?linkid=834051
-schema: 2.0.0
+title: Remove-CMDeviceCollectionIncludeMembershipRule
+titleSuffix: Configuration Manager
+description: Removes an Include Collections membership rule from a device collection.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMDeviceCollectionIncludeMembershipRule

@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMConfigurationPolicyDeployment
+titleSuffix: Configuration Manager
+description: Removes a configuration policy deployment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMConfigurationPolicyDeployment
 
 ## SYNOPSIS
-Removes a configuration policy deployment
+Removes a configuration policy deployment.
 
 ## SYNTAX
 
