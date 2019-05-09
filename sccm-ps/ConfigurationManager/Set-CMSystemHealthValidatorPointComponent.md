@@ -340,8 +340,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMManagementPointComponent](Set-CMManagementPointComponent.md)
 
-[Set-CMOutOfBandManagementComponent](Set-CMOutOfBandManagementComponent.md)
-
 [Set-CMSoftwareUpdatePointComponent](Set-CMSoftwareUpdatePointComponent.md)
 
 [Set-CMStatusReportingComponent](Set-CMStatusReportingComponent.md)
