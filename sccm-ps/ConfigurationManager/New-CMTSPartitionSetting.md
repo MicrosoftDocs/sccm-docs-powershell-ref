@@ -13,7 +13,8 @@ manager: dougeby
 
 # New-CMTSPartitionSetting
 
-## SYNOPSIS
+# SYNOPSIS
+
 Creates a t s partition setting.
 
 ## SYNTAX

@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepPartitionDisk
 
 ## SYNOPSIS
-Creates a t s step partition disk
+Creates a TS step partition disk
 
 ## SYNTAX
 

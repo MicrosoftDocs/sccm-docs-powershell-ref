@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepReboot
 
 ## SYNOPSIS
-Gets a t s step reboot
+Gets a TS step reboot
 
 ## SYNTAX
 
