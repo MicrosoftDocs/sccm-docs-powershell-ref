@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Migration.dll-Help.xml
-ms.assetid: CBAB4B86-8A08-4BB6-B5F5-C6C24628AB25
-online version: https://go.microsoft.com/fwlink/?linkid=833934
-schema: 2.0.0
+title: Set-CMMigrationSource
+titleSuffix: Configuration Manager
+description: Specifies or changes settings for a migration source site in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMMigrationSource
