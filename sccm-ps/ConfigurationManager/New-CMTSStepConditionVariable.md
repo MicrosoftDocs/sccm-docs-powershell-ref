@@ -14,7 +14,9 @@ manager: dougeby
 # New-CMTSStepConditionVariable
 
 ## SYNOPSIS
+
 Creates a t s step condition variable.
+
 
 ## SYNTAX
 

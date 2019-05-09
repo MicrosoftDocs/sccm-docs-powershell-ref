@@ -14,7 +14,9 @@ manager: dougeby
 # New-CMTSStepConditionRegistry
 
 ## SYNOPSIS
+
 Creates a t s step condition registry.
+
 
 ## SYNTAX
 

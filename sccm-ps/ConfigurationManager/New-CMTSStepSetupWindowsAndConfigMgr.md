@@ -14,7 +14,9 @@ manager: dougeby
 # New-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
+
 Creates a t s step setup windows and config mgr.
+
 
 ## SYNTAX
 

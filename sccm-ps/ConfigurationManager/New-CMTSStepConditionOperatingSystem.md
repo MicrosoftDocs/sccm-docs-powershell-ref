@@ -14,7 +14,9 @@ manager: dougeby
 # New-CMTSStepConditionOperatingSystem
 
 ## SYNOPSIS
+
 Creates a t s step condition operating system.
+
 
 ## SYNTAX
 

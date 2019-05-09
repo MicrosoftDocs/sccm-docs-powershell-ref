@@ -14,7 +14,9 @@ manager: dougeby
 # New-CMTSStepConditionQueryWmi
 
 ## SYNOPSIS
+
 Creates a t s step condition query wmi.
+
 
 ## SYNTAX
 

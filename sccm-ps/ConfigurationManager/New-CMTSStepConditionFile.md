@@ -14,7 +14,9 @@ manager: dougeby
 # New-CMTSStepConditionFile
 
 ## SYNOPSIS
+
 Creates a t s step condition file.
+
 
 ## SYNTAX
 
