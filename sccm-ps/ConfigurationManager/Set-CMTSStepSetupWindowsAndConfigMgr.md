@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Set-CMTSStepSetupWindowsAndConfigMgr
+titleSuffix: Configuration Manager
+description: Sets a TS step setup windows and config mgr.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Sets a TS step setup windows and config mgr
+Sets a TS step setup windows and config mgr.
 
 ## SYNTAX
 

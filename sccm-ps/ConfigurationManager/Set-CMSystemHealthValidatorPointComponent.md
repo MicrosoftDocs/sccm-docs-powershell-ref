@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=834123
-schema: 2.0.0
-ms.assetid: 27842BB3-EBB9-41C0-9713-53C515D27E2B
+title: Set-CMSystemHealthValidatorPointComponent
+titleSuffix: Configuration Manager
+description: Modifies settings of a Configuration Manager system health validator point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMSystemHealthValidatorPointComponent
