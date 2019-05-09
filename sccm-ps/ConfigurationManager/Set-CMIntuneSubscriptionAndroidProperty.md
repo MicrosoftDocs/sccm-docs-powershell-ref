@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: 14BD2A9D-635A-43C0-B477-B324BBB7FBC5
-online version: https://go.microsoft.com/fwlink/?linkid=833883
-schema: 2.0.0
+title: Set-CMIntuneSubscriptionAndroidProperty
+titleSuffix: Configuration Manager
+description: Updates a Microsoft Intune subscription to enable Android enrollment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMIntuneSubscriptionAndroidProperty
