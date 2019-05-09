@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: 009BA9A5-AB9A-4512-99D9-D2788C7FE02A
-online version: https://go.microsoft.com/fwlink/?linkid=834257
-schema: 2.0.0
+title: Sync-CMSoftwareUpdate
+titleSuffix: Configuration Manager
+description: Synchronizes software updates.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Sync-CMSoftwareUpdate

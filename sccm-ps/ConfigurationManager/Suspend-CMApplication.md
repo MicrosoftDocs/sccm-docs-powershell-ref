@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 1E63FED9-D574-44F1-B056-7AB5BACFEA24
-online version: https://go.microsoft.com/fwlink/?linkid=834243
-schema: 2.0.0
+title: Suspend-CMApplication
+titleSuffix: Configuration Manager
+description: Suspends an application.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Suspend-CMApplication
