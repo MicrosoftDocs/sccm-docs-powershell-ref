@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
-ms.assetid: C3D5A011-7F5C-4151-BB10-112E9A0E78CA
-online version: https://go.microsoft.com/fwlink/?linkid=833779
-schema: 2.0.0
+title: Set-CMDatabaseReplicationLinkProperty
+titleSuffix: Configuration Manager
+description: Changes configuration settings for a database replication link.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMDatabaseReplicationLinkProperty

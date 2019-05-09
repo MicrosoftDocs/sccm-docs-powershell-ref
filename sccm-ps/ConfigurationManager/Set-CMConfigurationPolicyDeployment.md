@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
-ms.assetid: F8D992C0-0F8C-40B7-944A-7BA571735859
-online version: https://go.microsoft.com/fwlink/?linkid=833771
-schema: 2.0.0
+title: Set-CMConfigurationPolicyDeployment
+titleSuffix: Configuration Manager
+description: Creates a configuration policy deployment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMConfigurationPolicyDeployment
