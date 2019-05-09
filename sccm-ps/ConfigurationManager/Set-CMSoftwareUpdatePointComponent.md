@@ -585,8 +585,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMManagementPointComponent](Set-CMManagementPointComponent.md)
 
-[Set-CMOutOfBandManagementComponent](Set-CMOutOfBandManagementComponent.md)
-
 [Set-CMStatusReportingComponent](Set-CMStatusReportingComponent.md)
 
 [Set-CMSystemHealthValidatorPointComponent](Set-CMSystemHealthValidatorPointComponent.md)
