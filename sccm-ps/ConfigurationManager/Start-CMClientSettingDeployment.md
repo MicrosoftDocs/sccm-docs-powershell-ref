@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.ClientSettings.dll-Help.xml
-ms.assetid: 6272F088-F019-471D-A1EC-D4B3383D6931
-online version: https://go.microsoft.com/fwlink/?linkid=834203
-schema: 2.0.0
+title: Start-CMClientSettingDeployment
+titleSuffix: Configuration Manager
+description: Deploys client settings to devices in a collection.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Start-CMClientSettingDeployment

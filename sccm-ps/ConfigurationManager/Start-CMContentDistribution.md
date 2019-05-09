@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: CE48C113-8802-4088-AB60-2D9BE09B8EB5
-online version: https://go.microsoft.com/fwlink/?linkid=834214
-schema: 2.0.0
+title: Start-CMContentDistribution
+titleSuffix: Configuration Manager
+description: Copies content to distribution points.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Start-CMContentDistribution

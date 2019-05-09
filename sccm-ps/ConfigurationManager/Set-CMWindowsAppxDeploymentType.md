@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: AD051C96-0341-486C-A0B0-25C9DEA090C6
-online version: https://go.microsoft.com/fwlink/?linkid=834156
-schema: 2.0.0
+title: Set-CMWindowsAppxDeploymentType
+titleSuffix: Configuration Manager
+description: Sets a Windows app package deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMWindowsAppxDeploymentType

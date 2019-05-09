@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 079BA78F-2757-4D49-9AE7-51953468AC60
-online version: https://go.microsoft.com/fwlink/?linkid=834168
-schema: 2.0.0
+title: Set-CMWindowsMobileDeploymentType
+titleSuffix: Configuration Manager
+description: Sets a Windows Mobile cabinet deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMWindowsMobileDeploymentType
