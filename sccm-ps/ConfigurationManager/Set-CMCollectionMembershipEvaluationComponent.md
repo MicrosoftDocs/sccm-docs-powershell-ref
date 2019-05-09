@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: DC548AD7-17F7-4455-8857-6342043439FA
-online version: https://go.microsoft.com/fwlink/?linkid=833744
-schema: 2.0.0
+title: Set-CMCollectionMembershipEvaluationComponent
+titleSuffix: Configuration Manager
+description: Sets how often Configuration Manager evaluates collections for membership.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMCollectionMembershipEvaluationComponent

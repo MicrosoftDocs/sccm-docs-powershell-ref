@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Set-CMComplianceRuleRegistryKeyPermission
+titleSuffix: Configuration Manager
+description: Sets a compliance rule registry key permission.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMComplianceRuleRegistryKeyPermission
 
 ## SYNOPSIS
-Sets a compliance rule registry key permission
+Sets a compliance rule registry key permission.
 
 ## SYNTAX
 
