@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833724
 schema: 2.0.0
@@ -42,7 +42,7 @@ The **Add-CMNokiaDeploymentType** cmdlet adds a Nokia deployment type to an appl
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a Nokia deployment type
