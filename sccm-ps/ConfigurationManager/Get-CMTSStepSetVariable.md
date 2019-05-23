@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepSetVariable
 titleSuffix: Configuration Manager
-description: Gets a t s step set variable.
+description: Gets a TS step set variable.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepSetVariable
 
 ## SYNOPSIS
-Gets a TS step set variable
+Gets a TS step set variable.
 
 ## SYNTAX
 
