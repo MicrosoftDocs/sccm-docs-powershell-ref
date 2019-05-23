@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 36A1F0DC-7683-4F9C-B711-19CADFA70D0D
 online version: https://go.microsoft.com/fwlink/?linkid=833788
@@ -45,7 +45,7 @@ The **Add-CMWindowsAppxDeploymentType** cmdlet adds a Windows app package deploy
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a Windows app package deployment type
