@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: A5700EDF-92D7-48DE-B942-F0C3274E2331
 online version: https://go.microsoft.com/fwlink/?linkid=833850
@@ -58,7 +58,7 @@ System Center Configuration Manager redeploys the most recent required deploymen
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Clear a PXE deployment for a device collection
