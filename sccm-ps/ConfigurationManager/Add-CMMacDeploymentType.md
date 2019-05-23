@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: CE342BBE-34D9-4CA6-8BAF-FFC302C10282
 online version: https://go.microsoft.com/fwlink/?linkid=833700
@@ -42,7 +42,7 @@ The **Add-CMMacDeploymentType** cmdlet adds a Mac deployment type to an applicat
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a Mac deployment type
