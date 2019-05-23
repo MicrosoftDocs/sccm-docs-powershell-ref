@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: ACD65BCF-63FD-4A8D-B382-9FBD3BEEF261
 online version: https://go.microsoft.com/fwlink/?linkid=833839
@@ -30,7 +30,7 @@ You can also specify the computer that hosts that component.
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Clear message count
