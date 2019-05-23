@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: 508CC52D-2E8D-4C76-AD7E-FDF8F306983E
 online version: https://go.microsoft.com/fwlink/?linkid=833860
@@ -23,7 +23,7 @@ The **Clear-CMSiteStatusMessageCount** cmdlet clears the message count in Micros
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Clear the status message count
