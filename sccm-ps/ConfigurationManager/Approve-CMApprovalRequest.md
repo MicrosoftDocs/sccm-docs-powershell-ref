@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: F1FE1043-7043-4C8A-A5C6-E09BC8F80D49
 online version: https://go.microsoft.com/fwlink/?linkid=833808
@@ -50,7 +50,7 @@ You can also use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Approve a request for a specific application
