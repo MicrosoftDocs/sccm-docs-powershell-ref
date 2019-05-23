@@ -74,7 +74,7 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
     ```  PowerShell
     PS XYZ:\>  
-    PS XYZ:\> CD 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin'  
+    PS XYZ:\> cd $env:SMS_ADMIN_UI_PATH\..\
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1  
     ```  
 

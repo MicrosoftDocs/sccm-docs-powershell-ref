@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepConditionRegistry
 
 ## SYNOPSIS
-Creates a t s step condition registry
+Creates a TS step condition registry
 
 ## SYNTAX
 

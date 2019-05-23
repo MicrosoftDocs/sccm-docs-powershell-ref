@@ -63,12 +63,6 @@ This command gets the collection object named All Users and uses the pipeline op
 
 ### -CollectionType
 Specifies a type for the collection.
-Valid values are:
-
-- Root
-- User
-- Device
-- Unknown
 
 ```yaml
 Type: CollectionType

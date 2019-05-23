@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMTSStepSetVariable
 
 ## SYNOPSIS
-Removes a t s step set variable
+Removes a TS step set variable
 
 ## SYNTAX
 

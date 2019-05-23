@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMTSStepReboot
 
 ## SYNOPSIS
-Removes a t s step reboot
+Removes a TS step reboot
 
 ## SYNTAX
 

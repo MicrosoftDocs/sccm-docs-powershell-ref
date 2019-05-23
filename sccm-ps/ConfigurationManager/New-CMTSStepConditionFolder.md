@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepConditionFolder
 
 ## SYNOPSIS
-Creates a t s step condition folder
+Creates a TS step condition folder
 
 ## SYNTAX
 

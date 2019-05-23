@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMTSStepPartitionDisk
 
 ## SYNOPSIS
-Removes a t s step partition disk
+Removes a TS step partition disk
 
 ## SYNTAX
 

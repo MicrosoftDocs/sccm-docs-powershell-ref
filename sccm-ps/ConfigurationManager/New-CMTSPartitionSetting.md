@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSPartitionSetting
 
 ## SYNOPSIS
-Creates a t s partition setting
+Creates a TS partition setting
 
 ## SYNTAX
 

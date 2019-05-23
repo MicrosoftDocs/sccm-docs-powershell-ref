@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepSetVariable
 
 ## SYNOPSIS
-Creates a t s step set variable
+Creates a TS step set variable
 
 ## SYNTAX
 

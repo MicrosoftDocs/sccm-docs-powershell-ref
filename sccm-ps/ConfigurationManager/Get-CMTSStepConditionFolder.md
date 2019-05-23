@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepConditionFolder
 
 ## SYNOPSIS
-Gets a t s step condition folder
+Gets a TS step condition folder
 
 ## SYNTAX
 

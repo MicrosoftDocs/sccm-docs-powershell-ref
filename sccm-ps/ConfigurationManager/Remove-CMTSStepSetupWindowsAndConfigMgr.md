@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Removes a t s step setup windows and config mgr
+Removes a TS step setup windows and config mgr
 
 ## SYNTAX
 

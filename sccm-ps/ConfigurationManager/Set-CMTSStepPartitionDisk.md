@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CMTSStepPartitionDisk
 
 ## SYNOPSIS
-Sets a t s step partition disk
+Sets a TS step partition disk
 
 ## SYNTAX
 

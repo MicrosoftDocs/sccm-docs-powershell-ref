@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepConditionOperatingSystem
 
 ## SYNOPSIS
-Creates a t s step condition operating system
+Creates a TS step condition operating system
 
 ## SYNTAX
 

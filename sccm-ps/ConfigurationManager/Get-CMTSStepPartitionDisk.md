@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepPartitionDisk
 
 ## SYNOPSIS
-Gets a t s step partition disk
+Gets a TS step partition disk
 
 ## SYNTAX
 

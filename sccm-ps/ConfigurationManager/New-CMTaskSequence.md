@@ -950,7 +950,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CMTaskSequence](Get-CMTaskSequence.md)
+[New-CMTaskSequence](New-CMTaskSequence.md)
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 [Set-CMTaskSequence](Set-CMTaskSequence.md)
 [Copy-CMTaskSequence](Copy-CMTaskSequence.md)

@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepConditionQueryWmi
 
 ## SYNOPSIS
-Gets a t s step condition query wmi
+Gets a TS step condition query wmi
 
 ## SYNTAX
 

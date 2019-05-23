@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepInstallSoftware
 
 ## SYNOPSIS
-Gets a t s step install software
+Gets a TS step install software
 
 ## SYNTAX
 

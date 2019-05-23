@@ -131,8 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -IconLocationFile
-Specifies the location of the icon file.
-This is set to the single default language.
+Specifies the location of the icon file. This is set to the single default language. The size of the icon image cannot be greater than 512x512.
 
 ```yaml
 Type: String
@@ -145,6 +144,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+> [!TIP]
+> If the icon file is larger 250 x 250 px the cmdlet will fail, compared to the UI that accepts 512 x 512 px.
 
 ### -IsFeatured
 Indicates whether the application displays as a featured app and is highlighted in the company portal.

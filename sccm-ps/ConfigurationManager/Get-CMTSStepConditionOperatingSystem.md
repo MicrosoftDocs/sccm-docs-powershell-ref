@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepConditionOperatingSystem
 
 ## SYNOPSIS
-Gets a t s step condition operating system
+Gets a TS step condition operating system
 
 ## SYNTAX
 

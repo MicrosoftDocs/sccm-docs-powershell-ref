@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepConditionSoftware
 
 ## SYNOPSIS
-Gets a t s step condition software
+Gets a TS step condition software
 
 ## SYNTAX
 

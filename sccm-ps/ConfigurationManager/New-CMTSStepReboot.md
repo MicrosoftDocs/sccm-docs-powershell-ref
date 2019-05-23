@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepReboot
 
 ## SYNOPSIS
-Creates a t s step reboot
+Creates a TS step reboot
 
 ## SYNTAX
 

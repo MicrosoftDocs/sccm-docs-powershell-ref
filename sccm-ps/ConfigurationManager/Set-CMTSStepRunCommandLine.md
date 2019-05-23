@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Sets a t s step run command line
+Sets a TS step run command line
 
 ## SYNTAX
 

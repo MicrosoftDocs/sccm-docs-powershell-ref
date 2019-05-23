@@ -24,7 +24,11 @@
       "source_path": "docs-conceptual/configurationmanager/index.md",
       "redirect_url": "/powershell/sccm/overview",
       "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/about_ConfigurationManager_Cmdlets.md",
+      "redirect_url": "/powershell/sccm/overview",
+      "redirect_document_id": "False"
     }
-
   ]
 }

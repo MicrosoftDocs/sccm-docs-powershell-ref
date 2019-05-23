@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Removes a t s step run command line
+Removes a TS step run command line
 
 ## SYNTAX
 

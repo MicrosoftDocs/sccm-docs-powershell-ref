@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepConditionIfStatement
 
 ## SYNOPSIS
-Creates a t s step condition if statement
+Creates a TS step condition if statement
 
 ## SYNTAX
 

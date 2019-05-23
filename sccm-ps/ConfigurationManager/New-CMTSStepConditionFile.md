@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepConditionFile
 
 ## SYNOPSIS
-Creates a t s step condition file
+Creates a TS step condition file
 
 ## SYNTAX
 

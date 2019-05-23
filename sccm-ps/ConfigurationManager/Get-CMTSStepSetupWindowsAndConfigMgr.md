@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Gets a t s step setup windows and config mgr
+Gets a TS step setup windows and config mgr
 
 ## SYNTAX
 

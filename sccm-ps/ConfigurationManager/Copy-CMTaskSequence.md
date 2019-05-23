@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-CMTaskSequence](Get-CMTaskSequence.md)
+[New-CMTaskSequence](New-CMTaskSequence.md)
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 [Set-CMTaskSequence](Set-CMTaskSequence.md)
 [Copy-CMTaskSequence](Copy-CMTaskSequence.md)

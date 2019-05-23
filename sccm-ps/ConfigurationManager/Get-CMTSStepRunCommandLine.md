@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Gets a t s step run command line
+Gets a TS step run command line
 
 ## SYNTAX
 

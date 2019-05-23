@@ -21,9 +21,10 @@ Set-CMApplication [-InputObject] <IResultObject> [-Description <String>] [-Publi
  [-ClearSupportContact] [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
  [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-AddAppCategory <IResultObject>] 
+ [-AddUserCategory <IResultObject>] [-CleanAppCategory] [-CleanUserCategory] [-PrivacyUrl <String>] 
+ [-IsFeatured <Boolean>] [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] 
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
@@ -35,9 +36,10 @@ Set-CMApplication [-Id] <Int32> [-Description <String>] [-Publisher <String>] [-
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
  [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-AddAppCategory <IResultObject>] 
+ [-AddUserCategory <IResultObject>] [-CleanAppCategory] [-CleanUserCategory] [-PrivacyUrl <String>] 
+ [-IsFeatured <Boolean>] [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] 
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
@@ -49,9 +51,10 @@ Set-CMApplication [-Name] <String> [-Description <String>] [-Publisher <String>]
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
  [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-AddAppCategory <IResultObject>] 
+ [-AddUserCategory <IResultObject>] [-CleanAppCategory] [-CleanUserCategory] [-PrivacyUrl <String>] 
+ [-IsFeatured <Boolean>] [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] 
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByModelName
@@ -63,9 +66,10 @@ Set-CMApplication -ModelName <String> [-Description <String>] [-Publisher <Strin
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
  [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-AddAppCategory <IResultObject>] [-AddUserCategory <IResultObject>]
+ [-CleanAppCategory] [-CleanUserCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>] [-IconLocationFile <String>] 
+ [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] 
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -125,6 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppCategory
+This cmdlet is deprecated in 1802. See -AddAppCategory for more information.
 Specifies an array of administrative categories assigned to the application.
 Provide the categories by their name.
 Only categories of the type AppCategories are supported.
@@ -141,6 +146,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddAppCategory
+Specifies an administrative category assigned to the application.
+Provide the category by its name.
+Only categories of the type AppCategories are supported.
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddUserCategory
+Specifies a user category assigned to the application for Software Center filtering use.
+Provide the category by its name.
+Only categories of the type CatalogCategories are supported.
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoInstall
 Indicates whether a task sequence action can install the application.
 
@@ -148,6 +187,36 @@ Indicates whether a task sequence action can install the application.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanAppCategory
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanUserCategory
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -653,6 +722,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCategory
+This cmdlet is deprecated in 1802. See -AddUserCategory for more information. 
 Specifies an array of user categories assigned to the application.
 You can use this parameter to identify a group or category of software, such as "office productivity" or "graphics."
 

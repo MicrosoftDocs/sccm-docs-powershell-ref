@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepInstallApplication
 
 ## SYNOPSIS
-Creates a t s step install application
+Creates a TS step install application
 
 ## SYNTAX
 
