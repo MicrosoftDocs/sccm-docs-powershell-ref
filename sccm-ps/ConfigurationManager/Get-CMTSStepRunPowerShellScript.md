@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepRunPowerShellScript
 
 ## SYNOPSIS
-Gets a t s step run power shell script.
+Gets a TS step run power shell script
 
 ## SYNTAX
 

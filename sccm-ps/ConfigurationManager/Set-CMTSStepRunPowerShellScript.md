@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CMTSStepRunPowerShellScript
 
 ## SYNOPSIS
-Sets a t s step run power shell script
+Sets a TS step run power shell script
 
 ## SYNTAX
 

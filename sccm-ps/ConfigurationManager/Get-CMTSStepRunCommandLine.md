@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Gets a t s step run command line.
+Gets a TS step run command line
 
 ## SYNTAX
 
