@@ -40,7 +40,7 @@ Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObjec
 ```
 
 ## DESCRIPTION
-This cmdlet is usually called by higher level wrapper cmdlets. It is not called directly.
+This cmdlet is called by higher-level wrapper cmdlets. It isn't called directly.
 
 
 ## EXAMPLES
