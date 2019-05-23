@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: FFE46104-3BE6-4E96-A2D4-EB8EFEB0E7A2
 online version: https://go.microsoft.com/fwlink/?linkid=833816
@@ -37,7 +37,7 @@ Instead of deploying an application to a group of devices, you deploy an applica
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Approve a request for user device affinity
