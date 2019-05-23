@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepRunCommandLine
 titleSuffix: Configuration Manager
-description: Gets a t s step run command line.
+description: Gets a TS step run command line.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Gets a TS step run command line
+Gets a TS step run command line.
 
 ## SYNTAX
 
