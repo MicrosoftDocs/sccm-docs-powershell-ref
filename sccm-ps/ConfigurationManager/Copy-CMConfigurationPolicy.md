@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: CA239E73-691E-4A34-852A-8417420E68E1
 online version: https://go.microsoft.com/fwlink/?linkid=833918
@@ -38,7 +38,7 @@ See the Alias section for additional policy items that you can use this cmdlet t
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Copy a configuration policy by using the pipeline
