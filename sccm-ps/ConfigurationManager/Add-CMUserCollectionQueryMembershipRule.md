@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: D4FECF42-937A-42F8-BB4C-EA3A17E04563
 online version: https://go.microsoft.com/fwlink/?linkid=833780
@@ -37,12 +37,12 @@ You can specify the user collections by using their names, IDs, or by specifying
 The query is specified as a text string.
 
 A query rule lets you dynamically update the members of a collection based on a query that is run on a schedule.
-For more information on collection rules, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information, see [Introduction to collections](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a rule to a collection by using a name
