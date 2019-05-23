@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: B0E1925F-4D8D-4BFE-9DE7-8C76F10A8383
 online version: https://go.microsoft.com/fwlink/?linkid=833768
@@ -53,12 +53,12 @@ The **Add-CMUserCollectionDirectMembershipRule** cmdlet adds a rule that adds a 
 You can specify the user collections by using their names, IDs, or by specifying an object that represents the collections.
 
 A direct rule lets you explicitly choose the members of the user collection.
-For more information on collection rules in Microsoft System Center Configuration Manager, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information, see [Introduction to collections](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a direct membership rule to a user collection
