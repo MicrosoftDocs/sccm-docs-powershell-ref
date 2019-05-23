@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A2AA9552-58E9-4C19-BD23-EE6816C90CDB
 online version: https://go.microsoft.com/fwlink/?linkid=833602
@@ -75,12 +75,12 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 You can use boundary groups to manage network locations.
 You must assign boundaries to boundary groups before you can use the boundary group.
 Boundary groups enable client computers to find a primary site for client assignment, which is referred to as automatic site assignment, and a list of available site systems that have content.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266225) on TechNet.
+For more information about boundaries, see [Define site boundaries and boundary groups](https://docs.microsoft.com/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Assign a boundary group to a boundary
