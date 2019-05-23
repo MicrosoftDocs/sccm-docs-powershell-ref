@@ -1,7 +1,7 @@
 ---
 Module Name: ConfigurationManager
 Module Guid: 7F590131-5253-4425-8B32-EEAB51A4C393
-#Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799206 (Link not available)
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799206
 Help Version: 5.0.1.0
 Locale: en-US
 ms.assetid: 0ADD6D91-97E0-4F79-ABE3-0174AA0C4750
