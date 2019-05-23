@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 7889D303-FEA2-4E63-9189-A71C4D77FCF7
 online version: https://go.microsoft.com/fwlink/?linkid=833751
@@ -32,7 +32,7 @@ This connects Microsoft System Center Configuration Manager to Microsoft cloud s
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a service connection point
