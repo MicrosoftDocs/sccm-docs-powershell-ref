@@ -40,7 +40,7 @@ Get-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObject <
 ```
 
 ## DESCRIPTION
-This cmdlet is usually called by higher level wrapper cmdlets. It is not called directly.
+This cmdlet is called by higher-level wrapper cmdlets. It isn't called directly.
 
 ## EXAMPLES
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+DisableWildcardHandling treats wildcard characters as literal character values. Can't be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Can't be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
