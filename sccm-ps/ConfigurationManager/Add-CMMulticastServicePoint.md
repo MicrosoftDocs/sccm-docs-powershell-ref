@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: D13CE329-6515-4DD1-8D5D-4E9C738EA32B
 online version: https://go.microsoft.com/fwlink/?linkid=833720
@@ -35,7 +35,7 @@ The **Add-CMMulticastServicePoint** cmdlet enables multicast to simultaneously s
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a multicast service point by using the pipeline
