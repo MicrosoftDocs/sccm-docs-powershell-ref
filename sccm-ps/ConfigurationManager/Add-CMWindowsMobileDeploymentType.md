@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 2DB4F947-E8B1-4D2A-A7D0-0DCDA1D8ED53
 online version: https://go.microsoft.com/fwlink/?linkid=833792
@@ -42,7 +42,7 @@ The **Add-CMWindowsMobileDeploymentType** cmdlet adds a Windows mobile cabinet d
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a deployment type using the pipeline
