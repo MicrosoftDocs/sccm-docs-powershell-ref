@@ -1,4 +1,4 @@
-﻿---
+---
 title: Add-CMDeploymentType
 titleSuffix: Configuration Manager
 description: Adds a deployment type for a Configuration Manager deployment application. This cmdlet is deprecated.
@@ -229,7 +229,7 @@ A deployment type also contains rules that specify if and how the software is de
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add an Windows Installer deployment type to an application
