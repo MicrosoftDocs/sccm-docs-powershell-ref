@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 6299CEF1-998E-49EA-A49A-2F2AA2FE13A4
 online version: https://go.microsoft.com/fwlink/?linkid=833764
@@ -36,7 +36,7 @@ Instead of deploying the application to all the devices of a user, you deploy th
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a primary user to a device
