@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833731
 schema: 2.0.0
@@ -53,7 +53,7 @@ For more information about out of band management for System Center Configuratio
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add an out of band service point by using a site code
