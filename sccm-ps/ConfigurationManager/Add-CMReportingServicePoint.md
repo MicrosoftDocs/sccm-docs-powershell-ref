@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: E05F73D3-A82F-43B2-AD2A-BC6555936C41
 online version: https://go.microsoft.com/fwlink/?linkid=833735
@@ -34,7 +34,7 @@ A reporting service point is a site system role that is installed on a server th
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a reporting service point
