@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 86BEA428-375A-470C-8F80-36DA8B5626A9
 online version: https://go.microsoft.com/fwlink/?linkid=833761
@@ -74,7 +74,7 @@ Likewise, you can specify a software update group by name or by ID or use the [G
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add an update to a software group
