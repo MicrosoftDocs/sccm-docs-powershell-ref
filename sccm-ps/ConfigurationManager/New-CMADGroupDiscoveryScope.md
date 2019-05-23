@@ -47,7 +47,7 @@ PS C:\>
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+DisableWildcardHandling treats wildcard characters as literal character values. Can't be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
