@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 530F83FB-CCDC-4B2A-AE45-250D828201A9
 online version: https://go.microsoft.com/fwlink/?linkid=834102
@@ -41,10 +41,14 @@ You can specify which migration point to modify by using the site system server 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a state migration point
 ```
-PS C:\> $StateMigrationPoint = Get-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com"
-PS C:\> Set-CMStateMigrationPoint -InputObject $StateMigrationPoint -AllowFallbackSourceLocationForContent $True -TimeDeleteAfter 12 -TimeUnit Hours
+PS XYZ:\> $StateMigrationPoint = Get-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com"
+PS XYZ:\> Set-CMStateMigrationPoint -InputObject $StateMigrationPoint -AllowFallbackSourceLocationForContent $True -TimeDeleteAfter 12 -TimeUnit Hours
 ```
 
 This example modifies a migration point named MigrationServer.TSQA.Contoso.com for the site that has the code CM4.
@@ -57,9 +61,9 @@ The command sets the *AllowFallbackSourceLocationForContent* parameter to $True,
 
 ### Example 2: Modify storage folders and boundary groups for a state migration point
 ```
-PS C:\> $Storage01 = New-CMStoragefolder -MaximumClientNumber 100 -MinimumFreeSpace 100 -SpaceUnit Megabyte -StorageFolderName "C:\"
-PS C:\> $Storage02 = New-CMStoragefolder -MaximumClientNumber 100 -MinimumFreeSpace 10 -SpaceUnit Gigabyte -StorageFolderName "D:\"
-PS C:\> Set-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com" -AddBoundaryGroupName "BG07" -AddStorageFolder $Storage02 -AllowFallbackSourceLocationForContent $False -DeleteImmediately -EnableRestoreOnlyMode $True -RemoveBoundaryGroupName "BG22" -RemoveStorageFolder $Storage01
+PS XYZ:\> $Storage01 = New-CMStoragefolder -MaximumClientNumber 100 -MinimumFreeSpace 100 -SpaceUnit Megabyte -StorageFolderName "C:\"
+PS XYZ:\> $Storage02 = New-CMStoragefolder -MaximumClientNumber 100 -MinimumFreeSpace 10 -SpaceUnit Gigabyte -StorageFolderName "D:\"
+PS XYZ:\> Set-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com" -AddBoundaryGroupName "BG07" -AddStorageFolder $Storage02 -AllowFallbackSourceLocationForContent $False -DeleteImmediately -EnableRestoreOnlyMode $True -RemoveBoundaryGroupName "BG22" -RemoveStorageFolder $Storage01
 ```
 
 This example modifies settings for a state migration point named MigrationServer.TSQA.Contoso.com for the site that has the site code CM4.

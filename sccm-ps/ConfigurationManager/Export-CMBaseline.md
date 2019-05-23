@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: E01D931B-EEB2-4A1E-A206-CCE907238209
 online version: https://go.microsoft.com/fwlink/?linkid=834013
@@ -37,9 +37,13 @@ Configuration data is converted to desired configuration management (DCM) Digest
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Export a baseline
 ```
-PS C:\>Export-CMBaseline -Name "BLConfig01" -Path "\\Contoso01\CM\Toolbox\BaselineW2K8.cab"
+PS XYZ:\>Export-CMBaseline -Name "BLConfig01" -Path "\\Contoso01\CM\Toolbox\BaselineW2K8.cab"
 ```
 
 This command exports the configuration baseline named BLConfig01 to the file named BaselineW2K8.cab.

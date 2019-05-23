@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 23EA2D57-BC59-4443-BF7B-817A956149A7
 online version: https://go.microsoft.com/fwlink/?linkid=834112
@@ -27,9 +27,13 @@ The functionality of file replication routes is the same as that of addresses in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a file replication route
 ```
-PS C:\> Remove-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode "IM1"
+PS XYZ:\> Remove-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode "IM1"
 ```
 
 This command removes a file replication route from the site that has the site code IM1 to the site that has the site code IM5.

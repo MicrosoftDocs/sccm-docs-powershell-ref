@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 963070B3-F0C7-4B2F-8D4A-3D1250CCCE75
 online version: https://go.microsoft.com/fwlink/?linkid=833718
@@ -51,16 +51,20 @@ A package is a System Center Configuration Manager object that contains the cont
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a package
 ```
-PS C:\> New-CMPackage -Name "ScriptsPackage01"
+PS XYZ:\> New-CMPackage -Name "ScriptsPackage01"
 ```
 
 This command creates a Configuration Manager package named ScriptsPackage01.
 
 ### Example 2: Create a package and add a description
 ```
-PS C:\> New-CMPackage -Name "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
+PS XYZ:\> New-CMPackage -Name "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
 ```
 
 This command creates a Configuration Manager package named ScriptsPackage02 and adds the specified description to the package.

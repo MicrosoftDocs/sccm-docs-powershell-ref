@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: FF85464C-9235-47F3-8981-D97C793053A8
 online version: https://go.microsoft.com/fwlink/?linkid=834298
@@ -32,9 +32,13 @@ For information about creating a trusted CA certificate profile, see the New-CMC
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a SCEP certificate profile
 ```
-PS C:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate01" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm SHA2 -KeyUsage KeyEncipherment -Name "TestSCEPProf01" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testing -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SanType SubjectAltReqiureEmail -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")
+PS XYZ:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate01" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm SHA2 -KeyUsage KeyEncipherment -Name "TestSCEPProf01" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testing -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SanType SubjectAltReqiureEmail -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")
 ```
 
 This command creates a trusted root CA certificate, and gets all Windows 10 Client supported platforms.
@@ -42,7 +46,7 @@ The command then creates a SEP certificate profile using the newly created trust
 
 ### Example 2: Create a SCEP certificate profile and set the certificate store to User
 ```
-PS C:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate02" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm ShA1 -KeyUsage Digitalsignature -Name "TestSCEPProf02" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testingSecond -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -CertificateStore User -Description "Test description" -EnrollmentRenewThresholdPct 2 -EnrollmentRetryCount 5 -EnrollmentRetryDelayMins 7 -KeySize 2048 -KeyStorageProvider InstallToTPM_FailIfNotPresent -RequireMultiFactor -SubjectType SubjectRequireEmail -SanType SubjectAltReqiureEmail
+PS XYZ:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate02" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm ShA1 -KeyUsage Digitalsignature -Name "TestSCEPProf02" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testingSecond -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -CertificateStore User -Description "Test description" -EnrollmentRenewThresholdPct 2 -EnrollmentRetryCount 5 -EnrollmentRetryDelayMins 7 -KeySize 2048 -KeyStorageProvider InstallToTPM_FailIfNotPresent -RequireMultiFactor -SubjectType SubjectRequireEmail -SanType SubjectAltReqiureEmail
 ```
 
 This command creates a trusted root CA certificate, and gets all Windows 10 Client supported platforms.

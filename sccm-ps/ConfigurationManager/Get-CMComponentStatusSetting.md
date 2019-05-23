@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: AF06715E-5255-4E82-841F-49800982E9F7
 online version: https://go.microsoft.com/fwlink/?linkid=834254
@@ -23,16 +23,20 @@ These objects contain thresholds for Microsoft System Center Configuration Manag
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get settings for components
 ```
-PS C:\> Get-CMComponentStatusSetting -SiteCode "CAS" -ComponentName SMS_REPL*
+PS XYZ:\> Get-CMComponentStatusSetting -SiteCode "CAS" -ComponentName SMS_REPL*
 ```
 
 This command gets status setting objects for the site that has the site code CAS for components with names that begin with SMS_REPL.
 
 ### Example 2: Get settings for components on specified systems
 ```
-PS C:\> Get-CMComponentStatusSetting -SiteSystemName VM* -ComponentName SMS_REPL*
+PS XYZ:\> Get-CMComponentStatusSetting -SiteSystemName VM* -ComponentName SMS_REPL*
 ```
 
 This command gets status setting objects for systems with names that begin with VM for components with names that begin with SMS_REPL.

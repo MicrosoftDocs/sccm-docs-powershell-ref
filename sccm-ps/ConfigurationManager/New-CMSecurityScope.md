@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: 73C8ACBF-E83D-4AC9-AC89-7780D5950FE0
 online version: https://go.microsoft.com/fwlink/?linkid=833748
@@ -23,9 +23,13 @@ Security scopes provide administrative users with access to securable objects.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a security scope
 ```
-PS C:\> New-CMSecurityScope -Name "testSecope" -Description "Security Scope"
+PS XYZ:\> New-CMSecurityScope -Name "testSecope" -Description "Security Scope"
 ```
 
 This command creates a security scope named testScope.

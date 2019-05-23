@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 5336F6B8-3B01-4D9B-8925-9FB913735BBB
 online version: https://go.microsoft.com/fwlink/?linkid=834094
@@ -52,9 +52,13 @@ The **Install-CMClient** cmdlet installs a client for Microsoft System Center Co
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Install a client
 ```
-PS C:\>Install-CMClient -Name "RemoteClient05" -SiteCode "CM1" -AlwaysInstallClient $True -IncludeDomainController $True
+PS XYZ:\>Install-CMClient -Name "RemoteClient05" -SiteCode "CM1" -AlwaysInstallClient $True -IncludeDomainController $True
 ```
 
 This command installs the client named RemoteClient05 on the Configuration Manager site that has the site code CM1.

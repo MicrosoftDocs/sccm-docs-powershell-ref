@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: AC599011-1C6E-4A45-8BF3-C1E1A2F1F4E0
 online version: https://go.microsoft.com/fwlink/?linkid=833998
@@ -36,16 +36,20 @@ You can specify the association to remove by specifying both computers in the as
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an association by using computer names
 ```
-PS C:\> Remove-CMComputerAssociation -DestinationComputer "West155" -SourceComputer "West073"
+PS XYZ:\> Remove-CMComputerAssociation -DestinationComputer "West155" -SourceComputer "West073"
 ```
 
 This command removes the computer association between the computers named West155 and West073.
 
 ### Example 2: Remove an association by using an ID
 ```
-PS C:\> Remove-CMComputerAssociation -MigrationId "MID1207" -Force
+PS XYZ:\> Remove-CMComputerAssociation -MigrationId "MID1207" -Force
 ```
 
 This command removes the computer association that has the ID MID1207.
@@ -53,8 +57,8 @@ This command uses the *Force* parameter, so the cmdlet does not prompt you for c
 
 ### Example 3: Remove an association by using a variable
 ```
-PS C:\> $CMCA = Get-CMComputerAssociation -MigrationId "MID1207"
-PS C:\> Remove-CMComputerAssociation -InputObject $CMCA -Force
+PS XYZ:\> $CMCA = Get-CMComputerAssociation -MigrationId "MID1207"
+PS XYZ:\> Remove-CMComputerAssociation -InputObject $CMCA -Force
 ```
 
 The first command gets the computer association that has the ID MID1207, and saves it in the $CMCA variable.

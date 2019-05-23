@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 15B8EF4A-EC79-48DB-9564-61AC220E6F41
 online version: https://go.microsoft.com/fwlink/?linkid=834122
@@ -22,9 +22,13 @@ The **Remove-CMIntineSubscription** cmdlet removes a Microsoft Intune subscripti
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a Microsoft Intune subscription
 ```
-PS C:\> Remove-CMIntuneSubscription -Force
+PS XYZ:\> Remove-CMIntuneSubscription -Force
 ```
 
 This command removes the Microsoft Intune subscription from the site without prompting the user for confirmation.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=834244
 schema: 2.0.0
@@ -33,9 +33,13 @@ Before you remove a system health validator point, make sure that there is anoth
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a validator point
 ```
-PS C:\> Remove-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com"
+PS XYZ:\> Remove-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com"
 ```
 
 This command removes a system health validator point.
@@ -43,8 +47,8 @@ The command specifies the site code and the name of the server that hosts that s
 
 ### Example 2: Remove a validator point by using a variable
 ```
-PS C:\> $CMSHVP = Get-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com" 
-PS C:\> Remove-CMSystemHealthValidatorPoint -InputObject $CMSHVP
+PS XYZ:\> $CMSHVP = Get-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com" 
+PS XYZ:\> Remove-CMSystemHealthValidatorPoint -InputObject $CMSHVP
 ```
 
 The first command gets the system role that has the specified site code and host name and stores it in the $CMSHVP variable.

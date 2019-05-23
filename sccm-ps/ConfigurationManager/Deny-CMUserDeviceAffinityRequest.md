@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: CF9105FA-8872-47E9-8FEB-1736A3FEBBEF
 online version: https://go.microsoft.com/fwlink/?linkid=833931
@@ -35,9 +35,13 @@ In Microsoft System Center Configuration Manager, user device affinity defines a
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Deny a request for user device affinity
 ```
-PS C:\>Deny-CMUserDeviceAffinityRequest -CollectionName "All Systems" -UserName "Western\EvanNarvaez$"
+PS XYZ:\>Deny-CMUserDeviceAffinityRequest -CollectionName "All Systems" -UserName "Western\EvanNarvaez$"
 ```
 
 This command denies a request for user device affinity for the collection named All Systems.

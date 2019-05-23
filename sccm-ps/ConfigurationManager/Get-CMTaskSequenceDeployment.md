@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMTaskSequenceDeployment
 titleSuffix: Configuration Manager
 description: Gets a task sequence deployment in Configuration Manager.
@@ -59,10 +59,14 @@ A task sequence deployment assigns a task sequence to a collection of computers.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> Get-CMTaskSequenceDeployment -Name "Task Sequence 1333" 
+PS XYZ:\> Get-CMTaskSequenceDeployment -Name "Task Sequence 1333" 
 ```
 
 This command gets a task sequence deployment by name.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: 6633EFD1-D89B-4115-B23E-0A0A71BF5C02
 online version: https://go.microsoft.com/fwlink/?linkid=834072
@@ -81,16 +81,20 @@ You can specify these values by ID or name, or you can use the [Get-CMDistributi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a distribution point by using an ID
 ```
-PS C:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointId "SMS000022"
+PS XYZ:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointId "SMS000022"
 ```
 
 This command removes a distribution point that has an ID of SMS000022 from a distribution point group that has the ID SMS000067.
 
 ### Example 2: Remove a distribution point by using a name
 ```
-PS C:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointName "Western office distribution point" -Force
+PS XYZ:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointName "Western office distribution point" -Force
 ```
 
 This command removes a distribution point, specified by its name, from a distribution point group that has the ID SMS000067.

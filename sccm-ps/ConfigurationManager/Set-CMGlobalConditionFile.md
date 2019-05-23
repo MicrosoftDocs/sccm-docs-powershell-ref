@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalConditionFile
 titleSuffix: Configuration Manager
 description: Sets a File System type global condition in Configuration Manager.
@@ -40,10 +40,14 @@ The **Set-CMGlobalConditionFile** cmdlet modifies settings for a File System typ
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalFloder = Set-CMGlobalConditionFile -Path c:\ -FileOrFolderName test -IsFolder $true -Name Floder 
+PS XYZ:\> $GlobalFloder = Set-CMGlobalConditionFile -Path c:\ -FileOrFolderName test -IsFolder $true -Name Floder 
 ```
 
 This command sets a File System type folder global condition in Configuration Manager.
@@ -51,7 +55,7 @@ This command sets a File System type folder global condition in Configuration Ma
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalFile = Set-CMGlobalConditionFile -FilePath c:\test  -Name file
+PS XYZ:\> $GlobalFile = Set-CMGlobalConditionFile -FilePath c:\test  -Name file
 ```
 
 This command sets a File System type file global condition in Configuration Manager.

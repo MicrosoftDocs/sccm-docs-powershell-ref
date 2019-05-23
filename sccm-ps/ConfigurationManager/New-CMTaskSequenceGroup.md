@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMTaskSequenceGroup
 titleSuffix: Configuration Manager
 description: Creates a Configuration Manager task sequence group.
@@ -33,10 +33,14 @@ The **New-CMTaskSequenceGroup** cmdlet creates a new task sequence group object 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> New-CMTaskSequenceGroup -Name $gpName -Description $gpDescription -ContinueOnError -Step ($st1, $st2) -Condition ($cd1, $cd2)
+PS XYZ:\> New-CMTaskSequenceGroup -Name $gpName -Description $gpDescription -ContinueOnError -Step ($st1, $st2) -Condition ($cd1, $cd2)
 ```
 
 The command creates a task sequence group with specific name, description, steps, and conditions.

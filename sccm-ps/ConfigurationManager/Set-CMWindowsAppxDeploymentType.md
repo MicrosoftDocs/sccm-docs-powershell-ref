@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: AD051C96-0341-486C-A0B0-25C9DEA090C6
 online version: https://go.microsoft.com/fwlink/?linkid=834156
@@ -53,16 +53,20 @@ The **Set-CMWindowsAppxDeploymentType** cmdlet changes the settings for a Window
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify an app package deployment type
 ```
-PS C:\> Set-CMWindowsAppxdeploymentType -ApplicationName "Application1" -DeploymentTypeName "DTS" -NewName "DTS_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Set-CMWindowsAppxdeploymentType -ApplicationName "Application1" -DeploymentTypeName "DTS" -NewName "DTS_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command changes the name of the Windows app package deployment type named DTS for the application named Application1 to DTS_New, adds English and Chinese as supported languages, and adds a description.
 
 ### Example 2: Modify an app package deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DTS" | Set-CMWindowsAppxDeploymentType -NewName "DTS_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DTS" | Set-CMWindowsAppxDeploymentType -NewName "DTS_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command gets the Windows app package deployment type object named DTS for the application named Application1 and uses the pipeline operator to pass the object to **Set-CMWindowsAppxDeploymentType**.

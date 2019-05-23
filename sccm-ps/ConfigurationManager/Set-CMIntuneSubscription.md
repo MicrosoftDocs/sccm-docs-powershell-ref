@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 04653B7F-F691-4FBD-BF8F-6795E7B0D94C
 online version: https://go.microsoft.com/fwlink/?linkid=833879
@@ -26,9 +26,13 @@ The **Set-CMIntuneSubscription** cmdlet sets the properties of a Microsoft Intun
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set the properties for a Microsoft Intune subscription
 ```
-PS C:\> Set-CMIntuneSubscription -ContactAdditional "Contact Additional Information" -ContactEmail "ITContact@Contoso.com" -ContactPhoneNumber "123456789"
+PS XYZ:\> Set-CMIntuneSubscription -ContactAdditional "Contact Additional Information" -ContactEmail "ITContact@Contoso.com" -ContactPhoneNumber "123456789"
 ```
 
 This command adds an IT contact email, phone number, and additional information to the Microsoft Intune subscription for the site.

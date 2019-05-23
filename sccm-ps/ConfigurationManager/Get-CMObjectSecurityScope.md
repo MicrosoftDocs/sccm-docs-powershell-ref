@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: EFE32915-8FDB-4B03-9206-5338A0F0E5A5
 online version: https://go.microsoft.com/fwlink/?linkid=833786
@@ -29,16 +29,20 @@ The **Get-CMObjectSecurityScope** cmdlet gets the security scopes that are assoc
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get security scopes for an application object
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Get-CMObjectSecurityScope
+PS XYZ:\> Get-CMApplication -Name "Application1" | Get-CMObjectSecurityScope
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Get-CMObjectSecurityScope**, which gets all security scopes associated with the application object.
 
 ### Example 2: Get a security scope
 ```
-PS C:\> Get-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application1") -Name "Scope1"
+PS XYZ:\> Get-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application1") -Name "Scope1"
 ```
 
 This command gets the security scope named Scope1 that is associated with the application object named Application1.

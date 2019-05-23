@@ -22,16 +22,20 @@ The **ConvertTo-CMApplication** cmdlet converts an application object to an appl
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an application and convert it
 ```
-PS C:\> Get-CMApplication -Name "Application01" | ConvertTo-CMApplication
+PS XYZ:\> Get-CMApplication -Name "Application01" | ConvertTo-CMApplication
 ```
 
 This command gets the application object named Application01 and uses the pipeline operator to pass the object to **ConvertTo-CMApplication**, which converts the application object to an application SDK object.
 
 ### Example 2: Convert an application
 ```
-PS C:\>ConvertTo-CMApplication -InputObject (Get-CMApplication -Name "Application02")
+PS XYZ:\>ConvertTo-CMApplication -InputObject (Get-CMApplication -Name "Application02")
 ```
 
 This command gets the application object named Application02 and converts the application object to an application SDK object.

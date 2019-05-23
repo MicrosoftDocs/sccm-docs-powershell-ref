@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalConditionXPathQuery
 titleSuffix: Configuration Manager
 description: Sets a XPath Query type global condition in Configuration Manager.
@@ -41,10 +41,14 @@ The **Set-CMGlobalConditionXPathQuery** cmdlet modifies settings for a XPath Que
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalXpath = Set-CMGlobalConditionXPathQuery -DataType String -XmlFilePath "c:\A" -XPathQuery "/" -Name GC8
+PS XYZ:\> $GlobalXpath = Set-CMGlobalConditionXPathQuery -DataType String -XmlFilePath "c:\A" -XPathQuery "/" -Name GC8
 ```
 
 This command sets a XPath Query type global condition in Configuration Manager.

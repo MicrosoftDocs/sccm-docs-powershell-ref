@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 523AADB5-3AAE-410A-AFCA-5B3C56138653
 online version: https://go.microsoft.com/fwlink/?linkid=834248
@@ -26,9 +26,13 @@ The **New-CMApplication** cmdlet creates an application in Microsoft System Cent
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create an application
 ```
-PS C:\> New-CMApplication -Name "Application01" -Description "New Application" -Publisher "Contoso" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator" -SupportContact "Administrator" -LocalizedName "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "For more information, see https://contoso.com/content" -LocalizedDescription "New Localized Application" -Keyword "application" -PrivacyUrl "https://contoso.com/library/privacy" -IsFeatured $True -IconLocationFile "C:\Users\administrator\Desktop\icon.png" -DisplaySupersedenceInApplicationCatalog $True
+PS XYZ:\> New-CMApplication -Name "Application01" -Description "New Application" -Publisher "Contoso" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator" -SupportContact "Administrator" -LocalizedName "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "For more information, see https://contoso.com/content" -LocalizedDescription "New Localized Application" -Keyword "application" -PrivacyUrl "https://contoso.com/library/privacy" -IsFeatured $True -IconLocationFile "C:\Users\administrator\Desktop\icon.png" -DisplaySupersedenceInApplicationCatalog $True
 ```
 
 This command creates an application named Application01.

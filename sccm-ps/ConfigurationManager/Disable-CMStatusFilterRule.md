@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: AF1704A4-0EC9-4228-AEF3-BC4D7434B4CD
 online version: https://go.microsoft.com/fwlink/?linkid=833961
@@ -37,9 +37,13 @@ To remove a rule permanently, use the [Remove-CMStatusFilterRule](Remove-CMStatu
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Disable a status filter rule
 ```
-PS C:\>Disable-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1"
+PS XYZ:\>Disable-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1"
 ```
 
 This command disables a status filter rule that has the specified name in a site that has the site code CM1.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 62D4DFB1-3F7B-49A2-AEA8-8FA5747B743F
 online version: https://go.microsoft.com/fwlink/?linkid=833929
@@ -24,9 +24,13 @@ You can use the [Invoke-CMSoftwareUpdateSummarization](Invoke-CMSoftwareUpdateSu
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Display the summarization schedule
 ```
-PS C:\> Get-CMSoftwareUpdateSummarizationSchedule
+PS XYZ:\> Get-CMSoftwareUpdateSummarizationSchedule
                                Interval                                    Unit
                                --------                                    ----
                                      12                                   Hours

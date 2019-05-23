@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 8969DC7F-BF22-4F9C-860F-CFC807D696BE
 online version: https://go.microsoft.com/fwlink/?linkid=834058
@@ -37,9 +37,13 @@ You can use the [Remove-CMSoftwareMeteringRule](Remove-CMSoftwareMeteringRule.md
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Disable automatic rule creation
 ```
-PS C:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $False
+PS XYZ:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $False
 ```
 
 This command disables automatic rule creation.
@@ -47,7 +51,7 @@ System Center Configuration Manager does not automatically create software meter
 
 ### Example 2: Configure automatic rule creation
 ```
-PS C:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $True -AutoCreatePercentage 50 -AutoCreateThreshold 200 -DataRetentionDayCount 30
+PS XYZ:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $True -AutoCreatePercentage 50 -AutoCreateThreshold 200 -DataRetentionDayCount 30
 ```
 
 This command enables automatic rule creation and sets properties for it.
@@ -55,7 +59,7 @@ This command sets the percentage of computers that use a piece of software to 50
 
 ### Example 3: Change automatic rule creation percentage
 ```
-PS C:\> Set-CMSoftwareMeteringSetting -AutoCreatePercentage 20
+PS XYZ:\> Set-CMSoftwareMeteringSetting -AutoCreatePercentage 20
 ```
 
 This command changes the percentage of computers that use a piece of software to 20 percent.

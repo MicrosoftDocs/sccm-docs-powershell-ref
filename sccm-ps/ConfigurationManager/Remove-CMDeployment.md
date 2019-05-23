@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 ms.assetid: FA9052DA-213F-4295-8DA7-07214859D824
 online version: https://go.microsoft.com/fwlink/?linkid=834015
@@ -39,16 +39,20 @@ If you delete an application deployment, or remove a resource from the collectio
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an application deployment
 ```
-PS C:\> Remove-CMDeployment -ApplicationName "CMappD01" -CollectionName "All Users"
+PS XYZ:\> Remove-CMDeployment -ApplicationName "CMappD01" -CollectionName "All Users"
 ```
 
 This command removes the Configuration Manager deployment that is associated with the application named CMappD01 and that is applied to the collection named All Users.
 
 ### Example 2: Pass a deployment object and remove it
 ```
-PS C:\> Get-CMDeployment -CollectionName "deviceCol01" -FeatureType Application | Remove-CMDeployment -Force
+PS XYZ:\> Get-CMDeployment -CollectionName "deviceCol01" -FeatureType Application | Remove-CMDeployment -Force
 ```
 
 This command gets the specified application deployment object for the collection named deiceCol01 and uses the pipeline operator to pass the object to **Remove-CMDeployment**, which removes the deployment.
@@ -56,7 +60,7 @@ Because the *Force* parameter is specified, the user is not prompted before the 
 
 ### Example 3: Remove a deployment by its ID
 ```
-PS C:\> Remove-CMDeployment -DeploymentId "{890082B6-7C16-4600-8807-7E0003BC9D99}" -ApplicationName "application01" -Force
+PS XYZ:\> Remove-CMDeployment -DeploymentId "{890082B6-7C16-4600-8807-7E0003BC9D99}" -ApplicationName "application01" -Force
 ```
 
 This command removes the deployment named application01 with the specified ID.

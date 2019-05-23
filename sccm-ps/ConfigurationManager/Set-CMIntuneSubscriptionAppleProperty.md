@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 346AC378-4A7D-4F06-BE42-EBB231762E27
 online version: https://go.microsoft.com/fwlink/?linkid=833890
@@ -23,9 +23,13 @@ The **Set-CMIntuneSubscriptionAppleProperty** cmdlet updates the settings of a M
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable iOS and Mac OS X (MDM) enrollment
 ```
-PS C:\> Set-CMIntuneSubscriptionAppleProperty -Enable $True -ApnsCertificatePath "C:\Certs\test.pem" -ApnsCertificatePassword $null -CertificateExpiryAlertDays 30
+PS XYZ:\> Set-CMIntuneSubscriptionAppleProperty -Enable $True -ApnsCertificatePath "C:\Certs\test.pem" -ApnsCertificatePassword $null -CertificateExpiryAlertDays 30
 ```
 
 This command enables iOS and Mac OS X (MDM) enrollment for the Microsoft Intune subscription.

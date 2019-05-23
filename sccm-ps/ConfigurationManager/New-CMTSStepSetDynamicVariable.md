@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
 description: Create a task sequence Set Dynamic Variable step in Configuration Manager.
@@ -33,10 +33,14 @@ The **New-CMTSStepSetDynamicVariable** creates a task sequence "Set Dynamic Vari
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> Add-CMTaskSequenceStep -TaskSequenceName $TSName | New-CMTaskSequenceStepSetDynamicVariable -Name $name -Description $description -Condition ($cd1,$cd2) -AddRule ($rule1)
+PS XYZ:\> Add-CMTaskSequenceStep -TaskSequenceName $TSName | New-CMTaskSequenceStepSetDynamicVariable -Name $name -Description $description -Condition ($cd1,$cd2) -AddRule ($rule1)
 ```
 
 This command creates a task sequence "Set Dynamic Variable" step.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 3057C77C-7B9C-4413-AC06-DF8A17AD448C
 online version: https://go.microsoft.com/fwlink/?linkid=833793
@@ -35,9 +35,13 @@ The **Get-CMOperatingSystemImageUpdateSchedule** cmdlet retrieves an object that
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Retrieve the operating system image update schedule
 ```
-PS C:\> Get-CMOperatingSystemImageUpdateSchedule -Id "1207"
+PS XYZ:\> Get-CMOperatingSystemImageUpdateSchedule -Id "1207"
 ```
 
 This command retrieves the operating system image update schedule identified by the ID 1207.

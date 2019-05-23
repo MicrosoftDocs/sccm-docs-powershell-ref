@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: 25E1BFF0-57F9-41D0-9D13-4E8AF57A1570
 online version: https://go.microsoft.com/fwlink/?linkid=833878
@@ -27,9 +27,13 @@ You can view status messages in the Status Message Viewer.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get site status messages
 ```
-PS C:\> Get-CMSiteStatusMessage -ViewingPeriod "2012/09/03 02:16:10.000" -ComputerName "cmcen-dist02" -Severity Error -SiteCode "CM2"
+PS XYZ:\> Get-CMSiteStatusMessage -ViewingPeriod "2012/09/03 02:16:10.000" -ComputerName "cmcen-dist02" -Severity Error -SiteCode "CM2"
 ```
 
 This command gets the site status messages that System Center Configuration Manager receives on or after September 3, 2012 and that have an error severity.

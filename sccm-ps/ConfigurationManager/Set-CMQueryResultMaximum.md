@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 1A0A53E9-FBFD-4DE8-9E06-B089EA04B244
 online version: https://go.microsoft.com/fwlink/?linkid=833996
@@ -22,9 +22,13 @@ The **Set-CMQueryResultMaximum** cmdlet changes the setting for the maximum numb
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set the query result maximum
 ```
-PS C:\> Set-CMQueryResultMaximum -Maximum 2500
+PS XYZ:\> Set-CMQueryResultMaximum -Maximum 2500
 ```
 
 This command sets the maximum number of rows that a Configuration Manager report query can return to 2500.

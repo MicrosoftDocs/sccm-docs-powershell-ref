@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMDeploymentType
 titleSuffix: Configuration Manager
 description: Removes a deployment type for a Configuration Manager deployment application.
@@ -53,10 +53,14 @@ If you have already deployed the application, you cannot remove the last deploym
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a deployment type
 
 ```powershell
-PS C:\> Remove-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
+PS XYZ:\> Remove-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
 ```
 
 This command removes the deployment type named InterDept - Windows app package (.appx file) that is contained in the application named CenterApp.

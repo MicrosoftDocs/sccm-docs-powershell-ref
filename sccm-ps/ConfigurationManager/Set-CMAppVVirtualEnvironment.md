@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 8AB81212-FC73-4DA4-A8CB-F9090B6BFE91
 online version: https://go.microsoft.com/fwlink/?linkid=833647
@@ -39,9 +39,13 @@ You can specify App-V environments by name or ID.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change virtual environment settings by using a name
 ```
-PS C:\> Set-CMAppVVirtualEnvironment -Name "VMWin03" -SecurityScopeAction RemoveMembership -SecurityScopeName "ClientSecGroup01"
+PS XYZ:\> Set-CMAppVVirtualEnvironment -Name "VMWin03" -SecurityScopeAction RemoveMembership -SecurityScopeName "ClientSecGroup01"
 ```
 
 This command removes the virtual environment named VMWin03 from the security scope named ClientSecGroup01.

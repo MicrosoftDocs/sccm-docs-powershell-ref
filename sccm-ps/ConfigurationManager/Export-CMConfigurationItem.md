@@ -1,4 +1,4 @@
----
+﻿---
 title: Export-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Saves a Configuration Manager configuration item to a file.
@@ -52,10 +52,14 @@ For more information about configuration items, see [Introduction to Compliance 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Export an item using an ID
 
 ```powershell
-PS C:\>Export-CMConfigurationItem -Id "16777568" -Path "C:\Exports\CI16777568.cab"
+PS XYZ:\>Export-CMConfigurationItem -Id "16777568" -Path "C:\Exports\CI16777568.cab"
 ```
 
 This command exports a configuration item with the identifier named 16777568 to the specified file.
@@ -63,7 +67,7 @@ This command exports a configuration item with the identifier named 16777568 to 
 ### Example 2: Export an item using a name
 
 ```powershell
-PS C:\>Export-CMConfigurationItem -Name "ConfigItem76" -Path "C:\Exports\CIConfigItem76.cab"
+PS XYZ:\>Export-CMConfigurationItem -Name "ConfigItem76" -Path "C:\Exports\CIConfigItem76.cab"
 ```
 
 This command exports a configuration item named ConfigItem76 to the specified file.
@@ -71,8 +75,8 @@ This command exports a configuration item named ConfigItem76 to the specified fi
 ### Example 3: Export an item using a variable
 
 ```powershell
-PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
-PS C:\> Export-CMConfigurationItem -InputObject $CIObj -Path "C:\Exports\CI16777568.cab"
+PS XYZ:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Export-CMConfigurationItem -InputObject $CIObj -Path "C:\Exports\CI16777568.cab"
 ```
 
 The first command gets a configuration item with the specified identifier and stores it in the $CIObj variable.

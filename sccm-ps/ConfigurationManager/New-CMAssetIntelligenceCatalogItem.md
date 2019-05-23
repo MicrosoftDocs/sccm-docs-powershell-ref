@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 858C2F49-80B8-4B63-B45D-B3B3324A9371
 online version: https://go.microsoft.com/fwlink/?linkid=834258
@@ -28,23 +28,27 @@ You can also create custom software labels.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create category label item in the catalog
 ```
-PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Databases" -LanguageId 1033 -Type TypeTag
+PS XYZ:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Databases" -LanguageId 1033 -Type TypeTag
 ```
 
 This command creates a category label in the Asset Intelligence catalog named Databases that has a language ID of 1033 and a type of TypeTag.
 
 ### Example 2: Create a category item in the catalog
 ```
-PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -Type TypeCategory
+PS XYZ:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -Type TypeCategory
 ```
 
 This command creates a category in the Asset Intelligence catalog named Database Tools that has a type of TypeCategory.
 
 ### Example 3: Create a category family in the catalog
 ```
-PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Software" -Type TypeFamily
+PS XYZ:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Software" -Type TypeFamily
 ```
 
 This command creates a category family item in the Asset Intelligence catalog family named Database Software that has a type of TypeFamily.

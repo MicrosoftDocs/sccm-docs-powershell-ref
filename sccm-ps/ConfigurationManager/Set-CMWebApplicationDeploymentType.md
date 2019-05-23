@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: C9BEBDB3-7AAA-4098-B779-E10C113714CD
 online version: https://go.microsoft.com/fwlink/?linkid=834152
@@ -49,16 +49,20 @@ The **Set-CMWebApplicationDeploymentType** cmdlet changes the settings for a web
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a web application deployment type
 ```
-PS C:\> Set-CMWebApplicationdeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Set-CMWebApplicationdeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command changes the name of the web application deployment type named DT1 for the application named testweb to DT1_Updated, and removes Chinese from the array of supported languages.
 
 ### Example 2: Modify a web application deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" | Set-CMWebApplicationdeploymentType -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" | Set-CMWebApplicationdeploymentType -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command gets the web application deployment type object named DT1 for the application named testweb and uses the pipeline operator to pass the object to **Set-CMWebApplicationDeploymentType**.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 23C2C811-714F-4B4C-A811-8FF6D837AF8B
 online version: https://go.microsoft.com/fwlink/?linkid=834139
@@ -29,9 +29,13 @@ The **Remove-CMMulticastServicePoint** cmdlet removes the multicast service poin
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a multicast service point by using the pipeline
 ```
-PS C:\> Get-CMMulticastServicePoint -SiteSystemServerName "server1.contoso.com" -SiteCode "PS1" | Remove-CMMulticastServicePoint -RemoveWds -Force
+PS XYZ:\> Get-CMMulticastServicePoint -SiteSystemServerName "server1.contoso.com" -SiteCode "PS1" | Remove-CMMulticastServicePoint -RemoveWds -Force
 ```
 
 This command gets the multicast service point object with the site system server name of server1.contoso.com and site code PS1 and uses the pipeline operator to pass the object to **Remove-CMMulticastServicePoint**, which removes the multicast service point and WDS.
@@ -39,7 +43,7 @@ Using the *Force* parameter indicates that the user is not prompted for confirma
 
 ### Example 2: Remove a multicast service point
 ```
-PS C:\> Remove-CMMulticastServicePoint -SiteSystemServerName "server1.contoso.com" -SiteCode "PS1" -RemoveWds -Force
+PS XYZ:\> Remove-CMMulticastServicePoint -SiteSystemServerName "server1.contoso.com" -SiteCode "PS1" -RemoveWds -Force
 ```
 
 This command removes the multicast service point with the site system server name of server1.contoso.com and site code PS1.

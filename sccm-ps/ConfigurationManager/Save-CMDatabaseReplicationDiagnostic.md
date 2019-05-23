@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
 ms.assetid: F80FD38D-B120-4F6B-9F6E-0DEC8A90A565
 online version: https://go.microsoft.com/fwlink/?linkid=833582
@@ -28,9 +28,13 @@ Diagnostics identify problems in database replication.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Save database replication diagnostic
 ```
-PS C:\> Save-CMDatabaseReplicationDiagnostic -ChildSiteCode "CC2" -FileName "D:\Diagnostics\CCB_CC2_Diagnostics.csv" -ParentSiteCode "CCB"
+PS XYZ:\> Save-CMDatabaseReplicationDiagnostic -ChildSiteCode "CC2" -FileName "D:\Diagnostics\CCB_CC2_Diagnostics.csv" -ParentSiteCode "CCB"
 ```
 
 This command saves database replication diagnostics in a file named CCB_CC2_Diagnostics.csv.

@@ -37,13 +37,17 @@ You can specify the user collections by using their names, IDs, or by specifying
 The query is specified as a text string.
 
 A query rule lets you dynamically update the members of a collection based on a query that is run on a schedule.
-For more information on collection rules, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information, see [Introduction to collections](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a rule to a collection by using a name
 ```
-PS C:\>Add-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -QueryExpression "select SMS_R_USER.ResourceID,SMS_R_USER.ResourceType,SMS_R_USER.Name,SMS_R_USER.UniqueUserName,SMS_R_USER.WindowsNTDomain from SMS_R_User" -RuleName "Remote Users by Domain"
+PS XYZ:\>Add-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -QueryExpression "select SMS_R_USER.ResourceID,SMS_R_USER.ResourceType,SMS_R_USER.Name,SMS_R_USER.UniqueUserName,SMS_R_USER.WindowsNTDomain from SMS_R_User" -RuleName "Remote Users by Domain"
 ```
 
 This command adds a rule named Remote Users by Domain to the collection named Remote Users.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 ms.assetid: F8D992C0-0F8C-40B7-944A-7BA571735859
 online version: https://go.microsoft.com/fwlink/?linkid=833771
@@ -82,9 +82,13 @@ Use the [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeplo
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a configuration policy deployment
 ```
-PS C:\> Set-CMConfigurationPolicyDeployment -CollectionName "Regional Remote Users" -FirewallPolicyName "Remote Firewall Policy"
+PS XYZ:\> Set-CMConfigurationPolicyDeployment -CollectionName "Regional Remote Users" -FirewallPolicyName "Remote Firewall Policy"
 ```
 
 This command creates a configuration policy deployment named Remote Firewall Policy and deploys it to the collection named Regional Remote Users.

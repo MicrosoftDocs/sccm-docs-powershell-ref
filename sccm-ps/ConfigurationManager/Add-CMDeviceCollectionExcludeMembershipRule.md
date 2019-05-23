@@ -72,13 +72,17 @@ You can specify the device collections where the rule is applied by name, ID, or
 You can specify the collection whose members are excluded by name, ID, or an object that represents the collection.
 
 Microsoft System Center Configuration Manager dynamically updates the membership of the device collection on a schedule if the membership of the excluded collection changes.
-For more information on these rules, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information on these rules, see [Introduction to collections](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an exclude collection rule to a single device collection
 ```
-PS C:\>Add-CMDeviceCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS XYZ:\>Add-CMDeviceCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command excludes the members of the All Mobile Devices collection, which has the ID SMSDM001, from the device collection, which has the ID 9990000D0.

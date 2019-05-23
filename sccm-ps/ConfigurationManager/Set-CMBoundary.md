@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3BEAE3AE-C1A4-430B-B3F7-22B5F3A00C09
 online version: https://go.microsoft.com/fwlink/?linkid=833686
@@ -38,17 +38,21 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Rename a boundary
 ```
-PS C:\> Set-CMBoundary -Name "Default-ADSite" -NewName "ADSiteBoundary01"
+PS XYZ:\> Set-CMBoundary -Name "Default-ADSite" -NewName "ADSiteBoundary01"
 ```
 
 This command changes a boundary name from Default-ADSite to ADSiteBoundary01.
 
 ### Example 2: Modify the value of a boundary by using an InputObject
 ```
-PS C:\> $BoundaryObj = Get-CMBoundary -Id "16777217"
-PS C:\> Set-CMBoundary -InputObject $BoundaryObj -Value "IPSubnet17"
+PS XYZ:\> $BoundaryObj = Get-CMBoundary -Id "16777217"
+PS XYZ:\> Set-CMBoundary -InputObject $BoundaryObj -Value "IPSubnet17"
 ```
 
 In this example, the first command gets a boundary that has the ID of 16777217 and inserts it into the input object $BoundaryObj.

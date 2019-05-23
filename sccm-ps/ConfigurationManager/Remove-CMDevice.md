@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 16B5581F-4F33-4117-AED7-546E20A281C3
 online version: https://go.microsoft.com/fwlink/?linkid=834037
@@ -36,16 +36,20 @@ Do not remove a client if you want to uninstall the client or remove it from a c
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a device by name
 ```
-PS C:\> Remove-CMDevice -DeviceName "WIN10-86-33"
+PS XYZ:\> Remove-CMDevice -DeviceName "WIN10-86-33"
 ```
 
 This command removes the device named WIN10-86-33.
 
 ### Example 2: Get a device and remove it
 ```
-PS C:\> Get-CMDevice -Name "TestVLAN-VNEXT" | Remove-CMDevice
+PS XYZ:\> Get-CMDevice -Name "TestVLAN-VNEXT" | Remove-CMDevice
 ```
 
 This command gets the device object named TestVLAN-VNEXT and uses the pipeline operator to pass the object to **Remove-CMDevice**, which removes the device object.

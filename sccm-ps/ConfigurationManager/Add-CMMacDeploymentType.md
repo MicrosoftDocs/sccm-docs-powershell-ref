@@ -41,9 +41,13 @@ The **Add-CMMacDeploymentType** cmdlet adds a Mac deployment type to an applicat
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a Mac deployment type
 ```
-PS C:\>Add-CMMacDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac" -ContentLocation "\\Server01\Resources\Applications\Mac\Bean.app\Bean.app.cmmac" -Confirm -Comment "create a mac DT" -AddLanguage "en-US","zh-CN"
+PS XYZ:\>Add-CMMacDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac" -ContentLocation "\\Server01\Resources\Applications\Mac\Bean.app\Bean.app.cmmac" -Confirm -Comment "create a mac DT" -AddLanguage "en-US","zh-CN"
 ```
 
 This command adds the Mac deployment type named DTMac from the specified URL to the application named testMac in English and Chinese.
@@ -51,7 +55,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add a Mac deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testMac" | Add-CMMacDeploymentType -DeploymentTypeName "DTMac01" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -WhatIf -Comment "create a mac DT" -AddLanguage "zh-CN"
+PS XYZ:\> Get-CMApplication -Name "testMac" | Add-CMMacDeploymentType -DeploymentTypeName "DTMac01" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -WhatIf -Comment "create a mac DT" -AddLanguage "zh-CN"
 ```
 
 This command gets the application object named testMAC and uses the pipeline operator to pass the object to **Add-CMMacDeploymentType**.

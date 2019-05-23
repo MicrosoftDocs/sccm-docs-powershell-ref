@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: B2A455ED-6B5A-403B-B34F-63958235F370
 online version: https://go.microsoft.com/fwlink/?linkid=833738
@@ -25,9 +25,13 @@ Client computers use remote connection profiles to remotely connect to computers
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a remote connection profile configuration item
 ```
-PS C:\> New-CMRemoteConnectionProfileConfigurationItem -Name "EuropeanRemoteConnections" -EnablePrimaryUsers $True -EnableTSConnection $True -EnableTSFirewallRule $True
+PS XYZ:\> New-CMRemoteConnectionProfileConfigurationItem -Name "EuropeanRemoteConnections" -EnablePrimaryUsers $True -EnableTSConnection $True -EnableTSFirewallRule $True
 ```
 
 This command creates a remote connection profile configuration item named EuropeanRemoteConnections.

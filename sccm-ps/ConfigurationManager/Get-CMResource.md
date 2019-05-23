@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 8C04D094-EAB1-4579-A0BF-51394304F2FD
 online version: https://go.microsoft.com/fwlink/?linkid=833838
@@ -24,9 +24,13 @@ A resource can be a user or a device.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a resource by ID
 ```
-PS C:\> Get-CMResource -ResourceID 2097152000 -Fast
+PS XYZ:\> Get-CMResource -ResourceID 2097152000 -Fast
 ```
 
 This command gets the resource with the ID 2097152000.
@@ -34,7 +38,7 @@ It does not return lazy properties.
 
 ### Example 2: Get all user resources
 ```
-PS C:\> Get-CMResource -ResourceType User -Fast
+PS XYZ:\> Get-CMResource -ResourceType User -Fast
 ```
 
 This command gets all user resources.

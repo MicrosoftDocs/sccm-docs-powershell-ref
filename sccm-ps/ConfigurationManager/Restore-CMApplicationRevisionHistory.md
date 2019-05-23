@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: C76A60B1-D65B-4F19-BD71-E96060E497AA
 online version: https://go.microsoft.com/fwlink/?linkid=834300
@@ -39,9 +39,13 @@ For more control over application replacement, create a new application that sup
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Restore an application
 ```
-PS C:\> Restore-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser" -Revision 6.05
+PS XYZ:\> Restore-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser" -Revision 6.05
 ```
 
 This command restores the application MSXML 6.0 Parser, version 6.05.

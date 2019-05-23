@@ -228,10 +228,14 @@ A deployment type also contains rules that specify if and how the software is de
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an Windows Installer deployment type to an application
 
 ```powershell
-PS C:\>Add-CMDeploymentType -MsiInstaller -ApplicationName "App01d2012" -AutoIdentifyFromIntallationFile -InstallationFileLocation "\\CMCEN\D02\Software\RDCMan.msi" -ForceForUnknownPublisher $True
+PS XYZ:\>Add-CMDeploymentType -MsiInstaller -ApplicationName "App01d2012" -AutoIdentifyFromIntallationFile -InstallationFileLocation "\\CMCEN\D02\Software\RDCMan.msi" -ForceForUnknownPublisher $True
 ```
 
 This command adds a Windows Installer deployment type for the application named App01d2012.
@@ -241,7 +245,7 @@ The command uses the *ForceForUnknownPublisher* parameter to specify that the de
 ### Example 2: Add a deployment type that uses a script
 
 ```powershell
-PS C:\>Add-CMDeploymentType -ApplicationName "App02d2012" -MsiInstaller -DeploymentTypeName "Type01" -AdministratorComment "Div A script" -Language Afrikaans,Arabic -InstallationProgram 'msiexec /i "\\atd-dist01\Public\CM\DTeam\FeatureData\OSD\Tbreck\Setup1.msi"' -DetectDeploymentTypeByCustomScript -ScriptType VBScript -ScriptContent "1231231" -RunScriptAs32bitProcessOn64bitClient $True
+PS XYZ:\>Add-CMDeploymentType -ApplicationName "App02d2012" -MsiInstaller -DeploymentTypeName "Type01" -AdministratorComment "Div A script" -Language Afrikaans,Arabic -InstallationProgram 'msiexec /i "\\atd-dist01\Public\CM\DTeam\FeatureData\OSD\Tbreck\Setup1.msi"' -DetectDeploymentTypeByCustomScript -ScriptType VBScript -ScriptContent "1231231" -RunScriptAs32bitProcessOn64bitClient $True
 ```
 
 This command adds a Windows Installer deployment type for the application named App02d2012.

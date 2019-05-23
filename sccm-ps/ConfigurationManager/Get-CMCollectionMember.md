@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 60C6778B-12CB-4F15-846D-3B8ED4AC58A8
 online version: https://go.microsoft.com/fwlink/?linkid=834230
@@ -35,16 +35,20 @@ The **Get-CMCollectionMember** cmdlet gets a member of a Microsoft System Center
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a member of a collection by using the pipeline operator
 ```
-PS C:\> Get-CMCollection -Name "UserCol1" | Get-CMCollectionMember
+PS XYZ:\> Get-CMCollection -Name "UserCol1" | Get-CMCollectionMember
 ```
 
 This command gets the collection object named UserCol1 and uses the pipeline operator to pass the object to **Get-CMCollectionMember**, which gets all members in UserCol1.
 
 ### Example 2: Get a member of a collection by name
 ```
-PS C:\> Get-CMCollectionMember -CollectionName "DeviceCol1" -Name "domain*"
+PS XYZ:\> Get-CMCollectionMember -CollectionName "DeviceCol1" -Name "domain*"
 ```
 
 This command gets the all members of the device collection named DeviceCol1 that have a name beginning with domain.

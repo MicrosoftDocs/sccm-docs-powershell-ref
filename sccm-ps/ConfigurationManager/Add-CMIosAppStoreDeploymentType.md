@@ -41,9 +41,13 @@ The **Add-CMIosDeploymentType** cmdlet adds an iOS App Store deployment type to 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an iOS App Store deployment type
 ```
-PS C:\> Get-CMApplication -Name "testIOSapp" | Add-CMIOSAppStoreDeploymentType -DeploymentTypeName "DTIOSapp01" -Url "https://itunes.apple.com/us/app/cut-the-rope-magic/id1044677336?mt=8" -Comment "Create a Mac DT" -AddLanguage "zh-CN" -Confirm
+PS XYZ:\> Get-CMApplication -Name "testIOSapp" | Add-CMIOSAppStoreDeploymentType -DeploymentTypeName "DTIOSapp01" -Url "https://itunes.apple.com/us/app/cut-the-rope-magic/id1044677336?mt=8" -Comment "Create a Mac DT" -AddLanguage "zh-CN" -Confirm
 ```
 
 This command gets the application object named testIOSapp and uses the pipeline operator to pass the object to **Add-CMIOSAppStoreDeploymentType**.
@@ -52,7 +56,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add an iOS App Store deployment type by using the pipeline
 ```
-PS C:\>Add-CMIOSAppStoreDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp02" -Url "https://itunes.apple.com/us/app/cut-the-rope-magic/id1044677336?mt=8" -Confirm -Comment "Create a Mac DT" -AddLanguage "en-US","zh-CN"
+PS XYZ:\>Add-CMIOSAppStoreDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp02" -Url "https://itunes.apple.com/us/app/cut-the-rope-magic/id1044677336?mt=8" -Confirm -Comment "Create a Mac DT" -AddLanguage "en-US","zh-CN"
 ```
 
 This command adds the iOS App Store deployment type named DTIOSapp02 from the specified URL to the application named testIOSapp in English and Chinese.

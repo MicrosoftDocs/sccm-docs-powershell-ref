@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 2E251111-93BB-4D25-AD73-C7C1C316E253
 online version: https://go.microsoft.com/fwlink/?linkid=834062
@@ -23,9 +23,13 @@ You can use the [Export-CMDriverPackage](Export-CMDriverPackage.md) cmdlet to ex
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import a driver package
 ```
-PS C:\>Import-CMDriverPackage -ImportFilePath "\\Contoso02\main\driverpackages\DriverPackage.zip"
+PS XYZ:\>Import-CMDriverPackage -ImportFilePath "\\Contoso02\main\driverpackages\DriverPackage.zip"
 ```
 
 This command imports a driver package from the import file named DriverPackage.zip.

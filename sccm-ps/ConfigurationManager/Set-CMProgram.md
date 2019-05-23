@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 814A673E-A28D-4123-9A6C-A173188FE26B
 online version: https://go.microsoft.com/fwlink/?linkid=833989
@@ -114,16 +114,20 @@ You can associate multiple programs with the same package.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a standard program
 ```
-PS C:\> Set-CMProgram -Name "Test" -StandardProgramName SPM -Comment "Standard Upgrades" -CommandLine "RunThisNow" -RunType Maximized -AfterRunningType ProgramControlsRestart -Category "Laptops" -DiskSpaceRequirement 50 -DiskSpaceUnit MB -Duration 150 -Requirement 4 -Reconnect $False -SuppressProgramNotifications $False -DisableProgram $True -EnableTaskSequence $True -DisableMomAlertOnRun $True -GenerateMomAlertOnFail $True
+PS XYZ:\> Set-CMProgram -Name "Test" -StandardProgramName SPM -Comment "Standard Upgrades" -CommandLine "RunThisNow" -RunType Maximized -AfterRunningType ProgramControlsRestart -Category "Laptops" -DiskSpaceRequirement 50 -DiskSpaceUnit MB -Duration 150 -Requirement 4 -Reconnect $False -SuppressProgramNotifications $False -DisableProgram $True -EnableTaskSequence $True -DisableMomAlertOnRun $True -GenerateMomAlertOnFail $True
 ```
 
 This command modifies a standard program.
 
 ### Example 2: Modify a device program
 ```
-PS C:\> Set-CMProgram -Name "Test" -DeviceProgramName DPM -Comment "Upgrades for December" -CommandLine "RunMe" -WorkingDirectory "\TempWork" -CommandLineFolder "C:\Windows" -DiskSpaceRequirement 30 -DiskSpaceUnit MB -DownloadProgramType AsSoonAsPossible -Requirement "All previous device updates"
+PS XYZ:\> Set-CMProgram -Name "Test" -DeviceProgramName DPM -Comment "Upgrades for December" -CommandLine "RunMe" -WorkingDirectory "\TempWork" -CommandLineFolder "C:\Windows" -DiskSpaceRequirement 30 -DiskSpaceUnit MB -DownloadProgramType AsSoonAsPossible -Requirement "All previous device updates"
 ```
 
 This command modifies a device program.

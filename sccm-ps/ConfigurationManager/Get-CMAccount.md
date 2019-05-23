@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Accounts.dll-Help.xml
 ms.assetid: 37B4DA45-91D4-47B0-AD08-F7D68D98FF8D
 online version: https://go.microsoft.com/fwlink/?linkid=834057
@@ -24,9 +24,13 @@ For more information about System Center Configuration Manager user accounts, se
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a user account by using its name
 ```
-PS C:\> Get-CMAccount -Name "CONTOSO\ENarvaez"
+PS XYZ:\> Get-CMAccount -Name "CONTOSO\ENarvaez"
 ```
 
 This command gets a user account.

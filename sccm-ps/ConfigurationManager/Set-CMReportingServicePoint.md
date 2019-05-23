@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 06BFF15B-79D8-46D1-99F3-CE319F2BF432
 online version: https://go.microsoft.com/fwlink/?linkid=834010
@@ -32,24 +32,28 @@ A reporting service point is a site system role that is installed on a server th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a reporting service point
 ```
-PS C:\> Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -UserName "Contoso\DavidChew"
+PS XYZ:\> Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -UserName "Contoso\DavidChew"
 ```
 
 The command sets a reporting service point by using the *SiteSystemServerName* parameter.
 
 ### Example 2: Set a reporting service point by using a site system server name
 ```
-PS C:\> Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM2"
+PS XYZ:\> Set-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM2"
 ```
 
 The command sets a reporting service point by using the *SiteSystemServerName* parameter.
 
 ### Example 3: Set a reporting service point by using an input object
 ```
-PS C:\> $RS = Get-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" 
-PS C:\> Set-CMReportingServicePoint -InputObject $RS -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM4"
+PS XYZ:\> $RS = Get-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" 
+PS XYZ:\> Set-CMReportingServicePoint -InputObject $RS -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM4"
 ```
 
 The first command uses the **Get-CMReportingServicePoint** cmdlet to get a reporting service point, by using the *SiteSystemServerName* parameter.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 599AAF88-A6E1-45C7-A1A2-A28F5B085F26
 online version: https://go.microsoft.com/fwlink/?linkid=834148
@@ -39,9 +39,13 @@ Client computers use VPN profiles to remotely connect to a company network over 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a VPN profile configuration item
 ```
-PS C:\> Set-CMVpnProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Vpn2.xml"
+PS XYZ:\> Set-CMVpnProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Vpn2.xml"
 ```
 
 This command modifies the VPN profile configuration item with the ID AAA0004D.

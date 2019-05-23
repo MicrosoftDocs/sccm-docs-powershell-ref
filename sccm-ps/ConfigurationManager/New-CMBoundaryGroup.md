@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 8AF3746E-A031-432B-91E1-C9B579FE7D55
 online version: https://go.microsoft.com/fwlink/?linkid=834281
@@ -29,9 +29,13 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a new boundary group
 ```
-PS C:\> New-BoundaryGroup -Name "BGroup05"
+PS XYZ:\> New-BoundaryGroup -Name "BGroup05"
 CreatedBy:          
 CreatedOn           
 DefaultSiteCode:

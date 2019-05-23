@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833662
 schema: 2.0.0
@@ -22,9 +22,13 @@ The **New-CMExchangeServerConnectorAccessRule** cmdlet configures access setting
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Configure email management settings for a mobile device
 ```
-PS C:\> New-CMExchangeServerConnectorAccessRule -RuleName "AccessRule01" -AccessLevel Allow -Device DeviceType
+PS XYZ:\> New-CMExchangeServerConnectorAccessRule -RuleName "AccessRule01" -AccessLevel Allow -Device DeviceType
 ```
 
 This command creates an access rule for a device type named AccessRule01 that has the Allow access level.

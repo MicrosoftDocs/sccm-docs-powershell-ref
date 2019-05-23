@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 7B562CA1-B1D1-49AF-A7C2-1E47BF36BBB7
 online version: https://go.microsoft.com/fwlink/?linkid=833615
@@ -35,16 +35,20 @@ The **Get-CMDeviceActionState** cmdlet gets the state of an action initiated on 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the state of a device action using the pipeline
 ```
-PS C:\> Get-CMDevice -Name "WindowsPhone0402" | Get-CMDeviceActionState -Action PinReset
+PS XYZ:\> Get-CMDevice -Name "WindowsPhone0402" | Get-CMDeviceActionState -Action PinReset
 ```
 
 This command gets the device object named WindowsPhone0402 and uses the pipeline operator to pass the object to **Get-CMDeviceActionState**, which gets the state of the PIN reset action on the device.
 
 ### Example 2: Get the state of a lock action
 ```
-PS C:\> Get-CMDeviceActionState -Name "WindowsPhone0401" -Action Lock
+PS XYZ:\> Get-CMDeviceActionState -Name "WindowsPhone0401" -Action Lock
 ```
 
 This command gets the state of the lock action on the device named WindowsPhone0401.

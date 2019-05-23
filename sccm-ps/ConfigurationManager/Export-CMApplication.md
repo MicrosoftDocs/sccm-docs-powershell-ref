@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 3AC0F544-5D1F-41E2-B46F-36469A443650
 online version: https://go.microsoft.com/fwlink/?linkid=834009
@@ -37,9 +37,13 @@ Specify a file path to the location where you want to export the application.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an application and export it
 ```
-PS C:\> Get-CMApplication "Application01" | Export-CMApplication -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export" -Force
+PS XYZ:\> Get-CMApplication "Application01" | Export-CMApplication -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export" -Force
 ```
 
 This command gets the application object named Applicaton01 and uses the pipeline operator to pass the object to **Export-CMApplicaton**.
@@ -48,7 +52,7 @@ Specifying the *Force* parameter indicates that the application is exported with
 
 ### Example 2: Export an application
 ```
-PS C:\>Export-CMApplication -Name "Application01" -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export"
+PS XYZ:\>Export-CMApplication -Name "Application01" -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export"
 ```
 
 This command exports the application named Application01 to the path C:\test.zip, omitting related content from the zip file, and not exporting related objects.

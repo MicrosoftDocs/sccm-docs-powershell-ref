@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 ms.assetid: 8316BA4A-1758-4255-A911-D5749FC64971
 online version: https://go.microsoft.com/fwlink/?linkid=834191
@@ -31,9 +31,13 @@ For more information about client settings, see [About Client Settings in Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a collection of customized client settings that is specified by its name
 ```
-PS C:\> Get-CMClientSetting -Name "Windows 8 Client Computers Settings"
+PS XYZ:\> Get-CMClientSetting -Name "Windows 8 Client Computers Settings"
 AgentConfigurations: {}
 AssignmentCount:     0
 CreatedBy:           Contoso\DChew

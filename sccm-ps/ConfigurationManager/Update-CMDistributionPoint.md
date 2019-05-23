@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: C24C7EB7-412E-49ED-AC3A-D6C8838D6A87
 online version: https://go.microsoft.com/fwlink/?linkid=834296
@@ -103,9 +103,13 @@ Manually updating the distribution points does not interfere with the recurring 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Update distribution points by package name
 ```
-PS C:\>Update-CMDistributionPoint -PackageName "Package01"
+PS XYZ:\>Update-CMDistributionPoint -PackageName "Package01"
 ```
 
 This command updates distribution points with the package named Package01.

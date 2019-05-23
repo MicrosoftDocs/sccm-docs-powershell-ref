@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 78F11C36-9204-405A-AB8C-4F4F305349EA
 online version: https://go.microsoft.com/fwlink/?linkid=834202
@@ -21,9 +21,13 @@ The **Get-CMClientStatusUpdateSchedule** cmdlet gets a schedule interval of the 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Gets a client status update schedule
 ```
-PS C:\> Get-CMClientStatusUpdateSchedule
+PS XYZ:\> Get-CMClientStatusUpdateSchedule
 Interval Unit 
 -------- ----
        1 Days

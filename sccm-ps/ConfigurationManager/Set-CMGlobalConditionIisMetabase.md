@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalConditionIisMetabase
 titleSuffix: Configuration Manager
 description: Sets a IIS Metabase type global condition in Configuration Manager.
@@ -30,10 +30,14 @@ The **Set-CMGlobalConditionIisMetabase** cmdlet modifies settings for an IIS Met
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalIIS = Set-CMGlobalConditionIisMetabase -DataType String -PropertyId $int -Name GC3
+PS XYZ:\> $GlobalIIS = Set-CMGlobalConditionIisMetabase -DataType String -PropertyId $int -Name GC3
 ```
 
 This command sets a IIS Metabase type global condition in Configuration Manager.
