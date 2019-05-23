@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Creates a t s step run command line
+Creates a TS step run command line
 
 ## SYNTAX
 

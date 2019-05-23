@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CMTSStepConditionQueryWmi
 
 ## SYNOPSIS
-Creates a t s step condition query wmi
+Creates a TS step condition query wmi
 
 ## SYNTAX
 
