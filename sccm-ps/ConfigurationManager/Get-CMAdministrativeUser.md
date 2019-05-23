@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: E10E2966-E438-49C0-A115-868CEDE6D8BB
 online version: https://go.microsoft.com/fwlink/?linkid=834069
@@ -30,16 +30,20 @@ An administrative user has a defined set of permissions and may be a member of o
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all the administrative users
 ```
-PS C:\> Get-CMAdministrativeUser
+PS XYZ:\> Get-CMAdministrativeUser
 ```
 
 This command gets all administrative users.
 
 ### Example 2: Get administrative user by name
 ```
-PS C:\> Get-CMAdministrativeUser -Name "testDomain\myAdminUser"
+PS XYZ:\> Get-CMAdministrativeUser -Name "testDomain\myAdminUser"
 ```
 
 This command gets the administrative user named AdminUser1.

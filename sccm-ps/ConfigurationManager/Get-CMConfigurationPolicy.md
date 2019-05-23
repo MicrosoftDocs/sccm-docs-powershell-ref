@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 3A8B20A1-F35D-483F-BF47-1ECDC5109034
 online version: https://go.microsoft.com/fwlink/?linkid=834279
@@ -35,16 +35,20 @@ The **Get-CMConfigurationPolicy** cmdlet gets a configuration policy.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a configuration policy by name
 ```
-PS C:\> Get-CMConfigurationPolicy -Name "TrustedCACert01" -AsXml
+PS XYZ:\> Get-CMConfigurationPolicy -Name "TrustedCACert01" -AsXml
 ```
 
 This command gets the configuration policy named TrustedCACert01 and displays the output in XML format.
 
 ### Example 2: Get a configuration policy by ID
 ```
-PS C:\> Get-CMConfigurationPolicy -Id 16777454 -Fast
+PS XYZ:\> Get-CMConfigurationPolicy -Id 16777454 -Fast
 ```
 
 This command gets the configuration policy with the ID of 16777454 and does not display lazy properties.

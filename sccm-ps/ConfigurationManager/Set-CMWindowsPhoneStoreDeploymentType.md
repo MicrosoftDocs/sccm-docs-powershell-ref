@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 8BF837AF-CB34-4A00-8CB6-8BB1455AA2E0
 online version: https://go.microsoft.com/fwlink/?linkid=834176
@@ -49,9 +49,13 @@ The **Set-CMWindowsPhoneStoreDeploymentType** cmdlet changes the settings for a 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" | Set-CMWindowsPhoneStoreDeploymentType -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" | Set-CMWindowsPhoneStoreDeploymentType -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command gets the Windows Phone app package deployment type object named DT1 for the application named Application1 and uses the pipeline operator to pass the object to **Set-CMWindowsPhoneStoreDeploymentType**.
@@ -59,7 +63,7 @@ This command gets the Windows Phone app package deployment type object named DT1
 
 ### Example 2: Rename a deployment type
 ```
-PS C:\> Set-CMWindowsPhoneStoreDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Set-CMWindowsPhoneStoreDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command changes the name of the Windows Phone app package deployment type named DT1 for the application named Application1 to DT1_New and adds English and Chinese as supported languages.

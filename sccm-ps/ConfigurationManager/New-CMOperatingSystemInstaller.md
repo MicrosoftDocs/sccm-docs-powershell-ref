@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 5FA48701-395D-4A6C-BE90-B6A3B5D010FA
 online version: https://go.microsoft.com/fwlink/?linkid=833713
@@ -23,9 +23,13 @@ An operating system installer is an installation package that contains all the f
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an operating system installer
 ```
-PS C:\> New-CMOperatingSystemInstaller -Name "INSTALL01" -Path "\\Contoso01\CM\Win8Install"
+PS XYZ:\> New-CMOperatingSystemInstaller -Name "INSTALL01" -Path "\\Contoso01\CM\Win8Install"
 ```
 
 This command adds an operating system installer named INSTALL01 and specifies the network path to the installation source files of the operating system installer.

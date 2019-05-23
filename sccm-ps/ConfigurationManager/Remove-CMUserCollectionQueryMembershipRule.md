@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: EE51B872-1986-4551-B4C0-7E92529AA20C
 online version: https://go.microsoft.com/fwlink/?linkid=834277
@@ -38,9 +38,13 @@ For more information about membership rules in Microsoft System Center Configura
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a rule from a collection by using the collection name
 ```
-PS C:\> Remove-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
+PS XYZ:\> Remove-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
 ```
 
 This command removes the rule named Remote Users by Domain from the collection named Remote Users.

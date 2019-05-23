@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 8DADA85C-4A7E-4495-8A2F-26F6E7E0D47F
 online version: https://go.microsoft.com/fwlink/?linkid=833942
@@ -85,9 +85,13 @@ The **Set-CMMsiDeploymentType** cmdlet changes the settings for a Windows Instal
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a Windows Installer deployment type
 ```
-PS C:\> Set-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -NewName "DTMsi_Updated" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
+PS XYZ:\> Set-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -NewName "DTMsi_Updated" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
 ```
 
 This command changes the name of the Windows Installer deployment type named DTMsi for the application named testMsi to DTMsi_Updated, adds English and Chinese as supported languages, and adds a description.
@@ -95,7 +99,7 @@ This command specifies that the installation will take approximately 14 minutes 
 
 ### Example 2: Modify a Windows Installer deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi_Updated" | Set-CMMsiDeploymentType -NewName "DTMsi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi_Updated" | Set-CMMsiDeploymentType -NewName "DTMsi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
 ```
 
 This command gets the Windows Installer deployment type object named DTMsi_Updated for the application named testMsi and uses the pipeline operator to pass the object to **Set-CMMsiDeploymentType**.

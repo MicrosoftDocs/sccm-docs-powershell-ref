@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A52F6FB6-F290-40F9-AE6C-2026EF88AF06
 online version: https://go.microsoft.com/fwlink/?linkid=833849
@@ -31,24 +31,28 @@ An enrollment point is a site system role that uses public key infrastructure (P
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set an enrollment point
 ```
-PS C:\> Set-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -UserName "Contoso\ElisaDaugherty"
+PS XYZ:\> Set-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -UserName "Contoso\ElisaDaugherty"
 ```
 
 The command sets an enrollment point, and specifies an account name to use to connect to the Configuration Manager database.
 
 ### Example 2: Set an enrollment point with the computer account
 ```
-PS C:\> Set-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -UseComputerAccount
+PS XYZ:\> Set-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -UseComputerAccount
 ```
 
 The command sets an enrollment point by specifying the site system server and site code, and uses the computer account to connect to the Configuration Manager database.
 
 ### Example 3: Set an enrollment point by using an input object
 ```
-PS C:\> $Ep = Get-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
-PS C:\> Set-CMEnrollmentPoint -InputObject $Ep -UserName "Contoso\ElisaDaugherty"
+PS XYZ:\> $Ep = Get-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
+PS XYZ:\> Set-CMEnrollmentPoint -InputObject $Ep -UserName "Contoso\ElisaDaugherty"
 ```
 
 The first command uses the **Get-CMEnrollmentPoint** cmdlet to get an enrollment point, and stores the result in the $Ep variable.

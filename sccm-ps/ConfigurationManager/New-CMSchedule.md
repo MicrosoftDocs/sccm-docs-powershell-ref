@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: D74177C5-D6E5-4B71-8864-02CF2E56C2C6
 online version: https://go.microsoft.com/fwlink/?linkid=833742
@@ -144,9 +144,13 @@ You can then use the interval strings to set schedule properties when you define
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a schedule token
 ```
-PS C:\> New-CMSchedule -DayOfMonth 0 -DateTime "20120105185728.303000+000"
+PS XYZ:\> New-CMSchedule -DayOfMonth 0 -DateTime "20120105185728.303000+000"
 ```
 
 This command creates a schedule token that specifies that the event occurs on the last day of the month at the specified date and time.

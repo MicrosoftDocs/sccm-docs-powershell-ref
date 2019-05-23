@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 60B0C10A-9997-40B0-87A3-5E0ABE5D0908
 online version: https://go.microsoft.com/fwlink/?linkid=833829
@@ -53,16 +53,20 @@ The **Set-CMDriverPackage** cmdlet modifies a driver package in Microsoft System
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a security scope action to a driver package
 ```
-PS C:\> Set-CMDriverPackage -SecurityScopeAction AddMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
+PS XYZ:\> Set-CMDriverPackage -SecurityScopeAction AddMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
 ```
 
 This command adds a security scope action to the driver package that is named Windows 7 Standard Hardware Package.
 
 ### Example 2: Remove a security scope action from a driver package
 ```
-PS C:\> Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
+PS XYZ:\> Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
 ```
 
 This command removes a security scope action from the driver package that is named Windows 7 Standard Hardware Package.

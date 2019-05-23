@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: F8EFAEC4-2716-4761-BA06-D4B32F6ECB15
 online version: https://go.microsoft.com/fwlink/?linkid=833913
@@ -32,23 +32,27 @@ After you deploy a software update group, you can add new software updates to th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get software update groups
 ```
-PS C:\> Get-CMSoftwareUpdateGroup
+PS XYZ:\> Get-CMSoftwareUpdateGroup
 ```
 
 This command gets all software update groups.
 
 ### Example 2: Get a software update group by using an ID
 ```
-PS C:\> Get-CMSoftwareUpdateGroup -Id "ST10000D"
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Id "ST10000D"
 ```
 
 This command gets a software update group that has the ID ST10000D.
 
 ### Example 3: Get a software update group by using a name
 ```
-PS C:\> Get-CMSoftwareUpdateGroup -Name "SUGroupD01"
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "SUGroupD01"
 ```
 
 This command gets a software update group object named SUGroupD01.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 4D76D4D0-5D21-4320-BEA6-335CE01284A7
 online version: https://go.microsoft.com/fwlink/?linkid=833809
@@ -29,23 +29,27 @@ You can use the *SecuredScopeNames* parameter to specify the security scope of a
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all packages
 ```
-PS C:\> Get-CMPackage
+PS XYZ:\> Get-CMPackage
 ```
 
 This command gets all Configuration Manager packages.
 
 ### Example 2: Get a package by using an ID
 ```
-PS C:\> Get-CMPackage -Id "CM100002"
+PS XYZ:\> Get-CMPackage -Id "CM100002"
 ```
 
 This command gets the program that has the ID CM100002.
 
 ### Example 3: Get a package by using a name
 ```
-PS C:\> Get-CMPackage -Name "Configuration Manager Client Package"
+PS XYZ:\> Get-CMPackage -Name "Configuration Manager Client Package"
 ```
 
 This command gets the program named Configuration Manager Client Package.

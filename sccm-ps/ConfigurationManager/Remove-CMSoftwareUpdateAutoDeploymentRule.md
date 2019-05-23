@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: EE878F33-0D30-45F6-A72B-43BEFEFE4E07
 online version: https://go.microsoft.com/fwlink/?linkid=834217
@@ -43,9 +43,13 @@ You can use the [Disable-CMSoftwareUpdateAutoDeploymentRule](Disable-CMSoftwareU
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a deployment rule by name
 ```
-PS C:\> Remove-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+PS XYZ:\> Remove-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
 Remove
 Are you sure you wish to remove SoftwareUpdateAutoDeploymentRule: Name="Weekly Driver Updates"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
@@ -56,7 +60,7 @@ Because the command does not include the *Force* parameter, the cmdlet prompts y
 
 ### Example 2: Remove a deployment rule by ID
 ```
-PS C:\> Remove-CMSoftwareUpdateAutoDeploymentRule -Id "16777217" -Force
+PS XYZ:\> Remove-CMSoftwareUpdateAutoDeploymentRule -Id "16777217" -Force
 ```
 
 This command disables a deployment rule that has the ID 16777217.
@@ -64,8 +68,8 @@ This command includes the *Force* parameter, so the cmdlet does not prompt you b
 
 ### Example 3: Remove a deployment rule by using a variable
 ```
-PS C:\> $CMSUADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
-PS C:\> Remove-CMSoftwareUpdateAutoDeploymentRule -InputObject $CMSUADR -Force
+PS XYZ:\> $CMSUADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+PS XYZ:\> Remove-CMSoftwareUpdateAutoDeploymentRule -InputObject $CMSUADR -Force
 ```
 
 The first command gets a deployment rule that has the specified name, and then stores it in the $CMSUADR variable.

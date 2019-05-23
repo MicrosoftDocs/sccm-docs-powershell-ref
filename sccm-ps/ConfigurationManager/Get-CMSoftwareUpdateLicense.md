@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: EFF80160-0FF7-4F76-A09A-2C55C29D7972
 online version: https://go.microsoft.com/fwlink/?linkid=833917
@@ -31,9 +31,13 @@ If you specify an ID or name, you can further specify a security scope membershi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a EULA or SLT for a software update
 ```
-PS C:\> Get-CMSoftwareUpdateLicense -Name "UpdatePkg01" -SecuredScopeNames "SecScope02"
+PS XYZ:\> Get-CMSoftwareUpdateLicense -Name "UpdatePkg01" -SecuredScopeNames "SecScope02"
 ```
 
 This command gets the EULA or SLT for a software update named UpdatePkg01 for the security scope named SecScope02.

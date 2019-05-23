@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 ms.assetid: 0AC09C2B-42ED-4397-9786-B7B1126AF5DC
 online version: https://go.microsoft.com/fwlink/?linkid=834077
@@ -31,23 +31,27 @@ If you do not specify anything, the cmdlet returns the properties of all alert s
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Display all alert subscriptions
 ```
-PS C:\> Get-CMAlertSubscription
+PS XYZ:\> Get-CMAlertSubscription
 ```
 
 This command displays all System Center Configuration Manager alert subscriptions.
 
 ### Example 2: Display alert subscriptions by ID by using wildcard characters
 ```
-PS C:\> Get-CMAlertSubscription -Id 16777*
+PS XYZ:\> Get-CMAlertSubscription -Id 16777*
 ```
 
 This command displays all System Center Configuration Manager alert subscriptions that have an ID that starts with the number 16777.
 
 ### Example 3: Display an alert subscription by name
 ```
-PS C:\> Get-CMAlertSubscription -Name "Subscription01"
+PS XYZ:\> Get-CMAlertSubscription -Name "Subscription01"
 ```
 
 This command displays the System Center Configuration Manager alert subscription named Subscription01.

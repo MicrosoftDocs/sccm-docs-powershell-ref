@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: BFB60354-1427-48AB-B27B-86FFABCCA9C5
 online version: https://go.microsoft.com/fwlink/?linkid=833924
@@ -39,9 +39,13 @@ For more information about the SMS provider, see [Planning for the SMS Provider 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a boot image object that is identified by using its ID
 ```
-PS C:\> Remove-CMBootImage -Id "CM100004" -Confirm
+PS XYZ:\> Remove-CMBootImage -Id "CM100004" -Confirm
 ```
 
 This command removes a boot image object that is identified by using its ID.
@@ -49,7 +53,7 @@ You must confirm the action before the command performs it.
 
 ### Example 2: Remove a boot image object that is identified by using its name
 ```
-PS C:\> Remove-CMBootImage -Name "Boot image (86)" -Confirm
+PS XYZ:\> Remove-CMBootImage -Name "Boot image (86)" -Confirm
 ```
 
 This command removes a boot image object that is identified by using its name.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 433C709E-FBB0-449F-A835-9ED3613D2581
 online version: https://go.microsoft.com/fwlink/?linkid=833760
@@ -29,16 +29,20 @@ The **Set-CMConditionalAccessPolicy** cmdlet updates the settings of a condition
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a conditional access policy to add collections
 ```
-PS C:\> Get-CMConditionalAccessPolicy | Set-CMConditionalAccessPolicy -NotificationText "Test text 01" -AddExcludedCollectionID EC300016 -AddTargetedCollectionID TC300018
+PS XYZ:\> Get-CMConditionalAccessPolicy | Set-CMConditionalAccessPolicy -NotificationText "Test text 01" -AddExcludedCollectionID EC300016 -AddTargetedCollectionID TC300018
 ```
 
 This command gets the conditional access policy object and uses the pipeline operator to pass the object to **Set-CMConditionalAccessPolicy**, which adds an excluded collection with the ID of EC300016 and a targeted collection with the id of TC300018.
 
 ### Example 2: Set a conditional access policy to remove collections
 ```
-PS C:\> Get-CMConditionalAccessPolicy | Set-CMConditionalAccessPolicy -NotificationText "Text text 02" -RemoveExcludedCollectionID EC300014 -RemoveTargetedCollectionName "All Users"
+PS XYZ:\> Get-CMConditionalAccessPolicy | Set-CMConditionalAccessPolicy -NotificationText "Text text 02" -RemoveExcludedCollectionID EC300014 -RemoveTargetedCollectionName "All Users"
 ```
 
 This command gets the conditional access policy object and uses the pipeline operator to pass the object to **Set-CMConditionalAccessPolicy**, which removes the excluded collection with the ID of EC300014, and the targeted collection with the name of All Users.

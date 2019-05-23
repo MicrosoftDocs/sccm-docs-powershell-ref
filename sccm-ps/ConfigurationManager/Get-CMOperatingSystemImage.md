@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: B1F3E321-B9DE-4E3D-8EC7-1E023B36998F
 online version: https://go.microsoft.com/fwlink/?linkid=833789
@@ -30,9 +30,13 @@ Operating system images are .wim format files and represent a compressed collect
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an operating system image
 ```
-PS C:\> Get-CMOperatingSystemImage -Name "OSImagePkg01" -SecuredScopeNames "SecScope02"
+PS XYZ:\> Get-CMOperatingSystemImage -Name "OSImagePkg01" -SecuredScopeNames "SecScope02"
 ```
 
 This command gets the operating system image named OSImagePkg01 for the security scope named SecScope02.

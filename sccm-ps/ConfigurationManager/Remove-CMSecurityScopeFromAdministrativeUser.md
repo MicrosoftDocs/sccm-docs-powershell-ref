@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: 5647FB87-7F94-4AEA-95A1-A8AF521325E9
 online version: https://go.microsoft.com/fwlink/?linkid=834196
@@ -73,9 +73,13 @@ After you remove the association between a security scope and an administrative 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a security scope from an administrative user
 ```
-PS C:\> Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -SecurityScopeName "SecScope02"
+PS XYZ:\> Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -SecurityScopeName "SecScope02"
 ```
 
 This command removes the association between the security scope named SecScope02 and the administrative user named Contoso\PattiFuller.

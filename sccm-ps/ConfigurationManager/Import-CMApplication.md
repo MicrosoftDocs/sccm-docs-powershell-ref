@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 0CF8ACEA-3D7A-43E6-AA0B-408012386BEE
 online version: https://go.microsoft.com/fwlink/?linkid=834033
@@ -27,9 +27,13 @@ If the package contains content, the application package imports the content, or
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import an application
 ```
-PS C:\>Import-CMApplication -FilePath "\\Server1\resource\test.zip" -ImportActionType DirectImport
+PS XYZ:\>Import-CMApplication -FilePath "\\Server1\resource\test.zip" -ImportActionType DirectImport
 ```
 
 This command imports the application stored in test.zip, including the application objects.

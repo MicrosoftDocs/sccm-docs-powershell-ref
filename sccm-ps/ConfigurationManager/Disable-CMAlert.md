@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 ms.assetid: 57F5F380-5A44-42B2-8CCE-EC72F4D3E701
 online version: https://go.microsoft.com/fwlink/?linkid=833935
@@ -42,10 +42,14 @@ System Center Configuration Manager does not evaluate the condition for a disabl
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Disable an alert by using alert ID
 
 ```powershell
-PS C:\>Disable-CMAlert -Id "16777218"
+PS XYZ:\>Disable-CMAlert -Id "16777218"
 ```
 
 This command disables an alert that has the ID 16777218.
@@ -53,8 +57,8 @@ This command disables an alert that has the ID 16777218.
 ### Example 2: Disable an alert by using alert object variable
 
 ```powershell
-PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
-PS C:\> Disable-CMAlert -InputObject $AlertObj
+PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777221"
+PS XYZ:\> Disable-CMAlert -InputObject $AlertObj
 ```
 
 The first command gets an alert object that has the ID 16777221, and then stores it in the $AlertObj variable.

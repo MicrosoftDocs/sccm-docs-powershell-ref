@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 7FFB20CC-CC5E-4817-9DE8-CE34A40A8C11
 online version: https://go.microsoft.com/fwlink/?linkid=833806
@@ -40,9 +40,13 @@ Individual devices have device variables. Task sequence processing uses device v
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a device variable
 ```
-PS C:\> Set-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -NewVariableValue "192.168.100.10"
+PS XYZ:\> Set-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -NewVariableValue "192.168.100.10"
 ```
 
 This command modifies the device variable ServerIPAddress associated with the device gateway-server.contoso.com.

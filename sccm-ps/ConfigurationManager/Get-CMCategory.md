@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 8F146039-6CB8-4A79-AABF-8C8DA90EB182
 online version: https://go.microsoft.com/fwlink/?linkid=834158
@@ -29,9 +29,13 @@ Configuration categories offer an optional method of sorting and filtering confi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get configuration categories by using a name
 ```
-PS C:\> Get-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
+PS XYZ:\> Get-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
 ```
 
 This command gets configuration driver categories in Configuration Manager that have the name NewLaptopDriverSet.

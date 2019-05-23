@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 9303F7BE-B1E8-482F-8270-1C77249566BF
 online version: https://go.microsoft.com/fwlink/?linkid=834054
@@ -51,16 +51,20 @@ For more information about security scopes, see [Planning for Security in Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change locale for rules for a product
 ```
-PS C:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -LanguageID 1036
+PS XYZ:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -LanguageID 1036
 ```
 
 This command sets the locale ID for rules that include the product name Accounting Package.
 
 ### Example 2: Add a security scope to rules for a product
 ```
-PS C:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -SecurityScopeAction AddMembership -SecurityScopeName "Scope05"
+PS XYZ:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -SecurityScopeAction AddMembership -SecurityScopeName "Scope05"
 ```
 
 This command adds the security scope called Scope05 to rules for the product name Accounting Package.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: F27EC489-FE2F-4E0B-A376-2C3DF975E044
 online version: https://go.microsoft.com/fwlink/?linkid=834181
@@ -22,9 +22,13 @@ The **Get-CMClientCertificatePfx** cmdlet gets a client Personal Information Exc
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a client PFX certificate
 ```
-PS C:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator").SMSID -Thumbprint  e1c2fff14282b61f79f78fbfca6721f0517ab767
+PS XYZ:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator").SMSID -Thumbprint  e1c2fff14282b61f79f78fbfca6721f0517ab767
 ```
 
 This command gets the Pfx client certificate for the user named Administrator with the specified thumbprint.

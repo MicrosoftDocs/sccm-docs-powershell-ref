@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 873DF234-E1C8-4704-8179-D869C09F48DF
 online version: https://go.microsoft.com/fwlink/?linkid=834175
@@ -31,16 +31,20 @@ A resource can be a user or a device.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a resource by using the pipeline
 ```
-PS C:\> Get-CMResource -ResourceID 2063597568 -Fast| Remove-CMResource -Force
+PS XYZ:\> Get-CMResource -ResourceID 2063597568 -Fast| Remove-CMResource -Force
 ```
 
 This command gets the resource object with the ID of 2063597568 and uses the pipeline operator to pass the object to **Remove-CMResource**, which removes the resource without prompting for user confirmation.
 
 ### Example 2: Remove a resource by ID
 ```
-PS C:\> Remove-CMResource -ResourceID 2097152000
+PS XYZ:\> Remove-CMResource -ResourceID 2097152000
 ```
 
 This command removes the resource with the ID of 2097152000.

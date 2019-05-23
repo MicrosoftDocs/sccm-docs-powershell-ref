@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 5291A714-9843-41D3-9C74-2BAC7CED0E75
 online version: https://go.microsoft.com/fwlink/?linkid=833775
@@ -27,9 +27,13 @@ You can use the [Get-CMDatabaseProperty](Get-CMDatabaseProperty.md) cmdlet to se
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change settings for a database
 ```
-PS C:\> Set-CMDatabaseProperty -SiteCode "CM2" -DataRetentionPeriodDays 10 -EnableDataCompression $False -SqlServerServiceBrokerPort 80
+PS XYZ:\> Set-CMDatabaseProperty -SiteCode "CM2" -DataRetentionPeriodDays 10 -EnableDataCompression $False -SqlServerServiceBrokerPort 80
 ```
 
 This command makes changes to the database for the site that has the site code CM2.

@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMScript
 titleSuffix: Configuration Manager
 description: Removes Configuration Manager Powershell scripts.
@@ -41,10 +41,14 @@ The **Remove-CMScript** cmdlet removes one or more Microsoft System Center Confi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a script by using the script name
 
 ```powershell
-PS C:\> Remove-CMScript -ScriptName "getUsers"
+PS XYZ:\> Remove-CMScript -ScriptName "getUsers"
 ```
 
 This command removes a script that has the name getUesrs.

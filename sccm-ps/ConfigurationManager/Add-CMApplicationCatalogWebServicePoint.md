@@ -1,4 +1,4 @@
----
+﻿---
 title: Add-CMApplicationCatalogWebServicePoint
 titleSuffix: Configuration Manager
 description: Adds an Application Catalog web service point to a Microsoft System Center Configuration Manager site.
@@ -43,9 +43,13 @@ For more information about site system roles, see [Install and Configure Site Sy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a web service point for the Application Catalog
 ```
-PS C:\>Add-CMApplicationCatalogWebServicePoint -PortNumber 80 -SiteCode "CM1" -SiteSystemServerName "CMACWSPRole.Western.Contoso.com"
+PS XYZ:\>Add-CMApplicationCatalogWebServicePoint -PortNumber 80 -SiteCode "CM1" -SiteSystemServerName "CMACWSPRole.Western.Contoso.com"
 ```
 
 This command adds a web service point for the Application Catalog.

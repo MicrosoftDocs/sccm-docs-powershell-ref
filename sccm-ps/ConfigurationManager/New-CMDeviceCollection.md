@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: F460F99B-D44F-4B83-94AB-B84BE510AC37
 online version: https://go.microsoft.com/fwlink/?linkid=833617
@@ -52,13 +52,17 @@ For more information about Configuration Manager collections, see [Introduction 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a device collection
 ```
-PS C:\> New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
+PS XYZ:\> New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
 ```
 
-This command creates a collection for all computers that run Windows® 7.
-The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the Windows® 7 collection.
+This command creates a collection for all computers that run WindowsÂ® 7.
+The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the WindowsÂ® 7 collection.
 
 ## PARAMETERS
 

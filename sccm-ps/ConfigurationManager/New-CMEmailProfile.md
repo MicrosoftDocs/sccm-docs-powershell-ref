@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 8C11B11B-494E-4AE3-870D-ADBA8D5798BB
 online version: https://go.microsoft.com/fwlink/?linkid=833637
@@ -27,10 +27,14 @@ The **New-CMEmailProfile** cmdlet creates an Exchange ActiveSync email profile.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create an email profile
 ```
-PS C:\> $Platform = Get-CMSupportedPlatform -Fast -Platform "Windows Phone"
-PS C:\> New-CMEmailProfile -AccountName "TestAccount1" -ExchangeHost "TestHost1" -Name "EmailProfile01" -SupportedPlatform $Platform[1] -AccountUserNameType sAMAccountName -AccountDomainActiveDirectory domain
+PS XYZ:\> $Platform = Get-CMSupportedPlatform -Fast -Platform "Windows Phone"
+PS XYZ:\> New-CMEmailProfile -AccountName "TestAccount1" -ExchangeHost "TestHost1" -Name "EmailProfile01" -SupportedPlatform $Platform[1] -AccountUserNameType sAMAccountName -AccountDomainActiveDirectory domain
 ```
 
 The first command gets all supported platform objects for Windows Phone and stores the objects in the $Platform variable.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: BCE2CE97-4F41-42C4-8CDE-37F5FC704AF2
 online version: https://go.microsoft.com/fwlink/?linkid=834284
@@ -35,24 +35,28 @@ The **Update-CMApplicationStatistic** cmdlet updates the statistics for a Micros
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Update statistics for an application by ID
 ```
-PS C:\>Update-CMApplicationStatistic -Id "16781415"
+PS XYZ:\>Update-CMApplicationStatistic -Id "16781415"
 ```
 
 This command updates statistics for an application that has the ID 16781415.
 
 ### Example 2: Update statistics for an application by name
 ```
-PS C:\>Update-CMApplicationStatistic -Name "Test"
+PS XYZ:\>Update-CMApplicationStatistic -Name "Test"
 ```
 
 This command updates statistics for an application named Test.
 
 ### Example 3: Update statistics for an application by name by using a variable
 ```
-PS C:\> $App = Get-CMApplication -Name "Test"
-PS C:\> Update-CMApplicationStatistic -InputObject $App
+PS XYZ:\> $App = Get-CMApplication -Name "Test"
+PS XYZ:\> Update-CMApplicationStatistic -InputObject $App
 ```
 
 The first command gets the application object named Test and stores the object in the $App variable.

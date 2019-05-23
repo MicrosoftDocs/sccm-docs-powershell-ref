@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: D7E17940-5C9F-4DDE-A364-11E554AAC586
 online version: https://go.microsoft.com/fwlink/?linkid=834041
@@ -35,9 +35,13 @@ For more information about user device affinity, see [How to Manage User Device 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove device affinity from a user by user ID
 ```
-PS C:\> Remove-CMDeviceAffinityFromUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
+PS XYZ:\> Remove-CMDeviceAffinityFromUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
 ```
 
 This command adds affinity to the device named WestDivUpdates05 for the user named Patti Fuller.

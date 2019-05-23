@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A9AADC86-58CF-4144-A6A5-7E854BD8DA5B
 online version: https://go.microsoft.com/fwlink/?linkid=833937
@@ -35,9 +35,13 @@ The **Remove-CMBoundaryGroup** cmdlet removes a boundary group from Microsoft Sy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a boundary group that is specified by its ID
 ```
-PS C:\> Remove-CMBoundaryGroup -Id "16777219"
+PS XYZ:\> Remove-CMBoundaryGroup -Id "16777219"
 ```
 
 This command removes a boundary group that is specified by its identifier.
@@ -45,8 +49,8 @@ Because the *Force* parameter is not specified, you must confirm the action befo
 
 ### Example 2: Remove multiple boundary groups by using an InputObject
 ```
-PS C:\> $BoundaryObj = Get-CMBoundaryGroup -Name "BGroup0*"
-PS C:\> Remove-CMBoundary -InputObject $BoundaryObj
+PS XYZ:\> $BoundaryObj = Get-CMBoundaryGroup -Name "BGroup0*"
+PS XYZ:\> Remove-CMBoundary -InputObject $BoundaryObj
 ```
 
 The first command uses the **Get-CMBoundaryGroup** to get multiple boundary groups that are specified by a wildcard name, and stores this data into the $BoundaryObj variable.

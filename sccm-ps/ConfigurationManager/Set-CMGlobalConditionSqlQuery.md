@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalConditionSqlQuery
 titleSuffix: Configuration Manager
 description: Sets a SQL Query type global condition in Configuration Manager.
@@ -41,10 +41,14 @@ The **Set-CMGlobalConditionSqlQuery** cmdlet modifies settings for a SQL Query t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalSql = Set-CMGlobalConditionSqlQuery -DataType String -QueryText $string -Database ss -Column aa –Name GC6
+PS XYZ:\> $GlobalSql = Set-CMGlobalConditionSqlQuery -DataType String -QueryText $string -Database ss -Column aa â€“Name GC6
 ```
 
 This command sets a SQL Query type global condition in Configuration Manager.

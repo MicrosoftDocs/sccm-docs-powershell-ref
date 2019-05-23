@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 3AA12DC1-E0BD-40C1-B5D3-3CB1C394045B
 online version: https://go.microsoft.com/fwlink/?linkid=834151
@@ -38,9 +38,13 @@ After you remove an operating system installer, you cannot distribute the instal
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an operating system installer
 ```
-PS C:\> Remove-CMOperatingSystemInstaller -Name "INSTALL01"
+PS XYZ:\> Remove-CMOperatingSystemInstaller -Name "INSTALL01"
 ```
 
 This command removes the operating system installer named INSTALL01.

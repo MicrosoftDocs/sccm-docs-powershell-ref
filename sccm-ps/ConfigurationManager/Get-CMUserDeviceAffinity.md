@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 465E33E8-26CF-4981-A815-0ADD2BFA15F9
 online version: https://go.microsoft.com/fwlink/?linkid=834001
@@ -43,30 +43,34 @@ User device affinity in Microsoft System Center Configuration Manager is a metho
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a user device affinity by using a user name
 ```
-PS C:\> Get-CMUserDeviceAffinity -UserName "CENTRAL\001D$"
+PS XYZ:\> Get-CMUserDeviceAffinity -UserName "CENTRAL\001D$"
 ```
 
 This command gets the user device affinity for the user named CENTRAL\001D$.
 
 ### Example 2: Get a user device affinity by using a user ID
 ```
-PS C:\> Get-CMUserDeviceAffinity -UserID "2063597981"
+PS XYZ:\> Get-CMUserDeviceAffinity -UserID "2063597981"
 ```
 
 This command gets the user device affinity for the user that has the ID named 2063597981.
 
 ### Example 3: Get a user device affinity by using a device name
 ```
-PS C:\> Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
+PS XYZ:\> Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
 ```
 
 This command gets the user device affinity for the device named CMCEN-DIST02.
 
 ### Example 4: Get a user device affinity by using a device ID
 ```
-PS C:\> Get-CMUserDeviceAffinity -DeviceID "2097152000"
+PS XYZ:\> Get-CMUserDeviceAffinity -DeviceID "2097152000"
 ```
 
 This command gets the user device affinity for the device that has the ID 2097152000.

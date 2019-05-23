@@ -22,6 +22,10 @@ The **Convertfrom-CMIResultObject** cmdlet converts from an **IResultObject** to
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Convert an IResultObject to a ManagementBaseObject by getting a site object
 ```
 PS ABC:\> $Site = Get-CMSite -SiteCode PS1

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 76D3B60C-127D-47B0-960D-C42451DC491D
 online version: https://go.microsoft.com/fwlink/?linkid=833643
@@ -53,16 +53,20 @@ The **Set-CMAppvDeploymentType** cmdlet changes the settings for a Microsoft App
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change the name of the deployment type
 ```
-PS C:\> Set-CMAppvDeploymentType -ApplicationName "testApp" -DeploymentTypeName "Appv" -NewName "newAppv"
+PS XYZ:\> Set-CMAppvDeploymentType -ApplicationName "testApp" -DeploymentTypeName "Appv" -NewName "newAppv"
 ```
 
 This command changes the display name of the deployment type for the application named testApp from AppV to newAppv.
 
 ### Example 2: Change the name of the deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -DeploymentTypeName "Appv" -ApplicationName "testApp" | Set-CMAppvDeploymentType -NewName "newAppv"
+PS XYZ:\> Get-CMDeploymentType -DeploymentTypeName "Appv" -ApplicationName "testApp" | Set-CMAppvDeploymentType -NewName "newAppv"
 ```
 
 This command gets the deployment type object named Appv for the applicaton named testApp and uses the pipeline operator to pass the object to **Set-CMAppvDeploymentType**, which changes the name of the deployment type object to newAppv.

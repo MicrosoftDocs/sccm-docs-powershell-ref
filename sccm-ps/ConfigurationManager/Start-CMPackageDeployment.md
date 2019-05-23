@@ -1,4 +1,4 @@
----
+﻿---
 title: Start-CMPackageDeployment
 titleSuffix: Configuration Manager
 description: Starts deployment of a software package to a Configuration Manager collection.
@@ -135,10 +135,14 @@ You can specify whether System Center Configuration Manager deploys the package 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Start a recurring deployment
 
 ```powershell
-PS C:\> Start-CMPackageDeployment -CollectionName "All Systems" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "DPM for all systems." -DeploymentStartDay 2012/10/26 -DeploymentStartTime 12:12 -RecurUnit Days -RecurValue 7 -Rerun $True -UseMeteredNetwork $True -UseUtc $True
+PS XYZ:\> Start-CMPackageDeployment -CollectionName "All Systems" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "DPM for all systems." -DeploymentStartDay 2012/10/26 -DeploymentStartTime 12:12 -RecurUnit Days -RecurValue 7 -Rerun $True -UseMeteredNetwork $True -UseUtc $True
 ```
 
 This command starts deployment for a named package to the collection named All Systems for the device program named DPM.
@@ -151,7 +155,7 @@ The deployment uses UTC time.
 ### Example 2: Start a recurring deployment for an available package
 
 ```powershell
-PS C:\> Start-CMPackageDeployment -CollectionName "Western Computers" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "Deployment for Western office." -DeployPurpose Available -Rerun $True -UseUtc $True
+PS XYZ:\> Start-CMPackageDeployment -CollectionName "Western Computers" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -Comment "Deployment for Western office." -DeployPurpose Available -Rerun $True -UseUtc $True
 ```
 
 This command starts deployment for a named package to the collection named Western Computers for the device program named DPM.
@@ -163,7 +167,7 @@ The deployment uses UTC time.
 ### Example 3: Start a deployment for a standard program
 
 ```powershell
-PS C:\> Start-CMPackageDeployment -CollectionName "All Systems" -PackageName "User State Migration Tool for Windows 8" -StandardProgramName "SPM" AllowSharedContent $False
+PS XYZ:\> Start-CMPackageDeployment -CollectionName "All Systems" -PackageName "User State Migration Tool for Windows 8" -StandardProgramName "SPM" AllowSharedContent $False
 ```
 
 This command starts a deployment of a package named User State Migration Tool for Windows 8 to the collection named All Systems for the standard program named SPM.

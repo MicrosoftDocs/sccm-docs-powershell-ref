@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMDeploymentTypeDependencyGroup
 titleSuffix: Configuration Manager
 description: Creates a deployment type dependency group in Configuration Manager.
@@ -33,10 +33,14 @@ Must be added to an existing deployment type by using [Add-CMDeploymentTypeDepen
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | New-CMDeploymentTypeDependencyGroup -GroupName MyGroup
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | New-CMDeploymentTypeDependencyGroup -GroupName MyGroup
 ```
 
 This command creates a new dependency group call MyGroup for the deployment type MyApp.

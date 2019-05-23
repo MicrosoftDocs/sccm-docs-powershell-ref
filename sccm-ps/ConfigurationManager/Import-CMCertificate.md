@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
 ms.assetid: FECB6577-2499-441A-967F-FE505F41D1F7
 online version: https://go.microsoft.com/fwlink/?linkid=834040
@@ -29,9 +29,13 @@ The **Import-CMCertificate** cmdlet imports a public key infrastructure (PKI) ce
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import a certificate
 ```
-PS C:\>Import-CMCertificate -Path "\\Contoso01\CM\Certficates\BaseCert.txt"
+PS XYZ:\>Import-CMCertificate -Path "\\Contoso01\CM\Certficates\BaseCert.txt"
 ```
 
 This command imports the PKI certificate from the file named BaseCert.

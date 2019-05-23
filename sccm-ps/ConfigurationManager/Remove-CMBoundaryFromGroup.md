@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 478AB135-42CF-4D2E-9D7B-B6A8C5A1ECCF
 online version: https://go.microsoft.com/fwlink/?linkid=833932
@@ -74,17 +74,21 @@ A boundary group is a collection of boundaries.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a boundary from a group by using the boundary name
 ```
-PS C:\> Remove-CMBoundaryFromGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
+PS XYZ:\> Remove-CMBoundaryFromGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
 ```
 
 This example removes a boundary named CLBound03 from a boundary group that has the ID 16777219.
 
 ### Example 2: Remove multiple boundary groups by using an InputObject
 ```
-PS C:\> $BoundaryObj = Get-CMBoundary -Name "Bound01", "Bound02", "Bound03"
-PS C:\> Remove-CMBoundaryFromGroup -Boundary $BoundaryObj -BoundaryGroupName "BGroup02"
+PS XYZ:\> $BoundaryObj = Get-CMBoundary -Name "Bound01", "Bound02", "Bound03"
+PS XYZ:\> Remove-CMBoundaryFromGroup -Boundary $BoundaryObj -BoundaryGroupName "BGroup02"
 ```
 
 The first command uses the **Get-CMBoundary** cmdlet to get multiple boundaries that are specified by their names, and stores this data into the **$BoundaryObj** variable.

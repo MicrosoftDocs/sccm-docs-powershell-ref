@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMPackageDeploymentStatus
 titleSuffix: Configuration Manager
 description: Gets the status of classic software distribution deployments.
@@ -56,10 +56,14 @@ A classic software distribution is a legacy software distribution program on a c
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> Get-CMPackageDeploymentStatus -Name "Depack01"
+PS XYZ:\> Get-CMPackageDeploymentStatus -Name "Depack01"
 ```
 
 This command gets the status of a deployment that is distributed to Configuration Manager clients by using the deployment package named Depack01.

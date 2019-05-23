@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: B2F9AD76-2083-44CA-A964-D58F7E7A9A07
 online version: https://go.microsoft.com/fwlink/?linkid=834125
@@ -36,16 +36,20 @@ This cmdlet only works on mobile devices.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Lock a mobile device
 ```
-PS C:\> Get-CMDevice -Name "WindowsPhone0401" | Invoke-CMDeviceAction -Action Lock
+PS XYZ:\> Get-CMDevice -Name "WindowsPhone0401" | Invoke-CMDeviceAction -Action Lock
 ```
 
 This command gets the device object named WindowsPhone0401 and uses the pipeline operator to pass the object to **Invoke-CMDeviceAction**, which locks the device.
 
 ### Example 2: Reset the PIN for a mobile device
 ```
-PS C:\> Invoke-CMDeviceAction -Name "WindowsPhone0402" -Action PinReset -PassThru
+PS XYZ:\> Invoke-CMDeviceAction -Name "WindowsPhone0402" -Action PinReset -PassThru
 ```
 
 This command resets the PIN for the device named WindowsPhone0402.

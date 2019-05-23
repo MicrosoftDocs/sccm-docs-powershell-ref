@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: C659F1EB-43D3-4DD1-8AA4-6645726C7091
 online version: https://go.microsoft.com/fwlink/?linkid=833584
@@ -30,9 +30,13 @@ For more information about cloud distribution points, see [Planning for Content 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a cloud distribution point
 ```
-PS C:\> New-CMCloudDistributionPoint -ManagementCertificatePath "C:\Certificates\Management.pfx" -Region "WestUS" -ServiceCertificatePath "C:\Certificates\Distribution.pfx" -ServiceCName "distribution-server.contoso.com" -SiteCode "ContosoSite"-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"
+PS XYZ:\> New-CMCloudDistributionPoint -ManagementCertificatePath "C:\Certificates\Management.pfx" -Region "WestUS" -ServiceCertificatePath "C:\Certificates\Distribution.pfx" -ServiceCName "distribution-server.contoso.com" -SiteCode "ContosoSite"-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"
 ```
 
 This command creates a distribution with the canonical name server.contoso.com.

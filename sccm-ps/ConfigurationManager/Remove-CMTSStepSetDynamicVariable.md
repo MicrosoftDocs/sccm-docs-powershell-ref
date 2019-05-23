@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
 description: Remove Set Dynamic Variable steps from a Configuration Manager task sequence.
@@ -43,14 +43,18 @@ Remove-CMTSStepSetDynamicVariable [-TaskSequenceName] <String> [-StepName <Strin
 
 ## DESCRIPTION
 
-Remove task sequence “Set Dynamic Variable” step(s) from a specific task sequence, it supports pipeline from a task sequence object, and could be filtered by the name of the step.
+Remove task sequence â€œSet Dynamic Variableâ€ step(s) from a specific task sequence, it supports pipeline from a task sequence object, and could be filtered by the name of the step.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Remove-CMTaskSequenceStepSetDynamicVariable -StepName $st1.Name -Force
+PS XYZ:\> $ReferencedTaskSequence | Remove-CMTaskSequenceStepSetDynamicVariable -StepName $st1.Name -Force
 ```
 
 This command removes a task sequence "Set Dynamic Variables" steps.

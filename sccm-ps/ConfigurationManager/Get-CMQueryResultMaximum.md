@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: D37F399D-6BD8-4C5F-AAC9-1B5DFB6684EF
 online version: https://go.microsoft.com/fwlink/?linkid=833830
@@ -25,9 +25,13 @@ By default, the maximum number of rows is unbound, which is different from the b
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the report query result maximum
 ```
-PS C:\> Get-CMQueryResultMaximum
+PS XYZ:\> Get-CMQueryResultMaximum
 ```
 
 This command gets the maximum number of rows that a Configuration Manager report query can return.

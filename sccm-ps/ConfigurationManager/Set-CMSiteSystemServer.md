@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 20AEB24C-2706-4103-B3D1-808D355C696C
 online version: https://go.microsoft.com/fwlink/?linkid=834042
@@ -33,9 +33,13 @@ The **Set-CMSiteSystemServer** cmdlet modifies a site system server in Microsoft
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a site system server by using the pipeline operator
 ```
-PS C:\> Get-CMSiteSystemServer -Name "Server2.contoso.com" -SiteCode MP5 | Set-CMSiteSystemServer -SiteCode MP5 -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
+PS XYZ:\> Get-CMSiteSystemServer -Name "Server2.contoso.com" -SiteCode MP5 | Set-CMSiteSystemServer -SiteCode MP5 -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
 ```
 
 This command gets the site system server object named Server2.contoso.com with the site code MP5 and uses the pipeline operator to pass the object to **Set-CMSiteSystemServer**.
@@ -43,7 +47,7 @@ This command gets the site system server object named Server2.contoso.com with t
 
 ### Example 2: Modify a site system server
 ```
-PS C:\> Set-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
+PS XYZ:\> Set-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
 ```
 
 This command gets the site system server object named Server2.contoso.com with the site code MP5, adds an FQDN to the site system server to use on the Internet, and enables a proxy server named ProxyServer1 to connect to the Internet using port 80.

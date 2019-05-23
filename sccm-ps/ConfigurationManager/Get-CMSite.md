@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3F9D178E-7C8B-4C41-BC6C-3A2092A95B71
 online version: https://go.microsoft.com/fwlink/?linkid=833856
@@ -24,9 +24,13 @@ You can get a Configuration Manager site by using either a site name or a site c
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a site by using a site name
 ```
-PS C:\> Get-CMSite -SiteName "CMSiteSystem"
+PS XYZ:\> Get-CMSite -SiteName "CMSiteSystem"
 ```
 
 This command gets a System Center Configuration Manager site by using the site name CMSiteSystem.

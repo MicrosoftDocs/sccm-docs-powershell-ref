@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: DE269D9A-EC2F-4DAE-859E-76E39BA4F9AF
 online version: https://go.microsoft.com/fwlink/?linkid=833702
@@ -39,9 +39,13 @@ The **Set-CMCertificateProfileTrustedRootCA** cmdlet changes the settings of a t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a trusted CA certificate profile by using the pipeline
 ```
-PS C:\> Get-CMCertificateProfileTrustedRootCA -Name "Test123" -Fast | Set-CMCertificateProfileTrustedRootCA -Description "Updated description" -WhatIf
+PS XYZ:\> Get-CMCertificateProfileTrustedRootCA -Name "Test123" -Fast | Set-CMCertificateProfileTrustedRootCA -Description "Updated description" -WhatIf
 ```
 
 This command describes what would happen if the command gets the trusted CA certificate profile object named Test123 and uses the pipeline operator to pass the object to **Set-CMCertificateProfileTrustedRootCA** to update its description.
@@ -49,7 +53,7 @@ The command does not actually run.
 
 ### Example 2: Set a trusted CA certificate profile by ID
 ```
-PS C:\> Set-CMCertificateProfileTrustedRootCA -Id 16777479 -NewName "Test456" -Description "Update" -DestinationStore UserIntermediate -Confirm
+PS XYZ:\> Set-CMCertificateProfileTrustedRootCA -Id 16777479 -NewName "Test456" -Description "Update" -DestinationStore UserIntermediate -Confirm
 ```
 
 This command updates the name of the trusted CA certificate profile with the ID of 16777479 to Test456, updates its description, and changes the destination store to UserIntermediate.

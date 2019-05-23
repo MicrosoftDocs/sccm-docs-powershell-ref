@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: FF47986C-F314-4A29-AD87-24010BF2C92F
 online version: https://go.microsoft.com/fwlink/?linkid=834140
@@ -101,9 +101,13 @@ You can create a configuration item by using the [New-CMUserDataAndProfileConfig
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a configuration item
 ```
-PS C:\> Set-CMUserDataAndProfileConfigurationItem -Name "CMUDaPCI001" -NewName "CMUDaPCI0073" -ConfigureFolderRedirection $False -ConfigureOffineFile $False -ConfigureRoamingUserProfile $False -Description "User data and profile configuration information"
+PS XYZ:\> Set-CMUserDataAndProfileConfigurationItem -Name "CMUDaPCI001" -NewName "CMUDaPCI0073" -ConfigureFolderRedirection $False -ConfigureOffineFile $False -ConfigureRoamingUserProfile $False -Description "User data and profile configuration information"
 ```
 
 This command modifies the configuration item named CMUDaPCI001, changing its name to CMUDaPCI0073.

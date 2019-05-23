@@ -35,9 +35,13 @@ Instead of deploying the application to all the devices of a user, you deploy th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a primary user to a device
 ```
-PS C:\>Add-CMUserAffinityToDevice -DeviceName "CMCEN-DIST-02" -UserId "2063597981"
+PS XYZ:\>Add-CMUserAffinityToDevice -DeviceName "CMCEN-DIST-02" -UserId "2063597981"
 ```
 
 This command adds the primary user that has the ID 2063597981 to the device named CMCEN-DIST-02.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833973
 schema: 2.0.0
@@ -38,24 +38,28 @@ You can specify computers by using the Microsoft System Center Configuration Man
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable audit logging for a device by using an ID
 ```
-PS C:\>Enable-CMAmtAuditLog -DeviceID "16777230"
+PS XYZ:\>Enable-CMAmtAuditLog -DeviceID "16777230"
 ```
 
 This command enables Intel AMT audit logging for a device that has the ID 16777230.
 
 ### Example 2: Enable audit logging for a named device
 ```
-PS C:\>Enable-CMAmtAuditLog -DeviceName "Accn023.Contoso.com"
+PS XYZ:\>Enable-CMAmtAuditLog -DeviceName "Accn023.Contoso.com"
 ```
 
 This command enables Intel AMT audit logging for a device named Accn023.Contoso.com.
 
 ### Example 3: Enable audit logging by using a variable
 ```
-PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
-PS C:\> Enable-CMAmtAuditLog -Device $CMD -Force
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS XYZ:\> Enable-CMAmtAuditLog -Device $CMD -Force
 ```
 
 The first command gets a device object by using the **Get-CMDevice** command, and then stores it in the $CMD variable.

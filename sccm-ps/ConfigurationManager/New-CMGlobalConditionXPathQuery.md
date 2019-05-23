@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMGlobalConditionXPathQuery
 titleSuffix: Configuration Manager
 description: Creates a XPath Query type global condition in Configuration Manager.
@@ -43,10 +43,14 @@ A global condition is a setting or expression in System Center Configuration Man
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalXpath = New-CMGlobalConditionXPathQuery -DataType String -XmlFilePath "c:\A" -XPathQuery "/" -Name GC8
+PS XYZ:\> $GlobalXpath = New-CMGlobalConditionXPathQuery -DataType String -XmlFilePath "c:\A" -XPathQuery "/" -Name GC8
 ```
 
 This command creates a XPath Query type global condition in Configuration Manager.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: FD1C8F39-5BCF-43BF-891C-B11C39141EB0
 online version: https://go.microsoft.com/fwlink/?linkid=833629
@@ -23,9 +23,13 @@ Distribution point groups provide a logical grouping of distribution points for 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a distribution point group
 ```
-PS C:\> New-CMDistributionPointGroup -Name "DpgDept01" -Description "Western region"
+PS XYZ:\> New-CMDistributionPointGroup -Name "DpgDept01" -Description "Western region"
 ```
 
 This command creates a distribution point group named DpgDept01 and adds a description for the distribution point group.

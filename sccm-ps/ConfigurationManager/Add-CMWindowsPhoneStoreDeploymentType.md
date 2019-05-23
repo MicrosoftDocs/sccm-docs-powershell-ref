@@ -41,9 +41,13 @@ The **Add-CMWindowsPhoneStoreDeploymentType** cmdlet adds a Windows Phone app pa
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Add-CMWindowsPhoneStoreDeploymentType -DeploymentTypeName "DT2" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -AddLanguage "en-US","zh-CN" -Comment "Windows Store app"
+PS XYZ:\> Get-CMApplication -Name "Application1" | Add-CMWindowsPhoneStoreDeploymentType -DeploymentTypeName "DT2" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -AddLanguage "en-US","zh-CN" -Comment "Windows Store app"
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Add-CMWindowsPhoneStoreDeploymentType**.
@@ -51,7 +55,7 @@ This command gets the application object named Application1 and uses the pipelin
 
 ### Example 2: Add a Windows Phone Store deployment type
 ```
-PS C:\> Add-CMWindowsPhoneStoreDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT2" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -AddLanguage "en-US","zh-CN" -Comment "Windows Store app"
+PS XYZ:\> Add-CMWindowsPhoneStoreDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT2" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -AddLanguage "en-US","zh-CN" -Comment "Windows Store app"
 ```
 
 This command adds the Windows Phone app package (in the Windows Store) deployment type named DT2 from the specified URL to the application named Application1 in English and Chinese.

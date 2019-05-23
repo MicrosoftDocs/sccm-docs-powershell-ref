@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: BBCCCE7A-A366-4D6D-991E-198CCFED8A00
 online version: https://go.microsoft.com/fwlink/?linkid=834145
@@ -23,9 +23,13 @@ A forest discovery returns a list of Active Directory sites, subnets, and domain
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Invoke a forest discovery operation
 ```
-PS C:\>Invoke-CMForestDiscovery -SiteCode "CM4"
+PS XYZ:\>Invoke-CMForestDiscovery -SiteCode "CM4"
 ```
 
 This command invokes a forest discovery operation in Active Directory starting at the site that has the site code CM4.

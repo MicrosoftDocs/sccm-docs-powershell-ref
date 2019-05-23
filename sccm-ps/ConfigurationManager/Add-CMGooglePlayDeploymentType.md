@@ -41,9 +41,13 @@ The **Add-CMGooglePlayDeploymentType** cmdlet adds a Google Play deployment type
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a Google Play deployment type
 ```
-PS C:\>Add-CMGooglePlayDeploymentType -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -ApplicationName "TestGooglePlay02" -DeploymentTypeName "DTGooglePlay02" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
+PS XYZ:\>Add-CMGooglePlayDeploymentType -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -ApplicationName "TestGooglePlay02" -DeploymentTypeName "DTGooglePlay02" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
 ```
 
 This command adds the Google Play deployment type named DTGooglePlay02 from the specified URL to the application named TestGooglePlay02 in English and Chinese.
@@ -51,7 +55,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add a Google Play deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "TestGooglePlay" | Add-CMGooglePlayDeploymentType -DeploymentTypeName "DTGooglePlay01" -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
+PS XYZ:\> Get-CMApplication -Name "TestGooglePlay" | Add-CMGooglePlayDeploymentType -DeploymentTypeName "DTGooglePlay01" -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
 ```
 
 This command gets the application object named TestGooglePlay and uses the pipeline operator to pass the object to **Add-CMGooglePlayDeploymentType**.

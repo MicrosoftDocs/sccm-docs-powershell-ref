@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum-help.xml
 ms.assetid: A33A1535-F234-4E1A-896D-2832DDA6B2A3
 online version: https://go.microsoft.com/fwlink/?linkid=834020
@@ -27,9 +27,13 @@ The **Get-CMWindowsServicingPlan** cmdlet gets a Windows 10 servicing plan.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all servicing plans
 ```
-PS C:\> Get-CMWindowsServicingPlan -Fast
+PS XYZ:\> Get-CMWindowsServicingPlan -Fast
 ```
 
 This command gets all Windows 10 servicing plans.
@@ -37,7 +41,7 @@ The command does not return lazy properties.
 
 ### Example 2: Get a servicing plan by name
 ```
-PS C:\> Get-CMWindowsServicingPlan -Name "SvcPlan01"
+PS XYZ:\> Get-CMWindowsServicingPlan -Name "SvcPlan01"
 ```
 
 This command returns the Windows 10 servicing plan named SvcPlan01.
