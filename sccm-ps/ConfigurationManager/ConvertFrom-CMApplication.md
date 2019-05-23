@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 29E31091-FF04-446F-82EC-FD3FFF90B526
 online version: https://go.microsoft.com/fwlink/?linkid=833872
@@ -23,7 +23,7 @@ The **ConvertFrom-CMApplication** cmdlet converts an application SDK object to a
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Convert an application object
