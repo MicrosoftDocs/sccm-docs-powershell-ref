@@ -1,4 +1,4 @@
-﻿---
+---
 title: Add-CMTaskSequenceStep
 titleSuffix: Configuration Manager
 description: Adds a Configuration Manager task sequence step.
@@ -52,7 +52,7 @@ The **New-CMTaskSequenceStep** cmdlet adds task sequence group or step object(s)
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1
