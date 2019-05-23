@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: E3DB3EC2-E24E-4CEC-A7F4-92CF76D058D2
 online version: https://go.microsoft.com/fwlink/?linkid=833688
@@ -30,7 +30,7 @@ NOTE:  You can only add a Microsoft Intune subscription to a Central Administrat
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a Microsoft Intune subscription
