@@ -1,4 +1,4 @@
-﻿---
+---
 title: ConvertTo-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Convert a Configuration Manager management iResultObject to a configuration item object.
@@ -41,7 +41,7 @@ The **ConvertTo-CMConfigurationItem** cmdlet converts a string which contains Co
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1
