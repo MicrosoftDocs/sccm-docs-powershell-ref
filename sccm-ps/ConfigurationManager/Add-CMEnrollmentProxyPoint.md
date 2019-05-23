@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A4563737-1BF4-4AD1-A9D3-CFD2F5564586
 online version: https://go.microsoft.com/fwlink/?linkid=833676
@@ -34,12 +34,12 @@ When Configuration Manager enrolls a mobile device, it installs a Configuration 
 The client provides management capabilities that include hardware inventory, software deployment, settings, and remote wipe.
 To enroll mobile devices, use Microsoft Certificate Services with an enterprise certification authority (CA).
 You need a Configuration Manager enrollment proxy point site system role, as well as an enrollment point site system role.
-For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=262649) on TechNet.
+For more information, see [Install site system roles](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-site-system-roles).
 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add an enrollment proxy point
