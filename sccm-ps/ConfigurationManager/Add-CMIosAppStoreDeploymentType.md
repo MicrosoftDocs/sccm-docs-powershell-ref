@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 3A7DDA19-DBE2-4656-A00F-1E9C6D219022
 online version: https://go.microsoft.com/fwlink/?linkid=833692
@@ -42,7 +42,7 @@ The **Add-CMIosDeploymentType** cmdlet adds an iOS App Store deployment type to 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add an iOS App Store deployment type
