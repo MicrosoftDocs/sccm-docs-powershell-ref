@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepConditionOperatingSystem
 titleSuffix: Configuration Manager
-description: Gets a t s step condition operating system.
+description: Gets a TS step condition operating system.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepConditionOperatingSystem
 
 ## SYNOPSIS
-Gets a t s step condition operating system.
+Gets a TS step condition operating system.
 
 ## SYNTAX
 

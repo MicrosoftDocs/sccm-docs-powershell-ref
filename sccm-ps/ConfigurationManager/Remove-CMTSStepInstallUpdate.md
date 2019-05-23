@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CMTSStepInstallUpdate
 
 ## SYNOPSIS
-Removes a t s step install update
+Removes a TS step install update
 
 ## SYNTAX
 

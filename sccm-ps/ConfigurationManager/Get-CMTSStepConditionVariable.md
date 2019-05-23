@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepConditionVariable
 titleSuffix: Configuration Manager
-description: Gets a t s step condition variable.
+description: Gets a TS step condition variable.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepConditionVariable
 
 ## SYNOPSIS
-Gets a t s step condition variable.
+Gets a TS step condition variable.
 
 ## SYNTAX
 

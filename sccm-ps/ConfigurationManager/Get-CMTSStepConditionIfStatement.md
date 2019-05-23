@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepConditionIfStatement
 titleSuffix: Configuration Manager
-description: Gets a t s step condition if statement.
+description: Gets a TS step condition if statement.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepConditionIfStatement
 
 ## SYNOPSIS
-Gets a t s step condition if statement.
+Gets a TS step condition if statement.
 
 ## SYNTAX
 

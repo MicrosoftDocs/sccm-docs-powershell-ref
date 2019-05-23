@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepPartitionDisk
 titleSuffix: Configuration Manager
-description: Gets a t s step partition disk.
+description: Gets a TS step partition disk.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepPartitionDisk
 
 ## SYNOPSIS
-Gets a t s step partition disk.
+Gets a TS step partition disk.
 
 ## SYNTAX
 

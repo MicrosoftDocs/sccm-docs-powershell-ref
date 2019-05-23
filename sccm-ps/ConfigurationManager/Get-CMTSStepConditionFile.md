@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepConditionFile
 titleSuffix: Configuration Manager
-description: Gets a t s step condition file.
+description: Gets a TS step condition file.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepConditionFile
 
 ## SYNOPSIS
-Gets a t s step condition file.
+Gets a TS step condition file.
 
 ## SYNTAX
 

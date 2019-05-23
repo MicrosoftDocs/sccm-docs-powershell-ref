@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepConditionQueryWmi
 titleSuffix: Configuration Manager
-description: Gets a t s step condition query wmi.
+description: Gets a TS step condition query wmi.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepConditionQueryWmi
 
 ## SYNOPSIS
-Gets a t s step condition query wmi.
+Gets a TS step condition query wmi.
 
 ## SYNTAX
 

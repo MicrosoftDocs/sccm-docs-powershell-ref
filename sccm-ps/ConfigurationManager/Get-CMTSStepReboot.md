@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepReboot
 titleSuffix: Configuration Manager
-description: Gets a t s step reboot.
+description: Gets a TS step reboot.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,8 @@ manager: dougeby
 # Get-CMTSStepReboot
 
 ## SYNOPSIS
-Gets a t s step reboot.
+Gets a TS step reboot.
+
 
 ## SYNTAX
 

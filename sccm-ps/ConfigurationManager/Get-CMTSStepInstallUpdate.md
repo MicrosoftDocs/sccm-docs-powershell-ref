@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepInstallUpdate
 titleSuffix: Configuration Manager
-description: Gets a t s step install update.
+description: Gets a TS step install update.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepInstallUpdate
 
 ## SYNOPSIS
-Gets a t s step install update.
+Gets a TS step install update.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepConditionSoftware
 titleSuffix: Configuration Manager
-description: Gets a t s step condition software.
+description: Gets a TS step condition software.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepConditionSoftware
 
 ## SYNOPSIS
-Gets a t s step condition software.
+Gets a TS step condition software.
 
 ## SYNTAX
 

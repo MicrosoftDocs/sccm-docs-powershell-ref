@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepConditionRegistry
 titleSuffix: Configuration Manager
-description: Gets a t s step condition registry.
+description: Gets a TS step condition registry.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepConditionRegistry
 
 ## SYNOPSIS
-Gets a t s step condition registry.
+Gets a TS step condition registry.
 
 ## SYNTAX
 

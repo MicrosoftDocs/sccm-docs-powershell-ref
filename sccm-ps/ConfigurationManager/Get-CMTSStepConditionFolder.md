@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepConditionFolder
 titleSuffix: Configuration Manager
-description: Gets a t s step condition folder.
+description: Gets a TS step condition folder.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepConditionFolder
 
 ## SYNOPSIS
-Gets a t s step condition folder.
+Gets a TS step condition folder.
 
 ## SYNTAX
 

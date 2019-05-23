@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepInstallApplication
 titleSuffix: Configuration Manager
-description: Gets a t s step install application.
+description: Gets a TS step install application.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepInstallApplication
 
 ## SYNOPSIS
-Gets a t s step install application.
+Gets a TS step install application.
 
 ## SYNTAX
 
