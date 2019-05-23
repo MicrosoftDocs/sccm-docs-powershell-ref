@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepRunPowerShellScript
 titleSuffix: Configuration Manager
-description: Gets a t s step run power shell script.
+description: Gets a TS step run power shell script.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
