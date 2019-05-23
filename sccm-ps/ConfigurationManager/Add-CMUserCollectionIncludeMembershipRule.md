@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: E65427BE-BF3E-4488-BA34-F79087BA3B43
 online version: https://go.microsoft.com/fwlink/?linkid=833777
@@ -72,12 +72,12 @@ You can specify the user collections where the rule is applied by using their na
 You can specify the collection whose members are included by using its name, ID, or an object that represents the collection.
 
 Microsoft System Center Configuration Manager dynamically updates the membership of the user collection on a schedule if the membership of the included collection changes.
-For more information on these rules, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information, see [Introduction to collections](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add an include membership rule to a user collection
