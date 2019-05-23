@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: B2B9CF97-719D-4F30-87C9-9ED6F3A5A798
 online version: https://go.microsoft.com/fwlink/?linkid=833598
@@ -35,7 +35,7 @@ You can install the Asset Intelligence synchronization point only on a site syst
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Install an Asset Intelligence synchronization point
