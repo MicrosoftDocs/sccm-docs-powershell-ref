@@ -1,7 +1,7 @@
 ---
 title: Invoke-CMUserDiscovery
 titleSuffix: Configuration Manager
-description: Invokes an user discovery.
+description: Invokes a user discovery.
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,7 +14,7 @@ manager: dougeby
 # Invoke-CMUserDiscovery
 
 ## SYNOPSIS
-Invokes an user discovery.
+Invokes a user discovery.
 
 ## SYNTAX
 
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+DisableWildcardHandling treats wildcard characters as literal character values. Can't be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Can't be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
