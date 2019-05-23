@@ -1,4 +1,4 @@
-﻿---
+---
 title: Add-CMAppvDeploymentType
 titleSuffix: Configuration Manager
 description: Adds a Microsoft Application Virtualization (App-V) 4 deployment type to an application.
@@ -51,7 +51,7 @@ The **Add-CMAppvDeploymentType** cmdlet adds a Microsoft Application Virtualizat
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add an App-V deployment type
