@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 76C8AF2C-65AA-485C-8905-66A1B624C36D
 online version: https://go.microsoft.com/fwlink/?linkid=833784
@@ -42,7 +42,7 @@ The **Add-CMWebApplicationDeploymentType** cmdlet adds a web application deploym
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a web application deployment type
