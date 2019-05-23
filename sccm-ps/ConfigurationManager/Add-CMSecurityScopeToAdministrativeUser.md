@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: CAC293F8-F168-4D53-8C74-E33A077BE0D1
 online version: https://go.microsoft.com/fwlink/?linkid=833747
@@ -69,7 +69,7 @@ Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -Administ
 ## DESCRIPTION
 The **Add-CMSecurityScopeToAdministrativeUser** cmdlet adds a security scope to an administrative user or administrative group in Microsoft System Center Configuration Manager.
 
-For more information about security scopes, see [Configuring Security for Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=247225) on TechNet.
+For more information, see [Configuring security](https://docs.microsoft.com/sccm/core/plan-design/security/configure-security).
 
 You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
 You can specify a security scope to add by name or by ID or you can use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet to obtain a security scope.
@@ -77,7 +77,7 @@ You can specify a security scope to add by name or by ID or you can use the [Get
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a named security scope to a named administrative group
