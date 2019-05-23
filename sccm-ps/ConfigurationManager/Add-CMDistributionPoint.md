@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: C01B52A1-0E55-4A7E-90C6-F071D8F76CF2
 online version: https://go.microsoft.com/fwlink/?linkid=833657
@@ -96,7 +96,7 @@ You can add the distribution point site role to a new site system server or add 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a site by using a site system server object
