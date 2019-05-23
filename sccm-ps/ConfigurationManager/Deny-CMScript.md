@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deny-CMScript
 titleSuffix: Configuration Manager
 description: Denies a Configuration Manager PowerShell script.
