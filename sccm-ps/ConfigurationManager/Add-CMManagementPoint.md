@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 4FDCA14B-25A9-4224-AD46-F204C1F525F2
 online version: https://go.microsoft.com/fwlink/?linkid=833704
@@ -53,7 +53,7 @@ A management point is a System Center Configuration Manager site system role tha
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a management point
