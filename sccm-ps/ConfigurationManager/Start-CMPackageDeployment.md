@@ -722,7 +722,6 @@ The acceptable values for this parameter are:
 - AsSoonAsPossible
 - LogOff
 - LogOn
-- SendWakeUpPacket
 
 ```yaml
 Type: ScheduleEventType
