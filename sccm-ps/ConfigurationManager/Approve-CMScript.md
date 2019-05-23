@@ -1,4 +1,4 @@
-﻿---
+---
 title: Approve-CMScript
 titleSuffix: Configuration Manager
 description: Approves a Configuration Manager PowerShell script.
@@ -44,7 +44,7 @@ You can approve a specific script by specifying the script object or the name of
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Approve a script by using the script id
