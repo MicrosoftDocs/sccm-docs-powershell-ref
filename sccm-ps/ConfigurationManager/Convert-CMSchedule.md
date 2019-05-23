@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 8D8F8DC3-4AC4-417A-BA50-30E81D02EE6E
 online version: https://go.microsoft.com/fwlink/?linkid=833868
@@ -32,7 +32,7 @@ In Microsoft System Center Configuration Manager, scheduling information is conf
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Convert a schedule string
