@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
 ms.assetid: BB56BBF5-A38E-4BDE-B32B-EE42739B4945
 online version: https://go.microsoft.com/fwlink/?linkid=833819
@@ -31,7 +31,7 @@ Microsoft System Center Configuration Manager uses certificates to manage boot m
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Block a certificate
