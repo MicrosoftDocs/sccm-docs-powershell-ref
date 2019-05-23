@@ -1,7 +1,7 @@
 ---
 title: Get-CMTSStepSetupWindowsAndConfigMgr
 titleSuffix: Configuration Manager
-description: Gets a t s step setup windows and config mgr.
+description: Gets a TS step setup windows and config mgr.
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
