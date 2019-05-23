@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 4ED6C471-F499-47E7-BF08-020C768896A8
 online version: https://go.microsoft.com/fwlink/?linkid=833796
@@ -42,7 +42,7 @@ The **Add-CMWindowsPhoneDeploymentType** cmdlet adds a Windows Phone app package
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a Windows Phone deployment type by using the pipeline
