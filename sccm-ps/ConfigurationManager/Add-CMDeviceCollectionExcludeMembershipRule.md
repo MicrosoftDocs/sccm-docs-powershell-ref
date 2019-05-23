@@ -72,7 +72,7 @@ You can specify the device collections where the rule is applied by name, ID, or
 You can specify the collection whose members are excluded by name, ID, or an object that represents the collection.
 
 Microsoft System Center Configuration Manager dynamically updates the membership of the device collection on a schedule if the membership of the excluded collection changes.
-For more information on these rules, see [Introduction to collections](https://docs.microsoft.com/en-us/sccm/core/clients/manage/collections/introduction-to-collections).
+For more information on these rules, see [Introduction to collections](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
 
 ## EXAMPLES
 
