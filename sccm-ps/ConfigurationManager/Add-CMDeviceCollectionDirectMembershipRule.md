@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: CEB87494-F554-4B05-A44B-978B1B418583
 online version: https://go.microsoft.com/fwlink/?linkid=833642
@@ -55,7 +55,7 @@ A direct membership rule lets you explicitly choose the members of the device co
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a direct membership rule
