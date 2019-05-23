@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 5F39BFCE-FF04-4DB0-BF85-4C495CAE7A23
 online version: https://go.microsoft.com/fwlink/?linkid=833914
@@ -23,7 +23,7 @@ The **ConvertTo-CMIResultObject** cmdlet converts a **ManagementBaseObject** to 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Convert a ManagementBaseObject to an IResultObject by passing a WMI object through the pipeline
