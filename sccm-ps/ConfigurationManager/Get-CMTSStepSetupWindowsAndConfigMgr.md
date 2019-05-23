@@ -14,7 +14,7 @@ manager: dougeby
 # Get-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Gets a TS step setup windows and config mgr
+Gets a TS step setup window and config mgr.
 
 ## SYNTAX
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
