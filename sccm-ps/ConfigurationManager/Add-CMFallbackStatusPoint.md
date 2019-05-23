@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 787B327A-1694-4942-852C-268301003B5D
 online version: https://go.microsoft.com/fwlink/?linkid=833680
@@ -33,12 +33,12 @@ You also need to specify a throttle interval and the number of messages for that
 
 Configuration Manager can use one or more fallback status points to collect state messages for a site and send them to Configuration Manager.
 Throttling prevents the fallback status point from sending too many messages together, which can affect performance.
-For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=262649) on TechNet.
+For more information, see [Install site system roles](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-site-system-roles).
 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a fallback status point
