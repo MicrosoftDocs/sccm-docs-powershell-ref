@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 405EE043-48AC-43DF-BE3F-1566DB9621E9
 online version: https://go.microsoft.com/fwlink/?linkid=833669
@@ -31,12 +31,12 @@ The **Add-CMEndpointProtectionPoint** cmdlet adds a site system role for System 
 
 Endpoint Protection lets you manage antimalware policies and Windows Firewall security for client computers in System Center Configuration Manager.
 In order to use Endpoint Protection with System Center Configuration Manager, you must install a single site system role for Endpoint Protection, either in the central site or in a stand-alone primary site.
-For more information about Endpoint Protection in System Center Configuration Manager, see [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427) on TechNet.
+For more information, see [Endpoint Protection in Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/endpoint-protection).
 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a site system role
