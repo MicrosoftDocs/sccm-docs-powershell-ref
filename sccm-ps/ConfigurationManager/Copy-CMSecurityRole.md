@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: ED2B0513-DEEB-472B-B863-3E456B8182CF
 online version: https://go.microsoft.com/fwlink/?linkid=833922
@@ -38,7 +38,7 @@ If you require additional security roles, you can create a custom security role 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Copy a security role by using an ID
