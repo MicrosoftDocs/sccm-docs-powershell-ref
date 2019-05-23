@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 ms.assetid: DFCB60F1-211A-46E1-8E16-A494AC4DCCA6
 online version: https://go.microsoft.com/fwlink/?linkid=833835
@@ -33,7 +33,7 @@ You can use the Remove-CMClientOperation cmdlet to remove a client operation obj
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Clear a client operation
