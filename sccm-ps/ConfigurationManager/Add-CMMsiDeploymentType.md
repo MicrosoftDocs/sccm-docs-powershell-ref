@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: CF418851-B343-4F4B-993D-6F1250520326
 online version: https://go.microsoft.com/fwlink/?linkid=833716
@@ -111,7 +111,7 @@ The **Add-CMMsiDeploymentType** cmdlet adds a Windows Installer deployment type 
 ## EXAMPLES
 
 > [!NOTE]
-> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/en-us/powershell/sccm/overview).
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
 
 
 ### Example 1: Add a deployment type
