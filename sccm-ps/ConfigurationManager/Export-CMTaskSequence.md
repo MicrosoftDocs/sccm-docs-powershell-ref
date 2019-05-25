@@ -74,6 +74,28 @@ PS XYZ:\> Get-CMTaskSequence -Name "TaskSequence02" | Export-CMTaskSequence -Exp
 
 This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Export-CMTaskSequence**, which exports the task sequence object to the specified location.
 
+### Example 3: Export Several Task Sequences by Creating an Array (Part of Script)
+
+```powershell
+$TaskSequenceTable= @(
+        @{ TSName = 'TaskSequence_A'; TSPackageID = "PS200038"; Comment = "Comments about TS_A"}
+        @{ TSName = 'TaskSequence_B'; TSPackageID = "PS200072"; Comment = "Comments about TS_B"}
+        @{ TSName = 'TaskSequence_C'; TSPackageID = "PS200084"; Comment = "Comments about TS_C"}
+        @{ TSName = 'TaskSequence_D'; TSPackageID = "PS200081"; Comment = "Comments about TS_D"}
+        )
+foreach ($TaskSequence in $TaskSequenceTable)
+    {
+    $TSObject = Get-CMTaskSequence -TaskSequencePackageId $TaskSequence.TSPackageID
+    $TSSourceDate = $TSObject.LastRefreshTime.ToString("yyyyMMdd")
+    $ExportLocation = "\\Server\Share\TSExports"
+    $TSExportDir = "$($ExportLocation)\TaskSequences\$($TaskSequence.TSName)"
+    $TSExportName = "$($TSObject.Name)_$($TSSourceDate).zip"
+    Export-CMTaskSequence -InputObject $TSObject -ExportFilePath "$($TSExportDir)\$($TSExportName)" -Comment $TaskSequence.Comment -WithDependence $true -WithContent $false -Force
+    }
+
+```
+This Code shows creating an array of Task Sequences which will allow you to Export them all.  It will use much of the information from the actual Task Sequence to create the folder structure and file name during the export.  Also allows you to create export it with comments.
+
 ## PARAMETERS
 
 ### -Comment
