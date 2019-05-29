@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 7B3F75FB-24E0-47DD-A58A-34C028DC76B4
-online version: https://go.microsoft.com/fwlink/?linkid=833866
-schema: 2.0.0
+title: Set-CMGooglePlayDeploymentType
+titleSuffix: Configuration Manager
+description: Sets a Google Play deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMGooglePlayDeploymentType

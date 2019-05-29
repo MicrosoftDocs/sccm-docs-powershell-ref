@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Set-CMIosEnrollmentProfile
+titleSuffix: Configuration Manager
+description: Sets an ios enrollment profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMIosEnrollmentProfile
 
 ## SYNOPSIS
-Sets an ios enrollment profile
+Sets an ios enrollment profile.
 
 ## SYNTAX
 

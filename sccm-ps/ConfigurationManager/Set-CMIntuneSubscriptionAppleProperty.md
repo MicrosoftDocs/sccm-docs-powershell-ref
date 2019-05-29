@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: 346AC378-4A7D-4F06-BE42-EBB231762E27
-online version: https://go.microsoft.com/fwlink/?linkid=833890
-schema: 2.0.0
+title: Set-CMIntuneSubscriptionAppleProperty
+titleSuffix: Configuration Manager
+description: Updates a Microsoft Intune subscription to enable iOS and Mac OS X (MDM) enrollment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMIntuneSubscriptionAppleProperty
