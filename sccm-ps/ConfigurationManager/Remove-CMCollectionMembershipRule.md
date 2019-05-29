@@ -1,7 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMCollectionMembershipRule
+titleSuffix: Configuration Manager
+description: Removes a Configuration Manager collection membership rule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMCollectionMembershipRule
@@ -33,7 +40,7 @@ Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObjec
 ```
 
 ## DESCRIPTION
-This cmdlet is usually called by higher level wrapper cmdlets. It is not called directly.
+This cmdlet is called by higher-level wrapper cmdlets. It isn't called directly.
 
 
 ## EXAMPLES

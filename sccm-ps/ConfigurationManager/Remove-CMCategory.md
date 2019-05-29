@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 1A28C432-B26B-43EE-8C1D-856F16DDB25E
-online version: https://go.microsoft.com/fwlink/?linkid=833941
-schema: 2.0.0
+title: Remove-CMCategory
+titleSuffix: Configuration Manager
+description: Removes a configuration category in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMCategory
