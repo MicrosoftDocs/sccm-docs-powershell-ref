@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: 7B562CA1-B1D1-49AF-A7C2-1E47BF36BBB7
-online version: https://go.microsoft.com/fwlink/?linkid=833615
-schema: 2.0.0
+title: Get-CMDeviceActionState
+titleSuffix: Configuration Manager
+description: Gets the state of a device action.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDeviceActionState
