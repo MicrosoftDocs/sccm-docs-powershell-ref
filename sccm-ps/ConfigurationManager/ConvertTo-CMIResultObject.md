@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Common.dll-Help.xml
-ms.assetid: 5F39BFCE-FF04-4DB0-BF85-4C495CAE7A23
-online version: https://go.microsoft.com/fwlink/?linkid=833914
-schema: 2.0.0
+title: ConvertTo-CMIResultObject
+titleSuffix: Configuration Manager
+description: Converts a **ManagementBaseObject** to an **IResultObject**.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # ConvertTo-CMIResultObject

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: CF9105FA-8872-47E9-8FEB-1736A3FEBBEF
-online version: https://go.microsoft.com/fwlink/?linkid=833931
-schema: 2.0.0
+title: Deny-CMUserDeviceAffinityRequest
+titleSuffix: Configuration Manager
+description: Denies a request for user device affinity in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Deny-CMUserDeviceAffinityRequest
