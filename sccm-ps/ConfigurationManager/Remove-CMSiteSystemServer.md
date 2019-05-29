@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 73480395-F8AB-4F64-84F1-ED4EC157EC02
-online version: https://go.microsoft.com/fwlink/?linkid=834209
-schema: 2.0.0
+title: Remove-CMSiteSystemServer
+titleSuffix: Configuration Manager
+description: Removes a site system server.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMSiteSystemServer

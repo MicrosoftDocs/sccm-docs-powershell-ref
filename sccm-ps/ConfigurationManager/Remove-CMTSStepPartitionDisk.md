@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Osd-help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMTSStepPartitionDisk
+titleSuffix: Configuration Manager
+description: Removes a TS step partition disk.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMTSStepPartitionDisk
 
 ## SYNOPSIS
-Removes a TS step partition disk
+Removes a TS step partition disk.
 
 ## SYNTAX
 

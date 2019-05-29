@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: 2382F219-2290-45C8-905B-E9C2D3BD6CB6
-online version: https://go.microsoft.com/fwlink/?linkid=834183
-schema: 2.0.0
+title: Remove-CMSecurityRole
+titleSuffix: Configuration Manager
+description: Removes custom security roles from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMSecurityRole
