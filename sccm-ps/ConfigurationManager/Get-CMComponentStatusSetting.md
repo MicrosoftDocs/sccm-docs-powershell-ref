@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: AF06715E-5255-4E82-841F-49800982E9F7
-online version: https://go.microsoft.com/fwlink/?linkid=834254
-schema: 2.0.0
+title: Get-CMComponentStatusSetting
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager component status settings.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMComponentStatusSetting
