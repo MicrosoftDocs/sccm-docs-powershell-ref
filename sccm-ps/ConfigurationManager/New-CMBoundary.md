@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 5457BE35-1591-44A8-8D2E-6624532F633D
-online version: https://go.microsoft.com/fwlink/?linkid=834276
-schema: 2.0.0
+title: New-CMBoundary
+titleSuffix: Configuration Manager
+description: Creates a Configuration Manager boundary.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMBoundary

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: F291D73C-1D80-4D78-AC0C-643BECDF0F33
-online version: https://go.microsoft.com/fwlink/?linkid=834291
-schema: 2.0.0
+title: New-CMCategory
+titleSuffix: Configuration Manager
+description: Creates a configuration category in Configuration Manager.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMCategory
