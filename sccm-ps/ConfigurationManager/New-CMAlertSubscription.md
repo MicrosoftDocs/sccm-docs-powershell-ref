@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Alerts.dll-Help.xml
-ms.assetid: CD9803F0-3DBE-4056-9E85-A834AD91D390
-online version: https://go.microsoft.com/fwlink/?linkid=834232
-schema: 2.0.0
+title: New-CMAlertSubscription
+titleSuffix: Configuration Manager
+description: Creates an alert subscription object.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMAlertSubscription

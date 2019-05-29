@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: B5D0F1F5-75B0-42FF-8C3E-9FEB9551C18D
-online version: https://go.microsoft.com/fwlink/?linkid=834169
-schema: 2.0.0
+title: Invoke-CMSoftwareUpdateAutoDeploymentRule
+titleSuffix: Configuration Manager
+description: Runs a Configuration Manager deployment rule for automatic software updates.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMSoftwareUpdateAutoDeploymentRule
