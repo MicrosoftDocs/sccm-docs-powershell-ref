@@ -2,7 +2,7 @@
 title: Approve-CMApprovalRequest
 titleSuffix: Configuration Manager
 description: Approves a request to allow the installation of an application.
-ms.date: 04/29/2019
+ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -13,11 +13,9 @@ manager: dougeby
 
 # Approve-CMApprovalRequest
 
-## SYNOPSIS
-
 Approves a request to allow the installation of an application.
 
-## SYNTAX
+## Syntax
 
 ### SearchByValueMandatory (Default)
 
@@ -47,13 +45,11 @@ Approve-CMApprovalRequest [-Comment <String>] -RequestGuid <String> [-DisableWil
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
-The **Approve-CMApprovalRequest** cmdlet approves a request from a user to install an application.
-You can specify an approval request by application name, application ID, or by user.
-You can also use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to view approval requests.
+The **Approve-CMApprovalRequest** cmdlet approves a request from a user to install an application. You can specify an approval request by application name, application ID, or by user. You can also use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to view approval requests.
 
-## EXAMPLES
+## Examples
 
 ### Example 1: Approve a request for a specific application
 
@@ -69,8 +65,7 @@ This command approves a request from a user to install an application specified 
 PS C:\>Approve-CMApprovalRequest -Application "Test" -User "tsqa\davidchew" -Comment "Request approved."
 ```
 
-This command approves a request for an application named Test for the specified user.
-The command includes a comment.
+This command approves a request for an application named Test for the specified user. The command includes a comment.
 
 ### Example 3: Approve a request by using a variable
 
@@ -79,14 +74,13 @@ PS C:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7
 PS C:\> Approve-CMApprovalRequest -InputObject $Approval -Comment "Request approved."
 ```
 
-The first command gets an approval request for a specified application ID and stores it in the variable $Approval.
+The first command gets an approval request for a specified application ID and stores it in the variable `$Approval`.
 
-The second command accepts the request stored in $Approval.
-The command includes a comment.
+The second command accepts the request stored in `$Approval`. The command includes a comment.
 
-## PARAMETERS
+## Parameters
 
-### -ApplicationName
+### `-ApplicationName`
 
 Specifies an array of names of applications.
 
@@ -102,7 +96,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Comment
+### `-Comment`
 
 Specifies a comment about the approval of the request.
 
@@ -118,7 +112,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### `-Confirm`
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -134,14 +128,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisableWildcardHandling
+### `-DisableWildcardHandling`
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+DisableWildcardHandling treats wildcard characters as literal character values. Don't combine with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,14 +144,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceWildcardHandling
+### `-ForceWildcardHandling`
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Don't combine with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +160,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
+### `-Id`
 
 Specifies an array of IDs of applications.
 
@@ -182,15 +176,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
+### `-InputObject`
 
-Specifies an approval request object.
-To obtain an approval request object, use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet.
+Specifies an approval request object. To obtain an approval request object, use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,14 +192,27 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -RequestGuid
- 
+### `-InstallActionBehavior`
+
+Specifies when to install the application, either right away or during non-business hours.
+
+```yml
+Type: ActionBehavior
+Accepted values: InstallNow, InstallNonBusinessHours
+Position: Named
+Default value: InstallNow
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### `-RequestGuid`
+
 Specifies the request ID.
 
 ```yaml
 Type: String
 Parameter Sets: SearchByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -215,15 +221,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -User
+### `-User`
 
-Specifies the name of a user who submitted the approval request.
-Use the format domain\user.
+Specifies the name of a user who submitted the approval request. Use the format **domain\user**.
 
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -232,10 +237,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### `-WhatIf`
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't make any changes.
 
 ```yaml
 Type: SwitchParameter
@@ -253,13 +257,8 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
+## See also
 
 [Deny-CMApprovalRequest](Deny-CMApprovalRequest.md)
 
