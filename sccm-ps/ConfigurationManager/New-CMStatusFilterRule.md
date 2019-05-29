@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: C8F0AA23-CCFA-4D78-AABC-BE8664546C2C
-online version: https://go.microsoft.com/fwlink/?linkid=833782
-schema: 2.0.0
+title: New-CMStatusFilterRule
+titleSuffix: Configuration Manager
+description: Creates a rule in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMStatusFilterRule
