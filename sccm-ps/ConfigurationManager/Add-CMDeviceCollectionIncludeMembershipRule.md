@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: 34A7028A-50C4-44B5-949E-5EE63D1DB598
-online version: https://go.microsoft.com/fwlink/?linkid=833650
-schema: 2.0.0
+title: Add-CMDeviceCollectionIncludeMembershipRule
+titleSuffix: Configuration Manager
+description: Adds an Include Collections membership rule to a device collection.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMDeviceCollectionIncludeMembershipRule

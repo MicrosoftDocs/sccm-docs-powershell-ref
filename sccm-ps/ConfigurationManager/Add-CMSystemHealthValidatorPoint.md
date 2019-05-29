@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=833763
-schema: 2.0.0
-ms.assetid: 20DB4263-D1EA-4E0C-8A62-FA4B92BE03C1
+title: Add-CMSystemHealthValidatorPoint
+titleSuffix: Configuration Manager
+description: Adds a validator point for system health in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMSystemHealthValidatorPoint

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: F43D2D81-0586-4B25-83CA-041B24C9D1DA
-online version: https://go.microsoft.com/fwlink/?linkid=833611
-schema: 2.0.0
+title: Get-CMDevice
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager device.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDevice

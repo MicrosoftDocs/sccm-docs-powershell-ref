@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: AB26AB4A-E630-4F08-84D9-AA7A36BE9F20
-online version: https://go.microsoft.com/fwlink/?linkid=834187
-schema: 2.0.0
+title: Remove-CMSecurityRoleFromAdministrativeUser
+titleSuffix: Configuration Manager
+description: Removes the association between a security role and an administrative user.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMSecurityRoleFromAdministrativeUser

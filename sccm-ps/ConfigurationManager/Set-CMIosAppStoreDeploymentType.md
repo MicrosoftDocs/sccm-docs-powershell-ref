@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 302A6C32-CFCD-4AB4-99BC-481B2E97604E
-online version: https://go.microsoft.com/fwlink/?linkid=833903
-schema: 2.0.0
+title: Set-CMIosAppStoreDeploymentType
+titleSuffix: Configuration Manager
+description: Sets an iOS App Store deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMIosAppStoreDeploymentType

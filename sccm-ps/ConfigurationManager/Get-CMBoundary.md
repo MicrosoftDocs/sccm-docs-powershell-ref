@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: B3E5550C-8A64-46FA-8D31-1E89FE83BC71
-online version: https://go.microsoft.com/fwlink/?linkid=834150
-schema: 2.0.0
+title: Get-CMBoundary
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager boundary.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMBoundary

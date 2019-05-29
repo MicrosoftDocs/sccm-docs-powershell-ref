@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Osd-help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMTSStepInstallSoftware
+titleSuffix: Configuration Manager
+description: Removes a TS step install software.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMTSStepInstallSoftware
 
 ## SYNOPSIS
-Removes a TS step install software
+Removes a TS step install software.
 
 ## SYNTAX
 

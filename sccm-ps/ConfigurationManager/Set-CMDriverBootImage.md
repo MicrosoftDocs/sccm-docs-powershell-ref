@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 634952FD-0028-44EB-A3E8-D6907CDA26DD
-online version: https://go.microsoft.com/fwlink/?linkid=833826
-schema: 2.0.0
+title: Set-CMDriverBootImage
+titleSuffix: Configuration Manager
+description: Adds a driver to a boot image or removes a driver from a boot image.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMDriverBootImage

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: BFDDAC90-E647-44EB-9C5F-1486E267EDD5
-online version: https://go.microsoft.com/fwlink/?linkid=833739
-schema: 2.0.0
+title: Set-CMCollection
+titleSuffix: Configuration Manager
+description: Sets a Configuration Manager collection.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMCollection

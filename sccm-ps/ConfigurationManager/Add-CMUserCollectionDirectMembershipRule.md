@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: B0E1925F-4D8D-4BFE-9DE7-8C76F10A8383
-online version: https://go.microsoft.com/fwlink/?linkid=833768
-schema: 2.0.0
+title: Add-CMUserCollectionDirectMembershipRule
+titleSuffix: Configuration Manager
+description: Adds a direct membership rule to one or more Configuration Manager user collections.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMUserCollectionDirectMembershipRule

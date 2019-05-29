@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Alerts.dll-Help.xml
-ms.assetid: DB03FADD-6289-4A10-B6A0-05271056A480
-online version: https://go.microsoft.com/fwlink/?linkid=833877
-schema: 2.0.0
+title: Remove-CMAlert
+titleSuffix: Configuration Manager
+description: Removes Configuration Manager alerts.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMAlert

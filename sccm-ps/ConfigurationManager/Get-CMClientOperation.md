@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.ClientOperations.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMClientOperation
+titleSuffix: Configuration Manager
+description: Gets a client operation.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMClientOperation
 
 ## SYNOPSIS
-Gets a client operation
+Gets a client operation.
 
 ## SYNTAX
 

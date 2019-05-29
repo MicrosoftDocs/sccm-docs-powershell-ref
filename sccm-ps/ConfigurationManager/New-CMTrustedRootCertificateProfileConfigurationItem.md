@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=833803
-schema: 2.0.0
-ms.assetid: 5FD6BD13-48BB-492C-82AB-8939BFA73526
+title: New-CMTrustedRootCertificateProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Creates a root certificate profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMTrustedRootCertificateProfileConfigurationItem

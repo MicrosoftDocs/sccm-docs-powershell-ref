@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: DC6BA132-9F40-4A6B-87D7-D800729DD11A
-online version: https://go.microsoft.com/fwlink/?linkid=834147
-schema: 2.0.0
+title: Remove-CMOperatingSystemImage
+titleSuffix: Configuration Manager
+description: Removes operating system images.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMOperatingSystemImage

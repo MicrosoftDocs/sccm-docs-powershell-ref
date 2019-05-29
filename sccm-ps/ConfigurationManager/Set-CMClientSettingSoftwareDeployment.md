@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.ClientSettings.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Set-CMClientSettingSoftwareDeployment
+titleSuffix: Configuration Manager
+description: Sets a client setting software deployment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMClientSettingSoftwareDeployment
 
 ## SYNOPSIS
-Sets a client setting software deployment
+Sets a client setting software deployment.
 
 ## SYNTAX
 

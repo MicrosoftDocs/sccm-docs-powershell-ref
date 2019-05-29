@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: A4563737-1BF4-4AD1-A9D3-CFD2F5564586
-online version: https://go.microsoft.com/fwlink/?linkid=833676
-schema: 2.0.0
+title: Add-CMEnrollmentProxyPoint
+titleSuffix: Configuration Manager
+description: Adds an enrollment proxy point to Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMEnrollmentProxyPoint

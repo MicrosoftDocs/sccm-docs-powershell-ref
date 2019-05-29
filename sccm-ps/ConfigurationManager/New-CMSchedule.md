@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Common.dll-Help.xml
-ms.assetid: D74177C5-D6E5-4B71-8864-02CF2E56C2C6
-online version: https://go.microsoft.com/fwlink/?linkid=833742
-schema: 2.0.0
+title: New-CMSchedule
+titleSuffix: Configuration Manager
+description: Creates a Configuration Manager schedule token.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMSchedule

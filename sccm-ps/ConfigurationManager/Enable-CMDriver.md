@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: A0817955-1A13-4AC6-AC54-FDC3AB82514F
-online version: https://go.microsoft.com/fwlink/?linkid=833985
-schema: 2.0.0
+title: Enable-CMDriver
+titleSuffix: Configuration Manager
+description: Enables a device driver.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Enable-CMDriver

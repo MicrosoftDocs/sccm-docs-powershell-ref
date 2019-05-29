@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Set-CMComplianceSettingWqlQuery
+titleSuffix: Configuration Manager
+description: Sets a compliance setting wql query.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMComplianceSettingWqlQuery
 
 ## SYNOPSIS
-Sets a compliance setting wql query
+Sets a compliance setting wql query.
 
 ## SYNTAX
 

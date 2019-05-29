@@ -1,7 +1,14 @@
 ---
-external help file: AdminUI.PS.Common.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Disconnect-CMTrackedObject
+titleSuffix: Configuration Manager
+description: Disconnects a tracked object
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Disconnect-CMTrackedObject

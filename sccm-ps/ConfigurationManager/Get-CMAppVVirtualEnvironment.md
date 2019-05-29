@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: 0249609D-987D-4F8C-85AD-B4BFD4970484
-online version: https://go.microsoft.com/fwlink/?linkid=834106
-schema: 2.0.0
+title: Get-CMAppVVirtualEnvironment
+titleSuffix: Configuration Manager
+description: Gets an App-V virtual environment.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMAppVVirtualEnvironment

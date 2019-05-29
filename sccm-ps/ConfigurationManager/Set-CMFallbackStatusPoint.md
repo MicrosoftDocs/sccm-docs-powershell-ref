@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 958D9892-86AF-461B-A025-5EB7E3C9CCFF
-online version: https://go.microsoft.com/fwlink/?linkid=833854
-schema: 2.0.0
+title: Set-CMFallbackStatusPoint
+titleSuffix: Configuration Manager
+description: Changes the throttle interval or the message count for a Configuration Manager fallback status point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMFallbackStatusPoint

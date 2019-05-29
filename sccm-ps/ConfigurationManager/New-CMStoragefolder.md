@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 1B4D2568-7D6A-4DFF-891B-9EDB54B3DFF0
-online version: https://go.microsoft.com/fwlink/?linkid=833790
-schema: 2.0.0
+title: New-CMStorageFolder
+titleSuffix: Configuration Manager
+description: Creates a new storage folder in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMStorageFolder

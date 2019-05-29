@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: 6ABB57F2-9CCE-420E-8ECA-01AB5C8B0A50
-online version: https://go.microsoft.com/fwlink/?linkid=833726
-schema: 2.0.0
+title: Set-CMClientStatusUpdateSchedule
+titleSuffix: Configuration Manager
+description: Modifies the schedule interval of the client status update task.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMClientStatusUpdateSchedule

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 530F83FB-CCDC-4B2A-AE45-250D828201A9
-online version: https://go.microsoft.com/fwlink/?linkid=834102
-schema: 2.0.0
+title: Set-CMStateMigrationPoint
+titleSuffix: Configuration Manager
+description: Modifies settings for a state migration point in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMStateMigrationPoint

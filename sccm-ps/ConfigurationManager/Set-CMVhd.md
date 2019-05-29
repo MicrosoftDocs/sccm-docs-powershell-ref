@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: F354A3B1-3569-4CC5-962B-5050F0A67DDD
-online version: https://go.microsoft.com/fwlink/?linkid=834144
-schema: 2.0.0
+title: Set-CMVhd
+titleSuffix: Configuration Manager
+description: Modifies VHD images.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMVhd

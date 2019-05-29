@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
-ms.assetid: 5BB8ECD0-6FB0-4FCB-8966-8BB7FCC10E5B
-online version: https://go.microsoft.com/fwlink/?linkid=834302
-schema: 2.0.0
+title: Get-CMDatabaseReplicationStatus
+titleSuffix: Configuration Manager
+description: Gets the status for database replication.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDatabaseReplicationStatus

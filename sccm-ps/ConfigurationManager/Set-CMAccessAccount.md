@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: BB88D28C-3AA8-4F03-B0CF-07DE6769B4A9
-online version: https://go.microsoft.com/fwlink/?linkid=833601
-schema: 2.0.0
+title: Set-CMAccessAccount
+titleSuffix: Configuration Manager
+description: Modifies the properties of an access account.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMAccessAccount

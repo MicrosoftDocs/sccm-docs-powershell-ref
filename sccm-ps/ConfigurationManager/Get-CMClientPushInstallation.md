@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 93625B5F-18C6-48F8-9BB2-6CF6BC0E4590
-online version: https://go.microsoft.com/fwlink/?linkid=834188
-schema: 2.0.0
+title: Get-CMClientPushInstallation
+titleSuffix: Configuration Manager
+description: Gets an object that installs a Configuration Manager client by using client push.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMClientPushInstallation

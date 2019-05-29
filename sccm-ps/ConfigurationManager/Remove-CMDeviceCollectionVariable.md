@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 510CD0D6-ECBF-4739-92D5-550921869768
-online version: https://go.microsoft.com/fwlink/?linkid=834060
-schema: 2.0.0
+title: Remove-CMDeviceCollectionVariable
+titleSuffix: Configuration Manager
+description: Removes a device collection variable.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMDeviceCollectionVariable

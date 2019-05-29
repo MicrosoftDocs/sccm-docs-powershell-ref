@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: EBE1B874-1B5D-458D-9BBF-FDC66BA81FBA
-online version: https://go.microsoft.com/fwlink/?linkid=833871
-schema: 2.0.0
+title: Set-CMHardwareRequirement
+titleSuffix: Configuration Manager
+description: Changes Configuration Manager hardware requirement settings for a product.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMHardwareRequirement

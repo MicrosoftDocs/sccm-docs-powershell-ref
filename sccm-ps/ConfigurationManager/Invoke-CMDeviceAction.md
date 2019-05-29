@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: B2F9AD76-2083-44CA-A964-D58F7E7A9A07
-online version: https://go.microsoft.com/fwlink/?linkid=834125
-schema: 2.0.0
+title: Invoke-CMDeviceAction
+titleSuffix: Configuration Manager
+description: Initiates a remote action on a mobile device.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMDeviceAction

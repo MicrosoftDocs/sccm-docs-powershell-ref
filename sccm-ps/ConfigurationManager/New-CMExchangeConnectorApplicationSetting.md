@@ -1,7 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMExchangeConnectorApplicationSetting
+titleSuffix: Configuration Manager
+description: Creates application-related settings for a mobile device that uses a Exchange Server connector.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMExchangeConnectorApplicationSetting

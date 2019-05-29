@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: EE51B872-1986-4551-B4C0-7E92529AA20C
-online version: https://go.microsoft.com/fwlink/?linkid=834277
-schema: 2.0.0
+title: Remove-CMUserCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
+description: Removes a query membership rule from one or more user collection in the Configuration Manager hierarchy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMUserCollectionQueryMembershipRule

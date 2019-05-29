@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: F8A5A3D8-DF47-4073-93A6-632BE7A2570C
-online version: https://go.microsoft.com/fwlink/?linkid=833912
-schema: 2.0.0
+title: Remove-CMAssetIntelligenceSynchronizationPoint
+titleSuffix: Configuration Manager
+description: Removes an Asset Intelligence synchronization point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMAssetIntelligenceSynchronizationPoint

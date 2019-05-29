@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.ClientSettings.dll-Help.xml
-ms.assetid: 0F088B51-F0AF-4A8C-AD75-8FD1665B8CDF
-online version: https://go.microsoft.com/fwlink/?linkid=833719
-schema: 2.0.0
+title: Set-CMClientSetting
+titleSuffix: Configuration Manager
+description: Changes client settings for Configuration Manager devices and users.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMClientSetting

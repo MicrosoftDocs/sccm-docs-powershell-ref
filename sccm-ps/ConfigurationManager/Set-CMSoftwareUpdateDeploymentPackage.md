@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: EA722095-C1A2-4454-9936-19EFB7088C47
-online version: https://go.microsoft.com/fwlink/?linkid=834084
-schema: 2.0.0
+title: Set-CMSoftwareUpdateDeploymentPackage
+titleSuffix: Configuration Manager
+description: Modifies a software update deployment package.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMSoftwareUpdateDeploymentPackage

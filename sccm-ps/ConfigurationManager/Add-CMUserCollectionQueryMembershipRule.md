@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: D4FECF42-937A-42F8-BB4C-EA3A17E04563
-online version: https://go.microsoft.com/fwlink/?linkid=833780
-schema: 2.0.0
+title: Add-CMUserCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
+description: Adds a query membership rule to one or more Configuration Manager user collections.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMUserCollectionQueryMembershipRule

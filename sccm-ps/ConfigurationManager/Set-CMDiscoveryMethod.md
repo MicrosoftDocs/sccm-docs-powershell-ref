@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 95345283-447D-49C8-BF9A-5C9973CCF2AF
-online version: https://go.microsoft.com/fwlink/?linkid=833810
-schema: 2.0.0
+title: Set-CMDiscoveryMethod
+titleSuffix: Configuration Manager
+description: Changes configuration settings of a discovery method.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMDiscoveryMethod

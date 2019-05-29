@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 3A8B20A1-F35D-483F-BF47-1ECDC5109034
-online version: https://go.microsoft.com/fwlink/?linkid=834279
-schema: 2.0.0
+title: Get-CMConfigurationPolicy
+titleSuffix: Configuration Manager
+description: Gets a configuration policy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMConfigurationPolicy

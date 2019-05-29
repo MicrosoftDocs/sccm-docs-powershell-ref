@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 590C1763-C913-4295-89D3-453ED1E32837
-online version: https://go.microsoft.com/fwlink/?linkid=833652
-schema: 2.0.0
+title: Get-CMDistributionPoint
+titleSuffix: Configuration Manager
+description: Gets a distribution point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDistributionPoint

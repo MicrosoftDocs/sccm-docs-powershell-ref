@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: D7E96763-967E-4FAA-BF63-F5D1DC4AEC2D
-online version: https://go.microsoft.com/fwlink/?linkid=833600
-schema: 2.0.0
+title: New-CMConditionalAccessPolicy
+titleSuffix: Configuration Manager
+description: Creates a conditional access policy.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMConditionalAccessPolicy

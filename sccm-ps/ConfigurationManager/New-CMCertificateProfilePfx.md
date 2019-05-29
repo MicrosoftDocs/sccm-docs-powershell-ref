@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: D4ADE497-4DDA-48FC-B727-B9FB14494F12
-online version: https://go.microsoft.com/fwlink/?linkid=834294
-schema: 2.0.0
+title: New-CMCertificateProfilePfx
+titleSuffix: Configuration Manager
+description: Creates a PFX certificate profile.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMCertificateProfilePfx

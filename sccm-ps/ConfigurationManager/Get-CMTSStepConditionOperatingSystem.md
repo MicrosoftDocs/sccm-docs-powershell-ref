@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMTSStepConditionOperatingSystem
+titleSuffix: Configuration Manager
+description: Gets a TS step condition operating system.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMTSStepConditionOperatingSystem
 
 ## SYNOPSIS
-Gets a TS step condition operating system
+Gets a TS step condition operating system.
 
 ## SYNTAX
 

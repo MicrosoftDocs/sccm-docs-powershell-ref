@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 2DFC0BFA-2097-4838-949D-94AB419A2BD7
-online version: https://go.microsoft.com/fwlink/?linkid=833671
-schema: 2.0.0
+title: Set-CMBaseline
+titleSuffix: Configuration Manager
+description: Changes the settings of configuration baselines.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMBaseline

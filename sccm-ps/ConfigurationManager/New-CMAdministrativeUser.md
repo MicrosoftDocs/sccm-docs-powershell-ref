@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: 2DF67D4D-B111-4F6B-956A-EB72BCA1EEDC
-online version: https://go.microsoft.com/fwlink/?linkid=834228
-schema: 2.0.0
+title: New-CMAdministrativeUser
+titleSuffix: Configuration Manager
+description: Creates an administrative user.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMAdministrativeUser

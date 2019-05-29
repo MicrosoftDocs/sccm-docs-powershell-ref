@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 53E1F345-47DB-430C-8AFF-D0739FB63161
-online version: https://go.microsoft.com/fwlink/?linkid=834236
-schema: 2.0.0
+title: New-CMAmtProvisioningAccount
+titleSuffix: Configuration Manager
+description: Creates an AMT Discovery and Provisioning Account.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMAmtProvisioningAccount

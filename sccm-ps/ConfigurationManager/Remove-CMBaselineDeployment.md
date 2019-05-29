@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMBaselineDeployment
+titleSuffix: Configuration Manager
+description: Removes a baseline deployment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMBaselineDeployment
 
 ## SYNOPSIS
-Removes a baseline deployment
+Removes a baseline deployment.
 
 ## SYNTAX
 

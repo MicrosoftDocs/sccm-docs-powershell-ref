@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 9D6404C9-30BE-49C9-9F64-2B73C49F26D9
-online version: https://go.microsoft.com/fwlink/?linkid=833822
-schema: 2.0.0
+title: Set-CMDriver
+titleSuffix: Configuration Manager
+description: Changes the settings of a device driver.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMDriver

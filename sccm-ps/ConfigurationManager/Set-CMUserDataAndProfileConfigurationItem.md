@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: FF47986C-F314-4A29-AD87-24010BF2C92F
-online version: https://go.microsoft.com/fwlink/?linkid=834140
-schema: 2.0.0
+title: Set-CMUserDataAndProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Modifies a user data and profile configuration item.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMUserDataAndProfileConfigurationItem

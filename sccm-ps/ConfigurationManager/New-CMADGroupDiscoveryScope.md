@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMADGroupDiscoveryScope
+titleSuffix: Configuration Manager
+description: Creates an a d group discovery scope.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMADGroupDiscoveryScope
 
 ## SYNOPSIS
-Creates an a d group discovery scope
+Creates an a d group discovery scope.
 
 ## SYNTAX
 
@@ -40,7 +47,7 @@ PS C:\>
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+DisableWildcardHandling treats wildcard characters as literal character values. Can't be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 04AC8F78-1E8D-4FBC-B87E-732B52D09F9E
-online version: https://go.microsoft.com/fwlink/?linkid=834295
-schema: 2.0.0
+title: Get-CMDatabaseProperty
+titleSuffix: Configuration Manager
+description: Gets an object that represents a Configuration Manager database.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDatabaseProperty

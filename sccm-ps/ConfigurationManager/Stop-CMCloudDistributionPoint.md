@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Content.dll-Help.xml
-ms.assetid: 4C9E537F-007B-45FE-B82F-CE17CB39B29B
-online version: https://go.microsoft.com/fwlink/?linkid=834235
-schema: 2.0.0
+title: Stop-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
+description: Stops the cloud distribution point service.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Stop-CMCloudDistributionPoint

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: B1D024FB-2D23-40B5-A7F4-C8F4E4EE3273
-online version: https://go.microsoft.com/fwlink/?linkid=833916
-schema: 2.0.0
+title: Remove-CMAutoDeploymentRuleDeployment
+titleSuffix: Configuration Manager
+description: Removes a deployment from an auto deployment rule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMAutoDeploymentRuleDeployment

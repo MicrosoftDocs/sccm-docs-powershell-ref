@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: 5A75BC8C-977B-4AAF-BA2E-9A5164628A62
-online version: https://go.microsoft.com/fwlink/?linkid=834192
-schema: 2.0.0
+title: Remove-CMSecurityScope
+titleSuffix: Configuration Manager
+description: Removes a security scope.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMSecurityScope

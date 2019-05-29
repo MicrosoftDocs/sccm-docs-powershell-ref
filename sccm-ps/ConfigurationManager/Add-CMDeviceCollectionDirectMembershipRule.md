@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: CEB87494-F554-4B05-A44B-978B1B418583
-online version: https://go.microsoft.com/fwlink/?linkid=833642
-schema: 2.0.0
+title: Add-CMDeviceCollectionDirectMembershipRule
+titleSuffix: Configuration Manager
+description: Adds a Direct Rule membership rule to a device collection.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMDeviceCollectionDirectMembershipRule

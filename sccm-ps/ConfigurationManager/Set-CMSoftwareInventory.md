@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: 8210D2F5-9101-47D0-81E7-5F837F5F4F60
-online version: https://go.microsoft.com/fwlink/?linkid=834050
-schema: 2.0.0
+title: Set-CMSoftwareInventory
+titleSuffix: Configuration Manager
+description: Modifies an object that collects software inventory data on files.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMSoftwareInventory

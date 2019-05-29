@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Migration.dll-Help.xml
-ms.assetid: 73184343-AC93-43B4-9C0A-EDBC23C5A950
-online version: https://go.microsoft.com/fwlink/?linkid=833843
-schema: 2.0.0
+title: Clear-CMMigrationData
+titleSuffix: Configuration Manager
+description: Deletes historical data about a data migration operation.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Clear-CMMigrationData

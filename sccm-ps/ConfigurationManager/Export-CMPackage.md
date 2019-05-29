@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: CBAF58CB-B602-4A3D-ACAD-61078090F657
-online version: https://go.microsoft.com/fwlink/?linkid=834029
-schema: 2.0.0
+title: Export-CMPackage
+titleSuffix: Configuration Manager
+description: Exports a Configuration Manager package.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Export-CMPackage

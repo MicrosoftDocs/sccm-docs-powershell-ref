@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 3087AF87-3AD6-4205-9740-0373A5C5C7DC
-online version: https://go.microsoft.com/fwlink/?linkid=834065
-schema: 2.0.0
+title: Get-CMActiveDirectorySite
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager sites that publish data to AD DS.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMActiveDirectorySite

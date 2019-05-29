@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=833972
-schema: 2.0.0
-ms.assetid: 86D6E727-868D-4CAA-9716-7CFEA70AD699
+title: Set-CMOutOfBandServicePoint
+titleSuffix: Configuration Manager
+description: Changes configuration settings for an out of band service point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMOutOfBandServicePoint

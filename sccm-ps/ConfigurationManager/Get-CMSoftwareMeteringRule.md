@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: C12620B8-D0BF-464F-BF90-BB1658ABE0B4
-online version: https://go.microsoft.com/fwlink/?linkid=833892
-schema: 2.0.0
+title: Get-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager software metering rules.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMSoftwareMeteringRule

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Common.dll-Help.xml
-ms.assetid: 2CA8797E-6B30-4B19-A6A5-7FC938EC28A4
-online version: https://go.microsoft.com/fwlink/?linkid=833781
-schema: 2.0.0
+title: Get-CMObjectLockDetails
+titleSuffix: Configuration Manager
+description: Gets object lock details.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMObjectLockDetails

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 7715E46A-AE0E-47C1-86B5-AC56F7BAD28C
-online version: https://go.microsoft.com/fwlink/?linkid=833778
-schema: 2.0.0
+title: New-CMStandaloneMedia
+titleSuffix: Configuration Manager
+description: Creates stand-alone media.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMStandaloneMedia

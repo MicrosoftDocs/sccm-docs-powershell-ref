@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: EE878F33-0D30-45F6-A72B-43BEFEFE4E07
-online version: https://go.microsoft.com/fwlink/?linkid=834217
-schema: 2.0.0
+title: Remove-CMSoftwareUpdateAutoDeploymentRule
+titleSuffix: Configuration Manager
+description: Removes Configuration Manager deployment rules for automatic software updates.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMSoftwareUpdateAutoDeploymentRule

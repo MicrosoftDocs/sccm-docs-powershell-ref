@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: F7D78486-A360-44AF-997A-37CDA8BB7844
-online version: https://go.microsoft.com/fwlink/?linkid=833703
-schema: 2.0.0
+title: Get-CMFallbackStatusPoint
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager fallback status point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMFallbackStatusPoint

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=833840
-schema: 2.0.0
-ms.assetid: 5887137C-3DB1-4DBC-BD1D-9A751813E992
+title: New-CMWiredProfileObject
+titleSuffix: Configuration Manager
+description: Creates a profile that specifies settings for AMT-based computers on a wired network.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMWiredProfileObject

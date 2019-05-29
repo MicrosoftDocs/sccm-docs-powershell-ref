@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: CED257A6-E5DE-4D3D-97FA-861AEA295DE3
-online version: https://go.microsoft.com/fwlink/?linkid=834034
-schema: 2.0.0
+title: Set-CMSite
+titleSuffix: Configuration Manager
+description: Changes security scope settings for Configuration Manager sites.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMSite

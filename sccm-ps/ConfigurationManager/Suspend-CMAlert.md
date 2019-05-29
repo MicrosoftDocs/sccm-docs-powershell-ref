@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Alerts.dll-Help.xml
-ms.assetid: 128C4EA4-CC60-44F1-8074-17BAEDBF60C1
-online version: https://go.microsoft.com/fwlink/?linkid=834239
-schema: 2.0.0
+title: Suspend-CMAlert
+titleSuffix: Configuration Manager
+description: Suspends monitoring alerts.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Suspend-CMAlert

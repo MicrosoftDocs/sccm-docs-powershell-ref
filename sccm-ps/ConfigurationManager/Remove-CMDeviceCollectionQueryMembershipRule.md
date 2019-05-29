@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: C0E6FBD0-E779-48D5-8C2D-886E5C02866E
-online version: https://go.microsoft.com/fwlink/?linkid=834056
-schema: 2.0.0
+title: Remove-CMDeviceCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
+description: Removes a query membership rule from one or more device collection in the Configuration Manager hierarchy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMDeviceCollectionQueryMembershipRule

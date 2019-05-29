@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Set-CMComplianceRuleFileFolderDate
+titleSuffix: Configuration Manager
+description: Sets a compliance rule file folder date.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMComplianceRuleFileFolderDate
 
 ## SYNOPSIS
-Sets a compliance rule file folder date
+Sets a compliance rule file folder date.
 
 ## SYNTAX
 

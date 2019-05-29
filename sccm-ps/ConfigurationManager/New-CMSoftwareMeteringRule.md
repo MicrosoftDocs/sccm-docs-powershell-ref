@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: 13FECF2C-1A82-4A61-B717-F91AE4C9F94D
-online version: https://go.microsoft.com/fwlink/?linkid=833755
-schema: 2.0.0
+title: New-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
+description: Creates a Configuration Manager software metering rule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMSoftwareMeteringRule

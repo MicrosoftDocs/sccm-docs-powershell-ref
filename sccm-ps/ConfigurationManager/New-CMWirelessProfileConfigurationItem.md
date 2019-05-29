@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 7C162720-0C10-4DDE-8E52-B6BB89EDB1D1
-online version: https://go.microsoft.com/fwlink/?linkid=833844
-schema: 2.0.0
+title: New-CMWirelessProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Creates a wireless profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMWirelessProfileConfigurationItem

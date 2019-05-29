@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: F0A3DB13-6BBE-4403-9BD3-22A16BC57649
-online version: https://go.microsoft.com/fwlink/?linkid=834038
-schema: 2.0.0
+title: Set-CMSiteMaintenanceTask
+titleSuffix: Configuration Manager
+description: Changes settings for a Configuration Manager maintenance task.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMSiteMaintenanceTask
