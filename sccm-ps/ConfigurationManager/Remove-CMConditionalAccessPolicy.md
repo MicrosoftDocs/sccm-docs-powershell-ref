@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: 7CA627FC-5C81-490A-B347-045E955DCEA4
-online version: https://go.microsoft.com/fwlink/?linkid=834000
-schema: 2.0.0
+title: Remove-CMConditionalAccessPolicy
+titleSuffix: Configuration Manager
+description: Removes a conditional access policy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMConditionalAccessPolicy

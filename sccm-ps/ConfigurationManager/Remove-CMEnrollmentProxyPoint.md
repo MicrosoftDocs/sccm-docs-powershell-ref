@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 101E23A6-5318-4AA7-81EF-59AA9CE44B67
-online version: https://go.microsoft.com/fwlink/?linkid=834098
-schema: 2.0.0
+title: Remove-CMEnrollmentProxyPoint
+titleSuffix: Configuration Manager
+description: Removes an enrollment proxy point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMEnrollmentProxyPoint

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: 48839870-57C3-4450-B538-67066B32E2A3
-online version: https://go.microsoft.com/fwlink/?linkid=834159
-schema: 2.0.0
+title: Remove-CMPackage
+titleSuffix: Configuration Manager
+description: Removes a Configuration Manager package.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMPackage

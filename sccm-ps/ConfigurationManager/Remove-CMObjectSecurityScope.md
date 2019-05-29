@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Common.dll-Help.xml
-ms.assetid: 2FB8BE93-96D3-4BF9-B3F7-F1B2C6BEF109
-online version: https://go.microsoft.com/fwlink/?linkid=834143
-schema: 2.0.0
+title: Remove-CMObjectSecurityScope
+titleSuffix: Configuration Manager
+description: Removes a security scope from a Configuration Manager object.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMObjectSecurityScope

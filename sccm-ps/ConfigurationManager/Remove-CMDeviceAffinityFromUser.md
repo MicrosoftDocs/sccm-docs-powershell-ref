@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: D7E17940-5C9F-4DDE-A364-11E554AAC586
-online version: https://go.microsoft.com/fwlink/?linkid=834041
-schema: 2.0.0
+title: Remove-CMDeviceAffinityFromUser
+titleSuffix: Configuration Manager
+description: Removes device affinity from a Configuration Manager user.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMDeviceAffinityFromUser

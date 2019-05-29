@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=834155
-schema: 2.0.0
-ms.assetid: 43E4F726-D027-4828-B0AC-49FEBDF53DC0
+title: Remove-CMOutOfBandServicePoint
+titleSuffix: Configuration Manager
+description: Removes an out of band service point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMOutOfBandServicePoint

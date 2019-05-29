@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 2EC18943-84E5-4291-BCD9-0EB15C9D31FA
-online version: https://go.microsoft.com/fwlink/?linkid=834131
-schema: 2.0.0
+title: Remove-CMManagementPoint
+titleSuffix: Configuration Manager
+description: Removes a management point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMManagementPoint
