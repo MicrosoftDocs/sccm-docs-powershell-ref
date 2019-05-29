@@ -13,9 +13,11 @@ manager: dougeby
 
 # Approve-CMApprovalRequest
 
+## SYNOPSIS
+
 Approves a request to allow the installation of an application.
 
-## Syntax
+## SYNTAX
 
 ### SearchByValueMandatory (Default)
 
@@ -45,11 +47,13 @@ Approve-CMApprovalRequest [-Comment <String>] -RequestGuid <String> [-DisableWil
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Description
+## DESCRIPTION
 
-The **Approve-CMApprovalRequest** cmdlet approves a request from a user to install an application. You can specify an approval request by application name, application ID, or by user. You can also use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to view approval requests.
+The **Approve-CMApprovalRequest** cmdlet approves a request from a user to install an application.
+You can specify an approval request by application name, application ID, or by user.
+You can also use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to view approval requests.
 
-## Examples
+## EXAMPLES
 
 ### Example 1: Approve a request for a specific application
 
@@ -78,9 +82,9 @@ The first command gets an approval request for a specified application ID and st
 
 The second command accepts the request stored in `$Approval`. The command includes a comment.
 
-## Parameters
+## PARAMETERS
 
-### `-ApplicationName`
+### -ApplicationName
 
 Specifies an array of names of applications.
 
@@ -96,7 +100,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-Comment`
+### -Comment
 
 Specifies a comment about the approval of the request.
 
@@ -112,7 +116,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-Confirm`
+### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -128,7 +132,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-DisableWildcardHandling`
+### -DisableWildcardHandling
 
 DisableWildcardHandling treats wildcard characters as literal character values. Don't combine with **ForceWildcardHandling**.
 
@@ -144,7 +148,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-ForceWildcardHandling`
+### -ForceWildcardHandling
 
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Don't combine with **DisableWildcardHandling**.
 
@@ -160,7 +164,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-Id`
+### -Id
 
 Specifies an array of IDs of applications.
 
@@ -176,7 +180,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-InputObject`
+### -InputObject
 
 Specifies an approval request object. To obtain an approval request object, use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet.
 
@@ -192,11 +196,11 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### `-InstallActionBehavior`
+### -InstallActionBehavior
 
 Specifies when to install the application, either right away or during non-business hours.
 
-```yml
+```yaml
 Type: ActionBehavior
 Accepted values: InstallNow, InstallNonBusinessHours
 Position: Named
@@ -205,7 +209,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-RequestGuid`
+### -RequestGuid
 
 Specifies the request ID.
 
@@ -221,7 +225,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-User`
+### -User
 
 Specifies the name of a user who submitted the approval request. Use the format **domain\user**.
 
@@ -237,7 +241,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### `-WhatIf`
+### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet doesn't make any changes.
 
@@ -257,8 +261,13 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
 
-## See also
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
 
 [Deny-CMApprovalRequest](Deny-CMApprovalRequest.md)
 
