@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 529564E3-1620-41B3-B0AF-504FEB1FB194
-online version: https://go.microsoft.com/fwlink/?linkid=833832
-schema: 2.0.0
+title: New-CMWindowsFirewallPolicy
+titleSuffix: Configuration Manager
+description: Creates a new Windows Firewall policy in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMWindowsFirewallPolicy
