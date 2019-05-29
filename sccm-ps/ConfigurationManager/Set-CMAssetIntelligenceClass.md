@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: 1617E8AD-4023-423D-9A90-1616CD32E75E
-online version: https://go.microsoft.com/fwlink/?linkid=833655
-schema: 2.0.0
+title: Set-CMAssetIntelligenceClass
+titleSuffix: Configuration Manager
+description: Modifies the Asset Intelligence hardware inventory reporting classes.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMAssetIntelligenceClass

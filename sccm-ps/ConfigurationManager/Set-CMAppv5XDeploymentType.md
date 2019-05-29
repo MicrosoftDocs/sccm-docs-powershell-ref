@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 36CD4461-59AB-4C25-9E1B-8EC5C7078EEB
-online version: https://go.microsoft.com/fwlink/?linkid=833639
-schema: 2.0.0
+title: Set-CMAppv5XDeploymentType
+titleSuffix: Configuration Manager
+description: Sets an App-V 5X deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMAppv5XDeploymentType
