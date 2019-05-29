@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: A635E162-B777-4289-B6EE-B8BF2F9EC302
-online version: https://go.microsoft.com/fwlink/?linkid=833689
-schema: 2.0.0
+title: Get-CMEnrollmentPoint
+titleSuffix: Configuration Manager
+description: Gets an enrollment point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMEnrollmentPoint
