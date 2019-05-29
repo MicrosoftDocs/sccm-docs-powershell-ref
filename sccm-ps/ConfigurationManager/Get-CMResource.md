@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 8C04D094-EAB1-4579-A0BF-51394304F2FD
-online version: https://go.microsoft.com/fwlink/?linkid=833838
-schema: 2.0.0
+title: Get-CMResource
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager resource.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMResource
