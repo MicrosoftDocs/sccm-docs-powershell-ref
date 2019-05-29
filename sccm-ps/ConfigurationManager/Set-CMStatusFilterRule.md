@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 3911D73C-E269-4160-8667-732DAFD7AB48
-online version: https://go.microsoft.com/fwlink/?linkid=834108
-schema: 2.0.0
+title: Set-CMStatusFilterRule
+titleSuffix: Configuration Manager
+description: Modifies settings for a Configuration Manager filter rule for status messages.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMStatusFilterRule
