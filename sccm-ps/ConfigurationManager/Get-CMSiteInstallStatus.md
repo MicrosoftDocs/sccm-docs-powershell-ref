@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 5F699783-3BFE-4BA9-A82F-80C16196383B
-online version: https://go.microsoft.com/fwlink/?linkid=833867
-schema: 2.0.0
+title: Get-CMSiteInstallStatus
+titleSuffix: Configuration Manager
+description: Provides information about Configuration Manager installation status.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMSiteInstallStatus
