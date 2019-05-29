@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: C76A60B1-D65B-4F19-BD71-E96060E497AA
-online version: https://go.microsoft.com/fwlink/?linkid=834300
-schema: 2.0.0
+title: Restore-CMApplicationRevisionHistory
+titleSuffix: Configuration Manager
+description: Restores a previous version of a Configuration Manager application from the application revision history.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Restore-CMApplicationRevisionHistory
