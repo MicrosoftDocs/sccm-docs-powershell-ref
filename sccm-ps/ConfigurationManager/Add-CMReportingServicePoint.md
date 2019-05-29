@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: E05F73D3-A82F-43B2-AD2A-BC6555936C41
-online version: https://go.microsoft.com/fwlink/?linkid=833735
-schema: 2.0.0
+title: Add-CMReportingServicePoint
+titleSuffix: Configuration Manager
+description: Adds a reporting service point to Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMReportingServicePoint
