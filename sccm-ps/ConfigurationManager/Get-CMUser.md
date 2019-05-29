@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 381B444E-D2CA-4351-9EDF-036291F23E7D
-online version: https://go.microsoft.com/fwlink/?linkid=833975
-schema: 2.0.0
+title: Get-CMUser
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager user.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMUser
