@@ -2,7 +2,7 @@
 title: Approve-CMApprovalRequest
 titleSuffix: Configuration Manager
 description: Approves a request to allow the installation of an application.
-ms.date: 04/29/2019
+ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -69,8 +69,7 @@ This command approves a request from a user to install an application specified 
 PS C:\>Approve-CMApprovalRequest -Application "Test" -User "tsqa\davidchew" -Comment "Request approved."
 ```
 
-This command approves a request for an application named Test for the specified user.
-The command includes a comment.
+This command approves a request for an application named Test for the specified user. The command includes a comment.
 
 ### Example 3: Approve a request by using a variable
 
@@ -79,10 +78,9 @@ PS C:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7
 PS C:\> Approve-CMApprovalRequest -InputObject $Approval -Comment "Request approved."
 ```
 
-The first command gets an approval request for a specified application ID and stores it in the variable $Approval.
+The first command gets an approval request for a specified application ID and stores it in the variable `$Approval`.
 
-The second command accepts the request stored in $Approval.
-The command includes a comment.
+The second command accepts the request stored in `$Approval`. The command includes a comment.
 
 ## PARAMETERS
 
@@ -136,12 +134,12 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+DisableWildcardHandling treats wildcard characters as literal character values. Don't combine with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,12 +150,12 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Don't combine with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,13 +182,12 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies an approval request object.
-To obtain an approval request object, use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet.
+Specifies an approval request object. To obtain an approval request object, use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,14 +196,27 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -InstallActionBehavior
+
+Specifies when to install the application, either right away or during non-business hours.
+
+```yaml
+Type: ActionBehavior
+Accepted values: InstallNow, InstallNonBusinessHours
+Position: Named
+Default value: InstallNow
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RequestGuid
- 
+
 Specifies the request ID.
 
 ```yaml
 Type: String
 Parameter Sets: SearchByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -217,13 +227,12 @@ Accept wildcard characters: False
 
 ### -User
 
-Specifies the name of a user who submitted the approval request.
-Use the format domain\user.
+Specifies the name of a user who submitted the approval request. Use the format **domain\user**.
 
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -234,8 +243,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't make any changes.
 
 ```yaml
 Type: SwitchParameter
