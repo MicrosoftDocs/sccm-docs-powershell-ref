@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 5DD1E791-012A-468F-A016-8800E7CCE72B
-online version: https://go.microsoft.com/fwlink/?linkid=833624
-schema: 2.0.0
+title: New-CMDeviceVariable
+titleSuffix: Configuration Manager
+description: Creates a device variable for a Configuration Manager device.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMDeviceVariable
