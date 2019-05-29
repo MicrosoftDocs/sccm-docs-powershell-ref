@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: 5DC5CD9E-DF35-4BB7-9AA4-79476C013FF4
-online version: https://go.microsoft.com/fwlink/?linkid=834138
-schema: 2.0.0
+title: Get-CMBaselineSummarizationSchedule
+titleSuffix: Configuration Manager
+description: Gets the summarization schedule for configuration baseline data.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMBaselineSummarizationSchedule

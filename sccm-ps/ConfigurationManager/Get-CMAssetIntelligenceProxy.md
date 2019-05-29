@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMAssetIntelligenceProxy
+titleSuffix: Configuration Manager
+description: Gets an asset intelligence proxy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMAssetIntelligenceProxy
 
 ## SYNOPSIS
-Gets an asset intelligence proxy
+Gets an asset intelligence proxy.
 
 ## SYNTAX
 
