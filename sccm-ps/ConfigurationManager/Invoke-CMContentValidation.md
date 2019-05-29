@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: CB1B6D39-7EE5-449E-92A5-357AD8F68922
-online version: https://go.microsoft.com/fwlink/?linkid=834117
-schema: 2.0.0
+title: Invoke-CMContentValidation
+titleSuffix: Configuration Manager
+description: Validates packages on a distribution point.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMContentValidation

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Reporting.dll-Help.xml
-ms.assetid: 57DE1031-012E-4267-AA6B-A56450A98AB5
-online version: https://go.microsoft.com/fwlink/?linkid=834162
-schema: 2.0.0
+title: Invoke-CMReport
+titleSuffix: Configuration Manager
+description: Invokes a report about data and operations in Configuration Manager.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMReport
