@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Oob.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=833831
-schema: 2.0.0
-ms.assetid: 4AF1703D-DBDE-40D7-AEBB-DA96D2BEF98D
+title: Clear-CMAmtAuditLog
+titleSuffix: Configuration Manager
+description: Clears audit log entries for Intel AMT-based computers.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Clear-CMAmtAuditLog

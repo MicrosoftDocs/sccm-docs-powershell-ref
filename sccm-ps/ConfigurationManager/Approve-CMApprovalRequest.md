@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: F1FE1043-7043-4C8A-A5C6-E09BC8F80D49
-online version: https://go.microsoft.com/fwlink/?linkid=833808
-schema: 2.0.0
+title: Approve-CMApprovalRequest
+titleSuffix: Configuration Manager
+description: Approves a request to allow the installation of an application.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Approve-CMApprovalRequest
