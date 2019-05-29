@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: 9C1E92FE-A79C-4759-8B60-CF71B83AEECB
-online version: https://go.microsoft.com/fwlink/?linkid=834247
-schema: 2.0.0
+title: Sync-CMAssetIntelligenceCatalog
+titleSuffix: Configuration Manager
+description: Synchronizes the Asset Intelligence catalog with System Center Online.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Sync-CMAssetIntelligenceCatalog
