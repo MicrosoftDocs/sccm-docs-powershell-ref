@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 60C6778B-12CB-4F15-846D-3B8ED4AC58A8
-online version: https://go.microsoft.com/fwlink/?linkid=834230
-schema: 2.0.0
+title: Get-CMCollectionMember
+titleSuffix: Configuration Manager
+description: Gets a member of a Configuration Manager collection.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMCollectionMember
