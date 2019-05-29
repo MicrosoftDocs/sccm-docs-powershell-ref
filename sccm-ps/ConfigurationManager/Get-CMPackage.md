@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: 4D76D4D0-5D21-4320-BEA6-335CE01284A7
-online version: https://go.microsoft.com/fwlink/?linkid=833809
-schema: 2.0.0
+title: Get-CMPackage
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager packages.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMPackage

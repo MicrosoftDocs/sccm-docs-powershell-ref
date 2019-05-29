@@ -1,13 +1,22 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMTSStepConditionVariable
+titleSuffix: Configuration Manager
+description: Creates a t s step condition variable.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMTSStepConditionVariable
 
 ## SYNOPSIS
-Creates a TS step condition variable
+
+Creates a t s step condition variable.
+
 
 ## SYNTAX
 

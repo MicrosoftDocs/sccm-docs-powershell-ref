@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Common.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=833734
-schema: 2.0.0
-ms.assetid: 13E4E149-5691-4B97-BEB0-313B8025F9B2
+title: Set-CMCmdletUpdateCheck
+titleSuffix: Configuration Manager
+description: Configures update check settings on a per-user or per-system basis.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMCmdletUpdateCheck

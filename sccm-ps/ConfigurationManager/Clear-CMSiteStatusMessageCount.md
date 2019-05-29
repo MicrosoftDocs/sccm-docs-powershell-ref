@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.SystemStatus.dll-Help.xml
-ms.assetid: 508CC52D-2E8D-4C76-AD7E-FDF8F306983E
-online version: https://go.microsoft.com/fwlink/?linkid=833860
-schema: 2.0.0
+title: Clear-CMSiteStatusMessageCount
+titleSuffix: Configuration Manager
+description: Clears the message count in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Clear-CMSiteStatusMessageCount

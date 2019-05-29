@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Content.dll-Help.xml
-ms.assetid: FD1C8F39-5BCF-43BF-891C-B11C39141EB0
-online version: https://go.microsoft.com/fwlink/?linkid=833629
-schema: 2.0.0
+title: New-CMDistributionPointGroup
+titleSuffix: Configuration Manager
+description: Creates a distribution point group.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMDistributionPointGroup

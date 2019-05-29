@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: AA061A0F-F88B-4C68-AD45-EB6F9503A39D
-online version: https://go.microsoft.com/fwlink/?linkid=833905
-schema: 2.0.0
+title: Remove-CMAppVVirtualEnvironment
+titleSuffix: Configuration Manager
+description: Removes an App-V virtual environment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMAppVVirtualEnvironment

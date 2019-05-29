@@ -1,7 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMExchangeConnectorEmailManagementSetting
+titleSuffix: Configuration Manager
+description: Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMExchangeConnectorEmailManagementSetting

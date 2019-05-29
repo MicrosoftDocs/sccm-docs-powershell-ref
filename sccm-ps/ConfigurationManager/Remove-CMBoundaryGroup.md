@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: A9AADC86-58CF-4144-A6A5-7E854BD8DA5B
-online version: https://go.microsoft.com/fwlink/?linkid=833937
-schema: 2.0.0
+title: Remove-CMBoundaryGroup
+titleSuffix: Configuration Manager
+description: Removes a boundary group.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMBoundaryGroup

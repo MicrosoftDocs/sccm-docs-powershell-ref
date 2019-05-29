@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Common.dll-Help.xml
-ms.assetid: 8D8F8DC3-4AC4-417A-BA50-30E81D02EE6E
-online version: https://go.microsoft.com/fwlink/?linkid=833868
-schema: 2.0.0
+title: Convert-CMSchedule
+titleSuffix: Configuration Manager
+description: Converts schedule tokens into and from interval strings.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Convert-CMSchedule

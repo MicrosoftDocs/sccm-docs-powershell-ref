@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 89EBC6C7-BDB2-4AB6-B54D-62361D0B6620
-online version: https://go.microsoft.com/fwlink/?linkid=834178
-schema: 2.0.0
+title: Get-CMCertificateRegistrationPoint
+titleSuffix: Configuration Manager
+description: Gets a certificate registration point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMCertificateRegistrationPoint

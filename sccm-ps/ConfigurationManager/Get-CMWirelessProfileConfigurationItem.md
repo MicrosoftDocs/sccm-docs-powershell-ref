@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Dcm-help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMWirelessProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Gets a wireless profile configuration item.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMWirelessProfileConfigurationItem
 
 ## SYNOPSIS
-Gets a wireless profile configuration item
+Gets a wireless profile configuration item.
 
 ## SYNTAX
 

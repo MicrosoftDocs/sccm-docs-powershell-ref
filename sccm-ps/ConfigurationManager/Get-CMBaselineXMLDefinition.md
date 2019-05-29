@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 73C221D9-2219-4362-A22C-69D65EA490F5
-online version: https://go.microsoft.com/fwlink/?linkid=834142
-schema: 2.0.0
+title: Get-CMBaselineXMLDefinition
+titleSuffix: Configuration Manager
+description: Gets the XML definition of a configuration baseline.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMBaselineXMLDefinition

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: 8AB81212-FC73-4DA4-A8CB-F9090B6BFE91
-online version: https://go.microsoft.com/fwlink/?linkid=833647
-schema: 2.0.0
+title: Set-CMAppVVirtualEnvironment
+titleSuffix: Configuration Manager
+description: Changes settings for virtual applications that you have deployed by using Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMAppVVirtualEnvironment

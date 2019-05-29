@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Accounts.dll-Help.xml
-ms.assetid: D9CF99B8-E30E-481E-A44C-D3BBAA2A9F19
-online version: https://go.microsoft.com/fwlink/?linkid=833865
-schema: 2.0.0
+title: Remove-CMAccount
+titleSuffix: Configuration Manager
+description: Removes a specified user.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMAccount

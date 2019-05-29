@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 50515A68-3D70-4072-980C-5437A31518FF
-online version: https://go.microsoft.com/fwlink/?linkid=834200
-schema: 2.0.0
+title: Remove-CMServiceConnectionPoint
+titleSuffix: Configuration Manager
+description: Removes a service connection point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMServiceConnectionPoint

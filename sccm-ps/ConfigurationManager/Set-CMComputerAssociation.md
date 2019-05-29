@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 1175C860-DAC9-40FA-BFA0-F035CA8126E9
-online version: https://go.microsoft.com/fwlink/?linkid=833757
-schema: 2.0.0
+title: Set-CMComputerAssociation
+titleSuffix: Configuration Manager
+description: Changes settings for a computer association in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMComputerAssociation

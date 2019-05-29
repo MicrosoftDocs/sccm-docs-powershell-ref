@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: 52232AA5-E78B-4C48-84B7-B4BCE58B3875
-online version: https://go.microsoft.com/fwlink/?linkid=833667
-schema: 2.0.0
+title: Set-CMAutoDeploymentRuleDeployment
+titleSuffix: Configuration Manager
+description: Sets a deployment for an automatic deployment rule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMAutoDeploymentRuleDeployment

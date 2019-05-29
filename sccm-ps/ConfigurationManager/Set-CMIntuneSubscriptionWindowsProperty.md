@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: 01422A54-9C29-45FD-9FED-34787A17C362
-online version: https://go.microsoft.com/fwlink/?linkid=833900
-schema: 2.0.0
+title: Set-CMIntuneSubscriptionWindowsProperty
+titleSuffix: Configuration Manager
+description: Updates a Microsoft Intune subscription to enable Windows enrollment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMIntuneSubscriptionWindowsProperty

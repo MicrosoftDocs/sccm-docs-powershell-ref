@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.SystemStatus.dll-Help.xml
-ms.assetid: 3AABF576-B504-4756-A8B8-412E842306C3
-online version: https://go.microsoft.com/fwlink/?linkid=834250
-schema: 2.0.0
+title: Get-CMComponentStatusMessage
+titleSuffix: Configuration Manager
+description: Gets component status messages in Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMComponentStatusMessage

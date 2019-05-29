@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
-ms.assetid: B8879874-7A8B-4D59-8CA3-B3DC69602546
-online version: https://go.microsoft.com/fwlink/?linkid=834304
-schema: 2.0.0
+title: Get-CMDeployment
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager deployment.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDeployment

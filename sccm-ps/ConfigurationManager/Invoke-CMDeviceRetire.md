@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Oob.dll-Help.xml
-ms.assetid: 870825FB-4DB9-4DC5-9CD7-7C69F3DCC601
-online version: https://go.microsoft.com/fwlink/?linkid=834129
-schema: 2.0.0
+title: Invoke-CMDeviceRetire
+titleSuffix: Configuration Manager
+description: Retires devices.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMDeviceRetire

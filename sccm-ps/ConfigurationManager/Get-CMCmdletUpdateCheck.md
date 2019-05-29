@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Common.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=834208
-schema: 2.0.0
-ms.assetid: 336CD5FE-3132-4211-A98D-0D5DDFA6F203
+title: Get-CMCmdletUpdateCheck
+titleSuffix: Configuration Manager
+description: Gets a cmdlet update check configuration object.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMCmdletUpdateCheck

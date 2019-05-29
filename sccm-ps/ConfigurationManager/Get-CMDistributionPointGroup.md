@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Content.dll-Help.xml
-ms.assetid: B616CC22-3B89-436A-BDDB-3BC01C5DAD7D
-online version: https://go.microsoft.com/fwlink/?linkid=833656
-schema: 2.0.0
+title: Get-CMDistributionPointGroup
+titleSuffix: Configuration Manager
+description: Gets distribution point groups.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMDistributionPointGroup

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
-ms.assetid: F80FD38D-B120-4F6B-9F6E-0DEC8A90A565
-online version: https://go.microsoft.com/fwlink/?linkid=833582
-schema: 2.0.0
+title: Save-CMDatabaseReplicationDiagnostic
+titleSuffix: Configuration Manager
+description: Saves database replication diagnostic information for Configuration Manager in a file.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Save-CMDatabaseReplicationDiagnostic

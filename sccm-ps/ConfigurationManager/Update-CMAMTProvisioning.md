@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Oob.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=834280
-schema: 2.0.0
-ms.assetid: 4EA61576-93BD-4095-9457-8D894A172115
+title: Update-CMAmtProvisioning
+titleSuffix: Configuration Manager
+description: Updates provisioning for an Intel AMT-based computer.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Update-CMAmtProvisioning

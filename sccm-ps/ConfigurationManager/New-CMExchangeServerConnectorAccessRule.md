@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=833662
-schema: 2.0.0
-ms.assetid: 6122AB0E-4285-41D0-9AC7-9A465A345FA0
+title: New-CMExchangeServerConnectorAccessRule
+titleSuffix: Configuration Manager
+description: Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMExchangeServerConnectorAccessRule

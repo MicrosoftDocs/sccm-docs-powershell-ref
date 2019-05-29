@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: BFB60354-1427-48AB-B27B-86FFABCCA9C5
-online version: https://go.microsoft.com/fwlink/?linkid=833924
-schema: 2.0.0
+title: Remove-CMBootImage
+titleSuffix: Configuration Manager
+description: Removes an operating system boot image.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMBootImage

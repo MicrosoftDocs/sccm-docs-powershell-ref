@@ -2,7 +2,6 @@
 title: Remove-CMDeploymentTypeSupersedence
 titleSuffix: Configuration Manager
 description: Removes a deployment type supersedence in Configuration Manager.
-
 ms.date: 01/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,8 +9,6 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
-
-external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Remove-CMDeploymentTypeSupersedence

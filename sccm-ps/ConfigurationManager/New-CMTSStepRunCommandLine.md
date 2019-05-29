@@ -1,13 +1,22 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMTSStepRunCommandLine
+titleSuffix: Configuration Manager
+description: Creates a t s step run command line.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMTSStepRunCommandLine
 
 ## SYNOPSIS
-Creates a TS step run command line
+
+Creates a t s step run command line.
+
 
 ## SYNTAX
 

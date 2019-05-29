@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: A94D2654-D7A1-41D1-AA53-C6DD0E346891
-online version: https://go.microsoft.com/fwlink/?linkid=833889
-schema: 2.0.0
+title: Get-CMSoftwareInventory
+titleSuffix: Configuration Manager
+description: Retrieves an object that collects software inventory data in Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMSoftwareInventory

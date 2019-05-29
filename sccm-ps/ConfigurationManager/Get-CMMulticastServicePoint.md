@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 08AC9C99-5F25-4368-A74A-C1D23906A535
-online version: https://go.microsoft.com/fwlink/?linkid=833776
-schema: 2.0.0
+title: Get-CMMulticastServicePoint
+titleSuffix: Configuration Manager
+description: Gets a multicast service point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMMulticastServicePoint

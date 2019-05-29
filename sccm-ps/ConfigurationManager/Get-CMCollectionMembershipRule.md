@@ -1,7 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMCollectionMembershipRule
+titleSuffix: Configuration Manager
+description: Get a Configuration Manager collection membership rule.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMCollectionMembershipRule
@@ -33,7 +40,7 @@ Get-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObject <
 ```
 
 ## DESCRIPTION
-This cmdlet is usually called by higher level wrapper cmdlets. It is not called directly.
+This cmdlet is called by higher-level wrapper cmdlets. It isn't called directly.
 
 ## EXAMPLES
 
@@ -101,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+DisableWildcardHandling treats wildcard characters as literal character values. Can't be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -131,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Can't be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter

@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Remove-CMCorpOwnedDevice
+titleSuffix: Configuration Manager
+description: Removes a corp owned device.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMCorpOwnedDevice
 
 ## SYNOPSIS
-Removes a corp owned device
+Removes a corp owned device.
 
 ## SYNTAX
 

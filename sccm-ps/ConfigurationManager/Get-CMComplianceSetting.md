@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMComplianceSetting
+titleSuffix: Configuration Manager
+description: Gets a compliance setting.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMComplianceSetting
 
 ## SYNOPSIS
-Gets a compliance setting
+Gets a compliance setting.
 
 ## SYNTAX
 

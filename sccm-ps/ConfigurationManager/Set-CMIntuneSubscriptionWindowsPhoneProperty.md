@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: E4CBCA72-31F0-40AC-B1AE-14EFA11F11F8
-online version: https://go.microsoft.com/fwlink/?linkid=833897
-schema: 2.0.0
+title: Set-CMIntuneSubscriptionWindowsPhoneProperty
+titleSuffix: Configuration Manager
+description: Updates a Microsoft Intune subscription to enable Windows Phone enrollment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMIntuneSubscriptionWindowsPhoneProperty

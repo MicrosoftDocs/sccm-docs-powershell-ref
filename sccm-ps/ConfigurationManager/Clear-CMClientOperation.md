@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.ClientOperations.dll-Help.xml
-ms.assetid: DFCB60F1-211A-46E1-8E16-A494AC4DCCA6
-online version: https://go.microsoft.com/fwlink/?linkid=833835
-schema: 2.0.0
+title: Clear-CMClientOperation
+titleSuffix: Configuration Manager
+description: Clears a Configuration Manager client operation object.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Clear-CMClientOperation

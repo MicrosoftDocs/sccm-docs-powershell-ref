@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 78A69AB1-BD8F-42A4-8A9B-B38810F81BD1
-online version: https://go.microsoft.com/fwlink/?linkid=833706
-schema: 2.0.0
+title: Get-CMFileReplicationRoute
+titleSuffix: Configuration Manager
+description: Gets a file replication route from Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMFileReplicationRoute

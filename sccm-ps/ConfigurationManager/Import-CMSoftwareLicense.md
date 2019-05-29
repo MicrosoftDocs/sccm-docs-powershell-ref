@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: 7B354232-530E-4DD6-A439-4183A9320EE3
-online version: https://go.microsoft.com/fwlink/?linkid=834078
-schema: 2.0.0
+title: Import-CMSoftwareLicense
+titleSuffix: Configuration Manager
+description: Imports a software license.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Import-CMSoftwareLicense

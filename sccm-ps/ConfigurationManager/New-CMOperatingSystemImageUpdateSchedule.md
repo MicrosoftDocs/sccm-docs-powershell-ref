@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: DB311582-AD04-42ED-8330-6693CF3AADDB
-online version: https://go.microsoft.com/fwlink/?linkid=833709
-schema: 2.0.0
+title: New-CMOperatingSystemImageUpdateSchedule
+titleSuffix: Configuration Manager
+description: Creates an operating system image update schedule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMOperatingSystemImageUpdateSchedule

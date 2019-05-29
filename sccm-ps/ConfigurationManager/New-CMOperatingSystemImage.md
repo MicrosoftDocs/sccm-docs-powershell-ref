@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: E6AB814A-E29E-4DBB-AABF-63DF1F129E80
-online version: https://go.microsoft.com/fwlink/?linkid=833705
-schema: 2.0.0
+title: New-CMOperatingSystemImage
+titleSuffix: Configuration Manager
+description: Creates an operating system image.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMOperatingSystemImage

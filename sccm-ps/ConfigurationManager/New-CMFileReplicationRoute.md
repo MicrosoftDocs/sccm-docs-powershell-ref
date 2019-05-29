@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 70F90D3C-9019-4AE8-9CFC-693D9D3AC351
-online version: https://go.microsoft.com/fwlink/?linkid=833683
-schema: 2.0.0
+title: New-CMFileReplicationRoute
+titleSuffix: Configuration Manager
+description: Creates a file replication route for Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMFileReplicationRoute

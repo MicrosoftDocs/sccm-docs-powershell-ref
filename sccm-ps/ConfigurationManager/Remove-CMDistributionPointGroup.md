@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Content.dll-Help.xml
-ms.assetid: FBC76C13-CA04-4B44-BC77-35E93E8A5358
-online version: https://go.microsoft.com/fwlink/?linkid=834076
-schema: 2.0.0
+title: Remove-CMDistributionPointGroup
+titleSuffix: Configuration Manager
+description: Removes distribution point groups.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMDistributionPointGroup

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 19F2832A-607E-4626-B0BC-A8970D87E46C
-online version: https://go.microsoft.com/fwlink/?linkid=834008
-schema: 2.0.0
+title: Get-CMVhd
+titleSuffix: Configuration Manager
+description: Gets VHD images.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMVhd

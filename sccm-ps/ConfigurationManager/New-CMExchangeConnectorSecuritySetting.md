@@ -1,7 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMExchangeConnectorSecuritySetting
+titleSuffix: Configuration Manager
+description: Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMExchangeConnectorSecuritySetting

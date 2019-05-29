@@ -1,11 +1,14 @@
-﻿---
-Module Name: ConfigurationManager
-Module Guid: 7F590131-5253-4425-8B32-EEAB51A4C393
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799206
-Help Version: 5.0.1.0
-Locale: en-US
-ms.assetid: 0ADD6D91-97E0-4F79-ABE3-0174AA0C4750
-ms.service: powershell
+---
+title: ConfigurationManager Module
+titleSuffix: Configuration Manager
+description: This section contains the help topics and about topics for the Configuration Manager Cmdlets.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # ConfigurationManager Module

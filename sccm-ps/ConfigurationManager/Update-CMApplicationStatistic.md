@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: BCE2CE97-4F41-42C4-8CDE-37F5FC704AF2
-online version: https://go.microsoft.com/fwlink/?linkid=834284
-schema: 2.0.0
+title: Update-CMApplicationStatistic
+titleSuffix: Configuration Manager
+description: Updates the statistics for an application.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Update-CMApplicationStatistic

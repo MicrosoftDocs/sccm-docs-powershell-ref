@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Deployments.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMApplicationDeploymentStatus
+titleSuffix: Configuration Manager
+description: Gets an application deployment status.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMApplicationDeploymentStatus
 
 ## SYNOPSIS
-Gets an application deployment status
+Gets an application deployment status.
 
 ## SYNTAX
 

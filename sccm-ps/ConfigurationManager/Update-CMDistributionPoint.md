@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: C24C7EB7-412E-49ED-AC3A-D6C8838D6A87
-online version: https://go.microsoft.com/fwlink/?linkid=834296
-schema: 2.0.0
+title: Update-CMDistributionPoint
+titleSuffix: Configuration Manager
+description: Updates content on a distribution point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Update-CMDistributionPoint

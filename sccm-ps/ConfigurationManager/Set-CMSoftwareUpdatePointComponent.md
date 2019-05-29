@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 06300983-C58D-4402-A33C-E37968FF9FD2
-online version: https://go.microsoft.com/fwlink/?linkid=834096
-schema: 2.0.0
+title: Set-CMSoftwareUpdatePointComponent
+titleSuffix: Configuration Manager
+description: Modifies a software update point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMSoftwareUpdatePointComponent
@@ -578,8 +584,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMEmailNotificationComponent](Set-CMEmailNotificationComponent.md)
 
 [Set-CMManagementPointComponent](Set-CMManagementPointComponent.md)
-
-[Set-CMOutOfBandManagementComponent](Set-CMOutOfBandManagementComponent.md)
 
 [Set-CMStatusReportingComponent](Set-CMStatusReportingComponent.md)
 

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 8E7A3551-4BB0-43EB-AD44-FB4FF6A8F3A4
-online version: https://go.microsoft.com/fwlink/?linkid=833638
-schema: 2.0.0
+title: Add-CMDeviceAffinityToUser
+titleSuffix: Configuration Manager
+description: Adds device affinity to a Configuration Manager user.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMDeviceAffinityToUser

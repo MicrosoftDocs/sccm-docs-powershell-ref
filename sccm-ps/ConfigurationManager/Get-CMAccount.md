@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Accounts.dll-Help.xml
-ms.assetid: 37B4DA45-91D4-47B0-AD08-F7D68D98FF8D
-online version: https://go.microsoft.com/fwlink/?linkid=834057
-schema: 2.0.0
+title: Get-CMAccount
+titleSuffix: Configuration Manager
+description: Gets a named user account.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMAccount

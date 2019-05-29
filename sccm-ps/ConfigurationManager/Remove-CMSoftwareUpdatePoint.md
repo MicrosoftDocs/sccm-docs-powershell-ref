@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: F459D8AF-0C31-4E95-8EF1-AF9FF31167BD
-online version: https://go.microsoft.com/fwlink/?linkid=834229
-schema: 2.0.0
+title: Remove-CMSoftwareUpdatePoint
+titleSuffix: Configuration Manager
+description: Removes a software update point site system role from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMSoftwareUpdatePoint

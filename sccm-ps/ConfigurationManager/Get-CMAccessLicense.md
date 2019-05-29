@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.CalTracking.dll-Help.xml
-ms.assetid: F4A560C6-BF3A-423B-B6FB-F779E2863F4F
-online version: https://go.microsoft.com/fwlink/?linkid=834053
-schema: 2.0.0
+title: Get-CMAccessLicense
+titleSuffix: Configuration Manager
+description: Gets license usage information.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMAccessLicense

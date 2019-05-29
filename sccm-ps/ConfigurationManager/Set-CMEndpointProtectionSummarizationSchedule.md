@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: A911E2C8-2C32-430B-95E0-C9003B9402A4
-online version: https://go.microsoft.com/fwlink/?linkid=833845
-schema: 2.0.0
+title: Set-CMEndpointProtectionSummarizationSchedule
+titleSuffix: Configuration Manager
+description: Modifies an Endpoint Protection summarization schedule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMEndpointProtectionSummarizationSchedule

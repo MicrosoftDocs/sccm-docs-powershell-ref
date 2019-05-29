@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Invoke-CMSystemDiscovery
+titleSuffix: Configuration Manager
+description: Invokes a system discovery.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMSystemDiscovery
 
 ## SYNOPSIS
-Invokes a system discovery
+Invokes a system discovery.
 
 ## SYNTAX
 

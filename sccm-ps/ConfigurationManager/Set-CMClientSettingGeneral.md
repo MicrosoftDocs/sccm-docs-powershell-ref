@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.ClientSettings.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Set-CMClientSettingGeneral
+titleSuffix: Configuration Manager
+description: Sets a client setting general.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMClientSettingGeneral
 
 ## SYNOPSIS
-Sets a client setting general
+Sets a client setting general.
 
 ## SYNTAX
 

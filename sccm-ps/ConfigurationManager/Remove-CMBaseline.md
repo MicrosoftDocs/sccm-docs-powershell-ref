@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: D7D57FDA-A9BC-40D4-B55B-4190280B2E5F
-online version: https://go.microsoft.com/fwlink/?linkid=833920
-schema: 2.0.0
+title: Remove-CMBaseline
+titleSuffix: Configuration Manager
+description: Removes configuration baselines.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Remove-CMBaseline

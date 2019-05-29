@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=833666
-schema: 2.0.0
-ms.assetid: 7B26C797-B537-4CDE-A4FF-C9C58D05C29F
+title: New-CMExchangeServerConnectorApplicationSetting
+titleSuffix: Configuration Manager
+description: Creates application-related settings for a mobile device that uses a Exchange Server connector.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMExchangeServerConnectorApplicationSetting

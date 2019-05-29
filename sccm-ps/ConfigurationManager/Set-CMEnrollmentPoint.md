@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: A52F6FB6-F290-40F9-AE6C-2026EF88AF06
-online version: https://go.microsoft.com/fwlink/?linkid=833849
-schema: 2.0.0
+title: Set-CMEnrollmentPoint
+titleSuffix: Configuration Manager
+description: Sets an enrollment point in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMEnrollmentPoint

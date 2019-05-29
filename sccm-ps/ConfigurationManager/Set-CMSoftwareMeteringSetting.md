@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
-ms.assetid: 8969DC7F-BF22-4F9C-860F-CFC807D696BE
-online version: https://go.microsoft.com/fwlink/?linkid=834058
-schema: 2.0.0
+title: Set-CMSoftwareMeteringSetting
+titleSuffix: Configuration Manager
+description: Configures Configuration Manager software metering properties.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMSoftwareMeteringSetting

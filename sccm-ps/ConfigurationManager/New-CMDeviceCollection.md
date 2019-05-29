@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: F460F99B-D44F-4B83-94AB-B84BE510AC37
-online version: https://go.microsoft.com/fwlink/?linkid=833617
-schema: 2.0.0
+title: New-CMDeviceCollection
+titleSuffix: Configuration Manager
+description: Creates a collection for devices and adds the collection to the Configuration Manager hierarchy.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMDeviceCollection

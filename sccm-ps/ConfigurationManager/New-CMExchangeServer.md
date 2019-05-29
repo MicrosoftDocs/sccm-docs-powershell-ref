@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 6A49F9E5-ECD8-438F-9A2D-D0D2615941B3
-online version: https://go.microsoft.com/fwlink/?linkid=833658
-schema: 2.0.0
+title: New-CMExchangeServer
+titleSuffix: Configuration Manager
+description: Configures a new Exchange Server connector.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMExchangeServer

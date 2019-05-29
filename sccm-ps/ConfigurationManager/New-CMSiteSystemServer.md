@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 09C0BCC8-2106-40DB-9A88-F9E7335B3C6B
-online version: https://go.microsoft.com/fwlink/?linkid=833753
-schema: 2.0.0
+title: New-CMSiteSystemServer
+titleSuffix: Configuration Manager
+description: Creates a site system server.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMSiteSystemServer

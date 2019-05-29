@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMCollectionExcludeMembershipRule
+titleSuffix: Configuration Manager
+description: Gets a collection exclude membership rule.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMCollectionExcludeMembershipRule
 
 ## SYNOPSIS
-Gets a collection exclude membership rule
+Gets a collection exclude membership rule.
 
 ## SYNTAX
 

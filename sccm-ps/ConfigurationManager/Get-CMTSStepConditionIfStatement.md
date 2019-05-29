@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Get-CMTSStepConditionIfStatement
+titleSuffix: Configuration Manager
+description: Gets a TS step condition if statement.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMTSStepConditionIfStatement
 
 ## SYNOPSIS
-Gets a TS step condition if statement
+Gets a TS step condition if statement.
 
 ## SYNTAX
 

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Migration.dll-Help.xml
-ms.assetid: D02E7E60-2F2E-4EBE-9EB3-CA8CA9914289
-online version: https://go.microsoft.com/fwlink/?linkid=833758
-schema: 2.0.0
+title: Get-CMManagementPoint
+titleSuffix: Configuration Manager
+description: Gets a migration entity in System Center Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMMigrationEntity

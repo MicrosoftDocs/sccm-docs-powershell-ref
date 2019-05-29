@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Oob.dll-Help.xml
-ms.assetid: 072CB4A9-2915-4126-99E2-A595A94C57F4
-online version: https://go.microsoft.com/fwlink/?linkid=834157
-schema: 2.0.0
+title: Invoke-CMRemoteControl
+titleSuffix: Configuration Manager
+description: Enables remote control on computers.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Invoke-CMRemoteControl

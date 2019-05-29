@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppModel.dll-Help.xml
-ms.assetid: 4DC33097-C090-407F-A8D8-1542C6A9A952
-online version: https://go.microsoft.com/fwlink/?linkid=833927
-schema: 2.0.0
+title: Deny-CMApprovalRequest
+titleSuffix: Configuration Manager
+description: Denies a request to allow the installation of an application.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Deny-CMApprovalRequest

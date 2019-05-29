@@ -1,13 +1,20 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: New-CMDetectionClauseMacBundle
+titleSuffix: Configuration Manager
+description: Creates a detection clause mac bundle.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMDetectionClauseMacBundle
 
 ## SYNOPSIS
-Creates a detection clause mac bundle
+Creates a detection clause mac bundle.
 
 ## SYNTAX
 

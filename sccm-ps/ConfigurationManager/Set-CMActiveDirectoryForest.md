@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 4AE8D747-EDC2-486B-ADB3-0CF426C047F1
-online version: https://go.microsoft.com/fwlink/?linkid=833609
-schema: 2.0.0
+title: Set-CMActiveDirectoryForest
+titleSuffix: Configuration Manager
+description: Changes Active Directory forest properties in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMActiveDirectoryForest

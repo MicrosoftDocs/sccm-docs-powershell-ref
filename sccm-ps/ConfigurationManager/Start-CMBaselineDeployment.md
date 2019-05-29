@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 4EA07297-564A-4DA0-957D-5ADE49683D74
-online version: https://go.microsoft.com/fwlink/?linkid=834199
-schema: 2.0.0
+title: Start-CMBaselineDeployment
+titleSuffix: Configuration Manager
+description: Starts deployment of a Configuration Manager baseline configuration to a collection of computers.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Start-CMBaselineDeployment

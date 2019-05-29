@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 7D654E76-C29F-49C5-9795-A9B845086DAE
-online version: https://go.microsoft.com/fwlink/?linkid=834233
-schema: 2.0.0
+title: Get-CMCollectionMembershipEvaluationComponent
+titleSuffix: Configuration Manager
+description: Gets how often Configuration Manager evaluates collection membership.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMCollectionMembershipEvaluationComponent

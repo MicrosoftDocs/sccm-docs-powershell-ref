@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 8F146039-6CB8-4A79-AABF-8C8DA90EB182
-online version: https://go.microsoft.com/fwlink/?linkid=834158
-schema: 2.0.0
+title: Get-CMCategory
+titleSuffix: Configuration Manager
+description: Gets configuration categories in Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Get-CMCategory

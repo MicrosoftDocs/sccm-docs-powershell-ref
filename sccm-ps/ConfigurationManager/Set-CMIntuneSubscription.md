@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: 04653B7F-F691-4FBD-BF8F-6795E7B0D94C
-online version: https://go.microsoft.com/fwlink/?linkid=833879
-schema: 2.0.0
+title: Set-CMIntuneSubscription
+titleSuffix: Configuration Manager
+description: Sets the properties of a Microsoft Intune subscription in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMIntuneSubscription
