@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: CE342BBE-34D9-4CA6-8BAF-FFC302C10282
-online version: https://go.microsoft.com/fwlink/?linkid=833700
-schema: 2.0.0
+title: Add-CMMacDeploymentType
+titleSuffix: Configuration Manager
+description: Adds a Mac deployment type.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMMacDeploymentType
