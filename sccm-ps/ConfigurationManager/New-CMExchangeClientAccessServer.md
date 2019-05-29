@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: E66BF7A0-762F-470D-BCD0-E0A58EA3FB6F
-online version: https://go.microsoft.com/fwlink/?linkid=833654
-schema: 2.0.0
+title: New-CMExchangeClientAccessServer
+titleSuffix: Configuration Manager
+description: Creates a Client Access server role for an Exchange Server.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMExchangeClientAccessServer

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Migration.dll-Help.xml
-ms.assetid: 7A6A863C-460A-4F6A-A241-DBE016C8A5B9
-online version: https://go.microsoft.com/fwlink/?linkid=833701
-schema: 2.0.0
+title: New-CMMigrationJob
+titleSuffix: Configuration Manager
+description: Creates a migration job in System Center Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMMigrationJob

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: AA864A00-4726-4284-8F25-958C1B3375D9
-online version: https://go.microsoft.com/fwlink/?linkid=833721
-schema: 2.0.0
+title: New-CMPowerManagementCustomPlan
+titleSuffix: Configuration Manager
+description: Creates a custom power management plan.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # New-CMPowerManagementCustomPlan
