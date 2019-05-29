@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Dcm.dll-Help.xml
-ms.assetid: 7B4B13D3-569E-4121-8210-8E3E045DBCFF
-online version: https://go.microsoft.com/fwlink/?linkid=834002
-schema: 2.0.0
+title: Set-CMRemoteConnectionProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Modifies a remote connection profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMRemoteConnectionProfileConfigurationItem

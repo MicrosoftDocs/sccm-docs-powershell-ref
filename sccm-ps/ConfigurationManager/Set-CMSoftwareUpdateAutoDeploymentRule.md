@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: 9156F844-66C1-4144-9716-8F5E549923CD
-online version: https://go.microsoft.com/fwlink/?linkid=834066
-schema: 2.0.0
+title: Set-CMSoftwareUpdateAutoDeploymentRule
+titleSuffix: Configuration Manager
+description: Modifies Configuration Manager deployment rules for automatic software updates.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Set-CMSoftwareUpdateAutoDeploymentRule
