@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: CD980A75-6FE0-429E-BCC3-26B98F4C9664
-online version: https://go.microsoft.com/fwlink/?linkid=834017
-schema: 2.0.0
+title: Export-CMCollection
+titleSuffix: Configuration Manager
+description: Exports a Configuration Manager collection.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Export-CMCollection
