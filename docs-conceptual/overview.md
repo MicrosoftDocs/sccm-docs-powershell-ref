@@ -101,5 +101,5 @@ After you have installed the Configuration Manager cmdlet help, you can get help
 
 For more information about what's changed in the most recent release of Configuration Manager, select the latest **Release Notes** from the table of contents to the left. 
 
-For more information on individual cmdlets, see the [Configuration Manager cmdlet reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
+For more information on individual cmdlets, see the [Configuration Manager cmdlet reference](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/configurationmanager?view=sccm-ps).
 
