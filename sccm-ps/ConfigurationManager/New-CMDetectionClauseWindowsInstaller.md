@@ -140,7 +140,7 @@ Accept wildcard characters: False
 Type: MSIProperty
 Parameter Sets: Value
 Aliases: 
-Accepted values: ProductVersion
+Accepted values: DateModified, DateCreated, Version, Size
 
 Required: False
 Position: Named
