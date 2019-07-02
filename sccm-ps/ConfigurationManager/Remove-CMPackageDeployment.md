@@ -65,7 +65,22 @@ You can specify the package by name or ID, or you can use the [Get-CMPackage](Ge
 ### Example 1
 
 ```powershell
-PS C:\>  
+PS XYZ:\> # Remove Package Deployment from All Collections
+PS XYZ:\> Remove-CMPackageDeployment -PackageId "XYZ00199"
+```
+
+### Example 2
+
+```powershell
+PS XYZ:\> # Removes Package Deployment Specific Program from Specific Collection
+PS XYZ:\> Remove-CMPackageDeployment -PackageId "XYZ00199" -CollectionName "Test Collection"
+```
+
+### Example 3
+
+```powershell
+PS XYZ:\> # Remove Package Deployment from All Collections
+PS XYZ:\> Remove-CMPackageDeployment -PackageId "XYZ00199" -CollectionName "Test Clients" -ProgramName "Test Program"
 ```
 
 ## PARAMETERS
@@ -294,8 +309,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CMPackageDeployment](New-CMPackageDeployment.md)
+
 [Start-CMPackageDeployment](Start-CMPackageDeployment.md)
+
 [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
+
 [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
+
 [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
+
 [Get-CMPackage](Get-CMPackage.md)
