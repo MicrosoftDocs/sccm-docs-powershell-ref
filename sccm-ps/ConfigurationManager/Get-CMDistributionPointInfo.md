@@ -34,7 +34,7 @@ Get-CMDistributionPointInfo [-InputObject <IResultObject>] [-DisableWildcardHand
 
 ### Example 1
 ```
-PS XYZ:\>  
+PS XYZ:\>  Get-CMDistributionPointInfo -SiteSystemServerName "MySiteSys_11310.Contoso.com"
 ```
 
  
