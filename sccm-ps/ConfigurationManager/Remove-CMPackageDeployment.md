@@ -1,13 +1,13 @@
-﻿---
+---
 title: Remove-CMPackageDeployment
 titleSuffix: Configuration Manager
 description: Removes a package deployment from Configuration Manager.
-ms.date: 11/30/2018
+ms.date: 07/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 
 external help file: AdminUI.PS.AppMan.dll-Help.xml
