@@ -4,6 +4,8 @@
 - name: Release notes
   href: ''
   items:
+  - name: 1906 release notes
+    href: 1906-release-notes.md
   - name: 1902 release notes
     href: 1902-release-notes.md
   - name: 1810 release notes
@@ -12,5 +14,3 @@
     href: 1806_Release_Notes.md
   - name: 1802 release notes
     href: 1802_Release_Notes.md
-  - name: 1710 release notes
-    href: 1710_Release_Notes.md
