@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 9DD38462-DD7F-42F1-956D-43142B02AA7D
 online version: https://go.microsoft.com/fwlink/?linkid=833895
@@ -21,9 +21,13 @@ The **Get-CMSoftwareMeteringSetting** cmdlet gets a software metering settings o
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get software metering setting object
 ```
-PS C:\> Get-CMSoftwareMeteringSetting
+PS XYZ:\> Get-CMSoftwareMeteringSetting
 
 ClientComponentName : Software Metering Agent
 FileType            : 2

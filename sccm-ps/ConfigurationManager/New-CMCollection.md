@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: BECE8291-8231-49F6-B161-C95BD24AC705
 online version: https://go.microsoft.com/fwlink/?linkid=833588
@@ -40,16 +40,20 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a collection and specify its scope
 ```
-PS C:\> New-CMCollection -CollectionType User -LimitingCollectionName "All Users" -Name "testUser"
+PS XYZ:\> New-CMCollection -CollectionType User -LimitingCollectionName "All Users" -Name "testUser"
 ```
 
 This command creates a user collection named testUser that establishes the All Users collection as the scope from which you can add members.
 
 ### Example 2: Create a collection based on an existing one
 ```
-PS C:\> Get-CMCollection -Name "All Users" | New-CMCollection -Name "testUser" -CollectionType "User"
+PS XYZ:\> Get-CMCollection -Name "All Users" | New-CMCollection -Name "testUser" -CollectionType "User"
 ```
 
 This command gets the collection object named All Users and uses the pipeline operator to pass the object to **New-CMCollection**.

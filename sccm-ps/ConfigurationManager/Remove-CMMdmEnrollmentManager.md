@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: DB1B3B24-B73F-4626-B482-1CB739D0A72C
 online version: https://go.microsoft.com/fwlink/?linkid=834135
@@ -35,16 +35,20 @@ The **Remove-CMMdmEnrollmentManager** cmdlet removes a Device Enrollment Manager
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a device enrollment manager using the pipeline
 ```
-PS C:\> Get-CMUser -Name "Contoso\User01"| Remove-CMMdmEnrollmentManager
+PS XYZ:\> Get-CMUser -Name "Contoso\User01"| Remove-CMMdmEnrollmentManager
 ```
 
 This command gets the user object named User01 and uses the pipeline operator to pass the object to **Remove-CMMdmEnrollmentManager**, which removes the device enrollment manager.
 
 ### Example 2: Remove a device enrollment manager by name
 ```
-PS C:\> Remove-CMMdmEnrollmentManager -Name "Contoso\User02"
+PS XYZ:\> Remove-CMMdmEnrollmentManager -Name "Contoso\User02"
 ```
 
 This command removes the device enrollment manager named User02.

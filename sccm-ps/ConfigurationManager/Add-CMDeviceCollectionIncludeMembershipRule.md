@@ -72,16 +72,20 @@ An Include Collections membership rule includes members of other device collecti
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an Include Collections membership rule
 ```
-PS C:\>Add-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems"
+PS XYZ:\>Add-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems"
 ```
 
 This command adds the device collection named All Systems as an Include Collections membership rule associated with the device collection named Device.
 
 ### Example 2: Add an Include Membership rule to a collection by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device" | Add-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems"
+PS XYZ:\> Get-CMCollection -Name "Device" | Add-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems"
 ```
 
 This command gets the collection object named Device and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionIncludeMembershipRule**.

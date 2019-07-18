@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMTaskSequenceStepCondition
 titleSuffix: Configuration Manager
 description: Gets a Configuration Manager task sequence step condition.
@@ -32,10 +32,14 @@ The **Get-CMTaskSequenceStepCondition** cmdlet gets task sequence condition obje
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Get-CMTaskSequenceGroup -StepName $gpName | Get-CMTaskSequenceStepCondition
+PS XYZ:\>$ReferencedTaskSequence | Get-CMTaskSequenceGroup -StepName $gpName | Get-CMTaskSequenceStepCondition
 ```
 The command gets the task sequence condition objects from a task sequence group with a specific name.
 

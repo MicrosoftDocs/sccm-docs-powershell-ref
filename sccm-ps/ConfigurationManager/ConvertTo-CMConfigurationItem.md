@@ -40,11 +40,15 @@ The **ConvertTo-CMConfigurationItem** cmdlet converts a string which contains Co
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $myCI = ConvertTo-CMConfigurationItem -DigestText $digestString 
-PS C:\> $myCI.Persist($myCI)    
+PS XYZ:\> $myCI = ConvertTo-CMConfigurationItem -DigestText $digestString 
+PS XYZ:\> $myCI.Persist($myCI)    
 ```
 
 This command converts a digest into a ConfigurationItem object, and then save the object to the site.

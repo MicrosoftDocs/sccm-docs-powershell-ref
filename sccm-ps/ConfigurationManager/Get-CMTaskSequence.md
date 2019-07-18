@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMTaskSequence
 titleSuffix: Configuration Manager
 description: Gets Configuration Manager task sequences.
@@ -44,10 +44,14 @@ You can also specify a security scope, by itself or with a name or ID, to get se
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a task sequence by name
 
 ```powershell
-PS C:\> Get-CMTaskSequence -Name "taskSequence"
+PS XYZ:\> Get-CMTaskSequence -Name "taskSequence"
 ```
 
 This command gets the task sequence named taskSequence.

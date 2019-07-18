@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 762F1090-8DA6-46BC-A4E7-876E1A7A5511
 online version: https://go.microsoft.com/fwlink/?linkid=833587
@@ -41,9 +41,13 @@ For more information about Endpoint Protection, see [Endpoint Protection in Conf
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Save an Endpoint Protection epshort definition by using a device collection nameepshortEndpoint Protection
 ```
-PS C:\> Save-CMEndpointProtectionDefinition -DeviceCollectionName "NA-Client-Devices"
+PS XYZ:\> Save-CMEndpointProtectionDefinition -DeviceCollectionName "NA-Client-Devices"
 ```
 
 This command saves the Endpoint Protection definition to the devices in the device collection named NA-Client-Devices.

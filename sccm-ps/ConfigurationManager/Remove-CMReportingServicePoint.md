@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: C32CF428-1E90-4EB5-8490-5CA9E9D75835
 online version: https://go.microsoft.com/fwlink/?linkid=834171
@@ -32,17 +32,21 @@ After you remove a reporting service point from a System Center Configuration Ma
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a reporting service point
 ```
-PS C:\> Remove-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
+PS XYZ:\> Remove-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
 ```
 
 This command removes the reporting service point from the System Center Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
 
 ### Example 2: Remove a reporting service point by using an object variable
 ```
-PS C:\> $Rsp = Get-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
-PS C:\> Remove-CMReportingServicePoint -InputObject $Rsp
+PS XYZ:\> $Rsp = Get-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
+PS XYZ:\> Remove-CMReportingServicePoint -InputObject $Rsp
 ```
 
 The first command gets the reporting service point from the System Center Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.

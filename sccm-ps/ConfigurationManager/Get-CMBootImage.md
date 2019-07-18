@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 22CEE6D5-3BCC-43A5-9778-06779C7E5BE0
 online version: https://go.microsoft.com/fwlink/?linkid=834146
@@ -35,16 +35,20 @@ For more information about the SMS provider, see [Planning for the SMS Provider 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a boot image by using its ID
 ```
-PS C:\> Get-CMBootImage -Id "c0eb2912-0de8-4a2a-9c77-603b35bcf7e4"
+PS XYZ:\> Get-CMBootImage -Id "c0eb2912-0de8-4a2a-9c77-603b35bcf7e4"
 ```
 
 This command gets a boot image by using its ID.
 
 ### Example 2: Get a boot image by using its name
 ```
-PS C:\> Get-CMBootImage -Name "SMS_BootImagePackage"
+PS XYZ:\> Get-CMBootImage -Name "SMS_BootImagePackage"
 ```
 
 This command gets a boot image by using its name.

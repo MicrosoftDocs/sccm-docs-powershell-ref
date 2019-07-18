@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalConditionAssembly
 titleSuffix: Configuration Manager
 description: Sets an Assembly type global condition in Configuration Manager.
@@ -30,10 +30,14 @@ The **Set-CMGlobalConditionAssembly** cmdlet modifies settings for an Assembly t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalAssembly =  Set-CMGlobalConditionAssembly -AssemblyName $AssemblyName -Name GC2
+PS XYZ:\> $GlobalAssembly =  Set-CMGlobalConditionAssembly -AssemblyName $AssemblyName -Name GC2
 ```
 
 This command sets an Assembly type global condition in Configuration Manager.

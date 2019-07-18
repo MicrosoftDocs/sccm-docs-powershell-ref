@@ -1,4 +1,4 @@
----
+﻿---
 title: Import-CMTaskSequence
 titleSuffix: Configuration Manager
 description: Imports a Configuration Manager task sequence.
@@ -32,10 +32,14 @@ The **Import-CMTaskSequence** cmdlet imports a task sequence into Microsoft Syst
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import a task sequence
 
 ```powershell
-PS C:\>Import-CMTaskSequence -ImportFilePath "\\Server1\TS\TaskSequence.zip"
+PS XYZ:\>Import-CMTaskSequence -ImportFilePath "\\Server1\TS\TaskSequence.zip"
 ```
 
 This command imports a task sequence from the specified location.

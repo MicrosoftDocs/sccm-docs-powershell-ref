@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 1F502C28-64F4-438A-B6C4-5D2FF80756B4
 online version: https://go.microsoft.com/fwlink/?linkid=833938
@@ -50,9 +50,13 @@ The **Set-CMMobileMsiDeploymentType** cmdlet changes the settings for a mobile W
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a mobile Windows Installer deployment type
 ```
-PS C:\> Set-CMMobileMsiDeploymentType -ApplicationName "testMobile" -DeploymentTypeName "DTMobile" -NewName "DTMobile_Updated" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\test\32BitCompat.msi" -PassThru -Confirm -Comment "test-set-CMMobileMsiDeploymentType"
+PS XYZ:\> Set-CMMobileMsiDeploymentType -ApplicationName "testMobile" -DeploymentTypeName "DTMobile" -NewName "DTMobile_Updated" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\test\32BitCompat.msi" -PassThru -Confirm -Comment "test-set-CMMobileMsiDeploymentType"
 ```
 
 This command changes the name of the mobile Windows Installer deployment type named DTMobile for the application named testMobile to DTMobile_Updated, and adds a description.
@@ -60,7 +64,7 @@ The *PassThru* parameter indicates that an object will be returned from this com
 
 ### Example 2: Modify a mobile Windows Installer deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testMobile" -DeploymentTypeName "DTMobile_Updated" | Set-CMMobileMsiDeploymentType -NewName "DTMobile" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -PassThru -DisableWildcardHandling -Comment "test-set-CMMobileMsiDeploymentType"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testMobile" -DeploymentTypeName "DTMobile_Updated" | Set-CMMobileMsiDeploymentType -NewName "DTMobile" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -PassThru -DisableWildcardHandling -Comment "test-set-CMMobileMsiDeploymentType"
 ```
 
 This command gets the mobile Windows Installer deployment type object named DTMobile_Updated for the application named testMobile and uses the pipeline operator to pass the object to **Set-CMMobileMsiDeploymentType**.

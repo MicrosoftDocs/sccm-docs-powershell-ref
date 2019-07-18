@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: A94D2654-D7A1-41D1-AA53-C6DD0E346891
 online version: https://go.microsoft.com/fwlink/?linkid=833889
@@ -28,9 +28,13 @@ The **Get-CMSoftwareInventory** cmdlet retrieves an object that collects informa
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a software inventory object
 ```
-PS C:\> Get-CMSoftwareInventory -Name "MSXML 6.0 Parser"
+PS XYZ:\> Get-CMSoftwareInventory -Name "MSXML 6.0 Parser"
 ```
 
 This command gets the software inventory object named MSXML 6.0 Parser.

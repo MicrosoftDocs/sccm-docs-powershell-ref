@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 52232AA5-E78B-4C48-84B7-B4BCE58B3875
 online version: https://go.microsoft.com/fwlink/?linkid=833667
@@ -49,18 +49,22 @@ The **Set-CMAutoDeploymentRuleDeployment** cmdlet updates a deployment for an au
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a deployment by ID
 ```
-PS C:\> Set-CMAutoDeploymentRuleDeployment -ID 348 -CollectionName "All Systems" -EnableDeployment $True -SendWakeupPacket $False -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $False  -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $False -AllowRestart $False -SuppressRestartServer  $False -SuppressRestartWorkstation $False -WriteFilterHandling $False -GenerateSuccessAlert $True -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $False -GenerateOperationsManagerAlert $False -NoInstallOnRemote $False -NoInstallOnUnprotected $False -UseBranchCache $False
+PS XYZ:\> Set-CMAutoDeploymentRuleDeployment -ID 348 -CollectionName "All Systems" -EnableDeployment $True -SendWakeupPacket $False -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $False  -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $False -AllowRestart $False -SuppressRestartServer  $False -SuppressRestartWorkstation $False -WriteFilterHandling $False -GenerateSuccessAlert $True -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $False -GenerateOperationsManagerAlert $False -NoInstallOnRemote $False -NoInstallOnUnprotected $False -UseBranchCache $False
 ```
 
 This command updates the settings for the deployment rule deployment with the action ID of 348 and the collection named All Systems.
 
 ### Example 2: Set a deployment using a variable
 ```
-PS C:\> $ReferenceADR = Get-CMAutoDeploymentRule -Name "TestADR01"
-PS C:\> $Deployment = $ReferenceADR | Get-CMAutoDeploymentRuleDeployment
-PS C:\> Set-CMAutoDeploymentRuleDeployment -InputObject $Deployment[0] -CollectionName "All Systems" -EnableDeployment $True -SendWakeupPacket $False -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $False -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $False -AllowRestart $False -SuppressRestartServer $False -SuppressRestartWorkstation $False -WriteFilterHandling $False -GenerateSuccessAlert $True -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $False -GenerateOperationsManagerAlert $False -NoInstallOnRemote $False -NoInstallOnUnprotected $False -UseBranchCache $False
+PS XYZ:\> $ReferenceADR = Get-CMAutoDeploymentRule -Name "TestADR01"
+PS XYZ:\> $Deployment = $ReferenceADR | Get-CMAutoDeploymentRuleDeployment
+PS XYZ:\> Set-CMAutoDeploymentRuleDeployment -InputObject $Deployment[0] -CollectionName "All Systems" -EnableDeployment $True -SendWakeupPacket $False -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $False -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $False -AllowRestart $False -SuppressRestartServer $False -SuppressRestartWorkstation $False -WriteFilterHandling $False -GenerateSuccessAlert $True -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $False -GenerateOperationsManagerAlert $False -NoInstallOnRemote $False -NoInstallOnUnprotected $False -UseBranchCache $False
 ```
 
 The first command gets the automatic deployment rule object named TestADR01 and stores the object in the $ReferenceADR variable.

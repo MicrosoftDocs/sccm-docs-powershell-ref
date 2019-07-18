@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 online version: 
 schema: 2.0.0
@@ -35,9 +35,13 @@ Configuration Manager queries define and store the criteria for sets of database
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 ```
-PS C:\>  Get-CMQuery -Name "My Systems" | Remove-CMQuery -Force
+PS XYZ:\>  Get-CMQuery -Name "My Systems" | Remove-CMQuery -Force
 ```
 
 This command removes the Configuration Manager queries with the name called "My Systems".

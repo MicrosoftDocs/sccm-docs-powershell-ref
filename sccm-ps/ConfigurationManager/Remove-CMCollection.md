@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: F2F2FB26-C763-4B52-A354-214E27F7C59F
 online version: https://go.microsoft.com/fwlink/?linkid=833968
@@ -37,9 +37,13 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a specified collection
 ```
-PS C:\> Remove-CMCollection -Name "testUser" -Force
+PS XYZ:\> Remove-CMCollection -Name "testUser" -Force
 ```
 
 This command removes the collection named testUser.
@@ -47,7 +51,7 @@ Specifying the *Force* parameter means that the user is not prompted for confirm
 
 ### Example 2: Get a collection object and remove it
 ```
-PS C:\> Get-CMCollection -Name "testUser" | Remove-CMCollection -Force
+PS XYZ:\> Get-CMCollection -Name "testUser" | Remove-CMCollection -Force
 ```
 
 This command gets the collection object named testUser and uses the pipeline operator to pass the object to **Remove-CMCollection**, which removes the collection.

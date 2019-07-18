@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalConditionScript
 titleSuffix: Configuration Manager
 description: Sets a Script type global condition in Configuration Manager.
@@ -41,10 +41,14 @@ The **Set-CMGlobalConditionScript** cmdlet modifies settings for a Script type g
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalScript = Set-CMGlobalConditionScript -DataType String -ScriptText $string -ScriptLanguage JScript -Name GC5
+PS XYZ:\> $GlobalScript = Set-CMGlobalConditionScript -DataType String -ScriptText $string -ScriptLanguage JScript -Name GC5
 ```
 
 This command sets a Script type global condition in Configuration Manager.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 27AABF04-9A90-4997-8859-7D3BD360830B
 online version: https://go.microsoft.com/fwlink/?linkid=833684
@@ -23,9 +23,13 @@ For more information about Endpoint Protection summarization schedules, see [How
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an Endpoint Protection summarization schedule
 ```
-PS C:\> Get-CMEndpointProtectionSummarizationSchedule
+PS XYZ:\> Get-CMEndpointProtectionSummarizationSchedule
 ```
 
 This command gets an Endpoint Protection summarization schedule.

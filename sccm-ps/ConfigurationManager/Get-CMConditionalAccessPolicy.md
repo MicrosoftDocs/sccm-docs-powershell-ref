@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 9C9C7C89-BEC9-4B9D-838B-250771C23C44
 online version: https://go.microsoft.com/fwlink/?linkid=834263
@@ -35,16 +35,20 @@ The **Get-CMConditionalAccessPolicy** cmdlet gets a conditional access policy.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a conditional access policy by name
 ```
-PS C:\> Get-CMConditionalAccessPolicy -TargetedCollection (Get-CMCollection -Name "All Users")
+PS XYZ:\> Get-CMConditionalAccessPolicy -TargetedCollection (Get-CMCollection -Name "All Users")
 ```
 
 This command gets the conditional access policy for the targeted collection named All Users.
 
 ### Example 2: Get a conditional access policy by ID
 ```
-PS C:\> Get-CMConditionalAccessPolicy -TargetedCollectionID SMS00002
+PS XYZ:\> Get-CMConditionalAccessPolicy -TargetedCollectionID SMS00002
 ```
 
 This command gets the conditional access policy for the target collection with the ID of SMS00002.

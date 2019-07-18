@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
 ms.assetid: CD441955-3619-4CCE-B1AA-E012BC7A6C99
 online version: https://go.microsoft.com/fwlink/?linkid=834261
@@ -29,9 +29,13 @@ The **Unblock-CMCertificate** cmdlet unblocks one or more public key infrastruct
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Unblock a certificate
 ```
-PS C:\>Unblock-CMCertificate -Id "BaseCert.txt"
+PS XYZ:\>Unblock-CMCertificate -Id "BaseCert.txt"
 ```
 
 This command unblocks the PKI certificate named BaseCert.

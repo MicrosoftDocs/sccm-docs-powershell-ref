@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 688A2F48-7E58-4D4C-97B9-D79933FE4618
 online version: https://go.microsoft.com/fwlink/?linkid=834290
@@ -21,6 +21,10 @@ The **Get-CMConnectionManager** cmdlet gets the Connection Manager instance asso
 The Connection Manager instance can be used for directly communicating with the SMS Provider.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1: Get a Connection Manager instance
 ```

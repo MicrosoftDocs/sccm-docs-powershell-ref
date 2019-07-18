@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMDeploymentTypeSupersedence
 titleSuffix: Configuration Manager
 description: Removes a deployment type supersedence in Configuration Manager.
@@ -34,10 +34,14 @@ The **Remove-CMDeploymentTypeSupersedence** cmdlet removes a superseding deploym
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Remove-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp)
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Remove-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp)
 ```
 
 ## PARAMETERS

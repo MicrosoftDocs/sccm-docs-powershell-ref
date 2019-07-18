@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 53E1F345-47DB-430C-8AFF-D0739FB63161
 online version: https://go.microsoft.com/fwlink/?linkid=834236
@@ -25,9 +25,13 @@ The AMT Provisioning and Discovery Account that you specify in System Center Con
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create an AMT Discovery and Provisioning Account
 ```
-PS C:\> New-CMAmtProvisioningAccount -Username "AMT_Manager" -Password "S@mPle1Pswrd" -Description "Out-of-band management security group"
+PS XYZ:\> New-CMAmtProvisioningAccount -Username "AMT_Manager" -Password "S@mPle1Pswrd" -Description "Out-of-band management security group"
 ```
 
 This command creates an AMT Discovery and Provisioning Account named AMT_Manager, and specifies a password and description for the account.

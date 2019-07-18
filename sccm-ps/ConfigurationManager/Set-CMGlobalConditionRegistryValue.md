@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalConditionRegistryValue
 titleSuffix: Configuration Manager
 description: Sets a Registry Value type global condition in Configuration Manager.
@@ -31,10 +31,14 @@ The **Set-CMGlobalConditionRegistryValue** cmdlet modifies settings for a Regist
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalRegValue = Set-CMGlobalConditionRegistryValue -DataType String -KeyName key -Name GC4 -DeviceType WindowsMobile -RegistryHive LocalMachine -ValueName VName 
+PS XYZ:\> $GlobalRegValue = Set-CMGlobalConditionRegistryValue -DataType String -KeyName key -Name GC4 -DeviceType WindowsMobile -RegistryHive LocalMachine -ValueName VName 
 ```
 
 This command sets a Registry Value type global condition in Configuration Manager.

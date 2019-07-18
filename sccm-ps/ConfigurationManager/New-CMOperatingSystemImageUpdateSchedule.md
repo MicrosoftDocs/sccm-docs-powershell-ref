@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: DB311582-AD04-42ED-8330-6693CF3AADDB
 online version: https://go.microsoft.com/fwlink/?linkid=833709
@@ -72,6 +72,10 @@ New-CMOperatingSystemImageUpdateSchedule [-ContinueOnError <Boolean>] [-RunNow]
 The **New-CMOperatingSystemImageUpdateSchedule** cmdlet creates an operating system image update schedule.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1: Create an operating system image update schedule
 ```

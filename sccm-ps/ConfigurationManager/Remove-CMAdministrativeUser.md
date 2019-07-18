@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: FE92047B-B040-478C-B886-6C67FAD3A4E4
 online version: https://go.microsoft.com/fwlink/?linkid=833873
@@ -36,9 +36,13 @@ When you remove an administrative user, Configuration Manager revokes the access
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: SearchByValueMandatory, pipeline
 ```
-PS C:\> Get-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" | Remove-CMAdministrativeUser -Force
+PS XYZ:\> Get-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" | Remove-CMAdministrativeUser -Force
 ```
 
 This command gets the administrative user object named AdminUser1 who is a member of the Application Administrator role and uses the pipeline operator to pass the object to **Remove-CMAdministrativeUser**, which removes the adminsitrative user.
@@ -46,7 +50,7 @@ Specifying the *Force* parameter indicates that the user is not prompted for con
 
 ### Example 2: SearchByName
 ```
-PS C:\> Remove-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" -Force
+PS XYZ:\> Remove-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" -Force
 ```
 
 This command removes the administrative user named AdminUser1 who is a member of the Application Administrator role.

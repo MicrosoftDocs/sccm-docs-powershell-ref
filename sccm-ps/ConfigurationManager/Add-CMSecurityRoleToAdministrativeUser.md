@@ -72,23 +72,27 @@ The **Add-CMSecurityRoleToAdministrativeUser** cmdlet adds a security role to an
 Permissions defined in a role represent object types and actions available for each object type.
 System Center Configuration Manager provides some built-in security roles.
 You can also create custom security roles.
-For more information about security roles, see [Configuring Security for Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=247225) on TechNet.
+For more information, see [Configuring security](https://docs.microsoft.com/sccm/core/plan-design/security/configure-security).
 
 You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
 You can specify a role to add by name or by ID, or you can use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to obtain a role.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a named role to a named user group
 ```
-PS C:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators " -RoleName "SecurityRole17"
+PS XYZ:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators " -RoleName "SecurityRole17"
 ```
 
 This command adds a security role named SecurityRole17 to the administrative group named Western Administrators.
 
 ### Example 2: Add a role to a named user group identified by using an ID
 ```
-PS C:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators" -RoleId "SMS38973"
+PS XYZ:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators" -RoleId "SMS38973"
 ```
 
 This command adds a security role that has the specified ID to the administrative group named Western Administrators.

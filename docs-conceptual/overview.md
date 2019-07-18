@@ -1,4 +1,4 @@
----
+﻿---
 title: Get started with ConfigMgr cmdlets
 titleSuffix: Configuration Manager
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
@@ -73,8 +73,8 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
     The following example changes to the module's directory and then imports it:  
 
     ```  PowerShell
-    PS C:\>  
-    PS C:\> cd $env:SMS_ADMIN_UI_PATH\..\
+    PS XYZ:\>  
+    PS XYZ:\> cd $env:SMS_ADMIN_UI_PATH\..\
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1  
     ```  
 
@@ -87,11 +87,12 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
 
 4.  Confirm that PowerShell properly loaded the Configuration Manager module by using the `Get-CMSite` cmdlet.  
 
-
+> [!TIP]
+> If you're not certain about the site code, such as when you're testing code that could be used in any environment, the following PowerShell will connect to the first (or only) CM drive: `Set-Location "$((Get-PSDrive | Where-Object { $_.Provider.Name -eq "CMSITE" })[0].Name):"`
 
 ## Update help
 
-Update Windows PowerShell help by using the `Update-Help` cmdlet. This action can also update the help for the Configuration Manager cmdlets. If your computer is connected to the internet, go to your Windows PowerShell window, and type in `Update-Help –Module configurationmanager`. Make sure that you're running Windows PowerShell as an administrator.  
+Update Windows PowerShell help by using the `Update-Help` cmdlet. This action can also update the help for the Configuration Manager cmdlets. If your computer is connected to the internet, go to your Windows PowerShell window, and type in `Update-Help -Module configurationmanager`. Make sure that you're running Windows PowerShell as an administrator.  
 
 After you have installed the Configuration Manager cmdlet help, you can get help about the cmdlets by using the `Get-Help` cmdlet. For example, go to your Windows PowerShell window, and type in `Get-Help Get-CMSite`.
 

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: B08C17F1-A997-4352-A9C2-6757E0D19C3A
 online version: https://go.microsoft.com/fwlink/?linkid=833963
@@ -57,9 +57,13 @@ An operating system installer is an installation package that contains all the f
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change settings for an operating system installer by using a name
 ```
-PS C:\> Set-CMOperatingSystemInstaller -Name "Win8x64" -NewName "OsiWin8x64" -Version "I20B" -Description "Dept02 Sys Install" -Path "\\Win2k3X64contoso\Public\OSD\win8x64"
+PS XYZ:\> Set-CMOperatingSystemInstaller -Name "Win8x64" -NewName "OsiWin8x64" -Version "I20B" -Description "Dept02 Sys Install" -Path "\\Win2k3X64contoso\Public\OSD\win8x64"
 ```
 
 This command changes configuration settings of the operating system installer named Win8x64.
@@ -67,14 +71,14 @@ The command renames the operating system installer, adds a version and descripti
 
 ### Example 2: Add an operating system installer to a security scope by using a name
 ```
-PS C:\> Set-CMOperatingSystemInstaller -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
+PS XYZ:\> Set-CMOperatingSystemInstaller -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
 ```
 
 This command adds membership to the security scope named SecScope02 for the operating system installer named InstPkg01.
 
 ### Example 3: Remove an operating system installer from a security scope
 ```
-PS C:\> Set-CMOperatingSystemInstaller -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
+PS XYZ:\> Set-CMOperatingSystemInstaller -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
 ```
 
 This command removes membership to the security scope named SecScope02 for the operating system installer named InstPkg01.

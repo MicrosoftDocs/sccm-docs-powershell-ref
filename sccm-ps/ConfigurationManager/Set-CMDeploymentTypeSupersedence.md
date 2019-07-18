@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMDeploymentTypeSupersedence
 titleSuffix: Configuration Manager
 description: Sets a deployment type supersedence in Configuration Manager.
@@ -33,10 +33,14 @@ The **Set-CMDeploymentTypeSupersedence** cmdlet configures settings for a deploy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Set-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp) -IsUninstall $true
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Set-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp) -IsUninstall $true
 ```
 
 ## PARAMETERS

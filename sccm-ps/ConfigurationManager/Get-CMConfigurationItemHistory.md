@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMConfigurationItemHistory
 titleSuffix: Configuration Manager
 description: Gets the previous versions of a configuration item in Configuration Manager.
@@ -55,10 +55,14 @@ This cmdlet also gets the history for a specified revision of an item.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get item history by name
 
 ```powershell
-PS C:\> Get-CMConfigurationItemHistory -Name "CMCI07"
+PS XYZ:\> Get-CMConfigurationItemHistory -Name "CMCI07"
 ```
 
 This command gets the history for a configuration item named CMCI07.
@@ -66,7 +70,7 @@ This command gets the history for a configuration item named CMCI07.
 ### Example 2: Get item history by ID
 
 ```powershell
-PS C:\> Get-CMConfigurationItemHistory -Id "16777568"
+PS XYZ:\> Get-CMConfigurationItemHistory -Id "16777568"
 ```
 
 This command gets the previous version of a configuration item with the specified ID.

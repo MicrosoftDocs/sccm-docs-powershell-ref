@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: E10123F3-F925-4D6C-90C2-045CDB620B91
 online version: https://go.microsoft.com/fwlink/?linkid=833907
@@ -49,9 +49,13 @@ The **Set-CMIosDeploymentType** cmdlet changes the settings for an iOS deploymen
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Rename a deployment type
 ```
-PS C:\> Set-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS01" -NewName "TIOS01_updated" -ContentLocation "\\server01\Resources\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -PassThru -Comment "test-set-CMMacDeploymentType"
+PS XYZ:\> Set-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS01" -NewName "TIOS01_updated" -ContentLocation "\\server01\Resources\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -PassThru -Comment "test-set-CMMacDeploymentType"
 ```
 
 This command changes the name of the deployment type named DTIOS01 for the application named testIOS to TIOS01_updated, and adds a description.
@@ -59,7 +63,7 @@ The *PassThru* parameter indicates that an object is returned from this command.
 
 ### Example 2: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS" | Set-CMIOSDeploymentType -NewName "DTIOS_updated" -ContentLocation "\\server01\Resources\Applications\Ipa\iOSTestAppV2\iOSTestAppV2.ipa" -PassThru -Comment "test-set-CMIOSDeploymentType"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS" | Set-CMIOSDeploymentType -NewName "DTIOS_updated" -ContentLocation "\\server01\Resources\Applications\Ipa\iOSTestAppV2\iOSTestAppV2.ipa" -PassThru -Comment "test-set-CMIOSDeploymentType"
 ```
 
 This command gets the deployment type object named testIOS for the application named testIOS and uses the pipeline operator to pass the object to **Set-CMIosDeploymentType**.

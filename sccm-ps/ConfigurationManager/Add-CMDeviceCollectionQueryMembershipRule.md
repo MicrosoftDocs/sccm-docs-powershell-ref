@@ -37,13 +37,17 @@ You can specify the device collections by names, IDs, or an object that represen
 The query is specified as a text string.
 
 A query rule lets you dynamically update the members of a collection based on a query that is run on a schedule.
-For more information on collection rules in Microsoft System Center Configuration Manager, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information, see [Introduction to collections](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a query membership rule
 ```
-PS C:\>Add-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -QueryExpression "select SMS_R_System.ResourceId, SMS_R_System.ResourceType, SMS_R_System.Name, SMS_R_System.SMSUniqueIdentifier, SMS_R_System.ResourceDomainORWorkgroup, SMS_R_System.Client from  SMS_R_System inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId" -RuleName "TPM Information"
+PS XYZ:\>Add-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -QueryExpression "select SMS_R_System.ResourceId, SMS_R_System.ResourceType, SMS_R_System.Name, SMS_R_System.SMSUniqueIdentifier, SMS_R_System.ResourceDomainORWorkgroup, SMS_R_System.Client from  SMS_R_System inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId" -RuleName "TPM Information"
 ```
 
 This command adds a membership rule named TPM Information to the device collection named Mobile Windows 7 Devices.

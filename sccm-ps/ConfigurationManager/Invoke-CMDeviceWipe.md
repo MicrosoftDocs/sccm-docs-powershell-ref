@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 ms.assetid: E25CBF84-5D1E-4E2C-B89C-78A8691E5BBC
 online version: https://go.microsoft.com/fwlink/?linkid=834133
@@ -36,9 +36,13 @@ This cmdlet returns one or more devices to the factory configuration.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Return Restore a device to its factory configurationRestore
 ```
-PS C:\>Invoke-CMDeviceWipe -DeviceName "WindowsPhone_17"
+PS XYZ:\>Invoke-CMDeviceWipe -DeviceName "WindowsPhone_17"
 ```
 
 This command restores the named device to its factory configuration.

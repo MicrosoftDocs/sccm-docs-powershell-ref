@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 94BE72CA-AAE0-47C1-8C05-1BAF02B798A0
 online version: https://go.microsoft.com/fwlink/?linkid=834274
@@ -29,9 +29,13 @@ For more information about the SMS provider, see [Planning for the SMS Provider 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a new boot image object
 ```
-PS C:\> New-CMBootImage -Path "\\Server99.Contoso.com\SMS_CCC\osd\boot\i386\boot.wim" -Index 1 -Name "WinPE Boot Image" -Version 11 -Description "WinPE Boot Image x86 Approved 9/1/2012"
+PS XYZ:\> New-CMBootImage -Path "\\Server99.Contoso.com\SMS_CCC\osd\boot\i386\boot.wim" -Index 1 -Name "WinPE Boot Image" -Version 11 -Description "WinPE Boot Image x86 Approved 9/1/2012"
 ```
 
 This command creates a new boot image object and provides it with a source path for its WIM file, an index value, a name, an operating system version, and a description.

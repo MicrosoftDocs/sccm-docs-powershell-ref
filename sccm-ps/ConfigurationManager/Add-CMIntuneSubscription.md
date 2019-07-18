@@ -29,12 +29,16 @@ NOTE:  You can only add a Microsoft Intune subscription to a Central Administrat
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a Microsoft Intune subscription
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD! -AsPlainText -Force
-PS C:\> MyCreds = New-Object System.Management.Automation.PSCredential ("AccountName@CompanyName.onmicrosoft.com", $SecPasswd)
-PS C:\> $UC = Get-CMUserCollection -Name "All Users"
-PS C:\> Add-CMIntuneSubscription -CompanyName "CompanyName" -IntuneCredential $MyCreds -UserCollection $UC
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD! -AsPlainText -Force
+PS XYZ:\> MyCreds = New-Object System.Management.Automation.PSCredential ("AccountName@CompanyName.onmicrosoft.com", $SecPasswd)
+PS XYZ:\> $UC = Get-CMUserCollection -Name "All Users"
+PS XYZ:\> Add-CMIntuneSubscription -CompanyName "CompanyName" -IntuneCredential $MyCreds -UserCollection $UC
 ```
 
 The first command converts a password into a secure string and stores the secure string in the $SecPasswd variable.

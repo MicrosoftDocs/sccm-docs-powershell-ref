@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: F407970C-75BC-43D7-B7A9-E7D44EF71ED7
 online version: https://go.microsoft.com/fwlink/?linkid=833593
@@ -32,9 +32,13 @@ You can also use the Sync-CMAssetIntelligenceCatalog cmdlet to synchronize the l
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Request an update for a software category
 ```
-PS C:\> Send-CMAssetIntelligenceCatalogUpdateRequest -Name "Browsers"
+PS XYZ:\> Send-CMAssetIntelligenceCatalogUpdateRequest -Name "Browsers"
 ```
 
 This command requests an update of the Asset Intelligence catalog for the software category named Browsers.

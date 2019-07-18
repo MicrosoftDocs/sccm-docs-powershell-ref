@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 8104F0AD-BD4E-43FB-9E4B-E347CEE0A70C
 online version: https://go.microsoft.com/fwlink/?linkid=833678
@@ -22,9 +22,13 @@ The **Set-CMBaselineSummarizationSchedule** cmdlet configures the schedule by wh
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set the configuration baseline update schedule
 ```
-PS C:\> Set-CMBaselineSummarizationSchedule -Interval 6 -Unit "Hours"
+PS XYZ:\> Set-CMBaselineSummarizationSchedule -Interval 6 -Unit "Hours"
 ```
 
 This command schedules Configuration Manager to automatically update the configuration baseline data every six hours.

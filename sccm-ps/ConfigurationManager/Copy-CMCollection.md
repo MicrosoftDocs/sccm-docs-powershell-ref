@@ -36,9 +36,13 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 ```
-PS C:\> Copy-CMCollection -Name "testUser" -NewName "testUserNew"
+PS XYZ:\> Copy-CMCollection -Name "testUser" -NewName "testUserNew"
 ```
 
 This command exports the collection named testUser to a new collection named testUserNew.

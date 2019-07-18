@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 28331CBC-88B0-42DE-B4E6-5109D2A03D7F
 online version: https://go.microsoft.com/fwlink/?linkid=833821
@@ -38,16 +38,20 @@ You can associate multiple programs with the same package.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all programs
 ```
-PS C:\> Get-CMProgram
+PS XYZ:\> Get-CMProgram
 ```
 
 This command gets all programs in System Center Configuration Manager.
 
 ### Example 2: Get a program by using a name and an ID
 ```
-PS C:\> Get-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
+PS XYZ:\> Get-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
 ```
 
 This command gets the program named ProgramD02 in the package that has the ID ST10000F.

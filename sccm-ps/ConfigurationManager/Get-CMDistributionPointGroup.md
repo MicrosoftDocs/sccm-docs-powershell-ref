@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: B616CC22-3B89-436A-BDDB-3BC01C5DAD7D
 online version: https://go.microsoft.com/fwlink/?linkid=833656
@@ -29,16 +29,20 @@ The **Get-CMDistributionPointGroup** cmdlet gets one or more distribution point 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a distribution point group by using an ID
 ```
-PS C:\> Get-CMDistributionPointGroup -Id "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
+PS XYZ:\> Get-CMDistributionPointGroup -Id "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
 ```
 
 This command get the distribution point group that has the ID 6617708D-0F98-4898-8D05-9E882C23DCB2.
 
 ### Example 2: Get a distribution point group by using a name
 ```
-PS C:\> Get-CMDistributionPointGroup -Name "Dpg01" -Id "{FA921CF2-89C9-407D-A21D-FE6947F2C00A}"
+PS XYZ:\> Get-CMDistributionPointGroup -Name "Dpg01" -Id "{FA921CF2-89C9-407D-A21D-FE6947F2C00A}"
 ```
 
 This command gets the distribution point group named Dpg01 and that has the ID FA921CF2-89C9-407D-A21D-FE6947F2C00A.

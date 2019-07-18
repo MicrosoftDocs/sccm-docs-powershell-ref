@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMDeploymentTypeDependency
 titleSuffix: Configuration Manager
 description: Gets a deployment type dependency.
@@ -32,10 +32,14 @@ The **Get-CMDeploymentTypeDependency** cmdlet gets existing dependent deployment
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Get-CMDeploymentTypeDependency
+PS XYZ:\> Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Get-CMDeploymentTypeDependency
 ```
 
 This command gets a deployment type from a dependency group.

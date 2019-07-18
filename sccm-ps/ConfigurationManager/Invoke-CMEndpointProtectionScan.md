@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 106F4D21-3C52-432C-B2CE-C925FF402DB3
 online version: https://go.microsoft.com/fwlink/?linkid=834137
@@ -56,9 +56,13 @@ For more information about how Configuration Manager supports Endpoint Protectio
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Invoke a full Endpoint Protection scan
 ```
-PS C:\>Invoke-CMEndpointProtectionScan -DeviceName "CMCEN-DIST02" -ScanType Full
+PS XYZ:\>Invoke-CMEndpointProtectionScan -DeviceName "CMCEN-DIST02" -ScanType Full
 ```
 
 This command invokes a full Endpoint Protection scan of the device named CMCEN-DIST02.

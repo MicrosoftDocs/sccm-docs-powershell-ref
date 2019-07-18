@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm-help.xml
 ms.assetid: C2319974-8CEA-4FA1-99D0-24DA994351AE
 online version: https://go.microsoft.com/fwlink/?linkid=834166
@@ -32,16 +32,20 @@ The **Get-CMCertificateProfilePfx** function gets a PFX certificate profile.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a PFX certificate profile by name
 ```
-PS C:\> Get-CMCertificateProfilePfx -Name "Test1"
+PS XYZ:\> Get-CMCertificateProfilePfx -Name "Test1"
 ```
 
 This command gets the PFX certificate profile object named Test1.
 
 ### Example 2: Get a PFX certificate profile by ID
 ```
-PS C:\> Get-CMcertificateprofilePfx -Id 16777499
+PS XYZ:\> Get-CMcertificateprofilePfx -Id 16777499
 ```
 
 This command gets the PFX certificate profile object with the ID of 16777499.

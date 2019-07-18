@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: EA722095-C1A2-4454-9936-19EFB7088C47
 online version: https://go.microsoft.com/fwlink/?linkid=834084
@@ -39,23 +39,27 @@ A software update deployment package contains one or more software updates for d
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Update the name and description of a software update deployment package
 ```
-PS C:\> Set-CMSoftwareUpdateDeploymentPackage -Id "ST10000C" -Description "Deployment pack 107" -NewName "SDPTest"
+PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Id "ST10000C" -Description "Deployment pack 107" -NewName "SDPTest"
 ```
 
 This command sets a new name and description for the deployment package that has the ID ST10000C.
 
 ### Example 2: Add membership to a security scope of a software update deployment package
 ```
-PS C:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction AddMembership -SecurityScopeName "testScopeName"
+PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction AddMembership -SecurityScopeName "testScopeName"
 ```
 
 This command adds membership for the security scope named testScopeName.
 
 ### Example 3: Remove membership from a security scope of a software update deployment package
 ```
-PS C:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction RemoveMembership -SecurityScopeName "testScopeName"
+PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction RemoveMembership -SecurityScopeName "testScopeName"
 ```
 
 This command removes membership for the security scope named testScopeName.

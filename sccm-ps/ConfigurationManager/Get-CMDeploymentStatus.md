@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833580
 schema: 2.0.0
@@ -42,9 +42,13 @@ A classic software distribution is a legacy software distribution program on a c
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the status of a deployment
 ```
-PS C:\> Get-CMDeploymentStatus -Name "Depack01"
+PS XYZ:\> Get-CMDeploymentStatus -Name "Depack01"
 ```
 
 This command gets the status of a deployment that is distributed to Configuration Manager clients by using the deployment package named Depack01.

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 7C162720-0C10-4DDE-8E52-B6BB89EDB1D1
 online version: https://go.microsoft.com/fwlink/?linkid=833844
@@ -23,9 +23,13 @@ Client computers use wireless profiles for configuration when they connect to a 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a wireless profile configuration item
 ```
-PS C:\> New-CMWirelessProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\Wireless.xml"
+PS XYZ:\> New-CMWirelessProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\Wireless.xml"
 ```
 
 This command creates a wireless profile configuration item by using the digest file C:\Digests\Wireless.xml.

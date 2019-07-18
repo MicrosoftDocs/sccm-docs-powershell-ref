@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 1E63FED9-D574-44F1-B056-7AB5BACFEA24
 online version: https://go.microsoft.com/fwlink/?linkid=834243
@@ -39,16 +39,20 @@ To resume an application, use the [Resume-CMApplication](Resume-CMApplication.md
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Suspend an application by its name
 ```
-PS C:\> Suspend-CMApplication -Name "Application01"
+PS XYZ:\> Suspend-CMApplication -Name "Application01"
 ```
 
 This command suspends the application named Application01.
 
 ### Example 2: Get an application and suspend it
 ```
-PS C:\> Get-CMApplication -Name "Application01" | Suspend-CMApplication
+PS XYZ:\> Get-CMApplication -Name "Application01" | Suspend-CMApplication
 ```
 
 This command gets the application object named Application01 and uses the pipeline operator to pass the object to **Suspend-CMApplication**, which suspends the application.

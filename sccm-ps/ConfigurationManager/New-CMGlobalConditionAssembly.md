@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMGlobalConditionAssembly
 titleSuffix: Configuration Manager
 description: Creates an Assembly type global condition in Configuration Manager.
@@ -33,10 +33,14 @@ A global condition is a setting or expression in System Center Configuration Man
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalAssembly =  New-CMGlobalConditionAssembly -AssemblyName $AssemblyName -Name GC2
+PS XYZ:\> $GlobalAssembly =  New-CMGlobalConditionAssembly -AssemblyName $AssemblyName -Name GC2
 ```
 
 This command creates an Assembly type global condition in Configuration Manager.

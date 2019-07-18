@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Alerts.dll-Help.xml
 ms.assetid: DB03FADD-6289-4A10-B6A0-05271056A480
 online version: https://go.microsoft.com/fwlink/?linkid=833877
@@ -35,17 +35,21 @@ The **Remove-CMAlert** cmdlet removes one or more Microsoft System Center Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an alert by using alert ID
 ```
-PS C:\> Remove-CMAlert -Id "16777223"
+PS XYZ:\> Remove-CMAlert -Id "16777223"
 ```
 
 This command removes an alert that has the ID 16777223.
 
 ### Example 2: Remove an alert by using alert object variable
 ```
-PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
-PS C:\> Remove-CMAlert -InputObject $AlertObj
+PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777221"
+PS XYZ:\> Remove-CMAlert -InputObject $AlertObj
 ```
 
 The first command gets a **CMAlert** object that has the ID 16777221, and then stores it in the $AlertObj variable.

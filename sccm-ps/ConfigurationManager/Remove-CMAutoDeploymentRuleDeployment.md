@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: B1D024FB-2D23-40B5-A7F4-C8F4E4EE3273
 online version: https://go.microsoft.com/fwlink/?linkid=833916
@@ -22,10 +22,14 @@ The **Remove-CMAutoDeploymentRuleDeployment** cmdlet removes a deployment from a
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a deployment
 ```
-PS C:\> $Deployments = Get-CMAutoDeploymentRuleDeployment -Name "TestRule01"
-PS C:\> Remove-CMAutoDeploymentRuleDeployment -InputObject $Deployments[0]
+PS XYZ:\> $Deployments = Get-CMAutoDeploymentRuleDeployment -Name "TestRule01"
+PS XYZ:\> Remove-CMAutoDeploymentRuleDeployment -InputObject $Deployments[0]
 ```
 
 The first command gets the deployment objects associated with the automatic deployment rule named TestRule01 and stores the objects in the $Deployments variable.

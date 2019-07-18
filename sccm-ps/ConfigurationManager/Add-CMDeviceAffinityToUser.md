@@ -31,13 +31,17 @@ Device affinity in Configuration Manager associates a user with one or more devi
 Instead of deploying applications to all the user's devices, you deploy the application to the user and Configuration Manager automatically installs the application on all devices that are associated with that user.
 Device affinity removes the need for Configuration Manager to determine the names of the devices of a user before you deploy applications for that user.
 
-For more information about user device affinity, see [How to Manage User Device Affinity in Configuration Manager](http://go.microsoft.com/fwlink/?linkid=247182) on TechNet.
+For more information, see [Link users and devices with user device affinity](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add device affinity to a user by user ID
 ```
-PS C:\>Add-CMDeviceAffinityToUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
+PS XYZ:\>Add-CMDeviceAffinityToUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
 ```
 
 This command adds affinity to the device named WestDivUpdates05 for the user named Patti Fuller.

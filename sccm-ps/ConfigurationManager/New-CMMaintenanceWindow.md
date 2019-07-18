@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 0F23554E-0127-4B10-A3B2-3F9AF0D639C5
 online version: https://go.microsoft.com/fwlink/?linkid=833697
@@ -42,10 +42,14 @@ Maintenance windows are periods of time reserved for write operations such as ap
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a maintenance window
 ```
-PS C:\> $MWSchedule = New-CMSchedule -DayOfWeek Friday -DurationCount 0 -DurationInterval Hours -RecurCount 1 -Start "10/12/2013 21:00:00"
-PS C:\> New-CMMaintenanceWindow -CollectionID "AAA0005D" -Name "MonthlySchedule" -Schedule $MWSchedule
+PS XYZ:\> $MWSchedule = New-CMSchedule -DayOfWeek Friday -DurationCount 0 -DurationInterval Hours -RecurCount 1 -Start "10/12/2013 21:00:00"
+PS XYZ:\> New-CMMaintenanceWindow -CollectionID "AAA0005D" -Name "MonthlySchedule" -Schedule $MWSchedule
 ```
 
 The first command uses the **New-CMSchedule** cmdlet to create a schedule object, and then stores it in the $MWSchedule variable.

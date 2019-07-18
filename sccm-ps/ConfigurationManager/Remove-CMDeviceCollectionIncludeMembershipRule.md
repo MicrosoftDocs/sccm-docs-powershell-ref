@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: D0AB3D9A-6F2D-4373-9FC7-60990D9D8CCD
 online version: https://go.microsoft.com/fwlink/?linkid=834051
@@ -71,9 +71,13 @@ The **Remove-CMDeviceCollectionIncludeMembershipRule** cmdlet removes an Include
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an Include Collections membership rule
 ```
-PS C:\> Remove-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems" -Force
+PS XYZ:\> Remove-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems" -Force
 ```
 
 This command removes the Include Collections membership rule named All Systems from the device collection named Device.
@@ -81,7 +85,7 @@ Specifying the *Force* parameter indicates that the membership rule is removed w
 
 ### Example 2: Remove an include membership rule by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems" -Force
+PS XYZ:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems" -Force
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Remove-CMDeviceCollectionIncludeMembershipRule**.

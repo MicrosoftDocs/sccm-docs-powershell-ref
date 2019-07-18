@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMTaskSequenceGroup
 titleSuffix: Configuration Manager
 description: Sets a Configuration Manager task sequence group.
@@ -261,10 +261,14 @@ The **Set-CMTaskSequenceGroup** cmdlet sets properties, options, specific condit
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Set-CMTaskSequenceGroup -StepName $gpName -NewStepName $gpName2 -Description $gpNewDescription -IsContinueOnError $false -IsEnabled $false -ClearStep -AddStep $st1 -ClearCondition -AddCondition $cd1
+PS XYZ:\>$ReferencedTaskSequence | Set-CMTaskSequenceGroup -StepName $gpName -NewStepName $gpName2 -Description $gpNewDescription -IsContinueOnError $false -IsEnabled $false -ClearStep -AddStep $st1 -ClearCondition -AddCondition $cd1
 ```
 
 ### Example 2

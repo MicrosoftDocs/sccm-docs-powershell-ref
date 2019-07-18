@@ -29,9 +29,13 @@ You can also specify the computer that hosts that component.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Clear message count
 ```
-PS C:\>Clear-CMComponentStatusMessageCount -ComponentName "SMS_HIERARCHY_MANAGER" -Severity All -SiteCode "CM1"
+PS XYZ:\>Clear-CMComponentStatusMessageCount -ComponentName "SMS_HIERARCHY_MANAGER" -Severity All -SiteCode "CM1"
 ```
 
 This command changes the message count to zero for the component SMS_HIERARCHY_MANAGER for all message severity types.
@@ -39,7 +43,7 @@ The command specifies the site that has the site code CM1.
 
 ### Example 2: Clear error message count
 ```
-PS C:\>Clear-CMComponentStatusMessageCount -ComponentName "SMS_DISTRIBUTION_MANAGER" -Severity Error -SiteCode "CM1" -ComputerName "West34.Western.Contoso.com"
+PS XYZ:\>Clear-CMComponentStatusMessageCount -ComponentName "SMS_DISTRIBUTION_MANAGER" -Severity Error -SiteCode "CM1" -ComputerName "West34.Western.Contoso.com"
 ```
 
 This command changes the message count to zero for the component SMS_DISTRIBUTION_MANAGER for error messages.

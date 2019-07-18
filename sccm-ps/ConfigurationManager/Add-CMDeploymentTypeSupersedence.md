@@ -33,10 +33,14 @@ The **Add-CMDeploymentTypeSupersedence** cmdlet sets one deployment type to supe
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Add-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp)
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Add-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp)
 ```
 
 ## PARAMETERS

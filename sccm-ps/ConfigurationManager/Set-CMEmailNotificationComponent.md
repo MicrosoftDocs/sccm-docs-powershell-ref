@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 492BE510-2A4E-485F-A4BE-ED5BD5303085
 online version: https://go.microsoft.com/fwlink/?linkid=833834
@@ -31,9 +31,13 @@ You can configure the email notification component for each System Center Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable email notification
 ```
-PS C:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM2" -EnableEmailNotification $True -MstpServerFqdn "mail.corp.contosco.com" -Port 25 -TypeOfAuthentication DefaultServiceAccount -SendFrom "evan.narvaez@contoso.com"
+PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM2" -EnableEmailNotification $True -MstpServerFqdn "mail.corp.contosco.com" -Port 25 -TypeOfAuthentication DefaultServiceAccount -SendFrom "evan.narvaez@contoso.com"
 ```
 
 This command enables email notification for System Center Configuration Manager.
@@ -43,14 +47,14 @@ The command specifies that System Center Configuration Manager uses the default 
 
 ### Example 2: Disable email notification
 ```
-PS C:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -EnableEmailNotification $False
+PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -EnableEmailNotification $False
 ```
 
 This command disables email notification for System Center Configuration Manager on the site server named cmcen-dist02.tsqa.corp.contoso.com.
 
 ### Example 3: Set the outgoing SMTP port for email notification
 ```
-PS C:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -Port 27
+PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -Port 27
 ```
 
 This command sets the outgoing SMTP port that System Center Configuration Manager uses for sending email alerts on the site server named cmcen-dist02.tsqa.corp.contoso.com to port 27.

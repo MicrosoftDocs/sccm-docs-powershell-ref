@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 80157719-BA02-42AD-9ACE-03D9112E3956
 online version: https://go.microsoft.com/fwlink/?linkid=833902
@@ -42,9 +42,13 @@ The revision history contains a list of revisions to an application or a develop
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a revision history
 ```
-PS C:\> Remove-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
+PS XYZ:\> Remove-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
 ```
 
 This command removes the revision history named MSXML 6.0 Parser.

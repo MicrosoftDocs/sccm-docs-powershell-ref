@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 63B857FB-228C-497F-BE06-4795E85C2986
 online version: https://go.microsoft.com/fwlink/?linkid=833820
@@ -33,9 +33,13 @@ When an application is installed or when a client evaluates installed applicatio
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a virtual environment group
 ```
-PS C:\> New-CMVirtualEnvironmentGroup -DeploymentType "Office_Standard" -Name "Office Remote Apps"
+PS XYZ:\> New-CMVirtualEnvironmentGroup -DeploymentType "Office_Standard" -Name "Office Remote Apps"
 ```
 
 This command creates a virtual environment group named Office Remote Apps for the deployment type Office_Standard.

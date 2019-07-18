@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 38B9CB0B-A9F5-4F3A-A89A-550B7DE849C3
 online version: https://go.microsoft.com/fwlink/?linkid=834079
@@ -36,10 +36,14 @@ The source is not affected.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a driver specified by a driver object
 ```
-PS C:\> $Driver = Get-CMDriver -Name "Driver01"
-PS C:\> Remove-CMDriver -InputObject $Driver -Force
+PS XYZ:\> $Driver = Get-CMDriver -Name "Driver01"
+PS XYZ:\> Remove-CMDriver -InputObject $Driver -Force
 ```
 
 The first command gets the driver object named Driver01 and stores the object in the $Driver variable.
@@ -49,7 +53,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a driver by using the pipeline
 ```
-PS C:\> Get-CMDriver -Name "Driver02" | Remove-CMDriver -Force
+PS XYZ:\> Get-CMDriver -Name "Driver02" | Remove-CMDriver -Force
 ```
 
 This command gets the driver object named Driver02 and uses the pipeline operator to pass the object to **Remove-CMDriver**, which removes the driver object.
