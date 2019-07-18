@@ -1,8 +1,8 @@
-﻿---
+---
 title: Export-CMTaskSequence
 titleSuffix: Configuration Manager
 description: Exports a Configuration Manager task sequence.
-ms.date: 11/30/2018
+ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -76,6 +76,8 @@ This command gets the task sequence object named TaskSequence02 and uses the pip
 
 ### Example 3: Export Several Task Sequences by Creating an Array (Part of Script)
 
+This code creates an array of task sequences, then exports them all. It uses much of the information from the actual task sequence to create the folder structure and file name during the export. It also allows you to export it with comments.
+
 ```powershell
 $TaskSequenceTable= @(
         @{ TSName = 'TaskSequence_A'; TSPackageID = "PS200038"; Comment = "Comments about TS_A"}
@@ -92,9 +94,8 @@ foreach ($TaskSequence in $TaskSequenceTable)
     $TSExportName = "$($TSObject.Name)_$($TSSourceDate).zip"
     Export-CMTaskSequence -InputObject $TSObject -ExportFilePath "$($TSExportDir)\$($TSExportName)" -Comment $TaskSequence.Comment -WithDependence $true -WithContent $false -Force
     }
-
 ```
-This Code shows creating an array of Task Sequences which will allow you to Export them all.  It will use much of the information from the actual Task Sequence to create the folder structure and file name during the export.  Also allows you to create export it with comments.
+
 
 ## PARAMETERS
 
