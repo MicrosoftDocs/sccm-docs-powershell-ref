@@ -48,7 +48,7 @@ Get-CMBaselineDeployment [-InputObject <IResultObject>] [-Summary] [-CollectionN
 
 ### Example 1
 ```
-PS XYZ:\>  
+PS XYZ:\>  Get-CMBaselineDeployment -Name "Test Baseline"
 ```
 
  
