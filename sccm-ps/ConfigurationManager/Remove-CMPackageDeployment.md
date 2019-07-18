@@ -1,13 +1,13 @@
-﻿---
+---
 title: Remove-CMPackageDeployment
 titleSuffix: Configuration Manager
 description: Removes a package deployment from Configuration Manager.
-ms.date: 11/30/2018
+ms.date: 07/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 
 external help file: AdminUI.PS.AppMan.dll-Help.xml
@@ -69,7 +69,22 @@ You can specify the package by name or ID, or you can use the [Get-CMPackage](Ge
 ### Example 1
 
 ```powershell
-PS XYZ:\>  
+PS XYZ:\> # Remove Package Deployment from All Collections
+PS XYZ:\> Remove-CMPackageDeployment -PackageId "XYZ00199"
+```
+
+### Example 2
+
+```powershell
+PS XYZ:\> # Removes Package Deployment Specific Program from Specific Collection
+PS XYZ:\> Remove-CMPackageDeployment -PackageId "XYZ00199" -CollectionName "Test Collection"
+```
+
+### Example 3
+
+```powershell
+PS XYZ:\> # Remove Package Deployment from All Collections
+PS XYZ:\> Remove-CMPackageDeployment -PackageId "XYZ00199" -CollectionName "Test Clients" -ProgramName "Test Program"
 ```
 
 ## PARAMETERS
@@ -298,8 +313,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CMPackageDeployment](New-CMPackageDeployment.md)
+
 [Start-CMPackageDeployment](Start-CMPackageDeployment.md)
+
 [Get-CMPackageDeployment](Get-CMPackageDeployment.md)
+
 [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
+
 [Set-CMPackageDeployment](Set-CMPackageDeployment.md)
+
 [Get-CMPackage](Get-CMPackage.md)
