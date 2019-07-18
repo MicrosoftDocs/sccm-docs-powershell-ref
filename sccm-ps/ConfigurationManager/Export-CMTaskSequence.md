@@ -6,8 +6,8 @@ ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 
 external help file: AdminUI.PS.AppMan.dll-Help.xml
