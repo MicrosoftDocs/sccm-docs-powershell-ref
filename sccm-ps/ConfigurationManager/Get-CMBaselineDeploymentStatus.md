@@ -27,7 +27,7 @@ Get-CMBaselineDeploymentStatus [-StatusType <BaselineDeploymentStatusType>] -Inp
 
 ### Example 1
 ```
-PS XYZ:\>  
+PS XYZ:\>  Get-CMBaselineDeployment -Name "Test Baseline" | Get-CMBaselineDeploymentStatus
 ```
 
  
