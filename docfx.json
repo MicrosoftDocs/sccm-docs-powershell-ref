@@ -85,7 +85,7 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "sccm-powershell",
+    "dest": "sccm-docs-powershell",
     "markdownEngineName": "markdig"
   }
 }
