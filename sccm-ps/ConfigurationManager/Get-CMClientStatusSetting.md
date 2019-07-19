@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMClientStatusSetting
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.ClientStatus.dll-Help.xml
+ms.assetid: C12D4C9E-15A3-44EB-9090-6E80B95045E3
+online version: https://go.microsoft.com/fwlink/?linkid=834197
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMClientStatusSetting
@@ -30,9 +38,13 @@ For more information about client settings, see [About Client Settings in Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get client status settings for the local computer
 ```
-PS C:\> Get-CMClientStatusSetting
+PS XYZ:\> Get-CMClientStatusSetting
 ADRetrieving Schedule  : 
 CleanUpInterval        : 7
 DDRInactiveInterval    : 3

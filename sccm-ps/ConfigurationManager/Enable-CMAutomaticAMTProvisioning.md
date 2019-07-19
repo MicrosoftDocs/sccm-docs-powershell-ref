@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Enable-CMAutomaticAmtProvisioning
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Oob.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833977
+schema: 2.0.0
+ms.assetid: 08E05ACB-B1DE-4D06-861B-E96AA2271AD8
+>>>>>>> master
 ---
 
 # Enable-CMAutomaticAmtProvisioning
@@ -43,9 +51,13 @@ An out of band service point is a site system role that provisions and configure
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable automatic provisioning of an AMT-based computers
 ```
-PS C:\>Enable-CMAutomaticAmtProvisioning -DeviceName "CMdiv-west03"
+PS XYZ:\>Enable-CMAutomaticAmtProvisioning -DeviceName "CMdiv-west03"
 ```
 
 This command enables automatic provisioning of the device named CMdiv-west03.

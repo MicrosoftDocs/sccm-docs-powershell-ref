@@ -55,10 +55,14 @@ You can also use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Approve a request for a specific application
 
 ```powershell
-PS C:\>Approve-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1"
+PS XYZ:\>Approve-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1"
 ```
 
 This command approves a request from a user to install an application specified by its ID.
@@ -66,7 +70,7 @@ This command approves a request from a user to install an application specified 
 ### Example 2: Approve a request for a specific user
 
 ```powershell
-PS C:\>Approve-CMApprovalRequest -Application "Test" -User "tsqa\davidchew" -Comment "Request approved."
+PS XYZ:\>Approve-CMApprovalRequest -Application "Test" -User "tsqa\davidchew" -Comment "Request approved."
 ```
 
 This command approves a request for an application named Test for the specified user. The command includes a comment.
@@ -74,8 +78,8 @@ This command approves a request for an application named Test for the specified 
 ### Example 3: Approve a request by using a variable
 
 ```powershell
-PS C:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_d047e945-d6af-46f4-910f-ed36c880ae06/1"
-PS C:\> Approve-CMApprovalRequest -InputObject $Approval -Comment "Request approved."
+PS XYZ:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_d047e945-d6af-46f4-910f-ed36c880ae06/1"
+PS XYZ:\> Approve-CMApprovalRequest -InputObject $Approval -Comment "Request approved."
 ```
 
 The first command gets an approval request for a specified application ID and stores it in the variable `$Approval`.

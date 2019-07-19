@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMCategory
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 1A28C432-B26B-43EE-8C1D-856F16DDB25E
+online version: https://go.microsoft.com/fwlink/?linkid=833941
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMCategory
@@ -47,9 +55,13 @@ The **Remove-CMCategory** cmdlet removes a configuration category in Microsoft S
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a configuration category
 ```
-PS C:\> Remove-CMCategory -CategoryType "DriverCategories" -Force -Name "NewLaptopDriverSet"
+PS XYZ:\> Remove-CMCategory -CategoryType "DriverCategories" -Force -Name "NewLaptopDriverSet"
 ```
 
 This command removes the category named NewLaptopDriverSet from DriversCategories without prompting you for confirmation.

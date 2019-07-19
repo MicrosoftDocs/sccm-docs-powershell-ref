@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMApplicationDeployment
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+ms.assetid: B77A46FA-BA17-4E39-AC41-267AB0D3A353
+online version: https://go.microsoft.com/fwlink/?linkid=833636
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMApplicationDeployment
@@ -70,9 +78,13 @@ You can specify an application by name or ID, or you can use the [Get-CMApplicat
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify availability and deadline for an application deployment
 ```
-PS C:\> Set-CMApplicationDeployment -ApplicationName "Track System 2011" -CollectionName "All Users" -AvaliableDate 2012/10/21 -AvaliableTime 17:25 -DeadlineDate 2013/01/01 -DeadlineTime 13:10
+PS XYZ:\> Set-CMApplicationDeployment -ApplicationName "Track System 2011" -CollectionName "All Users" -AvaliableDate 2012/10/21 -AvaliableTime 17:25 -DeadlineDate 2013/01/01 -DeadlineTime 13:10
 ```
 
 This command modifies an application deployment for an application named Track System 2011 for a collection named All Users.

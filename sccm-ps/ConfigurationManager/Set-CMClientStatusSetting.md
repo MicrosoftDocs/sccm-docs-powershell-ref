@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMClientStatusSetting
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.ClientStatus.dll-Help.xml
+ms.assetid: C361CE49-5461-4CC1-8660-9EE840B3F6B8
+online version: https://go.microsoft.com/fwlink/?linkid=833723
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMClientStatusSetting
@@ -33,16 +41,20 @@ For more information about client settings, see [About Client Settings in Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify all client status settings
 ```
-PS C:\> Set-CMClientStatusSetting -ClientPolicyDayInterval 2 -HeartbeatDiscoveryDayInterval 3 -HardwareInventoryDayInterval 4 -SoftwareInventoryDayInterval 5 -StatusMessageDayInterval 6 -HistoryCleanupDayInterval 7
+PS XYZ:\> Set-CMClientStatusSetting -ClientPolicyDayInterval 2 -HeartbeatDiscoveryDayInterval 3 -HardwareInventoryDayInterval 4 -SoftwareInventoryDayInterval 5 -StatusMessageDayInterval 6 -HistoryCleanupDayInterval 7
 ```
 
 This command modifies all client status settings.
 
 ### Example 2: Modify the Client Policy setting
 ```
-PS C:\> Set-CMClientStatusSetting -ClientPolicyDayInterval 5
+PS XYZ:\> Set-CMClientStatusSetting -ClientPolicyDayInterval 5
 ```
 
 This command modifies the client policy day setting only.

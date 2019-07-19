@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMMigrationSource
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: CBAB4B86-8A08-4BB6-B5F5-C6C24628AB25
+online version: https://go.microsoft.com/fwlink/?linkid=833934
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMMigrationSource
@@ -34,9 +42,13 @@ If you migrate from a System Center Configuration Manager hierarchy, you do not 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Specify a migration source
 ```
-PS C:\> Set-CMMigrationSource -SourceSiteServerName "cmdev-contoso01" -SmsProviderAccount "tsqa\pattifuller" -SqlServerAccount "tsqa\pattifuller" -EnableDistributionPointSharing $True
+PS XYZ:\> Set-CMMigrationSource -SourceSiteServerName "cmdev-contoso01" -SmsProviderAccount "tsqa\pattifuller" -SqlServerAccount "tsqa\pattifuller" -EnableDistributionPointSharing $True
 ```
 
 This command specifies the site server named cmdev-contoso01 as the source of migration data.

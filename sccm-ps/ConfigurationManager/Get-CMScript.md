@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMScript
 titleSuffix: Configuration Manager
 description: Gets Configuration Manager PowerShell scripts.
@@ -32,10 +32,14 @@ You can get a specific script by specifying the author or the name of the script
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all scripts
 
 ```powershell
-PS C:\> Get-CMScript
+PS XYZ:\> Get-CMScript
 ```
 
 This command gets all scripts that System Center Configuration Manager manages.
@@ -43,7 +47,7 @@ This command gets all scripts that System Center Configuration Manager manages.
 ### Example 2: Get scripts by using name
 
 ```powershell
-PS C:\> Get-CMScript -ScriptName "D*"
+PS XYZ:\> Get-CMScript -ScriptName "D*"
 ```
 
 This command gets all scripts that have a name that begins with the letter D.

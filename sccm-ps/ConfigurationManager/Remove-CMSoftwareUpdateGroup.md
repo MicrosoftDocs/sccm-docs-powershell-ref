@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMSoftwareUpdateGroup
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 0AE20299-BC95-4F7B-9D2C-E57678954D6D
+online version: https://go.microsoft.com/fwlink/?linkid=834226
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSoftwareUpdateGroup
@@ -43,24 +51,28 @@ If you remove a software update group, you can use the [Get-CMSoftwareUpdateGrou
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a software update group by using an ID
 ```
-PS C:\> Remove-CMSoftwareUpdateGroup -Id "ST10000B"
+PS XYZ:\> Remove-CMSoftwareUpdateGroup -Id "ST10000B"
 ```
 
 This command removes the software update group that has the ID ST10000B.
 
 ### Example 2: Remove a software update group by using a name
 ```
-PS C:\> Remove-CMSoftwareUpdateGroup -Name "SUGroupD01"
+PS XYZ:\> Remove-CMSoftwareUpdateGroup -Name "SUGroupD01"
 ```
 
 This command removes the software update group named SUGroupD01.
 
 ### Example 3: Remove a software update group by using an object variable
 ```
-PS C:\> $SubObj=Get-CMSoftwareUpdateGroup -Id "ST10000B" 
-PS C:\> Remove-CMSoftwareUpdateGroup -SoftwareUpdateGroup $SubObj
+PS XYZ:\> $SubObj=Get-CMSoftwareUpdateGroup -Id "ST10000B" 
+PS XYZ:\> Remove-CMSoftwareUpdateGroup -SoftwareUpdateGroup $SubObj
 ```
 
 The first command gets the software update group that has the ID ST10000B, and then stores it in the variable $SubObj.

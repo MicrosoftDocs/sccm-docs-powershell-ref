@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMServiceConnectionPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 1A94F9DA-050E-442B-A30F-AD506DEDD42A
+online version: https://go.microsoft.com/fwlink/?linkid=833852
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMServiceConnectionPoint
@@ -35,17 +43,21 @@ The **Get-CMServiceConnectionPoint** cmdlet gets a service connection point.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a service connection point by name
 ```
-PS C:\> Get-CMServiceConnectionPoint -SiteSystemServerName "TestServer01.Contoso.com" -SiteCode PS1
+PS XYZ:\> Get-CMServiceConnectionPoint -SiteSystemServerName "TestServer01.Contoso.com" -SiteCode PS1
 ```
 
 This command gets the service connection point for the site system server named TestServer01.Contoso.com with the site code PS1.
 
 ### Example 2: Get a service connection point by using a variable
 ```
-PS C:\> $Server = Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer02.Contoso.com"
-PS C:\> Get-CMServiceConnectionPoint -InputObject $Server
+PS XYZ:\> $Server = Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer02.Contoso.com"
+PS XYZ:\> Get-CMServiceConnectionPoint -InputObject $Server
 ```
 
 The first command gets the site system server object named TestServer02.Contoso.com with the site code PS1 and saves the object in the $Server variable.

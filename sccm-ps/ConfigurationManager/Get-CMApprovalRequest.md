@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMApprovalRequest
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: F564E6AA-E38D-4F5A-B030-2A71844EFF6D
+online version: https://go.microsoft.com/fwlink/?linkid=834103
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMApprovalRequest
@@ -61,10 +69,14 @@ You can specify an approval request by application name, application ID, or by u
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all approval requests
 
 ```powershell
-PS C:\> Get-CMApprovalRequest
+PS XYZ:\> Get-CMApprovalRequest
 ```
 
 This command gets all pending Microsoft System Center Configuration Manager approval requests.
@@ -72,7 +84,7 @@ This command gets all pending Microsoft System Center Configuration Manager appr
 ### Example 2: Get an approval request by using an application ID
 
 ```powershell
-PS C:\> Get-CMApprovalRequest -Id "1635223"
+PS XYZ:\> Get-CMApprovalRequest -Id "1635223"
 ```
 
 This command gets an approval request for an application with the specified ID.
@@ -80,7 +92,7 @@ This command gets an approval request for an application with the specified ID.
 ### Example 3: Get an approval request for a specific user
 
 ```powershell
-PS C:\> Get-CMApprovalRequest -Application "HelloWorld" -User "tsqa\davidchew"
+PS XYZ:\> Get-CMApprovalRequest -Application "HelloWorld" -User "tsqa\davidchew"
 ```
 
 This command gets an approval request for the application HelloWorld for a specified user.

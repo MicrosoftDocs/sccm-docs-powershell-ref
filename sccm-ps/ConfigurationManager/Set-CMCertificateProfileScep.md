@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMCertificateProfileScep
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: C3950252-6811-4EE6-B4FD-212F8523BFAD
+online version: https://go.microsoft.com/fwlink/?linkid=833699
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMCertificateProfileScep
@@ -64,16 +72,20 @@ The **Set-CMCertificateProfileScep** cmdlet updates the settings of a SCEP certi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a SCEP certificate profile by name
 ```
-PS C:\> Set-CMCertificateProfileScep -Name "TestProfile01" -CertificateStore Machine -Description "Test update" -HashAlgorithm SHA3 -KeySize 1024 -KeyUsage KeyEncipherment -NewName "TestProfile01_updated" -SanType SubjectAltRequireDns
+PS XYZ:\> Set-CMCertificateProfileScep -Name "TestProfile01" -CertificateStore Machine -Description "Test update" -HashAlgorithm SHA3 -KeySize 1024 -KeyUsage KeyEncipherment -NewName "TestProfile01_updated" -SanType SubjectAltRequireDns
 ```
 
 This command updates the SEP certificate profile named TestProfile01 and gives it the new name TestProfile01_updated.
 
 ### Example 2: Set a SCEP certificate profile by using the pipeline
 ```
-PS C:\> Get-CMCertificateProfileScep -Name "TestProfile02" -Fast | Set-CMCertificateProfileScep -AllowCertificateOnAnyDevice $True -KeyStorageProvider InstallToNGC_FailIfNotPresent
+PS XYZ:\> Get-CMCertificateProfileScep -Name "TestProfile02" -Fast | Set-CMCertificateProfileScep -AllowCertificateOnAnyDevice $True -KeyStorageProvider InstallToNGC_FailIfNotPresent
 ```
 
 This command gets the SEP certificate profile object named TestProfile02 and uses the pipeline operator to pass the object to **Set-CMCertificateProfileScep**, which updates the settings of the profile object.

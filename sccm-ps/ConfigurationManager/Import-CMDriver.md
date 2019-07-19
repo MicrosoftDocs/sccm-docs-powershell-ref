@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Import-CMDriver
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 3E3C8B28-7093-4BCC-8576-0DB94EEF4367
+online version: https://go.microsoft.com/fwlink/?linkid=834059
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMDriver
@@ -38,16 +46,20 @@ Because the accuracy of this information can vary, manually verify that the devi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import all device drivers in a path
 ```
-PS C:\>Import-CMDriver -UncFileLocation "\\Server1\Driver" -ImportFolder
+PS XYZ:\>Import-CMDriver -UncFileLocation "\\Server1\Driver" -ImportFolder
 ```
 
 This command imports all device drivers located in the network path \\\\Server1\Driver.
 
 ### Example 2: Import a device driver by name
 ```
-PS C:\>Import-CMDriver -UncFileLocation "\\Server1\Driver\driver.inf"
+PS XYZ:\>Import-CMDriver -UncFileLocation "\\Server1\Driver\driver.inf"
 ```
 
 This command imports the driver named driver.inf from the network path \\\\Server1\Driver.

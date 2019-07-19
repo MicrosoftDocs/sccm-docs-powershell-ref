@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Publish-CMPrestageContentTaskSequence
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 077E0748-86A4-460E-B829-4A21A61664EF
+online version: https://go.microsoft.com/fwlink/?linkid=833857
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Publish-CMPrestageContentTaskSequence
@@ -45,9 +53,13 @@ Optionally, you can exclude the application dependencies for applications indica
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Publish content required by a task sequence
 ```
-PS C:\>Publish-CMPrestageContentTaskSequence -DistributionPointName "distribution-server.contoso.com" -FolderName "ToBePublished" -TaskSequenceName "ContosoDeploymentSequence"
+PS XYZ:\>Publish-CMPrestageContentTaskSequence -DistributionPointName "distribution-server.contoso.com" -FolderName "ToBePublished" -TaskSequenceName "ContosoDeploymentSequence"
 ```
 
 This command copies content required by the task sequence ContosoDeploymentSequence to the distribution point distribution-server.contoso.com.

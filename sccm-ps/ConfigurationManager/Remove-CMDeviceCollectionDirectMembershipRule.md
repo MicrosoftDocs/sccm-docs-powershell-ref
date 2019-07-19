@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMDeviceCollectionDirectMembershipRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 26DED564-E45B-4654-84F5-05707F1080A8
+online version: https://go.microsoft.com/fwlink/?linkid=834044
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDeviceCollectionDirectMembershipRule
@@ -77,9 +85,13 @@ The **Remove-CMDeviceCollectionDirectMembershipRule** cmdlet removes a direct me
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a direct membership rule
 ```
-PS C:\> Remove-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01" -ResourceId 2097152004 -Force
+PS XYZ:\> Remove-CMDeviceCollectionDirectMembershipRule -CollectionName "Device01" -ResourceId 2097152004 -Force
 ```
 
 This command removes the direct membership rule for the resource with the ID of 2097152004 from the collection named Device01.
@@ -87,7 +99,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a direct membership rule by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device02" | Remove-CMDeviceCollectionDirectMembershipRule -Force
+PS XYZ:\> Get-CMCollection -Name "Device02" | Remove-CMDeviceCollectionDirectMembershipRule -Force
 ```
 
 This command gets the collection object named Device02 and uses the pipeline operator to pass the object to **Remove-CMDeviceCollectionDirectMembershipRule** which removes the direct membership rule for the resource with the ID of 2097152004 from the collection object.

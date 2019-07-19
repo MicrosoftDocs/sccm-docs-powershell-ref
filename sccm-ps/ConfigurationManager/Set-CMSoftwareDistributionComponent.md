@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSoftwareDistributionComponent
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 27F0C9D7-8574-4155-AA12-761A0A7C3AAE
+online version: https://go.microsoft.com/fwlink/?linkid=834046
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareDistributionComponent
@@ -41,9 +49,13 @@ You can configure the properties of an object to meet the demands that clients p
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set properties of a software distribution component
 ```
-PS C:\> Set-CMSoftwareDistributionComponent -SiteCode "CM2" -MaximumPackageCount 3 -MaximumThreadsPerPackage 6 -RetryCount 99 -DelayBeforeRetryingMinutes 31 -MulticastRetryCount 4 -MulticastDelayBeforeRetryingMinutes 2 -NetworkAccessAccount "Western\ElisaDaugherty"
+PS XYZ:\> Set-CMSoftwareDistributionComponent -SiteCode "CM2" -MaximumPackageCount 3 -MaximumThreadsPerPackage 6 -RetryCount 99 -DelayBeforeRetryingMinutes 31 -MulticastRetryCount 4 -MulticastDelayBeforeRetryingMinutes 2 -NetworkAccessAccount "Western\ElisaDaugherty"
 ```
 
 The following command sets all properties for a software distribution component.

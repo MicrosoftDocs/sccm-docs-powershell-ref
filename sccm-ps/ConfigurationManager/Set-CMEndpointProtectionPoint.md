@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMEndpointProtectionPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 7BEF1089-8E5C-4719-96E0-57443F90E8AA
+online version: https://go.microsoft.com/fwlink/?linkid=833841
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMEndpointProtectionPoint
@@ -40,17 +48,21 @@ For more information about Endpoint Protection in System Center Configuration Ma
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set an endpoint protection point
 ```
-PS C:\> Set-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -ProtectionService AdvancedMembership
+PS XYZ:\> Set-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -ProtectionService AdvancedMembership
 ```
 
 The command sets the endpoint protection point for the server, and specifies the membership type for the *ProtectionService* parameter.
 
 ### Example 2: Set an endpoint protection point by using an input object
 ```
-PS C:\> $Epp = Get-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
-PS C:\> Set-CMEndpointProtectionPoint -InputObject $Epp -ProtectionService BasicMembership
+PS XYZ:\> $Epp = Get-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
+PS XYZ:\> Set-CMEndpointProtectionPoint -InputObject $Epp -ProtectionService BasicMembership
 ```
 
 The first command uses the **Get-CMEndpointProtectionPoint** cmdlet to get an endpoint protection point, and stores the result in the $Epp variable.

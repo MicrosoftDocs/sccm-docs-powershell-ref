@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMMdmEnrollmentManager
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: EE34D675-431A-4CE6-A3C0-3114CF29C023
+online version: https://go.microsoft.com/fwlink/?linkid=833750
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMMdmEnrollmentManager
@@ -35,16 +43,20 @@ The **Get-CMMdmEnrollmentManger** cmdlet gets one or more Device Enrollment Mana
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a device enrollment manager by name
 ```
-PS C:\> Get-CMMdmEnrollmentManager -name "Contoso\User01"
+PS XYZ:\> Get-CMMdmEnrollmentManager -name "Contoso\User01"
 ```
 
 This command gets the device enrollment manager named User01.
 
 ### Example 2: Get a device enrollment manager by ID
 ```
-PS C:\> Get-CMMdmEnrollmentManager -ID "1234567890"
+PS XYZ:\> Get-CMMdmEnrollmentManager -ID "1234567890"
 ```
 
 This command gets the device enrollment manager named 1234567890.

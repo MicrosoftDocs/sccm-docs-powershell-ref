@@ -45,16 +45,20 @@ To unblock a device, use the [Unblock-CMDevice](Unblock-CMDevice.md) cmdlet.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Block a device
 ```
-PS C:\>Block-CMDevice -DeviceName "CMCEN-DIST02"
+PS XYZ:\>Block-CMDevice -DeviceName "CMCEN-DIST02"
 ```
 
 This command blocks the device named Test-DIST02.
 
 ### Example 2: Get a device and block it
 ```
-PS C:\> Get-CMDevice -Name "WIN10-86-33" | Block-CMDevice
+PS XYZ:\> Get-CMDevice -Name "WIN10-86-33" | Block-CMDevice
 ```
 
 This command gets the device object named WIN10-86-33 and uses the pipeline operator to pass the object to the **Block-CMDevice** cmdlet, which blocks the device object.

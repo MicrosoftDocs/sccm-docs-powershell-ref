@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Rename-CMCategory
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: AC1A56D7-0868-4302-B93D-423F21BFD2E0
+online version: https://go.microsoft.com/fwlink/?linkid=834293
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Rename-CMCategory
@@ -34,6 +42,10 @@ Rename-CMCategory -Name <String> -CategoryType <CategoryType> -NewName <String> 
 The **Rename-CMCategory** cmdlet renames a category instance.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1: Rename a category by getting a category object
 ```

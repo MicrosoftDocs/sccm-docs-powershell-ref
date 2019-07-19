@@ -49,17 +49,21 @@ You can specify a conflict by using a name or ID or you can use the [Get-CMConfl
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a blocked record for a named conflict
 ```
-PS C:\>Block-CMConflictingRecord -Name "CR07"
+PS XYZ:\>Block-CMConflictingRecord -Name "CR07"
 ```
 
 This command creates a blocked record for the conflict named CR07.
 
 ### Example 2: Create a blocked record by using a variable
 ```
-PS C:\> $CMCR = Get-CMConflictingRecord -Name "CR07"
-PS C:\> Block-CMConflictingRecord -ConflictingRecord $CMCR
+PS XYZ:\> $CMCR = Get-CMConflictingRecord -Name "CR07"
+PS XYZ:\> Block-CMConflictingRecord -ConflictingRecord $CMCR
 ```
 
 The first command gets a conflicting record named CR07 and saves it in the $CMCR variable.

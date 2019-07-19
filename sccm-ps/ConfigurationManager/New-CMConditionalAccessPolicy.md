@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMConditionalAccessPolicy
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: D7E96763-967E-4FAA-BF63-F5D1DC4AEC2D
+online version: https://go.microsoft.com/fwlink/?linkid=833600
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMConditionalAccessPolicy
@@ -46,9 +54,13 @@ NOTE: Ensure that the Administrator has set the notification email address for t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a conditional access policy by value
 ```
-PS C:\> New-CMConditionalAccessPolicy -TargetedCollection (Get-CMCollection -Name 'All Users') -DefaultRuleOverride -ExcludedCollection (Get-CMCollection -Name "TestCol") -NotificationText "Succeedtest"
+PS XYZ:\> New-CMConditionalAccessPolicy -TargetedCollection (Get-CMCollection -Name 'All Users') -DefaultRuleOverride -ExcludedCollection (Get-CMCollection -Name "TestCol") -NotificationText "Succeedtest"
 ```
 
 This command creates a conditional access policy with a targeted collection named All Users and an excluded collection named TestCol.
@@ -56,7 +68,7 @@ The command provides text for the user notification sent by Exchange when the us
 
 ### Example 2: Create a conditional access policy by ID
 ```
-PS C:\> New-CMConditionalAccessPolicy -TargetedCollectionId sms00004 -ExcludedCollectionID TS300014 -NotificationText "Test text" -DefaultRuleOverride
+PS XYZ:\> New-CMConditionalAccessPolicy -TargetedCollectionId sms00004 -ExcludedCollectionID TS300014 -NotificationText "Test text" -DefaultRuleOverride
 ```
 
 This command creates a conditional access policy with a targeted collection with the ID of sms00004 and an excluded collection with the ID TS300014.
@@ -64,7 +76,7 @@ The command provides text for the user notification sent by Exchange when the us
 
 ### Example 3: Create a conditional access policy by name
 ```
-PS C:\> New-CMConditionalAccessPolicy -TargetedCollectionName "All Users" -ExcludedCollectionName "TestCol1" -NotificationText "Test text" -DefaultRuleOverride
+PS XYZ:\> New-CMConditionalAccessPolicy -TargetedCollectionName "All Users" -ExcludedCollectionName "TestCol1" -NotificationText "Test text" -DefaultRuleOverride
 ```
 
 This command creates a conditional access policy with a targeted collection named All Users and an excluded collection named TestCol1.

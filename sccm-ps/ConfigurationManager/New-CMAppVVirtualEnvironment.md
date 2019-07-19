@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMAppVVirtualEnvironment
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 5FB30D79-F7FE-45AD-B888-2B3D5AC7C74E
+online version: https://go.microsoft.com/fwlink/?linkid=834252
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMAppVVirtualEnvironment
@@ -30,11 +38,15 @@ App-V virtual environments in System Center Configuration Manager enable deploye
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create an App-V virtual environment
 ```
-PS C:\> $Dti = Get-CMAppV5XDeploymentTypeItem -ApplicationName "App01d2012" -DeploymentTypeName "7Zip - Microsoft Application Virtualization 5"
-PS C:\> $Veg = New-CMVirtualEnvironmentGroup -Name "Venvgroup01" -DeploymentType $Dti
-PS C:\> New-CMAppVVirtualEnvironment -Name "CMAppVenv01" -Description "App-V virtual environment" -ApplicationGroup $Veg
+PS XYZ:\> $Dti = Get-CMAppV5XDeploymentTypeItem -ApplicationName "App01d2012" -DeploymentTypeName "7Zip - Microsoft Application Virtualization 5"
+PS XYZ:\> $Veg = New-CMVirtualEnvironmentGroup -Name "Venvgroup01" -DeploymentType $Dti
+PS XYZ:\> New-CMAppVVirtualEnvironment -Name "CMAppVenv01" -Description "App-V virtual environment" -ApplicationGroup $Veg
 ```
 
 This first command uses the **Get-CMAppV5XDeploymentTypeItem** cmdlet gets the deployment type named 7Zip - Microsoft Application Virtualization 5 in the application named App01d2012.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Invoke-CMDeviceRetire
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Oob.dll-Help.xml
+ms.assetid: 870825FB-4DB9-4DC5-9CD7-7C69F3DCC601
+online version: https://go.microsoft.com/fwlink/?linkid=834129
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMDeviceRetire
@@ -44,9 +52,13 @@ Retired devices remain listed until a maintenance task removes them.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Retire a named device
 ```
-PS C:\>Invoke-CMDeviceRetire -DeviceName "Computer073"
+PS XYZ:\>Invoke-CMDeviceRetire -DeviceName "Computer073"
 ```
 
 This command retires the computer named Computer073.

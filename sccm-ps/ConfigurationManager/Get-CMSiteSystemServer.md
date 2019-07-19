@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMSiteSystemServer
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 099289E2-E483-4312-B9E4-0CA86E6CE904
+online version: https://go.microsoft.com/fwlink/?linkid=833881
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSiteSystemServer
@@ -35,9 +43,13 @@ The **Get-CMSiteSystemServer** cmdlet gets a site system server in Microsoft Sys
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a site system server
 ```
-PS C:\> Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5"
+PS XYZ:\> Get-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5"
 ```
 
 This command gets the site system server named Server2.contoso.com for site code MP5.

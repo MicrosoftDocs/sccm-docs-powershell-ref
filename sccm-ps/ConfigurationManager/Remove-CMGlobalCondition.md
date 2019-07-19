@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMGlobalCondition
 titleSuffix: Configuration Manager
 description: Removes a Configuration Manager global condition object.
@@ -52,10 +52,14 @@ You cannot remove read-only global conditions.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a global condition
 
 ```powershell
-PS C:\> Remove-CMGlobalCondition -Name "GC56" -Force
+PS XYZ:\> Remove-CMGlobalCondition -Name "GC56" -Force
 ```
 
 This command removes a global condition named GC56.
@@ -64,8 +68,8 @@ Because the command uses the *Force* parameter, the system does not prompt you b
 ### Example 2: Remove a global condition using a variable
 
 ```powershell
-PS C:\> $CMGC = Get-CMGlobalCondition -Name "GC57"
-PS C:\> Remove-CMGlobalCondition -InputObject $CMGC
+PS XYZ:\> $CMGC = Get-CMGlobalCondition -Name "GC57"
+PS XYZ:\> Remove-CMGlobalCondition -InputObject $CMGC
 Remove
 Are you sure you wish to remove GlobalCondition: 
 LocalizedDisplayName=" GC57"?

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Import-CMComputerInformation
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Oob.dll-Help.xml
+ms.assetid: 98AE4491-7551-417F-9D80-E310C90AE6D9
+online version: https://go.microsoft.com/fwlink/?linkid=834052
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMComputerInformation
@@ -50,9 +58,13 @@ System Center Configuration Manager migrates user information and settings from 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import computers by using a file
 ```
-PS C:\>Import-CMComputerInformation -CollectionName "All Systems" -FileName "\\cmshare\Public\CM\ImportComputers.csv" -EnableColumnHeadings $True
+PS XYZ:\>Import-CMComputerInformation -CollectionName "All Systems" -FileName "\\cmshare\Public\CM\ImportComputers.csv" -EnableColumnHeadings $True
 ```
 
 This command imports the computers specified in the CVS file into the All Systems collection.
@@ -61,7 +73,7 @@ The cmdlet ignores the first line of the file.
 
 ### Example 2: Import a single computer
 ```
-PS C:\>Import-CMComputerInformation -CollectionName "All Systems" -ComputerName "Computer08" -MacAddress "5F:DA:FA:FA:FA:FA" -SmBiosGuid "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
+PS XYZ:\>Import-CMComputerInformation -CollectionName "All Systems" -ComputerName "Computer08" -MacAddress "5F:DA:FA:FA:FA:FA" -SmBiosGuid "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
 ```
 
 This command imports a specified computer into the All Systems collection.
@@ -69,7 +81,7 @@ The command specifies the name, MAC address, and SMBIOS GUID for a computer.
 
 ### Example 3: Import a computer using a reference computer
 ```
-PS C:\>Import-CMComputerInformation -CollectionName "All Systems" -ComputerName "Computer08" -MacAddress "5F:DA:FA:FA:FA:FA" -SmBiosGuid "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA" -SourceComputerName "ResourceComputer01"
+PS XYZ:\>Import-CMComputerInformation -CollectionName "All Systems" -ComputerName "Computer08" -MacAddress "5F:DA:FA:FA:FA:FA" -SmBiosGuid "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA" -SourceComputerName "ResourceComputer01"
 ```
 
 This command imports a specified computer into the All Systems collection.

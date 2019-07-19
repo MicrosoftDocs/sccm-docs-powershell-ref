@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Export-CMDriverPackage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: FB721B53-FA7D-4F58-984A-D8A94A218161
+online version: https://go.microsoft.com/fwlink/?linkid=834025
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Export-CMDriverPackage
@@ -44,9 +52,13 @@ The **Export-CMDriverPackage** cmdlet exports one or more driver packages to a .
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Export a driver package
 ```
-PS C:\>Export-CMDriverPackage -Name "DrvPkg01" -ExportFilePath "\\Contoso02\DriverPackages\DriverPackage01.zip"
+PS XYZ:\>Export-CMDriverPackage -Name "DrvPkg01" -ExportFilePath "\\Contoso02\DriverPackages\DriverPackage01.zip"
 ```
 
 This command exports the driver package named DrvPkg01 to the export file DriverPackage01.zip.

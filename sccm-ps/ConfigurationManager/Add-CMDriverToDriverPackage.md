@@ -82,9 +82,13 @@ When a device driver is added to a driver package, Microsoft System Center Confi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a driver to a driver package
 ```
-PS C:\>Add-CMDriverToDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -DriverPackageName "DrvPkg01"
+PS XYZ:\>Add-CMDriverToDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -DriverPackageName "DrvPkg01"
 ```
 
 This command adds the driver named Adaptec Embedded SCSI HostRAID Controller to the driver package named DrvPkg01.

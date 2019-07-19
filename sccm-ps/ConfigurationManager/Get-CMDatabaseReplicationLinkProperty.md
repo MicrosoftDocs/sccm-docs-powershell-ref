@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMDatabaseReplicationLinkProperty
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+ms.assetid: CC332293-14EF-4E4A-8F5B-0D16FD9EA33D
+online version: https://go.microsoft.com/fwlink/?linkid=834299
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDatabaseReplicationLinkProperty
@@ -31,9 +39,13 @@ This enables all sites to share the same information.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a replication link
 ```
-PS C:\> Get-CMDatabaseReplicationLinkProperty -ChildSiteCode "CM8" -ParentSiteCode "CM1"
+PS XYZ:\> Get-CMDatabaseReplicationLinkProperty -ChildSiteCode "CM8" -ParentSiteCode "CM1"
 ```
 
 This command gets a replication link between specified parent and child sites.

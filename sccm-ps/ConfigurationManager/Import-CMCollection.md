@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Import-CMCollection
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: D3A42200-DE43-4FCD-949A-10FCAE145DF5
+online version: https://go.microsoft.com/fwlink/?linkid=834048
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMCollection
@@ -30,9 +38,13 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import a collection
 ```
-PS C:\> Import-CMCollection -ImportFilePath "c:\path\collection.mof"
+PS XYZ:\> Import-CMCollection -ImportFilePath "c:\path\collection.mof"
 ```
 
 This command imports the collection defined in the collection.mof file.

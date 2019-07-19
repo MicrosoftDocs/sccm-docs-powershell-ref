@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMCertificateProfileScep
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm-help.xml
+ms.assetid: E45BED4A-8286-46FF-A3F1-4E54B7D77F90
+online version: https://go.microsoft.com/fwlink/?linkid=834170
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMCertificateProfileScep
@@ -38,16 +46,20 @@ The **Get-CMCertificateProfileScep** function gets a SCEP certificate profile.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a SCEP certificate profile by ID
 ```
-PS C:\> Get-CMcertificateProfileScep -Id 16777476
+PS XYZ:\> Get-CMcertificateProfileScep -Id 16777476
 ```
 
 This command gets the SCEP certificate profile with the ID of 16777476.
 
 ### Example 2: Get a SCEP certificate profile by name
 ```
-PS C:\> Get-CMCertificateProfileScep -Name "TestSCEPProfile"
+PS XYZ:\> Get-CMCertificateProfileScep -Name "TestSCEPProfile"
 ```
 
 This command gets the SCEP certificate profile with the name TestSCEPProfile.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMUserCollection
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 1543ACE3-2915-4522-9A1D-04902FB557DF
+online version: https://go.microsoft.com/fwlink/?linkid=833807
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMUserCollection
@@ -58,9 +66,13 @@ For more information about Configuration Manager collections, see [Introduction 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a user collection
 ```
-PS C:\> New-CMUserCollection -Name "Sales" -LimitingCollectionName "All Users"
+PS XYZ:\> New-CMUserCollection -Name "Sales" -LimitingCollectionName "All Users"
 ```
 
 This command creates a collection for all users in the Sales department.

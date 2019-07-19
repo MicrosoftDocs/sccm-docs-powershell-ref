@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMSoftwareMeteringRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 140F1D39-4D3B-4F73-BB67-676B5080A972
+online version: https://go.microsoft.com/fwlink/?linkid=834213
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSoftwareMeteringRule
@@ -49,9 +57,13 @@ For more information about software metering in System Center Configuration Mana
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove rules for a product
 ```
-PS C:\> Remove-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS XYZ:\> Remove-CMSoftwareMeteringRule -ProductName "Accounting Package"
 Remove
 Are you sure you wish to remove SoftwareMeteringRule: RuleID=16777220? 
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y

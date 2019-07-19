@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMUserAffinityFromDevice
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 71F2E8B1-1E1C-45EB-82EF-F6B6F71790F1
+online version: https://go.microsoft.com/fwlink/?linkid=834260
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMUserAffinityFromDevice
@@ -37,9 +45,13 @@ User device affinity is a method of associating a user with one or more specifie
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a primary user from a device
 ```
-PS C:\> Remove-CMUserAffinityFromDevice -DeviceId "209846738" -UserId "206359374"
+PS XYZ:\> Remove-CMUserAffinityFromDevice -DeviceId "209846738" -UserId "206359374"
 ```
 
 This command removes the association between the user that has the ID 206359374 and the device that has the ID 209846738.

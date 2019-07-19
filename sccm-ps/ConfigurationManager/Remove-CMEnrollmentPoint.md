@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMEnrollmentPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: C13FF7E4-A9CE-45C8-B995-685D417F14FD
+online version: https://go.microsoft.com/fwlink/?linkid=834093
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMEnrollmentPoint
@@ -37,9 +45,13 @@ After you remove an enrollment point, client computers and devices must use a di
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an enrollment point
 ```
-PS C:\> Remove-CMEnrollmentPoint -SiteSystemServerName "SiteServer01.Contoso.com" -SiteCode "CM1"
+PS XYZ:\> Remove-CMEnrollmentPoint -SiteSystemServerName "SiteServer01.Contoso.com" -SiteCode "CM1"
 ```
 
 This command removes an enrollment point.

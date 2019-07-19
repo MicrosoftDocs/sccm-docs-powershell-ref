@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSoftwareUpdateSummarizationSchedule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 3A9B5B87-2CE5-432B-BB63-D4CA96E35350
+online version: https://go.microsoft.com/fwlink/?linkid=834100
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdateSummarizationSchedule
@@ -30,16 +38,20 @@ You can use the [Invoke-CMSoftwareUpdateSummarization](Invoke-CMSoftwareUpdateSu
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Schedule summarization interval and unit
 ```
-PS C:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 5 -Unit Days
+PS XYZ:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 5 -Unit Days
 ```
 
 This command sets the update summarization schedule to run every five days.
 
 ### Example 2: Change schedule interval
 ```
-PS C:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 7
+PS XYZ:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 7
 ```
 
 This command changes the interval for the update summarization schedule to seven.

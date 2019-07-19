@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMScriptDeploymentType
 titleSuffix: Configuration Manager
 description: Sets a script installer deployment type.
@@ -97,10 +97,14 @@ The **Set-CMScriptDeploymentType** cmdlet changes the settings for a script inst
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a script installer deployment type
 
 ```powershell
-PS C:\> Set-CMScriptDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT01" -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage Powershell -ScriptText "update script text"
+PS XYZ:\> Set-CMScriptDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT01" -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage Powershell -ScriptText "update script text"
 ```
 
 This command adds an uninstall command to the script installer deployment type named ScriptDT01 for the application named application01.
@@ -109,7 +113,7 @@ The command also specifies the language of the script used to detect this deploy
 ### Example 2: Modify a script installer deployment type by using the pipeline
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT02" | Set-CMScriptDeploymentType -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage PowerShell -ScriptText "update script text"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT02" | Set-CMScriptDeploymentType -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage PowerShell -ScriptText "update script text"
 ```
 
 This command gets the script installer deployment type object named ScriptDT02 for the application named application01 and uses the pipeline operator to pass the object to **Set-CMScriptDeploymentType**.

@@ -1,4 +1,4 @@
----
+﻿---
 title: Add-CMApplicationCatalogWebsitePoint
 titleSuffix: Configuration Manager
 description: Adds an Application Catalog website point to a Microsoft System Center Configuration Manager site.
@@ -92,9 +92,13 @@ You can also specify a name for users to see in the browser, such as a company n
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an Application Catalog website point
 ```
-PS C:\>Add-CMApplicationCatalogWebsitePoint -ColorBlue 52 -ColorGreen 201 -ColorRed 168 -SiteCode "CM4" -SiteSystemServerName "ApplicationCatalog.Western.Contoso.com"
+PS XYZ:\>Add-CMApplicationCatalogWebsitePoint -ColorBlue 52 -ColorGreen 201 -ColorRed 168 -SiteCode "CM4" -SiteSystemServerName "ApplicationCatalog.Western.Contoso.com"
 ```
 
 This command adds an Application Catalog website point site system role for the site that has the site code CM4.

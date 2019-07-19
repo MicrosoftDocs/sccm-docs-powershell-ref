@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMConfigurationPolicy
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: C7C14E05-2CB8-4D9E-92A5-81838CF88799
+online version: https://go.microsoft.com/fwlink/?linkid=834007
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMConfigurationPolicy
@@ -43,16 +51,20 @@ See the Alias section for additional policy types that you can use this cmdlet t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a configuration policy by ID
 ```
-PS C:\> Remove-CMConfigurationPolicy -ID 16777454 -Force
+PS XYZ:\> Remove-CMConfigurationPolicy -ID 16777454 -Force
 ```
 
 This command removes the configuration policy with the CI_ID of 16777454, without prompting the user for confirmation.
 
 ### Example 2: Remove a configuration policy by name
 ```
-PS C:\> Get-CMcertificateProfilePfx -Name "CertProf1" | Remove-CMConfigurationPolicy
+PS XYZ:\> Get-CMcertificateProfilePfx -Name "CertProf1" | Remove-CMConfigurationPolicy
 ```
 
 This command gets the PFX certificate profile object named CertProf01 and uses the pipeline operator to pass the object to **Remove-CMConfigurationPolicy** which removes the certificate profile.

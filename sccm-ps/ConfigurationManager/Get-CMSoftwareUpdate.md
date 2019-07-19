@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMSoftwareUpdate
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: FBAE9153-5CD0-4F4B-9394-7B8EC2093A85
+online version: https://go.microsoft.com/fwlink/?linkid=833898
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdate
@@ -59,16 +67,20 @@ Clients receive a software update object when manually or automatically deployin
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get software updates that have been downloaded
 ```
-PS C:\> Get-CMSoftwareUpdate -IsContentProvisioned $True
+PS XYZ:\> Get-CMSoftwareUpdate -IsContentProvisioned $True
 ```
 
 This command gets all software updates that have been downloaded.
 
 ### Example 2: Get software updates by update group
 ```
-PS C:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Get-CMSoftwareUpdate
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Get-CMSoftwareUpdate
 ```
 
 This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Get-CMSoftwareUpdate**, which gets all software updates for the software update group object.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSoftwareUpdateBasedClientInstallation
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: DF5B9C76-DB24-42A5-AC3D-7AFEF65CE214
+online version: https://go.microsoft.com/fwlink/?linkid=834071
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdateBasedClientInstallation
@@ -35,9 +43,13 @@ The **Set-CMSoftwareUpdateBasedClientInstallation** cmdlet modifies a client ins
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a client installation to enable WSUS
 ```
-PS C:\> Set-CMSoftwareUpdateBasedClientInstallation -EnableWSUS $True -SiteCode "CM1"
+PS XYZ:\> Set-CMSoftwareUpdateBasedClientInstallation -EnableWSUS $True -SiteCode "CM1"
 ```
 
 This command enables WSUS for a client installation.

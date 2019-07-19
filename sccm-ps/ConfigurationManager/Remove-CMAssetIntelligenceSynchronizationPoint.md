@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMAssetIntelligenceSynchronizationPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F8A5A3D8-DF47-4073-93A6-632BE7A2570C
+online version: https://go.microsoft.com/fwlink/?linkid=833912
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMAssetIntelligenceSynchronizationPoint
@@ -36,17 +44,21 @@ After you remove an Asset Intelligence synchronization point, the Microsoft Syst
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an Asset Intelligence synchronization point
 ```
-PS C:\> Remove-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM1"
+PS XYZ:\> Remove-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM1"
 ```
 
 This command removes the Asset Intelligence synchronization point on the System Center Configuration Manager site that has the site code CM1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
 
 ### Example 2: Remove an Asset Intelligence synchronization point by using an object variable
 ```
-PS C:\> $AIsync = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "WEST04.CORP.CONTOSO.COM" -SiteCode "ST1"
-PS C:\> Remove-CMAssetIntelligenceSynchronizationPoint -InputObject $AIsync
+PS XYZ:\> $AIsync = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "WEST04.CORP.CONTOSO.COM" -SiteCode "ST1"
+PS XYZ:\> Remove-CMAssetIntelligenceSynchronizationPoint -InputObject $AIsync
 ```
 
 The first command gets the Asset Intelligence synchronization point on the System Center Configuration Manager site that has the site code ST1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.

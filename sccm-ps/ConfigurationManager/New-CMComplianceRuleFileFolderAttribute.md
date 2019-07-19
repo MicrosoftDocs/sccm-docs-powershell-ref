@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMComplianceRuleFileFolderAttribute
 titleSuffix: Configuration Manager
@@ -9,6 +10,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+online version: 
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMComplianceRuleFileFolderAttribute
@@ -31,9 +38,13 @@ New-CMComplianceRuleFileFolderAttribute [-Archive <Boolean>] [-Compressed <Boole
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>  
 ```
 
  

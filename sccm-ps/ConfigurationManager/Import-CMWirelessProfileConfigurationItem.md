@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Import-CMWirelessProfileConfigurationItem
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 4E6D3504-C65F-4EE1-A914-FDC1100584BD
+online version: https://go.microsoft.com/fwlink/?linkid=834089
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMWirelessProfileConfigurationItem
@@ -29,9 +37,13 @@ The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wir
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import a wireless profile configuration item
 ```
-PS C:\><?xml version="1.0"?>
+PS XYZ:\><?xml version="1.0"?>
 <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
  <name>Open-WEP</name>
  <SSIDConfig>
@@ -56,7 +68,7 @@ PS C:\><?xml version="1.0"?>
  </MSM>
 </WLANProfile>
 
-PS C:\> Import-CMWirelessProfileConfigurationItem -Name "Wireless2" -Description "Imported wireless profile" -Path "c:\WLanProfile.xml" -SupportedPlatform (Get-CMSupportedPlatform -Name "*Windows*10*" -Fast)
+PS XYZ:\> Import-CMWirelessProfileConfigurationItem -Name "Wireless2" -Description "Imported wireless profile" -Path "c:\WLanProfile.xml" -SupportedPlatform (Get-CMSupportedPlatform -Name "*Windows*10*" -Fast)
 ```
 
 The first section provides xml content for the wireless profile.

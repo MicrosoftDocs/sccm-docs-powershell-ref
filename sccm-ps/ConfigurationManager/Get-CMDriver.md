@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMDriver
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 2B68441B-3BDC-44EF-9546-BC931AEE22CB
+online version: https://go.microsoft.com/fwlink/?linkid=833664
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDriver
@@ -50,9 +58,13 @@ The **Get-CMDriver** cmdlet gets a device driver.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a device driver
 ```
-PS C:\> Get-CMDriver -Name "Driver01"
+PS XYZ:\> Get-CMDriver -Name "Driver01"
 ```
 
 This command gets the driver named Driver01.

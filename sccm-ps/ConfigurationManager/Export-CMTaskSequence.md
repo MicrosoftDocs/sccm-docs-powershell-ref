@@ -2,12 +2,12 @@
 title: Export-CMTaskSequence
 titleSuffix: Configuration Manager
 description: Exports a Configuration Manager task sequence.
-ms.date: 11/30/2018
+ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ---
 
@@ -49,11 +49,15 @@ The **Export-CMTaskSequence** cmdlet exports a Microsoft System Center Configura
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a task sequence and export it
 
 ```powershell
-PS C:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS C:\> Export-CMTaskSequence -InputObject $TaskSequence -ExportFilePath "\\Server1\TS\TaskSequence01.zip"
+PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+PS XYZ:\> Export-CMTaskSequence -InputObject $TaskSequence -ExportFilePath "\\Server1\TS\TaskSequence01.zip"
 ```
 
 The first command gets the task sequence object named TaskSequence01 and stores the object in the $TaskSequence variable.
@@ -63,10 +67,33 @@ The second command exports the task sequence stored in $TaskSequence to the spec
 ### Example 2: Get a task sequence and use the pipeline to export it
 
 ```powershell
-PS C:\> Get-CMTaskSequence -Name "TaskSequence02" | Export-CMTaskSequence -ExportFilePath "\\Server1\TS\TaskSequence02.zip"
+PS XYZ:\> Get-CMTaskSequence -Name "TaskSequence02" | Export-CMTaskSequence -ExportFilePath "\\Server1\TS\TaskSequence02.zip"
 ```
 
 This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Export-CMTaskSequence**, which exports the task sequence object to the specified location.
+
+### Example 3: Export Several Task Sequences by Creating an Array (Part of Script)
+
+This code creates an array of task sequences, then exports them all. It uses much of the information from the actual task sequence to create the folder structure and file name during the export. It also allows you to export it with comments.
+
+```powershell
+$TaskSequenceTable= @(
+        @{ TSName = 'TaskSequence_A'; TSPackageID = "PS200038"; Comment = "Comments about TS_A"}
+        @{ TSName = 'TaskSequence_B'; TSPackageID = "PS200072"; Comment = "Comments about TS_B"}
+        @{ TSName = 'TaskSequence_C'; TSPackageID = "PS200084"; Comment = "Comments about TS_C"}
+        @{ TSName = 'TaskSequence_D'; TSPackageID = "PS200081"; Comment = "Comments about TS_D"}
+        )
+foreach ($TaskSequence in $TaskSequenceTable)
+    {
+    $TSObject = Get-CMTaskSequence -TaskSequencePackageId $TaskSequence.TSPackageID
+    $TSSourceDate = $TSObject.LastRefreshTime.ToString("yyyyMMdd")
+    $ExportLocation = "\\Server\Share\TSExports"
+    $TSExportDir = "$($ExportLocation)\TaskSequences\$($TaskSequence.TSName)"
+    $TSExportName = "$($TSObject.Name)_$($TSSourceDate).zip"
+    Export-CMTaskSequence -InputObject $TSObject -ExportFilePath "$($TSExportDir)\$($TSExportName)" -Comment $TaskSequence.Comment -WithDependence $true -WithContent $false -Force
+    }
+```
+
 
 ## PARAMETERS
 
@@ -275,7 +302,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CMTaskSequence](Get-CMTaskSequence.md)
+[New-CMTaskSequence](New-CMTaskSequence.md)
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 [Set-CMTaskSequence](Set-CMTaskSequence.md)
 [Copy-CMTaskSequence](Copy-CMTaskSequence.md)

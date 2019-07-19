@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSoftwareInventory
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 8210D2F5-9101-47D0-81E7-5F837F5F4F60
+online version: https://go.microsoft.com/fwlink/?linkid=834050
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareInventory
@@ -44,9 +52,13 @@ The **Set-CMSoftwareInventory** cmdlet modifies an object that collects informat
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a software inventory object
 ```
-PS C:\> Set-CMSoftwareInventory -Name "MSXML 6.0 Parser"
+PS XYZ:\> Set-CMSoftwareInventory -Name "MSXML 6.0 Parser"
 ```
 
 This command starts collecting software inventory data on the file named MSXML 6.0 Parser.

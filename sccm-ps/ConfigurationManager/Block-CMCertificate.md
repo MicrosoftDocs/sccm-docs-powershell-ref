@@ -36,9 +36,13 @@ Microsoft System Center Configuration Manager uses certificates to manage boot m
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Block a certificate
 ```
-PS C:\>Block-CMCertificate -Id "11729"
+PS XYZ:\>Block-CMCertificate -Id "11729"
 ```
 
 This command blocks the certificate that has the specified ID.

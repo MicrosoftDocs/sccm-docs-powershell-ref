@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMBaseline
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: C01E6314-2F4A-4D25-B420-F73CA7F48CBD
+online version: https://go.microsoft.com/fwlink/?linkid=834130
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMBaseline
@@ -51,16 +59,20 @@ The **Get-CMBaseline** cmdlet gets one or more configuration baselines.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get configuration baselines by using a parent baseline name
 ```
-PS C:\> Get-CMBaseline -ParentBaselineName "ParentBaselineContoso01"
+PS XYZ:\> Get-CMBaseline -ParentBaselineName "ParentBaselineContoso01"
 ```
 
 This command gets the child configuration baselines in the parent baseline configuration item named ParentBaselineContoso01.
 
 ### Example 2: Get configuration baselines by using a parent baseline ID
 ```
-PS C:\> Get-CMBaseline -ParentBaselineId "16777357"
+PS XYZ:\> Get-CMBaseline -ParentBaselineId "16777357"
 ```
 
 This command gets the child configuration baselines in the parent baseline configuration item that has the identity 16777357.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMNokiaDeploymentType
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833950
+schema: 2.0.0
+ms.assetid: 5004C134-23B8-4DB9-AC9E-94345E8978D6
+>>>>>>> master
 ---
 
 # Set-CMNokiaDeploymentType
@@ -55,16 +63,20 @@ The **Set-CMNokiaDeploymentType** cmdlet changes the settings for a Nokia deploy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a Nokia deployment type
 ```
-PS C:\> Set-CMNokiaDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia" -NewName "DTNokia_Updated" -RemoveLanguage "zh-CN"
+PS XYZ:\> Set-CMNokiaDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia" -NewName "DTNokia_Updated" -RemoveLanguage "zh-CN"
 ```
 
 This command changes the name of the Nokia deployment type named DTNokia for the application named testNokia to DTNokia_Updated and removes Chinese from the deployment type.
 
 ### Example 2: Modify a Nokia deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia01" | Set-CMNokiaDeploymentType -NewName "DTNokia01_updated" -RemoveLanguage "en-US" -Comment "Set Nokia deployment type" -Confirm
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia01" | Set-CMNokiaDeploymentType -NewName "DTNokia01_updated" -RemoveLanguage "en-US" -Comment "Set Nokia deployment type" -Confirm
 ```
 
 This command gets the Nokia deployment type object named DTNokia01 for the application named testNokia and uses the pipeline operator to pass the object to **Set-CMNokiaDeploymentType**.

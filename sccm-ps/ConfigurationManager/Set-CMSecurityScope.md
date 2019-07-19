@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSecurityScope
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 625C4356-E131-46E4-B0AA-A4E1BB6996A7
+online version: https://go.microsoft.com/fwlink/?linkid=834023
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSecurityScope
@@ -41,10 +49,14 @@ The **Set-CMSecurityScope** cmdlet changes the configuration settings of a secur
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a security scope and update its name
 ```
-PS C:\> $Scope = Get-CMSecurityScope -Name "Scope"
-PS C:\> Set-CMSecurityScope -InputObject $Scope -NewName "newScope"
+PS XYZ:\> $Scope = Get-CMSecurityScope -Name "Scope"
+PS XYZ:\> Set-CMSecurityScope -InputObject $Scope -NewName "newScope"
 ```
 
 The first command gets the security scope object named Scope and stores the object in the $Scope variable.
@@ -53,7 +65,7 @@ The second command changes the name of the security scope stored in $Scope to ne
 
 ### Example 2: Pass a security scope through the pipeline and update its name
 ```
-PS C:\> Get-CMSecurityScope -Name "Scope" | Set-CMSecurityScope -NewName "newScope"
+PS XYZ:\> Get-CMSecurityScope -Name "Scope" | Set-CMSecurityScope -NewName "newScope"
 ```
 
 This command gets the security scope object named Scope and uses the pipeline operator to pass the object to **Set-CMSecurityScope**, which changes the name of the security scope to newScope.

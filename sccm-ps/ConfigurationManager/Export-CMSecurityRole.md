@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Export-CMSecurityRole
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 22B77C84-02CE-4101-8EAB-44700D126880
+online version: https://go.microsoft.com/fwlink/?linkid=834036
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Export-CMSecurityRole
@@ -41,9 +49,13 @@ The **Export-CMSecurityRole** cmdlet exports a security role configuration from 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Export a security role
 ```
-PS C:\>Export-CMSecurityRole -Path "\\Contoso01\Export\Sec_Roles\Security_Manager" -RoleId "SMS000CR"
+PS XYZ:\>Export-CMSecurityRole -Path "\\Contoso01\Export\Sec_Roles\Security_Manager" -RoleId "SMS000CR"
 ```
 
 This command exports the security role named SMS000CR to the file named Security_Manager.

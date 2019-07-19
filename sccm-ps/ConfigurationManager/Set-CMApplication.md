@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMApplication
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 0FF11819-7D5A-499F-9E7C-E332117BE0E6
+online version: https://go.microsoft.com/fwlink/?linkid=833628
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMApplication
@@ -27,9 +35,10 @@ Set-CMApplication [-InputObject] <IResultObject> [-Description <String>] [-Publi
  [-ClearSupportContact] [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
  [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-AddAppCategory <IResultObject>] 
+ [-AddUserCategory <IResultObject>] [-CleanAppCategory] [-CleanUserCategory] [-PrivacyUrl <String>] 
+ [-IsFeatured <Boolean>] [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] 
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
@@ -41,9 +50,10 @@ Set-CMApplication [-Id] <Int32> [-Description <String>] [-Publisher <String>] [-
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
  [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-AddAppCategory <IResultObject>] 
+ [-AddUserCategory <IResultObject>] [-CleanAppCategory] [-CleanUserCategory] [-PrivacyUrl <String>] 
+ [-IsFeatured <Boolean>] [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] 
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
@@ -55,9 +65,10 @@ Set-CMApplication [-Name] <String> [-Description <String>] [-Publisher <String>]
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
  [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-AddAppCategory <IResultObject>] 
+ [-AddUserCategory <IResultObject>] [-CleanAppCategory] [-CleanUserCategory] [-PrivacyUrl <String>] 
+ [-IsFeatured <Boolean>] [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] 
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByModelName
@@ -69,9 +80,10 @@ Set-CMApplication -ModelName <String> [-Description <String>] [-Publisher <Strin
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
  [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserCategory <String[]>] [-AppCategory <String[]>] [-AddAppCategory <IResultObject>] [-AddUserCategory <IResultObject>]
+ [-CleanAppCategory] [-CleanUserCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>] [-IconLocationFile <String>] 
+ [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] 
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,9 +91,13 @@ The **Set-CMApplication** cmdlet changes the settings of an application.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set the properties of an application by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application01" | Set-CMApplication -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "Linktext" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
+PS XYZ:\> Get-CMApplication -Name "Application01" | Set-CMApplication -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "Linktext" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
 ```
 
 The first command gets the application object named Application01 and uses the pipeline operator to pass the object to **Set-CMApplication**.
@@ -89,7 +105,7 @@ The first command gets the application object named Application01 and uses the p
 
 ### Example 2: Get an application, rename it, and update its settings
 ```
-PS C:\> Set-CMApplication -Name "Application01" -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName Localized "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "LinkText" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
+PS XYZ:\> Set-CMApplication -Name "Application01" -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName Localized "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "LinkText" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
 ```
 
 This command gets the application named Application01, renames it to Application01_New, and sets the specified properties on the application.
@@ -127,6 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppCategory
+This cmdlet is deprecated in 1802. See -AddAppCategory for more information.
 Specifies an array of administrative categories assigned to the application.
 Provide the categories by their name.
 Only categories of the type AppCategories are supported.
@@ -143,6 +160,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddAppCategory
+Specifies an administrative category assigned to the application.
+Provide the category by its name.
+Only categories of the type AppCategories are supported.
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddUserCategory
+Specifies a user category assigned to the application for Software Center filtering use.
+Provide the category by its name.
+Only categories of the type CatalogCategories are supported.
+
+```yaml
+Type: IResultObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoInstall
 Indicates whether a task sequence action can install the application.
 
@@ -150,6 +201,36 @@ Indicates whether a task sequence action can install the application.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanAppCategory
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanUserCategory
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -655,6 +736,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCategory
+This cmdlet is deprecated in 1802. See -AddUserCategory for more information. 
 Specifies an array of user categories assigned to the application.
 You can use this parameter to identify a group or category of software, such as "office productivity" or "graphics."
 

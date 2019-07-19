@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMDatabaseReplicationStatus
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+ms.assetid: 5BB8ECD0-6FB0-4FCB-8966-8BB7FCC10E5B
+online version: https://go.microsoft.com/fwlink/?linkid=834302
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDatabaseReplicationStatus
@@ -31,9 +39,13 @@ You can specify just the site code or just the name for a parent or child and ge
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get status using site codes
 ```
-PS C:\> Get-CMDataBaseReplicationStatus -ChildSiteCode "CCC" -ParentSiteCode "CCA"
+PS XYZ:\> Get-CMDataBaseReplicationStatus -ChildSiteCode "CCC" -ParentSiteCode "CCA"
 ```
 
 This command gets the status of a database replication link for the child with a site code CCC and the parent with a site code CCA.

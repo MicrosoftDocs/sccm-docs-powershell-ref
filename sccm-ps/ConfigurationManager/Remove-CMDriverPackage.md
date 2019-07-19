@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMDriverPackage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: F75B3EAC-82F0-43A6-97A5-137CDE2C6D6B
+online version: https://go.microsoft.com/fwlink/?linkid=834085
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDriverPackage
@@ -42,9 +50,13 @@ After the driver package is removed, it cannot be used by any task sequence.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a driver package that is specified by its identifier
 ```
-PS C:\> Remove-CMDriverPackage -Id "ST100062"
+PS XYZ:\> Remove-CMDriverPackage -Id "ST100062"
 ```
 
 This command removes a driver package that is specified by its identifier.

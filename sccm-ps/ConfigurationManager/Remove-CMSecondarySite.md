@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMSecondarySite
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 44AF985A-0AC1-46CC-A021-0BEE66558953
+online version: https://go.microsoft.com/fwlink/?linkid=834179
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSecondarySite
@@ -43,9 +51,13 @@ Instead it is connected to a primary site and sends client data to the primary s
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a secondary site upgrade by using a site name
 ```
-PS C:\> Remove-CMSecondarySite -Action Delete -SiteName "ClientSecSiteUpgrade03"
+PS XYZ:\> Remove-CMSecondarySite -Action Delete -SiteName "ClientSecSiteUpgrade03"
 ```
 
 This command deletes a secondary site named ClientSecSiteUpgrade03.

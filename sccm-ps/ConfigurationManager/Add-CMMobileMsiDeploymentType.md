@@ -47,16 +47,20 @@ The **Add-CMMobileMsiDeploymentType** cmdlet adds a mobile Windows Installer dep
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a deployment type
 ```
-PS C:\>Add-CMMobileMsiDeploymentType -ApplicationName "TestMobile" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
+PS XYZ:\>Add-CMMobileMsiDeploymentType -ApplicationName "TestMobile" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
 ```
 
 This command adds the mobile Windows Installer deployment type named DTMobile from the specified location to the application named TestMobile in English and Chinese.
 
 ### Example 2: Add a deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication "TestMobile" | Add-CMMobileMsiDeploymentType -ContentLocation "\\127.0.0.1\c$\UnitTest\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile02" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
+PS XYZ:\> Get-CMApplication "TestMobile" | Add-CMMobileMsiDeploymentType -ContentLocation "\\127.0.0.1\c$\UnitTest\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile02" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
 ```
 
 This command gets the application object named TestMobile and uses the pipeline operator to pass the object to **Add-CMMobileMsiDeploymentType**.
@@ -68,7 +72,7 @@ This command gets the application object named TestMobile and uses the pipeline 
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information about the **CultureInfo.Name** property, see [CultureInfo.Name Property](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo.name?view=netframework-4.8#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]

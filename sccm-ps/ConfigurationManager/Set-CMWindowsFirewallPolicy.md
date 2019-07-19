@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMWindowsFirewallPolicy
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 4B32EE03-FD8B-4F78-9F32-258A1C20EB0A
+online version: https://go.microsoft.com/fwlink/?linkid=834164
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMWindowsFirewallPolicy
@@ -58,24 +66,28 @@ The **Set-CMWindowsFirewallPolicy** cmdlet changes settings of one or more Windo
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Decrease the priority of a Windows Firewall policy by using a name
 ```
-PS C:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Name "WFPContoso01"
+PS XYZ:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Name "WFPContoso01"
 ```
 
 This command decreases the priority of the Windows Firewall policy named WFPContoso01.
 
 ### Example 2: Decrease the priority of a Windows Firewall policy by using an ID
 ```
-PS C:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Id "16777568"
+PS XYZ:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Id "16777568"
 ```
 
 This command decreases the priority of the Windows Firewall policy that has the ID 16777568.
 
 ### Example 3: Increase the priority of a Windows Firewall policy by using an object variable
 ```
-PS C:\> $WFPobj=Get-CMWindowsFirewallPolicy -Id "16777568"
-PS C:\> Set-CMWindowsFirewallPolicy -Priority Increase -InputObject $WFPobj
+PS XYZ:\> $WFPobj=Get-CMWindowsFirewallPolicy -Id "16777568"
+PS XYZ:\> Set-CMWindowsFirewallPolicy -Priority Increase -InputObject $WFPobj
 ```
 
 The first command gets the **CMWindowsFirewallPolicy** object that has the ID 16777568 and stores it in the $WFPobj variable.

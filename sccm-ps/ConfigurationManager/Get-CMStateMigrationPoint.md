@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMStateMigrationPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 4726F813-5B03-4939-BC9D-C5AC93D795A4
+online version: https://go.microsoft.com/fwlink/?linkid=833933
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMStateMigrationPoint
@@ -41,9 +49,13 @@ Each state migration point site server can be a member of only one System Center
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a migration point
 ```
-PS C:\> Get-CMStateMigrationPoint -SiteCode "CM1" -SiteSystemServerName "SMP01.Western.Contoso.com"
+PS XYZ:\> Get-CMStateMigrationPoint -SiteCode "CM1" -SiteSystemServerName "SMP01.Western.Contoso.com"
 ```
 
 This command gets a state migration point that belongs to the specified site and has the specified host name.

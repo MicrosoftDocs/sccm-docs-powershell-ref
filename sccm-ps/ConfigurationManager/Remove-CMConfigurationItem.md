@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Removes configuration items from Configuration Manager.
@@ -54,10 +54,14 @@ For more information about configuration items, see [Introduction to Compliance 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an item using an ID
 
 ```powershell
-PS C:\> Remove-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Remove-CMConfigurationItem -Id "16777568"
 ```
 
 This command removes a configuration item with the specified identifier.
@@ -65,7 +69,7 @@ This command removes a configuration item with the specified identifier.
 ### Example 2: Remove an item using a name
 
 ```powershell
-PS C:\> Remove-CMConfigurationItem -Name "ConfigItem76"
+PS XYZ:\> Remove-CMConfigurationItem -Name "ConfigItem76"
 ```
 
 This command removes a configuration item named ConfigItem76.
@@ -73,8 +77,8 @@ This command removes a configuration item named ConfigItem76.
 ### Example 3: Remove an item using a variable
 
 ```powershell
-PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
-PS C:\> Remove-CMConfigurationItem -InputObject $CIObj
+PS XYZ:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Remove-CMConfigurationItem -InputObject $CIObj
 ```
 
 The first command gets a configuration item with the specified identifier and stores it in the $CIObj variable.

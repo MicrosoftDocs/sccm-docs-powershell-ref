@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Enable-CMProgram
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 3075773B-6EDE-4F06-96B1-9B909098F9F6
+online version: https://go.microsoft.com/fwlink/?linkid=833987
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Enable-CMProgram
@@ -47,9 +55,13 @@ You can associate multiple programs with the same package.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable a program
 ```
-PS C:\>Enable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
+PS XYZ:\>Enable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
 ```
 
 This command enables the program named ProgramD02 in the package that has the ID CM400007.

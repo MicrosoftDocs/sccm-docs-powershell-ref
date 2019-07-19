@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMSqlServerSetting
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 3BEACC09-5500-4890-BF68-77652EF15768
+online version: https://go.microsoft.com/fwlink/?linkid=833773
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMSqlServerSetting
@@ -38,9 +46,13 @@ The object specifies settings for the name of the site database and the port num
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a SQL Server settings object
 ```
-PS C:\> New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite -SqlServerServiceBrokerPort 4037
+PS XYZ:\> New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite -SqlServerServiceBrokerPort 4037
 ```
 
 This command creates a SQL Server settings object that specifies that System Center Configuration Manager copies Microsoft SQL Server Express to a secondary site.

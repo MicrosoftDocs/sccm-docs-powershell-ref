@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMCertificate
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Certificates.dll-Help.xml
+ms.assetid: 20865371-37E6-4090-9921-E2051D26D873
+online version: https://go.microsoft.com/fwlink/?linkid=834161
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMCertificate
@@ -27,6 +35,10 @@ Get-CMCertificate [-Id <String>] [-Thumbprint <String>] [-CertificateType <Certi
 The **Get-CMCertificate** cmdlet gets a certificate.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1: Get all certificates
 ```

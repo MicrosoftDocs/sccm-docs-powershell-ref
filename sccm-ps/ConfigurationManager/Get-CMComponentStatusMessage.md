@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMComponentStatusMessage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: 3AABF576-B504-4756-A8B8-412E842306C3
+online version: https://go.microsoft.com/fwlink/?linkid=834250
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMComponentStatusMessage
@@ -35,9 +43,13 @@ You must specify a viewing period, as a **TimeSpan** object.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get critical messages for a site
 ```
-PS C:\> Get-CMComponentStatusMessage -ViewingPeriod "2/1/2013 12:00 AM" -Severity Warning -SiteCode "CM1"
+PS XYZ:\> Get-CMComponentStatusMessage -ViewingPeriod "2/1/2013 12:00 AM" -Severity Warning -SiteCode "CM1"
 ```
 
 This command gets component status messages for the specified viewing period for the Configuration Manager site that has the site code CM1.

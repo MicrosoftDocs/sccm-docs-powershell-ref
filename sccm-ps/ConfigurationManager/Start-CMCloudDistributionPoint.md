@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Start-CMCloudDistributionPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Content.dll-Help.xml
+ms.assetid: 0F8788AA-2C2A-4834-9CEA-9390D1E67F52
+online version: https://go.microsoft.com/fwlink/?linkid=834207
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMCloudDistributionPoint
@@ -43,24 +51,28 @@ You can use the [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Start the cloud distribution point service using an ID
 ```
-PS C:\> Start-CMCloudDistributionPoint -Id "16777242"
+PS XYZ:\> Start-CMCloudDistributionPoint -Id "16777242"
 ```
 
 This command starts the cloud distribution point service for the cloud distribution point that has the specified identifier.
 
 ### Example 2: Start the cloud distribution point service using a name
 ```
-PS C:\> Start-CMCloudDistributionPoint -Name "West01"
+PS XYZ:\> Start-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command starts the cloud distribution point service for the cloud distribution point named West01.
 
 ### Example 3: Start the cloud distribution point service using an object
 ```
-PS C:\> $DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
-PS C:\> Start-CMCloudDistributionPoint -InputObject $DistPnt
+PS XYZ:\> $DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
+PS XYZ:\> Start-CMCloudDistributionPoint -InputObject $DistPnt
 ```
 
 The first command uses the **Get-CMCloudDistributionPoint** cmdlet to get the distribution point with the specified identifier, and then saves it in the $DistPnt variable.

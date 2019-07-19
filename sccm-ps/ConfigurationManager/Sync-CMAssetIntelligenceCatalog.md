@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Sync-CMAssetIntelligenceCatalog
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 9C1E92FE-A79C-4759-8B60-CF71B83AEECB
+online version: https://go.microsoft.com/fwlink/?linkid=834247
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Sync-CMAssetIntelligenceCatalog
@@ -36,9 +44,13 @@ When you manually request catalog synchronization with System Center Online, it 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Update the Asset Intelligence catalog
 ```
-PS C:\> Sync-CMAssetIntelligenceCatalog -SiteCode "CM2" -SiteSystemServerName "Contoso-west02"
+PS XYZ:\> Sync-CMAssetIntelligenceCatalog -SiteCode "CM2" -SiteSystemServerName "Contoso-west02"
 ```
 
 This command the updates the Asset Intelligence catalog on the System Center Configuration Manager site that has the site code CM2 on the site system server named Contoso-west02.

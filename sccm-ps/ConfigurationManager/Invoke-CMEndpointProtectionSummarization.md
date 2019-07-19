@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Invoke-CMEndpointProtectionSummarization
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 0D61AE1F-9859-481D-AF56-E7724212CC22
+online version: https://go.microsoft.com/fwlink/?linkid=834141
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMEndpointProtectionSummarization
@@ -31,9 +39,13 @@ For more information about configuring and monitoring Endpoint Protection, see [
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Invoke summarization for Endpoint Protection
 ```
-PS C:\>Invoke-CMEndpointProtectionSummarization -Confirm
+PS XYZ:\>Invoke-CMEndpointProtectionSummarization -Confirm
 ```
 
 This command gets summary data about Endpoint Protection status after you confirm that you want to run the command.

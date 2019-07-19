@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMTaskSequence
 titleSuffix: Configuration Manager
 description: Sets a Configuration Manager task sequence.
@@ -64,11 +64,15 @@ The **Set-CMTaskSequence** cmdlet modifies a Microsoft System Center Configurati
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a task sequence and change its name
 
 ```powershell
-PS C:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS C:\> Set-CMTaskSequence -InputObject $TaskSequence -NewName "NewTS01"
+PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+PS XYZ:\> Set-CMTaskSequence -InputObject $TaskSequence -NewName "NewTS01"
 ```
 
 The first command gets the task sequence object named TaskSequence01 and stores the object in the $TaskSequence variable.
@@ -78,7 +82,7 @@ The second command changes the name of the task sequence stored in $TaskSequence
 ### Example 2: Pass a task sequence and change its name
 
 ```powershell
-PS C:\> Get-CMTaskSequence -Name "TaskSequence02" | Set-CMTaskSequence -NewName "NewTS02"
+PS XYZ:\> Get-CMTaskSequence -Name "TaskSequence02" | Set-CMTaskSequence -NewName "NewTS02"
 ```
 
 This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Set-CMTaskSequence**, which changes the name of the task sequence object to NewTS02.

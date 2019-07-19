@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMHardwareRequirement
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 17573093-E2AE-4B48-8B64-2A239FBA3FC5
+online version: https://go.microsoft.com/fwlink/?linkid=833691
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMHardwareRequirement
@@ -31,9 +39,13 @@ You can add, modify, or delete your own hardware requirements, but you cannot ch
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a hardware requirement object
 ```
-PS C:\> New-CMHardwareRequirement -MinCpu 233 -MinDiskFree 1572864 -MinDiskSize 10485760 -MinRam 131072 -Product "Accounts Program"
+PS XYZ:\> New-CMHardwareRequirement -MinCpu 233 -MinDiskFree 1572864 -MinDiskSize 10485760 -MinRam 131072 -Product "Accounts Program"
 
 
 IsLocal     : 

@@ -47,9 +47,13 @@ The **Add-CMIosDeploymentType** cmdlet adds an iOS deployment type to an applica
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an iOS deployment type
 ```
-PS C:\>Add-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS01" -ContentLocation "\\server01\Applications\Ipa\iOSTestAppV2\iOSTestAppV2.ipa" -Confirm -Comment "Create an IOS DT" -AddLanguage "en-US","zh-CN"
+PS XYZ:\>Add-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS01" -ContentLocation "\\server01\Applications\Ipa\iOSTestAppV2\iOSTestAppV2.ipa" -Confirm -Comment "Create an IOS DT" -AddLanguage "en-US","zh-CN"
 ```
 
 This command adds the iOS deployment type named DTIOS01 from the specified location to the application named testIOS in English and Chinese.
@@ -57,7 +61,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add an iOS deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testIOS" | Add-CMIOSDeploymentType -DeploymentTypeName "DTIOS" -ContentLocation "\\server01\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -Comment "Create an IOS DT" -AddLanguage "zh-CN","en-US
+PS XYZ:\> Get-CMApplication -Name "testIOS" | Add-CMIOSDeploymentType -DeploymentTypeName "DTIOS" -ContentLocation "\\server01\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -Comment "Create an IOS DT" -AddLanguage "zh-CN","en-US
 ```
 
 This command gets the application object named testIOS and uses the pipeline operator to pass the object to **Add-CMIOSDeploymentType**.

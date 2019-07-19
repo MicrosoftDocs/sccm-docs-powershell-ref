@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSecurityRole
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 0AE6E561-6C79-48D2-9C0E-EA161C1897C0
+online version: https://go.microsoft.com/fwlink/?linkid=834018
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSecurityRole
@@ -42,9 +50,13 @@ You can use this cmdlet to change the name and description of a security role.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change the name of a security role by using an ID
 ```
-PS C:\> Set-CMSecurityRole -Id "CM100003" -NewName "RTOperator02"
+PS XYZ:\> Set-CMSecurityRole -Id "CM100003" -NewName "RTOperator02"
 ```
 
 This command renames the security role that has the ID CM100003.
@@ -52,7 +64,7 @@ The command changes the name to RTOperator02.
 
 ### Example 2: Change the name of a security role by using a name
 ```
-PS C:\> Set-CMSecurityRole -Name "SRole02" -NewName "RTOperator02"
+PS XYZ:\> Set-CMSecurityRole -Name "SRole02" -NewName "RTOperator02"
 ```
 
 This command renames the security role named SRole02.
@@ -60,8 +72,8 @@ The command changes the name to RTOperator02.
 
 ### Example 3: Change the name of a security role by using an object variable
 ```
-PS C:\> $Srole = Get-CMSecurityRole -Id "CM100003"
-PS C:\> Set-CMSecurityRole -Inputobject $Srole -NewName "RTOperator02"
+PS XYZ:\> $Srole = Get-CMSecurityRole -Id "CM100003"
+PS XYZ:\> Set-CMSecurityRole -Inputobject $Srole -NewName "RTOperator02"
 ```
 
 The first command gets the security role that has the ID CM100003 and stores it in the $Srole variable.

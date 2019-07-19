@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMDeploymentType
 titleSuffix: Configuration Manager
 description: Gets the deployment type of a Configuration Manager deployment application.
@@ -49,10 +49,14 @@ A deployment type also contains rules that specify if and how the software is de
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the deployment type of an application
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp"
 ```
 
 This command gets the deployment type for the application named CenterApp.
@@ -60,7 +64,7 @@ This command gets the deployment type for the application named CenterApp.
 ### Example 2: Get the deployment type of an application by name
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
 ```
 
 This command gets the deployment type for the application named CenterApp that has a deployment type named InterDept - Windows app package (.appx file).
@@ -68,7 +72,7 @@ This command gets the deployment type for the application named CenterApp that h
 ### Example 3: Get the deployment type of an application by ID
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeID "16777457"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeID "16777457"
 ```
 
 This command gets the deployment type for the application named CenterApp that has a deployment type that has the ID 16777457.

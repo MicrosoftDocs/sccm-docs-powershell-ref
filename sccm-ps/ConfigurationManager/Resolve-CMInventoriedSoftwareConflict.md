@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Resolve-CMInventoriedSoftwareConflict
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: E1789427-9146-4196-ABA0-758333913567
+online version: https://go.microsoft.com/fwlink/?linkid=834297
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Resolve-CMInventoriedSoftwareConflict
@@ -31,9 +39,13 @@ You can resolve a conflict by keeping your local inventory information or updati
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Resolve a software conflict and keep local inventory information
 ```
-PS C:\> Resolve-CMInventoriedSoftwareConflict -Id "SMS0001" -RevertLocalEdit $True
+PS XYZ:\> Resolve-CMInventoriedSoftwareConflict -Id "SMS0001" -RevertLocalEdit $True
 ```
 
 This command resolves a software conflict that has the specified ID.

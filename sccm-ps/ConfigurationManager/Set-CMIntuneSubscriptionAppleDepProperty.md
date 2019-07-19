@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMIntuneSubscriptionAppleDepProperty
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: 7E3BFA62-110D-4451-9135-02D955B057F8
+online version: https://go.microsoft.com/fwlink/?linkid=833885
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMIntuneSubscriptionAppleDepProperty
@@ -29,11 +37,15 @@ The **Set-CMIntuneSubscriptionAppleDepProperty** cmdlet updates the settings of 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable the Apple DEP
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
-PS C:\> $Creds = New-Object System.Management.Automation.PSCredential ("AccountName@CompanyName.onmicrosoft.com", $SecPasswd)
-PS C:\> Set-CMIntuneSubscriptionAppleDepProperty -Enable $True -AppleId "AppleID01" -DepTokenPath "C:\tokens\DepToken.p7m" -IntuneCredential $Creds
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
+PS XYZ:\> $Creds = New-Object System.Management.Automation.PSCredential ("AccountName@CompanyName.onmicrosoft.com", $SecPasswd)
+PS XYZ:\> Set-CMIntuneSubscriptionAppleDepProperty -Enable $True -AppleId "AppleID01" -DepTokenPath "C:\tokens\DepToken.p7m" -IntuneCredential $Creds
 ```
 
 The first command creates a secure password object and stores the object in the $SecPasswd variable.

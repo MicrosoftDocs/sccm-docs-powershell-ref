@@ -1,4 +1,4 @@
----
+﻿---
 title: Start-CMTaskSequenceDeployment
 titleSuffix: Configuration Manager
 description: Starts a task sequence deployment in Configuration Manager.
@@ -64,10 +64,14 @@ A task sequence deployment assigns a task sequence to a collection of computers.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Start a task sequence deployment
 
 ```powershell
-PS C:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 01"
+PS XYZ:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 01"
 ```
 
 This command starts a task sequence deployment by using the name of the task sequence deployment and the name of a collection.
@@ -75,7 +79,7 @@ This command starts a task sequence deployment by using the name of the task seq
 ### Example 2: Start a task sequence deployment for devices
 
 ```powershell
-PS C:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 02" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
+PS XYZ:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 02" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
 ```
 
 This command starts a task sequence deployment for mobile devices.

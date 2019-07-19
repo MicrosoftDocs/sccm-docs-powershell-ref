@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Disable-CMSoftwareMeteringRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 94B0BAF1-446D-4D59-A8DC-FC228FBA435B
+online version: https://go.microsoft.com/fwlink/?linkid=833953
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Disable-CMSoftwareMeteringRule
@@ -51,9 +59,13 @@ For more information about software metering in System Center Configuration Mana
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Disable rules for a specific product
 ```
-PS C:\>Disable-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS XYZ:\>Disable-CMSoftwareMeteringRule -ProductName "Accounting Package"
 ```
 
 This command disables software metering rules for the product named Accounting Package.
@@ -61,7 +73,7 @@ There may be more than one rule.
 
 ### Example 2: Disable a specific rule
 ```
-PS C:\>Disable-CMSoftwareMeteringRule -Id "16777229"
+PS XYZ:\>Disable-CMSoftwareMeteringRule -Id "16777229"
 ```
 
 This command disables a software metering rule that has the specified ID.

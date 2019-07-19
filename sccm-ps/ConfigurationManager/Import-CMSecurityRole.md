@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Import-CMSecurityRole
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 00C0842E-0AA5-462E-9C22-18254F2407DB
+online version: https://go.microsoft.com/fwlink/?linkid=834075
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMSecurityRole
@@ -28,9 +36,13 @@ The **Import-CMSecurityRole** cmdlet imports a security role that was exported f
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import a security role
 ```
-PS C:\>Import-CMSecurityRole -Overwrite $True -XmlFileName "RemoteAdminSecurity.xml"
+PS XYZ:\>Import-CMSecurityRole -Overwrite $True -XmlFileName "RemoteAdminSecurity.xml"
 ```
 
 This command imports a security role into Configuration Manager from the XML export file named RemoteAdminSecurity.

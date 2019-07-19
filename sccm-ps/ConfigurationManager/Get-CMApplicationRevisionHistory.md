@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMApplicationRevisionHistory
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: C77E2084-F298-4B89-AA9B-89A8DB91715D
+online version: https://go.microsoft.com/fwlink/?linkid=834099
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMApplicationRevisionHistory
@@ -43,9 +51,13 @@ You can use the revision history to display each revision made to an application
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the revision history for an application
 ```
-PS C:\> Get-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
+PS XYZ:\> Get-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
 ```
 
 This command gets the application revision history named MSXML 6.0 Parser.

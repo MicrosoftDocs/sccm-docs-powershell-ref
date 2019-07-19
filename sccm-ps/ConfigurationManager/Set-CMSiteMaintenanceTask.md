@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSiteMaintenanceTask
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F0A3DB13-6BBE-4403-9BD3-22A16BC57649
+online version: https://go.microsoft.com/fwlink/?linkid=834038
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSiteMaintenanceTask
@@ -54,9 +62,13 @@ The **Set-CMSiteMaintenanceTask** cmdlet changes settings for a Microsoft System
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a maintenance task to run once a week
 ```
-PS C:\> Set-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup" -DaysOfWeek Friday
+PS XYZ:\> Set-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup" -DaysOfWeek Friday
 ```
 
 This command specifies that the maintenance task named Backup runs on Friday each week on the Configuration Manager site that has the site code CM1.

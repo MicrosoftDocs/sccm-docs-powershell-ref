@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMExchangeServer
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: A5D0AF1A-BDAF-419D-9020-A1D34AB3A5FC
+online version: https://go.microsoft.com/fwlink/?linkid=833698
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMExchangeServer
@@ -30,23 +38,27 @@ Configuration Manager works with Exchange Server to manage mobile devices that c
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all Exchange Server systems
 ```
-PS C:\> Get-CMExchangeServer
+PS XYZ:\> Get-CMExchangeServer
 ```
 
 This command gets all the Exchange Server items for a Configuration Manager server.
 
 ### Example 2: Get an Exchange Server for a site
 ```
-PS C:\> Get-CMExchangeServer -SiteCode "PE1"
+PS XYZ:\> Get-CMExchangeServer -SiteCode "PE1"
 ```
 
 This command gets an Exchange Server for the site identified by the site code PE1.
 
 ### Example 3: Get a specified nextref_exchange
 ```
-PS C:\> Get-CMExchangeServer -Address "http://localhost/PowerShell"
+PS XYZ:\> Get-CMExchangeServer -Address "http://localhost/PowerShell"
 ```
 
 This command gets the Exchange Server with the specified address.

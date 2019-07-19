@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMAccount
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Accounts.dll-Help.xml
+ms.assetid: D9CF99B8-E30E-481E-A44C-D3BBAA2A9F19
+online version: https://go.microsoft.com/fwlink/?linkid=833865
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMAccount
@@ -37,9 +45,13 @@ For more information about user accounts, see [Technical Reference for Accounts 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a user account by using its name
 ```
-PS C:\> Remove-CMAccount -Name "CONTOSO\EDaugherty"
+PS XYZ:\> Remove-CMAccount -Name "CONTOSO\EDaugherty"
 ```
 
 This command removes the user account that is specified by its name.

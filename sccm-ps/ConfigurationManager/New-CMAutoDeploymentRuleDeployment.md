@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMAutoDeploymentRuleDeployment
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: DF2D6142-9B3F-429B-91F5-61300D7F9D97
+online version: https://go.microsoft.com/fwlink/?linkid=834262
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMAutoDeploymentRuleDeployment
@@ -71,16 +79,20 @@ The **New-CMAutoDeploymentRuleDeployment** cmdlet creates a deployment for an au
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a deployment for an automatic deployment rule
 ```
-PS C:\>New-CMAutoDeploymentRuleDeployment -Name test -CollectionName "All Systems" -EnableDeployment $true -SendWakeupPacket $false -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $false  -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $false -AllowRestart $false -SuppressRestartServer  $false -SuppressRestartWorkstation $false -WriteFilterHandling $false -GenerateSuccessAlert $true -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $false -GenerateOperationsManagerAlert $false -NoInstallOnRemote $false -NoInstallOnUnprotected $false -UseBranchCache $false
+PS XYZ:\>New-CMAutoDeploymentRuleDeployment -Name test -CollectionName "All Systems" -EnableDeployment $true -SendWakeupPacket $false -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $false  -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $false -AllowRestart $false -SuppressRestartServer  $false -SuppressRestartWorkstation $false -WriteFilterHandling $false -GenerateSuccessAlert $true -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $false -GenerateOperationsManagerAlert $false -NoInstallOnRemote $false -NoInstallOnUnprotected $false -UseBranchCache $false
 ```
 
 This command creates a deployment for the automatic deployment rule TestDepRule01 and the collection named All Systems.
 
 ### Example 2: Get an automatic deployment rule object
 ```
-PS C:\>Get-CMAutoDeploymentRule -Name test | New-CMAutoDeploymentRuleDeployment -CollectionName "All Systems" -EnableDeployment $true -SendWakeupPacket $false -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $false -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $false -AllowRestart $false -SuppressRestartServer $false -SuppressRestartWorkstation $false -WriteFilterHandling $false -GenerateSuccessAlert  $true -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $false -GenerateOperationsManagerAlert $false -NoInstallOnRemote $false -NoInstallOnUnprotected $false -UseBranchCache $false
+PS XYZ:\>Get-CMAutoDeploymentRule -Name test | New-CMAutoDeploymentRuleDeployment -CollectionName "All Systems" -EnableDeployment $true -SendWakeupPacket $false -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $false -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $false -AllowRestart $false -SuppressRestartServer $false -SuppressRestartWorkstation $false -WriteFilterHandling $false -GenerateSuccessAlert  $true -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $false -GenerateOperationsManagerAlert $false -NoInstallOnRemote $false -NoInstallOnUnprotected $false -UseBranchCache $false
 ```
 
 This command gets the automatic deployment rule object named TestDepRule02 and uses the pipeline operator to pass the object to New-CMAutoDeploymentRuleDeployment, which creates a deployment for automatic deployment rule TestDepRule02 and the collection named All Systems.

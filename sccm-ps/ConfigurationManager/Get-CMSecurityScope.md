@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMSecurityScope
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 0F19406F-06D0-4A41-8B99-7EE68F379737
+online version: https://go.microsoft.com/fwlink/?linkid=833847
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSecurityScope
@@ -35,16 +43,20 @@ If you don't provide any parameters, all security scopes are returned.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a security scope by name
 ```
-PS C:\> Get-CMSecurityScope -Name "Scope"
+PS XYZ:\> Get-CMSecurityScope -Name "Scope"
 ```
 
 This command gets the security scope named Scope.
 
 ### Example 2: Get a security scope by using a wildcard
 ```
-PS C:\> Get-CMSecurityScope -Name "S*"
+PS XYZ:\> Get-CMSecurityScope -Name "S*"
 ```
 
 This command gets all security scope objects that have a name beginning with "S".

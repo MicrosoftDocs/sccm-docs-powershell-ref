@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMEnrollmentProxyPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 7DDE98A2-66EF-4751-95B6-13684209508F
+online version: https://go.microsoft.com/fwlink/?linkid=833694
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMEnrollmentProxyPoint
@@ -36,9 +44,13 @@ An enrollment proxy point is a site system role that manages enrollment requests
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an enrollment proxy point
 ```
-PS C:\> Get-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "SiteServer01.Contoso.com"
+PS XYZ:\> Get-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "SiteServer01.Contoso.com"
 ```
 
 This command gets an enrollment proxy point.

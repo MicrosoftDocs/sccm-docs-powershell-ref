@@ -47,9 +47,13 @@ The **Add-CMWindowsMobileDeploymentType** cmdlet adds a Windows mobile cabinet d
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a deployment type using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Add-CMWindowsMobileDeploymentType -DeploymentTypeName "DT4" -ContentLocation "\\Machine\Applications\Cab\CMConfigExplorer\ConfigExplorerSetup.cab" -EnableUninstall -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\> Get-CMApplication -Name "Application1" | Add-CMWindowsMobileDeploymentType -DeploymentTypeName "DT4" -ContentLocation "\\Machine\Applications\Cab\CMConfigExplorer\ConfigExplorerSetup.cab" -EnableUninstall -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Add-CMWindowsMobileDeploymentType**.
@@ -58,7 +62,7 @@ Specifying the *EnableUninstall* parameter indicates that the user can uninstall
 
 ### Example 2: Add a Windows Mobile cabinet deployment type
 ```
-PS C:\> Add-CMWindowsMobileDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" -ContentLocation "\\Machine\Resources\Applications\Cab\CMConfigExplorer\ConfigExplorerSetup.cab" -EnableUninstall -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\> Add-CMWindowsMobileDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" -ContentLocation "\\Machine\Resources\Applications\Cab\CMConfigExplorer\ConfigExplorerSetup.cab" -EnableUninstall -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command adds the Windows Mobile cabinet deployment type named DT4 from the specified location to the application named Application1 in English and Chinese.

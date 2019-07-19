@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMActiveDirectoryForest
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 4AE8D747-EDC2-486B-ADB3-0CF426C047F1
+online version: https://go.microsoft.com/fwlink/?linkid=833609
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMActiveDirectoryForest
@@ -51,9 +59,13 @@ Active Directory Forest Discovery requires a global account to discover or publi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change the description of an Active Directory forest
 ```
-PS C:\> Set-CMActiveDirectoryForest -Id "16777217" -Description "AD Forest 01"
+PS XYZ:\> Set-CMActiveDirectoryForest -Id "16777217" -Description "AD Forest 01"
 ```
 
 This command changes the description of an Active Directory forest that has the ID 16777217 to AD Forest 01.

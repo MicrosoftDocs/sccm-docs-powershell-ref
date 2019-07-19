@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMDriverBootImage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 634952FD-0028-44EB-A3E8-D6907CDA26DD
+online version: https://go.microsoft.com/fwlink/?linkid=833826
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMDriverBootImage
@@ -88,16 +96,20 @@ You should add only mass storage device drivers and network adapter device drive
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a driver to a boot image
 ```
-PS C:\> Set-CMDriverBootImage -SetDriveBootImageAction AddDriverToBootImage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -BootImageName "Boot image (x64)"
+PS XYZ:\> Set-CMDriverBootImage -SetDriveBootImageAction AddDriverToBootImage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -BootImageName "Boot image (x64)"
 ```
 
 This command adds the driver named Adaptec Embedded SCSI HostRAID Controller to the boot image named Boot image (x64).
 
 ### Example 2: Remove a driver from a boot image
 ```
-PS C:\> Set-CMDriverBootImage -SetDriveBootImageAction RemoveDriverFromBootImage -DriverName "Adaptec SCSI HostRAID Management Processor Device" -BootImageName "Boot image (x64)"
+PS XYZ:\> Set-CMDriverBootImage -SetDriveBootImageAction RemoveDriverFromBootImage -DriverName "Adaptec SCSI HostRAID Management Processor Device" -BootImageName "Boot image (x64)"
 ```
 
 This command removes the driver named Adaptec SCSI HostRAID Management Processor Device from the boot image named Boot image (x64).

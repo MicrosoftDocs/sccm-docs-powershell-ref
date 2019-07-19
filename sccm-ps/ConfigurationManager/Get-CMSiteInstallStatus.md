@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMSiteInstallStatus
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 5F699783-3BFE-4BA9-A82F-80C16196383B
+online version: https://go.microsoft.com/fwlink/?linkid=833867
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSiteInstallStatus
@@ -35,9 +43,13 @@ You can specify an installation by ID or by site code.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get site installation status
 ```
-PS C:\> Get-CMSiteInstallStatus -SiteCode "CM1"
+PS XYZ:\> Get-CMSiteInstallStatus -SiteCode "CM1"
 ```
 
 This command gets the site installation status for the site that has the specified site code.

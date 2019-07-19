@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMAppVVirtualEnvironment
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: AA061A0F-F88B-4C68-AD45-EB6F9503A39D
+online version: https://go.microsoft.com/fwlink/?linkid=833905
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMAppVVirtualEnvironment
@@ -42,24 +50,28 @@ You can specify App-V virtual environments by name or ID, or you can provide an 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a virtual environment by name
 ```
-PS C:\> Remove-CMAppVVirtualEnvironment -Name "Test"
+PS XYZ:\> Remove-CMAppVVirtualEnvironment -Name "Test"
 ```
 
 This command removes an App-V virtual environment named Test.
 
 ### Example 2: Remove a virtual environment by ID
 ```
-PS C:\> Remove-CMAppVVirtualEnvironment -Id "16781806"
+PS XYZ:\> Remove-CMAppVVirtualEnvironment -Id "16781806"
 ```
 
 This command removes an App-V virtual environment that has the ID 16781806.
 
 ### Example 3: Remove a virtual environment by name by using a wildcard
 ```
-PS C:\> $AppV = Get-CMAppVVirtualEnvironment -Name "T*"
-PS C:\> Remove-CMAppVVirtualEnvironment -InputObject $AppV
+PS XYZ:\> $AppV = Get-CMAppVVirtualEnvironment -Name "T*"
+PS XYZ:\> Remove-CMAppVVirtualEnvironment -InputObject $AppV
 ```
 
 The first command gets all App-V virtual environments that have names that begin with the letter T and stores them in the $AppV variable.

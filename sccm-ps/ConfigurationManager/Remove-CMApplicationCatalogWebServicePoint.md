@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMApplicationCatalogWebServicePoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F43742B5-491E-49E6-86FB-B55B086F2BC9
+online version: https://go.microsoft.com/fwlink/?linkid=833896
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMApplicationCatalogWebServicePoint
@@ -35,9 +43,13 @@ The **Remove-CMApplicationCatalogWebServicePoint** cmdlet removes a Microsoft Sy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a system role
 ```
-PS C:\> Remove-CMApplicationCatalogWebServicePoint -SiteSystemServerName "western.contoso.com" -SiteCode "CM1"
+PS XYZ:\> Remove-CMApplicationCatalogWebServicePoint -SiteSystemServerName "western.contoso.com" -SiteCode "CM1"
 ```
 
 This command removes an Application Catalog web service point named western.contoso.com that has the site code CM1.

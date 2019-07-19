@@ -79,16 +79,20 @@ Likewise, you can specify a software update group by name or by ID or use the [G
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an update to a software group
 ```
-PS C:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupName "Accounting Group updates" -SoftwareUpdateId "SMS00078"
+PS XYZ:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupName "Accounting Group updates" -SoftwareUpdateId "SMS00078"
 ```
 
 This command adds a software update with the ID SMS00078 to the update group named Accounting Group updates.
 
 ### Example 2: Add an update to a software group by using IDs
 ```
-PS C:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupId "SUP00045" -SoftwareUpdateId "SMS00078"
+PS XYZ:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupId "SUP00045" -SoftwareUpdateId "SMS00078"
 ```
 
 This command adds a software update that has the ID SMS00078 to the update group with the specified ID.

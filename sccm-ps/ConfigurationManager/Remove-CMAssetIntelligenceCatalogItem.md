@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMAssetIntelligenceCatalogItem
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: B605E86F-2EDA-41D0-9C1A-4BD76A3DA91D
+online version: https://go.microsoft.com/fwlink/?linkid=833908
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMAssetIntelligenceCatalogItem
@@ -47,9 +55,13 @@ You can also create custom software labels.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a catalog item by category name
 ```
-PS C:\> Remove-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools"
+PS XYZ:\> Remove-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools"
 ```
 
 This command removes the category named Database Tools from the Asset Intelligence catalog.

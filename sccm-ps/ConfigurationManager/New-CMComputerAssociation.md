@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMComputerAssociation
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 563284E4-67DD-46B5-B098-83CC215C8463
+online version: https://go.microsoft.com/fwlink/?linkid=833596
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMComputerAssociation
@@ -34,9 +42,13 @@ You can also specify whether the migration includes other user names from the so
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a computer association
 ```
-PS C:\> New-CMComputerAssociation -SourceComputer "TSQA073" -MigrationUserName "Contoso-TSQA\ElisaDaugherty" -DestinationComputer "TSQA155"
+PS XYZ:\> New-CMComputerAssociation -SourceComputer "TSQA073" -MigrationUserName "Contoso-TSQA\ElisaDaugherty" -DestinationComputer "TSQA155"
 ```
 
 This command creates a computer association between the source computer named TSQA073 and the destination computer named TSQA155.

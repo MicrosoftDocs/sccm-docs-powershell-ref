@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMBoundary
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 61FCB261-0A44-4F19-A802-1198DB28BA16
+online version: https://go.microsoft.com/fwlink/?linkid=833928
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMBoundary
@@ -44,9 +52,13 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a boundary that is specified by its ID
 ```
-PS C:\> Remove-CMBoundary -Id "16777223"
+PS XYZ:\> Remove-CMBoundary -Id "16777223"
 ```
 
 This command removes the boundary that has an identifier of 16777223.
@@ -54,8 +66,8 @@ Because the *Force* parameter is not specified, you must confirm the action befo
 
 ### Example 2: Remove a boundary by using an InputObject
 ```
-PS C:\> $BoundaryObj = Get-CMBoundary -Id "16777223"
-PS C:\> 
+PS XYZ:\> $BoundaryObj = Get-CMBoundary -Id "16777223"
+PS XYZ:\> 
 Remove-Boundary -InputObject $BoundaryObj
 ```
 

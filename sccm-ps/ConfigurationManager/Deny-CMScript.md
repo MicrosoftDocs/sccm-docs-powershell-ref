@@ -40,10 +40,14 @@ You can deny a specific script by specifying the script object or the name of th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Deny a script by using the script id
 
 ```powershell
-PS C:\> Deny-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"  
+PS XYZ:\> Deny-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"  
 ```
 
 This command denies a script that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80.
@@ -51,8 +55,8 @@ This command denies a script that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F8
 ### Example 2: Deny a script by using script object variable
 
 ```powershell
-PS C:\> $ScriptObj = Get-CMScript -Id "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
-PS C:\> Deny-CMScript -InputObject $ScriptObj
+PS XYZ:\> $ScriptObj = Get-CMScript -Id "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
+PS XYZ:\> Deny-CMScript -InputObject $ScriptObj
 ```
 
 The first command gets a **CMScript** object that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80, and then stores it in the $ScriptObj variable.

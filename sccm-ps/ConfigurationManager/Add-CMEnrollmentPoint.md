@@ -40,13 +40,17 @@ When Configuration Manager enrolls a mobile device, it installs a Configuration 
 The client provides management capabilities that include hardware inventory, software deployment, settings, and remote wipe.
 To enroll mobile devices, use Microsoft Certificate Services with an enterprise certification authority.
 You need a System Center Configuration Manager enrollment point site system role, as well as an enrollment proxy point site system role.
-For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=262649) on TechNet.
+For more information, see [Install site system roles](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-site-system-roles).
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an enrollment point
 ```
-PS C:\>Add-CMEnrollmentPoint -SiteCode "CM4" -SiteSystemServerName "Server04.Building02.Contoso.com" -IISWebsite "Intranet17" -PortNumber 80 -UserName "QADept\Admins" -WebApplicationName "Tracker"
+PS XYZ:\>Add-CMEnrollmentPoint -SiteCode "CM4" -SiteSystemServerName "Server04.Building02.Contoso.com" -IISWebsite "Intranet17" -PortNumber 80 -UserName "QADept\Admins" -WebApplicationName "Tracker"
 ```
 
 This command adds an enrollment point for the site that has the site code CM4 to the server named Server04.Building02.Contoso.com.

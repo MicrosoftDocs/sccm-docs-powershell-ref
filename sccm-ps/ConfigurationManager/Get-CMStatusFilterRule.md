@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMStatusFilterRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 9A9F77DF-FAA9-438A-AB3F-B72A9AD98016
+online version: https://go.microsoft.com/fwlink/?linkid=833936
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMStatusFilterRule
@@ -33,9 +41,13 @@ You configure status filter rules for each site, not across all sites.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get rules for a specified site
 ```
-PS C:\> Get-CMStatusFilterRule -SiteCode "CM1"
+PS XYZ:\> Get-CMStatusFilterRule -SiteCode "CM1"
 ```
 
 This cmdlet gets status filter rules for the site that has the site code CM1.

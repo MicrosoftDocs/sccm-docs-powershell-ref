@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMExchangeServerConnectorPasswordSetting
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833675
+schema: 2.0.0
+ms.assetid: 93A8476A-389C-4F2C-A01F-5316B2DC839F
+>>>>>>> master
 ---
 
 # New-CMExchangeServerConnectorPasswordSetting
@@ -32,9 +40,13 @@ An Exchange Server connector in Configuration Manager manages mobile devices tha
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Specify password settings for an Exchange Server connector
 ```
-PS C:\> New-CMExchangeServerConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity Strong -MinimumComplexChar 3 -AllowSimplePassword $True -PasswordRecovery $True
+PS XYZ:\> New-CMExchangeServerConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity Strong -MinimumComplexChar 3 -AllowSimplePassword $True -PasswordRecovery $True
 ```
 
 This command sets these password-related options for an Exchange Server connector: 

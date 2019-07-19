@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMGlobalCondition
 titleSuffix: Configuration Manager
 description: Gets Configuration Manager global condition objects.
@@ -47,10 +47,14 @@ For instance, you might specify an array of global condition names and specify a
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a global condition by name
 
 ```powershell
-PS C:\> Get-CMGlobalCondition -Name "CPU speed"
+PS XYZ:\> Get-CMGlobalCondition -Name "CPU speed"
 ```
 
 This command gets the global condition named CPU speed.
@@ -58,7 +62,7 @@ This command gets the global condition named CPU speed.
 ### Example 2: Get a global condition by id (CI_ID)
 
 ```powershell
-PS C:\> $test = Get-CMGlobalCondition -Id 16777504
+PS XYZ:\> $test = Get-CMGlobalCondition -Id 16777504
         $test.CI_ID
 ```
 

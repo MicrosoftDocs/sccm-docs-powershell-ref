@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMSoftwareMeteringRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 13FECF2C-1A82-4A61-B717-F91AE4C9F94D
+online version: https://go.microsoft.com/fwlink/?linkid=833755
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMSoftwareMeteringRule
@@ -43,9 +51,13 @@ For more information about software metering in System Center Configuration Mana
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a software metering rule
 ```
-PS C:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System" 
+PS XYZ:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System" 
 ApplyToChildSites : True
 Comment           : 
 Enabled           : True

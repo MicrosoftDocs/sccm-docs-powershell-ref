@@ -47,9 +47,13 @@ The **Add-CMWindowsStoreDeploymentType** cmdlet adds a Windows app package (in t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Add-CMWindowsStoreDeploymentType -DeploymentTypeName "DT1" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -Comment "Windows Store Deployment Type" -AddLanguage "en-US","zh-CN"
+PS XYZ:\> Get-CMApplication -Name "Application1" | Add-CMWindowsStoreDeploymentType -DeploymentTypeName "DT1" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -Comment "Windows Store Deployment Type" -AddLanguage "en-US","zh-CN"
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Add-CMWindowsStoreDeploymentType**.
@@ -57,7 +61,7 @@ This command gets the application object named Application1 and uses the pipelin
 
 ### Example 2: Add a Windows app package deployment type
 ```
-PS C:\> Add-CMWindowsStoreDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT2" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -Comment "Windows Store Deployment Type" -AddLanguage "en-US","zh-CN"
+PS XYZ:\> Add-CMWindowsStoreDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT2" -Url "https://www.microsoft.com/store/apps/9wzdncrfjb9s" -Comment "Windows Store Deployment Type" -AddLanguage "en-US","zh-CN"
 ```
 
 This command adds the Windows app package deployment type named DT2 from the specified URL to the application named Application1 in English and Chinese.
@@ -68,7 +72,7 @@ This command adds the Windows app package deployment type named DT2 from the spe
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name property](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo.name?view=netframework-4.8#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]

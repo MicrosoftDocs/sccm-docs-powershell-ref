@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Update-CMCertificate
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Certificates.dll-Help.xml
+ms.assetid: EEFF1F3A-F8F1-4A3A-9AA7-D9687B6EC008
+online version: https://go.microsoft.com/fwlink/?linkid=834288
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Update-CMCertificate
@@ -41,9 +49,13 @@ The **Update-CMCertificate** cmdlet updates a public key infrastructure (PKI) ce
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Update a certificate
 ```
-PS C:\>Update-CMCertificate -Id "ManagementCertificate" -Path "C:\Certificates\Management.pfx"
+PS XYZ:\>Update-CMCertificate -Id "ManagementCertificate" -Path "C:\Certificates\Management.pfx"
 ```
 
 This command modifies the certificate path for the certificate with the ID ManagementCertificate.

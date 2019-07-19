@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMUserCollectionQueryMembershipRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: FA669383-9E20-4F2B-B18E-1DB9BC3558C2
+online version: https://go.microsoft.com/fwlink/?linkid=833997
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMUserCollectionQueryMembershipRule
@@ -43,9 +51,13 @@ For more information about membership rules in Microsoft System Center Configura
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a rule by using a collection name
 ```
-PS C:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
+PS XYZ:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
 ```
 
 This command gets the rule named Remote Users by Domain that belongs to the collection named Remote Users.

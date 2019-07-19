@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMPowerManagementCustomPlan
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: AA864A00-4726-4284-8F25-958C1B3375D9
+online version: https://go.microsoft.com/fwlink/?linkid=833721
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMPowerManagementCustomPlan
@@ -59,9 +67,13 @@ The **New-CMPowerManagementCustomPlan** cmdlet creates a custom power management
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create parameters for a custom power management plan and store them in a variable
 ```
-PS C:\>$PlanParams = @{
+PS XYZ:\>$PlanParams = @{
     Name = "test"
     Description = "comments"
     DisplayOffMinAC = 20
@@ -102,8 +114,8 @@ This variable can now be used to create a custom plan.
 
 ### Example 2: Create a custom peak power management plan to configure a device collection
 ```
-PS C:\> $PeakPlan = New-CMPowerManagementCustomPlan -Peak @planParams
-PS C:\> Set-CMCollectionPowerManagement -CollectionName "deviceCol1" -PeakPlan $PeakPlan
+PS XYZ:\> $PeakPlan = New-CMPowerManagementCustomPlan -Peak @planParams
+PS XYZ:\> Set-CMCollectionPowerManagement -CollectionName "deviceCol1" -PeakPlan $PeakPlan
 ```
 
 The first command uses the parameters set in Example 1 to create a custom peak power management plan object, which it then stores in the $PeakPlan variable.
@@ -112,8 +124,8 @@ The second command uses the custom plan stored in $PeakPlan to configure the pow
 
 ### Example 3: Create a custom non-peak power management plan to configure a device collection
 ```
-PS C:\> $NonPeakPlan = New-CMPowerManagementCustomPlan -NonPeak @planParams
-PS C:\> Set-CMCollectionPowerManagement -CollectionName "deviceCol2" -NonPeakPlan $NonPeakPlan
+PS XYZ:\> $NonPeakPlan = New-CMPowerManagementCustomPlan -NonPeak @planParams
+PS XYZ:\> Set-CMCollectionPowerManagement -CollectionName "deviceCol2" -NonPeakPlan $NonPeakPlan
 ```
 
 The first command uses the parameters set in Example 1 to create a custom non-peak power management plan object, which it then stores in the $NonPeakPlan variable.

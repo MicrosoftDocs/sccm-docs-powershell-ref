@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMSoftwareUpdateBasedClientInstallation
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 3E004486-ADA5-4109-BBB7-035A2FE790AA
+online version: https://go.microsoft.com/fwlink/?linkid=833904
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdateBasedClientInstallation
@@ -34,9 +42,13 @@ This server must be the active software update point in a primary site.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a client installation
 ```
-PS C:\> Get-CMSoftwareUpdateBasedClientInstallation -SiteCode "CM1"
+PS XYZ:\> Get-CMSoftwareUpdateBasedClientInstallation -SiteCode "CM1"
 ```
 
 This command gets the client installation for the site that has the site code CM1.

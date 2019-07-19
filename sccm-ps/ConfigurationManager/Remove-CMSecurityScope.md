@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMSecurityScope
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 5A75BC8C-977B-4AAF-BA2E-9A5164628A62
+online version: https://go.microsoft.com/fwlink/?linkid=834192
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSecurityScope
@@ -41,10 +49,14 @@ The **Remove-CMSecurityScope** cmdlet removes a security scope from Microsoft Sy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a security scope in a variable
 ```
-PS C:\> $Scope = Get-CMSecurityScope -Name "Scope"
-PS C:\> Remove-CMSecurityScope -InputObject $Scope -Force
+PS XYZ:\> $Scope = Get-CMSecurityScope -Name "Scope"
+PS XYZ:\> Remove-CMSecurityScope -InputObject $Scope -Force
 ```
 
 The first command gets the security scope object named Scope and stores the object in the $Scope variable.
@@ -54,7 +66,7 @@ By specifying the *Force* parameter, the user is not prompted for confirmation p
 
 ### Example 2: Remove a security scope using the pipeline
 ```
-PS C:\> Get-CMSecurityScope -Name "Scope" | Remove-CMSecurityScope -Force
+PS XYZ:\> Get-CMSecurityScope -Name "Scope" | Remove-CMSecurityScope -Force
 ```
 
 This command gets the security scope object named Scope and uses the pipeline operator to pass the object to **Remove-CMSecurityScope**, which removes the security scope.

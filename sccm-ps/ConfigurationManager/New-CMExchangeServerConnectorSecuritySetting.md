@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMExchangeServerConnectorSecuritySetting
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833679
+schema: 2.0.0
+ms.assetid: 3B5B71A1-F88F-4699-8D6F-534921DA754D
+>>>>>>> master
 ---
 
 # New-CMExchangeServerConnectorSecuritySetting
@@ -31,9 +39,13 @@ An Exchange Server connector in System Center Configuration Manager manages mobi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Configure security settings for a mobile device
 ```
-PS C:\> New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
+PS XYZ:\> New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
 ```
 
 This command sets the following security options for a mobile device:

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMIntuneSubscriptionWindowsProperty
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: 01422A54-9C29-45FD-9FED-34787A17C362
+online version: https://go.microsoft.com/fwlink/?linkid=833900
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMIntuneSubscriptionWindowsProperty
@@ -29,10 +37,14 @@ The **Set-CMIntuneSubscriptionWindowsProperty** cmdlet updates the settings of a
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable Windows enrollment
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
-PS C:\> Set-CMIntuneSubscriptionWindowsProperties -Enable $True -CertificatePath "C:\Certs\sign.pfx" -CertificatePassword $SecPasswd
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
+PS XYZ:\> Set-CMIntuneSubscriptionWindowsProperties -Enable $True -CertificatePath "C:\Certs\sign.pfx" -CertificatePassword $SecPasswd
 ```
 
 This command enables Windows enrollment for the Microsoft Intune subscription.

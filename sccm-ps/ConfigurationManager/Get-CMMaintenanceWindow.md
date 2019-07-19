@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMMaintenanceWindow
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 78ED339E-4DB8-4C21-B704-85031ECF01F8
+online version: https://go.microsoft.com/fwlink/?linkid=833736
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMMaintenanceWindow
@@ -41,9 +49,13 @@ The **Get-CMMaintenanceWindow** cmdlet gets the maintenance windows for specifie
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get maintenance windows
 ```
-PS C:\> Get-CMMaintenanceWindow -CollectionID "AAA0004D"
+PS XYZ:\> Get-CMMaintenanceWindow -CollectionID "AAA0004D"
 ```
 
 This command gets the maintenance windows for the specified collection.

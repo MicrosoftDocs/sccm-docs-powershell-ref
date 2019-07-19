@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMWindowsStoreDeploymentType
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 8E5ACA39-459C-4767-9577-5C14F1A680E7
+online version: https://go.microsoft.com/fwlink/?linkid=834180
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMWindowsStoreDeploymentType
@@ -55,9 +63,13 @@ The **Set-CMWindowsStoreDeploymentType** cmdlet changes the settings for a Windo
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "Application01" -DeploymentTypeName "DT1" | Set-CMWindowsStoreDeploymentType -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "Application01" -DeploymentTypeName "DT1" | Set-CMWindowsStoreDeploymentType -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command gets the Windows app package deployment type object named DT1 for the application named Application01 and uses the pipeline operator to pass the object to **Set-CMWindowsStoreDeploymentType**.
@@ -65,7 +77,7 @@ This command gets the Windows app package deployment type object named DT1 for t
 
 ### Example 2: Rename a deployment type
 ```
-PS C:\> Set-CMWindowsStoreDeploymentType -ApplicationName "Application01" -DeploymentTypeName "DT1" -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Set-CMWindowsStoreDeploymentType -ApplicationName "Application01" -DeploymentTypeName "DT1" -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command changes the name of the Windows app package deployment type named DT1 for the application named Application01 to DT1_New, and adds English and Chinese as supported languages.

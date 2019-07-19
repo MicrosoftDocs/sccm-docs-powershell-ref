@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMExchangeServer
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 6A49F9E5-ECD8-438F-9A2D-D0D2615941B3
+online version: https://go.microsoft.com/fwlink/?linkid=833658
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMExchangeServer
@@ -49,10 +57,14 @@ For more information, see [Configuration Manager 2012 Exchange Connector Impleme
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create an Exchange Server
 ```
-PS C:\> $schedule = New-CMSchedule -Start "03/01/2016 11:59 PM" -RecurInterval Days -RecurCount 1
-PS C:\> New-CMExchangeServer -ServerAddress "http://exchange.contoso.com" -DeltaSyncInterval 120 -FullSyncSchedule $schedule -IsHosted -SiteCode "ContosoSite"
+PS XYZ:\> $schedule = New-CMSchedule -Start "03/01/2016 11:59 PM" -RecurInterval Days -RecurCount 1
+PS XYZ:\> New-CMExchangeServer -ServerAddress "http://exchange.contoso.com" -DeltaSyncInterval 120 -FullSyncSchedule $schedule -IsHosted -SiteCode "ContosoSite"
 ```
 
 These commands create an Exchange Server with the server address `http://exchange.contoso.com`.

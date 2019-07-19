@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Import-CMPackage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 1AB14130-5DCA-4803-B9ED-2E9105D24872
+online version: https://go.microsoft.com/fwlink/?linkid=834067
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMPackage
@@ -29,9 +37,13 @@ You can use this cmdlet to import a package of collections, queries, or reports 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import a package
 ```
-PS C:\>Import-CMPackage -ImportFilePath "\\Deploy01\ExportPackages"
+PS XYZ:\>Import-CMPackage -ImportFilePath "\\Deploy01\ExportPackages"
 ```
 
 This command imports a package from the path \\\\Deploy01\ExportPackages.

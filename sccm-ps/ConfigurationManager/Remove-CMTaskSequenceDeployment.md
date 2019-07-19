@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMTaskSequenceDeployment
 titleSuffix: Configuration Manager
 description: Removes a task sequence deployment from Configuration Manager.
@@ -58,10 +58,14 @@ A task sequence deployment assigns a task sequence to a collection of computers.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> Remove-CMTaskSequenceDeployment -Name "Task Sequence 1333" 
+PS XYZ:\> Remove-CMTaskSequenceDeployment -Name "Task Sequence 1333" 
 ```
 
 This command removes a task sequence deployment by name.

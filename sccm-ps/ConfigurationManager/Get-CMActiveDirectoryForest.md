@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMActiveDirectoryForest
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 2626D1D7-FB5C-4563-8694-CD8E19DA371B
+online version: https://go.microsoft.com/fwlink/?linkid=834061
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMActiveDirectoryForest
@@ -36,23 +44,27 @@ You can get an Active Directory forest object by ID or fully qualified domain na
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all Active Directory forest objects
 ```
-PS C:\> Get-CMActiveDirectoryForest
+PS XYZ:\> Get-CMActiveDirectoryForest
 ```
 
 This command gets all Active Directory forest objects.
 
 ### Example 2: Get an Active Directory Forest object by ID
 ```
-PS C:\> Get-CMActiveDirectoryForest -Id "16777217"
+PS XYZ:\> Get-CMActiveDirectoryForest -Id "16777217"
 ```
 
 This command gets an Active Directory forest object that has the ID 16777217.
 
 ### Example 3: Get Active Directory Forest by domain name
 ```
-PS C:\> Get-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com"
+PS XYZ:\> Get-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com"
 ```
 
 This command gets an Active Directory forest object that has the FQDN tsqa.contoso.com.

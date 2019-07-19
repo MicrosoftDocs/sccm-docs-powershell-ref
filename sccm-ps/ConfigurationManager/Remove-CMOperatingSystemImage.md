@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMOperatingSystemImage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: DC6BA132-9F40-4A6B-87D7-D800729DD11A
+online version: https://go.microsoft.com/fwlink/?linkid=834147
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMOperatingSystemImage
@@ -44,9 +52,13 @@ After you remove an operating system image, you cannot distribute the operating 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an operating system image
 ```
-PS C:\> Remove-CMOperatingSystemImage -Name "STANDARD_WIN7"
+PS XYZ:\> Remove-CMOperatingSystemImage -Name "STANDARD_WIN7"
 ```
 
 This command removes the operating system image named STANDARD_WIN7.

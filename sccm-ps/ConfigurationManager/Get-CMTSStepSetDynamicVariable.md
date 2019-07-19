@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
 description: Gets task sequence Set Dynamic Variable steps in Configuration Manager.
@@ -43,10 +43,14 @@ The **Get-CMTSStepSetDynamicVariable** gets task sequence "Set Dynamic Variable"
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Get-CMTaskSequenceStepSetDynamicVariable -StepName $stepName
+PS XYZ:\> $ReferencedTaskSequence | Get-CMTaskSequenceStepSetDynamicVariable -StepName $stepName
 ```
 
 This command gets task sequence "Set Dynamic Variable" steps in a task sequence. 

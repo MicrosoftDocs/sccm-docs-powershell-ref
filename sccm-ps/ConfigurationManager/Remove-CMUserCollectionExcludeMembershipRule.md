@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMUserCollectionExcludeMembershipRule
 titleSuffix: Configuration Manager
@@ -8,6 +9,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: F198C43A-27CC-44DA-86B9-5CCDE5F1529D
+online version: https://go.microsoft.com/fwlink/?linkid=834269
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMUserCollectionExcludeMembershipRule
@@ -79,9 +87,13 @@ For more information about collection rules in Microsoft System Center Configura
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an exclude membership rule
 ```
-PS C:\> Remove-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS XYZ:\> Remove-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command removes the exclude membership rule that has the ID SMSDM001 from the user collection that has the ID in the 9990000D.

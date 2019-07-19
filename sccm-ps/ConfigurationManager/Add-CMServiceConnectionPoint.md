@@ -37,9 +37,13 @@ This connects Microsoft System Center Configuration Manager to Microsoft cloud s
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a service connection point
 ```
-PS C:\> Add-CMServiceConnectionPoint -SiteSystemServerName "TestServer01.Contoso.com" -SiteCode PS1 -Mode Online
+PS XYZ:\> Add-CMServiceConnectionPoint -SiteSystemServerName "TestServer01.Contoso.com" -SiteCode PS1 -Mode Online
 ```
 
 This command adds the service connection point site system role to the site system server named TestServer01.Contoso.com and the site code PS1.
@@ -47,8 +51,8 @@ The command sets the mode to online.
 
 ### Example 2: Add a service connection point by using a variable
 ```
-PS C:\> $Server = Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer02.Contoso.com"
-PS C:\> Add-CMServiceConnectionPoint -InputObject $Server -Mode Online
+PS XYZ:\> $Server = Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer02.Contoso.com"
+PS XYZ:\> Add-CMServiceConnectionPoint -InputObject $Server -Mode Online
 ```
 
 The first command gets the site system server object named TestServer02.Contoso.com with the site code PS1 and stores the object in the $Server variable.
@@ -57,7 +61,7 @@ The second command adds the service connection point site system role to the sit
 
 ### Example 3: Add a service connection point by using the pipeline
 ```
-PS C:\> Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer03.Contoso.com" | Add-CMServiceConnectionPoint -Mode Online
+PS XYZ:\> Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer03.Contoso.com" | Add-CMServiceConnectionPoint -Mode Online
 ```
 
 This command gets the site system server object named TestServer03.Contoso.com with the site code PS1 and uses the pipeline operator to pass the object to **Add-CMServiceConnectionPoint**, which adds the service connection point site system role to the site system server object and sets the mode to online.

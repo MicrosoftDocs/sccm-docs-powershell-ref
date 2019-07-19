@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Enable-CMDriver
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: A0817955-1A13-4AC6-AC54-FDC3AB82514F
+online version: https://go.microsoft.com/fwlink/?linkid=833985
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Enable-CMDriver
@@ -41,17 +49,21 @@ The **Enable-CMDriver** cmdlet enables a device driver in Microsoft System Cente
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable a driver by using the pipeline
 ```
-PS C:\> Get-CMDriver -Name "Driver02" | Enable-CMDriver
+PS XYZ:\> Get-CMDriver -Name "Driver02" | Enable-CMDriver
 ```
 
 This command gets the driver object named Driver02 and uses the pipeline operator to pass the object to **Enable-CMDriver**, which enables the driver object.
 
 ### Example 2: Enable a device driver that is specified by its name
 ```
-PS C:\> $Driver = Get-CMDriver -Name "Driver01"
-PS C:\> Enable-CMDriver -InputObject $Driver
+PS XYZ:\> $Driver = Get-CMDriver -Name "Driver01"
+PS XYZ:\> Enable-CMDriver -InputObject $Driver
 ```
 
 The first command gets the driver object named Driver01 and stores the object in the $Driver variable.

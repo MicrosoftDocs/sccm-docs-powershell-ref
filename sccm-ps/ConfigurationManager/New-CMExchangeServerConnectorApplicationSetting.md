@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMExchangeServerConnectorApplicationSetting
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833666
+schema: 2.0.0
+ms.assetid: 7B26C797-B537-4CDE-A4FF-C9C58D05C29F
+>>>>>>> master
 ---
 
 # New-CMExchangeServerConnectorApplicationSetting
@@ -28,9 +36,13 @@ The **New-CMExchangeServerConnectorApplicationSetting** cmdlet creates applicati
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set application options for an Exchange Server connector
 ```
-PS C:\> New-CMExchangeServerConnectorApplicationSetting -UnsignedApplication $False -UnsignedInstall $True -BlockedApplication "a1","a2"
+PS XYZ:\> New-CMExchangeServerConnectorApplicationSetting -UnsignedApplication $False -UnsignedInstall $True -BlockedApplication "a1","a2"
 ```
 
 This command sets these application options for an Exchange Server connector: 

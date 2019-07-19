@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMMulticastServicePoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 08AC9C99-5F25-4368-A74A-C1D23906A535
+online version: https://go.microsoft.com/fwlink/?linkid=833776
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMMulticastServicePoint
@@ -35,9 +43,13 @@ The **Get-CMMulticastServicePoint** cmdlet gets the multicast settings for a dis
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a multicast service point
 ```
-PS C:\> Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" -SiteCode "PS1"
+PS XYZ:\> Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" -SiteCode "PS1"
 ```
 
 This command gets the multicast service point settings for the distribution point that has the site system server name server01.contoso.com and site code PS1.

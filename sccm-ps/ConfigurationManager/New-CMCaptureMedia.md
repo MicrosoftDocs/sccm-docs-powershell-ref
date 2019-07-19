@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMCaptureMedia
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: F3E1E495-47DC-4EA2-BC27-6BCB1F7A9B7B
+online version: https://go.microsoft.com/fwlink/?linkid=834285
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMCaptureMedia
@@ -31,11 +39,15 @@ NOTE: This cmdlet requires elevated permissions to run.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create capture media
 ```
-PS C:\> $BootImage = Get-CMBootImage -Name "Boot image (x64)"
-PS C:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
-PS C:\> New-CMCaptureMedia -MediaType CdDvd -Path "\\server\share\CaptureMedia.iso" -BootImage $BootImage -DistributionPoint $DistributionPoint
+PS XYZ:\> $BootImage = Get-CMBootImage -Name "Boot image (x64)"
+PS XYZ:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
+PS XYZ:\> New-CMCaptureMedia -MediaType CdDvd -Path "\\server\share\CaptureMedia.iso" -BootImage $BootImage -DistributionPoint $DistributionPoint
 ```
 
 The first command gets the boot image object named Boot image (x64) and stores the object in the $BootImage variable.

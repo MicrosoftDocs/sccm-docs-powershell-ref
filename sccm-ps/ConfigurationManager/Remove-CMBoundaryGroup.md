@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMBoundaryGroup
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: A9AADC86-58CF-4144-A6A5-7E854BD8DA5B
+online version: https://go.microsoft.com/fwlink/?linkid=833937
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMBoundaryGroup
@@ -41,9 +49,13 @@ The **Remove-CMBoundaryGroup** cmdlet removes a boundary group from Microsoft Sy
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a boundary group that is specified by its ID
 ```
-PS C:\> Remove-CMBoundaryGroup -Id "16777219"
+PS XYZ:\> Remove-CMBoundaryGroup -Id "16777219"
 ```
 
 This command removes a boundary group that is specified by its identifier.
@@ -51,16 +63,62 @@ Because the *Force* parameter is not specified, you must confirm the action befo
 
 ### Example 2: Remove multiple boundary groups by using an InputObject
 ```
-PS C:\> $BoundaryObj = Get-CMBoundary -Name "BGroup01", "BGroup02", "BGroup03"
-PS C:\> Remove-CMBoundary -InputObject $BoundaryObj
+PS XYZ:\> $BoundaryObj = Get-CMBoundaryGroup -Name "BGroup0*"
+PS XYZ:\> Remove-CMBoundary -InputObject $BoundaryObj
 ```
 
-The first command uses the **Get-CMBoundaryGroup** to get multiple boundary groups that are specified by their names, and stores this data into the $BoundaryObj variable.
+The first command uses the **Get-CMBoundaryGroup** to get multiple boundary groups that are specified by a wildcard name, and stores this data into the $BoundaryObj variable.
 
 The second command identifies and removes the boundaries that are specified by using the input object $BoundaryObj.
 Because the *Force* parameter is not specified, you must confirm the action before it is performed.
 
 ## PARAMETERS
+
+### -Id
+Specifies an array of identifiers (IDs) for one or more boundary groups.
+
+```yaml
+Type: String[]
+Parameter Sets: SearchByIdMandatory
+Aliases: GroupId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Specifies an input object to this cmdlet.
+You can get the input object by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
+
+```yaml
+Type: IResultObject
+Parameter Sets: SearchByValueMandatory
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of a boundary group.
+
+```yaml
+Type: String
+Parameter Sets: SearchByNameMandatory
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -116,52 +174,6 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Id
-Specifies an array of identifiers (IDs) for one or more boundary groups.
-
-```yaml
-Type: String[]
-Parameter Sets: SearchByIdMandatory
-Aliases: GroupId
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InputObject
-Specifies an input object to this cmdlet.
-You can get the input object by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByValueMandatory
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of a boundary group.
-
-```yaml
-Type: String
-Parameter Sets: SearchByNameMandatory
-Aliases: 
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

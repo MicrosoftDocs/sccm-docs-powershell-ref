@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSystemHealthValidatorPointComponent
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=834123
+schema: 2.0.0
+ms.assetid: 27842BB3-EBB9-41C0-9713-53C515D27E2B
+>>>>>>> master
 ---
 
 # Set-CMSystemHealthValidatorPointComponent
@@ -49,9 +57,13 @@ To specify a system health validator point to modify, specify a site code or nam
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify settings of a system health validator point by using a name
 ```
-PS C:\> Set-CMSystemHealthValidatorPointComponent -Name "SHVPC02.TSQA.Contoso.com" -QueryInterval 60 -ValidityPeriod 24
+PS XYZ:\> Set-CMSystemHealthValidatorPointComponent -Name "SHVPC02.TSQA.Contoso.com" -QueryInterval 60 -ValidityPeriod 24
 ```
 
 This command modifies settings of a system health validator point named SHVPC02.TSQA.Contoso.com.

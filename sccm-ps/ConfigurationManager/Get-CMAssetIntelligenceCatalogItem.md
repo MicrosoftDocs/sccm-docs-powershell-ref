@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMAssetIntelligenceCatalogItem
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: C36B760A-9281-44FA-A120-B4D57F9BD142
+online version: https://go.microsoft.com/fwlink/?linkid=834110
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMAssetIntelligenceCatalogItem
@@ -43,16 +51,20 @@ For more information about the Asset Intelligence catalog, see [Introduction to 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get catalog items by category name
 ```
-PS C:\> Get-CMAssetIntelligenceCatalogItem -CategoryName "Browsers"
+PS XYZ:\> Get-CMAssetIntelligenceCatalogItem -CategoryName "Browsers"
 ```
 
 This command gets Asset Intelligence catalog items by category name.
 
 ### Example 2: Get catalog items by category ID
 ```
-PS C:\> Get-CMAssetIntelligenceCatalogItem -Id "1211"
+PS XYZ:\> Get-CMAssetIntelligenceCatalogItem -Id "1211"
 ```
 
 This command gets Asset Intelligence catalog items by category ID.

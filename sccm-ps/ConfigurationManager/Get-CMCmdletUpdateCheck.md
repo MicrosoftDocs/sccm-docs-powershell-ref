@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMCmdletUpdateCheck
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Common.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=834208
+schema: 2.0.0
+ms.assetid: 336CD5FE-3132-4211-A98D-0D5DDFA6F203
+>>>>>>> master
 ---
 
 # Get-CMCmdletUpdateCheck
@@ -35,9 +43,13 @@ The **Get-CMCmdletUpdateCheck** cmdlet gets an update check configuration object
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the update check configuration
 ```
-PS C:\> Get-CMCmdletUpdateCheck -CurrentUser
+PS XYZ:\> Get-CMCmdletUpdateCheck -CurrentUser
 ```
 
 This command gets the update check configuration for the current user.

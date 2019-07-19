@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMBoundary
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: B3E5550C-8A64-46FA-8D31-1E89FE83BC71
+online version: https://go.microsoft.com/fwlink/?linkid=834150
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMBoundary
@@ -55,9 +63,13 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a boundary that is specified by its identifier
 ```
-PS C:\> Get-Boundary -Id "67777217"
+PS XYZ:\> Get-Boundary -Id "67777217"
 BoundaryFlags:      0
 BoundaryID:         67777217
 BoundaryType:       1
@@ -76,7 +88,7 @@ This command gets a boundary that is specified by the identifier 67777217.
 
 ### Example 2: Get a boundary that is specified by the name of an associated boundary group
 ```
-PS C:\> Get-Boundary -BoundaryGroupName "BGroup07"
+PS XYZ:\> Get-Boundary -BoundaryGroupName "BGroup07"
 BoundaryFlags:      0
 BoundaryID:         63997411
 BoundaryType:       2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMEndpointProtectionPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 6B74ECA1-5193-46F2-8C2F-976B6E5D6EAD
+online version: https://go.microsoft.com/fwlink/?linkid=833681
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMEndpointProtectionPoint
@@ -36,9 +44,13 @@ For more information about Endpoint Protection in Microsoft System Center Config
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an Endpoint Protection point
 ```
-PS C:\> Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
+PS XYZ:\> Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
 ```
 
 This command gets an Endpoint Protection point.

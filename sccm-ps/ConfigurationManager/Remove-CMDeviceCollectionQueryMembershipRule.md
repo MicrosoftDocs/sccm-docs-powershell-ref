@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMDeviceCollectionQueryMembershipRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: C0E6FBD0-E779-48D5-8C2D-886E5C02866E
+online version: https://go.microsoft.com/fwlink/?linkid=834056
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDeviceCollectionQueryMembershipRule
@@ -44,9 +52,13 @@ For more information about membership rules, see [Introduction to Collections in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove the query membership rules for a device collection
 ```
-PS C:\> Remove-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -RuleName "TPM Information"
+PS XYZ:\> Remove-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -RuleName "TPM Information"
 ```
 
 This command removes the query membership rule named TPM Information from the device collection named Mobile Windows 7 Devices.

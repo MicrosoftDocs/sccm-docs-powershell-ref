@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMTaskSequenceStep
 titleSuffix: Configuration Manager
 description: Gets a Configuration Manager task sequence step.
@@ -46,10 +46,14 @@ The **Get-CMTaskSequence** cmdlet gets task sequence group or step object(s) fro
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Get-CMTaskSequenceStep -StepName $st1.Name
+PS XYZ:\>$ReferencedTaskSequence | Get-CMTaskSequenceStep -StepName $st1.Name
 ```
 The comment gets a task sequence step by using the name.
 

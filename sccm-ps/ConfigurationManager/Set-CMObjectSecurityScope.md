@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMObjectSecurityScope
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 0D58EEC5-1105-4C96-9CCB-CC0DDDE2F240
+online version: https://go.microsoft.com/fwlink/?linkid=833954
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMObjectSecurityScope
@@ -31,9 +39,13 @@ Use [Add-CMObjectSecurityScope](Add-CMObjectSecurityScope.md) and [Remove-CMObje
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a security scope to application objects by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application*" | Set-CMObjectSecurityScope -Action AddMembership -Name "Scope1"
+PS XYZ:\> Get-CMApplication -Name "Application*" | Set-CMObjectSecurityScope -Action AddMembership -Name "Scope1"
 ```
 
 This command gets all application objects that have a name beginning with Application and uses the pipeline operator to pass the objects to **Set-CMObjectSecurityScope**.
@@ -41,7 +53,7 @@ This command gets all application objects that have a name beginning with Applic
 
 ### Example 2: Add a security scope to application objects
 ```
-PS C:\> Set-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Action AddMembership -Name "Scope1"
+PS XYZ:\> Set-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Action AddMembership -Name "Scope1"
 ```
 
 This command gets all application objects that have a name beginning with Application and adds the security scope named Scope1 to each application object.

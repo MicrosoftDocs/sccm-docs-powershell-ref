@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Publish-CMPrestageContent
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 91C3C2FE-F7DA-4C85-831E-14BB477C020B
+online version: https://go.microsoft.com/fwlink/?linkid=833855
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Publish-CMPrestageContent
@@ -184,37 +192,41 @@ You can specify the item to be published by name or ID, or use another cmdlet to
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Publish a package
 ```
-PS C:\>Publish-CMPrestageContent -PackageId "CM200001" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\Package.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -PackageId "CM200001" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\Package.pkgx"
 ```
 
 This command publishes the package that has the ID CM200001 to the specified distribution point as the specified .pkgx file.
 
 ### Example 2: Publish a boot image
 ```
-PS C:\>Publish-CMPrestageContent -BootImageId "CM200005" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\BootImage.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -BootImageId "CM200005" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\BootImage.pkgx"
 ```
 
 This command publishes the boot image that has the ID CM200005 to the specified distribution point as the specified .pkgx file.
 
 ### Example 3: Publish a driver package
 ```
-PS C:\>Publish-CMPrestageContent -DriverPackageId "CM20000F" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\DriverPackage.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -DriverPackageId "CM20000F" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\DriverPackage.pkgx"
 ```
 
 This command publishes the driver package that has the ID CM20000F to the specified distribution point as the specified .pkgx file.
 
 ### Example 4: Publish an operating system image
 ```
-PS C:\>Publish-CMPrestageContent -OperatingSystemImageId "CM200006" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\OSImage.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -OperatingSystemImageId "CM200006" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\OSImage.pkgx"
 ```
 
 This command publishes the operating system image that has the ID CM200006 to the specified distribution point as the specified .pkgx file.
 
 ### Example 5: Publish an operating system installer
 ```
-PS C:\>Publish-CMPrestageContent -OperatingSystemInstallerId "CM200017" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\OSInstaller.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -OperatingSystemInstallerId "CM200017" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\OSInstaller.pkgx"
 ```
 
 This command publishes the operating system installer that has the ID CM200017 to the specified distribution point as the specified .pkgx file.

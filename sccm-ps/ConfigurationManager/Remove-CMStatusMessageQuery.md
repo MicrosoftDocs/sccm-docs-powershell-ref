@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMStatusMessageQuery
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: DCBDB391-1D9C-4BEB-B118-DE09D44A812C
+online version: https://go.microsoft.com/fwlink/?linkid=834241
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMStatusMessageQuery
@@ -42,9 +50,13 @@ Status message queries return status messages from the System Center Configurati
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a named query
 ```
-PS C:\> Remove-CMStatusMessageQuery -Name "All Audit Status Messages from a Specific Site"
+PS XYZ:\> Remove-CMStatusMessageQuery -Name "All Audit Status Messages from a Specific Site"
 Remove
 Are you sure you wish to remove StatusMessageQuery: Name="All Audit Status Messages from a Specific Site"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
@@ -55,7 +67,7 @@ The command does not include the *Force* parameter, so the cmdlet prompts you be
 
 ### Example 2: Remove a query that has a specified ID
 ```
-PS C:\> Remove-CMStatusMessageQuery -Id "CM100008" -Force
+PS XYZ:\> Remove-CMStatusMessageQuery -Id "CM100008" -Force
 ```
 
 This command removes the query that has an ID of CM100008.

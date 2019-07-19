@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMPackageDeployment
 titleSuffix: Configuration Manager
 description: Gets a package deployment from Configuration Manager.
@@ -57,10 +57,14 @@ The **Get-CMPackageDeployment** cmdlet starts deployment of a specified software
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> Get-CMPackageDeployment -PackageId $thisPackage.packageid
+PS XYZ:\> Get-CMPackageDeployment -PackageId $thisPackage.packageid
 ```
 
 This command gets a package deployment by the package id.

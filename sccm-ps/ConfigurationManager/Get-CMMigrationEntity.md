@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMManagementPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: D02E7E60-2F2E-4EBE-9EB3-CA8CA9914289
+online version: https://go.microsoft.com/fwlink/?linkid=833758
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMMigrationEntity
@@ -40,23 +48,27 @@ A migration entity is an object to be migrated that is of any type that is suppo
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get information about all your migration entities
 ```
-PS C:\> Get-CMMigrationEntity
+PS XYZ:\> Get-CMMigrationEntity
 ```
 
 This command returns information about all of your migration entities.
 
 ### Example 2: Get information about a specific migration entity
 ```
-PS C:\> Get-CMMigrationEntity -Name "MigrationTest"
+PS XYZ:\> Get-CMMigrationEntity -Name "MigrationTest"
 ```
 
 This command returns information about the migration entity with the name MigrationTest.
 
 ### Example 3: Get information about active migration entities
 ```
-PS C:\> Get-CMMigrationEntity -IsActive
+PS XYZ:\> Get-CMMigrationEntity -IsActive
 ```
 
 This command returns information about all of your active migration entities.

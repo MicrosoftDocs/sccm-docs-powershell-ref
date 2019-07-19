@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSite
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: CED257A6-E5DE-4D3D-97FA-861AEA295DE3
+online version: https://go.microsoft.com/fwlink/?linkid=834034
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSite
@@ -101,16 +109,20 @@ You can specify a site for which you change security scope settings by using a s
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a site to a security scope by using a site name
 ```
-PS C:\> Set-CMSite -SecurityScopeAction AddMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
+PS XYZ:\> Set-CMSite -SecurityScopeAction AddMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
 ```
 
 This command assigns a custom security scope named Scope22 to a System Center Configuration Manager site named CMSiteSystem.
 
 ### Example 2: Remove a security scope for a site by using the site name
 ```
-PS C:\> Set-CMSite -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
+PS XYZ:\> Set-CMSite -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
 ```
 
 This command removes the custom security scope in the previous example from a System Center Configuration Manager site named CMSiteSystem.
@@ -119,7 +131,7 @@ This command removes the custom security scope in the previous example from a Sy
 
 ### -AddActiveDirectoryForest
 Specifies an array of Active Directory Forest objects to publish in Active Directory Domain Services.
-To obtain an Active Directory Forest object, use the [Get-ADForest](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adforest?view=win10-ps) cmdlet.
+To obtain an Active Directory Forest object, use the [Get-ADForest](https://docs.microsoft.com/powershell/module/addsadministration/get-adforest?view=win10-ps) cmdlet.
 
 ```yaml
 Type: IResultObject[]

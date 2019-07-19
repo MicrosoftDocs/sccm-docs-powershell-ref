@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Invoke-CMDeploymentSummarization
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+ms.assetid: A2A4F695-E2B3-4869-8235-B9486C9CB4EB
+online version: https://go.microsoft.com/fwlink/?linkid=834121
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMDeploymentSummarization
@@ -52,9 +60,13 @@ You can specify a deployment summarization by ID or by collection or you can spe
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Invoke a deployment summarization
 ```
-PS C:\>Invoke-CMDeploymentSummarization -CollectionName "CMWest"
+PS XYZ:\>Invoke-CMDeploymentSummarization -CollectionName "CMWest"
 ```
 
 This command runs a deployment summarization for the collection named CMWest.

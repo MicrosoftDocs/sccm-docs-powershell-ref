@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMEnrollmentPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: A635E162-B777-4289-B6EE-B8BF2F9EC302
+online version: https://go.microsoft.com/fwlink/?linkid=833689
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMEnrollmentPoint
@@ -36,9 +44,13 @@ An enrollment point is a site system role that uses public key infrastructure (P
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an enrollment point
 ```
-PS C:\> Get-CMEnrollmentPoint -SiteSystemServerName "SiteServer01.Contoso.com" -SiteCode "CM1"
+PS XYZ:\> Get-CMEnrollmentPoint -SiteSystemServerName "SiteServer01.Contoso.com" -SiteCode "CM1"
 ```
 
 This command gets an enrollment point.

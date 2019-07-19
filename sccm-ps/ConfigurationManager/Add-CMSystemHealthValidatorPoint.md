@@ -35,9 +35,13 @@ The **Add-CMSystemHealthValidatorPoint** cmdlet adds a validator point for syste
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a system health validator point to a server for a site
 ```
-PS C:\>Add-CMSystemHealthValidatorPoint -SiteCode "CM4" -SiteSystemServerName "Test01.TSQA.Contoso.com"
+PS XYZ:\>Add-CMSystemHealthValidatorPoint -SiteCode "CM4" -SiteSystemServerName "Test01.TSQA.Contoso.com"
 ```
 
 This command adds a system health validator point to the server named Test01.TSQA.Contoso.com for the site that has the site code CM4.

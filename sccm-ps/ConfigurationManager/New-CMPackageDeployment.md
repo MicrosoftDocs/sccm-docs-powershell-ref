@@ -1,4 +1,4 @@
----
+﻿---
 title: New-CMPackageDeployment
 titleSuffix: Configuration Manager
 description: Creates a package deployment to a Configuration Manager collection.
@@ -143,22 +143,26 @@ You can specify whether System Center Configuration Manager deploys the package 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: By ID
 
 ```powershell
-PS C:\> New-CMPackageDeployment -PackageId $ReferencePackage.PackageID -ProgramName $ReferenceProgram.ProgramName -CollectionID $Collection.CollectionID -StandardProgram -Comment $Comment -DeployPurpose Available
+PS XYZ:\> New-CMPackageDeployment -PackageId $ReferencePackage.PackageID -ProgramName $ReferenceProgram.ProgramName -CollectionID $Collection.CollectionID -StandardProgram -Comment $Comment -DeployPurpose Available
 ```
 
 ### Example 2: By name
 
 ```powershell
-PS C:\> New-CMPackageDeployment -PackageName $ReferencePackage.Name -ProgramName $ReferenceProgram.ProgramName -CollectionName $Collection.Name -StandardProgram -Comment $Comment -DeployPurpose Available 
+PS XYZ:\> New-CMPackageDeployment -PackageName $ReferencePackage.Name -ProgramName $ReferenceProgram.ProgramName -CollectionName $Collection.Name -StandardProgram -Comment $Comment -DeployPurpose Available 
 ```
 
 ### Example 3: By pipeline
 
 ```powershell
-PS C:\> $ReferencePackage | New-CMPackageDeployment -ProgramName $ReferenceProgram.ProgramName -Collection $Collection -StandardProgram -Comment $Comment -DeployPurpose Available 
+PS XYZ:\> $ReferencePackage | New-CMPackageDeployment -ProgramName $ReferenceProgram.ProgramName -Collection $Collection -StandardProgram -Comment $Comment -DeployPurpose Available 
 ```
 
 ## PARAMETERS

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMPackage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 524F059C-88B7-4675-884C-3F9D75A26A48
+online version: https://go.microsoft.com/fwlink/?linkid=833976
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMPackage
@@ -75,9 +83,13 @@ Any other values indicate application-specific error codes.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Rename a package and add a description
 ```
-PS C:\> Set-CMPackage -Id "ST120001" -NewName "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
+PS XYZ:\> Set-CMPackage -Id "ST120001" -NewName "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
 ```
 
 This command renames the package that has the ID ST120001.
@@ -85,8 +97,8 @@ The command changes the name of the package to ScriptsPackage02 and adds a descr
 
 ### Example 2: Rename a package by using an object variable
 ```
-PS C:\> $Pkg = Get-CMPackage -Id ST120001
-PS C:\> Set-CMPackage -InputObject $Pkg -Newname "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
+PS XYZ:\> $Pkg = Get-CMPackage -Id ST120001
+PS XYZ:\> Set-CMPackage -InputObject $Pkg -Newname "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
 ```
 
 The first command gets the package that has the ID ST120001, and stores the results in the $Pkg variable.

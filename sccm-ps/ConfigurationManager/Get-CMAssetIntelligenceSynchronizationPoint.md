@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMAssetIntelligenceSynchronizationPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 19923FBC-EDF0-4BB5-8FEE-F0B4428D2413
+online version: https://go.microsoft.com/fwlink/?linkid=834120
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMAssetIntelligenceSynchronizationPoint
@@ -36,9 +44,13 @@ Microsoft System Center Configuration Manager uses the Asset Intelligence synchr
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an Asset Intelligence synchronization point
 ```
-PS C:\> Get-CMAssetIntelligenceSynchronizationPoint
+PS XYZ:\> Get-CMAssetIntelligenceSynchronizationPoint
 ```
 
 This command gets an Asset Intelligence synchronization point.

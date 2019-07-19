@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMObjectLockDetails
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 2CA8797E-6B30-4B19-A6A5-7FC938EC28A4
+online version: https://go.microsoft.com/fwlink/?linkid=833781
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMObjectLockDetails
@@ -27,6 +35,10 @@ Get-CMObjectLockDetails [-InputObject] <IResultObject> [-DisableWildcardHandling
 The **Get-CMObjectLockDetails** cmdlet gets the object lock details for an object.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1: Get object lock details by passing an application object through the pipeline
 ```

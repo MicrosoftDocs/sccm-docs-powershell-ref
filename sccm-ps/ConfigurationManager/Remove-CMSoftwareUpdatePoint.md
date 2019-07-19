@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMSoftwareUpdatePoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F459D8AF-0C31-4E95-8EF1-AF9FF31167BD
+online version: https://go.microsoft.com/fwlink/?linkid=834229
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSoftwareUpdatePoint
@@ -42,9 +50,13 @@ You can also use the Get-CMSoftwareUpdatePoint cmdlet to obtain a software updat
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a software update point
 ```
-PS C:\> Remove-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+PS XYZ:\> Remove-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
 ```
 
 The command removes a software update point.
@@ -53,8 +65,8 @@ Because the command does not include the *Force* parameter, the cmdlet prompts y
 
 ### Example 2: Remove a software update point by using a variable
 ```
-PS C:\> $CMSUP = Get-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
-PS C:\> Remove-CMSoftwareUpdatePoint -InputObject $CMSUP -Force
+PS XYZ:\> $CMSUP = Get-CMSoftwareUpdatePoint -SiteCode "CM1" -SiteSystemServerName "UpdateSystem.Western.Contoso.com"
+PS XYZ:\> Remove-CMSoftwareUpdatePoint -InputObject $CMSUP -Force
 ```
 
 The first command gets a software update point and saves it to the $CMSUP variable.

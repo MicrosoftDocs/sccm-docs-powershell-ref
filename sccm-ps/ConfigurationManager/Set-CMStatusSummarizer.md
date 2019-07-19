@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMStatusSummarizer
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: BC02FCFC-70B2-4DAD-BF1E-F6D11EA68D4B
+online version: https://go.microsoft.com/fwlink/?linkid=834119
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMStatusSummarizer
@@ -53,9 +61,13 @@ The Microsoft System Center Configuration Manager status summarizers apply to th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a status summarizer
 ```
-PS C:\> Set-CMStatusSummarizer -ApplicationDeploymentSummarizer -SiteCode "ContosoSite"
+PS XYZ:\> Set-CMStatusSummarizer -ApplicationDeploymentSummarizer -SiteCode "ContosoSite"
 ```
 
 This command configures the status summarizer for the Contoso site to return application deployment statistics.

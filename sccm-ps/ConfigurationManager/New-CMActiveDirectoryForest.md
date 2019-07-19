@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMActiveDirectoryForest
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 196CA882-2AC7-42C3-9E79-1CCE583C8079
+online version: https://go.microsoft.com/fwlink/?linkid=834219
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMActiveDirectoryForest
@@ -34,9 +42,13 @@ Active Directory Forest Discovery requires a global account to discover or publi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create an Active Directory forest object that has discovery enabled
 ```
-PS C:\> New-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com" -EnableDiscovery $True
+PS XYZ:\> New-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com" -EnableDiscovery $True
 ```
 
 This command creates an Active Directory forest object that has the FQDN tsqa.contoso.com and that has discovery enabled.

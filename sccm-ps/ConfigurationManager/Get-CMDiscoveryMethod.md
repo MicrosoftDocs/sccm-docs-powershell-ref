@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMDiscoveryMethod
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 7CBBD8FA-3534-46FC-829C-14A7C95BAB47
+online version: https://go.microsoft.com/fwlink/?linkid=833648
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDiscoveryMethod
@@ -33,9 +41,13 @@ For more information about discovery in System Center Configuration Manager, see
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a user discovery method
 ```
-PS C:\> Get-CMDiscoveryMethod -Name "ActiveDirectoryUserDiscovery"
+PS XYZ:\> Get-CMDiscoveryMethod -Name "ActiveDirectoryUserDiscovery"
 ```
 
 This command gets a System Center Configuration Manager method that discovers users in the installation.

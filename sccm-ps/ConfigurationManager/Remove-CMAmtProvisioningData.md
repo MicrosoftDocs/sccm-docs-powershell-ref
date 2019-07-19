@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMAmtProvisioningData
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Oob.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833886
+schema: 2.0.0
+ms.assetid: D4DBB01E-986C-4B70-B24C-0F477791386B
+>>>>>>> master
 ---
 
 # Remove-CMAmtProvisioningData
@@ -47,9 +55,13 @@ Use the *ControlType* parameter to control reprovisioning for individual compute
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove provisioning information completely for a specified computer
 ```
-PS C:\> Remove-CMAmtProvisioningData -ControlType FullUnprovisionSuppressAuto -DeviceId "SMS000076" -Force
+PS XYZ:\> Remove-CMAmtProvisioningData -ControlType FullUnprovisionSuppressAuto -DeviceId "SMS000076" -Force
 ```
 
 This command removes provisioning information from a computer that has the ID SMS000076.

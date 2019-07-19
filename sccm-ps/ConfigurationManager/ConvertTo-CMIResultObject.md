@@ -28,6 +28,10 @@ The **ConvertTo-CMIResultObject** cmdlet converts a **ManagementBaseObject** to 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Convert a ManagementBaseObject to an IResultObject by passing a WMI object through the pipeline
 ```
 PS ABC:\> $WmiObject = Get-WmiObject -Query "SELECT * FROM SMS_Site" -Namespace "root\sms\site_PS1"

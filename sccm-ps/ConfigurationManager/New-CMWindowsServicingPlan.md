@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMWindowsServicingPlan
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum-help.xml
+ms.assetid: 8E0ADE58-89CE-4E07-ABCF-1BB9545C0665
+online version: https://go.microsoft.com/fwlink/?linkid=833836
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMWindowsServicingPlan
@@ -78,12 +86,16 @@ The **New-CMWindowsServicingPlan** cmdlet creates a Windows 10 servicing plan.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a servicing plan by collection ID
 ```
-PS C:\> $Lang = ("Japanese", "English", "French")
-PS C:\> $Required = (">=1", "<=100")
-PS C:\> $Title = ("Title1", "Title2", "Title3")
-PS C:\> New-CMWindowsServicingPlan -Name "Test01" -CollectionId MP40001A -Description "Servicing Plan description01" -SendWakeupPacket $False -VerboseLevel AllMessages -Language $Lang -Required $Required -Title $Title -RunType DoNotRunThisRuleAutomatically -UseUtc $True -AvailableImmediately $True -DeadlineImmediately $False -UserNotification DisplayAll -AllowSoftwareInstallationOutsideMaintenanceWindow $True -AllowRestart $True -SuppressRestartServer $True -SuppressRestartWorkstation $True -DeploymentPackage (Get-CMSoftwareUpdateDeploymentPackage -Name "SUDP01")
+PS XYZ:\> $Lang = ("Japanese", "English", "French")
+PS XYZ:\> $Required = (">=1", "<=100")
+PS XYZ:\> $Title = ("Title1", "Title2", "Title3")
+PS XYZ:\> New-CMWindowsServicingPlan -Name "Test01" -CollectionId MP40001A -Description "Servicing Plan description01" -SendWakeupPacket $False -VerboseLevel AllMessages -Language $Lang -Required $Required -Title $Title -RunType DoNotRunThisRuleAutomatically -UseUtc $True -AvailableImmediately $True -DeadlineImmediately $False -UserNotification DisplayAll -AllowSoftwareInstallationOutsideMaintenanceWindow $True -AllowRestart $True -SuppressRestartServer $True -SuppressRestartWorkstation $True -DeploymentPackage (Get-CMSoftwareUpdateDeploymentPackage -Name "SUDP01")
 ```
 
 The first command creates a list of languages and stores the list in the $Lang variable.
@@ -98,8 +110,8 @@ The command adds the upgrade filter languages stored in $Lang, the required filt
 
 ### Example 2: Create a servicing plan by collection name
 ```
-PS C:\> $LangSelect = ("Japanese", "English", "French", "German")
-PS C:\> New-CMWindowsServicingPlan -Name "Test02" -CollectionName "ColName02" -DeploymentPackage (Get-CMSoftwareUpdateDeploymentPackage -Name "SUP02") -WriteFilterHandling $True -GenerateSuccessAlert $True -SuccessPercentage $True -AlertTime 10 -AlertTimeUnit Days -DisableOperationManager $True -GenerateOperationManagerAlert $True -NoInstallOnRemote $True -NoInstallOnUnprotected $True -UseBranchCache $True -DownloadFromMicrosoftUpdate $True -AllowUseMeteredNetwork $True -DownloadFromInternet $True -Location "\\TestSevr\WSUSTemp" -DeploymentRing Cbb -UpdateDeploymentWaitDay 20 -LanguageSelection $LangSelect
+PS XYZ:\> $LangSelect = ("Japanese", "English", "French", "German")
+PS XYZ:\> New-CMWindowsServicingPlan -Name "Test02" -CollectionName "ColName02" -DeploymentPackage (Get-CMSoftwareUpdateDeploymentPackage -Name "SUP02") -WriteFilterHandling $True -GenerateSuccessAlert $True -SuccessPercentage $True -AlertTime 10 -AlertTimeUnit Days -DisableOperationManager $True -GenerateOperationManagerAlert $True -NoInstallOnRemote $True -NoInstallOnUnprotected $True -UseBranchCache $True -DownloadFromMicrosoftUpdate $True -AllowUseMeteredNetwork $True -DownloadFromInternet $True -Location "\\TestSevr\WSUSTemp" -DeploymentRing Cbb -UpdateDeploymentWaitDay 20 -LanguageSelection $LangSelect
 ```
 
 The first command creates a list of language selection languages and stores the list in the $LangSelect variable.

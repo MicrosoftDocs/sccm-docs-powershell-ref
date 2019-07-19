@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Invoke-CMSoftwareUpdateSummarization
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: C6C21CFF-2DF9-4D17-BC99-6367B2E90120
+online version: https://go.microsoft.com/fwlink/?linkid=834173
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMSoftwareUpdateSummarization
@@ -32,9 +40,13 @@ You can use the Get-CMSoftwareUpdateSummarizationSchedule cmdlet to view the cur
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Run software update summarization
 ```
-PS C:\>Invoke-CMSoftwareUpdateSummarization
+PS XYZ:\>Invoke-CMSoftwareUpdateSummarization
 ```
 
 This command runs the software update summarization immediately, instead of waiting for the next scheduled time.

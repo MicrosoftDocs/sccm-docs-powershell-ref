@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMInitialModifiableSecuredCategory
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: 34B1F9D6-3D89-46FF-AA23-A9B40E4433B0
+online version: https://go.microsoft.com/fwlink/?linkid=833722
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMInitialModifiableSecuredCategory
@@ -37,16 +45,20 @@ Note: This cmdlet was previously known as **Get-CMInitModifiableSecuredCategory*
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get information about all your modifiable secured categories
 ```
-PS C:\> Get-CMInitialModifiableSecuredCategory
+PS XYZ:\> Get-CMInitialModifiableSecuredCategory
 ```
 
 This command returns information about all your modifiable secured categories.
 
 ### Example 2: Get information about a specific modifiable secured category
 ```
-PS C:\> Get-CMInitialModifiableSecuredCategory -ID "121989"
+PS XYZ:\> Get-CMInitialModifiableSecuredCategory -ID "121989"
 ```
 
 This command returns information about the modifiable secured category that has the ID 121989.

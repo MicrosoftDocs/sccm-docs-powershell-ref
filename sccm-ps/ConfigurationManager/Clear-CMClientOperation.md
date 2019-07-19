@@ -38,9 +38,13 @@ You can use the Remove-CMClientOperation cmdlet to remove a client operation obj
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Clear a client operation
 ```
-PS C:\>Clear-CMClientOperation -Id "CMCO217"
+PS XYZ:\>Clear-CMClientOperation -Id "CMCO217"
 ```
 
 This command clears the client operation that has the ID CMCO217.

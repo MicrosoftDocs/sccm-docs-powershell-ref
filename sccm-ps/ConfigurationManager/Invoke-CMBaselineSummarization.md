@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Invoke-CMBaselineSummarization
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: EC3D7A25-AFDB-40BE-88E5-3B6506920E8D
+online version: https://go.microsoft.com/fwlink/?linkid=834101
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMBaselineSummarization
@@ -31,9 +39,13 @@ You can use the [Set-CMBaselineSummarizationSchedule](Set-CMBaselineSummarizatio
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Update configuration baseline data
 ```
-PS C:\>Invoke-CMBaselineSummarization
+PS XYZ:\>Invoke-CMBaselineSummarization
 ```
 
 This command updates data in configuration baselines with the latest data from the site database.

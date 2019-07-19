@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMWirelessProfileObject
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833848
+schema: 2.0.0
+ms.assetid: 8C35E121-7077-4ECB-804C-C1BFC7195761
+>>>>>>> master
 ---
 
 # New-CMWirelessProfileObject
@@ -34,9 +42,13 @@ System Center Configuration Manager cannot validate that these settings with you
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a profile for AMT-based computers on a wireless network
 ```
-PS C:\> New-CMWirelessProfileObject -ClientAuthenticationMethod  EapTtlsMschapv2 -ClientCertificateTemplate "Contoso Wireless User"  -ClientCertificationAuthorityName "Contoso CA 1" -ClientIssuingCertificationAuthority "ContosoCA.Contoso.com" -EncryptionMethod TKIP -NetworkName "ContosoWireless" -ProfileName "WirelessLocalUser" -SecurityType WPA2Enterprise -TrustedRootCertificate "Contoso Root CA"
+PS XYZ:\> New-CMWirelessProfileObject -ClientAuthenticationMethod  EapTtlsMschapv2 -ClientCertificateTemplate "Contoso Wireless User"  -ClientCertificationAuthorityName "Contoso CA 1" -ClientIssuingCertificationAuthority "ContosoCA.Contoso.com" -EncryptionMethod TKIP -NetworkName "ContosoWireless" -ProfileName "WirelessLocalUser" -SecurityType WPA2Enterprise -TrustedRootCertificate "Contoso Root CA"
 ```
 
 This command creates a profile for Intel Active Management Technology (AMT)-based computers on a wireless network.

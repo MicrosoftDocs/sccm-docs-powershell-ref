@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSoftwareUpdate
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: EB3C88E9-0845-4092-928B-79AA6948A073
+online version: https://go.microsoft.com/fwlink/?linkid=834063
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdate
@@ -44,16 +52,20 @@ A software update is an update to Windows or other software that Microsoft Syste
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a software update and change its settings
 ```
-PS C:\> Get-CMSoftwareUpdate -Name "Update for Windows 10 (KB3106932)" | Set-CMSoftwareUpdate -MaximumExecutionMins 10 -CustomSeverity Critical
+PS XYZ:\> Get-CMSoftwareUpdate -Name "Update for Windows 10 (KB3106932)" | Set-CMSoftwareUpdate -MaximumExecutionMins 10 -CustomSeverity Critical
 ```
 
 This command gets the software update object named Update for Windows 10 (KB3106932) and uses the pipeline operator to pass the object to **Set-CMSoftwareUpdate**, which sets the severity of the update to Critical and the maximum installation time to 10 minutes.
 
 ### Example 2: Modify software update settings
 ```
-PS C:\> Set-CMSoftwareUpdate -Id 16777979 -MaximumExecutionMins 10 -CustomSeverity Critical
+PS XYZ:\> Set-CMSoftwareUpdate -Id 16777979 -MaximumExecutionMins 10 -CustomSeverity Critical
 ```
 
 This command gets the software update with the ID of 16777979 and sets the severity of the update to Critical and the maximum installation time to 10 minutes.

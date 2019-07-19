@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMCertificateRegistrationPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 37602013-704A-4D5E-8EFF-BA9F722FBD0A
+online version: https://go.microsoft.com/fwlink/?linkid=833707
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMCertificateRegistrationPoint
@@ -38,9 +46,13 @@ The **Set-CMCertificateRegistrationPoint** cmdlet updates the settings of a cert
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a certificate registration point role by using the pipeline
 ```
-PS C:\> Get-CMCertificateRegistrationPoint -SiteSystemServerName "SiteServer01.Contoso.com" | Set-CMCertificateRegistrationPoint  -AddCertificate @{"https://ndes2.fabrikam.com/certsrv/mscep/mscep.dll" ="\\Server\ShareFolder\Cert.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\Administrator).UserName -RemoveCertificate @{"https://ndes1.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\ShareFolder\RootCA.cer"}.Keys[0]
+PS XYZ:\> Get-CMCertificateRegistrationPoint -SiteSystemServerName "SiteServer01.Contoso.com" | Set-CMCertificateRegistrationPoint  -AddCertificate @{"https://ndes2.fabrikam.com/certsrv/mscep/mscep.dll" ="\\Server\ShareFolder\Cert.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\Administrator).UserName -RemoveCertificate @{"https://ndes1.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\ShareFolder\RootCA.cer"}.Keys[0]
 ```
 
 This command gets the certificate registration point object for the site system server named SiteServer01.Contoso.com and uses the pipeline operator to pass the object to **Set-CMCertificateRegistrationPoint**.
@@ -48,7 +60,7 @@ This command gets the certificate registration point object for the site system 
 
 ### Example 2: Set a certificate registration point role by name
 ```
-PS C:\> Set-CMCertificateRegistrationPoint -SiteSystemServerName "SiteServer02.Contoso.com" -AddCertificate @{"https://ndes2.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\ShareFolder\RootCA.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\Admin1).UserName -RemoveCertificate @{"https://ndes1.fabrikam.com/certsrv/mscep/mscep.dll" ="\\Server\ShareFolder\Cert.cer"}.Keys[0]
+PS XYZ:\> Set-CMCertificateRegistrationPoint -SiteSystemServerName "SiteServer02.Contoso.com" -AddCertificate @{"https://ndes2.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\ShareFolder\RootCA.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\Admin1).UserName -RemoveCertificate @{"https://ndes1.fabrikam.com/certsrv/mscep/mscep.dll" ="\\Server\ShareFolder\Cert.cer"}.Keys[0]
 ```
 
 This command adds the certificate named RootCA.cer to the site system server named SiteServer02.Contoso.com, and removes the certificate named Cert.cer, by using the user account named Contoso\Admin1 to connect to the Configuration Manager database.

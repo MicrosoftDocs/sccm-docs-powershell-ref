@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMPrestagedMedia
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833725
+schema: 2.0.0
+ms.assetid: 5BC25D39-D4A1-4878-94AA-B82919AB7854
+>>>>>>> master
 ---
 
 # New-CMPrestagedMedia
@@ -34,13 +42,17 @@ The **New-CMPrestagedMedia** cmdlet creates a file to prestage on a new hard dri
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create prestaged media
 ```
-PS C:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
-PS C:\> $BootImage = Get-CMBootImage -Name "BootImage01"
-PS C:\> $DistributionPoint = Get-CMDistributionPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
-PS C:\> $OSImage = Get-CMOperatingSystemImage -Name "OSImagePkg01"
-PS C:\> New-CMPrestagedMedia -MediaMode Dynamic -Path "\\server\share\PrestargedMedia.wim" -BootImage $BootImage -DistributionPoint $DistributionPoint -ManagementPoint $ManagementPoint -OperatingSystemImage $OSImage
+PS XYZ:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
+PS XYZ:\> $BootImage = Get-CMBootImage -Name "BootImage01"
+PS XYZ:\> $DistributionPoint = Get-CMDistributionPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
+PS XYZ:\> $OSImage = Get-CMOperatingSystemImage -Name "OSImagePkg01"
+PS XYZ:\> New-CMPrestagedMedia -MediaMode Dynamic -Path "\\server\share\PrestargedMedia.wim" -BootImage $BootImage -DistributionPoint $DistributionPoint -ManagementPoint $ManagementPoint -OperatingSystemImage $OSImage
 ```
 
 The first command gets the management point object for the site system server named dist01.contoso.com with the site code CM1 and stores the object in the $ManagementPoint variable.

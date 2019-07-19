@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMEnrollmentProxyPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 101E23A6-5318-4AA7-81EF-59AA9CE44B67
+online version: https://go.microsoft.com/fwlink/?linkid=834098
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMEnrollmentProxyPoint
@@ -37,9 +45,13 @@ After you remove an enrollment proxy point, mobile devices must use a different 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an enrollment proxy point
 ```
-PS C:\> Remove-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "SiteServer01.Contoso.com"
+PS XYZ:\> Remove-CMEnrollmentProxyPoint -SiteCode "CM1" -SiteSystemServerName "SiteServer01.Contoso.com"
 ```
 
 This command removes an enrollment proxy point.

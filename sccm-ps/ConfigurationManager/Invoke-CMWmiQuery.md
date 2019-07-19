@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Invoke-CMWmiQuery
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 020CF218-583F-4419-8AFB-09C8CD67D755
+online version: https://go.microsoft.com/fwlink/?linkid=834190
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMWmiQuery
@@ -36,15 +44,19 @@ The **Invoke-CMWmiQuery** cmdlet runs a Windows Management Instrumentation (WMI)
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Run a WQL query
 ```
-PS C:\> $WQL = @"
+PS XYZ:\> $WQL = @"
 SELECT app.* FROM SMS_ApplicationLatest AS app
 INNER JOIN SMS_CIContentPackage AS con ON app.CI_ID=con.CI_ID
 INNER JOIN SMS_DistributionPoint AS srv ON con.PackageID=srv.PackageID
 WHERE app.IsHidden = 0
 "@
-PS C:\> Invoke-CMWmiQuery -Query $WQL -Option Lazy
+PS XYZ:\> Invoke-CMWmiQuery -Query $WQL -Option Lazy
 ```
 
 The first command creates a WQL query and stores it in the $WQL variable.
@@ -53,10 +65,10 @@ The second command runs the query stored in $WQL.
 
 ### Example 2: Run a WMI query for device collections
 ```
-PS C:\> $Search = [Microsoft.ConfigurationManagement.PowerShell.Provider.SmsProviderSearch]::new()
-PS C:\> $Search.AddOrder("CollectionID", [Microsoft.ConfigurationManagement.PowerShell.Provider.SearchParameterOrderBy]::Asc)
-PS C:\> $Search.Add("Name","DeviceCol*", $True)
-PS C:\> Invoke-CMWmiQuery -Search $Search -ClassName "SMS_Collection" -Option Lazy
+PS XYZ:\> $Search = [Microsoft.ConfigurationManagement.PowerShell.Provider.SmsProviderSearch]::new()
+PS XYZ:\> $Search.AddOrder("CollectionID", [Microsoft.ConfigurationManagement.PowerShell.Provider.SearchParameterOrderBy]::Asc)
+PS XYZ:\> $Search.Add("Name","DeviceCol*", $True)
+PS XYZ:\> Invoke-CMWmiQuery -Search $Search -ClassName "SMS_Collection" -Option Lazy
 ```
 
 The first command creates a search object and stores the object in the $Search variable.
@@ -70,9 +82,9 @@ The last command runs the query stored in $Search, specifying SMS_Collection as 
 
 ### Example 3: Run a WMI query for sites by status
 ```
-PS C:\> $Search.Clear()
-PS C:\> $Search.Add("Status", $True)
-PS C:\> Invoke-CMWmiQuery -ClassName "SMS_Site" -Search $Search
+PS XYZ:\> $Search.Clear()
+PS XYZ:\> $Search.Add("Status", $True)
+PS XYZ:\> Invoke-CMWmiQuery -ClassName "SMS_Site" -Search $Search
 ```
 
 The first command clears the search parameters from the search object created in example 2.
@@ -84,9 +96,9 @@ The last command runs the query stored in $Search, specifying SMS_Site as the cl
 
 ### Example 4: Run a WMI query for sites by name
 ```
-PS C:\> $Search.Clear()
-PS C:\> $Search.Add("SiteName", $null, [Microsoft.ConfigurationManagement.PowerShell.Provider.SearchParameterOperator]::NotEquals)
-PS C:\> Invoke-CMWmiQuery -ClassName "SMS_Site" -Search $Search
+PS XYZ:\> $Search.Clear()
+PS XYZ:\> $Search.Add("SiteName", $null, [Microsoft.ConfigurationManagement.PowerShell.Provider.SearchParameterOperator]::NotEquals)
+PS XYZ:\> Invoke-CMWmiQuery -ClassName "SMS_Site" -Search $Search
 ```
 
 The first command clears the search parameters from the search object created in example 2.
@@ -98,9 +110,9 @@ The last command runs the query stored in $Search, specifying SMS_Site as the cl
 
 ### Example 5: Run a WMI query for applications
 ```
-PS C:\> $Search.Clear()
-PS C:\>  $Search.AddAdhoc("CI_ID > 0")
-PS C:\>  Invoke-CMWmiQuery -ClassName "SMS_Application" -Search $Search -Option Lazy
+PS XYZ:\> $Search.Clear()
+PS XYZ:\>  $Search.AddAdhoc("CI_ID > 0")
+PS XYZ:\>  Invoke-CMWmiQuery -ClassName "SMS_Application" -Search $Search -Option Lazy
 ```
 
 The first command clears the search parameters from the search object created in example 2.

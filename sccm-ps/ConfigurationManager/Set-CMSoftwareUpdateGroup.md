@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSoftwareUpdateGroup
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 7880EBFC-D033-4243-BCFC-D9A890971680
+online version: https://go.microsoft.com/fwlink/?linkid=834088
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdateGroup
@@ -51,16 +59,20 @@ After you deploy a software update group, you can add new software updates to th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a software update group to a security scope
 ```
-PS C:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction AddMembership -SecurityScopeName "ScopeNameD02" -Name "SUGroup01"
+PS XYZ:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction AddMembership -SecurityScopeName "ScopeNameD02" -Name "SUGroup01"
 ```
 
 This command adds a software update group named SUGroup01 as a member of the security scope named ScopeNameD02.
 
 ### Example 2: Remove a software update group from a security scope
 ```
-PS C:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "ScopeNameD17" -Name "SUGroup01"
+PS XYZ:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "ScopeNameD17" -Name "SUGroup01"
 ```
 
 This command removes the software update group named SUGroup01 from membership in the security scope named ScopeNameD17.

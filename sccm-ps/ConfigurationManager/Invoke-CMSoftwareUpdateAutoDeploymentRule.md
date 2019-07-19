@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Invoke-CMSoftwareUpdateAutoDeploymentRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: B5D0F1F5-75B0-42FF-8C3E-9FEB9551C18D
+online version: https://go.microsoft.com/fwlink/?linkid=834169
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMSoftwareUpdateAutoDeploymentRule
@@ -49,9 +57,13 @@ You can use the [Enable-CMSoftwareUpdateAutoDeploymentRule](Enable-CMSoftwareUpd
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Invoke a deployment rule
 ```
-PS C:\>Invoke-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Security Updates"
+PS XYZ:\>Invoke-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Security Updates"
 ```
 
 This command runs a rule called Weekly Security Updates.

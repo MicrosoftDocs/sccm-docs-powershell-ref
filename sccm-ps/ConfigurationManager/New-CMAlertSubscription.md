@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMAlertSubscription
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+ms.assetid: CD9803F0-3DBE-4056-9E85-A834AD91D390
+online version: https://go.microsoft.com/fwlink/?linkid=834232
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMAlertSubscription
@@ -30,9 +38,13 @@ Before you create an alert subscription, make sure that you have configured emai
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create an alert subscription
 ```
-PS C:\> New-CMAlertSubscription -Name "Subscription01" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 1033 -AlertIds 16777219
+PS XYZ:\> New-CMAlertSubscription -Name "Subscription01" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 1033 -AlertIds 16777219
 ```
 
 This command creates an alert subscription named Subscription01.

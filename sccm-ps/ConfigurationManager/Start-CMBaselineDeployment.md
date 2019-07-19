@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Start-CMBaselineDeployment
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 4EA07297-564A-4DA0-957D-5ADE49683D74
+online version: https://go.microsoft.com/fwlink/?linkid=834199
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMBaselineDeployment
@@ -52,9 +60,13 @@ System Center Configuration Manager assigns baselines to computer in collections
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Start baseline deployment
 ```
-PS C:\> Start-CMBaselineDeployment -CollectionName "All Users" -Name "Baseline22" -EnableEnforcement $True -GenerateAlert $True -MonitoredByScom $True -OverrideServiceWindow $True -ParameterValue 30
+PS XYZ:\> Start-CMBaselineDeployment -CollectionName "All Users" -Name "Baseline22" -EnableEnforcement $True -GenerateAlert $True -MonitoredByScom $True -OverrideServiceWindow $True -ParameterValue 30
 ```
 
 This command starts a baseline deployment named Baseline22 for the collection All Users.

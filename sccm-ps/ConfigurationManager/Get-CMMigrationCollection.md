@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMMigrationCollection
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: ED0B8420-DCA5-43D7-A48B-45A539486580
+online version: https://go.microsoft.com/fwlink/?linkid=833754
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMMigrationCollection
@@ -37,9 +45,13 @@ A migration collection is the set of resources chosen from a hierarchy for migra
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a migration collection by name
 ```
-PS C:\> Get-CMMigrationCollection -Name "PhoneCollection5"
+PS XYZ:\> Get-CMMigrationCollection -Name "PhoneCollection5"
 ```
 
 This command gets the migration collection.

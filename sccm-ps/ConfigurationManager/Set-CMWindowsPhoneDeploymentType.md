@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMWindowsPhoneDeploymentType
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: F9CCD117-AD06-4CB3-A7BE-92E64ED56B9F
+online version: https://go.microsoft.com/fwlink/?linkid=834172
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMWindowsPhoneDeploymentType
@@ -55,9 +63,13 @@ The **Set-CMWindowsPhoneDeploymentType** cmdlet changes the settings for a Windo
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" | Set-CMWindowsPhoneDeploymentType -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" | Set-CMWindowsPhoneDeploymentType -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command gets the Windows Phone app package deployment type object named DT1 for the application named Application1 and uses the pipeline operator to pass the object to **Set-CMWindowsPhoneDeploymentType**.
@@ -65,7 +77,7 @@ This command gets the Windows Phone app package deployment type object named DT1
 
 ### Example 2: Rename a deployment type
 ```
-PS C:\> Set-CMWindowsPhoneDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Set-CMWindowsPhoneDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" -NewName "DT1_New" -AddLanguage "en-US","zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command changes the name of the Windows Phone app package deployment type named DT1 for the application named Application1 to DT1_New, adds English and Chinese as supported languages, and adds a description.

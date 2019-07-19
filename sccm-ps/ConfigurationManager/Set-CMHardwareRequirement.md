@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMHardwareRequirement
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: EBE1B874-1B5D-458D-9BBF-FDC66BA81FBA
+online version: https://go.microsoft.com/fwlink/?linkid=833871
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMHardwareRequirement
@@ -43,17 +51,21 @@ You can specify a product by name or obtain a product by using the **Get-CMHardw
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change minimum RAM value
 ```
-PS C:\> Set-CMHardwareRequirement -Product "Accounts Program" -MinRam 161072
+PS XYZ:\> Set-CMHardwareRequirement -Product "Accounts Program" -MinRam 161072
 ```
 
 This command sets the minimum RAM value for a specified product.
 
 ### Example 2: Change minimum disk size value for a hardware requirements object
 ```
-PS C:\> $CMHR = Get-CMHardwareRequirement -Product "Accounts Program"
-PS C:\> Set-CMHardwareRequirement -InputObject $CMHR -MinDiskSize 1600000
+PS XYZ:\> $CMHR = Get-CMHardwareRequirement -Product "Accounts Program"
+PS XYZ:\> Set-CMHardwareRequirement -InputObject $CMHR -MinDiskSize 1600000
 ```
 
 The first command gets the hardware requirements object for Accounts Program and stores it in the $CMHR variable.

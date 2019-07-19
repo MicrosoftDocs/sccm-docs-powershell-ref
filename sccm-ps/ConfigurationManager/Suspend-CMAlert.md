@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Suspend-CMAlert
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+ms.assetid: 128C4EA4-CC60-44F1-8074-17BAEDBF60C1
+online version: https://go.microsoft.com/fwlink/?linkid=834239
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Suspend-CMAlert
@@ -44,17 +52,21 @@ If you do not specify the *SkipUntil* parameter, the alert is suspended indefini
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Suspend an alert by using ID
 ```
-PS C:\> Suspend-CMAlert -Id "16777219" -Comments "Postponing alert evaluation" -SkipUntil "Wednesday, August 20, 2012 4:03:17 PM"
+PS XYZ:\> Suspend-CMAlert -Id "16777219" -Comments "Postponing alert evaluation" -SkipUntil "Wednesday, August 20, 2012 4:03:17 PM"
 ```
 
 This command suspends an alert that has the Id 16777219 until the time specified by *SkipUntil*, and adds a comment to the alert.
 
 ### Example 2: Suspend an alert by using alert object variable
 ```
-PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
-PS C:\> Suspend-CMAlert -InputObject $AlertObj -Comments "Postponing alert evaluation" -SkipUntil "4/8/2012 8:04:39 PM"
+PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777221"
+PS XYZ:\> Suspend-CMAlert -InputObject $AlertObj -Comments "Postponing alert evaluation" -SkipUntil "4/8/2012 8:04:39 PM"
 ```
 
 The first command gets the alert object that has the ID 16777221, and then stores the object in the $AlertObj variable.

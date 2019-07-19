@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMMaintenanceWindow
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: CACE0105-30EC-4667-9F58-0BB43A6391B4
+online version: https://go.microsoft.com/fwlink/?linkid=833915
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMMaintenanceWindow
@@ -72,9 +80,13 @@ Maintenance windows are periods of time reserved for write operations such as ap
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a maintenance window
 ```
-PS C:\> Set-CMMaintenanceWindow -Name "DiskCleanup"-CollectionID "AAA0004D" -ApplyToTaskSequenceOnly
+PS XYZ:\> Set-CMMaintenanceWindow -Name "DiskCleanup"-CollectionID "AAA0004D" -ApplyToTaskSequenceOnly
 ```
 
 This command modifies the maintenance window named DiskCleanup, a window associated with the collection AAA0004D.

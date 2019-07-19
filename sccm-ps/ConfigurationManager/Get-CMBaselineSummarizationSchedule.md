@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMBaselineSummarizationSchedule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 5DC5CD9E-DF35-4BB7-9AA4-79476C013FF4
+online version: https://go.microsoft.com/fwlink/?linkid=834138
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMBaselineSummarizationSchedule
@@ -27,9 +35,13 @@ The **Get-CMBaselineSummarizationSchedule** cmdlet gets the schedule by which th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the update schedule for configuration baseline data
 ```
-PS C:\> Get-CMBaselineSummarizationSchedule
+PS XYZ:\> Get-CMBaselineSummarizationSchedule
 ```
 
 This command gets the update schedule for configuration baseline data.

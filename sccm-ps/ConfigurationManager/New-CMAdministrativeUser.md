@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMAdministrativeUser
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: 2DF67D4D-B111-4F6B-956A-EB72BCA1EEDC
+online version: https://go.microsoft.com/fwlink/?linkid=834228
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMAdministrativeUser
@@ -31,9 +39,13 @@ You can also define the types of access that the new administrative user has to 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an administrative user
 ```
-PS C:\> New-CMAdministrativeUser -Name "Consoto\AdminUser1" -RoleName "Application Administrator","Software Update Manager" -SecurityScopeName "scope1","scope2" -CollectionName "userCollection1","deviceCollection1"
+PS XYZ:\> New-CMAdministrativeUser -Name "Consoto\AdminUser1" -RoleName "Application Administrator","Software Update Manager" -SecurityScopeName "scope1","scope2" -CollectionName "userCollection1","deviceCollection1"
 ```
 
 This command adds the user named AdminUser1 as an administrative user to the Application Administrator and Software Update Manager security roles.

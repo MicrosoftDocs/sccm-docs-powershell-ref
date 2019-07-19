@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMDeviceCollectionVariable
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 510CD0D6-ECBF-4739-92D5-550921869768
+online version: https://go.microsoft.com/fwlink/?linkid=834060
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDeviceCollectionVariable
@@ -41,10 +49,14 @@ The **Remove-CMDeviceCollectionVariable** cmdlet removes a device collection var
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a device collection variable
 ```
-PS C:\> $Collection = Get-CMCollection -Name "Device" 
-PS C:\> Remove-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Force
+PS XYZ:\> $Collection = Get-CMCollection -Name "Device" 
+PS XYZ:\> Remove-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Force
 ```
 
 The first command gets the device collection object named Device and stores the object in the $Collection variable.
@@ -54,7 +66,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a device collection variable by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionVariable -VariableName "testTS" -Force
+PS XYZ:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionVariable -VariableName "testTS" -Force
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Remove-CMDeviceCollectionVariable**, which removes the device collection variable named testTS from the device collection object.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMAlert
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+ms.assetid: 2DF24DAB-8C8C-4F9B-9E44-4CA624C522F3
+online version: https://go.microsoft.com/fwlink/?linkid=833613
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMAlert
@@ -44,17 +52,21 @@ The **Set-CMAlert** cmdlet changes the properties of one or more Microsoft Syste
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set alert properties
 ```
-PS C:\> Set-CMAlert -Id "16777223" -Comments "Editing severity" -Severity 2
+PS XYZ:\> Set-CMAlert -Id "16777223" -Comments "Editing severity" -Severity 2
 ```
 
 This command changes the values of the *Comments* and *Severity* properties for an alert that has the ID 16777223.
 
 ### Example 2: Set alert properties by using alert object variable
 ```
-PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
-PS C:\> Set-CMAlert -InputObject $AlertObj -Comments "Updating alert"
+PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777221"
+PS XYZ:\> Set-CMAlert -InputObject $AlertObj -Comments "Updating alert"
 ```
 
 The first command gets an alert object that has the ID 16777221, and then stores it in the $AlertObj variable.

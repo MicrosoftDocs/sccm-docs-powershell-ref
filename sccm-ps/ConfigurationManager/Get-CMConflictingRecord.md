@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMConflictingRecord
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: 5B0C478D-55DA-4A57-9176-47B810CEA35B
+online version: https://go.microsoft.com/fwlink/?linkid=834286
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMConflictingRecord
@@ -43,16 +51,20 @@ You can get all the outstanding conflicts for Configuration Manager or specify a
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get all conflicting records
 ```
-PS C:\> Get-CMConflictingRecord
+PS XYZ:\> Get-CMConflictingRecord
 ```
 
 This command gets all the unresolved conflicts for Configuration Manager.
 
 ### Example 2: Get a named conflicting record
 ```
-PS C:\> Get-CMConflictingRecord -Name "CR07"
+PS XYZ:\> Get-CMConflictingRecord -Name "CR07"
 ```
 
 This command gets a conflict named CR07.

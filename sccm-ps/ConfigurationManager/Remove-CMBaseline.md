@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMBaseline
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: D7D57FDA-A9BC-40D4-B55B-4190280B2E5F
+online version: https://go.microsoft.com/fwlink/?linkid=833920
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMBaseline
@@ -43,16 +51,20 @@ After you remove a configuration baseline, System Center Configuration Manager r
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a baseline configuration by using a name
 ```
-PS C:\> Remove-CMBaseline -Name "BLConfigContoso02"
+PS XYZ:\> Remove-CMBaseline -Name "BLConfigContoso02"
 ```
 
 This command removes the configuration baseline named BLConfigContoso02.
 
 ### Example 2: Remove a baseline configuration by using an ID
 ```
-PS C:\> Remove-CMBaseline -Id "16777366"
+PS XYZ:\> Remove-CMBaseline -Id "16777366"
 ```
 
 This command removes the configuration baseline that has the ID 16777366.

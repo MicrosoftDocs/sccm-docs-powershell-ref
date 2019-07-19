@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Sync-CMSoftwareUpdate
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 009BA9A5-AB9A-4512-99D9-D2788C7FE02A
+online version: https://go.microsoft.com/fwlink/?linkid=834257
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Sync-CMSoftwareUpdate
@@ -30,9 +38,13 @@ You can use this cmdlet to retrieve metadata for all software updates or only re
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Perform a full synchronization for all software updates
 ```
-PS C:\> Sync-CMSoftwareUpdate -FullSync $True
+PS XYZ:\> Sync-CMSoftwareUpdate -FullSync $True
 ```
 
 This command performs a complete metadata synchronization for all software updates.

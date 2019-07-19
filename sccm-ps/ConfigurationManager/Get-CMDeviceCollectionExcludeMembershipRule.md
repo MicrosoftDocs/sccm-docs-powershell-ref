@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMDeviceCollectionExcludeMembershipRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: 0FC57289-D6EF-48C3-A352-F1A3CE60687C
+online version: https://go.microsoft.com/fwlink/?linkid=833627
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDeviceCollectionExcludeMembershipRule
@@ -82,9 +90,13 @@ For more information about membership rules, see [Introduction to Collections in
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the exclude membership rules from a device collection
 ```
-PS C:\> Get-CMDeviceCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS XYZ:\> Get-CMDeviceCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command gets the rules that exclude the members of the collection that has the ID SMSDM001 from the device collection that has the ID 9990000D.

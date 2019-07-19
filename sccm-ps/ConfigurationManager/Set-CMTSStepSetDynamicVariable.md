@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMTSStepSetDynamicVariable
 titleSuffix: Configuration Manager
 description: Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager. 
@@ -252,14 +252,18 @@ Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>]
 
 ## DESCRIPTION
 
-The **Set-CMTSStepSetDynamicVariable** cmdlet sets properties, options, specific conditions for “Set Dynamic Variable” steps in a task sequence.  The cmdlet supports pipeline from a task sequence object, and could be filtered by the name of the step.
+The **Set-CMTSStepSetDynamicVariable** cmdlet sets properties, options, specific conditions for â€œSet Dynamic Variableâ€ steps in a task sequence.  The cmdlet supports pipeline from a task sequence object, and could be filtered by the name of the step.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -ClearCondition -AddCondition $cd1 -CleanRule -AddRule ($rule5,$rule6)
+PS XYZ:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -ClearCondition -AddCondition $cd1 -CleanRule -AddRule ($rule5,$rule6)
 ```
 
 ## PARAMETERS

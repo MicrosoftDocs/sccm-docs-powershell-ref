@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMComputerAssociation
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 1175C860-DAC9-40FA-BFA0-F035CA8126E9
+online version: https://go.microsoft.com/fwlink/?linkid=833757
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMComputerAssociation
@@ -45,9 +53,13 @@ You can also change whether System Center Configuration Manager includes other u
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a computer association
 ```
-PS C:\> Set-CMComputerAssociation -DestinationComputer "TSQA155" -SourceComputer "TSQA073" -AddMigrationUserName "ContosoTSQA\EvanNarvaez" -MigrationBehavior CaptureAllUserAccountsAndRestoreSpecifiedAccounts -RemoveMigrationUserName "ContosoTSQA\ElisaDaugherty"
+PS XYZ:\> Set-CMComputerAssociation -DestinationComputer "TSQA155" -SourceComputer "TSQA073" -AddMigrationUserName "ContosoTSQA\EvanNarvaez" -MigrationBehavior CaptureAllUserAccountsAndRestoreSpecifiedAccounts -RemoveMigrationUserName "ContosoTSQA\ElisaDaugherty"
 ```
 
 This command changes the association between the computer named TSQA073 and TSQA155.

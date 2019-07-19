@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMBootableMedia
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 111C231D-453E-481C-A43D-2109531917A9
+online version: https://go.microsoft.com/fwlink/?linkid=834270
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMBootableMedia
@@ -36,12 +44,16 @@ NOTE: This cmdlet requires elevated permissions to run.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create bootable media
 ```
-PS C:\> $BootImage = Get-CMBootImage -Name "Boot image (x64)"
-PS C:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
-PS C:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "SiteSystemServer02.Contoso.com"
-PS C:\> New-CMBootableMedia -MediaMode Dynamic -MediaType CdDvd -Path "\\Server\share\test.iso" -AllowUnknownMachine -BootImage $BootImage -DistributionPoint $DistributionPoint -ManagementPoint $ManagementPoint
+PS XYZ:\> $BootImage = Get-CMBootImage -Name "Boot image (x64)"
+PS XYZ:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
+PS XYZ:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "SiteSystemServer02.Contoso.com"
+PS XYZ:\> New-CMBootableMedia -MediaMode Dynamic -MediaType CdDvd -Path "\\Server\share\test.iso" -AllowUnknownMachine -BootImage $BootImage -DistributionPoint $DistributionPoint -ManagementPoint $ManagementPoint
 ```
 
 The first command gets the boot image object named Boot image (x64) and stores the object in the $BootImage variable.

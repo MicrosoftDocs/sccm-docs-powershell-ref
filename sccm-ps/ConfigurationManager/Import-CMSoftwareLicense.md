@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Import-CMSoftwareLicense
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+ms.assetid: 7B354232-530E-4DD6-A439-4183A9320EE3
+online version: https://go.microsoft.com/fwlink/?linkid=834078
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMSoftwareLicense
@@ -28,9 +36,13 @@ The **Import-CMSoftwareLicense** cmdlet imports Microsoft and non-Microsoft lice
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import a software license
 ```
-PS C:\>Import-CMSoftwareLicense -MlsFilePath "\\ContosoFS01\Mid\SWLicense01.xml" -ImportType MicrosftVolumeLicenseStatement
+PS XYZ:\>Import-CMSoftwareLicense -MlsFilePath "\\ContosoFS01\Mid\SWLicense01.xml" -ImportType MicrosftVolumeLicenseStatement
 ```
 
 This command imports a MVLS license statement from the licensing information file named SWLicense01.xml.

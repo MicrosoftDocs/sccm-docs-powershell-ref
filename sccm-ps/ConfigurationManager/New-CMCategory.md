@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMCategory
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: F291D73C-1D80-4D78-AC0C-643BECDF0F33
+online version: https://go.microsoft.com/fwlink/?linkid=834291
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMCategory
@@ -29,9 +37,13 @@ Configuration categories offer an optional method of sorting and filtering confi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a configuration category
 ```
-PS C:\> New-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
+PS XYZ:\> New-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
 ```
 
 This command creates a new category in DriverCategories named NewLaptopDriverSet.

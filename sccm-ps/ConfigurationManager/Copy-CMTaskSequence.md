@@ -46,10 +46,14 @@ A task sequence performs multiple steps or tasks on a Microsoft System Center Co
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> $newTS = Copy-CMTaskSequence -Name "TaskSequence01"
+PS XYZ:\> $newTS = Copy-CMTaskSequence -Name "TaskSequence01"
 ```
 
 This command makes a copy of the task sequence with the name TaskSequence01.

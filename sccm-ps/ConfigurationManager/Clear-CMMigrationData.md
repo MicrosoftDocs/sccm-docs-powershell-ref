@@ -31,9 +31,13 @@ When you migrate data from a source hierarchy, you access data from the site dat
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Clean up historical data from a migration
 ```
-PS C:\>Clear-CMMigrationData -SiteCode "C04"
+PS XYZ:\>Clear-CMMigrationData -SiteCode "C04"
 ```
 
 This command removes the historical data from the destination site that has the site code C04.

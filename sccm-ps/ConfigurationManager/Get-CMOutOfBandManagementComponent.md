@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMOutOfBandManagementComponent
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833802
+schema: 2.0.0
+ms.assetid: DBE058A7-0428-449A-9EA0-65151A1702A7
+>>>>>>> master
 ---
 
 # Get-CMOutOfBandManagementComponent
@@ -30,16 +38,20 @@ Out of band management lets you connect to a computer AMT management controller 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an out of band management component by using a site code
 ```
-PS C:\> Get-CMOutOfBandManagementComponent -SiteCode "CM4"
+PS XYZ:\> Get-CMOutOfBandManagementComponent -SiteCode "CM4"
 ```
 
 This command gets the out of band management component from the client site that has code CM4.
 
 ### Example 2: Get an out of band management component by using a site server name
 ```
-PS C:\> Get-CMOutOfBandManagementComponent -SiteSystemServerName "condev-test04.tsqa.corp.contoso.com"
+PS XYZ:\> Get-CMOutOfBandManagementComponent -SiteSystemServerName "condev-test04.tsqa.corp.contoso.com"
 ```
 
 This command gets the out of band management component from the site server named condev-test04.tsqa.corp.contoso.com in the client site.

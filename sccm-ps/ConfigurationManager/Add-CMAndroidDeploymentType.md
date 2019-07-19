@@ -1,4 +1,4 @@
----
+﻿---
 title: Add-CMAndroidDeploymentType
 titleSuffix: Configuration Manager
 description: Adds an Android deployment type.
@@ -47,16 +47,20 @@ The **Add-CMAndroidDeploymentType** cmdlet adds an Android deployment type to an
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add an Android deployment type
 ```
-PS C:\>Add-CMAndroidDeploymentType -ApplicationName "testApp" -ContentLocation "\\Server1\Applications\Apk\Expenses\expenses.apk" -DeploymentTypeName "AndroidDeploymentType"
+PS XYZ:\>Add-CMAndroidDeploymentType -ApplicationName "testApp" -ContentLocation "\\Server1\Applications\Apk\Expenses\expenses.apk" -DeploymentTypeName "AndroidDeploymentType"
 ```
 
 This command adds an Android deployment type to the application named testApp.
 
 ### Example 2: Add an Android deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testApp" | Add-CMAndroidDeploymentType -ContentLocation "\\Server1\Applications\Apk\Expenses\expenses.apk" -DeploymentTypeName "AndroidDeploymentType"
+PS XYZ:\> Get-CMApplication -Name "testApp" | Add-CMAndroidDeploymentType -ContentLocation "\\Server1\Applications\Apk\Expenses\expenses.apk" -DeploymentTypeName "AndroidDeploymentType"
 ```
 
 This command gets the application object named testApp and uses the pipeline operator to pass the object to **Add-CMAndroidDeploymentType**, which adds an Android deployment type to the application.

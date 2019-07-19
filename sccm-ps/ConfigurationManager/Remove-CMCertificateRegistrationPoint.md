@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMCertificateRegistrationPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 465F235A-C884-464E-8894-8992FB3B4874
+online version: https://go.microsoft.com/fwlink/?linkid=833946
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMCertificateRegistrationPoint
@@ -35,9 +43,13 @@ The **Remove-CMCertificateRegistrationPoint** cmdlet removes a certificate regis
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a certificate registration point role by using the pipeline
 ```
-PS C:\> Get-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemserver01.Contoso.com" | Remove-CMCertificateRegistrationPoint -Force
+PS XYZ:\> Get-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemserver01.Contoso.com" | Remove-CMCertificateRegistrationPoint -Force
 ```
 
 This command gets the certificate registration point object for the site system server named SiteSystemserver01.Contoso.com and uses the pipeline operator to pass the object to **Remove-CMCertificateRegistrationPoint**, which removes the certificate registration point.
@@ -45,7 +57,7 @@ The command does not prompt the user for confirmation.
 
 ### Example 2: Remove a certificate registration point role by name
 ```
-PS C:\> Remove-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemserver02.Contoso.com"
+PS XYZ:\> Remove-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemserver02.Contoso.com"
 ```
 
 This command removes the certificate registration point from the site system server named SiteSystemserver02.Contoso.com.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMClientStatusUpdateSchedule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 6ABB57F2-9CCE-420E-8ECA-01AB5C8B0A50
+online version: https://go.microsoft.com/fwlink/?linkid=833726
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMClientStatusUpdateSchedule
@@ -29,9 +37,13 @@ For more information, see [How to Configure Client Status in Configuration Manag
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify a client's status update schedule
 ```
-PS C:\> Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
+PS XYZ:\> Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
 ```
 
 This command modifies the client status update schedule.

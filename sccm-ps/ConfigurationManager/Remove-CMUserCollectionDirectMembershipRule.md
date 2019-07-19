@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMUserCollectionDirectMembershipRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections-help.xml
+ms.assetid: AB985DAA-B7DE-4FC1-8429-20398128AA1E
+online version: https://go.microsoft.com/fwlink/?linkid=834264
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMUserCollectionDirectMembershipRule
@@ -80,9 +88,13 @@ For more information about collection rules in Microsoft System Center Configura
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove all direct membership rules from a user collection
 ```
-PS C:\> Remove-CMUserCollectionDirectMembershipRule -CollectionID "CM0001A" -ResourceId "12733"
+PS XYZ:\> Remove-CMUserCollectionDirectMembershipRule -CollectionID "CM0001A" -ResourceId "12733"
 ```
 
 This command removes all the direct membership rules of the user collection that has the ID CM0001A.

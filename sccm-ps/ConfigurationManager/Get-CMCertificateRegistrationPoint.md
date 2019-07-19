@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMCertificateRegistrationPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 89EBC6C7-BDB2-4AB6-B54D-62361D0B6620
+online version: https://go.microsoft.com/fwlink/?linkid=834178
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMCertificateRegistrationPoint
@@ -35,16 +43,20 @@ The **Get-CMCertificateRegistrationPoint** cmdlet gets a certificate registratio
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a certificate registration point by name
 ```
-PS C:\> Get-CMCertificateRegistrationPoint -SiteCode SC3
+PS XYZ:\> Get-CMCertificateRegistrationPoint -SiteCode SC3
 ```
 
 This command gets the certificate registration point for site code SC3.
 
 ### Example 2: Get a certificate registration point by using the pipeline
 ```
-PS C:\> Get-CMSitesystemserver -SiteSystemServerName "SiteServer01.Contoso.com" | Get-CMCertificateRegistrationPoint
+PS XYZ:\> Get-CMSitesystemserver -SiteSystemServerName "SiteServer01.Contoso.com" | Get-CMCertificateRegistrationPoint
 ```
 
 This command gets the site system server object named SiteServer01.Contoso.com and uses the pipeline operator to pass the object to **Get-CMCertificateRegistrationPoint**, which gets the certificate registration point for the site system server object.

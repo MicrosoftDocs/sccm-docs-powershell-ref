@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMSecondarySite
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F94DB807-7FB0-403F-A8D2-318E1A1AC933
+online version: https://go.microsoft.com/fwlink/?linkid=833746
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMSecondarySite
@@ -80,10 +88,14 @@ The **New-CMSecondarySite** cmdlet creates a secondary site in Microsoft System 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a secondary site
 ```
-PS C:\> $CIObj = New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite
-PS C:\> New-CMSecondarySite -CertificateExpirationTimeUtc "2/1/2020 12:00 AM" -CreateSelfSignedCertificate -Https -InstallationSourceFile "\\ContosoServer1\SourceFiles" -InstallInternetServer $True -ParentSiteCode "CM1" -ServerName "server2.corp.contoso.com" -SiteCode "CM2" -SiteName "Contoso remote site" -SqlServerSetting $CIObj
+PS XYZ:\> $CIObj = New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite
+PS XYZ:\> New-CMSecondarySite -CertificateExpirationTimeUtc "2/1/2020 12:00 AM" -CreateSelfSignedCertificate -Https -InstallationSourceFile "\\ContosoServer1\SourceFiles" -InstallInternetServer $True -ParentSiteCode "CM1" -ServerName "server2.corp.contoso.com" -SiteCode "CM2" -SiteName "Contoso remote site" -SqlServerSetting $CIObj
 ```
 
 This first command creates a SQL Server settings object and specifies that Microsoft SQL Server Express is copied to a Configuration Manager secondary site.

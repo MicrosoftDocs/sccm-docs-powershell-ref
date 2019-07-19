@@ -39,13 +39,17 @@ You also need to specify a throttle interval and the number of messages for that
 
 Configuration Manager can use one or more fallback status points to collect state messages for a site and send them to Configuration Manager.
 Throttling prevents the fallback status point from sending too many messages together, which can affect performance.
-For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=262649) on TechNet.
+For more information, see [Install site system roles](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-site-system-roles).
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a fallback status point
 ```
-PS C:\>Add-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "CMFSPPoint.Western.Contoso.com" -StateMessageNum 10000 -ThrottleInterval 60
+PS XYZ:\>Add-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "CMFSPPoint.Western.Contoso.com" -StateMessageNum 10000 -ThrottleInterval 60
 ```
 
 This command adds a fallback status point for the site that has the site code CM1.

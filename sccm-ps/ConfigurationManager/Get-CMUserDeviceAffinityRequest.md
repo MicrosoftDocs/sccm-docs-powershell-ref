@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMUserDeviceAffinityRequest
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 94996A97-9D9F-428F-B198-DFB589398780
+online version: https://go.microsoft.com/fwlink/?linkid=834005
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMUserDeviceAffinityRequest
@@ -40,9 +48,13 @@ Instead of deploying an application to a group of devices, you deploy an applica
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a request for user device affinity
 ```
-PS C:\> Get-CMUserDeviceAffinityRequest -CollectionName "All Systems"
+PS XYZ:\> Get-CMUserDeviceAffinityRequest -CollectionName "All Systems"
 ```
 
 This command gets a request for user device affinity for the collection named All Systems.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMDeviceVariable
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: F42A8C48-A9AF-4FA6-8734-16011E12C611
+online version: https://go.microsoft.com/fwlink/?linkid=834064
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDeviceVariable
@@ -43,9 +51,13 @@ Individual devices have device variables. Task sequence processing uses device v
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a device variable
 ```
-PS C:\> Remove-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress"
+PS XYZ:\> Remove-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress"
 ```
 
 This command removes the device variable ServerIPAddress from the device gateway-server.contoso.com.

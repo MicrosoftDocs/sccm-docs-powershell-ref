@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Disable-CMProgram
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: B4E99D6B-B50F-496B-AFA7-AD795ADA8C8A
+online version: https://go.microsoft.com/fwlink/?linkid=833949
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Disable-CMProgram
@@ -48,9 +56,13 @@ This behavior is the same that occurs when you disable an advertisement with whi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Disable a program
 ```
-PS C:\>Disable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
+PS XYZ:\>Disable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
 ```
 
 This command disables the program named ProgramD02 in the package that has the ID CM400007.

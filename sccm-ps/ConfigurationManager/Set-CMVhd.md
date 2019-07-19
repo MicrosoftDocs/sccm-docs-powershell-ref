@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMVhd
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: F354A3B1-3569-4CC5-962B-5050F0A67DDD
+online version: https://go.microsoft.com/fwlink/?linkid=834144
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMVhd
@@ -47,16 +55,20 @@ The **Set-CMVhd** cmdlet modifies one or more virtual hard disk (VHD) images tha
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change the distribution point server for a VHD
 ```
-PS C:\> Set-CMVhd -Name "Windows 10 Enterprise" -DistributionPointServerNames "distribution-server.contoso.com"
+PS XYZ:\> Set-CMVhd -Name "Windows 10 Enterprise" -DistributionPointServerNames "distribution-server.contoso.com"
 ```
 
 This command changes the distribution point server for the virtual hard disk (VHD) named Windows 10 Enterprise.
 
 ### Example 2: Rename a VHD
 ```
-PS C:\> Set-CMVhd -Name "Windows 10 Enterprise"-NewName "User Desktop Image"
+PS XYZ:\> Set-CMVhd -Name "Windows 10 Enterprise"-NewName "User Desktop Image"
 ```
 
 This command renames the VHD named Windows 10 Enterprise.

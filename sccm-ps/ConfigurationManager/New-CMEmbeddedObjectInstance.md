@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMEmbeddedObjectInstance
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: 852B2CB4-10AC-482F-8B2D-C4654431DEF5
+online version: https://go.microsoft.com/fwlink/?linkid=833641
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMEmbeddedObjectInstance
@@ -27,6 +35,10 @@ New-CMEmbeddedObjectInstance -ClassName <String> [-DisableWildcardHandling] [-Fo
 The **New-CMEmbeddedObjectInstance** creates an instance of an embedded object.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1: Create an embedded object instance
 ```

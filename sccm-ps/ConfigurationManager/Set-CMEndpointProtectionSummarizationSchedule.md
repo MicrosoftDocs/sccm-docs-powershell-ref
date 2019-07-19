@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMEndpointProtectionSummarizationSchedule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: A911E2C8-2C32-430B-95E0-C9003B9402A4
+online version: https://go.microsoft.com/fwlink/?linkid=833845
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMEndpointProtectionSummarizationSchedule
@@ -29,9 +37,13 @@ For more information about Endpoint Protection summarization schedules, see [How
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify an Endpoint Protection summarization schedules
 ```
-PS C:\> Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "Days"
+PS XYZ:\> Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "Days"
 ```
 
 This command modifies the interval and unit values to specify that 10 days pass before the Endpoint Protection Summarization Schedule runs again.

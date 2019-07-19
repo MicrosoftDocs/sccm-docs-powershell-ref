@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMIntuneSubscriptionWindowsPhoneProperty
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: E4CBCA72-31F0-40AC-B1AE-14EFA11F11F8
+online version: https://go.microsoft.com/fwlink/?linkid=833897
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMIntuneSubscriptionWindowsPhoneProperty
@@ -31,9 +39,13 @@ The **Set-CMIntuneSubscriptionWindowsPhoneProperty** updates the settings of a M
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable Windows Phone enrollment
 ```
-PS C:\> Set-CMIntuneSubscriptionWindowsPhoneProperty -EnableWindowsPhone81 $True
+PS XYZ:\> Set-CMIntuneSubscriptionWindowsPhoneProperty -EnableWindowsPhone81 $True
 ```
 
 This command enables Windows Phone 8.1 and Windows 10 Mobile enrollment for the Microsoft Intune subscription.

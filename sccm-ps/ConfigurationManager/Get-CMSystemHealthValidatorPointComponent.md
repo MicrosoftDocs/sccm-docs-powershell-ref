@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMSystemHealthValidatorPointComponent
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=833959
+schema: 2.0.0
+ms.assetid: 28507B76-6E7C-4438-97E4-42BCB4E0E221
+>>>>>>> master
 ---
 
 # Get-CMSystemHealthValidatorPointComponent
@@ -29,16 +37,20 @@ A system health validator point is a site system role that evaluates system heal
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Retrieve a system health validator point by site system server name
 ```
-PS C:\> Get-CMSystemHealthValidatorPointComponent -SiteSystemServerName "Shvp-01.TSQA.Corp.Contoso.com"
+PS XYZ:\> Get-CMSystemHealthValidatorPointComponent -SiteSystemServerName "Shvp-01.TSQA.Corp.Contoso.com"
 ```
 
 This command retrieves a system health validator point component by using a site system server name.
 
 ### Example 2: Retrieve a system health validator point by site code
 ```
-PS C:\> Get-CMSystemHealthValidatorPointComponent -SiteCode "CM4"
+PS XYZ:\> Get-CMSystemHealthValidatorPointComponent -SiteCode "CM4"
 ```
 
 This command retrieves a system health validator point component by using a site code.

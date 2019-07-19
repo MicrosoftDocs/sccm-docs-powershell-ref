@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMDeviceCollectionVariable
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: 776836A3-581F-4989-8FBD-67C811B4983E
+online version: https://go.microsoft.com/fwlink/?linkid=833640
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDeviceCollectionVariable
@@ -41,9 +49,13 @@ The **Get-CMDeviceCollectionVariable** cmdlet gets the task sequence variables f
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a device collection variable by name
 ```
-PS C:\> Get-CMDeviceCollectionVariable -CollectionName "DeviceCollection02" -VariableName "testTS"
+PS XYZ:\> Get-CMDeviceCollectionVariable -CollectionName "DeviceCollection02" -VariableName "testTS"
 ```
 
 This command gets the collection variable named testTS for the device collection named Device.

@@ -1,4 +1,4 @@
----
+﻿---
 title: Remove-CMTaskSequence
 titleSuffix: Configuration Manager
 description: Removes a Configuration Manager task sequence.
@@ -48,11 +48,15 @@ NOTE:  All related deployments are automatically removed.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a task sequence by using a variable
 
 ```powershell
-PS C:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS C:\> Remove-CMTaskSequence -InputObject $TaskSequence -Force
+PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+PS XYZ:\> Remove-CMTaskSequence -InputObject $TaskSequence -Force
 Remove
 Are you sure you wish to remove TaskSequence: Name="General Sequence 11"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
@@ -66,7 +70,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 ### Example 2: Remove a task sequence by using the pipeline
 
 ```powershell
-PS C:\> Get-CMTaskSequence -Name "TaskSequence02" | Remove-CMTaskSequence -Force
+PS XYZ:\> Get-CMTaskSequence -Name "TaskSequence02" | Remove-CMTaskSequence -Force
 ```
 
 This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Remove-CMTaskSequence**, which removes the task sequence object.
@@ -210,7 +214,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CMTaskSequence](Get-CMTaskSequence.md)
+[New-CMTaskSequence](New-CMTaskSequence.md)
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 [Set-CMTaskSequence](Set-CMTaskSequence.md)
 [Copy-CMTaskSequence](Copy-CMTaskSequence.md)

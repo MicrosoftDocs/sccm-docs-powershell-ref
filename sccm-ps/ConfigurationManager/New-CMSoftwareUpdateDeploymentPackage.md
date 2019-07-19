@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMSoftwareUpdateDeploymentPackage
 titleSuffix: Configuration Manager
@@ -9,6 +10,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+online version: 
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMSoftwareUpdateDeploymentPackage
@@ -29,9 +36,13 @@ New-CMSoftwareUpdateDeploymentPackage -Name <String> [-Description <String>] -Pa
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>  
 ```
 
  

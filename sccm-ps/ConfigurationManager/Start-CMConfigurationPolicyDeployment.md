@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Start-CMConfigurationPolicyDeployment
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 9F810236-8954-43EB-BE04-B119088905B9
+online version: https://go.microsoft.com/fwlink/?linkid=834210
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMConfigurationPolicyDeployment
@@ -103,9 +111,13 @@ You can specify System Center 2016 - Operations Manager monitoring criteria.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Start deployment of a firewall policy
 ```
-PS C:\> Start-CMConfigurationPolicyDeployment -CollectionName "Desktop systems" -FirewallPolicyName "General firewall policy"
+PS XYZ:\> Start-CMConfigurationPolicyDeployment -CollectionName "Desktop systems" -FirewallPolicyName "General firewall policy"
 ```
 
 This command starts the configuration policy deployment for a collection named Desktop systems.

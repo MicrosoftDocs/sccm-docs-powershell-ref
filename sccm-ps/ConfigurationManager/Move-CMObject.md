@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Move-CMObject
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: DA3EDFA4-22E2-47AF-8084-BA9A8A7DBD39
+online version: https://go.microsoft.com/fwlink/?linkid=834206
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Move-CMObject
@@ -37,9 +45,13 @@ Because an object exists in only one folder, the cmdlet does not specify the cur
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Move an object
 ```
-PS C:\>Move-CMObject -FolderPath "GKP:\Application\TestFolder" -ObjectId "209224563"
+PS XYZ:\>Move-CMObject -FolderPath "GKP:\Application\TestFolder" -ObjectId "209224563"
 ```
 
 This command moves the object that has the specified ID to the folder GKP:\Application\TestFolder.

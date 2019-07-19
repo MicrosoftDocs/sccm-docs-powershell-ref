@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMApplicationCatalogWebsitePoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 4381D90C-738B-4526-A0FF-7B1A36851F41
+online version: https://go.microsoft.com/fwlink/?linkid=834091
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMApplicationCatalogWebsitePoint
@@ -39,16 +47,20 @@ Use this cmdlet with no parameters to get all Application Catalog website points
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a website point by using a site code
 ```
-PS C:\> Get-CMApplicationCatalogWebsitePoint -SiteCode "CM4"
+PS XYZ:\> Get-CMApplicationCatalogWebsitePoint -SiteCode "CM4"
 ```
 
 This command gets the website point role for the site that has the site code CM4.
 
 ### Example 2: Get a website point by using a site system name
 ```
-PS C:\> Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "WesternACWP.Contoso.com"
+PS XYZ:\> Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "WesternACWP.Contoso.com"
 ```
 
 This command gets the website point role that the computer WesternACWP.Contoso.com hosts.

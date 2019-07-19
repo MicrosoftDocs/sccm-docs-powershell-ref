@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMProgram
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+ms.assetid: 5118DE8E-70F4-4352-83AA-81EFEA354785
+online version: https://go.microsoft.com/fwlink/?linkid=834163
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMProgram
@@ -42,17 +50,21 @@ If System Center Configuration Manager has already run the advertised program on
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a program by using a name and an ID
 ```
-PS C:\> Remove-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
+PS XYZ:\> Remove-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
 ```
 
 This command removes the program named ProgramD02 from the package that has the ID ST10000F.
 
 ### Example 2: Remove a program by using an object variable
 ```
-PS C:\> $Prog = Get-CMProgram -Name "ProgramD02" -PackageId "ST10000F"
-PS C:\> Remove-CMProgram -InputObject $Prog
+PS XYZ:\> $Prog = Get-CMProgram -Name "ProgramD02" -PackageId "ST10000F"
+PS XYZ:\> Remove-CMProgram -InputObject $Prog
 ```
 
 The first command gets the program named ProgramD02 in the package that has the ID ST10000F.

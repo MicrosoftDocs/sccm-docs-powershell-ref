@@ -47,9 +47,13 @@ The **Add-CMWindowsPhoneDeploymentType** cmdlet adds a Windows Phone app package
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a Windows Phone deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Add-CMWindowsPhoneDeploymentType -DeploymentTypeName "DT3" -ContentLocation "\\Machine\Applications\Xap\Weather.xap" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\> Get-CMApplication -Name "Application1" | Add-CMWindowsPhoneDeploymentType -DeploymentTypeName "DT3" -ContentLocation "\\Machine\Applications\Xap\Weather.xap" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Add-CMWindowsPhoneDeploymentType**.
@@ -57,7 +61,7 @@ This command gets the application object named Application1 and uses the pipelin
 
 ### Example 2: Add a Windows Phone deployment type
 ```
-PS C:\>Add-CMWindowsPhoneDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT3" -ContentLocation "\\Machine\Applications\Xap\Weather.xap" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\>Add-CMWindowsPhoneDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT3" -ContentLocation "\\Machine\Applications\Xap\Weather.xap" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command adds the Windows Phone app package deployment type named DT3 from the specified location to the application named Application1 in English and Chinese.

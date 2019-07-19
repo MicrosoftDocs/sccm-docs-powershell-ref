@@ -1,4 +1,4 @@
----
+﻿---
 title: Set-CMGlobalConditionGeneral
 titleSuffix: Configuration Manager
 description: Modifies general settings for a Configuration Manager global condition.
@@ -30,10 +30,14 @@ The **Set-CMGlobalConditionGeneral** cmdlet modifies general settings for a glob
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1
 
 ```powershell
-PS C:\> Set-CMGlobalConditionGeneral -Name newscript -NewName newscript2 -Description Description2
+PS XYZ:\> Set-CMGlobalConditionGeneral -Name newscript -NewName newscript2 -Description Description2
 ```
 
 This command modifies the name and the description.

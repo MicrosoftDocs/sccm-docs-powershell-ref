@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMSoftwareUpdateAutoDeploymentRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 9156F844-66C1-4144-9716-8F5E549923CD
+online version: https://go.microsoft.com/fwlink/?linkid=834066
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdateAutoDeploymentRule
@@ -100,9 +108,13 @@ The System Center Configuration Manager server downloads content files and copie
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Modify the language selection and name of a rule
 ```
-PS C:\> Set-CMSoftwareUpdateAutoDeploymentRule -Name "DeploymentRule07" -NewName "DeploymentRule07Revised" -Description "Update rule to use Portuguese (Brazil)." -LanguageSelection "Portuguese (Brazil)"
+PS XYZ:\> Set-CMSoftwareUpdateAutoDeploymentRule -Name "DeploymentRule07" -NewName "DeploymentRule07Revised" -Description "Update rule to use Portuguese (Brazil)." -LanguageSelection "Portuguese (Brazil)"
 ```
 
 This command modifies the automatic deployment rule named DeploymentRule07.

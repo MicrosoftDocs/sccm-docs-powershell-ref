@@ -68,24 +68,28 @@ Specify a collection by using the collection name or collection ID, or you can u
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive.  For more information see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Clear the audit log by using an ID
 ```
-PS C:\>Clear-CMAmtAuditLog -DeviceID "16777230"
+PS XYZ:\>Clear-CMAmtAuditLog -DeviceID "16777230"
 ```
 
 This command clears the Intel AMT audit log for a device that has the ID 16777230.
 
 ### Example 2: Clear audit logs for a device collection
 ```
-PS C:\>Clear-CMAmtAuditLog -DeviceCollectionName "Floor03"
+PS XYZ:\>Clear-CMAmtAuditLog -DeviceCollectionName "Floor03"
 ```
 
 This command clears Intel AMT audit logs for the devices in a collection named Floor03.
 
 ### Example 3: Clear the audit log by using a variable
 ```
-PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com" 
-PS C:\> Clear-CMAmtAuditLog -Device $CMD -Force
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com" 
+PS XYZ:\> Clear-CMAmtAuditLog -Device $CMD -Force
 ```
 
 The first command gets a device object by using the **Get-CMDevice** cmdlet, and then stores it in the $CMD variable.

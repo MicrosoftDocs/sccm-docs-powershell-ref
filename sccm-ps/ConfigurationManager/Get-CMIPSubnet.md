@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMIPSubnet
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 97B5236A-E4F2-4EA4-A45F-53F60F082705
+online version: https://go.microsoft.com/fwlink/?linkid=833732
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMIPSubnet
@@ -37,9 +45,13 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an IP subnet
 ```
-PS C:\> Get-CMIPSubnet -Name "West07Subnet"
+PS XYZ:\> Get-CMIPSubnet -Name "West07Subnet"
 ```
 
 This command gets the IP subnet object named West07Subnet.

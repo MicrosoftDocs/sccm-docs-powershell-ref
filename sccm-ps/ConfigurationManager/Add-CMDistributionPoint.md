@@ -101,11 +101,15 @@ You can add the distribution point site role to a new site system server or add 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a site by using a site system server object
 ```
-PS C:\> $Date = [DateTime]::Now.AddYears(30)
-PS C:\> $SystemServer = Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com"
-PS C:\> Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc $Date
+PS XYZ:\> $Date = [DateTime]::Now.AddYears(30)
+PS XYZ:\> $SystemServer = Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+PS XYZ:\> Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc $Date
 ```
 
 The first command creates a date object for thirty years from the current date and stores the object in the $Date variable.
@@ -116,8 +120,8 @@ The third command adds a distribution point to the site system server stored in 
 
 ### Example 2: Add a site by using the pipeline
 ```
-PS C:\> $Date = [DateTime]::Now.AddYears(30)
-PS C:\> Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add-CMDistributionPoint -CertificateExpirationTimeUtc $Date
+PS XYZ:\> $Date = [DateTime]::Now.AddYears(30)
+PS XYZ:\> Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add-CMDistributionPoint -CertificateExpirationTimeUtc $Date
 ```
 
 The first command creates a date object for thirty years from the current date and stores the object in the $Date variable.

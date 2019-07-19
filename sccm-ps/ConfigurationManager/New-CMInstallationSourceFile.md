@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMInstallationSourceFile
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F3A129C9-055F-493E-A96D-8FC71ED5E233
+online version: https://go.microsoft.com/fwlink/?linkid=833695
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMInstallationSourceFile
@@ -44,9 +52,13 @@ Instead, it forwards information that it gets from clients to a primary site tha
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create an installation source file
 ```
-PS C:\> New-CMInstallationSourceFile -CopyFromParentSiteServer
+PS XYZ:\> New-CMInstallationSourceFile -CopyFromParentSiteServer
 ```
 
 This command creates an installation source file for a secondary site installation by copying the installation files from the primary site.

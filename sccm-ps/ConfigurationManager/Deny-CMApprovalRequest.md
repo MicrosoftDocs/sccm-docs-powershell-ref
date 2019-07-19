@@ -55,10 +55,14 @@ You can use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to view
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Deny a request by application ID
 
 ```powershell
-PS C:\>Deny-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1" -Comment "All requests for this application are denied."
+PS XYZ:\>Deny-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1" -Comment "All requests for this application are denied."
 ```
 
 This command denies a request for an application that has the specified ID.
@@ -67,7 +71,7 @@ The command includes a comment.
 ### Example 2: Deny a request from a specific user
 
 ```powershell
-PS C:\>Deny-CMApprovalRequest -Application "Test" -User "tsqa\davidchew"
+PS XYZ:\>Deny-CMApprovalRequest -Application "Test" -User "tsqa\davidchew"
 ```
 
 This command denies a request for an application named Test for the specified user.
@@ -75,8 +79,8 @@ This command denies a request for an application named Test for the specified us
 ### Example 3: Deny a request by using a variable
 
 ```powershell
-PS C:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1"
-PS C:\> Deny-CMApprovalRequest -InputObject $Approval -Comment "Request denied."
+PS XYZ:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1"
+PS XYZ:\> Deny-CMApprovalRequest -InputObject $Approval -Comment "Request denied."
 ```
 
 The first command gets an approval request for a specified application ID and stores it in the $Approval variable.

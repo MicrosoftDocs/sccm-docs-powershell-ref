@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMBoundaryGroup
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 26841EEA-B0CF-4D0A-A84E-EB713CC493AC
+online version: https://go.microsoft.com/fwlink/?linkid=834154
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMBoundaryGroup
@@ -39,9 +47,13 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a boundary group that is specified by its identifier
 ```
-PS C:\> Get-CMBoundaryGroup -Id "1600231"
+PS XYZ:\> Get-CMBoundaryGroup -Id "1600231"
 CreatedBy:          Contoso\ENarvaez
 CreatedOn           5/17/2012 06:01:29 AM
 DefaultSiteCode: 
@@ -58,7 +70,7 @@ This command gets a boundary group that is specified by the identifier 1600231.
 
 ### Example 2: Get multiple boundary groups that are specified by name
 ```
-PS C:\> Get-CMBoundaryGroup -Name "BGroup01", "BGroup02", "BGroup03"
+PS XYZ:\> Get-CMBoundaryGroup -Name "BGroup01", "BGroup02", "BGroup03"
 CreatedBy:          Contoso\ENarvaez
 CreatedOn           5/17/2012 07:13:02 AM
 DefaultSiteCode: 

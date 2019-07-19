@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMEmbeddedPropertyList
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Common.dll-Help.xml
+ms.assetid: E4BEA20B-43B6-4297-8A2A-AA28CB1841E0
+online version: https://go.microsoft.com/fwlink/?linkid=833649
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMEmbeddedPropertyList
@@ -27,6 +35,10 @@ New-CMEmbeddedPropertyList -PropertyListName <String> [-Value <Object[]>] [-Disa
 The **New-CMEmbeddedPropertyList** cmdlet creates an embedded property list.
 
 ## EXAMPLES
+
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
 
 ### Example 1: Create an embedded property list
 ```

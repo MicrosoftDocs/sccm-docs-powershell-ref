@@ -116,16 +116,20 @@ The **Add-CMMsiDeploymentType** cmdlet adds a Windows Installer deployment type 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a deployment type
 ```
-PS C:\>Add-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -ContentLocation "\\Server1\Applications\MSI\32BitSDK\32BitCompat.msi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\>Add-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -ContentLocation "\\Server1\Applications\MSI\32BitSDK\32BitCompat.msi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command adds the Windows Installer deployment type named DTMsi from the specified location to the application named testMsi in English and Chinese.
 
 ### Example 2: Add a deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testMsi" | Add-CMMsiDeploymentType -DeploymentTypeName "DTMsiTest" -ContentLocation "\\Server1\Applications\MSI\32BitSDK\32BitCompat.msi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\> Get-CMApplication -Name "testMsi" | Add-CMMsiDeploymentType -DeploymentTypeName "DTMsiTest" -ContentLocation "\\Server1\Applications\MSI\32BitSDK\32BitCompat.msi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command gets the application object named testMsi and uses the pipeline operator to pass the object to **Add-CMMsiDeploymentType**.

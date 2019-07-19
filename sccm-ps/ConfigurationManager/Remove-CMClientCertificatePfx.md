@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMClientCertificatePfx
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 37712E99-06A4-4F70-B7C2-1CE8156D44F8
+online version: https://go.microsoft.com/fwlink/?linkid=833952
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMClientCertificatePfx
@@ -36,16 +44,20 @@ The **Remove-CMClientCertificatePFX** removes a client Personal Information Exch
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a PFX client certificate by using the pipeline
 ```
-PS C:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator01").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767 | Remove-CMClientCertificatePfx
+PS XYZ:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator01").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767 | Remove-CMClientCertificatePfx
 ```
 
 This command gets the client Pfx certificate object for the user named Administrator01 with the specified thumbprint and uses the pipeline operator to pass the object to **Remove-CMClientCertificatePfx**, which removes the certificate.
 
 ### Example 2: Remove a PFX client certificate by name
 ```
-PS C:\> Remove-CMClientCertificatePfx -Username (Get-CMUser -Name "Contoso\Administrator02").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767
+PS XYZ:\> Remove-CMClientCertificatePfx -Username (Get-CMUser -Name "Contoso\Administrator02").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767
 ```
 
 This command removes the client Pfx certificate for the user named Administrator02 with the specified thumbprint.

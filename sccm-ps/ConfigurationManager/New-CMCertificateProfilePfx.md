@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMCertificateProfilePfx
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: D4ADE497-4DDA-48FC-B727-B9FB14494F12
+online version: https://go.microsoft.com/fwlink/?linkid=834294
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMCertificateProfilePfx
@@ -29,16 +37,20 @@ The **New-CMCertificateProfilePfx** cmdlet creates a Personal Information Exchan
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a PFX certificate profile
 ```
-PS C:\> New-CMCertificateProfilePfx -Name "TestCertificatieProfilePfx1" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
+PS XYZ:\> New-CMCertificateProfilePfx -Name "TestCertificatieProfilePfx1" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
 ```
 
 This command creates a PFX certificate profile named TestCertificatieProfilePfx1 for all Windows 10 Client platforms.
 
 ### Example 2: Create a PFX certificate profile to install to TPM
 ```
-PS C:\> New-CMCertificateProfilePfx -Name "Test2" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -Description "Test cmcertificationprofilepfx description" -KeyStorageProvider InstallToTPM_IfPresent
+PS XYZ:\> New-CMCertificateProfilePfx -Name "Test2" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -Description "Test cmcertificationprofilepfx description" -KeyStorageProvider InstallToTPM_IfPresent
 ```
 
 This command creates a PFX certificate profile named Test2 for all Windows 10 Client platforms and sets the key storage provider to install to TPM, if present.

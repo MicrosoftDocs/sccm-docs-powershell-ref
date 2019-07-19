@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMApplicationCatalogWebServicePoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: F8EC64DE-F2D9-4AD0-86DB-0C978E8DD372
+online version: https://go.microsoft.com/fwlink/?linkid=834087
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMApplicationCatalogWebServicePoint
@@ -38,9 +46,13 @@ For more information, see [Install and Configure Site System Roles for Configura
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a system role
 ```
-PS C:\> Get-CMApplicationCatalogWebServicePoint -SiteSystemServerName "western.contoso.com" -SiteCode "CM1"
+PS XYZ:\> Get-CMApplicationCatalogWebServicePoint -SiteSystemServerName "western.contoso.com" -SiteCode "CM1"
 ```
 
 This command gets an Application Catalog web service point named western.contoso.com that has the site code CM1.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMSoftwareUpdateDeploymentPackage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 27F14916-98BF-4FF5-8848-EFB4EF0F93A3
+online version: https://go.microsoft.com/fwlink/?linkid=834221
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSoftwareUpdateDeploymentPackage
@@ -43,9 +51,13 @@ Once the deployment package is removed, clients cannot install the software upda
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a software package by using an ID
 ```
-PS C:\> Remove-CMSoftwareUpdateDeploymentPackage -PackageID "ST10000C"
+PS XYZ:\> Remove-CMSoftwareUpdateDeploymentPackage -PackageID "ST10000C"
 ```
 
 This command removes the software package that has the ID ST10000C.

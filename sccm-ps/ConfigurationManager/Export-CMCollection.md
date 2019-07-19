@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Export-CMCollection
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Collections.dll-Help.xml
+ms.assetid: CD980A75-6FE0-429E-BCC3-26B98F4C9664
+online version: https://go.microsoft.com/fwlink/?linkid=834017
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Export-CMCollection
@@ -43,16 +51,20 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Export a collection by name
 ```
-PS C:\> Export-CMCollection -Name "testUser" -ExportFilePath "C:\collection.mof"
+PS XYZ:\> Export-CMCollection -Name "testUser" -ExportFilePath "C:\collection.mof"
 ```
 
 This command exports the collection named testUser to the file named collection.mof.
 
 ### Example 2: Get a collection object and export it
 ```
-PS C:\> Get-CMCollection -Name "testUser" | Export-CMCollection -ExportFilePath "C:\collection.mof"
+PS XYZ:\> Get-CMCollection -Name "testUser" | Export-CMCollection -ExportFilePath "C:\collection.mof"
 ```
 
 This command gets the collection object named testUser and uses the pipeline operator to pass the object to **Export-CMCollection**, which exports the object to the file named collection.mof.

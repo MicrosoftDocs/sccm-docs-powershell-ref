@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Import-CMApplication
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+ms.assetid: 0CF8ACEA-3D7A-43E6-AA0B-408012386BEE
+online version: https://go.microsoft.com/fwlink/?linkid=834033
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMApplication
@@ -23,6 +31,9 @@ Import-CMApplication -FilePath <String> [-ImportActionType <ImportActionType>] [
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+> [!NOTE]
+> The -FilePath parameter must be a UNC path.  Importing from a local disk is not supported.
+
 ## DESCRIPTION
 The **Import-CMApplication** cmdlet imports a package created by the [Export-CMApplication](Export-CMApplication.md) cmdlet.
 A package contains one or more applications and related objects, such as catalogs.
@@ -30,9 +41,13 @@ If the package contains content, the application package imports the content, or
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Import an application
 ```
-PS C:\>Import-CMApplication -FilePath "\\Server1\resource\test.zip" -ImportActionType DirectImport
+PS XYZ:\>Import-CMApplication -FilePath "\\Server1\resource\test.zip" -ImportActionType DirectImport
 ```
 
 This command imports the application stored in test.zip, including the application objects.
@@ -70,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-Specifies a file path for the application.
+Specifies a file path for the application.  This must be a UNC path.
 
 ```yaml
 Type: String

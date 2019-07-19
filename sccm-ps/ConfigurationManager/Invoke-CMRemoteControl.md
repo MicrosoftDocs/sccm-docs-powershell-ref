@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Invoke-CMRemoteControl
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Oob.dll-Help.xml
+ms.assetid: 072CB4A9-2915-4126-99E2-A595A94C57F4
+online version: https://go.microsoft.com/fwlink/?linkid=834157
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMRemoteControl
@@ -52,9 +60,13 @@ System Center Configuration Manager supports the remote control of workgroup com
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Enable remote control on a computer
 ```
-PS C:\>Invoke-CMRemoteControl -DeviceName "CMCEN-DIST02"
+PS XYZ:\>Invoke-CMRemoteControl -DeviceName "CMCEN-DIST02"
 ```
 
 This command enables remote control on the computer named CMCEN-DIST02.

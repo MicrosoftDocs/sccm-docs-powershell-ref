@@ -38,16 +38,20 @@ The **Add-CMCertificateRegistrationPoint** cmdlet adds a certificate registratio
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Add a certificate registration point role by using the pipeline
 ```
-PS C:\> Get-CMSitesystemserver -SiteSystemServerName "SiteSystemServer01.Contoso.com" | Add-CMCertificateRegistrationPoint -Certificate @{"https://www.ndes1.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\Sharefolder\RootCA.cer"}
+PS XYZ:\> Get-CMSitesystemserver -SiteSystemServerName "SiteSystemServer01.Contoso.com" | Add-CMCertificateRegistrationPoint -Certificate @{"https://www.ndes1.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\Sharefolder\RootCA.cer"}
 ```
 
 This command gets the site system server object named SiteSystemServer01.Contoso.com and uses the pipeline operator to pass the object to **Add-CMCertificateRegistrationPoint**, which adds a certificate registration point role to the site system server.
 
 ### Example 2: Add a certificate registration point role by name
 ```
-PS C:\> Add-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemServer02.Contoso.com" -Certificate @{"https://www.ndes1.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\Sharefolder\RootCA.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\User01).UserName -IisWebsite "TestWebsite01" -WebApplicationName "TestWebApp01" -Port 443 -Sitecode SC3
+PS XYZ:\> Add-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemServer02.Contoso.com" -Certificate @{"https://www.ndes1.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\Sharefolder\RootCA.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\User01).UserName -IisWebsite "TestWebsite01" -WebApplicationName "TestWebApp01" -Port 443 -Sitecode SC3
 ```
 
 This command adds a site system server role to the site system server named SiteSystemServer02.Contoso.com, specifying a user account to use when connecting the certification registration point to the Configuration Manager database.

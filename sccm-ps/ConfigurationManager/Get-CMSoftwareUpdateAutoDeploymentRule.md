@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMSoftwareUpdateAutoDeploymentRule
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Sum.dll-Help.xml
+ms.assetid: 25E50823-D771-43CD-98E0-B5463B1DB374
+online version: https://go.microsoft.com/fwlink/?linkid=833901
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdateAutoDeploymentRule
@@ -42,16 +50,20 @@ You can use this cmdlet to get deployment rules for automatic software updates t
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get a deployment rule by name
 ```
-PS C:\> Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+PS XYZ:\> Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
 ```
 
 This command gets a deployment rule named Weekly Driver Updates.
 
 ### Example 2: Get a deployment rule by ID
 ```
-PS C:\> Get-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
+PS XYZ:\> Get-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
 ```
 
 This command gets a deployment rule that has the ID 16777217.

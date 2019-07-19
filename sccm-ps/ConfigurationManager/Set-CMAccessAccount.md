@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMAccessAccount
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: BB88D28C-3AA8-4F03-B0CF-07DE6769B4A9
+online version: https://go.microsoft.com/fwlink/?linkid=833601
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMAccessAccount
@@ -132,10 +140,14 @@ For example, members in the Software Update Point Connection Access Account can 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Change access to a package by using the package name
 ```
-PS C:\> $Name = Get-CMAccessAccount -PackageName "Configuration Manager Client Package" 
-PS C:\> Set-CMAccessAccount -PackageName $Name -Type User -UserName "CONTOSO\PFuller" -Access Read -Confirm
+PS XYZ:\> $Name = Get-CMAccessAccount -PackageName "Configuration Manager Client Package" 
+PS XYZ:\> Set-CMAccessAccount -PackageName $Name -Type User -UserName "CONTOSO\PFuller" -Access Read -Confirm
 ```
 
 The first command gets the package name, and then stores it in the $Name variable.

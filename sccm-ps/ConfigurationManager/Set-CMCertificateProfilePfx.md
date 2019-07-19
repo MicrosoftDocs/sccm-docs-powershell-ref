@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMCertificateProfilePfx
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+ms.assetid: 5B61CB9F-A632-4D14-B6EA-F6BA25BDD0A1
+online version: https://go.microsoft.com/fwlink/?linkid=833693
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMCertificateProfilePfx
@@ -46,23 +54,27 @@ The **Set-CMCertificateProfilePfx** cmdlet changes the settings of a PFX certifi
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Set a PFX certificate profile by name
 ```
-PS C:\> Set-CMCertificateProfilePfx -Name "TestUpdate1" -Description "Update name to Test" -NewName "Test" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
+PS XYZ:\> Set-CMCertificateProfilePfx -Name "TestUpdate1" -Description "Update name to Test" -NewName "Test" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
 ```
 
 This command updates the name of the PFX certificate profile named TestUpdate1 to Test for all Windows 10 Client platforms.
 
 ### Example 2: Set a PFX certificate profile by ID
 ```
-PS C:\> Set-CMCertificateProfilePfx -Id 16777453 -Description "Updated" -KeyStorageProvider InstallToSoftwareKeyStorageProvider -NewName "Test2"
+PS XYZ:\> Set-CMCertificateProfilePfx -Id 16777453 -Description "Updated" -KeyStorageProvider InstallToSoftwareKeyStorageProvider -NewName "Test2"
 ```
 
 This command updates the name of the PFX certificate profile with the ID 16777453 to Test2 and sets the key storage provider to install to Software Key Storage Provider.
 
 ### Example 3: Set a PFX certificate profile by using the pipeline
 ```
-PS C:\> Get-CMCertificateprofilePfx -Name "Test3" | Set-CMCertificateprofilePfx -Description "Updated"
+PS XYZ:\> Get-CMCertificateprofilePfx -Name "Test3" | Set-CMCertificateprofilePfx -Description "Updated"
 ```
 
 This command gets the PFX certificate profile object named Test3 and uses the pipeline operator to pass the object to **Set-CMCertificateProfilePfx**, which updates the description of the object.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMIntuneSubscription
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+ms.assetid: C45DD606-A366-49CA-AA64-AAD1285340D9
+online version: https://go.microsoft.com/fwlink/?linkid=833728
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMIntuneSubscription
@@ -27,9 +35,13 @@ The **Get-CMIntuneSubscription** cmdlet gets the properties of a Microsoft Intun
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get the Microsoft Intune subscription
 ```
-PS C:\> Get-CMIntuneSubscription
+PS XYZ:\> Get-CMIntuneSubscription
 ```
 
 This command gets the Microsoft Intune subscription for the Configuration Manager site.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMExchangeServer
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.HS.dll-Help.xml
+ms.assetid: 5BF0061A-3EB7-4D64-BA08-72AD7E25B4DC
+online version: https://go.microsoft.com/fwlink/?linkid=834104
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMExchangeServer
@@ -38,9 +46,13 @@ Configuration Manager works with Exchange Server to manage mobile devices that c
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove an nextref_exchange
 ```
-PS C:\> Remove-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
+PS XYZ:\> Remove-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
 ```
 
 This command removes the Exchange Server with the specified address for the site code PE1.

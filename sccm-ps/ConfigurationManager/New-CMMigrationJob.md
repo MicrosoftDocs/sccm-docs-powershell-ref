@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMMigrationJob
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Migration.dll-Help.xml
+ms.assetid: 7A6A863C-460A-4F6A-A241-DBE016C8A5B9
+online version: https://go.microsoft.com/fwlink/?linkid=833701
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMMigrationJob
@@ -66,11 +74,15 @@ The **New-CMMigrationJob** cmdlet creates a migration job in Microsoft System Ce
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a migration job
 ```
-PS C:\> $CategoryObjects = Get-CMInitialModifiableSecuredCategory
-PS C:\> $MigrationEntity = Get-CMMigrationEntity
-PS C:\> New-CMMigrationJob -Name "123" -ObjectMigrationJobType -SecurityScope $CategoryObjects -MigrationObject $MigrationEntity
+PS XYZ:\> $CategoryObjects = Get-CMInitialModifiableSecuredCategory
+PS XYZ:\> $MigrationEntity = Get-CMMigrationEntity
+PS XYZ:\> New-CMMigrationJob -Name "123" -ObjectMigrationJobType -SecurityScope $CategoryObjects -MigrationObject $MigrationEntity
 ```
 
 The first command uses the Get-CMInitialModifiableSecuredCategory cmdlet and stores the result in the $CategoryObjects variable.

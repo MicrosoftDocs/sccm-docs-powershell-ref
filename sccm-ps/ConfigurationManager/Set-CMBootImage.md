@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Set-CMBootImage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 1FF11796-0904-4BED-91C8-05DCC05CDDA3
+online version: https://go.microsoft.com/fwlink/?linkid=833682
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMBootImage
@@ -75,9 +83,13 @@ A modification to the boot image does not change its source package.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Rename a boot image object that is identified by using its ID
 ```
-PS C:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
+PS XYZ:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
 ```
 
 This command retrieves a boot image by using its ID, and then renames the boot image.
@@ -85,7 +97,7 @@ Depending on replication issues, this modification can take a long time to displ
 
 ### Example 2: Rename a boot image object that is identified by using its name
 ```
-PS C:\> Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
+PS XYZ:\> Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
 ```
 
 This command retrieves a boot image by using its name, and then renames the boot image.

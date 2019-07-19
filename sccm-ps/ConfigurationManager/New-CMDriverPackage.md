@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: New-CMDriverPackage
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Osd.dll-Help.xml
+ms.assetid: 02B40786-6500-4F35-B8DC-531AAF099381
+online version: https://go.microsoft.com/fwlink/?linkid=833632
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMDriverPackage
@@ -28,9 +36,13 @@ The **New-CMDriverPackage** cmdlet creates a driver package.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Create a new driver package
 ```
-PS C:\> New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifuller\Desktop\pckg"
+PS XYZ:\> New-CMDriverPackage -Name "Pckg01" -Path "\\Contoso01\Users\pattifuller\Desktop\pckg"
 ```
 
 This command creates a new driver package named Pckg01.

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Remove-CMSecurityRoleFromAdministrativeUser
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Rba.dll-Help.xml
+ms.assetid: AB26AB4A-E630-4F08-84D9-AA7A36BE9F20
+online version: https://go.microsoft.com/fwlink/?linkid=834187
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSecurityRoleFromAdministrativeUser
@@ -78,9 +86,13 @@ After you remove the association of a security role with an administrative user,
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Remove a security role from an administrative user
 ```
-PS C:\> Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -RoleName "Security Update Manager"
+PS XYZ:\> Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -RoleName "Security Update Manager"
 ```
 
 This command removes the association between the security role named Security Update Manager and the administrative user named Contoso\PattiFuller.

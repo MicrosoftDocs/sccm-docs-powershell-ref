@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Stop-CMCloudDistributionPoint
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Content.dll-Help.xml
+ms.assetid: 4C9E537F-007B-45FE-B82F-CE17CB39B29B
+online version: https://go.microsoft.com/fwlink/?linkid=834235
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Stop-CMCloudDistributionPoint
@@ -47,24 +55,28 @@ For example, you might want to stop a cloud service when usage reaches a data th
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Stop the cloud distribution point service using an ID
 ```
-PS C:\> Stop-CMCloudDistributionPoint -Id "16777242"
+PS XYZ:\> Stop-CMCloudDistributionPoint -Id "16777242"
 ```
 
 This command stops the cloud distribution point service for the cloud distribution point that has the specified identifier.
 
 ### Example 2: Stop the cloud distribution point service using a name
 ```
-PS C:\> Stop-CMCloudDistributionPoint -Name "West01"
+PS XYZ:\> Stop-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command stops the cloud distribution point service for the cloud distribution point named West01.
 
 ### Example 3: Stop the cloud distribution point service using an object
 ```
-PS C:\> $DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
-PS C:\> Stop-CMCloudDistributionPoint -InputObject $DistPnt
+PS XYZ:\> $DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
+PS XYZ:\> Stop-CMCloudDistributionPoint -InputObject $DistPnt
 ```
 
 The first command uses the **Get-CMCloudDistributionPoint** cmdlet to get the distribution point with the specified identifier, and then stores it in the $DistPnt variable.

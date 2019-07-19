@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Get-CMEmailProfile
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.Dcm-help.xml
+ms.assetid: E9001728-AB67-49A6-BFBA-5CDC37B64185
+online version: https://go.microsoft.com/fwlink/?linkid=833677
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMEmailProfile
@@ -38,23 +46,27 @@ The **Get-CMEmailProfile** function gets an Exchange ActiveSync email profile.
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an email profile by name
 ```
-PS C:\> Get-CMEmailProfile -Name "EmailProfile1"
+PS XYZ:\> Get-CMEmailProfile -Name "EmailProfile1"
 ```
 
 This command gets the Exchange ActiveSync email profile with the name EmailProfile1.
 
 ### Example 2: Get an email profile by ID
 ```
-PS C:\> Get-CMEmailProfile -ID 16795653
+PS XYZ:\> Get-CMEmailProfile -ID 16795653
 ```
 
 This command gets the Exchange ActiveSync email profile with the CI_ID of 16795653.
 
 ### Example 3: Get all email profiles
 ```
-PS C:\> Get-CMEmailProfile -Fast
+PS XYZ:\> Get-CMEmailProfile -Fast
 ```
 
 This command gets all Exchange ActiveSync email profiles.

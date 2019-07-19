@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Merge-CMConflictingRecord
 titleSuffix: Configuration Manager
@@ -9,6 +10,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+=======
+﻿---
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+ms.assetid: 701C2E53-2F36-40F8-929A-9C6B50E2D815
+online version: https://go.microsoft.com/fwlink/?linkid=834201
+schema: 2.0.0
+>>>>>>> master
 ---
 
 # Merge-CMConflictingRecord
@@ -56,16 +64,20 @@ You can specify conflicting records by using a name or ID or you can specify a s
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Merge conflicting records for a site
 ```
-PS C:\>Merge-CMConflictingRecords -SiteCode "CM2"
+PS XYZ:\>Merge-CMConflictingRecords -SiteCode "CM2"
 ```
 
 This command merges each of the conflicting records for the specified System Center Configuration Manager site.
 
 ### Example 2: Merge records for a named conflict
 ```
-PS C:\>Merge-CMConflictingRecords -Name "CR07"
+PS XYZ:\>Merge-CMConflictingRecords -Name "CR07"
 ```
 
 This command merges the conflicting records named CR07.

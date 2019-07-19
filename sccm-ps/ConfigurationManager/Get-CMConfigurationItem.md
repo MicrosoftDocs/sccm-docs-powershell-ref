@@ -1,4 +1,4 @@
----
+﻿---
 title: Get-CMConfigurationItem
 titleSuffix: Configuration Manager
 description: Gets Configuration Manager configuration items.
@@ -44,10 +44,14 @@ For more information about configuration items, see [Introduction to Compliance 
 
 ## EXAMPLES
 
+> [!NOTE]
+> Configuration Manager CmdLets must be run from the Configuration Manager site drive. For more information, see the [getting started documentation](https://docs.microsoft.com/powershell/sccm/overview).
+
+
 ### Example 1: Get an item using a name
 
 ```powershell
-PS C:\> Get-CMConfigurationItem -Name "ConfigItem76"
+PS XYZ:\> Get-CMConfigurationItem -Name "ConfigItem76"
 ```
 
 This command gets a configuration item named ConfigItem76.
@@ -55,8 +59,8 @@ This command gets a configuration item named ConfigItem76.
 ### Example 2: Get an item to use with another cmdlet
 
 ```powershell
-PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
-PS C:\> Remove-CMConfigurationItem -InputObject $CIObj
+PS XYZ:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Remove-CMConfigurationItem -InputObject $CIObj
 ```
 
 The first command gets a configuration item with the specified identifier and stores it in the $CIObj variable.
