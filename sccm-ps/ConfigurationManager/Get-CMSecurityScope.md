@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSecurityScope
+titleSuffix: Configuration Manager
+description: Gets a security scope.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: 0F19406F-06D0-4A41-8B99-7EE68F379737
 online version: https://go.microsoft.com/fwlink/?linkid=833847
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSecurityScope

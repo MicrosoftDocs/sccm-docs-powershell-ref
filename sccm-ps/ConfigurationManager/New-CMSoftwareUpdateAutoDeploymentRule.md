@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMSoftwareUpdateAutoDeploymentRule
+titleSuffix: Configuration Manager
+description: Creates Configuration Manager deployment rules for automatic software updates.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 1860D065-B2D0-4CDE-A75F-56F44FE40FD6
 online version: https://go.microsoft.com/fwlink/?linkid=833759
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMSoftwareUpdateAutoDeploymentRule

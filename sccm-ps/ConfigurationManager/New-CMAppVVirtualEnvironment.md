@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMAppVVirtualEnvironment
+titleSuffix: Configuration Manager
+description: Creates an App-V virtual environment.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 5FB30D79-F7FE-45AD-B888-2B3D5AC7C74E
 online version: https://go.microsoft.com/fwlink/?linkid=834252
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMAppVVirtualEnvironment

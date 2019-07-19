@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMSoftwareUpdatePoint
+titleSuffix: Configuration Manager
+description: Changes settings for a Configuration Manager software update point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 781F6A2C-9A81-48F4-92EE-171566F550CF
 online version: https://go.microsoft.com/fwlink/?linkid=834092
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdatePoint

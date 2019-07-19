@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Start-CMApplicationDeployment
+titleSuffix: Configuration Manager
+description: Starts an application deployment in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 651B7552-B84A-4097-A162-BE420A5A1DC0
 online version: https://go.microsoft.com/fwlink/?linkid=834193
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMApplicationDeployment

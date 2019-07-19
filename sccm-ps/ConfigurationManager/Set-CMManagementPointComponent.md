@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMManagementPointComponent
+titleSuffix: Configuration Manager
+description: Sets a component for a management point in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 03B638BE-FB62-443F-897D-09A4E7555C23
 online version: https://go.microsoft.com/fwlink/?linkid=833923
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMManagementPointComponent

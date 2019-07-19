@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
+description: Gets cloud-based distribution points.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: A636E1DD-49D4-4A9D-94BE-167F3D9A4D5D
 online version: https://go.microsoft.com/fwlink/?linkid=834205
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMCloudDistributionPoint

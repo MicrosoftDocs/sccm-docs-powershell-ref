@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
+description: Changes settings for a cloud-based distribution point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: F2F9DBD4-F429-4913-82E7-E3E160D4A926
 online version: https://go.microsoft.com/fwlink/?linkid=833730
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMCloudDistributionPoint

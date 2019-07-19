@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.SystemStatus.dll-Help.xml
-ms.assetid: 28AA7E3C-EC13-4CE4-851D-7F6C765E48F9
-online version: https://go.microsoft.com/fwlink/?linkid=833823
-schema: 2.0.0
+title: Block-CMConflictingRecord
+titleSuffix: Configuration Manager
+description: Creates a blocked Configuration Manager record for client that has a conflicting record.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Block-CMConflictingRecord

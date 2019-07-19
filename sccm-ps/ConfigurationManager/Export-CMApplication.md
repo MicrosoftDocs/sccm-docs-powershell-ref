@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Export-CMApplication
+titleSuffix: Configuration Manager
+description: Exports an application.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 3AC0F544-5D1F-41E2-B46F-36469A443650
 online version: https://go.microsoft.com/fwlink/?linkid=834009
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Export-CMApplication

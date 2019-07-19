@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Set-CMTSStepSetupWindowsAndConfigMgr
+titleSuffix: Configuration Manager
+description: Sets a TS step setup window and config mgr.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Sets a TS step setup windows and config mgr
+Sets a TS step setup window and config mgr.
 
 ## SYNTAX
 
@@ -342,7 +356,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -464,7 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Can't be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -1086,7 +1099,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

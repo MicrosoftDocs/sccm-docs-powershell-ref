@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMBoundaryGroup
+titleSuffix: Configuration Manager
+description: Modifies the properties of a boundary group.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 51F673B9-5558-4865-8AF8-B0B67296F729
 online version: https://go.microsoft.com/fwlink/?linkid=833690
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMBoundaryGroup

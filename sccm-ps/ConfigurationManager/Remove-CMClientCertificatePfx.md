@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMClientCertificatePfx
+titleSuffix: Configuration Manager
+description: Removes a PFX client certificate.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 37712E99-06A4-4F70-B7C2-1CE8156D44F8
 online version: https://go.microsoft.com/fwlink/?linkid=833952
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMClientCertificatePfx

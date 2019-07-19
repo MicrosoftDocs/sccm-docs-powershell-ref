@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Remove-CMComplianceRule
+titleSuffix: Configuration Manager
+description: Removes a compliance rule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMComplianceRule
 
 ## SYNOPSIS
-Removes a compliance rule
+Removes a compliance rule.
 
 ## SYNTAX
 

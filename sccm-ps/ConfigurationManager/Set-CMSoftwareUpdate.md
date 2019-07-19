@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMSoftwareUpdate
+titleSuffix: Configuration Manager
+description: Sets a software update.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: EB3C88E9-0845-4092-928B-79AA6948A073
 online version: https://go.microsoft.com/fwlink/?linkid=834063
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdate

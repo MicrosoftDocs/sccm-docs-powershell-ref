@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Publish-CMPrestageContentTaskSequence
+titleSuffix: Configuration Manager
+description: Distributes the content that a task sequence uses to a distribution point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 077E0748-86A4-460E-B829-4A21A61664EF
 online version: https://go.microsoft.com/fwlink/?linkid=833857
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Publish-CMPrestageContentTaskSequence

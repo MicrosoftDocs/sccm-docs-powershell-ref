@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMMulticastServicePoint
+titleSuffix: Configuration Manager
+description: Sets a multicast service point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: B0A665E8-148A-4848-9923-7F80EAB27A4F
 online version: https://go.microsoft.com/fwlink/?linkid=833947
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMMulticastServicePoint

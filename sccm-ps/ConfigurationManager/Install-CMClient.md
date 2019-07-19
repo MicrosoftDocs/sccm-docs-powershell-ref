@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Install-CMClient
+titleSuffix: Configuration Manager
+description: Installs a Configuration Manager client.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 5336F6B8-3B01-4D9B-8925-9FB913735BBB
 online version: https://go.microsoft.com/fwlink/?linkid=834094
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Install-CMClient

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMBootImage
+titleSuffix: Configuration Manager
+description: Gets an operating system boot image.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 22CEE6D5-3BCC-43A5-9778-06779C7E5BE0
 online version: https://go.microsoft.com/fwlink/?linkid=834146
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMBootImage

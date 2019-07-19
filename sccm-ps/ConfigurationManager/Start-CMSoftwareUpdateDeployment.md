@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Start-CMSoftwareUpdateDeployment
+titleSuffix: Configuration Manager
+description: Initiates a software update deployment in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: ABE2C372-76D4-46F7-B817-A963A5AA3145
 online version: https://go.microsoft.com/fwlink/?linkid=834227
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMSoftwareUpdateDeployment

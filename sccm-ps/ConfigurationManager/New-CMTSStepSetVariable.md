@@ -1,13 +1,29 @@
+<<<<<<< HEAD
+---
+title: New-CMUserCollection
+titleSuffix: Configuration Manager
+description: Creates a t s step set variable.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMTSStepSetVariable
 
 ## SYNOPSIS
-Creates a TS step set variable
+
+Creates a t s step set variable.
+
 
 ## SYNTAX
 

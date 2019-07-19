@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMWmiMethod
+titleSuffix: Configuration Manager
+description: Calls a WMI method.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: AED2DBE6-6FC0-4A61-A055-236424BFE85C
 online version: https://go.microsoft.com/fwlink/?linkid=834186
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMWmiMethod

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMProgram
+titleSuffix: Configuration Manager
+description: Gets programs in Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 28331CBC-88B0-42DE-B4E6-5109D2A03D7F
 online version: https://go.microsoft.com/fwlink/?linkid=833821
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMProgram

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMAccessAccount
+titleSuffix: Configuration Manager
+description: Adds users or groups to an access account.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: BAAFB5BA-EC7B-48DE-B029-4AA132BD9AEE
 online version: https://go.microsoft.com/fwlink/?linkid=834211
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMAccessAccount

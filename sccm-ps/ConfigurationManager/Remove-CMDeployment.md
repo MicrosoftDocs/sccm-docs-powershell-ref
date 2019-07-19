@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMDeployment
+titleSuffix: Configuration Manager
+description: Removes a deployment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 ms.assetid: FA9052DA-213F-4295-8DA7-07214859D824
 online version: https://go.microsoft.com/fwlink/?linkid=834015
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDeployment

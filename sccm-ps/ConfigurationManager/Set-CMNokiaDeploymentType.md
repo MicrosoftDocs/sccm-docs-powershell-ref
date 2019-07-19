@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMNokiaDeploymentType
+titleSuffix: Configuration Manager
+description: Sets a Nokia deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833950
 schema: 2.0.0
 ms.assetid: 5004C134-23B8-4DB9-AC9E-94345E8978D6
+>>>>>>> master
 ---
 
 # Set-CMNokiaDeploymentType

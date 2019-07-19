@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: A2AA9552-58E9-4C19-BD23-EE6816C90CDB
-online version: https://go.microsoft.com/fwlink/?linkid=833602
-schema: 2.0.0
+title: Add-CMBoundaryToGroup
+titleSuffix: Configuration Manager
+description: Assigns boundaries to a boundary group.
+ms.date: 04/27/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMBoundaryToGroup

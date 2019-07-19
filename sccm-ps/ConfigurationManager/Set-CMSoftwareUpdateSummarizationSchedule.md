@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMSoftwareUpdateSummarizationSchedule
+titleSuffix: Configuration Manager
+description: Sets how often Configuration Manager summarizes the status of updates.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 3A9B5B87-2CE5-432B-BB63-D4CA96E35350
 online version: https://go.microsoft.com/fwlink/?linkid=834100
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdateSummarizationSchedule

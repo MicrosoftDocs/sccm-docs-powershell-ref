@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMSoftwareUpdateSyncStatus
+titleSuffix: Configuration Manager
+description: Gets a software update sync status.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdateSyncStatus
 
 ## SYNOPSIS
-Gets a software update sync status
+Gets a software update sync status.
 
 ## SYNTAX
 

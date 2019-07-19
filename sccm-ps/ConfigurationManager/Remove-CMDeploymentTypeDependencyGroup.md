@@ -2,7 +2,6 @@
 title: Remove-CMDeploymentTypeDependencyGroup
 titleSuffix: Configuration Manager
 description: Removes a deployment type dependency group from Configuration Manager.
-
 ms.date: 12/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,8 +9,6 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
-
-external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Remove-CMDeploymentTypeDependencyGroup

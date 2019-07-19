@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: CAC293F8-F168-4D53-8C74-E33A077BE0D1
-online version: https://go.microsoft.com/fwlink/?linkid=833747
-schema: 2.0.0
+title: Add-CMSecurityScopeToAdministrativeUser
+titleSuffix: Configuration Manager
+description: Adds a security scope to an administrative user or group in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMSecurityScopeToAdministrativeUser

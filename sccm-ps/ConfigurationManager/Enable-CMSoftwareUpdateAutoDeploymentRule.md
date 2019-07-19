@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Enable-CMSoftwareUpdateAutoDeploymentRule
+titleSuffix: Configuration Manager
+description: Enables Configuration Manager deployment rules for automatic software updates.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 6131BBBC-B2B3-4997-80C2-839441E27CB0
 online version: https://go.microsoft.com/fwlink/?linkid=833995
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Enable-CMSoftwareUpdateAutoDeploymentRule

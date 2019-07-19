@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMEndpointProtectionPoint
+titleSuffix: Configuration Manager
+description: Modifies a site system role for Endpoint Protection.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 7BEF1089-8E5C-4719-96E0-57443F90E8AA
 online version: https://go.microsoft.com/fwlink/?linkid=833841
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMEndpointProtectionPoint

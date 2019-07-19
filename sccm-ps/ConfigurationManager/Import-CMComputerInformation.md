@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Import-CMComputerInformation
+titleSuffix: Configuration Manager
+description: Imports computer information into a Configuration Manager database.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 ms.assetid: 98AE4491-7551-417F-9D80-E310C90AE6D9
 online version: https://go.microsoft.com/fwlink/?linkid=834052
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMComputerInformation

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Import-CMUserDeviceAffinity
+titleSuffix: Configuration Manager
+description: Imports a file that contains user and device affinities to Configuration Manager.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 ms.assetid: 3F0D9D7A-5FD0-436C-BB6D-A28806F8A4F6
 online version: https://go.microsoft.com/fwlink/?linkid=834086
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMUserDeviceAffinity

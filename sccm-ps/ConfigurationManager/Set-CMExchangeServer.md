@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMExchangeServer
+titleSuffix: Configuration Manager
+description: Changes settings for an Exchange server.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 660FDB95-D970-4937-8A63-1EC4219625CA
 online version: https://go.microsoft.com/fwlink/?linkid=833851
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMExchangeServer

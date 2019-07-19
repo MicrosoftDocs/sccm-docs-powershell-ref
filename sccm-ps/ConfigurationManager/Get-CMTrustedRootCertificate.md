@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMTrustedRootCertificate
+titleSuffix: Configuration Manager
+description: Gets a trusted root certificate for Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 611213A2-DA3D-4A5C-8769-2E9B92EF1B7A
 online version: https://go.microsoft.com/fwlink/?linkid=833967
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMTrustedRootCertificate

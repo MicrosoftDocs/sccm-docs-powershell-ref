@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMCollectionPowerManagement
+titleSuffix: Configuration Manager
+description: Configures power management settings for a device collection.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 4BCE08DA-01DE-4CF2-86A8-F6CA8DD022E2
 online version: https://go.microsoft.com/fwlink/?linkid=833749
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMCollectionPowerManagement

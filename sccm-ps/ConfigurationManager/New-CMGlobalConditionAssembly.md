@@ -2,7 +2,6 @@
 title: New-CMGlobalConditionAssembly
 titleSuffix: Configuration Manager
 description: Creates an Assembly type global condition in Configuration Manager.
-
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other

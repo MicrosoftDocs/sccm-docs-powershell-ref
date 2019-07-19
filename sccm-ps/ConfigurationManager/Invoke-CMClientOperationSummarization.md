@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMClientOperationSummarization
+titleSuffix: Configuration Manager
+description: Performs a Configuration Manager client operations summarization.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 ms.assetid: 33A18314-C3D3-4457-9E93-7D5C3A46D621
 online version: https://go.microsoft.com/fwlink/?linkid=834109
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMClientOperationSummarization

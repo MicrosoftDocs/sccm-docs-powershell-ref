@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMSoftwareUpdateSummarization
+titleSuffix: Configuration Manager
+description: Runs the Configuration Manager software update summarization.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: C6C21CFF-2DF9-4D17-BC99-6367B2E90120
 online version: https://go.microsoft.com/fwlink/?linkid=834173
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMSoftwareUpdateSummarization

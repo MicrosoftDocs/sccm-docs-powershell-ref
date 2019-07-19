@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMWinPEOptionalComponentInfo
+titleSuffix: Configuration Manager
+description: Gets WinPE optional component information.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: CC02B9EF-225A-46D8-BC9A-8CD46A64D7F3
 online version: https://go.microsoft.com/fwlink/?linkid=834024
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMWinPEOptionalComponentInfo

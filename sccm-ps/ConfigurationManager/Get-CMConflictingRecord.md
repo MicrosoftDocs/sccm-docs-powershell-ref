@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMConflictingRecord
+titleSuffix: Configuration Manager
+description: Gets conflicting Configuration Manager record objects.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: 5B0C478D-55DA-4A57-9176-47B810CEA35B
 online version: https://go.microsoft.com/fwlink/?linkid=834286
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMConflictingRecord

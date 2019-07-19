@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Sum.dll-Help.xml
-ms.assetid: 86BEA428-375A-470C-8F80-36DA8B5626A9
-online version: https://go.microsoft.com/fwlink/?linkid=833761
-schema: 2.0.0
+title: Add-CMSoftwareUpdateToGroup
+titleSuffix: Configuration Manager
+description: Adds a software update to a software update group in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMSoftwareUpdateToGroup

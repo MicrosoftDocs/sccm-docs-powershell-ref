@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMUserCollectionExcludeMembershipRule
+titleSuffix: Configuration Manager
+description: Gets the exclude membership rules from one or more user collections in the Configuration Manager hierarchy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 94DE6A0D-6D37-4D87-ACD6-584E4F3FB65D
 online version: https://go.microsoft.com/fwlink/?linkid=833988
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMUserCollectionExcludeMembershipRule

@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Remove-CMWindowsEnrollmentProfilePackage
+titleSuffix: Configuration Manager
+description: Removes a windows enrollment profile package.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMWindowsEnrollmentProfilePackage
 
 ## SYNOPSIS
-Removes a windows enrollment profile package
+Removes a windows enrollment profile package.
 
 ## SYNTAX
 

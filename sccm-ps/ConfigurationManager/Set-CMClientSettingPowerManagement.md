@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Set-CMClientSettingPowerManagement
+titleSuffix: Configuration Manager
+description: Sets a client setting power management.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMClientSettingPowerManagement
 
 ## SYNOPSIS
-Sets a client setting power management
+Sets a client setting power management.
 
 ## SYNTAX
 

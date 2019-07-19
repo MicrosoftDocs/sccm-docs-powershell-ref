@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMClientCertificatePfx
+titleSuffix: Configuration Manager
+description: Gets a client PFX certificate.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: F27EC489-FE2F-4E0B-A376-2C3DF975E044
 online version: https://go.microsoft.com/fwlink/?linkid=834181
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMClientCertificatePfx

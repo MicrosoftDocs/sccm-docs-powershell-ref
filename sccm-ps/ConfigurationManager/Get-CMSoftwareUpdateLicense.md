@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSoftwareUpdateLicense
+titleSuffix: Configuration Manager
+description: Gets a EULA or SLT for a software update in Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: EFF80160-0FF7-4F76-A09A-2C55C29D7972
 online version: https://go.microsoft.com/fwlink/?linkid=833917
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdateLicense

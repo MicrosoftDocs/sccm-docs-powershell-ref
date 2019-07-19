@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Rename-CMCategory
+titleSuffix: Configuration Manager
+description: Renames a category.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: AC1A56D7-0868-4302-B93D-423F21BFD2E0
 online version: https://go.microsoft.com/fwlink/?linkid=834293
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Rename-CMCategory

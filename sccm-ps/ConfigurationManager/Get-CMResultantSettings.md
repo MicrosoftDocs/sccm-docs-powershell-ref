@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMResultantSettings
+titleSuffix: Configuration Manager
+description: Gets a resultant settings.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMResultantSettings
 
 ## SYNOPSIS
-Gets a resultant settings
+Gets a resultant settings.
 
 ## SYNTAX
 

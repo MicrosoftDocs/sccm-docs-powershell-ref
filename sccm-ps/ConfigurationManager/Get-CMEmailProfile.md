@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMEmailProfile
+titleSuffix: Configuration Manager
+description: Gets an email profile.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm-help.xml
 ms.assetid: E9001728-AB67-49A6-BFBA-5CDC37B64185
 online version: https://go.microsoft.com/fwlink/?linkid=833677
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMEmailProfile

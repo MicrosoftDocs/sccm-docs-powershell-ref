@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Import-CMDriverPackage
+titleSuffix: Configuration Manager
+description: Imports a driver package.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 2E251111-93BB-4D25-AD73-C7C1C316E253
 online version: https://go.microsoft.com/fwlink/?linkid=834062
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMDriverPackage

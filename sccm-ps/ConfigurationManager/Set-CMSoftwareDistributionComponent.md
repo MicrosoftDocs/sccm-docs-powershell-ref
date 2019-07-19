@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMSoftwareDistributionComponent
+titleSuffix: Configuration Manager
+description: Sets properties of a software distribution component in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 27F0C9D7-8574-4155-AA12-761A0A7C3AAE
 online version: https://go.microsoft.com/fwlink/?linkid=834046
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareDistributionComponent

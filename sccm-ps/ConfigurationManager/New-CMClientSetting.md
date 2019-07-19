@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMClientSetting
+titleSuffix: Configuration Manager
+description: Creates customized client settings.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 ms.assetid: 728F467C-C28D-428E-9C2F-8812F6A4F80F
 online version: https://go.microsoft.com/fwlink/?linkid=833581
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMClientSetting

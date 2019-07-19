@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMBootImage
+titleSuffix: Configuration Manager
+description: Adds a new operating system boot image.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 94BE72CA-AAE0-47C1-8C05-1BAF02B798A0
 online version: https://go.microsoft.com/fwlink/?linkid=834274
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMBootImage

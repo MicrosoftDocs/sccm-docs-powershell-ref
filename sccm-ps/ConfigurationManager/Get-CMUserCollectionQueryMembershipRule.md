@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMUserCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
+description: Gets the query membership rules from one or more user collections in the Configuration Manager hierarchy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: FA669383-9E20-4F2B-B18E-1DB9BC3558C2
 online version: https://go.microsoft.com/fwlink/?linkid=833997
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMUserCollectionQueryMembershipRule

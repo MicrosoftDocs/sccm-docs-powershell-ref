@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSoftwareUpdateDeploymentPackage
+titleSuffix: Configuration Manager
+description: Retrieves a deployment package.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 183D4DE8-9632-41D4-94D3-94CAED832637
 online version: https://go.microsoft.com/fwlink/?linkid=833909
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdateDeploymentPackage

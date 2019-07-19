@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMBaselineSummarizationSchedule
+titleSuffix: Configuration Manager
+description: Configures the summarization schedule for configuration baseline data.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 8104F0AD-BD4E-43FB-9E4B-E347CEE0A70C
 online version: https://go.microsoft.com/fwlink/?linkid=833678
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMBaselineSummarizationSchedule

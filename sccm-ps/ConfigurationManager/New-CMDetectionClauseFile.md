@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: New-CMDetectionClauseFile
+titleSuffix: Configuration Manager
+description: Creates a detection clause file.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMDetectionClauseFile
 
 ## SYNOPSIS
-Creates a detection clause file
+Creates a detection clause file.
 
 ## SYNTAX
 

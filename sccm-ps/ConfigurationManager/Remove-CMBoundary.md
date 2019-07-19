@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMBoundary
+titleSuffix: Configuration Manager
+description: Removes a Configuration Manager boundary.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 61FCB261-0A44-4F19-A802-1198DB28BA16
 online version: https://go.microsoft.com/fwlink/?linkid=833928
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMBoundary

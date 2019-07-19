@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMDeviceCollectionVariable
+titleSuffix: Configuration Manager
+description: Creates a device collection variable.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 388164F7-DE65-45A1-B3D9-1D0BB6B7AEBD
 online version: https://go.microsoft.com/fwlink/?linkid=833621
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMDeviceCollectionVariable

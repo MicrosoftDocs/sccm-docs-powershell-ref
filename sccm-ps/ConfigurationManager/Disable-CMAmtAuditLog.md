@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Disable-CMAmtAuditLog
+titleSuffix: Configuration Manager
+description: Disables audit logging for Intel AMT-based computers.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833939
 schema: 2.0.0
 ms.assetid: 09ADAA08-AF61-48EB-A923-1E931C914A83
+>>>>>>> master
 ---
 
 # Disable-CMAmtAuditLog

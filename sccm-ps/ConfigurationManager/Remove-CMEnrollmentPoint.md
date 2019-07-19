@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMEnrollmentPoint
+titleSuffix: Configuration Manager
+description: Removes an enrollment point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: C13FF7E4-A9CE-45C8-B995-685D417F14FD
 online version: https://go.microsoft.com/fwlink/?linkid=834093
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMEnrollmentPoint

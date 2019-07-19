@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMIntuneSubscriptionAppleDepProperty
+titleSuffix: Configuration Manager
+description: Updates a Microsoft Intune subscription to enable the Apple DEP.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 7E3BFA62-110D-4451-9135-02D955B057F8
 online version: https://go.microsoft.com/fwlink/?linkid=833885
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMIntuneSubscriptionAppleDepProperty

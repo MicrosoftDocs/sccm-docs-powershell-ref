@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Import-CMBaseline
+titleSuffix: Configuration Manager
+description: Imports Configuration Manager baselines.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 484FFAF5-FE27-4B04-93D0-A7F2337ADF86
 online version: https://go.microsoft.com/fwlink/?linkid=834035
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMBaseline

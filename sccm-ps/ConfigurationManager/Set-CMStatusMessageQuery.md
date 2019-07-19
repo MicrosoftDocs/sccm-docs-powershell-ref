@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMStatusMessageQuery
+titleSuffix: Configuration Manager
+description: Changes settings or security scope or deletes messages for a Configuration Manager status message query.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: DB992DC8-0D2B-4704-AA14-0CD157FFA1C2
 online version: https://go.microsoft.com/fwlink/?linkid=834111
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMStatusMessageQuery

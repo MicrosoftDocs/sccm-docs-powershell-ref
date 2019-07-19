@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMMulticastServicePoint
+titleSuffix: Configuration Manager
+description: Removes a multicast service point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 23C2C811-714F-4B4C-A811-8FF6D837AF8B
 online version: https://go.microsoft.com/fwlink/?linkid=834139
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMMulticastServicePoint

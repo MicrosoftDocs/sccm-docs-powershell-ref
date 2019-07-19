@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMSecurityScope
+titleSuffix: Configuration Manager
+description: Sets a security scope.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: 625C4356-E131-46E4-B0AA-A4E1BB6996A7
 online version: https://go.microsoft.com/fwlink/?linkid=834023
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSecurityScope

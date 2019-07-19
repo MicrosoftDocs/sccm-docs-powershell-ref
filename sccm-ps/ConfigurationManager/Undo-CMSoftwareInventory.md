@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Undo-CMSoftwareInventory
+titleSuffix: Configuration Manager
+description: Stops collecting software inventory data on files.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: CD47E9D6-4600-43D9-917C-77501237D683
 online version: https://go.microsoft.com/fwlink/?linkid=834273
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Undo-CMSoftwareInventory

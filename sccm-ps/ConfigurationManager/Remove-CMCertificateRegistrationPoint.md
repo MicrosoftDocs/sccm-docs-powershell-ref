@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMCertificateRegistrationPoint
+titleSuffix: Configuration Manager
+description: Removes a certificate registration point role from a site system server.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 465F235A-C884-464E-8894-8992FB3B4874
 online version: https://go.microsoft.com/fwlink/?linkid=833946
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMCertificateRegistrationPoint

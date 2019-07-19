@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMSiteSystemServer
+titleSuffix: Configuration Manager
+description: Modifies a site system server.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 20AEB24C-2706-4103-B3D1-808D355C696C
 online version: https://go.microsoft.com/fwlink/?linkid=834042
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSiteSystemServer

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMDeploymentStatus
+titleSuffix: Configuration Manager
+description: Gets the status of classic software distribution deployments.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833580
 schema: 2.0.0
 ms.assetid: AE6E47B5-5E78-4C8C-9A65-E7F25712BD92
+>>>>>>> master
 ---
 
 # Get-CMDeploymentStatus

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMMsiDeploymentType
+titleSuffix: Configuration Manager
+description: Sets a Windows Installer deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 8DADA85C-4A7E-4495-8A2F-26F6E7E0D47F
 online version: https://go.microsoft.com/fwlink/?linkid=833942
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMMsiDeploymentType

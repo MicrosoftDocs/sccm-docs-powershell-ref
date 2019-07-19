@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMComputerAssociation
+titleSuffix: Configuration Manager
+description: Deletes a computer association from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: AC599011-1C6E-4A45-8BF3-C1E1A2F1F4E0
 online version: https://go.microsoft.com/fwlink/?linkid=833998
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMComputerAssociation

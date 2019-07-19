@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMReportingServicePoint
+titleSuffix: Configuration Manager
+description: Modifies a System Center Configuration Manager reporting service point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 06BFF15B-79D8-46D1-99F3-CE319F2BF432
 online version: https://go.microsoft.com/fwlink/?linkid=834010
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMReportingServicePoint

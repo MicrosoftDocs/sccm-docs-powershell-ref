@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMWindowsPhoneDeploymentType
+titleSuffix: Configuration Manager
+description: Sets a Windows Phone app package deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: F9CCD117-AD06-4CB3-A7BE-92E64ED56B9F
 online version: https://go.microsoft.com/fwlink/?linkid=834172
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMWindowsPhoneDeploymentType

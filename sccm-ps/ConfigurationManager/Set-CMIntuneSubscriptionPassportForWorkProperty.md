@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMIntuneSubscriptionPassportForWorkProperty
+titleSuffix: Configuration Manager
+description: Updates a Microsoft Intune subscription to enable Windows Hello for business.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: B62E719D-4285-49C7-803B-E5E4CEFECB45
 online version: https://go.microsoft.com/fwlink/?linkid=833894
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMIntuneSubscriptionPassportForWorkProperty

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMSoftwareUpdateDeploymentPackage
+titleSuffix: Configuration Manager
+description: Removes a deployment package.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 27F14916-98BF-4FF5-8848-EFB4EF0F93A3
 online version: https://go.microsoft.com/fwlink/?linkid=834221
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSoftwareUpdateDeploymentPackage

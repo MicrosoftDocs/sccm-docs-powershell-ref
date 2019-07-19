@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMQueryResultMaximum
+titleSuffix: Configuration Manager
+description: Gets the maximum number of rows that a Configuration Manager report query can return.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: D37F399D-6BD8-4C5F-AAC9-1B5DFB6684EF
 online version: https://go.microsoft.com/fwlink/?linkid=833830
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMQueryResultMaximum

@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Set-CMBoundaryGroupRelationship
+titleSuffix: Configuration Manager
+description: Sets a boundary group relationship.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMBoundaryGroupRelationship
 
 ## SYNOPSIS
-Sets a boundary group relationship
+Sets a boundary group relationship.
 
 ## SYNTAX
 

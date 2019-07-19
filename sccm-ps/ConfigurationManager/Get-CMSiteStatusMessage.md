@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSiteStatusMessage
+titleSuffix: Configuration Manager
+description: Gets site system status messages.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: 25E1BFF0-57F9-41D0-9D13-4E8AF57A1570
 online version: https://go.microsoft.com/fwlink/?linkid=833878
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSiteStatusMessage

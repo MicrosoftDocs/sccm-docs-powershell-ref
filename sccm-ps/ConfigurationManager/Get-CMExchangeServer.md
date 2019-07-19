@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMExchangeServer
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager Exchange Server object.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A5D0AF1A-BDAF-419D-9020-A1D34AB3A5FC
 online version: https://go.microsoft.com/fwlink/?linkid=833698
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMExchangeServer

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMReportingServicePoint
+titleSuffix: Configuration Manager
+description: Gets a reporting service point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 5B517A0E-E010-4E69-8658-9300234C3131
 online version: https://go.microsoft.com/fwlink/?linkid=833833
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMReportingServicePoint

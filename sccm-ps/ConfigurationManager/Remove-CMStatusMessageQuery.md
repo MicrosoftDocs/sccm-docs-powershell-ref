@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMStatusMessageQuery
+titleSuffix: Configuration Manager
+description: Removes a Configuration Manager status message query.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: DCBDB391-1D9C-4BEB-B118-DE09D44A812C
 online version: https://go.microsoft.com/fwlink/?linkid=834241
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMStatusMessageQuery

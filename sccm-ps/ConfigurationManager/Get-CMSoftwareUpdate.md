@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSoftwareUpdate
+titleSuffix: Configuration Manager
+description: Gets a software update.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: FBAE9153-5CD0-4F4B-9394-7B8EC2093A85
 online version: https://go.microsoft.com/fwlink/?linkid=833898
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdate

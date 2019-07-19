@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMEmailProfile
+titleSuffix: Configuration Manager
+description: Creates an email profile.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 8C11B11B-494E-4AE3-870D-ADBA8D5798BB
 online version: https://go.microsoft.com/fwlink/?linkid=833637
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMEmailProfile

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMRemoteConnectionProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Creates a remote connection profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: B2A455ED-6B5A-403B-B34F-63958235F370
 online version: https://go.microsoft.com/fwlink/?linkid=833738
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMRemoteConnectionProfileConfigurationItem

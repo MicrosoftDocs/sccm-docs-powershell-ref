@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Remove-CMSoftwareUpdateDeployment
+titleSuffix: Configuration Manager
+description: Removes a software update deployment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSoftwareUpdateDeployment
 
 ## SYNOPSIS
-Removes a software update deployment
+Removes a software update deployment.
 
 ## SYNTAX
 

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Enable-CMStatusFilterRule
+titleSuffix: Configuration Manager
+description: Enables a Configuration Manager filter rule for status messages.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: D0E060EA-EF7D-47EC-86E9-2C4E027FA54B
 online version: https://go.microsoft.com/fwlink/?linkid=833999
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Enable-CMStatusFilterRule

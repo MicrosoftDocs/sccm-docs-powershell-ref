@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMEndpointProtectionPoint
+titleSuffix: Configuration Manager
+description: Removes an Endpoint Protection point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A5A05130-1B29-4F27-8AC3-39BE3F13D305
 online version: https://go.microsoft.com/fwlink/?linkid=834090
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMEndpointProtectionPoint

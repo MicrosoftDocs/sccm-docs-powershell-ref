@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMManagementPointComponent
+titleSuffix: Configuration Manager
+description: Gets a component for a Configuration Manager management point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 69AC1D24-491C-4095-B924-5D78E948342B
 online version: https://go.microsoft.com/fwlink/?linkid=833745
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMManagementPointComponent

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMUserCollectionIncludeMembershipRule
+titleSuffix: Configuration Manager
+description: Removes an include membership rule from one or more user collection in the Configuration Manager hierarchy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: C056D663-5448-4746-B9B8-F0F01B156C0A
 online version: https://go.microsoft.com/fwlink/?linkid=834272
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMUserCollectionIncludeMembershipRule

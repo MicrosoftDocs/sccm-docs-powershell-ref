@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMConditionalAccessPolicy
+titleSuffix: Configuration Manager
+description: Gets a conditional access policy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 9C9C7C89-BEC9-4B9D-838B-250771C23C44
 online version: https://go.microsoft.com/fwlink/?linkid=834263
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMConditionalAccessPolicy

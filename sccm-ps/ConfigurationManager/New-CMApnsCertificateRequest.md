@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMApnsCertificateRequest
+titleSuffix: Configuration Manager
+description: Creates an APNS certificate request.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: B955A6FD-38A4-4AEA-889D-A4AF76CFCEB0
 online version: https://go.microsoft.com/fwlink/?linkid=834245
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMApnsCertificateRequest

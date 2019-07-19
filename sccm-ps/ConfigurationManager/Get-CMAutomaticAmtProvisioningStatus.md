@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMAutomaticAmtProvisioningStatus
+titleSuffix: Configuration Manager
+description: Gets the automatic provisioning status of computers with an AMT management controller.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=834127
 schema: 2.0.0
 ms.assetid: E309D1B1-672D-4733-B145-FBA92FD748D8
+>>>>>>> master
 ---
 
 # Get-CMAutomaticAmtProvisioningStatus

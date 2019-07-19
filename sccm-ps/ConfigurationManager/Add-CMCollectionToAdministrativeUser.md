@@ -1,7 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-online version: 
-schema: 2.0.0
+title: Add-CMCollectionToAdministrativeUser
+titleSuffix: Configuration Manager
+description: Adds a collection to administrative user.
+ms.date: 04/27/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMCollectionToAdministrativeUser

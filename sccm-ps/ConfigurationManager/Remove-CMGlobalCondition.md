@@ -2,7 +2,6 @@
 title: Remove-CMGlobalCondition
 titleSuffix: Configuration Manager
 description: Removes a Configuration Manager global condition object.
-
 ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other

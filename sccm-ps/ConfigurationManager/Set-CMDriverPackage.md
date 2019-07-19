@@ -1,14 +1,28 @@
+<<<<<<< HEAD
+---
+title: Set-CMDriverPackage
+titleSuffix: Configuration Manager
+description: Modifies a driver package.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 60B0C10A-9997-40B0-87A3-5E0ABE5D0908
 online version: https://go.microsoft.com/fwlink/?linkid=833829
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMDriverPackage
 
 ## SYNOPSIS
-Modifies a driver package
+Modifies a driver package.
 
 ## SYNTAX
 

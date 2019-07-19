@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMEmailNotificationComponent
+titleSuffix: Configuration Manager
+description: Changes configuration settings of an email notification component.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 492BE510-2A4E-485F-A4BE-ED5BD5303085
 online version: https://go.microsoft.com/fwlink/?linkid=833834
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMEmailNotificationComponent

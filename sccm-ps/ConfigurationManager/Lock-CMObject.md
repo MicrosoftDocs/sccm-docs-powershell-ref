@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Lock-CMObject
+titleSuffix: Configuration Manager
+description: Locks global objects in Configuration Manager.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: CB778D72-D265-4EFA-AE33-A027F7B5A93B
 online version: https://go.microsoft.com/fwlink/?linkid=834194
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Lock-CMObject

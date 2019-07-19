@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMWindowsFirewallPolicy
+titleSuffix: Configuration Manager
+description: Gets a windows firewall policy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm-help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMWindowsFirewallPolicy
 
 ## SYNOPSIS
-Gets a windows firewall policy
+Gets a windows firewall policy.
 
 ## SYNTAX
 

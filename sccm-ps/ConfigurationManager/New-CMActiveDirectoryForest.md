@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMActiveDirectoryForest
+titleSuffix: Configuration Manager
+description: Creates one or more Active Directory forest objects in Configuration Manager.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 196CA882-2AC7-42C3-9E79-1CCE583C8079
 online version: https://go.microsoft.com/fwlink/?linkid=834219
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMActiveDirectoryForest

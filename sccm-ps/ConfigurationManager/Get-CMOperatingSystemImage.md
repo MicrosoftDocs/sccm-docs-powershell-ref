@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMOperatingSystemImage
+titleSuffix: Configuration Manager
+description: Gets operating system images.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: B1F3E321-B9DE-4E3D-8EC7-1E023B36998F
 online version: https://go.microsoft.com/fwlink/?linkid=833789
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMOperatingSystemImage

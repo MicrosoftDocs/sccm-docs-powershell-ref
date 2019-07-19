@@ -1,7 +1,21 @@
+<<<<<<< HEAD
+---
+title: New-CMExchangeConnectorPasswordSetting
+titleSuffix: Configuration Manager
+description: Adds new password settings to a Exchange Server connector in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMExchangeConnectorPasswordSetting

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMCertificateProfileScep
+titleSuffix: Configuration Manager
+description: Gets a SCEP certificate profile.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm-help.xml
 ms.assetid: E45BED4A-8286-46FF-A3F1-4E54B7D77F90
 online version: https://go.microsoft.com/fwlink/?linkid=834170
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMCertificateProfileScep

@@ -1,13 +1,28 @@
+<<<<<<< HEAD
+---
+title: New-CMTSPartitionSetting
+titleSuffix: Configuration Manager
+description: Creates a t s partition setting.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMTSPartitionSetting
 
-## SYNOPSIS
-Creates a TS partition setting
+# SYNOPSIS
+
+Creates a t s partition setting.
 
 ## SYNTAX
 

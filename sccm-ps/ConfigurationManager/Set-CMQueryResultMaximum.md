@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMQueryResultMaximum
+titleSuffix: Configuration Manager
+description: Changes the setting for the query result maximum.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 1A0A53E9-FBFD-4DE8-9E06-B089EA04B244
 online version: https://go.microsoft.com/fwlink/?linkid=833996
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMQueryResultMaximum

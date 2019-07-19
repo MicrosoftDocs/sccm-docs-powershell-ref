@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMMaintenanceWindow
+titleSuffix: Configuration Manager
+description: Removes a maintenance window.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 64883A65-5691-40B6-B8DE-C2DE4EDEEB23
 online version: https://go.microsoft.com/fwlink/?linkid=834126
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMMaintenanceWindow

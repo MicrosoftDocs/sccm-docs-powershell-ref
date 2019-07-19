@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Remove-CMCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
+description: Removes a collection query membership rule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMCollectionQueryMembershipRule
 
 ## SYNOPSIS
-Removes a collection query membership rule
+Removes a collection query membership rule.
 
 ## SYNTAX
 

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMUserDataAndProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Creates a user data and profile configuration item.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 628F6856-2636-4C39-AEF8-BA670101D08C
 online version: https://go.microsoft.com/fwlink/?linkid=833811
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMUserDataAndProfileConfigurationItem

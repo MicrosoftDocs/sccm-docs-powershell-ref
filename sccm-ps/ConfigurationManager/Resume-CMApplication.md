@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Resume-CMApplication
+titleSuffix: Configuration Manager
+description: Resumes a suspended application.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 4307DB22-0478-43D2-BA84-8CCE3B86A9BA
 online version: https://go.microsoft.com/fwlink/?linkid=833578
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Resume-CMApplication

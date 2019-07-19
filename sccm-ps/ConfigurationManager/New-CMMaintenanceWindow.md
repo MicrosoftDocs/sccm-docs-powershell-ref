@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMMaintenanceWindow
+titleSuffix: Configuration Manager
+description: Creates a maintenance window for a collection.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 0F23554E-0127-4B10-A3B2-3F9AF0D639C5
 online version: https://go.microsoft.com/fwlink/?linkid=833697
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMMaintenanceWindow

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Enable-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
+description: Enables Configuration Manager software metering rules.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: BE43AAAD-ABF9-42DD-886C-D3224AAAB175
 online version: https://go.microsoft.com/fwlink/?linkid=833991
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Enable-CMSoftwareMeteringRule

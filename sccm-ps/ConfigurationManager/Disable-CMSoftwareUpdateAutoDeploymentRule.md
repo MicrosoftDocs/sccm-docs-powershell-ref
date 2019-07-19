@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Disable-CMSoftwareUpdateAutoDeploymentRule
+titleSuffix: Configuration Manager
+description: Disables Configuration Manager deployment rules for automatic software updates.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: A1766572-846D-47B8-A9C9-01745BB7E114
 online version: https://go.microsoft.com/fwlink/?linkid=833957
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Disable-CMSoftwareUpdateAutoDeploymentRule

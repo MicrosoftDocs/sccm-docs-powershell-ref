@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMDriver
+titleSuffix: Configuration Manager
+description: Gets a device driver.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 2B68441B-3BDC-44EF-9546-BC931AEE22CB
 online version: https://go.microsoft.com/fwlink/?linkid=833664
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDriver

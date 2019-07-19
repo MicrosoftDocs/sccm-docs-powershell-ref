@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 3C642D15-E6BF-4416-99F6-98BDBC2A5D36
-online version: https://go.microsoft.com/fwlink/?linkid=833762
-schema: 2.0.0
+title: Add-CMStateMigrationPoint
+titleSuffix: Configuration Manager
+description: Adds a state migration point in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMStateMigrationPoint

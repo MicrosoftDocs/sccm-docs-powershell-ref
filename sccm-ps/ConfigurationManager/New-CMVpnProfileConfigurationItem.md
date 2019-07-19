@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMVpnProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Creates a VPN profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 93167F73-1CDD-4866-BD0B-42126A40807B
 online version: https://go.microsoft.com/fwlink/?linkid=833824
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMVpnProfileConfigurationItem

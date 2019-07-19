@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMEndpointProtectionSummarizationSchedule
+titleSuffix: Configuration Manager
+description: Gets an Endpoint Protection summarization schedule.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 27AABF04-9A90-4997-8859-7D3BD360830B
 online version: https://go.microsoft.com/fwlink/?linkid=833684
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMEndpointProtectionSummarizationSchedule

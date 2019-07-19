@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Osd.dll-Help.xml
-ms.assetid: 522EDC95-F732-4237-B269-59AE6D0CC370
-online version: https://go.microsoft.com/fwlink/?linkid=833846
-schema: 2.0.0
+title: Clear-CMOperatingSystemImageUpdateSchedule
+titleSuffix: Configuration Manager
+description: Removes a schedule for updating an operating system image.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Clear-CMOperatingSystemImageUpdateSchedule

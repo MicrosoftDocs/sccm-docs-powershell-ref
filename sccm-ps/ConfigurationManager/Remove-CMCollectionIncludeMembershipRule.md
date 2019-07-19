@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Remove-CMCollectionIncludeMembershipRule
+titleSuffix: Configuration Manager
+description: Removes a collection include membership rule.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMCollectionIncludeMembershipRule
 
 ## SYNOPSIS
-Removes a collection include membership rule
+Removes a collection include membership rule.
 
 ## SYNTAX
 

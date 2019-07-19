@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMClientSetting
+titleSuffix: Configuration Manager
+description: Gets client settings.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 ms.assetid: 8316BA4A-1758-4255-A911-D5749FC64971
 online version: https://go.microsoft.com/fwlink/?linkid=834191
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMClientSetting

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMFileReplicationRoute
+titleSuffix: Configuration Manager
+description: Removes a file replication route from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 23EA2D57-BC59-4443-BF7B-817A956149A7
 online version: https://go.microsoft.com/fwlink/?linkid=834112
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMFileReplicationRoute

@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: New-CMAdvancedThreatProtectionPolicy
+titleSuffix: Configuration Manager
+description: Creates an advanced threat protection policy.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMAdvancedThreatProtectionPolicy
 
 ## SYNOPSIS
-Creates an advanced threat protection policy
+Creates an advanced threat protection policy.
 
 ## SYNTAX
 

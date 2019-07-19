@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSecurityRole
+titleSuffix: Configuration Manager
+description: Gets security roles.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: EC701CF2-B169-4E10-A386-A1DCE7CB52A4
 online version: https://go.microsoft.com/fwlink/?linkid=833842
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSecurityRole

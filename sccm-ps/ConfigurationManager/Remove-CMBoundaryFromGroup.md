@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMBoundaryFromGroup
+titleSuffix: Configuration Manager
+description: Removes a Configuration Manager boundary from a boundary group.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 478AB135-42CF-4D2E-9D7B-B6A8C5A1ECCF
 online version: https://go.microsoft.com/fwlink/?linkid=833932
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMBoundaryFromGroup

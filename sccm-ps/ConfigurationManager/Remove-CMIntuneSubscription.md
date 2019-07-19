@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMIntuneSubscription
+titleSuffix: Configuration Manager
+description: Removes a Microsoft Intune subscription.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 15B8EF4A-EC79-48DB-9564-61AC220E6F41
 online version: https://go.microsoft.com/fwlink/?linkid=834122
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMIntuneSubscription

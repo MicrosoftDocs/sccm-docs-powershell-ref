@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: New-CMSoftwareUpdateDeploymentPackage
+titleSuffix: Configuration Manager
+description: Creates a software update deployment package.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMSoftwareUpdateDeploymentPackage
 
 ## SYNOPSIS
-Creates a software update deployment package
+Creates a software update deployment package.
 
 ## SYNTAX
 

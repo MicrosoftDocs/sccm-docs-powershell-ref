@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMMigrationExclusionList
+titleSuffix: Configuration Manager
+description: Edits the global exclusion list for migration jobs.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Migration.dll-Help.xml
 ms.assetid: B4AFB52F-322C-446C-BE3D-6CB67373D957
 online version: https://go.microsoft.com/fwlink/?linkid=833926
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMMigrationExclusionList

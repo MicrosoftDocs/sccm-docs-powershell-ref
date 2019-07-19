@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMUserCollectionIncludeMembershipRule
+titleSuffix: Configuration Manager
+description: Gets the include membership rules from one or more user collections in the Configuration Manager hierarchy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 547CD0EB-6C44-45F5-9466-DEC1B9338C5E
 online version: https://go.microsoft.com/fwlink/?linkid=833992
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMUserCollectionIncludeMembershipRule

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMConnectionManager
+titleSuffix: Configuration Manager
+description: Gets the Connection Manager instance associated with the currently-connected site server.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 688A2F48-7E58-4D4C-97B9-D79933FE4618
 online version: https://go.microsoft.com/fwlink/?linkid=834290
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMConnectionManager

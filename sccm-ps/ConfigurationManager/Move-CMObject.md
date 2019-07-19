@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Move-CMObject
+titleSuffix: Configuration Manager
+description: Moves a Configuration Manager object into a different folder.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: DA3EDFA4-22E2-47AF-8084-BA9A8A7DBD39
 online version: https://go.microsoft.com/fwlink/?linkid=834206
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Move-CMObject

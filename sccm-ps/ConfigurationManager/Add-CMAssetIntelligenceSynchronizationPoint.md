@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: B2B9CF97-719D-4F30-87C9-9ED6F3A5A798
-online version: https://go.microsoft.com/fwlink/?linkid=833598
-schema: 2.0.0
+title: Add-CMAssetIntelligenceSynchronizationPoint
+titleSuffix: Configuration Manager
+description: Installs an Asset Intelligence synchronization point.
+ms.date: 04/27/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMAssetIntelligenceSynchronizationPoint

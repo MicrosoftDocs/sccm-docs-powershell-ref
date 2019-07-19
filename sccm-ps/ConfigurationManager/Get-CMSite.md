@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSite
+titleSuffix: Configuration Manager
+description: Gets one or more Configuration Manager sites.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3F9D178E-7C8B-4C41-BC6C-3A2092A95B71
 online version: https://go.microsoft.com/fwlink/?linkid=833856
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSite

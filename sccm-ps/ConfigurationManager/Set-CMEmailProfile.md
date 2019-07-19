@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMEmailProfile
+titleSuffix: Configuration Manager
+description: Sets an email profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 7376C05F-C498-475F-8F2B-6F1D1E861CFF
 online version: https://go.microsoft.com/fwlink/?linkid=833837
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMEmailProfile

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMDeviceCollectionVariable
+titleSuffix: Configuration Manager
+description: Sets a device collection variable.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 5FACECF3-56B3-4835-8E13-A786F65BE89D
 online version: https://go.microsoft.com/fwlink/?linkid=833799
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMDeviceCollectionVariable

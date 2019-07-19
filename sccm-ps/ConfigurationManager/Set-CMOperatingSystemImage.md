@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMOperatingSystemImage
+titleSuffix: Configuration Manager
+description: Changes configuration settings of operating system images.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: B2701AED-9D42-45CE-AFA0-092A54AB1BE5
 online version: https://go.microsoft.com/fwlink/?linkid=833958
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMOperatingSystemImage

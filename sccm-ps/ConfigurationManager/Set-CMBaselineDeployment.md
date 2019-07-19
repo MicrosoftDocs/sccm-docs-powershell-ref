@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMBaselineDeployment
+titleSuffix: Configuration Manager
+description: Changes settings for a Configuration Manager baseline deployment.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 ms.assetid: E9EBE502-8433-4600-8D69-2240C7699282
 online version: https://go.microsoft.com/fwlink/?linkid=833674
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMBaselineDeployment

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMOperatingSystemInstaller
+titleSuffix: Configuration Manager
+description: Adds an operating system installer.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 5FA48701-395D-4A6C-BE90-B6A3B5D010FA
 online version: https://go.microsoft.com/fwlink/?linkid=833713
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMOperatingSystemInstaller

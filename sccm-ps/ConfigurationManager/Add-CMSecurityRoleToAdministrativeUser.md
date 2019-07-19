@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Rba.dll-Help.xml
-ms.assetid: B521723C-DE6D-4EE3-9742-8BB6F8F44E72
-online version: https://go.microsoft.com/fwlink/?linkid=833743
-schema: 2.0.0
+title: Add-CMSecurityRoleToAdministrativeUser
+titleSuffix: Configuration Manager
+description: Adds a security role to an administrative user or group in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMSecurityRoleToAdministrativeUser

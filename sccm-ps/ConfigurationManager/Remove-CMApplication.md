@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMApplication
+titleSuffix: Configuration Manager
+description: Removes an application from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: FCD17E0C-355E-4AE5-87E4-2ADA5754A7C3
 online version: https://go.microsoft.com/fwlink/?linkid=833893
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMApplication

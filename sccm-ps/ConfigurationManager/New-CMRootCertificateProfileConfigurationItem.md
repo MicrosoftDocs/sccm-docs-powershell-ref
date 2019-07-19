@@ -1,7 +1,21 @@
+<<<<<<< HEAD
+---
+title: New-CMRootCertificateProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Creates a root certificate profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMRootCertificateProfileConfigurationItem

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMWmiQuery
+titleSuffix: Configuration Manager
+description: Runs a WMI query.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 020CF218-583F-4419-8AFB-09C8CD67D755
 online version: https://go.microsoft.com/fwlink/?linkid=834190
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMWmiQuery

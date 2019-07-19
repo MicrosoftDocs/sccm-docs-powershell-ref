@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 7889D303-FEA2-4E63-9189-A71C4D77FCF7
-online version: https://go.microsoft.com/fwlink/?linkid=833751
-schema: 2.0.0
+title: Add-CMServiceConnectionPoint
+titleSuffix: Configuration Manager
+description: Adds a service connection point to a site system server.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMServiceConnectionPoint

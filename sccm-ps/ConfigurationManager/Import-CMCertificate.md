@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Import-CMCertificate
+titleSuffix: Configuration Manager
+description: Imports a certificate.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Certificates.dll-Help.xml
 ms.assetid: FECB6577-2499-441A-967F-FE505F41D1F7
 online version: https://go.microsoft.com/fwlink/?linkid=834040
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMCertificate

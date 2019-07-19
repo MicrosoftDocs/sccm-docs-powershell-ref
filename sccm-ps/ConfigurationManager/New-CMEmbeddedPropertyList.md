@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMEmbeddedPropertyList
+titleSuffix: Configuration Manager
+description: Creates an embedded property list.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: E4BEA20B-43B6-4297-8A2A-AA28CB1841E0
 online version: https://go.microsoft.com/fwlink/?linkid=833649
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMEmbeddedPropertyList

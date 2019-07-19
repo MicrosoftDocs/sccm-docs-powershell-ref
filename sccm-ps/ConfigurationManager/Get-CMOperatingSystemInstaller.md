@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMOperatingSystemInstaller
+titleSuffix: Configuration Manager
+description: Gets operating system installers.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 1C8CA4A9-A212-4C8C-95ED-E51675AE2F1A
 online version: https://go.microsoft.com/fwlink/?linkid=833798
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMOperatingSystemInstaller

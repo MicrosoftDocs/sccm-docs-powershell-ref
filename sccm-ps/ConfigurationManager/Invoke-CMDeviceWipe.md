@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMDeviceWipe
+titleSuffix: Configuration Manager
+description: Performs a wipe of a modern device.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 ms.assetid: E25CBF84-5D1E-4E2C-B89C-78A8691E5BBC
 online version: https://go.microsoft.com/fwlink/?linkid=834133
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMDeviceWipe

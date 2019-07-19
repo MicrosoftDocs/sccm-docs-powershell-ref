@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
+description: Creates a cloud distribution point.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: C659F1EB-43D3-4DD1-8AA4-6645726C7091
 online version: https://go.microsoft.com/fwlink/?linkid=833584
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMCloudDistributionPoint

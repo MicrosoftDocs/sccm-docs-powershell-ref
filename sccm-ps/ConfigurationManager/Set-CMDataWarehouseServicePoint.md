@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Set-CMDataWarehouseServicePoint
+titleSuffix: Configuration Manager
+description: Sets a data warehouse service point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMDataWarehouseServicePoint
 
 ## SYNOPSIS
-Sets a data warehouse service point
+Sets a data warehouse service point.
 
 ## SYNTAX
 

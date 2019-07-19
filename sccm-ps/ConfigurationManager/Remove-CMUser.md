@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMUser
+titleSuffix: Configuration Manager
+description: Removes a user from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: B4B866B4-15B3-46F0-A742-C892A96B99CD
 online version: https://go.microsoft.com/fwlink/?linkid=834256
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMUser

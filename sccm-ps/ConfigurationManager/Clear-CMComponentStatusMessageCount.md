@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.SystemStatus.dll-Help.xml
-ms.assetid: ACD65BCF-63FD-4A8D-B382-9FBD3BEEF261
-online version: https://go.microsoft.com/fwlink/?linkid=833839
-schema: 2.0.0
+title: Clear-CMComponentStatusMessageCount
+titleSuffix: Configuration Manager
+description: Changes the component status message count to zero.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Clear-CMComponentStatusMessageCount

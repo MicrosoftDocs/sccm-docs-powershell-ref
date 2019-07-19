@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMPackage
+titleSuffix: Configuration Manager
+description: Creates a Configuration Manager package.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 963070B3-F0C7-4B2F-8D4A-3D1250CCCE75
 online version: https://go.microsoft.com/fwlink/?linkid=833718
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMPackage

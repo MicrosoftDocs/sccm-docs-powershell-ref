@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 6299CEF1-998E-49EA-A49A-2F2AA2FE13A4
-online version: https://go.microsoft.com/fwlink/?linkid=833764
-schema: 2.0.0
+title: Add-CMUserAffinityToDevice
+titleSuffix: Configuration Manager
+description: Adds a primary user to one or more devices in the Configuration Manager hierarchy.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMUserAffinityToDevice

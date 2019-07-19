@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMDistributionPoint
+titleSuffix: Configuration Manager
+description: Removes a distribution point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: BD6E2FCF-CFEB-4111-AACB-B817E25915BF
 online version: https://go.microsoft.com/fwlink/?linkid=834068
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDistributionPoint

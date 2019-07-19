@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 9A874A9F-1A1D-4326-A7AA-5FA3702E0991
-online version: https://go.microsoft.com/fwlink/?linkid=833800
-schema: 2.0.0
+title: Add-CMWindowsPhoneStoreDeploymentType
+titleSuffix: Configuration Manager
+description: Adds a Windows Phone app package (in the Windows Store) deployment type.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMWindowsPhoneStoreDeploymentType

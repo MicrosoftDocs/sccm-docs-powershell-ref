@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMSiteUpdateHistory
+titleSuffix: Configuration Manager
+description: Gets a site update history.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSiteUpdateHistory
 
 ## SYNOPSIS
-Gets a site update history
+Gets a site update history.
 
 ## SYNTAX
 

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMPackage
+titleSuffix: Configuration Manager
+description: Changes configuration settings for Configuration Manager packages.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 524F059C-88B7-4675-884C-3F9D75A26A48
 online version: https://go.microsoft.com/fwlink/?linkid=833976
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMPackage

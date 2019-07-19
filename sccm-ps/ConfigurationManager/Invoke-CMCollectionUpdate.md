@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMCollectionUpdate
+titleSuffix: Configuration Manager
+description: Updates the membership of a Configuration Manager collection.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 789484FC-87E4-4EA3-946A-57659F622D05
 online version: https://go.microsoft.com/fwlink/?linkid=834113
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMCollectionUpdate

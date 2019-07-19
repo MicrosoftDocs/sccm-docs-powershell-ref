@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMDatabaseReplicationLinkProperty
+titleSuffix: Configuration Manager
+description: Gets a replication link between a Configuration Manager parent site and child site.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
 ms.assetid: CC332293-14EF-4E4A-8F5B-0D16FD9EA33D
 online version: https://go.microsoft.com/fwlink/?linkid=834299
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDatabaseReplicationLinkProperty

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMWirelessProfileObject
+titleSuffix: Configuration Manager
+description: Creates a profile that specifies settings for AMT-based computers on a wireless network.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833848
 schema: 2.0.0
 ms.assetid: 8C35E121-7077-4ECB-804C-C1BFC7195761
+>>>>>>> master
 ---
 
 # New-CMWirelessProfileObject

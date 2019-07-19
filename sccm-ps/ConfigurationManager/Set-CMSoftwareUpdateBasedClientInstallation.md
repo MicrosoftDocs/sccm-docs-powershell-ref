@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMSoftwareUpdateBasedClientInstallation
+titleSuffix: Configuration Manager
+description: Modifies a client installation on a Configuration Manager software update point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: DF5B9C76-DB24-42A5-AC3D-7AFEF65CE214
 online version: https://go.microsoft.com/fwlink/?linkid=834071
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareUpdateBasedClientInstallation

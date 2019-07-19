@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMAssetIntelligenceCatalogItem
+titleSuffix: Configuration Manager
+description: Changes the properties of an item in the Asset Intelligence catalog.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 55D600D1-7CFB-4F4C-BCAC-81F19FF7B8A3
 online version: https://go.microsoft.com/fwlink/?linkid=833651
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMAssetIntelligenceCatalogItem

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Disable-CMProgram
+titleSuffix: Configuration Manager
+description: Disables programs in Configuration Manager packages.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: B4E99D6B-B50F-496B-AFA7-AD795ADA8C8A
 online version: https://go.microsoft.com/fwlink/?linkid=833949
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Disable-CMProgram

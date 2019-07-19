@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMSecondarySiteUpgrade
+titleSuffix: Configuration Manager
+description: Invokes a secondary site upgrade.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 0A99CDA6-73E7-4D69-8681-E0FCAD5E09FC
 online version: https://go.microsoft.com/fwlink/?linkid=834165
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMSecondarySiteUpgrade

@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: New-CMExchangeConnectorGeneralSetting
+titleSuffix: Configuration Manager
+description: Creates an exchange connector general setting.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMExchangeConnectorGeneralSetting
 
 ## SYNOPSIS
-Creates an exchange connector general setting
+Creates an exchange connector general setting.
 
 ## SYNTAX
 

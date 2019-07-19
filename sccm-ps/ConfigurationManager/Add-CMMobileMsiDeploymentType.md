@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 93EC35F2-8831-4E18-9F0D-4DD05717137F
-online version: https://go.microsoft.com/fwlink/?linkid=833712
-schema: 2.0.0
+title: Add-CMMobileMsiDeploymentType
+titleSuffix: Configuration Manager
+description: Adds a mobile Windows Installer deployment type.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMMobileMsiDeploymentType

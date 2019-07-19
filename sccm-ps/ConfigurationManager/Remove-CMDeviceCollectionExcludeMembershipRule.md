@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMDeviceCollectionExcludeMembershipRule
+titleSuffix: Configuration Manager
+description: Removes an exclude membership rule from one or more device collection in the Configuration Manager hierarchy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 14D9B7C6-602E-4CA7-BCDE-5E5477462783
 online version: https://go.microsoft.com/fwlink/?linkid=834047
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDeviceCollectionExcludeMembershipRule

@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: 05550BB3-526D-43E5-A48A-B447E5D61EED
-online version: https://go.microsoft.com/fwlink/?linkid=833756
-schema: 2.0.0
+title: Add-CMSoftwareUpdatePoint
+titleSuffix: Configuration Manager
+description: Adds a software update point for Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMSoftwareUpdatePoint

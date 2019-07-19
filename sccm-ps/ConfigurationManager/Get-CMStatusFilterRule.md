@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMStatusFilterRule
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager filter rules for status messages.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 9A9F77DF-FAA9-438A-AB3F-B72A9AD98016
 online version: https://go.microsoft.com/fwlink/?linkid=833936
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMStatusFilterRule

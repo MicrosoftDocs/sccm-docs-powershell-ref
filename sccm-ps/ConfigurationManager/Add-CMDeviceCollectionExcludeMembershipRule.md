@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections-help.xml
-ms.assetid: E8A0B8E9-EDDF-4281-8DF4-C6D3C90EC3F5
-online version: https://go.microsoft.com/fwlink/?linkid=833645
-schema: 2.0.0
+title: Add-CMDeviceCollectionExcludeMembershipRule
+titleSuffix: Configuration Manager
+description: Adds an exclude membership rule to one or more Configuration Manager device collections.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMDeviceCollectionExcludeMembershipRule

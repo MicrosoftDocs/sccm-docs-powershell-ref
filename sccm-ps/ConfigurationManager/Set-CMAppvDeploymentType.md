@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMAppvDeploymentType
+titleSuffix: Configuration Manager
+description: Sets an App-V deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 76D3B60C-127D-47B0-960D-C42451DC491D
 online version: https://go.microsoft.com/fwlink/?linkid=833643
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMAppvDeploymentType

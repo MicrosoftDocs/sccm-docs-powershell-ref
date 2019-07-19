@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMVhd
+titleSuffix: Configuration Manager
+description: Removes VHD images.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: A8C92172-4378-49C6-8C57-1689DF406FD3
 online version: https://go.microsoft.com/fwlink/?linkid=834282
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMVhd

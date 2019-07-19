@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMAccessAccount
+titleSuffix: Configuration Manager
+description: Removes users or groups from an access account.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: D9439146-832E-49E5-A105-B06F9B5B1296
 online version: https://go.microsoft.com/fwlink/?linkid=833861
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMAccessAccount

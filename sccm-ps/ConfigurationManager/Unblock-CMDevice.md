@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Unblock-CMDevice
+titleSuffix: Configuration Manager
+description: Unblocks a client device.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: F51FCE47-CF79-4C56-8DBD-40F98BAF4370
 online version: https://go.microsoft.com/fwlink/?linkid=834268
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Unblock-CMDevice

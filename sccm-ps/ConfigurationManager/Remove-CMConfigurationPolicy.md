@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMConfigurationPolicy
+titleSuffix: Configuration Manager
+description: Removes a configuration policy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: C7C14E05-2CB8-4D9E-92A5-81838CF88799
 online version: https://go.microsoft.com/fwlink/?linkid=834007
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMConfigurationPolicy

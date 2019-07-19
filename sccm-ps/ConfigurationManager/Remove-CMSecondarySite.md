@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMSecondarySite
+titleSuffix: Configuration Manager
+description: Removes a secondary site from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 44AF985A-0AC1-46CC-A021-0BEE66558953
 online version: https://go.microsoft.com/fwlink/?linkid=834179
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSecondarySite

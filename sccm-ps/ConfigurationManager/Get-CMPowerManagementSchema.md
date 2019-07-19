@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMPowerManagementSchema
+titleSuffix: Configuration Manager
+description: Gets a power management schema.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMPowerManagementSchema
 
 ## SYNOPSIS
-Gets a power management schema
+Gets a power management schema.
 
 ## SYNTAX
 

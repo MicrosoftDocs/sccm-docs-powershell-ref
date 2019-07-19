@@ -1,7 +1,21 @@
+<<<<<<< HEAD
+---
+title: New-CMQuery
+titleSuffix: Configuration Manager
+description: Creates a Configuration Manager query.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMQuery

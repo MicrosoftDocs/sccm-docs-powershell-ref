@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 9FD6BC0A-60BE-43DA-9BA2-8555725281EF
-online version: https://go.microsoft.com/fwlink/?linkid=833804
-schema: 2.0.0
+title: Add-CMWindowsStoreDeploymentType
+titleSuffix: Configuration Manager
+description: Adds a Windows app package (in the Windows Store) deployment type.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMWindowsStoreDeploymentType

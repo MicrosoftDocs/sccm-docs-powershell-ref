@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.HS.dll-Help.xml
-ms.assetid: D13CE329-6515-4DD1-8D5D-4E9C738EA32B
-online version: https://go.microsoft.com/fwlink/?linkid=833720
-schema: 2.0.0
+title: Add-CMMulticastServicePoint
+titleSuffix: Configuration Manager
+description: Adds a multicast service point.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMMulticastServicePoint

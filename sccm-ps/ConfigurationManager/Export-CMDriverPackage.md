@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Export-CMDriverPackage
+titleSuffix: Configuration Manager
+description: Exports driver packages.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: FB721B53-FA7D-4F58-984A-D8A94A218161
 online version: https://go.microsoft.com/fwlink/?linkid=834025
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Export-CMDriverPackage

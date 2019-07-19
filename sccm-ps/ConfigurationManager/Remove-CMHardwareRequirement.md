@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMHardwareRequirement
+titleSuffix: Configuration Manager
+description: Removes Configuration Manager hardware requirement objects for products.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: C4F9B9A3-3D8E-49EC-9B36-6272EAE7F3C8
 online version: https://go.microsoft.com/fwlink/?linkid=834118
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMHardwareRequirement

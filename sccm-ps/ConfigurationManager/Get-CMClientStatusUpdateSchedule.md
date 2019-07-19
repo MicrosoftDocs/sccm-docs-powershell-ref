@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMClientStatusUpdateSchedule
+titleSuffix: Configuration Manager
+description: Gets a schedule interval of the client status update task.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 78F11C36-9204-405A-AB8C-4F4F305349EA
 online version: https://go.microsoft.com/fwlink/?linkid=834202
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMClientStatusUpdateSchedule

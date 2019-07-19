@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMWindowsServicingPlan
+titleSuffix: Configuration Manager
+description: Creates a Windows 10 servicing plan.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum-help.xml
 ms.assetid: 8E0ADE58-89CE-4E07-ABCF-1BB9545C0665
 online version: https://go.microsoft.com/fwlink/?linkid=833836
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMWindowsServicingPlan

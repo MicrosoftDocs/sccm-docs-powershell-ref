@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMResource
+titleSuffix: Configuration Manager
+description: Removes a Configuration Manager resource.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 873DF234-E1C8-4704-8179-D869C09F48DF
 online version: https://go.microsoft.com/fwlink/?linkid=834175
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMResource

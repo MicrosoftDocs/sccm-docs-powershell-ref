@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMContentRedistribution
+titleSuffix: Configuration Manager
+description: Invokes a content redistribution.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMContentRedistribution
 
 ## SYNOPSIS
-Invokes a content redistribution
+Invokes a content redistribution.
 
 ## SYNTAX
 

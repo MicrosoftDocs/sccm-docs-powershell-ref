@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
+description: Removes Configuration Manager software metering rules.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 140F1D39-4D3B-4F73-BB67-676B5080A972
 online version: https://go.microsoft.com/fwlink/?linkid=834213
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMSoftwareMeteringRule

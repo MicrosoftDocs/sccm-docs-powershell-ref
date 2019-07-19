@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMApprovalRequest
+titleSuffix: Configuration Manager
+description: Gets an approval request to allow the installation of a Configuration Manager application.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: F564E6AA-E38D-4F5A-B030-2A71844EFF6D
 online version: https://go.microsoft.com/fwlink/?linkid=834103
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMApprovalRequest

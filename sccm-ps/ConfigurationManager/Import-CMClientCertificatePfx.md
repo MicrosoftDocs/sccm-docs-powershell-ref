@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Import-CMClientCertificatePfx
+titleSuffix: Configuration Manager
+description: Imports a client PFX certificate.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: AC569305-8C8B-4A6A-9BE8-4AC78003A7E9
 online version: https://go.microsoft.com/fwlink/?linkid=834043
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMClientCertificatePfx

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMPrestagedMedia
+titleSuffix: Configuration Manager
+description: Creates prestaged media.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833725
 schema: 2.0.0
 ms.assetid: 5BC25D39-D4A1-4878-94AA-B82919AB7854
+>>>>>>> master
 ---
 
 # New-CMPrestagedMedia

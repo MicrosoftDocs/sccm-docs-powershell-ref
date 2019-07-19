@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMClientOperation
+titleSuffix: Configuration Manager
+description: Removes a Configuration Manager client operation object.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
 ms.assetid: 123C38D0-2305-4753-BAB7-6FCC668669AA
 online version: https://go.microsoft.com/fwlink/?linkid=833956
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMClientOperation

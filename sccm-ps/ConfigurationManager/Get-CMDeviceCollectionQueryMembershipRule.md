@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMDeviceCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
+description: Gets the query membership rules from one or more device collections in the Configuration Manager hierarchy.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: A250BE6D-1C96-4337-88F5-454CB95B0AA1
 online version: https://go.microsoft.com/fwlink/?linkid=833635
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDeviceCollectionQueryMembershipRule

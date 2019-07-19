@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSoftwareUpdatePoint
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager software update point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A0E3C123-0943-4185-A255-37CE17B6D7F7
 online version: https://go.microsoft.com/fwlink/?linkid=833921
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdatePoint

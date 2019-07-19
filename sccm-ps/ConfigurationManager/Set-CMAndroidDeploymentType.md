@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMAndroidDeploymentType
+titleSuffix: Configuration Manager
+description: Sets an Android deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 93B12651-7C2B-4387-902D-5046CDD71D00
 online version: https://go.microsoft.com/fwlink/?linkid=833620
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMAndroidDeploymentType

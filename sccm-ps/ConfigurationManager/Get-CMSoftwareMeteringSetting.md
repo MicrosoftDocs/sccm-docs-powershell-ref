@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSoftwareMeteringSetting
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager software metering settings.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 9DD38462-DD7F-42F1-956D-43142B02AA7D
 online version: https://go.microsoft.com/fwlink/?linkid=833895
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareMeteringSetting

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMComputerAssociation
+titleSuffix: Configuration Manager
+description: Gets Configuration Manager computer associations.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 621E70A5-817B-46A2-ADEA-3D5F5012788F
 online version: https://go.microsoft.com/fwlink/?linkid=834259
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMComputerAssociation

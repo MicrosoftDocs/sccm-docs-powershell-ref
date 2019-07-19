@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Import-CMWirelessProfileConfigurationItem
+titleSuffix: Configuration Manager
+description: Imports a wireless profile configuration item.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 4E6D3504-C65F-4EE1-A914-FDC1100584BD
 online version: https://go.microsoft.com/fwlink/?linkid=834089
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Import-CMWirelessProfileConfigurationItem

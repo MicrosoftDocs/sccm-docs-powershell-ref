@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Stop-CMObjectTracking
+titleSuffix: Configuration Manager
+description: Stops an object tracking.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Stop-CMObjectTracking
 
 ## SYNOPSIS
-Stops an object tracking
+Stops an object tracking.
 
 ## SYNTAX
 

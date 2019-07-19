@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: 63BCD25A-C343-463F-820A-B3668CB7B22E
-online version: https://go.microsoft.com/fwlink/?linkid=833708
-schema: 2.0.0
+title: Add-CMMdmEnrollmentManager
+titleSuffix: Configuration Manager
+description: Adds a Device Enrollment Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMMdmEnrollmentManager

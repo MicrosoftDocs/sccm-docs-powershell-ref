@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMMdmEnrollmentManager
+titleSuffix: Configuration Manager
+description: Removes a Device Enrollment Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: DB1B3B24-B73F-4626-B482-1CB739D0A72C
 online version: https://go.microsoft.com/fwlink/?linkid=834135
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMMdmEnrollmentManager

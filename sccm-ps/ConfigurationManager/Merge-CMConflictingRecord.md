@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Merge-CMConflictingRecord
+titleSuffix: Configuration Manager
+description: Merges a new Configuration Manager client record with a conflicting client record.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
 ms.assetid: 701C2E53-2F36-40F8-929A-9C6B50E2D815
 online version: https://go.microsoft.com/fwlink/?linkid=834201
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Merge-CMConflictingRecord

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMDepTokenRequest
+titleSuffix: Configuration Manager
+description: Creates an Apple DEP token reqeust.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Hybrid.dll-Help.xml
 ms.assetid: 4046A417-80F5-4665-9258-AE12B85F6F09
 online version: https://go.microsoft.com/fwlink/?linkid=833612
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMDepTokenRequest

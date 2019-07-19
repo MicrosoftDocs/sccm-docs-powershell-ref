@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: CF418851-B343-4F4B-993D-6F1250520326
-online version: https://go.microsoft.com/fwlink/?linkid=833716
-schema: 2.0.0
+title: Add-CMMsiDeploymentType
+titleSuffix: Configuration Manager
+description: Adds a Windows Installer deployment type.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMMsiDeploymentType

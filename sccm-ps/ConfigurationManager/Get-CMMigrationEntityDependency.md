@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMMigrationEntityDependency
+titleSuffix: Configuration Manager
+description: Gets a dependency for a migration entity in Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Migration.dll-Help.xml
 ms.assetid: E9057BB2-EFBE-45F9-AF07-71933FF4BB4E
 online version: https://go.microsoft.com/fwlink/?linkid=833766
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMMigrationEntityDependency

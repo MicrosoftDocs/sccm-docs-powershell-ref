@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMAssetIntelligenceCatalogItem
+titleSuffix: Configuration Manager
+description: Removes an item from the Asset Intelligence catalog.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: B605E86F-2EDA-41D0-9C1A-4BD76A3DA91D
 online version: https://go.microsoft.com/fwlink/?linkid=833908
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMAssetIntelligenceCatalogItem

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMStatusSummarizer
+titleSuffix: Configuration Manager
+description: Gets a status summarizer object for Configuration Manager.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: CB5EE603-74FA-4FF6-8063-06F257643B15
 online version: https://go.microsoft.com/fwlink/?linkid=833948
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMStatusSummarizer

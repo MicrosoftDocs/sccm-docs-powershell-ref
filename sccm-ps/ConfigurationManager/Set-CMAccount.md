@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMAccount
+titleSuffix: Configuration Manager
+description: Sets a Configuration Manager user account.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Accounts.dll-Help.xml
 ms.assetid: 5DA6777B-C1CC-4FC0-A85C-6185F7AB69BE
 online version: https://go.microsoft.com/fwlink/?linkid=833605
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMAccount

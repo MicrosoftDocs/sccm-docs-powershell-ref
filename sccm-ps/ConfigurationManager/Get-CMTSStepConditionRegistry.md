@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMTSStepConditionRegistry
+titleSuffix: Configuration Manager
+description: Gets a TS step condition registry.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMTSStepConditionRegistry
 
 ## SYNOPSIS
-Gets a TS step condition registry
+Gets a TS step condition registry.
 
 ## SYNTAX
 

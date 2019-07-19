@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMApplicationRevisionHistory
+titleSuffix: Configuration Manager
+description: Removes a revision history from a Configuration Manager application.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 80157719-BA02-42AD-9ACE-03D9112E3956
 online version: https://go.microsoft.com/fwlink/?linkid=833902
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMApplicationRevisionHistory

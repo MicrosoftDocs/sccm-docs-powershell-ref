@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMAdministrativeUser
+titleSuffix: Configuration Manager
+description: Gets an administrative user.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 ms.assetid: E10E2966-E438-49C0-A115-868CEDE6D8BB
 online version: https://go.microsoft.com/fwlink/?linkid=834069
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMAdministrativeUser

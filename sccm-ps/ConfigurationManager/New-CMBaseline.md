@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMBaseline
+titleSuffix: Configuration Manager
+description: Creates a Configuration Manager baseline.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 10D58015-8146-4A5F-8996-31BF2BD06DF9
 online version: https://go.microsoft.com/fwlink/?linkid=834266
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMBaseline

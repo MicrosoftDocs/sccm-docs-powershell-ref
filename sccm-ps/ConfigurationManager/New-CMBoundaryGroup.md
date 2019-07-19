@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMBoundaryGroup
+titleSuffix: Configuration Manager
+description: Creates a new boundary group.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 8AF3746E-A031-432B-91E1-C9B579FE7D55
 online version: https://go.microsoft.com/fwlink/?linkid=834281
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMBoundaryGroup

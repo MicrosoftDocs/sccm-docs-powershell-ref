@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Save-CMEndpointProtectionDefinition
+titleSuffix: Configuration Manager
+description: Saves an Endpoint Protection definition.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 762F1090-8DA6-46BC-A4E7-876E1A7A5511
 online version: https://go.microsoft.com/fwlink/?linkid=833587
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Save-CMEndpointProtectionDefinition

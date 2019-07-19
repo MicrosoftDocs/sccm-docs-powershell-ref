@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Sync-CMExchangeServer
+titleSuffix: Configuration Manager
+description: Synchronizes Configuration Manager mobile device information with an Exchange Server.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3FE27BD4-6193-4593-BCED-ABD609C55AC8
 online version: https://go.microsoft.com/fwlink/?linkid=834251
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Sync-CMExchangeServer

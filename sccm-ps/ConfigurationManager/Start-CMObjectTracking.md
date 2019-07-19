@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Start-CMObjectTracking
+titleSuffix: Configuration Manager
+description: Starts an object tracking.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMObjectTracking
 
 ## SYNOPSIS
-Starts an object tracking
+Starts an object tracking.
 
 ## SYNTAX
 

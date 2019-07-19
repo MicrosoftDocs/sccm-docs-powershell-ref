@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Start-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
+description: Starts the cloud distribution point service.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: 0F8788AA-2C2A-4834-9CEA-9390D1E67F52
 online version: https://go.microsoft.com/fwlink/?linkid=834207
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMCloudDistributionPoint

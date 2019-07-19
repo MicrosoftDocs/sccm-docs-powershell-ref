@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMDriver
+titleSuffix: Configuration Manager
+description: Removes a device driver from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 38B9CB0B-A9F5-4F3A-A89A-550B7DE849C3
 online version: https://go.microsoft.com/fwlink/?linkid=834079
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMDriver

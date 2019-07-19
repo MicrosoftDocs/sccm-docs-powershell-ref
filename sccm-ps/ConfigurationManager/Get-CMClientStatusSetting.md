@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMClientStatusSetting
+titleSuffix: Configuration Manager
+description: Gets client status settings.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.ClientStatus.dll-Help.xml
 ms.assetid: C12D4C9E-15A3-44EB-9090-6E80B95045E3
 online version: https://go.microsoft.com/fwlink/?linkid=834197
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMClientStatusSetting

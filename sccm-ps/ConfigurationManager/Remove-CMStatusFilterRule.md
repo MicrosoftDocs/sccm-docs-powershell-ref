@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMStatusFilterRule
+titleSuffix: Configuration Manager
+description: Removes a specified Configuration Manager filter rule for status messages.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 8B1C6216-49C0-4D0E-A77B-CF7C29E706C9
 online version: https://go.microsoft.com/fwlink/?linkid=834237
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMStatusFilterRule

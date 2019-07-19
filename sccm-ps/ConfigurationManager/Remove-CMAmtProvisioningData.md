@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMAmtProvisioningData
+titleSuffix: Configuration Manager
+description: Removes provisioning information for an Intel AMT computer.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833886
 schema: 2.0.0
 ms.assetid: D4DBB01E-986C-4B70-B24C-0F477791386B
+>>>>>>> master
 ---
 
 # Remove-CMAmtProvisioningData

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMClientPushInstallation
+titleSuffix: Configuration Manager
+description: Changes settings of a client push installation.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 14F033E4-B272-4B91-AFAA-E8CDF38CB217
 online version: https://go.microsoft.com/fwlink/?linkid=833715
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMClientPushInstallation

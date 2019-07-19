@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMAssetIntelligenceSynchronizationPoint
+titleSuffix: Configuration Manager
+description: Enables or disables an Asset Intelligence synchronization point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: A6085846-7C0C-49CE-B542-65E240999450
 online version: https://go.microsoft.com/fwlink/?linkid=833659
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMAssetIntelligenceSynchronizationPoint

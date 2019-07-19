@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMOperatingSystemInstaller
+titleSuffix: Configuration Manager
+description: Changes configuration settings of operating system installers.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: B08C17F1-A997-4352-A9C2-6757E0D19C3A
 online version: https://go.microsoft.com/fwlink/?linkid=833963
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMOperatingSystemInstaller

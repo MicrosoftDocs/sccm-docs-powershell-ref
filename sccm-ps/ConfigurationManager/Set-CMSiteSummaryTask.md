@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Set-CMSiteSummaryTask
+titleSuffix: Configuration Manager
+description: Sets a site summary task.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSiteSummaryTask
 
 ## SYNOPSIS
-Sets a site summary task
+Sets a site summary task.
 
 ## SYNTAX
 

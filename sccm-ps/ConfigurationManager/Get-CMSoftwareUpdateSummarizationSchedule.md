@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSoftwareUpdateSummarizationSchedule
+titleSuffix: Configuration Manager
+description: Displays the Configuration Manager schedule for software update summarization.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 62D4DFB1-3F7B-49A2-AEA8-8FA5747B743F
 online version: https://go.microsoft.com/fwlink/?linkid=833929
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdateSummarizationSchedule

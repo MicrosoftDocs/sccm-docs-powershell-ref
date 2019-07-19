@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMApplicationCatalogWebServicePoint
+titleSuffix: Configuration Manager
+description: Removes an Application Catalog web service point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: F43742B5-491E-49E6-86FB-B55B086F2BC9
 online version: https://go.microsoft.com/fwlink/?linkid=833896
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMApplicationCatalogWebServicePoint

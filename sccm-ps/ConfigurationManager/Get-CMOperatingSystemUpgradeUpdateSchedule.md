@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMOperatingSystemUpgradeUpdateSchedule
+titleSuffix: Configuration Manager
+description: Gets an operating system upgrade update schedule.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMOperatingSystemUpgradeUpdateSchedule
 
 ## SYNOPSIS
-Gets an operating system upgrade update schedule
+Gets an operating system upgrade update schedule.
 
 ## SYNTAX
 

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMHierarchySetting
+titleSuffix: Configuration Manager
+description: Sets hierarchy settings in System Center Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 9502FE38-91CD-49ED-A267-7F8E74695968
 online version: https://go.microsoft.com/fwlink/?linkid=833875
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMHierarchySetting

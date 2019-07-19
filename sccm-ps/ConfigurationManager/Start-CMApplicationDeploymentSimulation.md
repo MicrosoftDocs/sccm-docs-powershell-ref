@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Start-CMApplicationDeploymentSimulation
+titleSuffix: Configuration Manager
+description: Starts an application deployment simulation in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 10131437-15F6-4126-9E65-82CC58D5503D
 online version: https://go.microsoft.com/fwlink/?linkid=834195
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMApplicationDeploymentSimulation

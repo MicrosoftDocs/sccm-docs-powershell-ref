@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMDeviceCollectionIncludeMembershipRule
+titleSuffix: Configuration Manager
+description: Gets an Include Collections membership rule for a device collection.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections-help.xml
 ms.assetid: 3CB9C62E-6B40-491C-9FB6-4328215AA7E9
 online version: https://go.microsoft.com/fwlink/?linkid=833631
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDeviceCollectionIncludeMembershipRule

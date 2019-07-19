@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMReportingServicePoint
+titleSuffix: Configuration Manager
+description: Removes a reporting service point.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: C32CF428-1E90-4EB5-8490-5CA9E9D75835
 online version: https://go.microsoft.com/fwlink/?linkid=834171
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMReportingServicePoint

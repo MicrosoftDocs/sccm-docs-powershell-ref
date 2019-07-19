@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMVirtualEnvironmentGroup
+titleSuffix: Configuration Manager
+description: Creates a virtual environment group.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 63B857FB-228C-497F-BE06-4795E85C2986
 online version: https://go.microsoft.com/fwlink/?linkid=833820
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMVirtualEnvironmentGroup

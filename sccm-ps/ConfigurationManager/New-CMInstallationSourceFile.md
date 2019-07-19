@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMInstallationSourceFile
+titleSuffix: Configuration Manager
+description: Creates an installation source file for Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: F3A129C9-055F-493E-A96D-8FC71ED5E233
 online version: https://go.microsoft.com/fwlink/?linkid=833695
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMInstallationSourceFile

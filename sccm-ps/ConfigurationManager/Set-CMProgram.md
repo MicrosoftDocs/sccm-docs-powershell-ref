@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMProgram
+titleSuffix: Configuration Manager
+description: Modifies a program in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 ms.assetid: 814A673E-A28D-4123-9A6C-A173188FE26B
 online version: https://go.microsoft.com/fwlink/?linkid=833989
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMProgram

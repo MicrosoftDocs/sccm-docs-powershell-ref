@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
+description: Removes cloud-based distribution points.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: 471DC886-634B-4D50-A183-5FCDFE4CED8A
 online version: https://go.microsoft.com/fwlink/?linkid=833964
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMCloudDistributionPoint

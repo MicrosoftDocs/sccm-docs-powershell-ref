@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMDistributionPointGroup
+titleSuffix: Configuration Manager
+description: Changes the configuration settings of distribution point groups.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Content.dll-Help.xml
 ms.assetid: A04B7F84-3E7F-4D68-A046-A6A4DEE09A98
 online version: https://go.microsoft.com/fwlink/?linkid=833818
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMDistributionPointGroup

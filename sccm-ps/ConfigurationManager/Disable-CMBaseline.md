@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Disable-CMBaseline
+titleSuffix: Configuration Manager
+description: Disables configuration baselines.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: A8CBD6AE-CE6E-4F46-91E1-9E206E798C57
 online version: https://go.microsoft.com/fwlink/?linkid=833943
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Disable-CMBaseline

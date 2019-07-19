@@ -2,15 +2,13 @@
 title: New-CMPackageDeployment
 titleSuffix: Configuration Manager
 description: Creates a package deployment to a Configuration Manager collection.
-ms.date: 11/30/2018
+ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-
-external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # New-CMPackageDeployment

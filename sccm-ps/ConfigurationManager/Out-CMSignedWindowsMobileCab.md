@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Out-CMSignedWindowsMobileCab
+titleSuffix: Configuration Manager
+description: Signs a Windows Mobile CAB file.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: 51DF5E48-B29A-4A17-9DBD-29DAB1D5B1B8
 online version: https://go.microsoft.com/fwlink/?linkid=833853
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Out-CMSignedWindowsMobileCab

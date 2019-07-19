@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Start-CMCloudManagementGateway
+titleSuffix: Configuration Manager
+description: Starts a cloud management gateway.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Start-CMCloudManagementGateway
 
 ## SYNOPSIS
-Starts a cloud management gateway
+Starts a cloud management gateway.
 
 ## SYNTAX
 

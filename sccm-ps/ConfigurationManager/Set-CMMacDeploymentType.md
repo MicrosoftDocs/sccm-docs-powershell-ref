@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMMacDeploymentType
+titleSuffix: Configuration Manager
+description: Sets a Mac deployment type.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 ms.assetid: EF0E00B2-B4C1-4DDB-A6D2-FC52E0A642F8
 online version: https://go.microsoft.com/fwlink/?linkid=833911
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMMacDeploymentType

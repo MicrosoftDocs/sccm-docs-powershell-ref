@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: FFE46104-3BE6-4E96-A2D4-EB8EFEB0E7A2
-online version: https://go.microsoft.com/fwlink/?linkid=833816
-schema: 2.0.0
+title: Approve-CMUserDeviceAffinityRequest
+titleSuffix: Configuration Manager
+description: Approves a request for user device affinity in Configuration Manager.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Approve-CMUserDeviceAffinityRequest

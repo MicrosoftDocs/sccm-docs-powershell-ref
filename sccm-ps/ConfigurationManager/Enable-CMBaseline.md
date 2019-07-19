@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Enable-CMBaseline
+titleSuffix: Configuration Manager
+description: Enables configuration baselines.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: CBC37447-1B97-4C05-B859-BC3AD90F816D
 online version: https://go.microsoft.com/fwlink/?linkid=833981
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Enable-CMBaseline

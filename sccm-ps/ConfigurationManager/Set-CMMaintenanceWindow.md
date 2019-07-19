@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMMaintenanceWindow
+titleSuffix: Configuration Manager
+description: Modifies a maintenance window.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: CACE0105-30EC-4667-9F58-0BB43A6391B4
 online version: https://go.microsoft.com/fwlink/?linkid=833915
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMMaintenanceWindow

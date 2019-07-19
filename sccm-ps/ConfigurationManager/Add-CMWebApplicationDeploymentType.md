@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.AppMan.dll-Help.xml
-ms.assetid: 76C8AF2C-65AA-485C-8905-66A1B624C36D
-online version: https://go.microsoft.com/fwlink/?linkid=833784
-schema: 2.0.0
+title: Add-CMWebApplicationDeploymentType
+titleSuffix: Configuration Manager
+description: Adds a web application deployment type.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMWebApplicationDeploymentType

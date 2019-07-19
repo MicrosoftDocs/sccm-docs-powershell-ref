@@ -1,8 +1,8 @@
 ﻿---
 title: Add-CMAndroidDeploymentType
 titleSuffix: Configuration Manager
-description: Adds an Android deployment type to an application.
-ms.date: 04/27/2019
+description: Adds an Android deployment type.
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

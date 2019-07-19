@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Content.dll-Help.xml
-ms.assetid: DEDB28D8-E0D3-43B5-9EC7-B0F81B36652D
-online version: https://go.microsoft.com/fwlink/?linkid=833661
-schema: 2.0.0
+title: Add-CMDistributionPointToGroup
+titleSuffix: Configuration Manager
+description: Adds a distribution point to a distribution point group.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMDistributionPointToGroup

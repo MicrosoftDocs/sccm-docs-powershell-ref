@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMComputerAssociation
+titleSuffix: Configuration Manager
+description: Creates an association between two computers in Configuration Manager.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: 563284E4-67DD-46B5-B098-83CC215C8463
 online version: https://go.microsoft.com/fwlink/?linkid=833596
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMComputerAssociation

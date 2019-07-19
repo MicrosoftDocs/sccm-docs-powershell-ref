@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Enable-CMAmtAuditLog
+titleSuffix: Configuration Manager
+description: Enables audit logging for Intel AMT-based computers.
+ms.date: 05/01/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Oob.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833973
 schema: 2.0.0
 ms.assetid: E23E75B8-3F37-4C75-892A-E4FDE3698767
+>>>>>>> master
 ---
 
 # Enable-CMAmtAuditLog

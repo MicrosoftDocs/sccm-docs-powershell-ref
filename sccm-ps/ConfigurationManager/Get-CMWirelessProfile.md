@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMWirelessProfile
+titleSuffix: Configuration Manager
+description: Gets a wireless profile.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm-help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMWirelessProfile
 
 ## SYNOPSIS
-Gets a wireless profile
+Gets a wireless profile.
 
 ## SYNTAX
 

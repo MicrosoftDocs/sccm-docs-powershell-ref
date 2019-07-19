@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMApplicationDeployment
+titleSuffix: Configuration Manager
+description: Modifies properties for an application deployment in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 ms.assetid: B77A46FA-BA17-4E39-AC41-267AB0D3A353
 online version: https://go.microsoft.com/fwlink/?linkid=833636
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMApplicationDeployment

@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Get-CMTSStepSetupWindowsAndConfigMgr
+titleSuffix: Configuration Manager
+description: Gets a TS step setup windows and config mgr.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd-help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMTSStepSetupWindowsAndConfigMgr
 
 ## SYNOPSIS
-Gets a TS step setup windows and config mgr
+Gets a TS step setup window and config mgr.
 
 ## SYNTAX
 
@@ -124,7 +138,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

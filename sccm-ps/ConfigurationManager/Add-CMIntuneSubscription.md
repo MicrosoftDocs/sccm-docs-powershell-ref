@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Hybrid.dll-Help.xml
-ms.assetid: E3DB3EC2-E24E-4CEC-A7F4-92CF76D058D2
-online version: https://go.microsoft.com/fwlink/?linkid=833688
-schema: 2.0.0
+title: Add-CMIntuneSubscription
+titleSuffix: Configuration Manager
+description: Adds a Microsoft Intune subscription.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMIntuneSubscription

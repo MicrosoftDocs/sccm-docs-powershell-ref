@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Send-CMAssetIntelligenceCatalogUpdateRequest
+titleSuffix: Configuration Manager
+description: Requests a catalog update for uncategorized software titles.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: F407970C-75BC-43D7-B7A9-E7D44EF71ED7
 online version: https://go.microsoft.com/fwlink/?linkid=833593
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Send-CMAssetIntelligenceCatalogUpdateRequest

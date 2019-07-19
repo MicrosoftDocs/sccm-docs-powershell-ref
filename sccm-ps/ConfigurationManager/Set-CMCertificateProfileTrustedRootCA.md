@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMCertificateProfileTrustedRootCA
+titleSuffix: Configuration Manager
+description: Sets a trusted CA certificate profile.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: DE269D9A-EC2F-4DAE-859E-76E39BA4F9AF
 online version: https://go.microsoft.com/fwlink/?linkid=833702
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMCertificateProfileTrustedRootCA

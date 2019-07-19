@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMSoftwareUpdateBasedClientInstallation
+titleSuffix: Configuration Manager
+description: Gets a client installation on a Configuration Manager software update point.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 3E004486-ADA5-4109-BBB7-035A2FE790AA
 online version: https://go.microsoft.com/fwlink/?linkid=833904
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMSoftwareUpdateBasedClientInstallation

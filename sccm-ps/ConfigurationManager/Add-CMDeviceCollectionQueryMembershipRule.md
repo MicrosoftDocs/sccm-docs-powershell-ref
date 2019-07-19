@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: F4A29E0D-6DDA-4E86-A836-9F148B38836F
-online version: https://go.microsoft.com/fwlink/?linkid=833653
-schema: 2.0.0
+title: Add-CMDeviceCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
+description: Adds a query membership rule to one or more Configuration Manager device collections.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Add-CMDeviceCollectionQueryMembershipRule

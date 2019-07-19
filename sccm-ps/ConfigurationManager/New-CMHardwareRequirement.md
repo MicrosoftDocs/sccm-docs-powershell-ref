@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMHardwareRequirement
+titleSuffix: Configuration Manager
+description: Creates a Configuration Manager hardware requirement object for a product.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 17573093-E2AE-4B48-8B64-2A239FBA3FC5
 online version: https://go.microsoft.com/fwlink/?linkid=833691
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMHardwareRequirement

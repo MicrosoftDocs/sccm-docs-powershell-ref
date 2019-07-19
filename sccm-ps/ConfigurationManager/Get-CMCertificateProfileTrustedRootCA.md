@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMCertificateProfileTrustedRootCA
+titleSuffix: Configuration Manager
+description: Gets a trusted CA certificate profile.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm-help.xml
 ms.assetid: B0351D61-35E9-42F7-BD61-DDB7A66039A3
 online version: https://go.microsoft.com/fwlink/?linkid=834174
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMCertificateProfileTrustedRootCA

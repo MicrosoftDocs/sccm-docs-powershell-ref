@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Disable-CMDriver
+titleSuffix: Configuration Manager
+description: Disables a device driver.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: DC4B2713-2B9D-45B0-A595-00407274F314
 online version: https://go.microsoft.com/fwlink/?linkid=833945
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Disable-CMDriver

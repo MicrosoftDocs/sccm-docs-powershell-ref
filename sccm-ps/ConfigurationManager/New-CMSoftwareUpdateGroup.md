@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: New-CMSoftwareUpdateGroup
+titleSuffix: Configuration Manager
+description: Creates a software update group.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: 1343FB22-DB1A-4CBC-A26B-DFED53CF00A1
 online version: https://go.microsoft.com/fwlink/?linkid=833770
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # New-CMSoftwareUpdateGroup

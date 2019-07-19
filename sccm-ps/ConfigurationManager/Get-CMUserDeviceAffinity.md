@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMUserDeviceAffinity
+titleSuffix: Configuration Manager
+description: Gets a Configuration Manager user's device affinities.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 ms.assetid: 465E33E8-26CF-4981-A815-0ADD2BFA15F9
 online version: https://go.microsoft.com/fwlink/?linkid=834001
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMUserDeviceAffinity

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Invoke-CMBaselineSummarization
+titleSuffix: Configuration Manager
+description: Updates configuration baseline data.
+ms.date: 05/05/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Sum.dll-Help.xml
 ms.assetid: EC3D7A25-AFDB-40BE-88E5-3B6506920E8D
 online version: https://go.microsoft.com/fwlink/?linkid=834101
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Invoke-CMBaselineSummarization

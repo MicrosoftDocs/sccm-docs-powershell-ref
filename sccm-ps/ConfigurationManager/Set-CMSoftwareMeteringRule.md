@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
+description: Changes properties and security scopes for Configuration Manager software metering rules.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
 ms.assetid: 9303F7BE-B1E8-482F-8270-1C77249566BF
 online version: https://go.microsoft.com/fwlink/?linkid=834054
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMSoftwareMeteringRule

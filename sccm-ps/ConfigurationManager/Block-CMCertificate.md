@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Certificates.dll-Help.xml
-ms.assetid: BB56BBF5-A38E-4BDE-B32B-EE42739B4945
-online version: https://go.microsoft.com/fwlink/?linkid=833819
-schema: 2.0.0
+title: Block-CMCertificate
+titleSuffix: Configuration Manager
+description: Blocks a certificate.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Block-CMCertificate

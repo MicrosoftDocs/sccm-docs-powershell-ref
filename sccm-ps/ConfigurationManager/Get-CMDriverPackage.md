@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMDriverPackage
+titleSuffix: Configuration Manager
+description: Gets a driver package.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 ms.assetid: FFDDED71-D9A4-4974-A61E-F4325BCEADC4
 online version: https://go.microsoft.com/fwlink/?linkid=833668
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMDriverPackage

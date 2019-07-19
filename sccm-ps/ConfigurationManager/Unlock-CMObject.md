@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Unlock-CMObject
+titleSuffix: Configuration Manager
+description: Releases locks to global objects in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 ms.assetid: 66E1A4FB-1FF6-4DA5-8710-1A5AC6BEE641
 online version: https://go.microsoft.com/fwlink/?linkid=834278
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Unlock-CMObject

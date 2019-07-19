@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMManagementPoint
+titleSuffix: Configuration Manager
+description: Changes settings for a management point in Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 5687A04C-C8E3-4902-A157-FC5807D7BFF9
 online version: https://go.microsoft.com/fwlink/?linkid=833919
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMManagementPoint

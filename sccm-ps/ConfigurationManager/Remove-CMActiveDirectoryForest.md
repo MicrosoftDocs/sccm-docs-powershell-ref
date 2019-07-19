@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMActiveDirectoryForest
+titleSuffix: Configuration Manager
+description: Removes an Active Directory forest object from Configuration Manager.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: E1819266-4602-4752-A526-BA365AFA70C4
 online version: https://go.microsoft.com/fwlink/?linkid=833869
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMActiveDirectoryForest

@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Send-CMCmdletUpdateCheck
+titleSuffix: Configuration Manager
+description: Performs an unscheduled cmdlet update check.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Common.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833597
 schema: 2.0.0
 ms.assetid: 15162B1F-B421-431D-A171-5B38A0FDBC0B
+>>>>>>> master
 ---
 
 # Send-CMCmdletUpdateCheck

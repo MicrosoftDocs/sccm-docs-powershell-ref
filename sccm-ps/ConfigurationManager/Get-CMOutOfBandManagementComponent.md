@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMOutOfBandManagementComponent
+titleSuffix: Configuration Manager
+description: Gets an out of band management component.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=833802
 schema: 2.0.0
 ms.assetid: DBE058A7-0428-449A-9EA0-65151A1702A7
+>>>>>>> master
 ---
 
 # Get-CMOutOfBandManagementComponent
@@ -109,8 +123,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-## RELATED LINKS
-
-[Set-CMOutOfBandManagementComponent](Set-CMOutOfBandManagementComponent.md)
 
 

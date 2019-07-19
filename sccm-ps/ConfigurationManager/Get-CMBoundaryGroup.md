@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Get-CMBoundaryGroup
+titleSuffix: Configuration Manager
+description: Gets a boundary group.
+ms.date: 05/02/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: 26841EEA-B0CF-4D0A-A84E-EB713CC493AC
 online version: https://go.microsoft.com/fwlink/?linkid=834154
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Get-CMBoundaryGroup

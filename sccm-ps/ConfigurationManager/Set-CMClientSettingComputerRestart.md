@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+---
+title: Set-CMClientSettingComputerRestart
+titleSuffix: Configuration Manager
+description: Sets a client setting computer restart.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 online version: 
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMClientSettingComputerRestart
 
 ## SYNOPSIS
-Sets a client setting computer restart
+Sets a client setting computer restart.
 
 ## SYNTAX
 

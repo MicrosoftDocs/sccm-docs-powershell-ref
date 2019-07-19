@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Set-CMWindowsFirewallPolicy
+titleSuffix: Configuration Manager
+description: Changes settings of a Windows Firewall policy.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 ms.assetid: 4B32EE03-FD8B-4F78-9F32-258A1C20EB0A
 online version: https://go.microsoft.com/fwlink/?linkid=834164
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Set-CMWindowsFirewallPolicy

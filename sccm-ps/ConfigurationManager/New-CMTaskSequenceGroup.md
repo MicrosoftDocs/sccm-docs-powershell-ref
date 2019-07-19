@@ -9,8 +9,6 @@ ms.topic: reference
 author: mumian
 ms.author: jgao
 manager: dougeby
-
-external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # New-CMTaskSequenceGroup
@@ -29,7 +27,7 @@ New-CMTaskSequenceGroup [-Step <IResultObject[]>] -Name <String> [-Description <
 
 ## DESCRIPTION
 
-The **New-CMTaskSequenceGroup** cmdlet creates a new task sequence group object with specific name, description, options, conditions and steps/sub-groups.
+The **New-CMTaskSequenceGroup** cmdlet creates a new task sequence group object with specific name, description, options, conditions, and steps/sub-groups.
 
 ## EXAMPLES
 
@@ -49,7 +47,7 @@ The command creates a task sequence group with specific name, description, steps
 
 ### -Condition
 
-Specifies condition objectss.
+Specifies condition objects.
 
 ```yaml
 Type: IResultObject[]
@@ -65,7 +63,7 @@ Accept wildcard characters: False
 
 ### -ContinueOnError
 
-Indicates whether the creation should continue when there is an error.
+Indicates whether the creation should continue when there's an error.
 
 ```yaml
 Type: SwitchParameter
@@ -113,7 +111,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+DisableWildcardHandling treats wildcard characters as literal character values. Can't be combined with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +127,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Can't be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -194,7 +192,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

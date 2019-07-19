@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: 2F3F29C9-FD9F-4335-8775-BC8D600F527D
-online version: https://go.microsoft.com/fwlink/?linkid=833827
-schema: 2.0.0
+title: Block-CMDevice
+titleSuffix: Configuration Manager
+description: Blocks a device.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Block-CMDevice

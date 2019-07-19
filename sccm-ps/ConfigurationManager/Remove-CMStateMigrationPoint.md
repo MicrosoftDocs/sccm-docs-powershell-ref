@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+---
+title: Remove-CMStateMigrationPoint
+titleSuffix: Configuration Manager
+description: Removes a state migration point from a Configuration Manager site.
+ms.date: 05/07/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+=======
 ﻿---
 external help file: AdminUI.PS.HS.dll-Help.xml
 ms.assetid: EC6C701B-2D78-40E5-9EF4-025F4132F26B
 online version: https://go.microsoft.com/fwlink/?linkid=834234
 schema: 2.0.0
+>>>>>>> master
 ---
 
 # Remove-CMStateMigrationPoint

@@ -9,8 +9,6 @@ ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-external help file: AdminUI.PS.AppMan.dll-Help.xml
 ---
 
 # Export-CMTaskSequence

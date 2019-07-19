@@ -1,8 +1,14 @@
 ---
-external help file: AdminUI.PS.Collections.dll-Help.xml
-ms.assetid: D6A79C88-CE68-45E7-88B3-43F94F73DDE9
-online version: https://go.microsoft.com/fwlink/?linkid=833812
-schema: 2.0.0
+title: Approve-CMDevice
+titleSuffix: Configuration Manager
+description: Approves a device.
+ms.date: 04/29/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Approve-CMDevice
