@@ -77,20 +77,13 @@ None
 
 ### Deprecated cmdlets
 
-None
+- Get-CMAadConditionalAccessPolicy
+- Set-CMAadConditionalAccessPolicy
 
 
 ## Known issues
 
 The following items are known issues with the Cmdlet Library that aren't resolved in this version.
-
-### Get-CMAadConditionalAccessPolicy and Set-CMAadConditionalAccessPolicy
-
-These cmdlets require a 64-bit PowerShell environment.
-
-#### Workaround
-
-- None
 
 ### Import-CMSecurityRole
 
