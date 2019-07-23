@@ -5,7 +5,7 @@
 
 ## Important changes
 ### Documentation library updates
-Up-to-date Cmdlet Library documentation is now available from https://docs.microsoft.com/powershell/sccm/configurationmanager/vlatest/configurationmanager.
+Up-to-date Cmdlet Library documentation is now available from https://docs.microsoft.com/en-us/powershell/module/configurationmanager/configurationmanager?view=sccm-ps.
 
 ### Removed cmdlets
 The following cmdlets are no longer supported and have been removed:
