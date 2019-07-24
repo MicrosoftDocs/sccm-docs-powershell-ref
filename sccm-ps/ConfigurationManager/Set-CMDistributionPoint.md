@@ -516,6 +516,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableNonWdsPxe
+Indicates whether the ConfigMgr PXE Responder is enabled on the distribution point.
+
+When you enable Non WDS PXe, Configuration Manager will install the ConfigMgr PXE Responder Service on the server.
+This feature was introduced in Configuration Manager 1806 [Configuration Manager 1806](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1806#improvements-to-pxe-enabled-distribution-points).
+ConfigMgr PXE Responder Service is the service that will replace the functionality of Windows Deploy Services.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableScheduledMulticast
 Indicates whether you can schedule when Configuration Manager deploys the operating system image from the distribution point.
 
