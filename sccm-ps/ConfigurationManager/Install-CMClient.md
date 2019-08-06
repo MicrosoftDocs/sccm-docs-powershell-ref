@@ -94,21 +94,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CollectionId
-Specifies the ID of the collection to which the client belongs.
-
-```yaml
-Type: String
-Parameter Sets: SearchByIdMandatory
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
