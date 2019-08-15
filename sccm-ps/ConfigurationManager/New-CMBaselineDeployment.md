@@ -50,10 +50,28 @@ New-CMBaselineDeployment [-Name] <String> [-EnableEnforcement <Boolean>] [-Overr
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Deploy Baseline to several Collections that Start with the Name "Collection_Name"
 ```
 PS XYZ:\>
+PS XYZ:\>  $BaselineName = Get-CMBaseline -Name 'ConfigMgr Baseline'
+PS XYZ:\>  $DeployToCollections = Get-CMCollection -Name 'Collection_Name*' | Sort-Object -Property "Name"
+PS XYZ:\>  $BaselineSchedule = New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
+PS XYZ:\>  foreach ($Collection in $DeployToCollection)
+             {
+             New-CMBaselineDeployment -InputObject $BaselineName -CollectionID $Collection.CollectionId -Schedule $BaselineSchedule
+             Write-Output "Created Deployment for $($BaselineName.LocalizedDisplayName) on $($Collection.Name)"
+             }
+             
 ```
+This Example Grabs the Baseline we want to deploy and places it into the variable $BaselineName (InputObject) using [Get-CMBaseline](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmbaseline), we then grab a list of all the collections we wish to deploy it to ($DeployToCollections) using [Get-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollection).  We then need to create a schedule for the deployment using [New-CMSchedule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/new-cmschedule). Once we have all of the required information, we can deploy the baseline to those collections using New-CMBaselineDeployment.
+
+### Example 2 - Deploy Baseline to one Collection
+```
+PS XYZ:\>  $BaselineSchedule = New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
+PS XYZ:\>  New-CMBaselineDeployment -Name "MY_Baseline" -CollectionID "PS1000023" -Schedule $BaselineSchedule
+```
+
+This first creates a simple schedule, then deployes the Baseline "MyName" to Collection ID: PS1000023 using that schedule.
 
 ## PARAMETERS
 
