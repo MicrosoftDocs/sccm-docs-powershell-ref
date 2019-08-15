@@ -169,6 +169,15 @@ PS XYZ:\> New-CMSchedule -DayOfMonth 0 -DateTime "20120105185728.303000+000"
 
 This command creates a schedule token that specifies that the event occurs on the last day of the month at the specified date and time.
 
+### Example 2: Create a schedule to run daily (Simple Schedule)
+```
+PS XYZ:\> New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
+```
+
+This will create a Simple Schedule that will occur daily forever, used in conjunction with deploying Baselines.
+
+
+
 ## PARAMETERS
 
 ### -Confirm
