@@ -168,6 +168,15 @@ The following example creates the following schedule:
 $schedToken2 = New-CMSchedule -Start (Get-Date) -DayOfWeek Monday -WeekOrder Second -RecurCount 1 -OffsetDay 0
 ```
 
+### Example 2: Create a schedule to run daily (Simple Schedule)
+```
+PS XYZ:\> New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
+```
+
+This will create a Simple Schedule that will occur daily forever, used in conjunction with deploying Baselines.
+
+
+
 ## PARAMETERS
 
 ### -Confirm
