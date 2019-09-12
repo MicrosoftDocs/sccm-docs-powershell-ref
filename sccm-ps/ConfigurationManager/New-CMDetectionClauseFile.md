@@ -49,7 +49,7 @@ New-CMDetectionClauseFile -FileName <String> [-Is64Bit] -Path <String> [-Existen
 
 ### Example 1
 ```
-PS XYZ:\>  
+PS XYZ:\>  New-CMDetectionClauseFile -Path "C:\Program Files\Application" -FileName App.exe -Value -PropertyType Version -ExpressionOperator GreaterEquals -ExpectedValue 1.0.0
 ```
 
  
