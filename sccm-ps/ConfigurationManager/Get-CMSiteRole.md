@@ -29,6 +29,8 @@ Get-CMSiteRole [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling
 
 ## DESCRIPTION
 
+Returns the roles installed on a Configuration Manager site system server.
+
 This cmdlet gets a site role object. For example, a management point or distribution point.
 
 > [!NOTE]
@@ -52,6 +54,18 @@ This example lists all roles in the current site.
 ```powershell
 $allRoles = Get-CMSiteRole -AllSite
 $allRoles.RoleName
+### Example 1
+```powershell
+PS XYZ:\> Get-CMSiteRole -AllSite
+```
+### Example 2
+```powershell
+PS XYZ:\> Get-CMSiteRole -SiteCode P01
+```
+
+### Example 3
+```powershell
+PS XYZ:\> Get-CMSiteRole -SiteSystemServerName "cm01.contoso.local"
 ```
 
 ## PARAMETERS
@@ -213,3 +227,5 @@ For more information on this return object and its properties, see [SMS_SCI_SysR
 ## RELATED LINKS
 
 [Remove-CMSiteRole](Remove-CMSiteRole.md)
+[Get-CMSiteFeature](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmsitefeature)
+[Get-CMSiteSiteSystemServer](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmsitesystemserver)
