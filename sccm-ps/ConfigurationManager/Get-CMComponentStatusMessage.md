@@ -36,9 +36,28 @@ You must specify a viewing period, as a **TimeSpan** object.
 
 ## EXAMPLES
 
-### Example 1: Get critical messages for a site
+### Example 1: Get error messages for a site
+```powershell
+PS XYZ:\> Get-CMComponentStatusMessage -StartTime "2/1/2013 12:00 AM" -Severity Error
 ```
-PS XYZ:\> Get-CMComponentStatusMessage -ViewingPeriod "2/1/2013 12:00 AM" -Severity Warning -SiteCode "CM1"
+
+### Example 2: Get warning messages for a site within the last 24 hours
+```powershell
+PS XYZ:\> Get-CMComponentStatusMessage -StartTime $(Get-Date).AddHours(-24) -Severity Warning -SiteCode "CM1"
+```
+
+### Example 3: Get summary of messages for all components within last 24 hours
+```powershell
+Get-CMSiteComponent | Select-Object -ExpandProperty ComponentName -Unique | Sort-Object ComponentName | % {
+    $errs  = $(Get-CMComponentStatusMessage -ComponentName $_ -Severity Error -StartTime $(Get-Date).AddHours(-24)).Count
+    $warns = $(Get-CMComponentStatusMessage -ComponentName $_ -Severity Warning -StartTime $(Get-Date).AddHours(-24)).Count
+    [pscustomobject]@{
+        Component  = $_
+        LimitHours = $LimitHours
+        Errors     = $errs
+        Warnings   = $warns
+    }
+}
 ```
 
 This command gets component status messages for the specified viewing period for the Configuration Manager site that has the site code CM1.
@@ -173,8 +192,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+Severity parameter does not currently work with 'All' value, but also doesn't return any values if omitted.
+
 ## RELATED LINKS
 
 [Get-CMComponentStatusSetting](Get-CMComponentStatusSetting.md)
-
-
+[Get-CMSiteComponent](Get-CMSiteComponent.md)
