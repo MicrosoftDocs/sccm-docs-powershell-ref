@@ -38,7 +38,8 @@ Get-CMSiteRole [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling
 ```
 
 ## DESCRIPTION
- 
+
+Returns the roles installed on a Configuration Manager site system server.
 
 ## EXAMPLES
 
@@ -47,11 +48,18 @@ Get-CMSiteRole [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling
 
 
 ### Example 1
+```powershell
+PS XYZ:\> Get-CMSiteRole -AllSite
 ```
-PS XYZ:\>  
+### Example 2
+```powershell
+PS XYZ:\> Get-CMSiteRole -SiteCode P01
 ```
 
- 
+### Example 3
+```powershell
+PS XYZ:\> Get-CMSiteRole -SiteSystemServerName "cm01.contoso.local"
+```
 
 ## PARAMETERS
 
@@ -176,3 +184,5 @@ IResultObject#SMS_SCI_SysResUse
 
 ## RELATED LINKS
 
+[Get-CMSiteFeature](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmsitefeature)
+[Get-CMSiteSiteSystemServer](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmsitesystemserver)
