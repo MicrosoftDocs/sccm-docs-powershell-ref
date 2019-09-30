@@ -56,7 +56,7 @@ NOTE:  All related deployments are automatically removed.
 
 ```powershell
 PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS XYZ:\> Remove-CMTaskSequence -InputObject $TaskSequence -Force
+PS XYZ:\> Remove-CMTaskSequence -InputObject $TaskSequence
 Remove
 Are you sure you wish to remove TaskSequence: Name="General Sequence 11"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
@@ -65,7 +65,6 @@ Are you sure you wish to remove TaskSequence: Name="General Sequence 11"?
 The first command gets the task sequence object named TaskSequence01 and stores the object in the $TaskSequence variable.
 
 The second command removes the task sequence object stored in $TaskSequence.
-Specifying the *Force* parameter indicates that the user is not prompted before the task sequence is removed.
 
 ### Example 2: Remove a task sequence by using the pipeline
 
