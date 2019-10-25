@@ -28,6 +28,10 @@ Remove-CMSiteRole -SiteSystemServerName <String> -RoleName <String> [-SiteCode <
 
 ## DESCRIPTION
 
+Uninstalls a site system role from a site system server.
+
+## EXAMPLES
+
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
 > The examples in this article use the site name **XYZ**. For more information, see the
@@ -37,7 +41,7 @@ Remove-CMSiteRole -SiteSystemServerName <String> -RoleName <String> [-SiteCode <
 
 ### Example 1
 ```
-PS XYZ:\>
+PS XYZ:\>  Remove-CMSiteRole -SiteSystemServerName "cm01.contoso.local" -RoleName "SMS SRS Reporting Point"
 ```
 
 ## PARAMETERS
