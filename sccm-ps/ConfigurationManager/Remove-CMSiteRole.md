@@ -38,7 +38,8 @@ Remove-CMSiteRole -SiteSystemServerName <String> -RoleName <String> [-SiteCode <
 ```
 
 ## DESCRIPTION
- 
+
+Uninstalls a site system role from a site system server.
 
 ## EXAMPLES
 
@@ -48,7 +49,7 @@ Remove-CMSiteRole -SiteSystemServerName <String> -RoleName <String> [-SiteCode <
 
 ### Example 1
 ```
-PS XYZ:\>  
+PS XYZ:\>  Remove-CMSiteRole -SiteSystemServerName "cm01.contoso.local" -RoleName "SMS SRS Reporting Point"
 ```
 
  
