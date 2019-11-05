@@ -1,4 +1,4 @@
-﻿# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
+# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
 
  >[!NOTE]
  > The 1604 version of the System Center Configuration Manager Cmdlet
@@ -399,7 +399,7 @@ Cmdlet may silently ignore *OverrideServiceWindow* if enforcement is not enabled
 
 ### Set-CMClientSetting
 #### Deprecations
-Cmdlet has been deprecated and replaced with a feature-specific cmdlet. See [New Cmdlets](#New-Cmdlets) for more details.
+Cmdlet has been deprecated and replaced with a feature-specific cmdlet. See [New Cmdlets](#new-mmdlets) for more details.
 
 ### Set-CMCollectionMembershipEvaluationComponent
 #### Deprecations
