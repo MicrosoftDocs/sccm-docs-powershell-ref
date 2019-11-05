@@ -26,7 +26,7 @@ manager: dougeby
 - ```Set-CMWindowsMobileDeploymentType```
 
 ### Deprecated cmdlets
-- ```New-CMGlobalCondition``` and ```Set-CMGlobalCondition``` have been superseded by the [new family of global condition cmdlets](#gccmdlets).
+- ```New-CMGlobalCondition``` and ```Set-CMGlobalCondition``` have been superseded by the new family of global condition cmdlets.
 
 
 
