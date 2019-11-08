@@ -1,4 +1,17 @@
-﻿# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
+---
+title: Version 1610 release notes
+titleSuffix: Configuration Manager
+description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1610. 
+ms.date: 11/19/2016
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+---
+
+# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
 
  >[!NOTE]
  > The 1604 version of the System Center Configuration Manager Cmdlet
@@ -17,7 +30,7 @@ Some Get cmdlets now have a *Fast* parameter. This parameter allows the cmdlet t
 To provide visibility into this change, cmdlets that support *Fast* will write a warning to the console if it is not used in a case where its presence may be beneficial. This warning can be suppressed by setting `$CMPSSuppressFastNotUsedCheck = $True`.
 
 ## How to provide feedback or report issues
-Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, go to http://go.microsoft.com/fwlink/?LinkId=529220 (a Microsoft Account is required).
+Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, go to https://go.microsoft.com/fwlink/?LinkId=529220 (a Microsoft Account is required).
 
 ## Known issues
 These are known issues with the Cmdlet Library that are not resolved in this release.
@@ -399,7 +412,7 @@ Cmdlet may silently ignore *OverrideServiceWindow* if enforcement is not enabled
 
 ### Set-CMClientSetting
 #### Deprecations
-Cmdlet has been deprecated and replaced with a feature-specific cmdlet. See [New Cmdlets](#New-Cmdlets) for more details.
+Cmdlet has been deprecated and replaced with a feature-specific cmdlet. See [New Cmdlets](#new-cmdlets) for more details.
 
 ### Set-CMCollectionMembershipEvaluationComponent
 #### Deprecations
