@@ -134,6 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRestart
+Specified deadline behavior to allow System Restart (if necessery) be performed outside the maintenance window.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -199,6 +201,8 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
+Specifies the description for a software update deployment.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -267,6 +271,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -480,6 +486,8 @@ Accept wildcard characters: False
 ```
 
 ### -RestartServer
+Indicates whether to allow a server to restart following a software update.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -493,6 +501,8 @@ Accept wildcard characters: False
 ```
 
 ### -RestartWorkstation
+Indicates whether to allow a workstation to restart following a software update.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -547,6 +557,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
+Specified deadline behavior to allow Software Update Installation be performed outside the maintenance window.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
