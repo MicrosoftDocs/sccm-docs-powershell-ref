@@ -101,11 +101,7 @@ $catalog | Remove-CMThirdPartyUpdateCatalog -Force
 
 ### Removed cmdlets
 
-None
-
-### Deprecated cmdlets
-
-The following cmdlets are deprecated with the end of hybrid service:
+The following cmdlets have been removed with the end of hybrid service:
 
 - Add-CMIntuneSubscription
 - Add-CMMdmEnrollmentManager (Add-CMIntuneDeviceEnrollmentManager)
@@ -150,6 +146,10 @@ The following cmdlets are deprecated with the end of hybrid service:
 - Set-CMIosEnrollmentProfile
 - Set-CMIosEnrollmentProfileAssignment
 - Set-CMWindowsEnrollmentProfile
+
+### Deprecated cmdlets
+
+None
 
 ## Known issues
 
