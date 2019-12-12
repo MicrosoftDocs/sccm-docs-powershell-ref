@@ -2,7 +2,7 @@
 title: Version 1910 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1910. 
-ms.date: 11/25/2019
+ms.date: 12/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -101,11 +101,7 @@ $catalog | Remove-CMThirdPartyUpdateCatalog -Force
 
 ### Removed cmdlets
 
-None
-
-### Deprecated cmdlets
-
-The following cmdlets are deprecated with the end of hybrid service:
+The following cmdlets are removed with the end of hybrid service:
 
 - Add-CMIntuneSubscription
 - Add-CMMdmEnrollmentManager (Add-CMIntuneDeviceEnrollmentManager)
@@ -150,6 +146,10 @@ The following cmdlets are deprecated with the end of hybrid service:
 - Set-CMIosEnrollmentProfile
 - Set-CMIosEnrollmentProfileAssignment
 - Set-CMWindowsEnrollmentProfile
+
+### Deprecated cmdlets
+
+None
 
 ## Known issues
 
