@@ -686,3 +686,31 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMTaskSequenceDeployment](./Set-CMTaskSequenceDeployment.md)
 [Start-CMTaskSequenceDeployment](./Start-CMTaskSequenceDeployment.md)
 [Remove-CMTaskSequenceDeployment](./Remove-CMTaskSequenceDeployment.md)
+
+## EXAMPLES
+
+### Example 1: Deploy a TS with Several Parameters
+```
+<# Deploy a TS
+Deployment Available (-AvailableDateTime $DeployAvailableTime) -If you leave this off the command, it uses current time as the available time.
+Deployment Start Time: November 25 2025 @ 8PM
+Deployment Schedule: Runs Daily starting Dec 25, 2025 @ 8PM, and runs 8PM every day.(Schedule $DeploySchedule)
+Deployment Behavior: AlwaysRerun (-RerunBehavior AlwaysRerunProgram)
+Deployment Show Progress: True (-ShowTaskSequenceProgress $true)
+Deployment Available for User to trigger (Show in SS): True (-RunFromSoftwareCenter $true) 
+Deployment Content Download Behavior: Download All Before Starting (-DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence)
+Deployment Availability: Clients Only / NOT WinPE Media (-Availability Clients)
+Deployment Purpose: Required  (-DeployPurpose Required)
+Deployment Expired: (-DeadlineDateTime $DeployExpireTime)
+#>
+
+$DeployTS = Get-CMTaskSequence -TaskSequencePackageId 'PS104823' #Grabs the Task Sequence object you would like to deploy
+$DeployCollection = 'PS11B7C4' #Sets the Collection on which to create the deployment.
+$DeployAvailableTime = [datetime]::ParseExact("20251125-200000", "yyyyMMdd-HHmmss", $null) #Deadline at 8PM on Nov 25 2025
+$DeployExpireTime = [datetime]::ParseExact("20260125-200000", "yyyyMMdd-HHmmss", $null) #Deadline at 8PM on Jan 25 2026
+$ScheduleDataTime = [datetime]::ParseExact("20251225-200000", "yyyyMMdd-HHmmss", $null) #Deadline at 8PM on Dec 25 2025
+$DeploySchedule = New-CMSchedule -DurationInterval Days -RecurInterval Days -RecurCount 1 -DurationCount 0 -Start $ScheduleDataTime   #Daily Reoccuring Schedule
+#$DeploySchedule = New-CMSchedule  -Start $ScheduleDataTime  -Nonrecurring #This would set the Deployment to run on the Scheduled Date, with NO reoccuring schedules.
+New-CMTaskSequenceDeployment -InputObject $DeployTS -DeployPurpose Required -AvailableDateTime $DeployAvailableTime -Availability Clients -RerunBehavior AlwaysRerunProgram -Schedule $DeploySchedule -CollectionId $DeployCollection -ShowTaskSequenceProgress $true -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -RunFromSoftwareCenter $true -DeadlineDateTime $DeployExpireTime 
+
+```
