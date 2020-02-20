@@ -1,14 +1,17 @@
 ---
-title: Get-CMAdministrativeUser
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets an administrative user.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMAdministrativeUser
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMAdministrativeUser
@@ -38,14 +41,14 @@ An administrative user has a defined set of permissions and may be a member of o
 
 ### Example 1: Get all the administrative users
 ```
-PS C:\> Get-CMAdministrativeUser
+PS XYZ:\> Get-CMAdministrativeUser
 ```
 
 This command gets all administrative users.
 
 ### Example 2: Get administrative user by name
 ```
-PS C:\> Get-CMAdministrativeUser -Name "testDomain\myAdminUser"
+PS XYZ:\> Get-CMAdministrativeUser -Name "testDomain\myAdminUser"
 ```
 
 This command gets the administrative user named AdminUser1.
@@ -58,7 +61,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +76,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

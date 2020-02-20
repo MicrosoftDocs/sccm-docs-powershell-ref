@@ -1,14 +1,17 @@
 ---
-title: Add-CMSoftwareUpdateToGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a software update to a software update group in Configuration Manager.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMSoftwareUpdateToGroup
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMSoftwareUpdateToGroup
@@ -81,14 +84,14 @@ Likewise, you can specify a software update group by name or by ID or use the [G
 
 ### Example 1: Add an update to a software group
 ```
-PS C:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupName "Accounting Group updates" -SoftwareUpdateId "SMS00078"
+PS XYZ:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupName "Accounting Group updates" -SoftwareUpdateId "SMS00078"
 ```
 
 This command adds a software update with the ID SMS00078 to the update group named Accounting Group updates.
 
 ### Example 2: Add an update to a software group by using IDs
 ```
-PS C:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupId "SUP00045" -SoftwareUpdateId "SMS00078"
+PS XYZ:\>Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupId "SUP00045" -SoftwareUpdateId "SMS00078"
 ```
 
 This command adds a software update that has the ID SMS00078 to the update group with the specified ID.
@@ -116,7 +119,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +134,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +166,7 @@ To obtain a software update group object, use **Get-CMSoftwareUpdateGroup**.
 ```yaml
 Type: IResultObject
 Parameter Sets: ById_Object, ByName_Object, ByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -178,7 +181,7 @@ Specifies an ID of a software group.
 ```yaml
 Type: String
 Parameter Sets: ById_Id, ByName_Id, ByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -193,7 +196,7 @@ Specifies a name of a software group.
 ```yaml
 Type: String
 Parameter Sets: ById_Name, ByName_Name, ByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -249,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Remove-CMSecurityRole
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes custom security roles from Configuration Manager.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMSecurityRole
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMSecurityRole
@@ -54,7 +57,7 @@ Before you remove a security role, make sure every user has a role in addition t
 
 ### Example 1: Remove a security role by using a name
 ```
-PS C:\> Remove-CMSecurityRole -Name "MainSecurityRole" -Force
+PS XYZ:\> Remove-CMSecurityRole -Name "MainSecurityRole" -Force
 ```
 
 This command removes a security role named MainSecurityRole from Configuration Manager.
@@ -62,8 +65,8 @@ The command uses the *Force* parameter, so it does not prompt you for confirmati
 
 ### Example 2: Remove security roles by using a variable
 ```
-PS C:\> $Roles = Get-CMSecurityRole -Name *Role 
-PS C:\> Remove-CMSecurityRole -SecurityRole $Roles
+PS XYZ:\> $Roles = Get-CMSecurityRole -Name *Role 
+PS XYZ:\> Remove-CMSecurityRole -SecurityRole $Roles
 ```
 
 The first command uses the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to get each security role that has a name that ends in Role.
@@ -94,7 +97,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +112,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +127,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +158,7 @@ To obtain a security role object, use the [Get-CMSecurityRole](Get-CMSecurityRol
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -196,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,15 +1,19 @@
 ---
-title: Remove-CMDeploymentTypeDependency
-titleSuffix: Configuration Manager
+author: mumian
 description: Removes a deployment type dependency from Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDeploymentTypeDependency
+titleSuffix: Configuration Manager
 ---
+
 # Remove-CMDeploymentTypeDependency
 
 ## SYNOPSIS
@@ -18,7 +22,7 @@ Removes a deployment type dependency from Configuration Manager deployment type 
 
 ## SYNTAX
 
-```powershell
+```
 Remove-CMDeploymentTypeDependency [-Force] -DeploymentTypeDependency <IResultObject[]>
  -InputObject <DeploymentTypeDependencyGroup> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -33,9 +37,9 @@ The **Remove-CMDeploymentTypeDependency** cmdlet removes a deployment type depen
 ### Example 1
 
 ```powershell
-PS C:\> $dpGroup = Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup
-PS C:\> $dpDeps = Get-CMDeploymentTypeDependency -Group $dpGroup
-PS C:\> Remove-CMDeploymentTypeDependency -Group $dpGroup -DeploymentTypeDependency $dpDeps[1] -Force
+PS XYZ:\> $dpGroup = Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup
+PS XYZ:\> $dpDeps = Get-CMDeploymentTypeDependency -Group $dpGroup
+PS XYZ:\> Remove-CMDeploymentTypeDependency -Group $dpGroup -DeploymentTypeDependency $dpDeps[1] -Force
 ```
 
 This command removes a deployment type dependency.
@@ -81,7 +85,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +101,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +117,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +160,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -166,6 +169,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

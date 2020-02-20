@@ -1,14 +1,17 @@
 ---
-title: Add-CMMdmEnrollmentManager
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a Device Enrollment Manager.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMMdmEnrollmentManager
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMMdmEnrollmentManager
@@ -43,14 +46,14 @@ The **Add-CMMdmEnrollmentManager** cmdlet adds a Device Enrollment Manager to th
 
 ### Example 1: Add a device enrollment manager using the pipeline
 ```
-PS C:\> Get-CMUser -Name "Contoso\User01" | Add-CMMdmEnrollmentManager
+PS XYZ:\> Get-CMUser -Name "Contoso\User01" | Add-CMMdmEnrollmentManager
 ```
 
 This command gets the user object named User01 and uses the pipeline operator to pass the object to **Add-CMMdmEnrollmentManager**, which adds the user as a device enrollment manager.
 
 ### Example 2: Add a device enrollment manager by name
 ```
-PS C:\> Add-CMMdmEnrollmentManager -Name "Contoso\User02"
+PS XYZ:\> Add-CMMdmEnrollmentManager -Name "Contoso\User02"
 ```
 
 This command adds the user named User02 as a device enrollment manager.
@@ -78,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +142,7 @@ Specifies the name of a Configuration Manager user.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +158,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

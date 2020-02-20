@@ -1,14 +1,17 @@
 ---
-title: Set-CMAppv5XDeploymentType
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets an App-V 5X deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAppv5XDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMAppv5XDeploymentType
@@ -61,8 +64,8 @@ The **Set-CMAppv5XDeploymentType** cmdlet changes the settings for a Microsoft A
 
 ### Example 1: Change the name of the deployment type
 ```
-PS C:\> $application = Get-CMApplication -Name "testApp"
-PS C:\> Set-CMAppv5XDeploymentType -Application $application -DeploymentTypeName "Appv5X" -NewName "newAppv5X"
+PS XYZ:\> $application = Get-CMApplication -Name "testApp"
+PS XYZ:\> Set-CMAppv5XDeploymentType -Application $application -DeploymentTypeName "Appv5X" -NewName "newAppv5X"
 ```
 
 The first command gets the application object named testApp and stores the object in the $applicaton variable.
@@ -71,7 +74,7 @@ The second command changes the display name of the deployment type for the appli
 
 ### Example 2: Change the name of the deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -DeploymentTypeName "Appv5X" -ApplicationName "testApp" | Set-CMAppv5XDeploymentType -NewName "newAppv5X"
+PS XYZ:\> Get-CMDeploymentType -DeploymentTypeName "Appv5X" -ApplicationName "testApp" | Set-CMAppv5XDeploymentType -NewName "newAppv5X"
 ```
 
 This command gets the deployment type object named Appv5X for the application named testApp and uses the pipeline operator to pass the object to **Set-CMAppv5XDeployment**, which changes the name of the deployment type object to newAppv5X.
@@ -102,7 +105,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +121,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,7 +151,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -209,7 +212,7 @@ The site system server requires permissions to read the content files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +227,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -239,7 +242,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +262,7 @@ Valid values are:
 ```yaml
 Type: ContentHandlingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DownloadContentForStreaming, Download
 
 Required: False
@@ -290,7 +293,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -337,7 +340,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -388,7 +391,7 @@ Valid values are:
 ```yaml
 Type: ContentHandlingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNothing, Download, DownloadContentForStreaming
 
 Required: False
@@ -415,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

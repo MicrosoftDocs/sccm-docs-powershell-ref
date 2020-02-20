@@ -1,14 +1,17 @@
 ---
-title: Invoke-CMSoftwareUpdateSummarization
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Runs the Configuration Manager software update summarization.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMSoftwareUpdateSummarization
+titleSuffix: Configuration Manager
 ---
 
 # Invoke-CMSoftwareUpdateSummarization
@@ -34,7 +37,7 @@ You can use the Get-CMSoftwareUpdateSummarizationSchedule cmdlet to view the cur
 
 ### Example 1: Run software update summarization
 ```
-PS C:\>Invoke-CMSoftwareUpdateSummarization
+PS XYZ:\>Invoke-CMSoftwareUpdateSummarization
 ```
 
 This command runs the software update summarization immediately, instead of waiting for the next scheduled time.
@@ -62,7 +65,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +80,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Add-CMApplicationCatalogWebsitePoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a Microsoft Application Virtualization (App-V) 5X deployment type to an application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMApplicationCatalogWebsitePoint
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMAppv5XDeploymentType
@@ -52,14 +55,14 @@ The **Add-CMAppv5XDeploymentType** cmdlet adds a Microsoft Application Virtualiz
 
 ### Example 1: Add an App-V 5X deployment type
 ```
-PS C:\>Add-CMAppv5XDeploymentType -ApplicationName "testApp" -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
+PS XYZ:\>Add-CMAppv5XDeploymentType -ApplicationName "testApp" -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
 ```
 
 This command adds an App-V 5X deployment type to the application named testApp.
 
 ### Example 2: Add an App-V 5X deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testApp" | Add-CMAppv5XDeploymentType -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
+PS XYZ:\> Get-CMApplication -Name "testApp" | Add-CMAppv5XDeploymentType -ContentLocation "\\Server1\ResourcesApplications\Appv5x\BasicVApp\BasicVApp.appv" -DeploymentTypeName "Appv5X"
 ```
 
 This command gets the application object named testApp and uses the pipeline operator to pass the object to **Add-CMAppV5XDeploymentType**, which adds an App-V 5X deployment type to the application.
@@ -90,7 +93,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +123,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -196,7 +199,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +214,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,7 +234,7 @@ Valid values are:
 ```yaml
 Type: ContentHandlingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DownloadContentForStreaming, Download
 
 Required: False
@@ -262,7 +265,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -329,7 +332,7 @@ Valid values are:
 ```yaml
 Type: ContentHandlingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNothing, Download, DownloadContentForStreaming
 
 Required: False
@@ -356,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

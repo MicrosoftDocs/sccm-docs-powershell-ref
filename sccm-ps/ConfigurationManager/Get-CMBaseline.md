@@ -1,14 +1,17 @@
 ---
-title: Get-CMBaseline
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets configuration baselines.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMBaseline
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMBaseline
@@ -53,14 +56,14 @@ The **Get-CMBaseline** cmdlet gets one or more configuration baselines.
 
 ### Example 1: Get configuration baselines by using a parent baseline name
 ```
-PS C:\> Get-CMBaseline -ParentBaselineName "ParentBaselineContoso01"
+PS XYZ:\> Get-CMBaseline -ParentBaselineName "ParentBaselineContoso01"
 ```
 
 This command gets the child configuration baselines in the parent baseline configuration item named ParentBaselineContoso01.
 
 ### Example 2: Get configuration baselines by using a parent baseline ID
 ```
-PS C:\> Get-CMBaseline -ParentBaselineId "16777357"
+PS XYZ:\> Get-CMBaseline -ParentBaselineId "16777357"
 ```
 
 This command gets the child configuration baselines in the parent baseline configuration item that has the identity 16777357.
@@ -73,7 +76,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +91,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +136,7 @@ Specifies a **CMParentBaseline** object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByParentBaseline
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -148,7 +151,7 @@ Specifies the ID of a parent baseline object.
 ```yaml
 Type: Int32
 Parameter Sets: SearchByParentBaselineIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +166,7 @@ Specifies the name of a parent baseline.
 ```yaml
 Type: String
 Parameter Sets: SearchByParentBaselineNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -173,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

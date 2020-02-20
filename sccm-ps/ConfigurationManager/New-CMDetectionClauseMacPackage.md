@@ -1,14 +1,17 @@
 ---
-title: New-CMDetectionClauseMacPackage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a detection clause mac package.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMDetectionClauseMacPackage
+titleSuffix: Configuration Manager
 ---
 
 # New-CMDetectionClauseMacPackage
@@ -19,21 +22,18 @@ Creates a detection clause mac package.
 ## SYNTAX
 
 ```
-New-CMDetectionClauseMacPackage -ExpressionOperator <RuleExpressionOperator> -PackageId <String> [-Value]
- -ExpectedValue <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+New-CMDetectionClauseMacPackage -ExpressionOperator <RuleExpressionOperator> -PackageId <String>
+ -ExpectedValue <String> [-Value] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -43,7 +43,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -53,12 +53,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -68,13 +66,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
- 
-
 ```yaml
 Type: RuleExpressionOperator
 Parameter Sets: (All)
-Aliases: 
-Accepted values: IsEquals
+Aliases:
+Accepted values: IsEquals, GreaterEquals, GreaterThan, LessEquals, LessThan
 
 Required: True
 Position: Named
@@ -89,7 +85,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,12 +95,10 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,12 +108,10 @@ Accept wildcard characters: False
 ```
 
 ### -Value
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -142,4 +134,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,14 +1,17 @@
 ---
-title: Get-CMSoftwareUpdateCategory
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a software update category.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSoftwareUpdateCategory
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMSoftwareUpdateCategory
@@ -37,16 +40,13 @@ Get-CMSoftwareUpdateCategory -UniqueId <String> [-Fast] [-DisableWildcardHandlin
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -56,7 +56,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,12 +66,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +84,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,8 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -Id
- 
-
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -111,8 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -126,8 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -TypeName
- 
-
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -141,8 +133,6 @@ Accept wildcard characters: False
 ```
 
 ### -UniqueId
- 
-
 ```yaml
 Type: String
 Parameter Sets: ByUniqueId
@@ -156,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -170,4 +160,3 @@ IResultObject#SMS_UpdateCategoryInstance
 ## NOTES
 
 ## RELATED LINKS
-

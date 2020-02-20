@@ -1,14 +1,17 @@
 ---
-title: Remove-CMApplication
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes an application from Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMApplication
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMApplication
@@ -50,7 +53,7 @@ This cmdlet does not remove any existing client installations.
 
 ### Example 1: Get an application and remove it
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Remove-CMApplication -Force
+PS XYZ:\> Get-CMApplication -Name "Application1" | Remove-CMApplication -Force
 ```
 
 The first command gets the application object named Application1 and uses the pipeline operator to pass the object to **Remove-CMApplication**, which removes the application.
@@ -58,7 +61,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove an application by model name
 ```
-PS C:\> Remove-CMApplication -ModelName "ScopeId_5E88BBB4-B1D1-4B74-8A4F-9E8B03BC1EB0/Application_7aa0ed27-6240-4070-a098-3edc9281dd96" -Force
+PS XYZ:\> Remove-CMApplication -ModelName "ScopeId_5E88BBB4-B1D1-4B74-8A4F-9E8B03BC1EB0/Application_7aa0ed27-6240-4070-a098-3edc9281dd96" -Force
 ```
 
 This command removes the application object with the specified model name.
@@ -87,7 +90,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +105,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +120,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +151,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +166,7 @@ Specifies the model name of the application.
 ```yaml
 Type: String
 Parameter Sets: SearchByModelName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

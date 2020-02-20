@@ -40,15 +40,15 @@ After you remove an out of band service point, administrative users cannot provi
 
 ### Example 1: Remove an out of band service point
 ```
-PS C:\> Remove-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1"
+PS XYZ:\> Remove-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1"
 ```
 
 This command removes the out of band service point from the Configuration Manager site that has the site code CM1 on the site system server named cmcen-dist02.tsqa.contoso.com.
 
 ### Example 2: Remove an out of band service point by using an object variable
 ```
-PS C:\> $Osp = Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1"
-PS C:\> Remove-CMOutOfBandServicePoint -InputObject $Osp
+PS XYZ:\> $Osp = Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM1"
+PS XYZ:\> Remove-CMOutOfBandServicePoint -InputObject $Osp
 ```
 
 The first command gets the out of band service point from the Configuration Manager site that has the site code CM1 on the site system server named cmcen-dist02.tsqa.contoso.com.

@@ -1,14 +1,17 @@
 ---
-title: New-CMDistributionPointGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a distribution point group.
+external help file: AdminUI.PS.Content.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMDistributionPointGroup
+titleSuffix: Configuration Manager
 ---
 
 # New-CMDistributionPointGroup
@@ -31,7 +34,7 @@ Distribution point groups provide a logical grouping of distribution points for 
 
 ### Example 1: Create a distribution point group
 ```
-PS C:\> New-CMDistributionPointGroup -Name "DpgDept01" -Description "Western region"
+PS XYZ:\> New-CMDistributionPointGroup -Name "DpgDept01" -Description "Western region"
 ```
 
 This command creates a distribution point group named DpgDept01 and adds a description for the distribution point group.
@@ -59,7 +62,7 @@ Specifies a description for the distribution point group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +77,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +92,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +107,7 @@ Specifies a name of the distribution point group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -130,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

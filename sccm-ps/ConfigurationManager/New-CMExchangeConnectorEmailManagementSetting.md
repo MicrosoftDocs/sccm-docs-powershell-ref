@@ -1,14 +1,17 @@
 ---
-title: New-CMExchangeConnectorEmailManagementSetting
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMExchangeConnectorEmailManagementSetting
+titleSuffix: Configuration Manager
 ---
 
 # New-CMExchangeConnectorEmailManagementSetting
@@ -33,7 +36,7 @@ The **New-CMExchangeConnectorEmailManagementSetting** cmdlet creates a set of e-
 
 ### Example 1: Add email management settings to a mobile device
 ```
-PS C:\> New-CMExchangeServerConnectorEmailManagementSetting -AllowHtmlEmail $True -ConsumerEmail $True -EmailAttachmentPolicy $True -MaximumCalenderAge ThreeMonths -MaximumEmailAge OneDay -PushWhenRoaming $True -MaximumSizeAttachment 24 -MaximumSizeHtmlEmail 402 -MaximumSizeTextEmail 401
+PS XYZ:\> New-CMExchangeServerConnectorEmailManagementSetting -AllowHtmlEmail $True -ConsumerEmail $True -EmailAttachmentPolicy $True -MaximumCalenderAge ThreeMonths -MaximumEmailAge OneDay -PushWhenRoaming $True -MaximumSizeAttachment 24 -MaximumSizeHtmlEmail 402 -MaximumSizeTextEmail 401
 ```
 
 This command creates the following settings for a mobile device: 
@@ -49,12 +52,10 @@ This command creates the following settings for a mobile device:
 ## PARAMETERS
 
 ### -AllowHtmlEmail
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -64,12 +65,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConsumerEmail
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +83,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,12 +93,10 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAttachmentPolicy
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,8 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumCalendarAge
- 
-
 ```yaml
 Type: MaxCalendarAgeType
 Parameter Sets: (All)
@@ -140,12 +135,10 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumEmailAge
- 
-
 ```yaml
 Type: MaxEmailAgeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: All, OneDay, ThreeDays, OneWeek, TwoWeeks, OneMonth
 
 Required: False
@@ -156,12 +149,10 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSizeAttachment
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,12 +162,10 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSizeHtmlEmail
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,12 +175,10 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSizeTextEmail
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,12 +188,10 @@ Accept wildcard characters: False
 ```
 
 ### -PushWhenRoaming
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

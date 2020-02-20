@@ -1,14 +1,17 @@
 ---
-title: Remove-CMMaintenanceWindow
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a maintenance window.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMMaintenanceWindow
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMMaintenanceWindow
@@ -44,7 +47,7 @@ If you remove a maintenance window during that window, the maintenance updates f
 
 ### Example 1: Remove a maintenance window
 ```
-PS C:\> Remove-CMMaintenanceWindow -Name "Distribution Point Maintenance" -CollectionId "AAA0004D"
+PS XYZ:\> Remove-CMMaintenanceWindow -Name "Distribution Point Maintenance" -CollectionId "AAA0004D"
 ```
 
 This command removes the maintenance window Distribution Point Maintenance.
@@ -58,7 +61,7 @@ Specifies the ID of the collection that the maintenance window applies to.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -101,7 +104,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +119,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +134,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,8 +144,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -185,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

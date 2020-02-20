@@ -1,14 +1,17 @@
 ---
-title: Set-CMDeviceVariable
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a device variable of a Configuration Manager device.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDeviceVariable
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDeviceVariable
@@ -48,7 +51,7 @@ Individual devices have device variables. Task sequence processing uses device v
 
 ### Example 1: Modify a device variable
 ```
-PS C:\> Set-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -NewVariableValue "192.168.100.10"
+PS XYZ:\> Set-CMDeviceVariable -DeviceName "gateway-server.contoso.com" -VariableName "ServerIPAddress" -NewVariableValue "192.168.100.10"
 ```
 
 This command modifies the device variable ServerIPAddress associated with the device gateway-server.contoso.com.
@@ -78,7 +81,7 @@ You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +96,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +142,7 @@ Indicates whether a value displays in the Configuration Manager console.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +157,7 @@ Specifies a name for the variable that this cmdlet modifies.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +172,7 @@ Specifies a value for the variable that this cmdlet modifies.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,12 +182,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -199,7 +200,7 @@ Specifies a Systems Management Server (SMS) ID.
 ```yaml
 Type: String
 Parameter Sets: SetByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -214,7 +215,7 @@ Specifies the name of the device variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -240,7 +241,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

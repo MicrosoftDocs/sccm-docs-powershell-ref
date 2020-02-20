@@ -1,14 +1,17 @@
 ---
-title: New-CMGlobalConditionFile
-titleSuffix: Configuration Manager
+author: mumian
 description: Creates a File System type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMGlobalConditionFile
+titleSuffix: Configuration Manager
 ---
 
 # New-CMGlobalConditionFile
@@ -20,18 +23,16 @@ Creates a File System type global condition in Configuration Manager.
 ## SYNTAX
 
 ### NewFileSystem (Default)
-
-```powershell
+```
 New-CMGlobalConditionFile [-IsFolder] -Path <String> -FileOrFolderName <String> [-IncludeSubfolder <Boolean>]
  [-Is64Bit <Boolean>] -Name <String> [-Description <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### NewFileSystemFile
-
-```powershell
+```
 New-CMGlobalConditionFile -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +46,7 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-$GlobalFloder = New-CMGlobalConditionFile -Path c:\ -FileOrFolderName test -IsFolder $true -Name Folder 
+$GlobalFloder = New-CMGlobalConditionFile -Path c:\ -FileOrFolderName test -IsFolder $true -Name Folder
 ```
 
 This command creates a File System type folder global condition in Configuration Manager.
@@ -220,9 +221,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

@@ -1,14 +1,17 @@
 ---
-title: New-CMAssetIntelligenceCatalogItem
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates an item for the Asset Intelligence catalog.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMAssetIntelligenceCatalogItem
+titleSuffix: Configuration Manager
 ---
 
 # New-CMAssetIntelligenceCatalogItem
@@ -36,21 +39,21 @@ You can also create custom software labels.
 
 ### Example 1: Create category label item in the catalog
 ```
-PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Databases" -LanguageId 1033 -Type TypeTag
+PS XYZ:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Databases" -LanguageId 1033 -Type TypeTag
 ```
 
 This command creates a category label in the Asset Intelligence catalog named Databases that has a language ID of 1033 and a type of TypeTag.
 
 ### Example 2: Create a category item in the catalog
 ```
-PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -Type TypeCategory
+PS XYZ:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools" -Type TypeCategory
 ```
 
 This command creates a category in the Asset Intelligence catalog named Database Tools that has a type of TypeCategory.
 
 ### Example 3: Create a category family in the catalog
 ```
-PS C:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Software" -Type TypeFamily
+PS XYZ:\> New-CMAssetIntelligenceCatalogItem -CategoryName "Database Software" -Type TypeFamily
 ```
 
 This command creates a category family item in the Asset Intelligence catalog family named Database Software that has a type of TypeFamily.
@@ -63,7 +66,7 @@ Specifies the name of a category, family, or label in the Asset Intelligence cat
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +96,7 @@ Specifies the description of a category, family, or label in the Asset Intellige
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +126,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +142,7 @@ For more information and a list of locale IDs, see the Locale IDs Assigned by Mi
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +162,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Types
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: TypeCategory, TypeFamily, TypeTag
 
 Required: True
@@ -186,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Add-CMApplicationCatalogWebServicePoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds an Application Catalog web service point to a Microsoft System Center Configuration Manager site.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMApplicationCatalogWebServicePoint
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMApplicationCatalogWebServicePoint
@@ -45,7 +48,7 @@ For more information about site system roles, see [Install and Configure Site Sy
 
 ### Example 1: Add a web service point for the Application Catalog
 ```
-PS C:\>Add-CMApplicationCatalogWebServicePoint -PortNumber 80 -SiteCode "CM1" -SiteSystemServerName "CMACWSPRole.Western.Contoso.com"
+PS XYZ:\>Add-CMApplicationCatalogWebServicePoint -PortNumber 80 -SiteCode "CM1" -SiteSystemServerName "CMACWSPRole.Western.Contoso.com"
 ```
 
 This command adds a web service point for the Application Catalog.
@@ -61,7 +64,7 @@ Valid values are: HTTP and HTTPS.
 ```yaml
 Type: ComputerCommunicationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 
 Required: False
@@ -92,7 +95,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +110,7 @@ Indicates that the cmdlet forces wild card handling.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +141,7 @@ Specifies the port to use to connect with the web service.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +156,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: WebServicePointByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +186,7 @@ Specifies the name of the web application used for the application catalog.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

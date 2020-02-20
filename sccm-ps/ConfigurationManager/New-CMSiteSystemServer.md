@@ -1,14 +1,17 @@
 ---
-title: New-CMSiteSystemServer
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a site system server.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMSiteSystemServer
+titleSuffix: Configuration Manager
 ---
 
 # New-CMSiteSystemServer
@@ -34,7 +37,7 @@ You can designate a new server as a site system server and add the site system r
 
 ### Example 1: Create a site system server
 ```
-PS C:\> New-CMSiteSystemServer -SiteSystemServerName "Server1.contoso.com" -SiteCode "MP5" -PublicFqdn "Internetsrv1.contoso.com" -FdmOperation $True -UseSiteServerAccount -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator")
+PS XYZ:\> New-CMSiteSystemServer -SiteSystemServerName "Server1.contoso.com" -SiteCode "MP5" -PublicFqdn "Internetsrv1.contoso.com" -FdmOperation $True -UseSiteServerAccount -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator")
 ```
 
 This command creates a site system server with the name Server1.contoso.com.
@@ -48,7 +51,7 @@ Specifies an account name to use to install the site system server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ Indicates whether to enable a proxy server to use when synchronizing information
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ Indicates whether the site server is required to initiate connections to this si
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +126,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +142,7 @@ Do not use user principal name (UPN) format.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +158,7 @@ Use a fully qualified domain name (FQDN), short name, or IPv4/IPv6 address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +173,7 @@ Specifies the proxy server port number to use when connecting to the Internet.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +188,7 @@ Specifies a fully qualified domain name (FQDN) for the site system for use on th
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +203,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -230,7 +233,7 @@ Indicates that the cmdlet uses the computer account of the site server to instal
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

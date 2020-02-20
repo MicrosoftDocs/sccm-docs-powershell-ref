@@ -1,14 +1,17 @@
 ---
-title: New-CMWindowsFirewallPolicy
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a new Windows Firewall policy in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMWindowsFirewallPolicy
+titleSuffix: Configuration Manager
 ---
 
 # New-CMWindowsFirewallPolicy
@@ -38,7 +41,7 @@ The network location types are: domain, public, and private.
 
 ### Example 1: Create a Windows Firewall policy
 ```
-PS C:\> New-CMWindowsFirewallPolicy -Name "test01" -Description "323132" -DomainTurnOnFirewall Yes -PrivateTurnOnFirewall Yes -PublicTurnOnFirewall Yes
+PS XYZ:\> New-CMWindowsFirewallPolicy -Name "test01" -Description "323132" -DomainTurnOnFirewall Yes -PrivateTurnOnFirewall Yes -PublicTurnOnFirewall Yes
 ```
 
 This command creates a new Windows Firewall policy and enables the firewall for domain, private, and public network location types.
@@ -81,7 +84,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +103,7 @@ Specifies whether to block all incoming traffic for a domain type of network loc
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -135,7 +138,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -151,7 +154,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,7 +189,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -221,7 +224,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -242,7 +245,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -277,7 +280,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -304,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

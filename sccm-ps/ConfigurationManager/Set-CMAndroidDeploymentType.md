@@ -1,14 +1,17 @@
 ---
-title: Set-CMAndroidDeploymentType
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets an Android deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAndroidDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMAndroidDeploymentType
@@ -57,14 +60,14 @@ The **Set-CMAndriodDeploymentType** cmdlet changes the settings for an Android d
 
 ### Example 1: Change the name of the deployment type
 ```
-PS C:\> Set-CMAndroidDeploymentType -ApplicationName "ExpensesApp" -DeploymentTypeName "Expenses" -NewName "NewExpenses"
+PS XYZ:\> Set-CMAndroidDeploymentType -ApplicationName "ExpensesApp" -DeploymentTypeName "Expenses" -NewName "NewExpenses"
 ```
 
 This command changes the deployment type name for the application named ExpensesApp from Expenses to NewExpenses.
 
 ### Example 2: Change the name of the deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -DeploymentTypeName "Expenses" -ApplicationName "ExpensesApp2" | Set-CMAndroidDeploymentType -NewName "NewExpenses2"
+PS XYZ:\> Get-CMDeploymentType -DeploymentTypeName "Expenses" -ApplicationName "ExpensesApp2" | Set-CMAndroidDeploymentType -NewName "NewExpenses2"
 ```
 
 This command gets the deployment type object named Expenses for the application named ExpensesApp2 and uses the pipeline operator to pass the object to **Set-CMAndroidDeploymentType**.
@@ -96,7 +99,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +145,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +191,7 @@ The site system server requires permissions to read the content files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +206,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -218,7 +221,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +251,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +298,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -352,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

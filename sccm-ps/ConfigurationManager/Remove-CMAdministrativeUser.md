@@ -1,14 +1,17 @@
 ---
-title: Remove-CMAdministrativeUser
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes an administrative user.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMAdministrativeUser
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMAdministrativeUser
@@ -44,7 +47,7 @@ When you remove an administrative user, Configuration Manager revokes the access
 
 ### Example 1: SearchByValueMandatory, pipeline
 ```
-PS C:\> Get-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" | Remove-CMAdministrativeUser -Force
+PS XYZ:\> Get-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" | Remove-CMAdministrativeUser -Force
 ```
 
 This command gets the administrative user object named AdminUser1 who is a member of the Application Administrator role and uses the pipeline operator to pass the object to **Remove-CMAdministrativeUser**, which removes the adminsitrative user.
@@ -52,7 +55,7 @@ Specifying the *Force* parameter indicates that the user is not prompted for con
 
 ### Example 2: SearchByName
 ```
-PS C:\> Remove-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" -Force
+PS XYZ:\> Remove-CMAdministrativeUser -Name contoso\admin1 -RoleName "Application Administrator" -Force
 ```
 
 This command removes the administrative user named AdminUser1 who is a member of the Application Administrator role.
@@ -81,7 +84,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +114,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +145,7 @@ To obtain an administrative user object, use the [Get-CMAdministrativeUser](Get-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -183,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

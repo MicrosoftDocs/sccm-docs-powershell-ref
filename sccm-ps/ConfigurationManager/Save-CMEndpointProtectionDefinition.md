@@ -1,14 +1,17 @@
 ---
-title: Save-CMEndpointProtectionDefinition
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Saves an Endpoint Protection definition.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Save-CMEndpointProtectionDefinition
+titleSuffix: Configuration Manager
 ---
 
 # Save-CMEndpointProtectionDefinition
@@ -49,7 +52,7 @@ For more information about Endpoint Protection, see [Endpoint Protection in Conf
 
 ### Example 1: Save an Endpoint Protection epshort definition by using a device collection nameepshortEndpoint Protection
 ```
-PS C:\> Save-CMEndpointProtectionDefinition -DeviceCollectionName "NA-Client-Devices"
+PS XYZ:\> Save-CMEndpointProtectionDefinition -DeviceCollectionName "NA-Client-Devices"
 ```
 
 This command saves the Endpoint Protection definition to the devices in the device collection named NA-Client-Devices.
@@ -79,7 +82,7 @@ This object identifies the device to which you save the Endpoint Protection defi
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ This object identifies the device collection to which you save the Endpoint Prot
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -111,7 +114,7 @@ Specifies an ID for a Configuration Manager device collection to which you add t
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -126,7 +129,7 @@ Specifies a name for a Configuration Manager device collection to which you add 
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -171,7 +174,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,7 +189,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

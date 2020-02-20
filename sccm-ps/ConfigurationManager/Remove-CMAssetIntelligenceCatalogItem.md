@@ -1,14 +1,17 @@
 ---
-title: Remove-CMAssetIntelligenceCatalogItem
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes an item from the Asset Intelligence catalog.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMAssetIntelligenceCatalogItem
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMAssetIntelligenceCatalogItem
@@ -49,7 +52,7 @@ You can also create custom software labels.
 
 ### Example 1: Remove a catalog item by category name
 ```
-PS C:\> Remove-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools"
+PS XYZ:\> Remove-CMAssetIntelligenceCatalogItem -CategoryName "Database Tools"
 ```
 
 This command removes the category named Database Tools from the Asset Intelligence catalog.
@@ -62,7 +65,7 @@ Specifies the name of a category, family, or label in the Asset Intelligence cat
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -92,7 +95,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +110,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +125,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +156,7 @@ To get an Asset Intelligence catalog item, use the Get-CMAssetIntelligenceCatalo
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -179,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

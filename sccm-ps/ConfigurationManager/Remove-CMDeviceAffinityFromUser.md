@@ -1,14 +1,17 @@
 ---
-title: Remove-CMDeviceAffinityFromUser
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes device affinity from a Configuration Manager user.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDeviceAffinityFromUser
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMDeviceAffinityFromUser
@@ -20,13 +23,13 @@ Removes device affinity from a Configuration Manager user.
 
 ### RemoveDeviceAffinityByUserName (Default)
 ```
-Remove-CMDeviceAffinityFromUser -UserName <String[]> [-DeviceId <String>] [-DeviceName <String>] [-Force]
+Remove-CMDeviceAffinityFromUser -UserName <String[]> [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveDeviceAffinityByUserId
 ```
-Remove-CMDeviceAffinityFromUser -UserId <String> [-DeviceId <String>] [-DeviceName <String>] [-Force]
+Remove-CMDeviceAffinityFromUser -UserId <Int32> [-DeviceId <Int32[]>] [-DeviceName <String[]>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,7 +46,7 @@ For more information about user device affinity, see [How to Manage User Device 
 
 ### Example 1: Remove device affinity from a user by user ID
 ```
-PS C:\> Remove-CMDeviceAffinityFromUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
+PS XYZ:\> Remove-CMDeviceAffinityFromUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
 ```
 
 This command adds affinity to the device named WestDivUpdates05 for the user named Patti Fuller.
@@ -69,9 +72,9 @@ Accept wildcard characters: False
 Specifies a device by using an ID.
 
 ```yaml
-Type: String
+Type: Int32[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: DeviceIds
 
 Required: False
 Position: Named
@@ -84,9 +87,9 @@ Accept wildcard characters: False
 Specifies a device by using a name.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: DeviceNames
 
 Required: False
 Position: Named
@@ -101,7 +104,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +132,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,9 +145,9 @@ Accept wildcard characters: False
 Specifies a user by using an ID.
 
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: RemoveDeviceAffinityByUserId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

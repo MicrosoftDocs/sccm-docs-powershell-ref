@@ -1,14 +1,17 @@
 ---
-title: Get-CMDeployment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a Configuration Manager deployment.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMDeployment
@@ -39,7 +42,7 @@ The cmdlet gets summary information about application, Software Update Managemen
 
 ### Example 1: Get a deployment for a collection
 ```
-PS C:\> Get-CMDeployment -CollectionName "deviceCol1" -FeatureType "Application"
+PS XYZ:\> Get-CMDeployment -CollectionName "deviceCol1" -FeatureType "Application"
 ```
 
 This command gets the Application deployment for the device collection named deviceCol1.
@@ -52,7 +55,7 @@ Specifies the name of the collection associated with the deployment.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -67,7 +70,7 @@ Specifies the ID of a deployment.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,7 +85,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +108,7 @@ Valid values are:
 ```yaml
 Type: DeploymentFeature
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 Accepted values: Application, Package, SoftwareUpdate, ConfigurationItem, TaskSequence, FirewallSetting
 
 Required: False
@@ -121,7 +124,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +140,7 @@ Use this parameter with a legacy distribution program.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +156,7 @@ Use this parameter with a software update.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Get-CMSecurityScope
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a security scope.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSecurityScope
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMSecurityScope
@@ -37,14 +40,14 @@ If you don't provide any parameters, all security scopes are returned.
 
 ### Example 1: Get a security scope by name
 ```
-PS C:\> Get-CMSecurityScope -Name "Scope"
+PS XYZ:\> Get-CMSecurityScope -Name "Scope"
 ```
 
 This command gets the security scope named Scope.
 
 ### Example 2: Get a security scope by using a wildcard
 ```
-PS C:\> Get-CMSecurityScope -Name "S*"
+PS XYZ:\> Get-CMSecurityScope -Name "S*"
 ```
 
 This command gets all security scope objects that have a name beginning with "S".
@@ -57,7 +60,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +75,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

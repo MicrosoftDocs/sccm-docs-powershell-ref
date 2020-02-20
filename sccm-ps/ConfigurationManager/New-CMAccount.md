@@ -1,14 +1,17 @@
 ---
-title: New-CMAccount
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a Configuration Manager user account.
+external help file: AdminUI.PS.Accounts.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMAccount
+titleSuffix: Configuration Manager
 ---
 
 # New-CMAccount
@@ -32,8 +35,8 @@ For more information about user accounts, see [Technical Reference for Accounts 
 
 ### Example 1: Create a user account by using name and password
 ```
-PS C:\> $Secure = ConvertTo-SecureString -String "Pas$W0rd" -AsPlainText -Force
-PS C:\> New-CMAccount -Name "TSQA\PFuller" -Password $Secure -SiteCode "CM2"
+PS XYZ:\> $Secure = ConvertTo-SecureString -String "Pas$W0rd" -AsPlainText -Force
+PS XYZ:\> New-CMAccount -Name "TSQA\PFuller" -Password $Secure -SiteCode "CM2"
 ```
 
 The first command creates a password as a secure string.
@@ -63,7 +66,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +81,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ Specifies a secure string that contains the password for the user account.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,7 +111,7 @@ Specifies a Configuration Manager site code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

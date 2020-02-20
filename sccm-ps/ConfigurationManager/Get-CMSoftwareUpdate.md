@@ -1,14 +1,17 @@
 ---
-title: Get-CMSoftwareUpdate
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a software update.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSoftwareUpdate
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMSoftwareUpdate
@@ -61,14 +64,14 @@ Clients receive a software update object when manually or automatically deployin
 
 ### Example 1: Get software updates that have been downloaded
 ```
-PS C:\> Get-CMSoftwareUpdate -IsContentProvisioned $True
+PS XYZ:\> Get-CMSoftwareUpdate -IsContentProvisioned $True
 ```
 
 This command gets all software updates that have been downloaded.
 
 ### Example 2: Get software updates by update group
 ```
-PS C:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Get-CMSoftwareUpdate
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Get-CMSoftwareUpdate
 ```
 
 This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Get-CMSoftwareUpdate**, which gets all software updates for the software update group object.
@@ -81,7 +84,7 @@ Specifies the article ID of a software update.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ Specifies the bulletin ID of a software update.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ To obtain a category object, use the Get-CMSoftwareUpdateCategory cmdlet.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +145,7 @@ Specifies the latest date that a software update was released.
 ```yaml
 Type: DateTime
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +160,7 @@ Specifies the earliest date that a software update was released.
 ```yaml
 Type: DateTime
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +175,7 @@ Specifies the latest date that a software update was revised.
 ```yaml
 Type: DateTime
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +190,7 @@ Specifies the earliest date that a software update was revised.
 ```yaml
 Type: DateTime
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +205,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,8 +215,6 @@ Accept wildcard characters: False
 ```
 
 ### -EulaExist
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
@@ -235,7 +236,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +251,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,8 +276,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeUpgrade
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByName
@@ -295,7 +294,7 @@ Indicates whether the software update is downloaded.
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -310,7 +309,7 @@ Indicates whether the software update is deployed.
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,7 +324,7 @@ Indicates whether the software update has expired.
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -340,7 +339,7 @@ Indicates whether the software update is the latest version.
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -355,7 +354,7 @@ Indicates whether the software update is offline-serviceable.
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -370,7 +369,7 @@ Indicates whether the software update is superseded.
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -385,7 +384,7 @@ Indicates whether the software update is user-defined.
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -415,7 +414,7 @@ Indicates that the cmdlet only searches for expired software updates.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -437,7 +436,7 @@ Valid values are:
 ```yaml
 Type: CustomSeverityType
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 Accepted values: None, Low, Moderate, Important, Critical
 
 Required: False
@@ -454,7 +453,7 @@ To obtain an update group object, use the [Get-CMSoftwareUpdateGroup](Get-CMSoft
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByUpdateGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -469,7 +468,7 @@ Specifies an array of IDs of software update groups.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByUpdateGroupIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -484,7 +483,7 @@ Specifies an array of names of software update groups.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByUpdateGroupNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -494,7 +493,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

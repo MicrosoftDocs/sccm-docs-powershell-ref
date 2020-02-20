@@ -33,7 +33,7 @@ The AMT Provisioning and Discovery Account that you specify in System Center Con
 
 ### Example 1: Create an AMT Discovery and Provisioning Account
 ```
-PS C:\> New-CMAmtProvisioningAccount -Username "AMT_Manager" -Password "S@mPle1Pswrd" -Description "Out-of-band management security group"
+PS XYZ:\> New-CMAmtProvisioningAccount -Username "AMT_Manager" -Password "S@mPle1Pswrd" -Description "Out-of-band management security group"
 ```
 
 This command creates an AMT Discovery and Provisioning Account named AMT_Manager, and specifies a password and description for the account.

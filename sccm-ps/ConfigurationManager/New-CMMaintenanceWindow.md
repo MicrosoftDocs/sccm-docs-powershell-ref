@@ -1,14 +1,17 @@
 ---
-title: New-CMMaintenanceWindow
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a maintenance window for a collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMMaintenanceWindow
+titleSuffix: Configuration Manager
 ---
 
 # New-CMMaintenanceWindow
@@ -50,8 +53,8 @@ Maintenance windows are periods of time reserved for write operations such as ap
 
 ### Example 1: Create a maintenance window
 ```
-PS C:\> $MWSchedule = New-CMSchedule -DayOfWeek Friday -DurationCount 0 -DurationInterval Hours -RecurCount 1 -Start "10/12/2013 21:00:00"
-PS C:\> New-CMMaintenanceWindow -CollectionID "AAA0005D" -Name "MonthlySchedule" -Schedule $MWSchedule
+PS XYZ:\> $MWSchedule = New-CMSchedule -DayOfWeek Friday -DurationCount 0 -DurationInterval Hours -RecurCount 1 -Start "10/12/2013 21:00:00"
+PS XYZ:\> New-CMMaintenanceWindow -CollectionID "AAA0005D" -Name "MonthlySchedule" -Schedule $MWSchedule
 ```
 
 The first command uses the **New-CMSchedule** cmdlet to create a schedule object, and then stores it in the $MWSchedule variable.
@@ -65,7 +68,7 @@ The maintenance window uses the schedule stored in the $MWSchedule variable.
 ```yaml
 Type: MaintenanceWindowApplyTo
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Any, SoftwareUpdatesOnly, TaskSequencesOnly
 
 Required: False
@@ -81,7 +84,7 @@ Indicates that the maintenance window is used to apply software updates only.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ Indicates that the maintenance window is used to apply task sequences only.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +114,7 @@ Specifies the ID of the collection that the maintenance window applies to.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -124,7 +127,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -154,7 +157,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +172,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +201,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,12 +211,10 @@ Accept wildcard characters: False
 ```
 
 ### -IsUtc
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +246,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -271,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

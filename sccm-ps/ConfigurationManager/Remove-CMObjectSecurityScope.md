@@ -1,14 +1,17 @@
 ---
-title: Remove-CMObjectSecurityScope
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a security scope from a Configuration Manager object.
+external help file: AdminUI.PS.Common.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMObjectSecurityScope
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMObjectSecurityScope
@@ -43,8 +46,8 @@ The **Remove-CMObjectSecurityScope** cmdlet removes a security scope from a Micr
 
 ### Example 1: Remove a security scope from application objects by using the pipeline
 ```
-PS C:\> $Scope = Get-CMSecurityScope -Name "Scope1"
-PS C:\> Get-CMApplication -Name "Application*" | Remove-CMObjectSecurityScope -Scope $Scope -Force
+PS XYZ:\> $Scope = Get-CMSecurityScope -Name "Scope1"
+PS XYZ:\> Get-CMApplication -Name "Application*" | Remove-CMObjectSecurityScope -Scope $Scope -Force
 ```
 
 The first command gets the security scope object named Scope1 and stores the object in the $Scope variable.
@@ -55,7 +58,7 @@ The *Force* parameter indicates that the user is not prompted before the securit
 
 ### Example 2: Remove a security scope from application objects
 ```
-PS C:\> Remove-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Name "Scope1" -Force
+PS XYZ:\> Remove-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Name "Scope1" -Force
 ```
 
 This command gets all application objects that have a name beginning with Application and removes the security scope named Scope1 from each application object.
@@ -84,7 +87,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +102,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ Specifies an array of Configuration Manager objects associated with a security s
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

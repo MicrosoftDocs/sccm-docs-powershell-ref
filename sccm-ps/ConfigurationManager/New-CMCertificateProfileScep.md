@@ -1,14 +1,17 @@
 ---
-title: New-CMCertificateProfileScep
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a SCEP certificate profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMCertificateProfileScep
+titleSuffix: Configuration Manager
 ---
 
 # New-CMCertificateProfileScep
@@ -40,7 +43,7 @@ For information about creating a trusted CA certificate profile, see the New-CMC
 
 ### Example 1: Create a SCEP certificate profile
 ```
-PS C:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate01" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm SHA2 -KeyUsage KeyEncipherment -Name "TestSCEPProf01" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testing -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SanType SubjectAltReqiureEmail -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")
+PS XYZ:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate01" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm SHA2 -KeyUsage KeyEncipherment -Name "TestSCEPProf01" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testing -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SanType SubjectAltReqiureEmail -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")
 ```
 
 This command creates a trusted root CA certificate, and gets all Windows 10 Client supported platforms.
@@ -48,7 +51,7 @@ The command then creates a SEP certificate profile using the newly created trust
 
 ### Example 2: Create a SCEP certificate profile and set the certificate store to User
 ```
-PS C:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate02" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm ShA1 -KeyUsage Digitalsignature -Name "TestSCEPProf02" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testingSecond -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -CertificateStore User -Description "Test description" -EnrollmentRenewThresholdPct 2 -EnrollmentRetryCount 5 -EnrollmentRetryDelayMins 7 -KeySize 2048 -KeyStorageProvider InstallToTPM_FailIfNotPresent -RequireMultiFactor -SubjectType SubjectRequireEmail -SanType SubjectAltReqiureEmail
+PS XYZ:\> New-CMCertificateProfileScep -CertificateTemplateName "TestTemplate02" -CertificateValidityDays 10 -Eku @{ "name1" ="1.2.3.4"; "name2" = "1.2.3.4.5" } -HashAlgorithm ShA1 -KeyUsage Digitalsignature -Name "TestSCEPProf02" -RootCertificate (New-CMCertificateProfileTrustedRootCA -Name testingSecond -Path "\\Server\Sharefolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform  -Fast -Name "All Windows 10*Client")) -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -CertificateStore User -Description "Test description" -EnrollmentRenewThresholdPct 2 -EnrollmentRetryCount 5 -EnrollmentRetryDelayMins 7 -KeySize 2048 -KeyStorageProvider InstallToTPM_FailIfNotPresent -RequireMultiFactor -SubjectType SubjectRequireEmail -SanType SubjectAltReqiureEmail
 ```
 
 This command creates a trusted root CA certificate, and gets all Windows 10 Client supported platforms.
@@ -62,7 +65,7 @@ Indicates whether to allow certificate enrollment on any device.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +84,7 @@ Valid values are:
 ```yaml
 Type: CertificateStoreType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Machine, User
 
 Required: False
@@ -97,7 +100,7 @@ Specifies the name of a certificate template.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -112,7 +115,7 @@ Specifies, in number of days, the certificate validity period.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +145,7 @@ Specifies a description for the SCEP certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +160,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,7 +191,7 @@ Specifies the percentage of the certificate lifetime that remains before the dev
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +206,7 @@ Specifies the number of times that the device automatically retries the certific
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +221,7 @@ Specifies the interval, in minutes, between each enrollment attempt when you use
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +236,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +276,7 @@ Valid values are:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: 1024, 2048, 4096
 
 Required: False
@@ -296,7 +299,7 @@ Valid values are:
 ```yaml
 Type: KeyStorageProviderSettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, InstallToTPM_FailIfNotPresent, InstallToTPM_IfPresent, InstallToSoftwareKeyStorageProvider, InstallToNGC_FailIfNotPresent
 
 Required: False
@@ -316,7 +319,7 @@ Valid values are:
 ```yaml
 Type: X509KeyUsageFlags
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: KeyEncipherment, DigitalSignature
 
 Required: True
@@ -332,7 +335,7 @@ Specifies a name for the SCEP certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -348,7 +351,7 @@ This parameter can be used when the InstallToNGC_FailIfNotPresent value is set f
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -364,7 +367,7 @@ To get a trusted root CA certificate, use the Get-CMCertificateProfileTrustedRoo
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -475,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

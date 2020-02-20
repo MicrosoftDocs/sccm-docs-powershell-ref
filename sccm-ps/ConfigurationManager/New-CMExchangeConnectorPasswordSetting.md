@@ -1,14 +1,17 @@
 ---
-title: New-CMExchangeConnectorPasswordSetting
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds new password settings to a Exchange Server connector in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMExchangeConnectorPasswordSetting
+titleSuffix: Configuration Manager
 ---
 
 # New-CMExchangeConnectorPasswordSetting
@@ -34,7 +37,7 @@ An Exchange Server connector in Configuration Manager manages mobile devices tha
 
 ### Example 1: Specify password settings for an Exchange Server connector
 ```
-PS C:\> New-CMExchangeServerConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity Strong -MinimumComplexChar 3 -AllowSimplePassword $True -PasswordRecovery $True
+PS XYZ:\> New-CMExchangeServerConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity Strong -MinimumComplexChar 3 -AllowSimplePassword $True -PasswordRecovery $True
 ```
 
 This command sets these password-related options for an Exchange Server connector: 
@@ -53,12 +56,10 @@ This command sets these password-related options for an Exchange Server connecto
 ## PARAMETERS
 
 ### -AllowSimplePassword
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +74,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +89,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,8 +99,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumIdleTimeMins
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -113,12 +112,10 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumComplexChar
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,12 +125,10 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumPasswordLength
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,12 +138,10 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordComplexity
- 
-
 ```yaml
 Type: PasswordComplexityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Pin, Strong
 
 Required: False
@@ -159,12 +152,10 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordEnabled
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,12 +165,10 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordExpiration
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,12 +178,10 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordHistory
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,12 +191,10 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordRecovery
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,12 +204,10 @@ Accept wildcard characters: False
 ```
 
 ### -WipeAfterFailedAttempt
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Start-CMBaselineDeployment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Starts deployment of a Configuration Manager baseline configuration to a collection of computers.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Start-CMBaselineDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Start-CMBaselineDeployment
@@ -54,7 +57,7 @@ System Center Configuration Manager assigns baselines to computer in collections
 
 ### Example 1: Start baseline deployment
 ```
-PS C:\> Start-CMBaselineDeployment -CollectionName "All Users" -Name "Baseline22" -EnableEnforcement $True -GenerateAlert $True -MonitoredByScom $True -OverrideServiceWindow $True -ParameterValue 30
+PS XYZ:\> Start-CMBaselineDeployment -CollectionName "All Users" -Name "Baseline22" -EnableEnforcement $True -GenerateAlert $True -MonitoredByScom $True -OverrideServiceWindow $True -ParameterValue 30
 ```
 
 This command starts a baseline deployment named Baseline22 for the collection All Users.
@@ -70,7 +73,7 @@ The deployment applies to this collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -100,7 +103,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +119,7 @@ During enforcement, a client reports compliance information about a deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +134,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +149,7 @@ Indicates whether Configuration Manager generates alerts during the deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +179,7 @@ Specifies a baseline deployment object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -191,7 +194,7 @@ Specifies whether to apply System Center 2016 - Operations Manager monitoring cr
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +225,7 @@ Service windows are periods of time allocated for maintenance.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -238,7 +241,7 @@ This is the parameter value.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +259,7 @@ This is the date for the deployment if postponed.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +276,7 @@ This is the time for the deployment if postponed.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,7 +292,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,7 +318,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Remove-CMDeploymentType
-titleSuffix: Configuration Manager
+author: mumian
 description: Removes a deployment type for a Configuration Manager deployment application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMDeploymentType
@@ -20,22 +23,19 @@ Removes a deployment type for a Configuration Manager deployment application.
 ## SYNTAX
 
 ### SearchByInputObjectMandatory (Default)
-
-```powershell
+```
 Remove-CMDeploymentType [-Force] [-ApplicationName <String>] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Remove-CMDeploymentType -DeploymentTypeId <Int32> [-Force] -ApplicationName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
-
-```powershell
+```
 Remove-CMDeploymentType [-DeploymentTypeName] <String> [-Force] -ApplicationName <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -54,7 +54,7 @@ If you have already deployed the application, you cannot remove the last deploym
 ### Example 1: Remove a deployment type
 
 ```powershell
-PS C:\> Remove-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
+PS XYZ:\> Remove-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
 ```
 
 This command removes the deployment type named InterDept - Windows app package (.appx file) that is contained in the application named CenterApp.
@@ -68,7 +68,7 @@ Specifies the name of an application that is associated to the deployment type.
 ```yaml
 Type: String
 Parameter Sets: SearchByInputObjectMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory, SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,7 +144,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,8 +220,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

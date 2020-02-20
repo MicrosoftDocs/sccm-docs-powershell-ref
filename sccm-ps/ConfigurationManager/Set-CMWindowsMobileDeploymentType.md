@@ -60,7 +60,7 @@ The **Set-CMWindowsMobileDeploymentType** cmdlet changes the settings for a Wind
 
 ### Example 1: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" | Set-CMWindowsMobileDeploymentType -EnableUninstall $False -NewName "DT4_New" -RemoveLanguage "en-US","zh-CN" -Comment "Deployment Type updated" -PassThru
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" | Set-CMWindowsMobileDeploymentType -EnableUninstall $False -NewName "DT4_New" -RemoveLanguage "en-US","zh-CN" -Comment "Deployment Type updated" -PassThru
 ```
 
 This command gets the Windows Mobile cabinet deployment type object named DT4 for the application named Application1 and uses the pipeline operator to pass the object to **Set-CMWindowsMobileDeploymentType**.
@@ -69,7 +69,7 @@ Setting the *EnableUninstall* parameter to $False indicates that the user is not
 
 ### Example 2: Rename a deployment type
 ```
-PS C:\> Set-CMWindowsMobileDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" -EnableUninstall $False -NewName DT4_New -RemoveLanguage "en-US","zh-CN" -Comment "Deployment Type updated" -PassThru
+PS XYZ:\> Set-CMWindowsMobileDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" -EnableUninstall $False -NewName DT4_New -RemoveLanguage "en-US","zh-CN" -Comment "Deployment Type updated" -PassThru
 ```
 
 This command changes the name of the Windows Mobile cabinet deployment type named DT4 for the application named Application1 to DT4_New, and removes English and Chinese from the array of supported languages.

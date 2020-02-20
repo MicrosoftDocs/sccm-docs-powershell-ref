@@ -1,14 +1,17 @@
 ---
-title: Set-CMStatusSummarizer
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies settings of a Configuration Manager status summarizer.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMStatusSummarizer
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMStatusSummarizer
@@ -55,7 +58,7 @@ The Microsoft System Center Configuration Manager status summarizers apply to th
 
 ### Example 1: Modify a status summarizer
 ```
-PS C:\> Set-CMStatusSummarizer -ApplicationDeploymentSummarizer -SiteCode "ContosoSite"
+PS XYZ:\> Set-CMStatusSummarizer -ApplicationDeploymentSummarizer -SiteCode "ContosoSite"
 ```
 
 This command configures the status summarizer for the Contoso site to return application deployment statistics.
@@ -68,7 +71,7 @@ Indicates that the summarizer is an application deployment status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetAppDeploymentSummarizer
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,7 +101,7 @@ Indicates that the summarizer is a component status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetComponentStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,7 +132,7 @@ This parameter applies to site system status summarizers.
 ```yaml
 Type: Int32
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +160,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +176,7 @@ This parameter applies to component status summarizers and site system status su
 ```yaml
 Type: Boolean
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,7 +191,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -230,7 +233,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -247,7 +250,7 @@ If you specify a value of $True for this parameter, specify a priority by using 
 ```yaml
 Type: Boolean
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +267,7 @@ Specify this parameter if you specify $True for the *ReplicateToParentSite* para
 ```yaml
 Type: ReplicationPriorityType
 Parameter Sets: SetComponentStatusSummarizer, SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 Accepted values: Low, Normal, High
 
 Required: False
@@ -281,7 +284,7 @@ To obtain a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +299,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +314,7 @@ Indicates that the summarizer is a site system status summarizer.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -341,7 +344,7 @@ This parameter applies to site system status summarizers.
 ```yaml
 Type: Int32
 Parameter Sets: SetSiteSystemStatusSummarizer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -367,7 +370,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -34,7 +34,7 @@ System Center Configuration Manager cannot validate that these settings with you
 
 ### Example 1: Create a profile for AMT-based computers on a wired network
 ```
-PS C:\> New-CMWiredProfileObject -ClientAuthenticationMethod EapTtlsMschapv2 -ClientCertificateTemplate "Contoso Wired User" -ClientCertificationAuthorityName "Contoso CA 1" -ClientIssuingCertificationAuthority "ContosoCA.Contoso.com" -TrustedRootCertificate "Contoso Root"
+PS XYZ:\> New-CMWiredProfileObject -ClientAuthenticationMethod EapTtlsMschapv2 -ClientCertificateTemplate "Contoso Wired User" -ClientCertificationAuthorityName "Contoso CA 1" -ClientIssuingCertificationAuthority "ContosoCA.Contoso.com" -TrustedRootCertificate "Contoso Root"
 ```
 
 This command creates a profile for Intel Active Management Technology (AMT)-based computers on a wired network.

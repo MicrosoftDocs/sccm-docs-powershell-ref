@@ -31,14 +31,14 @@ A system health validator point is a site system role that evaluates system heal
 
 ### Example 1: Retrieve a system health validator point by site system server name
 ```
-PS C:\> Get-CMSystemHealthValidatorPointComponent -SiteSystemServerName "Shvp-01.TSQA.Corp.Contoso.com"
+PS XYZ:\> Get-CMSystemHealthValidatorPointComponent -SiteSystemServerName "Shvp-01.TSQA.Corp.Contoso.com"
 ```
 
 This command retrieves a system health validator point component by using a site system server name.
 
 ### Example 2: Retrieve a system health validator point by site code
 ```
-PS C:\> Get-CMSystemHealthValidatorPointComponent -SiteCode "CM4"
+PS XYZ:\> Get-CMSystemHealthValidatorPointComponent -SiteCode "CM4"
 ```
 
 This command retrieves a system health validator point component by using a site code.

@@ -1,14 +1,17 @@
 ---
-title: Remove-CMCollection
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a Configuration Manager collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMCollection
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMCollection
@@ -45,7 +48,7 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ### Example 1: Remove a specified collection
 ```
-PS C:\> Remove-CMCollection -Name "testUser" -Force
+PS XYZ:\> Remove-CMCollection -Name "testUser" -Force
 ```
 
 This command removes the collection named testUser.
@@ -53,7 +56,7 @@ Specifying the *Force* parameter means that the user is not prompted for confirm
 
 ### Example 2: Get a collection object and remove it
 ```
-PS C:\> Get-CMCollection -Name "testUser" | Remove-CMCollection -Force
+PS XYZ:\> Get-CMCollection -Name "testUser" | Remove-CMCollection -Force
 ```
 
 This command gets the collection object named testUser and uses the pipeline operator to pass the object to **Remove-CMCollection**, which removes the collection.
@@ -82,7 +85,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +100,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +146,7 @@ To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +161,7 @@ Specifies the name of a collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -184,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

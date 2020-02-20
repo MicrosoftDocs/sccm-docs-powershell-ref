@@ -1,14 +1,17 @@
 ---
-title: Add-CMDeviceCollectionIncludeMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds an Include Collections membership rule to a device collection.
+external help file: AdminUI.PS.Collections-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDeviceCollectionIncludeMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMDeviceCollectionIncludeMembershipRule
@@ -80,14 +83,14 @@ An Include Collections membership rule includes members of other device collecti
 
 ### Example 1: Add an Include Collections membership rule
 ```
-PS C:\>Add-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems"
+PS XYZ:\>Add-CMDeviceCollectionIncludeMembershipRule -CollectionName "Device" -IncludeCollectionName "All Systems"
 ```
 
 This command adds the device collection named All Systems as an Include Collections membership rule associated with the device collection named Device.
 
 ### Example 2: Add an Include Membership rule to a collection by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device" | Add-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems"
+PS XYZ:\> Get-CMCollection -Name "Device" | Add-CMDeviceCollectionIncludeMembershipRule -IncludeCollectionName "All Systems"
 ```
 
 This command gets the collection object named Device and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionIncludeMembershipRule**.
@@ -147,7 +150,7 @@ To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -162,7 +165,7 @@ Specifies the ID of a device collection to include in the membership rule.
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -177,7 +180,7 @@ Specifies the name of a device collection to include in the membership rule.
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -209,7 +212,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Get-CMActiveDirectoryForest
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets one or more Active Directory forest objects.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMActiveDirectoryForest
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMActiveDirectoryForest
@@ -38,21 +41,21 @@ You can get an Active Directory forest object by ID or fully qualified domain na
 
 ### Example 1: Get all Active Directory forest objects
 ```
-PS C:\> Get-CMActiveDirectoryForest
+PS XYZ:\> Get-CMActiveDirectoryForest
 ```
 
 This command gets all Active Directory forest objects.
 
 ### Example 2: Get an Active Directory Forest object by ID
 ```
-PS C:\> Get-CMActiveDirectoryForest -Id "16777217"
+PS XYZ:\> Get-CMActiveDirectoryForest -Id "16777217"
 ```
 
 This command gets an Active Directory forest object that has the ID 16777217.
 
 ### Example 3: Get Active Directory Forest by domain name
 ```
-PS C:\> Get-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com"
+PS XYZ:\> Get-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com"
 ```
 
 This command gets an Active Directory forest object that has the FQDN tsqa.contoso.com.
@@ -65,7 +68,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +83,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +98,7 @@ Specifies the FQDN of a Configuration Manager object.
 ```yaml
 Type: String
 Parameter Sets: SearchByFQDN
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

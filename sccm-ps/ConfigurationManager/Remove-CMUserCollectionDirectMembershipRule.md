@@ -1,14 +1,17 @@
 ---
-title: Remove-CMUserCollectionDirectMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a direct membership rule from one or more user collections in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMUserCollectionDirectMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMUserCollectionDirectMembershipRule
@@ -20,55 +23,55 @@ Removes a direct membership rule from one or more user collections in the Config
 
 ### ByNameAndName (Default)
 ```
-Remove-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceName <String> [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceName <String[]> [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameAndValue
 ```
-Remove-CMUserCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject> [-Force]
+Remove-CMUserCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject[]> [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameAndId
 ```
-Remove-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceId <String> [-Force] [-WhatIf]
+Remove-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceId <String[]> [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdAndValue
 ```
-Remove-CMUserCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject> [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-CMUserCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject[]> [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdAndId
 ```
-Remove-CMUserCollectionDirectMembershipRule -CollectionId <String> -ResourceId <String> [-Force] [-WhatIf]
+Remove-CMUserCollectionDirectMembershipRule -CollectionId <String> -ResourceId <String[]> [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdAndName
 ```
-Remove-CMUserCollectionDirectMembershipRule -CollectionId <String> -ResourceName <String> [-Force] [-WhatIf]
+Remove-CMUserCollectionDirectMembershipRule -CollectionId <String> -ResourceName <String[]> [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueAndValue
 ```
-Remove-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject> [-Force]
+Remove-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject[]> [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueAndId
 ```
-Remove-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <String> [-Force]
+Remove-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <String[]> [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueAndName
 ```
-Remove-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceName <String> [-Force]
+Remove-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceName <String[]> [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -82,7 +85,7 @@ For more information about collection rules in Microsoft System Center Configura
 
 ### Example 1: Remove all direct membership rules from a user collection
 ```
-PS C:\> Remove-CMUserCollectionDirectMembershipRule -CollectionID "CM0001A" -ResourceId "12733"
+PS XYZ:\> Remove-CMUserCollectionDirectMembershipRule -CollectionID "CM0001A" -ResourceId "12733"
 ```
 
 This command removes all the direct membership rules of the user collection that has the ID CM0001A.
@@ -134,7 +137,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,9 +161,9 @@ Accept wildcard characters: False
 
 ### -Resource
 ```yaml
-Type: IResultObject
+Type: IResultObject[]
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
-Aliases: 
+Aliases: Resources
 
 Required: True
 Position: Named
@@ -171,9 +174,9 @@ Accept wildcard characters: False
 
 ### -ResourceId
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
-Aliases: 
+Aliases: ResourceIds
 
 Required: True
 Position: Named
@@ -184,9 +187,9 @@ Accept wildcard characters: False
 
 ### -ResourceName
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
-Aliases: 
+Aliases: ResourceNames
 
 Required: True
 Position: Named
@@ -212,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

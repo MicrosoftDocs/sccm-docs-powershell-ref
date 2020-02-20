@@ -1,14 +1,17 @@
 ---
-title: Get-CMCertificateProfileTrustedRootCA
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a trusted CA certificate profile.
+external help file: AdminUI.PS.Dcm-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCertificateProfileTrustedRootCA
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMCertificateProfileTrustedRootCA
@@ -40,14 +43,14 @@ The **Get-CMCertificateProfileTrustedRootCA** function gets a trusted CA certifi
 
 ### Example 1: Get a trusted CA certificate profile by ID
 ```
-PS C:\> Get-CMCertificateProfileTrustedRootCA -Id 16777479
+PS XYZ:\> Get-CMCertificateProfileTrustedRootCA -Id 16777479
 ```
 
 This command gets the trusted CA certificate profile with the ID 16777479.
 
 ### Example 2: Get a trusted CA certificate profile by name
 ```
-PS C:\> Get-CMCertificateProfileTrustedRootCA -Name "Test01" -Fast
+PS XYZ:\> Get-CMCertificateProfileTrustedRootCA -Name "Test01" -Fast
 ```
 
 This command gets the trusted CA certificate profile named Test01, but does not return lazy properties.
@@ -63,7 +66,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ Specifies the name of a trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -103,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

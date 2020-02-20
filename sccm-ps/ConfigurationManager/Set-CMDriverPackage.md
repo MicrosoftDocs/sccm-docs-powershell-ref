@@ -1,14 +1,17 @@
 ---
-title: Set-CMDriverPackage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a driver package.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDriverPackage
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDriverPackage
@@ -61,14 +64,14 @@ The **Set-CMDriverPackage** cmdlet modifies a driver package in Microsoft System
 
 ### Example 1: Add a security scope action to a driver package
 ```
-PS C:\> Set-CMDriverPackage -SecurityScopeAction AddMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
+PS XYZ:\> Set-CMDriverPackage -SecurityScopeAction AddMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
 ```
 
 This command adds a security scope action to the driver package that is named Windows 7 Standard Hardware Package.
 
 ### Example 2: Remove a security scope action from a driver package
 ```
-PS C:\> Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
+PS XYZ:\> Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope 001" -Name "Windows 7 Standard Hardware Package"
 ```
 
 This command removes a security scope action from the driver package that is named Windows 7 Standard Hardware Package.
@@ -107,7 +110,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +125,7 @@ Specifies a description of a driver package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +140,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +192,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +205,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +220,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +251,7 @@ To obtain a driver package object, use the [Get-CMDriverPackage](Get-CMDriverPac
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -261,7 +264,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -274,7 +277,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,7 +290,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -302,7 +305,7 @@ Specifies a name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -317,7 +320,7 @@ Specifies a new name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -333,7 +336,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -346,7 +349,7 @@ Accept wildcard characters: False
 ```yaml
 Type: PrestageBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ManualCopy, DownloadDelta, OnDemand
 
 Required: False
@@ -363,7 +366,7 @@ Valid values are: Increase and Decrease.
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: High, Medium, Low
 
 Required: False
@@ -392,7 +395,7 @@ Specifies the version of a security scope.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -418,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

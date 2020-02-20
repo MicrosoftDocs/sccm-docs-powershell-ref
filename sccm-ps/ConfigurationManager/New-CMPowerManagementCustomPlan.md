@@ -1,14 +1,17 @@
 ---
-title: New-CMPowerManagementCustomPlan
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a custom power management plan.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMPowerManagementCustomPlan
+titleSuffix: Configuration Manager
 ---
 
 # New-CMPowerManagementCustomPlan
@@ -61,7 +64,7 @@ The **New-CMPowerManagementCustomPlan** cmdlet creates a custom power management
 
 ### Example 1: Create parameters for a custom power management plan and store them in a variable
 ```
-PS C:\>$PlanParams = @{
+PS XYZ:\>$PlanParams = @{
     Name = "test"
     Description = "comments"
     DisplayOffMinAC = 20
@@ -102,8 +105,8 @@ This variable can now be used to create a custom plan.
 
 ### Example 2: Create a custom peak power management plan to configure a device collection
 ```
-PS C:\> $PeakPlan = New-CMPowerManagementCustomPlan -Peak @planParams
-PS C:\> Set-CMCollectionPowerManagement -CollectionName "deviceCol1" -PeakPlan $PeakPlan
+PS XYZ:\> $PeakPlan = New-CMPowerManagementCustomPlan -Peak @planParams
+PS XYZ:\> Set-CMCollectionPowerManagement -CollectionName "deviceCol1" -PeakPlan $PeakPlan
 ```
 
 The first command uses the parameters set in Example 1 to create a custom peak power management plan object, which it then stores in the $PeakPlan variable.
@@ -112,8 +115,8 @@ The second command uses the custom plan stored in $PeakPlan to configure the pow
 
 ### Example 3: Create a custom non-peak power management plan to configure a device collection
 ```
-PS C:\> $NonPeakPlan = New-CMPowerManagementCustomPlan -NonPeak @planParams
-PS C:\> Set-CMCollectionPowerManagement -CollectionName "deviceCol2" -NonPeakPlan $NonPeakPlan
+PS XYZ:\> $NonPeakPlan = New-CMPowerManagementCustomPlan -NonPeak @planParams
+PS XYZ:\> Set-CMCollectionPowerManagement -CollectionName "deviceCol2" -NonPeakPlan $NonPeakPlan
 ```
 
 The first command uses the parameters set in Example 1 to create a custom non-peak power management plan object, which it then stores in the $NonPeakPlan variable.
@@ -129,7 +132,7 @@ A hibernation file can be used to restore the computer's state in the event of p
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +148,7 @@ A hibernation file can be used to restore the computer's state in the event of p
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +164,7 @@ This still consumes some power, but enables the computer to wake faster.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +180,7 @@ This still consumes some power, but enables the computer to wake faster.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +201,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -220,7 +223,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -236,7 +239,7 @@ Specifies a description for the power management plan.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +254,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,7 +269,7 @@ Specifies the length of time, in minutes, that the computer must be inactive bef
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +284,7 @@ Specifies the length of time, in minutes, that the computer must be inactive bef
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +299,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +314,7 @@ Specifies the length of time, in minutes, that the computer's hard disk must be 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +329,7 @@ Specifies the length of time, in minutes, that the computer's hard disk must be 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -341,7 +344,7 @@ Specifies the length of time, in minutes, that the computer must be inactive bef
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -356,7 +359,7 @@ Specifies the length of time, in minutes, that the computer must be inactive bef
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -377,7 +380,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -399,7 +402,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -421,7 +424,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -443,7 +446,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -459,7 +462,7 @@ Specifies a name for the power management plan.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -474,7 +477,7 @@ Indicates that the "Allow standby state when sleeping action" property is not in
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -489,7 +492,7 @@ Indicates that the "Critical battery action" property is not included in this po
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -504,7 +507,7 @@ Indicates that the "Turn off display after (minutes)" property is not included i
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -519,7 +522,7 @@ Indicates that the "Turn off hard disk after (minutes)" property is not included
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -534,7 +537,7 @@ Indicates that the "Hibernate after (minutes)" property is not included in this 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -549,7 +552,7 @@ Indicates that the "Allow hybrid sleep" property is not included in this power m
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -564,7 +567,7 @@ Indicates that the "Lid close action" property is not included in this power man
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -579,7 +582,7 @@ Indicates that the "Low battery action" property is not included in this power m
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -594,7 +597,7 @@ Indicates that the "Power button action" property is not included in this power 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -609,7 +612,7 @@ Indicates that the "Require a password on wakeup" property is not included in th
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -624,7 +627,7 @@ Indicates that the "Sleep after (minutes)" property is not included in this powe
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -639,7 +642,7 @@ Indicates that the "Sleep button action" property is not included in this power 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -654,7 +657,7 @@ Indicates that the "Required idleness to sleep (%)" property is not included in 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -669,7 +672,7 @@ Indicates that the "Start menu power button" property is not included in this po
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -684,7 +687,7 @@ Indicates that the "Enable Windows wake up timer for desktop computers" property
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -699,7 +702,7 @@ Indicates that this is a non-peak plan.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NonPeak
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -714,7 +717,7 @@ Indicates that this is a peak plan.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Peak
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -735,7 +738,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -757,7 +760,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -773,7 +776,7 @@ Indicates whether a password is required to unlock the computer when it enters w
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -788,7 +791,7 @@ Indicates whether a password is required to unlock the computer when it enters w
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -809,7 +812,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -831,7 +834,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sleep, Hibernate, Shutdown
 
 Required: False
@@ -847,7 +850,7 @@ Specifies the percentage of idle time on the computer processor time required fo
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -862,7 +865,7 @@ Specifies the percentage of idle time on the computer processor time required fo
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -877,7 +880,7 @@ Specifies the length of time, in minutes, that the computer must be in active be
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -892,7 +895,7 @@ Specifies the length of time, in minutes, that the computer must be in active be
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -913,7 +916,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Sleep, Hibernate, Shutdown
 
 Required: False
@@ -935,7 +938,7 @@ Valid values are:
 ```yaml
 Type: PowerSettingAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Sleep, Hibernate, Shutdown
 
 Required: False
@@ -953,7 +956,7 @@ When a desktop computer is woken by using the Windows wake up timer, it will rem
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -970,7 +973,7 @@ When a desktop computer is woken by using the Windows wake up timer, it will rem
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -980,7 +983,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

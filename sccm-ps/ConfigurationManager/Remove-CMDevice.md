@@ -1,14 +1,17 @@
 ---
-title: Remove-CMDevice
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a client device from Configuration Manager.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDevice
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMDevice
@@ -44,14 +47,14 @@ Do not remove a client if you want to uninstall the client or remove it from a c
 
 ### Example 1: Remove a device by name
 ```
-PS C:\> Remove-CMDevice -DeviceName "WIN10-86-33"
+PS XYZ:\> Remove-CMDevice -DeviceName "WIN10-86-33"
 ```
 
 This command removes the device named WIN10-86-33.
 
 ### Example 2: Get a device and remove it
 ```
-PS C:\> Get-CMDevice -Name "TestVLAN-VNEXT" | Remove-CMDevice
+PS XYZ:\> Get-CMDevice -Name "TestVLAN-VNEXT" | Remove-CMDevice
 ```
 
 This command gets the device object named TestVLAN-VNEXT and uses the pipeline operator to pass the object to **Remove-CMDevice**, which removes the device object.
@@ -79,7 +82,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +97,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +112,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +128,7 @@ To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -181,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

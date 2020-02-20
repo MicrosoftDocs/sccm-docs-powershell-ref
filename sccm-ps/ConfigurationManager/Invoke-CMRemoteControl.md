@@ -1,14 +1,17 @@
 ---
-title: Invoke-CMRemoteControl
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Enables remote control on computers.
+external help file: AdminUI.PS.Oob.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMRemoteControl
+titleSuffix: Configuration Manager
 ---
 
 # Invoke-CMRemoteControl
@@ -54,7 +57,7 @@ System Center Configuration Manager supports the remote control of workgroup com
 
 ### Example 1: Enable remote control on a computer
 ```
-PS C:\>Invoke-CMRemoteControl -DeviceName "CMCEN-DIST02"
+PS XYZ:\>Invoke-CMRemoteControl -DeviceName "CMCEN-DIST02"
 ```
 
 This command enables remote control on the computer named CMCEN-DIST02.
@@ -82,7 +85,7 @@ Specifies an array of device IDs.
 ```yaml
 Type: String
 Parameter Sets: InvokeDeviceByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,7 +100,7 @@ Specifies an array of device names.
 ```yaml
 Type: String
 Parameter Sets: InvokeDeviceByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -112,7 +115,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +130,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +162,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +177,7 @@ Specifies an array of site codes of Configuration Manager sites that host the si
 ```yaml
 Type: String
 Parameter Sets: InvokeSiteStatusByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,7 +207,7 @@ Specifies an array of fully qualified domain names (FQDN) of the servers that ho
 ```yaml
 Type: String
 Parameter Sets: InvokeSiteStatusByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -230,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

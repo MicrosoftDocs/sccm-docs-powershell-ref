@@ -1,14 +1,17 @@
 ---
-title: New-CMStatusFilterRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a rule in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMStatusFilterRule
+titleSuffix: Configuration Manager
 ---
 
 # New-CMStatusFilterRule
@@ -36,7 +39,7 @@ The **New-CMStatusFilterRule** cmdlet creates a rule that triggers one or more a
 
 ### Example 1: Create a status filter rule
 ```
-PS C:\> New-CMStatusFilterRule -SiteCode "Contoso2" -Name "11211" -TargetSiteCode "Contoso2" -Source "SMS Provider" -System "Contoso-test" -Component "1111" -MessageType Milestone -SeverityType Informational -MessageId "1234" -PropertyName "403" -PropertyValue "123" -WriteToDatabase $True -AllowDeleteMessagesTimeDays 20 -ReportToEventLog $False -ReplicateToParentSite $False -RunProgram $False -ForwardToStatusSummarizers $True -ProcessLowerPriorityRules $True
+PS XYZ:\> New-CMStatusFilterRule -SiteCode "Contoso2" -Name "11211" -TargetSiteCode "Contoso2" -Source "SMS Provider" -System "Contoso-test" -Component "1111" -MessageType Milestone -SeverityType Informational -MessageId "1234" -PropertyName "403" -PropertyValue "123" -WriteToDatabase $True -AllowDeleteMessagesTimeDays 20 -ReportToEventLog $False -ReplicateToParentSite $False -RunProgram $False -ForwardToStatusSummarizers $True -ProcessLowerPriorityRules $True
 ```
 
 This command creates a status filter rule.
@@ -62,7 +65,7 @@ Specifies the Configuration Manager component that corresponds to the status mes
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +95,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +110,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +125,7 @@ Indicates whether to forward to the status summarizer.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +140,7 @@ Specifies a message ID in Configuration Manager.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +161,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MessageType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Milestone, Detail, Audit
 
 Required: False
@@ -174,7 +177,7 @@ Specifies a name for the status filter rule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +192,7 @@ Indicates whether to process a lower priority rule, which prevents further rule 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,7 +207,7 @@ Specifies a path to a program that runs when a status message matches the status
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +222,7 @@ Specifies a property ID in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +237,7 @@ Specifies a value for the corresponding *PropertyId* parameter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +252,7 @@ Indicates whether to pass a message to the parent site.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -265,7 +268,7 @@ The acceptable values for this parameter are: High, Low, and Medium.
 ```yaml
 Type: ReplicationPriority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Low, Medium, High
 
 Required: False
@@ -281,7 +284,7 @@ Indicates whether to report an event in the Windows event log.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +299,7 @@ Indicates whether to run a program when a status message matches a filter rule.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -317,7 +320,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SeverityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Informational, Warning, Error
 
 Required: False
@@ -333,7 +336,7 @@ Specifies a System Center Configuration Manager site code that defines the statu
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -348,7 +351,7 @@ Specifies a name of the site system server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -363,7 +366,7 @@ Specifies the status message source to match.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -378,7 +381,7 @@ Specifies a site code for the status filter rule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -410,7 +413,7 @@ Must be set to enable the *AllowUserDeleteMessagesAfterThresholdDays* parameter.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -420,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

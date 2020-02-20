@@ -1,14 +1,17 @@
 ---
-title: Set-CMIosAppStoreDeploymentType
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets an iOS App Store deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMIosAppStoreDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMIosAppStoreDeploymentType
@@ -57,7 +60,7 @@ The **Set-CMIosAppStoreDeploymentType** cmdlet changes the settings for an iOS A
 
 ### Example 1: Remove a language from a deployment type
 ```
-PS C:\> Set-CMIOSAppStoreDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp02" -NewName "DTIOSapp02_updated" -Url "https://itunes.apple.com/us/app/warhammer-40-000-deathwatch/id791134629?mt=8" -PassThru -Comment "test-set-CMIOSAppStoreDeploymentType" -RemoveLanguage "en-US"
+PS XYZ:\> Set-CMIOSAppStoreDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp02" -NewName "DTIOSapp02_updated" -Url "https://itunes.apple.com/us/app/warhammer-40-000-deathwatch/id791134629?mt=8" -PassThru -Comment "test-set-CMIOSAppStoreDeploymentType" -RemoveLanguage "en-US"
 ```
 
 This command removes English from the deployment type named DTIOSapp02 for the application named testIOSapp.
@@ -66,7 +69,7 @@ The *PassThru* parameter indicates that an object is returned from this command.
 
 ### Example 2: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp01" | Set-CMIOSAppStoreDeploymentType -NewName "DTIOSapp01_Updated"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp01" | Set-CMIOSAppStoreDeploymentType -NewName "DTIOSapp01_Updated"
 ```
 
 This command gets the deployment type object named DTIOSapp01 for the application named testIOSapp and uses the pipeline operator to pass the object to **Set-CMIOSAppStoreDeploymentType**.
@@ -98,7 +101,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,7 +147,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +192,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +207,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +237,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +284,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Set-CMStatusReportingComponent
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets an object representing a status reporting component.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMStatusReportingComponent
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMStatusReportingComponent
@@ -61,7 +64,7 @@ You can configure the reporting component to check log files and monitor the sev
 
 ### Example 1: Set status reporting component
 ```
-PS C:\> Set-CMStatusReportingComponent -SiteCode "CM1" -ClientReportType AllMilestones -ServerReportType AllMilestones
+PS XYZ:\> Set-CMStatusReportingComponent -SiteCode "CM1" -ClientReportType AllMilestones -ServerReportType AllMilestones
 ```
 
 This command sets a client report type and a server report type.
@@ -74,7 +77,7 @@ Indicates whether a client log is checked.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +92,7 @@ Indicates whether a client log failure is checked.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +113,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: StatusReportOrLogType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMilestones, ErrorMilestones
 
 Required: False
@@ -126,7 +129,7 @@ Indicates whether a client report is checked.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +144,7 @@ Indicates whether a client failure is checked.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +165,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: StatusReportOrLogType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMilestones, ErrorMilestones
 
 Required: False
@@ -193,7 +196,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +211,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -223,7 +226,7 @@ Specifies an object output from another cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -253,7 +256,7 @@ Indicates whether a server log is checked.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -268,7 +271,7 @@ Indicates whether a server log failure is checked.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,7 +292,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: StatusReportOrLogType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMilestones, ErrorMilestones
 
 Required: False
@@ -305,7 +308,7 @@ Indicates whether a server report is checked.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -320,7 +323,7 @@ Indicates whether a server report failure is checked.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -341,7 +344,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: StatusReportOrLogType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AllMilestonesAndAllDetails, AllMilestones, ErrorAndWarningMilestones, ErrorMilestones
 
 Required: False
@@ -357,7 +360,7 @@ Specifies a site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -383,7 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

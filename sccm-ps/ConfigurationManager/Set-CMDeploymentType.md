@@ -1,14 +1,17 @@
 ---
-title: Set-CMDeploymentType
-titleSuffix: Configuration Manager
+author: mumian
 description: Changes a deployment type for a Configuration Manager deployment application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDeploymentType
@@ -20,15 +23,13 @@ Changes a deployment type for a Configuration Manager deployment application.
 ## SYNTAX
 
 ### SetByValuePriority (Default)
-
-```powershell
+```
 Set-CMDeploymentType -InputObject <IResultObject> [-Priority <PriorityChangeType>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNamePropertyMsiConfigureRule
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
  [-EnableContentLocationFallback <Boolean>] -ApplicationName <String> [-ContentLocation <String>]
  -DeploymentTypeName <String> [-DetectDeploymentTypeByCustomScript] [-EstimatedInstallationTimeMins <Int32>]
@@ -45,8 +46,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boole
 ```
 
 ### SetByNamePropertyOtherInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> [-ContentLocation <String>]
  -DeploymentTypeName <String> [-Language <String[]>] [-NewDeploymentTypeName <String>]
  [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru]
@@ -54,8 +54,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> 
 ```
 
 ### SetByNamePropertyWindows8Installer
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
  [-EnableContentLocationFallback <Boolean>] -ApplicationName <String> [-ContentLocation <String>]
  -DeploymentTypeName <String> [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>]
@@ -66,8 +65,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boole
 ```
 
 ### SetByNamePropertyAppV5xInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFallback <Boolean>]
  [-AppV5xInstaller] -ApplicationName <String> -DeploymentTypeName <String>
  [-EnablePeerToPeerContentDistribution <Boolean>] [-Language <String[]>] [-NewDeploymentTypeName <String>]
@@ -78,8 +76,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFal
 ```
 
 ### SetByNamePropertyAppVInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFallback <Boolean>]
  [-AppVInstaller] -ApplicationName <String> -DeploymentTypeName <String>
  [-EnablePeerToPeerContentDistribution <Boolean>] [-Language <String[]>]
@@ -91,8 +88,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFal
 ```
 
 ### SetByNamePropertyMacInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> [-ContentLocation <String>]
  -DeploymentTypeName <String> [-InstallationProgram <String>] [-Language <String[]>] [-MacInstaller]
  [-MacRebootBehavior <MacRebootBehavior>] [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>]
@@ -101,8 +97,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> 
 ```
 
 ### SetByNamePropertyWmInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableUserUninstall <Boolean>]
  -ApplicationName <String> [-ContentLocation <String>] -DeploymentTypeName <String> [-Language <String[]>]
  [-NewDeploymentTypeName <String>] [-WindowsMobileInstaller] [-AddRequirement <Rule[]>]
@@ -111,8 +106,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableUserUninstall <Boo
 ```
 
 ### SetByNamePropertyWindowsStoreInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String>
  [-ApplicationNameInWindowsStore <String>] [-WindowsStoreInstaller] -DeploymentTypeName <String>
  [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>] [-NewDeploymentTypeName <String>]
@@ -121,8 +115,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String>
 ```
 
 ### SetByNamePropertyWebAppInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> -DeploymentTypeName <String>
  [-Language <String[]>] [-NewDeploymentTypeName <String>] [-WebAppInstaller] [-AddRequirement <Rule[]>]
  [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
@@ -130,8 +123,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> 
 ```
 
 ### SetByNamePropertyMobileMsiConfigureRule
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> [-ContentLocation <String>]
  -DeploymentTypeName <String> [-InstallationCommandLine <String>] -Language <String[]> [-MobileMsiInstaller]
  [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
@@ -140,8 +132,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] -ApplicationName <String> 
 ```
 
 ### SetByValuePropertyMobileMsiConfigureRule
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>] -InputObject <IResultObject>
  [-InstallationCommandLine <String>] -Language <String[]> [-MobileMsiInstaller]
  [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
@@ -150,8 +141,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>
 ```
 
 ### SetByValuePropertyMsiConfigureRule
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
  [-EnableContentLocationFallback <Boolean>] [-ContentLocation <String>] [-DetectDeploymentTypeByCustomScript]
  [-EstimatedInstallationTimeMins <Int32>] -InputObject <IResultObject>
@@ -168,8 +158,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boole
 ```
 
 ### SetByValuePropertyOtherInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>] -InputObject <IResultObject>
  [-Language <String[]>] [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>]
  [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru] [-DisableWildcardHandling]
@@ -177,8 +166,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>
 ```
 
 ### SetByValuePropertyWindows8Installer
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
  [-EnableContentLocationFallback <Boolean>] [-ContentLocation <String>] -InputObject <IResultObject>
  [-Language <String[]>] [-MaximumAllowedRunTimeMins <Int32>] [-NewDeploymentTypeName <String>]
@@ -188,8 +176,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableBranchCache <Boole
 ```
 
 ### SetByValuePropertyAppV5xInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFallback <Boolean>]
  [-AppV5xInstaller] [-EnablePeerToPeerContentDistribution <Boolean>] -InputObject <IResultObject>
  [-Language <String[]>] [-NewDeploymentTypeName <String>] [-OnFastNetworkMode <OnFastNetworkMode>]
@@ -199,8 +186,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFal
 ```
 
 ### SetByValuePropertyAppVInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFallback <Boolean>]
  [-AppVInstaller] [-EnablePeerToPeerContentDistribution <Boolean>] -InputObject <IResultObject>
  [-Language <String[]>] [-LoadContentIntoAppVCacheBeforeLaunch <Boolean>] [-NewDeploymentTypeName <String>]
@@ -211,8 +197,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableContentLocationFal
 ```
 
 ### SetByValuePropertyMacInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>] -InputObject <IResultObject>
  [-InstallationProgram <String>] [-Language <String[]>] [-MacInstaller]
  [-MacRebootBehavior <MacRebootBehavior>] [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>]
@@ -221,8 +206,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-ContentLocation <String>
 ```
 
 ### SetByValuePropertyWmInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-EnableUserUninstall <Boolean>]
  [-ContentLocation <String>] -InputObject <IResultObject> [-Language <String[]>]
  [-NewDeploymentTypeName <String>] [-WindowsMobileInstaller] [-AddRequirement <Rule[]>]
@@ -231,8 +215,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-EnableUserUninstall <Boo
 ```
 
 ### SetByValuePropertyWindowsStoreInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-ApplicationNameInWindowsStore <String>]
  [-WindowsStoreInstaller] -InputObject <IResultObject> [-Language <String[]>]
  [-MaximumAllowedRunTimeMins <Int32>] [-NewDeploymentTypeName <String>] [-RemoteComputerName <String>]
@@ -241,8 +224,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-ApplicationNameInWindows
 ```
 
 ### SetByValuePropertyWebAppInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] -InputObject <IResultObject> [-Language <String[]>]
  [-NewDeploymentTypeName <String>] [-WebAppInstaller] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
  [-ClearRequirements] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
@@ -250,8 +232,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] -InputObject <IResultObjec
 ```
 
 ### SetByNamePropertyWindowsPhoneStoreInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-WindowsPhoneStoreInstaller] -ApplicationName <String>
  [-ContentLocation <String>] -DeploymentTypeName <String> [-Language <String[]>]
  [-NewDeploymentTypeName <String>] [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>]
@@ -260,8 +241,7 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-WindowsPhoneStoreInstall
 ```
 
 ### SetByValuePropertyWindowsPhoneStoreInstaller
-
-```powershell
+```
 Set-CMDeploymentType [-AdministratorComment <String>] [-WindowsPhoneStoreInstaller] [-ContentLocation <String>]
  -InputObject <IResultObject> [-Language <String[]>] [-NewDeploymentTypeName <String>]
  [-AddRequirement <Rule[]>] [-RemoveRequirement <Rule[]>] [-ClearRequirements] [-PassThru]
@@ -269,15 +249,13 @@ Set-CMDeploymentType [-AdministratorComment <String>] [-WindowsPhoneStoreInstall
 ```
 
 ### SetByNamePriority
-
-```powershell
+```
 Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeName <String> [-Priority <PriorityChangeType>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByIdPriority
-
-```powershell
+```
 Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeId <Int32> [-Priority <PriorityChangeType>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -294,7 +272,7 @@ Configuration Manager evaluates and installs dependencies of a deployment type i
 ### Example 1: Increase the priority of a deployment application
 
 ```powershell
-PS C:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Increase
+PS XYZ:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Increase
 ```
 
 This command sets a deployment type named Configuration Manager Console - Windows Installer (Native) for a deployment application named 2 - Child and increases the priority of that application.
@@ -302,7 +280,7 @@ This command sets a deployment type named Configuration Manager Console - Window
 ### Example 2: Decrease the priority of a deployment application
 
 ```powershell
-PS C:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Decrease
+PS XYZ:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Decrease
 ```
 
 This command sets a deployment type named Configuration Manager Console - Windows Installer (Native) for a deployment application named 2 - Child and decreases the priority of that application.
@@ -1283,8 +1261,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

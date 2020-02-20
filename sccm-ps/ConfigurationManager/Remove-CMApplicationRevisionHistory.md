@@ -1,14 +1,17 @@
 ---
-title: Remove-CMApplicationRevisionHistory
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a revision history from a Configuration Manager application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMApplicationRevisionHistory
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMApplicationRevisionHistory
@@ -50,7 +53,7 @@ The revision history contains a list of revisions to an application or a develop
 
 ### Example 1: Remove a revision history
 ```
-PS C:\> Remove-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
+PS XYZ:\> Remove-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
 ```
 
 This command removes the revision history named MSXML 6.0 Parser.
@@ -78,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +172,7 @@ Specifies the version number of the revision that you delete from the history.
 ```yaml
 Type: UInt32
 Parameter Sets: SearchBySingleNameMandatory, SearchByValueMandatory, SearchBySingleIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -195,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

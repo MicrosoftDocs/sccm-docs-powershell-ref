@@ -1,14 +1,17 @@
 ---
-title: Get-CMCertificateProfilePfx
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a PFX certificate profile.
+external help file: AdminUI.PS.Dcm-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCertificateProfilePfx
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMCertificateProfilePfx
@@ -40,14 +43,14 @@ The **Get-CMCertificateProfilePfx** function gets a PFX certificate profile.
 
 ### Example 1: Get a PFX certificate profile by name
 ```
-PS C:\> Get-CMCertificateProfilePfx -Name "Test1"
+PS XYZ:\> Get-CMCertificateProfilePfx -Name "Test1"
 ```
 
 This command gets the PFX certificate profile object named Test1.
 
 ### Example 2: Get a PFX certificate profile by ID
 ```
-PS C:\> Get-CMcertificateprofilePfx -Id 16777499
+PS XYZ:\> Get-CMcertificateprofilePfx -Id 16777499
 ```
 
 This command gets the PFX certificate profile object with the ID of 16777499.
@@ -63,7 +66,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ Specifies the name of a PFX certificate profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -103,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

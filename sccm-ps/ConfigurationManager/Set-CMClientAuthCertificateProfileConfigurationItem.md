@@ -1,14 +1,17 @@
 ---
-title: Set-CMClientAuthCertificateProfileConfigurationItem
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a certificate profile.
+external help file:
+manager: dougeby
+Module Name: AdminUI.PS.Dcm
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMClientAuthCertificateProfileConfigurationItem
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMClientAuthCertificateProfileConfigurationItem
@@ -18,223 +21,16 @@ Modifies a certificate profile.
 
 ## SYNTAX
 
-### SetByName (Default)
-```
-Set-CMClientAuthCertificateProfileConfigurationItem [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-Name] <String> [-NewName <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetByValue
-```
-Set-CMClientAuthCertificateProfileConfigurationItem [-InputObject] <IResultObject> [-Description <String>]
- [-Digest <ConfigurationItem>] [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### SetById
-```
-Set-CMClientAuthCertificateProfileConfigurationItem [-Description <String>] [-Digest <ConfigurationItem>]
- [-DigestPath <String>] [-DigestXml <String>] [-Id] <Int32> [-NewName <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 The **Set-CMClientAuthCertificateProfileConfigurationItem** cmdlet modifies a certificate profile.
 Client computers use certificate profiles to authenticate when they use services such as a virtual private network (VPN) or a wireless network.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: LocalizedDescription
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Digest
-
-
-```yaml
-Type: ConfigurationItem
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -DigestPath
-
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: DesiredConfigurationDigestPath
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DigestXml
-
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Id
-Specifies an array of IDs of certificate profiles.
-
-```yaml
-Type: Int32
-Parameter Sets: SetById
-Aliases: CIId, CI_ID
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InputObject
-Specifies a certificate profile object.
-To obtain a certificate profile object, use the Get-CMClientAuthCertificateProfileConfigurationItem cmdlet.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SetByValue
-Aliases: 
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies an array of names of certificate profiles.
-
-```yaml
-Type: String
-Parameter Sets: SetByName
-Aliases: LocalizedDisplayName
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NewName
-
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

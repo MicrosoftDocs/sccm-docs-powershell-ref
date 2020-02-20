@@ -1,14 +1,17 @@
 ---
-title: Approve-CMDevice
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Approves a device.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Approve-CMDevice
+titleSuffix: Configuration Manager
 ---
 
 # Approve-CMDevice
@@ -44,14 +47,14 @@ You cannot approve a Configuration Manager client until you have installed the d
 
 ### Example 1: Approve a device
 ```
-PS C:\>Approve-CMDevice -DeviceName "TestVlan-site2"
+PS XYZ:\>Approve-CMDevice -DeviceName "TestVlan-site2"
 ```
 
 This command approves the device named TestVlan-site2.
 
 ### Example 2: Get a device and approve it
 ```
-PS C:\> Get-CMDevice -Name "TestVlan-site2" | Approve-CMDevice
+PS XYZ:\> Get-CMDevice -Name "TestVlan-site2" | Approve-CMDevice
 ```
 
 This command gets the device object named TestVlan-site2 and uses the pipeline operator to pass the object to **Approve-CMDevice**, which approves the device object.
@@ -109,7 +112,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +127,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +143,7 @@ To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -166,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

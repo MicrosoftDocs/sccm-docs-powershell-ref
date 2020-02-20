@@ -1,14 +1,17 @@
 ---
-title: Remove-CMTaskSequenceGroup
-titleSuffix: Configuration Manager
+author: mumian
 description: Removes a Configuration Manager task sequence group.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMTaskSequenceGroup
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMTaskSequenceGroup
@@ -20,22 +23,19 @@ Removes a Configuration Manager task sequence group.
 ## SYNTAX
 
 ### ByValue (Default)
-
-```powershell
+```
 Remove-CMTaskSequenceGroup [-Force] -InputObject <IResultObject> [-StepName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
-
-```powershell
+```
 Remove-CMTaskSequenceGroup [-Force] -TaskSequenceId <String> [-StepName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
-
-```powershell
+```
 Remove-CMTaskSequenceGroup [-Force] -TaskSequenceName <String> [-StepName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -49,12 +49,28 @@ The **Remove-CMTaskSequenceGroup** cmdlet removes task sequence group(s) from a 
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Remove-CMTaskSequenceGroup -StepName $gpName -Force
+PS XYZ:\> $ReferencedTaskSequence | Remove-CMTaskSequenceGroup -StepName $gpName -Force
 ```
 
 The command removes the task sequence groups from a task sequence with the name specified.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -63,7 +79,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +95,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +143,7 @@ Specifies the name of a step.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,25 +175,9 @@ Specifies the name of a task sequence.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -202,7 +202,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -212,6 +211,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

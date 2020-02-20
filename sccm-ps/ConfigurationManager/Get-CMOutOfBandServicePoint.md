@@ -38,7 +38,7 @@ An out of band service point is a site system role that provisions and configure
 
 ### Example 1: Get an out of band service point
 ```
-PS C:\> Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM1" >>\Results\Get-CMOutOfBandServicePoint_data.txt"
+PS XYZ:\> Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM1" >>\Results\Get-CMOutOfBandServicePoint_data.txt"
 ```
 
 This command get an out of band service point that is associated with the site system named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM and the site code CM1.

@@ -1,14 +1,17 @@
 ---
-title: Start-CMConfigurationPolicyDeployment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Deploys policies for a Configuration Manager collection.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Start-CMConfigurationPolicyDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Start-CMConfigurationPolicyDeployment
@@ -105,7 +108,7 @@ You can specify System Center 2016 - Operations Manager monitoring criteria.
 
 ### Example 1: Start deployment of a firewall policy
 ```
-PS C:\> Start-CMConfigurationPolicyDeployment -CollectionName "Desktop systems" -FirewallPolicyName "General firewall policy"
+PS XYZ:\> Start-CMConfigurationPolicyDeployment -CollectionName "Desktop systems" -FirewallPolicyName "General firewall policy"
 ```
 
 This command starts the configuration policy deployment for a collection named Desktop systems.
@@ -120,7 +123,7 @@ The deployment applies to this Configuration Manager collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -150,7 +153,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +169,7 @@ During enforcement, a client reports compliance information about a deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +184,7 @@ Specifies a firewall policy object.
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployFWPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -196,7 +199,7 @@ Specifies an ID for a firewall policy.
 ```yaml
 Type: String
 Parameter Sets: DeployFWPolicyByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -211,7 +214,7 @@ Specifies a name for a firewall policy.
 ```yaml
 Type: String
 Parameter Sets: DeployFWPolicyByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -226,7 +229,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +244,7 @@ Specifies whether Configuration Manager generates alerts during the deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +259,7 @@ Specifies whether Operations Manager monitoring criteria applies during the depl
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -271,7 +274,7 @@ Specifies whether to override the service window while deploying policies.
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,7 +290,7 @@ This is the parameter value.
 ```yaml
 Type: Int32
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +306,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +324,7 @@ This is the date for the deployment if postponed.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,7 +341,7 @@ This is the time for the deployment if postponed.
 ```yaml
 Type: DateTime
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,7 +356,7 @@ Specifies the remote connection profile that this cmdlet deploys configuration p
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -368,7 +371,7 @@ Specifies the remote connection profile ID that this cmdlet deploys configuratio
 ```yaml
 Type: String
 Parameter Sets: DeployRCPolicyByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -383,7 +386,7 @@ Specifies the remote connection profile name that this cmdlet deploys configurat
 ```yaml
 Type: String
 Parameter Sets: DeployRCPolicyByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -399,7 +402,7 @@ This is the schedule for evaluating the policy.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -415,7 +418,7 @@ To obtain a user data and profile object, use the Get-CMUserDataAndProfileConfig
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployUSMPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -430,7 +433,7 @@ Specifies an ID for a user data and profile object.
 ```yaml
 Type: String
 Parameter Sets: DeployUSMPolicyByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -445,7 +448,7 @@ Specifies a name for a user data and profile object.
 ```yaml
 Type: String
 Parameter Sets: DeployUSMPolicyByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -471,7 +474,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

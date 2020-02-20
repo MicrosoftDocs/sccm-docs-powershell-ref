@@ -1,14 +1,17 @@
 ---
-title: Set-CMVpnProfileConfigurationItem
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a VPN profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMVpnProfileConfigurationItem
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMVpnProfileConfigurationItem
@@ -47,7 +50,7 @@ Client computers use VPN profiles to remotely connect to a company network over 
 
 ### Example 1: Modify a VPN profile configuration item
 ```
-PS C:\> Set-CMVpnProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Vpn2.xml"
+PS XYZ:\> Set-CMVpnProfileConfigurationItem -ID "AAA0004D" -DesiredConfigurationDigestPath "C:\Digests\Vpn2.xml"
 ```
 
 This command modifies the VPN profile configuration item with the ID AAA0004D.
@@ -89,7 +92,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +118,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +133,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +148,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +179,7 @@ To obtain a VPN profile object, use the [Get-CMVpnProfileConfigurationItem](Get-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -206,7 +209,7 @@ Specifies the new name of the VPN profile that this cmdlet sets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +225,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

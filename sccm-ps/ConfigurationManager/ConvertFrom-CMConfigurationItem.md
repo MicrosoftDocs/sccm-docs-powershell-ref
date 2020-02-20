@@ -1,14 +1,17 @@
 ---
-title: ConvertFrom-CMConfigurationItem
-titleSuffix: Configuration Manager
-description: 
+author: mumian
+description:
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: ConvertFrom-CMConfigurationItem
+titleSuffix: Configuration Manager
 ---
 
 # ConvertFrom-CMConfigurationItem
@@ -19,14 +22,16 @@ Converts a Configuration Manager configuration item to a string.
 
 ## SYNTAX
 
-```powershell
-ConvertFrom-CMConfigurationItem [-ConfigurationItem <ConfigurationItem>] [-DisableWildcardHandling]
+```
+ConvertFrom-CMConfigurationItem [-ConfigurationItem] <ConfigurationItem> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **ConvertFrom-CMConfigurationItem** cmdlet converts a ConfigurationItem object into a string which contains the XML definition of the ConfigurationItem object.
+
+## EXAMPLES
 
 ## PARAMETERS
 
@@ -37,10 +42,10 @@ Specifies a configuration item.
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
@@ -53,7 +58,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +74,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -89,6 +93,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.String
+
+## NOTES
 
 ## RELATED LINKS
 

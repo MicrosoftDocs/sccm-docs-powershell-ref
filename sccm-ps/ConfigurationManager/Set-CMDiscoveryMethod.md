@@ -1,14 +1,17 @@
 ---
-title: Set-CMDiscoveryMethod
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes configuration settings of a discovery method.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDiscoveryMethod
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDiscoveryMethod
@@ -40,9 +43,10 @@ Set-CMDiscoveryMethod [-ActiveDirectorySystemDiscovery] [-SiteCode <String>] [-E
  [-AddAdditionalAttribute <String[]>] [-RemoveAdditionalAttribute <String[]>]
  [-EnableFilteringExpiredLogon <Boolean>] [-TimeSinceLastLogonDays <Int32>]
  [-EnableFilteringExpiredPassword <Boolean>] [-TimeSinceLastPasswordUpdateDays <Int32>]
- [-ActiveDirectoryContainer <String[]>] [-Recursive] [-IncludeGroup] [-ClearActiveDirectoryContainer]
- [-RemoveActiveDirectoryContainer <String[]>] [-AddActiveDirectoryContainer <String[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ActiveDirectoryContainer <String[]>] [-Recursive] [-EnableRecursive <Boolean>] [-IncludeGroup]
+ [-EnableIncludeGroup <Boolean>] [-ClearActiveDirectoryContainer] [-RemoveActiveDirectoryContainer <String[]>]
+ [-AddActiveDirectoryContainer <String[]>] [-UserName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByActiveDirectoryUserDiscovery
@@ -50,9 +54,10 @@ Set-CMDiscoveryMethod [-ActiveDirectorySystemDiscovery] [-SiteCode <String>] [-E
 Set-CMDiscoveryMethod [-ActiveDirectoryUserDiscovery] [-SiteCode <String>] [-Enabled <Boolean>]
  [-PollingSchedule <IResultObject>] [-EnableDeltaDiscovery <Boolean>] [-DeltaDiscoveryMins <Int32>]
  [-AddAdditionalAttribute <String[]>] [-RemoveAdditionalAttribute <String[]>]
- [-ActiveDirectoryContainer <String[]>] [-Recursive] [-IncludeGroup] [-ClearActiveDirectoryContainer]
- [-RemoveActiveDirectoryContainer <String[]>] [-AddActiveDirectoryContainer <String[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ActiveDirectoryContainer <String[]>] [-Recursive] [-EnableRecursive <Boolean>] [-IncludeGroup]
+ [-EnableIncludeGroup <Boolean>] [-ClearActiveDirectoryContainer] [-RemoveActiveDirectoryContainer <String[]>]
+ [-AddActiveDirectoryContainer <String[]>] [-UserName <String>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByActiveDirectoryGroupDiscovery
@@ -82,7 +87,7 @@ You can then use the discovery information to help you to install the System Cen
 
 ### Example 1: Modify network discovery
 ```
-PS C:\> Set-CMDiscoveryMethod -NetworkDiscovery -SiteCode "CM4" -Enabled $True -NetworkDiscoveryType ToplogyAndClient -SlowNetworkSpeed $True
+PS XYZ:\> Set-CMDiscoveryMethod -NetworkDiscovery -SiteCode "CM4" -Enabled $True -NetworkDiscoveryType ToplogyAndClient -SlowNetworkSpeed $True
 ```
 
 This command modifies network discovery for the site that has the site code CM4.
@@ -91,8 +96,8 @@ The command also enables discovery.
 
 ### Example 2: Modify Active Directory system discovery
 ```
-PS C:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
-PS C:\> Set-CMDiscoveryMethod -ActiveDirectorySystemDiscovery -SiteCode "CM4" -AddAdditionalAttribute "331", "431", "134" -DeltaDiscoveryIntervalMinutes 8 -Enabled $True -EnableDeltaDiscovery $True -EnableFilteringExpiredLogon $True -PollingSchedule $Schedule -RemoveAdditionalAttribute "123","cn" -TimeSinceLastLogonDays 80
+PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS XYZ:\> Set-CMDiscoveryMethod -ActiveDirectorySystemDiscovery -SiteCode "CM4" -AddAdditionalAttribute "331", "431", "134" -DeltaDiscoveryIntervalMinutes 8 -Enabled $True -EnableDeltaDiscovery $True -EnableFilteringExpiredLogon $True -PollingSchedule $Schedule -RemoveAdditionalAttribute "123","cn" -TimeSinceLastLogonDays 80
 ```
 
 The first command creates a schedule object by using the **New-CMSchedule** cmdlet and stores it in the $Schedule variable.
@@ -106,8 +111,8 @@ Also, the command adds and removes specified attributes from the attributes used
 
 ### Example 3: Modify forest discovery
 ```
-PS C:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
-PS C:\> Set-CMDiscoveryMethod -ActiveDirectoryForestDiscovery -SiteCode "CM4" -EnableActiveDirectorySiteBoundaryCreation $True -Enabled $True  -EnableSubnetBoundaryCreation $True -PollingSchedule $Schedule
+PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS XYZ:\> Set-CMDiscoveryMethod -ActiveDirectoryForestDiscovery -SiteCode "CM4" -EnableActiveDirectorySiteBoundaryCreation $True -Enabled $True  -EnableSubnetBoundaryCreation $True -PollingSchedule $Schedule
 ```
 
 The first command creates a schedule object by using the **New-CMSchedule** cmdlet, and then stores it in the $Schedule variable.
@@ -117,8 +122,8 @@ The command specifies the schedule object stored in the $Schedule variable as th
 
 ### Example 4: Enable heartbeat discovery
 ```
-PS C:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
-PS C:\> Set-CMDiscoveryMethod -Heartbeat -SiteCode "CM4" -Enabled $True -PollingSchedule $Schedule
+PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS XYZ:\> Set-CMDiscoveryMethod -Heartbeat -SiteCode "CM4" -Enabled $True -PollingSchedule $Schedule
 ```
 
 The first command creates a schedule object by using the **New-CMSchedule** cmdlet and stores it in the $Schedule variable.
@@ -133,7 +138,7 @@ Specifies an array of names of Active Directory containers.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +153,7 @@ Indicates that the discovery method discovers security groups, including local, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectoryForestDiscovery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +168,7 @@ Indicates that the discovery method discovers additional information, including 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -178,7 +183,7 @@ Indicates that the discovery method discovers computers from specified locations
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectorySystemDiscovery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -193,7 +198,7 @@ Indicates that the discovery method discovers users from specified locations in 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectoryUserDiscovery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -222,7 +227,7 @@ The cmdlet adds these attributes to the list of attributes that Configuration Ma
 ```yaml
 Type: String[]
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +240,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ADGroupDiscoveryScope[]
 Parameter Sets: SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +253,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -291,7 +296,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +324,7 @@ Indicates whether Configuration Manager creates Active Directory boundaries from
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByActiveDirectoryForestDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -335,7 +340,7 @@ If you specify a value of $True for this parameter, specify a value for the *Del
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -351,7 +356,7 @@ Specify the number of days by using the *TimeSinceLastLogonDays* parameter.
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -367,7 +372,37 @@ Specify the number of days by using the *TimeSinceLastPasswordUpdateDays* parame
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableIncludeGroup
+{{ Fill EnableIncludeGroup Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+Aliases: EnableIncludeGroups
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRecursive
+{{ Fill EnableRecursive Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+Aliases:
 
 Required: False
 Position: Named
@@ -382,7 +417,7 @@ Indicates whether Configuration Manager creates IP address range boundaries from
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByActiveDirectoryForestDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -398,7 +433,7 @@ If you specify a value of $False, Configuration Manager does not discover resour
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -413,7 +448,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -428,7 +463,7 @@ Indicates that the discovery method updates discovery records for Configuration 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByHeartbeat
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -438,8 +473,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeGroup
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
@@ -458,7 +491,7 @@ Indicates that the discovery method searches the network infrastructure for netw
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByNetworkDiscovery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -482,7 +515,7 @@ The discovery finds the topology of your network by discovering IP subnets and r
 ```yaml
 Type: NetworkDiscoveryType
 Parameter Sets: SearchByNetworkDiscovery
-Aliases: 
+Aliases:
 Accepted values: Topology, TopologyAndClient, ToplogyAndClient, TopologyClientAndClientOperatingSystem, ToplogyClientAndClientOperatingSystem
 
 Required: False
@@ -493,12 +526,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -515,7 +546,7 @@ The polling schedule determines how often Configuration Manager attempts to disc
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByActiveDirectoryForestDiscovery, SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery, SearchByActiveDirectoryGroupDiscovery, SearchByHeartbeat
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -528,7 +559,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -557,7 +588,7 @@ The cmdlet removes these attributes from the list of attributes that Configurati
 ```yaml
 Type: String[]
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -570,7 +601,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String[]
 Parameter Sets: SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -585,7 +616,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -600,7 +631,7 @@ Indicates whether Configuration Manager makes adjustments to its discovery setti
 ```yaml
 Type: Boolean
 Parameter Sets: SearchByNetworkDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -615,7 +646,7 @@ Specifies the number of days since the last logon when the *EnableFilteringExpir
 ```yaml
 Type: Int32
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -630,7 +661,22 @@ Specifies the number of days since that last password updated when the *EnableFi
 ```yaml
 Type: Int32
 Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryGroupDiscovery
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserName
+{{ Fill UserName Description }}
+
+```yaml
+Type: String
+Parameter Sets: SearchByActiveDirectorySystemDiscovery, SearchByActiveDirectoryUserDiscovery
+Aliases: DiscoveryAccountUserName
 
 Required: False
 Position: Named
@@ -656,7 +702,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

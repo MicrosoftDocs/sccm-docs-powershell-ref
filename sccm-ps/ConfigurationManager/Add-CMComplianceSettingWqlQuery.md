@@ -1,14 +1,17 @@
 ---
-title: Add-CMComplianceSettingWqlQuery
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a compliance setting wql query.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMComplianceSettingWqlQuery
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMComplianceSettingWqlQuery
@@ -47,26 +50,21 @@ Add-CMComplianceSettingWqlQuery -ClassName <String> -Namespace <String> -Propert
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -ClassName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,13 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -DataType
- 
-
 ```yaml
 Type: SettingDataType
 Parameter Sets: (All)
-Aliases: 
-Accepted values: String, Integer, DateTime, FloatingPoint, Version, StringArray, Boolean
+Aliases:
+Accepted values: String, Integer, DateTime, FloatingPoint, Version, StringArray, Boolean, IntegerArray
 
 Required: True
 Position: Named
@@ -107,12 +103,10 @@ Accept wildcard characters: False
 ```
 
 ### -Description
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +121,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,12 +131,10 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
- 
-
 ```yaml
 Type: ExistenceType
 Parameter Sets: ExistentialRule
-Aliases: 
+Aliases:
 Accepted values: MustExist, MustNotExist, Occurs
 
 Required: True
@@ -153,12 +145,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExistentialRule
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ExistentialRule
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -168,8 +158,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: ValueRule
@@ -195,12 +183,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
- 
-
 ```yaml
 Type: RuleExpressionOperator
 Parameter Sets: ValueRule
-Aliases: 
+Aliases:
 Accepted values: And, Or, Other, IsEquals, NotEquals, GreaterThan, LessThan, Between, NotBetween, GreaterEquals, LessEquals, BeginsWith, NotBeginsWith, EndsWith, NotEndsWith, Contains, NotContains, AllOf, OneOf, NoneOf, SetEquals, SubsetOf, ExcludesAll
 
 Required: True
@@ -213,7 +199,7 @@ Accept wildcard characters: False
 ```yaml
 Type: RuleExpressionOperator
 Parameter Sets: ExistentialRule
-Aliases: 
+Aliases:
 Accepted values: And, Or, Other, IsEquals, NotEquals, GreaterThan, LessThan, Between, NotBetween, GreaterEquals, LessEquals, BeginsWith, NotBeginsWith, EndsWith, NotEndsWith, Contains, NotContains, AllOf, OneOf, NoneOf, SetEquals, SubsetOf, ExcludesAll
 
 Required: False
@@ -229,7 +215,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,12 +225,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -254,8 +238,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -269,12 +251,10 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -284,8 +264,6 @@ Accept wildcard characters: False
 ```
 
 ### -NoRule
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: EmptyRule
@@ -299,12 +277,10 @@ Accept wildcard characters: False
 ```
 
 ### -NoncomplianceSeverity
- 
-
 ```yaml
 Type: NoncomplianceSeverity
 Parameter Sets: ValueRule, ExistentialRule
-Aliases: 
+Aliases:
 Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
@@ -320,7 +296,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -330,12 +306,10 @@ Accept wildcard characters: False
 ```
 
 ### -Property
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -345,12 +319,10 @@ Accept wildcard characters: False
 ```
 
 ### -Remediate
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ValueRule
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -360,12 +332,10 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNoncompliance
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ValueRule
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -375,12 +345,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleDescription
- 
-
 ```yaml
 Type: String
 Parameter Sets: ValueRule, ExistentialRule
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -390,12 +358,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
- 
-
 ```yaml
 Type: String
 Parameter Sets: ValueRule, ExistentialRule
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -405,12 +371,10 @@ Accept wildcard characters: False
 ```
 
 ### -ValueRule
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ValueRule
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -436,12 +400,10 @@ Accept wildcard characters: False
 ```
 
 ### -WhereClause
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -451,7 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -464,4 +426,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

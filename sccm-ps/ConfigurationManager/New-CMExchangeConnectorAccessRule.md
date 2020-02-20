@@ -1,14 +1,17 @@
 ---
-title: New-CMExchangeConnectorAccessRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMExchangeConnectorAccessRule
+titleSuffix: Configuration Manager
 ---
 
 # New-CMExchangeConnectorAccessRule
@@ -30,7 +33,7 @@ The **New-CMExchangeServerConnectorAccessRule** cmdlet configures access setting
 
 ### Example 1: Configure email management settings for a mobile device
 ```
-PS C:\> New-CMExchangeServerConnectorAccessRule -RuleName "AccessRule01" -AccessLevel Allow -Device DeviceType
+PS XYZ:\> New-CMExchangeServerConnectorAccessRule -RuleName "AccessRule01" -AccessLevel Allow -Device DeviceType
 ```
 
 This command creates an access rule for a device type named AccessRule01 that has the Allow access level.
@@ -38,12 +41,10 @@ This command creates an access rule for a device type named AccessRule01 that ha
 ## PARAMETERS
 
 ### -AccessLevel
- 
-
 ```yaml
 Type: AccessLevelType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Allow, Block, Quarantine
 
 Required: True
@@ -54,12 +55,10 @@ Accept wildcard characters: False
 ```
 
 ### -Device
- 
-
 ```yaml
 Type: DeviceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DeviceType, DeviceModel
 
 Required: True
@@ -75,7 +74,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +89,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,12 +99,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

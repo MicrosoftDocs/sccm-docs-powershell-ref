@@ -1,14 +1,17 @@
 ---
-title: Get-CMAccessLicense
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets license usage information.
+external help file: AdminUI.PS.CalTracking.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMAccessLicense
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMAccessLicense
@@ -43,14 +46,14 @@ This cmdlet returns a list of features able to be licensed and a list of unique 
 
 ### Example 1: Get all licensable features for all servers and clients
 ```
-PS C:\> Get-CMAccessLicense -License
+PS XYZ:\> Get-CMAccessLicense -License
 ```
 
 This command gets all licensable features for all servers and clients within the scope of System Center Configuration Manager.
 
 ### Example 2: Get the unique users, devices, and license-specific unique ID for a specified license
 ```
-PS C:\> Get-CMAccessLicense -LicenseName ConfigMgr_2012_EndPointClient
+PS XYZ:\> Get-CMAccessLicense -LicenseName ConfigMgr_2012_EndPointClient
 ```
 
 This command gets the unique users, devices, and license-specific IDs for the license named ConfigMgr_2012_EndPointClient.
@@ -63,7 +66,7 @@ Indicates that the cmdlet returns a count of unique users and devices for the sp
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByCount
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +112,7 @@ You can specify the name of the license that is returned for the *LicenseName* p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +133,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: ByCount, ByValue
-Aliases: 
+Aliases:
 Accepted values: ConfigMgr_2012_CoreServer, ConfigMgr_2012_CoreClient, ConfigMgr_2012_EndpointClient
 
 Required: True
@@ -141,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -150,4 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

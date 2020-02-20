@@ -1,14 +1,17 @@
 ---
-title: Remove-CMIntuneSubscription
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a Microsoft Intune subscription.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMIntuneSubscription
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMIntuneSubscription
@@ -30,7 +33,7 @@ The **Remove-CMIntineSubscription** cmdlet removes a Microsoft Intune subscripti
 
 ### Example 1: Remove a Microsoft Intune subscription
 ```
-PS C:\> Remove-CMIntuneSubscription -Force
+PS XYZ:\> Remove-CMIntuneSubscription -Force
 ```
 
 This command removes the Microsoft Intune subscription from the site without prompting the user for confirmation.
@@ -58,7 +61,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +76,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +91,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

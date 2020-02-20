@@ -1,14 +1,17 @@
 ---
-title: Set-CMFileReplicationRoute
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes settings for a file replication route in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMFileReplicationRoute
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMFileReplicationRoute
@@ -67,7 +70,7 @@ The functionality of file replication routes is the same as that of addresses in
 
 ### Example 1: Specify a file replication route by using a replication account name
 ```
-PS C:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -FileReplicationAccountName "11\12" -Unlimited
+PS XYZ:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -FileReplicationAccountName "11\12" -Unlimited
 ```
 
 This command specifies a file replication route between the source site named CM2 and the destination site named SS2.
@@ -75,7 +78,7 @@ It uses the user account name 11\12 for file replication.
 
 ### Example 2: Specify a file replication route by using a source and destination site names
 ```
-PS C:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -ControlNetworkLoadSchedule -DaysOfWeek Friday, Sunday -AvailabilityLevel All
+PS XYZ:\> Set-CMFileReplicationRoute -SourceSiteCode "CM2" -DestinationSiteCode "SS2" -ControlNetworkLoadSchedule -DaysOfWeek Friday, Sunday -AvailabilityLevel All
 ```
 
 This command specifies a file replication route between the source site named CM2 and the destination site named SS2.
@@ -96,7 +99,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: AvailabilityLevel
 Parameter Sets: SetFileReplicationRouteBySchedule
-Aliases: 
+Aliases:
 Accepted values: All, MediumHigh, High, Closed
 
 Required: False
@@ -140,7 +143,7 @@ Indicates that scheduled replication controls network load.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetFileReplicationRouteBySchedule
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +158,7 @@ Specifies a data block size, in kilobytes.
 ```yaml
 Type: Int32
 Parameter Sets: SetFileReplicationRouteByPulseMode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +182,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DaysOfWeek[]
 Parameter Sets: SetFileReplicationRouteBySchedule
-Aliases: 
+Aliases:
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
 Required: False
@@ -223,7 +226,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,7 +255,7 @@ This account must have local administrative credentials.
 ```yaml
 Type: String
 Parameter Sets: SetFileReplicationAccount, SetFileReplicationRouteByUnlimited, SetFileReplicationRouteByPulseMode, SetFileReplicationRouteByLimited
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -267,7 +270,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +298,7 @@ Indicates that bandwidth for a file replication route is limited.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetFileReplicationRouteByLimited
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -337,7 +340,7 @@ Use this parameter when you have low network bandwidth between sites.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetFileReplicationRouteByPulseMode
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -367,7 +370,7 @@ Indicates that bandwidth for a file replication route is unlimited.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetFileReplicationRouteByUnlimited
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -393,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

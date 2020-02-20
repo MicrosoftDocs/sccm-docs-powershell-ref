@@ -1,14 +1,17 @@
 ---
-title: Invoke-CMWmiQuery
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Runs a WMI query.
+external help file: AdminUI.PS.Common.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMWmiQuery
+titleSuffix: Configuration Manager
 ---
 
 # Invoke-CMWmiQuery
@@ -38,13 +41,13 @@ The **Invoke-CMWmiQuery** cmdlet runs a Windows Management Instrumentation (WMI)
 
 ### Example 1: Run a WQL query
 ```
-PS C:\> $WQL = @"
+PS XYZ:\> $WQL = @"
 SELECT app.* FROM SMS_ApplicationLatest AS app
 INNER JOIN SMS_CIContentPackage AS con ON app.CI_ID=con.CI_ID
 INNER JOIN SMS_DistributionPoint AS srv ON con.PackageID=srv.PackageID
 WHERE app.IsHidden = 0
 "@
-PS C:\> Invoke-CMWmiQuery -Query $WQL -Option Lazy
+PS XYZ:\> Invoke-CMWmiQuery -Query $WQL -Option Lazy
 ```
 
 The first command creates a WQL query and stores it in the $WQL variable.
@@ -53,10 +56,10 @@ The second command runs the query stored in $WQL.
 
 ### Example 2: Run a WMI query for device collections
 ```
-PS C:\> $Search = [Microsoft.ConfigurationManagement.PowerShell.Provider.SmsProviderSearch]::new()
-PS C:\> $Search.AddOrder("CollectionID", [Microsoft.ConfigurationManagement.PowerShell.Provider.SearchParameterOrderBy]::Asc)
-PS C:\> $Search.Add("Name","DeviceCol*", $True)
-PS C:\> Invoke-CMWmiQuery -Search $Search -ClassName "SMS_Collection" -Option Lazy
+PS XYZ:\> $Search = [Microsoft.ConfigurationManagement.PowerShell.Provider.SmsProviderSearch]::new()
+PS XYZ:\> $Search.AddOrder("CollectionID", [Microsoft.ConfigurationManagement.PowerShell.Provider.SearchParameterOrderBy]::Asc)
+PS XYZ:\> $Search.Add("Name","DeviceCol*", $True)
+PS XYZ:\> Invoke-CMWmiQuery -Search $Search -ClassName "SMS_Collection" -Option Lazy
 ```
 
 The first command creates a search object and stores the object in the $Search variable.
@@ -70,9 +73,9 @@ The last command runs the query stored in $Search, specifying SMS_Collection as 
 
 ### Example 3: Run a WMI query for sites by status
 ```
-PS C:\> $Search.Clear()
-PS C:\> $Search.Add("Status", $True)
-PS C:\> Invoke-CMWmiQuery -ClassName "SMS_Site" -Search $Search
+PS XYZ:\> $Search.Clear()
+PS XYZ:\> $Search.Add("Status", $True)
+PS XYZ:\> Invoke-CMWmiQuery -ClassName "SMS_Site" -Search $Search
 ```
 
 The first command clears the search parameters from the search object created in example 2.
@@ -84,9 +87,9 @@ The last command runs the query stored in $Search, specifying SMS_Site as the cl
 
 ### Example 4: Run a WMI query for sites by name
 ```
-PS C:\> $Search.Clear()
-PS C:\> $Search.Add("SiteName", $null, [Microsoft.ConfigurationManagement.PowerShell.Provider.SearchParameterOperator]::NotEquals)
-PS C:\> Invoke-CMWmiQuery -ClassName "SMS_Site" -Search $Search
+PS XYZ:\> $Search.Clear()
+PS XYZ:\> $Search.Add("SiteName", $null, [Microsoft.ConfigurationManagement.PowerShell.Provider.SearchParameterOperator]::NotEquals)
+PS XYZ:\> Invoke-CMWmiQuery -ClassName "SMS_Site" -Search $Search
 ```
 
 The first command clears the search parameters from the search object created in example 2.
@@ -98,9 +101,9 @@ The last command runs the query stored in $Search, specifying SMS_Site as the cl
 
 ### Example 5: Run a WMI query for applications
 ```
-PS C:\> $Search.Clear()
-PS C:\>  $Search.AddAdhoc("CI_ID > 0")
-PS C:\>  Invoke-CMWmiQuery -ClassName "SMS_Application" -Search $Search -Option Lazy
+PS XYZ:\> $Search.Clear()
+PS XYZ:\>  $Search.AddAdhoc("CI_ID > 0")
+PS XYZ:\>  Invoke-CMWmiQuery -ClassName "SMS_Application" -Search $Search -Option Lazy
 ```
 
 The first command clears the search parameters from the search object created in example 2.
@@ -118,7 +121,7 @@ Specifies the Configuration Manager WMI class that contains the static method yo
 ```yaml
 Type: String
 Parameter Sets: BySearch
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +152,7 @@ This is a list of name/value pairs that are passed to a WMI provider that suppor
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +167,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +182,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +227,7 @@ Specifies a WMI Query Language (WQL) statement.
 ```yaml
 Type: String
 Parameter Sets: ByWql
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -239,7 +242,7 @@ Specifies an **SMSProviderSearch** object.
 ```yaml
 Type: SmsProviderSearch
 Parameter Sets: BySearch
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -265,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

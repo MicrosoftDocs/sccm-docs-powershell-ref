@@ -1,14 +1,17 @@
 ---
-title: Get-CMUserCollectionQueryMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets the query membership rules from one or more user collections in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMUserCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMUserCollectionQueryMembershipRule
@@ -45,7 +48,7 @@ For more information about membership rules in Microsoft System Center Configura
 
 ### Example 1: Get a rule by using a collection name
 ```
-PS C:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
+PS XYZ:\> Get-CMUserCollectionQueryMembershipRule -CollectionName "Remote Users" -RuleName "Remote Users by Domain"
 ```
 
 This command gets the rule named Remote Users by Domain that belongs to the collection named Remote Users.
@@ -98,7 +101,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

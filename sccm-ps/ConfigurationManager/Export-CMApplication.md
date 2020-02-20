@@ -1,14 +1,17 @@
 ---
-title: Export-CMApplication
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Exports an application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Export-CMApplication
+titleSuffix: Configuration Manager
 ---
 
 # Export-CMApplication
@@ -45,7 +48,7 @@ Specify a file path to the location where you want to export the application.
 
 ### Example 1: Get an application and export it
 ```
-PS C:\> Get-CMApplication "Application01" | Export-CMApplication -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export" -Force
+PS XYZ:\> Get-CMApplication "Application01" | Export-CMApplication -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export" -Force
 ```
 
 This command gets the application object named Applicaton01 and uses the pipeline operator to pass the object to **Export-CMApplicaton**.
@@ -54,7 +57,7 @@ Specifying the *Force* parameter indicates that the application is exported with
 
 ### Example 2: Export an application
 ```
-PS C:\>Export-CMApplication -Name "Application01" -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export"
+PS XYZ:\>Export-CMApplication -Name "Application01" -Path "C:\test.zip" -IgnoreRelated -OmitContent -Comment "Application export"
 ```
 
 This command exports the application named Application01 to the path C:\test.zip, omitting related content from the zip file, and not exporting related objects.
@@ -68,7 +71,7 @@ Specifies a comment for the exported application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +101,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +116,7 @@ Performs the action without a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +131,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +161,7 @@ Indicates that related objects, such as application dependencies, superseded app
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +177,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +207,7 @@ Indicates that the cmdlet exports related content to a separate folder in the sa
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,7 +223,7 @@ The package file has a .zip extension.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -246,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

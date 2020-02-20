@@ -1,14 +1,17 @@
 ---
-title: New-CMGlobalCondition
-titleSuffix: Configuration Manager
+author: mumian
 description: Creates a Configuration Manager global condition object.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMGlobalCondition
+titleSuffix: Configuration Manager
 ---
 
 # New-CMGlobalCondition
@@ -20,8 +23,7 @@ Creates a Configuration Manager global condition object.
 ## SYNTAX
 
 ### NewADQuery (Default)
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> [-LdapPrefix <String>] -DistinguishedName <String> -LdapFilter <String>
  -SearchScope <SearchScope> -Property <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
@@ -29,16 +31,14 @@ New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <Global
 ```
 
 ### NewIisMetabase
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> [-MetabasePath <String>] -PropertyId <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewRegistryValue
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> [-Is64Bit <Boolean>] -RegistryHive <RegistryRootKey> -KeyName <String>
  -ValueName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
@@ -46,8 +46,7 @@ New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <Global
 ```
 
 ### NewScript
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> -FilePath <String> -ScriptLanguage <ScriptingLanguage>
  [-UseLoggedOnUserCredential <Boolean>] [-Use32BitHost <Boolean>] [-DisableWildcardHandling]
@@ -55,32 +54,28 @@ New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <Global
 ```
 
 ### NewSqlQueryDefaultInstance
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> -FilePath <String> [-DefaultInstance] -Database <String> -Column <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewSqlQueryAllInstances
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> -FilePath <String> [-AllInstances] -Database <String> -Column <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewSqlQuerySpecificInstance
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> -FilePath <String> -InstanceName <String> -Database <String>
  -Column <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewWqlQuery
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> -Property <String> [-Namespace <String>] -Class <String>
  [-WhereClause <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
@@ -88,8 +83,7 @@ New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <Global
 ```
 
 ### NewXPathQuery
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
  [-XmlNamespace <String[]>] -XPathQuery <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
@@ -97,8 +91,7 @@ New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <Global
 ```
 
 ### NewXPathQueryFromFile
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> -FilePath <String> -XmlFilePath <String> [-IncludeSubfolder <Boolean>]
  [-Is64Bit <Boolean>] [-XmlNamespace <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
@@ -106,40 +99,35 @@ New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <Global
 ```
 
 ### NewOmaUri
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -DataType <GlobalConditionDataType> -OmaUri <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewAssembly
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -AssemblyName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### NewFileSystem
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  [-IsFolder] -Path <String> -FileOrFolderName <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewFileSystemFile
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  -FilePath <String> [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewRegistryKey
-
-```powershell
+```
 New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <GlobalConditionDeviceType>
  [-Is64Bit <Boolean>] -RegistryHive <RegistryRootKey> -KeyName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -156,7 +144,7 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1: Create a global condition
 
 ```powershell
-PS C:\> New-CMGlobalCondition -AssemblyName "Microsoft.Office.Tools.Word.v9.0" -DeviceType $Windows
+PS XYZ:\> New-CMGlobalCondition -AssemblyName "Microsoft.Office.Tools.Word.v9.0" -DeviceType $Windows
 ```
 
 This command creates a global condition that searches the assembly named Microsoft.Office.Tools.Word.v9.0 on Windows devices.
@@ -189,7 +177,7 @@ An assembly name must be registered in the Global Assembly Cache.
 ```yaml
 Type: String
 Parameter Sets: NewAssembly
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -206,7 +194,7 @@ The query assesses compliance on client computers.
 ```yaml
 Type: String
 Parameter Sets: NewWqlQuery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -222,7 +210,7 @@ Specifies the column name used to assess the compliance of the global condition.
 ```yaml
 Type: String
 Parameter Sets: NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -231,19 +219,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Database
+### -Confirm
 
-Specifies the name of a database.
-The SQL query runs on this database.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
-Parameter Sets: NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance
-Aliases:
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -265,8 +252,25 @@ The acceptable values for this parameter are:
 ```yaml
 Type: GlobalConditionDataType
 Parameter Sets: NewADQuery, NewIisMetabase, NewRegistryValue, NewScript, NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance, NewWqlQuery, NewXPathQuery, NewXPathQueryFromFile, NewOmaUri
-Aliases: 
+Aliases:
 Accepted values: String, DateTime, Integer, FloatingPoint, Version, Boolean, StringArray, IntegerArray, Base64, Xml
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Database
+
+Specifies the name of a database.
+The SQL query runs on this database.
+
+```yaml
+Type: String
+Parameter Sets: NewSqlQueryDefaultInstance, NewSqlQueryAllInstances, NewSqlQuerySpecificInstance
+Aliases:
 
 Required: True
 Position: Named
@@ -317,7 +321,7 @@ The acceptable values for this parameter are: Nokia, Windows, and WindowsMobile.
 ```yaml
 Type: GlobalConditionDeviceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Windows, WindowsMobile
 
 Required: True
@@ -350,7 +354,7 @@ Specifies the distinguished name of the Active Directory Domain Services (AD DS)
 ```yaml
 Type: String
 Parameter Sets: NewADQuery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -366,7 +370,7 @@ Specifies the name of a file or folder. Specify the *IsFolder* parameter to sear
 ```yaml
 Type: String
 Parameter Sets: NewFileSystem
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -398,7 +402,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -432,7 +436,7 @@ To search all instances, specify the *UseAllInstances* parameter.
 ```yaml
 Type: String
 Parameter Sets: NewSqlQuerySpecificInstance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -448,7 +452,7 @@ Indicates that the global condition searches the 64-bit system file location in 
 ```yaml
 Type: Boolean
 Parameter Sets: NewRegistryValue, NewXPathQuery, NewXPathQueryFromFile, NewFileSystem, NewFileSystemFile, NewRegistryKey
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -466,7 +470,7 @@ Specify the name of the file or folder by using the *FileOrFolderName* parameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewFileSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -483,7 +487,7 @@ Use the format key\subkey.
 ```yaml
 Type: String
 Parameter Sets: NewRegistryValue, NewRegistryKey
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -499,7 +503,7 @@ Specifies a Lightweight Directory Access Protocol (LDAP) filter to refine the re
 ```yaml
 Type: String
 Parameter Sets: NewADQuery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -516,7 +520,7 @@ This prefix can be either LDAP:// or GC://.
 ```yaml
 Type: String
 Parameter Sets: NewADQuery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -532,7 +536,7 @@ Specifies the path to the metabase file for Internet Information Services (IIS).
 ```yaml
 Type: String
 Parameter Sets: NewIisMetabase
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -548,7 +552,7 @@ Specifies the name of an IIS metabase file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -565,7 +569,7 @@ The default value is Root\cimv2.
 ```yaml
 Type: String
 Parameter Sets: NewWqlQuery
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -581,7 +585,7 @@ Specifies a Uniform Resource Indicator (URI) that points to device-specific para
 ```yaml
 Type: String
 Parameter Sets: NewOmaUri
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -597,7 +601,7 @@ Specifies the path for an OMA URI.
 ```yaml
 Type: String
 Parameter Sets: NewFileSystem
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -613,7 +617,7 @@ Specifies the property of the AD DS object used to assess compliance on client c
 ```yaml
 Type: String
 Parameter Sets: NewADQuery, NewWqlQuery
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -629,7 +633,7 @@ Specifies the property of AD DS that Configuration Manager uses to determine cli
 ```yaml
 Type: String
 Parameter Sets: NewIisMetabase
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -653,7 +657,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RegistryRootKey
 Parameter Sets: NewRegistryValue, NewRegistryKey
-Aliases: 
+Aliases:
 Accepted values: ClassesRoot, CurrentConfig, CurrentUser, LocalMachine, Users
 
 Required: True
@@ -675,7 +679,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ScriptingLanguage
 Parameter Sets: NewScript
-Aliases: 
+Aliases:
 Accepted values: PowerShell, VBScript, JScript, ShellScript
 
 Required: True
@@ -693,7 +697,7 @@ The acceptable values for this parameter are: Base, OneLevel, and Subtree.
 ```yaml
 Type: SearchScope
 Parameter Sets: NewADQuery
-Aliases: 
+Aliases:
 Accepted values: Base, OneLevel, Subtree
 
 Required: True
@@ -710,7 +714,7 @@ Indicates that the file or folder is associated with a 64-bit application.
 ```yaml
 Type: Boolean
 Parameter Sets: NewScript
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -751,6 +755,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhereClause
 
 Specifies a WQL query WHERE clause to apply to the specified namespace, class, and property on client computers.
@@ -767,6 +788,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -XPathQuery
+
+Specifies a XPath query.
+
+```yaml
+Type: String
+Parameter Sets: NewXPathQuery
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -XmlFilePath
 
 Specifies a file that contains the XML query to use to assess compliance on client computers.
@@ -774,7 +811,7 @@ Specifies a file that contains the XML query to use to assess compliance on clie
 ```yaml
 Type: String
 Parameter Sets: NewXPathQueryFromFile
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -799,58 +836,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -XPathQuery
-
-Specifies a XPath query.
-
-```yaml
-Type: String
-Parameter Sets: NewXPathQuery
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

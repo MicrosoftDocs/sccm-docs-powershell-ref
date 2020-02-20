@@ -1,14 +1,17 @@
 ---
-title: Set-CMBoundaryGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies the properties of a boundary group.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMBoundaryGroup
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMBoundaryGroup
@@ -23,7 +26,9 @@ Modifies the properties of a boundary group.
 Set-CMBoundaryGroup -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
  [-DefaultSiteCode <String>] [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
  [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
@@ -31,7 +36,9 @@ Set-CMBoundaryGroup -InputObject <IResultObject> [-NewName <String>] [-Descripti
 Set-CMBoundaryGroup -Id <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
  [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
  [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
@@ -39,7 +46,9 @@ Set-CMBoundaryGroup -Id <String> [-NewName <String>] [-Description <String>] [-D
 Set-CMBoundaryGroup -Name <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
  [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
  [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,14 +60,14 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ### Example 1: Rename a boundary group
 ```
-PS C:\> Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
+PS XYZ:\> Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
 ```
 
 This command renames a boundary group.
 
 ### Example 2: Add a security scope to a boundary group
 ```
-PS C:\> Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
+PS XYZ:\> Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
 ```
 
 This command adds the security scope OSDeploymentScope to the boundary group BGroup02.
@@ -89,12 +98,25 @@ Accept wildcard characters: False
 ```
 
 ### -AddSiteSystemServerName
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddSiteSystemServerNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPeerDownload
+{{ Fill AllowPeerDownload Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +161,7 @@ Specifies the default site code of a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +176,7 @@ Specifies a description for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +191,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +206,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +237,7 @@ To obtain a boundary group object, use the [Get-CMBoundaryGroup](Get-CMBoundaryG
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -230,7 +252,7 @@ Specifies a name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -245,7 +267,7 @@ Specifies a new name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +283,37 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferCloudDPOverDP
+{{ Fill PreferCloudDPOverDP Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: PreferCloudDistributionPointOverDistributionPoint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferDPOverPeer
+{{ Fill PreferDPOverPeer Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: PreferDistributionPointOverPeerInSubnet
 
 Required: False
 Position: Named
@@ -301,6 +353,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SubnetPeerDownloadOnly
+{{ Fill SubnetPeerDownloadOnly Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: PeerWithinSameSubnetOnly
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -318,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

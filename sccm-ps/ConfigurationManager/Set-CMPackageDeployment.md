@@ -1,14 +1,17 @@
 ---
-title: Set-CMPackageDeployment
-titleSuffix: Configuration Manager
+author: mumian
 description: Changes values that define how Configuration Manager deploys a software package.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMPackageDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMPackageDeployment
@@ -20,78 +23,72 @@ Changes values that define how Configuration Manager deploys a software package.
 ## SYNTAX
 
 ### SetStandardProgramDeploymentByPackageValue (Default)
-
-```powershell
+```
 Set-CMPackageDeployment -InputObject <IResultObject> -StandardProgramName <String> [-Comment <String>]
- [-SendWakeupPacket <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
+ [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
  [-UseUtcForAvailableSchedule <Boolean>] [-EnableExpireSchedule <Boolean>]
  [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
  [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
  [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
  [-PersistOnWriteFilterDevice <Boolean>] [-FastNetworkOption <FastNetworkOptionType>]
- [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetStandardProgramDeploymentByPackageName
-
-```powershell
+```
 Set-CMPackageDeployment -PackageName <String> -StandardProgramName <String> [-Comment <String>]
- [-SendWakeupPacket <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
+ [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
  [-UseUtcForAvailableSchedule <Boolean>] [-EnableExpireSchedule <Boolean>]
  [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
  [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
  [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
  [-PersistOnWriteFilterDevice <Boolean>] [-FastNetworkOption <FastNetworkOptionType>]
- [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramDeploymentByPackageName
-
-```powershell
+```
 Set-CMPackageDeployment -PackageName <String> -DeviceProgramName <String> [-Comment <String>]
- [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>] [-UseRecurrencePattern <Boolean>]
- [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>] [-PassThru] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UseMeteredNetwork <Boolean>] [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>]
+ [-UseRecurrencePattern <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetStandardProgramDeploymentByPackageId
-
-```powershell
+```
 Set-CMPackageDeployment -PackageId <String> -StandardProgramName <String> [-Comment <String>]
- [-SendWakeupPacket <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
+ [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>] [-DeploymentAvailableDateTime <DateTime>]
  [-UseUtcForAvailableSchedule <Boolean>] [-EnableExpireSchedule <Boolean>]
  [-DeploymentExpireDateTime <DateTime>] [-UseUtcForExpireSchedule <Boolean>]
  [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
  [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
  [-PersistOnWriteFilterDevice <Boolean>] [-FastNetworkOption <FastNetworkOptionType>]
- [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramDeploymentByPackageId
-
-```powershell
+```
 Set-CMPackageDeployment -PackageId <String> -DeviceProgramName <String> [-Comment <String>]
- [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>] [-UseRecurrencePattern <Boolean>]
- [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>] [-PassThru] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UseMeteredNetwork <Boolean>] [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>]
+ [-UseRecurrencePattern <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDeviceProgramDeploymentByPackageValue
-
-```powershell
+```
 Set-CMPackageDeployment -InputObject <IResultObject> -DeviceProgramName <String> [-Comment <String>]
- [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>] [-UseRecurrencePattern <Boolean>]
- [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>] [-PassThru] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UseMeteredNetwork <Boolean>] [-DeploymentStartDateTime <DateTime>] [-UseUtc <Boolean>]
+ [-UseRecurrencePattern <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>] [-Rerun <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,7 +103,7 @@ You can specify the package by name or ID, or you can use the [Get-CMPackage](Ge
 ### Example 1: Set recurrence properties
 
 ```powershell
-PS C:\> Set-CMPackageDeployment -CollectionName "All Systems" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -RecurUnit Hours -RecurValue 7 -UseRecurrencePattern $True
+PS XYZ:\> Set-CMPackageDeployment -CollectionName "All Systems" -DeviceProgramName "DPM" -PackageName "User State Migration Tool for Windows 8" -RecurUnit Hours -RecurValue 7 -UseRecurrencePattern $True
 ```
 
 This command makes changes to the deployment specified by the collection named All Systems, the device program named DPM, and the package named User State Migration Tool for Windows 8.
@@ -117,7 +114,7 @@ Therefore, the deployment recurs every seven hours.
 ### Example 2: Set availability day and time
 
 ```powershell
-PS C:\> Set-CMPackageDeployment -CollectionName "All Systems" -PackageName "User State Migration Tool for Windows 8" -StandardProgramName "SPM" -DeploymentAvailableDay 2012/10/18 -DeploymentAvailableTime 15:41 -UseUtcForAvailableSchedule $False
+PS XYZ:\> Set-CMPackageDeployment -CollectionName "All Systems" -PackageName "User State Migration Tool for Windows 8" -StandardProgramName "SPM" -DeploymentAvailableDay 2012/10/18 -DeploymentAvailableTime 15:41 -UseUtcForAvailableSchedule $False
 ```
 
 This command makes changes to the deployment specified by the collection named All Systems, the package named User State Migration Tool for Windows 8, and the standard program named SPM.
@@ -126,6 +123,21 @@ The command also specifies that the deployment does not use UTC for the availabi
 The schedule refers to the local time zone.
 
 ## PARAMETERS
+
+### -AllowFallback
+{{ Fill AllowFallback Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowSharedContent
 
@@ -136,7 +148,7 @@ If this value is $False, clients do not attempt to download from other clients.
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +164,7 @@ Specifies the user collection.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +180,7 @@ Specifies the ID of a device or user collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +196,7 @@ Specifies the ID of a device or user collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +212,7 @@ Specifies a comment for the deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +245,7 @@ To obtain a **DateTime** object, use the Get-Date cmdlet.
 ```yaml
 Type: DateTime
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +262,7 @@ To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 ```yaml
 Type: DateTime
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -268,7 +280,7 @@ To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 ```yaml
 Type: DateTime
 Parameter Sets: SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -284,7 +296,7 @@ Specifies the name of a device program.
 ```yaml
 Type: String
 Parameter Sets: SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -300,7 +312,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -316,7 +328,7 @@ Indicates whether to enable the schedule to expire the deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -336,7 +348,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: FastNetworkOptionType
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 Accepted values: RunProgramFromDistributionPoint, DownloadContentFromDistributionPointAndRunLocally
 
 Required: False
@@ -353,7 +365,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -385,7 +397,7 @@ Specifies the ID of a package.
 ```yaml
 Type: String
 Parameter Sets: SetStandardProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -401,7 +413,7 @@ Specifies the name of a package.
 ```yaml
 Type: String
 Parameter Sets: SetStandardProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -418,7 +430,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -437,7 +449,7 @@ For a value of $False, the device saves changes in an overlay and commits them l
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -458,7 +470,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RecurUnitType
 Parameter Sets: SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
-Aliases: 
+Aliases:
 Accepted values: Minutes, Hours, Days
 
 Required: False
@@ -477,7 +489,7 @@ This value can be between 1 and 23 if the unit is Hours, between 1 and 31 if the
 ```yaml
 Type: Int32
 Parameter Sets: SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -495,7 +507,7 @@ If this value is $False, the deployment does not run again.
 ```yaml
 Type: Boolean
 Parameter Sets: SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -523,7 +535,7 @@ You can use this value for updates that depend on the previous update.
 ```yaml
 Type: RerunBehaviorType
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 Accepted values: NeverRerunDeployedProgram, AlwaysRerunProgram, RerunIfFailedPreviousAttempt, RerunIfSucceededOnPreviousAttempt
 
 Required: False
@@ -558,7 +570,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) c
 ```yaml
 Type: IResultObject[]
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -580,7 +592,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ScheduleEventType[]
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 Accepted values: AsSoonAsPossible, LogOn, LogOff
 
 Required: False
@@ -600,7 +612,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -621,7 +633,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SlowNetworkOptionType
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 Accepted values: DoNotRunProgram, DownloadContentFromDistributionPointAndLocally, RunProgramFromDistributionPoint
 
 Required: False
@@ -641,7 +653,7 @@ If this value is $False, Configuration Manager does not install deployed softwar
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -657,7 +669,7 @@ Specifies a standard program name.
 ```yaml
 Type: String
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -676,7 +688,22 @@ If this value is $False, the computer does not restart outside a maintenance win
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseMeteredNetwork
+{{ Fill UseMeteredNetwork Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -692,7 +719,7 @@ Indicates whether to use a recurrence pattern.
 ```yaml
 Type: Boolean
 Parameter Sets: SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -710,7 +737,7 @@ If this value is $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: SetDeviceProgramDeploymentByPackageName, SetDeviceProgramDeploymentByPackageId, SetDeviceProgramDeploymentByPackageValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -728,7 +755,7 @@ If this value is $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -746,7 +773,7 @@ If this value is $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramDeploymentByPackageValue, SetStandardProgramDeploymentByPackageName, SetStandardProgramDeploymentByPackageId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -773,8 +800,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

@@ -1,14 +1,17 @@
 ---
-title: Remove-CMSoftwareMeteringRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes Configuration Manager software metering rules.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMSoftwareMeteringRule
@@ -51,7 +54,7 @@ For more information about software metering in System Center Configuration Mana
 
 ### Example 1: Remove rules for a product
 ```
-PS C:\> Remove-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS XYZ:\> Remove-CMSoftwareMeteringRule -ProductName "Accounting Package"
 Remove
 Are you sure you wish to remove SoftwareMeteringRule: RuleID=16777220? 
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -88,7 +91,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +106,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +121,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +152,7 @@ To obtain a software metering rule object, use the [Get-CMSoftwareMeteringRule](
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,7 +167,7 @@ Specifies a name for a product that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

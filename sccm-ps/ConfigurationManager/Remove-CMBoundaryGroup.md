@@ -1,14 +1,17 @@
 ---
-title: Remove-CMBoundaryGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a boundary group.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMBoundaryGroup
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMBoundaryGroup
@@ -43,7 +46,7 @@ The **Remove-CMBoundaryGroup** cmdlet removes a boundary group from Microsoft Sy
 
 ### Example 1: Remove a boundary group that is specified by its ID
 ```
-PS C:\> Remove-CMBoundaryGroup -Id "16777219"
+PS XYZ:\> Remove-CMBoundaryGroup -Id "16777219"
 ```
 
 This command removes a boundary group that is specified by its identifier.
@@ -51,8 +54,8 @@ Because the *Force* parameter is not specified, you must confirm the action befo
 
 ### Example 2: Remove multiple boundary groups by using an InputObject
 ```
-PS C:\> $BoundaryObj = Get-CMBoundary -Name "BGroup01", "BGroup02", "BGroup03"
-PS C:\> Remove-CMBoundary -InputObject $BoundaryObj
+PS XYZ:\> $BoundaryObj = Get-CMBoundary -Name "BGroup01", "BGroup02", "BGroup03"
+PS XYZ:\> Remove-CMBoundary -InputObject $BoundaryObj
 ```
 
 The first command uses the **Get-CMBoundaryGroup** to get multiple boundary groups that are specified by their names, and stores this data into the $BoundaryObj variable.
@@ -83,7 +86,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +101,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +116,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ You can get the input object by using the [Get-CMBoundaryGroup](Get-CMBoundaryGr
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +162,7 @@ Specifies the name of a boundary group.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

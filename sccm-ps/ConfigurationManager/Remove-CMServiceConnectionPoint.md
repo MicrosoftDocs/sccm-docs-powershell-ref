@@ -1,14 +1,17 @@
 ---
-title: Remove-CMServiceConnectionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a service connection point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMServiceConnectionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMServiceConnectionPoint
@@ -37,7 +40,7 @@ The **Remove-CMServiceConnectionPoint** cmdlet removes a service connection poin
 
 ### Example 1: Remove a service connection point by name
 ```
-PS C:\> Remove-CMServiceConnectionPoint -SiteSystemServerName "SiteSystemServer01.Contoso.com" -SiteCode PS1 -Force
+PS XYZ:\> Remove-CMServiceConnectionPoint -SiteSystemServerName "SiteSystemServer01.Contoso.com" -SiteCode PS1 -Force
 ```
 
 This command removes the service connection point role from the site system server named SiteSystemServer01.Contoso.com with the site code PS1.
@@ -45,8 +48,8 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a service connection point by using a variable
 ```
-PS C:\> $ConnPoint = Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer02.Contoso.com"
-PS C:\> Remove-CMServiceConnectionPoint -InputObject $ConnPoint -Force
+PS XYZ:\> $ConnPoint = Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer02.Contoso.com"
+PS XYZ:\> Remove-CMServiceConnectionPoint -InputObject $ConnPoint -Force
 ```
 
 The first command gets the service connection point object for the site system server named SiteSystemServer02.Contoso.com with the site code PS1 and stores the object in the $ConnPoint variable.
@@ -56,7 +59,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 3: Remove a service connection point by using the pipeline
 ```
-PS C:\> Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer03.Contoso.com" | Remove-CMServiceConnectionPoint -Force
+PS XYZ:\> Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer03.Contoso.com" | Remove-CMServiceConnectionPoint -Force
 ```
 
 This command gets the service connection point object for the site system server named SiteSystemServer03.Contoso.com with the site code PS1 and uses the pipeline operator to pass the object to **Remove-CMServiceConnectionPoint**, which removes the service connection point object.
@@ -85,7 +88,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +103,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +118,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +149,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Unlock-CMObject
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Releases locks to global objects in Configuration Manager.
+external help file: AdminUI.PS.Common.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Unlock-CMObject
+titleSuffix: Configuration Manager
 ---
 
 # Unlock-CMObject
@@ -35,8 +38,8 @@ While the lock is assigned to you, no other user or computer can edit the object
 
 ### Example 1: Unlock a global object
 ```
-PS C:\> $CIObj = Get-CMDriverPackage -Id "CM100042"
-PS C:\> Unlock-CMObject $CIObj
+PS XYZ:\> $CIObj = Get-CMDriverPackage -Id "CM100042"
+PS XYZ:\> Unlock-CMObject $CIObj
 ```
 
 The first command gets the driver package object that has the ID CM100042, and stores the object in the $CIObj variable.
@@ -66,7 +69,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +84,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +114,7 @@ Specifies an array of Configuration Manager objects output from another cmdlet.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -137,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

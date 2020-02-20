@@ -1,14 +1,17 @@
 ---
-title: Set-CMDatabaseReplicationLinkProperty
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes configuration settings for a database replication link.
+external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDatabaseReplicationLinkProperty
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDatabaseReplicationLinkProperty
@@ -46,14 +49,14 @@ This enables all sites to share the same information.
 
 ### Example 1: Change settings of a database replication link
 ```
-PS C:\> Set-CMDatabaseReplicationLinkProperty -ParentSiteCode "CCC" -ChildSiteCode "CCB" -EnableDistributedViewForHardwareInventory 1 -EnableDistributedViewForSoftwareInventory 1 -EnableDistributedViewForStatusMessage 1 -ReplicationDataTrafficSummarizationIntervalMinutes 12 -DegradedLinkStatusRetryCount 40 -FailedLinkStatusRetryCount 60 -GenerateReplicationDownAlert 1 -ReplicationDownAlertThresholdMinutes 20
+PS XYZ:\> Set-CMDatabaseReplicationLinkProperty -ParentSiteCode "CCC" -ChildSiteCode "CCB" -EnableDistributedViewForHardwareInventory 1 -EnableDistributedViewForSoftwareInventory 1 -EnableDistributedViewForStatusMessage 1 -ReplicationDataTrafficSummarizationIntervalMinutes 12 -DegradedLinkStatusRetryCount 40 -FailedLinkStatusRetryCount 60 -GenerateReplicationDownAlert 1 -ReplicationDownAlertThresholdMinutes 20
 ```
 
 This command changes configuration settings for a database replication link between the Configuration Manager parent site that has the site code CCC and the child site that has the site code CCB.
 
 ### Example 2: Set the schedule for a database replication link
 ```
-PS C:\> Set-CMDatabaseReplicationLinkProperty -ParentSiteCode "CCC" -ChildSiteCode "CCB" -DaysOfWeek Friday, Monday, Tuesday -TimePeriodStart 8 -TimePeriodEnd 0 -AvailabilityLevel HINVSINV
+PS XYZ:\> Set-CMDatabaseReplicationLinkProperty -ParentSiteCode "CCC" -ChildSiteCode "CCB" -DaysOfWeek Friday, Monday, Tuesday -TimePeriodStart 8 -TimePeriodEnd 0 -AvailabilityLevel HINVSINV
 ```
 
 This command sets the schedule for the database replication link between the Configuration Manager parent site that has the site code CCC and the child site that has the site code CCB.
@@ -78,7 +81,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: InvAvailabilityLevel
 Parameter Sets: SetScheduleBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: Closed, HINV, SINV, HINVSINV, StatMSG, HINVStatMSG, SINVStatMSG, HINVSINVStatMSG
 
 Required: True
@@ -134,7 +137,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DaysOfWeek[]
 Parameter Sets: SetScheduleBySiteCodeMandatory
-Aliases: 
+Aliases:
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
 Required: True
@@ -150,7 +153,7 @@ Specifies a retry count when a replication group or object is delayed due to deg
 ```yaml
 Type: Int32
 Parameter Sets: SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +168,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +183,7 @@ Indicates whether Configuration Manager configures the SQL Server distributed pa
 ```yaml
 Type: Boolean
 Parameter Sets: SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +198,7 @@ Indicates whether Configuration Manager configures the SQL Server distributed pa
 ```yaml
 Type: Boolean
 Parameter Sets: SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +213,7 @@ Indicates whether Configuration Manager configures the SQL Server distributed pa
 ```yaml
 Type: Boolean
 Parameter Sets: SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,7 +228,7 @@ Specifies a retry count when a replication group or object is delayed by failed 
 ```yaml
 Type: Int32
 Parameter Sets: SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +243,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,7 +258,7 @@ Indicates whether to generate a replication down alert.
 ```yaml
 Type: Boolean
 Parameter Sets: SetBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -349,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

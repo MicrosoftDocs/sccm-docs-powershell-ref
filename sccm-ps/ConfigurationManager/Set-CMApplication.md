@@ -1,14 +1,17 @@
 ---
-title: Set-CMApplication
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets the properties of an application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMApplication
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMApplication
@@ -25,11 +28,15 @@ Set-CMApplication [-InputObject] <IResultObject> [-Description <String>] [-Publi
  [-AutoInstall <Boolean>] [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner]
  [-SupportContact <String>] [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>]
  [-ClearSupportContact] [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
+ [-LocalizedDescription <String>] [-Keyword <String[]>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
+ [-UserCategory <String[]>] [-AddUserCategory <IResultObject[]>] [-RemoveUserCategoryName <String[]>]
+ [-CleanUserCategory] [-AppCategory <String[]>] [-AddAppCategory <IResultObject[]>]
+ [-RemoveAppCategoryName <String[]>] [-CleanAppCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
  [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ClearAppCatalog] [-RemoveAppCatalog <Int32[]>] [-AddAppCatalog <AppDisplayInfo[]>]
+ [-ApplyToLanguageById <Int32>] [-DefaultLanguageId <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
@@ -39,11 +46,15 @@ Set-CMApplication [-Id] <Int32> [-Description <String>] [-Publisher <String>] [-
  [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
  [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
+ [-LocalizedDescription <String>] [-Keyword <String[]>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
+ [-UserCategory <String[]>] [-AddUserCategory <IResultObject[]>] [-RemoveUserCategoryName <String[]>]
+ [-CleanUserCategory] [-AppCategory <String[]>] [-AddAppCategory <IResultObject[]>]
+ [-RemoveAppCategoryName <String[]>] [-CleanAppCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
  [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ClearAppCatalog] [-RemoveAppCatalog <Int32[]>] [-AddAppCatalog <AppDisplayInfo[]>]
+ [-ApplyToLanguageById <Int32>] [-DefaultLanguageId <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
@@ -53,11 +64,15 @@ Set-CMApplication [-Name] <String> [-Description <String>] [-Publisher <String>]
  [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
  [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
+ [-LocalizedDescription <String>] [-Keyword <String[]>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
+ [-UserCategory <String[]>] [-AddUserCategory <IResultObject[]>] [-RemoveUserCategoryName <String[]>]
+ [-CleanUserCategory] [-AppCategory <String[]>] [-AddAppCategory <IResultObject[]>]
+ [-RemoveAppCategoryName <String[]>] [-CleanAppCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
  [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ClearAppCatalog] [-RemoveAppCatalog <Int32[]>] [-AddAppCatalog <AppDisplayInfo[]>]
+ [-ApplyToLanguageById <Int32>] [-DefaultLanguageId <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByModelName
@@ -67,11 +82,15 @@ Set-CMApplication -ModelName <String> [-Description <String>] [-Publisher <Strin
  [-Owner <String>] [-AddOwner <String[]>] [-RemoveOwner <String[]>] [-ClearOwner] [-SupportContact <String>]
  [-AddSupportContact <String[]>] [-RemoveSupportContact <String[]>] [-ClearSupportContact]
  [-LocalizedApplicationName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String>] [-DistributionPriority <DistributionPriorityType>]
+ [-LocalizedDescription <String>] [-Keyword <String[]>] [-DistributionPriority <DistributionPriorityType>]
  [-SendToProtectedDistributionPoint <Boolean>] [-DistributionPointSetting <DistributionPointSettingType>]
- [-UserCategory <String[]>] [-AppCategory <String[]>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
+ [-UserCategory <String[]>] [-AddUserCategory <IResultObject[]>] [-RemoveUserCategoryName <String[]>]
+ [-CleanUserCategory] [-AppCategory <String[]>] [-AddAppCategory <IResultObject[]>]
+ [-RemoveAppCategoryName <String[]>] [-CleanAppCategory] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
  [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ClearAppCatalog] [-RemoveAppCatalog <Int32[]>] [-AddAppCatalog <AppDisplayInfo[]>]
+ [-ApplyToLanguageById <Int32>] [-DefaultLanguageId <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,7 +100,7 @@ The **Set-CMApplication** cmdlet changes the settings of an application.
 
 ### Example 1: Set the properties of an application by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application01" | Set-CMApplication -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "Linktext" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
+PS XYZ:\> Get-CMApplication -Name "Application01" | Set-CMApplication -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "Linktext" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
 ```
 
 The first command gets the application object named Application01 and uses the pipeline operator to pass the object to **Set-CMApplication**.
@@ -89,16 +108,44 @@ The first command gets the application object named Application01 and uses the p
 
 ### Example 2: Get an application, rename it, and update its settings
 ```
-PS C:\> Set-CMApplication -Name "Application01" -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName Localized "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "LinkText" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
+PS XYZ:\> Set-CMApplication -Name "Application01" -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName Localized "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "LinkText" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
 ```
 
 This command gets the application named Application01, renames it to Application01_New, and sets the specified properties on the application.
 
 ## PARAMETERS
 
-### -AddOwner
- 
+### -AddAppCatalog
+{{ Fill AddAppCatalog Description }}
 
+```yaml
+Type: AppDisplayInfo[]
+Parameter Sets: (All)
+Aliases: AppCatalogs
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddAppCategory
+{{ Fill AddAppCategory Description }}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases: AddAppCategories
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddOwner
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -112,12 +159,25 @@ Accept wildcard characters: False
 ```
 
 ### -AddSupportContact
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddSupportContacts
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddUserCategory
+{{ Fill AddUserCategory Description }}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases: AddUserCategories
 
 Required: False
 Position: Named
@@ -143,13 +203,73 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplyToLanguageById
+{{ Fill ApplyToLanguageById Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: ApplySettingToSpecificLanguage
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoInstall
 Indicates whether a task sequence action can install the application.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanAppCategory
+{{ Fill CleanAppCategory Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: CleanAppCategories
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanUserCategory
+{{ Fill CleanUserCategory Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: CleanUserCategories
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearAppCatalog
+{{ Fill ClearAppCatalog Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ClearAppCatalogs, CleanAppCatalog, CleanAppCatalogs
 
 Required: False
 Position: Named
@@ -159,8 +279,6 @@ Accept wildcard characters: False
 ```
 
 ### -ClearOwner
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -174,8 +292,6 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSupportContact
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -203,6 +319,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultLanguageId
+{{ Fill DefaultLanguageId Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Specifies a description for the application.
 The description appears in the Configuration Manager console
@@ -210,7 +341,7 @@ The description appears in the Configuration Manager console
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,7 +356,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -265,7 +396,7 @@ Manually copy the content in this package to distribution points.
 ```yaml
 Type: DistributionPointSettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AutoDownload, DeltaCopy, NoDownload
 
 Required: False
@@ -289,7 +420,7 @@ Packages with equal priority are sent in the order in which they are created.
 ```yaml
 Type: DistributionPriorityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: High, Medium, Low
 
 Required: False
@@ -305,7 +436,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +452,7 @@ This is set to the single default language.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -367,7 +498,7 @@ Indicates whether the application displays as a featured app and is highlighted 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -384,9 +515,9 @@ To add multiple keywords, use CultureInfo.CurrentCulture.TextInfo.ListSeparator 
 This keyword will help users of Software Center search for the application.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: Keywords
 
 Required: False
 Position: Named
@@ -402,7 +533,7 @@ This is set to the single default language.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -417,7 +548,7 @@ Specifies a localized name string that appears in the client software center or 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -448,7 +579,7 @@ Specifies the model name of the application.
 ```yaml
 Type: String
 Parameter Sets: SetByModelName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -478,7 +609,7 @@ Specifies a new name for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -493,7 +624,7 @@ Specifies optional reference information for this application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -508,7 +639,7 @@ Specifies an owner for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -524,7 +655,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -540,7 +671,7 @@ This is set to the single default language.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -570,7 +701,37 @@ Specifies a release date for the application.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAppCatalog
+{{ Fill RemoveAppCatalog Description }}
+
+```yaml
+Type: Int32[]
+Parameter Sets: (All)
+Aliases: RemoveAppCatalogsByLanguageId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAppCategoryName
+{{ Fill RemoveAppCategoryName Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveAppCategoryNames
 
 Required: False
 Position: Named
@@ -580,8 +741,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOwner
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -595,12 +754,25 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupportContact
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: RemoveSupportContacts
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveUserCategoryName
+{{ Fill RemoveUserCategoryName Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveUserCategoryNames
 
 Required: False
 Position: Named
@@ -615,7 +787,7 @@ Indicates whether to copy this application to protected distribution points.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -630,7 +802,7 @@ Specifies a software version for an application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -645,7 +817,7 @@ Specifies one or more administrative users who are support contacts for the appl
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -677,7 +849,7 @@ This is set to the single default language.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -703,7 +875,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

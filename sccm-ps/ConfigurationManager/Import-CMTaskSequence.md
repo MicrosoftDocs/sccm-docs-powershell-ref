@@ -1,14 +1,17 @@
 ---
-title: Import-CMTaskSequence
-titleSuffix: Configuration Manager
+author: mumian
 description: Imports a Configuration Manager task sequence.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Import-CMTaskSequence
+titleSuffix: Configuration Manager
 ---
 
 # Import-CMTaskSequence
@@ -19,7 +22,7 @@ Imports a Configuration Manager task sequence.
 
 ## SYNTAX
 
-```powershell
+```
 Import-CMTaskSequence [-IgnoreDependency] [-ImportActionType <ImportActionType>] -Path <String>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -33,12 +36,28 @@ The **Import-CMTaskSequence** cmdlet imports a task sequence into Microsoft Syst
 ### Example 1: Import a task sequence
 
 ```powershell
-PS C:\>Import-CMTaskSequence -ImportFilePath "\\Server1\TS\TaskSequence.zip"
+PS XYZ:\>Import-CMTaskSequence -ImportFilePath "\\Server1\TS\TaskSequence.zip"
 ```
 
 This command imports a task sequence from the specified location.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -47,7 +66,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,7 +82,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +98,7 @@ Indicates that the import process ignores dependencies in the task sequence.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +114,7 @@ Controls the behavior when a package already exists.
 ```yaml
 Type: ImportActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NotSet, Skip, DirectImport, Rename, Overwrite, ImportFail, IgnoreDependencyFailure, AppendDriverCategories, OverwriteIgnoreDependencyFailure
 
 Required: False
@@ -121,22 +140,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -155,8 +158,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

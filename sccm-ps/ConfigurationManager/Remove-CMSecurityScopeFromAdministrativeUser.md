@@ -1,14 +1,17 @@
 ---
-title: Remove-CMSecurityScopeFromAdministrativeUser
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes the association between security scopes and an administrative user.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMSecurityScopeFromAdministrativeUser
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMSecurityScopeFromAdministrativeUser
@@ -81,7 +84,7 @@ After you remove the association between a security scope and an administrative 
 
 ### Example 1: Remove a security scope from an administrative user
 ```
-PS C:\> Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -SecurityScopeName "SecScope02"
+PS XYZ:\> Remove-CMSecurityScopeFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -SecurityScopeName "SecScope02"
 ```
 
 This command removes the association between the security scope named SecScope02 and the administrative user named Contoso\PattiFuller.
@@ -95,7 +98,7 @@ To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](
 ```yaml
 Type: IResultObject
 Parameter Sets: RemoveScopeFromAdminById_Object, RemoveScopeFromAdminByName_Object, RemoveScopeFromAdminByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -110,7 +113,7 @@ Specifies the ID of an administrative user.
 ```yaml
 Type: Int32
 Parameter Sets: RemoveScopeFromAdminById_Id, RemoveScopeFromAdminByName_Id, RemoveScopeFromAdminByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -125,7 +128,7 @@ Specifies the name of an administrative user.
 ```yaml
 Type: String
 Parameter Sets: RemoveScopeFromAdminByName_Name, RemoveScopeFromAdminById_Name, RemoveScopeFromAdminByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +158,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +173,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +188,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +204,7 @@ To obtain a security scope object, use the [Get-CMSecurityScope](Get-CMSecurityS
 ```yaml
 Type: IResultObject
 Parameter Sets: RemoveScopeFromAdminByObject_Id, RemoveScopeFromAdminByObject_Name, RemoveScopeFromAdminByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -216,7 +219,7 @@ Specifies the ID of a security scope.
 ```yaml
 Type: String
 Parameter Sets: RemoveScopeFromAdminById_Id, RemoveScopeFromAdminById_Name, RemoveScopeFromAdminById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -232,7 +235,7 @@ A security scope name can be Default or the name of a custom security scope.
 ```yaml
 Type: String
 Parameter Sets: RemoveScopeFromAdminByName_Name, RemoveScopeFromAdminByName_Id, RemoveScopeFromAdminByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -258,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Remove-CMCategory
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a configuration category in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMCategory
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMCategory
@@ -49,7 +52,7 @@ The **Remove-CMCategory** cmdlet removes a configuration category in Microsoft S
 
 ### Example 1: Remove a configuration category
 ```
-PS C:\> Remove-CMCategory -CategoryType "DriverCategories" -Force -Name "NewLaptopDriverSet"
+PS XYZ:\> Remove-CMCategory -CategoryType "DriverCategories" -Force -Name "NewLaptopDriverSet"
 ```
 
 This command removes the category named NewLaptopDriverSet from DriversCategories without prompting you for confirmation.
@@ -70,7 +73,7 @@ Valid values are:
 ```yaml
 Type: CategoryType
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
 Required: False
@@ -83,7 +86,7 @@ Accept wildcard characters: False
 ```yaml
 Type: CategoryType
 Parameter Sets: ByCategory
-Aliases: 
+Aliases:
 Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
 Required: True
@@ -114,7 +117,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +132,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

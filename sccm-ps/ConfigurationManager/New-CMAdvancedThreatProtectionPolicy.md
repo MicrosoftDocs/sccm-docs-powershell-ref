@@ -1,14 +1,17 @@
 ---
-title: New-CMAdvancedThreatProtectionPolicy
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates an advanced threat protection policy.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMAdvancedThreatProtectionPolicy
+titleSuffix: Configuration Manager
 ---
 
 # New-CMAdvancedThreatProtectionPolicy
@@ -26,16 +29,13 @@ New-CMAdvancedThreatProtectionPolicy -Name <String> [-Description <String>] -Pol
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -55,12 +55,10 @@ Accept wildcard characters: False
 ```
 
 ### -Description
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +73,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,8 +83,6 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -105,7 +101,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,12 +111,10 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -130,12 +124,10 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
- 
-
 ```yaml
 Type: ConfigurationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Onboarding, Offboarding
 
 Required: True
@@ -146,12 +138,10 @@ Accept wildcard characters: False
 ```
 
 ### -SampleSharingType
- 
-
 ```yaml
 Type: SampleSharingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, All
 
 Required: False
@@ -162,12 +152,10 @@ Accept wildcard characters: False
 ```
 
 ### -TelemetryReportingFrequencyType
- 
-
 ```yaml
 Type: TelemetryReportingFrequencyType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Normal, Expedited
 
 Required: False
@@ -194,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -207,4 +195,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

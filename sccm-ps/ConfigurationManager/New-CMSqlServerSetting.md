@@ -1,14 +1,17 @@
 ---
-title: New-CMSqlServerSetting
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a SQL Server settings object in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMSqlServerSetting
+titleSuffix: Configuration Manager
 ---
 
 # New-CMSqlServerSetting
@@ -40,7 +43,7 @@ The object specifies settings for the name of the site database and the port num
 
 ### Example 1: Create a SQL Server settings object
 ```
-PS C:\> New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite -SqlServerServiceBrokerPort 4037
+PS XYZ:\> New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite -SqlServerServiceBrokerPort 4037
 ```
 
 This command creates a SQL Server settings object that specifies that System Center Configuration Manager copies Microsoft SQL Server Express to a secondary site.
@@ -69,7 +72,7 @@ Indicates that Microsoft SQL Server Express is copied to a secondary site.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewSettingByCopy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,7 +87,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +102,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ Specifies the name of an instance of SQL Server.
 ```yaml
 Type: String
 Parameter Sets: NewSettingByExisting
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +132,7 @@ Specifies a name of the Configuration Manager site database.
 ```yaml
 Type: String
 Parameter Sets: NewSettingByExisting
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,7 +147,7 @@ Specifies a port number for the SQL Server Service Broker port.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +162,7 @@ Specifies a port number for the SQL Server service port.
 ```yaml
 Type: Int32
 Parameter Sets: NewSettingByCopy
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +177,7 @@ Indicates that you use the existing instance of SQL Server.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewSettingByExisting
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -209,4 +212,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,14 +1,17 @@
 ---
-title: Get-CMScript
-titleSuffix: Configuration Manager
+author: mumian
 description: Gets Configuration Manager PowerShell scripts.
+external help file: AdminUI.PS.ClientOperations.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/15/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMScript
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMScript
@@ -19,9 +22,9 @@ Gets Configuration Manager PowerShell scripts.
 
 ## SYNTAX
 
-```powershell
+```
 Get-CMScript [-Author <String>] [-ScriptName <String>] [-Fast] [-DisableWildcardHandling]
- [-ForceWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +38,7 @@ You can get a specific script by specifying the author or the name of the script
 ### Example 1: Get all scripts
 
 ```powershell
-PS C:\> Get-CMScript
+PS XYZ:\> Get-CMScript
 ```
 
 This command gets all scripts that System Center Configuration Manager manages.
@@ -43,7 +46,7 @@ This command gets all scripts that System Center Configuration Manager manages.
 ### Example 2: Get scripts by using name
 
 ```powershell
-PS C:\> Get-CMScript -ScriptName "D*"
+PS XYZ:\> Get-CMScript -ScriptName "D*"
 ```
 
 This command gets all scripts that have a name that begins with the letter D.
@@ -133,6 +136,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
@@ -142,6 +148,8 @@ Accept wildcard characters: False
 ### IResultObject[]#SMS_Scripts
 
 IResultObject#SMS_Scripts
+
+## NOTES
 
 ## RELATED LINKS
 

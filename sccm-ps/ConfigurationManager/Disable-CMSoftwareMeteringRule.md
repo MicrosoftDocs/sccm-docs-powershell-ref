@@ -1,14 +1,17 @@
 ---
-title: Disable-CMSoftwareMeteringRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Disables Configuration Manager software metering rules.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Disable-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
 ---
 
 # Disable-CMSoftwareMeteringRule
@@ -53,7 +56,7 @@ For more information about software metering in System Center Configuration Mana
 
 ### Example 1: Disable rules for a specific product
 ```
-PS C:\>Disable-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS XYZ:\>Disable-CMSoftwareMeteringRule -ProductName "Accounting Package"
 ```
 
 This command disables software metering rules for the product named Accounting Package.
@@ -61,7 +64,7 @@ There may be more than one rule.
 
 ### Example 2: Disable a specific rule
 ```
-PS C:\>Disable-CMSoftwareMeteringRule -Id "16777229"
+PS XYZ:\>Disable-CMSoftwareMeteringRule -Id "16777229"
 ```
 
 This command disables a software metering rule that has the specified ID.
@@ -89,7 +92,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +107,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +138,7 @@ To obtain a software metering rule object, use the [Get-CMSoftwareMeteringRule](
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -150,7 +153,7 @@ Specifies a name for a product that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -176,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

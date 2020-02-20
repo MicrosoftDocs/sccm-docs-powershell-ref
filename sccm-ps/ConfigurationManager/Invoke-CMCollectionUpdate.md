@@ -1,14 +1,17 @@
 ---
-title: Invoke-CMCollectionUpdate
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Updates the membership of a Configuration Manager collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMCollectionUpdate
+titleSuffix: Configuration Manager
 ---
 
 # Invoke-CMCollectionUpdate
@@ -43,14 +46,14 @@ The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a Microsoft S
 
 ### Example 1: Update the membership of a collection using the pipeline
 ```
-PS C:\> Get-CMCollection -Id MP500014 | Invoke-CMCollectionUpdate
+PS XYZ:\> Get-CMCollection -Id MP500014 | Invoke-CMCollectionUpdate
 ```
 
 This command gets the collection object with the ID of MP500014 and uses the pipeline operator to pass the object to **Invoke-CMCollectionUpdate**, which updates the membership of the collection.
 
 ### Example 2: Update the membership of a collection by name
 ```
-PS C:\> Invoke-CMCollectionUpdate -Name "UserCol1"
+PS XYZ:\> Invoke-CMCollectionUpdate -Name "UserCol1"
 ```
 
 This command updates the membership of the collection named UserCol1.
@@ -63,7 +66,7 @@ Specifies the ID of a collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +96,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +127,7 @@ To obtain a collection object, use the Get-CMCollection, Get-CMDeviceCollection,
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,7 +142,7 @@ Specifies the name of a collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -165,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

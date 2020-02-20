@@ -1,14 +1,17 @@
 ---
-title: New-CMExchangeServer
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Configures a new Exchange Server connector.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMExchangeServer
+titleSuffix: Configuration Manager
 ---
 
 # New-CMExchangeServer
@@ -21,24 +24,27 @@ Configures a new Exchange Server connector.
 ### NewOnPrem (Default)
 ```
 New-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-IsHosted <Boolean>] [-OnPrem]
- [-ExchangeClientAccessServer <Dictionary`2[]>] [-UserName <String>] -FullSyncSchedule <IResultObject>
- -DeltaSyncMins <Int32> [-MaximumInactiveDay <Int32>] [-ActiveDirectoryContainer <String[]>]
- [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-PasswordSetting <ExchangeConnectorPasswordSetting>]
+ [-ExchangeClientAccessServer <Dictionary`2[]>] [-UserName <String>] [-NotificationUserName <String>]
+ [-FullSyncSchedule <IResultObject>] [-DeltaSyncMins <Int32>] [-MaximumInactiveDay <Int32>]
+ [-ActiveDirectoryContainer <String[]>] [-GeneralSetting <ExchangeConnectorGeneralSetting>]
+ [-PasswordSetting <ExchangeConnectorPasswordSetting>]
  [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>]
  [-SecuritySetting <ExchangeConnectorSecuritySetting>]
  [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-AllowExternalDeviceManagement <Boolean>]
+ [-EnableAccessRule <Boolean>] [-AccessLevel <AccessLevelType>] [-EmailAddress <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewHosted
 ```
 New-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-IsHosted <Boolean>] [-Hosted]
- -UserName <String> -FullSyncSchedule <IResultObject> -DeltaSyncMins <Int32> [-MaximumInactiveDay <Int32>]
- [-ActiveDirectoryContainer <String[]>] [-GeneralSetting <ExchangeConnectorGeneralSetting>]
- [-PasswordSetting <ExchangeConnectorPasswordSetting>]
+ -UserName <String> [-NotificationUserName <String>] [-FullSyncSchedule <IResultObject>]
+ [-DeltaSyncMins <Int32>] [-MaximumInactiveDay <Int32>] [-ActiveDirectoryContainer <String[]>]
+ [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-PasswordSetting <ExchangeConnectorPasswordSetting>]
  [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>]
  [-SecuritySetting <ExchangeConnectorSecuritySetting>]
  [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-AllowExternalDeviceManagement <Boolean>]
+ [-EnableAccessRule <Boolean>] [-AccessLevel <AccessLevelType>] [-EmailAddress <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,8 +57,8 @@ For more information, see [Configuration Manager 2012 Exchange Connector Impleme
 
 ### Example 1: Create an Exchange Server
 ```
-PS C:\> $schedule = New-CMSchedule -Start "03/01/2016 11:59 PM" -RecurInterval Days -RecurCount 1
-PS C:\> New-CMExchangeServer -ServerAddress "http://exchange.contoso.com" -DeltaSyncInterval 120 -FullSyncSchedule $schedule -IsHosted -SiteCode "ContosoSite"
+PS XYZ:\> $schedule = New-CMSchedule -Start "03/01/2016 11:59 PM" -RecurInterval Days -RecurCount 1
+PS XYZ:\> New-CMExchangeServer -ServerAddress "http://exchange.contoso.com" -DeltaSyncInterval 120 -FullSyncSchedule $schedule -IsHosted -SiteCode "ContosoSite"
 ```
 
 These commands create an Exchange Server with the server address `http://exchange.contoso.com`.
@@ -63,6 +69,22 @@ The second command then uses **New-CMExchangeServer** to create the new server a
 
 ## PARAMETERS
 
+### -AccessLevel
+{{ Fill AccessLevel Description }}
+
+```yaml
+Type: AccessLevelType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Allow, Block, Quarantine
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ActiveDirectoryContainer
 Specifies an array of names of Active Directory containers.
 When this parameter is specified, the Exchange Server connector searches the Active Directory containers for the device.
@@ -70,7 +92,7 @@ When this parameter is specified, the Exchange Server connector searches the Act
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +107,7 @@ Indicates whether an external device management program can manage the device.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +124,7 @@ Valid values are: AllowUnsignedApplications, AllowUnsignedInstallationPackages, 
 ```yaml
 Type: ExchangeConnectorApplicationSetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +154,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases: DeltaSyncInterval
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -145,7 +167,22 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailAddress
+{{ Fill EmailAddress Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: EmailAddresses
 
 Required: False
 Position: Named
@@ -161,7 +198,22 @@ For each dictionary entry in the array, specify the setting name as the key and 
 ```yaml
 Type: ExchangeConnectorEmailManagementSetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAccessRule
+{{ Fill EnableAccessRule Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +228,7 @@ Specifies an array of Exchange Client Access servers, as key-value pairs.
 ```yaml
 Type: Dictionary`2[]
 Parameter Sets: NewOnPrem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +243,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,9 +258,9 @@ Specifies a result object that schedules the full discovery time for an Exchange
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -228,7 +280,7 @@ Valid values are:
 ```yaml
 Type: ExchangeConnectorGeneralSetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +293,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewHosted
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +308,7 @@ Indicates that the Exchange Server connector configuration is for a hosted or on
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +325,22 @@ If the most recent sync time is older than the current time - MinimumInactiveDay
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationUserName
+{{ Fill NotificationUserName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +353,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewOnPrem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,7 +380,7 @@ Valid values are:
 ```yaml
 Type: ExchangeConnectorPasswordSetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -341,7 +408,7 @@ Valid values are:
 ```yaml
 Type: ExchangeConnectorSecuritySetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -356,7 +423,7 @@ Specifies the address of the Exchange Server for which the cmdlet configures the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -371,7 +438,7 @@ Specifies the site code of the Configuration Manager site where a Exchange Serve
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -386,7 +453,7 @@ Specifies the username that the connector uses to connect to the Exchange Server
 ```yaml
 Type: String
 Parameter Sets: NewOnPrem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -398,7 +465,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: NewHosted
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -424,7 +491,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

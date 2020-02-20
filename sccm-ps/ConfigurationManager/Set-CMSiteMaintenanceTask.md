@@ -1,14 +1,17 @@
 ---
-title: Set-CMSiteMaintenanceTask
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes settings for a Configuration Manager maintenance task.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSiteMaintenanceTask
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMSiteMaintenanceTask
@@ -35,7 +38,7 @@ Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>] 
 
 ### SetMaintenanceTasksByTaskName
 ```
-Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>] -TaskName <String>
+Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>] -Name <String>
  [-Enabled <Boolean>] [-BeginTime <DateTime>] [-LatestBeginTime <DateTime>] [-DaysOfWeek <DaysOfWeek[]>]
  [-EnableAlert <Boolean>] [-SiteCode <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -56,7 +59,7 @@ The **Set-CMSiteMaintenanceTask** cmdlet changes settings for a Microsoft System
 
 ### Example 1: Set a maintenance task to run once a week
 ```
-PS C:\> Set-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup" -DaysOfWeek Friday
+PS XYZ:\> Set-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup" -DaysOfWeek Friday
 ```
 
 This command specifies that the maintenance task named Backup runs on Friday each week on the Configuration Manager site that has the site code CM1.
@@ -69,7 +72,7 @@ Specifies the date and time at which a maintenance task starts.
 ```yaml
 Type: DateTime
 Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DaysOfWeek[]
 Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
-Aliases: 
+Aliases:
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
 Required: False
@@ -137,7 +140,7 @@ Specifies the name of the device on which the maintenance task runs.
 ```yaml
 Type: String
 Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +155,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,8 +165,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAlert
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
@@ -182,7 +183,7 @@ Indicates whether the maintenance task is enabled in Configuration Manager.
 ```yaml
 Type: Boolean
 Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +213,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,8 +223,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetMaintenanceTasksByValue
@@ -242,7 +241,7 @@ Specifies a future date and time at which the maintenance task runs.
 ```yaml
 Type: DateTime
 Parameter Sets: SetMaintenanceTasksByValue, SetMaintenanceTasksByTaskName, SetMaintenanceTasksByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -306,7 +305,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MaintenanceTask
 Parameter Sets: SetMaintenanceTasksByName
-Aliases: 
+Aliases:
 Accepted values: BackupSiteServer, CheckApplicationTitleWithInventoryInformation, ClearUndiscoveredClients, DeleteAgedApplicationRequestData, DeleteUnusedApplicationRevisions, DeleteAgedClientOperations, DeleteAgedCollectedFiles, DeleteAgedComputerAssociationData, DeleteAgedDeleteDetectionData, DeleteAgedDeviceWipeRecord, DeleteAgedDiscoveryData, DeleteAgedEnrolledDevices, DeleteAgedEndpointProtectionHealthStatusHistoryData, DeleteAgedDevicesManagedByTheExchangeServerConnector, DeleteAgedInventoryHistory, DeleteAgedLogData, DeleteAgedSoftwareMeteringData, DeleteAgedSoftwareMeteringSummaryData, DeleteAgedClientPresenceHistory, DeleteAgedNotificationTaskHistory, DeleteAgedReplicationTrackingData, DeleteAgedReplicationSummaryData, DeleteAgedStatusMessages, DeleteAgedThreatData, DeleteAgedUnknownComputers, DeleteAgedUserDeviceAffinityData, DeleteInactiveClientDiscoveryData, DeleteObsoleteAlerts, DeleteObsoleteClientDiscoveryData, DeleteObsoleteForestDiscoverySitesAndSubnets, EvaluateProvisionedAmtComputerCertificates, MonitorKeys, RebuildIndexes, SummarizeSoftwareMeteringFileUsageData, SummarizeInstalledSoftwareData, SummarizeSoftwareMeteringMonthlyUsageData, DeleteAgedDistributionPointUsageStats, DeleteAgedProxyTrafficData
 
 Required: True
@@ -316,13 +315,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThru
- 
+### -Name
+{{ Fill Name Description }}
 
+```yaml
+Type: String
+Parameter Sets: SetMaintenanceTasksByTaskName
+Aliases: MaintenanceTaskName, TaskName, ItemName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -350,7 +362,7 @@ Indicates whether Configuration Manager runs the maintenance task immediately.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetSummaryTaskByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -365,7 +377,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -381,23 +393,8 @@ The acceptable value for this parameter is UpdateApplicationCatalogTables.
 ```yaml
 Type: SummaryTask
 Parameter Sets: SetSummaryTaskByName
-Aliases: 
+Aliases:
 Accepted values: UpdateApplicationCatalogTables
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TaskName
- 
-
-```yaml
-Type: String
-Parameter Sets: SetMaintenanceTasksByTaskName
-Aliases: Name, MaintenanceTaskName
 
 Required: True
 Position: Named
@@ -423,7 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

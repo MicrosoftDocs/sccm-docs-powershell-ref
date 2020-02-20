@@ -1,14 +1,17 @@
 ---
-title: New-CMInstallationSourceFile
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates an installation source file for Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMInstallationSourceFile
+titleSuffix: Configuration Manager
 ---
 
 # New-CMInstallationSourceFile
@@ -46,7 +49,7 @@ Instead, it forwards information that it gets from clients to a primary site tha
 
 ### Example 1: Create an installation source file
 ```
-PS C:\> New-CMInstallationSourceFile -CopyFromParentSiteServer
+PS XYZ:\> New-CMInstallationSourceFile -CopyFromParentSiteServer
 ```
 
 This command creates an installation source file for a secondary site installation by copying the installation files from the primary site.
@@ -74,7 +77,7 @@ Indicates that Configuration Manager copies the installation files for a seconda
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewInstallationSourceFilesByNetworkLocation
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -89,7 +92,7 @@ Indicates that Configuration Manager copies the installation files for a seconda
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewInstallationSourceFilesByParent
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -104,7 +107,7 @@ Indicates that the installation files for a secondary site installation reside o
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewInstallationSourceFilesBySecondaryLocation
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +122,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +137,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +152,7 @@ Specifies a path to source files in the local file system of the secondary site 
 ```yaml
 Type: String
 Parameter Sets: NewInstallationSourceFilesBySecondaryLocation
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,7 +167,7 @@ Specifies a UNC path to source files in the local file system of the secondary s
 ```yaml
 Type: String
 Parameter Sets: NewInstallationSourceFilesByNetworkLocation
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -199,4 +202,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

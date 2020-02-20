@@ -1,14 +1,17 @@
 ---
-title: Get-CMOperatingSystemInstaller
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets operating system installers.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMOperatingSystemInstaller
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMOperatingSystemInstaller
@@ -38,7 +41,7 @@ An operating system installer is an installation package that contains all the f
 
 ### Example 1: Get an operating system installer
 ```
-PS C:\> Get-CMOperatingSystemInstaller -Name "OSInstPkg01"-SecuredScopeNames "SecScope02"
+PS XYZ:\> Get-CMOperatingSystemInstaller -Name "OSInstPkg01"-SecuredScopeNames "SecScope02"
 ```
 
 This command gets the operating system installer named OSInstPkg01 for the security scope named SecScope02.
@@ -51,7 +54,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,7 +69,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ Specifies the name of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

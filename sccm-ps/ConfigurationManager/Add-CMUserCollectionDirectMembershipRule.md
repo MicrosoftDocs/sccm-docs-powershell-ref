@@ -1,14 +1,17 @@
 ---
-title: Add-CMUserCollectionDirectMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a direct membership rule to one or more Configuration Manager user collections.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMUserCollectionDirectMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMUserCollectionDirectMembershipRule
@@ -20,37 +23,37 @@ Adds a direct membership rule to one or more Configuration Manager user collecti
 
 ### ByCollectionValueAndResourceValue (Default)
 ```
-Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -ResourceId <Int32> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -ResourceId <Int32[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdAndResourceValue
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceId <Int32> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -ResourceId <Int32[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceValue
 ```
-Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionValueAndResourceId
 ```
-Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <Int32> [-PassThru]
+Add-CMUserCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <Int32[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -65,7 +68,7 @@ For more information on collection rules in Microsoft System Center Configuratio
 
 ### Example 1: Add a direct membership rule to a user collection
 ```
-PS C:\>Add-CMUserCollectionDirectMembershipRule -CollectionName "All Mobile Devices" -ResourceId "Res_94412512"
+PS XYZ:\>Add-CMUserCollectionDirectMembershipRule -CollectionName "All Mobile Devices" -ResourceId "Res_94412512"
 ```
 
 This command adds a direct membership rule that has the ID Res_94412512 to the Configuration Manager user collection named All Mobile Devices.
@@ -78,7 +81,7 @@ Specifies the ID of the user collection where the rule is applied.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionIdAndResourceValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +96,7 @@ Specifies the name of a user collection where the rule is applied.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionNameAndResourceId, ByCollectionNameAndResourceValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -123,7 +126,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +141,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +173,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,9 +186,9 @@ Accept wildcard characters: False
 Specifies the type of the resource that the cmdlet adds to the user collections.
 
 ```yaml
-Type: IResultObject
+Type: IResultObject[]
 Parameter Sets: ByCollectionValueAndResourceValue, ByCollectionIdAndResourceValue, ByCollectionNameAndResourceValue
-Aliases: 
+Aliases: Resources
 
 Required: True
 Position: Named
@@ -198,9 +201,9 @@ Accept wildcard characters: False
 Specifies the ID of a resource that the cmdlet adds to the user collections.
 
 ```yaml
-Type: Int32
+Type: Int32[]
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionNameAndResourceId, ByCollectionValueAndResourceId
-Aliases: 
+Aliases: ResourceIds
 
 Required: True
 Position: Named
@@ -226,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

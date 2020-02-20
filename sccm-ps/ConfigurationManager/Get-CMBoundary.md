@@ -1,14 +1,17 @@
 ---
-title: Get-CMBoundary
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a Configuration Manager boundary.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMBoundary
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMBoundary
@@ -57,7 +60,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ### Example 1: Get a boundary that is specified by its identifier
 ```
-PS C:\> Get-Boundary -Id "67777217"
+PS XYZ:\> Get-Boundary -Id "67777217"
 BoundaryFlags:      0
 BoundaryID:         67777217
 BoundaryType:       1
@@ -76,7 +79,7 @@ This command gets a boundary that is specified by the identifier 67777217.
 
 ### Example 2: Get a boundary that is specified by the name of an associated boundary group
 ```
-PS C:\> Get-Boundary -BoundaryGroupName "BGroup07"
+PS XYZ:\> Get-Boundary -BoundaryGroupName "BGroup07"
 BoundaryFlags:      0
 BoundaryID:         63997411
 BoundaryType:       2
@@ -102,7 +105,7 @@ You can get a boundary group ID by using the **Get-CMBoundaryGroup** cmdlet.
 ```yaml
 Type: UInt32
 Parameter Sets: SearchByBoundaryGroupIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -131,7 +134,7 @@ You can get a boundary group name by using the **Get-CMBoundaryGroup** cmdlet.
 ```yaml
 Type: String
 Parameter Sets: SearchByBoundaryGroupNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +175,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +190,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Export-CMDriverPackage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Exports driver packages.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Export-CMDriverPackage
+titleSuffix: Configuration Manager
 ---
 
 # Export-CMDriverPackage
@@ -21,22 +24,22 @@ Exports driver packages.
 ### SearchPackageByNameMandatory (Default)
 ```
 Export-CMDriverPackage -Name <String> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
 Export-CMDriverPackage -InputObject <IResultObject> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
 Export-CMDriverPackage -Id <String> -ExportFilePath <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +49,7 @@ The **Export-CMDriverPackage** cmdlet exports one or more driver packages to a .
 
 ### Example 1: Export a driver package
 ```
-PS C:\>Export-CMDriverPackage -Name "DrvPkg01" -ExportFilePath "\\Contoso02\DriverPackages\DriverPackage01.zip"
+PS XYZ:\>Export-CMDriverPackage -Name "DrvPkg01" -ExportFilePath "\\Contoso02\DriverPackages\DriverPackage01.zip"
 ```
 
 This command exports the driver package named DrvPkg01 to the export file DriverPackage01.zip.
@@ -87,7 +90,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,9 +105,24 @@ Specifies the full path for the export file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -117,7 +135,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +166,7 @@ To obtain a **CMDriverPackage** object, use the [Get-CMDriverPackage](Get-CMDriv
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +181,7 @@ Specifies the name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchPackageByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -194,7 +212,7 @@ Specifies whether to export the content files for the driver packages and driver
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: ExportAllContent
 
 Required: False
 Position: Named
@@ -209,7 +227,7 @@ Specifies whether to export all drivers associated with the driver package.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: ExportAssociateDrivers
 
 Required: False
 Position: Named
@@ -219,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Get-CMConfigurationItem
-titleSuffix: Configuration Manager
+author: mumian
 description: Gets Configuration Manager configuration items.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMConfigurationItem
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMConfigurationItem
@@ -20,15 +23,13 @@ Gets Configuration Manager configuration items.
 ## SYNTAX
 
 ### SearchByName (Default)
-
-```powershell
+```
 Get-CMConfigurationItem [[-Name] <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Get-CMConfigurationItem [-Id] <Int32> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -47,7 +48,7 @@ For more information about configuration items, see [Introduction to Compliance 
 ### Example 1: Get an item using a name
 
 ```powershell
-PS C:\> Get-CMConfigurationItem -Name "ConfigItem76"
+PS XYZ:\> Get-CMConfigurationItem -Name "ConfigItem76"
 ```
 
 This command gets a configuration item named ConfigItem76.
@@ -55,8 +56,8 @@ This command gets a configuration item named ConfigItem76.
 ### Example 2: Get an item to use with another cmdlet
 
 ```powershell
-PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
-PS C:\> Remove-CMConfigurationItem -InputObject $CIObj
+PS XYZ:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Remove-CMConfigurationItem -InputObject $CIObj
 ```
 
 The first command gets a configuration item with the specified identifier and stores it in the $CIObj variable.
@@ -72,7 +73,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +92,7 @@ If lazy properties are not needed, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +108,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,8 +152,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

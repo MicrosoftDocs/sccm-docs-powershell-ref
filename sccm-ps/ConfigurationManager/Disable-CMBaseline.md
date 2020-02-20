@@ -1,14 +1,17 @@
 ---
-title: Disable-CMBaseline
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Disables configuration baselines.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Disable-CMBaseline
+titleSuffix: Configuration Manager
 ---
 
 # Disable-CMBaseline
@@ -44,7 +47,7 @@ After you disable a configuration baseline, System Center Configuration Manager 
 
 ### Example 1: Disable a configuration baseline
 ```
-PS C:\>Disable-CMBaseline -Name "BLconfig01"
+PS XYZ:\>Disable-CMBaseline -Name "BLconfig01"
 ```
 
 This command disables the configuration baseline named BLconfig01.
@@ -72,7 +75,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +90,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +121,7 @@ To obtain a **CMBaseline** object, use the [Get-CMBaseline](Get-CMBaseline.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -159,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

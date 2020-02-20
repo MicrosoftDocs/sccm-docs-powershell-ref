@@ -1,14 +1,17 @@
 ---
-title: Clear-CMClientOperation
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Clears a Configuration Manager client operation object.
+external help file: AdminUI.PS.ClientOperations.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Clear-CMClientOperation
+titleSuffix: Configuration Manager
 ---
 
 # Clear-CMClientOperation
@@ -40,7 +43,7 @@ You can use the Remove-CMClientOperation cmdlet to remove a client operation obj
 
 ### Example 1: Clear a client operation
 ```
-PS C:\>Clear-CMClientOperation -Id "CMCO217"
+PS XYZ:\>Clear-CMClientOperation -Id "CMCO217"
 ```
 
 This command clears the client operation that has the ID CMCO217.
@@ -51,7 +54,7 @@ This command clears the client operation that has the ID CMCO217.
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -81,7 +84,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +114,7 @@ Specifies the ID of a client operation.
 ```yaml
 Type: String
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

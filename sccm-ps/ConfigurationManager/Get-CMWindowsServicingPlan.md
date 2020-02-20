@@ -1,14 +1,17 @@
 ---
-title: Get-CMWindowsServicingPlan
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a Windows 10 servicing plan.
+external help file: AdminUI.PS.Sum-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMWindowsServicingPlan
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMWindowsServicingPlan
@@ -35,7 +38,7 @@ The **Get-CMWindowsServicingPlan** cmdlet gets a Windows 10 servicing plan.
 
 ### Example 1: Get all servicing plans
 ```
-PS C:\> Get-CMWindowsServicingPlan -Fast
+PS XYZ:\> Get-CMWindowsServicingPlan -Fast
 ```
 
 This command gets all Windows 10 servicing plans.
@@ -43,7 +46,7 @@ The command does not return lazy properties.
 
 ### Example 2: Get a servicing plan by name
 ```
-PS C:\> Get-CMWindowsServicingPlan -Name "SvcPlan01"
+PS XYZ:\> Get-CMWindowsServicingPlan -Name "SvcPlan01"
 ```
 
 This command returns the Windows 10 servicing plan named SvcPlan01.
@@ -59,7 +62,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +92,7 @@ Specifies the name of a servicing plan.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -99,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

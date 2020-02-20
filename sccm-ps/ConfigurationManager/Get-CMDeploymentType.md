@@ -1,14 +1,17 @@
 ---
-title: Get-CMDeploymentType
-titleSuffix: Configuration Manager
+author: mumian
 description: Gets the deployment type of a Configuration Manager deployment application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMDeploymentType
@@ -20,22 +23,19 @@ Gets the deployment type of a Configuration Manager deployment application.
 ## SYNTAX
 
 ### SearchByName (Default)
-
-```powershell
+```
 Get-CMDeploymentType [-DeploymentTypeName <String>] -ApplicationName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Get-CMDeploymentType -DeploymentTypeId <Int32> -ApplicationName <String> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByDTValue
-
-```powershell
+```
 Get-CMDeploymentType [-DeploymentTypeName <String>] -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -52,7 +52,7 @@ A deployment type also contains rules that specify if and how the software is de
 ### Example 1: Get the deployment type of an application
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp"
 ```
 
 This command gets the deployment type for the application named CenterApp.
@@ -60,7 +60,7 @@ This command gets the deployment type for the application named CenterApp.
 ### Example 2: Get the deployment type of an application by name
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeName "InterDept - Windows app package (.appx file)"
 ```
 
 This command gets the deployment type for the application named CenterApp that has a deployment type named InterDept - Windows app package (.appx file).
@@ -68,7 +68,7 @@ This command gets the deployment type for the application named CenterApp that h
 ### Example 3: Get the deployment type of an application by ID
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeID "16777457"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "CenterApp" -DeploymentTypeID "16777457"
 ```
 
 This command gets the deployment type for the application named CenterApp that has a deployment type that has the ID 16777457.
@@ -82,7 +82,7 @@ Specifies the name of an application that is associated with the deployment type
 ```yaml
 Type: String
 Parameter Sets: SearchByName, SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -130,7 +130,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,8 +173,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

@@ -1,14 +1,17 @@
 ---
-title: Get-CMTaskSequenceDeployment
-titleSuffix: Configuration Manager
+author: mumian
 description: Gets a task sequence deployment in Configuration Manager.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 12/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMTaskSequenceDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMTaskSequenceDeployment
@@ -20,31 +23,27 @@ Gets a task sequence deployment in Configuration Manager.
 ## SYNTAX
 
 ### SearchByName (Default)
-
-```powershell
+```
 Get-CMTaskSequenceDeployment [-Name <String>] [-Summary] [-CollectionName <String>] [-CollectionId <String>]
  [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
-
-```powershell
+```
 Get-CMTaskSequenceDeployment [-TaskSequenceId <String>] [-Summary] [-CollectionName <String>]
  [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
-
-```powershell
+```
 Get-CMTaskSequenceDeployment [-DeploymentId <String>] [-Summary] [-CollectionName <String>]
  [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
-
-```powershell
+```
 Get-CMTaskSequenceDeployment [-InputObject <IResultObject>] [-Summary] [-CollectionName <String>]
  [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
@@ -60,7 +59,7 @@ A task sequence deployment assigns a task sequence to a collection of computers.
 ### Example 1
 
 ```powershell
-PS C:\> Get-CMTaskSequenceDeployment -Name "Task Sequence 1333" 
+PS XYZ:\> Get-CMTaskSequenceDeployment -Name "Task Sequence 1333"
 ```
 
 This command gets a task sequence deployment by name.
@@ -74,7 +73,7 @@ Specifies a collection object.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +89,7 @@ Specifies a collection ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +106,7 @@ A collection is a group of client computers.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +138,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +154,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +201,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +227,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -242,6 +240,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 - IResultObject#SMS_DeploymentSummary
 - IResultObject[]#SMS_Advertisement
 - IResultObject#SMS_Advertisement
+
+## NOTES
 
 ## RELATED LINKS
 

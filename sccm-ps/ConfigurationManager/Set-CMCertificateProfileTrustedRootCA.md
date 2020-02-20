@@ -1,14 +1,17 @@
 ---
-title: Set-CMCertificateProfileTrustedRootCA
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a trusted CA certificate profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMCertificateProfileTrustedRootCA
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMCertificateProfileTrustedRootCA
@@ -47,7 +50,7 @@ The **Set-CMCertificateProfileTrustedRootCA** cmdlet changes the settings of a t
 
 ### Example 1: Set a trusted CA certificate profile by using the pipeline
 ```
-PS C:\> Get-CMCertificateProfileTrustedRootCA -Name "Test123" -Fast | Set-CMCertificateProfileTrustedRootCA -Description "Updated description" -WhatIf
+PS XYZ:\> Get-CMCertificateProfileTrustedRootCA -Name "Test123" -Fast | Set-CMCertificateProfileTrustedRootCA -Description "Updated description" -WhatIf
 ```
 
 This command describes what would happen if the command gets the trusted CA certificate profile object named Test123 and uses the pipeline operator to pass the object to **Set-CMCertificateProfileTrustedRootCA** to update its description.
@@ -55,7 +58,7 @@ The command does not actually run.
 
 ### Example 2: Set a trusted CA certificate profile by ID
 ```
-PS C:\> Set-CMCertificateProfileTrustedRootCA -Id 16777479 -NewName "Test456" -Description "Update" -DestinationStore UserIntermediate -Confirm
+PS XYZ:\> Set-CMCertificateProfileTrustedRootCA -Id 16777479 -NewName "Test456" -Description "Update" -DestinationStore UserIntermediate -Confirm
 ```
 
 This command updates the name of the trusted CA certificate profile with the ID of 16777479 to Test456, updates its description, and changes the destination store to UserIntermediate.
@@ -84,7 +87,7 @@ Specifies a description for the trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +123,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +138,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +169,7 @@ To obtain a trusted CA certificate profile object, use the Get-CMCertificateProf
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +184,7 @@ Specifies the name of a trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -196,7 +199,7 @@ Specifies a new name for the trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +215,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

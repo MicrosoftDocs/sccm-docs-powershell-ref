@@ -1,14 +1,17 @@
 ---
-title: Add-CMGooglePlayDeploymentType
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a Google Play deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMGooglePlayDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMGooglePlayDeploymentType
@@ -49,7 +52,7 @@ The **Add-CMGooglePlayDeploymentType** cmdlet adds a Google Play deployment type
 
 ### Example 1: Add a Google Play deployment type
 ```
-PS C:\>Add-CMGooglePlayDeploymentType -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -ApplicationName "TestGooglePlay02" -DeploymentTypeName "DTGooglePlay02" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
+PS XYZ:\>Add-CMGooglePlayDeploymentType -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -ApplicationName "TestGooglePlay02" -DeploymentTypeName "DTGooglePlay02" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
 ```
 
 This command adds the Google Play deployment type named DTGooglePlay02 from the specified URL to the application named TestGooglePlay02 in English and Chinese.
@@ -57,7 +60,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add a Google Play deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "TestGooglePlay" | Add-CMGooglePlayDeploymentType -DeploymentTypeName "DTGooglePlay01" -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
+PS XYZ:\> Get-CMApplication -Name "TestGooglePlay" | Add-CMGooglePlayDeploymentType -DeploymentTypeName "DTGooglePlay01" -Url "https://play.google.com/store/apps/details?id=com.microsoft.office.word" -AddLanguage "en-US", "zh-CN" -Comment "Add Google Play" -Confirm
 ```
 
 This command gets the application object named TestGooglePlay and uses the pipeline operator to pass the object to **Add-CMGooglePlayDeploymentType**.
@@ -90,7 +93,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +123,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -165,7 +168,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +183,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +213,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Set-CMSoftwareUpdateDeployment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a software update deployment in Configuration Manager.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareUpdateDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMSoftwareUpdateDeployment
@@ -105,28 +108,28 @@ The **Set-CMSoftwareUpdateDeployment** cmdlet modifies a deployment of software 
 
 ### Example 1: Set a deployment with expiration time
 ```
-PS C:\> Set-CMSoftwareUpdateDeployment -SoftwareUpdateName "CT" -DeploymentName "Contoso-test1" -NewDeploymentName "Contoso-test5" -Description "Contoso-test5-deployment" -CollectionName "All Mobile Devices" -SendWakeUpPacket $False -VerbosityLevel OnlySuccessAndErrorMessages -TimeBasedOn LocalTime -DeploymentAvailableDay 2013/11/24 -DeploymentAvailableTime 13:26 -DeploymentExpireDay 2014/7/22 -DeploymentExpireTime 4:30 -UserNotification DisplayAll -SoftwareInstallation $False -AllowRestart $False -RestartServer $False -RestartWorkstation $False -PersistOnWriteFilterDevice $True -GenerateSuccessAlert $False -PercentSuccess 99  -DisableOperationsManagerAlert $False -GenerateOperationsManagerAlert $False -ProtectedType NoInstall -UnprotectedType UnprotectedDistributionPoint -UseBranchCache $True -DownloadFromMicrosoftUpdate $False -AllowUseMeteredNetwork $False
+PS XYZ:\> Set-CMSoftwareUpdateDeployment -SoftwareUpdateName "CT" -DeploymentName "Contoso-test1" -NewDeploymentName "Contoso-test5" -Description "Contoso-test5-deployment" -CollectionName "All Mobile Devices" -SendWakeUpPacket $False -VerbosityLevel OnlySuccessAndErrorMessages -TimeBasedOn LocalTime -DeploymentAvailableDay 2013/11/24 -DeploymentAvailableTime 13:26 -DeploymentExpireDay 2014/7/22 -DeploymentExpireTime 4:30 -UserNotification DisplayAll -SoftwareInstallation $False -AllowRestart $False -RestartServer $False -RestartWorkstation $False -PersistOnWriteFilterDevice $True -GenerateSuccessAlert $False -PercentSuccess 99  -DisableOperationsManagerAlert $False -GenerateOperationsManagerAlert $False -ProtectedType NoInstall -UnprotectedType UnprotectedDistributionPoint -UseBranchCache $True -DownloadFromMicrosoftUpdate $False -AllowUseMeteredNetwork $False
 ```
 
 This command sets a software update deployment by using a software update name and expiration time.
 
 ### Example 2: Start a deployment without expiration time
 ```
-PS C:\> Set-CMSoftwareUpdateDeployment -SoftwareUpdateName "CT" -DeploymentName "Contoso-test2" -NewDeploymentName "Contoso-test6" -Description "Contoso-test6-deployment" -CollectionName "All Mobile Devices" -VerbosityLevel OnlyErrorMessages -TimeBasedOn LocalTime -DeploymentAvailableDay 2013/12/24 -DeploymentAvailableTime 3:56 -UserNotification DisplaySoftwareCenterOnly -PersistOnWriteFilterDevice $True -DisableOperationsManagerAlert $False -GenerateOperationsManagerAlert $False -ProtectedType NoInstall -UnprotectedType UnprotectedDistributionPoint -UseBranchCache $True -DownloadFromMicrosoftUpdate $False -AllowUseMeteredNetwork $False
+PS XYZ:\> Set-CMSoftwareUpdateDeployment -SoftwareUpdateName "CT" -DeploymentName "Contoso-test2" -NewDeploymentName "Contoso-test6" -Description "Contoso-test6-deployment" -CollectionName "All Mobile Devices" -VerbosityLevel OnlyErrorMessages -TimeBasedOn LocalTime -DeploymentAvailableDay 2013/12/24 -DeploymentAvailableTime 3:56 -UserNotification DisplaySoftwareCenterOnly -PersistOnWriteFilterDevice $True -DisableOperationsManagerAlert $False -GenerateOperationsManagerAlert $False -ProtectedType NoInstall -UnprotectedType UnprotectedDistributionPoint -UseBranchCache $True -DownloadFromMicrosoftUpdate $False -AllowUseMeteredNetwork $False
 ```
 
 This command sets a software update deployment by using a software update name but no specified expiration time.
 
 ### Example 3: Start a deployment by software update group name and expiration time
 ```
-PS C:\> Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupName "CTG" -DeploymentName "Contoso-test3" -NewDeploymentName "Contoso-test7" -Description "Contoso-test7-deployment" -CollectionName "All Mobile Devices" -SendWakeUpPacket $False -VerbosityLevel OnlySuccessAndErrorMessages -TimeBasedOn LocalTime -DeploymentAvailableDay 2013/11/24 -DeploymentAvailableTime 13:26 -DeploymentExpireDay 2014/7/22 -DeploymentExpireTime 4:30 -UserNotification DisplayAll -SoftwareInstallation $False -AllowRestart $False -RestartServer $False -RestartWorkstation $False -PersistOnWriteFilterDevice $True -GenerateSuccessAlert $False -PercentSuccess 99  -DisableOperationsManagerAlert $False -GenerateOperationsManagerAlert $False -ProtectedType NoInstall -UnprotectedType UnprotectedDistributionPoint -UseBranchCache $True -DownloadFromMicrosoftUpdate $False -AllowUseMeteredNetwork $False
+PS XYZ:\> Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupName "CTG" -DeploymentName "Contoso-test3" -NewDeploymentName "Contoso-test7" -Description "Contoso-test7-deployment" -CollectionName "All Mobile Devices" -SendWakeUpPacket $False -VerbosityLevel OnlySuccessAndErrorMessages -TimeBasedOn LocalTime -DeploymentAvailableDay 2013/11/24 -DeploymentAvailableTime 13:26 -DeploymentExpireDay 2014/7/22 -DeploymentExpireTime 4:30 -UserNotification DisplayAll -SoftwareInstallation $False -AllowRestart $False -RestartServer $False -RestartWorkstation $False -PersistOnWriteFilterDevice $True -GenerateSuccessAlert $False -PercentSuccess 99  -DisableOperationsManagerAlert $False -GenerateOperationsManagerAlert $False -ProtectedType NoInstall -UnprotectedType UnprotectedDistributionPoint -UseBranchCache $True -DownloadFromMicrosoftUpdate $False -AllowUseMeteredNetwork $False
 ```
 
 This command sets a software update deployment by using a software update group name and an expiration time.
 
 ### Example 4: Start a deployment by software update group name
 ```
-PS C:\> Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupName "CTG" -DeploymentName "Contoso-test4" -NewDeploymentName "Contoso-test8" -Description "Contoso-test8-deployment" -CollectionName "All Mobile Devices" -VerbosityLevel OnlyErrorMessages -TimeBasedOn LocalTime -DeploymentAvailableDay 2013/12/24 -DeploymentAvailableTime 3:56 -UserNotification DisplaySoftwareCenterOnly -PersistOnWriteFilterDevice $True -DisableOperationsManagerAlert $False -GenerateOperationsManagerAlert $False -ProtectedType NoInstall -UnprotectedType UnprotectedDistributionPoint -UseBranchCache $True -DownloadFromMicrosoftUpdate $False -AllowUseMeteredNetwork $False
+PS XYZ:\> Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupName "CTG" -DeploymentName "Contoso-test4" -NewDeploymentName "Contoso-test8" -Description "Contoso-test8-deployment" -CollectionName "All Mobile Devices" -VerbosityLevel OnlyErrorMessages -TimeBasedOn LocalTime -DeploymentAvailableDay 2013/12/24 -DeploymentAvailableTime 3:56 -UserNotification DisplaySoftwareCenterOnly -PersistOnWriteFilterDevice $True -DisableOperationsManagerAlert $False -GenerateOperationsManagerAlert $False -ProtectedType NoInstall -UnprotectedType UnprotectedDistributionPoint -UseBranchCache $True -DownloadFromMicrosoftUpdate $False -AllowUseMeteredNetwork $False
 ```
 
 This command starts a software update deployment by using a software update group name but no specified expiration time.
@@ -134,12 +137,10 @@ This command starts a software update deployment by using a software update grou
 ## PARAMETERS
 
 ### -AlertDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +155,7 @@ Indicates whether to allow a restart following installation.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +170,7 @@ Indicates whether to allow clients to use a metered network to download updates.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,12 +180,10 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,12 +193,10 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,12 +206,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -230,7 +225,7 @@ A collection is a group of client computers.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,12 +250,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentExpireDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +268,7 @@ Specifies a name for a software update deployment in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,7 +283,7 @@ Specifies a deployment type in Configuration Manager.
 ```yaml
 Type: DeploymentType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Required, Available
 
 Required: False
@@ -306,7 +299,7 @@ Specifies a description for a software update deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +314,7 @@ Indicates whether to disable System Center 2016 - Operations Manager alerts duri
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -336,7 +329,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -351,7 +344,7 @@ Indicates whether clients download updates directly from Microsoft Update.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -366,7 +359,7 @@ Indicates whether the cmdlet enables software updates in Configuration Manager.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -381,7 +374,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -396,7 +389,7 @@ Indicates whether to generate Operations Manager alerts when a software installa
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -411,7 +404,7 @@ Indicates whether to generate alerts when a software installation succeeds.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -421,8 +414,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
@@ -441,7 +432,7 @@ Specifies a name for a new deployment in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -451,12 +442,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -471,7 +460,7 @@ Specifies a percentage of the update.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -486,7 +475,7 @@ Indicates whether to install a software update on the temporary overlay and comm
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -501,7 +490,7 @@ Specifies a protected type.
 ```yaml
 Type: ProtectedType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NoInstall, RemoteDistributionPoint
 
 Required: False
@@ -512,12 +501,10 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePostRebootFullScan
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -532,7 +519,7 @@ Indicates whether to allow a server to restart following a software update.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -547,7 +534,7 @@ Indicates whether to allow a workstation to restart following a software update.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -565,7 +552,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -580,7 +567,7 @@ Indicates whether to allow the software update to install, even if the installat
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -596,7 +583,7 @@ A software update group contains individual software updates.
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -611,7 +598,7 @@ Specifies a name for a software update group.
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareUpdateGroupDeploymentByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -626,7 +613,7 @@ Specifies an ID for a software update in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareUpdateDeploymentByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -641,7 +628,7 @@ Specifies a name for a software update in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareUpdateDeploymentByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -657,7 +644,7 @@ UTC time makes the software update available at the same time for all computers.
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: LocalTime, Utc
 
 Required: False
@@ -673,7 +660,7 @@ Specifies an unprotected type.
 ```yaml
 Type: UnprotectedType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NoInstall, UnprotectedDistributionPoint
 
 Required: False
@@ -689,7 +676,7 @@ Indicates whether to use Branch Cache as a distribution point for updates.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -704,7 +691,7 @@ Specifies a user notification type.
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -725,7 +712,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: VerbosityLevelType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AllMessages, OnlySuccessAndErrorMessages, OnlyErrorMessages
 
 Required: False
@@ -752,7 +739,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Get-CMDeviceCollection
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets one or more device collections in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDeviceCollection
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMDeviceCollection
@@ -51,7 +54,7 @@ For more information about collections, see [Introduction to Collections in Conf
 
 ### Example 1: Get a device collection by using an ID
 ```
-PS C:\> Get-CMDeviceCollection -CollectionId "9990000D"
+PS XYZ:\> Get-CMDeviceCollection -CollectionId "9990000D"
 ```
 
 This command gets the device collection that has the ID 9990000D.
@@ -62,7 +65,7 @@ This command gets the device collection that has the ID 9990000D.
 ```yaml
 Type: IResultObject
 Parameter Sets: ByDPGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,7 +78,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByDPGroupId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +91,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByDPGroupName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,7 +117,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

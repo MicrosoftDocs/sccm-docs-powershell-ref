@@ -1,14 +1,17 @@
 ---
-title: Clear-CMPxeDeployment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Clears the status of the most recent PXE deployment in Configuration Manager.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Clear-CMPxeDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Clear-CMPxeDeployment
@@ -65,7 +68,7 @@ System Center Configuration Manager redeploys the most recent required deploymen
 
 ### Example 1: Clear a PXE deployment for a device collection
 ```
-PS C:\>Clear-CMPxeDeployment -DeviceCollectionId "SMS00072"
+PS XYZ:\>Clear-CMPxeDeployment -DeviceCollectionId "SMS00072"
 ```
 
 This command clears a PXE deployment identified with a device collection ID.
@@ -94,7 +97,7 @@ To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_Device
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -170,7 +173,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +188,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

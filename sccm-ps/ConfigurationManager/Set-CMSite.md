@@ -1,14 +1,17 @@
 ---
-title: Set-CMSite
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes security scope settings for Configuration Manager sites.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSite
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMSite
@@ -103,14 +106,14 @@ You can specify a site for which you change security scope settings by using a s
 
 ### Example 1: Add a site to a security scope by using a site name
 ```
-PS C:\> Set-CMSite -SecurityScopeAction AddMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
+PS XYZ:\> Set-CMSite -SecurityScopeAction AddMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
 ```
 
 This command assigns a custom security scope named Scope22 to a System Center Configuration Manager site named CMSiteSystem.
 
 ### Example 2: Remove a security scope for a site by using the site name
 ```
-PS C:\> Set-CMSite -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
+PS XYZ:\> Set-CMSite -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
 ```
 
 This command removes the custom security scope in the previous example from a System Center Configuration Manager site named CMSiteSystem.
@@ -653,8 +656,6 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemCollectionBehavior
- 
-
 ```yaml
 Type: CollectionBehaviorType
 Parameter Sets: (All)
@@ -700,8 +701,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThresholdOfSelectCollectionByDefault
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -715,8 +714,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThresholdOfSelectCollectionMax
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -824,7 +821,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: New-CMBootableMedia
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates bootable media.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMBootableMedia
+titleSuffix: Configuration Manager
 ---
 
 # New-CMBootableMedia
@@ -23,8 +26,8 @@ New-CMBootableMedia [-AllowUacPrompt] [-AllowUnattended] [-AllowUnknownMachine] 
  [-CertificateExpireTime <DateTime>] [-CertificatePassword <SecureString>] [-CertificatePath <String>]
  [-CertificateStartTime <DateTime>] -DistributionPoint <IResultObject[]> [-Force] [-FormatMedia]
  -ManagementPoint <IResultObject[]> -MediaMode <MediaMode> [-MediaPassword <SecureString>]
- -MediaType <MediaInputType> -Path <String> [-PrestartCommand <String>] [-PrestartPackage <IResultObject>]
- [-ProviderCredential <PSCredential>] [-UserDeviceAffinity <UserDeviceAffinityType>] [-Variable <Hashtable>]
+ -MediaType <MediaInputType> -Path <String> [-TemporaryFolder <String>] [-PrestartCommand <String>]
+ [-PrestartPackage <IResultObject>] [-UserDeviceAffinity <UserDeviceAffinityType>] [-Variable <Hashtable>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -38,10 +41,10 @@ NOTE: This cmdlet requires elevated permissions to run.
 
 ### Example 1: Create bootable media
 ```
-PS C:\> $BootImage = Get-CMBootImage -Name "Boot image (x64)"
-PS C:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
-PS C:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "SiteSystemServer02.Contoso.com"
-PS C:\> New-CMBootableMedia -MediaMode Dynamic -MediaType CdDvd -Path "\\Server\share\test.iso" -AllowUnknownMachine -BootImage $BootImage -DistributionPoint $DistributionPoint -ManagementPoint $ManagementPoint
+PS XYZ:\> $BootImage = Get-CMBootImage -Name "Boot image (x64)"
+PS XYZ:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
+PS XYZ:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "SiteSystemServer02.Contoso.com"
+PS XYZ:\> New-CMBootableMedia -MediaMode Dynamic -MediaType CdDvd -Path "\\Server\share\test.iso" -AllowUnknownMachine -BootImage $BootImage -DistributionPoint $DistributionPoint -ManagementPoint $ManagementPoint
 ```
 
 The first command gets the boot image object named Boot image (x64) and stores the object in the $BootImage variable.
@@ -60,7 +63,7 @@ Indicates that User Account Control (UAC) prompts are allowed.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,7 +79,7 @@ An unattended operating system deployment does not prompt for network configurat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +94,7 @@ Indicates that Configuration Manager is allowed to provision unknown computers.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +125,7 @@ Specifies an expiration date and time for a self-signed media certificate.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +141,7 @@ You need to import a PKI certificate for HTTPS communication.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +156,7 @@ Specifies a path from which to import a PKI certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +171,7 @@ Specifies a start date and time for a self-signed media certificate.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +201,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +232,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +247,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +262,7 @@ Indicates that the cmdlet formats the removable USB drive (FAT32), and makes it 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -294,7 +297,7 @@ Valid values are:
 ```yaml
 Type: MediaMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Dynamic, SiteBased
 
 Required: True
@@ -310,7 +313,7 @@ Specifies, as a secure string, a password to protect task sequence media.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -330,7 +333,7 @@ Valid values are:
 ```yaml
 Type: MediaInputType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Usb, CdDvd
 
 Required: True
@@ -378,7 +381,7 @@ To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -387,13 +390,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProviderCredential
- 
+### -TemporaryFolder
+{{ Fill TemporaryFolder Description }}
 
 ```yaml
-Type: PSCredential
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: TemporaryDirectory, StagingArea
 
 Required: False
 Position: Named
@@ -413,7 +416,7 @@ Valid values are:
 ```yaml
 Type: UserDeviceAffinityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotAllow, AdministratorApproval, AutoApproval
 
 Required: False
@@ -456,7 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Copy-CMConfigurationPolicy
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Copies a configuration policy.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Copy-CMConfigurationPolicy
+titleSuffix: Configuration Manager
 ---
 
 # Copy-CMConfigurationPolicy
@@ -45,14 +48,14 @@ See the Alias section for additional policy items that you can use this cmdlet t
 
 ### Example 1: Copy a configuration policy by using the pipeline
 ```
-PS C:\> Get-CMConfigurationPolicy -Name "TrustedCACert01" -Fast | Copy-CMConfigurationPolicy -NewName "TrustedCACert01_copy"
+PS XYZ:\> Get-CMConfigurationPolicy -Name "TrustedCACert01" -Fast | Copy-CMConfigurationPolicy -NewName "TrustedCACert01_copy"
 ```
 
 This command gets the configuration policy object named TrustedCACert01 and uses the pipeline operator to pass the object to **Copy-CMConfiguratinPolicy**, which creates a copy of the policy and names it TrustedCACert01_copy.
 
 ### Example 2: Copy a configuration policy by ID
 ```
-PS C:\> Copy-CMConfigurationPolicy -Id 16777454 -NewName "EmailProfile1_copy"
+PS XYZ:\> Copy-CMConfigurationPolicy -Id 16777454 -NewName "EmailProfile1_copy"
 ```
 
 This command makes a copy of the configuration policy with the ID of 16777454 and names it EmailProfile1_copy.
@@ -80,7 +83,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +98,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +159,7 @@ Specifies a name for the copy of the configuration policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -172,7 +175,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

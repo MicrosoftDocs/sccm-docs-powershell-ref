@@ -1,14 +1,17 @@
 ---
-title: Remove-CMSecondarySite
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a secondary site from Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMSecondarySite
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMSecondarySite
@@ -45,7 +48,7 @@ Instead it is connected to a primary site and sends client data to the primary s
 
 ### Example 1: Remove a secondary site upgrade by using a site name
 ```
-PS C:\> Remove-CMSecondarySite -Action Delete -SiteName "ClientSecSiteUpgrade03"
+PS XYZ:\> Remove-CMSecondarySite -Action Delete -SiteName "ClientSecSiteUpgrade03"
 ```
 
 This command deletes a secondary site named ClientSecSiteUpgrade03.
@@ -65,7 +68,7 @@ Removes the reference to the secondary site from the database and triggers an un
 ```yaml
 Type: ActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Uninstall, Delete
 
 Required: True
@@ -96,7 +99,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +114,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +129,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +145,7 @@ To obtain this object, use the New-CMSecondarySite cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +175,7 @@ Specifies a code for a secondary site.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -198,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

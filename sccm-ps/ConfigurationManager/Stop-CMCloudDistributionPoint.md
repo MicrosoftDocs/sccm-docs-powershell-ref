@@ -1,14 +1,17 @@
 ---
-title: Stop-CMCloudDistributionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Stops the cloud distribution point service.
+external help file: AdminUI.PS.Content.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Stop-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Stop-CMCloudDistributionPoint
@@ -49,22 +52,22 @@ For example, you might want to stop a cloud service when usage reaches a data th
 
 ### Example 1: Stop the cloud distribution point service using an ID
 ```
-PS C:\> Stop-CMCloudDistributionPoint -Id "16777242"
+PS XYZ:\> Stop-CMCloudDistributionPoint -Id "16777242"
 ```
 
 This command stops the cloud distribution point service for the cloud distribution point that has the specified identifier.
 
 ### Example 2: Stop the cloud distribution point service using a name
 ```
-PS C:\> Stop-CMCloudDistributionPoint -Name "West01"
+PS XYZ:\> Stop-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command stops the cloud distribution point service for the cloud distribution point named West01.
 
 ### Example 3: Stop the cloud distribution point service using an object
 ```
-PS C:\> $DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
-PS C:\> Stop-CMCloudDistributionPoint -InputObject $DistPnt
+PS XYZ:\> $DistPnt = Get-CMCloudDistributionPoint -Id "16777242"
+PS XYZ:\> Stop-CMCloudDistributionPoint -InputObject $DistPnt
 ```
 
 The first command uses the **Get-CMCloudDistributionPoint** cmdlet to get the distribution point with the specified identifier, and then stores it in the $DistPnt variable.
@@ -94,7 +97,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +112,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +144,7 @@ To get a cloud distribution point object, you can use the **Get-CMCloudDistribut
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -156,7 +159,7 @@ Specifies the name of a cloud distribution point.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -182,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

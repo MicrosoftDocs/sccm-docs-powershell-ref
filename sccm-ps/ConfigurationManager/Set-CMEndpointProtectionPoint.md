@@ -1,14 +1,17 @@
 ---
-title: Set-CMEndpointProtectionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a site system role for Endpoint Protection.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMEndpointProtectionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMEndpointProtectionPoint
@@ -42,15 +45,15 @@ For more information about Endpoint Protection in System Center Configuration Ma
 
 ### Example 1: Set an endpoint protection point
 ```
-PS C:\> Set-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -ProtectionService AdvancedMembership
+PS XYZ:\> Set-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" -ProtectionService AdvancedMembership
 ```
 
 The command sets the endpoint protection point for the server, and specifies the membership type for the *ProtectionService* parameter.
 
 ### Example 2: Set an endpoint protection point by using an input object
 ```
-PS C:\> $Epp = Get-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
-PS C:\> Set-CMEndpointProtectionPoint -InputObject $Epp -ProtectionService BasicMembership
+PS XYZ:\> $Epp = Get-CMEndpointProtectionPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
+PS XYZ:\> Set-CMEndpointProtectionPoint -InputObject $Epp -ProtectionService BasicMembership
 ```
 
 The first command uses the **Get-CMEndpointProtectionPoint** cmdlet to get an endpoint protection point, and stores the result in the $Epp variable.
@@ -80,7 +83,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +98,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +130,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +150,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MapsMembershipType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotJoinMaps, BasicMembership, AdvancedMembership
 
 Required: True
@@ -163,7 +166,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

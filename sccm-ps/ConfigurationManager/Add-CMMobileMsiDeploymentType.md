@@ -1,14 +1,17 @@
 ---
-title: Add-CMMobileMsiDeploymentType
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a mobile Windows Installer deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMMobileMsiDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMMobileMsiDeploymentType
@@ -49,14 +52,14 @@ The **Add-CMMobileMsiDeploymentType** cmdlet adds a mobile Windows Installer dep
 
 ### Example 1: Add a deployment type
 ```
-PS C:\>Add-CMMobileMsiDeploymentType -ApplicationName "TestMobile" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
+PS XYZ:\>Add-CMMobileMsiDeploymentType -ApplicationName "TestMobile" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
 ```
 
 This command adds the mobile Windows Installer deployment type named DTMobile from the specified location to the application named TestMobile in English and Chinese.
 
 ### Example 2: Add a deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication "TestMobile" | Add-CMMobileMsiDeploymentType -ContentLocation "\\127.0.0.1\c$\UnitTest\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile02" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
+PS XYZ:\> Get-CMApplication "TestMobile" | Add-CMMobileMsiDeploymentType -ContentLocation "\\127.0.0.1\c$\UnitTest\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -DeploymentTypeName "DTMobile02" -AddLanguage "en-US","zh-CN" -Comment "Mobile test"
 ```
 
 This command gets the application object named TestMobile and uses the pipeline operator to pass the object to **Add-CMMobileMsiDeploymentType**.
@@ -88,7 +91,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +121,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -179,7 +182,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +197,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +227,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,7 +258,7 @@ Specifies the command to use to install the Windows Installer package from the c
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -312,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

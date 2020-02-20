@@ -1,14 +1,17 @@
 ---
-title: New-CMUserCollection
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a collection for users and adds the collection to the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMUserCollection
+titleSuffix: Configuration Manager
 ---
 
 # New-CMUserCollection
@@ -60,7 +63,7 @@ For more information about Configuration Manager collections, see [Introduction 
 
 ### Example 1: Create a user collection
 ```
-PS C:\> New-CMUserCollection -Name "Sales" -LimitingCollectionName "All Users"
+PS XYZ:\> New-CMUserCollection -Name "Sales" -LimitingCollectionName "All Users"
 ```
 
 This command creates a collection for all users in the Sales department.
@@ -72,7 +75,7 @@ Specifying All Users for the *LimitingCollectionName* parameter indicates that t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +119,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,7 +132,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +145,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +158,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +171,7 @@ Accept wildcard characters: False
 ```yaml
 Type: CollectionRefreshType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Manual, Periodic, Continuous, Both
 
 Required: False
@@ -195,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

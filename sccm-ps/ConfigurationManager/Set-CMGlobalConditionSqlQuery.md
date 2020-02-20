@@ -1,14 +1,17 @@
 ---
-title: Set-CMGlobalConditionSqlQuery
-titleSuffix: Configuration Manager
+author: mumian
 description: Sets a SQL Query type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMGlobalConditionSqlQuery
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMGlobalConditionSqlQuery
@@ -20,19 +23,17 @@ Sets a SQL Query type global condition in Configuration Manager.
 ## SYNTAX
 
 ### SetQueryFromFile (Default)
-
-```powershell
+```
 Set-CMGlobalConditionSqlQuery [-FilePath <String>] [-UseDefaultInstance] [-UseAllInstances]
  [-InstanceName <String>] [-Database <String>] [-Column <String>] -Name <String> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetQueryFromText
-
-```powershell
+```
 Set-CMGlobalConditionSqlQuery [-QueryText <String>] [-UseDefaultInstance] [-UseAllInstances]
  [-InstanceName <String>] [-Database <String>] [-Column <String>] -Name <String> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +45,7 @@ The **Set-CMGlobalConditionSqlQuery** cmdlet modifies settings for a SQL Query t
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalSql = Set-CMGlobalConditionSqlQuery -DataType String -QueryText $string -Database ss -Column aa –Name GC6
+PS XYZ:\> $GlobalSql = Set-CMGlobalConditionSqlQuery -DataType String -QueryText $string -Database ss -Column aa -Name GC6
 ```
 
 This command sets a SQL Query type global condition in Configuration Manager.
@@ -59,6 +60,22 @@ Specifies the column name returned by the Transact-SQL statement to use to asses
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -228,22 +245,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -261,9 +262,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

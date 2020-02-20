@@ -1,14 +1,17 @@
 ---
-title: Enable-CMProgram
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Enables programs in Configuration Manager packages.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Enable-CMProgram
+titleSuffix: Configuration Manager
 ---
 
 # Enable-CMProgram
@@ -49,7 +52,7 @@ You can associate multiple programs with the same package.
 
 ### Example 1: Enable a program
 ```
-PS C:\>Enable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
+PS XYZ:\>Enable-CMProgram -PackageId "CM400007" -ProgramName "ProgramD02"
 ```
 
 This command enables the program named ProgramD02 in the package that has the ID CM400007.
@@ -77,7 +80,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +95,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +126,7 @@ Specifies an array of package IDs.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdAndNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -138,7 +141,7 @@ Specifies an array of package names.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameAndNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +157,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +172,7 @@ Specifies an array of program names.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdAndNameMandatory, SearchByNameAndNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -195,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -36,7 +36,7 @@ System Center Configuration Manager cannot validate that these settings with you
 
 ### Example 1: Create a profile for AMT-based computers on a wireless network
 ```
-PS C:\> New-CMWirelessProfileObject -ClientAuthenticationMethod  EapTtlsMschapv2 -ClientCertificateTemplate "Contoso Wireless User"  -ClientCertificationAuthorityName "Contoso CA 1" -ClientIssuingCertificationAuthority "ContosoCA.Contoso.com" -EncryptionMethod TKIP -NetworkName "ContosoWireless" -ProfileName "WirelessLocalUser" -SecurityType WPA2Enterprise -TrustedRootCertificate "Contoso Root CA"
+PS XYZ:\> New-CMWirelessProfileObject -ClientAuthenticationMethod  EapTtlsMschapv2 -ClientCertificateTemplate "Contoso Wireless User"  -ClientCertificationAuthorityName "Contoso CA 1" -ClientIssuingCertificationAuthority "ContosoCA.Contoso.com" -EncryptionMethod TKIP -NetworkName "ContosoWireless" -ProfileName "WirelessLocalUser" -SecurityType WPA2Enterprise -TrustedRootCertificate "Contoso Root CA"
 ```
 
 This command creates a profile for Intel Active Management Technology (AMT)-based computers on a wireless network.

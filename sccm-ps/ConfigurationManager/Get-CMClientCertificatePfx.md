@@ -1,14 +1,17 @@
 ---
-title: Get-CMClientCertificatePfx
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a client PFX certificate.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMClientCertificatePfx
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMClientCertificatePfx
@@ -30,7 +33,7 @@ The **Get-CMClientCertificatePfx** cmdlet gets a client Personal Information Exc
 
 ### Example 1: Get a client PFX certificate
 ```
-PS C:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator").SMSID -Thumbprint  e1c2fff14282b61f79f78fbfca6721f0517ab767
+PS XYZ:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator").SMSID -Thumbprint  e1c2fff14282b61f79f78fbfca6721f0517ab767
 ```
 
 This command gets the Pfx client certificate for the user named Administrator with the specified thumbprint.
@@ -43,7 +46,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -58,7 +61,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +92,7 @@ Specifies the thumbprint of the client PFX certificate. If you do not specify th
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +108,7 @@ To get a value for this parameter, you can use the following command: `(Get-CMUs
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

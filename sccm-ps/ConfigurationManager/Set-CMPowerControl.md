@@ -43,7 +43,7 @@ The **Set-CMPowerControl** cmdlet changes the power state for one or more Intel 
 
 ### Example 1: Change the power control setting for a client device
 ```
-PS C:\> Set-CMPowerControl -DeviceId "209224563" -PowerControl Restart
+PS XYZ:\> Set-CMPowerControl -DeviceId "209224563" -PowerControl Restart
 ```
 
 This command changes the power control setting to Restart for the client device that has the ID 209224563.

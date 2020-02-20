@@ -1,14 +1,17 @@
 ---
-title: Get-CMDistributionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a distribution point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDistributionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMDistributionPoint
@@ -55,14 +58,14 @@ The **Get-CMDistributionPoint** cmdlet gets a distribution point.
 
 ### Example 1: Get a distribution point
 ```
-PS C:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.contoso.com"
+PS XYZ:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.contoso.com"
 ```
 
 This command gets the distribution point for the site system server named MySiteSys_11310.contoso.com.
 
 ### Example 2: Get a distribution point by using the pipeline
 ```
-PS C:\> Get-CMDistributionPointGroup -Name "DPGroup" | Get-CMDistributionPoint
+PS XYZ:\> Get-CMDistributionPointGroup -Name "DPGroup" | Get-CMDistributionPoint
 ```
 
 This command gets the distribution point group object named DPGroup and uses the pipeline operator to pass the object to **Get-CMDistributionPoint**, which gets all of the distribution points for the distribution point group object.
@@ -70,8 +73,6 @@ This command gets the distribution point group object named DPGroup and uses the
 ## PARAMETERS
 
 ### -AllSite
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -90,7 +91,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +107,7 @@ To obtain a distribution point group object, use the [Get-CMDistributionPointGro
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +122,7 @@ Specifies the ID of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: SearchByGroupId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +137,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: SearchByGroupName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -151,7 +152,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +168,7 @@ To obtain a site system server object, use the [Get-CMSiteSystemServer](Get-CMSi
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -182,7 +183,7 @@ Specifies the site code of the site that is associated with a distribution point
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

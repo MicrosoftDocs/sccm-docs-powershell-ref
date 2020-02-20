@@ -1,14 +1,17 @@
 ---
-title: Set-CMClientPushInstallation
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes settings of a client push installation.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMClientPushInstallation
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMClientPushInstallation
@@ -70,7 +73,7 @@ For more information about how to install clients, see [How to Install Clients o
 
 ### Example 1: Change the settings of a client push installation
 ```
-PS C:\> Set-CMClientPushInstallation -EnableAutomaticClientPushInstallation $True -EnableSystemTypeConfiguationManager $True -ChosenAccount "CENTRAL\00ID$" -InstallationProperty "SMSSITECODE=CM1"
+PS XYZ:\> Set-CMClientPushInstallation -EnableAutomaticClientPushInstallation $True -EnableSystemTypeConfiguationManager $True -ChosenAccount "CENTRAL\00ID$" -InstallationProperty "SMSSITECODE=CM1"
 ```
 
 This command specifies that Configuration Manager automatically uses client push for discovered computers.
@@ -81,8 +84,6 @@ This setting assigns the client to the site that has the site code CM1.
 ## PARAMETERS
 
 ### -AddAccount
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -111,8 +112,6 @@ Accept wildcard characters: False
 ```
 
 ### -ClearAccount
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -146,7 +145,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +160,7 @@ Indicates whether Configuration Manager automatically uses client push for disco
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +175,7 @@ Indicates whether Configuration Manager pushes the client software to Configurat
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +190,7 @@ Indicates whether Configuration Manager pushes the client software to servers.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +205,7 @@ Indicates whether Configuration Manager pushes the client software to workstatio
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +220,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,7 +251,7 @@ Indicates whether to use automatic site-wide client push installation to install
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -278,7 +277,7 @@ For System Center Configuration Manager SP1: You can specify installation proper
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,8 +302,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAccount
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -323,7 +320,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -349,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

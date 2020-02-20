@@ -1,14 +1,17 @@
 ---
-title: Set-CMApplicationCatalogWebsitePoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes the settings of an Application Catalog website point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMApplicationCatalogWebsitePoint
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMApplicationCatalogWebsitePoint
@@ -51,7 +54,7 @@ You can also specify a name for users to see in the browser, such as a company n
 
 ### Example 1: Change the settings of an Application Catalog website point
 ```
-PS C:\> Set-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" -NetbiosName "CMDIV-WEST02" -OrganizationName "MarketingWest" -ColorRed 168 -ColorGreen 201 -ColorBlue 52
+PS XYZ:\> Set-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" -NetbiosName "CMDIV-WEST02" -OrganizationName "MarketingWest" -ColorRed 168 -ColorGreen 201 -ColorBlue 52
 ```
 
 This command changes the settings of the Application Catalog website point hosted on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
@@ -60,8 +63,8 @@ The command specifies that Configuration Manager displays the organization name 
 
 ### Example 2: Change the settings of an Application Catalog website point by object variable
 ```
-PS C:\> $Acwp= Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" 
-PS C:\> Set-CMApplicationCatalogWebsitePoint -InputObject $Acwp -NetbiosName "CMDIV-WEST02" -OrganizationName "MarketingWest" -ColorR 160 -ColorG 200 -ColorB 50
+PS XYZ:\> $Acwp= Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" 
+PS XYZ:\> Set-CMApplicationCatalogWebsitePoint -InputObject $Acwp -NetbiosName "CMDIV-WEST02" -OrganizationName "MarketingWest" -ColorR 160 -ColorG 200 -ColorB 50
 ```
 
 The first command uses the Get-CMApplicationCatalogWebsitePoint cmdlet to get the Application Catalog website point that is associated with the site system server named CMDIV-WEST04.CORP.CONTOSO.COM that is hosted on the Configuration Manager site that has the site code CM4.
@@ -97,7 +100,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 
 Required: False
@@ -111,7 +114,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Color
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +130,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +146,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +162,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +206,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +221,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +252,7 @@ Specifies the NetBIOS name of the server that hosts the Application Catalog webs
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -265,7 +268,7 @@ This name appears to users who access the Application Catalog.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +284,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +299,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -337,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

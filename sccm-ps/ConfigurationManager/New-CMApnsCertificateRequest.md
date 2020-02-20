@@ -1,14 +1,17 @@
 ---
-title: New-CMApnsCertificateRequest
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates an APNS certificate request.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMApnsCertificateRequest
+titleSuffix: Configuration Manager
 ---
 
 # New-CMApnsCertificateRequest
@@ -30,9 +33,9 @@ The **New-CMApnsCertificateRequest** cmdlet downloads an Apple Push Notification
 
 ### Example 1: Create an APNS certificate signing request
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
-PS C:\> $MyCreds = New-Object System.Management.Automation.PSCredential ("UserName@CompanyName.onmicrosoft.com", $SecPasswd)
-PS C:\> New-CMApnsCertificateRequest -IntuneCredential $MyCreds -Path "C:\Certificates\test.csr"
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
+PS XYZ:\> $MyCreds = New-Object System.Management.Automation.PSCredential ("UserName@CompanyName.onmicrosoft.com", $SecPasswd)
+PS XYZ:\> New-CMApnsCertificateRequest -IntuneCredential $MyCreds -Path "C:\Certificates\test.csr"
 ```
 
 The first command converts the password into a secure string and stores the secure string in the $SecPasswd variable.
@@ -105,8 +108,6 @@ Accept wildcard characters: False
 ```
 
 ### -OutputPath
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -152,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

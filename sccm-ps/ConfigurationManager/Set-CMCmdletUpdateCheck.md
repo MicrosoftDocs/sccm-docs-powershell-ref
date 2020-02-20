@@ -51,8 +51,8 @@ You must be running as an administrator to set system settings.
 
 ### Example 1: Disable an update check
 ```
-PS C:\> $UpdateConfig = Get-CMCmdletUpdateCheck -CurrentUser
-PS C:\> Set-CMCmdletUpdateCheck -InputObject $UpdateConfig -IsUpdateCheckEnabled $False -CheckMinimumMins 5
+PS XYZ:\> $UpdateConfig = Get-CMCmdletUpdateCheck -CurrentUser
+PS XYZ:\> Set-CMCmdletUpdateCheck -InputObject $UpdateConfig -IsUpdateCheckEnabled $False -CheckMinimumMins 5
 ```
 
 The first command gets the cmdlet update check configuration object for the current user and stores the object in the $UpdateConfig variable.
@@ -61,7 +61,7 @@ The second command disables update check for the update check configuration obje
 
 ### Example 2: Pass an update check configuration object and disable it
 ```
-PS C:\> Get-CMCmdletUpdateCheck -CurrentUser | Set-CMCmdletUpdateCheck -IsUpdateCheckEnabled $False -CheckMinimumMins 5
+PS XYZ:\> Get-CMCmdletUpdateCheck -CurrentUser | Set-CMCmdletUpdateCheck -IsUpdateCheckEnabled $False -CheckMinimumMins 5
 ```
 
 This command gets the cmdlet update check configuration object for the current user and uses the pipeline operator to pass the object to **Set-CmdletUpdateCheck**, which disables update check for the configuration object.

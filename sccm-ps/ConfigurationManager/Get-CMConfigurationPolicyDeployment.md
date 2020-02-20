@@ -1,14 +1,17 @@
 ---
-title: Get-CMConfigurationPolicyDeployment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a configuration policy deployment.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMConfigurationPolicyDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMConfigurationPolicyDeployment
@@ -47,26 +50,21 @@ Get-CMConfigurationPolicyDeployment [-InputObject <IResultObject>] [-Summary] [-
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -Collection
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,12 +74,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,12 +87,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,8 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentId
- 
-
 ```yaml
 Type: String
 Parameter Sets: SearchByDeploymentId
@@ -126,7 +118,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +133,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,8 +143,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
@@ -166,8 +156,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -181,8 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -SmsObjectId
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: SearchById
@@ -196,12 +182,10 @@ Accept wildcard characters: False
 ```
 
 ### -Summary
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -227,4 +211,3 @@ IResultObject#SMS_ConfigurationPolicyAssignment
 ## NOTES
 
 ## RELATED LINKS
-

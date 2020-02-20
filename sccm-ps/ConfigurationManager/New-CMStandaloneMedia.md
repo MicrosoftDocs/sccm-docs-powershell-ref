@@ -1,14 +1,17 @@
 ---
-title: New-CMStandaloneMedia
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates stand-alone media.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMStandaloneMedia
+titleSuffix: Configuration Manager
 ---
 
 # New-CMStandaloneMedia
@@ -23,8 +26,8 @@ New-CMStandaloneMedia [-DriverPackage <IResultObject[]>] [-Application <IResultO
  [-Package <IResultObject[]>] [-MediaStartDate <DateTime>] [-MediaExpirationDate <DateTime>]
  [-IncludeApplicationDependency] [-MediaSize <MediaSize>] -TaskSequence <IResultObject> [-AllowUacPrompt]
  [-AllowUnattended] [-CertificatePath <String>] -DistributionPoint <IResultObject[]> [-Force] [-FormatMedia]
- [-MediaPassword <SecureString>] -MediaType <MediaInputType> -Path <String> [-PrestartCommand <String>]
- [-PrestartPackage <IResultObject>] [-ProviderCredential <PSCredential>] [-Variable <Hashtable>]
+ [-MediaPassword <SecureString>] -MediaType <MediaInputType> -Path <String> [-TemporaryFolder <String>]
+ [-PrestartCommand <String>] [-PrestartPackage <IResultObject>] [-Variable <Hashtable>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -37,9 +40,9 @@ NOTE: This cmdlet requires elevated permissions to run.
 
 ### Example 1: Create stand-alone media using variables
 ```
-PS C:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS C:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
-PS C:\> New-CMStandaloneMedia -MediaType CdDvd -Path \\server\share\standaloneMedia.iso -TaskSequence $TaskSequence -DistributionPoint $DistributionPoint
+PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+PS XYZ:\> $DistributionPoint = Get-CMDistributionpoint -SiteCode CM1
+PS XYZ:\> New-CMStandaloneMedia -MediaType CdDvd -Path \\server\share\standaloneMedia.iso -TaskSequence $TaskSequence -DistributionPoint $DistributionPoint
 ```
 
 The first command gets the task sequence object named TaskSequence01 and stores the object in the $TaskSequence variable.
@@ -56,7 +59,7 @@ Indicates that User Account Control (UAC) prompts are allowed.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +75,7 @@ An unattended operating system deployment does not prompt for network configurat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,8 +85,6 @@ Accept wildcard characters: False
 ```
 
 ### -Application
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -102,7 +103,7 @@ Specifies a path from which to import a PKI certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +133,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,8 +159,6 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackage
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -178,7 +177,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +192,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +207,7 @@ Indicates that the cmdlet formats the removable USB drive (FAT32), and makes it 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,8 +232,6 @@ Accept wildcard characters: False
 ```
 
 ### -MediaExpirationDate
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
@@ -253,7 +250,7 @@ Specifies, as a secure string, a password to protect task sequence media.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +272,7 @@ Valid values are:
 ```yaml
 Type: MediaSize
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Size650MB, Size4GB, Size8GB, SizeUnlimited
 
 Required: False
@@ -286,8 +283,6 @@ Accept wildcard characters: False
 ```
 
 ### -MediaStartDate
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
@@ -311,7 +306,7 @@ Valid values are:
 ```yaml
 Type: MediaInputType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Usb, CdDvd
 
 Required: True
@@ -322,8 +317,6 @@ Accept wildcard characters: False
 ```
 
 ### -Package
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -374,22 +367,7 @@ To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProviderCredential
- 
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -405,9 +383,24 @@ To obtain a task sequence object, use the [Get-CMTaskSequence](Get-CMTaskSequenc
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TemporaryFolder
+{{ Fill TemporaryFolder Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: TemporaryDirectory, StagingArea
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -447,7 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

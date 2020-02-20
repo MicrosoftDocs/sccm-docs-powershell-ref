@@ -1,14 +1,17 @@
 ---
-title: Set-CMTaskSequence
-titleSuffix: Configuration Manager
+author: mumian
 description: Sets a Configuration Manager task sequence.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMTaskSequence
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMTaskSequence
@@ -20,8 +23,7 @@ Sets a Configuration Manager task sequence.
 ## SYNTAX
 
 ### SetByValue (Default)
-
-```powershell
+```
 Set-CMTaskSequence -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
  [-Category <String>] [-UseDefaultText <Boolean>] [-CustomText <String>] [-RunAnotherProgram <Boolean>]
  [-DeploymentPackageId <String>] [-ProgramName <String>] [-RunEveryTime <Boolean>]
@@ -33,8 +35,7 @@ Set-CMTaskSequence -InputObject <IResultObject> [-NewName <String>] [-Descriptio
 ```
 
 ### SetById
-
-```powershell
+```
 Set-CMTaskSequence -TaskSequenceId <String> [-NewName <String>] [-Description <String>] [-Category <String>]
  [-UseDefaultText <Boolean>] [-CustomText <String>] [-RunAnotherProgram <Boolean>]
  [-DeploymentPackageId <String>] [-ProgramName <String>] [-RunEveryTime <Boolean>]
@@ -46,8 +47,7 @@ Set-CMTaskSequence -TaskSequenceId <String> [-NewName <String>] [-Description <S
 ```
 
 ### SetByName
-
-```powershell
+```
 Set-CMTaskSequence -TaskSequenceName <String> [-NewName <String>] [-Description <String>] [-Category <String>]
  [-UseDefaultText <Boolean>] [-CustomText <String>] [-RunAnotherProgram <Boolean>]
  [-DeploymentPackageId <String>] [-ProgramName <String>] [-RunEveryTime <Boolean>]
@@ -67,8 +67,8 @@ The **Set-CMTaskSequence** cmdlet modifies a Microsoft System Center Configurati
 ### Example 1: Get a task sequence and change its name
 
 ```powershell
-PS C:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS C:\> Set-CMTaskSequence -InputObject $TaskSequence -NewName "NewTS01"
+PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
+PS XYZ:\> Set-CMTaskSequence -InputObject $TaskSequence -NewName "NewTS01"
 ```
 
 The first command gets the task sequence object named TaskSequence01 and stores the object in the $TaskSequence variable.
@@ -78,7 +78,7 @@ The second command changes the name of the task sequence stored in $TaskSequence
 ### Example 2: Pass a task sequence and change its name
 
 ```powershell
-PS C:\> Get-CMTaskSequence -Name "TaskSequence02" | Set-CMTaskSequence -NewName "NewTS02"
+PS XYZ:\> Get-CMTaskSequence -Name "TaskSequence02" | Set-CMTaskSequence -NewName "NewTS02"
 ```
 
 This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Set-CMTaskSequence**, which changes the name of the task sequence object to NewTS02.
@@ -109,7 +109,7 @@ Specifies the ID of a boot image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,11 +126,27 @@ You can use categories to group task sequences.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -143,7 +159,7 @@ Custom text appears in the progress notification dialog box while the task seque
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +176,7 @@ If you specify a value of $True for the *RunAnotherProgram* parameter, the speci
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +192,7 @@ Specifies a description for the task sequence.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +208,7 @@ Indicates whether to disable this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +224,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +256,7 @@ Indicates whether to enable this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +272,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -305,7 +321,7 @@ Specifies a new name for the task sequence.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -322,7 +338,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,7 +354,7 @@ Specifies the name of a program to run from a Configuration Manager software pac
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -372,7 +388,7 @@ Specify the program by using the *DeploymentPackageId* parameter and the *Progra
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -389,7 +405,7 @@ If you specify a value of $False, the program does not run if it has run success
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -421,7 +437,7 @@ Indicates whether to suppress notifications for this task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -469,7 +485,7 @@ Indicates whether the task sequence uses the boot image specified by using the *
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -486,27 +502,11 @@ If you select a value of $False for this parameter, be sure to specify custom te
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -529,8 +529,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

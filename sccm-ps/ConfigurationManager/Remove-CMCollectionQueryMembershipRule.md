@@ -1,14 +1,17 @@
 ---
-title: Remove-CMCollectionQueryMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a collection query membership rule.
+external help file: AdminUI.PS.Collections-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMCollectionQueryMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMCollectionQueryMembershipRule
@@ -37,22 +40,17 @@ Remove-CMCollectionQueryMembershipRule -CollectionId <String> -RuleName <String>
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -66,8 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -96,12 +92,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,8 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -126,12 +118,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -157,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -170,4 +160,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,14 +1,17 @@
 ---
-title: Set-CMWebApplicationDeploymentType
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a web application deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMWebApplicationDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMWebApplicationDeploymentType
@@ -57,14 +60,14 @@ The **Set-CMWebApplicationDeploymentType** cmdlet changes the settings for a web
 
 ### Example 1: Modify a web application deployment type
 ```
-PS C:\> Set-CMWebApplicationdeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Set-CMWebApplicationdeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command changes the name of the web application deployment type named DT1 for the application named testweb to DT1_Updated, and removes Chinese from the array of supported languages.
 
 ### Example 2: Modify a web application deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" | Set-CMWebApplicationdeploymentType -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testweb" -DeploymentTypeName "DT1" | Set-CMWebApplicationdeploymentType -NewName "DT1_Updated" -RemoveLanguage "zh-CN" -Comment "Deployment Type updated"
 ```
 
 This command gets the web application deployment type object named DT1 for the application named testweb and uses the pipeline operator to pass the object to **Set-CMWebApplicationDeploymentType**.
@@ -96,7 +99,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +145,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -187,7 +190,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -202,7 +205,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +235,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -279,7 +282,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -351,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

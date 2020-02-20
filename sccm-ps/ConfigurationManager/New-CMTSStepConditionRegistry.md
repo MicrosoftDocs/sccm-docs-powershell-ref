@@ -1,14 +1,17 @@
 ---
-title: New-CMTSStepConditionRegistry
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a t s step condition registry.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMTSStepConditionRegistry
+titleSuffix: Configuration Manager
 ---
 
 # New-CMTSStepConditionRegistry
@@ -16,7 +19,6 @@ manager: dougeby
 ## SYNOPSIS
 
 Creates a t s step condition registry.
-
 
 ## SYNTAX
 
@@ -28,16 +30,13 @@ New-CMTSStepConditionRegistry -RootKey <RegistryRootKeyType> -RegistryKey <Strin
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -62,7 +61,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +76,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,12 +86,10 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,12 +99,10 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
- 
-
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
 
 Required: True
@@ -118,12 +113,10 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,12 +126,10 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,12 +139,10 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
- 
-
 ```yaml
 Type: RegistryRootKeyType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: HKeyCurrentUser, HKeyLocalMachine, HKeyUsers, HKeyCurrentConfig
 
 Required: True
@@ -164,12 +153,10 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
- 
-
 ```yaml
 Type: RegistryValueType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RegistrySZ, RegistryExpandSZ, RegistryDWord
 
 Required: False
@@ -196,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -209,4 +196,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

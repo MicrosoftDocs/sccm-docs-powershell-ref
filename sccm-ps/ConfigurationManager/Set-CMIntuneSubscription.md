@@ -1,14 +1,17 @@
 ---
-title: Set-CMIntuneSubscription
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets the properties of a Microsoft Intune subscription in Configuration Manager.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMIntuneSubscription
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMIntuneSubscription
@@ -34,7 +37,7 @@ The **Set-CMIntuneSubscription** cmdlet sets the properties of a Microsoft Intun
 
 ### Example 1: Set the properties for a Microsoft Intune subscription
 ```
-PS C:\> Set-CMIntuneSubscription -ContactAdditional "Contact Additional Information" -ContactEmail "ITContact@Contoso.com" -ContactPhoneNumber "123456789"
+PS XYZ:\> Set-CMIntuneSubscription -ContactAdditional "Contact Additional Information" -ContactEmail "ITContact@Contoso.com" -ContactPhoneNumber "123456789"
 ```
 
 This command adds an IT contact email, phone number, and additional information to the Microsoft Intune subscription for the site.
@@ -47,7 +50,7 @@ Specifies a color scheme for the company portal.
 ```yaml
 Type: Color
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -62,7 +65,7 @@ Specifies the path to the company logo to use when the company portal background
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +80,7 @@ Specifies the path to the company logo to use when the company portal background
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +95,7 @@ Specifies a company name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +110,7 @@ Indicates whether the company name is displayed next to the company logo.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +140,7 @@ Specifies additional company contact information.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +155,7 @@ Specifies the IT department email address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +170,7 @@ Specifies the IT department contact name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +185,7 @@ Specifies the IT department phone number.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +200,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +215,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +230,7 @@ Specifies the maximum number of devices that a user can enroll.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -243,7 +246,7 @@ This applies to Windows 8.1 or later and Windows Phone 8.1 or later device enrol
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -258,7 +261,7 @@ Indicates that the company logo is not included on the company portal.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -274,7 +277,7 @@ Information from devices on premises do not replicate to the cloud.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,7 +293,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -305,7 +308,7 @@ Specifies the URL to company privacy documentation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +324,7 @@ The website name is displayed to users.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -337,7 +340,7 @@ The URL is not displayed to users.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -380,7 +383,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

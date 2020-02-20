@@ -1,14 +1,17 @@
 ---
-title: Set-CMClientStatusUpdateSchedule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies the schedule interval of the client status update task.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMClientStatusUpdateSchedule
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMClientStatusUpdateSchedule
@@ -31,7 +34,7 @@ For more information, see [How to Configure Client Status in Configuration Manag
 
 ### Example 1: Modify a client's status update schedule
 ```
-PS C:\> Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
+PS XYZ:\> Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
 ```
 
 This command modifies the client status update schedule.
@@ -59,7 +62,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +77,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +92,7 @@ Specifies the number of hours or days between client status updates.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,7 +108,7 @@ Valid values are: Hours and Days.
 ```yaml
 Type: ClientStatusUpdateScheduleUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Days, Hours
 
 Required: True
@@ -132,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

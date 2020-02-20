@@ -1,14 +1,17 @@
 ---
-title: Set-CMDistributionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a distribution point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDistributionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDistributionPoint
@@ -25,7 +28,7 @@ Set-CMDistributionPoint [-InputObject] <IResultObject> [-Description <String>]
  [-AllowProxyTraffic <Boolean>] [-EnableAnonymous <Boolean>] [-CertificateExpirationTimeUtc <DateTime>]
  [-CertificatePath <String>] [-CertificatePassword <SecureString>] [-AllowPreStaging <Boolean>]
  [-EnablePxe <Boolean>] [-KeepWds <Boolean>] [-AllowPxeResponse <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-PxePassword <SecureString>]
+ [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-PxePassword <SecureString>]
  [-UserDeviceAffinity <UserDeviceAffinityType>] [-RespondToAllNetwork]
  [-MacAddressForRespondingPxeRequest <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
  [-RemoveMacAddressForRespondingPxeRequest <String[]>] [-ClearMacAddressForRespondingPxeRequest]
@@ -36,8 +39,8 @@ Set-CMDistributionPoint [-InputObject] <IResultObject> [-Description <String>]
  [-EnableContentValidation <Boolean>] [-ContentValidationSchedule <IResultObject>]
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP <Boolean>] [-SourceDistributionPoint <String[]>]
  [-SourceDPRank <Int32[]>] [-AllowFallbackForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
- [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-EnableLedbat <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
@@ -47,7 +50,7 @@ Set-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
  [-AllowProxyTraffic <Boolean>] [-EnableAnonymous <Boolean>] [-CertificateExpirationTimeUtc <DateTime>]
  [-CertificatePath <String>] [-CertificatePassword <SecureString>] [-AllowPreStaging <Boolean>]
  [-EnablePxe <Boolean>] [-KeepWds <Boolean>] [-AllowPxeResponse <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-PxePassword <SecureString>]
+ [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-PxePassword <SecureString>]
  [-UserDeviceAffinity <UserDeviceAffinityType>] [-RespondToAllNetwork]
  [-MacAddressForRespondingPxeRequest <String[]>] [-AddMacAddressForRespondingPxeRequest <String[]>]
  [-RemoveMacAddressForRespondingPxeRequest <String[]>] [-ClearMacAddressForRespondingPxeRequest]
@@ -58,8 +61,8 @@ Set-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
  [-EnableContentValidation <Boolean>] [-ContentValidationSchedule <IResultObject>]
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP <Boolean>] [-SourceDistributionPoint <String[]>]
  [-SourceDPRank <Int32[]>] [-AllowFallbackForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
- [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-EnableLedbat <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,8 +72,8 @@ The **Set-CMDistributionPoint** cmdlet modifies a distribution point on a site s
 
 ### Example 1: Set properties of a distribution point
 ```
-PS C:\> $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
-PS C:\> Set-CMDistributionPoint -InputObject $DP -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $False -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
+PS XYZ:\> $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+PS XYZ:\> Set-CMDistributionPoint -InputObject $DP -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $False -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
 ```
 
 The first command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and stores the object in the $DP variable.
@@ -79,7 +82,7 @@ The second command modifies the distribution point object stored in $DP.
 
 ### Example 2: Set properties of a distribution point by using the pipeline
 ```
-PS C:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
+PS XYZ:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
 ```
 
 This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and uses the pipeline operator to pass the object to **Set-CMDistributionPoint**, which modifies the distribution point object.
@@ -107,7 +110,7 @@ Adds an array of media access control (MAC) addresses that respond to Pre-boot e
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +125,7 @@ Indicates whether clients outside of the boundary groups associated with a site 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +140,7 @@ Indicates whether the distribution point is enabled for prestaged content.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,8 +150,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowProxyTraffic
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -182,7 +183,7 @@ Specifies, in UTC format, the date and time when the certificate expires.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +198,7 @@ Specifies, as a secure string, the password for a PKI client certificate.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +213,7 @@ Specifies the import path for a PKI client certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +228,7 @@ Indicates that the cmdlet removes the array of MAC addresses that the distributi
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +247,7 @@ Valid values are:
 ```yaml
 Type: ComputerCommunicationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 
 Required: False
@@ -267,7 +268,7 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 
 Required: False
@@ -290,7 +291,7 @@ Valid values are:
 ```yaml
 Type: NetworkProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, ProfileCustom, Profile10Mbps, Profile100Mbps, Profile1Gbps
 
 Required: False
@@ -328,7 +329,7 @@ Valid values are:
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lowest, Low, Medium, High, Highest
 
 Required: False
@@ -360,7 +361,7 @@ Specifies a description for the distribution point.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -375,7 +376,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -390,7 +391,7 @@ Indicates that the distribution point permits anonymous connections from Configu
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -406,7 +407,7 @@ Content downloads from cloud-based distribution points can always be shared by c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -430,13 +431,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableLedbat
+{{ Fill EnableLedbat Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableMulticast
 Indicates whether multicast is enabled for the distribution point.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNonWdsPxe
+{{ Fill EnableNonWdsPxe Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -451,7 +482,7 @@ Enables, when set to $True, the distribution point is able to pull content from 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -485,7 +516,7 @@ Indicates whether you can schedule when Configuration Manager deploys the operat
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -501,7 +532,7 @@ Unknown computers are computers that are not managed by Configuration Manager.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -516,7 +547,7 @@ Specifies the ending IP address in a range of multicast addresses that Configura
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -531,7 +562,7 @@ Specifies the ending UDP port in a range of multicast UDP ports that Configurati
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -546,7 +577,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -577,7 +608,7 @@ Indicates whether the distribution point keeps Windows Deployment Services (WDS)
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -592,7 +623,7 @@ Specifies an array of MAC addresses that the distribution point uses to respond 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -607,7 +638,7 @@ Specifies how many client requests must be received before a scheduled multicast
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -622,7 +653,7 @@ Specifies the maximum number of clients that can download the operating system f
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -638,7 +669,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -699,7 +730,7 @@ Removes an array of MAC addresses that the distribution point uses to respond to
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -714,7 +745,7 @@ Indicates that the distribution point responds to PXE requests that arrive on an
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -744,7 +775,7 @@ Specifies the site code for the Configuration Manager site that hosts this site 
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -805,7 +836,7 @@ Specifies the starting IP address in a range of multicast addresses that Configu
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -820,7 +851,7 @@ Specifies the starting UDP port in a range of multicast UDP ports that Configura
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -835,7 +866,7 @@ Indicates that multicast uses IP addresses within any range.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -850,7 +881,7 @@ Indicates that the distribution point uses its computer account as the multicast
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -870,7 +901,7 @@ Valid values are:
 ```yaml
 Type: UserDeviceAffinityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotUse, AllowWithManualApproval, AllowWithAutomaticApproval
 
 Required: False
@@ -887,7 +918,7 @@ Use the format domain\username.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -913,7 +944,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

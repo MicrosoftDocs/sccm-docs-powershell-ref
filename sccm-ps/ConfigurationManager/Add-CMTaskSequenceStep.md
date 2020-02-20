@@ -1,14 +1,17 @@
 ---
-title: Add-CMTaskSequenceStep
-titleSuffix: Configuration Manager
+author: mumian
 description: Adds a Configuration Manager task sequence step.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Add-CMTaskSequenceStep
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMTaskSequenceStep
@@ -20,24 +23,21 @@ Adds a Configuration Manager task sequence step.
 ## SYNTAX
 
 ### ByValue (Default)
-
-```powershell
+```
 Add-CMTaskSequenceStep -Step <IResultObject[]> [-InsertStepStartIndex <UInt32>] -InputObject <IResultObject>
  [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ById
-
-```powershell
+```
 Add-CMTaskSequenceStep -Step <IResultObject[]> [-InsertStepStartIndex <UInt32>] -TaskSequenceId <String>
  [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ByName
-
-```powershell
+```
 Add-CMTaskSequenceStep -Step <IResultObject[]> [-InsertStepStartIndex <UInt32>] -TaskSequenceName <String>
  [-StepName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -52,7 +52,7 @@ The **New-CMTaskSequenceStep** cmdlet adds task sequence group or step object(s)
 ### Example 1
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Add-CMTaskSequenceStep -Step ($gp1,$st1,$st2)
+PS XYZ:\>$ReferencedTaskSequence | Add-CMTaskSequenceStep -Step ($gp1,$st1,$st2)
 ```
 
 This command adds a task sequence group and two task sequence steps to a task sequence.
@@ -60,12 +60,28 @@ This command adds a task sequence group and two task sequence steps to a task se
 ### Example 2
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Add-CMTaskSequenceStep -Step $st3 -InsertStepStartIndex $index
+PS XYZ:\>$ReferencedTaskSequence | Add-CMTaskSequenceStep -Step $st3 -InsertStepStartIndex $index
 ```
 
 This command adds a step to a task sequence with a start index.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -74,7 +90,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +106,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +170,7 @@ Specifies the name of a step.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,25 +202,9 @@ Specifies the name of a task sequence.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -229,7 +229,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -239,6 +238,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

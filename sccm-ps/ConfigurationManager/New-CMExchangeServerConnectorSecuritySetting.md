@@ -1,14 +1,17 @@
 ---
-title: New-CMExchangeServerConnectorSecuritySetting
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
+external help file:
+manager: dougeby
+Module Name: AdminUI.PS.HS
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMExchangeServerConnectorSecuritySetting
+titleSuffix: Configuration Manager
 ---
 
 # New-CMExchangeServerConnectorSecuritySetting
@@ -18,13 +21,6 @@ Configures security options for a Microsoft Exchange Server connector in Configu
 
 ## SYNTAX
 
-```
-New-CMExchangeServerConnectorSecuritySetting [-Bluetooth <BluetoothConnectionType>] [-Browser <Boolean>]
- [-Camera <Boolean>] [-FileEncrypt <Boolean>] [-Infrared <Boolean>] [-RemoteDesktop <Boolean>]
- [-StorageCard <Boolean>] [-StorageCardEncrypt <Boolean>] [-TextMessage <Boolean>] [-WifiConnection <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 The **New-CMExchangeServerConnectorSecuritySetting** cmdlet configures security options for a Microsoft Exchange Server connector in Microsoft System Center Configuration Manager.
 An Exchange Server connector in System Center Configuration Manager manages mobile devices that connect to an on-premise or online Exchange Server by using the Exchange ActiveSync protocol.
@@ -33,7 +29,7 @@ An Exchange Server connector in System Center Configuration Manager manages mobi
 
 ### Example 1: Configure security settings for a mobile device
 ```
-PS C:\> New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
+PS XYZ:\> New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
 ```
 
 This command sets the following security options for a mobile device:
@@ -44,183 +40,8 @@ This command sets the following security options for a mobile device:
 
 ## PARAMETERS
 
-### -Bluetooth
-Indicates whether users can run Bluetooth on the mobile device.
-
-```yaml
-Type: BluetoothConnectionType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: Disable, HandsfreeOnly, Allow
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Browser
-Indicates whether users can use the browser on the mobile device.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Camera
-Indicates whether users can use the camera on the mobile device.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FileEncrypt
-Indicates whether users can encrypt files on the mobile device.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Infrared
-
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: Infra
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteDesktop
-Indicates whether a device can initiate a Remote Desktop connection.
-This policy setting requires an Exchange Enterprise Client Access License.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageCard
-Indicates whether the mobile device can access information on a storage card.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageCardEncrypt
-Indicates whether the mobile device encrypts new files on the storage card by using a key that is tied to the device.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TextMessage
-Indicates whether the user can send and receive SMS and MMS text messages with the mobile device.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WifiConnection
-Specifies whether the user can use Wireless (Wi-Fi) local area networks (LANs) with the device.
-Valid values are: 
-
-- Allow
-- Disable
-- HandsfreeOnly
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

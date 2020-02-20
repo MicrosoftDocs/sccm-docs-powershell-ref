@@ -1,13 +1,16 @@
 ---
-title: Remove-CMUserCollectionExcludeMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes an exclude membership rule from one or more user collection in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMUserCollectionExcludeMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMUserCollectionExcludeMembershipRule
@@ -81,7 +84,7 @@ For more information about collection rules in Microsoft System Center Configura
 
 ### Example 1: Remove an exclude membership rule
 ```
-PS C:\> Remove-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
+PS XYZ:\> Remove-CMUserCollectionExcludeMembershipRule -CollectionId "9990000D" -ExcludeCollectionId "SMSDM001"
 ```
 
 This command removes the exclude membership rule that has the ID SMSDM001 from the user collection that has the ID in the 9990000D.
@@ -133,7 +136,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -146,7 +149,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +162,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +175,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

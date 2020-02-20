@@ -1,14 +1,17 @@
 ---
-title: Undo-CMSoftwareInventory
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Stops collecting software inventory data on files.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Undo-CMSoftwareInventory
+titleSuffix: Configuration Manager
 ---
 
 # Undo-CMSoftwareInventory
@@ -43,7 +46,7 @@ The **Undo-CMSoftwareInventory** cmdlet stops collecting information about files
 
 ### Example 1: Stop collecting software inventory data on a file
 ```
-PS C:\>Undo-CMSoftwareInventory -Name "MSXML 6.0 Parser"
+PS XYZ:\>Undo-CMSoftwareInventory -Name "MSXML 6.0 Parser"
 ```
 
 This command stops collecting software inventory data on the file named MSXML 6.0 Parser.
@@ -71,7 +74,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +89,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Set-CMQueryResultMaximum
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes the setting for the query result maximum.
+external help file: AdminUI.PS.Common.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMQueryResultMaximum
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMQueryResultMaximum
@@ -30,7 +33,7 @@ The **Set-CMQueryResultMaximum** cmdlet changes the setting for the maximum numb
 
 ### Example 1: Set the query result maximum
 ```
-PS C:\> Set-CMQueryResultMaximum -Maximum 2500
+PS XYZ:\> Set-CMQueryResultMaximum -Maximum 2500
 ```
 
 This command sets the maximum number of rows that a Configuration Manager report query can return to 2500.
@@ -58,7 +61,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +76,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +92,7 @@ The default value is 10,000.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -115,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

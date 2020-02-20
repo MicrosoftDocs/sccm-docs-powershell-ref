@@ -1,14 +1,17 @@
 ---
-title: Remove-CMDistributionPointFromGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a Configuration Manager distribution point from a distribution point group.
+external help file: AdminUI.PS.Content.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDistributionPointFromGroup
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMDistributionPointFromGroup
@@ -89,14 +92,14 @@ You can specify these values by ID or name, or you can use the [Get-CMDistributi
 
 ### Example 1: Remove a distribution point by using an ID
 ```
-PS C:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointId "SMS000022"
+PS XYZ:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointId "SMS000022"
 ```
 
 This command removes a distribution point that has an ID of SMS000022 from a distribution point group that has the ID SMS000067.
 
 ### Example 2: Remove a distribution point by using a name
 ```
-PS C:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointName "Western office distribution point" -Force
+PS XYZ:\> Remove-CMDistributionPointFromGroup -DistributionPointGroupId "SMS000067" -DistributionPointName "Western office distribution point" -Force
 ```
 
 This command removes a distribution point, specified by its name, from a distribution point group that has the ID SMS000067.
@@ -125,7 +128,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +144,7 @@ To obtain a distribution point object, use the **Get-CMDistributionPoint** cmdle
 ```yaml
 Type: IResultObject
 Parameter Sets: RemoveDistributionPointFromGroupByObject_Object, RemoveDistributionPointFromGroupByObject_Id, RemoveDistributionPointFromGroupByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -157,7 +160,7 @@ To obtain a distribution point group object, use the **Get-CMDistributionPointGr
 ```yaml
 Type: IResultObject
 Parameter Sets: RemoveDistributionPointFromGroupByObject_Object, RemoveDistributionPointFromGroupById_Object, RemoveDistributionPointFromGroupByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +175,7 @@ Specifies the ID of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -187,7 +190,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -202,7 +205,7 @@ Specifies the ID of a distribution point.
 ```yaml
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupById_Id, RemoveDistributionPointFromGroupById_Name, RemoveDistributionPointFromGroupById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -217,7 +220,7 @@ Specifies the name of a distribution point.
 ```yaml
 Type: String
 Parameter Sets: RemoveDistributionPointFromGroupByName_Id, RemoveDistributionPointFromGroupByName_Name, RemoveDistributionPointFromGroupByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -232,7 +235,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -247,7 +250,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

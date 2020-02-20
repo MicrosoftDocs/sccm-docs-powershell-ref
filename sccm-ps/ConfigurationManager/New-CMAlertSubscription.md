@@ -1,14 +1,17 @@
 ---
-title: New-CMAlertSubscription
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates an alert subscription object.
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMAlertSubscription
+titleSuffix: Configuration Manager
 ---
 
 # New-CMAlertSubscription
@@ -32,7 +35,7 @@ Before you create an alert subscription, make sure that you have configured emai
 
 ### Example 1: Create an alert subscription
 ```
-PS C:\> New-CMAlertSubscription -Name "Subscription01" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 1033 -AlertIds 16777219
+PS XYZ:\> New-CMAlertSubscription -Name "Subscription01" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 1033 -AlertIds 16777219
 ```
 
 This command creates an alert subscription named Subscription01.
@@ -42,8 +45,6 @@ Because the command specifies a locale ID of 1033, the subscription uses US Engl
 ## PARAMETERS
 
 ### -AddEmailAddress
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -92,7 +93,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +108,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +124,7 @@ For more information and a list of locale identifiers, see the Locale IDs Assign
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +139,7 @@ Specifies the name of an alert subscription object.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,12 +149,10 @@ Accept wildcard characters: False
 ```
 
 ### -RequireValidLocaleId
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

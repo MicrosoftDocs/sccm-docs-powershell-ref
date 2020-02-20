@@ -1,14 +1,17 @@
 ---
-title: Set-CMEmailProfile
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets an email profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMEmailProfile
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMEmailProfile
@@ -61,22 +64,22 @@ The **Set-CMEmailProfile** cmdlet updates the settings of an Exchange ActiveSync
 
 ### Example 1: Update a profile by name
 ```
-PS C:\> Set-CMEmailProfile -Name "EmailProfile1" -NewName "newEmailProfile1"
+PS XYZ:\> Set-CMEmailProfile -Name "EmailProfile1" -NewName "newEmailProfile1"
 ```
 
 This command updates the name of the Exchange ActiveSync email profile from EmailProfile1 to newEmailProfile1.
 
 ### Example 2: Update a profile by ID
 ```
-PS C:\> Set-CMEmailProfile -Id 16795654 -NewName "newEmailProfile2"
+PS XYZ:\> Set-CMEmailProfile -Id 16795654 -NewName "newEmailProfile2"
 ```
 
 This command updates the name of the Exchange ActiveSync email profile with the ID of 16795654 to newEmailProfile2.
 
 ### Example 3: Update a profile as an input object
 ```
-PS C:\> $EmailProfile = Get-CMEmailProfile -Name "EmailProfile3"
-PS C:\> Set-CMEmailProfile -InputObject $EmailProfile -NewName "newEmailProfile3"
+PS XYZ:\> $EmailProfile = Get-CMEmailProfile -Name "EmailProfile3"
+PS XYZ:\> Set-CMEmailProfile -InputObject $EmailProfile -NewName "newEmailProfile3"
 ```
 
 The first command gets the Exchange ActiveSync email profile object named EmailProfile3 and stores the object in the $EmailProfile variable.
@@ -85,7 +88,7 @@ The second command changes the name of the email profile stored in $EmailProfile
 
 ### Example 4: Use the pipeline to update a profile
 ```
-PS C:\> Get-CMEmailProfile -Name "EmailProfile4" | Set-CMEmailProfile -NewName "newEmailProfile4"
+PS XYZ:\> Get-CMEmailProfile -Name "EmailProfile4" | Set-CMEmailProfile -NewName "newEmailProfile4"
 ```
 
 This command gets the Exchange ActiveSync email profile object named EmailProfile4 and uses the pipeline operator to pass the object to **Set-CMEmailProfile**, which changes the name of the email profile object to newEmailProfile4.
@@ -102,7 +105,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: domain, ntdomain
 
 Required: False
@@ -119,7 +122,7 @@ This parameter can only be used if the sAMAccountName value is specified for the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +137,7 @@ Specifies the display name for the email account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +157,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: mail, sAMAccountName, userPrincipalName
 
 Required: False
@@ -170,7 +173,7 @@ Indicate whether users are allowed to move email messages between different acco
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +188,7 @@ Indicates whether users are allowed to send email from certain non-default, thir
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +218,7 @@ Specifies a description for the Exchange ActiveSync email profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -230,7 +233,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +252,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: mail, userPrincipalName
 
 Required: False
@@ -265,7 +268,7 @@ Indicates whether outgoing email is sent using S/MIME encryption.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,7 +283,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +314,7 @@ To obtain an identity certificate object, use the Get-CMConfigurationPolicy cmdl
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -327,7 +330,7 @@ To obtain an email profile object, use the Get-CMEmailProfile function.
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -350,7 +353,7 @@ Valid values are:
 ```yaml
 Type: MailNumberofDaysToSync
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unlimited, OneDay, ThreeDays, OneWeek, TwoWeeks, OneMonth
 
 Required: False
@@ -366,7 +369,7 @@ Specifies the name of an Exchange ActiveSync email profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -381,7 +384,7 @@ Specifies a new name for an Exchange ActiveSync email profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -397,7 +400,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -413,7 +416,7 @@ To obtain a signing certificate object, use the Get-CMConfigurationPolicy cmdlet
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -475,7 +478,7 @@ Specifies the schedule by which devices will synchronize data from the Exchange 
 ```yaml
 Type: Schedule
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Manual, FifteenMins, ThirtyMins, SixtyMins, AsArrive
 
 Required: False
@@ -491,7 +494,7 @@ Indicates whether the list of email addresses that have been recently used on th
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -506,7 +509,7 @@ Indicates whether Secure Sockets Layer (SSL) communication is used when sending 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -532,7 +535,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

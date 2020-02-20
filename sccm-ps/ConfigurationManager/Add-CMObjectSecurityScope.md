@@ -1,14 +1,17 @@
 ---
-title: Add-CMObjectSecurityScope
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a security scope to an object.
+external help file: AdminUI.PS.Common.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMObjectSecurityScope
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMObjectSecurityScope
@@ -43,8 +46,8 @@ The **Add-CMObjectSecurityScope** cmdlet adds security scope to a Microsoft Syst
 
 ### Example 1: Add a security scope to application objects by using the pipeline
 ```
-PS C:\> $Scope = New-CMSecurityScope -Name "Scope1" -Description "Security scope 1"
-PS C:\> Get-CMApplication -Name "Application*" | Add-CMObjectSecurityScope -Scope $Scope
+PS XYZ:\> $Scope = New-CMSecurityScope -Name "Scope1" -Description "Security scope 1"
+PS XYZ:\> Get-CMApplication -Name "Application*" | Add-CMObjectSecurityScope -Scope $Scope
 ```
 
 The first command creates a security scope object named Scope1 and stores the object in the $Scope variable.
@@ -54,7 +57,7 @@ The second command gets all application objects that have a name beginning with 
 
 ### Example 2: Add a security scope to application objects
 ```
-PS C:\>Add-CMObjectSecurityScope -Name "Scope1" -InputObject (Get-CMApplication -Name "Application*")
+PS XYZ:\>Add-CMObjectSecurityScope -Name "Scope1" -InputObject (Get-CMApplication -Name "Application*")
 ```
 
 This command gets all application objects that have a name beginning with "Application" and then adds the security scope named Scope1 to each application object.
@@ -82,7 +85,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +100,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +130,7 @@ Specifies an array of objects to which you want to assign a security scope.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -184,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

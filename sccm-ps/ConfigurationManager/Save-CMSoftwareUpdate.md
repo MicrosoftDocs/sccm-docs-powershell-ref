@@ -1,14 +1,17 @@
 ---
-title: Save-CMSoftwareUpdate
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Saves software updates to update groups and packages.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Save-CMSoftwareUpdate
+titleSuffix: Configuration Manager
 ---
 
 # Save-CMSoftwareUpdate
@@ -21,43 +24,43 @@ Saves software updates to update groups and packages.
 ### SearchByNameMandatory (Default)
 ```
 Save-CMSoftwareUpdate -SoftwareUpdateName <String[]> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
 Save-CMSoftwareUpdate -SoftwareUpdateId <String[]> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
 Save-CMSoftwareUpdate -SoftwareUpdate <IResultObject> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_UpdateGroup
 ```
 Save-CMSoftwareUpdate -SoftwareUpdateGroupId <String[]> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_UpdateGroup
 ```
 Save-CMSoftwareUpdate -SoftwareUpdateGroupName <String[]> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_UpdateGroup
 ```
 Save-CMSoftwareUpdate -SoftwareUpdateGroup <IResultObject> [-Location <String>] -DeploymentPackageName <String>
- [-SoftwareUpdateLanguage <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SoftwareUpdateLanguage <String[]>] [-RetryCount <UInt32>] [-RetryDelaySec <UInt32>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,21 +74,21 @@ Languages determine which summary details a software update synchronizes and the
 
 ### Example 1: Save a software update and add a language to it
 ```
-PS C:\> Save-CMSoftwareUpdate -SoftwareUpdateName "Cumulative Update for Windows 10 (KB3095020)" -DeploymentPackageName "Package01" -SoftwareUpdateLanguage "English"
+PS XYZ:\> Save-CMSoftwareUpdate -SoftwareUpdateName "Cumulative Update for Windows 10 (KB3095020)" -DeploymentPackageName "Package01" -SoftwareUpdateLanguage "English"
 ```
 
 This command saves the software update named Cumulative Update for Windows 10 (KB3095020) for the deployment package named Package01 adding English to its array of languages.
 
 ### Example 2: Save a software update from a software update group
 ```
-PS C:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Save-CMSoftwareUpdate -DeploymentPackageName "Package01"
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" | Save-CMSoftwareUpdate -DeploymentPackageName "Package01"
 ```
 
 This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update with the package name Package01.
 
 ### Example 3: Save a software update from a software update group and specify a source location to download from
 ```
-PS C:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" Save-CMSoftwareUpdate -Location "\\Server01\Updates" -DeploymentPackageName "Package01"
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "TestSUgroup10" Save-CMSoftwareUpdate -Location "\\Server01\Updates" -DeploymentPackageName "Package01"
 ```
 
 This command gets the software update group object named TestSUgroup10 and uses the pipeline operator to pass the object to **Save-CMSoftwareUpdate**, which saves the software update from the file share Updates on Server01 with the package name Package01.
@@ -113,7 +116,7 @@ Specifies a name of a deployment package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +131,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +146,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +161,37 @@ Specifies a download source location for software updates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetryCount
+{{ Fill RetryCount Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetryDelaySec
+{{ Fill RetryDelaySec Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +207,7 @@ To obtain a software update object, use the [Get-CMSoftwareUpdate](Get-CMSoftwar
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +223,7 @@ To obtain a software update group object, use the [Get-CMSoftwareUpdateGroup](Ge
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_UpdateGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -205,7 +238,7 @@ Specifies an array of IDs of software update groups.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_UpdateGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -220,7 +253,7 @@ Specifies an array of names of software update groups.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_UpdateGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -235,7 +268,7 @@ Specifies an array of IDs of software updates.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -250,7 +283,7 @@ Specifies an array of software update languages.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -291,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

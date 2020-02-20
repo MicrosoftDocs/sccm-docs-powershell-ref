@@ -1,14 +1,17 @@
 ---
-title: Copy-CMSecurityRole
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a custom security role.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Copy-CMSecurityRole
+titleSuffix: Configuration Manager
 ---
 
 # Copy-CMSecurityRole
@@ -45,22 +48,22 @@ If you require additional security roles, you can create a custom security role 
 
 ### Example 1: Copy a security role by using an ID
 ```
-PS C:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleId "SMS000CR"
+PS XYZ:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleId "SMS000CR"
 ```
 
 This command creates a new security role named SecRole02 by copying the security role that has the ID SMS000CR.
 
 ### Example 2: Copy a security role by using a name
 ```
-PS C:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleName "Software Update Manager"
+PS XYZ:\>Copy-CMSecurityRole -Name "SecRole02" -SourceRoleName "Software Update Manager"
 ```
 
 This command creates a new security role named SecRole02 by copying the security role named Software Update Manager.
 
 ### Example 3: Copy a security role
 ```
-PS C:\> $Srole = Get-CMSecurityRole -Name "Software Update Manager"
-PS C:\> Copy-CMSecurityRole -InputObject $Srole -Name "SecRole02"
+PS XYZ:\> $Srole = Get-CMSecurityRole -Name "Software Update Manager"
+PS XYZ:\> Copy-CMSecurityRole -InputObject $Srole -Name "SecRole02"
 ```
 
 The first command gets the security role named Software Update Manager and stores it in the $Srole variable.
@@ -105,7 +108,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +123,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +139,7 @@ To obtain a **CMSecurityRole** object, use the [Get-CMSecurityRole](Get-CMSecuri
 ```yaml
 Type: IResultObject
 Parameter Sets: CopyFromValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +184,7 @@ Specifies the name of a security role.
 ```yaml
 Type: String
 Parameter Sets: CopyFromName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -207,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

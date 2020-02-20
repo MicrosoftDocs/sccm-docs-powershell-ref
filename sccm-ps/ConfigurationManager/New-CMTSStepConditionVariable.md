@@ -1,14 +1,17 @@
 ---
-title: New-CMTSStepConditionVariable
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a t s step condition variable.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMTSStepConditionVariable
+titleSuffix: Configuration Manager
 ---
 
 # New-CMTSStepConditionVariable
@@ -16,7 +19,6 @@ manager: dougeby
 ## SYNOPSIS
 
 Creates a t s step condition variable.
-
 
 ## SYNTAX
 
@@ -27,22 +29,17 @@ New-CMTSStepConditionVariable -OperatorType <VariableOperatorType> -ConditionVar
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -ConditionVariableName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -56,8 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -91,7 +86,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +101,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,8 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
- 
-
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: (All)
@@ -148,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -161,4 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

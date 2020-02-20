@@ -1,14 +1,17 @@
 ---
-title: Set-CMAadConditionalAccessPolicy
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets an aad conditional access policy.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAadConditionalAccessPolicy
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMAadConditionalAccessPolicy
@@ -29,26 +32,21 @@ Set-CMAadConditionalAccessPolicy [-ClientType <AadServicePrincipalClientType>]
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -AccountId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -58,12 +56,10 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorityId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,12 +69,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClientType
- 
-
 ```yaml
 Type: AadServicePrincipalClientType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NativeApps, BrowsersAndNativeApps
 
 Required: False
@@ -109,7 +103,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,12 +113,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,8 +126,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedSecurityGroup
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -154,7 +144,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,8 +154,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludedSecurityGroup
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -179,12 +167,10 @@ Accept wildcard characters: False
 ```
 
 ### -IntuneClientId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,12 +180,10 @@ Accept wildcard characters: False
 ```
 
 ### -IntuneResourceId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +198,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,12 +208,10 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalType
- 
-
 ```yaml
 Type: AadServicePrincipalType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ExchangeOnline, SharepointOnline, SkypeForBusiness, CrmOnline
 
 Required: True
@@ -240,8 +222,6 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDevicePlatform
- 
-
 ```yaml
 Type: AadServicePrincipalDevicePlatform[]
 Parameter Sets: (All)
@@ -256,8 +236,6 @@ Accept wildcard characters: False
 ```
 
 ### -UserCredential
- 
-
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -287,12 +265,10 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsDeviceState
- 
-
 ```yaml
 Type: AadServicePrincipalDeviceState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: CompliantOrDomainJoined, DomainJoined, Compliant
 
 Required: False
@@ -303,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -316,4 +292,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

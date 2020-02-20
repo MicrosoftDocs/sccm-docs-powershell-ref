@@ -1,14 +1,17 @@
 ---
-title: Get-CMSoftwareUpdateDeploymentPackage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Retrieves a deployment package.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSoftwareUpdateDeploymentPackage
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMSoftwareUpdateDeploymentPackage
@@ -38,14 +41,14 @@ A **CMSoftwareUpdateDeploymentPackage** object contains one or more software upd
 
 ### Example 1: Get a deployment package by using a name
 ```
-PS C:\> Get-CMSoftwareUpdateDeploymentPackage -Name "Asdset"
+PS XYZ:\> Get-CMSoftwareUpdateDeploymentPackage -Name "Asdset"
 ```
 
 This command gets a deployment package named Asdset.
 
 ### Example 2: Get a deployment package by using an ID
 ```
-PS C:\> Get-CMSoftwareUpdateDeploymentPackage -Id "ST10000C"
+PS XYZ:\> Get-CMSoftwareUpdateDeploymentPackage -Id "ST10000C"
 ```
 
 This command gets a deployment package that has the ID ST10000C.
@@ -58,7 +61,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +76,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +106,7 @@ Specifies a name for the deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

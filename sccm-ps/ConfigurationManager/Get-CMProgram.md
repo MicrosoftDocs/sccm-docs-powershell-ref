@@ -1,14 +1,17 @@
 ---
-title: Get-CMProgram
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets programs in Configuration Manager.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMProgram
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMProgram
@@ -46,14 +49,14 @@ You can associate multiple programs with the same package.
 
 ### Example 1: Get all programs
 ```
-PS C:\> Get-CMProgram
+PS XYZ:\> Get-CMProgram
 ```
 
 This command gets all programs in System Center Configuration Manager.
 
 ### Example 2: Get a program by using a name and an ID
 ```
-PS C:\> Get-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
+PS XYZ:\> Get-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
 ```
 
 This command gets the program named ProgramD02 in the package that has the ID ST10000F.
@@ -66,7 +69,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +84,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +97,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,7 +112,7 @@ Specifies the package that contains the program by using an ID.
 ```yaml
 Type: String
 Parameter Sets: SearchById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -122,7 +125,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +140,7 @@ Specifies the program within the package by using a name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

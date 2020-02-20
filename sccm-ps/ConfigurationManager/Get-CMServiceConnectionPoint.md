@@ -1,14 +1,17 @@
 ---
-title: Get-CMServiceConnectionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a service connection point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMServiceConnectionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMServiceConnectionPoint
@@ -37,15 +40,15 @@ The **Get-CMServiceConnectionPoint** cmdlet gets a service connection point.
 
 ### Example 1: Get a service connection point by name
 ```
-PS C:\> Get-CMServiceConnectionPoint -SiteSystemServerName "TestServer01.Contoso.com" -SiteCode PS1
+PS XYZ:\> Get-CMServiceConnectionPoint -SiteSystemServerName "TestServer01.Contoso.com" -SiteCode PS1
 ```
 
 This command gets the service connection point for the site system server named TestServer01.Contoso.com with the site code PS1.
 
 ### Example 2: Get a service connection point by using a variable
 ```
-PS C:\> $Server = Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer02.Contoso.com"
-PS C:\> Get-CMServiceConnectionPoint -InputObject $Server
+PS XYZ:\> $Server = Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer02.Contoso.com"
+PS XYZ:\> Get-CMServiceConnectionPoint -InputObject $Server
 ```
 
 The first command gets the site system server object named TestServer02.Contoso.com with the site code PS1 and saves the object in the $Server variable.
@@ -55,8 +58,6 @@ The second command gets the service connection point for the server stored in $S
 ## PARAMETERS
 
 ### -AllSite
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -75,7 +76,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +91,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +107,7 @@ To obtain a site system server object, use the Get-CMSiteSystemServer cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +122,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

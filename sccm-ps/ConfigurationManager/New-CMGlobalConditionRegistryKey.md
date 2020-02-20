@@ -1,14 +1,17 @@
 ---
-title: New-CMGlobalConditionRegistryKey
-titleSuffix: Configuration Manager
+author: mumian
 description: Creates a Registry Key type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMGlobalConditionRegistryKey
+titleSuffix: Configuration Manager
 ---
 
 # New-CMGlobalConditionRegistryKey
@@ -19,9 +22,10 @@ Creates a Registry Key type global condition in Configuration Manager.
 
 ## SYNTAX
 
-```powershell
+```
 New-CMGlobalConditionRegistryKey [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] -KeyName <String>
  -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +39,7 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalRegKey = New-CMGlobalConditionRegistryKey -KeyName key -Name GC3 -RegistryHive LocalMachine -Description $String
+PS XYZ:\> $GlobalRegKey = New-CMGlobalConditionRegistryKey -KeyName key -Name GC3 -RegistryHive LocalMachine -Description $String
 ```
 
 This command creates a Registry Key type global condition in Configuration Manager.
@@ -155,9 +159,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

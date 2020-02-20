@@ -1,14 +1,17 @@
 ---
-title: Remove-CMDeploymentTypeDependencyGroup
-titleSuffix: Configuration Manager
+author: mumian
 description: Removes a deployment type dependency group from Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 12/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDeploymentTypeDependencyGroup
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMDeploymentTypeDependencyGroup
@@ -19,7 +22,7 @@ Removes a deployment type dependency group from Configuration Manager deployment
 
 ## SYNTAX
 
-```powershell
+```
 Remove-CMDeploymentTypeDependencyGroup [-Force] -InputObject <DeploymentTypeDependencyGroup>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -33,7 +36,7 @@ The **Remove-CMDeploymentTypeDependencyGroup** cmdlet removes a deployment type 
 ### Example 1
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Remove-CMDeploymentTypeDependencyGroup -Force
+PS XYZ:\> Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Remove-CMDeploymentTypeDependencyGroup -Force
 ```
 
 This command removes a deployment type dependency group.
@@ -63,7 +66,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +82,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +98,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +141,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -148,6 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

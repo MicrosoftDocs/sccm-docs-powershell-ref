@@ -45,7 +45,7 @@ An out of band service point is a site system role that provisions and configure
 
 ### Example 1: Enable automatic provisioning of an AMT-based computers
 ```
-PS C:\>Enable-CMAutomaticAmtProvisioning -DeviceName "CMdiv-west03"
+PS XYZ:\>Enable-CMAutomaticAmtProvisioning -DeviceName "CMdiv-west03"
 ```
 
 This command enables automatic provisioning of the device named CMdiv-west03.

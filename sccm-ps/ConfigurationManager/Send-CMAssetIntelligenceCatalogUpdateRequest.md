@@ -1,14 +1,17 @@
 ---
-title: Send-CMAssetIntelligenceCatalogUpdateRequest
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Requests a catalog update for uncategorized software titles.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Send-CMAssetIntelligenceCatalogUpdateRequest
+titleSuffix: Configuration Manager
 ---
 
 # Send-CMAssetIntelligenceCatalogUpdateRequest
@@ -40,7 +43,7 @@ You can also use the Sync-CMAssetIntelligenceCatalog cmdlet to synchronize the l
 
 ### Example 1: Request an update for a software category
 ```
-PS C:\> Send-CMAssetIntelligenceCatalogUpdateRequest -Name "Browsers"
+PS XYZ:\> Send-CMAssetIntelligenceCatalogUpdateRequest -Name "Browsers"
 ```
 
 This command requests an update of the Asset Intelligence catalog for the software category named Browsers.
@@ -68,7 +71,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +86,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

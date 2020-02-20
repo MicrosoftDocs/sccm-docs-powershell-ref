@@ -1,14 +1,17 @@
 ---
-title: Start-CMTaskSequenceDeployment
-titleSuffix: Configuration Manager
+author: mumian
 description: Starts a task sequence deployment in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 12/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Start-CMTaskSequenceDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Start-CMTaskSequenceDeployment
@@ -20,8 +23,7 @@ Starts a task sequence deployment in Configuration Manager.
 ## SYNTAX
 
 ### SearchByValueMandatory (Default)
-
-```powershell
+```
 Start-CMTaskSequenceDeployment [-InputObject] <IResultObject> [-CollectionName <String>]
  [-CollectionId <String>] [-Collection <IResultObject>] [-Comment <String>]
  [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
@@ -39,8 +41,7 @@ Start-CMTaskSequenceDeployment [-InputObject] <IResultObject> [-CollectionName <
 ```
 
 ### SearchPackageByIdMandatory
-
-```powershell
+```
 Start-CMTaskSequenceDeployment [-TaskSequencePackageId] <String> [-CollectionName <String>]
  [-CollectionId <String>] [-Collection <IResultObject>] [-Comment <String>]
  [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>] [-UseMeteredNetwork <Boolean>]
@@ -67,7 +68,7 @@ A task sequence deployment assigns a task sequence to a collection of computers.
 ### Example 1: Start a task sequence deployment
 
 ```powershell
-PS C:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 01"
+PS XYZ:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 01"
 ```
 
 This command starts a task sequence deployment by using the name of the task sequence deployment and the name of a collection.
@@ -75,7 +76,7 @@ This command starts a task sequence deployment by using the name of the task seq
 ### Example 2: Start a task sequence deployment for devices
 
 ```powershell
-PS C:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 02" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
+PS XYZ:\> Start-CMTaskSequenceDeployment -Name "Task Sequence 1333" -CollectionName "Collection 02" -Comment "Task sequence test" -DeployPurpose Required -SendWakeUpPacket $True -UseMeteredNetwork $True -ScheduleEvent AsSoonAsPossible -RerunBehavior NeverRerunDeployedProgram -AllowUsersRunIndependently $True -ShowTaskSequenceProgress $False -SoftwareInstallation $True -SystemRestart $True -PersistOnWriteFilterDevice $False -AllowFallback $True -CreatAlertBaseOnPercentSuccess $True -CreatAlertBaseOnPercentFailure $True -DeploymentOption DownloadAllContentLocallyBeforeStartingTaskSequence -AllowSharedContent $True -InternetOption $True
 ```
 
 This command starts a task sequence deployment for mobile devices.
@@ -90,7 +91,7 @@ Specifies a day and time to notify clients of a new deployment.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +107,7 @@ This parameter is deprecated. Use *AlertDateTime*.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +123,7 @@ This parameter is deprecated. Use *AlertDateTime*.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +139,7 @@ Indicates whether to allow a fallback status point for clients.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +196,7 @@ Specifies a collection object. To obtain a collection object, use the **Get-CMCo
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +212,7 @@ Specifies the ID of a collection designated to receive a task sequence deploymen
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +229,7 @@ A collection is a group of client computers.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +245,7 @@ Specifies a comment for the task sequence deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -253,126 +254,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DeploymentAvailableDateTime
+### -Confirm
 
-Specifies a date and time when a deployment becomes available to clients.
-By default, the deployment becomes available immediately.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: DateTime
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentAvailableDay
-
-This parameter is deprecated. Use *DeploymentAvailableDateTime*.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentAvailableTime
-
-This parameter is deprecated. Use *DeploymentAvailableDateTime*.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentExpireDateTime
-
-Specifies a date and time when a deployment expires.
-By default, a deployment never expires.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentExpireDay
-
-This parameter is deprecated. Use *DeploymentExpireDateTime*.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentExpireTime
-
-This parameter is deprecated. Use *DeploymentExpireDateTime*.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeploymentOption
-
-Specifies if clients download all content before starting the task sequence, or download content as needed by the running task sequence.
-By default, clients download content as needed.
-The acceptable values for this parameter are:
-
-- DownloadAllContentLocallyBeforeStartingTaskSequence
-- DownloadContentLocallyWhenNeededByRunningTaskSequence
-- RunFromDistributionPoint
-
-If you specify Clients for the *Availability* parameter, the default value for this parameter is DownloadAllContentLocallyBeforeStartingTaskSequence.
-If you specify ClientsMediaAndPxe, MediaAndPxe, or MediaAndPxeHidden for the *Availability* parameter, the default value for this parameter is DownloadContentLocallyWhenNeededByRunningTaskSequence.
-
-```yaml
-Type: DeploymentOptionType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
-
-Required: False
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -399,6 +292,130 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeploymentAvailableDateTime
+
+Specifies a date and time when a deployment becomes available to clients.
+By default, the deployment becomes available immediately.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeploymentAvailableDay
+
+This parameter is deprecated. Use *DeploymentAvailableDateTime*.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeploymentAvailableTime
+
+This parameter is deprecated. Use *DeploymentAvailableDateTime*.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeploymentExpireDateTime
+
+Specifies a date and time when a deployment expires.
+By default, a deployment never expires.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeploymentExpireDay
+
+This parameter is deprecated. Use *DeploymentExpireDateTime*.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeploymentExpireTime
+
+This parameter is deprecated. Use *DeploymentExpireDateTime*.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeploymentOption
+
+Specifies if clients download all content before starting the task sequence, or download content as needed by the running task sequence.
+By default, clients download content as needed.
+The acceptable values for this parameter are:
+
+- DownloadAllContentLocallyBeforeStartingTaskSequence
+- DownloadContentLocallyWhenNeededByRunningTaskSequence
+- RunFromDistributionPoint
+
+If you specify Clients for the *Availability* parameter, the default value for this parameter is DownloadAllContentLocallyBeforeStartingTaskSequence.
+If you specify ClientsMediaAndPxe, MediaAndPxe, or MediaAndPxeHidden for the *Availability* parameter, the default value for this parameter is DownloadContentLocallyWhenNeededByRunningTaskSequence.
+
+```yaml
+Type: DeploymentOptionType
+Parameter Sets: (All)
+Aliases:
+Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
 
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -406,7 +423,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -422,7 +439,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -439,7 +456,7 @@ To obtain a task sequence object, use the [Get-CMTaskSequenceDeployment](Get-CMT
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -455,7 +472,7 @@ Indicates whether the task sequence runs on clients connecting over the Internet
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -472,7 +489,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -488,7 +505,7 @@ Specifies a percentage for failed task sequence deployment.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -504,7 +521,7 @@ Specifies a percentage for successful task sequence deployment.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -520,7 +537,7 @@ Indicates whether to install a task sequence on the temporary overlay and commit
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -543,7 +560,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RerunBehaviorType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NeverRerunDeployedProgram, AlwaysRerunProgram, RerunIfFailedPreviousAttempt, RerunIfSucceededOnPreviousAttempt
 
 Required: False
@@ -576,7 +593,7 @@ Specifies an array of schedule objects.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -597,7 +614,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ScheduleEventType[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AsSoonAsPossible, LogOn, LogOff
 
 Required: False
@@ -618,7 +635,7 @@ The *Purpose* parameter must be set to Required.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -634,7 +651,7 @@ Indicates whether to show a process dialog for a task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -650,7 +667,7 @@ Indicates whether to allow the application to install, even if the installation 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -666,7 +683,7 @@ Indicates whether to allow an advertised program to restart the system, even if 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -698,7 +715,7 @@ Indicates whether to allow clients to connect to a metered network to download a
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -715,7 +732,7 @@ UTC time makes the task sequence available at the same time for all computers.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -732,27 +749,11 @@ UTC time makes the task sequence available at the same time for all computers.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -775,8 +776,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

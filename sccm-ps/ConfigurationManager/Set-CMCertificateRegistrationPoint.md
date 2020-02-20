@@ -1,14 +1,17 @@
 ---
-title: Set-CMCertificateRegistrationPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a certificate registration point role on a site system server.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMCertificateRegistrationPoint
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMCertificateRegistrationPoint
@@ -40,7 +43,7 @@ The **Set-CMCertificateRegistrationPoint** cmdlet updates the settings of a cert
 
 ### Example 1: Set a certificate registration point role by using the pipeline
 ```
-PS C:\> Get-CMCertificateRegistrationPoint -SiteSystemServerName "SiteServer01.Contoso.com" | Set-CMCertificateRegistrationPoint  -AddCertificate @{"https://ndes2.fabrikam.com/certsrv/mscep/mscep.dll" ="\\Server\ShareFolder\Cert.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\Administrator).UserName -RemoveCertificate @{"https://ndes1.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\ShareFolder\RootCA.cer"}.Keys[0]
+PS XYZ:\> Get-CMCertificateRegistrationPoint -SiteSystemServerName "SiteServer01.Contoso.com" | Set-CMCertificateRegistrationPoint  -AddCertificate @{"https://ndes2.fabrikam.com/certsrv/mscep/mscep.dll" ="\\Server\ShareFolder\Cert.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\Administrator).UserName -RemoveCertificate @{"https://ndes1.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\ShareFolder\RootCA.cer"}.Keys[0]
 ```
 
 This command gets the certificate registration point object for the site system server named SiteServer01.Contoso.com and uses the pipeline operator to pass the object to **Set-CMCertificateRegistrationPoint**.
@@ -48,7 +51,7 @@ This command gets the certificate registration point object for the site system 
 
 ### Example 2: Set a certificate registration point role by name
 ```
-PS C:\> Set-CMCertificateRegistrationPoint -SiteSystemServerName "SiteServer02.Contoso.com" -AddCertificate @{"https://ndes2.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\ShareFolder\RootCA.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\Admin1).UserName -RemoveCertificate @{"https://ndes1.fabrikam.com/certsrv/mscep/mscep.dll" ="\\Server\ShareFolder\Cert.cer"}.Keys[0]
+PS XYZ:\> Set-CMCertificateRegistrationPoint -SiteSystemServerName "SiteServer02.Contoso.com" -AddCertificate @{"https://ndes2.fabrikam.com/certsrv/mscep/mscep.dll"="\\Server\ShareFolder\RootCA.cer"} -ConnectionAccountUserName (Get-CMUser -Name Contoso\Admin1).UserName -RemoveCertificate @{"https://ndes1.fabrikam.com/certsrv/mscep/mscep.dll" ="\\Server\ShareFolder\Cert.cer"}.Keys[0]
 ```
 
 This command adds the certificate named RootCA.cer to the site system server named SiteServer02.Contoso.com, and removes the certificate named Cert.cer, by using the user account named Contoso\Admin1 to connect to the Configuration Manager database.
@@ -106,7 +109,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +124,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +156,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +171,7 @@ Specifies the HTTPS port number used by the certificate registration point to co
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +201,7 @@ Specifies the site code of the Configuration Manager site server.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

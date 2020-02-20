@@ -1,14 +1,17 @@
 ---
-title: Remove-CMCollectionMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a Configuration Manager collection membership rule.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMCollectionMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMCollectionMembershipRule
@@ -42,14 +45,11 @@ Remove-CMCollectionMembershipRule [-CollectionType <CollectionType>] -InputObjec
 ## DESCRIPTION
 This cmdlet is called by higher-level wrapper cmdlets. It isn't called directly.
 
-
 ## EXAMPLES
 
 ## PARAMETERS
 
 ### -ChildSearchCriteria
- 
-
 ```yaml
 Type: SmsProviderSearch
 Parameter Sets: (All)
@@ -63,12 +63,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,12 +76,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,12 +89,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionType
- 
-
 ```yaml
 Type: CollectionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: User, Device
 
 Required: False
@@ -129,7 +123,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,12 +133,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExtraArguments
- 
-
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,12 +146,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +164,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,8 +174,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -199,12 +187,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleClassName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -230,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -244,4 +230,3 @@ System.Object
 ## NOTES
 
 ## RELATED LINKS
-

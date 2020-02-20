@@ -1,14 +1,17 @@
 ---
-title: Copy-CMTaskSequence
-titleSuffix: Configuration Manager
+author: mumian
 description: Create a copy of an existing task sequence in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Copy-CMTaskSequence
+titleSuffix: Configuration Manager
 ---
 
 # Copy-CMTaskSequence
@@ -20,22 +23,21 @@ Create a copy of an existing task sequence in Configuration Manager.
 ## SYNTAX
 
 ### SearchById (Default)
-
-```powershell
+```
 Copy-CMTaskSequence -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByName
-
-```powershell
+```
 Copy-CMTaskSequence -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByValue
-
-```powershell
+```
 Copy-CMTaskSequence -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,12 +51,28 @@ A task sequence performs multiple steps or tasks on a Microsoft System Center Co
 ### Example 1
 
 ```powershell
-PS C:\> $newTS = Copy-CMTaskSequence -Name "TaskSequence01"
+PS XYZ:\> $newTS = Copy-CMTaskSequence -Name "TaskSequence01"
 ```
 
 This command makes a copy of the task sequence with the name TaskSequence01.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -136,22 +154,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -169,6 +171,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
@@ -176,6 +181,8 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequencePackage
+
+## NOTES
 
 ## RELATED LINKS
 

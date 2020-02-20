@@ -1,14 +1,17 @@
 ---
-title: Add-CMDeviceCollectionDirectMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a Direct Rule membership rule to a device collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDeviceCollectionDirectMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMDeviceCollectionDirectMembershipRule
@@ -20,37 +23,37 @@ Adds a Direct Rule membership rule to a device collection.
 
 ### ByCollectionIdAndResourceId (Default)
 ```
-Add-CMDeviceCollectionDirectMembershipRule -CollectionId <String> -ResourceId <Int32> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -CollectionId <String> -ResourceId <Int32[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionIdAndResourceValue
 ```
-Add-CMDeviceCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -CollectionId <String> -Resource <IResultObject[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceId
 ```
-Add-CMDeviceCollectionDirectMembershipRule -CollectionName <String> -ResourceId <Int32> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -CollectionName <String> -ResourceId <Int32[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionNameAndResourceValue
 ```
-Add-CMDeviceCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -CollectionName <String> -Resource <IResultObject[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionValueAndResourceId
 ```
-Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <Int32> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> -ResourceId <Int32[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByCollectionValueAndResourceValue
 ```
-Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject> [-PassThru]
+Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> -Resource <IResultObject[]> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -62,14 +65,14 @@ A direct membership rule lets you explicitly choose the members of the device co
 
 ### Example 1: Add a direct membership rule
 ```
-PS C:\>Add-CMDeviceCollectionDirectMembershipRule -CollectionId "SC100056" -ResourceId 2097152004
+PS XYZ:\>Add-CMDeviceCollectionDirectMembershipRule -CollectionId "SC100056" -ResourceId 2097152004
 ```
 
 This command adds a device collection direct membership rule to the collection with the ID of SC100056, and adds the resource with the ID of 2097152004 to the collection.
 
 ### Example 2: Add a direct membership rule by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "testCollection" | Add-CMDeviceCollectionDirectMembershipRule -ResourceId 2097152004
+PS XYZ:\> Get-CMCollection -Name "testCollection" | Add-CMDeviceCollectionDirectMembershipRule -ResourceId 2097152004
 ```
 
 This command gets the collection object named testCollection and uses the pipeline operator to pass the object to **Add-CMDeviceCollectionDirectMembershipRule**, which adds the direct membership rule to the collection object, and the resource with the ID of 2097152004 to the collection.This command gets the collection named Collection07 by using the [Get-CMCollection](Get-CMCollection.md) cmdlet.
@@ -84,7 +87,7 @@ Specifies the ID of a device collection.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionIdAndResourceValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,7 +102,7 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionNameAndResourceId, ByCollectionNameAndResourceValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,7 +132,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +179,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,9 +193,9 @@ Specifies a resource object.
 To obtain a resource object, use the Get-CMResource cmdlet.
 
 ```yaml
-Type: IResultObject
+Type: IResultObject[]
 Parameter Sets: ByCollectionIdAndResourceValue, ByCollectionNameAndResourceValue, ByCollectionValueAndResourceValue
-Aliases: 
+Aliases: Resources
 
 Required: True
 Position: Named
@@ -205,9 +208,9 @@ Accept wildcard characters: False
 Specifies the ID of a resource.
 
 ```yaml
-Type: Int32
+Type: Int32[]
 Parameter Sets: ByCollectionIdAndResourceId, ByCollectionNameAndResourceId, ByCollectionValueAndResourceId
-Aliases: 
+Aliases: ResourceIds
 
 Required: True
 Position: Named
@@ -233,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

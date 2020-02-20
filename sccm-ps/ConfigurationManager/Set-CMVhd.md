@@ -1,14 +1,17 @@
 ---
-title: Set-CMVhd
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies VHD images.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMVhd
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMVhd
@@ -49,14 +52,14 @@ The **Set-CMVhd** cmdlet modifies one or more virtual hard disk (VHD) images tha
 
 ### Example 1: Change the distribution point server for a VHD
 ```
-PS C:\> Set-CMVhd -Name "Windows 10 Enterprise" -DistributionPointServerNames "distribution-server.contoso.com"
+PS XYZ:\> Set-CMVhd -Name "Windows 10 Enterprise" -DistributionPointServerNames "distribution-server.contoso.com"
 ```
 
 This command changes the distribution point server for the virtual hard disk (VHD) named Windows 10 Enterprise.
 
 ### Example 2: Rename a VHD
 ```
-PS C:\> Set-CMVhd -Name "Windows 10 Enterprise"-NewName "User Desktop Image"
+PS XYZ:\> Set-CMVhd -Name "Windows 10 Enterprise"-NewName "User Desktop Image"
 ```
 
 This command renames the VHD named Windows 10 Enterprise.
@@ -85,7 +88,7 @@ Specifies a description for the VHD.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +103,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +131,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ To obtain a VHD image, use the [Get-CMVhd](Get-CMVhd.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +162,7 @@ Specifies an array of names of VHD images.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,7 +177,7 @@ Specifies a new name for the VHD image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +192,7 @@ Specifies an ID for a task sequence package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +205,7 @@ Accept wildcard characters: False
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +221,7 @@ Use any string.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -270,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

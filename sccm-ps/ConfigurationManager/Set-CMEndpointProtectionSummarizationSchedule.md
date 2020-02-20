@@ -1,14 +1,17 @@
 ---
-title: Set-CMEndpointProtectionSummarizationSchedule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies an Endpoint Protection summarization schedule.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMEndpointProtectionSummarizationSchedule
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMEndpointProtectionSummarizationSchedule
@@ -31,7 +34,7 @@ For more information about Endpoint Protection summarization schedules, see [How
 
 ### Example 1: Modify an Endpoint Protection summarization schedules
 ```
-PS C:\> Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "Days"
+PS XYZ:\> Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "Days"
 ```
 
 This command modifies the interval and unit values to specify that 10 days pass before the Endpoint Protection Summarization Schedule runs again.
@@ -59,7 +62,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +77,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +98,7 @@ Valid values for this parameter depend on the unit that you select:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,7 +118,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SummarizationScheduleUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Minutes, Hours, Days
 
 Required: False
@@ -142,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

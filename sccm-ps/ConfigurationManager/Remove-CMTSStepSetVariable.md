@@ -1,6 +1,7 @@
 ---
 external help file: AdminUI.PS.Osd-help.xml
-online version: 
+Module Name: ConfigurationManager
+online version:
 schema: 2.0.0
 ---
 
@@ -30,16 +31,13 @@ Remove-CMTSStepSetVariable [-TaskSequenceName] <String> [-StepName <String>] [-F
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -59,12 +57,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,8 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -89,12 +83,10 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,8 +96,6 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
- 
-
 ```yaml
 Type: String
 Parameter Sets: ById
@@ -119,12 +109,10 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
- 
-
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -150,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -163,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

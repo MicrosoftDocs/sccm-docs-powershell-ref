@@ -1,14 +1,17 @@
 ---
-title: Remove-CMBootImage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes an operating system boot image.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMBootImage
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMBootImage
@@ -47,7 +50,7 @@ For more information about the SMS provider, see [Planning for the SMS Provider 
 
 ### Example 1: Remove a boot image object that is identified by using its ID
 ```
-PS C:\> Remove-CMBootImage -Id "CM100004" -Confirm
+PS XYZ:\> Remove-CMBootImage -Id "CM100004" -Confirm
 ```
 
 This command removes a boot image object that is identified by using its ID.
@@ -55,7 +58,7 @@ You must confirm the action before the command performs it.
 
 ### Example 2: Remove a boot image object that is identified by using its name
 ```
-PS C:\> Remove-CMBootImage -Name "Boot image (86)" -Confirm
+PS XYZ:\> Remove-CMBootImage -Name "Boot image (86)" -Confirm
 ```
 
 This command removes a boot image object that is identified by using its name.
@@ -84,7 +87,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +102,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +148,7 @@ Specifies a boot image object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +163,7 @@ Specifies a name of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -186,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Set-CMComputerAssociation
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes settings for a computer association in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMComputerAssociation
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMComputerAssociation
@@ -47,7 +50,7 @@ You can also change whether System Center Configuration Manager includes other u
 
 ### Example 1: Modify a computer association
 ```
-PS C:\> Set-CMComputerAssociation -DestinationComputer "TSQA155" -SourceComputer "TSQA073" -AddMigrationUserName "ContosoTSQA\EvanNarvaez" -MigrationBehavior CaptureAllUserAccountsAndRestoreSpecifiedAccounts -RemoveMigrationUserName "ContosoTSQA\ElisaDaugherty"
+PS XYZ:\> Set-CMComputerAssociation -DestinationComputer "TSQA155" -SourceComputer "TSQA073" -AddMigrationUserName "ContosoTSQA\EvanNarvaez" -MigrationBehavior CaptureAllUserAccountsAndRestoreSpecifiedAccounts -RemoveMigrationUserName "ContosoTSQA\ElisaDaugherty"
 ```
 
 This command changes the association between the computer named TSQA073 and TSQA155.
@@ -63,7 +66,7 @@ The cmdlet adds these user names to the current specified user names of the comp
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +126,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +152,7 @@ Saves only the specified accounts from the source computer, and creates those ac
 ```yaml
 Type: MigrationBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: CaptureAndRestoreAllUserAccounts, CaptureAllUserAccountsAndRestoreSpecifiedAccounts, CaptureAndRestoreSpecifiedUserAccounts
 
 Required: False
@@ -160,12 +163,10 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationId
- 
-
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +182,7 @@ The cmdlet removes these user names from current specified user names of the com
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

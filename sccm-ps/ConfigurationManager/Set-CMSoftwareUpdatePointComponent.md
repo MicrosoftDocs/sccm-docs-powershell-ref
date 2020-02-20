@@ -1,14 +1,17 @@
 ---
-title: Set-CMSoftwareUpdatePointComponent
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a software update point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareUpdatePointComponent
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMSoftwareUpdatePointComponent
@@ -27,7 +30,8 @@ Set-CMSoftwareUpdatePointComponent [-SiteCode <String>] [-DefaultWsusServer <Str
  [-AddProductFamily <String[]>] [-RemoveProductFamily <String[]>] [-AddProduct <String[]>]
  [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>] [-Schedule <IResultObject>]
  [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
- [-EnableCallWsusCleanupWizard <Boolean>] [-WaitMonth <Int32>] [-AddLanguageUpdateFile <String[]>]
+ [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
+ [-WaitMonth <Int32>] [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>]
  [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
  [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -42,7 +46,8 @@ Set-CMSoftwareUpdatePointComponent -Name <String> [-DefaultWsusServer <String>]
  [-AddProductFamily <String[]>] [-RemoveProductFamily <String[]>] [-AddProduct <String[]>]
  [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>] [-Schedule <IResultObject>]
  [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
- [-EnableCallWsusCleanupWizard <Boolean>] [-WaitMonth <Int32>] [-AddLanguageUpdateFile <String[]>]
+ [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
+ [-WaitMonth <Int32>] [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>]
  [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
  [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -56,7 +61,8 @@ Set-CMSoftwareUpdatePointComponent [-DefaultWsusServer <String>] [-SynchronizeAc
  [-RemoveCompany <String[]>] [-AddProductFamily <String[]>] [-RemoveProductFamily <String[]>]
  [-AddProduct <String[]>] [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>]
  [-Schedule <IResultObject>] [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
- [-EnableCallWsusCleanupWizard <Boolean>] [-WaitMonth <Int32>] [-AddLanguageUpdateFile <String[]>]
+ [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
+ [-WaitMonth <Int32>] [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>]
  [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
  [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>]
  -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
@@ -73,8 +79,8 @@ You can specify a software update point to modify by name, by site code, or by u
 
 ### Example 1: Modify a software update point
 ```
-PS C:\> $CIObj = Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
-PS C:\> Set-CMSoftwareUpdatePointComponent -InputObject $CIObj
+PS XYZ:\> $CIObj = Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
+PS XYZ:\> Set-CMSoftwareUpdatePointComponent -InputObject $CIObj
 ```
 
 The first command retrieves a software update point component object on the server named Contoso-SiteSysSrv.TSQA.Contoso.com.
@@ -117,7 +123,7 @@ The cmdlet adds these languages to the languages supported for software updates 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +165,7 @@ This cmdlet adds these classifications to the classifications supported for soft
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,12 +190,10 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFileOption
- 
-
 ```yaml
 Type: ContentFileOptions
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: FullFilesOnly, ExpressForWindows10Only
 
 Required: False
@@ -203,7 +207,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +222,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,7 +235,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +250,7 @@ Indicates whether Configuration Manager creates an alert when synchronization fa
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -262,7 +266,7 @@ Specify a schedule by using the *Schedule* parameter.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,7 +281,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +299,22 @@ System Center 2016 Endpoint Protection definition updates and software updates t
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: ImmediatelyExpireSupersedenceForNonFeature
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ImmediatelyExpireSupersedenceForFeature
+{{ Fill ImmediatelyExpireSupersedenceForFeature Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -336,12 +355,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -383,7 +400,7 @@ The cmdlet removes these languages from the languages supported for software upd
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -429,7 +446,7 @@ This cmdlet removes these classifications from the classifications supported for
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -449,7 +466,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ReportingEventType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotCreateWsusReportingEvents, CreateOnlyWsusStatusReportingEvents, CreateAllWsusReportingEvents
 
 Required: False
@@ -467,7 +484,7 @@ To obtain a **Schedule** object, use the [New-CMSchedule](New-CMSchedule.md) cmd
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -482,7 +499,7 @@ Specifies a site code in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCodeMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -504,7 +521,7 @@ If you select a value of SynchronizeFromAnUpstreamDataSourceLocation, specify th
 ```yaml
 Type: SynchronizeActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: SynchronizeFromMicrosoftUpdate, SynchronizeFromAnUpstreamDataSourceLocation, DoNotSynchronizeFromMicrosoftUpdateOrUpstreamDataSource
 
 Required: False
@@ -521,7 +538,7 @@ To use this location, specify a value of SynchronizeFromAnUpstreamDataSourceLoca
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -539,7 +556,22 @@ Endpoint Protection definition updates and software updates that Service Packs s
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: WaitMonthForNonFeature
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WaitMonthForFeature
+{{ Fill WaitMonthForFeature Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -565,7 +597,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Invoke-CMDeviceAction
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Initiates a remote action on a mobile device.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMDeviceAction
+titleSuffix: Configuration Manager
 ---
 
 # Invoke-CMDeviceAction
@@ -44,14 +47,14 @@ This cmdlet only works on mobile devices.
 
 ### Example 1: Lock a mobile device
 ```
-PS C:\> Get-CMDevice -Name "WindowsPhone0401" | Invoke-CMDeviceAction -Action Lock
+PS XYZ:\> Get-CMDevice -Name "WindowsPhone0401" | Invoke-CMDeviceAction -Action Lock
 ```
 
 This command gets the device object named WindowsPhone0401 and uses the pipeline operator to pass the object to **Invoke-CMDeviceAction**, which locks the device.
 
 ### Example 2: Reset the PIN for a mobile device
 ```
-PS C:\> Invoke-CMDeviceAction -Name "WindowsPhone0402" -Action PinReset -PassThru
+PS XYZ:\> Invoke-CMDeviceAction -Name "WindowsPhone0402" -Action PinReset -PassThru
 ```
 
 This command resets the PIN for the device named WindowsPhone0402.
@@ -71,7 +74,7 @@ Valid values are:
 ```yaml
 Type: DeviceActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lock, PinReset, BypassActivationLock, RequestNewActivationLockCode
 
 Required: True
@@ -102,7 +105,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +120,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +166,7 @@ Specifies the name of a device.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -180,7 +183,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

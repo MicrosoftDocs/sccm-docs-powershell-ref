@@ -1,14 +1,17 @@
 ---
-title: Start-CMDistributionPointUpgrade
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Upgrades a shared distribution point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Start-CMDistributionPointUpgrade
+titleSuffix: Configuration Manager
 ---
 
 # Start-CMDistributionPointUpgrade
@@ -24,15 +27,16 @@ Start-CMDistributionPointUpgrade [-AllowFallbackForContent <Boolean>] [-AllowPre
  [-AllowRespondIncomingPxeRequest <Boolean>] [-ClientConnectionType <ClientConnectionTypes>]
  [-ClientCommunicationMode <ComputerCommunicationType>] [-PxePassword <SecureString>]
  [-ContentValidationPriority <Priority>] [-EnableAnonymous <Boolean>] [-EnablePxeSupport <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-InitiateConnection <Boolean>] [-InstallIis <Boolean>]
- [-MacAddressForRespondingPxeRequest <String[]>] [-PublicFqdn <String>] [-PxeServerResponseDelaySec <Int32>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] [-ValidateContentSchedule <IResultObject>]
- [-CertificatePassword <SecureString>] -CertificatePath <String> -DestinationSiteCode <String>
- [-ForceWhenDuplicateCertificate <Boolean>] [-InstallationAccount <IResultObject>] [-MinFreeSpaceMB <Int32>]
- [-PathForSavingMigratedPackage <String>] [-PrimaryContentLibraryLocation <DriveType>]
- [-PrimaryPackageShareLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
- [-SecondaryPackageShareLocation <DriveType>] -InputObject <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-InitiateConnection <Boolean>]
+ [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>] [-PublicFqdn <String>]
+ [-PxeServerResponseDelaySec <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-ValidateContentSchedule <IResultObject>] [-CertificatePassword <SecureString>] -CertificatePath <String>
+ -DestinationSiteCode <String> [-ForceWhenDuplicateCertificate <Boolean>]
+ [-InstallationAccount <IResultObject>] [-MinFreeSpaceMB <Int32>] [-PathForSavingMigratedPackage <String>]
+ [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
+ [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
+ -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### UseSelfSignedCertificate
@@ -41,15 +45,15 @@ Start-CMDistributionPointUpgrade [-AllowFallbackForContent <Boolean>] [-AllowPre
  [-AllowRespondIncomingPxeRequest <Boolean>] [-ClientConnectionType <ClientConnectionTypes>]
  [-ClientCommunicationMode <ComputerCommunicationType>] [-PxePassword <SecureString>]
  [-ContentValidationPriority <Priority>] [-EnableAnonymous <Boolean>] [-EnablePxeSupport <Boolean>]
- [-EnableUnknownComputerSupport <Boolean>] [-InitiateConnection <Boolean>] [-InstallIis <Boolean>]
- [-MacAddressForRespondingPxeRequest <String[]>] [-PublicFqdn <String>] [-PxeServerResponseDelaySec <Int32>]
- [-UserDeviceAffinity <UserDeviceAffinityType>] [-ValidateContentSchedule <IResultObject>]
- -CertificateExpirationTimeUtc <DateTime> -DestinationSiteCode <String> [-InstallationAccount <IResultObject>]
- [-MinFreeSpaceMB <Int32>] [-PathForSavingMigratedPackage <String>]
- [-PrimaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
- [-SecondaryContentLibraryLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>]
- -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-EnableUnknownComputerSupport <Boolean>] [-EnableNonWdsPxe <Boolean>] [-InitiateConnection <Boolean>]
+ [-InstallIis <Boolean>] [-MacAddressForRespondingPxeRequest <String[]>] [-PublicFqdn <String>]
+ [-PxeServerResponseDelaySec <Int32>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-ValidateContentSchedule <IResultObject>] -CertificateExpirationTimeUtc <DateTime>
+ -DestinationSiteCode <String> [-InstallationAccount <IResultObject>] [-MinFreeSpaceMB <Int32>]
+ [-PathForSavingMigratedPackage <String>] [-PrimaryContentLibraryLocation <DriveType>]
+ [-PrimaryPackageShareLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
+ [-SecondaryPackageShareLocation <DriveType>] -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,8 +70,8 @@ Therefore, when you upgrade a distribution point, you do not have to redistribut
 
 ### Example 1: Upgrade a shared distribution point
 ```
-PS C:\> $CIObj = Get-CMDistributionPoint -DistributionPointGroupId "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
-PS C:\> Start-CMDistributionPointUpgrade -AllowPreStaging $True -CertificatePath "\\Contoso01\CM\Toolbox\BaseCert.txt" -SharedDistributionPoint $CIObj -SiteCode "CM1"
+PS XYZ:\> $CIObj = Get-CMDistributionPoint -DistributionPointGroupId "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
+PS XYZ:\> Start-CMDistributionPointUpgrade -AllowPreStaging $True -CertificatePath "\\Contoso01\CM\Toolbox\BaseCert.txt" -SharedDistributionPoint $CIObj -SiteCode "CM1"
 ```
 
 The first command gets the distribution point object that has the ID 6617708D-0F98-4898-8D05-9E882C23DCB2, and stores the object in the $CIObj variable.
@@ -83,7 +87,7 @@ Indicates whether clients can use a fallback source location for content.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +102,7 @@ Indicates whether the distribution point can pre-stage contents.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +117,7 @@ Indicates whether the distribution point can respond to pre-boot execution envir
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +132,7 @@ Specifies the date and time when the certificate expires.
 ```yaml
 Type: DateTime
 Parameter Sets: UseSelfSignedCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +147,7 @@ Specifies the password, as a secure string, for the public key infrastructure (P
 ```yaml
 Type: SecureString
 Parameter Sets: UseImportCertificate
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +162,7 @@ Specifies the import path for the PKI issued certificate that the distribution p
 ```yaml
 Type: String
 Parameter Sets: UseImportCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -171,7 +175,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ComputerCommunicationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 
 Required: False
@@ -192,7 +196,7 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 
 Required: False
@@ -232,7 +236,7 @@ The default value is Lowest.
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lowest, Low, Medium, High, Highest
 
 Required: False
@@ -261,7 +265,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +280,22 @@ Indicates whether the distribution point permits anonymous connections from Conf
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNonWdsPxe
+{{ Fill EnableNonWdsPxe Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +314,7 @@ After you create the distribution point, Configuration Manager installs a provid
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +330,7 @@ Unknown computers are computers that are not managed by Configuration Manager.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +345,7 @@ Indicates whether Configuration Manager overwrites a duplicate certificate when 
 ```yaml
 Type: Boolean
 Parameter Sets: UseImportCertificate
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -341,7 +360,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -356,7 +375,7 @@ Indicates whether the distribution point initiates the connection with the clien
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -398,7 +417,7 @@ Configuration Manager 2007 Site Component Manager service uses Site System Insta
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -413,7 +432,7 @@ Specifies an array of media access controller (MAC) addresses that the distribut
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -429,7 +448,7 @@ Content files can span multiple drives.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -444,7 +463,7 @@ Specifies the path for a copy of the migrated content.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -464,7 +483,7 @@ Valid values are:
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -485,7 +504,7 @@ Valid values are:
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -501,7 +520,7 @@ Specifies the fully qualified domain name (FQDN) of the site system server that 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -546,7 +565,7 @@ Valid values are:
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -566,7 +585,7 @@ Valid values are:
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -587,7 +606,7 @@ Valid values are:
 ```yaml
 Type: UserDeviceAffinityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotUse, AllowWithManualApproval, AllowWithAutomaticApproval
 
 Required: False
@@ -605,7 +624,7 @@ To create a CMSchedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdle
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -631,7 +650,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

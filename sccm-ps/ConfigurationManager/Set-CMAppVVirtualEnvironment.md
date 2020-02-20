@@ -1,14 +1,17 @@
 ---
-title: Set-CMAppVVirtualEnvironment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes settings for virtual applications that you have deployed by using Configuration Manager.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAppVVirtualEnvironment
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMAppVVirtualEnvironment
@@ -47,7 +50,7 @@ You can specify App-V environments by name or ID.
 
 ### Example 1: Change virtual environment settings by using a name
 ```
-PS C:\> Set-CMAppVVirtualEnvironment -Name "VMWin03" -SecurityScopeAction RemoveMembership -SecurityScopeName "ClientSecGroup01"
+PS XYZ:\> Set-CMAppVVirtualEnvironment -Name "VMWin03" -SecurityScopeAction RemoveMembership -SecurityScopeName "ClientSecGroup01"
 ```
 
 This command removes the virtual environment named VMWin03 from the security scope named ClientSecGroup01.
@@ -61,7 +64,7 @@ Application groups contain multiple App-V deployment types that run in the same 
 ```yaml
 Type: VirtualEnvironmentGroup[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +94,7 @@ Specifies a description for the App-V virtual environment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +109,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +124,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +155,7 @@ To obtain a virtual environment object, use the Get-CMAppVVirtualEnvironment cmd
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -182,7 +185,7 @@ Specifies a new name for a virtual environment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +201,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +217,7 @@ Application groups contain multiple App-V deployment types that run in the same 
 ```yaml
 Type: VirtualEnvironmentGroup[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

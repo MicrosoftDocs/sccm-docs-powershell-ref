@@ -1,14 +1,17 @@
 ---
-title: Set-CMComplianceRuleAssembly
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a compliance rule assembly.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMComplianceRuleAssembly
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMComplianceRuleAssembly
@@ -53,16 +56,13 @@ Set-CMComplianceRuleAssembly [-PublicKeyToken] -Rule <Rule> [-ExpressionOperator
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -82,12 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -Culture
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByCICulture, ByRuleCulture
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,7 +100,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,8 +110,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -127,12 +123,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
- 
-
 ```yaml
 Type: RuleExpressionOperator
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: And, Or, Other, IsEquals, NotEquals, GreaterThan, LessThan, Between, NotBetween, GreaterEquals, LessEquals, BeginsWith, NotBeginsWith, EndsWith, NotEndsWith, Contains, NotContains, AllOf, OneOf, NoneOf, SetEquals, SubsetOf, ExcludesAll
 
 Required: False
@@ -148,7 +142,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,8 +152,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByCIToken, ByCICulture
@@ -173,12 +165,10 @@ Accept wildcard characters: False
 ```
 
 ### -NewRuleName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,12 +178,10 @@ Accept wildcard characters: False
 ```
 
 ### -NoncomplianceSeverity
- 
-
 ```yaml
 Type: NoncomplianceSeverity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
@@ -209,7 +197,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,12 +207,10 @@ Accept wildcard characters: False
 ```
 
 ### -PublicKeyToken
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByCIToken, ByRuleToken
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -234,12 +220,10 @@ Accept wildcard characters: False
 ```
 
 ### -Remediate
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,12 +233,10 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNoncompliance
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,12 +246,10 @@ Accept wildcard characters: False
 ```
 
 ### -Rule
- 
-
 ```yaml
 Type: Rule
 Parameter Sets: ByRuleCulture, ByRuleToken
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -279,12 +259,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleDescription
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -294,12 +272,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
- 
-
 ```yaml
 Type: String
 Parameter Sets: ByCIToken, ByCICulture
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -325,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -339,4 +315,3 @@ Microsoft.SystemsManagementServer.DesiredConfigurationManagement.Rules.Rule
 ## NOTES
 
 ## RELATED LINKS
-

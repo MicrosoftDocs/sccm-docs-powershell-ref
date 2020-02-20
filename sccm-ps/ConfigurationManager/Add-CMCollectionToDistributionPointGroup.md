@@ -1,14 +1,17 @@
 ---
-title: Add-CMCollectionToDistributionPointGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a collection to distribution point group.
+external help file: AdminUI.PS.Content.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMCollectionToDistributionPointGroup
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMCollectionToDistributionPointGroup
@@ -73,22 +76,17 @@ Add-CMCollectionToDistributionPointGroup -Collection <IResultObject> -Distributi
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -Collection
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: AddByObject_Id, AddByObject_Name, AddByObject_Object
@@ -102,8 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: AddById_Object, AddById_Id, AddById_Name
@@ -117,8 +113,6 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: AddByName_Id, AddByName_Name, AddByName_Object
@@ -152,7 +146,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,12 +156,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroup
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: AddById_Object, AddByName_Object, AddByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -177,12 +169,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupId
- 
-
 ```yaml
 Type: String
 Parameter Sets: AddById_Id, AddByName_Id, AddByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -192,12 +182,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
- 
-
 ```yaml
 Type: String
 Parameter Sets: AddById_Name, AddByName_Name, AddByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -212,7 +200,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +215,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -253,7 +241,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -266,4 +254,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

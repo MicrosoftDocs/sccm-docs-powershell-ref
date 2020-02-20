@@ -1,14 +1,17 @@
 ---
-title: Set-CMRemoteConnectionProfileConfigurationItem
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a remote connection profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMRemoteConnectionProfileConfigurationItem
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMRemoteConnectionProfileConfigurationItem
@@ -53,7 +56,7 @@ Client computers use remote connection profiles to remotely connect to computers
 
 ### Example 1: Modify a remote connection profile configuration item
 ```
-PS C:\> Set-CMRemoteConnectionProfileConfigurationItem -ID "AAA0004D" -EnablePrimaryUsers $False -EnableTSConnection $False -EnableTSFirewallRule $False
+PS XYZ:\> Set-CMRemoteConnectionProfileConfigurationItem -ID "AAA0004D" -EnablePrimaryUsers $False -EnableTSConnection $False -EnableTSFirewallRule $False
 ```
 
 This command modifies the remote connection profile configuration item with the ID AAA0004D.
@@ -95,7 +98,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +124,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +139,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +167,7 @@ Indicates whether to allow connections only from computers that run Remote Deskt
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +196,7 @@ If you specify a value for this parameter, you must specify values for the *Enab
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,7 +212,7 @@ If you specify a value for this parameter, you must specify values for the *Enab
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +227,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,7 +258,7 @@ To obtain a remote connection profile, use the Get-CMRemoteConnectionProfileConf
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -285,7 +288,7 @@ Specifies the new name for the remote connection profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -301,7 +304,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -316,7 +319,7 @@ Specifies the host name and port of the Remote Desktop gateway server, for examp
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

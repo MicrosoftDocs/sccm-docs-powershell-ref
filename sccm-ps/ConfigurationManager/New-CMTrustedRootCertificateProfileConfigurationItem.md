@@ -1,14 +1,17 @@
 ---
-title: New-CMTrustedRootCertificateProfileConfigurationItem
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a root certificate profile.
+external help file:
+manager: dougeby
+Module Name: AdminUI.PS.Dcm
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMTrustedRootCertificateProfileConfigurationItem
+titleSuffix: Configuration Manager
 ---
 
 # New-CMTrustedRootCertificateProfileConfigurationItem
@@ -18,11 +21,6 @@ Creates a root certificate profile.
 
 ## SYNTAX
 
-```
-New-CMTrustedRootCertificateProfileConfigurationItem -Path <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 The **New-CMTrustedRootCertificateProfileConfigurationItem** cmdlet creates a root certificate profile.
 Client computers use root certificate profiles to chain their certificates back to a corporate public key infrastructure (PKI) certification authority.
@@ -31,86 +29,15 @@ Client computers use root certificate profiles to chain their certificates back 
 
 ### Example 1: Create a trusted root certificate profile configuration item
 ```
-PS C:\> New-CMTrustedRootCertificateProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\TrustedRootCertificate.xml"
+PS XYZ:\> New-CMTrustedRootCertificateProfileConfigurationItem -DesiredConfigurationDigestPath "C:\Digests\TrustedRootCertificate.xml"
 ```
 
 This command creates a trusted root certificate profile configuration item by using the digest file C:\Digests\TrustedRootCertificate.xml .
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableWildcardHandling
-Indicates that wildcard handling is disabled.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForceWildcardHandling
-Indicates that wildcard handling is enabled.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Path
-Specifies the path to an XML digest exported from a previously created configuration item. Note that you can only use the XML once within a hierarchy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: DesiredConfigurationDigestPath
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Merge-CMConflictingRecord
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Merges a new Configuration Manager client record with a conflicting client record.
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Merge-CMConflictingRecord
+titleSuffix: Configuration Manager
 ---
 
 # Merge-CMConflictingRecord
@@ -58,14 +61,14 @@ You can specify conflicting records by using a name or ID or you can specify a s
 
 ### Example 1: Merge conflicting records for a site
 ```
-PS C:\>Merge-CMConflictingRecords -SiteCode "CM2"
+PS XYZ:\>Merge-CMConflictingRecords -SiteCode "CM2"
 ```
 
 This command merges each of the conflicting records for the specified System Center Configuration Manager site.
 
 ### Example 2: Merge records for a named conflict
 ```
-PS C:\>Merge-CMConflictingRecords -Name "CR07"
+PS XYZ:\>Merge-CMConflictingRecords -Name "CR07"
 ```
 
 This command merges the conflicting records named CR07.
@@ -93,7 +96,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +142,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -170,7 +173,7 @@ This cmdlet merges the conflicting records for this site.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCode
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -196,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

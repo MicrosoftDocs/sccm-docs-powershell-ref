@@ -1,14 +1,17 @@
 ---
-title: Get-CMUserCollectionIncludeMembershipRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets the include membership rules from one or more user collections in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMUserCollectionIncludeMembershipRule
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMUserCollectionIncludeMembershipRule
@@ -83,7 +86,7 @@ For more information about membership rules, see [Introduction to Collections in
 
 ### Example 1: Get the include membership rules from a user collection
 ```
-PS C:\> Get-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
+PS XYZ:\> Get-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
 ```
 
 This command gets the include membership rules for the collection that has the ID SMSDM001 from the user collection that has the ID 9990000D.
@@ -120,7 +123,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,7 +136,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -146,7 +149,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

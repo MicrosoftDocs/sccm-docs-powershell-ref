@@ -1,14 +1,17 @@
 ---
-title: Get-CMInitialModifiableSecuredCategory
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets modifiable secured categories.
+external help file: AdminUI.PS.Migration.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMInitialModifiableSecuredCategory
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMInitialModifiableSecuredCategory
@@ -39,14 +42,14 @@ Note: This cmdlet was previously known as **Get-CMInitModifiableSecuredCategory*
 
 ### Example 1: Get information about all your modifiable secured categories
 ```
-PS C:\> Get-CMInitialModifiableSecuredCategory
+PS XYZ:\> Get-CMInitialModifiableSecuredCategory
 ```
 
 This command returns information about all your modifiable secured categories.
 
 ### Example 2: Get information about a specific modifiable secured category
 ```
-PS C:\> Get-CMInitialModifiableSecuredCategory -ID "121989"
+PS XYZ:\> Get-CMInitialModifiableSecuredCategory -ID "121989"
 ```
 
 This command returns information about the modifiable secured category that has the ID 121989.
@@ -129,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: Set-CMGlobalConditionFile
-titleSuffix: Configuration Manager
+author: mumian
 description: Sets a File System type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMGlobalConditionFile
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMGlobalConditionFile
@@ -20,18 +23,17 @@ Sets a File System type global condition in Configuration Manager.
 ## SYNTAX
 
 ### SetFileSystemFile (Default)
-
-```powershell
+```
 Set-CMGlobalConditionFile [-FilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
  -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetFileSystem
-
-```powershell
+```
 Set-CMGlobalConditionFile [-Path <String>] [-FileOrFolderName <String>] [-IncludeSubfolder <Boolean>]
  [-Is64Bit <Boolean>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +45,7 @@ The **Set-CMGlobalConditionFile** cmdlet modifies settings for a File System typ
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalFloder = Set-CMGlobalConditionFile -Path c:\ -FileOrFolderName test -IsFolder $true -Name Floder 
+PS XYZ:\> $GlobalFloder = Set-CMGlobalConditionFile -Path c:\ -FileOrFolderName test -IsFolder $true -Name Floder
 ```
 
 This command sets a File System type folder global condition in Configuration Manager.
@@ -51,13 +53,28 @@ This command sets a File System type folder global condition in Configuration Ma
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalFile = Set-CMGlobalConditionFile -FilePath c:\test  -Name file
+PS XYZ:\> $GlobalFile = Set-CMGlobalConditionFile -FilePath c:\test  -Name file
 ```
 
 This command sets a File System type file global condition in Configuration Manager.
 
-
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -204,22 +221,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -237,9 +238,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

@@ -1,14 +1,17 @@
 ---
-title: Clear-CMSiteStatusMessageCount
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Clears the message count in Configuration Manager.
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Clear-CMSiteStatusMessageCount
+titleSuffix: Configuration Manager
 ---
 
 # Clear-CMSiteStatusMessageCount
@@ -30,7 +33,7 @@ The **Clear-CMSiteStatusMessageCount** cmdlet clears the message count in Micros
 
 ### Example 1: Clear the status message count
 ```
-PS C:\>Clear-CMSiteStatusMessageCount -ComputerName "Contoso-Test" -Severity Error -SiteCode "CM1"
+PS XYZ:\>Clear-CMSiteStatusMessageCount -ComputerName "Contoso-Test" -Severity Error -SiteCode "CM1"
 ```
 
 This command clears the error message count for the computer.
@@ -43,7 +46,7 @@ Specifies the name of a computer in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +76,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +91,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +107,7 @@ The acceptable values for this parameter are: All, Error, Information, and Warni
 ```yaml
 Type: Severity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: All, Error, Warning, Information
 
 Required: True
@@ -120,7 +123,7 @@ Specifies a site code in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: ConvertFrom-CMApplication
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Converts an application SDK object to an application object.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: ConvertFrom-CMApplication
+titleSuffix: Configuration Manager
 ---
 
 # ConvertFrom-CMApplication
@@ -30,8 +33,8 @@ The **ConvertFrom-CMApplication** cmdlet converts an application SDK object to a
 
 ### Example 1: Convert an application object
 ```
-PS C:\> $SdkApp = Get-CMApplication -Name "Application01" | ConvertTo-CMApplication
-PS C:\> $SdkApp | ConvertFrom-CMApplication
+PS XYZ:\> $SdkApp = Get-CMApplication -Name "Application01" | ConvertTo-CMApplication
+PS XYZ:\> $SdkApp | ConvertFrom-CMApplication
 ```
 
 The first command gets the application object named Application01 and uses the pipeline operator to pass the object to **ConvertTo-CMApplication**, which converts the application object into an application SDK object.
@@ -41,8 +44,8 @@ The second command converts the application SDK object stored in $SdkApp to an a
 
 ### Example 2: Convert an application object
 ```
-PS C:\> $SdkApp = Get-CMApplication -Name "Application02" | ConvertTo-CMApplication
-PS C:\> ConvertFrom-CMApplication -InputObject $SdkApp
+PS XYZ:\> $SdkApp = Get-CMApplication -Name "Application02" | ConvertTo-CMApplication
+PS XYZ:\> ConvertFrom-CMApplication -InputObject $SdkApp
 ```
 
 The first command gets the application object named Application02 and uses the pipeline operator to pass the object to **ConvertTo-CMApplication**, which converts the application object into an application SDK object.
@@ -58,7 +61,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +76,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

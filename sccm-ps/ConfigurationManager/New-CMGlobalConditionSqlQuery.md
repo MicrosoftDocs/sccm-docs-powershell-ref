@@ -1,14 +1,17 @@
 ---
-title: New-CMGlobalConditionSqlQuery
-titleSuffix: Configuration Manager
+author: mumian
 description: Creates a SQL Query type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMGlobalConditionSqlQuery
+titleSuffix: Configuration Manager
 ---
 
 # New-CMGlobalConditionSqlQuery
@@ -20,19 +23,17 @@ Creates a SQL Query type global condition in Configuration Manager.
 ## SYNTAX
 
 ### NewQueryFromFile (Default)
-
-```powershell
+```
 New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -FilePath <String> [-AllInstances]
  [-InstanceName <String>] -Database <String> -Column <String> -Name <String> [-Description <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### NewQueryFromText
-
-```powershell
+```
 New-CMGlobalConditionSqlQuery -DataType <GlobalConditionDataType> -QueryText <String> [-AllInstances]
  [-InstanceName <String>] -Database <String> -Column <String> -Name <String> [-Description <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +47,7 @@ A global condition is a setting or expression in System Center Configuration Man
 ### Example 1
 
 ```powershell
-$GlobalSql = New-CMGlobalConditionSqlQuery -DataType String -QueryText $string -Database ss -Column aa –Name GC6
+$GlobalSql = New-CMGlobalConditionSqlQuery -DataType String -QueryText $string -Database ss -Column aa -Name GC6
 ```
 
 This command creates a SQL Query type global condition in Configuration Manager.
@@ -87,22 +88,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Database
-
-Specifies a database name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DataType
 
 Specifies a data type.
@@ -112,6 +97,22 @@ Type: GlobalConditionDataType
 Parameter Sets: (All)
 Aliases:
 Accepted values: String, DateTime, Integer, FloatingPoint, Version, Boolean
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Database
+
+Specifies a database name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: True
 Position: Named
@@ -232,9 +233,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

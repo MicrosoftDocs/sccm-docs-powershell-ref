@@ -1,14 +1,17 @@
 ---
-title: Add-CMWindowsAppxDeploymentType
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a Windows app package deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMWindowsAppxDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMWindowsAppxDeploymentType
@@ -52,7 +55,7 @@ The **Add-CMWindowsAppxDeploymentType** cmdlet adds a Windows app package deploy
 
 ### Example 1: Add a Windows app package deployment type
 ```
-PS C:\>Add-CMWindowsAppxDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" -ContentLocation "\\Server1\Resources\Applications\appx\sccm_custom.appx" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type" -SlowNetworkDeploymentMode DoNothing -ContentFallback -TriggerVpn
+PS XYZ:\>Add-CMWindowsAppxDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" -ContentLocation "\\Server1\Resources\Applications\appx\sccm_custom.appx" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type" -SlowNetworkDeploymentMode DoNothing -ContentFallback -TriggerVpn
 ```
 
 This command adds the Windows app package deployment type named DT1 from the specified location to the application named Application1 in English and Chinese.
@@ -60,7 +63,7 @@ Specifying the *TriggerVpn* parameter indicates that a VPN connection is used.
 
 ### Example 2: Add a Windows app package deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Add-CMWindowsAppxDeploymentType -DeploymentTypeName "DT1" -ContentLocation "\\Server1\Resources\Applications\appx\sccm_custom.appx" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type" -SlowNetworkDeploymentMode DoNothing -ContentFallback -TriggerVpn
+PS XYZ:\> Get-CMApplication -Name "Application1" | Add-CMWindowsAppxDeploymentType -DeploymentTypeName "DT1" -ContentLocation "\\Server1\Resources\Applications\appx\sccm_custom.appx" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type" -SlowNetworkDeploymentMode DoNothing -ContentFallback -TriggerVpn
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Add-CMWindowsAppxDeploymentType**.
@@ -93,7 +96,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +126,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +203,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +218,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +248,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -312,7 +315,7 @@ Valid values are:
 ```yaml
 Type: ContentHandlingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNothing, Download
 
 Required: False
@@ -328,7 +331,7 @@ Indicates that a virtual private network (VPN) connection is used automatically.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -354,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

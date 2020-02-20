@@ -1,14 +1,17 @@
 ---
-title: Set-CMBoundary
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies Configuration Manager boundary settings.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMBoundary
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMBoundary
@@ -20,20 +23,21 @@ Modifies Configuration Manager boundary settings.
 
 ### SetByValue (Default)
 ```
-Set-CMBoundary -InputObject <IResultObject> [-NewName <String>] [-Type <BoundaryTypes>] [-Value <String>]
+Set-CMBoundary [-NewName <String>] -InputObject <IResultObject> [-NewType <BoundaryTypes>] [-NewValue <String>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMBoundary -Id <String> [-NewName <String>] [-Type <BoundaryTypes>] [-Value <String>] [-PassThru]
+Set-CMBoundary -Id <String> [-NewName <String>] [-NewType <BoundaryTypes>] [-NewValue <String>] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMBoundary -Name <String> [-NewName <String>] [-Type <BoundaryTypes>] [-Value <String>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMBoundary [-NewName <String>] -Type <BoundaryTypes> -Value <String> [-NewType <BoundaryTypes>]
+ [-NewValue <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,15 +50,15 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ### Example 1: Rename a boundary
 ```
-PS C:\> Set-CMBoundary -Name "Default-ADSite" -NewName "ADSiteBoundary01"
+PS XYZ:\> Set-CMBoundary -Name "Default-ADSite" -NewName "ADSiteBoundary01"
 ```
 
 This command changes a boundary name from Default-ADSite to ADSiteBoundary01.
 
 ### Example 2: Modify the value of a boundary by using an InputObject
 ```
-PS C:\> $BoundaryObj = Get-CMBoundary -Id "16777217"
-PS C:\> Set-CMBoundary -InputObject $BoundaryObj -Value "IPSubnet17"
+PS XYZ:\> $BoundaryObj = Get-CMBoundary -Id "16777217"
+PS XYZ:\> Set-CMBoundary -InputObject $BoundaryObj -Value "IPSubnet17"
 ```
 
 In this example, the first command gets a boundary that has the ID of 16777217 and inserts it into the input object $BoundaryObj.
@@ -84,7 +88,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +103,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,27 +134,12 @@ You can get the input object by using the Get-CMBoundary cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies an array of boundary names.
-
-```yaml
-Type: String
-Parameter Sets: SetByName
-Aliases: DisplayName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -160,7 +149,38 @@ Specifies a new name for a boundary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: DisplayName, Name
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NewType
+{{ Fill NewType Description }}
+
+```yaml
+Type: BoundaryTypes
+Parameter Sets: (All)
+Aliases: NewBoundaryType
+Accepted values: IPSubnet, ADSite, IPV6Prefix, IPRange
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NewValue
+{{ Fill NewValue Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +196,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,11 +211,11 @@ Valid values are: ADSite, IPV6Prefix, IPSubnet, and IPRange.
 
 ```yaml
 Type: BoundaryTypes
-Parameter Sets: (All)
+Parameter Sets: SetByName
 Aliases: BoundaryType
 Accepted values: IPSubnet, ADSite, IPV6Prefix, IPRange
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -208,10 +228,10 @@ For example, an Active Directory site value can be Default-ADSite.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByName
+Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -235,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

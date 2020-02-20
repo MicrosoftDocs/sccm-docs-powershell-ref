@@ -1,14 +1,17 @@
 ---
-title: Add-CMIntuneSubscription
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a Microsoft Intune subscription.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMIntuneSubscription
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMIntuneSubscription
@@ -37,10 +40,10 @@ NOTE:  You can only add a Microsoft Intune subscription to a Central Administrat
 
 ### Example 1: Add a Microsoft Intune subscription
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD! -AsPlainText -Force
-PS C:\> MyCreds = New-Object System.Management.Automation.PSCredential ("AccountName@CompanyName.onmicrosoft.com", $SecPasswd)
-PS C:\> $UC = Get-CMUserCollection -Name "All Users"
-PS C:\> Add-CMIntuneSubscription -CompanyName "CompanyName" -IntuneCredential $MyCreds -UserCollection $UC
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD! -AsPlainText -Force
+PS XYZ:\> MyCreds = New-Object System.Management.Automation.PSCredential ("AccountName@CompanyName.onmicrosoft.com", $SecPasswd)
+PS XYZ:\> $UC = Get-CMUserCollection -Name "All Users"
+PS XYZ:\> Add-CMIntuneSubscription -CompanyName "CompanyName" -IntuneCredential $MyCreds -UserCollection $UC
 ```
 
 The first command converts a password into a secure string and stores the secure string in the $SecPasswd variable.
@@ -60,7 +63,7 @@ Specifies a color scheme for the company portal.
 ```yaml
 Type: Color
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +78,7 @@ Specifies the path to the company logo to use when the company portal background
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +93,7 @@ Specifies the path to the company logo to use when the company portal background
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +108,7 @@ Specifies a company name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,7 +123,7 @@ Indicates that the company name is displayed next to the company logo.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +153,7 @@ Specifies additional company contact information.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +168,7 @@ Specifies the IT department email address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +183,7 @@ Specifies the IT department contact name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +198,7 @@ Specifies the IT department phone number.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +213,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,7 +228,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +243,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -270,7 +273,7 @@ Specifies the maximum number of devices that a user can enroll.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +289,7 @@ This applies to Windows 8.1 or later and Windows Phone 8.1 or later device enrol
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -302,7 +305,7 @@ Information from devices on premises do not replicate to the cloud.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -317,7 +320,7 @@ Specifies the URL to company privacy documentation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -332,7 +335,7 @@ Specifies the Configuration Manager site code for device assignment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -348,7 +351,7 @@ The website name is displayed to users.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -364,7 +367,7 @@ The URL is not displayed to users.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -407,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

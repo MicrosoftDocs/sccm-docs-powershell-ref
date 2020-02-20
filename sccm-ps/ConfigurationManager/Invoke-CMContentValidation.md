@@ -1,14 +1,17 @@
 ---
-title: Invoke-CMContentValidation
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Validates packages on a distribution point.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMContentValidation
+titleSuffix: Configuration Manager
 ---
 
 # Invoke-CMContentValidation
@@ -161,7 +164,7 @@ Validating the content ensures that the entire set of files transferred successf
 
 ### Example 1: Validate content for an application
 ```
-PS C:\>Invoke-CMContentValidation -ApplicationName "Dict.app" -DistributionPointName "DPServer01"
+PS XYZ:\>Invoke-CMContentValidation -ApplicationName "Dict.app" -DistributionPointName "DPServer01"
 ```
 
 This command validates the package for the application named Dict.app one the distribution point named DPServer01.
@@ -175,7 +178,7 @@ These IDs are GUIDs as strings.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +193,7 @@ Specifies an array of application names.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -235,7 +238,7 @@ Specifies the name of a Configuration Manager collection.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -308,7 +311,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -323,7 +326,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,7 +341,7 @@ Specifies the name of a distribution point that is associated with the content.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -383,7 +386,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -393,8 +396,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -414,7 +415,7 @@ To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage]
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemImage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -560,7 +561,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

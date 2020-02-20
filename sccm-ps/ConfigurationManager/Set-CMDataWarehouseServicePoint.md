@@ -1,14 +1,17 @@
 ---
-title: Set-CMDataWarehouseServicePoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a data warehouse service point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDataWarehouseServicePoint
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDataWarehouseServicePoint
@@ -23,8 +26,8 @@ Sets a data warehouse service point.
 Set-CMDataWarehouseServicePoint [-DataWarehouseDatabaseServerName <String>]
  [-DataWarehouseInstanceName <String>] [-DataWarehouseDatabaseName <String>] [-DataWarehouseSqlPort <Int32>]
  [-StartAftertime <DateTime>] [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>]
- -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-UserName <String>] [-DataRetentionDays <Int32>] -InputObject <IResultObject> [-PassThru] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
@@ -32,21 +35,19 @@ Set-CMDataWarehouseServicePoint [-DataWarehouseDatabaseServerName <String>]
 Set-CMDataWarehouseServicePoint [-SiteCode <String>] [-SiteSystemServerName] <String>
  [-DataWarehouseDatabaseServerName <String>] [-DataWarehouseInstanceName <String>]
  [-DataWarehouseDatabaseName <String>] [-DataWarehouseSqlPort <Int32>] [-StartAftertime <DateTime>]
- [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WeekFrequency <Int32>] [-DaysOfWeek <DataWarehouseDaysOfWeek>] [-UserName <String>]
+ [-DataRetentionDays <Int32>] [-PassThru] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -65,13 +66,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DataWarehouseDatabaseName
- 
+### -DataRetentionDays
+{{ Fill DataRetentionDays Description }}
 
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataWarehouseDatabaseName
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,12 +95,10 @@ Accept wildcard characters: False
 ```
 
 ### -DataWarehouseDatabaseServerName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,12 +108,10 @@ Accept wildcard characters: False
 ```
 
 ### -DataWarehouseInstanceName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,12 +121,10 @@ Accept wildcard characters: False
 ```
 
 ### -DataWarehouseSqlPort
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,13 +134,11 @@ Accept wildcard characters: False
 ```
 
 ### -DaysOfWeek
- 
-
 ```yaml
 Type: DataWarehouseDaysOfWeek
 Parameter Sets: (All)
-Aliases: 
-Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+Aliases:
+Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Daily
 
 Required: False
 Position: Named
@@ -147,7 +153,22 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +183,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,8 +193,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
@@ -192,7 +211,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,12 +221,10 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
- 
-
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,8 +234,6 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
- 
-
 ```yaml
 Type: String
 Parameter Sets: SetByName
@@ -232,12 +247,25 @@ Accept wildcard characters: False
 ```
 
 ### -StartAftertime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserName
+{{ Fill UserName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -247,12 +275,10 @@ Accept wildcard characters: False
 ```
 
 ### -WeekFrequency
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -278,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -291,4 +317,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

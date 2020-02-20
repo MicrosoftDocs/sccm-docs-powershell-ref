@@ -1,14 +1,17 @@
 ---
-title: Get-CMDeviceActionState
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets the state of a device action.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDeviceActionState
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMDeviceActionState
@@ -43,14 +46,14 @@ The **Get-CMDeviceActionState** cmdlet gets the state of an action initiated on 
 
 ### Example 1: Get the state of a device action using the pipeline
 ```
-PS C:\> Get-CMDevice -Name "WindowsPhone0402" | Get-CMDeviceActionState -Action PinReset
+PS XYZ:\> Get-CMDevice -Name "WindowsPhone0402" | Get-CMDeviceActionState -Action PinReset
 ```
 
 This command gets the device object named WindowsPhone0402 and uses the pipeline operator to pass the object to **Get-CMDeviceActionState**, which gets the state of the PIN reset action on the device.
 
 ### Example 2: Get the state of a lock action
 ```
-PS C:\> Get-CMDeviceActionState -Name "WindowsPhone0401" -Action Lock
+PS XYZ:\> Get-CMDeviceActionState -Name "WindowsPhone0401" -Action Lock
 ```
 
 This command gets the state of the lock action on the device named WindowsPhone0401.
@@ -70,7 +73,7 @@ Valid values are:
 ```yaml
 Type: DeviceActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lock, PinReset, BypassActivationLock, RequestNewActivationLockCode
 
 Required: False
@@ -86,7 +89,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +107,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +122,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +168,7 @@ Specifies the name of a device.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -175,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

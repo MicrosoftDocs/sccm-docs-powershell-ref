@@ -1,14 +1,17 @@
 ---
-title: Set-CMDistributionPointGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes the configuration settings of distribution point groups.
+external help file: AdminUI.PS.Content.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDistributionPointGroup
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDistributionPointGroup
@@ -43,14 +46,14 @@ The **Set-CMDistributionPointGroup** cmdlet changes the configuration settings o
 
 ### Example 1: Add a distribution point group to a security scope
 ```
-PS C:\> Set-CMDistributionPointGroup -SecurityScopeAction AddMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
+PS XYZ:\> Set-CMDistributionPointGroup -SecurityScopeAction AddMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
 ```
 
 This command adds the distribution point group as a member of the security scope named CScope02.
 
 ### Example 2: Remove a distribution point group from a security scope
 ```
-PS C:\> Set-CMDistributionPointGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
+PS XYZ:\> Set-CMDistributionPointGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "CScope02" -Name "DpgDept01"
 ```
 
 This command removes the distribution point group named DpgDept01 as a member of the security scope named CScope02.
@@ -78,7 +81,7 @@ Specifies a description for the distribution point group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +142,7 @@ To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPoin
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +157,7 @@ Specifies a name of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -169,7 +172,7 @@ Specifies a new name for the distribution point group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

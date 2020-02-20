@@ -1,14 +1,17 @@
 ---
-title: New-CMApplicationDeployment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates an application deployment.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMApplicationDeployment
+titleSuffix: Configuration Manager
 ---
 
 # New-CMApplicationDeployment
@@ -26,12 +29,12 @@ New-CMApplicationDeployment [-InputObject] <IResultObject> [-ApprovalRequired <B
  [-PreDeploy <Boolean>] [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-DistributeContent]
+ [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
+ [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
@@ -42,12 +45,12 @@ New-CMApplicationDeployment [-Name] <String> [-ApprovalRequired <Boolean>] [-Dep
  [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-DistributeContent]
+ [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
+ [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
@@ -58,31 +61,26 @@ New-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-Deploy
  [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-CollectionName <String>]
- [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-DistributeContent]
+ [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
+ [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -ApprovalRequired
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -96,12 +94,10 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,12 +107,10 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,12 +120,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,12 +133,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,12 +146,10 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,12 +174,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,12 +187,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeployAction
- 
-
 ```yaml
 Type: DeployActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Install, Uninstall
 
 Required: False
@@ -217,12 +201,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeployPurpose
- 
-
 ```yaml
 Type: DeployPurposeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Available, Required
 
 Required: False
@@ -233,8 +215,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableContentDependencyDetection
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -253,7 +233,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,12 +243,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeCollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -278,12 +256,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeContent
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -293,12 +269,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointGroupName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -308,12 +282,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPointName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -323,12 +295,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMomAlert
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,12 +308,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSoftDeadline
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,12 +321,10 @@ Accept wildcard characters: False
 ```
 
 ### -FailParameterValue
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -373,7 +339,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -383,8 +349,6 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateScomAlertOnFailure
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -398,8 +362,6 @@ Accept wildcard characters: False
 ```
 
 ### -Id
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: SearchByIdMandatory
@@ -413,8 +375,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -428,8 +388,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
@@ -443,12 +401,10 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideServiceWindow
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -458,12 +414,10 @@ Accept wildcard characters: False
 ```
 
 ### -PersistOnWriteFilterDevice
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -473,12 +427,10 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -488,12 +440,10 @@ Accept wildcard characters: False
 ```
 
 ### -PreDeploy
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -503,12 +453,25 @@ Accept wildcard characters: False
 ```
 
 ### -RebootOutsideServiceWindow
- 
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplaceToastNotificationWithDialog
+{{ Fill ReplaceToastNotificationWithDialog Description }}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -518,12 +481,10 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -533,12 +494,10 @@ Accept wildcard characters: False
 ```
 
 ### -Simulation
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -548,12 +507,10 @@ Accept wildcard characters: False
 ```
 
 ### -SuccessParameterValue
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -563,12 +520,10 @@ Accept wildcard characters: False
 ```
 
 ### -TimeBaseOn
- 
-
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: LocalTime, Utc
 
 Required: False
@@ -579,12 +534,10 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateSupersedence
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -594,12 +547,10 @@ Accept wildcard characters: False
 ```
 
 ### -UseMeteredNetwork
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -609,12 +560,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserNotification
- 
-
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -641,7 +590,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -654,4 +603,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

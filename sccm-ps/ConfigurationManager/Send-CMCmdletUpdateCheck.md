@@ -33,8 +33,8 @@ An unscheduled check does not consider policy settings.
 
 ### Example 1: Perform a cmdlet update check
 ```
-PS C:\> $Timeout = 50 * 24 * 3600
-PS C:\> Send-CMCmdletUpdateCheck -Timeout $Timeout
+PS XYZ:\> $Timeout = 50 * 24 * 3600
+PS XYZ:\> Send-CMCmdletUpdateCheck -Timeout $Timeout
 ```
 
 The first command creates a time span and stores the time span in the $Timeout variable.

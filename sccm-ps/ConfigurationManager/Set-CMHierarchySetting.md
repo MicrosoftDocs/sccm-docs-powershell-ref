@@ -1,14 +1,17 @@
 ---
-title: Set-CMHierarchySetting
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets hierarchy settings in System Center Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMHierarchySetting
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMHierarchySetting
@@ -26,8 +29,8 @@ Set-CMHierarchySetting [-UseFallbackSite <Boolean>] [-FallbackSiteCode <String>]
  [-TargetCollectionName <String>] [-TargetCollection <IResultObject>] [-UnlimitTargetCollectionMember]
  [-EnableExclusionCollection <Boolean>] [-ExclusionCollectionId <String>] [-ExclusionCollectionName <String>]
  [-ExclusionCollection <IResultObject>] [-Force] [-PassThru] [-EnablePrereleaseFeature]
- [-PreferBoundaryGroupManagementPoint <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-PreferBoundaryGroupManagementPoint <Boolean>] [-TelemetryLevel <TelemetryLevelType>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +40,7 @@ The **Set-CMHierarchySetting** cmdlet sets hierarchy settings in Microsoft Syste
 
 ### Example 1: Modify the hierarchy setting
 ```
-PS C:\> Set-CMHierarchySetting -AllowPrestage -ApprovalMethod AutomaticallyApproveAllComputers
+PS XYZ:\> Set-CMHierarchySetting -AllowPrestage -ApprovalMethod AutomaticallyApproveAllComputers
 ```
 
 This command uses the **Set-CMHierarchySetting** cmdlet to modify the hierarchy setting.
@@ -51,7 +54,7 @@ Indicates whether to allow prestaging.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,7 +74,7 @@ Valid values are:
 ```yaml
 Type: ApprovalMethodType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AutomaticallyApproveComputersInTrustedDomains, ManuallyApproveEachComputer, AutomaticallyApproveAllComputers
 
 Required: False
@@ -128,7 +131,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,12 +154,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExclusionCollection
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,12 +167,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePreProduction
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,8 +180,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePrereleaseFeature
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -211,12 +208,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionCollection
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,12 +221,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionCollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,12 +234,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionCollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +252,7 @@ Specifies the site code for a fallback site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +267,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -291,7 +282,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -307,7 +298,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -317,8 +308,6 @@ Accept wildcard characters: False
 ```
 
 ### -PreferBoundaryGroupManagementPoint
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -332,8 +321,6 @@ Accept wildcard characters: False
 ```
 
 ### -TargetCollection
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -347,8 +334,6 @@ Accept wildcard characters: False
 ```
 
 ### -TargetCollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -362,8 +347,6 @@ Accept wildcard characters: False
 ```
 
 ### -TargetCollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -376,9 +359,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UnlimitTargetCollectionMember
- 
+### -TelemetryLevel
+{{ Fill TelemetryLevel Description }}
 
+```yaml
+Type: TelemetryLevelType
+Parameter Sets: (All)
+Aliases: DiagnosticLevel
+Accepted values: Basic, Enhanced, Full
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UnlimitTargetCollectionMember
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -397,7 +394,7 @@ Indicates whether to use a fallback site.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -423,7 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -432,4 +429,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

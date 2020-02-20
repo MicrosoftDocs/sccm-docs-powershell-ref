@@ -1,14 +1,17 @@
 ---
-title: Set-CMServiceConnectionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a service connection point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMServiceConnectionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMServiceConnectionPoint
@@ -38,15 +41,15 @@ The **Set-CMServiceConnectionPoint** updates the settings of a connection servic
 
 ### Example 1: Set a service connection point
 ```
-PS C:\> Set-CMServiceConnectionPoint -SiteSystemServerName "SiteSystemServer01.Contoso.com" -SiteCode PS1 -Mode Offline
+PS XYZ:\> Set-CMServiceConnectionPoint -SiteSystemServerName "SiteSystemServer01.Contoso.com" -SiteCode PS1 -Mode Offline
 ```
 
 This command sets the mode for the site system server named SiteSystemServer01.Contoso.com to offline.
 
 ### Example 2: Set a service connection point by using a variable
 ```
-PS C:\> $Server = Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer02.Contoso.com"
-PS C:\> Set-CMServiceConnectionPoint -InputObject $Server -Mode Offline
+PS XYZ:\> $Server = Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer02.Contoso.com"
+PS XYZ:\> Set-CMServiceConnectionPoint -InputObject $Server -Mode Offline
 ```
 
 The first command gets the site system server object named SiteSystemServer02.Contoso.com with the site code PS1 and stores the object in the $Server variable.
@@ -55,7 +58,7 @@ The second command sets the mode for the site system server stored in $Server to
 
 ### Example 3: Set a service connection point by using the pipeline
 ```
-PS C:\> Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer03.Contoso.com" | Set-CMServiceConnectionPoint -Mode Offline
+PS XYZ:\> Get-CMServiceConnectionPoint -SiteCode PS1 -SiteSystemServerName "SiteSystemServer03.Contoso.com" | Set-CMServiceConnectionPoint -Mode Offline
 ```
 
 This command gets the site system server object named SiteSystemServer03.Contoso.com with the site code PS1 and uses the pipeline operator to pass the object to **Set-CMServiceConnectionPoint**, which sets the mode for the server object to offline.
@@ -83,7 +86,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +101,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +136,7 @@ Valid values are:
 ```yaml
 Type: ServiceConnectionPointMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Online, Offline
 
 Required: False
@@ -150,7 +153,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +168,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

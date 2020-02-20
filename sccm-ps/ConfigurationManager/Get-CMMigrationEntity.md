@@ -1,14 +1,17 @@
 ---
-title: Get-CMManagementPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a migration entity in System Center Configuration Manager.
+external help file: AdminUI.PS.Migration.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMManagementPoint
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMMigrationEntity
@@ -42,21 +45,21 @@ A migration entity is an object to be migrated that is of any type that is suppo
 
 ### Example 1: Get information about all your migration entities
 ```
-PS C:\> Get-CMMigrationEntity
+PS XYZ:\> Get-CMMigrationEntity
 ```
 
 This command returns information about all of your migration entities.
 
 ### Example 2: Get information about a specific migration entity
 ```
-PS C:\> Get-CMMigrationEntity -Name "MigrationTest"
+PS XYZ:\> Get-CMMigrationEntity -Name "MigrationTest"
 ```
 
 This command returns information about the migration entity with the name MigrationTest.
 
 ### Example 3: Get information about active migration entities
 ```
-PS C:\> Get-CMMigrationEntity -IsActive
+PS XYZ:\> Get-CMMigrationEntity -IsActive
 ```
 
 This command returns information about all of your active migration entities.
@@ -69,7 +72,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +87,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ Specifies that this migration entity is active.
 ```yaml
 Type: String
 Parameter Sets: SearchByOthers
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ Specifies a type in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: SearchByOthers
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

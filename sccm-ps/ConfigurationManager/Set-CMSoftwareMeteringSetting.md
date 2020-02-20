@@ -1,14 +1,17 @@
 ---
-title: Set-CMSoftwareMeteringSetting
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Configures Configuration Manager software metering properties.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareMeteringSetting
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMSoftwareMeteringSetting
@@ -45,7 +48,7 @@ You can use the [Remove-CMSoftwareMeteringRule](Remove-CMSoftwareMeteringRule.md
 
 ### Example 1: Disable automatic rule creation
 ```
-PS C:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $False
+PS XYZ:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $False
 ```
 
 This command disables automatic rule creation.
@@ -53,7 +56,7 @@ System Center Configuration Manager does not automatically create software meter
 
 ### Example 2: Configure automatic rule creation
 ```
-PS C:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $True -AutoCreatePercentage 50 -AutoCreateThreshold 200 -DataRetentionDayCount 30
+PS XYZ:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $True -AutoCreatePercentage 50 -AutoCreateThreshold 200 -DataRetentionDayCount 30
 ```
 
 This command enables automatic rule creation and sets properties for it.
@@ -61,7 +64,7 @@ This command sets the percentage of computers that use a piece of software to 50
 
 ### Example 3: Change automatic rule creation percentage
 ```
-PS C:\> Set-CMSoftwareMeteringSetting -AutoCreatePercentage 20
+PS XYZ:\> Set-CMSoftwareMeteringSetting -AutoCreatePercentage 20
 ```
 
 This command changes the percentage of computers that use a piece of software to 20 percent.
@@ -80,7 +83,7 @@ You can use the values set by other parameters of this cmdlet to limit creation 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +100,7 @@ Valid values are integers from 1 through 99.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +118,7 @@ Valid values are integers from 1 through 1000.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +148,7 @@ Specifies the number of days that Configuration Manager keeps software metering 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +163,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +178,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

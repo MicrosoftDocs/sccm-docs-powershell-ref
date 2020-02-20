@@ -1,14 +1,17 @@
 ---
-title: Set-CMBaseline
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes the settings of configuration baselines.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMBaseline
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMBaseline
@@ -67,14 +70,14 @@ The **Set-CMBaseline** cmdlet changes the settings of one or more configuration 
 
 ### Example 1: Add a membership to a security scope of a configuration baseline
 ```
-PS C:\> Set-CMBaseline -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "BLineContoso01"
+PS XYZ:\> Set-CMBaseline -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "BLineContoso01"
 ```
 
 This command adds membership to the security scope named SecScope02 for the configuration baseline named BLineContoso01.
 
 ### Example 2: Remove membership from a security scope of a configuration baseline
 ```
-PS C:\> Set-CMBaseline -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "BLineContoso01"
+PS XYZ:\> Set-CMBaseline -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "BLineContoso01"
 ```
 
 This command removes membership to the security scope named SecScope02 for the configuration baseline named BLineContoso01.
@@ -82,8 +85,6 @@ This command removes membership to the security scope named SecScope02 for the c
 ## PARAMETERS
 
 ### -AddBaseline
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -102,7 +103,7 @@ Specifies an array of names of configuration categories to add to the configurat
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,8 +165,6 @@ Accept wildcard characters: False
 ```
 
 ### -AddSoftwareUpdate
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -179,12 +178,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClearBaseline
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,12 +191,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClearOSConfigurationItem
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,12 +204,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClearOptionalConfigurationItem
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,12 +217,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClearProhibitedConfigurationItem
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,12 +230,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClearRequiredConfigurationItem
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,12 +243,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSoftwareUpdate
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -304,7 +291,7 @@ Specifies a path to the configuration data stored as a digest.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +306,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -334,7 +321,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -365,7 +352,7 @@ To obtain a CMBaseline object, use the [Get-CMBaseline](Get-CMBaseline.md) cmdle
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -395,7 +382,7 @@ Specifies a new name for the configuration baseline.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -411,7 +398,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -421,8 +408,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveBaseline
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -441,7 +426,7 @@ Specifies an array of names of configuration categories to remove from the confi
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -451,8 +436,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOSConfigurationItem
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -466,8 +449,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOptionalConfigurationItem
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -481,8 +462,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProhibitedConfigurationItem
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -496,8 +475,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveRequiredConfigurationItem
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -511,8 +488,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSoftwareUpdate
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -542,7 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

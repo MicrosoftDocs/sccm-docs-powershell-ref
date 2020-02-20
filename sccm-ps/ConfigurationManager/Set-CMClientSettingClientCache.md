@@ -1,14 +1,17 @@
 ---
-title: Set-CMClientSettingClientCache
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a client setting client cache.
+external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMClientSettingClientCache
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMClientSettingClientCache
@@ -46,22 +49,17 @@ Set-CMClientSettingClientCache [-ConfigureBranchCache <Boolean>] [-EnableBranchC
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -BroadcastPort
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -75,12 +73,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigureBranchCache
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,12 +86,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigureCacheSize
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,12 +114,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetDefaultSetting
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -140,7 +132,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,8 +142,6 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadPort
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -165,12 +155,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBranchCache
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,8 +168,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHttps
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -195,8 +181,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSuperPeer
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -215,7 +199,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,12 +209,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetCustomSettingByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -240,8 +222,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxBranchCacheSizePercent
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -255,8 +235,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCacheSize
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -270,8 +248,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCacheSizePercent
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -285,12 +261,10 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: SetCustomSettingByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -305,7 +279,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -331,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -344,4 +318,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

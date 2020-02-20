@@ -1,14 +1,17 @@
 ---
-title: Import-CMApplication
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Imports an application into Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Import-CMApplication
+titleSuffix: Configuration Manager
 ---
 
 # Import-CMApplication
@@ -32,7 +35,7 @@ If the package contains content, the application package imports the content, or
 
 ### Example 1: Import an application
 ```
-PS C:\>Import-CMApplication -FilePath "\\Server1\resource\test.zip" -ImportActionType DirectImport
+PS XYZ:\>Import-CMApplication -FilePath "\\Server1\resource\test.zip" -ImportActionType DirectImport
 ```
 
 This command imports the application stored in test.zip, including the application objects.
@@ -154,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

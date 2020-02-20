@@ -1,14 +1,17 @@
 ---
-title: Get-CMDeviceCollectionVariable
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a device collection variable.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDeviceCollectionVariable
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMDeviceCollectionVariable
@@ -43,7 +46,7 @@ The **Get-CMDeviceCollectionVariable** cmdlet gets the task sequence variables f
 
 ### Example 1: Get a device collection variable by name
 ```
-PS C:\> Get-CMDeviceCollectionVariable -CollectionName "DeviceCollection02" -VariableName "testTS"
+PS XYZ:\> Get-CMDeviceCollectionVariable -CollectionName "DeviceCollection02" -VariableName "testTS"
 ```
 
 This command gets the collection variable named testTS for the device collection named Device.
@@ -57,7 +60,7 @@ To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -72,7 +75,7 @@ Specifies the ID of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -87,7 +90,7 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,7 +105,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +120,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +135,7 @@ Specifies the name of a collection variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

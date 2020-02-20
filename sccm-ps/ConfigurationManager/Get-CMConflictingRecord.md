@@ -1,14 +1,17 @@
 ---
-title: Get-CMConflictingRecord
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets conflicting Configuration Manager record objects.
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMConflictingRecord
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMConflictingRecord
@@ -45,14 +48,14 @@ You can get all the outstanding conflicts for Configuration Manager or specify a
 
 ### Example 1: Get all conflicting records
 ```
-PS C:\> Get-CMConflictingRecord
+PS XYZ:\> Get-CMConflictingRecord
 ```
 
 This command gets all the unresolved conflicts for Configuration Manager.
 
 ### Example 2: Get a named conflicting record
 ```
-PS C:\> Get-CMConflictingRecord -Name "CR07"
+PS XYZ:\> Get-CMConflictingRecord -Name "CR07"
 ```
 
 This command gets a conflict named CR07.
@@ -65,7 +68,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +83,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

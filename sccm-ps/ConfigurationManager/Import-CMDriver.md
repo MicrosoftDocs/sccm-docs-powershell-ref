@@ -1,14 +1,17 @@
 ---
-title: Import-CMDriver
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Imports a device driver into Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Import-CMDriver
+titleSuffix: Configuration Manager
 ---
 
 # Import-CMDriver
@@ -40,14 +43,14 @@ Because the accuracy of this information can vary, manually verify that the devi
 
 ### Example 1: Import all device drivers in a path
 ```
-PS C:\>Import-CMDriver -UncFileLocation "\\Server1\Driver" -ImportFolder
+PS XYZ:\>Import-CMDriver -UncFileLocation "\\Server1\Driver" -ImportFolder
 ```
 
 This command imports all device drivers located in the network path \\\\Server1\Driver.
 
 ### Example 2: Import a device driver by name
 ```
-PS C:\>Import-CMDriver -UncFileLocation "\\Server1\Driver\driver.inf"
+PS XYZ:\>Import-CMDriver -UncFileLocation "\\Server1\Driver\driver.inf"
 ```
 
 This command imports the driver named driver.inf from the network path \\\\Server1\Driver.
@@ -111,7 +114,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +148,7 @@ Drivers added to the driver package are not affected.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +163,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +184,7 @@ Valid values are:
 ```yaml
 Type: ImportDuplicateDriverOption
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NotImport, AppendCategory, KeepExistingCategory, OverwriteCategory
 
 Required: False
@@ -197,7 +200,7 @@ Indicates that Configuration Manager imports all the device drivers in the impor
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,8 +210,6 @@ Accept wildcard characters: False
 ```
 
 ### -Path
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -298,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

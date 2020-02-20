@@ -1,14 +1,17 @@
 ---
-title: Get-CMSiteInstallStatus
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Provides information about Configuration Manager installation status.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSiteInstallStatus
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMSiteInstallStatus
@@ -37,7 +40,7 @@ You can specify an installation by ID or by site code.
 
 ### Example 1: Get site installation status
 ```
-PS C:\> Get-CMSiteInstallStatus -SiteCode "CM1"
+PS XYZ:\> Get-CMSiteInstallStatus -SiteCode "CM1"
 ```
 
 This command gets the site installation status for the site that has the specified site code.
@@ -50,7 +53,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -65,7 +68,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +98,7 @@ Specifies a site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -114,4 +117,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

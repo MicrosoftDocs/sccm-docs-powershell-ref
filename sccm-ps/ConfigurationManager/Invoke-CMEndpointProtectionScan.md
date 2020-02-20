@@ -1,14 +1,17 @@
 ---
-title: Invoke-CMEndpointProtectionScan
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Invokes a scan to detect malware on one or more devices in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMEndpointProtectionScan
+titleSuffix: Configuration Manager
 ---
 
 # Invoke-CMEndpointProtectionScan
@@ -64,7 +67,7 @@ For more information about how Configuration Manager supports Endpoint Protectio
 
 ### Example 1: Invoke a full Endpoint Protection scan
 ```
-PS C:\>Invoke-CMEndpointProtectionScan -DeviceName "CMCEN-DIST02" -ScanType Full
+PS XYZ:\>Invoke-CMEndpointProtectionScan -DeviceName "CMCEN-DIST02" -ScanType Full
 ```
 
 This command invokes a full Endpoint Protection scan of the device named CMCEN-DIST02.
@@ -92,7 +95,7 @@ Specifies the device that is scanned for malware.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByDeviceValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -107,7 +110,7 @@ Specifies an object that represents a device collection whose members are scanne
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -122,7 +125,7 @@ Specifies the ID of a device collection whose members are scanned for malware.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,7 +140,7 @@ Specifies the name of a device collection whose members are scanned for malware.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -182,7 +185,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +200,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +218,7 @@ The acceptable values for this parameter are: Full and Quick.
 ```yaml
 Type: ScanType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Full, Quick
 
 Required: False
@@ -242,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

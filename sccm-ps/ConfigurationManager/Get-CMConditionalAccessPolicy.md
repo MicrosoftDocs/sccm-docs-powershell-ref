@@ -1,14 +1,17 @@
 ---
-title: Get-CMConditionalAccessPolicy
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a conditional access policy.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMConditionalAccessPolicy
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMConditionalAccessPolicy
@@ -43,14 +46,14 @@ The **Get-CMConditionalAccessPolicy** cmdlet gets a conditional access policy.
 
 ### Example 1: Get a conditional access policy by name
 ```
-PS C:\> Get-CMConditionalAccessPolicy -TargetedCollection (Get-CMCollection -Name "All Users")
+PS XYZ:\> Get-CMConditionalAccessPolicy -TargetedCollection (Get-CMCollection -Name "All Users")
 ```
 
 This command gets the conditional access policy for the targeted collection named All Users.
 
 ### Example 2: Get a conditional access policy by ID
 ```
-PS C:\> Get-CMConditionalAccessPolicy -TargetedCollectionID SMS00002
+PS XYZ:\> Get-CMConditionalAccessPolicy -TargetedCollectionID SMS00002
 ```
 
 This command gets the conditional access policy for the target collection with the ID of SMS00002.
@@ -64,7 +67,7 @@ This rule overrides the default Exchange access rule, which means that even if y
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +82,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +149,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

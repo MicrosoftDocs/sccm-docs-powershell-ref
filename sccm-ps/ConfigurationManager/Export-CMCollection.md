@@ -1,14 +1,17 @@
 ---
-title: Export-CMCollection
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Exports a Configuration Manager collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Export-CMCollection
+titleSuffix: Configuration Manager
 ---
 
 # Export-CMCollection
@@ -20,19 +23,19 @@ Exports a Configuration Manager collection.
 
 ### SearchByNameMandatory (Default)
 ```
-Export-CMCollection -Name <String> -ExportFilePath <String> [-ExportComment <String>]
+Export-CMCollection -Name <String> -ExportFilePath <String> [-ExportComment <String>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Export-CMCollection -CollectionId <String> -ExportFilePath <String> [-ExportComment <String>]
+Export-CMCollection -CollectionId <String> -ExportFilePath <String> [-ExportComment <String>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
 ```
-Export-CMCollection -InputObject <IResultObject> -ExportFilePath <String> [-ExportComment <String>]
+Export-CMCollection -InputObject <IResultObject> -ExportFilePath <String> [-ExportComment <String>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -45,14 +48,14 @@ Configuration Manager collections provide a way to manage users, computers, and 
 
 ### Example 1: Export a collection by name
 ```
-PS C:\> Export-CMCollection -Name "testUser" -ExportFilePath "C:\collection.mof"
+PS XYZ:\> Export-CMCollection -Name "testUser" -ExportFilePath "C:\collection.mof"
 ```
 
 This command exports the collection named testUser to the file named collection.mof.
 
 ### Example 2: Get a collection object and export it
 ```
-PS C:\> Get-CMCollection -Name "testUser" | Export-CMCollection -ExportFilePath "C:\collection.mof"
+PS XYZ:\> Get-CMCollection -Name "testUser" | Export-CMCollection -ExportFilePath "C:\collection.mof"
 ```
 
 This command gets the collection object named testUser and uses the pipeline operator to pass the object to **Export-CMCollection**, which exports the object to the file named collection.mof.
@@ -66,7 +69,7 @@ If you do not specify a collection, all collections in the hierarchy are exporte
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -96,7 +99,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +114,7 @@ Specifies a comment for the exported collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,9 +129,24 @@ Specifies the full path for the export file. The file name must end in ".mof".
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -141,7 +159,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +175,7 @@ To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -173,7 +191,7 @@ If you do not specify a collection, all collections in the hierarchy are exporte
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

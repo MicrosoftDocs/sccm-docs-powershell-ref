@@ -60,7 +60,7 @@ For more information about out of band management for System Center Configuratio
 
 ### Example 1: Add an out of band service point by using a site code
 ```
-PS C:\>Add-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2" -Thumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
+PS XYZ:\>Add-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2" -Thumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
 ```
 
 This command adds an out of band service point to the Microsoft System Center Configuration Manager site that has the site code named CM2 on the site system named cmcen-dist02.tsqa.contoso.com.

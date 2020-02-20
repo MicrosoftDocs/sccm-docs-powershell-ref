@@ -1,14 +1,17 @@
 ---
-title: New-CMSoftwareMeteringRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a Configuration Manager software metering rule.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
 ---
 
 # New-CMSoftwareMeteringRule
@@ -45,7 +48,7 @@ For more information about software metering in System Center Configuration Mana
 
 ### Example 1: Create a software metering rule
 ```
-PS C:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System" 
+PS XYZ:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System" 
 ApplyToChildSites : True
 Comment           : 
 Enabled           : True
@@ -72,7 +75,7 @@ Specifies a comment for a software metering rule.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +105,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +118,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +133,7 @@ Specifies a version of the software that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +148,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +164,7 @@ For more information and a list of locale identifiers, see the Locale IDs Assign
 ```yaml
 Type: Int32
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +180,7 @@ This parameter can differ from the *Path* parameter if a user changed the name.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +195,7 @@ Specifies a file path of the software that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: NewFromPath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -207,7 +210,7 @@ Specifies a name for a product that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -219,7 +222,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: NewFromPath
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +237,7 @@ Specifies a site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

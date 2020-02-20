@@ -1,14 +1,17 @@
 ---
-title: Set-CMMulticastServicePoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a multicast service point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMMulticastServicePoint
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMMulticastServicePoint
@@ -44,7 +47,7 @@ The **Set-CMMulticastServicePoint** cmdlet updates the configuration of multicas
 
 ### Example 1: Modify a multicast service point by using the pipeline
 ```
-PS C:\> Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" | Set-CMMulticastServicePoint -UserName $null -StartIPAddress 224.0.1.0 -EndIPAddress 239.255.255.255 -StartUdpPort 64001 -EndUdpPort 65000 -ClientTransferRate Profile100Mbps -MaximumClientCount 100 -EnableScheduledMulticast $true -SessionStartDelayMins 15 -MinimumClientCount 20
+PS XYZ:\> Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" | Set-CMMulticastServicePoint -UserName $null -StartIPAddress 224.0.1.0 -EndIPAddress 239.255.255.255 -StartUdpPort 64001 -EndUdpPort 65000 -ClientTransferRate Profile100Mbps -MaximumClientCount 100 -EnableScheduledMulticast $true -SessionStartDelayMins 15 -MinimumClientCount 20
 ```
 
 This command gets the multicast service point object with the site system server name server1.contoso.com and uses the pipeline operator to pass the object to **Set-CMMulticastServicePoint**.
@@ -53,7 +56,7 @@ The command also sets the minimum and maximum client count, and sets a start del
 
 ### Example 2: Modify a multicast service point
 ```
-PS C:\> Set-CMMulticastServicePoint -SiteSystemServerName "server02.contoso.com" -UserName "contoso\administrator" -StartIPAddress 224.0.1.0 -EndIPAddress 239.255.255.255 -StartUdpPort 64001 -EndUdpPort 65000 -ClientTransferRate "Profile100Mbps" -MaximumClientCount 100 -EnableScheduledMulticast $true -SessionStartDelayMins 15 -MinimumClientCount 20
+PS XYZ:\> Set-CMMulticastServicePoint -SiteSystemServerName "server02.contoso.com" -UserName "contoso\administrator" -StartIPAddress 224.0.1.0 -EndIPAddress 239.255.255.255 -StartUdpPort 64001 -EndUdpPort 65000 -ClientTransferRate "Profile100Mbps" -MaximumClientCount 100 -EnableScheduledMulticast $true -SessionStartDelayMins 15 -MinimumClientCount 20
 ```
 
 This command updates the multicast service point settings for the site system server named server1.contoso.com using the administrator account.
@@ -78,7 +81,7 @@ Valid values are:
 ```yaml
 Type: NetworkProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, ProfileCustom, Profile10Mbps, Profile100Mbps, Profile1Gbps
 
 Required: False
@@ -109,7 +112,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +127,7 @@ Indicates whether you can schedule when Configuration Manager deploys the operat
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +142,7 @@ Specifies the ending IP address in the range of IP addresses that Configuration 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +157,7 @@ Specifies the ending port in the range of user datagram protocol (UDP) ports tha
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +172,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,7 +234,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +264,7 @@ Specifies the site code for the Configuration Manager site that hosts the site s
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -291,7 +294,7 @@ Specifies the starting IP address in the range of IP addresses that Configuratio
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -306,7 +309,7 @@ Specifies the starting port in the range of UDP ports that Configuration Manager
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -316,12 +319,10 @@ Accept wildcard characters: False
 ```
 
 ### -UseAnyRangeIP
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -337,7 +338,7 @@ If the *UserName* parameter is not specified, the cmdlet uses the computer accou
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -363,7 +364,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

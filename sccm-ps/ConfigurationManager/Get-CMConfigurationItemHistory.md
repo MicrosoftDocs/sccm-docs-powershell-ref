@@ -1,14 +1,17 @@
 ---
-title: Get-CMConfigurationItemHistory
-titleSuffix: Configuration Manager
+author: mumian
 description: Gets the previous versions of a configuration item in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMConfigurationItemHistory
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMConfigurationItemHistory
@@ -20,22 +23,19 @@ Gets the previous versions of a configuration item in Configuration Manager.
 ## SYNTAX
 
 ### SearchByNameMandatoryNoWildcards (Default)
-
-```powershell
+```
 Get-CMConfigurationItemHistory [-Name] <String> [-Revision <Int32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Get-CMConfigurationItemHistory [-Id] <Int32> [-Revision <Int32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
-
-```powershell
+```
 Get-CMConfigurationItemHistory [-InputObject] <IResultObject> [-Revision <Int32>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -56,7 +56,7 @@ This cmdlet also gets the history for a specified revision of an item.
 ### Example 1: Get item history by name
 
 ```powershell
-PS C:\> Get-CMConfigurationItemHistory -Name "CMCI07"
+PS XYZ:\> Get-CMConfigurationItemHistory -Name "CMCI07"
 ```
 
 This command gets the history for a configuration item named CMCI07.
@@ -64,7 +64,7 @@ This command gets the history for a configuration item named CMCI07.
 ### Example 2: Get item history by ID
 
 ```powershell
-PS C:\> Get-CMConfigurationItemHistory -Id "16777568"
+PS XYZ:\> Get-CMConfigurationItemHistory -Id "16777568"
 ```
 
 This command gets the previous version of a configuration item with the specified ID.
@@ -78,7 +78,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ To obtain a configuration item object, use the [Get-CMConfigurationItem](Get-CMC
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -159,7 +159,7 @@ Specifies the version of a configuration item as an integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,8 +169,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

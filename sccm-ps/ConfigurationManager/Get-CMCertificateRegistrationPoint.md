@@ -1,14 +1,17 @@
 ---
-title: Get-CMCertificateRegistrationPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a certificate registration point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCertificateRegistrationPoint
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMCertificateRegistrationPoint
@@ -37,14 +40,14 @@ The **Get-CMCertificateRegistrationPoint** cmdlet gets a certificate registratio
 
 ### Example 1: Get a certificate registration point by name
 ```
-PS C:\> Get-CMCertificateRegistrationPoint -SiteCode SC3
+PS XYZ:\> Get-CMCertificateRegistrationPoint -SiteCode SC3
 ```
 
 This command gets the certificate registration point for site code SC3.
 
 ### Example 2: Get a certificate registration point by using the pipeline
 ```
-PS C:\> Get-CMSitesystemserver -SiteSystemServerName "SiteServer01.Contoso.com" | Get-CMCertificateRegistrationPoint
+PS XYZ:\> Get-CMSitesystemserver -SiteSystemServerName "SiteServer01.Contoso.com" | Get-CMCertificateRegistrationPoint
 ```
 
 This command gets the site system server object named SiteServer01.Contoso.com and uses the pipeline operator to pass the object to **Get-CMCertificateRegistrationPoint**, which gets the certificate registration point for the site system server object.
@@ -52,8 +55,6 @@ This command gets the site system server object named SiteServer01.Contoso.com a
 ## PARAMETERS
 
 ### -AllSite
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -72,7 +73,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +88,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +104,7 @@ To obtain a site system server object, use the Get-CMSiteSystemServer cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,7 +119,7 @@ Specifies the site code of a Configuration Manager site system server.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

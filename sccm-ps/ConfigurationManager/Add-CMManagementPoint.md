@@ -1,14 +1,17 @@
 ---
-title: Add-CMManagementPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a management point to Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMManagementPoint
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMManagementPoint
@@ -60,7 +63,7 @@ A management point is a System Center Configuration Manager site system role tha
 
 ### Example 1: Add a management point
 ```
-PS C:\>Add-CMManagementPoint -SiteSystemServerName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SiteCode "CM2" -ClientConnectionType InternetAndIntranet -AllowDevice $True -GenerateAlert -SQLServerFqdnName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SQLServerInstanceName "MSSQLServer" -DatabaseName "test" -UserName "TSQA\MPAdmin" -Verbose
+PS XYZ:\>Add-CMManagementPoint -SiteSystemServerName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SiteCode "CM2" -ClientConnectionType InternetAndIntranet -AllowDevice $True -GenerateAlert -SQLServerFqdnName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SQLServerInstanceName "MSSQLServer" -DatabaseName "test" -UserName "TSQA\MPAdmin" -Verbose
 ```
 
 This command adds a management point to a System Center Configuration Manager installation.
@@ -82,7 +85,7 @@ Indicates that the management point supports device clients.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +105,7 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Internet, Intranet, InternetAndIntranet
 
 Required: False
@@ -160,7 +163,7 @@ Specifies the name of the site database or site database replica that the manage
 ```yaml
 Type: String
 Parameter Sets: ByNameReplica, ByValueReplica
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -175,7 +178,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,12 +188,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCloudGateway
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,7 +206,7 @@ Indicates that the cmdlet enables SSL for the management point.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,7 +221,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +236,7 @@ Indicates that Configuration Manager generates an alert when the management poin
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,7 +267,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 ```yaml
 Type: String
 Parameter Sets: ByNameNoReplica, ByNameReplica
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +310,7 @@ Specifies the name of the SQL Server instance that clients use to communicate wi
 ```yaml
 Type: String
 Parameter Sets: ByNameReplica, ByValueReplica
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -335,7 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

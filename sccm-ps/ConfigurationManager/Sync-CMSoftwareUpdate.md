@@ -1,14 +1,17 @@
 ---
-title: Sync-CMSoftwareUpdate
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Synchronizes software updates.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Sync-CMSoftwareUpdate
+titleSuffix: Configuration Manager
 ---
 
 # Sync-CMSoftwareUpdate
@@ -19,7 +22,7 @@ Synchronizes software updates.
 ## SYNTAX
 
 ```
-Sync-CMSoftwareUpdate -FullSync <Boolean> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+Sync-CMSoftwareUpdate [-FullSync <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -32,7 +35,7 @@ You can use this cmdlet to retrieve metadata for all software updates or only re
 
 ### Example 1: Perform a full synchronization for all software updates
 ```
-PS C:\> Sync-CMSoftwareUpdate -FullSync $True
+PS XYZ:\> Sync-CMSoftwareUpdate -FullSync $True
 ```
 
 This command performs a complete metadata synchronization for all software updates.
@@ -60,7 +63,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +78,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,9 +93,9 @@ Indicates whether to perform a complete synchronization of all updates or a delt
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -116,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

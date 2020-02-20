@@ -1,14 +1,17 @@
 ---
-title: Deny-CMApprovalRequest
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Denies a request to allow the installation of an application.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Deny-CMApprovalRequest
+titleSuffix: Configuration Manager
 ---
 
 # Deny-CMApprovalRequest
@@ -20,29 +23,25 @@ Denies a request to allow the installation of an application.
 ## SYNTAX
 
 ### SearchByValueMandatory (Default)
-
-```powershell
+```
 Deny-CMApprovalRequest -InputObject <IResultObject> [-Comment <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Deny-CMApprovalRequest -Id <String[]> [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
-
-```powershell
+```
 Deny-CMApprovalRequest -ApplicationName <String[]> -User <String> [-Comment <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByGuid
-
-```powershell
+```
 Deny-CMApprovalRequest -RequestGuid <String> [-Comment <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -58,7 +57,7 @@ You can use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to view
 ### Example 1: Deny a request by application ID
 
 ```powershell
-PS C:\>Deny-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1" -Comment "All requests for this application are denied."
+PS XYZ:\>Deny-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1" -Comment "All requests for this application are denied."
 ```
 
 This command denies a request for an application that has the specified ID.
@@ -67,7 +66,7 @@ The command includes a comment.
 ### Example 2: Deny a request from a specific user
 
 ```powershell
-PS C:\>Deny-CMApprovalRequest -Application "Test" -User "tsqa\davidchew"
+PS XYZ:\>Deny-CMApprovalRequest -Application "Test" -User "tsqa\davidchew"
 ```
 
 This command denies a request for an application named Test for the specified user.
@@ -75,8 +74,8 @@ This command denies a request for an application named Test for the specified us
 ### Example 3: Deny a request by using a variable
 
 ```powershell
-PS C:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1"
-PS C:\> Deny-CMApprovalRequest -InputObject $Approval -Comment "Request denied."
+PS XYZ:\> $Approval = Get-CMApprovalRequest -Id "ScopeId_2A11048C-917A-4C11-9E77-7DCC402F30EC/Application_426dfca1-0cc0-4aa3-85f8-3cd1b184d494/1"
+PS XYZ:\> Deny-CMApprovalRequest -InputObject $Approval -Comment "Request denied."
 ```
 
 The first command gets an approval request for a specified application ID and stores it in the $Approval variable.
@@ -141,7 +140,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +156,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +189,7 @@ To obtain an approval request object, use the [Get-CMApprovalRequest](Get-CMAppr
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -206,7 +205,7 @@ Specifies the request ID.
 ```yaml
 Type: String
 Parameter Sets: SearchByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -223,7 +222,7 @@ Use the format domain\user.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -250,8 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ---
-title: New-CMComplianceRuleRegistryKeyPermission
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a compliance rule registry key permission.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMComplianceRuleRegistryKeyPermission
+titleSuffix: Configuration Manager
 ---
 
 # New-CMComplianceRuleRegistryKeyPermission
@@ -27,16 +30,13 @@ New-CMComplianceRuleRegistryKeyPermission -ExpectedPermission <RegistryPermissio
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,8 +71,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedPermission
- 
-
 ```yaml
 Type: RegistryPermissions[]
 Parameter Sets: (All)
@@ -87,12 +85,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedUserAccess
- 
-
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -107,7 +103,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,8 +113,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: ConfigurationItemSetting
 Parameter Sets: (All)
@@ -132,12 +126,10 @@ Accept wildcard characters: False
 ```
 
 ### -IsExclusive
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,12 +139,10 @@ Accept wildcard characters: False
 ```
 
 ### -NoncomplianceSeverity
- 
-
 ```yaml
 Type: NoncomplianceSeverity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
@@ -163,12 +153,10 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNoncompliance
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,12 +166,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleDescription
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,12 +179,10 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -224,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -237,4 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

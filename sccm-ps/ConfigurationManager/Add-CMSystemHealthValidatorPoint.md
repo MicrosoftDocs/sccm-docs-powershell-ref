@@ -37,7 +37,7 @@ The **Add-CMSystemHealthValidatorPoint** cmdlet adds a validator point for syste
 
 ### Example 1: Add a system health validator point to a server for a site
 ```
-PS C:\>Add-CMSystemHealthValidatorPoint -SiteCode "CM4" -SiteSystemServerName "Test01.TSQA.Contoso.com"
+PS XYZ:\>Add-CMSystemHealthValidatorPoint -SiteCode "CM4" -SiteSystemServerName "Test01.TSQA.Contoso.com"
 ```
 
 This command adds a system health validator point to the server named Test01.TSQA.Contoso.com for the site that has the site code CM4.

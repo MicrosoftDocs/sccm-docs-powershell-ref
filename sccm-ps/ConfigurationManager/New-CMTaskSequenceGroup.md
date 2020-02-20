@@ -1,14 +1,17 @@
 ---
-title: New-CMTaskSequenceGroup
-titleSuffix: Configuration Manager
+author: mumian
 description: Creates a Configuration Manager task sequence group.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMTaskSequenceGroup
+titleSuffix: Configuration Manager
 ---
 
 # New-CMTaskSequenceGroup
@@ -19,7 +22,7 @@ Creates a Configuration Manager task sequence group.
 
 ## SYNTAX
 
-```powershell
+```
 New-CMTaskSequenceGroup [-Step <IResultObject[]>] -Name <String> [-Description <String>] [-ContinueOnError]
  [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -34,7 +37,7 @@ The **New-CMTaskSequenceGroup** cmdlet creates a new task sequence group object 
 ### Example 1
 
 ```powershell
-PS C:\> New-CMTaskSequenceGroup -Name $gpName -Description $gpDescription -ContinueOnError -Step ($st1, $st2) -Condition ($cd1, $cd2)
+PS XYZ:\> New-CMTaskSequenceGroup -Name $gpName -Description $gpDescription -ContinueOnError -Step ($st1, $st2) -Condition ($cd1, $cd2)
 ```
 
 The command creates a task sequence group with specific name, description, steps, and conditions.
@@ -57,6 +60,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContinueOnError
 
 Indicates whether the creation should continue when there's an error.
@@ -64,7 +83,7 @@ Indicates whether the creation should continue when there's an error.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +99,7 @@ Specifies a description.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +131,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +147,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,22 +188,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -203,12 +206,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
 
 ## OUTPUTS
 
 ### IResultObject#SMS_TaskSequence_Group
+
+## NOTES
 
 ## RELATED LINKS
 

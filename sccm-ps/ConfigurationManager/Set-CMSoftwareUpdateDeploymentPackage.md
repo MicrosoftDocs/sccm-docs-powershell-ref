@@ -1,14 +1,17 @@
 ---
-title: Set-CMSoftwareUpdateDeploymentPackage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Modifies a software update deployment package.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareUpdateDeploymentPackage
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMSoftwareUpdateDeploymentPackage
@@ -47,21 +50,21 @@ A software update deployment package contains one or more software updates for d
 
 ### Example 1: Update the name and description of a software update deployment package
 ```
-PS C:\> Set-CMSoftwareUpdateDeploymentPackage -Id "ST10000C" -Description "Deployment pack 107" -NewName "SDPTest"
+PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Id "ST10000C" -Description "Deployment pack 107" -NewName "SDPTest"
 ```
 
 This command sets a new name and description for the deployment package that has the ID ST10000C.
 
 ### Example 2: Add membership to a security scope of a software update deployment package
 ```
-PS C:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction AddMembership -SecurityScopeName "testScopeName"
+PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction AddMembership -SecurityScopeName "testScopeName"
 ```
 
 This command adds membership for the security scope named testScopeName.
 
 ### Example 3: Remove membership from a security scope of a software update deployment package
 ```
-PS C:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction RemoveMembership -SecurityScopeName "testScopeName"
+PS XYZ:\> Set-CMSoftwareUpdateDeploymentPackage -Name "DP107" -SecurityScopeAction RemoveMembership -SecurityScopeName "testScopeName"
 ```
 
 This command removes membership for the security scope named testScopeName.
@@ -89,7 +92,7 @@ Specifies a description for the deployment package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +107,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +122,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +153,7 @@ To obtain an **CMSoftwareUpdateDeploymentPackage** object, use the [Get-CMSoftwa
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -165,7 +168,7 @@ Specifies a name for the deployment package.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -180,7 +183,7 @@ Specifies a new name for the deployment package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,7 +199,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +229,7 @@ Specifies a distribution priority for the deployment package.
 ```yaml
 Type: Priorities
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: High, Normal, Low
 
 Required: False
@@ -292,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

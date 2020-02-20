@@ -1,14 +1,17 @@
 ---
-title: Get-CMAppVVirtualEnvironment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets an App-V virtual environment.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMAppVVirtualEnvironment
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMAppVVirtualEnvironment
@@ -38,21 +41,21 @@ You can specify App-V environments by name or ID.
 
 ### Example 1: Get all virtual environments
 ```
-PS C:\> Get-CMAppVVirtualEnvironment
+PS XYZ:\> Get-CMAppVVirtualEnvironment
 ```
 
 This command gets all App-V virtual environments.
 
 ### Example 2: Get virtual environments by using a wildcard
 ```
-PS C:\> Get-CMAppVVirtualEnvironment -Name "T*"
+PS XYZ:\> Get-CMAppVVirtualEnvironment -Name "T*"
 ```
 
 This command gets all App-V virtual environments that have names that begin with the letter T.
 
 ### Example 3: Get virtual environment by an ID
 ```
-PS C:\> Get-CMAppVVirtualEnvironment -Id "16781806"
+PS XYZ:\> Get-CMAppVVirtualEnvironment -Id "16781806"
 ```
 
 This command gets an App-V virtual environment that has the ID 16781806.
@@ -63,7 +66,7 @@ This command gets an App-V virtual environment that has the ID 16781806.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,7 +79,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

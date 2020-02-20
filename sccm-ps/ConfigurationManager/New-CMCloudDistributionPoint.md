@@ -1,14 +1,17 @@
 ---
-title: New-CMCloudDistributionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a cloud distribution point.
+external help file: AdminUI.PS.Content.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
 ---
 
 # New-CMCloudDistributionPoint
@@ -23,8 +26,9 @@ New-CMCloudDistributionPoint -SubscriptionId <String> [-SiteCode <String>] -Mana
  [-Description <String>] -ServiceCName <String> -ServiceCertificatePath <String> [-StorageQuotaGB <Int32>]
  [-StorageWarningThreshold <Int32>] [-StorageCriticalThreshold <Int32>] [-TrafficOutGB <Int32>]
  [-TrafficWarningThreshold <Int32>] [-TrafficCriticalThreshold <Int32>]
- [-ManagementCertificatePassword <SecureString>] [-ServiceCertificatePassword <SecureString>] -Region <Region>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ManagementCertificatePassword <SecureString>] [-ServiceCertificatePassword <SecureString>]
+ -Region <AzureRegion> [-EnvironmentSetting <AzureEnvironment>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +42,7 @@ For more information about cloud distribution points, see [Planning for Content 
 
 ### Example 1: Create a cloud distribution point
 ```
-PS C:\> New-CMCloudDistributionPoint -ManagementCertificatePath "C:\Certificates\Management.pfx" -Region "WestUS" -ServiceCertificatePath "C:\Certificates\Distribution.pfx" -ServiceCName "distribution-server.contoso.com" -SiteCode "ContosoSite"-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"
+PS XYZ:\> New-CMCloudDistributionPoint -ManagementCertificatePath "C:\Certificates\Management.pfx" -Region "WestUS" -ServiceCertificatePath "C:\Certificates\Distribution.pfx" -ServiceCName "distribution-server.contoso.com" -SiteCode "ContosoSite"-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"
 ```
 
 This command creates a distribution with the canonical name server.contoso.com.
@@ -67,7 +71,7 @@ Specifies a description for a cloud distribution point.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +86,23 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnvironmentSetting
+{{ Fill EnvironmentSetting Description }}
+
+```yaml
+Type: AzureEnvironment
+Parameter Sets: (All)
+Aliases:
+Accepted values: AzurePublicCloud, AzureUSGovernmentCloud
 
 Required: False
 Position: Named
@@ -97,7 +117,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +132,7 @@ Specifies a password for a management certificate.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +163,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,10 +190,10 @@ The acceptable values for this parameter are:
 - WestUS
 
 ```yaml
-Type: Region
+Type: AzureRegion
 Parameter Sets: (All)
-Aliases: 
-Accepted values: AnywhereAsia, AnywhereEurope, AnywhereUS, EastAsia, EastUS, NorthCentralUS, NorthEurope, SouthCentralUS, SoutheastAsia, WestEurope, WestUS
+Aliases:
+Accepted values: AnywhereAsia, AnywhereEurope, AnywhereUS, EastAsia, EastUS, NorthCentralUS, NorthEurope, SouthCentralUS, SoutheastAsia, WestEurope, WestUS, WestUS2, WestCentralUS, USGovernmentIowa, USGovernmentVirginia, USGovernmentArizona, USGovernmentTexas, USDoDCentral, USDoDEast, AustraliaEast, AustraliaSoutheast, BrazilSouth, CanadaCentral, CanadaEast, CentralIndia, CentralUS, EastUS2, JapanEast, JapanWest, SouthIndia, UKSouth, UKWest, WestIndia, FranceSouth, FranceCentral, KoreaSouth, KoreaCentral, AustraliaCentral, AustraliaCentral2, ChinaEast, ChinaNorth, GermanyCentral, GermanyNortheast, SouthAfricaNorth, SouthAfricaWest
 
 Required: True
 Position: Named
@@ -188,7 +208,7 @@ Specifies an alias, or CName, for a service.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -203,7 +223,7 @@ Specifies a password for a service certificate.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +253,7 @@ Specifies a Configuration Manager site code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +268,7 @@ Specifies the percentage for a critical alert to occur, based on the storage ale
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,7 +283,7 @@ Specifies the threshold value, in gigabytes, that triggers errors or warnings fo
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -278,7 +298,7 @@ Specifies the percentage for a warning alert to occur, based on the storage aler
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -294,7 +314,7 @@ To get a subscription ID, use the Azure Management Portal.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -309,7 +329,7 @@ Specifies the percentage for a critical alert to occur, based on the traffic out
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,7 +344,7 @@ Specifies the threshold value, in gigabytes, that triggers errors or warnings, f
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -339,7 +359,7 @@ Specifies the percentage for a warning alert to occur, based on the traffic out 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -365,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

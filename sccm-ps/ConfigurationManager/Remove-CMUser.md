@@ -1,14 +1,17 @@
 ---
-title: Remove-CMUser
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a user from Configuration Manager.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMUser
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMUser
@@ -43,8 +46,8 @@ The **Remove-CMUser** cmdlet removes user accounts from Microsoft System Center 
 
 ### Example 1: Remove a user
 ```
-PS C:\> $User = Get-CMUser -CollectionName "All Users" -Name "Contoso\user01"
-PS C:\> Remove-CMUser -InputObject $User -Force
+PS XYZ:\> $User = Get-CMUser -CollectionName "All Users" -Name "Contoso\user01"
+PS XYZ:\> Remove-CMUser -InputObject $User -Force
 ```
 
 The first command gets the user object named user01 from the All Users collection and stores the object in the $User variable.
@@ -54,7 +57,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a user by using the pipeline
 ```
-PS C:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\user02" | Remove-CMUser -Force
+PS XYZ:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\user02" | Remove-CMUser -Force
 ```
 
 This command gets the user object named user02 from the All Users collection and uses the pipeline operator to pass the object to **Remove-CMUser**, which removes the user account.
@@ -83,7 +86,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +101,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +116,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +132,7 @@ To obtain a Configuration Manager user account object, use the [Get-CMUser](Get-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -185,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

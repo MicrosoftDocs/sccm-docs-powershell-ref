@@ -1,14 +1,17 @@
 ---
-title: Suspend-CMApplication
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Suspends an application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Suspend-CMApplication
+titleSuffix: Configuration Manager
 ---
 
 # Suspend-CMApplication
@@ -47,14 +50,14 @@ To resume an application, use the [Resume-CMApplication](Resume-CMApplication.md
 
 ### Example 1: Suspend an application by its name
 ```
-PS C:\> Suspend-CMApplication -Name "Application01"
+PS XYZ:\> Suspend-CMApplication -Name "Application01"
 ```
 
 This command suspends the application named Application01.
 
 ### Example 2: Get an application and suspend it
 ```
-PS C:\> Get-CMApplication -Name "Application01" | Suspend-CMApplication
+PS XYZ:\> Get-CMApplication -Name "Application01" | Suspend-CMApplication
 ```
 
 This command gets the application object named Application01 and uses the pipeline operator to pass the object to **Suspend-CMApplication**, which suspends the application.
@@ -82,7 +85,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +100,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

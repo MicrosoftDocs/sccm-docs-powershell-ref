@@ -1,14 +1,17 @@
 ---
-title: Remove-CMAppVVirtualEnvironment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes an App-V virtual environment.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMAppVVirtualEnvironment
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMAppVVirtualEnvironment
@@ -44,22 +47,22 @@ You can specify App-V virtual environments by name or ID, or you can provide an 
 
 ### Example 1: Remove a virtual environment by name
 ```
-PS C:\> Remove-CMAppVVirtualEnvironment -Name "Test"
+PS XYZ:\> Remove-CMAppVVirtualEnvironment -Name "Test"
 ```
 
 This command removes an App-V virtual environment named Test.
 
 ### Example 2: Remove a virtual environment by ID
 ```
-PS C:\> Remove-CMAppVVirtualEnvironment -Id "16781806"
+PS XYZ:\> Remove-CMAppVVirtualEnvironment -Id "16781806"
 ```
 
 This command removes an App-V virtual environment that has the ID 16781806.
 
 ### Example 3: Remove a virtual environment by name by using a wildcard
 ```
-PS C:\> $AppV = Get-CMAppVVirtualEnvironment -Name "T*"
-PS C:\> Remove-CMAppVVirtualEnvironment -InputObject $AppV
+PS XYZ:\> $AppV = Get-CMAppVVirtualEnvironment -Name "T*"
+PS XYZ:\> Remove-CMAppVVirtualEnvironment -InputObject $AppV
 ```
 
 The first command gets all App-V virtual environments that have names that begin with the letter T and stores them in the $AppV variable.
@@ -89,7 +92,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +107,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +122,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +152,7 @@ Specifies an App-V virtual environment object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -191,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

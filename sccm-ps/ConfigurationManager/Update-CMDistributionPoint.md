@@ -1,14 +1,17 @@
 ---
-title: Update-CMDistributionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Updates content on a distribution point.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Update-CMDistributionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Update-CMDistributionPoint
@@ -111,7 +114,7 @@ Manually updating the distribution points does not interfere with the recurring 
 
 ### Example 1: Update distribution points by package name
 ```
-PS C:\>Update-CMDistributionPoint -PackageName "Package01"
+PS XYZ:\>Update-CMDistributionPoint -PackageName "Package01"
 ```
 
 This command updates distribution points with the package named Package01.
@@ -124,7 +127,7 @@ Specifies the name of an application.
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,7 +142,7 @@ Specifies the ID of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +157,7 @@ Specifies the name of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -184,7 +187,7 @@ Specifies the name of a deployment type.
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,7 +202,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +217,7 @@ Specifies the ID of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -229,7 +232,7 @@ Specifies the name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -244,7 +247,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +279,7 @@ Specify the manifest path if you specify Microsoft Application Virtualization fo
 ```yaml
 Type: String
 Parameter Sets: UpdateByDeploymentTypeName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -291,7 +294,7 @@ Specifies the ID of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -306,7 +309,7 @@ Specifies the name of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -321,7 +324,7 @@ Specifies the ID of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -336,7 +339,7 @@ Specifies the name of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -351,7 +354,7 @@ Specifies the ID of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -366,7 +369,7 @@ Specifies the name of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -376,8 +379,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReloadBootImage
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, SearchByBootImageId, SearchByBootImageName
@@ -396,7 +397,7 @@ Specifies the ID of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -411,7 +412,7 @@ Specifies the name of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -437,7 +438,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

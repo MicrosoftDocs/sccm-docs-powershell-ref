@@ -1,14 +1,17 @@
 ---
-title: Set-CMAssignedSite
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Assigns a client computer to a primary site.
+external help file: AdminUI.PS.Oob.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAssignedSite
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMAssignedSite
@@ -45,7 +48,7 @@ This cmdlet assigns a client to a different primary site.
 
 ### Example 1: Reassign a client to a site
 ```
-PS C:\> Set-CMAssignedSite -DeviceId "2097152000" -SiteCode "CM7"
+PS XYZ:\> Set-CMAssignedSite -DeviceId "2097152000" -SiteCode "CM7"
 ```
 
 This command reassigns the client that has the device ID 2097152000 to the site that has the site code CM7.
@@ -103,7 +106,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +121,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +137,7 @@ To obtain a **CMDevice** object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +152,7 @@ Specifies the site code of the new primary site to assign the client to.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

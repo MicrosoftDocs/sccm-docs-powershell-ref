@@ -1,14 +1,17 @@
 ---
-title: Remove-CMSecurityScope
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes a security scope.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMSecurityScope
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMSecurityScope
@@ -43,8 +46,8 @@ The **Remove-CMSecurityScope** cmdlet removes a security scope from Microsoft Sy
 
 ### Example 1: Remove a security scope in a variable
 ```
-PS C:\> $Scope = Get-CMSecurityScope -Name "Scope"
-PS C:\> Remove-CMSecurityScope -InputObject $Scope -Force
+PS XYZ:\> $Scope = Get-CMSecurityScope -Name "Scope"
+PS XYZ:\> Remove-CMSecurityScope -InputObject $Scope -Force
 ```
 
 The first command gets the security scope object named Scope and stores the object in the $Scope variable.
@@ -54,7 +57,7 @@ By specifying the *Force* parameter, the user is not prompted for confirmation p
 
 ### Example 2: Remove a security scope using the pipeline
 ```
-PS C:\> Get-CMSecurityScope -Name "Scope" | Remove-CMSecurityScope -Force
+PS XYZ:\> Get-CMSecurityScope -Name "Scope" | Remove-CMSecurityScope -Force
 ```
 
 This command gets the security scope object named Scope and uses the pipeline operator to pass the object to **Remove-CMSecurityScope**, which removes the security scope.
@@ -83,7 +86,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +101,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +116,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ To obtain a **CMSecurityScope** object, use the [Get-CMSecurityScope](Get-CMSecu
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

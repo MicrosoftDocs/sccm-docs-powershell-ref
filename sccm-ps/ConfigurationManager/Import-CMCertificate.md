@@ -1,14 +1,17 @@
 ---
-title: Import-CMCertificate
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Imports a certificate.
+external help file: AdminUI.PS.Certificates.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Import-CMCertificate
+titleSuffix: Configuration Manager
 ---
 
 # Import-CMCertificate
@@ -37,7 +40,7 @@ The **Import-CMCertificate** cmdlet imports a public key infrastructure (PKI) ce
 
 ### Example 1: Import a certificate
 ```
-PS C:\>Import-CMCertificate -Path "\\Contoso01\CM\Certficates\BaseCert.txt"
+PS XYZ:\>Import-CMCertificate -Path "\\Contoso01\CM\Certficates\BaseCert.txt"
 ```
 
 This command imports the PKI certificate from the file named BaseCert.
@@ -65,7 +68,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +83,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +114,7 @@ Specifies a certification path.
 ```yaml
 Type: String
 Parameter Sets: ByFile
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -140,7 +143,7 @@ Accept wildcard characters: False
 ```yaml
 Type: X509Certificate
 Parameter Sets: ByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -150,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

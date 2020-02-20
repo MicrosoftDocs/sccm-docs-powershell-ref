@@ -1,14 +1,17 @@
 ---
-title: Get-CMConfigurationPolicy
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets a configuration policy.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMConfigurationPolicy
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMConfigurationPolicy
@@ -43,14 +46,14 @@ The **Get-CMConfigurationPolicy** cmdlet gets a configuration policy.
 
 ### Example 1: Get a configuration policy by name
 ```
-PS C:\> Get-CMConfigurationPolicy -Name "TrustedCACert01" -AsXml
+PS XYZ:\> Get-CMConfigurationPolicy -Name "TrustedCACert01" -AsXml
 ```
 
 This command gets the configuration policy named TrustedCACert01 and displays the output in XML format.
 
 ### Example 2: Get a configuration policy by ID
 ```
-PS C:\> Get-CMConfigurationPolicy -Id 16777454 -Fast
+PS XYZ:\> Get-CMConfigurationPolicy -Id 16777454 -Fast
 ```
 
 This command gets the configuration policy with the ID of 16777454 and does not display lazy properties.
@@ -63,7 +66,7 @@ Specifies that the configuration policy is returned in XML format.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +114,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +129,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +159,7 @@ Specifies a configuration policy object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -181,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

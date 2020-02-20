@@ -1,14 +1,17 @@
 ---
-title: New-CMBoundaryGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a new boundary group.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMBoundaryGroup
+titleSuffix: Configuration Manager
 ---
 
 # New-CMBoundaryGroup
@@ -37,7 +40,7 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ### Example 1: Create a new boundary group
 ```
-PS C:\> New-BoundaryGroup -Name "BGroup05"
+PS XYZ:\> New-BoundaryGroup -Name "BGroup05"
 CreatedBy:          
 CreatedOn           
 DefaultSiteCode:
@@ -81,8 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -AddSiteSystemServerName
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -116,7 +117,7 @@ Specifies the default site code for the boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +132,7 @@ Specifies a description for the new boundary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +147,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +162,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +177,7 @@ Specifies a name for the new boundary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -202,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

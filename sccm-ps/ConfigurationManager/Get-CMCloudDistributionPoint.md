@@ -1,14 +1,17 @@
 ---
-title: Get-CMCloudDistributionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Gets cloud-based distribution points.
+external help file: AdminUI.PS.Content.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCloudDistributionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMCloudDistributionPoint
@@ -62,21 +65,21 @@ For example, you might want to get a distribution point and then use the [Stop-C
 
 ### Example 1: Get all cloud distribution points
 ```
-PS C:\> Get-CMCloudDistributionPoint
+PS XYZ:\> Get-CMCloudDistributionPoint
 ```
 
 This command gets all the cloud distribution points.
 
 ### Example 2: Get a cloud distribution point by name
 ```
-PS C:\> Get-CMCloudDistributionPoint -Name "West01"
+PS XYZ:\> Get-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command gets a distribution point named West01.
 
 ### Example 3: Get a cloud distribution point by ID
 ```
-PS C:\> Get-CMCloudDistributionPoint -Id "16777230"
+PS XYZ:\> Get-CMCloudDistributionPoint -Id "16777230"
 ```
 
 This command gets a distribution point with the specified ID.
@@ -89,7 +92,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +108,7 @@ To get a **CMDistributionPointGroup** object, use the [Get-CMDistributionPointGr
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,7 +123,7 @@ Specifies the ID of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: SearchByGroupId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,7 +138,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: SearchByGroupName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -150,7 +153,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +184,7 @@ Specifies the name of a cloud distribution point.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

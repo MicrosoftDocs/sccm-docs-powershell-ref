@@ -1,14 +1,17 @@
 ---
-title: New-CMTSStepPartitionDisk
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a t s step partition disk.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMTSStepPartitionDisk
+titleSuffix: Configuration Manager
 ---
 
 # New-CMTSStepPartitionDisk
@@ -16,7 +19,6 @@ manager: dougeby
 ## SYNOPSIS
 
 Creates a t s step partition disk.
-
 
 ## SYNTAX
 
@@ -28,22 +30,17 @@ New-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean
 ```
 
 ## DESCRIPTION
- 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -Condition
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -72,12 +69,10 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,12 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -Description
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,8 +95,6 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -122,7 +113,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,12 +123,10 @@ Accept wildcard characters: False
 ```
 
 ### -DiskNumber
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,12 +136,10 @@ Accept wildcard characters: False
 ```
 
 ### -DiskType
- 
-
 ```yaml
 Type: PartitionDiskStyle
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Mbr, Gpt
 
 Required: False
@@ -168,7 +155,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,12 +165,10 @@ Accept wildcard characters: False
 ```
 
 ### -IsBootDisk
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,8 +178,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -208,8 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionSetting
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -239,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -252,4 +233,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,14 +1,17 @@
 ---
-title: Add-CMReportingServicePoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a reporting service point to Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMReportingServicePoint
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMReportingServicePoint
@@ -21,7 +24,7 @@ Adds a reporting service point to Configuration Manager.
 ### ReportingServicePointByValue (Default)
 ```
 Add-CMReportingServicePoint [-ReportServerInstance <String>] [-DatabaseServerName <String>]
- [-DatabaseName <String>] -UserName <String> -InputObject <IResultObject> [-DisableWildcardHandling]
+ [-DatabaseName <String>] -UserName <String> -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -29,7 +32,7 @@ Add-CMReportingServicePoint [-ReportServerInstance <String>] [-DatabaseServerNam
 ```
 Add-CMReportingServicePoint [-FolderName <String>] [-ReportServerInstance <String>]
  [-SiteSystemServerName] <String> [-SiteCode <String>] [-DatabaseServerName <String>] [-DatabaseName <String>]
- -UserName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ -UserName <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -41,7 +44,7 @@ A reporting service point is a site system role that is installed on a server th
 
 ### Example 1: Add a reporting service point
 ```
-PS C:\>Add-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMReportingServicePoint.TSQA.Contoso.com"
+PS XYZ:\>Add-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMReportingServicePoint.TSQA.Contoso.com"
 ```
 
 This command adds a reporting service point on the computer named CMReportingServicePoint.TSQA.Contoso.com for the Configuration Manager site that has the site code CM1.
@@ -69,7 +72,7 @@ Specifies the name of the Configuration Manager database that you want to use as
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +88,7 @@ To specify a database instance, use the format \<Server Name\>\\\<Instance Name\
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +103,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +118,22 @@ Specifies the name of the report folder on the report server.
 ```yaml
 Type: String
 Parameter Sets: ReportingServicePoint
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +148,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +179,7 @@ Specifies the name of an instance of Microsoft SQL Server Reporting Services.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +194,7 @@ Specifies a site code of a Configuration Manager site that hosts this site syste
 ```yaml
 Type: String
 Parameter Sets: ReportingServicePoint
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +224,7 @@ Specifies a user name for an account that Configuration Manager uses to connect 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -232,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

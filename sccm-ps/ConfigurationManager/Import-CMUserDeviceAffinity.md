@@ -1,14 +1,17 @@
 ---
-title: Import-CMUserDeviceAffinity
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Imports a file that contains user and device affinities to Configuration Manager.
+external help file: AdminUI.PS.Oob.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Import-CMUserDeviceAffinity
+titleSuffix: Configuration Manager
 ---
 
 # Import-CMUserDeviceAffinity
@@ -34,7 +37,7 @@ If they do not exist, the import will fail.
 
 ### Example 1: Import a user device affinity
 ```
-PS C:\>Import-CMUserDeviceAffinity -FileName "Remote_Users.csv" -EnableColumnHeadings $True
+PS XYZ:\>Import-CMUserDeviceAffinity -FileName "Remote_Users.csv" -EnableColumnHeadings $True
 ```
 
 This command imports the user device affinity in the file named Remote_Users.csv.
@@ -63,7 +66,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +96,7 @@ Use the format \<Domain\>\\\<user name\>,\<device NetBIOS name\>.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,8 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -MappingOrder
- 
-
 ```yaml
 Type: Mapping[]
 Parameter Sets: (All)
@@ -150,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

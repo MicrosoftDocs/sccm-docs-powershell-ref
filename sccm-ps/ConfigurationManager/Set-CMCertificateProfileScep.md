@@ -1,14 +1,17 @@
 ---
-title: Set-CMCertificateProfileScep
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a SCEP certificate profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMCertificateProfileScep
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMCertificateProfileScep
@@ -66,14 +69,14 @@ The **Set-CMCertificateProfileScep** cmdlet updates the settings of a SCEP certi
 
 ### Example 1: Set a SCEP certificate profile by name
 ```
-PS C:\> Set-CMCertificateProfileScep -Name "TestProfile01" -CertificateStore Machine -Description "Test update" -HashAlgorithm SHA3 -KeySize 1024 -KeyUsage KeyEncipherment -NewName "TestProfile01_updated" -SanType SubjectAltRequireDns
+PS XYZ:\> Set-CMCertificateProfileScep -Name "TestProfile01" -CertificateStore Machine -Description "Test update" -HashAlgorithm SHA3 -KeySize 1024 -KeyUsage KeyEncipherment -NewName "TestProfile01_updated" -SanType SubjectAltRequireDns
 ```
 
 This command updates the SEP certificate profile named TestProfile01 and gives it the new name TestProfile01_updated.
 
 ### Example 2: Set a SCEP certificate profile by using the pipeline
 ```
-PS C:\> Get-CMCertificateProfileScep -Name "TestProfile02" -Fast | Set-CMCertificateProfileScep -AllowCertificateOnAnyDevice $True -KeyStorageProvider InstallToNGC_FailIfNotPresent
+PS XYZ:\> Get-CMCertificateProfileScep -Name "TestProfile02" -Fast | Set-CMCertificateProfileScep -AllowCertificateOnAnyDevice $True -KeyStorageProvider InstallToNGC_FailIfNotPresent
 ```
 
 This command gets the SEP certificate profile object named TestProfile02 and uses the pipeline operator to pass the object to **Set-CMCertificateProfileScep**, which updates the settings of the profile object.
@@ -86,7 +89,7 @@ Indicates whether to allow certificate enrollment on any device.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +108,7 @@ Valid values are:
 ```yaml
 Type: CertificateStoreType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Machine, User
 
 Required: False
@@ -121,7 +124,7 @@ Specifies the name of a certificate template.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +139,7 @@ Specifies, in number of days, the certificate validity period.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +169,7 @@ Specifies a description for the SCEP certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +184,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +215,7 @@ Specifies the percentage of the certificate lifetime that remains before the dev
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +230,7 @@ Specifies the number of times that the device automatically retries the certific
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -242,7 +245,7 @@ Specifies the interval, in minutes, between each enrollment attempt when you use
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -257,7 +260,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -310,7 +313,7 @@ To obtain a SCEP certificate profile object, use the Get-CMCertificateProfileSce
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -329,7 +332,7 @@ Valid values are:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: 1024, 2048, 4096
 
 Required: False
@@ -352,7 +355,7 @@ Valid values are:
 ```yaml
 Type: KeyStorageProviderSettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, InstallToTPM_FailIfNotPresent, InstallToTPM_IfPresent, InstallToSoftwareKeyStorageProvider, InstallToNGC_FailIfNotPresent
 
 Required: False
@@ -396,7 +399,7 @@ Specifies a name for the SCEP certificate profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -411,7 +414,7 @@ Specifies a new name for the SCEP certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -427,7 +430,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -443,7 +446,7 @@ This parameter can be used when the InstallToNGC_FailIfNotPresent value is set f
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -459,7 +462,7 @@ To get a trusted root CA certificate, use the Get-CMCertificateProfileTrustedRoo
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -570,7 +573,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

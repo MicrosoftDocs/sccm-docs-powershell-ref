@@ -1,14 +1,17 @@
 ---
-title: Set-CMCertificateProfilePfx
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a PFX certificate profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMCertificateProfilePfx
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMCertificateProfilePfx
@@ -48,21 +51,21 @@ The **Set-CMCertificateProfilePfx** cmdlet changes the settings of a PFX certifi
 
 ### Example 1: Set a PFX certificate profile by name
 ```
-PS C:\> Set-CMCertificateProfilePfx -Name "TestUpdate1" -Description "Update name to Test" -NewName "Test" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
+PS XYZ:\> Set-CMCertificateProfilePfx -Name "TestUpdate1" -Description "Update name to Test" -NewName "Test" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
 ```
 
 This command updates the name of the PFX certificate profile named TestUpdate1 to Test for all Windows 10 Client platforms.
 
 ### Example 2: Set a PFX certificate profile by ID
 ```
-PS C:\> Set-CMCertificateProfilePfx -Id 16777453 -Description "Updated" -KeyStorageProvider InstallToSoftwareKeyStorageProvider -NewName "Test2"
+PS XYZ:\> Set-CMCertificateProfilePfx -Id 16777453 -Description "Updated" -KeyStorageProvider InstallToSoftwareKeyStorageProvider -NewName "Test2"
 ```
 
 This command updates the name of the PFX certificate profile with the ID 16777453 to Test2 and sets the key storage provider to install to Software Key Storage Provider.
 
 ### Example 3: Set a PFX certificate profile by using the pipeline
 ```
-PS C:\> Get-CMCertificateprofilePfx -Name "Test3" | Set-CMCertificateprofilePfx -Description "Updated"
+PS XYZ:\> Get-CMCertificateprofilePfx -Name "Test3" | Set-CMCertificateprofilePfx -Description "Updated"
 ```
 
 This command gets the PFX certificate profile object named Test3 and uses the pipeline operator to pass the object to **Set-CMCertificateProfilePfx**, which updates the description of the object.
@@ -90,7 +93,7 @@ Specifies a description for the PFX certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +108,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +123,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +154,7 @@ To obtain a PFX certificate profile object, use the Get-CMCertificateProfilePfx 
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +175,7 @@ Valid values are:
 ```yaml
 Type: KeyStorageProviderSettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, InstallToTPM_FailIfNotPresent, InstallToTPM_IfPresent, InstallToSoftwareKeyStorageProvider, InstallToNGC_FailIfNotPresent
 
 Required: False
@@ -188,7 +191,7 @@ Specifies the name of a PFX certificate profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -203,7 +206,7 @@ Specifies a new name for the PFX certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +222,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

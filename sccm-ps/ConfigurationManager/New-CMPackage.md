@@ -1,14 +1,17 @@
 ---
-title: New-CMPackage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a Configuration Manager package.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMPackage
+titleSuffix: Configuration Manager
 ---
 
 # New-CMPackage
@@ -59,14 +62,14 @@ A package is a System Center Configuration Manager object that contains the cont
 
 ### Example 1: Create a package
 ```
-PS C:\> New-CMPackage -Name "ScriptsPackage01"
+PS XYZ:\> New-CMPackage -Name "ScriptsPackage01"
 ```
 
 This command creates a Configuration Manager package named ScriptsPackage01.
 
 ### Example 2: Create a package and add a description
 ```
-PS C:\> New-CMPackage -Name "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
+PS XYZ:\> New-CMPackage -Name "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
 ```
 
 This command creates a Configuration Manager package named ScriptsPackage02 and adds the specified description to the package.
@@ -95,7 +98,7 @@ You can use a maximum of 128 characters.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +113,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +128,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +143,7 @@ Indicates that Configuration Manager creates the package from a package definiti
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew, NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +161,7 @@ For example, you can have an English version and a German version of the same pa
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +177,7 @@ You can use a maximum of 32 characters.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +192,7 @@ Specifies a name for the package.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +207,7 @@ Specifies the name of a package definition file.
 ```yaml
 Type: String
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionSourceFileWithExisted
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -219,7 +222,7 @@ Indicates that the package does not require source files to be present on client
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithExisted, NewPackageByDefinitionNoSourceFileWithNew
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -234,7 +237,7 @@ Specifies a share name or path that Configuration Manager creates for the packag
 ```yaml
 Type: String
 Parameter Sets: NewPackageByDefinitionNoSourceFileWithNew, NewPackageByDefinitionSourceFileWithNew
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -271,7 +274,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SourceFileType
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
-Aliases: 
+Aliases:
 Accepted values: AlwaysObtainSourceFile, CreateCompressedVersionOfSourceFile
 
 Required: True
@@ -287,7 +290,7 @@ Specifies the location of the source files for the package.
 ```yaml
 Type: String
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -306,7 +309,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SourceFolderPathType
 Parameter Sets: NewPackageByDefinitionSourceFileWithExisted, NewPackageByDefinitionSourceFileWithNew
-Aliases: 
+Aliases:
 Accepted values: UncNetworkPath, LocalFolderOnSiteServer
 
 Required: True
@@ -322,7 +325,7 @@ Specifies a version number for the package.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -348,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

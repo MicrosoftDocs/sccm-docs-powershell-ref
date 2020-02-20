@@ -1,14 +1,17 @@
 ---
-title: Restore-CMApplicationRevisionHistory
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Restores a previous version of a Configuration Manager application from the application revision history.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Restore-CMApplicationRevisionHistory
+titleSuffix: Configuration Manager
 ---
 
 # Restore-CMApplicationRevisionHistory
@@ -47,7 +50,7 @@ For more control over application replacement, create a new application that sup
 
 ### Example 1: Restore an application
 ```
-PS C:\> Restore-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser" -Revision 6.05
+PS XYZ:\> Restore-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser" -Revision 6.05
 ```
 
 This command restores the application MSXML 6.0 Parser, version 6.05.
@@ -75,7 +78,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +93,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +155,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +170,7 @@ Specifies the version number of the application revision that you restore.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -193,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

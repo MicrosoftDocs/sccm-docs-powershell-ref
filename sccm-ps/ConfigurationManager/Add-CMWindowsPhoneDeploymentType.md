@@ -1,14 +1,17 @@
 ---
-title: Add-CMWindowsPhoneDeploymentType
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a Windows Phone app package deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMWindowsPhoneDeploymentType
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMWindowsPhoneDeploymentType
@@ -49,7 +52,7 @@ The **Add-CMWindowsPhoneDeploymentType** cmdlet adds a Windows Phone app package
 
 ### Example 1: Add a Windows Phone deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Add-CMWindowsPhoneDeploymentType -DeploymentTypeName "DT3" -ContentLocation "\\Machine\Applications\Xap\Weather.xap" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\> Get-CMApplication -Name "Application1" | Add-CMWindowsPhoneDeploymentType -DeploymentTypeName "DT3" -ContentLocation "\\Machine\Applications\Xap\Weather.xap" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Add-CMWindowsPhoneDeploymentType**.
@@ -57,7 +60,7 @@ This command gets the application object named Application1 and uses the pipelin
 
 ### Example 2: Add a Windows Phone deployment type
 ```
-PS C:\>Add-CMWindowsPhoneDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT3" -ContentLocation "\\Machine\Applications\Xap\Weather.xap" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\>Add-CMWindowsPhoneDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT3" -ContentLocation "\\Machine\Applications\Xap\Weather.xap" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command adds the Windows Phone app package deployment type named DT3 from the specified location to the application named Application1 in English and Chinese.
@@ -88,7 +91,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +121,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -179,7 +182,7 @@ Specifies a display name for the deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +197,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +227,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -297,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

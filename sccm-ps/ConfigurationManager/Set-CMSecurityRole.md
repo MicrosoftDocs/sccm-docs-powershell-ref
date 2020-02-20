@@ -1,14 +1,17 @@
 ---
-title: Set-CMSecurityRole
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes configuration settings of a security role.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSecurityRole
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMSecurityRole
@@ -44,7 +47,7 @@ You can use this cmdlet to change the name and description of a security role.
 
 ### Example 1: Change the name of a security role by using an ID
 ```
-PS C:\> Set-CMSecurityRole -Id "CM100003" -NewName "RTOperator02"
+PS XYZ:\> Set-CMSecurityRole -Id "CM100003" -NewName "RTOperator02"
 ```
 
 This command renames the security role that has the ID CM100003.
@@ -52,7 +55,7 @@ The command changes the name to RTOperator02.
 
 ### Example 2: Change the name of a security role by using a name
 ```
-PS C:\> Set-CMSecurityRole -Name "SRole02" -NewName "RTOperator02"
+PS XYZ:\> Set-CMSecurityRole -Name "SRole02" -NewName "RTOperator02"
 ```
 
 This command renames the security role named SRole02.
@@ -60,8 +63,8 @@ The command changes the name to RTOperator02.
 
 ### Example 3: Change the name of a security role by using an object variable
 ```
-PS C:\> $Srole = Get-CMSecurityRole -Id "CM100003"
-PS C:\> Set-CMSecurityRole -Inputobject $Srole -NewName "RTOperator02"
+PS XYZ:\> $Srole = Get-CMSecurityRole -Id "CM100003"
+PS XYZ:\> Set-CMSecurityRole -Inputobject $Srole -NewName "RTOperator02"
 ```
 
 The first command gets the security role that has the ID CM100003 and stores it in the $Srole variable.
@@ -107,7 +110,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +125,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +156,7 @@ To get a **CMSecurityRole** object, use the [Get-CMSecurityRole](Get-CMSecurityR
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -183,7 +186,7 @@ Specifies a new name for the security role.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

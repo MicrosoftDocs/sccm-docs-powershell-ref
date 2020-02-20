@@ -1,14 +1,17 @@
 ---
-title: Remove-CMSoftwareUpdateGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Removes Configuration Manager software update groups.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMSoftwareUpdateGroup
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMSoftwareUpdateGroup
@@ -45,22 +48,22 @@ If you remove a software update group, you can use the [Get-CMSoftwareUpdateGrou
 
 ### Example 1: Remove a software update group by using an ID
 ```
-PS C:\> Remove-CMSoftwareUpdateGroup -Id "ST10000B"
+PS XYZ:\> Remove-CMSoftwareUpdateGroup -Id "ST10000B"
 ```
 
 This command removes the software update group that has the ID ST10000B.
 
 ### Example 2: Remove a software update group by using a name
 ```
-PS C:\> Remove-CMSoftwareUpdateGroup -Name "SUGroupD01"
+PS XYZ:\> Remove-CMSoftwareUpdateGroup -Name "SUGroupD01"
 ```
 
 This command removes the software update group named SUGroupD01.
 
 ### Example 3: Remove a software update group by using an object variable
 ```
-PS C:\> $SubObj=Get-CMSoftwareUpdateGroup -Id "ST10000B" 
-PS C:\> Remove-CMSoftwareUpdateGroup -SoftwareUpdateGroup $SubObj
+PS XYZ:\> $SubObj=Get-CMSoftwareUpdateGroup -Id "ST10000B" 
+PS XYZ:\> Remove-CMSoftwareUpdateGroup -SoftwareUpdateGroup $SubObj
 ```
 
 The first command gets the software update group that has the ID ST10000B, and then stores it in the variable $SubObj.
@@ -90,7 +93,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +108,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +123,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +154,7 @@ To obtain a software update group object, use **Get-CMSoftwareUpdateGroup**.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -192,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

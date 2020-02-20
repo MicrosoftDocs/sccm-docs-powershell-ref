@@ -1,14 +1,17 @@
 ---
-title: Export-CMPackage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Exports a Configuration Manager package.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Export-CMPackage
+titleSuffix: Configuration Manager
 ---
 
 # Export-CMPackage
@@ -21,21 +24,21 @@ Exports a Configuration Manager package.
 ### SearchByValue (Default)
 ```
 Export-CMPackage -InputObject <IResultObject> -FileName <String> [-WithDependence <Boolean>]
- [-WithContent <Boolean>] [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-WithContent <Boolean>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
 ```
 Export-CMPackage -Id <String> -FileName <String> [-WithDependence <Boolean>] [-WithContent <Boolean>]
- [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchPackageByNameMandatory
 ```
 Export-CMPackage -Name <String> -FileName <String> [-WithDependence <Boolean>] [-WithContent <Boolean>]
- [-Comment <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -47,15 +50,15 @@ You can use this cmdlet in System Center Configuration Manager to create a packa
 
 ### Example 1: Export a package by using an ID
 ```
-PS C:\>Export-CMPackage -Id "ST120001" -ExportFilePath "\\Deploy01\ExportPackages"
+PS XYZ:\>Export-CMPackage -Id "ST120001" -ExportFilePath "\\Deploy01\ExportPackages"
 ```
 
 This command exports a package that has the ID ST120001 to the output path \\\\Deploy01\ExportPackages.
 
 ### Example 2: Export a package by using a variable
 ```
-PS C:\> $DeplObj = Get-CMPackage -Id "ST120001"
-PS C:\> Export-CMPackage - "ST120001" -ExportFilePath"\\Deploy01\ExportPackages" -InputObject $DeplObj
+PS XYZ:\> $DeplObj = Get-CMPackage -Id "ST120001"
+PS XYZ:\> Export-CMPackage - "ST120001" -ExportFilePath"\\Deploy01\ExportPackages" -InputObject $DeplObj
 ```
 
 The first command gets the package that has the ID ST120001, and then stores it in the variable $DeplObj.
@@ -98,7 +101,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,13 +123,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceWildcardHandling
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +175,7 @@ To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +190,7 @@ Specifies a name of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchPackageByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -203,7 +221,7 @@ Indicates whether to include content in the package.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +236,7 @@ Indicates whether to include dependencies in the package.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

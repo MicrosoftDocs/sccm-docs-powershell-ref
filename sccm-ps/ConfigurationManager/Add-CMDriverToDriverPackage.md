@@ -1,14 +1,17 @@
 ---
-title: Add-CMDriverToDriverPackage
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a device driver to a Configuration Manager driver package.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDriverToDriverPackage
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMDriverToDriverPackage
@@ -20,56 +23,63 @@ Adds a device driver to a Configuration Manager driver package.
 
 ### AddDriverToDriverPackageByObject_Object (Default)
 ```
-Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackage <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackage <IResultObject>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AddDriverToDriverPackageById_Id
 ```
-Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageId <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageId <String> [-UpdateDistributionPoints <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDriverToDriverPackageById_Name
 ```
-Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackageName <String> [-UpdateDistributionPoints <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDriverToDriverPackageById_Object
 ```
-Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackage <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -DriverId <Int32> -DriverPackage <IResultObject>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AddDriverToDriverPackageByName_Id
 ```
-Add-CMDriverToDriverPackage -DriverName <String> -DriverPackageId <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -DriverName <String> -DriverPackageId <String>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AddDriverToDriverPackageByName_Name
 ```
-Add-CMDriverToDriverPackage -DriverName <String> -DriverPackageName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -DriverName <String> -DriverPackageName <String>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AddDriverToDriverPackageByName_Object
 ```
-Add-CMDriverToDriverPackage -DriverName <String> -DriverPackage <IResultObject> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -DriverName <String> -DriverPackage <IResultObject>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AddDriverToDriverPackageByObject_Id
 ```
-Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageId <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageId <String>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AddDriverToDriverPackageByObject_Name
 ```
-Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageName <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMDriverToDriverPackage -Driver <IResultObject> -DriverPackageName <String>
+ [-UpdateDistributionPoints <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +94,7 @@ When a device driver is added to a driver package, Microsoft System Center Confi
 
 ### Example 1: Add a driver to a driver package
 ```
-PS C:\>Add-CMDriverToDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -DriverPackageName "DrvPkg01"
+PS XYZ:\>Add-CMDriverToDriverPackage -DriverName "Adaptec Embedded SCSI HostRAID Controller" -DriverPackageName "DrvPkg01"
 ```
 
 This command adds the driver named Adaptec Embedded SCSI HostRAID Controller to the driver package named DrvPkg01.
@@ -112,7 +122,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +138,7 @@ To obtain a **CMDriver** object, use the **Get-CMDriver** cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: AddDriverToDriverPackageByObject_Object, AddDriverToDriverPackageByObject_Id, AddDriverToDriverPackageByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +153,7 @@ Specifies the ID of a driver.
 ```yaml
 Type: Int32
 Parameter Sets: AddDriverToDriverPackageById_Id, AddDriverToDriverPackageById_Name, AddDriverToDriverPackageById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +168,7 @@ Specifies the name of a driver.
 ```yaml
 Type: String
 Parameter Sets: AddDriverToDriverPackageByName_Id, AddDriverToDriverPackageByName_Name, AddDriverToDriverPackageByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,7 +184,7 @@ To obtain a **CMDriverPackage** object, use the **Get-CMDriverPackage** cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: AddDriverToDriverPackageByObject_Object, AddDriverToDriverPackageById_Object, AddDriverToDriverPackageByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +199,7 @@ Specifies the ID of a driver package.
 ```yaml
 Type: String
 Parameter Sets: AddDriverToDriverPackageById_Id, AddDriverToDriverPackageByName_Id, AddDriverToDriverPackageByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +214,7 @@ Specifies the name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: AddDriverToDriverPackageById_Name, AddDriverToDriverPackageByName_Name, AddDriverToDriverPackageByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -219,7 +229,22 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateDistributionPoints
+{{ Fill UpdateDistributionPoints Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: UpdateDistributionPoint, UpdateDistributionPointForDriverPackage, UpdateDistributionPointsForDriverPackage
 
 Required: False
 Position: Named
@@ -245,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

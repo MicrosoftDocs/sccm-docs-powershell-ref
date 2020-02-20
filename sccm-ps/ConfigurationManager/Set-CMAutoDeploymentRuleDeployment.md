@@ -1,14 +1,17 @@
 ---
-title: Set-CMAutoDeploymentRuleDeployment
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets a deployment for an automatic deployment rule.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAutoDeploymentRuleDeployment
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMAutoDeploymentRuleDeployment
@@ -57,16 +60,16 @@ The **Set-CMAutoDeploymentRuleDeployment** cmdlet updates a deployment for an au
 
 ### Example 1: Set a deployment by ID
 ```
-PS C:\> Set-CMAutoDeploymentRuleDeployment -ID 348 -CollectionName "All Systems" -EnableDeployment $True -SendWakeupPacket $False -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $False  -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $False -AllowRestart $False -SuppressRestartServer  $False -SuppressRestartWorkstation $False -WriteFilterHandling $False -GenerateSuccessAlert $True -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $False -GenerateOperationsManagerAlert $False -NoInstallOnRemote $False -NoInstallOnUnprotected $False -UseBranchCache $False
+PS XYZ:\> Set-CMAutoDeploymentRuleDeployment -ID 348 -CollectionName "All Systems" -EnableDeployment $True -SendWakeupPacket $False -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $False  -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $False -AllowRestart $False -SuppressRestartServer  $False -SuppressRestartWorkstation $False -WriteFilterHandling $False -GenerateSuccessAlert $True -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $False -GenerateOperationsManagerAlert $False -NoInstallOnRemote $False -NoInstallOnUnprotected $False -UseBranchCache $False
 ```
 
 This command updates the settings for the deployment rule deployment with the action ID of 348 and the collection named All Systems.
 
 ### Example 2: Set a deployment using a variable
 ```
-PS C:\> $ReferenceADR = Get-CMAutoDeploymentRule -Name "TestADR01"
-PS C:\> $Deployment = $ReferenceADR | Get-CMAutoDeploymentRuleDeployment
-PS C:\> Set-CMAutoDeploymentRuleDeployment -InputObject $Deployment[0] -CollectionName "All Systems" -EnableDeployment $True -SendWakeupPacket $False -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $False -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $False -AllowRestart $False -SuppressRestartServer $False -SuppressRestartWorkstation $False -WriteFilterHandling $False -GenerateSuccessAlert $True -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $False -GenerateOperationsManagerAlert $False -NoInstallOnRemote $False -NoInstallOnUnprotected $False -UseBranchCache $False
+PS XYZ:\> $ReferenceADR = Get-CMAutoDeploymentRule -Name "TestADR01"
+PS XYZ:\> $Deployment = $ReferenceADR | Get-CMAutoDeploymentRuleDeployment
+PS XYZ:\> Set-CMAutoDeploymentRuleDeployment -InputObject $Deployment[0] -CollectionName "All Systems" -EnableDeployment $True -SendWakeupPacket $False -VerboseLevel OnlySuccessAndErrorMessages -UseUtc $False -AvailableTime 7 -AvailableTimeUnit Days -DeadlineTime 7 -DeadlineTimeUnit Days -UserNotification DisplaySoftwareCenterOnly -AllowSoftwareInstallationOutsideMaintenanceWindow $False -AllowRestart $False -SuppressRestartServer $False -SuppressRestartWorkstation $False -WriteFilterHandling $False -GenerateSuccessAlert $True -SuccessPercentage 10 -AlertTime 7 -AlertTimeUnit Days -DisableOperationsManager $False -GenerateOperationsManagerAlert $False -NoInstallOnRemote $False -NoInstallOnUnprotected $False -UseBranchCache $False
 ```
 
 The first command gets the automatic deployment rule object named TestADR01 and stores the object in the $ReferenceADR variable.
@@ -83,7 +86,7 @@ Specifies the number of time units for the offset from the deadline.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +107,7 @@ Valid values are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -120,7 +123,7 @@ Indicates whether a system restart is allowed to be performed outside of any def
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +138,7 @@ Indicates whether software installation is allowed to be performed outside of an
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +153,7 @@ Indicates whether software updates are available to install as soon as possible 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +168,7 @@ Specifies the number of time units for the software available time.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,7 +189,7 @@ Valid values are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -203,7 +206,7 @@ To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +221,7 @@ Specifies the ID of the target collection for the software update deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +236,7 @@ Specifies the name of the target collection for the software update deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,7 +266,7 @@ Indicates whether required software updates are installed as soon as possible wh
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -278,7 +281,7 @@ Specifies the number of time units for the deadline.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,7 +302,7 @@ Valid values are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -330,7 +333,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -361,7 +364,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -391,7 +394,7 @@ Indicates whether an alert is generated when this rule runs successfully.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -437,7 +440,7 @@ Indicates whether to install software updates when the updates are not available
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -452,7 +455,7 @@ Indicates whether to install software updates when the updates are not available
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -468,7 +471,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -499,7 +502,7 @@ When client compliance falls below this percentage, an alert is generated.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -514,7 +517,7 @@ Indicates whether a system restart is suppressed on servers when a software upda
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -529,7 +532,7 @@ Indicates whether a system restart is suppressed on workstations when a software
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -544,7 +547,7 @@ Indicates whether clients are allowed to share content with other clients on the
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -559,7 +562,7 @@ Indicates whether the schedule for this deployment is evaluated based upon Unive
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -579,7 +582,7 @@ Valid values are:
 ```yaml
 Type: UserNotificationOption
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -600,7 +603,7 @@ Valid values are:
 ```yaml
 Type: VerboseLevelType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OnlyErrorMessages, OnlySuccessAndErrorMessages, AllMessages
 
 Required: False
@@ -633,7 +636,7 @@ If set to $False, content is applied on the overlay and committed later.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -643,7 +646,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

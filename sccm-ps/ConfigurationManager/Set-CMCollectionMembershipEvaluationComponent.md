@@ -1,14 +1,17 @@
 ---
-title: Set-CMCollectionMembershipEvaluationComponent
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Sets how often Configuration Manager evaluates collections for membership.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMCollectionMembershipEvaluationComponent
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMCollectionMembershipEvaluationComponent
@@ -33,14 +36,14 @@ You can specify which site to change by site server name or site code.
 
 ### Example 1: Set an evaluation period for a site code
 ```
-PS C:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 5 -SiteCode "CM4"
+PS XYZ:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 5 -SiteCode "CM4"
 ```
 
 This command sets the evaluation frequency to five minutes for the specified site code.
 
 ### Example 2: Set an evaluation period for a system
 ```
-PS C:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 6 -SiteSystemName "CM01.West01.Contoso.com"
+PS XYZ:\> Set-CMCollectionMembershipEvaluationComponent -MinutesInterval 6 -SiteSystemName "CM01.West01.Contoso.com"
 ```
 
 This command sets the evaluation frequency to six minutes for the server named CM01.West01.Contoso.com.
@@ -68,7 +71,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +99,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +130,7 @@ Specifies an array of a site codes for Configuration Manager sites.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

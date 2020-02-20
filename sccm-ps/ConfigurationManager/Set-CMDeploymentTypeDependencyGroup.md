@@ -1,14 +1,17 @@
 ---
-title: Set-CMDeploymentTypeDependencyGroup
-titleSuffix: Configuration Manager
+author: mumian
 description: Sets a deployment type dependency group in Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 12/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDeploymentTypeDependencyGroup
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMDeploymentTypeDependencyGroup
@@ -19,7 +22,7 @@ Sets a deployment type dependency group in Configuration Manager.
 
 ## SYNTAX
 
-```powershell
+```
 Set-CMDeploymentTypeDependencyGroup -InputObject <DeploymentTypeDependencyGroup> -NewName <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -33,7 +36,7 @@ The **Set-CMDeploymentTypeDependencyGroup** cmdlet sets a deployment type depend
 ### Example 1
 
 ```powershell
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Set-CMDeploymentTypeDependencyGroup -NewName MyNewGroup
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Set-CMDeploymentTypeDependencyGroup -NewName MyNewGroup
 ```
 
 ## PARAMETERS
@@ -61,7 +64,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +80,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +128,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +155,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -162,6 +164,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Application
+
+## NOTES
 
 ## RELATED LINKS
 

@@ -1,14 +1,17 @@
 ---
-title: Add-CMBoundaryToGroup
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Assigns boundaries to a boundary group.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMBoundaryToGroup
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMBoundaryToGroup
@@ -87,7 +90,7 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ### Example 1: Assign a boundary group to a boundary
 ```
-PS C:\>Add-CMBoundaryToGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
+PS XYZ:\>Add-CMBoundaryToGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
 ```
 
 This command assigns the boundary named to CLBound03 to the boundary group that has the Id 16777219.
@@ -100,7 +103,7 @@ Specifies the ID of a boundary group.
 ```yaml
 Type: Int32
 Parameter Sets: AddBoundaryToGroupById_Id, AddBoundaryToGroupByName_Id, AddBoundaryToGroupByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +131,7 @@ Specifies the name of a boundary group.
 ```yaml
 Type: String
 Parameter Sets: AddBoundaryToGroupById_Name, AddBoundaryToGroupByName_Name, AddBoundaryToGroupByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +146,7 @@ Specifies the ID of a boundary.
 ```yaml
 Type: Int32
 Parameter Sets: AddBoundaryToGroupById_Id, AddBoundaryToGroupById_Name, AddBoundaryToGroupById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +161,7 @@ Specifies the name of a boundary.
 ```yaml
 Type: String
 Parameter Sets: AddBoundaryToGroupByName_Id, AddBoundaryToGroupByName_Name, AddBoundaryToGroupByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +191,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +206,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

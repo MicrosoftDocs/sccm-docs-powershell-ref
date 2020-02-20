@@ -1,14 +1,17 @@
 ---
-title: New-CMBaseline
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Creates a Configuration Manager baseline.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMBaseline
+titleSuffix: Configuration Manager
 ---
 
 # New-CMBaseline
@@ -32,7 +35,7 @@ After you create a baseline, you can deploy it to a collection so that devices i
 
 ### Example 1: Create a configuration baseline
 ```
-PS C:\> New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
+PS XYZ:\> New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
 ```
 
 This command creates a baseline for compliance named Accounting Department baseline.
@@ -97,7 +100,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

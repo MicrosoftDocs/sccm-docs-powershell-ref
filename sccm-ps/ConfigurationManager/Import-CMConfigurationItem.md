@@ -1,14 +1,17 @@
 ---
-title: Import-CMConfigurationItem
-titleSuffix: Configuration Manager
+author: mumian
 description: Imports Configuration Manager configuration items.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Import-CMConfigurationItem
+titleSuffix: Configuration Manager
 ---
 
 # Import-CMConfigurationItem
@@ -19,7 +22,7 @@ Imports Configuration Manager configuration items.
 
 ## SYNTAX
 
-```powershell
+```
 Import-CMConfigurationItem -FileName <String[]> [-DuplicateWhileImporting] [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -41,7 +44,7 @@ Items usually define a unit of configuration you want to monitor.
 ### Example 1: Import configuration items
 
 ```powershell
-PS C:\>Import-CMConfigurationItem -FileName "\\atc-dist-01\Public\CM\AdminUITeam\CIData\7389_OSCI.cab","\\atc-dist-01\Public\CM\AdminUITeam\CIData\7452OS_1.cab"
+PS XYZ:\>Import-CMConfigurationItem -FileName "\\atc-dist-01\Public\CM\AdminUITeam\CIData\7389_OSCI.cab","\\atc-dist-01\Public\CM\AdminUITeam\CIData\7452OS_1.cab"
 ```
 
 This command imports configuration items from the files 7389_OSCI.cab and 7452OS_1.cab.
@@ -49,7 +52,7 @@ This command imports configuration items from the files 7389_OSCI.cab and 7452OS
 ### Example 2: Import configuration items and create duplicate configuration items
 
 ```powershell
-PS C:\>Import-CMConfigurationItem -FileName "\\Contoso01\Public\CM\7389_OSCI.cab","\\ Contoso01\Public\CM\7452OS_1.cab" -DuplicateWhileImporting
+PS XYZ:\>Import-CMConfigurationItem -FileName "\\Contoso01\Public\CM\7389_OSCI.cab","\\ Contoso01\Public\CM\7452OS_1.cab" -DuplicateWhileImporting
 ```
 
 This command imports configuration items from the files 7389_OSCI.cab and 7452OS_1.cab.
@@ -80,7 +83,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +101,7 @@ Use this parameter to create a configuration item when you want an exact copy of
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +117,7 @@ Specifies an array of names of cabinet (cab) files.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +135,7 @@ Use this parameter to create a configuration item when you want an exact copy of
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +153,7 @@ Use this parameter to create a configuration item when you want an exact copy of
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,8 +180,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

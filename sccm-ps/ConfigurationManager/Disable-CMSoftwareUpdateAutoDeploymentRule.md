@@ -1,14 +1,17 @@
 ---
-title: Disable-CMSoftwareUpdateAutoDeploymentRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Disables Configuration Manager deployment rules for automatic software updates.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Disable-CMSoftwareUpdateAutoDeploymentRule
+titleSuffix: Configuration Manager
 ---
 
 # Disable-CMSoftwareUpdateAutoDeploymentRule
@@ -52,22 +55,22 @@ To remove a rule permanently, use the [Remove-CMSoftwareUpdateAutoDeploymentRule
 
 ### Example 1: Disable a deployment rule by name
 ```
-PS C:\>Disable-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+PS XYZ:\>Disable-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
 ```
 
 This command disables a rule named Weekly Driver Updates.
 
 ### Example 2: Disable a deployment rule by ID
 ```
-PS C:\>Disable-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
+PS XYZ:\>Disable-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
 ```
 
 This command disables a deployment rule that has the ID 16777217.
 
 ### Example 3: Disable a deployment rule by using a variable
 ```
-PS C:\> $CMSUADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
-PS C:\> Disable-CMSoftwareUpdateAutoDeploymentRule -InputObject $CMSUADR
+PS XYZ:\> $CMSUADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+PS XYZ:\> Disable-CMSoftwareUpdateAutoDeploymentRule -InputObject $CMSUADR
 ```
 
 The first command gets a deployment rule that has the specified name, and then stores it in the $CMSUADR variable.
@@ -97,7 +100,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ To obtain a deployment rule object, use **Get-CMSoftwareUpdateAutoDeploymentRule
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +162,7 @@ Specifies a name of a rule for automatic deployment of software updates.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

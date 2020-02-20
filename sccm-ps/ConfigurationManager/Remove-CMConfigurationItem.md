@@ -1,14 +1,17 @@
 ---
-title: Remove-CMConfigurationItem
-titleSuffix: Configuration Manager
+author: mumian
 description: Removes configuration items from Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMConfigurationItem
+titleSuffix: Configuration Manager
 ---
 
 # Remove-CMConfigurationItem
@@ -20,22 +23,19 @@ Removes configuration items from Configuration Manager.
 ## SYNTAX
 
 ### SearchByIdMandatory (Default)
-
-```powershell
+```
 Remove-CMConfigurationItem [-Id] <Int32> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
-
-```powershell
+```
 Remove-CMConfigurationItem [-Name] <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
-
-```powershell
+```
 Remove-CMConfigurationItem [-InputObject] <IResultObject> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -57,7 +57,7 @@ For more information about configuration items, see [Introduction to Compliance 
 ### Example 1: Remove an item using an ID
 
 ```powershell
-PS C:\> Remove-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Remove-CMConfigurationItem -Id "16777568"
 ```
 
 This command removes a configuration item with the specified identifier.
@@ -65,7 +65,7 @@ This command removes a configuration item with the specified identifier.
 ### Example 2: Remove an item using a name
 
 ```powershell
-PS C:\> Remove-CMConfigurationItem -Name "ConfigItem76"
+PS XYZ:\> Remove-CMConfigurationItem -Name "ConfigItem76"
 ```
 
 This command removes a configuration item named ConfigItem76.
@@ -73,8 +73,8 @@ This command removes a configuration item named ConfigItem76.
 ### Example 3: Remove an item using a variable
 
 ```powershell
-PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
-PS C:\> Remove-CMConfigurationItem -InputObject $CIObj
+PS XYZ:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Remove-CMConfigurationItem -InputObject $CIObj
 ```
 
 The first command gets a configuration item with the specified identifier and stores it in the $CIObj variable.
@@ -138,7 +138,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ To obtain a configuration item object, you can use the [Get-CMConfigurationItem]
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -215,8 +215,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

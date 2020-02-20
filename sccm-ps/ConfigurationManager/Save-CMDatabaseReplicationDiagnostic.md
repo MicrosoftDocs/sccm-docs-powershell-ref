@@ -1,14 +1,17 @@
 ---
-title: Save-CMDatabaseReplicationDiagnostic
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Saves database replication diagnostic information for Configuration Manager in a file.
+external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Save-CMDatabaseReplicationDiagnostic
+titleSuffix: Configuration Manager
 ---
 
 # Save-CMDatabaseReplicationDiagnostic
@@ -36,7 +39,7 @@ Diagnostics identify problems in database replication.
 
 ### Example 1: Save database replication diagnostic
 ```
-PS C:\> Save-CMDatabaseReplicationDiagnostic -ChildSiteCode "CC2" -FileName "D:\Diagnostics\CCB_CC2_Diagnostics.csv" -ParentSiteCode "CCB"
+PS XYZ:\> Save-CMDatabaseReplicationDiagnostic -ChildSiteCode "CC2" -FileName "D:\Diagnostics\CCB_CC2_Diagnostics.csv" -ParentSiteCode "CCB"
 ```
 
 This command saves database replication diagnostics in a file named CCB_CC2_Diagnostics.csv.
@@ -81,7 +84,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +100,7 @@ This cmdlet saves database diagnostic information for database replication to th
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +115,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +131,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

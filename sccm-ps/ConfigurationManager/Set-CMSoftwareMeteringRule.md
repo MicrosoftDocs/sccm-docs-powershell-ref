@@ -1,14 +1,17 @@
 ---
-title: Set-CMSoftwareMeteringRule
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Changes properties and security scopes for Configuration Manager software metering rules.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareMeteringRule
+titleSuffix: Configuration Manager
 ---
 
 # Set-CMSoftwareMeteringRule
@@ -59,14 +62,14 @@ For more information about security scopes, see [Planning for Security in Config
 
 ### Example 1: Change locale for rules for a product
 ```
-PS C:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -LanguageID 1036
+PS XYZ:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -LanguageID 1036
 ```
 
 This command sets the locale ID for rules that include the product name Accounting Package.
 
 ### Example 2: Add a security scope to rules for a product
 ```
-PS C:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -SecurityScopeAction AddMembership -SecurityScopeName "Scope05"
+PS XYZ:\> Set-CMSoftwareMeteringRule -ProductName "Accounting Package" -SecurityScopeAction AddMembership -SecurityScopeName "Scope05"
 ```
 
 This command adds the security scope called Scope05 to rules for the product name Accounting Package.
@@ -319,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

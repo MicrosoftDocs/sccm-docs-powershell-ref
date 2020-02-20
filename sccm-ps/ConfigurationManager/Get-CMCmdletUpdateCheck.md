@@ -37,7 +37,7 @@ The **Get-CMCmdletUpdateCheck** cmdlet gets an update check configuration object
 
 ### Example 1: Get the update check configuration
 ```
-PS C:\> Get-CMCmdletUpdateCheck -CurrentUser
+PS XYZ:\> Get-CMCmdletUpdateCheck -CurrentUser
 ```
 
 This command gets the update check configuration for the current user.

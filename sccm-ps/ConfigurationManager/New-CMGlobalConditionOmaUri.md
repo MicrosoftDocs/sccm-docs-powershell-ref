@@ -1,14 +1,17 @@
 ---
-title: New-CMGlobalConditionOmaUri
-titleSuffix: Configuration Manager
+author: mumian
 description: Creates an OMA URI type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 01/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMGlobalConditionOmaUri
+titleSuffix: Configuration Manager
 ---
 
 # New-CMGlobalConditionOmaUri
@@ -19,9 +22,9 @@ Creates an OMA URI type global condition in Configuration Manager. This cmdlet i
 
 ## SYNTAX
 
-```powershell
+```
 New-CMGlobalConditionOmaUri -DataType <GlobalConditionDataType> -OmaUri <String> -Name <String>
- [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +32,8 @@ New-CMGlobalConditionOmaUri -DataType <GlobalConditionDataType> -OmaUri <String>
 The **New-CMGlobalConditionOmaUri** cmdlet creates an Oma Uri type global condition in Microsoft System Center Configuration Manager.
 
 A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
+
+## EXAMPLES
 
 ## PARAMETERS
 
@@ -129,9 +134,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

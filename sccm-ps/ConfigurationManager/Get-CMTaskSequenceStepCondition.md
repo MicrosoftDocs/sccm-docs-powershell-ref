@@ -1,14 +1,17 @@
 ---
-title: Get-CMTaskSequenceStepCondition
-titleSuffix: Configuration Manager
+author: mumian
 description: Gets a Configuration Manager task sequence step condition.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: jgao
 ms.date: 11/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMTaskSequenceStepCondition
+titleSuffix: Configuration Manager
 ---
 
 # Get-CMTaskSequenceStepCondition
@@ -19,7 +22,7 @@ Gets a Configuration Manager task sequence step condition.
 
 ## SYNTAX
 
-```powershell
+```
 Get-CMTaskSequenceStepCondition -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -33,8 +36,9 @@ The **Get-CMTaskSequenceStepCondition** cmdlet gets task sequence condition obje
 ### Example 1
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Get-CMTaskSequenceGroup -StepName $gpName | Get-CMTaskSequenceStepCondition
+PS XYZ:\>$ReferencedTaskSequence | Get-CMTaskSequenceGroup -StepName $gpName | Get-CMTaskSequenceStepCondition
 ```
+
 The command gets the task sequence condition objects from a task sequence group with a specific name.
 
 ## PARAMETERS
@@ -46,7 +50,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -62,7 +66,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +92,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -100,6 +103,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_TaskSequence_Condition
 
 IResultObject#SMS_TaskSequence_Condition
+
+## NOTES
 
 ## RELATED LINKS
 

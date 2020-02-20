@@ -1,14 +1,17 @@
 ---
-title: Add-CMServiceConnectionPoint
-titleSuffix: Configuration Manager
+author: aczechowski
 description: Adds a service connection point to a site system server.
+external help file: AdminUI.PS.HS.dll-Help.xml
+manager: dougeby
+Module Name: ConfigurationManager
+ms.author: aaroncz
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMServiceConnectionPoint
+titleSuffix: Configuration Manager
 ---
 
 # Add-CMServiceConnectionPoint
@@ -39,7 +42,7 @@ This connects Microsoft System Center Configuration Manager to Microsoft cloud s
 
 ### Example 1: Add a service connection point
 ```
-PS C:\> Add-CMServiceConnectionPoint -SiteSystemServerName "TestServer01.Contoso.com" -SiteCode PS1 -Mode Online
+PS XYZ:\> Add-CMServiceConnectionPoint -SiteSystemServerName "TestServer01.Contoso.com" -SiteCode PS1 -Mode Online
 ```
 
 This command adds the service connection point site system role to the site system server named TestServer01.Contoso.com and the site code PS1.
@@ -47,8 +50,8 @@ The command sets the mode to online.
 
 ### Example 2: Add a service connection point by using a variable
 ```
-PS C:\> $Server = Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer02.Contoso.com"
-PS C:\> Add-CMServiceConnectionPoint -InputObject $Server -Mode Online
+PS XYZ:\> $Server = Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer02.Contoso.com"
+PS XYZ:\> Add-CMServiceConnectionPoint -InputObject $Server -Mode Online
 ```
 
 The first command gets the site system server object named TestServer02.Contoso.com with the site code PS1 and stores the object in the $Server variable.
@@ -57,7 +60,7 @@ The second command adds the service connection point site system role to the sit
 
 ### Example 3: Add a service connection point by using the pipeline
 ```
-PS C:\> Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer03.Contoso.com" | Add-CMServiceConnectionPoint -Mode Online
+PS XYZ:\> Get-CMSiteSystemServer -SiteCode PS1 -SiteSystemServerName "TestServer03.Contoso.com" | Add-CMServiceConnectionPoint -Mode Online
 ```
 
 This command gets the site system server object named TestServer03.Contoso.com with the site code PS1 and uses the pipeline operator to pass the object to **Add-CMServiceConnectionPoint**, which adds the service connection point site system role to the site system server object and sets the mode to online.
@@ -85,7 +88,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +103,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +138,7 @@ Valid values are:
 ```yaml
 Type: ServiceConnectionPointMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Online, Offline
 
 Required: True
@@ -151,7 +154,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
