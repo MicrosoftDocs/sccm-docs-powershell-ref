@@ -38,7 +38,7 @@ Invoke-CMScript [-Collection <IResultObject>] [-CollectionId <String>] [-Collect
 
 ## DESCRIPTION
 
-The **Invoke-CMScript** cmdlet invokes a PowerShell script in Microsoft System Center Configuration Manager. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
+The **Invoke-CMScript** cmdlet invokes a PowerShell script in Microsoft System Center Configuration Manager. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

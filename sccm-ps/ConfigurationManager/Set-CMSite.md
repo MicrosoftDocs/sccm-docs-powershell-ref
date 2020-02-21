@@ -127,7 +127,7 @@ This command removes the custom security scope in the previous example from a Sy
 
 ### -AddActiveDirectoryForest
 Specifies an array of Active Directory Forest objects to publish in Active Directory Domain Services.
-To obtain an Active Directory Forest object, use the [Get-ADForest](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adforest?view=win10-ps) cmdlet.
+To obtain an Active Directory Forest object, use the [Get-ADForest](/powershell/module/addsadministration/get-adforest?view=win10-ps) cmdlet.
 
 ```yaml
 Type: IResultObject[]
