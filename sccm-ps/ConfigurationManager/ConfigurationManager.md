@@ -533,7 +533,7 @@ Gets a boundary group.
 Gets a boundary group relationship.
 
 ### [Get-CMBoundaryGroupSiteSystem](Get-CMBoundaryGroupSiteSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMCategory](Get-CMCategory.md)
 Gets configuration categories in Configuration Manager.
@@ -644,7 +644,7 @@ Gets the previous versions of a configuration item in Configuration Manager.
 Gets an XML definition of a configuration item in Configuration Manager.
 
 ### [Get-CMConfigurationPlatform](Get-CMConfigurationPlatform.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMConfigurationPolicy](Get-CMConfigurationPolicy.md)
 Gets a configuration policy.
@@ -713,7 +713,7 @@ Gets a Configuration Manager device.
 Gets the state of a device action.
 
 ### [Get-CMDeviceCategory](Get-CMDeviceCategory.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 Gets one or more device collections in the Configuration Manager hierarchy.
@@ -743,7 +743,7 @@ Gets a discovery method for Configuration Manager.
 Gets a distribution point.
 
 ### [Get-CMDistributionPointDriveInfo](Get-CMDistributionPointDriveInfo.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md)
 Gets distribution point groups.
@@ -803,7 +803,7 @@ Gets modifiable secured categories.
 Gets a Microsoft Intune subscription.
 
 ### [Get-CMInventoryClass](Get-CMInventoryClass.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMIosEnrollmentProfile](Get-CMIosEnrollmentProfile.md)
 Gets an ios enrollment profile.
@@ -899,10 +899,10 @@ Gets a reporting service point.
 Gets a Configuration Manager resource.
 
 ### [Get-CMResultantCollection](Get-CMResultantCollection.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMResultantDeployment](Get-CMResultantDeployment.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMResultantSettings](Get-CMResultantSettings.md)
 Gets a resultant settings.
@@ -1058,34 +1058,34 @@ Gets a tracked object.
 Gets a trusted root certificate for Configuration Manager.
 
 ### [Get-CMTSStepApplyDataImage](Get-CMTSStepApplyDataImage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepApplyDriverPackage](Get-CMTSStepApplyDriverPackage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepApplyNetworkSetting](Get-CMTSStepApplyNetworkSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepApplyOperatingSystem](Get-CMTSStepApplyOperatingSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepApplyWindowsSetting](Get-CMTSStepApplyWindowsSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepAutoApplyDriver](Get-CMTSStepAutoApplyDriver.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepCaptureNetworkSettings](Get-CMTSStepCaptureNetworkSettings.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepCaptureSystemImage](Get-CMTSStepCaptureSystemImage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepCaptureUserState](Get-CMTSStepCaptureUserState.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepCaptureWindowsSettings](Get-CMTSStepCaptureWindowsSettings.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepConditionFile](Get-CMTSStepConditionFile.md)
 Gets a TS step condition file.
@@ -1112,19 +1112,19 @@ Gets a TS step condition software.
 Gets a TS step condition variable.
 
 ### [Get-CMTSStepConnectNetworkFolder](Get-CMTSStepConnectNetworkFolder.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepConvertDisk](Get-CMTSStepConvertDisk.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepDisableBitLocker](Get-CMTSStepDisableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepDownloadPackageContent](Get-CMTSStepDownloadPackageContent.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepEnableBitLocker](Get-CMTSStepEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepInstallApplication](Get-CMTSStepInstallApplication.md)
 Gets a TS step install application.
@@ -1136,34 +1136,34 @@ Gets a TS step install software.
 Gets a TS step install update.
 
 ### [Get-CMTSStepJoinDomainWorkgroup](Get-CMTSStepJoinDomainWorkgroup.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepOfflineEnableBitLocker](Get-CMTSStepOfflineEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepPartitionDisk](Get-CMTSStepPartitionDisk.md)
 Gets a TS step partition disk.
 
 ### [Get-CMTSStepPrepareConfigMgrClient](Get-CMTSStepPrepareConfigMgrClient.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepPrepareWindows](Get-CMTSStepPrepareWindows.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepPrestartCheck](Get-CMTSStepPrestartCheck.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepReboot](Get-CMTSStepReboot.md)
 Gets a TS step reboot.
 
 ### [Get-CMTSStepReleaseStateStore](Get-CMTSStepReleaseStateStore.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepRequestStateStore](Get-CMTSStepRequestStateStore.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepRestoreUserState](Get-CMTSStepRestoreUserState.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMTSStepRunCommandLine](Get-CMTSStepRunCommandLine.md)
 Gets a TS step run command line.
@@ -1181,7 +1181,7 @@ Gets a TS step setup window and config mgr.
 Gets a TS step set variable.
 
 ### [Get-CMTSStepUpgradeOperatingSystem](Get-CMTSStepUpgradeOperatingSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Get-CMUpdateGroupDeployment](Get-CMUpdateGroupDeployment.md)
 Gets an update group deployment.
@@ -1307,13 +1307,13 @@ Installs a site update.
 Checks whether computers have Intel AMT hardware.
 
 ### [Invoke-CMAnalyzePackage](Invoke-CMAnalyzePackage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Invoke-CMBaselineSummarization](Invoke-CMBaselineSummarization.md)
 Updates configuration baseline data.
 
 ### [Invoke-CMClientAction](Invoke-CMClientAction.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Invoke-CMClientNotification](Invoke-CMClientNotification.md)
 Sends a notification to client computers to trigger an immediate client action.
@@ -1331,7 +1331,7 @@ Invokes a content redistribution.
 Validates packages on a distribution point.
 
 ### [Invoke-CMConvertPackage](Invoke-CMConvertPackage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Invoke-CMDeploymentSummarization](Invoke-CMDeploymentSummarization.md)
 Runs a Configuration Manager deployment summarization.
@@ -1433,7 +1433,7 @@ Creates an a d group discovery scope.
 Creates an administrative user.
 
 ### [New-CMAdministrativeUserPermission](New-CMAdministrativeUserPermission.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMAdvancedThreatProtectionPolicy](New-CMAdvancedThreatProtectionPolicy.md)
 Creates an advanced threat protection policy.
@@ -1448,7 +1448,7 @@ Creates an AMT Discovery and Provisioning Account.
 Creates an object that specifies antimalware policies.
 
 ### [New-CMAntimalwarePolicyDeployment](New-CMAntimalwarePolicyDeployment.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMApnsCertificateRequest](New-CMApnsCertificateRequest.md)
 Creates an APNS certificate request.
@@ -1460,7 +1460,7 @@ Creates an application.
 Creates an application deployment.
 
 ### [New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMAppVVirtualEnvironment](New-CMAppVVirtualEnvironment.md)
 Creates an App-V virtual environment.
@@ -1529,7 +1529,7 @@ Creates a cloud management gateway.
 Creates a Configuration Manager collection.
 
 ### [New-CMCoManagementPolicy](New-CMCoManagementPolicy.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMComplianceRuleAssembly](New-CMComplianceRuleAssembly.md)
 Creates a compliance rule assembly.
@@ -1601,7 +1601,7 @@ Creates a detection clause registry key value.
 Creates a detection clause windows installer.
 
 ### [New-CMDeviceCategory](New-CMDeviceCategory.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMDeviceCollection](New-CMDeviceCollection.md)
 Creates a collection for devices and adds the collection to the Configuration Manager hierarchy.
@@ -1673,7 +1673,7 @@ Configures security options for a Microsoft Exchange Server connector in Configu
 Creates a file replication route for Configuration Manager.
 
 ### [New-CMFileSystemAccessControlEntry](New-CMFileSystemAccessControlEntry.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMGlobalCondition](New-CMGlobalCondition.md)
 Creates a Configuration Manager global condition object.
@@ -1685,7 +1685,7 @@ Creates a new Active Directory Query type global condition in Configuration Mana
 Creates an Assembly type global condition in Configuration Manager.
 
 ### [New-CMGlobalConditionExpression](New-CMGlobalConditionExpression.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMGlobalConditionFile](New-CMGlobalConditionFile.md)
 Creates a File System type global condition in Configuration Manager.
@@ -1721,7 +1721,7 @@ Creates a Configuration Manager hardware requirement object for a product.
 Creates an installation source file for Configuration Manager.
 
 ### [New-CMInventoryReportClass](New-CMInventoryReportClass.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMIosEnrollmentProfile](New-CMIosEnrollmentProfile.md)
 Creates an ios enrollment profile.
@@ -1766,58 +1766,58 @@ Creates a new program in Configuration Manager.
 Creates a Configuration Manager query.
 
 ### [New-CMRegistryAccessControlEntry](New-CMRegistryAccessControlEntry.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRemoteConnectionProfileConfigurationItem](New-CMRemoteConnectionProfileConfigurationItem.md)
 Creates a remote connection profile.
 
 ### [New-CMRequirementRuleActiveDirectorySiteValue](New-CMRequirementRuleActiveDirectorySiteValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleBooleanValue](New-CMRequirementRuleBooleanValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleCMSiteValue](New-CMRequirementRuleCMSiteValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleCommonValue](New-CMRequirementRuleCommonValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleDeviceOwnershipValue](New-CMRequirementRuleDeviceOwnershipValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleExistential](New-CMRequirementRuleExistential.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleExpression](New-CMRequirementRuleExpression.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleFileAttributeValue](New-CMRequirementRuleFileAttributeValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleFilePermissionValue](New-CMRequirementRuleFilePermissionValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleFreeDiskSpaceValue](New-CMRequirementRuleFreeDiskSpaceValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleInputTypeValue](New-CMRequirementRuleInputTypeValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleOperatingSystemLanguageValue](New-CMRequirementRuleOperatingSystemLanguageValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleOperatingSystemValue](New-CMRequirementRuleOperatingSystemValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleOUValue](New-CMRequirementRuleOUValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleRegistryKeyPermissionValue](New-CMRequirementRuleRegistryKeyPermissionValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRequirementRuleScreenResolutionValue](New-CMRequirementRuleScreenResolutionValue.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMRootCertificateProfileConfigurationItem](New-CMRootCertificateProfileConfigurationItem.md)
 Creates a root certificate profile.
@@ -1826,7 +1826,7 @@ Creates a root certificate profile.
 Creates a Configuration Manager schedule token.
 
 ### [New-CMScript](New-CMScript.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMSecondarySite](New-CMSecondarySite.md)
 Creates a secondary site in Configuration Manager.
@@ -1883,43 +1883,43 @@ Creates task sequence media in System Center Configuration Manager.
 Creates a root certificate profile.
 
 ### [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
 Creates a root certificate profile.
 
 ### [New-CMTSRule](New-CMTSRule.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepApplyDataImage](New-CMTSStepApplyDataImage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepApplyDriverPackage](New-CMTSStepApplyDriverPackage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepApplyNetworkSetting](New-CMTSStepApplyNetworkSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepApplyOperatingSystem](New-CMTSStepApplyOperatingSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepApplyWindowsSetting](New-CMTSStepApplyWindowsSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepAutoApplyDriver](New-CMTSStepAutoApplyDriver.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepCaptureNetworkSettings](New-CMTSStepCaptureNetworkSettings.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepCaptureSystemImage](New-CMTSStepCaptureSystemImage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepCaptureUserState](New-CMTSStepCaptureUserState.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepCaptureWindowsSettings](New-CMTSStepCaptureWindowsSettings.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
 Creates a t s step condition file.
@@ -1934,7 +1934,7 @@ Creates a t s step condition if statement.
 Creates a t s step condition operating system.
 
 ### [New-CMTSStepConditionOperatingSystemLanguage](New-CMTSStepConditionOperatingSystemLanguage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepConditionQueryWmi](New-CMTSStepConditionQueryWmi.md)
 Creates a t s step condition query wmi.
@@ -1949,19 +1949,19 @@ Creates a t s step condition software.
 Creates a t s step condition variable.
 
 ### [New-CMTSStepConnectNetworkFolder](New-CMTSStepConnectNetworkFolder.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepConvertDisk](New-CMTSStepConvertDisk.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepDisableBitLocker](New-CMTSStepDisableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepDownloadPackageContent](New-CMTSStepDownloadPackageContent.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepEnableBitLocker](New-CMTSStepEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepInstallApplication](New-CMTSStepInstallApplication.md)
 Creates a t s step install application.
@@ -1973,34 +1973,34 @@ Creates a t s step install software.
 Creates a t s step install update.
 
 ### [New-CMTSStepJoinDomainWorkgroup](New-CMTSStepJoinDomainWorkgroup.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepOfflineEnableBitLocker](New-CMTSStepOfflineEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepPartitionDisk](New-CMTSStepPartitionDisk.md)
 Creates a t s step partition disk.
 
 ### [New-CMTSStepPrepareConfigMgrClient](New-CMTSStepPrepareConfigMgrClient.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepPrepareWindows](New-CMTSStepPrepareWindows.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepPrestartCheck](New-CMTSStepPrestartCheck.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepReboot](New-CMTSStepReboot.md)
 Creates a t s step reboot.
 
 ### [New-CMTSStepReleaseStateStore](New-CMTSStepReleaseStateStore.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepRequestStateStore](New-CMTSStepRequestStateStore.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepRestoreUserState](New-CMTSStepRestoreUserState.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMTSStepRunCommandLine](New-CMTSStepRunCommandLine.md)
 Creates a t s step run command line.
@@ -2018,7 +2018,7 @@ Creates a t s step setup windows and config mgr.
 Creates a t s step set variable.
 
 ### [New-CMTSStepUpgradeOperatingSystem](New-CMTSStepUpgradeOperatingSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [New-CMUserCollection](New-CMUserCollection.md)
 Creates a collection for users and adds the collection to the Configuration Manager hierarchy.
@@ -2048,7 +2048,7 @@ Creates a Windows 10 servicing plan.
 Creates a profile that specifies settings for AMT-based computers on a wired network.
 
 ### [New-CMWirelessProfile](New-CMWirelessProfile.md)
-{{Placeholder}}
+
 
 ### [New-CMWirelessProfileConfigurationItem](New-CMWirelessProfileConfigurationItem.md)
 Creates a wireless profile.
@@ -2237,7 +2237,7 @@ Removes a client device from Configuration Manager.
 Removes device affinity from a Configuration Manager user.
 
 ### [Remove-CMDeviceCategory](Remove-CMDeviceCategory.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMDeviceCollectionDirectMembershipRule](Remove-CMDeviceCollectionDirectMembershipRule.md)
 Removes a direct membership rule from a device collection.
@@ -2420,49 +2420,49 @@ Removes a Configuration Manager task sequence group.
 Removes a Configuration Manager task sequence step.
 
 ### [Remove-CMTSStepApplyDataImage](Remove-CMTSStepApplyDataImage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepApplyDriverPackage](Remove-CMTSStepApplyDriverPackage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepApplyNetworkSetting](Remove-CMTSStepApplyNetworkSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepApplyOperatingSystem](Remove-CMTSStepApplyOperatingSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepApplyWindowsSetting](Remove-CMTSStepApplyWindowsSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepAutoApplyDriver](Remove-CMTSStepAutoApplyDriver.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepCaptureNetworkSettings](Remove-CMTSStepCaptureNetworkSettings.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepCaptureSystemImage](Remove-CMTSStepCaptureSystemImage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepCaptureUserState](Remove-CMTSStepCaptureUserState.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepCaptureWindowsSettings](Remove-CMTSStepCaptureWindowsSettings.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepConnectNetworkFolder](Remove-CMTSStepConnectNetworkFolder.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepConvertDisk](Remove-CMTSStepConvertDisk.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepDisableBitLocker](Remove-CMTSStepDisableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepDownloadPackageContent](Remove-CMTSStepDownloadPackageContent.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepEnableBitLocker](Remove-CMTSStepEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepInstallApplication](Remove-CMTSStepInstallApplication.md)
 Removes a TS step install application.
@@ -2474,34 +2474,34 @@ Removes a TS step install software.
 Removes a TS step install update.
 
 ### [Remove-CMTSStepJoinDomainWorkgroup](Remove-CMTSStepJoinDomainWorkgroup.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepOfflineEnableBitLocker](Remove-CMTSStepOfflineEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepPartitionDisk](Remove-CMTSStepPartitionDisk.md)
 Removes a TS step partition disk.
 
 ### [Remove-CMTSStepPrepareConfigMgrClient](Remove-CMTSStepPrepareConfigMgrClient.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepPrepareWindows](Remove-CMTSStepPrepareWindows.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepPrestartCheck](Remove-CMTSStepPrestartCheck.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepReboot](Remove-CMTSStepReboot.md)
 Removes a TS step reboot
 
 ### [Remove-CMTSStepReleaseStateStore](Remove-CMTSStepReleaseStateStore.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepRequestStateStore](Remove-CMTSStepRequestStateStore.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepRestoreUserState](Remove-CMTSStepRestoreUserState.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMTSStepRunCommandLine](Remove-CMTSStepRunCommandLine.md)
 Removes a TS step run command line
@@ -2519,7 +2519,7 @@ Removes a TS step setup windows and config mgr
 Removes a TS step set variable
 
 ### [Remove-CMTSStepUpgradeOperatingSystem](Remove-CMTSStepUpgradeOperatingSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Remove-CMUpdateGroupDeployment](Remove-CMUpdateGroupDeployment.md)
 Removes an update group deployment.
@@ -2705,7 +2705,7 @@ Sets a client setting computer agent.
 Sets a client setting computer restart.
 
 ### [Set-CMClientSettingDeliveryOptimization](Set-CMClientSettingDeliveryOptimization.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMClientSettingEndpointProtection](Set-CMClientSettingEndpointProtection.md)
 Sets a client setting endpoint protection.
@@ -2729,7 +2729,7 @@ Sets a client setting power management.
 Sets a client setting remote tool.
 
 ### [Set-CMClientSettingSoftwareCenter](Set-CMClientSettingSoftwareCenter.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMClientSettingSoftwareDeployment](Set-CMClientSettingSoftwareDeployment.md)
 Sets a client setting software deployment.
@@ -2750,7 +2750,7 @@ Sets a client setting state messaging.
 Sets a client setting user and device affinity.
 
 ### [Set-CMClientSettingWindowsAnalytics](Set-CMClientSettingWindowsAnalytics.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMClientStatusSetting](Set-CMClientStatusSetting.md)
 Modifies client status settings.
@@ -2879,7 +2879,7 @@ Sets a deployment type dependency group in Configuration Manager.
 Sets a deployment type supersedence in Configuration Manager.
 
 ### [Set-CMDeviceCategory](Set-CMDeviceCategory.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMDeviceCollectionVariable](Set-CMDeviceCollectionVariable.md)
 Sets a device collection variable.
@@ -3176,49 +3176,49 @@ Creates a task sequence deployment in Configuration Manager.
 Sets a Configuration Manager task sequence group.
 
 ### [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepApplyDriverPackage](Set-CMTSStepApplyDriverPackage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepApplyNetworkSetting](Set-CMTSStepApplyNetworkSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepApplyOperatingSystem](Set-CMTSStepApplyOperatingSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepApplyWindowsSetting](Set-CMTSStepApplyWindowsSetting.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepAutoApplyDriver](Set-CMTSStepAutoApplyDriver.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepCaptureNetworkSettings](Set-CMTSStepCaptureNetworkSettings.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepCaptureSystemImage](Set-CMTSStepCaptureSystemImage.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepCaptureUserState](Set-CMTSStepCaptureUserState.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepCaptureWindowsSettings](Set-CMTSStepCaptureWindowsSettings.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepConnectNetworkFolder](Set-CMTSStepConnectNetworkFolder.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepConvertDisk](Set-CMTSStepConvertDisk.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepDisableBitLocker](Set-CMTSStepDisableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepDownloadPackageContent](Set-CMTSStepDownloadPackageContent.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepEnableBitLocker](Set-CMTSStepEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepInstallApplication](Set-CMTSStepInstallApplication.md)
 Sets a TS step install application.
@@ -3230,34 +3230,34 @@ Sets a TS step install software.
 Sets a TS step install update.
 
 ### [Set-CMTSStepJoinDomainWorkgroup](Set-CMTSStepJoinDomainWorkgroup.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepOfflineEnableBitLocker](Set-CMTSStepOfflineEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepPartitionDisk](Set-CMTSStepPartitionDisk.md)
 Sets a TS step partition disk.
 
 ### [Set-CMTSStepPrepareConfigMgrClient](Set-CMTSStepPrepareConfigMgrClient.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepPrepareWindows](Set-CMTSStepPrepareWindows.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepPrestartCheck](Set-CMTSStepPrestartCheck.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepReboot](Set-CMTSStepReboot.md)
 Sets a TS step reboot.
 
 ### [Set-CMTSStepReleaseStateStore](Set-CMTSStepReleaseStateStore.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepRequestStateStore](Set-CMTSStepRequestStateStore.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepRestoreUserState](Set-CMTSStepRestoreUserState.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMTSStepRunCommandLine](Set-CMTSStepRunCommandLine.md)
 Sets a TS step run command line.
@@ -3275,7 +3275,7 @@ Sets a TS step setup window and config mgr.
 Sets a TS step set variable.
 
 ### [Set-CMTSStepUpgradeOperatingSystem](Set-CMTSStepUpgradeOperatingSystem.md)
-{{ Fill in the Synopsis }}
+
 
 ### [Set-CMUpdateGroupDeployment](Set-CMUpdateGroupDeployment.md)
 Sets an update group deployment.
