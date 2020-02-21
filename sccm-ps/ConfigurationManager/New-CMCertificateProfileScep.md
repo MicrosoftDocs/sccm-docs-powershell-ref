@@ -39,6 +39,11 @@ The **New-CMCertificateProfileScep** cmdlet creates a Simple Certificate Enrollm
 Note:  You must create a trusted CA certificate profile before you can create an SCEP certificate profile.
 For information about creating a trusted CA certificate profile, see the New-CMCertificateProfileTrustedRootCA cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a SCEP certificate profile

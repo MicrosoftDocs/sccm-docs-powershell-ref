@@ -44,6 +44,11 @@ You can add, modify, or delete your own hardware requirements, but you cannot ch
 You can use this cmdlet to modify the minimum requirements associated with a software product or change the name that Configuration Manager uses for a product.
 You can specify a product by name or obtain a product by using the **Get-CMHardwareRequirement** cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change minimum RAM value

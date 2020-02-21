@@ -44,6 +44,11 @@ The **Remove-CMSoftwareUpdateGroup** cmdlet removes software update groups from 
 You can specify each software update group that you are removing by using the group IDs or names.
 If you remove a software update group, you can use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet to return a software update group object and use that object to specify the group that you want to remove.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a software update group by using an ID
@@ -62,7 +67,7 @@ This command removes the software update group named SUGroupD01.
 
 ### Example 3: Remove a software update group by using an object variable
 ```
-PS XYZ:\> $SubObj=Get-CMSoftwareUpdateGroup -Id "ST10000B" 
+PS XYZ:\> $SubObj=Get-CMSoftwareUpdateGroup -Id "ST10000B"
 PS XYZ:\> Remove-CMSoftwareUpdateGroup -SoftwareUpdateGroup $SubObj
 ```
 

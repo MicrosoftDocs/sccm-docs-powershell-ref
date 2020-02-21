@@ -36,6 +36,11 @@ Rename-CMCategory -Name <String> -CategoryType <CategoryType> -NewName <String> 
 ## DESCRIPTION
 The **Rename-CMCategory** cmdlet renames a category instance.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Rename a category by getting a category object

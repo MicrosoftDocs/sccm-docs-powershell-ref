@@ -102,6 +102,11 @@ A distribution point is a site system role that Microsoft System Center Configur
 You must designate a site system server as a distribution point before you can make content available to client computers.
 You can add the distribution point site role to a new site system server or add the site role to an existing site system server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a site by using a site system server object
@@ -672,7 +677,7 @@ Specifies the primary package share location.
 Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the *MinimumFreeSpaceMB* parameter.
 Valid values are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
@@ -723,7 +728,7 @@ Accept wildcard characters: False
 Specifies the secondary content location.
 Valid values are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
@@ -743,7 +748,7 @@ Accept wildcard characters: False
 Specifies the secondary package share location.
 Valid values are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
@@ -867,7 +872,7 @@ Accept wildcard characters: False
 
 ### -UserDeviceAffinity
 Specifies how you want the distribution point to associate users with their devices for PXE deployments.
-Valid values are: 
+Valid values are:
 
 - AllowWithAutomaticApproval
 - AllowWithManualApproval

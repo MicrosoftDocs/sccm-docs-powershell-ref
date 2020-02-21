@@ -41,6 +41,11 @@ The **Enable-CMAutomaticAMTProvisioning** cmdlet enables automatic provisioning 
 After System Center Configuration Manager identifies computers with an AMT management controller from an out of band service point, you can use this cmdlet to enable automatic provision of the computers.
 An out of band service point is a site system role that provisions and configures Intel Active Management Technology (AMT)-based computers for System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable automatic provisioning of an AMT-based computers
@@ -73,7 +78,7 @@ To obtain a **CMDevice** object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -115,7 +120,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +134,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None

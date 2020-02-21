@@ -160,6 +160,11 @@ Invoke-CMContentValidation [-CollectionName <String[]>] [-DistributionPointGroup
 The **Invoke-CMContentValidation** cmdlet validates one or more packages on a distribution point.
 Validating the content ensures that the entire set of files transferred successfully to the distribution point.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Validate content for an application

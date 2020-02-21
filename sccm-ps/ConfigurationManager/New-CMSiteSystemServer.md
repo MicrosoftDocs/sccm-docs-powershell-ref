@@ -33,6 +33,11 @@ The **New-CMSiteSystemServer** cmdlet creates a site system server in Microsoft 
 A site system server provides functionality to a configuration management site, such as communication between a Configuration Manager server and Configuration Manager clients.
 You can designate a new server as a site system server and add the site system roles, or install site system roles to an existing site system server in the site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a site system server

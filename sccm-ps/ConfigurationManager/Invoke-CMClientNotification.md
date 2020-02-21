@@ -25,6 +25,11 @@ Sends a notification to client computers to trigger an immediate client action.
 The **Invoke-CMClientNotification** cmdlet sends a notification to client computers to trigger an immediate client action.
 You can specify one or more client computers, or send a notification to all the computers in a specified device collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Send a notification to trigger an event

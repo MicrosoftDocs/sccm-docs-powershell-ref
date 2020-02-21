@@ -66,6 +66,11 @@ This process also copies the existing content that is on the distributing point 
 The upgrade process then modifies the copy of the content to create the System Center Configuration Manager single instance store for use with System Center Configuration Manager content deployment.
 Therefore, when you upgrade a distribution point, you do not have to redistribute migrated content that was hosted on the Configuration Manager 2007 distribution point.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Upgrade a shared distribution point

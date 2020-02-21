@@ -60,6 +60,11 @@ New-CMPowerManagementCustomPlan [-Name <String>] [-Description <String>] [-NonPe
 ## DESCRIPTION
 The **New-CMPowerManagementCustomPlan** cmdlet creates a custom power management plan.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create parameters for a custom power management plan and store them in a variable
@@ -191,7 +196,7 @@ Accept wildcard characters: False
 
 ### -CriticalBatteryAC
 Specifies the action to take when the computer's battery reaches the specified critical battery notification when the device is plugged in.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -213,7 +218,7 @@ Accept wildcard characters: False
 
 ### -CriticalBatteryDC
 Specifies the action to take when the computer's battery reaches the specified critical battery notification when the device is running on batter power.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -370,7 +375,7 @@ Accept wildcard characters: False
 
 ### -LidDownAC
 Specifies the action that occurs when the user closes the lid of a portable computer when the device is plugged in.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -392,7 +397,7 @@ Accept wildcard characters: False
 
 ### -LidDownDC
 Specifies the action that occurs when the user closes the lid of a portable computer when the device is running on battery power.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -414,7 +419,7 @@ Accept wildcard characters: False
 
 ### -LowBatteryAC
 Specifies the action that occurs when the computer's battery reaches the specified low battery notification level when the device is plugged in.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -436,7 +441,7 @@ Accept wildcard characters: False
 
 ### -LowBatteryDC
 Specifies the action that occurs when the computer's battery reaches the specified low battery notification level when the device is running on battery power.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -728,7 +733,7 @@ Accept wildcard characters: False
 
 ### -PowerButtonAC
 Specifies the action that is taken when the computer's power button is pressed when the device is plugged in.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -750,7 +755,7 @@ Accept wildcard characters: False
 
 ### -PowerButtonDC
 Specifies the action that is taken when the computer's power button is pressed when the device is running on battery power.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -802,7 +807,7 @@ Accept wildcard characters: False
 
 ### -SleepButtonAC
 Specifies the action that occurs when you press the computer's Sleep button when the device is plugged in.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -824,7 +829,7 @@ Accept wildcard characters: False
 
 ### -SleepButtonDC
 Specifies the action that occurs when you press the computer's Sleep button when the device is running on battery power.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -906,7 +911,7 @@ Accept wildcard characters: False
 
 ### -StartButtonAC
 Specifies the action that occurs when you press the computer's Start menu power button when the device is plugged in.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep
@@ -928,7 +933,7 @@ Accept wildcard characters: False
 
 ### -StartButtonDC
 Specifies the action that occurs when you press the computer's Start menu power button when the device is running on battery power.
-Valid values are: 
+Valid values are:
 
 - None
 - Sleep

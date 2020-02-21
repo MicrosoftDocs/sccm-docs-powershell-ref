@@ -42,6 +42,11 @@ The **Deny-CMUserDeviceAffinityRequest** cmdlet denies a request for user device
 
 In Microsoft System Center Configuration Manager, user device affinity defines a relationship between a user and a device.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Deny a request for user device affinity

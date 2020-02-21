@@ -29,6 +29,11 @@ Convert-CMApplication -InputObject <PSObject> [-DisableWildcardHandling] [-Force
 ## DESCRIPTION
 The **Convert-CMApplication** cmdlet converts an application object to an application SDK object or an application SDK object to an application object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an application object and convert it

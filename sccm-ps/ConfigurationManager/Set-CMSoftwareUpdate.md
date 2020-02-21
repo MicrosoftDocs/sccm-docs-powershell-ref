@@ -45,6 +45,11 @@ The **Set-CMSoftwareUpdate** cmdlet changes configuration settings for a softwar
 You can use this cmdlet to set the severity and the maximum run time for an update.
 A software update is an update to Windows or other software that Microsoft System Center Configuration Manager applies to a collection of computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a software update and change its settings

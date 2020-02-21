@@ -46,6 +46,11 @@ Set-CMCertificateProfileTrustedRootCA [-Description <String>] [-DestinationStore
 ## DESCRIPTION
 The **Set-CMCertificateProfileTrustedRootCA** cmdlet changes the settings of a trusted CA certificate profile.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set a trusted CA certificate profile by using the pipeline

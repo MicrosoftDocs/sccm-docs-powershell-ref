@@ -86,6 +86,11 @@ New-CMTaskSequence [-CustomTaskSequence] -Name <String> [-Description <String>] 
 The **New-CMTaskSequence** cmdlet creates a task sequence.
 A task sequence performs multiple steps or tasks on a Microsoft System Center Configuration Manager client computer without user intervention.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a custom task sequence
@@ -618,7 +623,7 @@ Accept wildcard characters: False
 ### -JoinDomain
 
 Specifies the destination computer to add to a workgroup or domain.
-Valid values are: 
+Valid values are:
 
 - DomainType
 - WorkgroupType
@@ -817,7 +822,7 @@ Accept wildcard characters: False
 ### -SoftwareUpdateStyle
 
 Specifies whether the task sequence installs all updates or only mandatory updates for the destination computers that receive the task sequence.
-Valid values are: 
+Valid values are:
 
 - All
 - Mandatory

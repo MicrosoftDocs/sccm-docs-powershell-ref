@@ -31,6 +31,11 @@ The **Get-CMSite** cmdlet gets one or more Microsoft System Center Configuration
 A System Center Configuration Manager site is a server that has clients assigned to it and that processes client-generated data.
 You can get a Configuration Manager site by using either a site name or a site code.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a site by using a site name

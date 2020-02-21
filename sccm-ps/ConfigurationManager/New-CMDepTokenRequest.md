@@ -29,6 +29,11 @@ New-CMDepTokenRequest -IntuneCredential <PSCredential> [-OutputPath <String>] [-
 ## DESCRIPTION
 The **New-DepTokenRequest** cmdlet requests a public certificate from Microsoft Intune that can be used to download an encrypted DEP token from the Apple Deployment Program portal. Apple uses the public token to encrypt the DEP token. You need to provide a Microsoft Intune organizational account by using the *IntuneCredential* parameter.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a DEP token request

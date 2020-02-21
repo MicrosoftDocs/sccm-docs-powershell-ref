@@ -30,6 +30,11 @@ Get-CMStatusReportingComponent [-SiteSystemServerName <String>] [-SiteCode <Stri
 The **Get-CMStatusReportingComponent** cmdlet gets an object that represents the status reporting component.
 This object provides information about the client configuration and server configuration components.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get status reporting components

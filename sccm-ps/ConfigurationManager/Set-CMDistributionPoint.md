@@ -68,6 +68,11 @@ Set-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
 ## DESCRIPTION
 The **Set-CMDistributionPoint** cmdlet modifies a distribution point on a site system server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set properties of a distribution point
@@ -239,7 +244,7 @@ Accept wildcard characters: False
 
 ### -ClientCommunicationType
 Specifies how clients or devices communicate with the distribution point.
-Valid values are: 
+Valid values are:
 
 - HTTP
 - HTTPS
@@ -285,7 +290,7 @@ Valid values are:
 - None
 - Profile100Mbps
 - Profile10Mbps
-- Profile1Gbps 
+- Profile1Gbps
 - ProfileCustom
 
 ```yaml

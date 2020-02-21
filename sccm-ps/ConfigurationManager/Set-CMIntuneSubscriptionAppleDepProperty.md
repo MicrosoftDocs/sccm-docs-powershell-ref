@@ -30,6 +30,11 @@ Set-CMIntuneSubscriptionAppleDepProperty [-Enable <Boolean>] [-DepTokenPath <Str
 ## DESCRIPTION
 The **Set-CMIntuneSubscriptionAppleDepProperty** cmdlet updates the settings of a Microsoft Intune subscription to enable the Apple Device Enrollment Program (DEP).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable the Apple DEP

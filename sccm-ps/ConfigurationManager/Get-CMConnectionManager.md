@@ -29,6 +29,11 @@ Get-CMConnectionManager [-DisableWildcardHandling] [-ForceWildcardHandling] [<Co
 The **Get-CMConnectionManager** cmdlet gets the Connection Manager instance associated with the currently-connected site server.
 The Connection Manager instance can be used for directly communicating with the SMS Provider.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a Connection Manager instance

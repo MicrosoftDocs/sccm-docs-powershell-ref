@@ -43,6 +43,11 @@ Remove-CMMaintenanceWindow [-CollectionName] <String> -MaintenanceWindowName <St
 The **Remove-CMMaintenanceWindow** cmdlet removes a maintenance window associated with a collection.
 If you remove a maintenance window during that window, the maintenance updates finish installation.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a maintenance window

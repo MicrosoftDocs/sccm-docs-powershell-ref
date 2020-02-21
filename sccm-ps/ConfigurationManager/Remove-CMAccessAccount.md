@@ -122,6 +122,11 @@ The **Remove-CMAccessAccount** cmdlet removes users or groups from an access acc
 An access account is a list of users or groups that can access an established service or application that is located on a distribution point.
 For example, members in the Software Update Point Connection Access Account can access two services to manage software updates: Windows Server Update Services (WSUS) and WSUS Synchronization Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a user from an access account for an application by using its name
@@ -134,7 +139,7 @@ You must confirm the action before the command performs it.
 
 ### Example 2: Remove a group from an access account for a package by using its ID
 ```
-PS XYZ:\> $ID = Get-CMAccessAccount -PackageId "CM1100002" 
+PS XYZ:\> $ID = Get-CMAccessAccount -PackageId "CM1100002"
 PS XYZ:\> Remove-CMAccessAccount -PackageId $ID -Type WindowsGroup -UserName "CONTOSO\Guest"
 ```
 
@@ -313,8 +318,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

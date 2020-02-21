@@ -44,6 +44,11 @@ The **Remove-CMConfigurationPolicy** cmdlet removes a configuration policy.
 A configuration policy can be an email profile, a firewall policy, or others.
 See the Alias section for additional policy types that you can use this cmdlet to remove.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a configuration policy by ID

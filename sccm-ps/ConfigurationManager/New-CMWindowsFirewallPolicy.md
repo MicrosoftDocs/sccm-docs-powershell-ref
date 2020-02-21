@@ -37,6 +37,11 @@ Windows Firewall allows or denies incoming connections to an IP address.
 The blocking actions allow or deny incoming traffic based on a network location type.
 The network location types are: domain, public, and private.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a Windows Firewall policy
@@ -128,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainTurnOnFirewall
-Specifies whether to turn on a firewall for a domain type of network location. 
+Specifies whether to turn on a firewall for a domain type of network location.
 The acceptable values for this parameter are:
 
 - No
@@ -179,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateBlockAllInboundTraffic
-Specifies whether to block all incoming traffic for a private type of network location. 
+Specifies whether to block all incoming traffic for a private type of network location.
 The acceptable values for this parameter are:
 
 - No
@@ -214,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateTurnOnFirewall
-Specifies whether to turn on a firewall for a private type of network location. 
+Specifies whether to turn on a firewall for a private type of network location.
 The acceptable values for this parameter are:
 
 - No
@@ -235,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicBlockAllInboundTraffic
-Specifies whether to block all incoming traffic for a public type of network location. 
+Specifies whether to block all incoming traffic for a public type of network location.
 The acceptable values for this parameter are:
 
 - No
@@ -270,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicTurnOnFirewall
-Specifies whether to enable Windows Firewall for a public network location. 
+Specifies whether to enable Windows Firewall for a public network location.
 The acceptable values for this parameter are:
 
 - No

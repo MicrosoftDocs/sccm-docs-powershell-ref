@@ -48,6 +48,11 @@ When you remove a package, System Center Configuration Manager removes it from t
 If the package was sent to child sites, System Center Configuration Manager removes the package information at those child sites.
 If a compressed version of source files for the package exists, System Center Configuration Manager deletes the compressed file from the site server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a package

@@ -31,6 +31,11 @@ The **Sync-CMSoftwareUpdate** cmdlet retrieves metadata for software updates.
 Software updates synchronization in Configuration Manager uses Microsoft Update to retrieve software updates metadata.
 You can use this cmdlet to retrieve metadata for all software updates or only recent changes to software updates.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Perform a full synchronization for all software updates

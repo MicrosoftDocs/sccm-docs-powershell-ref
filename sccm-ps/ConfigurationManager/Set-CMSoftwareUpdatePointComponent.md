@@ -75,6 +75,11 @@ A software update point component interacts with a Windows Server Update Service
 
 You can specify a software update point to modify by name, by site code, or by using the [Get-CMSoftwareUpdatePointComponent](Get-CMSoftwareUpdatePointComponent.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a software update point

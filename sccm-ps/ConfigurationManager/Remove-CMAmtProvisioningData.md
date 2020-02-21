@@ -45,6 +45,11 @@ You can either remove all configuration data or retain identification informatio
 By default, System Center Configuration Manager automatically reprovisions Intel AMT-based computers if you have configured Intel AMT provisioning.
 Use the *ControlType* parameter to control reprovisioning for individual computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove provisioning information completely for a specified computer
@@ -100,7 +105,7 @@ Resets Intel AMT to the factory default settings, except for identification info
 ```yaml
 Type: RemoteControlType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DiscoveryBmc, PartialUnprovision, FullUnprovision, FullUnprovisionSuppressAuto, PartialUnprovisionSuppressAuto, KerberosFullUnprovision, KerberosFullUnprovisionSuppressAuto, KerberosPartialUnprovision, KerberosPartialUnprovisionSuppressAuto, Unsuppress, EnableAudit, DisableAudit, ClearAuditLog
 Required: True
 Position: Named
@@ -158,7 +163,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +177,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -205,7 +210,7 @@ Resets Intel AMT to the factory default settings, except for identification info
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None

@@ -34,6 +34,11 @@ Status filter rules specify how System Center Configuration Manager responds to 
 Each filter rule contains criteria and actions for status messages.
 You configure status filter rules for each site, not across all sites.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get rules for a specified site

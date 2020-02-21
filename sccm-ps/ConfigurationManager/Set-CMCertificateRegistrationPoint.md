@@ -39,6 +39,11 @@ Set-CMCertificateRegistrationPoint [-AddCertificate <Hashtable>] [-ConnectionAcc
 ## DESCRIPTION
 The **Set-CMCertificateRegistrationPoint** cmdlet updates the settings of a certificate registration point role on a site system server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set a certificate registration point role by using the pipeline

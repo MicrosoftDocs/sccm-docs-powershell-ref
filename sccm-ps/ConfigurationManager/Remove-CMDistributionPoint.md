@@ -37,6 +37,11 @@ Remove-CMDistributionPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName]
 The **Remove-CMDistributionPoint** cmdlet removes a distribution point.
 When you remove a distribution point, you remove the designation of a site system server to function as a distribution center for content files for applications, packages, software updates, and operating system deployment.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a distribution point by using the pipeline

@@ -43,6 +43,11 @@ Remove-CMVhd -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardH
 The **Remove-CMVhd** cmdlet removes one or more virtual hard disk (VHD) images from the operating system deployment feature.
 This cmdlet does not delete VHD images.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a VHD image

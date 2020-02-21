@@ -44,6 +44,11 @@ The **Set-CMDeviceOwnership** cmdlet configures ownership type for a modern devi
 For a personal device, the information gathered is limited, and personal information is not removed during a wipe operation.
 For a company-owned device, additional information can be gathered and deleted during a wipe operation.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Identify a device as a company asset

@@ -33,6 +33,11 @@ The **Get-CMCmdletUpdateCheck** cmdlet gets an update check configuration object
 
 **Note:** This cmdlet is deprecated starting with version 1610, and may be removed in a future release.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get the update check configuration
@@ -109,7 +114,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.Common.Update.CMCmdletUpdateConfiguration
+### Microsoft.ConfigurationManagement.cmdlets.Common.Update.CMCmdletUpdateConfiguration
 
 ## NOTES
 

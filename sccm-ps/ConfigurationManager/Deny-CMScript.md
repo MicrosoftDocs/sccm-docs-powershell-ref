@@ -39,6 +39,11 @@ Deny-CMScript -ScriptGuid <String> [-Comment <String>] [-DisableWildcardHandling
 The **Deny-CMScript** cmdlet denies a Microsoft System Center Configuration Manager Powershell script.  System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
 You can deny a specific script by specifying the script object or the name of the script.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Deny a script by using the script id

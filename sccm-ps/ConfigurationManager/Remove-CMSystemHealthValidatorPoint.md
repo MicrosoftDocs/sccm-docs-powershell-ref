@@ -37,6 +37,11 @@ You can specify a validator point by site system name or site code or both or yo
 
 Before you remove a system health validator point, make sure that there is another system health validator point for the site, or that the server that is running NPS has policies that grant network access and do not reference the System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a validator point
@@ -49,7 +54,7 @@ The command specifies the site code and the name of the server that hosts that s
 
 ### Example 2: Remove a validator point by using a variable
 ```
-PS XYZ:\> $CMSHVP = Get-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com" 
+PS XYZ:\> $CMSHVP = Get-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com"
 PS XYZ:\> Remove-CMSystemHealthValidatorPoint -InputObject $CMSHVP
 ```
 
@@ -79,7 +84,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +98,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +112,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +141,7 @@ Specifies a site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None

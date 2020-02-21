@@ -43,6 +43,11 @@ Invoke-CMSecondarySiteUpgrade -InputObject <IResultObject> [-Force] [-DisableWil
 The **Invoke-CMSecondarySiteUpgrade** cmdlet invokes a secondary site upgrade that is outside of any scheduled upgrades.
 You can specify the site upgrade by using its name or ID, or by specifying an object that represents the site upgrade.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Invoke a secondary site upgrade by using a site name

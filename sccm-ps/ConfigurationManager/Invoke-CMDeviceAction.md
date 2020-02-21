@@ -43,6 +43,11 @@ Invoke-CMDeviceAction [-Id] <Int32> [-Action] <DeviceActionType> [-PassThru] [-D
 The **Invoke-CMDeviceAction** cmdlet initiates a remote action, such as locking or resetting a PIN for, a mobile device.
 This cmdlet only works on mobile devices.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Lock a mobile device
@@ -63,7 +68,7 @@ This command resets the PIN for the device named WindowsPhone0402.
 
 ### -Action
 Specifies the action you want to initiate on the device.
-Valid values are: 
+Valid values are:
 
 - Lock
 - PinReset

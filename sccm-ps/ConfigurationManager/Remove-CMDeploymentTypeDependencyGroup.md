@@ -31,6 +31,11 @@ Remove-CMDeploymentTypeDependencyGroup [-Force] -InputObject <DeploymentTypeDepe
 
 The **Remove-CMDeploymentTypeDependencyGroup** cmdlet removes a deployment type dependency group (and its dependencies) from a deployment type in the Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
@@ -145,7 +150,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
+### Microsoft.ConfigurationManagement.cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
 
 ## OUTPUTS
 

@@ -45,6 +45,11 @@ A retired device is no longer active in Microsoft System Center Configuration Ma
 It does not receive new policies or policy updates.
 Retired devices remain listed until a maintenance task removes them.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Retire a named device

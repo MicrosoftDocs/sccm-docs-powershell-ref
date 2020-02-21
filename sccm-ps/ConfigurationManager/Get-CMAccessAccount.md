@@ -118,11 +118,16 @@ An access account is a list of users or groups that can access an established se
 For example, members in the Software Update Point Connection access account can access two services to manage software updates: Windows Server Update Services (WSUS) and WSUS Synchronization Manager.
 You can get an access account to change the network access permissions for clients who use the account.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an access account for a package by using the package ID
 ```
-PS XYZ:\> $ID = Get-CMPackage -PackageName "Configuration Manager Client Package" 
+PS XYZ:\> $ID = Get-CMPackage -PackageName "Configuration Manager Client Package"
 PS XYZ:\> Get-CMAccessAcccount -PackageId $ID
 Name:          Administrator
 Type:          Administrator
@@ -277,8 +282,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

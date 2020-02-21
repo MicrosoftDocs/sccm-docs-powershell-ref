@@ -46,6 +46,11 @@ You can get global conditions by name, ID, or security scope.
 You can also specify one or more security scope names with either names or IDs.
 For instance, you might specify an array of global condition names and specify a security scope to narrow your results.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a global condition by name

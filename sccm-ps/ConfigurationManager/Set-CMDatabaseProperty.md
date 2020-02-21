@@ -34,6 +34,11 @@ Specify the Configuration Manager site code for the database that you want to mo
 You can modify whether the database uses data compression, the Service Broker port for the computer that runs Microsoft SQL Server, and the length of time that the database keeps data.
 You can use the [Get-CMDatabaseProperty](Get-CMDatabaseProperty.md) cmdlet to see current values for these properties.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change settings for a database

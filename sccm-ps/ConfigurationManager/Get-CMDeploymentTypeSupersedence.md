@@ -31,6 +31,11 @@ Get-CMDeploymentTypeSupersedence -InputObject <IResultObject> [-DisableWildcardH
 
 The **Get-CMDeploymentTypeSupersedence** cmdlet gets supersedence objects for a superseded deployment type. Required input is a superseded deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
@@ -75,7 +80,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a superseded deployment type object. 
+Specifies a superseded deployment type object.
 
 ```yaml
 Type: IResultObject

@@ -71,6 +71,11 @@ Application deployments can also allow users to install at a time they choose.
 To specify an application deployment to modify, specify the collection name and the application.
 You can specify an application by name or ID, or you can use the [Get-CMApplication](Get-CMApplication.md) cmdlet to get an application to modify.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify availability and deadline for an application deployment
@@ -511,7 +516,7 @@ Specifies which time zone to use.
 The acceptable values for this parameter are:
 
 - LocalTime.
-Use local time. 
+Use local time.
 - UTC.
 Use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
 
@@ -545,7 +550,7 @@ Accept wildcard characters: False
 
 ### -UserNotification
 Specifies the type of notification for a client.
-Valid values are: 
+Valid values are:
 
 - DisplayAll
 - DisplaySoftwareCenterOnly

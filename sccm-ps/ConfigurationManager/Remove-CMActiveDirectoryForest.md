@@ -37,6 +37,11 @@ Remove-CMActiveDirectoryForest [-Name] <String> [-Force] [-DisableWildcardHandli
 The **Remove-CMActiveDirectoryForest** cmdlet removes an Active Directory forest object from Microsoft System Center Configuration Manager.
 You can specify an Active Directory forest by using the ID property or the fully qualified domain name (FQDN), or you can supply the Active Directory forest itself.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an Active Directory forest object by ID

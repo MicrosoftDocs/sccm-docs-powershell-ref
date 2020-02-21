@@ -89,6 +89,11 @@ The **Set-CMDriverBootImage** cmdlet adds a driver to a boot image or removes a 
 You can add Windows device drivers that you have imported into the Microsoft System Center Configuration Manager driver catalog to one or more boot images.
 You should add only mass storage device drivers and network adapter device drivers to boot images because other types of drivers are not needed and will increase the size of the boot image.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a driver to a boot image

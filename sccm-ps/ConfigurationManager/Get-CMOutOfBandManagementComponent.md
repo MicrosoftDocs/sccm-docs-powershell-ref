@@ -28,6 +28,11 @@ The **Get-CMOutOfBandManagementComponent** cmdlet gets the site system computer 
 The out of band management role manages computers that have the Intel vPro chip set and a version of Intel Active Management Technology (Intel AMT) that System Center Configuration Manager supports.
 Out of band management lets you connect to a computer AMT management controller when the computer is turned off, in hibernation, or otherwise unresponsive through the operating system.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an out of band management component by using a site code
@@ -52,7 +57,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -66,7 +71,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +85,7 @@ Specifies assigned site of a client by using a code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None

@@ -56,6 +56,11 @@ The **Get-CMBoundary** cmdlet gets a System Center Configuration Manager boundar
 In Microsoft System Center Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
 A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an IP address range.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a boundary that is specified by its identifier
@@ -66,12 +71,12 @@ BoundaryID:         67777217
 BoundaryType:       1
 CreatedBy:          Contoso\PFuller
 CreatedOn           6/10/2012 2:58:56 PM
-DefaultSiteCode: 
-DisplayName: 
+DefaultSiteCode:
+DisplayName:
 GroupCount:         0
 ModifiedBy:         Contoso\PFuller
 ModifiedOn:         9/13/2012  10:04 AM
-SiteSystems: 
+SiteSystems:
 Value:              Default1
 ```
 
@@ -85,12 +90,12 @@ BoundaryID:         63997411
 BoundaryType:       2
 CreatedBy:          Contoso\PFuller
 CreatedOn           4/13/2012 06:58:56 AM
-DefaultSiteCode: 
-DisplayName: 
+DefaultSiteCode:
+DisplayName:
 GroupCount:         1
 ModifiedBy:         Contoso\PFuller
 ModifiedOn:         8/02/2012  11:16 AM
-SiteSystems: 
+SiteSystems:
 Value:              Default1
 ```
 

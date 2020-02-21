@@ -44,6 +44,11 @@ Microsoft System Center Configuration Manager can use one or more fallback statu
 Throttling prevents the fallback status point from sending too many messages together, which can affect performance.
 You can use the *StateMessagesCount* and *ThrottleMinutesInterval* parameters to limit how many messages a fallback status point sends during a defined period.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change message and threshold settings for a fallback status point

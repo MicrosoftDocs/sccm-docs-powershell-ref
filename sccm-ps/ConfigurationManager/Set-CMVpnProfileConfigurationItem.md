@@ -46,6 +46,11 @@ Set-CMVpnProfileConfigurationItem [-Description <String>] [-Digest <Configuratio
 The **Set-CMVpnProfileConfigurationItem** cmdlet modifies a virtual private network (VPN) profile.
 Client computers use VPN profiles to remotely connect to a company network over the Internet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a VPN profile configuration item

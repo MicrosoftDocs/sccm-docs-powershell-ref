@@ -48,6 +48,11 @@ Set-CMVhd -Name <String> [-NewName <String>] [-VhdFilePath <String>] [-Version <
 ## DESCRIPTION
 The **Set-CMVhd** cmdlet modifies one or more virtual hard disk (VHD) images that were created through the operating system deployment feature.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the distribution point server for a VHD

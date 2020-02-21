@@ -46,6 +46,11 @@ You can use this cmdlet to modify an association.
 You can add user names to the association, or remove user names.
 You can also change whether System Center Configuration Manager includes other user names from the source computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a computer association
@@ -143,7 +148,7 @@ The computer association can specify that the migration process creates some or 
 The acceptable values for this parameter are:
 
 - CaptureAllUserAccountsAndRestoreSpecifiedAccounts.
-Saves all accounts created on the source computer, but creates only the specified accounts on the destination computer. 
+Saves all accounts created on the source computer, but creates only the specified accounts on the destination computer.
 - CaptureAndRestoreAllUserAccounts.
 Saves all accounts created on the source computer, and creates them on the destination computer.
 - CaptureAndRestoreSpecifiedUserAccounts.

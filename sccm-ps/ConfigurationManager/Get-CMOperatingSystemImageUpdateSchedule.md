@@ -42,6 +42,11 @@ Get-CMOperatingSystemImageUpdateSchedule -InputObject <IResultObject> [-DisableW
 ## DESCRIPTION
 The **Get-CMOperatingSystemImageUpdateSchedule** cmdlet retrieves an object that represents an operating system image update schedule in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Retrieve the operating system image update schedule

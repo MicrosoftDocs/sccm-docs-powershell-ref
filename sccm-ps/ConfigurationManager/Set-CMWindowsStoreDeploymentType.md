@@ -56,6 +56,11 @@ Set-CMWindowsStoreDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -Inp
 ## DESCRIPTION
 The **Set-CMWindowsStoreDeploymentType** cmdlet changes the settings for a Windows app package (in the Windows Store) deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the display name of a deployment type by using the pipeline

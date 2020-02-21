@@ -38,6 +38,11 @@ The **Remove-CMResource** cmdlet removes a resource.
 
 A resource can be a user or a device.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a resource by using the pipeline

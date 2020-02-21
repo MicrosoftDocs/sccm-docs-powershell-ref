@@ -101,6 +101,11 @@ System Center Configuration Manager uses rules to manage automatic deployment of
 When a rule runs, System Center Configuration Manager adds updates that qualify for the rule to a software update group.
 The System Center Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify the language selection and name of a rule

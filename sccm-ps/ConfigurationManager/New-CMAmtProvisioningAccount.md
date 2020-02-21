@@ -29,6 +29,11 @@ The **New-CMAmtProvisioningAccount** cmdlet creates an account for AMT provision
 The server that runs the out of band service point role uses this account to manage some network interface features of AMT in System Center Configuration Manager, by using the out of band management feature.
 The AMT Provisioning and Discovery Account that you specify in System Center Configuration Manager must match the AMT Remote Admin Account name and password of the BIOS extensions in the AMT-based computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an AMT Discovery and Provisioning Account
@@ -61,7 +66,7 @@ Specifies a description for the AMT Discovery and Provisioning Account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +96,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +111,7 @@ Specifies the password, as a secure string, for the AMT Discovery and Provisioni
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +126,7 @@ Specifies the name of the MEBx Account or Remote Admin Account of the BIOS exten
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

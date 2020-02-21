@@ -56,6 +56,11 @@ Set-CMGooglePlayDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -Input
 ## DESCRIPTION
 The **Set-CMGooglePlayDeploymentType** changes the settings for a Google Play deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the name and remove a language of the deployment type

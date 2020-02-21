@@ -43,6 +43,11 @@ Invoke-CMDeviceWipe -Id <Int32> [-Force] [-Cancel] [-DisableWildcardHandling] [-
 The **Invoke-CMDeviceWipe** cmdlet performs a complete wipe of all applications and data on a modern device.
 This cmdlet returns one or more devices to the factory configuration.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Return Restore a device to its factory configurationRestore

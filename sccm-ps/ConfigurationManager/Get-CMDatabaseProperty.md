@@ -33,6 +33,11 @@ Use the site code for a site to specify a database.
 When this cmdlet returns a database object in the console, it displays current settings for data compression, Broker port for the computer that runs Microsoft SQL Server, and the length of time that the database keeps data.
 You can use the [Set-CMDatabaseProperty](Set-CMDatabaseProperty.md) cmdlet to change these values.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a database property
@@ -40,8 +45,8 @@ You can use the [Set-CMDatabaseProperty](Set-CMDatabaseProperty.md) cmdlet to ch
 PS XYZ:\> Get-CMDatabaseProperty -SiteCode "CM2"
 Key                                     Value
 ---                                     -----
-SQL Server Service Broker Port          80 
-Retention Period                        10 
+SQL Server Service Broker Port          80
+Retention Period                        10
 IsCompression                           0
 ```
 

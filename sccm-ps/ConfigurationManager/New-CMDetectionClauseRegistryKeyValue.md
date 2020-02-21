@@ -37,6 +37,11 @@ New-CMDetectionClauseRegistryKeyValue -Hive <RegistryRootKey> [-Is64Bit] -KeyNam
 
 ## DESCRIPTION
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1

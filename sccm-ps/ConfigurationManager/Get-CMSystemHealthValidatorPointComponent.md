@@ -27,6 +27,11 @@ Get-CMSystemHealthValidatorPointComponent [-SiteCode <String>] [-DisableWildcard
 The **Get-CMSystemHealthValidatorPointComponent** cmdlet retrieves an object that represents a system health validator point.
 A system health validator point is a site system role that evaluates system health information reported by Windows clients for security related compliance.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Retrieve a system health validator point by site system server name
@@ -51,7 +56,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -65,7 +70,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +84,7 @@ Specifies a site code in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None

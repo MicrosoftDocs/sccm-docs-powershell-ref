@@ -32,6 +32,11 @@ Remove-CMDeploymentTypeSupersedence [-SupersedingDeploymentType] <IResultObject>
 
 The **Remove-CMDeploymentTypeSupersedence** cmdlet removes a superseding deployment type from a superseded deployment type. Required input is a superseding type from [Get-CMDeploymentType](./Get-CMDeploymentType.md) or [Get-CMDeploymentTypeSupersedence](./Get-CMDeploymentTypeSupersedence.md) and superseded deployment type from [Get-CMDeploymentType](./Get-CMDeploymentType.md).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1

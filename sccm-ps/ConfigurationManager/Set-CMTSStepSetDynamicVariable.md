@@ -18,7 +18,7 @@ titleSuffix: Configuration Manager
 
 ## SYNOPSIS
 
-Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager. 
+Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager.
 
 ## SYNTAX
 
@@ -233,6 +233,11 @@ Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>]
 
 The **Set-CMTSStepSetDynamicVariable** cmdlet sets properties, options, specific conditions for "Set Dynamic Variable" steps in a task sequence.  The cmdlet supports pipeline from a task sequence object, and could be filtered by the name of the step.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
@@ -309,7 +314,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-Specifies the conditions. This parameter is used with one of the following parameters: SetConditionIfStatement, SetConditionQueryWmi, SetConditionVariable, SetConditionOperatingSystem, SetConditionFile, SetConditionFolder, SetConditionRegistry, and SetConditionSoftware. 
+Specifies the conditions. This parameter is used with one of the following parameters: SetConditionIfStatement, SetConditionQueryWmi, SetConditionVariable, SetConditionOperatingSystem, SetConditionFile, SetConditionFolder, SetConditionRegistry, and SetConditionSoftware.
 
 ```yaml
 Type: IResultObject[]

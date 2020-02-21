@@ -46,6 +46,11 @@ This action does not affect existing deployments.
 When you suspend an application, its status shows as "Retired" in the Configuration Manager console.
 To resume an application, use the [Resume-CMApplication](Resume-CMApplication.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Suspend an application by its name

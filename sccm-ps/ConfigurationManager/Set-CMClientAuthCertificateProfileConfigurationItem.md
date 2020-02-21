@@ -25,6 +25,11 @@ Modifies a certificate profile.
 The **Set-CMClientAuthCertificateProfileConfigurationItem** cmdlet modifies a certificate profile.
 Client computers use certificate profiles to authenticate when they use services such as a virtual private network (VPN) or a wireless network.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ## PARAMETERS

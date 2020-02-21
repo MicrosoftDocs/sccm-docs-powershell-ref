@@ -44,6 +44,11 @@ You can also create custom software labels.
 
 For more information about the Asset Intelligence catalog, see [Introduction to Asset Intelligence in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=262650) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get catalog items by category name

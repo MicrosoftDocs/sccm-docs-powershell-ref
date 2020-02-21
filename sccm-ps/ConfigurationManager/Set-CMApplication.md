@@ -96,6 +96,11 @@ Set-CMApplication -ModelName <String> [-Description <String>] [-Publisher <Strin
 ## DESCRIPTION
 The **Set-CMApplication** cmdlet changes the settings of an application.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set the properties of an application by using the pipeline
@@ -382,14 +387,14 @@ Accept wildcard characters: False
 
 ### -DistributionPointSetting
 Specifies the prestaged distribution point settings.
-Valid values are: 
+Valid values are:
 
 - AutoDownload.
 Automatically download content when packages are assigned to distribution points.
- 
+
 - DeltaCopy.
 Download only content changes to distribution points.
- 
+
 - NoDownload.
 Manually copy the content in this package to distribution points.
 

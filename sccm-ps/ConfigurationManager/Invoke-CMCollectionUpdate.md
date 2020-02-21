@@ -42,6 +42,11 @@ Invoke-CMCollectionUpdate -CollectionId <String> [-DisableWildcardHandling] [-Fo
 ## DESCRIPTION
 The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a Microsoft System Center Configuration Manager collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Update the membership of a collection using the pipeline

@@ -81,6 +81,11 @@ New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <
 ## DESCRIPTION
 The **New-CMSecondarySite** cmdlet creates a secondary site in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a secondary site
@@ -191,7 +196,7 @@ Accept wildcard characters: False
 Specifies a client connection type.
 The acceptable values for this parameter are:
 
-- Internet 
+- Internet
 - InternetAndIntranet
 - Intranet
 
@@ -227,10 +232,10 @@ Accept wildcard characters: False
 Specifies content monitoring priority.
 The acceptable values for this parameter are:
 
-- High 
-- Highest 
-- Low 
-- Lowest 
+- High
+- Highest
+- Low
+- Lowest
 - Medium
 
 ```yaml
@@ -454,7 +459,7 @@ Accept wildcard characters: False
 Specifies a primary content library location.
 The acceptable values for this parameter are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
@@ -474,7 +479,7 @@ Accept wildcard characters: False
 Specifies a primary package share location.
 The acceptable values for this parameter are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
@@ -507,7 +512,7 @@ Accept wildcard characters: False
 Specifies a secondary content library location.
 The acceptable values for this parameter are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
@@ -527,7 +532,7 @@ Accept wildcard characters: False
 Specifies a secondary package share location.
 The acceptable values for this parameter are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml

@@ -30,6 +30,11 @@ Set-CMIntuneSubscriptionWindowsProperty [-Enable <Boolean>] [-CertificatePath <S
 ## DESCRIPTION
 The **Set-CMIntuneSubscriptionWindowsProperty** cmdlet updates the settings of a Microsoft Intune subscription to enable Windows enrollment.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable Windows enrollment

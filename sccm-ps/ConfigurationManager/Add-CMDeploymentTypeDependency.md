@@ -32,6 +32,11 @@ Add-CMDeploymentTypeDependency [-IsAutoInstall <Boolean>] -DeploymentTypeDepende
 
 The **Add-CMDeploymentTypeDependency** adds a deployment type as a dependency to a dependency group. Required input is a deployment type object from [Get-CMDeploymentType](./Get-CMDeploymentType.md) and a dependency group from [Get-CMDeploymentTypeDependencyGroup](./Get-CMDeploymentTypeDependencyGroup.md) and [New-CMDeploymentTypeDependencyGroup](./New-CMDeploymentTypeDependencyGroup.md).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
@@ -126,7 +131,7 @@ Accept wildcard characters: False
 
 ### -IsAutoInstall
 
-Indicate whether install automatically. 
+Indicate whether install automatically.
 
 ```yaml
 Type: Boolean
@@ -162,7 +167,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
+### Microsoft.ConfigurationManagement.cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
 
 ## OUTPUTS
 

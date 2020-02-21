@@ -48,6 +48,11 @@ Endpoint Protection definitions contain anti-malware policies and settings for W
 
 For more information about Endpoint Protection, see [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?linkid=268427) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Save an Endpoint Protection epshort definition by using a device collection nameepshortEndpoint Protection

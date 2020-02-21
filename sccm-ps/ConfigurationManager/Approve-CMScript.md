@@ -40,6 +40,11 @@ The **Approve-CMScript** cmdlet approves a Microsoft System Center Configuration
 
 You can approve a specific script by specifying the script object or the name of the script.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Approve a script by using the script id

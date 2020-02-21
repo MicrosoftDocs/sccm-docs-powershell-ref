@@ -30,6 +30,11 @@ Get-CMSoftwareDistributionComponent [-SiteCode <String>] [-SiteSystemServerName 
 The **Get-CMSoftwareDistributionComponent** cmdlet gets an object that represents a software distribution component in Microsoft System Center Configuration Manager.
 A software distribution component consists of individual components such as the client software distribution component.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a software distribution component

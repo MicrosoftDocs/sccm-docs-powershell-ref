@@ -33,6 +33,11 @@ For a collection-based migration, you specify one or more collections to migrate
 For each collection that you specify, the migration job automatically selects all related objects for migration.
 Objects on the exclusion list are available for migration, but System Center Configuration Manager does not automatically include these objects when you create a new collection-based migration job.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Specify a migration exclusion list

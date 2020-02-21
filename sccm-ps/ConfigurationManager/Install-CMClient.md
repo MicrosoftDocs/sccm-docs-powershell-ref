@@ -59,6 +59,11 @@ Install-CMClient -DeviceId <String> [-IncludeDomainController <Boolean>] [-Alway
 ## DESCRIPTION
 The **Install-CMClient** cmdlet installs a client for Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Install a client

@@ -56,6 +56,11 @@ Set-CMWindowsPhoneDeploymentType [-AddRequirement <Rule[]>] -InputObject <IResul
 ## DESCRIPTION
 The **Set-CMWindowsPhoneDeploymentType** cmdlet changes the settings for a Windows Phone app package deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the display name of a deployment type by using the pipeline

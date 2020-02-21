@@ -24,6 +24,11 @@ Creates application-related settings for a mobile device that uses a Exchange Se
 ## DESCRIPTION
 The **New-CMExchangeServerConnectorApplicationSetting** cmdlet creates application-related settings for a mobile device that uses a Microsoft Exchange Server connector.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set application options for an Exchange Server connector
@@ -31,7 +36,7 @@ The **New-CMExchangeServerConnectorApplicationSetting** cmdlet creates applicati
 PS XYZ:\> New-CMExchangeServerConnectorApplicationSetting -UnsignedApplication $False -UnsignedInstall $True -BlockedApplication "a1","a2"
 ```
 
-This command sets these application options for an Exchange Server connector: 
+This command sets these application options for an Exchange Server connector:
 
 - Allows the mobile device to install unsigned applications.
 - Blocks unsigned applications from running on the mobile device.

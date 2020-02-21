@@ -42,6 +42,11 @@ Set-CMDistributionPointGroup -Name <String> [-Description <String>] [-NewName <S
 ## DESCRIPTION
 The **Set-CMDistributionPointGroup** cmdlet changes the configuration settings of one or more distribution point groups.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a distribution point group to a security scope

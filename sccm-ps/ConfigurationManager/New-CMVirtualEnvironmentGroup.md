@@ -40,6 +40,11 @@ A virtual environment allows two or more Microsoft Application Virtualization (A
 When multiple virtual applications modify the same file system or registry values on a client computer, the application with the highest order takes precedence.
 When an application is installed or when a client evaluates installed applications, the virtual environment on client computers is added or modified.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a virtual environment group
@@ -110,8 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject[]

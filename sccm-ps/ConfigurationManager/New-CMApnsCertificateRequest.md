@@ -29,6 +29,11 @@ New-CMApnsCertificateRequest -IntuneCredential <PSCredential> [-OutputPath <Stri
 ## DESCRIPTION
 The **New-CMApnsCertificateRequest** cmdlet downloads an Apple Push Notification Service (APNS) certificate signing request. You should upload this request (.csr) file to the Apple Push Certificates Portal in order to download an APN certificate. Provide a Microsoft Intune organizational account by using the *IntuneCredential* parameter.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an APNS certificate signing request
@@ -163,4 +168,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Configuration Manager Cmdlets](ConfigurationManager.md)
+[Configuration Manager cmdlets](ConfigurationManager.md)

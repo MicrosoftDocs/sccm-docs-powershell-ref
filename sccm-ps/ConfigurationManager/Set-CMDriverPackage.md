@@ -60,6 +60,11 @@ Set-CMDriverPackage -Name <String> [-NewName <String>] [-Description <String>] [
 ## DESCRIPTION
 The **Set-CMDriverPackage** cmdlet modifies a driver package in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a security scope action to a driver package

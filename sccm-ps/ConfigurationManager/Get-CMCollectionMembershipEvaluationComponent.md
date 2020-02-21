@@ -31,6 +31,11 @@ The **Get-CMCollectionMembershipEvaluationComponent** cmdlet gets the value for 
 Configuration Manager queries the database at a regular interval to check for changes in collection membership.
 You can specify which value to get by site server name or site code.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an evaluation period for a site code

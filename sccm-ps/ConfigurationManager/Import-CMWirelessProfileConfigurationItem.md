@@ -30,6 +30,11 @@ Import-CMWirelessProfileConfigurationItem [-Description <String>] -Name <String>
 ## DESCRIPTION
 The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wireless profile item from a file.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import a wireless profile configuration item
@@ -162,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Severity
 Specifies a non-compliance severity for reports.
-Valid values are: 
+Valid values are:
 
 - None
 - Informational

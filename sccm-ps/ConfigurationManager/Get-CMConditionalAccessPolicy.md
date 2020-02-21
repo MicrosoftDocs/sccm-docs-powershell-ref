@@ -42,6 +42,11 @@ Get-CMConditionalAccessPolicy [-TargetedCollectionId <String[]>] [-ExcludedColle
 ## DESCRIPTION
 The **Get-CMConditionalAccessPolicy** cmdlet gets a conditional access policy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a conditional access policy by name

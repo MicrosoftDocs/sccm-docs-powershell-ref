@@ -133,11 +133,16 @@ You can add users or groups to the access account and change the level of permis
 An access account is a list of users or groups that can access an established service or application that is located on a distribution point.
 For example, members in the Software Update Point Connection Access Account can access two services to manage software updates: Windows Server Update Services (WSUS) and WSUS Synchronization Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change access to a package by using the package name
 ```
-PS XYZ:\> $Name = Get-CMAccessAccount -PackageName "Configuration Manager Client Package" 
+PS XYZ:\> $Name = Get-CMAccessAccount -PackageName "Configuration Manager Client Package"
 PS XYZ:\> Set-CMAccessAccount -PackageName $Name -Type User -UserName "CONTOSO\PFuller" -Access Read -Confirm
 ```
 

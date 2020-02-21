@@ -42,6 +42,11 @@ Get-CMDeviceActionState [[-Action] <DeviceActionType>] [-InputObject] <IResultOb
 ## DESCRIPTION
 The **Get-CMDeviceActionState** cmdlet gets the state of an action initiated on a mobile device by using the [Invoke-CMDeviceAction](Invoke-CMDeviceAction.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get the state of a device action using the pipeline
@@ -62,7 +67,7 @@ This command gets the state of the lock action on the device named WindowsPhone0
 
 ### -Action
 Specifies the action for which you want status.
-Valid values are: 
+Valid values are:
 
 - Lock
 - PinReset

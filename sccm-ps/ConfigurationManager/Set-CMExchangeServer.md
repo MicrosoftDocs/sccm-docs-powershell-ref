@@ -40,6 +40,11 @@ The **Set-CMExchangeServer** cmdlet changes settings for a Microsoft Exchange Se
 
 Microsoft System Center Configuration Manager works with Exchange Server to manage mobile devices that cannot run Configuration Manager clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change settings for an nextref_exchange
@@ -74,7 +79,7 @@ The command specifies application-related settings for a mobile device stored in
 ### -AccessLevel
 Specifies the type of access for the mobile devices.
 Access level applies to a mobile device that is not managed by a rule.
-Valid values are: 
+Valid values are:
 
 - Allow
 - Block
@@ -305,7 +310,7 @@ Accept wildcard characters: False
 
 ### -GeneralSetting
 Specifies general settings for mobile devices that use the Exchange Server Connector.
-Settings you can specify for this parameter include: 
+Settings you can specify for this parameter include:
 
 - RequireManualSyncWhenRoaming
 - RequireStorageCardEncryption
@@ -385,7 +390,7 @@ Accept wildcard characters: False
 
 ### -PasswordSetting
 Specifies general password settings.
-Settings you can specify for this parameter include: 
+Settings you can specify for this parameter include:
 
 - AlphanumericDevicePasswordRequired
 - DevicePasswordEnabled
@@ -412,7 +417,7 @@ Accept wildcard characters: False
 
 ### -SecuritySetting
 Specifies a dictionary of security settings.
-Settings you can specify for this parameter include: 
+Settings you can specify for this parameter include:
 
 - AllowBluetooth
 - AllowBrowser

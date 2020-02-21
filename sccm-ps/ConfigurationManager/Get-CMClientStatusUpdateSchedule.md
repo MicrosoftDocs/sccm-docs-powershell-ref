@@ -28,12 +28,17 @@ Get-CMClientStatusUpdateSchedule [-DisableWildcardHandling] [-ForceWildcardHandl
 ## DESCRIPTION
 The **Get-CMClientStatusUpdateSchedule** cmdlet gets a schedule interval of the client status update task.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Gets a client status update schedule
 ```
 PS XYZ:\> Get-CMClientStatusUpdateSchedule
-Interval Unit 
+Interval Unit
 -------- ----
        1 Days
 ```

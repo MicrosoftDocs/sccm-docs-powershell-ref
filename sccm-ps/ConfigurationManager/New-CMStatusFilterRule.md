@@ -35,6 +35,11 @@ New-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-Source <String>]
 ## DESCRIPTION
 The **New-CMStatusFilterRule** cmdlet creates a rule that triggers one or more actions that alerts an administrator to a specific message in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a status filter rule
@@ -153,9 +158,9 @@ Accept wildcard characters: False
 Specifies a status message type in Configuration Manager.
 The acceptable values for this parameter are:
 
-- Audit 
-- Detail 
-- Milestone 
+- Audit
+- Detail
+- Milestone
 - None
 
 ```yaml
@@ -312,9 +317,9 @@ Accept wildcard characters: False
 Specifies the severity of a status message.
 The acceptable values for this parameter are:
 
-- Error 
-- Informational 
-- None 
+- Error
+- Informational
+- None
 - Warning
 
 ```yaml

@@ -36,6 +36,11 @@ Set-CMSoftwareUpdateBasedClientInstallation -Name <String> -EnableWsus <Boolean>
 ## DESCRIPTION
 The **Set-CMSoftwareUpdateBasedClientInstallation** cmdlet modifies a client installation hosted on a software update point for Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a client installation to enable WSUS

@@ -31,6 +31,11 @@ ConvertFrom-CMConfigurationItem [-ConfigurationItem] <ConfigurationItem> [-Disab
 
 The **ConvertFrom-CMConfigurationItem** cmdlet converts a ConfigurationItem object into a string which contains the XML definition of the ConfigurationItem object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ## PARAMETERS

@@ -110,6 +110,11 @@ The **Update-CMDistributionPoint** cmdlet updates distribution points with the l
 You can update the distribution points for application content, software packages, software updates, operating system images, and boot images.
 Manually updating the distribution points does not interfere with the recurring update schedule.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Update distribution points by package name

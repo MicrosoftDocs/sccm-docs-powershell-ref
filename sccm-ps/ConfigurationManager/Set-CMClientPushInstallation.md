@@ -69,6 +69,11 @@ You can also start a client push installation by running the Client Push Install
 
 For more information about how to install clients, see [How to Install Clients on Windows-Based Computers in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247203) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the settings of a client push installation
@@ -265,7 +270,7 @@ Specifies any installation properties to use when installing the Configuration M
 
 For System Center Configuration Manager with no service pack installed: You can specify only installation properties for the Windows Installer package (Client.msi); you cannot specify properties for CCMSetup.exe.
 
-For System Center Configuration Manager SP1: You can specify installation properties for the Windows Installer package (Client.msi) and the following CCMSetup.exe properties: 
+For System Center Configuration Manager SP1: You can specify installation properties for the Windows Installer package (Client.msi) and the following CCMSetup.exe properties:
 
 - forcereboot
 - skipprereq

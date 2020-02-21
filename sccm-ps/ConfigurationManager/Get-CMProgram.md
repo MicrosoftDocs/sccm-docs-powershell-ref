@@ -45,6 +45,11 @@ Programs are commands that are associated with a System Center Configuration Man
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all programs

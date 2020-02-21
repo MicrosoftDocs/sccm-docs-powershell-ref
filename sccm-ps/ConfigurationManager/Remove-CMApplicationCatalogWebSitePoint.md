@@ -39,6 +39,11 @@ This site system role supports the Application Catalog website and the Software 
 
 You can specify a website point to remove by site code and name of the server that hosts the role, or you can use the Get-CMApplicationCatalogWebsitePoint cmdlet to get a website point to remove.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an Application Catalog website point
@@ -51,7 +56,7 @@ The computer named WesternACWP.Contoso.com hosts the point that the cmdlet remov
 
 ### Example 2: Remove an Application Catalog website point by variable
 ```
-PS XYZ:\> $CMACWP= Get-CMApplicationCatalogWebsitePoint -SiteCode "CM2" -SiteSystemServerName"WesternACWP.Contoso.com" 
+PS XYZ:\> $CMACWP= Get-CMApplicationCatalogWebsitePoint -SiteCode "CM2" -SiteSystemServerName"WesternACWP.Contoso.com"
 PS XYZ:\> Remove-CMApplicationCatalogWebsitePoint -InputObject $CMACWP -Force
 ```
 

@@ -28,6 +28,11 @@ Get-CMSoftwareMeteringSetting [-DisableWildcardHandling] [-ForceWildcardHandling
 ## DESCRIPTION
 The **Get-CMSoftwareMeteringSetting** cmdlet gets a software metering settings object in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get software metering setting object
@@ -39,9 +44,9 @@ FileType            : 2
 Flags               : 1
 ItemName            : Software Metering Agent
 ItemType            : Client Component
-PropLists           : 
-Props               : 
-RegMultiStringLists : 
+PropLists           :
+Props               :
+RegMultiStringLists :
 SiteCode            : CM1
 ```
 

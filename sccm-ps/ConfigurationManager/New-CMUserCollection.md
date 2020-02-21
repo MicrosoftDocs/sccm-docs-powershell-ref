@@ -49,7 +49,7 @@ For example, when you use the All Users collection as the limiting collection, t
 You specify the limiting collection by providing its name or ID.
 
 Users are added to the collection by membership rules.
-To add members to the user collection use one of the following membership rule cmdlets: 
+To add members to the user collection use one of the following membership rule cmdlets:
 
 - Add-CMDeviceCollectionQueryMembershipRule
 - Add-CMUserCollectionDirectMembershipRule
@@ -58,6 +58,11 @@ To add members to the user collection use one of the following membership rule c
 
 Collections represent logical groupings of resources, such as users and devices.
 For more information about Configuration Manager collections, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
@@ -100,8 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

@@ -43,6 +43,11 @@ The software update point interacts with Windows Server Update Services (WSUS) t
 You can specify a software update point to remove by site code and the name of the computer that hosts the site system role.
 You can also use the Get-CMSoftwareUpdatePoint cmdlet to obtain a software update point.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a software update point

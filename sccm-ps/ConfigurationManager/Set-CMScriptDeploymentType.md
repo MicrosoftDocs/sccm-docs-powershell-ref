@@ -102,6 +102,11 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 
 The **Set-CMScriptDeploymentType** cmdlet changes the settings for a script installer deployment type. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a script installer deployment type
@@ -516,7 +521,7 @@ Accept wildcard characters: False
 ### -InstallationBehaviorType
 
 Specifies the installation behavior of the deployment type.
-Valid values are: 
+Valid values are:
 
 - InstallForSystem
 - InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
@@ -538,7 +543,7 @@ Accept wildcard characters: False
 ### -LogonRequirementType
 
 Specifies the logon requirement for the deployment type.
-Valid values are: 
+Valid values are:
 
 - OnlyWhenNoUserLoggedOn
 - OnlyWhenUserLoggedOn
@@ -723,7 +728,7 @@ Accept wildcard characters: False
 
 Specifies the script language that you want to use to detect this deployment type.
 
-Valid values are: 
+Valid values are:
 
 - PowerShell
 - VBScript
@@ -761,7 +766,7 @@ Accept wildcard characters: False
 ### -SlowNetworkDeploymentMode
 
 Specifies the installation behavior of the deployment type on a slow network.
-Valid values are: 
+Valid values are:
 
 - DoNothing
 - Download
@@ -864,7 +869,7 @@ Accept wildcard characters: False
 ### -UserInteractionMode
 
 Specifies the mode in which the deployment type runs on client devices.
-Valid values are: 
+Valid values are:
 
 - Normal
 - Minimized

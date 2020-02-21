@@ -34,6 +34,11 @@ You can also start a client push installation by running the Client Push Install
 
 For more information about how to install clients, see [How to Install Clients on Windows Computers in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247203) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a client push installation

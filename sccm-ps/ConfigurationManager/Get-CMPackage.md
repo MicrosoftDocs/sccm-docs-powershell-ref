@@ -36,6 +36,11 @@ The **Get-CMPackage** cmdlet gets Microsoft System Center Configuration Manager 
 System Center Configuration Manager uses packages to distribute software to clients.
 You can use the *SecuredScopeNames* parameter to specify the security scope of a package to get.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all packages

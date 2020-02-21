@@ -37,6 +37,11 @@ Get-CMAdministrativeUser -Id <String> [-RoleName <String[]>] [-DisableWildcardHa
 The **Get-CMAdministrativeUser** cmdlet gets one or more administrative users in Microsoft System Center Configuration Manager.
 An administrative user has a defined set of permissions and may be a member of one or more scopes or roles.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all the administrative users
@@ -117,7 +122,7 @@ Accept wildcard characters: False
 
 ### -RoleName
 Specifies an array of names of security roles.
-Valid values are: 
+Valid values are:
 
 - Application Administrator
 - Application Author

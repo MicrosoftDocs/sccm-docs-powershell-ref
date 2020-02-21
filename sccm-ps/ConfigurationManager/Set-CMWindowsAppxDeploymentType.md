@@ -60,6 +60,11 @@ Set-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode
 ## DESCRIPTION
 The **Set-CMWindowsAppxDeploymentType** cmdlet changes the settings for a Windows app package deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify an app package deployment type

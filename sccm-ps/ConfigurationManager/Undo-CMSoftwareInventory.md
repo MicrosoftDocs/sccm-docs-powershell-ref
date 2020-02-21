@@ -42,6 +42,11 @@ Undo-CMSoftwareInventory -Name <String> [-DisableWildcardHandling] [-ForceWildca
 ## DESCRIPTION
 The **Undo-CMSoftwareInventory** cmdlet stops collecting information about files that are contained on client devices.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Stop collecting software inventory data on a file

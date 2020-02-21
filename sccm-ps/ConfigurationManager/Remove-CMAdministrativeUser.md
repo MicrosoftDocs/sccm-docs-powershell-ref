@@ -43,6 +43,11 @@ Remove-CMAdministrativeUser [-Force] -Id <String> [-DisableWildcardHandling] [-F
 The **Remove-CMAdministrativeUser** cmdlet removes one or more Microsoft System Center Configuration Manager administrative users.
 When you remove an administrative user, Configuration Manager revokes the access of the administrative user to manage Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: SearchByValueMandatory, pipeline

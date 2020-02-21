@@ -34,6 +34,11 @@ You can then use the discovery information to help you to install the System Cen
 
 For more information about discovery in System Center Configuration Manager, see [About Configuration Manager Discovery](http://go.microsoft.com/fwlink/?linkid=107444) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a user discovery method
@@ -80,7 +85,7 @@ Specifies the type of discovery method that the cmdlet gets.
 The acceptable values for this parameter are:
 
 - ActiveDirectoryForestDiscovery: Discovers security groups, including local, global, and universal groups from specified locations in Active Directory Domain Services.
-- ActiveDirectoryGroupDiscovery: Discovers additional information, including the OU and group membership of the computer, about previously discovered computers from specified locations in Active Directory Domain Services. 
+- ActiveDirectoryGroupDiscovery: Discovers additional information, including the OU and group membership of the computer, about previously discovered computers from specified locations in Active Directory Domain Services.
 - ActiveDirectorySystemDiscovery: Discovers computers from specified locations in Active Directory Domain Services.
 - ActiveDirectoryUserDiscovery: Discovers users from specified locations in Active Directory Domain Services.
 - HeartbeatDiscovery: Updates discovery records for Microsoft System Center Configuration Manager clients in the System Center Configuration Manager database without discovering new resources.

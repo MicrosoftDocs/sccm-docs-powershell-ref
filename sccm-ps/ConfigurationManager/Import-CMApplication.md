@@ -31,6 +31,11 @@ The **Import-CMApplication** cmdlet imports a package created by the [Export-CMA
 A package contains one or more applications and related objects, such as catalogs.
 If the package contains content, the application package imports the content, or includes a reference to the content.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import an application

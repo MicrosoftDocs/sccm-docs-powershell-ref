@@ -49,6 +49,11 @@ To remove a deployment type, you must remove any dependencies to the deployment 
 Additionally, you must remove previous revisions of any application that contains a deployment type that references the deployment type that you want to remove.
 If you have already deployed the application, you cannot remove the last deployment type that the application contains, and the application must be in an active state.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a deployment type
@@ -187,8 +192,8 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

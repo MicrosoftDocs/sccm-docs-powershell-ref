@@ -45,6 +45,11 @@ An installation source file is an object that contains installation source param
 A secondary site has no System Center Configuration Manager database of its own.
 Instead, it forwards information that it gets from clients to a primary site that stores the data for all the secondary sites that are attached to it.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an installation source file

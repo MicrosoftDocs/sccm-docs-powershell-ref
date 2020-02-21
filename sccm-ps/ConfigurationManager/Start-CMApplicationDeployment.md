@@ -67,6 +67,11 @@ Start-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-Avai
 ## DESCRIPTION
 The **Start-CMApplicationDeployment** cmdlet starts an application deployment.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Start application deployment

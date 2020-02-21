@@ -63,6 +63,11 @@ Set-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetect
 ## DESCRIPTION
 The **Set-CMMacDeploymentType** cmdlet changes the settings for a Mac deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Rename a deployment type and add a description

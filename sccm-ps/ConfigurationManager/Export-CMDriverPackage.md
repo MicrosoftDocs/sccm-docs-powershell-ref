@@ -45,6 +45,11 @@ Export-CMDriverPackage -Id <String> -ExportFilePath <String> [-WithDependence <B
 ## DESCRIPTION
 The **Export-CMDriverPackage** cmdlet exports one or more driver packages to a .zip file.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Export a driver package

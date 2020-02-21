@@ -32,6 +32,11 @@ The **Resolve-CMInventoriedSoftwareConflict** cmdlet resolves a conflict in Micr
 When Configuration Manager receives updated information about software that is part of the software inventory, that information may conflict with your local settings.
 You can resolve a conflict by keeping your local inventory information or updating to the new information.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Resolve a software conflict and keep local inventory information

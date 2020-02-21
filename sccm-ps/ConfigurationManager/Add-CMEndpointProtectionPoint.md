@@ -42,6 +42,11 @@ Endpoint Protection lets you manage antimalware policies and Windows Firewall se
 In order to use Endpoint Protection with System Center Configuration Manager, you must install a single site system role for Endpoint Protection, either in the central site or in a stand-alone primary site.
 For more information about Endpoint Protection in System Center Configuration Manager, see [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a site system role
@@ -101,8 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -133,7 +138,7 @@ Accept wildcard characters: False
 
 ### -ProtectionService
 Specifies the type of membership you have for Microsoft Active Protection Service (MAPS).
-Valid values are: 
+Valid values are:
 
 - AdvancedMembership
 - BasicMembership

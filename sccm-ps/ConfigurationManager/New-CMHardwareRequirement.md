@@ -32,6 +32,11 @@ The **New-CMHardwareRequirement** cmdlet creates a hardware requirement object f
 Microsoft System Center Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
 You can add, modify, or delete your own hardware requirements, but you cannot change built-in hardware requirement objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a hardware requirement object
@@ -39,7 +44,7 @@ You can add, modify, or delete your own hardware requirements, but you cannot ch
 PS XYZ:\> New-CMHardwareRequirement -MinCpu 233 -MinDiskFree 1572864 -MinDiskSize 10485760 -MinRam 131072 -Product "Accounts Program"
 
 
-IsLocal     : 
+IsLocal     :
 MinCPU      : 233
 MinDiskFree : 1572864
 MinDiskSize : 10485760

@@ -53,6 +53,11 @@ The **New-CMExchangeServer** cmdlet configures a new Microsoft Exchange Server c
 An Exchange Server connector synchronizes and manages the device enrolled by the Exchange Server.
 For more information, see [Configuration Manager 2012 Exchange Connector Implementation in Microsoft IT](http://go.microsoft.com/fwlink/?LinkId=286314) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an Exchange Server
@@ -391,7 +396,7 @@ Accept wildcard characters: False
 
 ### -SecuritySetting
 Specifies a dictionary of security settings.
-Valid values are: 
+Valid values are:
 
 - AllowBluetooth
 - AllowBrowser

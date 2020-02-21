@@ -47,6 +47,11 @@ The **Set-CMAlertSubscription** cmdlet changes the properties of an alert subscr
 You can change the name of an alert subscription, the email address of the recipient of an alert notification, the Windows locale ID, and the alert ID.
 You can also change the security scope membership of an alert subscription by adding it to or removing it from a specified security scope.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the properties of an alert subscription by subscription ID

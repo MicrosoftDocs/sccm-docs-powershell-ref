@@ -46,6 +46,11 @@ Set-CMWirelessProfileConfigurationItem [-Description <String>] [-Digest <Configu
 The **Set-CMWirelessProfileConfigurationItem** cmdlet modifies one or more wireless profiles.
 Client computers use wireless profiles for configuration when they connect to a company's wireless network.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a wireless profile configuration item

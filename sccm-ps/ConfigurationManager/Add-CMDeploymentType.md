@@ -210,6 +210,11 @@ The **Add-CMDeploymentType** cmdlet adds a deployment type for an application.
 A deployment type is contained within an application and contains the information that Microsoft System Center Configuration Manager requires to install software.
 A deployment type also contains rules that specify if and how the software is deployed.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add an Windows Installer deployment type to an application

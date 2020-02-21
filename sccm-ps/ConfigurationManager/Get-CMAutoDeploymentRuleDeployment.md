@@ -42,6 +42,11 @@ Get-CMAutoDeploymentRuleDeployment [-InputObject] <IResultObject> [-DisableWildc
 ## DESCRIPTION
 The **Get-CMAutoDeploymentRuleDeployment** cmdlet gets the deployments associated with an automatic deployment rule.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a deployment object for an automatic deployment rule

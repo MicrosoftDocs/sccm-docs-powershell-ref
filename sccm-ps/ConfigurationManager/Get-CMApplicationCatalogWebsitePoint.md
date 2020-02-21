@@ -40,6 +40,11 @@ This site system role supports the Application Catalog website.
 You can specify a website point by either site code or by the name of the server that hosts the role.
 Use this cmdlet with no parameters to get all Application Catalog website points for a Configuration Manager hierarchy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a website point by using a site code
@@ -102,8 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

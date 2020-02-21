@@ -33,6 +33,11 @@ User device affinity in System Center Configuration Manager is a method of assoc
 The devices listed in the file that you specify in the *FileName* parameter must already exist as resources in the Configuration Manager database.
 If they do not exist, the import will fail.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import a user device affinity

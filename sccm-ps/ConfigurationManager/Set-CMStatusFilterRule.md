@@ -43,6 +43,11 @@ You configure status filter rules for each site, not across all sites.
 
 To change the priority of a rule, use the rule name to specify the rule.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Increase the priority of a rule

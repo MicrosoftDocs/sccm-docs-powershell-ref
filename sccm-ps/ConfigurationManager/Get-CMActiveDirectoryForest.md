@@ -37,6 +37,11 @@ Get-CMActiveDirectoryForest -Id <String[]> [-DisableWildcardHandling] [-ForceWil
 The **Get-CMActiveDirectoryForest** cmdlet gets one or more Active Directory forest objects in Microsoft System Center Configuration Manager.
 You can get an Active Directory forest object by ID or fully qualified domain name (FQDN).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all Active Directory forest objects

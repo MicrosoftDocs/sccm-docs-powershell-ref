@@ -52,6 +52,11 @@ Set-CMRemoteConnectionProfileConfigurationItem [-EnableNla <Boolean>] [-EnablePr
 The **Set-CMRemoteConnectionProfileConfigurationItem** cmdlet modifies a remote connection profile.
 Client computers use remote connection profiles to remotely connect to computers from outside the domain or over the Internet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a remote connection profile configuration item

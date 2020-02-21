@@ -36,6 +36,11 @@ Get-CMSiteInstallStatus -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 The **Get-CMSiteInstallStatus** cmdlet provides information about the installation status for Microsoft System Center Configuration Manager.
 You can specify an installation by ID or by site code.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get site installation status

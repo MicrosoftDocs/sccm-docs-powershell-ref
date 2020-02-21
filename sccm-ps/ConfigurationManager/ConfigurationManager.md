@@ -5,7 +5,7 @@ Download Help Link: {{ Update Download Link }}
 Help Version: {{ Please enter version of help manually (X.X.X.X) format }}
 Locale: en-US
 titleSuffix: Configuration Manager
-description: This section contains the help topics and about topics for the Configuration Manager Cmdlets.
+description: This section contains the help topics and about topics for the Configuration Manager cmdlets.
 ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -18,9 +18,9 @@ manager: dougeby
 # ConfigurationManager Module
 
 ## Description
-This section contains the help topics and about topics for the Configuration Manager Cmdlets.
+This section contains the help topics and about topics for the Configuration Manager cmdlets.
 
-## ConfigurationManager Cmdlets
+## ConfigurationManager cmdlets
 
 ### [Add-CMAndroidDeploymentType](Add-CMAndroidDeploymentType.md)
 Adds an Android deployment type.

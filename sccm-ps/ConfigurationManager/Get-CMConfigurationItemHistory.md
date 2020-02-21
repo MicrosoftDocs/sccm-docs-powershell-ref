@@ -51,6 +51,11 @@ The server removes previous versions, by default, when the data is more than 90 
 This cmdlet gets the history of an item for a specified item name.
 This cmdlet also gets the history for a specified revision of an item.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get item history by name

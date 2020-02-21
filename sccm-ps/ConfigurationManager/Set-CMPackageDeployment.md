@@ -98,6 +98,11 @@ A deployment includes a collection of devices or users, a package to deploy, and
 To specify which deployment to modify, specify the collection name, package, and program name.
 You can specify the package by name or ID, or you can use the [Get-CMPackage](Get-CMPackage.md) cmdlet to get a package object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set recurrence properties
@@ -523,11 +528,11 @@ The acceptable values for this parameter are:
 
 - AlwaysRerunProgram.
 Rerun as scheduled, even if the deployment succeeded.
-You can use this value for recurring deployments. 
+You can use this value for recurring deployments.
 - NeverRerunDeployedProgram.
-Does not rerun, even if the deployment failed or files changed. 
+Does not rerun, even if the deployment failed or files changed.
 - RerunIfFailedPreviousAttempt.
-Rerun, as scheduled, if the deployment failed on the previous attempt. 
+Rerun, as scheduled, if the deployment failed on the previous attempt.
 - RerunIfSucceededOnpreviousAttempt.
 Rerun only if the previous attempt succeeded.
 You can use this value for updates that depend on the previous update.

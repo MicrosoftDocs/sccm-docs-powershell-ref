@@ -33,6 +33,11 @@ The **Get-CMScript** cmdlet gets one or more Microsoft System Center Configurati
 
 You can get a specific script by specifying the author or the name of the script.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all scripts

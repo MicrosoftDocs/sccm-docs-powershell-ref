@@ -41,6 +41,11 @@ A task sequence includes configuration and operating system deployment settings 
 You can specify a name or ID to get a specific sequence.
 You can also specify a security scope, by itself or with a name or ID, to get sequences with that security scope.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a task sequence by name

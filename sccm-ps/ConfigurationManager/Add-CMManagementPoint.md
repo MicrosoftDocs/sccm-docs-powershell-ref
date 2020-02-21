@@ -59,6 +59,11 @@ Add-CMManagementPoint [-EnableSsl] [-EnableCloudGateway] [-CommunicationType <Co
 The **Add-CMManagementPoint** cmdlet adds a management point to Microsoft System Center Configuration Manager.
 A management point is a System Center Configuration Manager site system role that provides policy and service information to clients and receives configuration data from clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a management point
@@ -67,14 +72,14 @@ PS XYZ:\>Add-CMManagementPoint -SiteSystemServerName "CMDEV-TEST02.TSQA.CONTOSO.
 ```
 
 This command adds a management point to a System Center Configuration Manager installation.
-The command specifies the following information about the management point: 
+The command specifies the following information about the management point:
 
 - The new management point appears on the site system named CMDEV-TEST02.TSQA.CONTOSO.COM.
 This name is also the fully qualified domain name for the SQL Server instance named MSSQLServer.
 - The site has code CM2.
 - The management point accepts connections from internet and intranet clients and from portable devices.
 - The management point has the associated database name Test.
-- The management point uses the domain user account for the user named TSQA\MPAdmin. 
+- The management point uses the domain user account for the user named TSQA\MPAdmin.
 - The cmdlet displays all messages that the addition operation generates.
 
 ## PARAMETERS
@@ -96,7 +101,7 @@ Accept wildcard characters: False
 
 ### -ClientConnectionType
 Specifies the type of the client connection.
-Valid values are: 
+Valid values are:
 
 - Internet
 - InternetAndIntranet
@@ -246,8 +251,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

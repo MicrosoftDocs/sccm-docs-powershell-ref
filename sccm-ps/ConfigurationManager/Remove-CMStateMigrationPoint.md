@@ -40,6 +40,11 @@ If you remove a state migration point, you also remove all associated stored use
 
 Each state migration point can be a member of only one System Center Configuration Manager site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a specified migration point

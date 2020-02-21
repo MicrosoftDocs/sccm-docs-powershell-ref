@@ -51,6 +51,11 @@ The **New-CMUserDataAndProfileConfigurationItem** cmdlet creates a user data and
 A configuration item can manage folder redirection, offline folders, and roaming user profiles.
 You can modify settings for an existing configuration item by using the Set-CMUserDataAndProfileConfigurationItem cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Specify folder redirection
@@ -610,7 +615,7 @@ Accept wildcard characters: False
 
 ### -ManageAdvancedSetting
 Indicates whether this configuration item manages advanced settings for folder redirection.
-Specify values for any of the following parameters: 
+Specify values for any of the following parameters:
 
 - *GrantExclusiveRight*
 - *MoveContent*

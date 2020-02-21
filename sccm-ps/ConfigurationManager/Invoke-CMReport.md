@@ -31,6 +31,11 @@ Invoke-CMReport [-SiteCode <String>] [-SrsServerName <String>] -ReportPath <Stri
 The **Invoke-CMReport** cmdlet invokes a Microsoft SQL Server Reporting Services report that displays information about data and operations in Microsoft System Center Configuration Manager.
 The reporting services point is a site system role that you install on a server that runs Microsoft SQL Server Reporting Services.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Invoke a report

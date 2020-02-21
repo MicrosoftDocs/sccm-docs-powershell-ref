@@ -50,6 +50,11 @@ You can specify rules to remove by ID or by name, or specify a rule object by us
 This cmdlet deletes rules permanently.
 You can use the [Disable-CMSoftwareUpdateAutoDeploymentRule](Disable-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet to suspend a rule.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a deployment rule by name

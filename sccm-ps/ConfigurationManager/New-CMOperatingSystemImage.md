@@ -30,6 +30,11 @@ New-CMOperatingSystemImage -Name <String> -Path <String> [-Version <String>] [-D
 The **New-CMOperatingSystemImage** cmdlet adds an operating system image to a Microsoft System Center Configuration Manager site.
 Operating system images are .wim format files and represent a compressed collection of reference files and folders that are System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an operating system image

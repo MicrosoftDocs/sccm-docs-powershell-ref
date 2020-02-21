@@ -46,6 +46,11 @@ Start-CMApplicationDeploymentSimulation -Id <Int32> -CollectionName <String>
 The **Start-CMApplicationDeploymentSimulation** cmdlet starts an application deployment.
 Use simulated deployment to test an application deployment without installing an application.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Start an application deployment simulation

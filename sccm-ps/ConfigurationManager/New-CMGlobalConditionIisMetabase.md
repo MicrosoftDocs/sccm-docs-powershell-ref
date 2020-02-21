@@ -18,7 +18,7 @@ titleSuffix: Configuration Manager
 
 ## SYNOPSIS
 
-Creates an IIS Metabase type global condition in Configuration Manager. 
+Creates an IIS Metabase type global condition in Configuration Manager.
 
 ## SYNTAX
 
@@ -34,6 +34,11 @@ The **New-CMGlobalConditionIisMetabase** cmdlet creates an IIS Metabase type glo
 
 A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
@@ -42,7 +47,7 @@ A global condition is a setting or expression in System Center Configuration Man
 $GlobalIIS = New-CMGlobalConditionIisMetabase -DataType String -PropertyId $int -Name GC3
 ```
 
-This command creates an IIS Metabase type global condition in Configuration Manager. 
+This command creates an IIS Metabase type global condition in Configuration Manager.
 
 ## PARAMETERS
 

@@ -37,6 +37,11 @@ Bootable media deploys an operating system when the destination computer starts.
 
 NOTE: This cmdlet requires elevated permissions to run.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create bootable media
@@ -289,7 +294,7 @@ Accept wildcard characters: False
 
 ### -MediaMode
 Specifies the media mode.
-Valid values are: 
+Valid values are:
 
 - Dynamic
 - SiteBased
@@ -324,7 +329,7 @@ Accept wildcard characters: False
 
 ### -MediaType
 Specifies the media type.
-Valid values are: 
+Valid values are:
 
 - CdDvd
 - Usb
@@ -407,7 +412,7 @@ Accept wildcard characters: False
 
 ### -UserDeviceAffinity
 Specifies how users are associated with their devices.
-Valid values are: 
+Valid values are:
 
 - DoNotAllow
 - AdministratorApproval

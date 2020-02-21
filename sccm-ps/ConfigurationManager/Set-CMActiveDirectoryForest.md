@@ -52,6 +52,11 @@ You can specify an Active Directory forest object by ID or FQDN, or you can supp
 
 Active Directory Forest Discovery requires a global account to discover or publish to untrusted forests.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the description of an Active Directory forest

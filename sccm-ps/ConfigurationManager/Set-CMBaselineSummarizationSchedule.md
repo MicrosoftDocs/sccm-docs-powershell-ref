@@ -29,6 +29,11 @@ Set-CMBaselineSummarizationSchedule -Interval <Int32> [-Unit <SummarizationSched
 ## DESCRIPTION
 The **Set-CMBaselineSummarizationSchedule** cmdlet configures the schedule by which the configuration baseline data in the Microsoft System Center Configuration Manager is updated with the latest information from the site database.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set the configuration baseline update schedule
@@ -88,10 +93,10 @@ Accept wildcard characters: False
 ### -Interval
 Specifies an amount of time, as an integer.
 This value works with the unit type you specify in the *Unit* parameter.
-Valid values for this parameter depend on the unit that you select: 
+Valid values for this parameter depend on the unit that you select:
 
-- Minutes: 10 through 59. 
-- Hours: 1 through 23. 
+- Minutes: 10 through 59.
+- Hours: 1 through 23.
 - Days: 1 through 31.
 
 ```yaml
@@ -108,7 +113,7 @@ Accept wildcard characters: False
 
 ### -Unit
 Specifies a unit to use to define an interval for the summarization schedule.
-Valid values are: 
+Valid values are:
 
 - Days
 - Hours

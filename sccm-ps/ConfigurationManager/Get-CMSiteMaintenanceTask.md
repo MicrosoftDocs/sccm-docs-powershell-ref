@@ -30,6 +30,11 @@ Get-CMSiteMaintenanceTask [-Name <String>] [-SiteCode <String>] [-DisableWildcar
 The **Get-CMSiteMaintenanceTask** cmdlet gets maintenance tasks in Microsoft System Center Configuration Manager.
 A maintenance task is a task in System Center Configuration Manager that performs maintenance on sites and databases.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a maintenance task

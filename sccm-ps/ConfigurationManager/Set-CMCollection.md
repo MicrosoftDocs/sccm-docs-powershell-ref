@@ -50,6 +50,11 @@ Set-CMCollection -CollectionId <String> [-NewName <String>] [-Comment <String>]
 
 Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a collection and modify it
@@ -274,7 +279,7 @@ Specifies how Configuration Manager refreshes the collection.
 Valid values are:
 
 - None
-- Manual 
+- Manual
 - Periodic
 - Continuous
 - Both

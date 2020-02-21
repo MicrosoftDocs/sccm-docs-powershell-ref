@@ -30,6 +30,11 @@ Set-CMEndpointProtectionSummarizationSchedule -Interval <Int32> [-Unit <Summariz
 The **Set-CMEndpointProtectionSummarizationSchedule** cmdlet modifies the settings of an System Center 2016 Endpoint Protection summarization schedule.
 For more information about Endpoint Protection summarization schedules, see [How to Monitor Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268428) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify an Endpoint Protection summarization schedules
@@ -89,10 +94,10 @@ Accept wildcard characters: False
 ### -Interval
 Specifies an amount of time, as an integer.
 This value works with the unit type you specify in the *Unit* parameter.
-Valid values for this parameter depend on the unit that you select: 
+Valid values for this parameter depend on the unit that you select:
 
-- Minutes: 10 through 59. 
-- Hours: 1 through 23. 
+- Minutes: 10 through 59.
+- Hours: 1 through 23.
 - Days: 1 through 31.
 
 ```yaml

@@ -151,6 +151,11 @@ You can create schedule tokens to schedule events with differing frequencies suc
 Use the Convert-CMSchedule cmdlet to decode and encode schedule tokens into and from an interval string.
 You can then use the interval strings to set schedule properties when you define or modify System Center Configuration Manager objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a schedule token
@@ -419,7 +424,7 @@ Accept wildcard characters: False
 Specifies the week of the month when the event occurs.
 The acceptable values for this parameter are:
 
-- 0: Last (default) 
+- 0: Last (default)
 - 1: First
 - 2: Second
 - 3: Third

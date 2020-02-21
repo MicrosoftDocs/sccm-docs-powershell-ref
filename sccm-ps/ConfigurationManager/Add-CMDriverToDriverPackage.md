@@ -90,6 +90,11 @@ A driver package contains the content associated with one or more device drivers
 You can add Windows device drivers that have been imported into the driver catalog to an existing driver package.
 When a device driver is added to a driver package, Microsoft System Center Configuration Manager copies the device driver content from the driver source location to the driver package.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a driver to a driver package

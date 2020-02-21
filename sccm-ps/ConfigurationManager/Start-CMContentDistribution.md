@@ -162,6 +162,11 @@ The **Start-CMContentDistribution** cmdlet copies content from the content libra
 You can use this cmdlet to distribute several types of content, including application deployment types, packages, deployment packages, driver packages, operating system images, operating system installers, boot images, and task sequences.
 You can distribute the content to distribution points, distribution point groups, or collections associated with distribution point groups.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Distribute a boot image

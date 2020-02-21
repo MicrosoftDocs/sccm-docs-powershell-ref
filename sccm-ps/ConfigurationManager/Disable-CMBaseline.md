@@ -43,6 +43,11 @@ Disable-CMBaseline [-InputObject] <IResultObject> [-DisableWildcardHandling] [-F
 The **Disable-CMBaseline** cmdlet disables one or more configuration baselines in Microsoft System Center Configuration Manager.
 After you disable a configuration baseline, System Center Configuration Manager no longer evaluates it for compliance on client computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Disable a configuration baseline

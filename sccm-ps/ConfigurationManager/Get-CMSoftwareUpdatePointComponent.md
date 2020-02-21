@@ -30,6 +30,11 @@ Get-CMSoftwareUpdatePointComponent [-SiteSystemServerName <String>] [-SiteCode <
 The **Get-CMSoftwareUpdatePointComponent** cmdlet retrieves a software update point component.
 A software update point component interacts with WSUS services to configure update settings, request synchronization to the upstream update source, and synchronize updates from the WSUS database to the site server database on the central site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Retrieve a software update point component by name

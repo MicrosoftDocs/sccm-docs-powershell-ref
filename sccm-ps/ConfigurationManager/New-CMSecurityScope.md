@@ -30,6 +30,11 @@ New-CMSecurityScope -Name <String> [-Description <String>] [-DisableWildcardHand
 The **New-CMSecurityScope** cmdlet creates a security scope.
 Security scopes provide administrative users with access to securable objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a security scope

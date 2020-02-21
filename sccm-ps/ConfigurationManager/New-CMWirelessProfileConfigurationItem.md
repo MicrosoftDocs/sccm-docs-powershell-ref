@@ -30,6 +30,11 @@ New-CMWirelessProfileConfigurationItem -DesiredConfigurationDigestPath <String> 
 The **New-CMWirelessProfileConfigurationItem** cmdlet creates a wireless profile.
 Client computers use wireless profiles for configuration when they connect to a company's wireless network.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a wireless profile configuration item

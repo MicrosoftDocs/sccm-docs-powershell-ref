@@ -30,6 +30,11 @@ Import-CMClientCertificatePfx -Path <String> -UserName <String> [-Password <Secu
 ## DESCRIPTION
 The **Import-CMClientCertificatePfx** cmdlet imports a client Personal Information Exchange (PFX) certificate to a site server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import a client PFX certificate

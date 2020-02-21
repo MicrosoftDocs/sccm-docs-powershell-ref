@@ -37,6 +37,11 @@ Remove-CMEndpointProtectionPoint [-SiteCode <String>] [-Force] [-SiteSystemServe
 The **Remove-CMEndpointProtectionPoint** cmdlet removes a System Center 2016 Endpoint Protection point from Microsoft System Center Configuration Manager.
 For more information about Endpoint Protection in Configuration Manager, see [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an Endpoint Protection point
@@ -48,7 +53,7 @@ This command removes an Endpoint Protection point.
 
 ### Example 2: Remove an Endpoint Protection point by using an input object
 ```
-PS XYZ:\> $EPP = Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com" 
+PS XYZ:\> $EPP = Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
 PS XYZ:\> Remove-CMEndpointProtectionPoint -InputObject $EPP
 ```
 

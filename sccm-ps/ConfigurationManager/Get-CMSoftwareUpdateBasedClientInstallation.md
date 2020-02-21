@@ -35,6 +35,11 @@ This site system role can install the client on computers that do not already ha
 To use software update point based installation, you must use the same Windows Server Update Services (WSUS) server for both client installation and software updates.
 This server must be the active software update point in a primary site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a client installation

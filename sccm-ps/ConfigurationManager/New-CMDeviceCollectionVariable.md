@@ -47,6 +47,11 @@ The **New-CMDeviceCollectionVariable** cmdlet creates a device collection variab
 You can use a device collection variable to define custom task sequence variables and their associated values to be used by the resources in a collection.
 Task sequence variables are a set of name and value pairs that provide a mechanism to configure and customize the steps of a task sequence when the task sequence is deployed to a specific collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a device collection variable

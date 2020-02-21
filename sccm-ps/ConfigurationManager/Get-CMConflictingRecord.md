@@ -44,6 +44,11 @@ You can also configure Configuration Manager to resolve conflicts automatically.
 You can use this cmdlet with the [Block-CMConflictingRecord](Block-CMConflictingRecord.md) cmdlet or the [Merge-CMConflictingRecord](Merge-CMConflictingRecord.md) cmdlet.
 You can get all the outstanding conflicts for Configuration Manager or specify a conflict by name or by ID.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all conflicting records

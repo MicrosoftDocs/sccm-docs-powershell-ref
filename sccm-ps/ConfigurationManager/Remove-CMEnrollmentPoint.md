@@ -38,6 +38,11 @@ The **Remove-CMEnrollmentPoint** cmdlet removes an enrollment point in Microsoft
 An enrollment point is a site system role that uses public key infrastructure (PKI) certificates to complete mobile device enrollment and to provision Intel AMT-based computers.
 After you remove an enrollment point, client computers and devices must use a different enrollment point.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an enrollment point

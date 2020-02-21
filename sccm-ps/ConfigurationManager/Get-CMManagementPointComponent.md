@@ -30,6 +30,11 @@ Get-CMManagementPointComponent [-SiteCode <String>] [-SiteSystemServerName <Stri
 The **Get-CMManagementPointComponent** cmdlet gets a component of a management point for Microsoft System Center Configuration Manager.
 A management point is a System Center Configuration Manager site that provides policy and service information to clients and receives configuration data from clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a management point component

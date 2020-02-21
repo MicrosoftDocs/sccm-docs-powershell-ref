@@ -83,6 +83,11 @@ Discovery identifies computer and user resources that Microsoft System Center Co
 When System Center Configuration Manager discovers a resource, System Center Configuration Manager creates a record in the Configuration Manager database for the resource and its associated information.
 You can then use the discovery information to help you to install the System Center Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify network discovery
@@ -96,7 +101,7 @@ The command also enables discovery.
 
 ### Example 2: Modify Active Directory system discovery
 ```
-PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10
 PS XYZ:\> Set-CMDiscoveryMethod -ActiveDirectorySystemDiscovery -SiteCode "CM4" -AddAdditionalAttribute "331", "431", "134" -DeltaDiscoveryIntervalMinutes 8 -Enabled $True -EnableDeltaDiscovery $True -EnableFilteringExpiredLogon $True -PollingSchedule $Schedule -RemoveAdditionalAttribute "123","cn" -TimeSinceLastLogonDays 80
 ```
 
@@ -111,7 +116,7 @@ Also, the command adds and removes specified attributes from the attributes used
 
 ### Example 3: Modify forest discovery
 ```
-PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10
 PS XYZ:\> Set-CMDiscoveryMethod -ActiveDirectoryForestDiscovery -SiteCode "CM4" -EnableActiveDirectorySiteBoundaryCreation $True -Enabled $True  -EnableSubnetBoundaryCreation $True -PollingSchedule $Schedule
 ```
 
@@ -122,7 +127,7 @@ The command specifies the schedule object stored in the $Schedule variable as th
 
 ### Example 4: Enable heartbeat discovery
 ```
-PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10 
+PS XYZ:\> $Schedule = New-CMSchedule -RecurInterval Minutes -Start "2012/10/20 00:00:00" -End "2013/10/20 00:00:00" -RecurCount 10
 PS XYZ:\> Set-CMDiscoveryMethod -Heartbeat -SiteCode "CM4" -Enabled $True -PollingSchedule $Schedule
 ```
 
@@ -502,13 +507,13 @@ Accept wildcard characters: False
 
 ### -NetworkDiscoveryType
 Specifies the network discovery type.
-If you specify the *NetworkDiscovery* parameter, specify one of the following types: 
+If you specify the *NetworkDiscovery* parameter, specify one of the following types:
 
 - ToplogyAndClient.
-The discovery finds the topology of your network and potential client devices. 
+The discovery finds the topology of your network and potential client devices.
 - ToplogyClientAndClientOperatingSystem.
 The discovery finds the topology of your network.
-The discovery finds potential client devices and their operating systems and versions. 
+The discovery finds potential client devices and their operating systems and versions.
 - Topology.
 The discovery finds the topology of your network by discovering IP subnets and routers.
 

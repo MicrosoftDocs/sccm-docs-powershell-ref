@@ -173,7 +173,7 @@ The **Publish-CMPrestageContent** cmdlet publishes files for applications, image
 
 Specify the distribution site, the file name, and the item to publish.
 
-You can specify any of the following to publish to a distribution point: 
+You can specify any of the following to publish to a distribution point:
 
 - Application
 - BootImage
@@ -184,6 +184,11 @@ You can specify any of the following to publish to a distribution point:
 - Package
 
 You can specify the item to be published by name or ID, or use another cmdlet to get the desired item.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 

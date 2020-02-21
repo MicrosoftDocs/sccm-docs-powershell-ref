@@ -41,6 +41,11 @@ Get-CMMigrationEntity [-Type <String>] [-IsActive <String>] [-DisableWildcardHan
 The **Get-CMMigrationEntity** cmdlet gets the migration entity in Microsoft System Center Configuration Manager.
 A migration entity is an object to be migrated that is of any type that is supported by migration.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get information about all your migration entities

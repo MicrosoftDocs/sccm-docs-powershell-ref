@@ -49,6 +49,11 @@ Remove-CMApplication -ModelName <String> [-Force] [-DisableWildcardHandling] [-F
 The **Remove-CMApplication** cmdlet removes an application from Microsoft System Center Configuration Manager so that it cannot be installed by clients.
 This cmdlet does not remove any existing client installations.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an application and remove it

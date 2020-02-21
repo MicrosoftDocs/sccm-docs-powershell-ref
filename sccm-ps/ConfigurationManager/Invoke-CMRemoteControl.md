@@ -53,6 +53,11 @@ Use remote control in Microsoft System Center Configuration Manager to remotely 
 You can use remote control to troubleshoot hardware and software configuration problems on client computers and to provide help desk support when access to the computer of a user is required.
 System Center Configuration Manager supports the remote control of workgroup computers and computers that are joined to an Active Directory domain.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable remote control on a computer
@@ -140,8 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

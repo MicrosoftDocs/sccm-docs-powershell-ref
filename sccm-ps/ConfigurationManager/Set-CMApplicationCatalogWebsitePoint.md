@@ -50,6 +50,11 @@ You can customize the page that users see when they connect to the Application C
 Specify custom values for the colors blue, green, and red.
 You can also specify a name for users to see in the browser, such as a company name or a division within a company.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the settings of an Application Catalog website point
@@ -63,7 +68,7 @@ The command specifies that Configuration Manager displays the organization name 
 
 ### Example 2: Change the settings of an Application Catalog website point by object variable
 ```
-PS XYZ:\> $Acwp= Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4" 
+PS XYZ:\> $Acwp= Get-CMApplicationCatalogWebsitePoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM4"
 PS XYZ:\> Set-CMApplicationCatalogWebsitePoint -InputObject $Acwp -NetbiosName "CMDIV-WEST02" -OrganizationName "MarketingWest" -ColorR 160 -ColorG 200 -ColorB 50
 ```
 

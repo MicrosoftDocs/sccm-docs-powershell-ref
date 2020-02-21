@@ -31,6 +31,11 @@ The **Get-CMAccount** cmdlet gets a Microsoft System Center Configuration Manage
 The user name must be in the domain\user format.
 For more information about System Center Configuration Manager user accounts, see [Technical Reference for Accounts Used in Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=248317) in the TechNet library.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a user account by using its name

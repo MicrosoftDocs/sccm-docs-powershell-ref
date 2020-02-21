@@ -31,6 +31,11 @@ Get-CMTaskSequenceStepCondition -InputObject <IResultObject> [-DisableWildcardHa
 
 The **Get-CMTaskSequenceStepCondition** cmdlet gets task sequence condition object(s) in a task sequence group or step.  The cmdlet supports pipeline from a task sequence group or step object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1

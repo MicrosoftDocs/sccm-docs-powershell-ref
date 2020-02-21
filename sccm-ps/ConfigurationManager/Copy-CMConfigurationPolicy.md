@@ -44,6 +44,11 @@ The **Copy-CMConfigurationPolicy** copies a configuration policy.
 A configuration policy can be a client authentication  certificate profile configuration item, a wireless profile configuration item, or others.
 See the Alias section for additional policy items that you can use this cmdlet to copy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Copy a configuration policy by using the pipeline

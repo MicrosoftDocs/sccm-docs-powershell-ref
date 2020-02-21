@@ -93,6 +93,11 @@ You can customize the page that users see when they connect to the Application C
 Specify custom values for the colors blue, green, and red.
 You can also specify a name for users to see in the browser, such as a company name or a division within a company.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add an Application Catalog website point
@@ -134,7 +139,7 @@ Accept wildcard characters: False
 
 ### -ClientConnectionType
 Specifies how a client connects to the website.
-Valid values are: 
+Valid values are:
 
 - Internet
 - InternetAndIntranet
@@ -311,8 +316,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

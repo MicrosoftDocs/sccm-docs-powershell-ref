@@ -64,6 +64,11 @@ You can redeploy a required PXE deployment for a collection of devices.
 Clear the status of the last PXE deployment assigned to that System Center Configuration Manager collection.
 System Center Configuration Manager redeploys the most recent required deployments.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Clear a PXE deployment for a device collection

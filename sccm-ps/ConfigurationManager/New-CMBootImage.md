@@ -36,6 +36,11 @@ You must run **New-CMBootImage** on the computer that is running the Systems Man
 The computer account of the computer that is running the SMS provider must have Read and Write access to the package source of the boot image.
 For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=263566) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a new boot image object

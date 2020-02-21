@@ -52,6 +52,11 @@ Get-CMBaseline [-ParentBaseline] <IResultObject> [-DisableWildcardHandling] [-Fo
 ## DESCRIPTION
 The **Get-CMBaseline** cmdlet gets one or more configuration baselines.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get configuration baselines by using a parent baseline name

@@ -70,6 +70,11 @@ You can specify one or more software updates associated with deployment packages
 You can also specify the download source location of updates and the language of the software updates.
 Languages determine which summary details a software update synchronizes and the file languages to be downloaded for software updates.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Save a software update and add a language to it

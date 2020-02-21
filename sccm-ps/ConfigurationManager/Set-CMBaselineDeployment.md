@@ -59,6 +59,11 @@ You can specify a baseline by its name or ID, or use the **Get-CMBaseline** cmdl
 
 You can use the **Start-CMBaselineDeployment** cmdlet to begin a deployment.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change whether a deployment generates alerts

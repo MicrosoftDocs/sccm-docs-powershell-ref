@@ -40,6 +40,11 @@ Add-CMReportingServicePoint [-FolderName <String>] [-ReportServerInstance <Strin
 The **Add-CMReportingServicePoint** cmdlet adds a reporting service point to Configuration Manager.
 A reporting service point is a site system role that is installed on a server that run Microsoft SQL Server Reporting Services.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a reporting service point
@@ -158,8 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

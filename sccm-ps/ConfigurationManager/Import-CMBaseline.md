@@ -37,6 +37,11 @@ For example, you might import data previously exported from Configuration Manage
 When you import a baseline configuration, you have the option of creating a local copy.
 You can modify that baseline in the future.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import a baseline

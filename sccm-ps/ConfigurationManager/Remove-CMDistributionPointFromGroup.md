@@ -88,6 +88,11 @@ Distribution point groups provide a logical grouping of distribution points for 
 To remove a distribution point, specify both the distribution point to remove and the distribution point group.
 You can specify these values by ID or name, or you can use the [Get-CMDistributionPoint](Get-CMDistributionPoint.md) cmdlet or the [Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md) cmdlet to obtain the relevant object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a distribution point by using an ID

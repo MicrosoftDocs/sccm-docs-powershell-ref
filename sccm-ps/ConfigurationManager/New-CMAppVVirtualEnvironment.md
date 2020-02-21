@@ -31,6 +31,11 @@ New-CMAppVVirtualEnvironment -Name <String> [-Description <String>]
 The **New-CMAppVVirtualEnvironment** cmdlet creates an Microsoft Application Virtualization (App-V) virtual environment in Microsoft System Center Configuration Manager.
 App-V virtual environments in System Center Configuration Manager enable deployed virtual applications to share the same file system and registry on client computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an App-V virtual environment

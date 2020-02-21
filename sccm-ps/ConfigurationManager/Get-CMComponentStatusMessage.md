@@ -36,6 +36,11 @@ Threads or processes send component status messages to Configuration Manager sit
 You can define which messages to get by the severity of the message, the component that created the message, the computer that hosts that component, or the Configuration Manager server that receives the message.
 You must specify a viewing period, as a **TimeSpan** object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get critical messages for a site
@@ -111,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Severity
-Specifies the severity of status messages. 
+Specifies the severity of status messages.
 The acceptable values for this parameter are:
 
 - ALL

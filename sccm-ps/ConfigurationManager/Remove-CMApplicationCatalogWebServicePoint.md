@@ -36,6 +36,11 @@ Remove-CMApplicationCatalogWebServicePoint [-SiteCode <String>] [-Force] [-SiteS
 ## DESCRIPTION
 The **Remove-CMApplicationCatalogWebServicePoint** cmdlet removes a Microsoft System Center Configuration Manager Application Catalog web service point object that has a specified site code for a fully qualified domain name (FQDN).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a system role

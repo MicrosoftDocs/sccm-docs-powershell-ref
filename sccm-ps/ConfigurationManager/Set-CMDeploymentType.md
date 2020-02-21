@@ -267,6 +267,11 @@ A deployment type is a part of the application that defines how that application
 You can also use this cmdlet to change the priority for dependencies of the deployment type.
 Configuration Manager evaluates and installs dependencies of a deployment type in order of priorities before it installs the deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Increase the priority of a deployment application

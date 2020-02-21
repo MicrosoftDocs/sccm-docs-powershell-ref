@@ -41,6 +41,11 @@ The Hardware Inventory Client Agent collects inventory from Microsoft System Cen
 You can modify the categorization information, which includes product name, vendor, software category, and software family, for inventoried software only at the top-level site in your hierarchy.
 After you modify the categorization information for predefined software, the validation state for the software changes from Validated to User Defined.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the Asset Intelligence hardware inventory reporting classes

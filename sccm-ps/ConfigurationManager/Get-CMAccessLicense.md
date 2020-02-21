@@ -42,6 +42,11 @@ Get-CMAccessLicense -LicenseName <String> [-DisableWildcardHandling] [-ForceWild
 The **Get-CMAccessLicense** cmdlet gets license usage information for the servers and clients in the scope of System Center Configuration Manager.
 This cmdlet returns a list of features able to be licensed and a list of unique users and devices per licensable feature.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all licensable features for all servers and clients

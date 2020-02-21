@@ -38,6 +38,11 @@ If you specify the name or ID of an alert subscription, the cmdlet retrieves onl
 If you specify part of the name or ID of an alert subscription, the cmdlet retrieves all alert subscriptions that match the partial name or ID.
 If you do not specify anything, the cmdlet returns the properties of all alert subscriptions.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Display all alert subscriptions

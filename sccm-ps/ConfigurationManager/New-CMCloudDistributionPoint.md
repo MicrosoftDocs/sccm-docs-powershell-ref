@@ -38,6 +38,11 @@ In System Center Configuration Manager, you can use a cloud service in Azure to 
 You can send packages and apps to and host packages and apps in cloud distribution points.
 For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266223) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a cloud distribution point

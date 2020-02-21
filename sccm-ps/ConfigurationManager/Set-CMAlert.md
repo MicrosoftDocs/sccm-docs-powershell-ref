@@ -45,6 +45,11 @@ Set-CMAlert -Id <String> [-NewName <String>] [-Severity <Severities>] [-Paramete
 ## DESCRIPTION
 The **Set-CMAlert** cmdlet changes the properties of one or more Microsoft System Center Configuration Manager alerts.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set alert properties

@@ -30,7 +30,7 @@ Import-CMConfigurationItem -FileName <String[]> [-DuplicateWhileImporting] [-For
 ## DESCRIPTION
 
 The **Import-CMConfigurationItem** cmdlet imports Microsoft System Center Configuration Manager configuration items from one or more cabinet files.
-The files that you import must conform to the Service Modeling Language (SML) schema and can contain information about configuration data from one of the following sources: 
+The files that you import must conform to the Service Modeling Language (SML) schema and can contain information about configuration data from one of the following sources:
 
 - Best practices from a System Center Configuration Manager Configuration Pack.
 - Configuration data that you have externally authored and packaged into a cabinet (.cab) file.
@@ -38,6 +38,11 @@ The files that you import must conform to the Service Modeling Language (SML) sc
 
 Configuration items contain one or more settings, along with compliance rules.
 Items usually define a unit of configuration you want to monitor.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 

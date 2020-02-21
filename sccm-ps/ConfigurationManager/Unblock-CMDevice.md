@@ -44,6 +44,11 @@ The **Unblock-CMDevice** cmdlet unblocks one or more Microsoft System Center Con
 You must unblock a device from the client's assigned site.
 You cannot unblock the device from sites higher in the hierarchy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Unblock a device

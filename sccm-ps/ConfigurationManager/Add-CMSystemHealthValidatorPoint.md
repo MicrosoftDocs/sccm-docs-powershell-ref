@@ -33,6 +33,11 @@ Add-CMSystemHealthValidatorPoint [-SiteSystemServerName] <String> [-SiteCode <St
 ## DESCRIPTION
 The **Add-CMSystemHealthValidatorPoint** cmdlet adds a validator point for system health in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a system health validator point to a server for a site
@@ -64,7 +69,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +83,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -87,8 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -107,7 +112,7 @@ Specifies a site code that identifies the Configuration Manager site that hosts 
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None

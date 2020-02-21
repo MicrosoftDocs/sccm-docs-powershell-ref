@@ -139,6 +139,11 @@ The **New-CMGlobalCondition** cmdlet creates a global condition in Microsoft Sys
 
 A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a global condition
@@ -648,9 +653,9 @@ Specifies the root key in the registry that identifies the registry hive that yo
 WMI uses the registry hive to return, set, and change the values of registry keys.
 The acceptable values for this parameter are:
 
-- ClassesRoot 
-- CurrentConfig 
-- CurrentUser 
+- ClassesRoot
+- CurrentConfig
+- CurrentUser
 - LocalMachine
 - Users
 
@@ -725,7 +730,7 @@ Accept wildcard characters: False
 
 ### -UseLoggedOnUserCredential
 
-Indicates whether to use logged on user credentials. 
+Indicates whether to use logged on user credentials.
 
 ```yaml
 Type: Boolean

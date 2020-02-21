@@ -32,6 +32,11 @@ The **Set-CMObjectSecurityScope** cmdlet adds and removes security scopes for Mi
 This cmdlet has been deprecated and may be removed in a future release.
 Use [Add-CMObjectSecurityScope](Add-CMObjectSecurityScope.md) and [Remove-CMObjectSecurityScope](Remove-CMObjectSecurityScope.md) to add and remove security scopes from Configuration Manager objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a security scope to application objects by using the pipeline
@@ -53,7 +58,7 @@ This command gets all application objects that have a name beginning with Applic
 
 ### -Action
 Specifies the action that this cmdlet takes on the security scope.
-Valid values are: 
+Valid values are:
 
 - AddMembership
 - RemoveMembership

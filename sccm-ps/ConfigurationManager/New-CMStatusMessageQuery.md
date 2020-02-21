@@ -31,6 +31,11 @@ The **New-CMStatusMessageQuery** cmdlet creates a status message query in Micros
 Status message queries in System Center Configuration Manager return status messages from the site database.
 All major System Center Configuration Manager components generate status messages.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a status message query

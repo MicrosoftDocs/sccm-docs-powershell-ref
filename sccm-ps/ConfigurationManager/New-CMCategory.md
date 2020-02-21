@@ -30,6 +30,11 @@ New-CMCategory -Name <String> -CategoryType <CategoryType> [-DisableWildcardHand
 The **New-CMCategory** cmdlet creates a configuration category in Microsoft System Center Configuration Manager.
 Configuration categories offer an optional method of sorting and filtering configuration baselines and configuration items in System Center Configuration Manager and Configuration Manager reports.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a configuration category
@@ -43,7 +48,7 @@ This command creates a new category in DriverCategories named NewLaptopDriverSet
 
 ### -CategoryType
 Specifies a category type.
-Valid values are: 
+Valid values are:
 
 - BaselineCategories
 - DriverCategories

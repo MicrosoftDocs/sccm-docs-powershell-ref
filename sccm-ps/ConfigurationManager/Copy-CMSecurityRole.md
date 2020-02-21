@@ -44,6 +44,11 @@ The **Copy-CMSecurityRole** cmdlet creates a new security role by using an exist
 Microsoft System Center Configuration Manager provides several built-in security roles.
 If you require additional security roles, you can create a custom security role by creating a copy of an existing security role, and then modifying the copy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Copy a security role by using an ID

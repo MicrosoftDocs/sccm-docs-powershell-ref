@@ -80,6 +80,11 @@ The **Remove-CMSecurityScopeFromAdministrativeUser** cmdlet removes the associat
 
 After you remove the association between a security scope and an administrative user, the administrative user cannot view the objects in Microsoft System Center Configuration Manager that are associated with the security scope, and no longer has the permission to perform the tasks that are related to those objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a security scope from an administrative user

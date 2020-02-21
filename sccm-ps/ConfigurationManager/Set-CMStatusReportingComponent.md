@@ -60,6 +60,11 @@ A status reporting component object specifies information about the client confi
 
 You can configure the reporting component to check log files and monitor the severity of entries in the log files.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set status reporting component

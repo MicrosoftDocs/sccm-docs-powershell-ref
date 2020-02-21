@@ -45,6 +45,11 @@ At that time, Microsoft System Center Configuration Manager updates the state of
 You can suspend an alert only when it is enabled.
 If you do not specify the *SkipUntil* parameter, the alert is suspended indefinitely.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Suspend an alert by using ID

@@ -36,6 +36,11 @@ The **New-CMStandaloneMedia** cmdlet creates media used to deploy operating syst
 
 NOTE: This cmdlet requires elevated permissions to run.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create stand-alone media using variables
@@ -261,7 +266,7 @@ Accept wildcard characters: False
 
 ### -MediaSize
 Specifies the size of the media.
-Valid values are: 
+Valid values are:
 
 - None
 - Size4GB
@@ -297,7 +302,7 @@ Accept wildcard characters: False
 
 ### -MediaType
 Specifies the media type.
-Valid values are: 
+Valid values are:
 
 - CdDvd
 - Usb

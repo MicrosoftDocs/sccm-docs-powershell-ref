@@ -32,6 +32,11 @@ If you do not specify the *DeploymentPackageName* parameter, Microsoft System Ce
 
 A deployment package is a Configuration Manager object that contains the content files and instructions for distributing programs, software updates, boot images, operating system images, and drivers to System Center Configuration Manager clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all deployment packages for a distribution point

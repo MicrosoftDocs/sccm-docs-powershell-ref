@@ -46,6 +46,11 @@ You cannot block the device from sites higher in the hierarchy.
 Blocked devices are ignored by the Microsoft System Center Configuration Manager hierarchy.
 To unblock a device, use the [Unblock-CMDevice](Unblock-CMDevice.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Block a device

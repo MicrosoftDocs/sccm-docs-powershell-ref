@@ -54,6 +54,11 @@ Set-CMStatusSummarizer [-SiteCode <String>] [-EnableStatusSummarizer <Boolean>]
 The **Set-CMStatusSummarizer** cmdlet modifies settings of a status summarizer.
 The Microsoft System Center Configuration Manager status summarizers apply to the areas of application deployment, application statistics, component status, and site system status.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a status summarizer

@@ -38,6 +38,11 @@ The **Get-CMMigrationCollection** cmdlet gets the collections selected from a so
 A collection is a set of resources in the Microsoft System Center Configuration Manager hierarchy.
 A migration collection is the set of resources chosen from a hierarchy for migration, including related objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a migration collection by name

@@ -32,6 +32,11 @@ The **New-CMWirelessProfileObject** cmdlet creates a Microsoft System Center Con
 These settings must match the configuration on your Remote Authentication Dial-In User Service (RADIUS) server.
 System Center Configuration Manager cannot validate that these settings with your RADIUS server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a profile for AMT-based computers on a wireless network
@@ -54,14 +59,14 @@ EAP-TLS.
 - EapTtlsMschapv2.
 EAP-TTLS/MSCHAPv2.
 - Peapv0EapMschapv2.
-PEAPv0/EAP-MSCHAPv2. 
+PEAPv0/EAP-MSCHAPv2.
 
 The default authentication method is EAP-TLS.
 
 ```yaml
 Type: ClientAuthenticationMethodType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: EapTls, EapTtlsMschapv2, Peapv0EapMschapv2
 Required: True
 Position: Named
@@ -76,7 +81,7 @@ Specifies a client certificate template.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -90,7 +95,7 @@ Specifies a certification authority for the client.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -104,7 +109,7 @@ Specifies an issuing certification authority for the client.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -132,7 +137,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +154,7 @@ The default value for this parameter is AES.
 ```yaml
 Type: EncryptionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Tkip, Aes
 Required: True
 Position: Named
@@ -164,7 +169,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +184,7 @@ This name cannot exceed 32 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -194,7 +199,7 @@ Use alphanumeric characters only, start the name with a letter, and do not excee
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -210,7 +215,7 @@ The default value for this parameter is WPA2Enterprise.
 ```yaml
 Type: WirelessProfileSecurityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: WpaEnterprise, Wpa2Enterprise
 Required: True
 Position: Named
@@ -225,7 +230,7 @@ Specifies the trusted root certificate that the RADIUS server uses as its server
 ```yaml
 Type: X509Certificate2
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None

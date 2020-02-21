@@ -61,6 +61,11 @@ For more information about cloud distribution points, see [Planning for Content 
 You can use the **Get-CMCloudDistributionPoint** cmdlet to get distribution points to use with other cmdlets.
 For example, you might want to get a distribution point and then use the [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md) cmdlet to suspend it.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all cloud distribution points

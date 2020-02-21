@@ -43,6 +43,11 @@ Set-CMSoftwareDistributionComponent [-SiteCode <String>] [-MaximumPackageCount <
 The **Set-CMSoftwareDistributionComponent** cmdlet sets properties of a software distribution component in Microsoft System Center Configuration Manager.
 You can configure the properties of an object to meet the demands that clients place on the System Center Configuration Manager site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set properties of a software distribution component

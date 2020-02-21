@@ -47,6 +47,11 @@ Set-CMCertificateProfilePfx [-Description <String>] [-KeyStorageProvider <KeySto
 ## DESCRIPTION
 The **Set-CMCertificateProfilePfx** cmdlet changes the settings of a PFX certificate profile.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set a PFX certificate profile by name
@@ -165,7 +170,7 @@ Accept wildcard characters: False
 
 ### -KeyStorageProvider
 Specifies the Key Storage Provider.
-Valid values are: 
+Valid values are:
 
 - InstallToTPM_FailIfNotPresent
 - InstallToTPM_IfPresent

@@ -48,6 +48,11 @@ Get-CMApplication -InputObject <IResultObject> [-Fast] [-ShowHidden] [-DisableWi
 ## DESCRIPTION
 The **Get-CMApplication** cmdlet gets a Microsoft System Center Configuration Manager application. A Configuration Manager application defines the metadata about app. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods and requirements. These rules specify when and how the client installs the software.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an application by name

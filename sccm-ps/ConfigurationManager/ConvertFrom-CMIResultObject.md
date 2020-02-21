@@ -29,6 +29,11 @@ ConvertFrom-CMIResultObject -InputObject <IResultObject> [-DisableWildcardHandli
 ## DESCRIPTION
 The **Convertfrom-CMIResultObject** cmdlet converts from an **IResultObject** to a **ManagementBaseObject**.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Convert an IResultObject to a ManagementBaseObject by getting a site object

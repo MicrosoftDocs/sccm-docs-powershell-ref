@@ -44,6 +44,11 @@ The **Start-CMCloudDistributionPoint** cmdlet starts the cloud distribution poin
 
 You can use the [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md) cmdlet to suspend distribution of content.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Start the cloud distribution point service using an ID

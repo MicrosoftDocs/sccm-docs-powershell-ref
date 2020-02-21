@@ -47,6 +47,11 @@ Set-CMDeploymentTypeDependency -DeploymentTypeDependency <IResultObject>
 
 The **Set-CMDeploymentTypeDependency** sets a deployment type as a dependency to a dependency group.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ## PARAMETERS
@@ -165,7 +170,7 @@ Accept wildcard characters: False
 
 ### -IsAutoInstall
 
-Indicate whether install automatically. 
+Indicate whether install automatically.
 
 ```yaml
 Type: Boolean
@@ -217,7 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
+### Microsoft.ConfigurationManagement.cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
 
 ## OUTPUTS
 

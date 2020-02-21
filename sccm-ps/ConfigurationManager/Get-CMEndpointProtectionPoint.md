@@ -37,6 +37,11 @@ Get-CMEndpointProtectionPoint [-AllSite] -InputObject <IResultObject> [-DisableW
 The **Get-CMEndpointProtectionPoint** cmdlet gets a System Center 2016 Endpoint Protection point in Microsoft System Center Configuration Manager.
 For more information about Endpoint Protection in Microsoft System Center Configuration Manager, see [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an Endpoint Protection point
@@ -92,8 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

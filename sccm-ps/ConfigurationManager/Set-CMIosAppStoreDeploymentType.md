@@ -56,6 +56,11 @@ Set-CMIosAppStoreDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -Inpu
 ## DESCRIPTION
 The **Set-CMIosAppStoreDeploymentType** cmdlet changes the settings for an iOS App Store deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a language from a deployment type

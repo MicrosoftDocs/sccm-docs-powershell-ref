@@ -44,6 +44,11 @@ The **Export-CMBaseline** cmdlet exports configuration baselines in a cabinet (.
 You can then import it to the same or a different System Center Configuration Manager site.
 Configuration data is converted to desired configuration management (DCM) Digest.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Export a baseline

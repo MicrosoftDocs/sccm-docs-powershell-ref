@@ -32,6 +32,11 @@ The cmdlet identifies the sites by site code.
 
 You can specify just the site code or just the name for a parent or child and get all the database replication links for the specified site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get status using site codes

@@ -38,6 +38,11 @@ The **Remove-CMUserAffinityFromDevice** cmdlet removes a primary user from the d
 
 User device affinity is a method of associating a user with one or more specified devices in System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a primary user from a device

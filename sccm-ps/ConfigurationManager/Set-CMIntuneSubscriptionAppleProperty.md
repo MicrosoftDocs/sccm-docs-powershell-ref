@@ -30,6 +30,11 @@ Set-CMIntuneSubscriptionAppleProperty [-Enable <Boolean>] [-ApnsCertificatePath 
 ## DESCRIPTION
 The **Set-CMIntuneSubscriptionAppleProperty** cmdlet updates the settings of a Microsoft Intune subscription to enable iOS and Mac OS X (MDM) enrollment.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable iOS and Mac OS X (MDM) enrollment

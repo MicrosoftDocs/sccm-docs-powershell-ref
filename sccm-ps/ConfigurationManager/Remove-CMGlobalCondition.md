@@ -50,6 +50,11 @@ Global conditions specify how to provide and deploy applications to client devic
 You can specify a global condition by name or ID or use the **Get-CMGlobalCondition** cmdlet to obtain a global condition object.
 You cannot remove read-only global conditions.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a global condition
@@ -67,7 +72,7 @@ Because the command uses the *Force* parameter, the system does not prompt you b
 PS XYZ:\> $CMGC = Get-CMGlobalCondition -Name "GC57"
 PS XYZ:\> Remove-CMGlobalCondition -InputObject $CMGC
 Remove
-Are you sure you wish to remove GlobalCondition: 
+Are you sure you wish to remove GlobalCondition:
 LocalizedDisplayName=" GC57"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```

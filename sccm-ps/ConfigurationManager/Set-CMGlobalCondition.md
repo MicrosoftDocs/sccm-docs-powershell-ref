@@ -132,6 +132,11 @@ Global conditions specify how to provide and deploy applications to client devic
 
 Each global condition must have at least one security scope.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a security scope
@@ -584,12 +589,12 @@ Accept wildcard characters: False
 ### -RegistryHive
 
 Specifies the root key in the registry that identifies the registry hive that you search.
-WMI uses the registry hive to return, set, and change the values of registry keys. 
+WMI uses the registry hive to return, set, and change the values of registry keys.
 The acceptable values for this parameter are:
 
-- ClassesRoot 
-- CurrentConfig 
-- CurrentUser 
+- ClassesRoot
+- CurrentConfig
+- CurrentUser
 - LocalMachine
 - Users
 
@@ -609,8 +614,8 @@ Accept wildcard characters: False
 ### -ScriptLanguage
 
 Specifies a scripting language to use.
-The acceptable values for this parameter are: 
-  
+The acceptable values for this parameter are:
+
 - PowerShell
 - VBScript
 - JScript
@@ -630,9 +635,9 @@ Accept wildcard characters: False
 
 ### -SearchScope
 
-Specifies the search scope in AD DS. 
-The acceptable values for this parameter are: 
-  
+Specifies the search scope in AD DS.
+The acceptable values for this parameter are:
+
 - Base
 - OneLevel
 - Subtree

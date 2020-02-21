@@ -34,6 +34,11 @@ New-CMEmailProfile [-AccountDomainActiveDirectory <String>] [-AccountDomainCusto
 ## DESCRIPTION
 The **New-CMEmailProfile** cmdlet creates an Exchange ActiveSync email profile.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an email profile
@@ -50,7 +55,7 @@ The second command creates an email named EmailProfile01 using the second suppor
 
 ### -AccountDomainActiveDirectory
 Specifies the type of Active Directory account domain.
-Valid values are: 
+Valid values are:
 
 - domain
 - ntdomain
@@ -101,7 +106,7 @@ Accept wildcard characters: False
 
 ### -AccountUserNameType
 Specifies an account user name type.
-Valid values are: 
+Valid values are:
 
 - mail
 - sAMAccountName
@@ -212,7 +217,7 @@ Accept wildcard characters: False
 
 ### -EmailAddressType
 Specifies an email address type.
-Valid values are: 
+Valid values are:
 
 - mail
 - userPrincipalName
@@ -293,7 +298,7 @@ Accept wildcard characters: False
 
 ### -MailSyncDays
 Specifies the number of days of email to synchronize.
-Valid values are: 
+Valid values are:
 
 - Unlimited
 - OneDay
@@ -364,13 +369,13 @@ Accept wildcard characters: False
 
 ### -SyncContentType
 Specifies a content type to synchronize to devices.
-Valid values are: 
+Valid values are:
 
 - None
 - Email
-- Contacts 
-- Calendar 
-- Tasks 
+- Contacts
+- Calendar
+- Tasks
 - Notes
 - All
 
@@ -388,7 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncSchedule
-Specifies the schedule by which devices will synchronize data from the Exchange Server. 
+Specifies the schedule by which devices will synchronize data from the Exchange Server.
 
 - Manual
 - FifteenMins

@@ -44,6 +44,11 @@ The **Set-CMAssignedSite** cmdlet assigns a client computer to a primary site.
 When you install a client agent, the installation determines the primary site for the client.
 This cmdlet assigns a client to a different primary site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Reassign a client to a site

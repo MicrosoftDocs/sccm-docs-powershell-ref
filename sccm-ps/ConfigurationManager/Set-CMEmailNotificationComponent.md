@@ -38,6 +38,11 @@ Set-CMEmailNotificationComponent [-DisableEmailNotification] [-DisableWildcardHa
 The **Set-CMEmailNotificationComponent** cmdlet changes configuration settings of an email notification component in Microsoft System Center Configuration Manager.
 You can configure the email notification component for each System Center Configuration Manager site to configure email subscriptions to alerts.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable email notification

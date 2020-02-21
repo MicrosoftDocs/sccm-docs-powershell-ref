@@ -49,6 +49,11 @@ New-CMMaintenanceWindow [-CollectionName] <String> [-IsEnabled <Boolean>] -Sched
 The **New-CMMaintenanceWindow** cmdlet creates a maintenance window for a collection.
 Maintenance windows are periods of time reserved for write operations such as applying software updates, installing software, or configuring computer settings.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a maintenance window
@@ -182,8 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

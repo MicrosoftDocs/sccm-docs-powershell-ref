@@ -38,6 +38,11 @@ Set-CMEnrollmentPoint [-SiteCode <String>] [-SiteSystemServerName] <String> [-Us
 The **Set-CMEnrollmentPoint** cmdlet sets an enrollment point in Microsoft System Center Configuration Manager.
 An enrollment point is a site system role that uses public key infrastructure (PKI) certificates to complete mobile device enrollment and to provision Intel AMT-based computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set an enrollment point
@@ -56,7 +61,7 @@ The command sets an enrollment point by specifying the site system server and si
 
 ### Example 3: Set an enrollment point by using an input object
 ```
-PS XYZ:\> $Ep = Get-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2" 
+PS XYZ:\> $Ep = Get-CMEnrollmentPoint -SiteSystemServerName "CM-Contoso.Contoso.Com" -SiteCode "CM2"
 PS XYZ:\> Set-CMEnrollmentPoint -InputObject $Ep -UserName "Contoso\ElisaDaugherty"
 ```
 

@@ -32,6 +32,11 @@ New-CMExchangeConnectorSecuritySetting [-Bluetooth <BluetoothConnectionType>] [-
 The **New-CMExchangeServerConnectorSecuritySetting** cmdlet configures security options for a Microsoft Exchange Server connector in Microsoft System Center Configuration Manager.
 An Exchange Server connector in System Center Configuration Manager manages mobile devices that connect to an on-premise or online Exchange Server by using the Exchange ActiveSync protocol.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Configure security settings for a mobile device
@@ -41,7 +46,7 @@ PS XYZ:\> New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -Sto
 
 This command sets the following security options for a mobile device:
 
-- Enables the camera. 
+- Enables the camera.
 - Disables Bluetooth, infrared communications, file encryption on storage cards, and text messaging.
 - Allows the mobile device to connect to the Internet only when the device is in hands-free mode.
 
@@ -217,7 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorSecuritySetting
+### Microsoft.ConfigurationManagement.cmdlets.HS.Commands.ExchangeConnectorSecuritySetting
 
 ## NOTES
 

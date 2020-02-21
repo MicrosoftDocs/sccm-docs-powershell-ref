@@ -58,6 +58,11 @@ Invoke-CMAmtProvisioningDiscovery -DeviceCollection <IResultObject> [-DisableWil
 The **Invoke-CMAmtProvisioningDiscovery** cmdlet checks whether computers have Intel Active Management Technology (Intel AMT) hardware that supports out-of-band management.
 You can check individual computers or computers that belong to a Microsoft System Center Configuration Manager collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Check a computer for Intel AMT hardware by using an ID
@@ -108,7 +113,7 @@ To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByDeviceValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,7 +129,7 @@ To obtain a device collection object, use the [Get-CMDeviceCollection](Get-CMDev
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,7 +144,7 @@ Specifies the ID of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +159,7 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,7 +204,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +219,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -29,6 +29,11 @@ New-CMExchangeConnectorAccessRule -RuleName <String> -AccessLevel <AccessLevelTy
 ## DESCRIPTION
 The **New-CMExchangeServerConnectorAccessRule** cmdlet configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Configure email management settings for a mobile device
@@ -120,7 +125,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorAccessRule
+### Microsoft.ConfigurationManagement.cmdlets.HS.Commands.ExchangeConnectorAccessRule
 
 ## NOTES
 

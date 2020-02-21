@@ -32,6 +32,11 @@ With Microsoft System Center Configuration Manager, you can migrate data from a 
 When you migrate data from a source hierarchy, you access data from the site databases that you identify in the source infrastructure and then transfer that data to your current environment from the database of the destination hierarchy.
 **Clear-CMMigrationData** cleans up the historical data from the destination hierarchy database.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Clean up historical data from a migration

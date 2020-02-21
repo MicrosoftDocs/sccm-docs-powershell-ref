@@ -44,6 +44,11 @@ Use the rule name and site code to specify a rule to enable.
 You can use the [Disable-CMStatusFilterRule](Disable-CMStatusFilterRule.md) cmdlet to disable a rule.
 To remove a rule permanently, use the [Remove-CMStatusFilterRule](Remove-CMStatusFilterRule.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable a status filter rule

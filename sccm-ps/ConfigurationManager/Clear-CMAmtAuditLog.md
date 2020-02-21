@@ -66,6 +66,11 @@ You can specify computers by using the Microsoft System Center Configuration Man
 You can also clear audit logs for all the devices in a System Center Configuration Manager collection.
 Specify a collection by using the collection name or collection ID, or you can use the [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlet to get a device collection object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Clear the audit log by using an ID
@@ -84,7 +89,7 @@ This command clears Intel AMT audit logs for the devices in a collection named F
 
 ### Example 3: Clear the audit log by using a variable
 ```
-PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com" 
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
 PS XYZ:\> Clear-CMAmtAuditLog -Device $CMD -Force
 ```
 
@@ -132,7 +137,7 @@ To obtain a device collection object, use **Get-CMDeviceCollection**.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByCollectionValueMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -146,7 +151,7 @@ Specifies an array of IDs of device collections.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByCollectionIdMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +165,7 @@ Specifies an array of names of device collections.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByCollectionNameMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -202,7 +207,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -216,7 +221,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -230,7 +235,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None

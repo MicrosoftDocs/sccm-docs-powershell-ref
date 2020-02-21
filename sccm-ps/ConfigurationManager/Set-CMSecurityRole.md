@@ -43,6 +43,11 @@ Set-CMSecurityRole -Name <String> [-NewName <String>] [-Description <String>] [-
 The **Set-CMSecurityRole** cmdlet changes configuration settings of a security role.
 You can use this cmdlet to change the name and description of a security role.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the name of a security role by using an ID

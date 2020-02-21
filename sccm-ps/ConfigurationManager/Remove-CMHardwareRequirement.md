@@ -42,6 +42,11 @@ You can add, modify, or delete your own hardware requirements, but you cannot ch
 You can use this cmdlet to remove hardware requirement objects.
 You can specify a product by name or obtain a requirement by using the **Get-CMHardwareRequirement** cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a hardware requirement

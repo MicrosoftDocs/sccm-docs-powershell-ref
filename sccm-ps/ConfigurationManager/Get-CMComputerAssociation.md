@@ -39,6 +39,11 @@ Microsoft System Center Configuration Manager uses a computer association to mig
 You can specify a source computer, a destination computer, or both.
 You can also use an ID to specify a computer association.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all computer associations

@@ -45,6 +45,11 @@ The **Remove-CMBoundary** cmdlet removes a boundary from Microsoft System Center
 In System Center Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
 A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an IP address range.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a boundary that is specified by its ID
@@ -58,7 +63,7 @@ Because the *Force* parameter is not specified, you must confirm the action befo
 ### Example 2: Remove a boundary by using an InputObject
 ```
 PS XYZ:\> $BoundaryObj = Get-CMBoundary -Id "16777223"
-PS XYZ:\> 
+PS XYZ:\>
 Remove-Boundary -InputObject $BoundaryObj
 ```
 

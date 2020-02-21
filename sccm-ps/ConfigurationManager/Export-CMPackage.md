@@ -46,6 +46,11 @@ Export-CMPackage -Name <String> -FileName <String> [-WithDependence <Boolean>] [
 The **Export-CMPackage** cmdlet exports a Microsoft System Center Configuration Manager package.
 You can use this cmdlet in System Center Configuration Manager to create a package of collections, queries, or reports and then export that package so that you can later deploy these items to a different location.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Export a package by using an ID

@@ -57,6 +57,11 @@ A deployment includes a collection of devices or users, a package to deploy, and
 To specify which deployment to modify, specify the collection name, package, and program name.
 You can specify the package by name or ID, or you can use the [Get-CMPackage](Get-CMPackage.md) cmdlet to get a package object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
@@ -85,7 +90,7 @@ Accept wildcard characters: False
 
 ### -CollectionId
 
-Specifies the ID of a device or user collection. 
+Specifies the ID of a device or user collection.
 
 ```yaml
 Type: String

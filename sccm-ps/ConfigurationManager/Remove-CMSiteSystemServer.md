@@ -37,6 +37,11 @@ Remove-CMSiteSystemServer [-SiteCode <String>] [-Force] [-SiteSystemServerName] 
 The **Remove-CMSiteSystemServer** cmdlet removes a site system server from Microsoft System Center Configuration Manager.
 If the site system server has other site system roles besides the site system role, this cmdlet will fail.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a site system server by using the pipeline

@@ -81,6 +81,11 @@ Set-CMCollectionPowerManagement -InputObject <IResultObject> [-NeverApply] [-Pas
 ## DESCRIPTION
 The **Set-CMCollectionPowerManagement** cmdlet configures power management settings for a device collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Configure power management settings by using the pipeline

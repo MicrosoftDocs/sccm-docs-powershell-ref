@@ -44,22 +44,27 @@ You can create software metering rules that specify which software to monitor.
 
 For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268432) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a software metering rule
 ```
-PS XYZ:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System" 
+PS XYZ:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System"
 ApplyToChildSites : True
-Comment           : 
+Comment           :
 Enabled           : True
 FileName          : Notepad.exe
 FileVersion       : 6.1.7600.16385
-LanguageID        : 
-LastUpdateTime    : 
+LanguageID        :
+LastUpdateTime    :
 OriginalFileName  : NOTEPAD.EXE
 ProductName       : Microsoft Windows Operating System
-RuleID            : 
-SecurityKey       : 
+RuleID            :
+SecurityKey       :
 SiteCode          : CM1
 SourceSite        :
 ```

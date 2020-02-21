@@ -53,6 +53,11 @@ You cannot remove built-in security roles.
 Every administrative user must have at least one security role.
 Before you remove a security role, make sure every user has a role in addition to the one you remove.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a security role by using a name
@@ -65,7 +70,7 @@ The command uses the *Force* parameter, so it does not prompt you for confirmati
 
 ### Example 2: Remove security roles by using a variable
 ```
-PS XYZ:\> $Roles = Get-CMSecurityRole -Name *Role 
+PS XYZ:\> $Roles = Get-CMSecurityRole -Name *Role
 PS XYZ:\> Remove-CMSecurityRole -SecurityRole $Roles
 ```
 

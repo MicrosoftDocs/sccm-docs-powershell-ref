@@ -60,6 +60,11 @@ Set-CMAppvDeploymentType [-ContentFallback <Boolean>] [-FastNetworkDeploymentMod
 ## DESCRIPTION
 The **Set-CMAppvDeploymentType** cmdlet changes the settings for a Microsoft Application Virtualization (App-V) deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the name of the deployment type
@@ -250,9 +255,9 @@ Accept wildcard characters: False
 
 ### -FastNetworkDeploymentMode
 Specifies the installation behavior of the deployment type on a fast network.
-Valid values are: 
+Valid values are:
 
-- DownloadContentForStreaming 
+- DownloadContentForStreaming
 - Download
 - DoNothing
 

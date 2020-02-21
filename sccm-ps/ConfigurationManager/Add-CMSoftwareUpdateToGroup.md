@@ -80,6 +80,11 @@ The **Add-CMSoftwareUpdateToGroup** cmdlet adds a software update to a software 
 You can specify a software update by name or by ID or use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet to obtain an update.
 Likewise, you can specify a software update group by name or by ID or use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet to obtain one.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add an update to a software group

@@ -31,6 +31,11 @@ The **New-CMBaseline** cmdlet creates a Microsoft System Center Configuration Ma
 A baseline is a collection of configuration items that System Center Configuration Manager uses to evaluate whether a computer complies with software requirements.
 After you create a baseline, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess compliance with it.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a configuration baseline
@@ -45,7 +50,7 @@ The command specifies a description for the baseline.
 
 ### -Category
 Specifies an array of categories to which the baseline configuration belongs.
-Valid values are: 
+Valid values are:
 
 - Client
 - IT Infrastructure

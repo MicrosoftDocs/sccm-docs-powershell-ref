@@ -36,6 +36,11 @@ The **Get-CMSecurityScope** cmdlet gets one or more security scopes in Microsoft
 You can get a security scope by its name or ID.
 If you don't provide any parameters, all security scopes are returned.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a security scope by name

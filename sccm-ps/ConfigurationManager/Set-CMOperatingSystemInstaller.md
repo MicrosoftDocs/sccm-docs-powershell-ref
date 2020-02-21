@@ -64,6 +64,11 @@ Set-CMOperatingSystemInstaller -InputObject <IResultObject> [-NewName <String>] 
 The **Set-CMOperatingSystemInstaller** cmdlet changes configuration settings of one or more operating system installers in Microsoft System Center Configuration Manager.
 An operating system installer is an installation package that contains all the files that System Center Configuration Manager needs to install a Windows operating system on a reference computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change settings for an operating system installer by using a name

@@ -47,6 +47,11 @@ Add-CMTaskSequenceStep -Step <IResultObject[]> [-InsertStepStartIndex <UInt32>] 
 
 The **New-CMTaskSequenceStep** cmdlet adds task sequence group or step object(s) to a specific task sequence. The cmdlet supports pipeline from a task sequence object, and can be filtered by the name of the group/step.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
@@ -117,7 +122,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a task sequence object. 
+Specifies a task sequence object.
 
 ```yaml
 Type: IResultObject

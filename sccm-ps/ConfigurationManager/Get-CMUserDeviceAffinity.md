@@ -50,6 +50,11 @@ The **Get-CMUserDeviceAffinity** cmdlet gets one or more user device affinities 
 
 User device affinity in Microsoft System Center Configuration Manager is a method of associating a user with one or more specified devices.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a user device affinity by using a user name

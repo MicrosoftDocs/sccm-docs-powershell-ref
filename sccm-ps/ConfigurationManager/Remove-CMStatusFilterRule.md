@@ -44,6 +44,11 @@ Use the rule name and site code to specify a rule to remove.
 This cmdlet deletes rules permanently.
 You can use the [Disable-CMStatusFilterRule](Disable-CMStatusFilterRule.md) cmdlet to suspend a rule.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a rule

@@ -39,6 +39,11 @@ Get-CMAutomaticAmtProvisioningStatus -InputObject <IResultObject> [-DisableWildc
 ## DESCRIPTION
 The **Get-CMAutomaticAmtProvisioningStatus** cmdlet gets the current automatic provisioning status of one or more computers with an AMT management controller.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get the automatic provisioning status of a computer
@@ -84,7 +89,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +103,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +118,7 @@ To obtain a **CMDevice** object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None

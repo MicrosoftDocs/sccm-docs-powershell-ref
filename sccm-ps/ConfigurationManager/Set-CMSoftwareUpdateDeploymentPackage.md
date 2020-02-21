@@ -46,6 +46,11 @@ Set-CMSoftwareUpdateDeploymentPackage -InputObject <IResultObject> [-NewName <St
 The **Set-CMSoftwareUpdateDeploymentPackage** cmdlet modifies a software update deployment package.
 A software update deployment package contains one or more software updates for deployment to a collection of computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Update the name and description of a software update deployment package

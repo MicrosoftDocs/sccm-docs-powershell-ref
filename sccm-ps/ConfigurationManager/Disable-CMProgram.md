@@ -49,6 +49,11 @@ You can disable a program to prevent System Center Configuration Manager from ru
 When you disable a program, System Center Configuration Manager still sends the program to distribution points and still advertises the Program on client computers, but Configuration Manager does not display or run the program on the client.
 This behavior is the same that occurs when you disable an advertisement with which the program has been associated.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Disable a program
@@ -106,8 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject

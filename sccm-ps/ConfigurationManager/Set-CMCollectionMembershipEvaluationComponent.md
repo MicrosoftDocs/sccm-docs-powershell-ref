@@ -32,6 +32,11 @@ The **Set-CMCollectionMembershipEvaluationComponent** cmdlet changes how often M
 Configuration Manager queries the database at a regular interval to check for changes in collection membership.
 You can specify which site to change by site server name or site code.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set an evaluation period for a site code

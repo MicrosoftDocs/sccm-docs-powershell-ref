@@ -43,6 +43,11 @@ When you remove a program from a package, System Center Configuration Manager up
 System Center Configuration Manager removes all of the advertisements for this program from the database and removes the advertisements from clients that have received them.
 If System Center Configuration Manager has already run the advertised program on the client computer, System Center Configuration Manager does not remove the software.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a program by using a name and an ID

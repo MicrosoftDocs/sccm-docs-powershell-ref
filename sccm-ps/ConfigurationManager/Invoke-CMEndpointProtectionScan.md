@@ -63,6 +63,11 @@ You can specify the device or collection by using its name, ID, or by specifying
 
 For more information about how Configuration Manager supports Endpoint Protection, see [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Invoke a full Endpoint Protection scan

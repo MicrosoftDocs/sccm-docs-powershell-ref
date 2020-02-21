@@ -43,6 +43,11 @@ The **Approve-CMUserDeviceAffinityRequest** cmdlet approves a request for user d
 In Microsoft System Center Configuration Manager, user device affinity defines a relationship between a user and a device.
 Instead of deploying an application to a group of devices, you deploy an application to a user and Configuration Manager installs the application on all devices associated with the user.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Approve a request for user device affinity

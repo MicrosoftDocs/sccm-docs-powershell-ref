@@ -42,6 +42,11 @@ User device affinity is a method of associating a user with one or more specifie
 This allows you to deploy applications to a user without the requirement to know the name of all the user's devices.
 Instead of deploying the application to all the devices of a user, you deploy the application to the user and the application automatically installs on all devices that are associated with that user.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a primary user to a device

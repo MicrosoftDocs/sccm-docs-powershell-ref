@@ -108,6 +108,11 @@ The **Set-CMUserDataAndProfileConfigurationItem** cmdlet modifies a user data an
 A configuration item can manage folder redirection, offline folders, and roaming user profiles.
 You can create a configuration item by using the [New-CMUserDataAndProfileConfigurationItem](New-CMUserDataAndProfileConfigurationItem.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a configuration item

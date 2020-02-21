@@ -32,6 +32,11 @@ This cmdlet indicates the number of rows that Configuration Manager returns.
 To change the maximum number of rows that a Configuration Manager query returns, use the [Set-CMQueryResultMaximum](Set-CMQueryResultMaximum.md) cmdlet.
 By default, the maximum number of rows is unbound, which is different from the behavior of the Configuration Manager console, and is also different from earlier releases of the Configuration Manager cmdlet library.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get the report query result maximum

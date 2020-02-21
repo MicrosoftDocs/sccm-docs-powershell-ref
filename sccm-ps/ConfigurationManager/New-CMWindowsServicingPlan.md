@@ -79,6 +79,11 @@ New-CMWindowsServicingPlan -Name <String> [-Description <String>] -CollectionId 
 ## DESCRIPTION
 The **New-CMWindowsServicingPlan** cmdlet creates a Windows 10 servicing plan.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a servicing plan by collection ID

@@ -44,6 +44,11 @@ A disabled rule does not collect information from clients.
 You can use the [Enable-CMSoftwareMeteringRule](Enable-CMSoftwareMeteringRule.md) cmdlet to enable a rule.
 You can use the [Remove-CMSoftwareMeteringRule](Remove-CMSoftwareMeteringRule.md) cmdlet to remove unwanted rules.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Disable automatic rule creation

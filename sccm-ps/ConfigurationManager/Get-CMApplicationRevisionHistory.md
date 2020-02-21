@@ -44,6 +44,11 @@ The **Get-CMApplicationRevisionHistory** cmdlet gets a Microsoft System Center C
 When you revise an application or a deployment type contained in an application, System Center Configuration Manager creates a new revision of the application.
 You can use the revision history to display each revision made to an application, view the properties of a revision, restore a previous revision, or delete an old revision.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get the revision history for an application

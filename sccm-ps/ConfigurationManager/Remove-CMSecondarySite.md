@@ -44,6 +44,11 @@ The **Remove-CMSecondarySite** cmdlet removes a secondary site from Microsoft Sy
 A secondary site has no site database of its own.
 Instead it is connected to a primary site and sends client data to the primary site for storage.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a secondary site upgrade by using a site name

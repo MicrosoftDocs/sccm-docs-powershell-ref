@@ -29,6 +29,11 @@ Remove-CMConditionalAccessPolicy [-InputObject] <IResultObject> [-Force] [-Disab
 ## DESCRIPTION
 The **Remove-CMConditionalAccessPolicy** cmdlet removes a conditional access policy from a Microsoft Configuration Manager site system server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a conditional access policy by using the pipeline

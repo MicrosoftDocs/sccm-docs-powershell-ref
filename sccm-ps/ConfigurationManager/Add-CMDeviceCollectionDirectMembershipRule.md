@@ -61,6 +61,11 @@ Add-CMDeviceCollectionDirectMembershipRule -InputObject <IResultObject> -Resourc
 The **Add-CMDeviceCollectionDirectMembershipRule** cmdlet adds a direct membership rule to a device collection.
 A direct membership rule lets you explicitly choose the members of the device collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a direct membership rule

@@ -32,6 +32,11 @@ The Client Access server role accepts connections to Exchange Server from differ
 Software clients such as Microsoft Outlook use POP3 or IMAP4 connections to communicate with Exchange Server.
 Hardware clients, such as mobile devices, use ActiveSync, POP3, or IMAP4 to communicate with Exchange Server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an Exchange Client Access server

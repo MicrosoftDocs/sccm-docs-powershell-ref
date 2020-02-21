@@ -121,6 +121,11 @@ Programs are commands that are associated with a System Center Configuration Man
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a standard program
@@ -156,9 +161,9 @@ Accept wildcard characters: False
 Specifies the action that occurs after the program completes successfully.
 The acceptable values for this parameter are:
 
-- ConfigurationManagerLogUserOff 
-- ConfigurationManagerStartsComputer 
- NoActionRequired 
+- ConfigurationManagerLogUserOff
+- ConfigurationManagerStartsComputer
+ NoActionRequired
 - ProgramControlsRestart.
 
 ```yaml
@@ -349,8 +354,8 @@ Accept wildcard characters: False
 Specifies when the program is to run.
 The acceptable values for this parameter are:
 
-- AsSoonAsPossible 
-- OnlyOverFastNetwork 
+- AsSoonAsPossible
+- OnlyOverFastNetwork
 - OnlyWhenTheDeviceIsLocked
 
 ```yaml
@@ -560,9 +565,9 @@ Accept wildcard characters: False
 Specifies the logon conditions that are necessary for the program to run.
 The acceptable values for this parameter are:
 
-- OnlyWhenNoUserIsLoggedOn 
-- OnlyWhenUserIsLoggedOn 
-- WhetherOrNotUserIsLoggedOn 
+- OnlyWhenNoUserIsLoggedOn
+- OnlyWhenUserIsLoggedOn
+- WhetherOrNotUserIsLoggedOn
 
 The default setting is OnlyWhenUserIsLoggedOn.
 
@@ -656,10 +661,10 @@ Accept wildcard characters: False
 Specifies the mode is which the program will run on the client computer.
 The acceptable values for this parameter are:
 
-- Hidden 
-- Maximized 
-- Minimized 
-- Normal 
+- Hidden
+- Maximized
+- Minimized
+- Normal
 
 The default is Normal.
 

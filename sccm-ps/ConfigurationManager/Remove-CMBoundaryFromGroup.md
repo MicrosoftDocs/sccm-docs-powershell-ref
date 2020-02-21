@@ -81,6 +81,11 @@ The **Remove-CMBoundaryFromGroup** cmdlet removes a Microsoft System Center Conf
 A boundary is a network address range, subnet, or Active Directory site that identifies a group of computers that are close in the network.
 A boundary group is a collection of boundaries.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a boundary from a group by using the boundary name

@@ -76,6 +76,11 @@ If System Center Configuration Manager cannot find a match, or if you do not spe
 An exit code of zero indicates that the program successfully ran.
 Any other values indicate application-specific error codes.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Rename a package and add a description

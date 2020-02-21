@@ -50,6 +50,11 @@ Get-CMDeviceCollection -DistributionPointGroup <IResultObject> [<CommonParameter
 The **Get-CMDeviceCollection** cmdlet retrieves collections that contain computers or mobile devices.
 For more information about collections, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a device collection by using an ID

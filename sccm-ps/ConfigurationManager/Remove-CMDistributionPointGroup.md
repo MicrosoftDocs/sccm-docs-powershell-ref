@@ -43,6 +43,11 @@ Remove-CMDistributionPointGroup -Id <String> [-Force] [-DisableWildcardHandling]
 The **Remove-CMDistributionPointGroup** cmdlet removes one or more distribution point groups.
 When you remove a distribution point group, you cannot use the distribution point group to distribute content to the site collections that are associated with the distribution point group and to the distribution points that are members of the distribution point group.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a distribution point group by using an ID

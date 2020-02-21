@@ -36,6 +36,11 @@ Set-CMHierarchySetting [-UseFallbackSite <Boolean>] [-FallbackSiteCode <String>]
 ## DESCRIPTION
 The **Set-CMHierarchySetting** cmdlet sets hierarchy settings in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify the hierarchy setting
@@ -65,7 +70,7 @@ Accept wildcard characters: False
 
 ### -ApprovalMethod
 Specifies an approval method.
-Valid values are:  
+Valid values are:
 
 - AutomaticallyApproveAllComputers
 - AutomaticallyApproveComputersInTrustedDomains

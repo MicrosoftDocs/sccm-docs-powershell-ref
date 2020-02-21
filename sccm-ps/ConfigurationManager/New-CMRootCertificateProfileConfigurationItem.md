@@ -30,6 +30,11 @@ New-CMRootCertificateProfileConfigurationItem -Path <String> [-DisableWildcardHa
 The **New-CMRootCertificateProfileConfigurationItem** cmdlet creates a root certificate profile.
 Client computers use root certificate profiles to chain their certificates back to a corporate public key infrastructure (PKI) certification authority.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a trusted root certificate profile configuration item

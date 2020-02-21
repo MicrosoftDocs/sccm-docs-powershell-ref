@@ -45,6 +45,11 @@ An operating system installer is an installation package that contains all the f
 
 After you remove an operating system installer, you cannot distribute the installation source files that are associated with the operating system installer to distribution points.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an operating system installer

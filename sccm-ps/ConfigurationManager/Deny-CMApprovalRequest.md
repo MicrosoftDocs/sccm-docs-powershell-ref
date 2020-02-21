@@ -52,6 +52,11 @@ The **Deny-CMApprovalRequest** cmdlet denies a request from a user to install an
 You can specify an approval request by application name, application ID, or by user.
 You can use the [Get-CMApprovalRequest](Get-CMApprovalRequest.md) cmdlet to view approval requests.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Deny a request by application ID

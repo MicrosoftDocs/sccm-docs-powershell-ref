@@ -39,6 +39,11 @@ Set-CMReportingServicePoint [-SiteCode <String>] [-SiteSystemServerName] <String
 The **Set-CMReportingServicePoint** cmdlet modifies a Microsoft System Center Configuration Manager reporting service point.
 A reporting service point is a site system role that is installed on a server that is running Microsoft SQL Server Reporting Services.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set a reporting service point
@@ -57,7 +62,7 @@ The command sets a reporting service point by using the *SiteSystemServerName* p
 
 ### Example 3: Set a reporting service point by using an input object
 ```
-PS XYZ:\> $RS = Get-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4" 
+PS XYZ:\> $RS = Get-CMReportingServicePoint -SiteSystemServerName "Contoso-Test.Contoso.Com" -SiteCode "CM4"
 PS XYZ:\> Set-CMReportingServicePoint -InputObject $RS -DatabaseServerName "Contoso-TestDB.Contoso.Com" -DatabaseName "CM_CM4"
 ```
 

@@ -46,6 +46,11 @@ You can use the revision history that System Center Configuration Manager create
 If you restore an application version from the history, System Center Configuration Manager might automatically replace currently installed copies of the application the next time it evaluates the deployment schedule.
 For more control over application replacement, create a new application that supersedes the application that you want to replace, and then deploy this application to the required collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Restore an application

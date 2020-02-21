@@ -126,6 +126,11 @@ The **Start-CMPackageDeployment** cmdlet starts deployment of a specified softwa
 You can choose when the package becomes available and when the package deployment expires.
 You can specify whether System Center Configuration Manager deploys the package only once or repeatedly and what happens when installation fails for a computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Start a recurring deployment

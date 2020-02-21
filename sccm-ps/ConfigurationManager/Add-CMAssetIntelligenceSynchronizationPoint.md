@@ -41,6 +41,11 @@ Microsoft System Center Configuration Manager uses the Asset Intelligence synchr
 
 You can install the Asset Intelligence synchronization point only on a site system located at the top-level site of the System Center Configuration Manager hierarchy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Install an Asset Intelligence synchronization point

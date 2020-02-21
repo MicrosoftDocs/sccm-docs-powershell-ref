@@ -37,6 +37,11 @@ Remove-CMAssetIntelligenceSynchronizationPoint [-SiteCode <String>] [-Force] [-S
 The **Remove-CMAssetIntelligenceSynchronizationPoint** cmdlet removes an Asset Intelligence synchronization point from a site system.
 After you remove an Asset Intelligence synchronization point, the Microsoft System Center Configuration Manager sites that used the synchronization point cannot connect to System Center Online.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an Asset Intelligence synchronization point

@@ -44,7 +44,12 @@ Set-CMQuery -Name <String> [-NewName <String>] [-Comment <String>] [-Expression 
 
 ## DESCRIPTION
 The **Set-CMQuery** cmdlet configures a query stored in Microsoft System Center Configuration Manager.
-Configuration Manager queries define and store the criteria for sets of database objects that you want to find. 
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 

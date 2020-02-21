@@ -35,6 +35,11 @@ By default, the top-level site of the hierarchy becomes a source site of the sou
 If you migrate from a Microsoft System Center Configuration Manager 2007 hierarchy, you can configure additional source sites for migration.
 If you migrate from a System Center Configuration Manager hierarchy, you do not need to configure additional source sites because the System Center Configuration Manager shared database at the top of the source hierarchy contains all of the information that you can migrate.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Specify a migration source

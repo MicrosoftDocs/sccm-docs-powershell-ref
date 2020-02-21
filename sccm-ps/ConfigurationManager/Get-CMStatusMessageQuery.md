@@ -40,6 +40,11 @@ You can use this cmdlet with the *ShowMessages* parameter to display messages fo
 
 You can use this cmdlet to get queries to use with the [Set-CMStatusMessageQuery](Set-CMStatusMessageQuery.md) cmdlet or the [Remove-CMStatusMessageQuery](Remove-CMStatusMessageQuery.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a query that has a specified name

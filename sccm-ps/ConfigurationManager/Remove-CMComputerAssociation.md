@@ -43,6 +43,11 @@ Remove-CMComputerAssociation -InputObject <IResultObject> [-Force] [-DisableWild
 The **Remove-CMComputerAssociation** cmdlet deletes a computer association from Microsoft System Center Configuration Manager.
 You can specify the association to remove by specifying both computers in the association or by specifying the association ID, or you can use the **Get-CMComputerAssociation** cmdlet to get an association to remove.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an association by using computer names

@@ -43,6 +43,11 @@ After you remove a fallback status point, that system no longer forwards state m
 The use of a fallback status point is optional.
 You can use this cmdlet to remove redundant fallback status points or to remove the last fallback status point from a site if you do not want to use that role.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a specified fallback status point

@@ -42,6 +42,11 @@ Remove-CMObjectSecurityScope [-Force] -InputObject <IResultObject[]> [-Name] <St
 ## DESCRIPTION
 The **Remove-CMObjectSecurityScope** cmdlet removes a security scope from a Microsoft System Center Configuration Manager object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a security scope from application objects by using the pipeline
