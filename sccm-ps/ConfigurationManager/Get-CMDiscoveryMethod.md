@@ -32,7 +32,7 @@ Discovery identifies computer and user resources that System Center Configuratio
 If it discovers a resource, Configuration Manager creates a record in the System Center Configuration Manager database for the resource and its associated information.
 You can then use the discovery information to help you to install the System Center Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
 
-For more information about discovery in System Center Configuration Manager, see [About Configuration Manager Discovery](http://go.microsoft.com/fwlink/?linkid=107444) on TechNet.
+For more information about discovery in System Center Configuration Manager, see [About Configuration Manager Discovery](/previous-versions/system-center/configuration-manager-2007/bb633276(v=technet.10)) on TechNet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -130,6 +130,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Configuration Manager Discovery](http://go.microsoft.com/fwlink/?linkid=107444)
+[About Configuration Manager Discovery](/previous-versions/system-center/configuration-manager-2007/bb633276(v=technet.10))
 
 [Set-CMDiscoveryMethod](Set-CMDiscoveryMethod.md)

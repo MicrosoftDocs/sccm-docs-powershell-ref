@@ -28,7 +28,7 @@ Set-CMClientStatusUpdateSchedule -Interval <Int32> -UnitType <ClientStatusUpdate
 
 ## DESCRIPTION
 The **Set-CMClientStatusUpdateSchedule** cmdlet modifies the schedule interval of the client status update task.
-For more information, see [How to Configure Client Status in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247263) on TechNet.
+For more information, see [How to Configure Client Status in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh338432(v=technet.10)) on TechNet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -150,7 +150,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to Configure Client Status in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247263)
+[How to Configure Client Status in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh338432(v=technet.10))
 
 [Get-CMClientStatusUpdateSchedule](Get-CMClientStatusUpdateSchedule.md)
 
