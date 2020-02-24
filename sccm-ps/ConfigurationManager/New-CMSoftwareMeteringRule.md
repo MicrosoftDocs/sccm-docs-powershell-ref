@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Creates a Configuration Manager software metering rule.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml

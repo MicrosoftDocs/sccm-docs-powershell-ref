@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Changes client settings for Configuration Manager devices and users.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
@@ -280,7 +280,7 @@ This command disables compliance evaluation for the setting named TSQA07.
 
 ### Example 9: Set computer agent settings
 ```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA09" -AddPortalToTrustedSiteList $True -AllowPortalToHaveElevatedTrust $True -BrandingTitle "Contoso IT" -EnableThirdPartyOrchestration Yes -FinalReminderMinutesInterval 52 -InitialReminderHoursInterval 6 -InstallRestriction OnlyAdministrators -PortalUrl "http://NewInstall.Contoso.com" -PowerShellExecutionPolicy Bypass -SuspendBitLocker Always
+PS XYZ:\> Set-CMClientSetting -Name "TSQA09" -AddPortalToTrustedSiteList $True -AllowPortalToHaveElevatedTrust $True -BrandingTitle "Contoso IT" -EnableThirdPartyOrchestration Yes -FinalReminderMinutesInterval 52 -InitialReminderHoursInterval 6 -InstallRestriction OnlyAdministrators -PortalUrl "https://NewInstall.Contoso.com" -PowerShellExecutionPolicy Bypass -SuspendBitLocker Always
 ```
 
 This command changes settings for the client settings object named TSQA09.

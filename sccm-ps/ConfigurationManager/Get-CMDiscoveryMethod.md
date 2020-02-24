@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets a discovery method for Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml

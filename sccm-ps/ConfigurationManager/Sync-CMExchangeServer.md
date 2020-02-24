@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Synchronizes Configuration Manager mobile device information with an Exchange Server.
 external help file: AdminUI.PS.HS.dll-Help.xml
@@ -40,7 +40,7 @@ Configuration Manager works with Exchange Server to manage mobile devices that c
 
 ### Example 1: Synchronize with an nextref_exchange
 ```
-PS XYZ:\> Sync-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
+PS XYZ:\> Sync-CMExchangeServer -Address "https://localhost/PowerShell" -SiteCode "PE1"
 ```
 
 This command synchronizes mobile devices for the site that has the site code PE1 with the specified Exchange Server.
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

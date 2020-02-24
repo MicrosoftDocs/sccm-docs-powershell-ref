@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds a new operating system boot image.
 external help file: AdminUI.PS.Osd.dll-Help.xml

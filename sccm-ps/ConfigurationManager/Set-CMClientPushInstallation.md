@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Changes settings of a client push installation.
 external help file: AdminUI.PS.HS.dll-Help.xml
@@ -67,7 +67,7 @@ A client push installation installs client software on computers that System Cen
 When you configure client push installation for a site, the client installation automatically runs on the computers that System Center Configuration Manager discovered within the site's configured boundaries when those boundaries are part of a boundary group.
 You can also start a client push installation by running the Client Push Installation Wizard for a specific collection or resource within a collection.
 
-For more information about how to install clients, see [How to Install Clients on Windows-Based Computers in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247203) on TechNet.
+For more information about how to install clients, see [How to Install Clients on Windows-Based Computers in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=247203) on TechNet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -361,6 +361,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to Install Clients on Windows-Based Computers in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247203)
+[How to Install Clients on Windows-Based Computers in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=247203)
 
 [Get-CMClientPushInstallation](Get-CMClientPushInstallation.md)

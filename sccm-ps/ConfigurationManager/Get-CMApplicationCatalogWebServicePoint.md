@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets an Application Catalog web service point.
 external help file: AdminUI.PS.HS.dll-Help.xml

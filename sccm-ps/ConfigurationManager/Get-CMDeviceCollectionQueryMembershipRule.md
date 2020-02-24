@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets the query membership rules from one or more device collections in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections-help.xml

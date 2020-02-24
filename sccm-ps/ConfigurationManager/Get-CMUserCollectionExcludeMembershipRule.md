@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets the exclude membership rules from one or more user collections in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections-help.xml

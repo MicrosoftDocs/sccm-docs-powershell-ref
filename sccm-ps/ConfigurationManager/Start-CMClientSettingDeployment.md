@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Deploys client settings to devices in a collection.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml

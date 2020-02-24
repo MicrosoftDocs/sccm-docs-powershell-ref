@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets Configuration Manager software metering rules.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml

@@ -1,4 +1,4 @@
----
+﻿---
 author: mumian
 description: Changes settings for a Configuration Manager configuration item.
 external help file: AdminUI.PS.Dcm.dll-Help.xml

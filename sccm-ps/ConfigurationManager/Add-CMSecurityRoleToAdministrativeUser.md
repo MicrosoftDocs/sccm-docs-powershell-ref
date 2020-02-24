@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds a security role to an administrative user or group in Configuration Manager.
 external help file: AdminUI.PS.Rba.dll-Help.xml

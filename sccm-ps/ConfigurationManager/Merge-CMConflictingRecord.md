@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Merges a new Configuration Manager client record with a conflicting client record.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml

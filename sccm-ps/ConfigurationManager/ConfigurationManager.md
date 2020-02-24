@@ -1,4 +1,4 @@
----
+﻿---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: {{ Update Download Link }}

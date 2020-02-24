@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Imports a wireless profile configuration item.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
@@ -40,7 +40,7 @@ The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wir
 ### Example 1: Import a wireless profile configuration item
 ```
 PS XYZ:\><?xml version="1.0"?>
-<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+<WLANProfile xmlns="https://www.microsoft.com/networking/WLAN/profile/v1">
  <name>Open-WEP</name>
  <SSIDConfig>
   <SSID>
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

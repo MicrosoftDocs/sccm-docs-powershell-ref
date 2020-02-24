@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets a Configuration Manager IP subnet.
 external help file: AdminUI.PS.HS.dll-Help.xml

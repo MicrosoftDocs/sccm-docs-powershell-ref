@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds an include membership rule to one or more Configuration Manager user collections.
 external help file: AdminUI.PS.Collections-help.xml

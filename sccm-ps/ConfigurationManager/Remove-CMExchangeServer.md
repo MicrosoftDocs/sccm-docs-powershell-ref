@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Removes an Exchange Server object from Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
@@ -48,7 +48,7 @@ Configuration Manager works with Exchange Server to manage mobile devices that c
 
 ### Example 1: Remove an nextref_exchange
 ```
-PS XYZ:\> Remove-CMExchangeServer -Address "http://localhost/PowerShell" -SiteCode "PE1"
+PS XYZ:\> Remove-CMExchangeServer -Address "https://localhost/PowerShell" -SiteCode "PE1"
 ```
 
 This command removes the Exchange Server with the specified address for the site code PE1.
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

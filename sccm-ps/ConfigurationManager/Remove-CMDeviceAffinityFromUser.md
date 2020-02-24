@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Removes device affinity from a Configuration Manager user.
 external help file: AdminUI.PS.Collections.dll-Help.xml

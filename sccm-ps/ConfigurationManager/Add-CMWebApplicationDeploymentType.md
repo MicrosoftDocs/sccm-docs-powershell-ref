@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds a web application deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
@@ -57,14 +57,14 @@ The **Add-CMWebApplicationDeploymentType** cmdlet adds a web application deploym
 
 ### Example 1: Add a web application deployment type
 ```
-PS XYZ:\>Add-CMWebApplicationDeploymentType -Url "http://www.contoso.com" -ApplicationName "testweb" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\>Add-CMWebApplicationDeploymentType -Url "https://www.contoso.com" -ApplicationName "testweb" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command adds the web application deployment type named DT1 from the specified URL to the application named testweb in English and Chinese.
 
 ### Example 2: Add a web application deployment type by using the pipeline
 ```
-PS XYZ:\> Get-CMApplication -Name "testweb" | Add-CMWebApplicationDeploymentType -Url "http://www.contoso.com" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\> Get-CMApplication -Name "testweb" | Add-CMWebApplicationDeploymentType -Url "https://www.contoso.com" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command gets the application object named testweb and uses the pipeline operator to pass the object to **Add-CMWebApplicationDeploymentType**.
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets an item from the Asset Intelligence catalog.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml

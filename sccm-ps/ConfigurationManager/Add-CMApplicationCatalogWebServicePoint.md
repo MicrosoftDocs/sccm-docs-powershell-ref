@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds an Application Catalog web service point to a Microsoft System Center Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml

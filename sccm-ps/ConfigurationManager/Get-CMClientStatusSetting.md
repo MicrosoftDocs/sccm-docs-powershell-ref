@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets client status settings.
 external help file: AdminUI.PS.ClientStatus.dll-Help.xml

@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds a fallback status point to a Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml

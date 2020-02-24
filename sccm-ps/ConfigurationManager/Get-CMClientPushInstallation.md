@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets an object that installs a Configuration Manager client by using client push.
 external help file: AdminUI.PS.HS.dll-Help.xml

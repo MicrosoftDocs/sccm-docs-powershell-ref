@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Removes an Endpoint Protection point.
 external help file: AdminUI.PS.HS.dll-Help.xml

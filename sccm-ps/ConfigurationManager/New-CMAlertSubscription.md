@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Creates an alert subscription object.
 external help file: AdminUI.PS.Alerts.dll-Help.xml
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies a locale for alert messages.
-For more information and a list of locale identifiers, see the Locale IDs Assigned by Microsoft topic at http://go.microsoft.com/fwlink/?LinkId=262651.
+For more information and a list of locale identifiers, see the Locale IDs Assigned by Microsoft topic at https://go.microsoft.com/fwlink/?LinkId=262651.
 
 ```yaml
 Type: Int32
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

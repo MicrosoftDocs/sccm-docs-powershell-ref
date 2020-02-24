@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets client settings.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml

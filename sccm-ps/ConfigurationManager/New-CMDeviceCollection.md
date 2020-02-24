@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Creates a collection for devices and adds the collection to the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections-help.xml

@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds a site system role for Endpoint Protection.
 external help file: AdminUI.PS.HS.dll-Help.xml

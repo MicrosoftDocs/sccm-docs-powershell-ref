@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds an enrollment point to Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml

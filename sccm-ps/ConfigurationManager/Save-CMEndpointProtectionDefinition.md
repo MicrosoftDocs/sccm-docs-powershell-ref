@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Saves an Endpoint Protection definition.
 external help file: AdminUI.PS.Collections.dll-Help.xml

@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds a security scope to an administrative user or group in Configuration Manager.
 external help file: AdminUI.PS.Rba.dll-Help.xml

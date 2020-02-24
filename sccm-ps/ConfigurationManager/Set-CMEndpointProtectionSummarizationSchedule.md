@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Modifies an Endpoint Protection summarization schedule.
 external help file: AdminUI.PS.Sum.dll-Help.xml

@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Adds an exclude membership rule to one or more Configuration Manager device collections.
 external help file: AdminUI.PS.Collections-help.xml

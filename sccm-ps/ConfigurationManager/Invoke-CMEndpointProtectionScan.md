@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Invokes a scan to detect malware on one or more devices in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections.dll-Help.xml

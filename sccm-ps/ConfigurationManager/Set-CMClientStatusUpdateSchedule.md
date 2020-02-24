@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Modifies the schedule interval of the client status update task.
 external help file: AdminUI.PS.Sum.dll-Help.xml

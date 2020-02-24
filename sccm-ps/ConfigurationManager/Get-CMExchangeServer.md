@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets a Configuration Manager Exchange Server object.
 external help file: AdminUI.PS.HS.dll-Help.xml
@@ -54,7 +54,7 @@ This command gets an Exchange Server for the site identified by the site code PE
 
 ### Example 3: Get a specified nextref_exchange
 ```
-PS XYZ:\> Get-CMExchangeServer -Address "http://localhost/PowerShell"
+PS XYZ:\> Get-CMExchangeServer -Address "https://localhost/PowerShell"
 ```
 
 This command gets the Exchange Server with the specified address.
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Modifies the properties of a boundary group.
 external help file: AdminUI.PS.HS.dll-Help.xml

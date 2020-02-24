@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets a boundary group.
 external help file: AdminUI.PS.HS.dll-Help.xml

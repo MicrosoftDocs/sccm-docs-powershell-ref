@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Changes the properties of an item in the Asset Intelligence catalog.
 external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -LanguageId
 Specifies the locale ID for an item.
-For more information and a list of locale IDs, see [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=262651).
+For more information and a list of locale IDs, see [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=262651).
 
 ```yaml
 Type: Int32
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

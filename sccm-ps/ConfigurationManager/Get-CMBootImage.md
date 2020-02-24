@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Gets an operating system boot image.
 external help file: AdminUI.PS.Osd.dll-Help.xml

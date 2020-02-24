@@ -1,4 +1,4 @@
----
+﻿---
 author: aczechowski
 description: Configures a new Exchange Server connector.
 external help file: AdminUI.PS.HS.dll-Help.xml
@@ -63,10 +63,10 @@ For more information, see [Configuration Manager 2012 Exchange Connector Impleme
 ### Example 1: Create an Exchange Server
 ```
 PS XYZ:\> $schedule = New-CMSchedule -Start "03/01/2016 11:59 PM" -RecurInterval Days -RecurCount 1
-PS XYZ:\> New-CMExchangeServer -ServerAddress "http://exchange.contoso.com" -DeltaSyncInterval 120 -FullSyncSchedule $schedule -IsHosted -SiteCode "ContosoSite"
+PS XYZ:\> New-CMExchangeServer -ServerAddress "https://exchange.contoso.com" -DeltaSyncInterval 120 -FullSyncSchedule $schedule -IsHosted -SiteCode "ContosoSite"
 ```
 
-These commands create an Exchange Server with the server address `http://exchange.contoso.com`.
+These commands create an Exchange Server with the server address `https://exchange.contoso.com`.
 To do this, the first command in the example uses the **New-CMSchedule** cmdlet to create a schedule for doing Exchange synchronizations.
 This schedule object is stored in a variable $schedule.
 

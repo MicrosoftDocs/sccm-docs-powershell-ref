@@ -1,4 +1,4 @@
----
+﻿---
 title: Add-CMOutOfBandServicePoint
 titleSuffix: Configuration Manager
 description: Adds an out of band service point to Configuration Manager.

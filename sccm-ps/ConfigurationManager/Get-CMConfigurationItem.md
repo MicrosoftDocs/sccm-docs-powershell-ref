@@ -1,4 +1,4 @@
----
+﻿---
 author: mumian
 description: Gets Configuration Manager configuration items.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
