@@ -161,6 +161,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [New-CMGlobalCondition](./Get-CMGlobalCondition.md)
-- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
-- [Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
+[New-CMGlobalCondition](./Get-CMGlobalCondition.md)
+
+[Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+
+[Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
