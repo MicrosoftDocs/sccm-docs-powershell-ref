@@ -852,6 +852,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-CMGlobalCondition](./Get-CMGlobalCondition.md)
-- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
-- [Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
+[Get-CMGlobalCondition](./Get-CMGlobalCondition.md)
+
+[Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+
+[Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)

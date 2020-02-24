@@ -256,15 +256,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
-- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
-- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
-- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
-- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
-- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)
+[New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+
+[Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+
+[Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+
+[Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+
+[Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+
+[Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+
+[Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+
+[Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+
+[Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+
+[Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+
+[Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+
+[Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

@@ -230,15 +230,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
-- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
-- [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
-- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
-- [New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
-- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
-- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
-- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)
+[Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+
+[New-CMGlobalCondition](./New-CMGlobalCondition.md)
+
+[New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
+
+[New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+
+[New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
+
+[New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+
+[New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+
+[New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+
+[New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+
+[New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+
+[New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
+
+[New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)
