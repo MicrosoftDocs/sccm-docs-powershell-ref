@@ -1,14 +1,7 @@
-﻿---
+---
 title: Update-CMAmtProvisioning
-titleSuffix: Configuration Manager
 description: Updates provisioning for an Intel AMT-based computer.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Update-CMAmtProvisioning

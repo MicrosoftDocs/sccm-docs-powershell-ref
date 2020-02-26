@@ -1,14 +1,7 @@
-﻿---
+---
 title: Set-CMPowerControl
-titleSuffix: Configuration Manager
 description: Changes power state for client devices by using AMT power control commands.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Set-CMPowerControl

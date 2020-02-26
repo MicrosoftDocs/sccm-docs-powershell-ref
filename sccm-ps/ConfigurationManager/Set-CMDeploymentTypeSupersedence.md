@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Sets a deployment type supersedence in Configuration Manager.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 01/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Set-CMDeploymentTypeSupersedence
-titleSuffix: Configuration Manager
 ---
 
 # Set-CMDeploymentTypeSupersedence

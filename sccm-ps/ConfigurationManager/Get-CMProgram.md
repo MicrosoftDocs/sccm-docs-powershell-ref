@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Gets programs in Configuration Manager.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMProgram
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMProgram

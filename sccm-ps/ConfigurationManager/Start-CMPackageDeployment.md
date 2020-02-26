@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Starts deployment of a software package to a Configuration Manager collection.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Start-CMPackageDeployment
-titleSuffix: Configuration Manager
 ---
 
 # Start-CMPackageDeployment

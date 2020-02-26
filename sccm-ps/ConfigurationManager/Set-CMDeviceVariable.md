@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Modifies a device variable of a Configuration Manager device.
 external help file: AdminUI.PS.Collections.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Set-CMDeviceVariable
-titleSuffix: Configuration Manager
 ---
 
 # Set-CMDeviceVariable

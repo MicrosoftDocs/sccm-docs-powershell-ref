@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Invokes a content redistribution.
 external help file: AdminUI.PS.Content.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Invoke-CMContentRedistribution
-titleSuffix: Configuration Manager
 ---
 
 # Invoke-CMContentRedistribution

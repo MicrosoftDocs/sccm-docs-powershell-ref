@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Creates a blocked Configuration Manager record for client that has a conflicting record.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Block-CMConflictingRecord
-titleSuffix: Configuration Manager
 ---
 
 # Block-CMConflictingRecord

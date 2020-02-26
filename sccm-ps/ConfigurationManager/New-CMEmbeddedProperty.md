@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Creates an embedded property.
 external help file: AdminUI.PS.Common.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: New-CMEmbeddedProperty
-titleSuffix: Configuration Manager
 ---
 
 # New-CMEmbeddedProperty

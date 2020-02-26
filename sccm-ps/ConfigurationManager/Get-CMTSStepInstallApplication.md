@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Gets a TS step install application.
 external help file: AdminUI.PS.Osd-help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMTSStepInstallApplication
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMTSStepInstallApplication

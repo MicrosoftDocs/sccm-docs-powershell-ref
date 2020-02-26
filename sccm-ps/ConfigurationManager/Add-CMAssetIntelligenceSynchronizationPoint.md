@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Installs an Asset Intelligence synchronization point.
 external help file: AdminUI.PS.HS.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Add-CMAssetIntelligenceSynchronizationPoint
-titleSuffix: Configuration Manager
 ---
 
 # Add-CMAssetIntelligenceSynchronizationPoint

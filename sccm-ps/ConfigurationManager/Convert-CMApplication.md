@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Converts an application object.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Convert-CMApplication
-titleSuffix: Configuration Manager
 ---
 
 # Convert-CMApplication

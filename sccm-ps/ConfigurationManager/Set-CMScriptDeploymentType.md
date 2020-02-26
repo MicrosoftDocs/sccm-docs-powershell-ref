@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Sets a script installer deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 11/15/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Set-CMScriptDeploymentType
-titleSuffix: Configuration Manager
 ---
 
 # Set-CMScriptDeploymentType

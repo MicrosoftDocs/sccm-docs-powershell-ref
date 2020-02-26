@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Create a task sequence Set Dynamic Variable step in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: New-CMTSStepSetDynamicVariable
-titleSuffix: Configuration Manager
 ---
 
 # New-CMTSStepSetDynamicVariable

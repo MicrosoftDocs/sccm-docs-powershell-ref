@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Changes values that define how Configuration Manager deploys a software package.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Set-CMPackageDeployment
-titleSuffix: Configuration Manager
 ---
 
 # Set-CMPackageDeployment

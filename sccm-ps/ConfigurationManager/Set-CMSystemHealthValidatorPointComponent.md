@@ -1,14 +1,7 @@
-﻿---
+---
 title: Set-CMSystemHealthValidatorPointComponent
-titleSuffix: Configuration Manager
 description: Modifies settings of a Configuration Manager system health validator point.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Set-CMSystemHealthValidatorPointComponent

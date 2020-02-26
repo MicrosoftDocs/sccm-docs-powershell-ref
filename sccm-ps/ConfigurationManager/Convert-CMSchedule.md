@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Converts schedule tokens into and from interval strings.
 external help file: AdminUI.PS.Common.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Convert-CMSchedule
-titleSuffix: Configuration Manager
 ---
 
 # Convert-CMSchedule

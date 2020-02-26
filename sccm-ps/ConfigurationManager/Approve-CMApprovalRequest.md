@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Approves a request to allow the installation of an application.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Approve-CMApprovalRequest
-titleSuffix: Configuration Manager
 ---
 
 # Approve-CMApprovalRequest

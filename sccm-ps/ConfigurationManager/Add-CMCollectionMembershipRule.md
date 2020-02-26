@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Adds a Configuration Manager collection membership rule.
 external help file: AdminUI.PS.Collections.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Add-CMCollectionMembershipRule
-titleSuffix: Configuration Manager
 ---
 
 # Add-CMCollectionMembershipRule

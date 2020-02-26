@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Gets Configuration Manager PowerShell scripts.
 external help file: AdminUI.PS.ClientOperations.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 11/15/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Get-CMScript
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMScript

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Osd-help.xml
 Module Name: ConfigurationManager
 online version:

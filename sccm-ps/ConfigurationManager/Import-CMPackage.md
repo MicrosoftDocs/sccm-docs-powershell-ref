@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Imports a Configuration Manager package.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Import-CMPackage
-titleSuffix: Configuration Manager
 ---
 
 # Import-CMPackage

@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Gets the summarization schedule for configuration baseline data.
 external help file: AdminUI.PS.Sum.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMBaselineSummarizationSchedule
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMBaselineSummarizationSchedule

@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Edits the global exclusion list for migration jobs.
 external help file: AdminUI.PS.Migration.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Set-CMMigrationExclusionList
-titleSuffix: Configuration Manager
 ---
 
 # Set-CMMigrationExclusionList

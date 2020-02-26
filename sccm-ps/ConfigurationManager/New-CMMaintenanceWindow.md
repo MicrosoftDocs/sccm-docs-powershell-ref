@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Creates a maintenance window for a collection.
 external help file: AdminUI.PS.Collections.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: New-CMMaintenanceWindow
-titleSuffix: Configuration Manager
 ---
 
 # New-CMMaintenanceWindow

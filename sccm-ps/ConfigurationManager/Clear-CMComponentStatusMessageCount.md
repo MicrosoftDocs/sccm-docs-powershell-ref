@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Changes the component status message count to zero.
 external help file: AdminUI.PS.SystemStatus.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Clear-CMComponentStatusMessageCount
-titleSuffix: Configuration Manager
 ---
 
 # Clear-CMComponentStatusMessageCount

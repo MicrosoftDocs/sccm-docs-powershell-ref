@@ -1,14 +1,7 @@
-﻿---
+---
 title: Invoke-CMAmtProvisioningDiscovery
-titleSuffix: Configuration Manager
 description: Checks whether computers have Intel AMT hardware.
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Invoke-CMAmtProvisioningDiscovery

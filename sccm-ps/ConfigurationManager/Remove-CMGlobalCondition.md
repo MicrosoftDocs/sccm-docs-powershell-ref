@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Removes a Configuration Manager global condition object.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 01/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Remove-CMGlobalCondition
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMGlobalCondition

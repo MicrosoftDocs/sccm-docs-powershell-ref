@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Deletes historical data about a data migration operation.
 external help file: AdminUI.PS.Migration.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Clear-CMMigrationData
-titleSuffix: Configuration Manager
 ---
 
 # Clear-CMMigrationData

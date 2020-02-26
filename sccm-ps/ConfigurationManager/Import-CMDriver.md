@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Imports a device driver into Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Import-CMDriver
-titleSuffix: Configuration Manager
 ---
 
 # Import-CMDriver

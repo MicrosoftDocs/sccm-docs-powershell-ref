@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Removes the association between security scopes and an administrative user.
 external help file: AdminUI.PS.Rba.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Remove-CMSecurityScopeFromAdministrativeUser
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMSecurityScopeFromAdministrativeUser

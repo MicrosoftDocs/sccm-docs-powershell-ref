@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Clears an operating system upgrade update schedule
 external help file: AdminUI.PS.Osd.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Clear-CMOperatingSystemUpgradeUpdateSchedule
-titleSuffix: Configuration Manager
 ---
 
 # Clear-CMOperatingSystemUpgradeUpdateSchedule

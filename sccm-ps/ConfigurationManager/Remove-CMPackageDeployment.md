@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Removes a package deployment from Configuration Manager.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Remove-CMPackageDeployment
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMPackageDeployment

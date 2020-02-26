@@ -1,18 +1,11 @@
-﻿---
+---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: {{ Update Download Link }}
 Help Version: {{ Please enter version of help manually (X.X.X.X) format }}
 Locale: en-US
-titleSuffix: Configuration Manager
 description: This section contains the help topics and about topics for the Configuration Manager cmdlets.
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # ConfigurationManager Module

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Rba.dll-Help.xml
 Module Name: ConfigurationManager
 online version:

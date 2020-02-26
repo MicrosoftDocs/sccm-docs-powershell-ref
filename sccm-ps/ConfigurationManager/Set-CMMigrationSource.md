@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Specifies or changes settings for a migration source site in Configuration Manager.
 external help file: AdminUI.PS.Migration.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Set-CMMigrationSource
-titleSuffix: Configuration Manager
 ---
 
 # Set-CMMigrationSource

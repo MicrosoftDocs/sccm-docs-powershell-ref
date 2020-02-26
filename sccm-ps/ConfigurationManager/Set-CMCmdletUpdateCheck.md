@@ -1,14 +1,7 @@
-﻿---
+---
 title: Set-CMCmdletUpdateCheck
-titleSuffix: Configuration Manager
 description: Configures update check settings on a per-user or per-system basis.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Set-CMCmdletUpdateCheck

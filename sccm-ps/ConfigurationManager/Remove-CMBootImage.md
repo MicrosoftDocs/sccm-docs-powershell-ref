@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Removes an operating system boot image.
 external help file: AdminUI.PS.Osd.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Remove-CMBootImage
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMBootImage

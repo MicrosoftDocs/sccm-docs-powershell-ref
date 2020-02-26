@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Creates a Client Access server role for an Exchange Server.
 external help file: AdminUI.PS.HS.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: New-CMExchangeClientAccessServer
-titleSuffix: Configuration Manager
 ---
 
 # New-CMExchangeClientAccessServer

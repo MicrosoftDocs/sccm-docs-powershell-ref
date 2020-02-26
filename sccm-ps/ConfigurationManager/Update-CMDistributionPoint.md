@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Updates content on a distribution point.
 external help file: AdminUI.PS.Osd.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Update-CMDistributionPoint
-titleSuffix: Configuration Manager
 ---
 
 # Update-CMDistributionPoint

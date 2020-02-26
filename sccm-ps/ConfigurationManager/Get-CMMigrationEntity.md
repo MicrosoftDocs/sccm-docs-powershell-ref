@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Gets a migration entity in System Center Configuration Manager.
 external help file: AdminUI.PS.Migration.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMManagementPoint
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMMigrationEntity

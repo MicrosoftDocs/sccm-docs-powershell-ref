@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Modifies general settings for a Configuration Manager global condition.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Set-CMGlobalConditionGeneral
-titleSuffix: Configuration Manager
 ---
 
 # Set-CMGlobalConditionGeneral

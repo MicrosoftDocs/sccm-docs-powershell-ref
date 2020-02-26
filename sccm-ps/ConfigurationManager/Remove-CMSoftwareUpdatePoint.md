@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Removes a software update point site system role from Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Remove-CMSoftwareUpdatePoint
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMSoftwareUpdatePoint

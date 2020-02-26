@@ -1,14 +1,7 @@
-﻿---
+---
 title: Remove-CMSystemHealthValidatorPoint
-titleSuffix: Configuration Manager
 description: Removes a system health validator point from Configuration Manager.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Remove-CMSystemHealthValidatorPoint

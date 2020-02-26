@@ -83,7 +83,18 @@
       "feedback_github_repo": "MicrosoftDocs/sccm-docs-powershell-ref",
       "feedback_product_url": "https://configurationmanager.uservoice.com"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "author": { "**/**.md": "aczechowski"},
+      "manager": { "**/**.md": "dougeby"},
+      "ms.author": { "**/**.md": "aaroncz"},
+      "ms.prod": { "**/**.md": "configuration-manager"},
+      "ms.technology": { "**/**.md": "configmgr-other"},
+      "ms.topic": {
+        "**/sccm-ps/ConfigurationManager/**.md": "reference",
+        "**/docs-conceptual/**.md": "conceptual"
+      },
+      "titleSuffix": { "**/**.md": "Configuration Manager"}
+    },
     "template": [],
     "dest": "sccm-powershell",
     "markdownEngineName": "markdig"

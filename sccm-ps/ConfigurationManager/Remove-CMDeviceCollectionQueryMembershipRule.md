@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Removes a query membership rule from one or more device collection in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections-help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Remove-CMDeviceCollectionQueryMembershipRule
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMDeviceCollectionQueryMembershipRule

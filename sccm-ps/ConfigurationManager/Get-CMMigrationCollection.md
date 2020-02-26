@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Gets collections selected for migration.
 external help file: AdminUI.PS.Migration.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMMigrationCollection
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMMigrationCollection

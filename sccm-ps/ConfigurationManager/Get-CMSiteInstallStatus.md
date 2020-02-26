@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Provides information about Configuration Manager installation status.
 external help file: AdminUI.PS.HS.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMSiteInstallStatus
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMSiteInstallStatus

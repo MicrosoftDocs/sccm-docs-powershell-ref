@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Changes properties of Configuration Manager alerts.
 external help file: AdminUI.PS.Alerts.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Set-CMAlert
-titleSuffix: Configuration Manager
 ---
 
 # Set-CMAlert

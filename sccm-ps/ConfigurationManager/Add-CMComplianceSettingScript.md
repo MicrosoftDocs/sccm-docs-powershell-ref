@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Adds a compliance setting script.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Add-CMComplianceSettingScript
-titleSuffix: Configuration Manager
 ---
 
 # Add-CMComplianceSettingScript

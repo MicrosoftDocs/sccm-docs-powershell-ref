@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Removes a Configuration Manager task sequence group.
 external help file: AdminUI.PS.Osd.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Remove-CMTaskSequenceGroup
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMTaskSequenceGroup

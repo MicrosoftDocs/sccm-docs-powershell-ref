@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Gets one or more Configuration Manager sites.
 external help file: AdminUI.PS.HS.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMSite
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMSite

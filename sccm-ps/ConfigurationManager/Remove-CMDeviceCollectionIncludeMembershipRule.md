@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Removes an Include Collections membership rule from a device collection.
 external help file: AdminUI.PS.Collections-help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Remove-CMDeviceCollectionIncludeMembershipRule
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMDeviceCollectionIncludeMembershipRule

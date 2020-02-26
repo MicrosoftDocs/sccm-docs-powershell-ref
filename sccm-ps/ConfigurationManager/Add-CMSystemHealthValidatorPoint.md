@@ -1,14 +1,7 @@
-﻿---
+---
 title: Add-CMSystemHealthValidatorPoint
-titleSuffix: Configuration Manager
 description: Adds a validator point for system health in Configuration Manager.
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Add-CMSystemHealthValidatorPoint

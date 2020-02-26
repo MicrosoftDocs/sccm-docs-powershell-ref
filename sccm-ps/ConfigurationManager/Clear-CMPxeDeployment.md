@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Clears the status of the most recent PXE deployment in Configuration Manager.
 external help file: AdminUI.PS.Collections.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Clear-CMPxeDeployment
-titleSuffix: Configuration Manager
 ---
 
 # Clear-CMPxeDeployment

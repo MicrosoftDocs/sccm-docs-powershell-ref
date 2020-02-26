@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Gets the status for database replication.
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMDatabaseReplicationStatus
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMDatabaseReplicationStatus

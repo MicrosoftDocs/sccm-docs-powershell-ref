@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Creates a certificate profile.
 external help file:
-manager: dougeby
 Module Name: AdminUI.PS.Dcm
-ms.author: aaroncz
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: New-CMClientAuthCertificateProfileConfigurationItem
-titleSuffix: Configuration Manager
 ---
 
 # New-CMClientAuthCertificateProfileConfigurationItem

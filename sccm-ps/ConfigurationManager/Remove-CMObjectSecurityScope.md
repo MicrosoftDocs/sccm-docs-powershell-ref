@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Removes a security scope from a Configuration Manager object.
 external help file: AdminUI.PS.Common.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Remove-CMObjectSecurityScope
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMObjectSecurityScope

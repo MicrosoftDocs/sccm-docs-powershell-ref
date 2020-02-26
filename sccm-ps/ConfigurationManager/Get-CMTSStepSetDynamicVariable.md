@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Gets task sequence Set Dynamic Variable steps in Configuration Manager.
 external help file: AdminUI.PS.Osd-help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Get-CMTSStepSetDynamicVariable
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMTSStepSetDynamicVariable

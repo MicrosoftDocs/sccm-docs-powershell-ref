@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Removes an include membership rule from one or more user collection in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections-help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Remove-CMUserCollectionIncludeMembershipRule
-titleSuffix: Configuration Manager
 ---
 
 # Remove-CMUserCollectionIncludeMembershipRule

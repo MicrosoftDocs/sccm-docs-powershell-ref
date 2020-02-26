@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Adds a software update point for Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Add-CMSoftwareUpdatePoint
-titleSuffix: Configuration Manager
 ---
 
 # Add-CMSoftwareUpdatePoint

@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Gets a site update.
 external help file: AdminUI.PS.HS.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Get-CMSiteUpdate
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMSiteUpdate

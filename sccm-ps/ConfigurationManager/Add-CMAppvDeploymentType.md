@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Adds a Microsoft Application Virtualization (App-V) 4 deployment type to an application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Add-CMAppvDeploymentType
-titleSuffix: Configuration Manager
 ---
 
 # Add-CMAppvDeploymentType

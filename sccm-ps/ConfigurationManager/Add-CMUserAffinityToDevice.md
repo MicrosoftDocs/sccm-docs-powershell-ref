@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Adds a primary user to one or more devices in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: Add-CMUserAffinityToDevice
-titleSuffix: Configuration Manager
 ---
 
 # Add-CMUserAffinityToDevice

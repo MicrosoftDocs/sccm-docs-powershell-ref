@@ -1,17 +1,10 @@
-ï»¿---
-author: aczechowski
+---
 description: Creates a collection for devices and adds the collection to the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections-help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: New-CMDeviceCollection
-titleSuffix: Configuration Manager
 ---
 
 # New-CMDeviceCollection
@@ -71,8 +64,8 @@ For more information about Configuration Manager collections, see [Introduction 
 PS XYZ:\> New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
 ```
 
-This command creates a collection for all computers that run WindowsÂ® 7.
-The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the WindowsÂ® 7 collection.
+This command creates a collection for all computers that run Windows® 7.
+The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the Windows® 7 collection.
 
 ## PARAMETERS
 

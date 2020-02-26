@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Creates a Configuration Manager schedule token.
 external help file: AdminUI.PS.Common.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: New-CMSchedule
-titleSuffix: Configuration Manager
 ---
 
 # New-CMSchedule

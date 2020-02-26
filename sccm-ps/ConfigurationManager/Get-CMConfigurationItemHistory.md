@@ -1,17 +1,10 @@
-﻿---
-author: mumian
+---
 description: Gets the previous versions of a configuration item in Configuration Manager.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
-manager: dougeby
 Module Name: ConfigurationManager
-ms.author: jgao
 ms.date: 11/29/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
 schema: 2.0.0
 title: Get-CMConfigurationItemHistory
-titleSuffix: Configuration Manager
 ---
 
 # Get-CMConfigurationItemHistory

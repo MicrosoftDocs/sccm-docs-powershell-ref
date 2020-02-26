@@ -1,17 +1,10 @@
-﻿---
-author: aczechowski
+---
 description: Adds new password settings to a Exchange Server connector in Configuration Manager.
 external help file:
-manager: dougeby
 Module Name: AdminUI.PS.HS
-ms.author: aaroncz
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
 schema: 2.0.0
 title: New-CMExchangeServerConnectorPasswordSetting
-titleSuffix: Configuration Manager
 ---
 
 # New-CMExchangeServerConnectorPasswordSetting
