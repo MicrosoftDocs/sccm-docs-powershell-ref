@@ -1,27 +1,24 @@
 ---
-title: New-CMGlobalConditionIisMetabase
-titleSuffix: Configuration Manager
 description: Creates an IIS Metabase type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMGlobalConditionIisMetabase
 ---
 
 # New-CMGlobalConditionIisMetabase
 
 ## SYNOPSIS
 
-Creates an IIS Metabase type global condition in Configuration Manager. 
+Creates an IIS Metabase type global condition in Configuration Manager.
 
 ## SYNTAX
 
-```powershell
+```
 New-CMGlobalConditionIisMetabase -DataType <GlobalConditionDataType> [-MetabasePath <String>]
  -PropertyId <Int32> -Name <String> [-Description <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +26,11 @@ New-CMGlobalConditionIisMetabase -DataType <GlobalConditionDataType> [-MetabaseP
 The **New-CMGlobalConditionIisMetabase** cmdlet creates an IIS Metabase type global condition in Microsoft System Center Configuration Manager.
 
 A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
@@ -38,7 +40,7 @@ A global condition is a setting or expression in System Center Configuration Man
 $GlobalIIS = New-CMGlobalConditionIisMetabase -DataType String -PropertyId $int -Name GC3
 ```
 
-This command creates an IIS Metabase type global condition in Configuration Manager. 
+This command creates an IIS Metabase type global condition in Configuration Manager.
 
 ## PARAMETERS
 
@@ -155,21 +157,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
-- [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
-- [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
-- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
-- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
-- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
-- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)
+[Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+
+[New-CMGlobalCondition](./New-CMGlobalCondition.md)
+
+[New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
+
+[New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
+
+[New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+
+[New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+
+[New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+
+[New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+
+[New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+
+[New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+
+[New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
+
+[New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)

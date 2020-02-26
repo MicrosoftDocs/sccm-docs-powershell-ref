@@ -1,14 +1,10 @@
 ---
-title: Set-CMEndpointProtectionSummarizationSchedule
-titleSuffix: Configuration Manager
 description: Modifies an Endpoint Protection summarization schedule.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMEndpointProtectionSummarizationSchedule
 ---
 
 # Set-CMEndpointProtectionSummarizationSchedule
@@ -25,13 +21,18 @@ Set-CMEndpointProtectionSummarizationSchedule -Interval <Int32> [-Unit <Summariz
 
 ## DESCRIPTION
 The **Set-CMEndpointProtectionSummarizationSchedule** cmdlet modifies the settings of an System Center 2016 Endpoint Protection summarization schedule.
-For more information about Endpoint Protection summarization schedules, see [How to Monitor Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268428) on TechNet.
+For more information about Endpoint Protection summarization schedules, see [How to Monitor Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508769(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Modify an Endpoint Protection summarization schedules
 ```
-PS C:\> Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "Days"
+PS XYZ:\> Set-CMEndpointProtectionSummarizationSchedule -Interval 10 -UnitType "Days"
 ```
 
 This command modifies the interval and unit values to specify that 10 days pass before the Endpoint Protection Summarization Schedule runs again.
@@ -59,7 +60,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +75,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,16 +87,16 @@ Accept wildcard characters: False
 ### -Interval
 Specifies an amount of time, as an integer.
 This value works with the unit type you specify in the *Unit* parameter.
-Valid values for this parameter depend on the unit that you select: 
+Valid values for this parameter depend on the unit that you select:
 
-- Minutes: 10 through 59. 
-- Hours: 1 through 23. 
+- Minutes: 10 through 59.
+- Hours: 1 through 23.
 - Days: 1 through 31.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,7 +116,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SummarizationScheduleUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Minutes, Hours, Days
 
 Required: False
@@ -142,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

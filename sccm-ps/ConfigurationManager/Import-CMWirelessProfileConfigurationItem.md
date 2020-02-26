@@ -1,14 +1,10 @@
 ---
-title: Import-CMWirelessProfileConfigurationItem
-titleSuffix: Configuration Manager
 description: Imports a wireless profile configuration item.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Import-CMWirelessProfileConfigurationItem
 ---
 
 # Import-CMWirelessProfileConfigurationItem
@@ -19,7 +15,7 @@ Imports a wireless profile configuration item.
 ## SYNTAX
 
 ```
-Import-CMWirelessProfileConfigurationItem -Path <String> -Name <String> [-Description <String>]
+Import-CMWirelessProfileConfigurationItem [-Description <String>] -Name <String> -Path <String>
  [-Severity <NoncomplianceSeverity>] -SupportedPlatform <IResultObject[]> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -27,12 +23,17 @@ Import-CMWirelessProfileConfigurationItem -Path <String> -Name <String> [-Descri
 ## DESCRIPTION
 The **Import-CMWirelessProfileConfigurationItem** cmdlet imports an existing wireless profile item from a file.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import a wireless profile configuration item
 ```
-PS C:\><?xml version="1.0"?>
-<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+PS XYZ:\><?xml version="1.0"?>
+<WLANProfile xmlns="https://www.microsoft.com/networking/WLAN/profile/v1">
  <name>Open-WEP</name>
  <SSIDConfig>
   <SSID>
@@ -56,7 +57,7 @@ PS C:\><?xml version="1.0"?>
  </MSM>
 </WLANProfile>
 
-PS C:\> Import-CMWirelessProfileConfigurationItem -Name "Wireless2" -Description "Imported wireless profile" -Path "c:\WLanProfile.xml" -SupportedPlatform (Get-CMSupportedPlatform -Name "*Windows*10*" -Fast)
+PS XYZ:\> Import-CMWirelessProfileConfigurationItem -Name "Wireless2" -Description "Imported wireless profile" -Path "c:\WLanProfile.xml" -SupportedPlatform (Get-CMSupportedPlatform -Name "*Windows*10*" -Fast)
 ```
 
 The first section provides xml content for the wireless profile.
@@ -88,7 +89,7 @@ Specifies a description for the wireless profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +104,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +134,7 @@ Specifies the name of a wireless profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +160,7 @@ Accept wildcard characters: False
 
 ### -Severity
 Specifies a non-compliance severity for reports.
-Valid values are: 
+Valid values are:
 
 - None
 - Informational
@@ -170,7 +171,7 @@ Valid values are:
 ```yaml
 Type: NoncomplianceSeverity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Informational, Warning, Critical, CriticalWithEvent
 
 Required: False
@@ -214,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

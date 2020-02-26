@@ -1,14 +1,7 @@
 ---
 title: Set-CMWindowsMobileDeploymentType
-titleSuffix: Configuration Manager
 description: Sets a Windows Mobile cabinet deployment type.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Set-CMWindowsMobileDeploymentType
@@ -56,11 +49,16 @@ Set-CMWindowsMobileDeploymentType [-EnableUninstall <Boolean>] [-AddRequirement 
 ## DESCRIPTION
 The **Set-CMWindowsMobileDeploymentType** cmdlet changes the settings for a Windows Mobile cabinet deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" | Set-CMWindowsMobileDeploymentType -EnableUninstall $False -NewName "DT4_New" -RemoveLanguage "en-US","zh-CN" -Comment "Deployment Type updated" -PassThru
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" | Set-CMWindowsMobileDeploymentType -EnableUninstall $False -NewName "DT4_New" -RemoveLanguage "en-US","zh-CN" -Comment "Deployment Type updated" -PassThru
 ```
 
 This command gets the Windows Mobile cabinet deployment type object named DT4 for the application named Application1 and uses the pipeline operator to pass the object to **Set-CMWindowsMobileDeploymentType**.
@@ -69,7 +67,7 @@ Setting the *EnableUninstall* parameter to $False indicates that the user is not
 
 ### Example 2: Rename a deployment type
 ```
-PS C:\> Set-CMWindowsMobileDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" -EnableUninstall $False -NewName DT4_New -RemoveLanguage "en-US","zh-CN" -Comment "Deployment Type updated" -PassThru
+PS XYZ:\> Set-CMWindowsMobileDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT4" -EnableUninstall $False -NewName DT4_New -RemoveLanguage "en-US","zh-CN" -Comment "Deployment Type updated" -PassThru
 ```
 
 This command changes the name of the Windows Mobile cabinet deployment type named DT4 for the application named Application1 to DT4_New, and removes English and Chinese from the array of supported languages.
@@ -81,7 +79,7 @@ Setting the *EnableUninstall* parameter to $False indicates that the user is not
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -101,7 +99,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +115,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -147,7 +145,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -193,7 +191,7 @@ The site system server requires permissions to read the content files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +206,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -223,7 +221,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -268,7 +266,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,7 +313,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -372,7 +370,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

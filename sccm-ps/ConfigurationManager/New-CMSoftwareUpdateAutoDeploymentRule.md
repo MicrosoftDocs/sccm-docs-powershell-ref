@@ -1,14 +1,10 @@
 ---
-title: New-CMSoftwareUpdateAutoDeploymentRule
-titleSuffix: Configuration Manager
 description: Creates Configuration Manager deployment rules for automatic software updates.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMSoftwareUpdateAutoDeploymentRule
 ---
 
 # New-CMSoftwareUpdateAutoDeploymentRule
@@ -23,7 +19,7 @@ Creates Configuration Manager deployment rules for automatic software updates.
 New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -Collection <IResultObject>
  [-AddToExistingSoftwareUpdateGroup <Boolean>] [-EnabledAfterCreate <Boolean>] [-Enable <Boolean>]
  [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-DeployWithoutLicense <Boolean>]
- [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>]
+ [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
  [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
  [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
@@ -47,7 +43,7 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
 New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -CollectionName <String>
  [-AddToExistingSoftwareUpdateGroup <Boolean>] [-EnabledAfterCreate <Boolean>] [-Enable <Boolean>]
  [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-DeployWithoutLicense <Boolean>]
- [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>]
+ [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
  [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
  [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
@@ -71,7 +67,7 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
 New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -CollectionId <String>
  [-AddToExistingSoftwareUpdateGroup <Boolean>] [-EnabledAfterCreate <Boolean>] [-Enable <Boolean>]
  [-SendWakeupPacket <Boolean>] [-VerboseLevel <VerboseLevelType>] [-DeployWithoutLicense <Boolean>]
- [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>]
+ [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
  [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
  [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
@@ -97,11 +93,16 @@ System Center Configuration Manager uses rules to manage automatic deployment of
 When a rule runs, System Center Configuration Manager adds updates that qualify for the rule to a software update group.
 The System Center Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an automatic deployment rule
 ```
-PS C:\> New-CMSoftwareUpdateAutoDeploymentRule -CollectionName "Desktops" -DeploymentPackageName "Updates123" -Name "DeploymentRule07" -ArticleId "117"
+PS XYZ:\> New-CMSoftwareUpdateAutoDeploymentRule -CollectionName "Desktops" -DeploymentPackageName "Updates123" -Name "DeploymentRule07" -ArticleId "117"
 ```
 
 This command creates a deployment rule named DeploymentRule07 for the collection named Desktops and the deployment package named Updates123.
@@ -109,8 +110,8 @@ The rule deploys updates that have an article ID that contains 117.
 
 ### Example 2: Create an automatic deployment rule that uses a schedule
 ```
-PS C:\> $Schedule = New-CMSchedule -DayOfWeek Wednesday
-PS C:\> New-CMSoftwareUpdateAutoDeploymentRule -CollectionName "Laptops" -DeploymentPackageName "Updates235" -Name "DeploymentRule22" -AddToExistingSoftwareUpdateGroup $False -AlertTime 4 -AlertTimeUnit Weeks -AllowRestart $True -AllowSoftwareInstallationOutsideMaintenanceWindow $True -AllowUseMeteredNetwork $True -ArticleId "test" -AvailableImmediately $False -AvailableTime 5 -AvailableTimeUnit Months -CustomSeverity Critical -DateReleasedOrRevised Last1day -DeadlineImmediately $False -DeadlineTime $True -DeadlineTimeUnit Hours -DeployWithoutLicense $True -Description "Standard updates for our laptop systems." -DisableOperationManager $True -DownloadFromInternet $False -DownloadFromMicrosoftUpdate $True -EnabledAfterCreate $False -GenerateOperationManagerAlert $True -GenerateSuccessAlert $True -Language "Catalan" -LanguageSelection "English" -Location "\\k\aS_O15_Client_Dev_1" -MicrosoftAsVendor $True -NoInstallOnRemote $False -NoInstallOnUnprotected $True -RunType RunTheRuleOnSchedule -Schedule $Schedule -SendWakeUpPacket $True -SuccessPercent 99 -Superseded $True -SuppressRestartServer $True -SuppressRestartWorkstation $True -UpdateClassification "Critical Updates" -UseBranchCache $False -UserNotification DisplayAll -UseUtc $True -VerboseLevel AllMessages -WriteFilterHandling $True
+PS XYZ:\> $Schedule = New-CMSchedule -DayOfWeek Wednesday
+PS XYZ:\> New-CMSoftwareUpdateAutoDeploymentRule -CollectionName "Laptops" -DeploymentPackageName "Updates235" -Name "DeploymentRule22" -AddToExistingSoftwareUpdateGroup $False -AlertTime 4 -AlertTimeUnit Weeks -AllowRestart $True -AllowSoftwareInstallationOutsideMaintenanceWindow $True -AllowUseMeteredNetwork $True -ArticleId "test" -AvailableImmediately $False -AvailableTime 5 -AvailableTimeUnit Months -CustomSeverity Critical -DateReleasedOrRevised Last1day -DeadlineImmediately $False -DeadlineTime $True -DeadlineTimeUnit Hours -DeployWithoutLicense $True -Description "Standard updates for our laptop systems." -DisableOperationManager $True -DownloadFromInternet $False -DownloadFromMicrosoftUpdate $True -EnabledAfterCreate $False -GenerateOperationManagerAlert $True -GenerateSuccessAlert $True -Language "Catalan" -LanguageSelection "English" -Location "\\k\aS_O15_Client_Dev_1" -MicrosoftAsVendor $True -NoInstallOnRemote $False -NoInstallOnUnprotected $True -RunType RunTheRuleOnSchedule -Schedule $Schedule -SendWakeUpPacket $True -SuccessPercent 99 -Superseded $True -SuppressRestartServer $True -SuppressRestartWorkstation $True -UpdateClassification "Critical Updates" -UseBranchCache $False -UserNotification DisplayAll -UseUtc $True -VerboseLevel AllMessages -WriteFilterHandling $True
 ```
 
 This example creates an automatic deployment rule that uses a defined schedule.
@@ -133,7 +134,7 @@ Specify the existing update group or assign a name for the new update group by u
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +151,7 @@ Specify a time unit by using the *AlertTimeUnit* parameter.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +172,7 @@ Valid values are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -190,7 +191,7 @@ If this value is $False, Configuration Manager does not restart the computer.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +209,7 @@ If this value is $False, Configuration Manager does not deploy the update outsid
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -223,7 +224,7 @@ Indicates whether to allow clients to download content over a metered Internet c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,7 +240,7 @@ The rule adds software updates that have article IDs that meet specified criteri
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,7 +256,7 @@ If you select a value of $False, use the *AvailableTime* and *AvailableTimeUnit*
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -272,7 +273,7 @@ Specify a time unit by using the *AvailableTimeUnit* parameter.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -293,7 +294,7 @@ Valid values are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -310,7 +311,23 @@ The rule adds software updates that have bulletin IDs that meet specified criter
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CMTag
+{{ Fill CMTag Description }}
+
+```yaml
+Type: CMTagTypes[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, UUP
 
 Required: False
 Position: Named
@@ -323,7 +340,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: NewByCollection
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -336,7 +353,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: NewByCollectionId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -351,7 +368,7 @@ Specifies the name of device collection or user collection.
 ```yaml
 Type: String
 Parameter Sets: NewByCollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -389,7 +406,7 @@ Valid values are:
 ```yaml
 Type: SeverityType[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Low, Moderate, Important, Critical
 
 Required: False
@@ -438,7 +455,7 @@ Valid values are:
 ```yaml
 Type: DateReleasedOrRevisedType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Any, Last1Hour, LastHour, Last2Hours, Last3Hours, Last4Hours, Last8Hours, Last12Hours, Last16Hours, Last20Hours, Last1Day, LastDay, Last2Days, Last3Days, Last4Days, Last5Days, Last6Days, Last7Days, Last14Days, Last21Days, Last28Days, LastMonth, Last1Month, Last2Months, Last3Months, Last4Months, Last5Months, Last6Months, Last7Months, Last8Months, Last9Months, Last10Months, Last11Months, Last1Year, LastYear, Last12Months
 
 Required: False
@@ -456,7 +473,7 @@ After the deadline, Configuration Manager installs required updates.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -473,7 +490,7 @@ Specify a time unit by using the *DeadlineTimeUnit* parameter.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -494,7 +511,7 @@ Valid values are:
 ```yaml
 Type: TimeUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days, Weeks, Months
 
 Required: False
@@ -512,7 +529,7 @@ If this value is $False, Configuration Manager deploys all software updates foun
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -540,7 +557,7 @@ Specifies the name of a software update deployment package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -553,7 +570,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DeploymentRing
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: CB, Release, BusinessMainstream, Cbb, Ltsb
 
 Required: False
@@ -569,7 +586,7 @@ Specifies a description for the automatic deployment rule for software updates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -584,7 +601,7 @@ Indicates whether to disable System Center 2012 - Operations Manager alerts duri
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -599,7 +616,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -615,7 +632,7 @@ If you specify a value of $False, specify an alternative location where computer
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -630,7 +647,7 @@ Indicates whether computers download content from Microsoft Update if that conte
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -674,7 +691,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -684,12 +701,10 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateFailureAlert
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -704,7 +719,7 @@ Indicates whether to generate Operations Manager alerts during a software update
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -719,7 +734,7 @@ Indicates whether to generate an alert for successful deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -732,7 +747,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -764,7 +779,7 @@ Computers download software updates available in the specified languages, in add
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -780,7 +795,7 @@ In order to use this location, specify a value of $False for the *DownloadFromIn
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -795,7 +810,7 @@ Indicates whether the rule includes only updates that have Microsoft as the vend
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -810,7 +825,7 @@ Specifies a name for the automatic deployment rule for software updates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -827,7 +842,7 @@ If you specify a value of $False, installation proceeds.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -844,7 +859,7 @@ If you specify a value of $False, installation proceeds.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -860,7 +875,7 @@ The rule adds software updates for products that meet specified criteria to the 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -876,7 +891,7 @@ The rule adds software updates identified by required that meet specified criter
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -898,7 +913,7 @@ If you specify RunTheRuleOnSchedule, specify a schedule by using the *Schedule* 
 ```yaml
 Type: RunType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotRunThisRuleAutomatically, RunTheRuleAfterAnySoftwareUpdatePointSynchronization, RunTheRuleOnSchedule
 
 Required: False
@@ -916,7 +931,7 @@ Specify a schedule for this parameter if you specify a value of RunTheRuleOnSche
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -934,7 +949,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -974,7 +989,7 @@ If compliance falls below this percentage, Configuration Manager produces option
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -989,7 +1004,7 @@ Indicates whether the rule adds updates superseded by other updates.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1005,7 +1020,7 @@ Some software updates require a system restart to complete the installation proc
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1021,7 +1036,7 @@ Some software updates require a system restart to complete the installation proc
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1082,7 +1097,7 @@ The rule adds software updates that have update descriptions that meet specified
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1098,7 +1113,7 @@ If you specify a value of $True, clients share content on the same subnet.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1115,7 +1130,7 @@ If this value is $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1138,7 +1153,7 @@ Hide in Software Center and all notifications.
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -1149,8 +1164,6 @@ Accept wildcard characters: False
 ```
 
 ### -Vendor
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -1175,7 +1188,7 @@ Valid values are:
 ```yaml
 Type: VerboseLevelType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OnlyErrorMessages, OnlySuccessAndErrorMessages, AllMessages
 
 Required: False
@@ -1210,7 +1223,7 @@ For a value of $False, the device saves changes in an overlay and commits them l
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1220,7 +1233,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

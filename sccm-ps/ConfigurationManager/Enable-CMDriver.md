@@ -1,14 +1,10 @@
 ---
-title: Enable-CMDriver
-titleSuffix: Configuration Manager
 description: Enables a device driver.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Enable-CMDriver
 ---
 
 # Enable-CMDriver
@@ -39,19 +35,24 @@ Enable-CMDriver -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWil
 ## DESCRIPTION
 The **Enable-CMDriver** cmdlet enables a device driver in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable a driver by using the pipeline
 ```
-PS C:\> Get-CMDriver -Name "Driver02" | Enable-CMDriver
+PS XYZ:\> Get-CMDriver -Name "Driver02" | Enable-CMDriver
 ```
 
 This command gets the driver object named Driver02 and uses the pipeline operator to pass the object to **Enable-CMDriver**, which enables the driver object.
 
 ### Example 2: Enable a device driver that is specified by its name
 ```
-PS C:\> $Driver = Get-CMDriver -Name "Driver01"
-PS C:\> Enable-CMDriver -InputObject $Driver
+PS XYZ:\> $Driver = Get-CMDriver -Name "Driver01"
+PS XYZ:\> Enable-CMDriver -InputObject $Driver
 ```
 
 The first command gets the driver object named Driver01 and stores the object in the $Driver variable.
@@ -81,7 +82,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +128,7 @@ To obtain a driver object, use the [Get-CMDriver](Get-CMDriver.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +159,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

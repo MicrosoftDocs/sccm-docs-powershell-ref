@@ -1,14 +1,10 @@
 ---
-title: Set-CMSite
-titleSuffix: Configuration Manager
 description: Changes security scope settings for Configuration Manager sites.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSite
 ---
 
 # Set-CMSite
@@ -99,18 +95,23 @@ A security scope is a collection of permissions that, in conjunction with securi
 You can use this cmdlet to change the type of a security scope action and the name of a security scope for a System Center Configuration Manager site.
 You can specify a site for which you change security scope settings by using a site name or a site code, or you can use the [Get-CMSite](Get-CMSite.md) cmdlet to specify a site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a site to a security scope by using a site name
 ```
-PS C:\> Set-CMSite -SecurityScopeAction AddMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
+PS XYZ:\> Set-CMSite -SecurityScopeAction AddMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
 ```
 
 This command assigns a custom security scope named Scope22 to a System Center Configuration Manager site named CMSiteSystem.
 
 ### Example 2: Remove a security scope for a site by using the site name
 ```
-PS C:\> Set-CMSite -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
+PS XYZ:\> Set-CMSite -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
 ```
 
 This command removes the custom security scope in the previous example from a System Center Configuration Manager site named CMSiteSystem.
@@ -119,7 +120,7 @@ This command removes the custom security scope in the previous example from a Sy
 
 ### -AddActiveDirectoryForest
 Specifies an array of Active Directory Forest objects to publish in Active Directory Domain Services.
-To obtain an Active Directory Forest object, use the [Get-ADForest](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adforest?view=win10-ps) cmdlet.
+To obtain an Active Directory Forest object, use the [Get-ADForest](/powershell/module/addsadministration/get-adforest?view=win10-ps) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -653,8 +654,6 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemCollectionBehavior
- 
-
 ```yaml
 Type: CollectionBehaviorType
 Parameter Sets: (All)
@@ -700,8 +699,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThresholdOfSelectCollectionByDefault
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -715,8 +712,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThresholdOfSelectCollectionMax
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -824,7 +819,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

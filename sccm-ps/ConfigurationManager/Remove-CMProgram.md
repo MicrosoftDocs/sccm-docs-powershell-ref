@@ -1,14 +1,10 @@
 ---
-title: Remove-CMProgram
-titleSuffix: Configuration Manager
 description: Removes programs from a Configuration Manager package.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMProgram
 ---
 
 # Remove-CMProgram
@@ -40,19 +36,24 @@ When you remove a program from a package, System Center Configuration Manager up
 System Center Configuration Manager removes all of the advertisements for this program from the database and removes the advertisements from clients that have received them.
 If System Center Configuration Manager has already run the advertised program on the client computer, System Center Configuration Manager does not remove the software.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a program by using a name and an ID
 ```
-PS C:\> Remove-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
+PS XYZ:\> Remove-CMProgram -PackageId "ST10000F" -ProgramName "ProgramD02"
 ```
 
 This command removes the program named ProgramD02 from the package that has the ID ST10000F.
 
 ### Example 2: Remove a program by using an object variable
 ```
-PS C:\> $Prog = Get-CMProgram -Name "ProgramD02" -PackageId "ST10000F"
-PS C:\> Remove-CMProgram -InputObject $Prog
+PS XYZ:\> $Prog = Get-CMProgram -Name "ProgramD02" -PackageId "ST10000F"
+PS XYZ:\> Remove-CMProgram -InputObject $Prog
 ```
 
 The first command gets the program named ProgramD02 in the package that has the ID ST10000F.
@@ -83,7 +84,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +99,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +114,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +130,7 @@ To obtain a **CMProgram** object, use the Get-CMProgram cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,7 +145,7 @@ Specifies the package that contains the program by using an ID.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdAndNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +160,7 @@ Specifies the program within the package by using a name.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdAndNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

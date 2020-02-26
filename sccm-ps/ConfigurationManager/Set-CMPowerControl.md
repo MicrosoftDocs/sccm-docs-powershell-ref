@@ -1,14 +1,7 @@
 ---
 title: Set-CMPowerControl
-titleSuffix: Configuration Manager
 description: Changes power state for client devices by using AMT power control commands.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Set-CMPowerControl
@@ -39,11 +32,16 @@ Set-CMPowerControl -DeviceId <String> -PowerControl <PowerControlType> [-Disable
 ## DESCRIPTION
 The **Set-CMPowerControl** cmdlet changes the power state for one or more Intel Active Management Technology (Intel AMT) provisioned client devices in Microsoft System Center Configuration Manager by using AMT power control commands.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the power control setting for a client device
 ```
-PS C:\> Set-CMPowerControl -DeviceId "209224563" -PowerControl Restart
+PS XYZ:\> Set-CMPowerControl -DeviceId "209224563" -PowerControl Restart
 ```
 
 This command changes the power control setting to Restart for the client device that has the ID 209224563.
@@ -101,7 +99,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +114,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +129,7 @@ Specifies a **CMPowerControl** object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -147,10 +145,10 @@ The acceptable values for this parameter are:
 - None.
 Disables power settings.
 - WakeUp.
-Turns on a sleeping computer. 
+Turns on a sleeping computer.
 - Restart.
 Performs a hard reset of the computer and turns on the computer.
-This action does not shut the operating system down. 
+This action does not shut the operating system down.
 - Shutdown.
 Performs a hard reset of the computer.
 This action does not shut the operating system down.
@@ -158,7 +156,7 @@ This action does not shut the operating system down.
 ```yaml
 Type: PowerControlType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Wakeup, Restart, Shutdown
 
 Required: True
@@ -185,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

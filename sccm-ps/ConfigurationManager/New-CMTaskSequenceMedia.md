@@ -1,14 +1,10 @@
 ---
-title: New-CMTaskSequenceMedia
-titleSuffix: Configuration Manager
 description: Creates task sequence media in System Center Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 12/03/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMTaskSequenceMedia
 ---
 
 # New-CMTaskSequenceMedia
@@ -20,8 +16,7 @@ Creates task sequence media in System Center Configuration Manager.
 ## SYNTAX
 
 ### NewBootableMedia (Default)
-
-```powershell
+```
 New-CMTaskSequenceMedia [-BootableMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
  -MediaInputType <MediaInputType> [-DriveName <String>] [-MediaSize <MediaSize>] -ProtectPassword <Boolean>
  [-Password <SecureString>] [-Variable <Hashtable>] [-EnablePrestartCommand <Boolean>]
@@ -36,8 +31,7 @@ New-CMTaskSequenceMedia [-BootableMedia] -MediaPath <String> [-AllowUnattendedDe
 ```
 
 ### NewStandAloneMedia
-
-```powershell
+```
 New-CMTaskSequenceMedia [-StandaloneMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
  -MediaInputType <MediaInputType> [-DriveName <String>] [-MediaSize <MediaSize>] -ProtectPassword <Boolean>
  [-Password <SecureString>] -TaskSequenceId <String> -TaskSequenceDistributionPointServerName <String[]>
@@ -48,8 +42,7 @@ New-CMTaskSequenceMedia [-StandaloneMedia] -MediaPath <String> [-AllowUnattended
 ```
 
 ### NewStandAloneMediaByValue
-
-```powershell
+```
 New-CMTaskSequenceMedia [-StandaloneMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
  [-MediaInputType <MediaInputType>] [-DriveName <String>] [-MediaSize <MediaSize>] [-ProtectPassword <Boolean>]
  [-Password <SecureString>] -TaskSequence <IResultObject> -TaskSequenceDistributionPoint <IResultObject[]>
@@ -60,8 +53,7 @@ New-CMTaskSequenceMedia [-StandaloneMedia] -MediaPath <String> [-AllowUnattended
 ```
 
 ### NewBootableMediaByValue
-
-```powershell
+```
 New-CMTaskSequenceMedia [-BootableMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
  [-MediaInputType <MediaInputType>] [-DriveName <String>] [-MediaSize <MediaSize>] [-ProtectPassword <Boolean>]
  [-Password <SecureString>] [-Variable <Hashtable>] [-EnablePrestartCommand <Boolean>]
@@ -76,24 +68,21 @@ New-CMTaskSequenceMedia [-BootableMedia] -MediaPath <String> [-AllowUnattendedDe
 ```
 
 ### NewCaptureMedia
-
-```powershell
+```
 New-CMTaskSequenceMedia [-CaptureMedia] -MediaPath <String> -MediaInputType <MediaInputType>
  [-DriveName <String>] -BootImageId <String> -BootImageDistributionPointServerName <String> [-AllowUacPrompt]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewCaptureMediaByValue
-
-```powershell
+```
 New-CMTaskSequenceMedia [-CaptureMedia] -MediaPath <String> [-MediaInputType <MediaInputType>]
  [-DriveName <String>] -BootImage <IResultObject> -BootImageDistributionPoint <IResultObject> [-AllowUacPrompt]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewPrestagedMedia
-
-```powershell
+```
 New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
  -ProtectPassword <Boolean> -TaskSequenceId <String> -TaskSequenceDistributionPointServerName <String[]>
  [-Variable <Hashtable>] [-PrestartCommandLine <String>] [-CommandIncludeFile <Boolean>]
@@ -108,8 +97,7 @@ New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedD
 ```
 
 ### NewPrestagedMediaByValue
-
-```powershell
+```
 New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedDeployment <Boolean>]
  [-ProtectPassword <Boolean>] -TaskSequence <IResultObject> -TaskSequenceDistributionPoint <IResultObject[]>
  [-Variable <Hashtable>] [-PrestartCommandLine <String>] [-CommandIncludeFile <Boolean>]
@@ -126,12 +114,17 @@ New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedD
 
 The **New-CMTaskSequenceMedia** cmdlet creates task sequence media in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create task sequence media with the captured media option
 
 ```powershell
-PS C:\> New-CMTaskSequenceMedia -CaptureMediaOption -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\1.iso" -MediaInputType CDDVD -BootImageName "Boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET"
+PS XYZ:\> New-CMTaskSequenceMedia -CaptureMediaOption -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\1.iso" -MediaInputType CDDVD -BootImageName "Boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET"
 ```
 
 This command creates task sequence media by specifying the *CaptureMediaOption* parameter.
@@ -140,8 +133,8 @@ The command also specifies a value for the *MediaPath* parameter, and a value fo
 ### Example 2: Create task sequence media with the standalone media option
 
 ```powershell
-PS C:\> $Group = @{"6"="8";}
-PS C:\> New-CMTaskSequenceMedia -StandAloneMediaOption -Variable $Group -MediaInputType CDDVD -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\111 - Copy.iso" -ProtectPassword 0 -TaskSequenceId "CCC0000B" -TaskSequenceDistributionPointServerName "\\Contoso320.Contoso319DOM.NET"
+PS XYZ:\> $Group = @{"6"="8";}
+PS XYZ:\> New-CMTaskSequenceMedia -StandAloneMediaOption -Variable $Group -MediaInputType CDDVD -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\111 - Copy.iso" -ProtectPassword 0 -TaskSequenceId "CCC0000B" -TaskSequenceDistributionPointServerName "\\Contoso320.Contoso319DOM.NET"
 ```
 
 The first command creates a mapping, and then stores the result in the $Group variable.
@@ -151,7 +144,7 @@ The second command creates task sequence media by specifying the *StandAloneMedi
 ### Example 3: Create task sequence media with the bootable media option
 
 ```powershell
-PS C:\> New-CMTaskSequenceMedia -BootableMediaOption -MediaInputType CDDVD -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\111 - Copy (6).iso" -MediaMode Dynamic -ProtectPassword 0 -BootImageName "boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET" -ManagementnPointNetworkOperatingSystemPath "Contoso320.Contoso319DOM.NET"
+PS XYZ:\> New-CMTaskSequenceMedia -BootableMediaOption -MediaInputType CDDVD -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\111 - Copy (6).iso" -MediaMode Dynamic -ProtectPassword 0 -BootImageName "boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET" -ManagementnPointNetworkOperatingSystemPath "Contoso320.Contoso319DOM.NET"
 ```
 
 This command creates task sequence media by specifying the *BootableMediaOption* parameter.
@@ -159,7 +152,7 @@ This command creates task sequence media by specifying the *BootableMediaOption*
 ### Example 4: Create task sequence media with the prestaged media option
 
 ```powershell
-PS C:\> New-CMTaskSequenceMedia -PrestagedMediaOption -MediaMode Dynamic -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\2.wim"  -ProtectPassword 0 -TaskSequenceId "CCC0000B" -BootImageName "boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET" -ManagementnPointNetworkOperatingSystemPath "Contoso320.Contoso319DOM.NET" -OperatingSystemImageDistributionPointServerName "Contoso320.Contoso319DOM.NET" -TaskSequenceDistributionPointServerName "\\Contoso320.Contoso319DOM.NET"
+PS XYZ:\> New-CMTaskSequenceMedia -PrestagedMediaOption -MediaMode Dynamic -MediaPath "\\Contoso320\Users\Administrator.Contoso319DOM\Desktop\DD\2.wim"  -ProtectPassword 0 -TaskSequenceId "CCC0000B" -BootImageName "boot" -DistributionPointServerName "Contoso320.Contoso319DOM.NET" -ManagementnPointNetworkOperatingSystemPath "Contoso320.Contoso319DOM.NET" -OperatingSystemImageDistributionPointServerName "Contoso320.Contoso319DOM.NET" -TaskSequenceDistributionPointServerName "\\Contoso320.Contoso319DOM.NET"
 ```
 
 This command uses the **New-CMTaskSequenceMedia** cmdlet to create task sequence media by specifying the *PrestagedMediaOption* parameter.
@@ -173,7 +166,7 @@ Indicates that User Account Control (UAC) prompts are allowed.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +182,7 @@ Indicates whether you allow unattended operating system deployment, which does n
 ```yaml
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +214,7 @@ Specifies an array of names of applications included in the task sequence.
 ```yaml
 Type: String[]
 Parameter Sets: NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -237,7 +230,7 @@ Specifies a boot image object.
 ```yaml
 Type: IResultObject
 Parameter Sets: NewBootableMediaByValue, NewCaptureMediaByValue, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -253,7 +246,7 @@ Specifies a boot image distribution point.
 ```yaml
 Type: IResultObject
 Parameter Sets: NewBootableMediaByValue, NewCaptureMediaByValue, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -285,7 +278,7 @@ Specifies the ID of the boot image package associated with the task sequence med
 ```yaml
 Type: String
 Parameter Sets: NewBootableMedia, NewCaptureMedia, NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -362,7 +355,7 @@ The *CommandPackageName* parameter specifies the package name.
 ```yaml
 Type: String
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -378,7 +371,7 @@ Indicates whether to include a file.
 ```yaml
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -394,7 +387,7 @@ Specifies a command package.
 ```yaml
 Type: IResultObject
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -410,7 +403,7 @@ Specifies a command package distrubtion point.
 ```yaml
 Type: IResultObject
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -426,7 +419,7 @@ Specifies a package name for the command specified by the *CommandLine* paramete
 ```yaml
 Type: String
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -442,7 +435,7 @@ Specifies a comment for a prestaged media file.
 ```yaml
 Type: String
 Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -475,7 +468,7 @@ Use this parameter only in mixed-mode environments.
 ```yaml
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -491,7 +484,7 @@ Specifies the name of an individual or organization responsible for the creation
 ```yaml
 Type: String
 Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -507,7 +500,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -523,7 +516,7 @@ Specifies a drive name.
 ```yaml
 Type: String
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewCaptureMedia, NewCaptureMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -572,7 +565,7 @@ A prestart command is a script or executable that runs before the task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -588,7 +581,7 @@ Indicates whether to provision unknown systems for operating system deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -604,7 +597,7 @@ Specifies an expiration date, in D.HH:MM:SS format, for bootable media.
 ```yaml
 Type: DateTime
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -620,7 +613,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -637,7 +630,7 @@ An import certificate is a PKI-issued certificate added to the boot media for cl
 ```yaml
 Type: SecureString
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -653,7 +646,7 @@ Specifies a path for an import certificate to add to the boot media.
 ```yaml
 Type: String
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -689,7 +682,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MediaInputType
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewCaptureMedia
-Aliases: 
+Aliases:
 Accepted values: Usb, CdDvd, Hd
 
 Required: True
@@ -702,7 +695,7 @@ Accept wildcard characters: False
 ```yaml
 Type: MediaInputType
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewCaptureMediaByValue
-Aliases: 
+Aliases:
 Accepted values: Usb, CdDvd, Hd
 
 Required: False
@@ -723,7 +716,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MediaMode
 Parameter Sets: NewBootableMedia, NewPrestagedMedia, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 Accepted values: Dynamic, SiteBased
 
 Required: True
@@ -736,7 +729,7 @@ Accept wildcard characters: False
 ```yaml
 Type: MediaMode
 Parameter Sets: NewBootableMediaByValue
-Aliases: 
+Aliases:
 Accepted values: Dynamic, SiteBased
 
 Required: False
@@ -753,7 +746,7 @@ Specifies a path to the media.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -776,7 +769,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MediaSize
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue
-Aliases: 
+Aliases:
 Accepted values: None, Size650MB, Size4GB, Size8GB, SizeUnlimited
 
 Required: False
@@ -791,7 +784,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -807,7 +800,7 @@ Specifies the name of a distribution point server for an operating system image.
 ```yaml
 Type: String
 Parameter Sets: NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -823,7 +816,7 @@ Specifies the name of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -837,7 +830,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -853,7 +846,7 @@ Specifies the identifier of an operating system image package.
 ```yaml
 Type: String
 Parameter Sets: NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -885,7 +878,7 @@ Specifies an array of package names.
 ```yaml
 Type: String[]
 Parameter Sets: NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -901,7 +894,7 @@ Specifies a password, as a secure string.
 ```yaml
 Type: SecureString
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -947,7 +940,7 @@ Indicates whether to protect the media with a password.
 ```yaml
 Type: Boolean
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -959,7 +952,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -989,7 +982,7 @@ Specifies a start date and time, in D.HH:MM:SS format.
 ```yaml
 Type: DateTime
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1005,7 +998,7 @@ Specifies a task sequence object.
 ```yaml
 Type: IResultObject
 Parameter Sets: NewStandAloneMediaByValue, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1053,7 +1046,7 @@ Specifies an ID for a task sequence.
 ```yaml
 Type: String
 Parameter Sets: NewStandAloneMedia, NewPrestagedMedia
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1075,7 +1068,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: UserDeviceAffinityType
 Parameter Sets: NewBootableMedia, NewBootableMediaByValue
-Aliases: 
+Aliases:
 Accepted values: DoNotAllow, AdministratorApproval, AutoApproval
 
 Required: False
@@ -1093,7 +1086,7 @@ The task sequence variable consists of a name and a value.
 ```yaml
 Type: Hashtable
 Parameter Sets: NewBootableMedia, NewStandAloneMedia, NewStandAloneMediaByValue, NewBootableMediaByValue, NewPrestagedMedia, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1109,7 +1102,7 @@ Specifies the version information for the media.
 ```yaml
 Type: String
 Parameter Sets: NewPrestagedMedia, NewPrestagedMediaByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1136,8 +1129,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

@@ -1,14 +1,10 @@
 ---
-title: New-CMConfigurationPolicyDeployment
-titleSuffix: Configuration Manager
 description: Creates a configuration policy deployment.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMConfigurationPolicyDeployment
 ---
 
 # New-CMConfigurationPolicyDeployment
@@ -66,6 +62,27 @@ New-CMConfigurationPolicyDeployment -FirewallPolicyId <String> [-Schedule <IResu
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### DeployCoMgmtPolicyByNameMandatory
+```
+New-CMConfigurationPolicyDeployment -CoManagementPolicyName <String> [-CollectionName <String>]
+ [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployCoMgmtPolicyByIdMandatory
+```
+New-CMConfigurationPolicyDeployment -CoManagementPolicyId <String> [-CollectionName <String>]
+ [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployCoMgmtPolicyByValueMandatory
+```
+New-CMConfigurationPolicyDeployment -CoManagementPolicy <IResultObject> [-CollectionName <String>]
+ [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### DeployRCPolicyByNameMandatory
 ```
 New-CMConfigurationPolicyDeployment -RemoteConnectionProfileName <String> [-EnableEnforcement <Boolean>]
@@ -93,27 +110,96 @@ New-CMConfigurationPolicyDeployment -RemoteConnectionProfile <IResultObject> [-E
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### DeployCommonPolicyByNameMandatory
+```
+New-CMConfigurationPolicyDeployment -CommonProfileName <String> [-GenerateAlert <Boolean>]
+ [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>]
+ [-Schedule <IResultObject>] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployCommonPolicyByIdMandatory
+```
+New-CMConfigurationPolicyDeployment -CommonProfileId <String> [-GenerateAlert <Boolean>]
+ [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>]
+ [-Schedule <IResultObject>] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeployCommonPolicyByValueMandatory
+```
+New-CMConfigurationPolicyDeployment -CommonProfile <IResultObject> [-GenerateAlert <Boolean>]
+ [-ParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-MonitoredByScom <Boolean>]
+ [-Schedule <IResultObject>] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
- 
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
-### -Collection
- 
+### -CoManagementPolicy
+{{ Fill CoManagementPolicy Description }}
 
 ```yaml
 Type: IResultObject
+Parameter Sets: DeployCoMgmtPolicyByValueMandatory
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -CoManagementPolicyId
+{{ Fill CoManagementPolicyId Description }}
+
+```yaml
+Type: String
+Parameter Sets: DeployCoMgmtPolicyByIdMandatory
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoManagementPolicyName
+{{ Fill CoManagementPolicyName Description }}
+
+```yaml
+Type: String
+Parameter Sets: DeployCoMgmtPolicyByNameMandatory
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Collection
+```yaml
+Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,12 +209,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,14 +222,57 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommonProfile
+{{ Fill CommonProfile Description }}
+
+```yaml
+Type: IResultObject
+Parameter Sets: DeployCommonPolicyByValueMandatory
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -CommonProfileId
+{{ Fill CommonProfileId Description }}
+
+```yaml
+Type: String
+Parameter Sets: DeployCommonPolicyByIdMandatory
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommonProfileName
+{{ Fill CommonProfileName Description }}
+
+```yaml
+Type: String
+Parameter Sets: DeployCommonPolicyByNameMandatory
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -173,7 +300,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,12 +310,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEnforcement
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,12 +323,10 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicy
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployFWPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -213,12 +336,10 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicyId
- 
-
 ```yaml
 Type: String
 Parameter Sets: DeployFWPolicyByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -228,12 +349,10 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicyName
- 
-
 ```yaml
 Type: String
 Parameter Sets: DeployFWPolicyByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -248,7 +367,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -258,12 +377,10 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateAlert
- 
-
 ```yaml
 Type: Boolean
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory, DeployCommonPolicyByNameMandatory, DeployCommonPolicyByIdMandatory, DeployCommonPolicyByValueMandatory
+Aliases:
 
 Required: False
 Position: Named
@@ -273,12 +390,10 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoredByScom
- 
-
 ```yaml
 Type: Boolean
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory, DeployCommonPolicyByNameMandatory, DeployCommonPolicyByIdMandatory, DeployCommonPolicyByValueMandatory
+Aliases:
 
 Required: False
 Position: Named
@@ -288,12 +403,10 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideServiceWindow
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,12 +416,10 @@ Accept wildcard characters: False
 ```
 
 ### -ParameterValue
- 
-
 ```yaml
 Type: Int32
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory, DeployCommonPolicyByNameMandatory, DeployCommonPolicyByIdMandatory, DeployCommonPolicyByValueMandatory
+Aliases:
 
 Required: False
 Position: Named
@@ -318,12 +429,10 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
- 
-
 ```yaml
 Type: DateTime
-Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory
-Aliases: 
+Parameter Sets: DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory, DeployCommonPolicyByNameMandatory, DeployCommonPolicyByIdMandatory, DeployCommonPolicyByValueMandatory
+Aliases:
 
 Required: False
 Position: Named
@@ -333,12 +442,10 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfile
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployRCPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -348,12 +455,10 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfileId
- 
-
 ```yaml
 Type: String
 Parameter Sets: DeployRCPolicyByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -363,12 +468,10 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfileName
- 
-
 ```yaml
 Type: String
 Parameter Sets: DeployRCPolicyByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -378,12 +481,10 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
- 
-
 ```yaml
 Type: IResultObject
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: DeployFWPolicyByValueMandatory, DeployUSMPolicyByNameMandatory, DeployUSMPolicyByIdMandatory, DeployUSMPolicyByValueMandatory, DeployFWPolicyByNameMandatory, DeployFWPolicyByIdMandatory, DeployRCPolicyByNameMandatory, DeployRCPolicyByIdMandatory, DeployRCPolicyByValueMandatory, DeployCommonPolicyByNameMandatory, DeployCommonPolicyByIdMandatory, DeployCommonPolicyByValueMandatory
+Aliases:
 
 Required: False
 Position: Named
@@ -393,12 +494,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserDataAndProfile
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: DeployUSMPolicyByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -408,12 +507,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserDataAndProfileId
- 
-
 ```yaml
 Type: String
 Parameter Sets: DeployUSMPolicyByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -423,12 +520,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserDataAndProfileName
- 
-
 ```yaml
 Type: String
 Parameter Sets: DeployUSMPolicyByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -454,7 +549,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -467,4 +562,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

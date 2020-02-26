@@ -1,14 +1,10 @@
 ---
-title: New-CMDeviceCollectionVariable
-titleSuffix: Configuration Manager
 description: Creates a device collection variable.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMDeviceCollectionVariable
 ---
 
 # New-CMDeviceCollectionVariable
@@ -44,12 +40,17 @@ The **New-CMDeviceCollectionVariable** cmdlet creates a device collection variab
 You can use a device collection variable to define custom task sequence variables and their associated values to be used by the resources in a collection.
 Task sequence variables are a set of name and value pairs that provide a mechanism to configure and customize the steps of a task sequence when the task sequence is deployed to a specific collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a device collection variable
 ```
-PS C:\> $Collection = Get-CMCollection -Name "Device"
-PS C:\> New-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Value "test001"
+PS XYZ:\> $Collection = Get-CMCollection -Name "Device"
+PS XYZ:\> New-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Value "test001"
 ```
 
 The first command gets the device collection object named Device and stores the object in the $Collection variable.
@@ -64,7 +65,7 @@ Specifies the ID of a device collection.
 ```yaml
 Type: String
 Parameter Sets: NewByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,7 +80,7 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: NewByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,7 +110,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +125,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +156,7 @@ Indicates whether the collection variable value displays in the Configuration Ma
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +186,7 @@ Specifies a name for the collection variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -211,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -221,7 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning a Task Sequence Strategy in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=260806)
+[Planning a Task Sequence Strategy in Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkID=260806)
 
 [Get-CMCollection](Get-CMCollection.md)
 

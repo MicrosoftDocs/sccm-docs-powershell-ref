@@ -1,14 +1,10 @@
 ---
-title: New-CMProgram
-titleSuffix: Configuration Manager
 description: Creates a new program in Configuration Manager.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMProgram
 ---
 
 # New-CMProgram
@@ -60,18 +56,23 @@ Programs are commands that are associated with a System Center Configuration Man
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a standard program
 ```
-PS C:\> New-CMProgram -PackageName "test" -StandardProgramName SPM -CommandLine "RunMe" -WorkingDirectory "C:\temp" -RunType Hidden -ProgramRunType OnlyWhenNoUserIsLoggedOn -DiskSpaceRequirement 100 -DiskSpaceUnit GB -Duration 100 -DriveMode RenameWithUnc
+PS XYZ:\> New-CMProgram -PackageName "test" -StandardProgramName SPM -CommandLine "RunMe" -WorkingDirectory "C:\temp" -RunType Hidden -ProgramRunType OnlyWhenNoUserIsLoggedOn -DiskSpaceRequirement 100 -DiskSpaceUnit GB -Duration 100 -DriveMode RenameWithUnc
 ```
 
 This command creates a standard program in Configuration Manager.
 
 ### Example 2: Create a device program
 ```
-PS C:\> New-CMProgram -PackageName "Contoso-12" -DeviceProgramName DPM -Comment "Upgrades for December" -WorkingDirectory "C:\temp" -CommandLine "RunMe" -CommandLineFolder "C:\Windows\" -DiskSpaceRequirement 10 -DiskSpaceUnit GB -DownloadProgramType OnlyWhenTheDeviceIsDocked -Requirement "All previous updates"
+PS XYZ:\> New-CMProgram -PackageName "Contoso-12" -DeviceProgramName DPM -Comment "Upgrades for December" -WorkingDirectory "C:\temp" -CommandLine "RunMe" -CommandLineFolder "C:\Windows\" -DiskSpaceRequirement 10 -DiskSpaceUnit GB -DownloadProgramType OnlyWhenTheDeviceIsDocked -Requirement "All previous updates"
 ```
 
 This command creates a device program in Configuration Manager.
@@ -79,8 +80,6 @@ This command creates a device program in Configuration Manager.
 ## PARAMETERS
 
 ### -AddSupportedOperatingSystemPlatform
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: NewStandardProgram, NewStandardProgramById
@@ -99,7 +98,7 @@ Specifies the command line for the program.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,7 +114,7 @@ This folder can be an absolute path on the client, or a path relative to the dis
 ```yaml
 Type: String
 Parameter Sets: NewDeviceProgram, NewDeviceProgramById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +130,7 @@ On client computers, this text is displayed in Run Advertised Programs in Contro
 ```yaml
 Type: String
 Parameter Sets: NewDeviceProgram, NewDeviceProgramById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +160,7 @@ Specifies a device program name.
 ```yaml
 Type: String
 Parameter Sets: NewDeviceProgram, NewDeviceProgramById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -176,7 +175,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,7 +208,7 @@ The acceptable values for this parameter are: GB, KB, and MB.
 ```yaml
 Type: DiskSpaceUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: KB, MB, GB
 
 Required: False
@@ -223,14 +222,14 @@ Accept wildcard characters: False
 Specifies when the program is to run.
 The acceptable values for this parameter are:
 
-- AsSoonAsPossible 
-- OnlyOverFastNetwork 
+- AsSoonAsPossible
+- OnlyOverFastNetwork
 - OnlyWhenTheDeviceIsLocked.
 
 ```yaml
 Type: DownloadProgramType
 Parameter Sets: NewDeviceProgram, NewDeviceProgramById
-Aliases: 
+Aliases:
 Accepted values: AsSoonAsPossible, OnlyOverFastNetwork, OnlyWhenTheDeviceIsDocked
 
 Required: False
@@ -246,7 +245,7 @@ Specifies a drive letter to qualify the location if the *DriveMode* parameter is
 ```yaml
 Type: String
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +263,7 @@ If *DriveMode* is set to RequiresSpecificDriveLetter, the program only runs if t
 ```yaml
 Type: DriveModeType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 Accepted values: RenameWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
 
 Required: False
@@ -281,7 +280,7 @@ The default value is 120 minutes.
 ```yaml
 Type: Int32
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +295,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +308,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: NewStandardProgramById, NewDeviceProgramById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -324,7 +323,7 @@ Specifies a package name.
 ```yaml
 Type: String
 Parameter Sets: NewStandardProgram, NewDeviceProgram
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -337,16 +336,16 @@ Accept wildcard characters: False
 Specifies the logon conditions that are necessary for the program to run.
 The acceptable values for this parameter are:
 
-- OnlyWhenNoUserIsLoggedOn 
-- OnlyWhenUserIsLoggedOn 
-- WhetherOrNotUserIsLoggedOn 
+- OnlyWhenNoUserIsLoggedOn
+- OnlyWhenUserIsLoggedOn
+- WhetherOrNotUserIsLoggedOn
 
 The default setting is OnlyWhenUserIsLoggedOn.
 
 ```yaml
 Type: ProgramRunType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 Accepted values: OnlyWhenUserIsLoggedOn, WhetherOrNotUserIsLoggedOn, OnlyWhenNoUserIsLoggedOn
 
 Required: False
@@ -362,7 +361,7 @@ Indicates whether the client computer reconnects to the distribution point when 
 ```yaml
 Type: Boolean
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -393,7 +392,7 @@ The acceptable values for this parameter are: RunWithAdministrativeRights and Ru
 ```yaml
 Type: RunModeType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 Accepted values: RunWithUserRights, RunWithAdministrativeRights
 
 Required: False
@@ -407,17 +406,17 @@ Accept wildcard characters: False
 Specifies the mode is which the program will run on the client computer.
 The acceptable values for this parameter are:
 
-- Hidden 
-- Maximized 
-- Minimized 
-- Normal 
+- Hidden
+- Maximized
+- Minimized
+- Normal
 
 The default is Normal.
 
 ```yaml
 Type: RunType
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 Accepted values: Normal, Minimized, Maximized, Hidden
 
 Required: False
@@ -433,7 +432,7 @@ Specifies the standard program name.
 ```yaml
 Type: String
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -448,7 +447,7 @@ Indicates whether to allow users to interact with the program.
 ```yaml
 Type: Boolean
 Parameter Sets: NewStandardProgram, NewStandardProgramById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -479,7 +478,7 @@ Specifies a working directory for the program.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -489,7 +488,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

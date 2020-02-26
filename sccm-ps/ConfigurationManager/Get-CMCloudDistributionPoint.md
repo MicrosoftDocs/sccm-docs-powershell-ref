@@ -1,14 +1,10 @@
 ---
-title: Get-CMCloudDistributionPoint
-titleSuffix: Configuration Manager
 description: Gets cloud-based distribution points.
+external help file: AdminUI.PS.Content.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCloudDistributionPoint
 ---
 
 # Get-CMCloudDistributionPoint
@@ -53,30 +49,35 @@ The **Get-CMCloudDistributionPoint** cmdlet gets one or more cloud-based distrib
 
 In Configuration Manager, you can use a cloud service in Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.
-For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266223) on TechNet.
+For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712321(v=technet.10)) on TechNet.
 
 You can use the **Get-CMCloudDistributionPoint** cmdlet to get distribution points to use with other cmdlets.
 For example, you might want to get a distribution point and then use the [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md) cmdlet to suspend it.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get all cloud distribution points
 ```
-PS C:\> Get-CMCloudDistributionPoint
+PS XYZ:\> Get-CMCloudDistributionPoint
 ```
 
 This command gets all the cloud distribution points.
 
 ### Example 2: Get a cloud distribution point by name
 ```
-PS C:\> Get-CMCloudDistributionPoint -Name "West01"
+PS XYZ:\> Get-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command gets a distribution point named West01.
 
 ### Example 3: Get a cloud distribution point by ID
 ```
-PS C:\> Get-CMCloudDistributionPoint -Id "16777230"
+PS XYZ:\> Get-CMCloudDistributionPoint -Id "16777230"
 ```
 
 This command gets a distribution point with the specified ID.
@@ -89,7 +90,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +106,7 @@ To get a **CMDistributionPointGroup** object, use the [Get-CMDistributionPointGr
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,7 +121,7 @@ Specifies the ID of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: SearchByGroupId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,7 +136,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: SearchByGroupName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -150,7 +151,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +182,7 @@ Specifies the name of a cloud distribution point.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

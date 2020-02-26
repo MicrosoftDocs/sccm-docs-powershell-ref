@@ -1,14 +1,10 @@
 ---
-title: Set-CMAlertSubscription
-titleSuffix: Configuration Manager
 description: Changes the properties of an alert subscription.
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAlertSubscription
 ---
 
 # Set-CMAlertSubscription
@@ -44,26 +40,31 @@ The **Set-CMAlertSubscription** cmdlet changes the properties of an alert subscr
 You can change the name of an alert subscription, the email address of the recipient of an alert notification, the Windows locale ID, and the alert ID.
 You can also change the security scope membership of an alert subscription by adding it to or removing it from a specified security scope.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the properties of an alert subscription by subscription ID
 ```
-PS C:\> Set-CMAlertSubscription -Id "16777217" -NewName "Subscription02" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 2057 -AlertIds 16777240
+PS XYZ:\> Set-CMAlertSubscription -Id "16777217" -NewName "Subscription02" -EmailAddress "evan.narvaez@contoso.com" -LocaleId 2057 -AlertIds 16777240
 ```
 
 This command changes the name, email address, Windows locale ID, and alert ID of an alert subscription that has the ID 16777217.
 
 ### Example 2: Change the properties of an alert subscription by subscription name
 ```
-PS C:\> Set-CMAlertSubscription -Name "Subscription01" -NewName "Subscription02" -EmailAddress "elisa.daugherty@contoso.com" -LocaleId 2057 -AlertIds 16777240
+PS XYZ:\> Set-CMAlertSubscription -Name "Subscription01" -NewName "Subscription02" -EmailAddress "elisa.daugherty@contoso.com" -LocaleId 2057 -AlertIds 16777240
 ```
 
 This command changes the name, email address, Windows locale ID, and alert ID of an alert subscription named Subscription01.
 
 ### Example 3: Change the properties of an alert subscription by using the output from another cmdlet as input
 ```
-PS C:\> $SubObj = Get-CMAlertSubscription -Id "16777310"
-PS C:\> Set-CMAlertSubscription -AlertSubscription $SubObj -NewName "Subscription02" -EmailAddress "patti.fuller@contoso.com" -LocaleId 3081 -AlertIds 16777240
+PS XYZ:\> $SubObj = Get-CMAlertSubscription -Id "16777310"
+PS XYZ:\> Set-CMAlertSubscription -AlertSubscription $SubObj -NewName "Subscription02" -EmailAddress "patti.fuller@contoso.com" -LocaleId 3081 -AlertIds 16777240
 ```
 
 The first command gets an alert subscription object that has the ID 16777310, and then stores the object in the $SubObj variable.
@@ -72,14 +73,14 @@ The second command changes the properties of the alert subscription object, whic
 
 ### Example 4: Add an alert subscription to a security scope
 ```
-PS C:\> Set-CMAlertSubscription -SecurityScopeAction AddMembership -SecurityScopeName "Test" -Name "Subscription01"
+PS XYZ:\> Set-CMAlertSubscription -SecurityScopeAction AddMembership -SecurityScopeName "Test" -Name "Subscription01"
 ```
 
 This command adds the alert subscription named Subscription01 to the security scope named Test.
 
 ### Example 5: Remove an alert subscription from a security scope
 ```
-PS C:\> Set-CMAlertSubscription -SecurityScopeAction RemoveMembership -SecurityScopeName "Test" -Name "Subscription01"
+PS XYZ:\> Set-CMAlertSubscription -SecurityScopeAction RemoveMembership -SecurityScopeName "Test" -Name "Subscription01"
 ```
 
 This command removes the alert subscription named Subscription01 from the security scope named Test.
@@ -87,8 +88,6 @@ This command removes the alert subscription named Subscription01 from the securi
 ## PARAMETERS
 
 ### -AddEmailAddress
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -137,7 +136,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +167,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +182,7 @@ Specifies the identifier for a subscription object.
 ```yaml
 Type: String
 Parameter Sets: SetById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -198,7 +197,7 @@ Specifies an alert notification object in Configuration Manager.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -209,12 +208,12 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies a locale for alert messages.
-For more information and a list of locale identifiers, see the Locale IDs Assigned by Microsoft topic at [http://go.microsoft.com/fwlink/?LinkId=262651](http://go.microsoft.com/fwlink/?LinkId=262651).
+For more information and a list of locale identifiers, see the Locale IDs Assigned by Microsoft topic at [https://go.microsoft.com/fwlink/?LinkId=262651](https://go.microsoft.com/fwlink/?LinkId=262651).
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +228,7 @@ Specifies the name of an alert subscription object.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -244,7 +243,7 @@ Specifies a new name for an alert subscription object.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +259,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -270,8 +269,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEmailAddress
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -301,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

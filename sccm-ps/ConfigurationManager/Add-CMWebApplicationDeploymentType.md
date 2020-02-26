@@ -1,14 +1,10 @@
 ---
-title: Add-CMWebApplicationDeploymentType
-titleSuffix: Configuration Manager
 description: Adds a web application deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMWebApplicationDeploymentType
 ---
 
 # Add-CMWebApplicationDeploymentType
@@ -45,18 +41,23 @@ Add-CMWebApplicationDeploymentType -Url <String> [-DeploymentTypeName <String>] 
 ## DESCRIPTION
 The **Add-CMWebApplicationDeploymentType** cmdlet adds a web application deployment type to an application.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a web application deployment type
 ```
-PS C:\>Add-CMWebApplicationDeploymentType -Url "http://www.contoso.com" -ApplicationName "testweb" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\>Add-CMWebApplicationDeploymentType -Url "https://www.contoso.com" -ApplicationName "testweb" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command adds the web application deployment type named DT1 from the specified URL to the application named testweb in English and Chinese.
 
 ### Example 2: Add a web application deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testweb" | Add-CMWebApplicationDeploymentType -Url "http://www.contoso.com" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
+PS XYZ:\> Get-CMApplication -Name "testweb" | Add-CMWebApplicationDeploymentType -Url "https://www.contoso.com" -DeploymentTypeName "DT1" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type"
 ```
 
 This command gets the application object named testweb and uses the pipeline operator to pass the object to **Add-CMWebApplicationDeploymentType**.
@@ -68,7 +69,7 @@ This command gets the application object named testweb and uses the pipeline ope
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -88,7 +89,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +164,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,7 +179,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +209,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Get-CMClientStatusSetting
-titleSuffix: Configuration Manager
 description: Gets client status settings.
+external help file: AdminUI.PS.ClientStatus.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMClientStatusSetting
 ---
 
 # Get-CMClientStatusSetting
@@ -26,18 +22,23 @@ Get-CMClientStatusSetting [-DisableWildcardHandling] [-ForceWildcardHandling] [<
 The **Get-CMClientStatusSetting** cmdlet gets client status settings for the local computer.
 These settings determine the data collection intervals for individual client monitoring activities.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226) on TechNet.
+For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get client status settings for the local computer
 ```
-PS C:\> Get-CMClientStatusSetting
-ADRetrieving Schedule  : 
+PS XYZ:\> Get-CMClientStatusSetting
+ADRetrieving Schedule  :
 CleanUpInterval        : 7
 DDRInactiveInterval    : 3
 HWInactiveInterval     : 4
-NeedADLastLogonTime    : 
+NeedADLastLogonTime    :
 PolicyInactiveInterval : 3
 SettingsID             : 1
 StatusInactiveInterval : 6
@@ -54,7 +55,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +70,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -89,7 +90,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226)
+[About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10))
 
 [Set-CMClientStatusSetting](Set-CMClientStatusSetting.md)
 

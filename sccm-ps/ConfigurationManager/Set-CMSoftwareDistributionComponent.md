@@ -1,14 +1,10 @@
 ---
-title: Set-CMSoftwareDistributionComponent
-titleSuffix: Configuration Manager
 description: Sets properties of a software distribution component in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareDistributionComponent
 ---
 
 # Set-CMSoftwareDistributionComponent
@@ -23,8 +19,9 @@ Sets properties of a software distribution component in Configuration Manager.
 Set-CMSoftwareDistributionComponent [-SiteCode <String>] [-MaximumPackageCount <Int32>]
  [-MaximumThreadCountPerPackage <Int32>] [-RetryCount <Int32>] [-DelayBeforeRetryingMins <Int32>]
  [-MulticastRetryCount <Int32>] [-MulticastDelayBeforeRetryingMins <Int32>]
- [-NetworkAccessAccountName <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-NetworkAccessAccountName <String[]>] [-AddNetworkAccessAccountName <String[]>]
+ [-RemoveNetworkAccessAccountName <String[]>] [-CleanNetworkAccessAccountName] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchBySiteCodeMandatory_ClientComputerAccount
@@ -39,16 +36,51 @@ Set-CMSoftwareDistributionComponent [-SiteCode <String>] [-MaximumPackageCount <
 The **Set-CMSoftwareDistributionComponent** cmdlet sets properties of a software distribution component in Microsoft System Center Configuration Manager.
 You can configure the properties of an object to meet the demands that clients place on the System Center Configuration Manager site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set properties of a software distribution component
 ```
-PS C:\> Set-CMSoftwareDistributionComponent -SiteCode "CM2" -MaximumPackageCount 3 -MaximumThreadsPerPackage 6 -RetryCount 99 -DelayBeforeRetryingMinutes 31 -MulticastRetryCount 4 -MulticastDelayBeforeRetryingMinutes 2 -NetworkAccessAccount "Western\ElisaDaugherty"
+PS XYZ:\> Set-CMSoftwareDistributionComponent -SiteCode "CM2" -MaximumPackageCount 3 -MaximumThreadsPerPackage 6 -RetryCount 99 -DelayBeforeRetryingMinutes 31 -MulticastRetryCount 4 -MulticastDelayBeforeRetryingMinutes 2 -NetworkAccessAccount "Western\ElisaDaugherty"
 ```
 
 The following command sets all properties for a software distribution component.
 
 ## PARAMETERS
+
+### -AddNetworkAccessAccountName
+{{ Fill AddNetworkAccessAccountName Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: SearchBySiteCodeMandatory
+Aliases: AddNetworkAccessAccountNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanNetworkAccessAccountName
+{{ Fill CleanNetworkAccessAccountName Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SearchBySiteCodeMandatory
+Aliases: CleanNetworkAccessAccountNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ClientComputerAccount
 Indicates that the cmdlet uses a client computer account.
@@ -56,7 +88,7 @@ Indicates that the cmdlet uses a client computer account.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SearchBySiteCodeMandatory_ClientComputerAccount
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +131,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +146,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +161,7 @@ Specifies a maximum number of packages.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +202,7 @@ Specifies a retry count for multicast software distribution attempts.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,13 +226,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveNetworkAccessAccountName
+{{ Fill RemoveNetworkAccessAccountName Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: SearchBySiteCodeMandatory
+Aliases: RemoveNetworkAccessAccountNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RetryCount
 Specifies a retry count.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +262,7 @@ Specifies a site code of a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

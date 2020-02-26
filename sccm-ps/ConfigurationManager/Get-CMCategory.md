@@ -1,14 +1,10 @@
 ---
-title: Get-CMCategory
-titleSuffix: Configuration Manager
 description: Gets configuration categories in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCategory
 ---
 
 # Get-CMCategory
@@ -33,11 +29,16 @@ Get-CMCategory -Id <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling
 The **Get-CMCategory** cmdlet gets configuration categories in Microsoft System Center Configuration Manager.
 Configuration categories offer an optional method of sorting and filtering configuration baselines and configuration items in System Center Configuration Manager and Configuration Manager reports.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get configuration categories by using a name
 ```
-PS C:\> Get-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
+PS XYZ:\> Get-CMCategory -CategoryType "DriverCategories" -Name "NewLaptopDriverSet"
 ```
 
 This command gets configuration driver categories in Configuration Manager that have the name NewLaptopDriverSet.
@@ -46,7 +47,7 @@ This command gets configuration driver categories in Configuration Manager that 
 
 ### -CategoryType
 Specifies a category type.
-Valid values are: 
+Valid values are:
 
 - BaselineCategories
 - DriverCategories
@@ -57,7 +58,7 @@ Valid values are:
 ```yaml
 Type: CategoryType
 Parameter Sets: GetCategoryByName
-Aliases: 
+Aliases:
 Accepted values: UserCategories, BaselineCategories, DriverCategories, AppCategories, GlobalCondition, CatalogCategories
 
 Required: False
@@ -73,7 +74,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +89,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

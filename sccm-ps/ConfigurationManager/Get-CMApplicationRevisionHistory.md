@@ -1,14 +1,10 @@
 ---
-title: Get-CMApplicationRevisionHistory
-titleSuffix: Configuration Manager
 description: Gets a Configuration Manager object that represents the revision history for an application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMApplicationRevisionHistory
 ---
 
 # Get-CMApplicationRevisionHistory
@@ -41,11 +37,16 @@ The **Get-CMApplicationRevisionHistory** cmdlet gets a Microsoft System Center C
 When you revise an application or a deployment type contained in an application, System Center Configuration Manager creates a new revision of the application.
 You can use the revision history to display each revision made to an application, view the properties of a revision, restore a previous revision, or delete an old revision.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get the revision history for an application
 ```
-PS C:\> Get-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
+PS XYZ:\> Get-CMApplicationRevisionHistory -Name "MSXML 6.0 Parser"
 ```
 
 This command gets the application revision history named MSXML 6.0 Parser.
@@ -58,7 +59,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +74,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ Specifies the version number of an application revision.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

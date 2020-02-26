@@ -1,14 +1,10 @@
 ---
-title: Set-CMDeviceCollectionVariable
-titleSuffix: Configuration Manager
 description: Sets a device collection variable.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDeviceCollectionVariable
 ---
 
 # Set-CMDeviceCollectionVariable
@@ -42,12 +38,17 @@ Set-CMDeviceCollectionVariable -CollectionName <String> -VariableName <String> [
 ## DESCRIPTION
 The **Set-CMDeviceCollectionVariable** cmdlet changes the settings of a device collection variable.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change a variable name
 ```
-PS C:\> $Collection = Get-CMCollection -Name "Device"
-PS C:\> Set-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -NewVariableName "NewVariable"
+PS XYZ:\> $Collection = Get-CMCollection -Name "Device"
+PS XYZ:\> Set-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -NewVariableName "NewVariable"
 ```
 
 The first command gets the device collection object named Device and stores the object in the $Collection variable.
@@ -56,7 +57,7 @@ The second command changes the name of the collection variable testTS for the de
 
 ### Example 2: Change a variable name by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device" | Set-CMDeviceCollectionVariable -VariableName "testTS" -NewVariableName "NewVariable"
+PS XYZ:\> Get-CMCollection -Name "Device" | Set-CMDeviceCollectionVariable -VariableName "testTS" -NewVariableName "NewVariable"
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Set-CMDeviceCollectionVariable**, which changes the name of the collection variable testTS for the device collection object to NewVariable.
@@ -69,7 +70,7 @@ Specifies the ID of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SetByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,7 +85,7 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SetByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,7 +115,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +130,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +161,7 @@ Indicates whether the collection variable value displays in the Configuration Ma
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +176,7 @@ Specifies a new name for the collection variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +191,7 @@ Specifies a new value for the collection variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,7 +206,7 @@ Specifies the name of a collection variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -231,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -241,7 +242,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning a Task Sequence Strategy in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=260806)
+[Planning a Task Sequence Strategy in Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkID=260806)
 
 [Get-CMDeviceCollectionVariable](Get-CMDeviceCollectionVariable.md)
 

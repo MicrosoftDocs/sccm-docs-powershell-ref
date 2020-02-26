@@ -1,14 +1,10 @@
 ---
-title: Set-CMWindowsFirewallPolicy
-titleSuffix: Configuration Manager
 description: Changes settings of a Windows Firewall policy.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMWindowsFirewallPolicy
 ---
 
 # Set-CMWindowsFirewallPolicy
@@ -20,62 +16,83 @@ Changes settings of a Windows Firewall policy.
 
 ### SetByValue (Default)
 ```
-Set-CMWindowsFirewallPolicy [-InputObject] <IResultObject> [-Priority <PriorityChangeType>]
+Set-CMWindowsFirewallPolicy [-InputObject] <IResultObject> [-Description <String>]
+ [-Digest <ConfigurationItem>] [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>]
  [-DomainTurnOnFirewall <SettingType>] [-PrivateTurnOnFirewall <SettingType>]
  [-PublicTurnOnFirewall <SettingType>] [-DomainBlockAllInboundTraffic <SettingType>]
  [-PrivateBlockAllInboundTraffic <SettingType>] [-PublicBlockAllInboundTraffic <SettingType>]
  [-DomainNotification <SettingType>] [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>]
- [-Description <String>] [-Digest <ConfigurationItem>] [-DigestPath <String>] [-DigestXml <String>]
- [-NewName <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
-Set-CMWindowsFirewallPolicy [-Priority <PriorityChangeType>] [-DomainTurnOnFirewall <SettingType>]
+Set-CMWindowsFirewallPolicy [-Id] <Int32> [-Description <String>] [-Digest <ConfigurationItem>]
+ [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-DomainTurnOnFirewall <SettingType>]
  [-PrivateTurnOnFirewall <SettingType>] [-PublicTurnOnFirewall <SettingType>]
  [-DomainBlockAllInboundTraffic <SettingType>] [-PrivateBlockAllInboundTraffic <SettingType>]
  [-PublicBlockAllInboundTraffic <SettingType>] [-DomainNotification <SettingType>]
- [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>] [-Description <String>]
- [-Digest <ConfigurationItem>] [-DigestPath <String>] [-DigestXml <String>] [-Id] <Int32> [-NewName <String>]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetOrderById
+```
+Set-CMWindowsFirewallPolicy [-Id] <Int32> -Order <PriorityChangeType> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Set-CMWindowsFirewallPolicy [-Priority <PriorityChangeType>] [-DomainTurnOnFirewall <SettingType>]
+Set-CMWindowsFirewallPolicy [-Name] <String> [-Description <String>] [-Digest <ConfigurationItem>]
+ [-DigestPath <String>] [-DigestXml <String>] [-NewName <String>] [-DomainTurnOnFirewall <SettingType>]
  [-PrivateTurnOnFirewall <SettingType>] [-PublicTurnOnFirewall <SettingType>]
  [-DomainBlockAllInboundTraffic <SettingType>] [-PrivateBlockAllInboundTraffic <SettingType>]
  [-PublicBlockAllInboundTraffic <SettingType>] [-DomainNotification <SettingType>]
- [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>] [-Description <String>]
- [-Digest <ConfigurationItem>] [-DigestPath <String>] [-DigestXml <String>] [-Name] <String>
- [-NewName <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-PrivateNotification <SettingType>] [-PublicNotification <SettingType>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetOrderByName
+```
+Set-CMWindowsFirewallPolicy [-Name] <String> -Order <PriorityChangeType> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetOrderByValue
+```
+Set-CMWindowsFirewallPolicy [-InputObject] <IResultObject> -Order <PriorityChangeType> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Set-CMWindowsFirewallPolicy** cmdlet changes settings of one or more Windows Firewall policies for System Center 2016 Endpoint Protection in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Decrease the priority of a Windows Firewall policy by using a name
 ```
-PS C:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Name "WFPContoso01"
+PS XYZ:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Name "WFPContoso01"
 ```
 
 This command decreases the priority of the Windows Firewall policy named WFPContoso01.
 
 ### Example 2: Decrease the priority of a Windows Firewall policy by using an ID
 ```
-PS C:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Id "16777568"
+PS XYZ:\> Set-CMWindowsFirewallPolicy -Priority Decrease -Id "16777568"
 ```
 
 This command decreases the priority of the Windows Firewall policy that has the ID 16777568.
 
 ### Example 3: Increase the priority of a Windows Firewall policy by using an object variable
 ```
-PS C:\> $WFPobj=Get-CMWindowsFirewallPolicy -Id "16777568"
-PS C:\> Set-CMWindowsFirewallPolicy -Priority Increase -InputObject $WFPobj
+PS XYZ:\> $WFPobj=Get-CMWindowsFirewallPolicy -Id "16777568"
+PS XYZ:\> Set-CMWindowsFirewallPolicy -Priority Increase -InputObject $WFPobj
 ```
 
 The first command gets the **CMWindowsFirewallPolicy** object that has the ID 16777568 and stores it in the $WFPobj variable.
@@ -104,7 +121,7 @@ Specifies a description for the Windows Firewall policy.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: SetByValue, SetById, SetByName
 Aliases: LocalizedDescription
 
 Required: False
@@ -117,8 +134,8 @@ Accept wildcard characters: False
 ### -Digest
 ```yaml
 Type: ConfigurationItem
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +147,7 @@ Accept wildcard characters: False
 ### -DigestPath
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: SetByValue, SetById, SetByName
 Aliases: DesiredConfigurationDigestPath
 
 Required: False
@@ -143,8 +160,8 @@ Accept wildcard characters: False
 ### -DigestXml
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +176,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,8 +195,8 @@ Valid values are:
 
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -192,7 +209,7 @@ Accept wildcard characters: False
 ### -DomainNotification
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
+Parameter Sets: SetByValue, SetById, SetByName
 Aliases: DomainNotifications
 Accepted values: Yes, No, NotConfigured
 
@@ -213,8 +230,8 @@ Valid values are:
 
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -230,7 +247,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +261,7 @@ Specifies an array of IDs of firewall policies.
 
 ```yaml
 Type: Int32
-Parameter Sets: SetById
+Parameter Sets: SetById, SetOrderById
 Aliases: CIId, CI_ID
 
 Required: True
@@ -260,8 +277,8 @@ To obtain a CMWindowsFirewallPolicy object, use the [Get-CMWindowsFirewallPolicy
 
 ```yaml
 Type: IResultObject
-Parameter Sets: SetByValue
-Aliases: 
+Parameter Sets: SetByValue, SetOrderByValue
+Aliases:
 
 Required: True
 Position: 0
@@ -275,7 +292,7 @@ Specifies an array of firewall policy names.
 
 ```yaml
 Type: String
-Parameter Sets: SetByName
+Parameter Sets: SetByName, SetOrderByName
 Aliases: LocalizedDisplayName
 
 Required: True
@@ -290,10 +307,26 @@ Specifies a new name for the firewall policy.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Order
+{{ Fill Order Description }}
+
+```yaml
+Type: PriorityChangeType
+Parameter Sets: SetOrderById, SetOrderByName, SetOrderByValue
+Aliases: Priority
+Accepted values: Increase, Decrease
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -307,24 +340,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Priority
-Specifies the priority of a firewall policy.
-Valid values are: Increase and Decrease.
-
-```yaml
-Type: PriorityChangeType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: Increase, Decrease
+Aliases:
 
 Required: False
 Position: Named
@@ -343,8 +359,8 @@ Valid values are:
 
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -357,7 +373,7 @@ Accept wildcard characters: False
 ### -PrivateNotification
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
+Parameter Sets: SetByValue, SetById, SetByName
 Aliases: PrivateNotifications
 Accepted values: Yes, No, NotConfigured
 
@@ -378,8 +394,8 @@ Valid values are:
 
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -399,8 +415,8 @@ Valid values are:
 
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -413,7 +429,7 @@ Accept wildcard characters: False
 ### -PublicNotification
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
+Parameter Sets: SetByValue, SetById, SetByName
 Aliases: PublicNotifications
 Accepted values: Yes, No, NotConfigured
 
@@ -434,8 +450,8 @@ Valid values are:
 
 ```yaml
 Type: SettingType
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetByValue, SetById, SetByName
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -462,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

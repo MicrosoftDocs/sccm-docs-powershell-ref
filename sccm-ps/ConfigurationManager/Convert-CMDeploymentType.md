@@ -1,14 +1,10 @@
 ---
-title: Convert-CMDeploymentType
-titleSuffix: Configuration Manager
 description: Converts the deployment type of a Configuration Manager deployment application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Convert-CMDeploymentType
 ---
 
 # Convert-CMDeploymentType
@@ -19,8 +15,9 @@ Converts the deployment type of a Configuration Manager deployment application.
 
 ## SYNTAX
 
-```powershell
+```
 Convert-CMDeploymentType -InputObject <PSObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,13 +29,18 @@ A deployment type also contains rules that specify if and how the software is de
 
 This cmdlet allows for getting a native DeploymentType object from an SMS_DeploymentType WMI object instance. Can be combined with [Get-CMDeploymentType](Get-CMDeploymentType.md).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $cmdp = Get-CMDeploymentType -ApplicationName "CenterApp"
-PS C:\> Convert-CMDeploymentType $cmdp
+PS XYZ:\> $cmdp = Get-CMDeploymentType -ApplicationName "CenterApp"
+PS XYZ:\> Convert-CMDeploymentType $cmdp
 ```
 
 This command gets the deployment type for the application named CenterApp, and then convert the deployment type.
@@ -93,6 +95,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
@@ -100,6 +105,8 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

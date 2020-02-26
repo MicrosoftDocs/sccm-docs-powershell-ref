@@ -1,14 +1,10 @@
 ---
-title: Set-CMScriptDeploymentType
-titleSuffix: Configuration Manager
 description: Sets a script installer deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/15/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMScriptDeploymentType
 ---
 
 # Set-CMScriptDeploymentType
@@ -20,10 +16,10 @@ Sets a script installer deployment type.
 ## SYNTAX
 
 ### ByAppName (Default)
-
-```powershell
+```
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
- [-RemoveDetectionClause <String[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
+ [-RemoveDetectionClause <String[]>] [-GroupDetectionClauses <String[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
  [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
  [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
@@ -31,17 +27,18 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
  [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
  [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
  [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-AddRequirement <Rule[]>] -ApplicationName <String>
+ [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
+ [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -ApplicationName <String>
  -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
  [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppId
-
-```powershell
+```
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
- [-RemoveDetectionClause <String[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
+ [-RemoveDetectionClause <String[]>] [-GroupDetectionClauses <String[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
  [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
  [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
@@ -49,17 +46,18 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
  [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
  [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
  [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
+ [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
+ [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
  -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
  [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppValue
-
-```powershell
+```
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
- [-RemoveDetectionClause <String[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
+ [-RemoveDetectionClause <String[]>] [-GroupDetectionClauses <String[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
  [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
  [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
@@ -67,17 +65,18 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
  [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
  [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
  [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
+ [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
+ [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
  -Application <IResultObject> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
  [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByDTValue
-
-```powershell
+```
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
- [-RemoveDetectionClause <String[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
+ [-RemoveDetectionClause <String[]>] [-GroupDetectionClauses <String[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
  [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
  [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
@@ -85,7 +84,8 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
  [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
  [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
  [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
+ [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
+ [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
  [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru]
  [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -93,14 +93,19 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 
 ## DESCRIPTION
 
-The **Set-CMScriptDeploymentType** cmdlet changes the settings for a script installer deployment type. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
+The **Set-CMScriptDeploymentType** cmdlet changes the settings for a script installer deployment type. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Modify a script installer deployment type
 
 ```powershell
-PS C:\> Set-CMScriptDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT01" -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage Powershell -ScriptText "update script text"
+PS XYZ:\> Set-CMScriptDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT01" -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage Powershell -ScriptText "update script text"
 ```
 
 This command adds an uninstall command to the script installer deployment type named ScriptDT01 for the application named application01.
@@ -109,7 +114,7 @@ The command also specifies the language of the script used to detect this deploy
 ### Example 2: Modify a script installer deployment type by using the pipeline
 
 ```powershell
-PS C:\> Get-CMDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT02" | Set-CMScriptDeploymentType -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage PowerShell -ScriptText "update script text"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "application01" -DeploymentTypeName "ScriptDT02" | Set-CMScriptDeploymentType -Comment "Script updated to uninstall" -UninstallCommand 'msiexec /x ""\\Machine01\Resources\Applications\MSI\AdvertMSI\AdvertMSI.msi" /q' -ScriptLanguage PowerShell -ScriptText "update script text"
 ```
 
 This command gets the script installer deployment type object named ScriptDT02 for the application named application01 and uses the pipeline operator to pass the object to **Set-CMScriptDeploymentType**.
@@ -156,7 +161,7 @@ Specifies an array of requirements for the deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +178,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -205,7 +210,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -287,7 +292,7 @@ The site system server requires permission to read the content files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,9 +308,24 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DetectionClauseConnector
+{{ Fill DetectionClauseConnector Description }}
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: DetectionClauseConnectors
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -319,7 +339,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -417,7 +437,22 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupDetectionClauses
+{{ Fill GroupDetectionClauses Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: GroupDetectionClausesByLogicalName
 
 Required: False
 Position: Named
@@ -479,7 +514,7 @@ Accept wildcard characters: False
 ### -InstallationBehaviorType
 
 Specifies the installation behavior of the deployment type.
-Valid values are: 
+Valid values are:
 
 - InstallForSystem
 - InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
@@ -488,7 +523,7 @@ Valid values are:
 ```yaml
 Type: InstallationBehaviorType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
 
 Required: False
@@ -501,7 +536,7 @@ Accept wildcard characters: False
 ### -LogonRequirementType
 
 Specifies the logon requirement for the deployment type.
-Valid values are: 
+Valid values are:
 
 - OnlyWhenNoUserLoggedOn
 - OnlyWhenUserLoggedOn
@@ -510,7 +545,7 @@ Valid values are:
 ```yaml
 Type: LogonRequirementType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OnlyWhenUserLoggedOn, WhereOrNotUserLoggedOn, WhetherOrNotUserLoggedOn, OnlyWhenNoUserLoggedOn
 
 Required: False
@@ -560,7 +595,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -576,7 +611,7 @@ Specifies the product code in the detection method for the deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -592,7 +627,7 @@ Specifies the reboot behavior.
 ```yaml
 Type: PostExecutionBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: BasedOnExitCode, NoAction, ForceReboot, ProgramReboot
 
 Required: False
@@ -673,7 +708,7 @@ Specifies the script file to use to detect this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -686,7 +721,7 @@ Accept wildcard characters: False
 
 Specifies the script language that you want to use to detect this deployment type.
 
-Valid values are: 
+Valid values are:
 
 - PowerShell
 - VBScript
@@ -724,7 +759,7 @@ Accept wildcard characters: False
 ### -SlowNetworkDeploymentMode
 
 Specifies the installation behavior of the deployment type on a slow network.
-Valid values are: 
+Valid values are:
 
 - DoNothing
 - Download
@@ -733,7 +768,7 @@ Valid values are:
 ```yaml
 Type: ContentHandlingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNothing, Download
 
 Required: False
@@ -751,7 +786,7 @@ Windows Source management enables an MSI represented by this deployment type to 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -768,6 +803,37 @@ Specifies the command to use to uninstall the Windows Installer package from the
 Type: String
 Parameter Sets: (All)
 Aliases: UninstallationProgram
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UninstallContentLocation
+{{ Fill UninstallContentLocation Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UninstallOption
+{{ Fill UninstallOption Description }}
+
+```yaml
+Type: UninstallContentSetting
+Parameter Sets: (All)
+Aliases:
+Accepted values: SameAsInstall, NoneRequired, Different
 
 Required: False
 Position: Named
@@ -796,7 +862,7 @@ Accept wildcard characters: False
 ### -UserInteractionMode
 
 Specifies the mode in which the deployment type runs on client devices.
-Valid values are: 
+Valid values are:
 
 - Normal
 - Minimized
@@ -834,8 +900,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

@@ -1,14 +1,10 @@
 ---
-title: Set-CMSoftwareInventory
-titleSuffix: Configuration Manager
 description: Modifies an object that collects software inventory data on files.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareInventory
 ---
 
 # Set-CMSoftwareInventory
@@ -21,37 +17,105 @@ Modifies an object that collects software inventory data on files.
 ### SetById (Default)
 ```
 Set-CMSoftwareInventory -Id <String> [-NewName <String>] [-Publisher <String>] [-FamilyId <Int32>]
- [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1] [-CleanTag2]
+ [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMSoftwareInventory -Name <String[]> [-NewName <String>] [-Publisher <String>] [-FamilyId <Int32>]
- [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1] [-CleanTag2]
+ [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
 ```
 Set-CMSoftwareInventory -InputObject <IResultObject> [-NewName <String>] [-Publisher <String>]
- [-FamilyId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FamilyId <Int32>] [-CategoryId <Int32>] [-Tag1Id <Int32>] [-Tag2Id <Int32>] [-Tag3Id <Int32>] [-CleanTag1]
+ [-CleanTag2] [-CleanTag3] [-ParentSoftwareId <String>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Set-CMSoftwareInventory** cmdlet modifies an object that collects information about files on client devices in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set a software inventory object
 ```
-PS C:\> Set-CMSoftwareInventory -Name "MSXML 6.0 Parser"
+PS XYZ:\> Set-CMSoftwareInventory -Name "MSXML 6.0 Parser"
 ```
 
 This command starts collecting software inventory data on the file named MSXML 6.0 Parser.
 
 ## PARAMETERS
+
+### -CategoryId
+{{ Fill CategoryId Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanTag1
+{{ Fill CleanTag1 Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: CleanLabel1
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanTag2
+{{ Fill CleanTag2 Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: CleanLabel2
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanTag3
+{{ Fill CleanTag3 Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: CleanLabel3
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -74,7 +138,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +153,7 @@ Specifies the ID of the family used to classify inventoried software in Configur
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +168,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +199,7 @@ To obtain a **CMSoftwareInventory** object, use the [Get-CMSoftwareInventory](Ge
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -165,7 +229,22 @@ Specifies a new name for inventoried software in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentSoftwareId
+{{ Fill ParentSoftwareId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -175,12 +254,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +287,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: Label1Id
 
 Required: False
 Position: Named
@@ -225,7 +302,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: Label2Id
 
 Required: False
 Position: Named
@@ -240,7 +317,7 @@ Specifies the ID of a tag to classify inventoried software in Configuration Mana
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: Label3Id
 
 Required: False
 Position: Named
@@ -266,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

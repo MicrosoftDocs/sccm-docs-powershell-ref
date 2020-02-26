@@ -1,14 +1,10 @@
 ---
-title: Remove-CMResource
-titleSuffix: Configuration Manager
 description: Removes a Configuration Manager resource.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMResource
 ---
 
 # Remove-CMResource
@@ -35,18 +31,23 @@ The **Remove-CMResource** cmdlet removes a resource.
 
 A resource can be a user or a device.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a resource by using the pipeline
 ```
-PS C:\> Get-CMResource -ResourceID 2063597568 -Fast| Remove-CMResource -Force
+PS XYZ:\> Get-CMResource -ResourceID 2063597568 -Fast| Remove-CMResource -Force
 ```
 
 This command gets the resource object with the ID of 2063597568 and uses the pipeline operator to pass the object to **Remove-CMResource**, which removes the resource without prompting for user confirmation.
 
 ### Example 2: Remove a resource by ID
 ```
-PS C:\> Remove-CMResource -ResourceID 2097152000
+PS XYZ:\> Remove-CMResource -ResourceID 2097152000
 ```
 
 This command removes the resource with the ID of 2097152000.
@@ -74,7 +75,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +136,7 @@ Specifies the ID of a resource.
 ```yaml
 Type: Int32
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -161,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

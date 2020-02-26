@@ -1,14 +1,10 @@
 ---
-title: Remove-CMActiveDirectoryForest
-titleSuffix: Configuration Manager
 description: Removes an Active Directory forest object from Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMActiveDirectoryForest
 ---
 
 # Remove-CMActiveDirectoryForest
@@ -34,11 +30,16 @@ Remove-CMActiveDirectoryForest [-Name] <String> [-Force] [-DisableWildcardHandli
 The **Remove-CMActiveDirectoryForest** cmdlet removes an Active Directory forest object from Microsoft System Center Configuration Manager.
 You can specify an Active Directory forest by using the ID property or the fully qualified domain name (FQDN), or you can supply the Active Directory forest itself.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an Active Directory forest object by ID
 ```
-PS C:\> Remove-CMActiveDirectoryForest -Id "16777217"
+PS XYZ:\> Remove-CMActiveDirectoryForest -Id "16777217"
 ```
 
 This command removes an Active Directory forest object that has the ID 16777217.
@@ -66,7 +67,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +82,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +112,7 @@ Specifies an Active Directory forest object in Configuration Manager.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -150,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

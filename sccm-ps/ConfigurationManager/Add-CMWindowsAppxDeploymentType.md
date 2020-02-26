@@ -1,14 +1,10 @@
 ---
-title: Add-CMWindowsAppxDeploymentType
-titleSuffix: Configuration Manager
 description: Adds a Windows app package deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMWindowsAppxDeploymentType
 ---
 
 # Add-CMWindowsAppxDeploymentType
@@ -48,11 +44,16 @@ Add-CMWindowsAppxDeploymentType [-SlowNetworkDeploymentMode <ContentHandlingMode
 ## DESCRIPTION
 The **Add-CMWindowsAppxDeploymentType** cmdlet adds a Windows app package deployment type to an application.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a Windows app package deployment type
 ```
-PS C:\>Add-CMWindowsAppxDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" -ContentLocation "\\Server1\Resources\Applications\appx\sccm_custom.appx" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type" -SlowNetworkDeploymentMode DoNothing -ContentFallback -TriggerVpn
+PS XYZ:\>Add-CMWindowsAppxDeploymentType -ApplicationName "Application1" -DeploymentTypeName "DT1" -ContentLocation "\\Server1\Resources\Applications\appx\sccm_custom.appx" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type" -SlowNetworkDeploymentMode DoNothing -ContentFallback -TriggerVpn
 ```
 
 This command adds the Windows app package deployment type named DT1 from the specified location to the application named Application1 in English and Chinese.
@@ -60,7 +61,7 @@ Specifying the *TriggerVpn* parameter indicates that a VPN connection is used.
 
 ### Example 2: Add a Windows app package deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Add-CMWindowsAppxDeploymentType -DeploymentTypeName "DT1" -ContentLocation "\\Server1\Resources\Applications\appx\sccm_custom.appx" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type" -SlowNetworkDeploymentMode DoNothing -ContentFallback -TriggerVpn
+PS XYZ:\> Get-CMApplication -Name "Application1" | Add-CMWindowsAppxDeploymentType -DeploymentTypeName "DT1" -ContentLocation "\\Server1\Resources\Applications\appx\sccm_custom.appx" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type" -SlowNetworkDeploymentMode DoNothing -ContentFallback -TriggerVpn
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Add-CMWindowsAppxDeploymentType**.
@@ -73,7 +74,7 @@ Specifying the *TriggerVpn* parameter indicates that a VPN connection is used.
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -93,7 +94,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +124,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +201,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +216,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +246,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +304,7 @@ Accept wildcard characters: False
 
 ### -SlowNetworkDeploymentMode
 Specifies the installation behavior of the deployment type on a slow network.
-Valid values are: 
+Valid values are:
 
 - DoNothing
 - Download
@@ -312,7 +313,7 @@ Valid values are:
 ```yaml
 Type: ContentHandlingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNothing, Download
 
 Required: False
@@ -328,7 +329,7 @@ Indicates that a virtual private network (VPN) connection is used automatically.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -354,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

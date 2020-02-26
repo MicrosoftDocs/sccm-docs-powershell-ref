@@ -1,14 +1,10 @@
 ---
-title: Get-CMMulticastServicePoint
-titleSuffix: Configuration Manager
 description: Gets a multicast service point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMMulticastServicePoint
 ---
 
 # Get-CMMulticastServicePoint
@@ -33,11 +29,16 @@ Get-CMMulticastServicePoint [-AllSite] -InputObject <IResultObject> [-DisableWil
 ## DESCRIPTION
 The **Get-CMMulticastServicePoint** cmdlet gets the multicast settings for a distribution point.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a multicast service point
 ```
-PS C:\> Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" -SiteCode "PS1"
+PS XYZ:\> Get-CMMulticastServicePoint -SiteSystemServerName "server01.contoso.com" -SiteCode "PS1"
 ```
 
 This command gets the multicast service point settings for the distribution point that has the site system server name server01.contoso.com and site code PS1.
@@ -45,8 +46,6 @@ This command gets the multicast service point settings for the distribution poin
 ## PARAMETERS
 
 ### -AllSite
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -65,7 +64,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +79,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +95,7 @@ To obtain a site system server object, use the [Get-CMSiteSystemServer](Get-CMSi
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -111,7 +110,7 @@ Specifies the site code for the Configuration Manager site that hosts the site s
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

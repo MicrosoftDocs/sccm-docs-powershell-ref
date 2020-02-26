@@ -1,14 +1,10 @@
 ---
-title: Remove-CMSecurityRoleFromAdministrativeUser
-titleSuffix: Configuration Manager
 description: Removes the association between a security role and an administrative user.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMSecurityRoleFromAdministrativeUser
 ---
 
 # Remove-CMSecurityRoleFromAdministrativeUser
@@ -76,11 +72,16 @@ Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -Administrativ
 The **Remove-CMSecurityRoleFromAdministrativeUser** cmdlet removes the association between one or more security roles and an administrative user.
 After you remove the association of a security role with an administrative user, the administrative user cannot view the objects in Microsoft System Center Configuration Manager that are associated with the security role, and no longer has the permission to perform the tasks that are related to those objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a security role from an administrative user
 ```
-PS C:\> Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -RoleName "Security Update Manager"
+PS XYZ:\> Remove-CMSecurityRoleFromAdministrativeUser -AdministrativeUserName "Contoso\PattiFuller" -RoleName "Security Update Manager"
 ```
 
 This command removes the association between the security role named Security Update Manager and the administrative user named Contoso\PattiFuller.
@@ -94,7 +95,7 @@ To obtain a **CMAdministrativeUser** object, use the [Get-CMAdministrativeUser](
 ```yaml
 Type: IResultObject
 Parameter Sets: RemoveRoleFromAdminById_Object, RemoveRoleFromAdminByName_Object, RemoveRoleFromAdminByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,7 +110,7 @@ Specifies the ID of an administrative user.
 ```yaml
 Type: Int32
 Parameter Sets: RemoveRoleFromAdminById_Id, RemoveRoleFromAdminByName_Id, RemoveRoleFromAdminByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,7 +125,7 @@ Specifies the name of an administrative user.
 ```yaml
 Type: String
 Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminById_Name, RemoveRoleFromAdminByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +155,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +170,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +185,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +201,7 @@ To obtain a **CMSecurityRole** object, use the [Get-CMSecurityRole](Get-CMSecuri
 ```yaml
 Type: IResultObject
 Parameter Sets: RemoveRoleFromAdminByObject_Id, RemoveRoleFromAdminByObject_Name, RemoveRoleFromAdminByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -215,7 +216,7 @@ Specifies the ID of a role.
 ```yaml
 Type: String
 Parameter Sets: RemoveRoleFromAdminById_Id, RemoveRoleFromAdminById_Name, RemoveRoleFromAdminById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -230,7 +231,7 @@ Specifies the name of a role.
 ```yaml
 Type: String
 Parameter Sets: RemoveRoleFromAdminByName_Name, RemoveRoleFromAdminByName_Id, RemoveRoleFromAdminByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -256,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

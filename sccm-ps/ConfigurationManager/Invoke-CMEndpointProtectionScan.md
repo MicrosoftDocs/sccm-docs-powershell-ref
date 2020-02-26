@@ -1,14 +1,10 @@
 ---
-title: Invoke-CMEndpointProtectionScan
-titleSuffix: Configuration Manager
 description: Invokes a scan to detect malware on one or more devices in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMEndpointProtectionScan
 ---
 
 # Invoke-CMEndpointProtectionScan
@@ -58,13 +54,18 @@ Invoke-CMEndpointProtectionScan -DeviceCollectionId <String> [-ScanType <ScanTyp
 The **Invoke-CMEndpointProtectionScan** cmdlet invokes a System Center 2016 Endpoint Protection scan that is outside of any scheduled scans.
 You can specify the device or collection by using its name, ID, or by specifying an object that represents the device or collection.
 
-For more information about how Configuration Manager supports Endpoint Protection, see [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427) on TechNet.
+For more information about how Configuration Manager supports Endpoint Protection, see [Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Invoke a full Endpoint Protection scan
 ```
-PS C:\>Invoke-CMEndpointProtectionScan -DeviceName "CMCEN-DIST02" -ScanType Full
+PS XYZ:\>Invoke-CMEndpointProtectionScan -DeviceName "CMCEN-DIST02" -ScanType Full
 ```
 
 This command invokes a full Endpoint Protection scan of the device named CMCEN-DIST02.
@@ -92,7 +93,7 @@ Specifies the device that is scanned for malware.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByDeviceValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -107,7 +108,7 @@ Specifies an object that represents a device collection whose members are scanne
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -122,7 +123,7 @@ Specifies the ID of a device collection whose members are scanned for malware.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,7 +138,7 @@ Specifies the name of a device collection whose members are scanned for malware.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -182,7 +183,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +198,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +216,7 @@ The acceptable values for this parameter are: Full and Quick.
 ```yaml
 Type: ScanType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Full, Quick
 
 Required: False
@@ -242,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -252,7 +253,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427)
+[Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10))
 
 [Get-CMEndpointProtectionPoint](Get-CMEndpointProtectionPoint.md)
 

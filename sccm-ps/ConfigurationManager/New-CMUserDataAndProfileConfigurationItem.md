@@ -1,14 +1,10 @@
 ---
-title: New-CMUserDataAndProfileConfigurationItem
-titleSuffix: Configuration Manager
 description: Creates a user data and profile configuration item.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMUserDataAndProfileConfigurationItem
 ---
 
 # New-CMUserDataAndProfileConfigurationItem
@@ -48,11 +44,16 @@ The **New-CMUserDataAndProfileConfigurationItem** cmdlet creates a user data and
 A configuration item can manage folder redirection, offline folders, and roaming user profiles.
 You can modify settings for an existing configuration item by using the Set-CMUserDataAndProfileConfigurationItem cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Specify folder redirection
 ```
-PS C:\> New-CMUserDataAndProfileConfigurationItem -ConfigureFolderRedirection $True -ConfigureOffineFile $True -ConfigureRoamingUserProfile $True -Name "CMUserDataProfileCI07" -FolderRedirectionUserConfigurationForDesktop RedirectToRemote -SpecifiedLocation "\\Server017\Shared" -UseSpecifiedLocation $True
+PS XYZ:\> New-CMUserDataAndProfileConfigurationItem -ConfigureFolderRedirection $True -ConfigureOffineFile $True -ConfigureRoamingUserProfile $True -Name "CMUserDataProfileCI07" -FolderRedirectionUserConfigurationForDesktop RedirectToRemote -SpecifiedLocation "\\Server017\Shared" -UseSpecifiedLocation $True
 ```
 
 This command creates a configuration item named CMUserDataProfileCI07.
@@ -62,7 +63,7 @@ The command includes a specified location and includes the *UseSpecifiedLocation
 
 ### Example 2: Specify settings for a configuration item
 ```
-PS C:\> New-CMUserDataAndProfileConfigurationItem -ConfigureFolderRedirection $True -ConfigureOffineFile $True -ConfigureRoamingUserProfile $True -Name "CMUserDataProfileCI27" -AccessPolicy $True -AddAdminGroupToRUPEnabled $True -AllowAllDevice $False -AllowCrossForestUserPolicy $True -BackgroundSynchronization NotConfigured -ConnectionTransferRate 300 -DeleteProfileOlderDays 300 -DeleteRoamingCacheEnabled $True -Description "Configuration item for off-site staff." -DetectSlowLinkDisabled $False -DeviceType OnlyOnPrimaryDevices -DisableMakeOffline $True -DisableWorkOffline $True -EnableOfflineFile $True -EnableSlowLink $True -ErrorDays 200 -ExcludeList "MiscFolder" -FileSynchronization Enabled -FolderRedirectionUserConfigurationForAppDataRoaming RedirectToLocal -FolderRedirectionUserConfigurationForContacts RedirectToRemote -FolderRedirectionUserConfigurationForDesktop RedirectToRemote -FolderRedirectionUserConfigurationForDocuments RedirectToRemote -FolderRedirectionUserConfigurationForDownloads RedirectToLocal -FolderRedirectionUserConfigurationForFavorites RedirectToLocal -FolderRedirectionUserConfigurationForLinks RedirectToRemote -FolderRedirectionUserConfigurationForMusic RedirectToLocal -FolderRedirectionUserConfigurationForPictures RedirectToRemote -FolderRedirectionUserConfigurationForSavedGames RedirectToRemote -FolderRedirectionUserConfigurationForSearches RedirectToLocal -FolderRedirectionUserConfigurationForStartMenu RedirectToLocal -FolderRedirectionUserConfigurationForVideos RedirectToRemote -ForceUnloadDisabled $True -GrantExclusiveRight $False -LeaveFolderNewLocation $True -LimitDisk 1024  -ManageAdvancedSetting $True -ManageSlowLink $True -MoveCachedFolder $True -MoveContent $False -OfflineFile "\\Server78\MiscShared" -OnlyAllowLocalProfiles $True -OwnerCheckDisabled $True -ProfileUploadDisabled $True -SlowLink 350 -SlowLinkUIEnabled $True -SpecifiedLocation "\\Server221\Part17" -SpecifyTimeInterval 120  -SynchronizationInterval 1200 -SynchronizationList "\\Server221\Part17" -SynchronizationPolicy $True -TempProfileLogonBlocked $True -TimeOut 130 -UseCommonAlert $True -UseSpecifiedLocation $True -WaitForNetworkInSeconds 300 -WarningDays 100
+PS XYZ:\> New-CMUserDataAndProfileConfigurationItem -ConfigureFolderRedirection $True -ConfigureOffineFile $True -ConfigureRoamingUserProfile $True -Name "CMUserDataProfileCI27" -AccessPolicy $True -AddAdminGroupToRUPEnabled $True -AllowAllDevice $False -AllowCrossForestUserPolicy $True -BackgroundSynchronization NotConfigured -ConnectionTransferRate 300 -DeleteProfileOlderDays 300 -DeleteRoamingCacheEnabled $True -Description "Configuration item for off-site staff." -DetectSlowLinkDisabled $False -DeviceType OnlyOnPrimaryDevices -DisableMakeOffline $True -DisableWorkOffline $True -EnableOfflineFile $True -EnableSlowLink $True -ErrorDays 200 -ExcludeList "MiscFolder" -FileSynchronization Enabled -FolderRedirectionUserConfigurationForAppDataRoaming RedirectToLocal -FolderRedirectionUserConfigurationForContacts RedirectToRemote -FolderRedirectionUserConfigurationForDesktop RedirectToRemote -FolderRedirectionUserConfigurationForDocuments RedirectToRemote -FolderRedirectionUserConfigurationForDownloads RedirectToLocal -FolderRedirectionUserConfigurationForFavorites RedirectToLocal -FolderRedirectionUserConfigurationForLinks RedirectToRemote -FolderRedirectionUserConfigurationForMusic RedirectToLocal -FolderRedirectionUserConfigurationForPictures RedirectToRemote -FolderRedirectionUserConfigurationForSavedGames RedirectToRemote -FolderRedirectionUserConfigurationForSearches RedirectToLocal -FolderRedirectionUserConfigurationForStartMenu RedirectToLocal -FolderRedirectionUserConfigurationForVideos RedirectToRemote -ForceUnloadDisabled $True -GrantExclusiveRight $False -LeaveFolderNewLocation $True -LimitDisk 1024  -ManageAdvancedSetting $True -ManageSlowLink $True -MoveCachedFolder $True -MoveContent $False -OfflineFile "\\Server78\MiscShared" -OnlyAllowLocalProfiles $True -OwnerCheckDisabled $True -ProfileUploadDisabled $True -SlowLink 350 -SlowLinkUIEnabled $True -SpecifiedLocation "\\Server221\Part17" -SpecifyTimeInterval 120  -SynchronizationInterval 1200 -SynchronizationList "\\Server221\Part17" -SynchronizationPolicy $True -TempProfileLogonBlocked $True -TimeOut 130 -UseCommonAlert $True -UseSpecifiedLocation $True -WaitForNetworkInSeconds 300 -WarningDays 100
 ```
 
 This command creates a configuration item named CMUserDataProfileCI27.
@@ -78,7 +79,7 @@ Indicates whether this configuration item manages profile access settings for ro
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +94,7 @@ Indicates whether to grant the Administrators group access to roaming profile fo
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +110,7 @@ If this value is $False, roaming profiles apply only to the primary device for a
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +125,7 @@ Indicates whether to permit user policies to roam across Active Directory forest
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +155,7 @@ The acceptable values for this parameter are: Disabled, Enabled, and NotConfigur
 ```yaml
 Type: SynchronizationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enabled, Disabled, NotConfigured
 
 Required: False
@@ -170,7 +171,7 @@ Indicates whether the configuration item includes settings for folder redirectio
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,7 +186,7 @@ Indicates whether the configuration item includes settings for offline folders.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +201,7 @@ Indicates whether the configuration item includes settings for roaming user prof
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -230,7 +231,7 @@ Specifies a connection transfer rate.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +261,7 @@ A computer deletes an older profile when it restarts.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +277,7 @@ The default for this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -320,7 +321,7 @@ Indicates whether to disable slow link detection.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -343,7 +344,7 @@ Folder redirection and caching on the primary device for a user.
 ```yaml
 Type: DeviceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OnAnyDevice, OnlyOnPrimaryDevices, FolderRedirectionOnAnyDeviceCachingOnPrimaryDevicesOnly
 
 Required: False
@@ -359,7 +360,7 @@ Indicates whether users can disable the **Make Available Offline** command.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -374,7 +375,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -389,7 +390,7 @@ Indicates whether users can disable the **Work Offline** command.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -432,7 +433,7 @@ Indicates whether this configuration item enables use of offline files.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -447,7 +448,7 @@ Indicates whether the configuration enables work with offline files over a slow 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -462,7 +463,7 @@ Specifies the number of days to wait before the profile creates an error.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -505,7 +506,7 @@ The acceptable values for this parameter are: Disabled, Enabled, and NotConfigur
 ```yaml
 Type: SynchronizationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enabled, Disabled, NotConfigured
 
 Required: False
@@ -522,7 +523,7 @@ The default value for this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -537,7 +538,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -552,7 +553,7 @@ Indicates whether to grant the user exclusive permissions to a redirected folder
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -567,7 +568,7 @@ Indicates whether to leave the folder in the redirected location in the event yo
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -582,7 +583,7 @@ Specifies a limit, in megabytes, for the disk space used for offline files.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -607,7 +608,7 @@ Accept wildcard characters: False
 
 ### -ManageAdvancedSetting
 Indicates whether this configuration item manages advanced settings for folder redirection.
-Specify values for any of the following parameters: 
+Specify values for any of the following parameters:
 
 - *GrantExclusiveRight*
 - *MoveContent*
@@ -617,7 +618,7 @@ Specify values for any of the following parameters:
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -632,7 +633,7 @@ Indicates whether this profile item manages slow links.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -647,7 +648,7 @@ Indicates whether to move the cached folder when the path updates on the server.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -662,7 +663,7 @@ Indicates whether to move the contents of redirected folders to the new location
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -706,7 +707,7 @@ Specifies an array of Administrative user assigned offline folders, as UNC paths
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -734,7 +735,7 @@ Indicates whether the configuration item does not check for ownership of roaming
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -763,7 +764,7 @@ Indicates whether to disable uploading of profiles.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -806,7 +807,7 @@ Specifies a value for a slow link.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -821,7 +822,7 @@ Indicates whether to enable user logon prompt to allow profile download when a d
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -836,7 +837,7 @@ Specifies a specified location.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -851,7 +852,7 @@ Specifies a time for background upload of the user hive.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: 12:00 AM, 1:00 PM, 2:00 PM, 3:00 PM, 4:00 PM, 5:00 PM, 6:00 PM, 7:00 PM, 8:00 PM, 9:00 PM, 10:00 PM, 11:00 PM, 12:00 PM
 
 Required: False
@@ -920,7 +921,7 @@ Indicates whether to use a synchronization policy.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -935,7 +936,7 @@ Indicates whether to block users from logging on by using a temporary profile.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -950,7 +951,7 @@ Specifies a timeout value.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -965,7 +966,7 @@ Indicates whether to use common alerts.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -980,7 +981,7 @@ Indicates whether to use the specified location referred to by the *SpecifiedLoc
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1022,7 +1023,7 @@ Specifies the number of days to wait before the profile creates a warning.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1048,7 +1049,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

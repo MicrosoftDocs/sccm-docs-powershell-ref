@@ -1,14 +1,10 @@
 ---
-title: Remove-CMDeployment
-titleSuffix: Configuration Manager
 description: Removes a deployment.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDeployment
 ---
 
 # Remove-CMDeployment
@@ -43,18 +39,23 @@ When you remove an application deployment, Configuration Manager does not remove
 To remove these applications, you must deploy the application to computers with the action Uninstall.
 If you delete an application deployment, or remove a resource from the collection you are deploying to, the application will no longer be visible in Software Center or the Application Catalog.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an application deployment
 ```
-PS C:\> Remove-CMDeployment -ApplicationName "CMappD01" -CollectionName "All Users"
+PS XYZ:\> Remove-CMDeployment -ApplicationName "CMappD01" -CollectionName "All Users"
 ```
 
 This command removes the Configuration Manager deployment that is associated with the application named CMappD01 and that is applied to the collection named All Users.
 
 ### Example 2: Pass a deployment object and remove it
 ```
-PS C:\> Get-CMDeployment -CollectionName "deviceCol01" -FeatureType Application | Remove-CMDeployment -Force
+PS XYZ:\> Get-CMDeployment -CollectionName "deviceCol01" -FeatureType Application | Remove-CMDeployment -Force
 ```
 
 This command gets the specified application deployment object for the collection named deiceCol01 and uses the pipeline operator to pass the object to **Remove-CMDeployment**, which removes the deployment.
@@ -62,7 +63,7 @@ Because the *Force* parameter is specified, the user is not prompted before the 
 
 ### Example 3: Remove a deployment by its ID
 ```
-PS C:\> Remove-CMDeployment -DeploymentId "{890082B6-7C16-4600-8807-7E0003BC9D99}" -ApplicationName "application01" -Force
+PS XYZ:\> Remove-CMDeployment -DeploymentId "{890082B6-7C16-4600-8807-7E0003BC9D99}" -ApplicationName "application01" -Force
 ```
 
 This command removes the deployment named application01 with the specified ID.
@@ -76,7 +77,7 @@ Specifies the name of the application associated with the deployment.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory, SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,7 +92,7 @@ Specifies the name of the collection associated with the deployment.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +122,7 @@ Specifies the ID of a deployment.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +137,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +152,7 @@ Performs the action without a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +167,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

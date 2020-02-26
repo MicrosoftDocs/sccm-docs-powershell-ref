@@ -1,14 +1,10 @@
 ---
-title: Set-CMIntuneSubscriptionPassportForWorkProperty
-titleSuffix: Configuration Manager
 description: Updates a Microsoft Intune subscription to enable Windows Hello for business.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMIntuneSubscriptionPassportForWorkProperty
 ---
 
 # Set-CMIntuneSubscriptionPassportForWorkProperty
@@ -31,11 +27,16 @@ The **Set-CMIntuneSubscriptionPassportForWorkProperty** updates the settings of 
 
 NOTE: Windows Hello for Business was previously known as Microsoft Passport for Work.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable Windows Hello for business
 ```
-PS C:\> Set-CMIntuneSubscriptionPassportForWorkProperty -Enable $True -RequireTpm $True -MinPinLength 5 -MaxPinLength 8 -AllowUpperCase $True -AllowLowerCase $True -AllowSpecialChar $True -PinExpirationDays 2 -PreventPinReuseCount 3 -EnableBiometrics $False -EnableEnhancedBiometrics $False -UseRemotePassport $False
+PS XYZ:\> Set-CMIntuneSubscriptionPassportForWorkProperty -Enable $True -RequireTpm $True -MinPinLength 5 -MaxPinLength 8 -AllowUpperCase $True -AllowLowerCase $True -AllowSpecialChar $True -PinExpirationDays 2 -PreventPinReuseCount 3 -EnableBiometrics $False -EnableEnhancedBiometrics $False -UseRemotePassport $False
 ```
 
 This command enables Windows Hello for business for enrolled devices.
@@ -108,7 +109,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,8 +134,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBiometric
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -148,8 +147,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEnhancedBiometric
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -168,7 +165,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +180,7 @@ Specifies the maximum required PIN length.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +195,7 @@ Specifies the minimum required PIN length.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +211,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +226,7 @@ Specifies the number of days before the PIN expires.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +241,7 @@ Specifies the number of previous PINs that the user is prevented from reusing.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +256,7 @@ Indicates whether a Trusted Platform Module (TPM) is used.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -274,7 +271,7 @@ Indicates whether Phone Sign In is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -300,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

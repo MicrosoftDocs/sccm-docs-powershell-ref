@@ -1,14 +1,10 @@
 ---
-title: Add-CMBoundaryToGroup
-titleSuffix: Configuration Manager
 description: Assigns boundaries to a boundary group.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMBoundaryToGroup
 ---
 
 # Add-CMBoundaryToGroup
@@ -81,13 +77,18 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 You can use boundary groups to manage network locations.
 You must assign boundaries to boundary groups before you can use the boundary group.
 Boundary groups enable client computers to find a primary site for client assignment, which is referred to as automatic site assignment, and a list of available site systems that have content.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266225) on TechNet.
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Assign a boundary group to a boundary
 ```
-PS C:\>Add-CMBoundaryToGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
+PS XYZ:\>Add-CMBoundaryToGroup -BoundaryGroupID "16777219" -BoundaryName "CLBound03"
 ```
 
 This command assigns the boundary named to CLBound03 to the boundary group that has the Id 16777219.
@@ -100,7 +101,7 @@ Specifies the ID of a boundary group.
 ```yaml
 Type: Int32
 Parameter Sets: AddBoundaryToGroupById_Id, AddBoundaryToGroupByName_Id, AddBoundaryToGroupByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +129,7 @@ Specifies the name of a boundary group.
 ```yaml
 Type: String
 Parameter Sets: AddBoundaryToGroupById_Name, AddBoundaryToGroupByName_Name, AddBoundaryToGroupByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +144,7 @@ Specifies the ID of a boundary.
 ```yaml
 Type: Int32
 Parameter Sets: AddBoundaryToGroupById_Id, AddBoundaryToGroupById_Name, AddBoundaryToGroupById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +159,7 @@ Specifies the name of a boundary.
 ```yaml
 Type: String
 Parameter Sets: AddBoundaryToGroupByName_Id, AddBoundaryToGroupByName_Name, AddBoundaryToGroupByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +189,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +204,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,8 +214,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -245,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -255,7 +256,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266225)
+[Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10))
 
 [Get-CMBoundary](Get-CMBoundary.md)
 

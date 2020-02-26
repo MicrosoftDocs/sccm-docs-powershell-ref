@@ -1,14 +1,10 @@
 ---
-title: Set-CMCollectionPowerManagement
-titleSuffix: Configuration Manager
 description: Configures power management settings for a device collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMCollectionPowerManagement
 ---
 
 # Set-CMCollectionPowerManagement
@@ -78,11 +74,16 @@ Set-CMCollectionPowerManagement -InputObject <IResultObject> [-NeverApply] [-Pas
 ## DESCRIPTION
 The **Set-CMCollectionPowerManagement** cmdlet configures power management settings for a device collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Configure power management settings by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "DeviceCol1" | Set-CMCollectionPowerManagement -NeverApply -PassThru
+PS XYZ:\> Get-CMCollection -Name "DeviceCol1" | Set-CMCollectionPowerManagement -NeverApply -PassThru
 ```
 
 This command gets the device collection object named DeviceCol1 and uses the pipeline operator to pass the object to **Set-CMCollectionPowerManagement**.
@@ -90,7 +91,7 @@ This command gets the device collection object named DeviceCol1 and uses the pip
 
 ### Example 2: Configure power management settings by name
 ```
-PS C:\> Set-CMCollectionPowerManagement -CollectionName "DeviceCol2" -Apply -PeakStartTime 8:00am -PeakEndTime 6:00pm -PeakPlan (Get-CMPowerManagementSchema -Peak -Name "Balanced (ConfigMgr)") -NonPeakPlan (Get-CMPowerManagementSchema -NonPeak -Name "Power Saver (ConfigMgr)") -WakeupTime 4:00am
+PS XYZ:\> Set-CMCollectionPowerManagement -CollectionName "DeviceCol2" -Apply -PeakStartTime 8:00am -PeakEndTime 6:00pm -PeakPlan (Get-CMPowerManagementSchema -Peak -Name "Balanced (ConfigMgr)") -NonPeakPlan (Get-CMPowerManagementSchema -NonPeak -Name "Power Saver (ConfigMgr)") -WakeupTime 4:00am
 ```
 
 This command specifies power management settings for the device collection DeviceCol2.
@@ -106,7 +107,7 @@ Indicates that power management settings can be set for a specified device colle
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueApply, ByNameApply, ByIdApply
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +122,7 @@ Specifies the collection ID of the device collection.
 ```yaml
 Type: String
 Parameter Sets: ByIdNone, ByIdNever, ByIdApply
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +137,7 @@ Specifies the name of the device collection.
 ```yaml
 Type: String
 Parameter Sets: ByNameNone, ByNameNever, ByNameApply
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -166,7 +167,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +182,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +213,7 @@ Indicates that power management settings will never be applied to computers in t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByNameNever, ByIdNever, ByValueNever
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -229,7 +230,7 @@ To create a customized power plan, use New-CMPowerManagementCustomPlan cmdlet.
 ```yaml
 Type: PowerSchema
 Parameter Sets: ByValueApply, ByNameApply, ByIdApply
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +245,7 @@ Indicates that no power management settings are set for the specified collection
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByNameNone, ByIdNone, ByValueNone
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -260,7 +261,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +276,7 @@ Specifies the end time for peak hours.
 ```yaml
 Type: DateTime
 Parameter Sets: ByValueApply, ByNameApply, ByIdApply
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -292,7 +293,7 @@ To create a customized power plan, use New-CMPowerManagementCustomPlan cmdlet.
 ```yaml
 Type: PowerSchema
 Parameter Sets: ByValueApply, ByNameApply, ByIdApply
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -322,7 +323,7 @@ Specifies a time when the Windows timer wakes a desktop computer from sleep or h
 ```yaml
 Type: DateTime
 Parameter Sets: ByValueApply, ByNameApply, ByIdApply
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -348,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

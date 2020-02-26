@@ -1,14 +1,10 @@
 ---
-title: Set-CMApplicationDeployment
-titleSuffix: Configuration Manager
 description: Modifies properties for an application deployment in Configuration Manager.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMApplicationDeployment
 ---
 
 # Set-CMApplicationDeployment
@@ -27,9 +23,9 @@ Set-CMApplicationDeployment -InputObject <IResultObject> [-Comment <String>] [-R
  [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
  [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
  [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetApplicationDeploymentByNameMandatory
@@ -41,9 +37,9 @@ Set-CMApplicationDeployment -ApplicationName <String> [-Comment <String>] [-Requ
  [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
  [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
  [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetApplicationDeploymentByIdMandatory
@@ -55,9 +51,9 @@ Set-CMApplicationDeployment -ApplicationId <String> [-Comment <String>] [-Requir
  [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
  [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
  [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
+ [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,11 +64,16 @@ Application deployments can also allow users to install at a time they choose.
 To specify an application deployment to modify, specify the collection name and the application.
 You can specify an application by name or ID, or you can use the [Get-CMApplication](Get-CMApplication.md) cmdlet to get an application to modify.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify availability and deadline for an application deployment
 ```
-PS C:\> Set-CMApplicationDeployment -ApplicationName "Track System 2011" -CollectionName "All Users" -AvaliableDate 2012/10/21 -AvaliableTime 17:25 -DeadlineDate 2013/01/01 -DeadlineTime 13:10
+PS XYZ:\> Set-CMApplicationDeployment -ApplicationName "Track System 2011" -CollectionName "All Users" -AvaliableDate 2012/10/21 -AvaliableTime 17:25 -DeadlineDate 2013/01/01 -DeadlineTime 13:10
 ```
 
 This command modifies an application deployment for an application named Track System 2011 for a collection named All Users.
@@ -86,7 +87,7 @@ Specifies the ID of an application.
 ```yaml
 Type: String
 Parameter Sets: SetApplicationDeploymentByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,7 +102,7 @@ Specifies the name of an application.
 ```yaml
 Type: String
 Parameter Sets: SetApplicationDeploymentByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -111,12 +112,10 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +128,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +141,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +156,7 @@ Specifies the name of device collection or user collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +171,7 @@ Specifies a comment for the deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +202,7 @@ Enter the percentage value by using the *FailParameterValue* parameter.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +218,7 @@ Enter the percentage value by using the *SuccessParameterValue* parameter.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,12 +228,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +246,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +261,7 @@ Indicates whether alerts from this cmdlet appear in System Center 2016 - Operati
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -274,12 +271,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSoftDeadline
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +291,7 @@ You must also specify the *CreatAlertBaseOnPercentFailure* parameter as $True.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +306,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +337,7 @@ If this value is $False, Configuration Manager does not deploy the application o
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -358,7 +353,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -376,7 +371,7 @@ For a value of $False, the device saves changes in an overlay and commits them l
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -386,12 +381,10 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -406,7 +399,7 @@ Indicates whether to pre-deploy the application to the primary device of the use
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -421,7 +414,7 @@ Indicates whether to create an Operations Manager alert if a client fails to ins
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -439,7 +432,22 @@ If this value is $False, the computer does not restart outside a service window.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplaceToastNotificationWithDialog
+{{ Fill ReplaceToastNotificationWithDialog Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -470,7 +478,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -487,7 +495,7 @@ You must also specify the *CreatAlertBaseOnPercentSuccess* parameter as $True.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -501,14 +509,14 @@ Specifies which time zone to use.
 The acceptable values for this parameter are:
 
 - LocalTime.
-Use local time. 
+Use local time.
 - UTC.
 Use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
 
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: LocalTime, Utc
 
 Required: False
@@ -524,7 +532,7 @@ Indicates whether to allow clients to download content over a metered Internet c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -535,7 +543,7 @@ Accept wildcard characters: False
 
 ### -UserNotification
 Specifies the type of notification for a client.
-Valid values are: 
+Valid values are:
 
 - DisplayAll
 - DisplaySoftwareCenterOnly
@@ -544,7 +552,7 @@ Valid values are:
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -571,7 +579,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

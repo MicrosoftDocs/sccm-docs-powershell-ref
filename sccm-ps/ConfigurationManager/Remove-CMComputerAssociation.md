@@ -1,14 +1,10 @@
 ---
-title: Remove-CMComputerAssociation
-titleSuffix: Configuration Manager
 description: Deletes a computer association from Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMComputerAssociation
 ---
 
 # Remove-CMComputerAssociation
@@ -40,18 +36,23 @@ Remove-CMComputerAssociation -InputObject <IResultObject> [-Force] [-DisableWild
 The **Remove-CMComputerAssociation** cmdlet deletes a computer association from Microsoft System Center Configuration Manager.
 You can specify the association to remove by specifying both computers in the association or by specifying the association ID, or you can use the **Get-CMComputerAssociation** cmdlet to get an association to remove.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an association by using computer names
 ```
-PS C:\> Remove-CMComputerAssociation -DestinationComputer "West155" -SourceComputer "West073"
+PS XYZ:\> Remove-CMComputerAssociation -DestinationComputer "West155" -SourceComputer "West073"
 ```
 
 This command removes the computer association between the computers named West155 and West073.
 
 ### Example 2: Remove an association by using an ID
 ```
-PS C:\> Remove-CMComputerAssociation -MigrationId "MID1207" -Force
+PS XYZ:\> Remove-CMComputerAssociation -MigrationId "MID1207" -Force
 ```
 
 This command removes the computer association that has the ID MID1207.
@@ -59,8 +60,8 @@ This command uses the *Force* parameter, so the cmdlet does not prompt you for c
 
 ### Example 3: Remove an association by using a variable
 ```
-PS C:\> $CMCA = Get-CMComputerAssociation -MigrationId "MID1207"
-PS C:\> Remove-CMComputerAssociation -InputObject $CMCA -Force
+PS XYZ:\> $CMCA = Get-CMComputerAssociation -MigrationId "MID1207"
+PS XYZ:\> Remove-CMComputerAssociation -InputObject $CMCA -Force
 ```
 
 The first command gets the computer association that has the ID MID1207, and saves it in the $CMCA variable.
@@ -106,7 +107,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +122,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +137,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +153,7 @@ To obtain a computer association object, use the Get-CMComputerAssociation cmdle
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -167,7 +168,7 @@ Specifies the ID of a computer association.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -208,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

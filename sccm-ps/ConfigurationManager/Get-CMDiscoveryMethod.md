@@ -1,14 +1,10 @@
 ---
-title: Get-CMDiscoveryMethod
-titleSuffix: Configuration Manager
 description: Gets a discovery method for Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDiscoveryMethod
 ---
 
 # Get-CMDiscoveryMethod
@@ -29,13 +25,18 @@ Discovery identifies computer and user resources that System Center Configuratio
 If it discovers a resource, Configuration Manager creates a record in the System Center Configuration Manager database for the resource and its associated information.
 You can then use the discovery information to help you to install the System Center Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
 
-For more information about discovery in System Center Configuration Manager, see [About Configuration Manager Discovery](http://go.microsoft.com/fwlink/?linkid=107444) on TechNet.
+For more information about discovery in System Center Configuration Manager, see [About Configuration Manager Discovery](/previous-versions/system-center/configuration-manager-2007/bb633276(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get a user discovery method
 ```
-PS C:\> Get-CMDiscoveryMethod -Name "ActiveDirectoryUserDiscovery"
+PS XYZ:\> Get-CMDiscoveryMethod -Name "ActiveDirectoryUserDiscovery"
 ```
 
 This command gets a System Center Configuration Manager method that discovers users in the installation.
@@ -48,7 +49,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,7 +64,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +78,7 @@ Specifies the type of discovery method that the cmdlet gets.
 The acceptable values for this parameter are:
 
 - ActiveDirectoryForestDiscovery: Discovers security groups, including local, global, and universal groups from specified locations in Active Directory Domain Services.
-- ActiveDirectoryGroupDiscovery: Discovers additional information, including the OU and group membership of the computer, about previously discovered computers from specified locations in Active Directory Domain Services. 
+- ActiveDirectoryGroupDiscovery: Discovers additional information, including the OU and group membership of the computer, about previously discovered computers from specified locations in Active Directory Domain Services.
 - ActiveDirectorySystemDiscovery: Discovers computers from specified locations in Active Directory Domain Services.
 - ActiveDirectoryUserDiscovery: Discovers users from specified locations in Active Directory Domain Services.
 - HeartbeatDiscovery: Updates discovery records for Microsoft System Center Configuration Manager clients in the System Center Configuration Manager database without discovering new resources.
@@ -86,7 +87,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DiscoveryType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ActiveDirectoryForestDiscovery, ActiveDirectoryGroupDiscovery, ActiveDirectorySystemDiscovery, ActiveDirectoryUserDiscovery, NetworkDiscovery, HeartbeatDiscovery
 
 Required: False
@@ -102,7 +103,7 @@ Specifies a site code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,6 +123,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Configuration Manager Discovery](http://go.microsoft.com/fwlink/?linkid=107444)
+[About Configuration Manager Discovery](/previous-versions/system-center/configuration-manager-2007/bb633276(v=technet.10))
 
 [Set-CMDiscoveryMethod](Set-CMDiscoveryMethod.md)

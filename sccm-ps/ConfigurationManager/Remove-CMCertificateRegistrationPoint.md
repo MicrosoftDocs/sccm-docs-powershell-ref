@@ -1,14 +1,10 @@
 ---
-title: Remove-CMCertificateRegistrationPoint
-titleSuffix: Configuration Manager
 description: Removes a certificate registration point role from a site system server.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMCertificateRegistrationPoint
 ---
 
 # Remove-CMCertificateRegistrationPoint
@@ -33,11 +29,16 @@ Remove-CMCertificateRegistrationPoint [-SiteCode <String>] [-Force] [-SiteSystem
 ## DESCRIPTION
 The **Remove-CMCertificateRegistrationPoint** cmdlet removes a certificate registration point role from a site system server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a certificate registration point role by using the pipeline
 ```
-PS C:\> Get-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemserver01.Contoso.com" | Remove-CMCertificateRegistrationPoint -Force
+PS XYZ:\> Get-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemserver01.Contoso.com" | Remove-CMCertificateRegistrationPoint -Force
 ```
 
 This command gets the certificate registration point object for the site system server named SiteSystemserver01.Contoso.com and uses the pipeline operator to pass the object to **Remove-CMCertificateRegistrationPoint**, which removes the certificate registration point.
@@ -45,7 +46,7 @@ The command does not prompt the user for confirmation.
 
 ### Example 2: Remove a certificate registration point role by name
 ```
-PS C:\> Remove-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemserver02.Contoso.com"
+PS XYZ:\> Remove-CMCertificateRegistrationPoint -SiteSystemServerName "SiteSystemserver02.Contoso.com"
 ```
 
 This command removes the certificate registration point from the site system server named SiteSystemserver02.Contoso.com.
@@ -73,7 +74,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +89,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +104,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ Specifies the site code of the Configuration Manager site server.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

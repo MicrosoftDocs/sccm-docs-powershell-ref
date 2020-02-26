@@ -1,14 +1,10 @@
 ---
-title: Set-CMBoundaryGroup
-titleSuffix: Configuration Manager
 description: Modifies the properties of a boundary group.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMBoundaryGroup
 ---
 
 # Set-CMBoundaryGroup
@@ -23,7 +19,9 @@ Modifies the properties of a boundary group.
 Set-CMBoundaryGroup -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
  [-DefaultSiteCode <String>] [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
  [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
@@ -31,7 +29,9 @@ Set-CMBoundaryGroup -InputObject <IResultObject> [-NewName <String>] [-Descripti
 Set-CMBoundaryGroup -Id <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
  [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
  [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
@@ -39,26 +39,33 @@ Set-CMBoundaryGroup -Id <String> [-NewName <String>] [-Description <String>] [-D
 Set-CMBoundaryGroup -Name <String> [-NewName <String>] [-Description <String>] [-DefaultSiteCode <String>]
  [-AddSiteSystemServer <IResultObject[]>] [-AddSiteSystemServerName <String[]>]
  [-RemoveSiteSystemServer <IResultObject[]>] [-RemoveSiteSystemServerName <String[]>] [-ClearSiteSystemServer]
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowPeerDownload <Boolean>] [-SubnetPeerDownloadOnly <Boolean>] [-PreferDPOverPeer <Boolean>]
+ [-PreferCloudDPOverDP <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Set-CMBoundaryGroup** cmdlet modifies the properties of a boundary group.
 A boundary group is a collection of boundaries.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266225) on TechNet and the [New-CMBoundary](New-CMBoundary.md) cmdlet.
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10)) on TechNet and the [New-CMBoundary](New-CMBoundary.md) cmdlet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Rename a boundary group
 ```
-PS C:\> Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
+PS XYZ:\> Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
 ```
 
 This command renames a boundary group.
 
 ### Example 2: Add a security scope to a boundary group
 ```
-PS C:\> Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
+PS XYZ:\> Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
 ```
 
 This command adds the security scope OSDeploymentScope to the boundary group BGroup02.
@@ -89,12 +96,25 @@ Accept wildcard characters: False
 ```
 
 ### -AddSiteSystemServerName
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: AddSiteSystemServerNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPeerDownload
+{{ Fill AllowPeerDownload Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +159,7 @@ Specifies the default site code of a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +174,7 @@ Specifies a description for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +189,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +204,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +235,7 @@ To obtain a boundary group object, use the [Get-CMBoundaryGroup](Get-CMBoundaryG
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -230,7 +250,7 @@ Specifies a name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -245,7 +265,7 @@ Specifies a new name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +281,37 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferCloudDPOverDP
+{{ Fill PreferCloudDPOverDP Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: PreferCloudDistributionPointOverDistributionPoint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreferDPOverPeer
+{{ Fill PreferDPOverPeer Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: PreferDistributionPointOverPeerInSubnet
 
 Required: False
 Position: Named
@@ -301,6 +351,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SubnetPeerDownloadOnly
+{{ Fill SubnetPeerDownloadOnly Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: PeerWithinSameSubnetOnly
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -318,7 +383,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -328,7 +393,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Define site boundaries and boundary groups for System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/)
+[Define site boundaries and boundary groups for System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/)
 
 [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md)
 

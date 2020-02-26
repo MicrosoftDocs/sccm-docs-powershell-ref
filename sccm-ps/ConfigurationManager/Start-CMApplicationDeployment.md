@@ -1,14 +1,10 @@
 ---
-title: Start-CMApplicationDeployment
-titleSuffix: Configuration Manager
 description: Starts an application deployment in Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Start-CMApplicationDeployment
 ---
 
 # Start-CMApplicationDeployment
@@ -29,7 +25,8 @@ Start-CMApplicationDeployment [-InputObject] <IResultObject> [-ApprovalRequired 
  [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>] [-GenerateScomAlertOnFailure <Boolean>]
  [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>] [-SuccessParameterValue <Int32>]
  [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>] [-UserNotification <UserNotificationType>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UpdateSupersedence <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
@@ -42,8 +39,8 @@ Start-CMApplicationDeployment [-Name] <String> [-ApprovalRequired <Boolean>] [-A
  [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
  [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>]
- [-UserNotification <UserNotificationType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserNotification <UserNotificationType>] [-PassThru] [-UpdateSupersedence <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
@@ -56,18 +53,23 @@ Start-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-Avai
  [-PostponeDate <DateTime>] [-PostponeTime <DateTime>] [-PostponeDateTime <DateTime>] [-PreDeploy <Boolean>]
  [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>] [-SendWakeupPacket <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UseMeteredNetwork <Boolean>]
- [-UserNotification <UserNotificationType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UserNotification <UserNotificationType>] [-PassThru] [-UpdateSupersedence <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Start-CMApplicationDeployment** cmdlet starts an application deployment.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Start application deployment
 ```
-PS C:\> Start-CMApplicationDeployment -CollectionName "All Users" -Name "7zip" -AvaliableDate 2012/10/1 -AvaliableTime 12:45 -Comment "test" -DeadlineDate 2013/10/23 -DeadlineTime 21:12 -DeployAction Uninstall -EnableMomAlert $True -FailParameterValue 40 -OverrideServiceWindow $True -PersistOnWriteFilterDevice $False -PostponeDate 2014/2/8 -PostponeTime 11:11 -PreDeploy $True -RaiseMomAlertsOnFailure $True -RebootOutsideServiceWindow $True -SendWakeUpPacket $True -SuccessParameterValue 30 -UseMeteredNetwork $True -UserNotification DisplaySoftwareCenterOnly
+PS XYZ:\> Start-CMApplicationDeployment -CollectionName "All Users" -Name "7zip" -AvaliableDate 2012/10/1 -AvaliableTime 12:45 -Comment "test" -DeadlineDate 2013/10/23 -DeadlineTime 21:12 -DeployAction Uninstall -EnableMomAlert $True -FailParameterValue 40 -OverrideServiceWindow $True -PersistOnWriteFilterDevice $False -PostponeDate 2014/2/8 -PostponeTime 11:11 -PreDeploy $True -RaiseMomAlertsOnFailure $True -RebootOutsideServiceWindow $True -SendWakeUpPacket $True -SuccessParameterValue 30 -UseMeteredNetwork $True -UserNotification DisplaySoftwareCenterOnly
 ```
 
 This command starts an application deployment named 7zip.
@@ -104,7 +106,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +134,7 @@ Specifies a target collection to deploy this application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -147,7 +149,7 @@ Specifies a comment for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,7 +180,7 @@ Autoinstall performs the installation if the application is not installed.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +193,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +209,7 @@ Autoinstall performs the installation if the application is not installed.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +231,7 @@ Uninstall the application.
 ```yaml
 Type: DeployActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Install, Uninstall
 
 Required: False
@@ -254,7 +256,7 @@ Installation occurs when the deadline passes.
 ```yaml
 Type: DeployPurposeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Available, Required
 
 Required: False
@@ -270,7 +272,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -285,7 +287,7 @@ Indicates whether to enable Operations Manager maintenance mode.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -300,7 +302,7 @@ Specifies a value that generates a deployment alert when exceeded.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,7 +317,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -358,7 +360,7 @@ Specifies an application deployment object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -388,7 +390,7 @@ Indicates whether an application installation occurs outside of a maintenance wi
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -404,7 +406,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -420,7 +422,7 @@ Otherwise, changes are written on the overlay and committed later.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -435,7 +437,7 @@ Specifies a date after which to create an alert.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -448,7 +450,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -463,7 +465,7 @@ Specifies a time after which to create an alert.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -479,7 +481,7 @@ To use this parameter, set the *DeployPurpose* parameter to Required.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -497,7 +499,7 @@ If this value is $False, the computer does not restart outside a service window.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -515,7 +517,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -530,7 +532,7 @@ Specifies a value that the threshold must exceed before an alert is created.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -552,8 +554,23 @@ Use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
 ```yaml
 Type: TimeType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: LocalTime, Utc
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateSupersedence
+{{ Fill UpdateSupersedence Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -569,7 +586,7 @@ Clients may incur additional costs.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -595,7 +612,7 @@ Do not display in Software Center and do not show notifications.
 ```yaml
 Type: UserNotificationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
 
 Required: False
@@ -622,7 +639,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Get-CMObjectSecurityScope
-titleSuffix: Configuration Manager
 description: Gets the security scope associated with a Configuration Manager object.
+external help file: AdminUI.PS.Common.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMObjectSecurityScope
 ---
 
 # Get-CMObjectSecurityScope
@@ -33,18 +29,23 @@ Get-CMObjectSecurityScope -InputObject <IResultObject> [-Id <String>] [-DisableW
 ## DESCRIPTION
 The **Get-CMObjectSecurityScope** cmdlet gets the security scopes that are associated with a Microsoft System Center Configuration Manager object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get security scopes for an application object
 ```
-PS C:\> Get-CMApplication -Name "Application1" | Get-CMObjectSecurityScope
+PS XYZ:\> Get-CMApplication -Name "Application1" | Get-CMObjectSecurityScope
 ```
 
 This command gets the application object named Application1 and uses the pipeline operator to pass the object to **Get-CMObjectSecurityScope**, which gets all security scopes associated with the application object.
 
 ### Example 2: Get a security scope
 ```
-PS C:\> Get-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application1") -Name "Scope1"
+PS XYZ:\> Get-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application1") -Name "Scope1"
 ```
 
 This command gets the security scope named Scope1 that is associated with the application object named Application1.
@@ -57,7 +58,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +73,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +103,7 @@ Specifies a Configuration Manager object that is associated with a security scop
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -127,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

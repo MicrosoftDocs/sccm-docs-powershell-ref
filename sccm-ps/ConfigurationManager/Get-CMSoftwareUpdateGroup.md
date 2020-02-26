@@ -1,14 +1,10 @@
 ---
-title: Get-CMSoftwareUpdateGroup
-titleSuffix: Configuration Manager
 description: Gets software update groups.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSoftwareUpdateGroup
 ---
 
 # Get-CMSoftwareUpdateGroup
@@ -36,25 +32,30 @@ A software update group is a collection of one or more software updates.
 You can add software updates to a software update group and then deploy the group to clients.
 After you deploy a software update group, you can add new software updates to the group and System Center Configuration Manager automatically deploys them.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get software update groups
 ```
-PS C:\> Get-CMSoftwareUpdateGroup
+PS XYZ:\> Get-CMSoftwareUpdateGroup
 ```
 
 This command gets all software update groups.
 
 ### Example 2: Get a software update group by using an ID
 ```
-PS C:\> Get-CMSoftwareUpdateGroup -Id "ST10000D"
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Id "ST10000D"
 ```
 
 This command gets a software update group that has the ID ST10000D.
 
 ### Example 3: Get a software update group by using a name
 ```
-PS C:\> Get-CMSoftwareUpdateGroup -Name "SUGroupD01"
+PS XYZ:\> Get-CMSoftwareUpdateGroup -Name "SUGroupD01"
 ```
 
 This command gets a software update group object named SUGroupD01.
@@ -67,7 +68,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +83,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

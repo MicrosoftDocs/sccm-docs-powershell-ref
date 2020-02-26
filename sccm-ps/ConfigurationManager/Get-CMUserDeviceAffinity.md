@@ -1,14 +1,10 @@
 ---
-title: Get-CMUserDeviceAffinity
-titleSuffix: Configuration Manager
 description: Gets a Configuration Manager user's device affinities.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMUserDeviceAffinity
 ---
 
 # Get-CMUserDeviceAffinity
@@ -32,13 +28,13 @@ Get-CMUserDeviceAffinity -DeviceName <String[]> [-DisableWildcardHandling] [-For
 
 ### SearchByDeviceIdMandatory
 ```
-Get-CMUserDeviceAffinity -DeviceId <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMUserDeviceAffinity -DeviceId <Int32[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByUserIdMandatory
 ```
-Get-CMUserDeviceAffinity -UserId <String[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMUserDeviceAffinity -UserId <Int32[]> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -47,32 +43,37 @@ The **Get-CMUserDeviceAffinity** cmdlet gets one or more user device affinities 
 
 User device affinity in Microsoft System Center Configuration Manager is a method of associating a user with one or more specified devices.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a user device affinity by using a user name
 ```
-PS C:\> Get-CMUserDeviceAffinity -UserName "CENTRAL\001D$"
+PS XYZ:\> Get-CMUserDeviceAffinity -UserName "CENTRAL\001D$"
 ```
 
 This command gets the user device affinity for the user named CENTRAL\001D$.
 
 ### Example 2: Get a user device affinity by using a user ID
 ```
-PS C:\> Get-CMUserDeviceAffinity -UserID "2063597981"
+PS XYZ:\> Get-CMUserDeviceAffinity -UserID "2063597981"
 ```
 
 This command gets the user device affinity for the user that has the ID named 2063597981.
 
 ### Example 3: Get a user device affinity by using a device name
 ```
-PS C:\> Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
+PS XYZ:\> Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
 ```
 
 This command gets the user device affinity for the device named CMCEN-DIST02.
 
 ### Example 4: Get a user device affinity by using a device ID
 ```
-PS C:\> Get-CMUserDeviceAffinity -DeviceID "2097152000"
+PS XYZ:\> Get-CMUserDeviceAffinity -DeviceID "2097152000"
 ```
 
 This command gets the user device affinity for the device that has the ID 2097152000.
@@ -83,7 +84,7 @@ This command gets the user device affinity for the device that has the ID 209715
 Specifies an array of device IDs.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: SearchByDeviceIdMandatory
 Aliases: ResourceId
 
@@ -115,7 +116,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +131,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,9 +144,9 @@ Accept wildcard characters: False
 Specifies an array of IDs of the primary users of the devices.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: SearchByUserIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -170,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

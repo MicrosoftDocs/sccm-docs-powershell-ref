@@ -1,14 +1,10 @@
 ---
-title: Set-CMMsiDeploymentType
-titleSuffix: Configuration Manager
 description: Sets a Windows Installer deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMMsiDeploymentType
 ---
 
 # Set-CMMsiDeploymentType
@@ -21,15 +17,17 @@ Sets a Windows Installer deployment type.
 ### ByAppName (Default)
 ```
 Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-ContentLocation <String>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
- [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
+ [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-ContentLocation <String>]
+ [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>] [-InstallCommand <String>]
+ [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
  [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
  [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-InstallWorkingDirectory <String>]
  [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
  [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
  [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-AddRequirement <Rule[]>] -ApplicationName <String>
+ [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
+ [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -ApplicationName <String>
  -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
  [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -38,15 +36,17 @@ Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetect
 ### ByAppId
 ```
 Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-ContentLocation <String>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
- [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
+ [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-ContentLocation <String>]
+ [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>] [-InstallCommand <String>]
+ [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
  [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
  [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-InstallWorkingDirectory <String>]
  [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
  [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
  [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
+ [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
+ [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
  -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
  [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -55,15 +55,17 @@ Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetect
 ### ByAppValue
 ```
 Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-ContentLocation <String>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
- [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
+ [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-ContentLocation <String>]
+ [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>] [-InstallCommand <String>]
+ [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
  [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
  [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-InstallWorkingDirectory <String>]
  [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
  [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
  [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
+ [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
+ [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
  -Application <IResultObject> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
  [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -72,15 +74,17 @@ Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetect
 ### ByDTValue
 ```
 Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetectionClause <String[]>]
- [-ContentLocation <String>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
- [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
+ [-GroupDetectionClauses <String[]>] [-DetectionClauseConnector <Hashtable[]>] [-ContentLocation <String>]
+ [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>] [-InstallCommand <String>]
+ [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
  [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
  [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
  [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-InstallWorkingDirectory <String>]
  [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
  [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
  [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
+ [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
+ [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
  [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru]
  [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -89,11 +93,16 @@ Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetect
 ## DESCRIPTION
 The **Set-CMMsiDeploymentType** cmdlet changes the settings for a Windows Installer deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a Windows Installer deployment type
 ```
-PS C:\> Set-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -NewName "DTMsi_Updated" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
+PS XYZ:\> Set-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -NewName "DTMsi_Updated" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
 ```
 
 This command changes the name of the Windows Installer deployment type named DTMsi for the application named testMsi to DTMsi_Updated, adds English and Chinese as supported languages, and adds a description.
@@ -101,7 +110,7 @@ This command specifies that the installation will take approximately 14 minutes 
 
 ### Example 2: Modify a Windows Installer deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi_Updated" | Set-CMMsiDeploymentType -NewName "DTMsi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi_Updated" | Set-CMMsiDeploymentType -NewName "DTMsi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
 ```
 
 This command gets the Windows Installer deployment type object named DTMsi_Updated for the application named testMsi and uses the pipeline operator to pass the object to **Set-CMMsiDeploymentType**.
@@ -111,8 +120,6 @@ This command specifies that the installation will take approximately 14 minutes 
 ## PARAMETERS
 
 ### -AddDetectionClause
- 
-
 ```yaml
 Type: DetectionClause[]
 Parameter Sets: (All)
@@ -146,7 +153,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +169,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -192,7 +199,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -269,7 +276,7 @@ The site system server requires permissions to read the content files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -284,9 +291,24 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DetectionClauseConnector
+{{ Fill DetectionClauseConnector Description }}
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: DetectionClauseConnectors
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -299,7 +321,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -391,7 +413,22 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupDetectionClauses
+{{ Fill GroupDetectionClauses Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: GroupDetectionClausesByLogicalName
 
 Required: False
 Position: Named
@@ -449,7 +486,7 @@ Accept wildcard characters: False
 
 ### -InstallationBehaviorType
 Specifies the installation behavior of the deployment type.
-Valid values are: 
+Valid values are:
 
 - InstallForSystem
 - InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
@@ -458,7 +495,7 @@ Valid values are:
 ```yaml
 Type: InstallationBehaviorType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
 
 Required: False
@@ -480,7 +517,7 @@ Valid values are:
 ```yaml
 Type: LogonRequirementType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OnlyWhenUserLoggedOn, WhereOrNotUserLoggedOn, WhetherOrNotUserLoggedOn, OnlyWhenNoUserLoggedOn
 
 Required: False
@@ -527,7 +564,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -542,7 +579,7 @@ Specifies the product code in the detection method for the deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -552,12 +589,10 @@ Accept wildcard characters: False
 ```
 
 ### -RebootBehavior
- 
-
 ```yaml
 Type: PostExecutionBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: BasedOnExitCode, NoAction, ForceReboot, ProgramReboot
 
 Required: False
@@ -568,8 +603,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveDetectionClause
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -628,12 +661,10 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFile
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -680,16 +711,16 @@ Accept wildcard characters: False
 
 ### -SlowNetworkDeploymentMode
 Specifies the installation behavior of the deployment type on a slow network.
-Valid values are: 
+Valid values are:
 
 - DoNothing
-- Download 
+- Download
 - DownloadContentForStreaming
 
 ```yaml
 Type: ContentHandlingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNothing, Download
 
 Required: False
@@ -706,7 +737,7 @@ Windows Source management enables an MSI represented by this deployment type to 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -722,6 +753,37 @@ Specifies the command to use to uninstall the Windows Installer package from the
 Type: String
 Parameter Sets: (All)
 Aliases: UninstallationProgram
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UninstallContentLocation
+{{ Fill UninstallContentLocation Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UninstallOption
+{{ Fill UninstallOption Description }}
+
+```yaml
+Type: UninstallContentSetting
+Parameter Sets: (All)
+Aliases:
+Accepted values: SameAsInstall, NoneRequired, Different
 
 Required: False
 Position: Named
@@ -748,7 +810,7 @@ Accept wildcard characters: False
 
 ### -UserInteractionMode
 Specifies the mode in which the deployment type runs on client devices.
-Valid values are: 
+Valid values are:
 
 - Normal
 - Minimized
@@ -785,7 +847,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

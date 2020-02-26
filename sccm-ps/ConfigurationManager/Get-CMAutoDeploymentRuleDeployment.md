@@ -1,14 +1,10 @@
 ---
-title: Get-CMAutoDeploymentRuleDeployment
-titleSuffix: Configuration Manager
 description: Gets the deployments associated with an automatic deployment rule.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMAutoDeploymentRuleDeployment
 ---
 
 # Get-CMAutoDeploymentRuleDeployment
@@ -39,18 +35,23 @@ Get-CMAutoDeploymentRuleDeployment [-InputObject] <IResultObject> [-DisableWildc
 ## DESCRIPTION
 The **Get-CMAutoDeploymentRuleDeployment** cmdlet gets the deployments associated with an automatic deployment rule.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a deployment object for an automatic deployment rule
 ```
-PS C:\>Get-CMAutoDeploymentRuleDeployment -Name "AutoDeploymentRule01"
+PS XYZ:\>Get-CMAutoDeploymentRuleDeployment -Name "AutoDeploymentRule01"
 ```
 
 This command gets the deployment object for the automatic deployment rule named AutoDeploymentRule01.
 
 ### Example 2: Get a deployment object for an automatic deployment rule using the pipeline
 ```
-PS C:\>Get-CMSoftwareUpdateAutoDeploymentRule -Name "TestRule01" | Get-CMAutoDeploymentRuleDeployment
+PS XYZ:\>Get-CMSoftwareUpdateAutoDeploymentRule -Name "TestRule01" | Get-CMAutoDeploymentRuleDeployment
 ```
 
 This command gets the automatic deployment rule object named TestRule01 and uses the pipeline operator to pass the object to **Get-CMAutoDeploymentRuleDeployment**, which gets the deployments associated with the automatic deployment rule named TestRule01.
@@ -63,7 +64,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +79,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

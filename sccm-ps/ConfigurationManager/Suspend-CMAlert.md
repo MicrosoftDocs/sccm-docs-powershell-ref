@@ -1,14 +1,10 @@
 ---
-title: Suspend-CMAlert
-titleSuffix: Configuration Manager
 description: Suspends monitoring alerts.
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Suspend-CMAlert
 ---
 
 # Suspend-CMAlert
@@ -42,19 +38,24 @@ At that time, Microsoft System Center Configuration Manager updates the state of
 You can suspend an alert only when it is enabled.
 If you do not specify the *SkipUntil* parameter, the alert is suspended indefinitely.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Suspend an alert by using ID
 ```
-PS C:\> Suspend-CMAlert -Id "16777219" -Comments "Postponing alert evaluation" -SkipUntil "Wednesday, August 20, 2012 4:03:17 PM"
+PS XYZ:\> Suspend-CMAlert -Id "16777219" -Comments "Postponing alert evaluation" -SkipUntil "Wednesday, August 20, 2012 4:03:17 PM"
 ```
 
 This command suspends an alert that has the Id 16777219 until the time specified by *SkipUntil*, and adds a comment to the alert.
 
 ### Example 2: Suspend an alert by using alert object variable
 ```
-PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
-PS C:\> Suspend-CMAlert -InputObject $AlertObj -Comments "Postponing alert evaluation" -SkipUntil "4/8/2012 8:04:39 PM"
+PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777221"
+PS XYZ:\> Suspend-CMAlert -InputObject $AlertObj -Comments "Postponing alert evaluation" -SkipUntil "4/8/2012 8:04:39 PM"
 ```
 
 The first command gets the alert object that has the ID 16777221, and then stores the object in the $AlertObj variable.
@@ -70,7 +71,7 @@ You can use the comment to record the explanation for suspending the alert.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +101,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +116,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +132,7 @@ You can obtain the ID of an alert by using the [Get-CMAlert](Get-CMAlert.md) cmd
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +164,7 @@ You can obtain the name of an alert by using **Get-CMAlert**.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -173,12 +174,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +200,7 @@ If the original job trigger did not include a **DateTime** object and you omit a
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -227,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: New-CMWindowsFirewallPolicy
-titleSuffix: Configuration Manager
 description: Creates a new Windows Firewall policy in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMWindowsFirewallPolicy
 ---
 
 # New-CMWindowsFirewallPolicy
@@ -34,11 +30,16 @@ Windows Firewall allows or denies incoming connections to an IP address.
 The blocking actions allow or deny incoming traffic based on a network location type.
 The network location types are: domain, public, and private.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a Windows Firewall policy
 ```
-PS C:\> New-CMWindowsFirewallPolicy -Name "test01" -Description "323132" -DomainTurnOnFirewall Yes -PrivateTurnOnFirewall Yes -PublicTurnOnFirewall Yes
+PS XYZ:\> New-CMWindowsFirewallPolicy -Name "test01" -Description "323132" -DomainTurnOnFirewall Yes -PrivateTurnOnFirewall Yes -PublicTurnOnFirewall Yes
 ```
 
 This command creates a new Windows Firewall policy and enables the firewall for domain, private, and public network location types.
@@ -81,7 +82,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +101,7 @@ Specifies whether to block all incoming traffic for a domain type of network loc
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -125,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainTurnOnFirewall
-Specifies whether to turn on a firewall for a domain type of network location. 
+Specifies whether to turn on a firewall for a domain type of network location.
 The acceptable values for this parameter are:
 
 - No
@@ -135,7 +136,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -151,7 +152,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateBlockAllInboundTraffic
-Specifies whether to block all incoming traffic for a private type of network location. 
+Specifies whether to block all incoming traffic for a private type of network location.
 The acceptable values for this parameter are:
 
 - No
@@ -186,7 +187,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -211,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateTurnOnFirewall
-Specifies whether to turn on a firewall for a private type of network location. 
+Specifies whether to turn on a firewall for a private type of network location.
 The acceptable values for this parameter are:
 
 - No
@@ -221,7 +222,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -232,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicBlockAllInboundTraffic
-Specifies whether to block all incoming traffic for a public type of network location. 
+Specifies whether to block all incoming traffic for a public type of network location.
 The acceptable values for this parameter are:
 
 - No
@@ -242,7 +243,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -267,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicTurnOnFirewall
-Specifies whether to enable Windows Firewall for a public network location. 
+Specifies whether to enable Windows Firewall for a public network location.
 The acceptable values for this parameter are:
 
 - No
@@ -277,7 +278,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, No, NotConfigured
 
 Required: False
@@ -304,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

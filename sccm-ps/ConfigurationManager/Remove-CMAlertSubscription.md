@@ -1,14 +1,10 @@
 ---
-title: Remove-CMAlertSubscription
-titleSuffix: Configuration Manager
 description: Removes an alert subscription object.
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMAlertSubscription
 ---
 
 # Remove-CMAlertSubscription
@@ -39,26 +35,31 @@ Remove-CMAlertSubscription -Name <String> [-Force] [-DisableWildcardHandling] [-
 ## DESCRIPTION
 The **Remove-CMAlertSubscription** cmdlet removes an alert subscription from Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an alert subscription by ID
 ```
-PS C:\> Remove-CMAlertSubscription -Id "16777310"
+PS XYZ:\> Remove-CMAlertSubscription -Id "16777310"
 ```
 
 This command removes an alert subscription by using its ID.
 
 ### Example 2: Remove an alert subscription by name
 ```
-PS C:\> Remove-CMAlertSubscription -Name "Subscription01"
+PS XYZ:\> Remove-CMAlertSubscription -Name "Subscription01"
 ```
 
 This command removes an alert subscription named Subscription01.
 
 ### Example 3: Remove an alert subscription by using the output from another cmdlet
 ```
-PS C:\> $SubObj = Get-CMAlertSubscription -Id "16777310"
-PS C:\> Remove-CMAlertSubscription -AlertSubscription $SubObj
+PS XYZ:\> $SubObj = Get-CMAlertSubscription -Id "16777310"
+PS XYZ:\> Remove-CMAlertSubscription -AlertSubscription $SubObj
 ```
 
 The first command gets an alert subscription object that has the ID 16777310, and then stores the object in the $SubObj variable.
@@ -88,7 +89,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +104,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +134,7 @@ Specifies the ID of an alert subscription.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,7 +149,7 @@ Specifies an alert notification object in Configuration Manager.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +164,7 @@ Specifies the name of an alert subscription.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

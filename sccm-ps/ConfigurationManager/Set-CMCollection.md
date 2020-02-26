@@ -1,14 +1,10 @@
 ---
-title: Set-CMCollection
-titleSuffix: Configuration Manager
 description: Sets a Configuration Manager collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMCollection
 ---
 
 # Set-CMCollection
@@ -22,24 +18,24 @@ Sets a Configuration Manager collection.
 ```
 Set-CMCollection -InputObject <IResultObject> [-NewName <String>] [-Comment <String>]
  [-LimitingCollectionId <String>] [-LimitingCollectionName <String>] [-LimitingCollection <IResultObject>]
- [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>] [-VariablePriority <Int32>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMCollection -Name <String> [-NewName <String>] [-Comment <String>] [-LimitingCollectionId <String>]
  [-LimitingCollectionName <String>] [-LimitingCollection <IResultObject>] [-RefreshSchedule <IResultObject>]
- [-RefreshType <CollectionRefreshType>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RefreshType <CollectionRefreshType>] [-VariablePriority <Int32>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
 Set-CMCollection -CollectionId <String> [-NewName <String>] [-Comment <String>]
  [-LimitingCollectionId <String>] [-LimitingCollectionName <String>] [-LimitingCollection <IResultObject>]
- [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>] [-VariablePriority <Int32>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,12 +43,17 @@ Set-CMCollection -CollectionId <String> [-NewName <String>] [-Comment <String>]
 
 Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a collection and modify it
 ```
-PS C:\> $userCollection = Get-CMCollection -Name "testUser"
-PS C:\> Set-CMCollection -CollectionId $userCollection -NewName "newTestUser"
+PS XYZ:\> $userCollection = Get-CMCollection -Name "testUser"
+PS XYZ:\> Set-CMCollection -CollectionId $userCollection -NewName "newTestUser"
 ```
 
 The first command gets the collection object named testUser and stores the object in the $userCollection variable.
@@ -61,7 +62,7 @@ The second command updates the name of the collection in $userCollection.
 
 ### Example 2: Pass a collection and modify it
 ```
-PS C:\> Get-CMCollection -Name "testUser" | Set-CMCollection -NewName "newTestUser"
+PS XYZ:\> Get-CMCollection -Name "testUser" | Set-CMCollection -NewName "newTestUser"
 ```
 
 This command gets the collection object named testUser and uses the pipeline operator to pass the object to **Set-CMCollection**, which updates its name to newTestUser.
@@ -74,7 +75,7 @@ Specifies a collection ID.
 ```yaml
 Type: String
 Parameter Sets: SetById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -89,7 +90,7 @@ Specifies a comment for the collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +120,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +167,7 @@ To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +212,7 @@ Specifies the name of a collection.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -226,7 +227,7 @@ Specifies a new name for the collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -242,7 +243,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -257,7 +258,7 @@ Specifies a schedule that determines when Configuration Manager refreshes the co
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -271,7 +272,7 @@ Specifies how Configuration Manager refreshes the collection.
 Valid values are:
 
 - None
-- Manual 
+- Manual
 - Periodic
 - Continuous
 - Both
@@ -279,8 +280,23 @@ Valid values are:
 ```yaml
 Type: CollectionRefreshType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Manual, Periodic, Continuous, Both
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VariablePriority
+{{ Fill VariablePriority Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: DeviceCollectionVariablePrecedence
 
 Required: False
 Position: Named
@@ -306,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

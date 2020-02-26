@@ -1,14 +1,10 @@
 ---
-title: Add-CMCollectionToAdministrativeUser
-titleSuffix: Configuration Manager
 description: Adds a collection to administrative user.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMCollectionToAdministrativeUser
 ---
 
 # Add-CMCollectionToAdministrativeUser
@@ -73,22 +69,22 @@ Add-CMCollectionToAdministrativeUser -InputObject <IResultObject> -UserName <Str
 ```
 
 ## DESCRIPTION
- 
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: AddCollectionToAdminById_Id, AddCollectionToAdminById_Name, AddCollectionToAdminById_Object
@@ -102,8 +98,6 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
- 
-
 ```yaml
 Type: String
 Parameter Sets: AddCollectionToAdminByName_Id, AddCollectionToAdminByName_Name, AddCollectionToAdminByName_Object
@@ -137,7 +131,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +146,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,8 +156,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: AddCollectionToAdminByObject_Object, AddCollectionToAdminByObject_Id, AddCollectionToAdminByObject_Name
@@ -177,8 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -User
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: AddCollectionToAdminByObject_Object, AddCollectionToAdminById_Object, AddCollectionToAdminByName_Object
@@ -192,8 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: AddCollectionToAdminById_Id, AddCollectionToAdminByName_Id, AddCollectionToAdminByObject_Id
@@ -207,8 +195,6 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
- 
-
 ```yaml
 Type: String
 Parameter Sets: AddCollectionToAdminById_Name, AddCollectionToAdminByName_Name, AddCollectionToAdminByObject_Name
@@ -238,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -251,4 +237,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

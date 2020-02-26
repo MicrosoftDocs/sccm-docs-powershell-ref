@@ -1,14 +1,10 @@
 ---
-title: Import-CMConfigurationItem
-titleSuffix: Configuration Manager
 description: Imports Configuration Manager configuration items.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/29/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Import-CMConfigurationItem
 ---
 
 # Import-CMConfigurationItem
@@ -19,7 +15,7 @@ Imports Configuration Manager configuration items.
 
 ## SYNTAX
 
-```powershell
+```
 Import-CMConfigurationItem -FileName <String[]> [-DuplicateWhileImporting] [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -27,7 +23,7 @@ Import-CMConfigurationItem -FileName <String[]> [-DuplicateWhileImporting] [-For
 ## DESCRIPTION
 
 The **Import-CMConfigurationItem** cmdlet imports Microsoft System Center Configuration Manager configuration items from one or more cabinet files.
-The files that you import must conform to the Service Modeling Language (SML) schema and can contain information about configuration data from one of the following sources: 
+The files that you import must conform to the Service Modeling Language (SML) schema and can contain information about configuration data from one of the following sources:
 
 - Best practices from a System Center Configuration Manager Configuration Pack.
 - Configuration data that you have externally authored and packaged into a cabinet (.cab) file.
@@ -36,12 +32,17 @@ The files that you import must conform to the Service Modeling Language (SML) sc
 Configuration items contain one or more settings, along with compliance rules.
 Items usually define a unit of configuration you want to monitor.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import configuration items
 
 ```powershell
-PS C:\>Import-CMConfigurationItem -FileName "\\atc-dist-01\Public\CM\AdminUITeam\CIData\7389_OSCI.cab","\\atc-dist-01\Public\CM\AdminUITeam\CIData\7452OS_1.cab"
+PS XYZ:\>Import-CMConfigurationItem -FileName "\\atc-dist-01\Public\CM\AdminUITeam\CIData\7389_OSCI.cab","\\atc-dist-01\Public\CM\AdminUITeam\CIData\7452OS_1.cab"
 ```
 
 This command imports configuration items from the files 7389_OSCI.cab and 7452OS_1.cab.
@@ -49,7 +50,7 @@ This command imports configuration items from the files 7389_OSCI.cab and 7452OS
 ### Example 2: Import configuration items and create duplicate configuration items
 
 ```powershell
-PS C:\>Import-CMConfigurationItem -FileName "\\Contoso01\Public\CM\7389_OSCI.cab","\\ Contoso01\Public\CM\7452OS_1.cab" -DuplicateWhileImporting
+PS XYZ:\>Import-CMConfigurationItem -FileName "\\Contoso01\Public\CM\7389_OSCI.cab","\\ Contoso01\Public\CM\7452OS_1.cab" -DuplicateWhileImporting
 ```
 
 This command imports configuration items from the files 7389_OSCI.cab and 7452OS_1.cab.
@@ -80,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +99,7 @@ Use this parameter to create a configuration item when you want an exact copy of
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +115,7 @@ Specifies an array of names of cabinet (cab) files.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +133,7 @@ Use this parameter to create a configuration item when you want an exact copy of
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +151,7 @@ Use this parameter to create a configuration item when you want an exact copy of
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,12 +178,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
+[Introduction to Compliance Settings in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=211014)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

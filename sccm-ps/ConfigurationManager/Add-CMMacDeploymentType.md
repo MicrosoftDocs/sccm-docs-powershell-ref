@@ -1,14 +1,10 @@
 ---
-title: Add-CMMacDeploymentType
-titleSuffix: Configuration Manager
 description: Adds a Mac deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMMacDeploymentType
 ---
 
 # Add-CMMacDeploymentType
@@ -20,36 +16,44 @@ Adds a Mac deployment type.
 
 ### ByAppName (Default)
 ```
-Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DeploymentTypeName <String>]
- [-AddRequirement <Rule[]>] -ApplicationName <String> [-RemoveLanguage <String[]>]
- [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] -ContentLocation <String> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-GroupDetectionClauses <String[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
+ -ApplicationName <String> [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>]
+ [-Comment <String>] -ContentLocation <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppId
 ```
-Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DeploymentTypeName <String>]
- [-AddRequirement <Rule[]>] -ApplicationId <Int32> [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>]
- [-AddLanguage <String[]>] [-Comment <String>] -ContentLocation <String> [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-GroupDetectionClauses <String[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
+ -ApplicationId <Int32> [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>]
+ [-Comment <String>] -ContentLocation <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppValue
 ```
-Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-DeploymentTypeName <String>]
- [-AddRequirement <Rule[]>] -InputObject <IResultObject> [-RemoveLanguage <String[]>]
- [-RemoveRequirement <Rule[]>] [-AddLanguage <String[]>] [-Comment <String>] -ContentLocation <String> [-Force]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-CMMacDeploymentType [-AddDetectionClause <DetectionClause[]>] [-GroupDetectionClauses <String[]>]
+ [-DetectionClauseConnector <Hashtable[]>] [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>]
+ -InputObject <IResultObject> [-RemoveLanguage <String[]>] [-RemoveRequirement <Rule[]>]
+ [-AddLanguage <String[]>] [-Comment <String>] -ContentLocation <String> [-Force] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Add-CMMacDeploymentType** cmdlet adds a Mac deployment type to an application.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a Mac deployment type
 ```
-PS C:\>Add-CMMacDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac" -ContentLocation "\\Server01\Resources\Applications\Mac\Bean.app\Bean.app.cmmac" -Confirm -Comment "create a mac DT" -AddLanguage "en-US","zh-CN"
+PS XYZ:\>Add-CMMacDeploymentType -ApplicationName "testMac" -DeploymentTypeName "DTMac" -ContentLocation "\\Server01\Resources\Applications\Mac\Bean.app\Bean.app.cmmac" -Confirm -Comment "create a mac DT" -AddLanguage "en-US","zh-CN"
 ```
 
 This command adds the Mac deployment type named DTMac from the specified URL to the application named testMac in English and Chinese.
@@ -57,7 +61,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add a Mac deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testMac" | Add-CMMacDeploymentType -DeploymentTypeName "DTMac01" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -WhatIf -Comment "create a mac DT" -AddLanguage "zh-CN"
+PS XYZ:\> Get-CMApplication -Name "testMac" | Add-CMMacDeploymentType -DeploymentTypeName "DTMac01" -ContentLocation "\\Server01\Resources\Applications\Mac\Skype.app\Skype.app.cmmac" -WhatIf -Comment "create a mac DT" -AddLanguage "zh-CN"
 ```
 
 This command gets the application object named testMAC and uses the pipeline operator to pass the object to **Add-CMMacDeploymentType**.
@@ -87,7 +91,7 @@ Accept wildcard characters: False
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -107,7 +111,7 @@ Specifies an array of requirements for the deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +141,7 @@ Specifies the name of the application that is associated with the deployment typ
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -198,7 +202,22 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DetectionClauseConnector
+{{ Fill DetectionClauseConnector Description }}
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: DetectionClauseConnectors
 
 Required: False
 Position: Named
@@ -213,7 +232,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -243,7 +262,22 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupDetectionClauses
+{{ Fill GroupDetectionClauses Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: GroupDetectionClausesByLogicalName
 
 Required: False
 Position: Named
@@ -316,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Clear-CMOperatingSystemImageUpdateSchedule
-titleSuffix: Configuration Manager
 description: Removes a schedule for updating an operating system image.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Clear-CMOperatingSystemImageUpdateSchedule
 ---
 
 # Clear-CMOperatingSystemImageUpdateSchedule
@@ -42,19 +38,24 @@ The **Clear-CMOperatingSystemImageUpdateSchedule** cmdlet removes a schedule for
 Operating system images are .wim format files, which represent a compressed collection of reference files and folders that System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
 You can use System Center Configuration Manager to define a schedule for updating these images by using Component Based Servicing (CBS), then delete unwanted schedules by using this cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a schedule for updating an operating system image by using a name
 ```
-PS C:\>Clear-CMOperatingSystemUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
+PS XYZ:\>Clear-CMOperatingSystemUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
 ```
 
 This command removes a schedule named Win8UpdateSchedule that updates an operating system image.
 
 ### Example 2: Remove a schedule for updating an operating system image by using an object
 ```
-PS C:\> $Win8UpdateSchedule = Get-CMOperatingSystemUpdateSchedule -Id 1207
-PS C:\> Clear-CMOperatingSystemImageUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
+PS XYZ:\> $Win8UpdateSchedule = Get-CMOperatingSystemUpdateSchedule -Id 1207
+PS XYZ:\> Clear-CMOperatingSystemImageUpdateSchedule -OperatingSystemImageName "Win8UpdateSchedule"
 ```
 
 The first command gets the image update schedule by using the ID 1207.
@@ -85,7 +86,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +101,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +116,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,8 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -183,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

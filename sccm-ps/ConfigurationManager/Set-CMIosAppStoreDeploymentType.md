@@ -1,14 +1,10 @@
 ---
-title: Set-CMIosAppStoreDeploymentType
-titleSuffix: Configuration Manager
 description: Sets an iOS App Store deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMIosAppStoreDeploymentType
 ---
 
 # Set-CMIosAppStoreDeploymentType
@@ -53,11 +49,16 @@ Set-CMIosAppStoreDeploymentType [-Url <String>] [-AddRequirement <Rule[]>] -Inpu
 ## DESCRIPTION
 The **Set-CMIosAppStoreDeploymentType** cmdlet changes the settings for an iOS App Store deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a language from a deployment type
 ```
-PS C:\> Set-CMIOSAppStoreDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp02" -NewName "DTIOSapp02_updated" -Url "https://itunes.apple.com/us/app/warhammer-40-000-deathwatch/id791134629?mt=8" -PassThru -Comment "test-set-CMIOSAppStoreDeploymentType" -RemoveLanguage "en-US"
+PS XYZ:\> Set-CMIOSAppStoreDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp02" -NewName "DTIOSapp02_updated" -Url "https://itunes.apple.com/us/app/warhammer-40-000-deathwatch/id791134629?mt=8" -PassThru -Comment "test-set-CMIOSAppStoreDeploymentType" -RemoveLanguage "en-US"
 ```
 
 This command removes English from the deployment type named DTIOSapp02 for the application named testIOSapp.
@@ -66,7 +67,7 @@ The *PassThru* parameter indicates that an object is returned from this command.
 
 ### Example 2: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp01" | Set-CMIOSAppStoreDeploymentType -NewName "DTIOSapp01_Updated"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testIOSapp" -DeploymentTypeName "DTIOSapp01" | Set-CMIOSAppStoreDeploymentType -NewName "DTIOSapp01_Updated"
 ```
 
 This command gets the deployment type object named DTIOSapp01 for the application named testIOSapp and uses the pipeline operator to pass the object to **Set-CMIOSAppStoreDeploymentType**.
@@ -78,7 +79,7 @@ This command gets the deployment type object named DTIOSapp01 for the applicatio
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -98,7 +99,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +115,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,7 +145,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +190,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +205,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +235,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +282,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

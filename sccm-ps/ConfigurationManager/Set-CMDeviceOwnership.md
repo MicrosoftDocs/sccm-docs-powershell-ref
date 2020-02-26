@@ -1,14 +1,10 @@
 ---
-title: Set-CMDeviceOwnership
-titleSuffix: Configuration Manager
 description: Configures ownership type for a device.
+external help file: AdminUI.PS.Oob.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDeviceOwnership
 ---
 
 # Set-CMDeviceOwnership
@@ -41,11 +37,16 @@ The **Set-CMDeviceOwnership** cmdlet configures ownership type for a modern devi
 For a personal device, the information gathered is limited, and personal information is not removed during a wipe operation.
 For a company-owned device, additional information can be gathered and deleted during a wipe operation.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Identify a device as a company asset
 ```
-PS C:\> Set-CMDeviceOwnership -DeviceId "209846738" -OwnershipType Company
+PS XYZ:\> Set-CMDeviceOwnership -DeviceId "209846738" -OwnershipType Company
 ```
 
 This command identifies the specified device as a company asset.
@@ -103,7 +104,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ To obtain a **CMDevice** object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +156,7 @@ The device is not a company asset.
 ```yaml
 Type: DeviceOwnershipType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Company, Personal
 
 Required: True
@@ -182,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

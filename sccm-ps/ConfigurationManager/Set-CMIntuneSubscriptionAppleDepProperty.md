@@ -1,14 +1,10 @@
 ---
-title: Set-CMIntuneSubscriptionAppleDepProperty
-titleSuffix: Configuration Manager
 description: Updates a Microsoft Intune subscription to enable the Apple DEP.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMIntuneSubscriptionAppleDepProperty
 ---
 
 # Set-CMIntuneSubscriptionAppleDepProperty
@@ -27,13 +23,18 @@ Set-CMIntuneSubscriptionAppleDepProperty [-Enable <Boolean>] [-DepTokenPath <Str
 ## DESCRIPTION
 The **Set-CMIntuneSubscriptionAppleDepProperty** cmdlet updates the settings of a Microsoft Intune subscription to enable the Apple Device Enrollment Program (DEP).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable the Apple DEP
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
-PS C:\> $Creds = New-Object System.Management.Automation.PSCredential ("AccountName@CompanyName.onmicrosoft.com", $SecPasswd)
-PS C:\> Set-CMIntuneSubscriptionAppleDepProperty -Enable $True -AppleId "AppleID01" -DepTokenPath "C:\tokens\DepToken.p7m" -IntuneCredential $Creds
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
+PS XYZ:\> $Creds = New-Object System.Management.Automation.PSCredential ("AccountName@CompanyName.onmicrosoft.com", $SecPasswd)
+PS XYZ:\> Set-CMIntuneSubscriptionAppleDepProperty -Enable $True -AppleId "AppleID01" -DepTokenPath "C:\tokens\DepToken.p7m" -IntuneCredential $Creds
 ```
 
 The first command creates a secure password object and stores the object in the $SecPasswd variable.
@@ -51,7 +52,7 @@ Specifies an Apple ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +82,7 @@ Specifies the path to the Device Enrollment program (DEP) token.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +127,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +158,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

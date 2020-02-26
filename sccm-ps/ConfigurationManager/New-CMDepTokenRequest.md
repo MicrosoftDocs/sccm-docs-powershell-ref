@@ -1,14 +1,10 @@
 ---
-title: New-CMDepTokenRequest
-titleSuffix: Configuration Manager
 description: Creates an Apple DEP token reqeust.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMDepTokenRequest
 ---
 
 # New-CMDepTokenRequest
@@ -26,13 +22,18 @@ New-CMDepTokenRequest -IntuneCredential <PSCredential> [-OutputPath <String>] [-
 ## DESCRIPTION
 The **New-DepTokenRequest** cmdlet requests a public certificate from Microsoft Intune that can be used to download an encrypted DEP token from the Apple Deployment Program portal. Apple uses the public token to encrypt the DEP token. You need to provide a Microsoft Intune organizational account by using the *IntuneCredential* parameter.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a DEP token request
 ```
-PS C:\> $SecPasswd = ConvertTo-SecureString "password" -AsPlainText -Force
-PS C:\> $IntuneCreds = New-Object System.Management.Automation.PSCredential ("Username@CompanyName.onmicrosoft.com", $SecPasswd)
-PS C:\> New-CMDepTokenRequest -IntuneCredential $IntuneCreds -Path "c:\test.pem"
+PS XYZ:\> $SecPasswd = ConvertTo-SecureString "password" -AsPlainText -Force
+PS XYZ:\> $IntuneCreds = New-Object System.Management.Automation.PSCredential ("Username@CompanyName.onmicrosoft.com", $SecPasswd)
+PS XYZ:\> New-CMDepTokenRequest -IntuneCredential $IntuneCreds -Path "c:\test.pem"
 ```
 
 The first command converts a password to a secure string and stores it in the $SecPasswd variable.
@@ -65,7 +66,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +81,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,8 +106,6 @@ Accept wildcard characters: False
 ```
 
 ### -OutputPath
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -126,7 +125,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -161,4 +160,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

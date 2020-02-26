@@ -1,14 +1,7 @@
 ---
 title: Add-CMOutOfBandServicePoint
-titleSuffix: Configuration Manager
 description: Adds an out of band service point to Configuration Manager.
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Add-CMOutOfBandServicePoint
@@ -54,13 +47,18 @@ Add-CMOutOfBandServicePoint -ErrorRetryCount <Int32> -ErrorRetryMinutesDelay <In
 The **Add-CMOutOfBandServicePoint** cmdlet adds an out of band service point to Microsoft System Center Configuration Manager.
 An out of band service point is a site system role that provisions and configures Intel Active Management Technology (AMT)-based computers for Microsoft System Center Configuration Manager.
 
-For more information about out of band management for System Center Configuration Manager see [Introduction to Out of Band Management in Configuration Manager](http://go.microsoft.com/fwlink/?linkid=252706) in the TechNet library.
+For more information about out of band management for System Center Configuration Manager see [Introduction to Out of Band Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682076(v=technet.10)) in the TechNet library.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Add an out of band service point by using a site code
 ```
-PS C:\>Add-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2" -Thumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
+PS XYZ:\>Add-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2" -Thumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
 ```
 
 This command adds an out of band service point to the Microsoft System Center Configuration Manager site that has the site code named CM2 on the site system named cmcen-dist02.tsqa.contoso.com.
@@ -73,7 +71,7 @@ Specifies the trusted root certificate for out of band management.
 ```yaml
 Type: X509Certificate2
 Parameter Sets: OutOfBandServicePointWithCert, OutOfBandServicePointWithCertByValue
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -101,7 +99,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +113,7 @@ Indicates whether the out of band service point verifies the certificate revocat
 ```yaml
 Type: Boolean
 Parameter Sets: OutOfBandServicePointByValue, OutOfBandServicePoint
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +124,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: OutOfBandServicePointWithCert, OutOfBandServicePointWithCertByValue
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -168,7 +166,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -177,8 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -197,7 +195,7 @@ Specifies the site code for the Configuration Manager site that hosts this site 
 ```yaml
 Type: String
 Parameter Sets: OutOfBandServicePoint, OutOfBandServicePointWithCert
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +223,7 @@ Specifies the thumbprint of the AMT provisioning certificate.
 ```yaml
 Type: String
 Parameter Sets: OutOfBandServicePointByValue, OutOfBandServicePoint
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

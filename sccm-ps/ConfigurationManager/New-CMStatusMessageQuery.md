@@ -1,14 +1,10 @@
 ---
-title: New-CMStatusMessageQuery
-titleSuffix: Configuration Manager
 description: Creates a status message query.
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMStatusMessageQuery
 ---
 
 # New-CMStatusMessageQuery
@@ -28,11 +24,16 @@ The **New-CMStatusMessageQuery** cmdlet creates a status message query in Micros
 Status message queries in System Center Configuration Manager return status messages from the site database.
 All major System Center Configuration Manager components generate status messages.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a status message query
 ```
-PS C:\> New-CMStatusMessageQuery -Name "Client Component Configuration Changes and Fatal Errors" -Expression "select stat.*, ins.*, att1.*, stat.Time from SMS_StatusMessage as stat left join SMS_StatMsgInsStrings as ins on stat.RecordID = ins.RecordID left join SMS_StatMsgAttributes as att1 on stat.RecordID = att1.RecordID where stat.ModuleName = 'SMS Client' and stat.MessageID = 669 and stat.SiteCode = ##PRM:SMS_StatusMessage.SiteCode## and stat.Time >= ##PRM:SMS_StatusMessage.Time## order by stat.Time desc"
+PS XYZ:\> New-CMStatusMessageQuery -Name "Client Component Configuration Changes and Fatal Errors" -Expression "select stat.*, ins.*, att1.*, stat.Time from SMS_StatusMessage as stat left join SMS_StatMsgInsStrings as ins on stat.RecordID = ins.RecordID left join SMS_StatMsgAttributes as att1 on stat.RecordID = att1.RecordID where stat.ModuleName = 'SMS Client' and stat.MessageID = 669 and stat.SiteCode = ##PRM:SMS_StatusMessage.SiteCode## and stat.Time >= ##PRM:SMS_StatusMessage.Time## order by stat.Time desc"
 ```
 
 This command creates a status message query named Client Component Configuration Changes and Fatal Errors.
@@ -74,7 +75,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ Specifies WMI Query Language (WQL) text for the query.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +120,7 @@ Specifies a name for the status message query.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -145,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

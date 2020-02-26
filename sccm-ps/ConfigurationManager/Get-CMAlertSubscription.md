@@ -1,14 +1,10 @@
 ---
-title: Get-CMAlertSubscription
-titleSuffix: Configuration Manager
 description: Gets one or more alert subscription objects.
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMAlertSubscription
 ---
 
 # Get-CMAlertSubscription
@@ -35,25 +31,30 @@ If you specify the name or ID of an alert subscription, the cmdlet retrieves onl
 If you specify part of the name or ID of an alert subscription, the cmdlet retrieves all alert subscriptions that match the partial name or ID.
 If you do not specify anything, the cmdlet returns the properties of all alert subscriptions.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Display all alert subscriptions
 ```
-PS C:\> Get-CMAlertSubscription
+PS XYZ:\> Get-CMAlertSubscription
 ```
 
 This command displays all System Center Configuration Manager alert subscriptions.
 
 ### Example 2: Display alert subscriptions by ID by using wildcard characters
 ```
-PS C:\> Get-CMAlertSubscription -Id 16777*
+PS XYZ:\> Get-CMAlertSubscription -Id 16777*
 ```
 
 This command displays all System Center Configuration Manager alert subscriptions that have an ID that starts with the number 16777.
 
 ### Example 3: Display an alert subscription by name
 ```
-PS C:\> Get-CMAlertSubscription -Name "Subscription01"
+PS XYZ:\> Get-CMAlertSubscription -Name "Subscription01"
 ```
 
 This command displays the System Center Configuration Manager alert subscription named Subscription01.
@@ -66,7 +67,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +82,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ Specifies the ID of a subscription.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -111,7 +112,7 @@ Specifies the name of an alert subscription object.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

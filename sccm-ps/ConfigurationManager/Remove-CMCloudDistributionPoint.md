@@ -1,14 +1,10 @@
 ---
-title: Remove-CMCloudDistributionPoint
-titleSuffix: Configuration Manager
 description: Removes cloud-based distribution points.
+external help file: AdminUI.PS.Content.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMCloudDistributionPoint
 ---
 
 # Remove-CMCloudDistributionPoint
@@ -42,11 +38,16 @@ The **Remove-CMCloudDistributionPoint** cmdlet removes specified cloud-based dis
 When you remove a distribution point, System Center Configuration Manager deletes all the content stored there.
 If you want to suspend a distribution point temporarily, use the [Stop-CMCloudDistributionPoint](Stop-CMCloudDistributionPoint.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove all distribution points
 ```
-PS C:\> Remove-CMCloudDistributionPoint
+PS XYZ:\> Remove-CMCloudDistributionPoint
 ```
 
 This command removes all the cloud distribution points from System Center Configuration Manager.
@@ -54,7 +55,7 @@ Unless you use the *Force* parameter, the cmdlet prompts you for confirmation.
 
 ### Example 2: Remove a distribution point using a name
 ```
-PS C:\> Remove-CMCloudDistributionPoint -Name "West01"
+PS XYZ:\> Remove-CMCloudDistributionPoint -Name "West01"
 ```
 
 This command removes the cloud distribution point named West01.
@@ -62,7 +63,7 @@ Unless you use the *Force* parameter, the cmdlet prompts you for confirmation.
 
 ### Example 3: Remove a distribution point using an ID
 ```
-PS C:\> Remove-CMCloudDistributionPoint -Id "16777236"
+PS XYZ:\> Remove-CMCloudDistributionPoint -Id "16777236"
 ```
 
 This command removes the cloud distribution point that has the specified identifier.
@@ -91,7 +92,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +107,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +122,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +154,7 @@ To obtain a cloud distribution point object, you can use the Get-CMCloudDistribu
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -168,7 +169,7 @@ Specifies the name of a cloud distribution point.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -194,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

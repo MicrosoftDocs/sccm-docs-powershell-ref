@@ -1,14 +1,10 @@
 ---
-title: Set-CMGlobalConditionWqlQuery
-titleSuffix: Configuration Manager
 description: Sets a WQL Query type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMGlobalConditionWqlQuery
 ---
 
 # Set-CMGlobalConditionWqlQuery
@@ -19,22 +15,27 @@ Sets a WQL Query type global condition in Configuration Manager.
 
 ## SYNTAX
 
-```powershell
+```
 Set-CMGlobalConditionWqlQuery [-Property <String>] [-Namespace <String>] [-Class <String>]
  [-WhereClause <String>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **Set-CMGlobalConditionWqlQuery** cmdlet modifies settings for a WQL Query type global condition in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalWql = Set-CMGlobalConditionWqlQuery -DataType String -Class $aa -Property $aa -Namespace root\aaa -Name GC7
+PS XYZ:\> $GlobalWql = Set-CMGlobalConditionWqlQuery -DataType String -Class $aa -Property $aa -Namespace root\aaa -Name GC7
 ```
 
 This command sets a WQL Query type global condition in Configuration Manager.
@@ -49,6 +50,22 @@ Specifies the WMI class that will be used to build a WQL query that will be asse
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -154,38 +171,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhereClause
-
-Specifies a WHERE clause to be applied to the specified namespace, class, and property on client computers.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -203,21 +188,55 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhereClause
+
+Specifies a WHERE clause to be applied to the specified namespace, class, and property on client computers.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-- [New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
-- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
-- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
-- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
-- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
-- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)
+[New-CMGlobalConditionWqlQuery](./New-CMGlobalConditionWqlQuery.md)
+
+[Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+
+[Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+
+[Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+
+[Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+
+[Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+
+[Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+
+[Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+
+[Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+
+[Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+
+[Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+
+[Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

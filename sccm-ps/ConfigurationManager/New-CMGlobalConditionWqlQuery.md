@@ -1,14 +1,10 @@
 ---
-title: New-CMGlobalConditionWqlQuery
-titleSuffix: Configuration Manager
 description: Creates a WQL Query type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMGlobalConditionWqlQuery
 ---
 
 # New-CMGlobalConditionWqlQuery
@@ -19,10 +15,10 @@ Creates a WQL Query type global condition in Configuration Manager.
 
 ## SYNTAX
 
-```powershell
+```
 New-CMGlobalConditionWqlQuery -DataType <GlobalConditionDataType> [-Namespace <String>] -Class <String>
  -Property <String> [-WhereClause <String>] -Name <String> [-Description <String>] [-DisableWildcardHandling]
- [-ForceWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,12 +27,17 @@ The **New-CMGlobalConditionWqlQuery** cmdlet creates a Wql Query type global con
 
 A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalWql = New-CMGlobalConditionWqlQuery -DataType String -Class $aa -Property $aa -Namespace root\aaa -Name GC7
+PS XYZ:\> $GlobalWql = New-CMGlobalConditionWqlQuery -DataType String -Class $aa -Property $aa -Namespace root\aaa -Name GC7
 ```
 
 This command creates a WQL Query type global condition in Configuration Manager.
@@ -188,21 +189,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
-- [New-CMGlobalCondition](./New-CMGlobalCondition.md)
-- [New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
-- [New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
-- [New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
-- [New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
-- [New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
-- [New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
-- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
-- [New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
-- [New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
-- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)
+[Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+
+[New-CMGlobalCondition](./New-CMGlobalCondition.md)
+
+[New-CMGlobalConditionActiveDirectoryQuery](./New-CMGlobalConditionActiveDirectoryQuery.md)
+
+[New-CMGlobalConditionAssembly](./New-CMGlobalConditionAssembly.md)
+
+[New-CMGlobalConditionFile](./New-CMGlobalConditionFile.md)
+
+[New-CMGlobalConditionIisMetabase](./New-CMGlobalConditionIisMetabase.md)
+
+[New-CMGlobalConditionOmaUri](./New-CMGlobalConditionOmaUri.md)
+
+[New-CMGlobalConditionRegistryKey](./New-CMGlobalConditionRegistryKey.md)
+
+[New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
+
+[New-CMGlobalConditionScript](./New-CMGlobalConditionScript.md)
+
+[New-CMGlobalConditionSqlQuery](./New-CMGlobalConditionSqlQuery.md)
+
+[New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXpathQuery.md)

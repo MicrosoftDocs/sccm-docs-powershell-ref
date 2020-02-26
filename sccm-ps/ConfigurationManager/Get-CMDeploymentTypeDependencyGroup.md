@@ -1,14 +1,10 @@
 ---
-title: Get-CMDeploymentTypeDependencyGroup
-titleSuffix: Configuration Manager
 description: Gets a deployment type dependency group from Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 12/03/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDeploymentTypeDependencyGroup
 ---
 
 # Get-CMDeploymentTypeDependencyGroup
@@ -19,8 +15,8 @@ Gets a deployment type dependency group from Configuration Manager.
 
 ## SYNTAX
 
-```powershell
-Get-CMDeploymentTypeDependencyGroup [-GroupName <String>] -InputObject <IResultObject>
+```
+Get-CMDeploymentTypeDependencyGroup [-GroupName <String>] [-GroupId <String>] -InputObject <IResultObject>
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -28,12 +24,17 @@ Get-CMDeploymentTypeDependencyGroup [-GroupName <String>] -InputObject <IResultO
 
 The **Get-CMDeploymentTypeDependencyGroup** cmdlet gets a deployment type dependency group from the Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup
 ```
 
 This command returns the dependency groups of a deployment type.
@@ -47,7 +48,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,7 +64,22 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupId
+{{ Fill GroupId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +95,7 @@ Specifies a dependency group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,8 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -117,6 +132,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### DeploymentTypeDependencyGroup[]
 
 DeploymentTypeDependency
+
+## NOTES
 
 ## RELATED LINKS
 

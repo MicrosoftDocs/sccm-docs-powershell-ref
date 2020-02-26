@@ -1,14 +1,10 @@
 ---
-title: New-CMComputerAssociation
-titleSuffix: Configuration Manager
 description: Creates an association between two computers in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMComputerAssociation
 ---
 
 # New-CMComputerAssociation
@@ -32,11 +28,16 @@ In the course of migration, System Center Configuration Manager saves accounts c
 To create an association, specify the source computer, the destination computer, and at least one user name created on the source computer to be migrated.
 You can also specify whether the migration includes other user names from the source computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a computer association
 ```
-PS C:\> New-CMComputerAssociation -SourceComputer "TSQA073" -MigrationUserName "Contoso-TSQA\ElisaDaugherty" -DestinationComputer "TSQA155"
+PS XYZ:\> New-CMComputerAssociation -SourceComputer "TSQA073" -MigrationUserName "Contoso-TSQA\ElisaDaugherty" -DestinationComputer "TSQA155"
 ```
 
 This command creates a computer association between the source computer named TSQA073 and the destination computer named TSQA155.
@@ -80,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +96,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ The computer association can specify that the migration process creates some or 
 The acceptable values for this parameter are:
 
 - CaptureAllUserAccountsAndRestoreSpecifiedAccounts.
-Saves all accounts created on the source computer, but creates only the specified accounts on the destination computer. 
+Saves all accounts created on the source computer, but creates only the specified accounts on the destination computer.
 - CaptureAndRestoreAllUserAccounts.
 Saves all accounts created on the source computer, and creates them on the destination computer.
 - CaptureAndRestoreSpecifiedUserAccounts.
@@ -123,7 +124,7 @@ If you do not specify a migration behavior, the migration uses CaptureAndRestore
 ```yaml
 Type: MigrationBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: CaptureAndRestoreAllUserAccounts, CaptureAllUserAccountsAndRestoreSpecifiedAccounts, CaptureAndRestoreSpecifiedUserAccounts
 
 Required: False
@@ -140,7 +141,7 @@ The specified user names, along with the *MigrationBehavior* parameter setting, 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

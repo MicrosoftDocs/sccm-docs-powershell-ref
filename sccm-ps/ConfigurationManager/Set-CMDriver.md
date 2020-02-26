@@ -1,14 +1,10 @@
 ---
-title: Set-CMDriver
-titleSuffix: Configuration Manager
 description: Changes the settings of a device driver.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDriver
 ---
 
 # Set-CMDriver
@@ -24,6 +20,7 @@ Set-CMDriver -InputObject <IResultObject> [-NewName <String>] [-Description <Str
  [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
  [-AddAdministrativeCategory <IResultObject[]>] [-RemoveAdministrativeCategory <IResultObject[]>]
  [-ClearAdministrativeCategory] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
+ [-AddSupportedPlatformName <String[]>] [-RemoveSupportedPlatformName <String[]>] [-ClearSupportedPlatformName]
  [-AddDriverPackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
  [-UpdateDriverDistributionPoint <Boolean>] [-AddBootImagePackage <IResultObject[]>]
  [-RemoveBootImagePackage <IResultObject[]>] [-UpdateBootImageDistributionPoint <Boolean>] [-PassThru]
@@ -36,6 +33,7 @@ Set-CMDriver -Name <String> [-NewName <String>] [-Description <String>] [-Driver
  [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
  [-AddAdministrativeCategory <IResultObject[]>] [-RemoveAdministrativeCategory <IResultObject[]>]
  [-ClearAdministrativeCategory] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
+ [-AddSupportedPlatformName <String[]>] [-RemoveSupportedPlatformName <String[]>] [-ClearSupportedPlatformName]
  [-AddDriverPackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
  [-UpdateDriverDistributionPoint <Boolean>] [-AddBootImagePackage <IResultObject[]>]
  [-RemoveBootImagePackage <IResultObject[]>] [-UpdateBootImageDistributionPoint <Boolean>] [-PassThru]
@@ -48,6 +46,7 @@ Set-CMDriver -Id <String> [-NewName <String>] [-Description <String>] [-DriverSo
  [-EnableAndAllowInstall <Boolean>] [-AdministrativeCategory <IResultObject[]>]
  [-AddAdministrativeCategory <IResultObject[]>] [-RemoveAdministrativeCategory <IResultObject[]>]
  [-ClearAdministrativeCategory] [-RunOnAnyPlatform] [-SupportedPlatformName <String[]>]
+ [-AddSupportedPlatformName <String[]>] [-RemoveSupportedPlatformName <String[]>] [-ClearSupportedPlatformName]
  [-AddDriverPackage <IResultObject[]>] [-RemoveDriverPackage <IResultObject[]>]
  [-UpdateDriverDistributionPoint <Boolean>] [-AddBootImagePackage <IResultObject[]>]
  [-RemoveBootImagePackage <IResultObject[]>] [-UpdateBootImageDistributionPoint <Boolean>] [-PassThru]
@@ -57,12 +56,17 @@ Set-CMDriver -Id <String> [-NewName <String>] [-Description <String>] [-DriverSo
 ## DESCRIPTION
 The **Set-CMDriver** cmdlet changes settings of a device driver in the driver catalog.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a driver
 ```
-PS C:\> $Driver = Get-CMDriver -Name "cdrom.sys"
-PS C:\> Set-CMDriver -InputObject $Driver -NewName "testDriver" -Description "Test configuration" -EnableAndAllowInstall $True -RunOnAnyPlatform $True
+PS XYZ:\> $Driver = Get-CMDriver -Name "cdrom.sys"
+PS XYZ:\> Set-CMDriver -InputObject $Driver -NewName "testDriver" -Description "Test configuration" -EnableAndAllowInstall $True -RunOnAnyPlatform $True
 ```
 
 The first command gets a device driver named cdrom.sys by using the [Get-CMDriver](Get-CMDriver.md) cmdlet.
@@ -73,7 +77,7 @@ The command specifies values for the *EnableAndAllowInstall* and *RunOnAnyPlatfo
 
 ### Example 2: Modify a driver by using the pipeline
 ```
-PS C:\> Get-CMDriver -Name "cdrom.sys" | Set-CMDriver -NewName testDriver -Description description -EnableAndAllowInstall $True -RunOnAnyPlatform $True
+PS XYZ:\> Get-CMDriver -Name "cdrom.sys" | Set-CMDriver -NewName testDriver -Description description -EnableAndAllowInstall $True -RunOnAnyPlatform $True
 ```
 
 This command gets a driver named cdrom.sys, and then passes it to the current cmdlet by using the pipeline operator.
@@ -106,7 +110,7 @@ To obtain a boot image object, use the [Get-CMBootImage](Get-CMBootImage.md) cmd
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +127,22 @@ To obtain a driver package object, use the [Get-CMDriverPackage](Get-CMDriverPac
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSupportedPlatformName
+{{ Fill AddSupportedPlatformName Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddSupportedPlatformNames
 
 Required: False
 Position: Named
@@ -141,7 +160,7 @@ To obtain an administrative category object, use the **Get-CMCategory** cmdlet.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,6 +176,21 @@ Indicates that this cmdlet removes all the administrative category objects from 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: ClearAdministrativeCategories
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearSupportedPlatformName
+{{ Fill ClearSupportedPlatformName Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ClearSupportedPlatformNames
 
 Required: False
 Position: Named
@@ -186,7 +220,7 @@ Specifies a description for the device driver.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +235,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +251,7 @@ When you create a driver package, the source location of the package must point 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +266,7 @@ Indicates whether Configuration Manager enables the drivers and allows computers
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -247,7 +281,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -262,7 +296,7 @@ Specifies the ID of a device driver.
 ```yaml
 Type: String
 Parameter Sets: SetDriverById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -278,7 +312,7 @@ To obtain a driver object, use the **Get-CMDriver** cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetDriverByResultObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -293,7 +327,7 @@ Specifies the name of a device driver.
 ```yaml
 Type: String
 Parameter Sets: SetDriverByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -308,7 +342,7 @@ Specifies a new name for the device driver.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,7 +358,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -357,7 +391,7 @@ To obtain a boot image object, use the [Get-CMBootImage](Get-CMBootImage.md) cmd
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -374,7 +408,22 @@ To obtain a driver package object, use the **Get-CMDriverPackage** cmdlet.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSupportedPlatformName
+{{ Fill RemoveSupportedPlatformName Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoveSupportedPlatformNames
 
 Required: False
 Position: Named
@@ -389,7 +438,7 @@ Indicates that the device driver can run on all platforms.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -404,7 +453,7 @@ Specifies an array of names of platforms on which the device driver can run.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -460,7 +509,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

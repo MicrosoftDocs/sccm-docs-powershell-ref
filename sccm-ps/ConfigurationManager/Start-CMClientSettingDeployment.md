@@ -1,14 +1,10 @@
 ---
-title: Start-CMClientSettingDeployment
-titleSuffix: Configuration Manager
 description: Deploys client settings to devices in a collection.
+external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Start-CMClientSettingDeployment
 ---
 
 # Start-CMClientSettingDeployment
@@ -77,21 +73,26 @@ The **Start-CMClientSettingDeployment** cmdlet deploys client settings to device
 Specify the client setting object by using its name or ID, or you can use the **Get-CMClientSetting** cmdlet to get a client setting object.
 Specify the collection to apply the settings to by using its name or ID, or you can use the [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlet to get a device collection.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226) on TechNet.
+For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Deploy a client setting object by using its ID to a named collection
 ```
-PS C:\> Start-CMClientSettingDeployment -ClientSettingId "CSI1023" -CollectionName "General Computer Collection"
+PS XYZ:\> Start-CMClientSettingDeployment -ClientSettingId "CSI1023" -CollectionName "General Computer Collection"
 ```
 
 This command starts deployment of the client setting object that has the ID CSI1023 for the collection named General Computer Collection.
 
 ### Example 2: Deploy a client setting object by using a variable
 ```
-PS C:\> $CSID = Get-CMClientSetting -Id "CSI1023"
-PS C:\> Start-CMClientSettingDeployment -ClientSetting $CSID -CollectionName "General Computer Collection"
+PS XYZ:\> $CSID = Get-CMClientSetting -Id "CSI1023"
+PS XYZ:\> Start-CMClientSettingDeployment -ClientSetting $CSID -CollectionName "General Computer Collection"
 ```
 
 The first command gets a client setting object that has the ID CSI1023, and saves it in the $CSID variable.
@@ -107,7 +108,7 @@ To obtain a client setting object, use the [Get-CMClientSetting](Get-CMClientSet
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByClientSettingValue_CollectionId, SearchByClientSettingValue_CollectionName, SearchByClientSettingValue_CollectionValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -122,7 +123,7 @@ Specifies the ID of a client setting object.
 ```yaml
 Type: String
 Parameter Sets: SearchByClientSettingId_CollectionId, SearchByClientSettingId_CollectionName, SearchByClientSettingId_CollectionValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,7 +138,7 @@ Specifies the name of a client setting object.
 ```yaml
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingName_CollectionId, SearchByClientSettingName_CollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +155,7 @@ Configuration Manager applies the client settings to the members of this collect
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByClientSettingName_CollectionValue, SearchByClientSettingId_CollectionValue, SearchByClientSettingValue_CollectionValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -170,7 +171,7 @@ Configuration Manager applies the client settings to the members of this collect
 ```yaml
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionId, SearchByClientSettingId_CollectionId, SearchByClientSettingValue_CollectionId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -186,7 +187,7 @@ Configuration Manager applies the client settings to the members of this collect
 ```yaml
 Type: String
 Parameter Sets: SearchByClientSettingName_CollectionName, SearchByClientSettingId_CollectionName, SearchByClientSettingValue_CollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -216,7 +217,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,7 +232,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -257,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Remove-CMPackage
-titleSuffix: Configuration Manager
 description: Removes a Configuration Manager package.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMPackage
 ---
 
 # Remove-CMPackage
@@ -45,19 +41,24 @@ When you remove a package, System Center Configuration Manager removes it from t
 If the package was sent to child sites, System Center Configuration Manager removes the package information at those child sites.
 If a compressed version of source files for the package exists, System Center Configuration Manager deletes the compressed file from the site server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a package
 ```
-PS C:\> Remove-CMPackage -Id "CM10000D"
+PS XYZ:\> Remove-CMPackage -Id "CM10000D"
 ```
 
 This command removes the package that has the ID CM10000D.
 
 ### Example 2: Remove a package by using an object variable
 ```
-PS C:\> $Pkg = Get-CMPackage -Id "CM10000D"
-PS C:\> Remove-CMPackage -InputObject $Pkg
+PS XYZ:\> $Pkg = Get-CMPackage -Id "CM10000D"
+PS XYZ:\> Remove-CMPackage -InputObject $Pkg
 ```
 
 The first command gets the package that has the ID CM10000D, and then stores the results to the $Pkg variable.
@@ -87,7 +88,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +103,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +118,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +149,7 @@ To obtain a **CMPackage** object, use the [Get-CMPackage](Get-CMPackage.md) cmdl
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +164,7 @@ Specifies an array of package names.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Get-CMComponentStatusMessage
-titleSuffix: Configuration Manager
 description: Gets component status messages in Configuration Manager.
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMComponentStatusMessage
 ---
 
 # Get-CMComponentStatusMessage
@@ -33,11 +29,16 @@ Threads or processes send component status messages to Configuration Manager sit
 You can define which messages to get by the severity of the message, the component that created the message, the computer that hosts that component, or the Configuration Manager server that receives the message.
 You must specify a viewing period, as a **TimeSpan** object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get critical messages for a site
 ```
-PS C:\> Get-CMComponentStatusMessage -ViewingPeriod "2/1/2013 12:00 AM" -Severity Warning -SiteCode "CM1"
+PS XYZ:\> Get-CMComponentStatusMessage -ViewingPeriod "2/1/2013 12:00 AM" -Severity Warning -SiteCode "CM1"
 ```
 
 This command gets component status messages for the specified viewing period for the Configuration Manager site that has the site code CM1.
@@ -83,7 +84,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +99,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Severity
-Specifies the severity of status messages. 
+Specifies the severity of status messages.
 The acceptable values for this parameter are:
 
 - ALL
@@ -119,7 +120,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Severity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: All, Error, Warning, Information
 
 Required: False
@@ -135,7 +136,7 @@ Specifies an array of a site codes for Configuration Manager sites.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

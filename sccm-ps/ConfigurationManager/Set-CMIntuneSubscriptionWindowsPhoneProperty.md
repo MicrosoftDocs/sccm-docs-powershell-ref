@@ -1,14 +1,10 @@
 ---
-title: Set-CMIntuneSubscriptionWindowsPhoneProperty
-titleSuffix: Configuration Manager
 description: Updates a Microsoft Intune subscription to enable Windows Phone enrollment.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMIntuneSubscriptionWindowsPhoneProperty
 ---
 
 # Set-CMIntuneSubscriptionWindowsPhoneProperty
@@ -29,11 +25,16 @@ Set-CMIntuneSubscriptionWindowsPhoneProperty [-EnableWindowsPhone8 <Boolean>] [-
 ## DESCRIPTION
 The **Set-CMIntuneSubscriptionWindowsPhoneProperty** updates the settings of a Microsoft Intune subscription to enable Windows Phone enrollment.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable Windows Phone enrollment
 ```
-PS C:\> Set-CMIntuneSubscriptionWindowsPhoneProperty -EnableWindowsPhone81 $True
+PS XYZ:\> Set-CMIntuneSubscriptionWindowsPhoneProperty -EnableWindowsPhone81 $True
 ```
 
 This command enables Windows Phone 8.1 and Windows 10 Mobile enrollment for the Microsoft Intune subscription.
@@ -46,7 +47,7 @@ Specifies the path to the application enrollment token (AET) file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,7 +62,7 @@ Specifies the path to the application enrollment token (AET) XML file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +92,7 @@ Specifies the application package that contains the signed Company Portal .xap f
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +122,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +137,7 @@ Indicates whether Windows Phone 8.0 enrollment is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +167,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +182,7 @@ Indicates that no application enrollment token is needed.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +198,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +213,7 @@ Specifies, as a secure string, the password for the pfx certificate.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +228,7 @@ Specifies the path to a pfx certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -253,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Remove-CMClientCertificatePfx
-titleSuffix: Configuration Manager
 description: Removes a PFX client certificate.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMClientCertificatePfx
 ---
 
 # Remove-CMClientCertificatePfx
@@ -34,18 +30,23 @@ Remove-CMClientCertificatePfx -UserName <String> [-Thumbprint <String>]
 ## DESCRIPTION
 The **Remove-CMClientCertificatePFX** removes a client Personal Information Exchange (PFX) certificate from a site server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a PFX client certificate by using the pipeline
 ```
-PS C:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator01").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767 | Remove-CMClientCertificatePfx
+PS XYZ:\> Get-CMClientCertificatePfx -UserName (Get-CMUser -Name "Contoso\Administrator01").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767 | Remove-CMClientCertificatePfx
 ```
 
 This command gets the client Pfx certificate object for the user named Administrator01 with the specified thumbprint and uses the pipeline operator to pass the object to **Remove-CMClientCertificatePfx**, which removes the certificate.
 
 ### Example 2: Remove a PFX client certificate by name
 ```
-PS C:\> Remove-CMClientCertificatePfx -Username (Get-CMUser -Name "Contoso\Administrator02").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767
+PS XYZ:\> Remove-CMClientCertificatePfx -Username (Get-CMUser -Name "Contoso\Administrator02").SMSID -Thumbprint e1c2fff14282b61f79f78fbfca6721f0517ab767
 ```
 
 This command removes the client Pfx certificate for the user named Administrator02 with the specified thumbprint.
@@ -59,7 +60,7 @@ To obtain a PFX certificate object, use the Get-CMCertificateProfilePfx cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +120,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +136,7 @@ To obtain a client PFX certificate object, use the Get-CMClientCertificatePfx cm
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -150,7 +151,7 @@ Specifies the thumbprint of a client PFX certificate.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +167,7 @@ To set a value to the parameter, you can use `(get-cmuser -name domain\username)
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -192,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

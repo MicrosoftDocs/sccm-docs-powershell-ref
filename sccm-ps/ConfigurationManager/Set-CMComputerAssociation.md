@@ -1,14 +1,10 @@
 ---
-title: Set-CMComputerAssociation
-titleSuffix: Configuration Manager
 description: Changes settings for a computer association in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMComputerAssociation
 ---
 
 # Set-CMComputerAssociation
@@ -43,11 +39,16 @@ You can use this cmdlet to modify an association.
 You can add user names to the association, or remove user names.
 You can also change whether System Center Configuration Manager includes other user names from the source computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a computer association
 ```
-PS C:\> Set-CMComputerAssociation -DestinationComputer "TSQA155" -SourceComputer "TSQA073" -AddMigrationUserName "ContosoTSQA\EvanNarvaez" -MigrationBehavior CaptureAllUserAccountsAndRestoreSpecifiedAccounts -RemoveMigrationUserName "ContosoTSQA\ElisaDaugherty"
+PS XYZ:\> Set-CMComputerAssociation -DestinationComputer "TSQA155" -SourceComputer "TSQA073" -AddMigrationUserName "ContosoTSQA\EvanNarvaez" -MigrationBehavior CaptureAllUserAccountsAndRestoreSpecifiedAccounts -RemoveMigrationUserName "ContosoTSQA\ElisaDaugherty"
 ```
 
 This command changes the association between the computer named TSQA073 and TSQA155.
@@ -63,7 +64,7 @@ The cmdlet adds these user names to the current specified user names of the comp
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +109,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +124,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +141,7 @@ The computer association can specify that the migration process creates some or 
 The acceptable values for this parameter are:
 
 - CaptureAllUserAccountsAndRestoreSpecifiedAccounts.
-Saves all accounts created on the source computer, but creates only the specified accounts on the destination computer. 
+Saves all accounts created on the source computer, but creates only the specified accounts on the destination computer.
 - CaptureAndRestoreAllUserAccounts.
 Saves all accounts created on the source computer, and creates them on the destination computer.
 - CaptureAndRestoreSpecifiedUserAccounts.
@@ -149,7 +150,7 @@ Saves only the specified accounts from the source computer, and creates those ac
 ```yaml
 Type: MigrationBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: CaptureAndRestoreAllUserAccounts, CaptureAllUserAccountsAndRestoreSpecifiedAccounts, CaptureAndRestoreSpecifiedUserAccounts
 
 Required: False
@@ -160,12 +161,10 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationId
- 
-
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +180,7 @@ The cmdlet removes these user names from current specified user names of the com
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

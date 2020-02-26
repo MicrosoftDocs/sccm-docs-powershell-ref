@@ -1,14 +1,10 @@
 ---
-title: Set-CMConfigurationPolicyDeployment
-titleSuffix: Configuration Manager
 description: Creates a configuration policy deployment.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMConfigurationPolicyDeployment
 ---
 
 # Set-CMConfigurationPolicyDeployment
@@ -86,11 +82,16 @@ The **Set-CMConfigurationPolicyDeployment** cmdlet creates a configuration polic
 You can deploy firewall policies or user session management policies.
 Use the [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md) cmdlet to deploy specified policies for a System Center Configuration Manager collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a configuration policy deployment
 ```
-PS C:\> Set-CMConfigurationPolicyDeployment -CollectionName "Regional Remote Users" -FirewallPolicyName "Remote Firewall Policy"
+PS XYZ:\> Set-CMConfigurationPolicyDeployment -CollectionName "Regional Remote Users" -FirewallPolicyName "Remote Firewall Policy"
 ```
 
 This command creates a configuration policy deployment named Remote Firewall Policy and deploys it to the collection named Regional Remote Users.
@@ -98,12 +99,10 @@ This command creates a configuration policy deployment named Remote Firewall Pol
 ## PARAMETERS
 
 ### -Collection
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,12 +112,10 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +131,7 @@ The deployment applies to this collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +161,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +177,7 @@ During enforcement, a client reports compliance information about a deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +192,7 @@ Specifies the ID of a Windows Firewall policy.
 ```yaml
 Type: String
 Parameter Sets: SetFWPolicyDeploymentByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -210,7 +207,7 @@ Specifies the name of a Windows Firewall policy.
 ```yaml
 Type: String
 Parameter Sets: SetFWPolicyDeploymentByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -225,7 +222,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +237,7 @@ Indicates whether Configuration Manager generates alerts during the deployment.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,8 +247,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetPoicyByValueMandatory
@@ -270,7 +265,7 @@ Indicates whether System Center 2016 - Operations Manager monitoring criteria ap
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +281,7 @@ Service windows are periods of time allocated for maintenance.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -302,7 +297,7 @@ Configuration Manager stores the values in XML format.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -318,7 +313,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -328,12 +323,10 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -343,12 +336,10 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfileId
- 
-
 ```yaml
 Type: String
 Parameter Sets: SetRemoteConnectionDeploymentByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -358,12 +349,10 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteConnectionProfileName
- 
-
 ```yaml
 Type: String
 Parameter Sets: SetRemoteConnectionDeploymentByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -380,7 +369,7 @@ You can use the [New-CMSchedule](New-CMSchedule.md) cmdlet to create a schedule 
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -395,7 +384,7 @@ Specifies an ID of a user data and profile configuration item.
 ```yaml
 Type: String
 Parameter Sets: SetUSMPolicyDeploymentByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -410,7 +399,7 @@ Specifies a name of a user data and profile configuration item.
 ```yaml
 Type: String
 Parameter Sets: SetUSMPolicyDeploymentByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -436,7 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -449,7 +438,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMUserDataAndProfileConfigurationItem](Get-CMUserDataAndProfileConfigurationItem.md)
 
 [Get-CMWindowsFirewallPolicy](Get-CMWindowsFirewallPolicy.md)
- 
+
 [New-CMSchedule](New-CMSchedule.md)
 
 [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md)

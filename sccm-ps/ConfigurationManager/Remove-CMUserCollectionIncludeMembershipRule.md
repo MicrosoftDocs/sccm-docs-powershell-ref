@@ -1,14 +1,10 @@
 ---
-title: Remove-CMUserCollectionIncludeMembershipRule
-titleSuffix: Configuration Manager
 description: Removes an include membership rule from one or more user collection in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMUserCollectionIncludeMembershipRule
 ---
 
 # Remove-CMUserCollectionIncludeMembershipRule
@@ -76,13 +72,18 @@ Remove-CMUserCollectionIncludeMembershipRule -InputObject <IResultObject> -Inclu
 The **Remove-CMUserCollectionIncludeMembershipRule** cmdlet removes an include rule from the specified collections.
 You can specify the user collections by using their names, IDs, or by specifying an input object that represents the collections.
 
-For more information about collection rules in Microsoft System Center Configuration Manager, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information about collection rules in Microsoft System Center Configuration Manager, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Remove an include membership rule from a user collection
 ```
-PS C:\> Remove-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
+PS XYZ:\> Remove-CMUserCollectionIncludeMembershipRule -CollectionId "9990000D" -IncludeCollectionId "SMSDM001"
 ```
 
 This command removes the include membership rule that has the ID SMSDM001 from the user collection that has the ID 9990000D.
@@ -134,7 +135,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +148,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: ByNameAndValue, ByIdAndValue, ByValueAndValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByNameAndId, ByIdAndId, ByValueAndId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -173,7 +174,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByNameAndName, ByIdAndName, ByValueAndName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -212,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

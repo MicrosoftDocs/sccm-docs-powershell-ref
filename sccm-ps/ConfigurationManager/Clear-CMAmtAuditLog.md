@@ -1,14 +1,7 @@
 ---
 title: Clear-CMAmtAuditLog
-titleSuffix: Configuration Manager
 description: Clears audit log entries for Intel AMT-based computers.
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Clear-CMAmtAuditLog
@@ -66,26 +59,31 @@ You can specify computers by using the Microsoft System Center Configuration Man
 You can also clear audit logs for all the devices in a System Center Configuration Manager collection.
 Specify a collection by using the collection name or collection ID, or you can use the [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlet to get a device collection object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Clear the audit log by using an ID
 ```
-PS C:\>Clear-CMAmtAuditLog -DeviceID "16777230"
+PS XYZ:\>Clear-CMAmtAuditLog -DeviceID "16777230"
 ```
 
 This command clears the Intel AMT audit log for a device that has the ID 16777230.
 
 ### Example 2: Clear audit logs for a device collection
 ```
-PS C:\>Clear-CMAmtAuditLog -DeviceCollectionName "Floor03"
+PS XYZ:\>Clear-CMAmtAuditLog -DeviceCollectionName "Floor03"
 ```
 
 This command clears Intel AMT audit logs for the devices in a collection named Floor03.
 
 ### Example 3: Clear the audit log by using a variable
 ```
-PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com" 
-PS C:\> Clear-CMAmtAuditLog -Device $CMD -Force
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS XYZ:\> Clear-CMAmtAuditLog -Device $CMD -Force
 ```
 
 The first command gets a device object by using the **Get-CMDevice** cmdlet, and then stores it in the $CMD variable.
@@ -132,7 +130,7 @@ To obtain a device collection object, use **Get-CMDeviceCollection**.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByCollectionValueMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -146,7 +144,7 @@ Specifies an array of IDs of device collections.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByCollectionIdMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +158,7 @@ Specifies an array of names of device collections.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByCollectionNameMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -202,7 +200,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -216,7 +214,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -230,7 +228,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -254,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

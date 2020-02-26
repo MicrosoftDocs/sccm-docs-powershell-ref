@@ -1,14 +1,10 @@
 ---
-title: Add-CMSecurityRoleToAdministrativeUser
-titleSuffix: Configuration Manager
 description: Adds a security role to an administrative user or group in Configuration Manager.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMSecurityRoleToAdministrativeUser
 ---
 
 # Add-CMSecurityRoleToAdministrativeUser
@@ -78,23 +74,28 @@ The **Add-CMSecurityRoleToAdministrativeUser** cmdlet adds a security role to an
 Permissions defined in a role represent object types and actions available for each object type.
 System Center Configuration Manager provides some built-in security roles.
 You can also create custom security roles.
-For more information about security roles, see [Configuring Security for Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=247225) on TechNet.
+For more information about security roles, see [Configuring Security for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427332(v=technet.10)) on TechNet.
 
 You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
 You can specify a role to add by name or by ID, or you can use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to obtain a role.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Add a named role to a named user group
 ```
-PS C:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators " -RoleName "SecurityRole17"
+PS XYZ:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators " -RoleName "SecurityRole17"
 ```
 
 This command adds a security role named SecurityRole17 to the administrative group named Western Administrators.
 
 ### Example 2: Add a role to a named user group identified by using an ID
 ```
-PS C:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators" -RoleId "SMS38973"
+PS XYZ:\>Add-CMSecurityRoleToAdministrativeUser -AdministrativeUserName "Western Administrators" -RoleId "SMS38973"
 ```
 
 This command adds a security role that has the specified ID to the administrative group named Western Administrators.
@@ -108,7 +109,7 @@ To obtain an administrative user or administrative group object, use the [Get-CM
 ```yaml
 Type: IResultObject
 Parameter Sets: AddRoleToAdminById_Object, AddRoleToAdminByName_Object, AddRoleToAdminByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -123,7 +124,7 @@ Specifies an ID of an administrative user or administrative group.
 ```yaml
 Type: Int32
 Parameter Sets: AddRoleToAdminById_Id, AddRoleToAdminByName_Id, AddRoleToAdminByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -138,7 +139,7 @@ Specifies a name of an administrative user or administrative group.
 ```yaml
 Type: String
 Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminById_Name, AddRoleToAdminByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -168,7 +169,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +184,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,8 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -215,7 +216,7 @@ A role represents Configuration Manager permissions granted to a user.
 ```yaml
 Type: String
 Parameter Sets: AddRoleToAdminById_Id, AddRoleToAdminById_Name, AddRoleToAdminById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -231,7 +232,7 @@ A role represents Configuration Manager permissions granted to a user.
 ```yaml
 Type: String
 Parameter Sets: AddRoleToAdminByName_Name, AddRoleToAdminByName_Id, AddRoleToAdminByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -257,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

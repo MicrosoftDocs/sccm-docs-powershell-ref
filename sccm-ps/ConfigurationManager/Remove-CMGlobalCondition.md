@@ -1,14 +1,10 @@
 ---
-title: Remove-CMGlobalCondition
-titleSuffix: Configuration Manager
 description: Removes a Configuration Manager global condition object.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMGlobalCondition
 ---
 
 # Remove-CMGlobalCondition
@@ -20,22 +16,19 @@ Removes a Configuration Manager global condition object.
 ## SYNTAX
 
 ### SearchByValueMandatory (Default)
-
-```powershell 
+```
 Remove-CMGlobalCondition -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Remove-CMGlobalCondition -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
-
-```powershell
+```
 Remove-CMGlobalCondition -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -50,12 +43,17 @@ Global conditions specify how to provide and deploy applications to client devic
 You can specify a global condition by name or ID or use the **Get-CMGlobalCondition** cmdlet to obtain a global condition object.
 You cannot remove read-only global conditions.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a global condition
 
 ```powershell
-PS C:\> Remove-CMGlobalCondition -Name "GC56" -Force
+PS XYZ:\> Remove-CMGlobalCondition -Name "GC56" -Force
 ```
 
 This command removes a global condition named GC56.
@@ -64,10 +62,10 @@ Because the command uses the *Force* parameter, the system does not prompt you b
 ### Example 2: Remove a global condition using a variable
 
 ```powershell
-PS C:\> $CMGC = Get-CMGlobalCondition -Name "GC57"
-PS C:\> Remove-CMGlobalCondition -InputObject $CMGC
+PS XYZ:\> $CMGC = Get-CMGlobalCondition -Name "GC57"
+PS XYZ:\> Remove-CMGlobalCondition -InputObject $CMGC
 Remove
-Are you sure you wish to remove GlobalCondition: 
+Are you sure you wish to remove GlobalCondition:
 LocalizedDisplayName=" GC57"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
@@ -79,6 +77,22 @@ This command does not use the *Force* parameter, so it prompts you for confirmat
 
 ## PARAMETERS
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
 
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -86,7 +100,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +116,7 @@ Performs the action without a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +132,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +166,7 @@ To obtain a global condition object, use the **Get-CMGlobalCondition** cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -178,22 +192,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -212,11 +210,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-- [New-CMGlobalCondition](./Get-CMGlobalCondition.md)
-- [Get-CMGlobalCondition](./Set-CMGlobalCondition.md)
-- [Set-CMGlobalCondition](./Remove-CMGlobalCondition.md)
+[New-CMGlobalCondition](./Get-CMGlobalCondition.md)
+
+[Get-CMGlobalCondition](./Set-CMGlobalCondition.md)
+
+[Set-CMGlobalCondition](./Remove-CMGlobalCondition.md)

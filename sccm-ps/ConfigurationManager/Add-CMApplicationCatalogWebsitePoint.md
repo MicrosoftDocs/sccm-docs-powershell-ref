@@ -1,14 +1,10 @@
 ---
-title: Add-CMApplicationCatalogWebsitePoint
-titleSuffix: Configuration Manager
 description: Adds an Application Catalog website point to a Microsoft System Center Configuration Manager site.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMApplicationCatalogWebsitePoint
 ---
 
 # Add-CMApplicationCatalogWebsitePoint
@@ -90,11 +86,16 @@ You can customize the page that users see when they connect to the Application C
 Specify custom values for the colors blue, green, and red.
 You can also specify a name for users to see in the browser, such as a company name or a division within a company.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add an Application Catalog website point
 ```
-PS C:\>Add-CMApplicationCatalogWebsitePoint -ColorBlue 52 -ColorGreen 201 -ColorRed 168 -SiteCode "CM4" -SiteSystemServerName "ApplicationCatalog.Western.Contoso.com"
+PS XYZ:\>Add-CMApplicationCatalogWebsitePoint -ColorBlue 52 -ColorGreen 201 -ColorRed 168 -SiteCode "CM4" -SiteSystemServerName "ApplicationCatalog.Western.Contoso.com"
 ```
 
 This command adds an Application Catalog website point site system role for the site that has the site code CM4.
@@ -104,12 +105,10 @@ The command specifies values for the three colors.
 ## PARAMETERS
 
 ### -ApplicationWebServicePointServer
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +132,7 @@ Accept wildcard characters: False
 
 ### -ClientConnectionType
 Specifies how a client connects to the website.
-Valid values are: 
+Valid values are:
 
 - Internet
 - InternetAndIntranet
@@ -142,7 +141,7 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 
 Required: False
@@ -156,7 +155,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Color
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +171,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,7 +187,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,7 +203,7 @@ Configuration Manager uses custom colors to conform to customer branding.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +245,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +258,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -300,7 +299,7 @@ Specifies the Internet Information Services (IIS) website installed on the Appli
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -310,8 +309,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -331,7 +330,7 @@ Specifies the NetBIOS name of the server that hosts the Application Catalog webs
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -347,7 +346,7 @@ This name appears to users who access the Application Catalog.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -375,7 +374,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: AppWebSite, AppWebSitePoint, AppWebSitePointWithSsl
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -405,7 +404,7 @@ Specifies the name of the web application used for the application catalog.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -431,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

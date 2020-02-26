@@ -1,14 +1,10 @@
 ---
-title: Disable-CMDriver
-titleSuffix: Configuration Manager
 description: Disables a device driver.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Disable-CMDriver
 ---
 
 # Disable-CMDriver
@@ -40,12 +36,17 @@ Disable-CMDriver -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandli
 The **Disable-CMDriver** cmdlet disables a device driver in Microsoft System Center Configuration Manager.
 To enable the driver, use the [Enable-CMDriver](Enable-CMDriver.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Disable a device driver
 ```
-PS C:\> $Driver = Get-CMDriver -Name "Driver01"
-PS C:\> Disable-CMDriver -InputObject $Driver
+PS XYZ:\> $Driver = Get-CMDriver -Name "Driver01"
+PS XYZ:\> Disable-CMDriver -InputObject $Driver
 ```
 
 The first command gets the driver object named Driver01 and stores the object in the $Driver variable.
@@ -54,7 +55,7 @@ The second command disables the driver stored in $Driver.
 
 ### Example 2: Disable a device driver by using the pipeline
 ```
-PS C:\> Get-CMDriver -Name "Driver02" | Disable-CMDriver
+PS XYZ:\> Get-CMDriver -Name "Driver02" | Disable-CMDriver
 ```
 
 This command gets the driver object named Driver02 and uses the pipeline operator to pass the object to **Disable-CMDriver**, which disables the driver object.
@@ -169,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

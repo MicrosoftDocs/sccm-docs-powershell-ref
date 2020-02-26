@@ -1,14 +1,10 @@
 ---
-title: Remove-CMDeviceCollectionVariable
-titleSuffix: Configuration Manager
 description: Removes a device collection variable.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDeviceCollectionVariable
 ---
 
 # Remove-CMDeviceCollectionVariable
@@ -39,12 +35,17 @@ Remove-CMDeviceCollectionVariable -CollectionName <String> -VariableName <String
 ## DESCRIPTION
 The **Remove-CMDeviceCollectionVariable** cmdlet removes a device collection variable.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a device collection variable
 ```
-PS C:\> $Collection = Get-CMCollection -Name "Device" 
-PS C:\> Remove-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Force
+PS XYZ:\> $Collection = Get-CMCollection -Name "Device"
+PS XYZ:\> Remove-CMDeviceCollectionVariable -Collection $Collection -VariableName "testTS" -Force
 ```
 
 The first command gets the device collection object named Device and stores the object in the $Collection variable.
@@ -54,7 +55,7 @@ Specifying the *Force* parameter indicates that the user is not prompted before 
 
 ### Example 2: Remove a device collection variable by using the pipeline
 ```
-PS C:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionVariable -VariableName "testTS" -Force
+PS XYZ:\> Get-CMCollection -Name "Device" | Remove-CMDeviceCollectionVariable -VariableName "testTS" -Force
 ```
 
 This command gets the device collection object named Device and uses the pipeline operator to pass the object to **Remove-CMDeviceCollectionVariable**, which removes the device collection variable named testTS from the device collection object.
@@ -69,7 +70,7 @@ To obtain a collection object, use the [Get-CMCollection](Get-CMCollection.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,7 +85,7 @@ Specifies the ID of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,7 +100,7 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,7 +130,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +145,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +160,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +175,7 @@ Specifies the name of a collection variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,7 @@
 ---
 title: Set-CMCmdletUpdateCheck
-titleSuffix: Configuration Manager
 description: Configures update check settings on a per-user or per-system basis.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Set-CMCmdletUpdateCheck
@@ -47,12 +40,17 @@ You must be running as an administrator to set system settings.
 
 **Note:** This cmdlet is deprecated starting with version 1610, and may be removed in a future release.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Disable an update check
 ```
-PS C:\> $UpdateConfig = Get-CMCmdletUpdateCheck -CurrentUser
-PS C:\> Set-CMCmdletUpdateCheck -InputObject $UpdateConfig -IsUpdateCheckEnabled $False -CheckMinimumMins 5
+PS XYZ:\> $UpdateConfig = Get-CMCmdletUpdateCheck -CurrentUser
+PS XYZ:\> Set-CMCmdletUpdateCheck -InputObject $UpdateConfig -IsUpdateCheckEnabled $False -CheckMinimumMins 5
 ```
 
 The first command gets the cmdlet update check configuration object for the current user and stores the object in the $UpdateConfig variable.
@@ -61,7 +59,7 @@ The second command disables update check for the update check configuration obje
 
 ### Example 2: Pass an update check configuration object and disable it
 ```
-PS C:\> Get-CMCmdletUpdateCheck -CurrentUser | Set-CMCmdletUpdateCheck -IsUpdateCheckEnabled $False -CheckMinimumMins 5
+PS XYZ:\> Get-CMCmdletUpdateCheck -CurrentUser | Set-CMCmdletUpdateCheck -IsUpdateCheckEnabled $False -CheckMinimumMins 5
 ```
 
 This command gets the cmdlet update check configuration object for the current user and uses the pipeline operator to pass the object to **Set-CmdletUpdateCheck**, which disables update check for the configuration object.
@@ -254,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

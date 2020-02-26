@@ -1,14 +1,10 @@
 ---
-title: Add-CMIosDeploymentType
-titleSuffix: Configuration Manager
 description: Adds an iOS deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMIosDeploymentType
 ---
 
 # Add-CMIosDeploymentType
@@ -45,11 +41,16 @@ Add-CMIosDeploymentType [-DeploymentTypeName <String>] [-AddRequirement <Rule[]>
 ## DESCRIPTION
 The **Add-CMIosDeploymentType** cmdlet adds an iOS deployment type to an application.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add an iOS deployment type
 ```
-PS C:\>Add-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS01" -ContentLocation "\\server01\Applications\Ipa\iOSTestAppV2\iOSTestAppV2.ipa" -Confirm -Comment "Create an IOS DT" -AddLanguage "en-US","zh-CN"
+PS XYZ:\>Add-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS01" -ContentLocation "\\server01\Applications\Ipa\iOSTestAppV2\iOSTestAppV2.ipa" -Confirm -Comment "Create an IOS DT" -AddLanguage "en-US","zh-CN"
 ```
 
 This command adds the iOS deployment type named DTIOS01 from the specified location to the application named testIOS in English and Chinese.
@@ -57,7 +58,7 @@ By using the *Confirm* parameter, the user is prompted for confirmation before t
 
 ### Example 2: Add an iOS deployment type by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "testIOS" | Add-CMIOSDeploymentType -DeploymentTypeName "DTIOS" -ContentLocation "\\server01\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -Comment "Create an IOS DT" -AddLanguage "zh-CN","en-US
+PS XYZ:\> Get-CMApplication -Name "testIOS" | Add-CMIOSDeploymentType -DeploymentTypeName "DTIOS" -ContentLocation "\\server01\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -Comment "Create an IOS DT" -AddLanguage "zh-CN","en-US
 ```
 
 This command gets the application object named testIOS and uses the pipeline operator to pass the object to **Add-CMIOSDeploymentType**.
@@ -69,7 +70,7 @@ This command gets the application object named testIOS and uses the pipeline ope
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -89,7 +90,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +120,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -180,7 +181,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +196,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,7 +226,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

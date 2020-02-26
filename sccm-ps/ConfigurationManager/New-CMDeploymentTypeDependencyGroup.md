@@ -1,14 +1,10 @@
 ---
-title: New-CMDeploymentTypeDependencyGroup
-titleSuffix: Configuration Manager
 description: Creates a deployment type dependency group in Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 12/03/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMDeploymentTypeDependencyGroup
 ---
 
 # New-CMDeploymentTypeDependencyGroup
@@ -19,7 +15,7 @@ Creates a deployment type dependency group in Configuration Manager.
 
 ## SYNTAX
 
-```powershell
+```
 New-CMDeploymentTypeDependencyGroup -GroupName <String> -InputObject <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -29,12 +25,17 @@ New-CMDeploymentTypeDependencyGroup -GroupName <String> -InputObject <IResultObj
 The **New-CMDeploymentTypeDependencyGroup** cmdlet creates a deployment type dependency group in the Microsoft System Center Configuration Manager.
 Must be added to an existing deployment type by using [Add-CMDeploymentTypeDependency](./Add-CMDeploymentTypeDependency.md).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | New-CMDeploymentTypeDependencyGroup -GroupName MyGroup
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | New-CMDeploymentTypeDependencyGroup -GroupName MyGroup
 ```
 
 This command creates a new dependency group call MyGroup for the deployment type MyApp.
@@ -48,7 +49,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -64,7 +65,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +81,7 @@ Specifies a group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -106,8 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -115,7 +115,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
+### Microsoft.ConfigurationManagement.cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
+
+## NOTES
 
 ## RELATED LINKS
 

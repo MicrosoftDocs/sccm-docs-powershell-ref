@@ -1,14 +1,10 @@
 ---
-title: Set-CMExchangeServer
-titleSuffix: Configuration Manager
 description: Changes settings for an Exchange server.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMExchangeServer
 ---
 
 # Set-CMExchangeServer
@@ -21,9 +17,9 @@ Changes settings for an Exchange server.
 ```
 Set-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-NewServerAddress <String>]
  [-IsHosted <Boolean>] [-ExchangeClientAccessServer <Dictionary`2[]>] [-UserName <String>]
- [-FullSyncSchedule <IResultObject>] [-DeltaSyncMins <Int32>] [-MaximumInactiveDays <Int32>] [-FindAll]
- [-ActiveDirectoryContainer <String[]>] [-GeneralSetting <ExchangeConnectorGeneralSetting>]
- [-PasswordSetting <ExchangeConnectorPasswordSetting>]
+ [-NotificationUserName <String>] [-FullSyncSchedule <IResultObject>] [-DeltaSyncMins <Int32>]
+ [-MaximumInactiveDays <Int32>] [-FindAll] [-ActiveDirectoryContainer <String[]>]
+ [-GeneralSetting <ExchangeConnectorGeneralSetting>] [-PasswordSetting <ExchangeConnectorPasswordSetting>]
  [-EmailManagementSetting <ExchangeConnectorEmailManagementSetting>]
  [-SecuritySetting <ExchangeConnectorSecuritySetting>]
  [-ApplicationSetting <ExchangeConnectorApplicationSetting>] [-AllowExternalDeviceManagement <Boolean>]
@@ -37,16 +33,21 @@ The **Set-CMExchangeServer** cmdlet changes settings for a Microsoft Exchange Se
 
 Microsoft System Center Configuration Manager works with Exchange Server to manage mobile devices that cannot run Configuration Manager clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change settings for an nextref_exchange
 ```
-PS C:\> $Gs= New-CMExchangeServerConnectorGeneralSetting -AllowInternetShare $True -AllowDesktopSync $True -AllowNonProvision $True -RefreshInterval 4
-PS C:\> $Ps= New-CMExchangeServerConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity
-PS C:\> $Em = New-CMExchangeServerConnectorEmailManagementSetting -ConsumerEmail $True -MaximumEmailAge OneDay -MaximumCalenderAge ThreeMonths -PushWhenRoaming $True -AllowHtmlEmail $True -EmailAttachmentPolicy $True -MaximumSizeTextEmail 401 -MaximumSizeHtmlEmail 402 -MaximumSizeAttachment 24
-PS C:\> $Ss = New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
-PS C:\> $As= New-CMExchangeServerConnectorApplicationSetting -UnsignedInstall $True -UnsignedApplication $False -BlockedApplication "App01","App02"
-PS C:\> Set-CMExchangeServer -SiteCode "CM2" -ServerAddress "http://www.contoso.com/powershell" -NewServerAddress "www.fabrikam.com" -UserName "ElisaDaugherty@contoso.com" -DeltaSyncInterval 124 -MaximumInactiveDay 26 -FindAll -AllowExternalDeviceManagement $False -EnableAccessRule $True -AccessLevel Allow -EmailAddress "EvanNarvaez@fabrikam.com","DavidChew@contosco.com" -GeneralSetting $Gs -PasswordSetting $Ps -EmailManagementSetting $Em -SecuritySetting $Ss -ApplicationSetting $As
+PS XYZ:\> $Gs= New-CMExchangeServerConnectorGeneralSetting -AllowInternetShare $True -AllowDesktopSync $True -AllowNonProvision $True -RefreshInterval 4
+PS XYZ:\> $Ps= New-CMExchangeServerConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity
+PS XYZ:\> $Em = New-CMExchangeServerConnectorEmailManagementSetting -ConsumerEmail $True -MaximumEmailAge OneDay -MaximumCalenderAge ThreeMonths -PushWhenRoaming $True -AllowHtmlEmail $True -EmailAttachmentPolicy $True -MaximumSizeTextEmail 401 -MaximumSizeHtmlEmail 402 -MaximumSizeAttachment 24
+PS XYZ:\> $Ss = New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
+PS XYZ:\> $As= New-CMExchangeServerConnectorApplicationSetting -UnsignedInstall $True -UnsignedApplication $False -BlockedApplication "App01","App02"
+PS XYZ:\> Set-CMExchangeServer -SiteCode "CM2" -ServerAddress "https://www.contoso.com/powershell" -NewServerAddress "www.fabrikam.com" -UserName "ElisaDaugherty@contoso.com" -DeltaSyncInterval 124 -MaximumInactiveDay 26 -FindAll -AllowExternalDeviceManagement $False -EnableAccessRule $True -AccessLevel Allow -EmailAddress "EvanNarvaez@fabrikam.com","DavidChew@contosco.com" -GeneralSetting $Gs -PasswordSetting $Ps -EmailManagementSetting $Em -SecuritySetting $Ss -ApplicationSetting $As
 ```
 
 The first command uses the **New-CMExchangeServerConnectorGeneralSetting** cmdlet to add new settings to an Exchange Server connector in Configuration Manager, and stores the settings in the $Gs variable.<!--505995-->
@@ -71,7 +72,7 @@ The command specifies application-related settings for a mobile device stored in
 ### -AccessLevel
 Specifies the type of access for the mobile devices.
 Access level applies to a mobile device that is not managed by a rule.
-Valid values are: 
+Valid values are:
 
 - Allow
 - Block
@@ -80,7 +81,7 @@ Valid values are:
 ```yaml
 Type: AccessLevelType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Allow, Block, Quarantine
 
 Required: False
@@ -125,7 +126,7 @@ Indicates whether an external device management program can manage the device.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +143,7 @@ Valid values are: AllowUnsignedApplications, AllowUnsignedInstallationPackages, 
 ```yaml
 Type: ExchangeConnectorApplicationSetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +186,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,7 +217,7 @@ For each dictionary entry in the array, specify the setting name as the key and 
 ```yaml
 Type: ExchangeConnectorEmailManagementSetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,7 +232,7 @@ Indicates whether to enable an access rule.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +247,7 @@ Specifies Exchange Client Access servers, as key-value pairs.
 ```yaml
 Type: Dictionary`2[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +262,7 @@ Indicates that the discovery process find all mobile devices in an Exchange orga
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +277,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -291,7 +292,7 @@ Specifies a result object that schedules the full discovery time for an Exchange
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -302,7 +303,7 @@ Accept wildcard characters: False
 
 ### -GeneralSetting
 Specifies general settings for mobile devices that use the Exchange Server Connector.
-Settings you can specify for this parameter include: 
+Settings you can specify for this parameter include:
 
 - RequireManualSyncWhenRoaming
 - RequireStorageCardEncryption
@@ -313,7 +314,7 @@ Settings you can specify for this parameter include:
 ```yaml
 Type: ExchangeConnectorGeneralSetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -328,7 +329,7 @@ Indicates that the Exchange Server connector configuration is for a hosted or on
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -356,7 +357,22 @@ Specifies a new server address for an Exchange server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationUserName
+{{ Fill NotificationUserName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -367,7 +383,7 @@ Accept wildcard characters: False
 
 ### -PasswordSetting
 Specifies general password settings.
-Settings you can specify for this parameter include: 
+Settings you can specify for this parameter include:
 
 - AlphanumericDevicePasswordRequired
 - DevicePasswordEnabled
@@ -383,7 +399,7 @@ Settings you can specify for this parameter include:
 ```yaml
 Type: ExchangeConnectorPasswordSetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -394,7 +410,7 @@ Accept wildcard characters: False
 
 ### -SecuritySetting
 Specifies a dictionary of security settings.
-Settings you can specify for this parameter include: 
+Settings you can specify for this parameter include:
 
 - AllowBluetooth
 - AllowBrowser
@@ -411,7 +427,7 @@ Settings you can specify for this parameter include:
 ```yaml
 Type: ExchangeConnectorSecuritySetting
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -426,7 +442,7 @@ Specifies the address of the Exchange Server for which the cmdlet configures the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -441,7 +457,7 @@ Specifies the Exchange Server by using a site code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -456,7 +472,7 @@ Specifies the user name that the connector uses to connect to the Exchange Serve
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -482,7 +498,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Set-CMMobileMsiDeploymentType
-titleSuffix: Configuration Manager
 description: Sets a mobile Windows Installer deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMMobileMsiDeploymentType
 ---
 
 # Set-CMMobileMsiDeploymentType
@@ -54,11 +50,16 @@ Set-CMMobileMsiDeploymentType [-InstallCommand <String>] [-AddRequirement <Rule[
 ## DESCRIPTION
 The **Set-CMMobileMsiDeploymentType** cmdlet changes the settings for a mobile Windows Installer deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a mobile Windows Installer deployment type
 ```
-PS C:\> Set-CMMobileMsiDeploymentType -ApplicationName "testMobile" -DeploymentTypeName "DTMobile" -NewName "DTMobile_Updated" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\test\32BitCompat.msi" -PassThru -Confirm -Comment "test-set-CMMobileMsiDeploymentType"
+PS XYZ:\> Set-CMMobileMsiDeploymentType -ApplicationName "testMobile" -DeploymentTypeName "DTMobile" -NewName "DTMobile_Updated" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\test\32BitCompat.msi" -PassThru -Confirm -Comment "test-set-CMMobileMsiDeploymentType"
 ```
 
 This command changes the name of the mobile Windows Installer deployment type named DTMobile for the application named testMobile to DTMobile_Updated, and adds a description.
@@ -66,7 +67,7 @@ The *PassThru* parameter indicates that an object will be returned from this com
 
 ### Example 2: Modify a mobile Windows Installer deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testMobile" -DeploymentTypeName "DTMobile_Updated" | Set-CMMobileMsiDeploymentType -NewName "DTMobile" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -PassThru -DisableWildcardHandling -Comment "test-set-CMMobileMsiDeploymentType"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testMobile" -DeploymentTypeName "DTMobile_Updated" | Set-CMMobileMsiDeploymentType -NewName "DTMobile" -ContentLocation "\\Server01\Resources\Applications\MSI\32BitSDK\32BitCompat.msi" -PassThru -DisableWildcardHandling -Comment "test-set-CMMobileMsiDeploymentType"
 ```
 
 This command gets the mobile Windows Installer deployment type object named DTMobile_Updated for the application named testMobile and uses the pipeline operator to pass the object to **Set-CMMobileMsiDeploymentType**.
@@ -79,7 +80,7 @@ The *PassThru* parameter indicates that an object will be returned from this com
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -99,7 +100,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +116,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -145,7 +146,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -191,7 +192,7 @@ The site system server requires permissions to read the content files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +207,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -221,7 +222,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +252,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +283,7 @@ Specifies the command to use to install the Windows Installer package from the c
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,7 +314,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -370,7 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Set-CMDeploymentTypeDependency
-titleSuffix: Configuration Manager
 description: Sets a deployment type dependency in Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDeploymentTypeDependency
 ---
 
 # Set-CMDeploymentTypeDependency
@@ -20,24 +16,21 @@ Sets a deployment type dependency in Configuration Manager.
 ## SYNTAX
 
 ### GeneralConfig (Default)
-
-```powershell
+```
 Set-CMDeploymentTypeDependency -DeploymentTypeDependency <IResultObject>
  -InputObject <DeploymentTypeDependencyGroup> -IsAutoInstall <Boolean> [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### IncreasePriority
-
-```powershell
+```
 Set-CMDeploymentTypeDependency -DeploymentTypeDependency <IResultObject>
  -InputObject <DeploymentTypeDependencyGroup> [-IncreasePriority] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DecreasePriority
-
-```powershell
+```
 Set-CMDeploymentTypeDependency -DeploymentTypeDependency <IResultObject>
  -InputObject <DeploymentTypeDependencyGroup> [-DecreasePriority] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -46,6 +39,13 @@ Set-CMDeploymentTypeDependency -DeploymentTypeDependency <IResultObject>
 ## DESCRIPTION
 
 The **Set-CMDeploymentTypeDependency** sets a deployment type as a dependency to a dependency group.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
+## EXAMPLES
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Indicates decreasing priority. This action changes the order in which the client
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DecreasePriority
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ Specifies a deployment type object.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ Indicates increasing priority. This action changes the order in which the client
 ```yaml
 Type: SwitchParameter
 Parameter Sets: IncreasePriority
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,12 +163,12 @@ Accept wildcard characters: False
 
 ### -IsAutoInstall
 
-Indicate whether install automatically. 
+Indicate whether install automatically.
 
 ```yaml
 Type: Boolean
 Parameter Sets: GeneralConfig
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -184,7 +184,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,16 +211,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
+### Microsoft.ConfigurationManagement.cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
 
 ## OUTPUTS
 
 ### IResultObject#SMS_Application
+
+## NOTES
 
 ## RELATED LINKS
 

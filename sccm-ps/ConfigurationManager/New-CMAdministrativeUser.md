@@ -1,14 +1,10 @@
 ---
-title: New-CMAdministrativeUser
-titleSuffix: Configuration Manager
 description: Creates an administrative user.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMAdministrativeUser
 ---
 
 # New-CMAdministrativeUser
@@ -18,10 +14,17 @@ Creates an administrative user.
 
 ## SYNTAX
 
+### New
 ```
 New-CMAdministrativeUser -Name <String> -RoleName <String[]> [-SecurityScopeName <String[]>]
  [-CollectionName <String[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
+```
+
+### Advanced
+```
+New-CMAdministrativeUser -Name <String> -Permission <IResultObject[]> [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,11 +32,16 @@ The **New-CMAdministrativeUser** cmdlet creates an administrative user for Micro
 At the same time that you create the administrative user account, you can give the new administrative user access to collections of Configuration Manager resources.
 You can also define the types of access that the new administrative user has to each collection by assigning security roles to the user.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add an administrative user
 ```
-PS C:\> New-CMAdministrativeUser -Name "Consoto\AdminUser1" -RoleName "Application Administrator","Software Update Manager" -SecurityScopeName "scope1","scope2" -CollectionName "userCollection1","deviceCollection1"
+PS XYZ:\> New-CMAdministrativeUser -Name "Consoto\AdminUser1" -RoleName "Application Administrator","Software Update Manager" -SecurityScopeName "scope1","scope2" -CollectionName "userCollection1","deviceCollection1"
 ```
 
 This command adds the user named AdminUser1 as an administrative user to the Application Administrator and Software Update Manager security roles.
@@ -47,8 +55,8 @@ The cmdlet assigns the new administrative user to each of these collections.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: New
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +86,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +101,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,6 +117,21 @@ Specifies the name of the administrative user in the form \<domain\>\\\<user\>.
 Type: String
 Parameter Sets: (All)
 Aliases: LogonName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Permission
+{{ Fill Permission Description }}
+
+```yaml
+Type: IResultObject[]
+Parameter Sets: Advanced
+Aliases: Permissions
 
 Required: True
 Position: Named
@@ -140,8 +163,8 @@ Valid values are:
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: New
+Aliases:
 
 Required: True
 Position: Named
@@ -157,8 +180,8 @@ The cmdlet assigns the security scopes that you specify to the administrative us
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: New
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

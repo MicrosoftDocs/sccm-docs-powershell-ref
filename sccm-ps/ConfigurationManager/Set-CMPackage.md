@@ -1,14 +1,10 @@
 ---
-title: Set-CMPackage
-titleSuffix: Configuration Manager
 description: Changes configuration settings for Configuration Manager packages.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMPackage
 ---
 
 # Set-CMPackage
@@ -73,11 +69,16 @@ If System Center Configuration Manager cannot find a match, or if you do not spe
 An exit code of zero indicates that the program successfully ran.
 Any other values indicate application-specific error codes.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Rename a package and add a description
 ```
-PS C:\> Set-CMPackage -Id "ST120001" -NewName "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
+PS XYZ:\> Set-CMPackage -Id "ST120001" -NewName "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
 ```
 
 This command renames the package that has the ID ST120001.
@@ -85,8 +86,8 @@ The command changes the name of the package to ScriptsPackage02 and adds a descr
 
 ### Example 2: Rename a package by using an object variable
 ```
-PS C:\> $Pkg = Get-CMPackage -Id ST120001
-PS C:\> Set-CMPackage -InputObject $Pkg -Newname "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
+PS XYZ:\> $Pkg = Get-CMPackage -Id ST120001
+PS XYZ:\> Set-CMPackage -InputObject $Pkg -Newname "ScriptsPackage02" -Description "This package deploys scripts that run on a recurring schedule."
 ```
 
 The first command gets the package that has the ID ST120001, and stores the results in the $Pkg variable.
@@ -143,7 +144,7 @@ You can use a maximum of 128 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +159,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +211,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -223,7 +224,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -238,7 +239,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +270,7 @@ To obtain a **CMPackage** object, use the [Get-CMPackage](Get-CMPackage.md) cmdl
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -287,7 +288,7 @@ For example, you can have an English version and a German version of the same pa
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +304,7 @@ You can use a maximum of 32 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -318,7 +319,7 @@ Specifies the name of the MIF file that contains the package status.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -334,7 +335,7 @@ The file name extension must be .mif.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -349,7 +350,7 @@ Specifies the name of the software publisher of the package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -364,7 +365,7 @@ Specifies the version number of the MIF file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -377,7 +378,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -390,7 +391,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -403,7 +404,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -418,7 +419,7 @@ Specifies a package name.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -433,7 +434,7 @@ Specifies a new name for the package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -449,7 +450,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -480,7 +481,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -493,7 +494,7 @@ Accept wildcard characters: False
 ```yaml
 Type: PrestageBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ManualCopy, DownloadDelta, OnDemand
 
 Required: False
@@ -541,7 +542,7 @@ Specifies a version number for the package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -567,7 +568,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

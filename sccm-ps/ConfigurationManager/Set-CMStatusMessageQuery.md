@@ -1,14 +1,10 @@
 ---
-title: Set-CMStatusMessageQuery
-titleSuffix: Configuration Manager
 description: Changes settings or security scope or deletes messages for a Configuration Manager status message query.
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMStatusMessageQuery
 ---
 
 # Set-CMStatusMessageQuery
@@ -67,25 +63,30 @@ Every status message query must belong to at least one security scope.
 
 You can specify a name or ID for a query or use the [Get-CMStatusMessageQuery](Get-CMStatusMessageQuery.md) cmdlet to obtain a query.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a security scope
 ```
-PS C:\> Set-CMStatusMessageQuery -Name "All Status Messages" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
+PS XYZ:\> Set-CMStatusMessageQuery -Name "All Status Messages" -SecurityScopeAction AddMembership -SecurityScopeName "Scope22"
 ```
 
 This command adds the security scope named Scope22 to the query named All Status Messages.
 
 ### Example 2: Delete messages
 ```
-PS C:\> Set-CMStatusMessageQuery -DeleteMessage -Name "All Active Directory Security Groups"
+PS XYZ:\> Set-CMStatusMessageQuery -DeleteMessage -Name "All Active Directory Security Groups"
 ```
 
 This command removes messages found by the query named All Active Directory Security Groups from the System Center Configuration Manager database.
 
 ### Example 3: Rename a query
 ```
-PS C:\> Set-CMStatusMessageQuery -Name "All Active Directory Security Groups" -NewName "Western Security Groups"
+PS XYZ:\> Set-CMStatusMessageQuery -Name "All Active Directory Security Groups" -NewName "Western Security Groups"
 ```
 
 This command renames the query All Active Directory Security Groups.
@@ -127,7 +128,7 @@ Indicates that messages found by this query are deleted from the Configuration M
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +143,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +158,7 @@ Specifies an expression in WMI Query Language (WQL).
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +173,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +204,7 @@ To obtain a status message query object, use the [Get-CMStatusMessageQuery](Get-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, DeleteMessageByObjectMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -218,7 +219,7 @@ Specifies a name for a status message query.
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByNameMandatory, DeleteMessageByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -233,7 +234,7 @@ Specifies a new name for a query.
 ```yaml
 Type: String
 Parameter Sets: SetStatusMessageQueryByObjectMandatory, SetStatusMessageQueryByIdMandatory, SetStatusMessageQueryByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +250,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DeleteMessageByIdMandatory, DeleteMessageByNameMandatory, DeleteMessageByObjectMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

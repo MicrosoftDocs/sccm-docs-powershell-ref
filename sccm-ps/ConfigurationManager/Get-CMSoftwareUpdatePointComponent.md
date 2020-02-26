@@ -1,14 +1,10 @@
 ---
-title: Get-CMSoftwareUpdatePointComponent
-titleSuffix: Configuration Manager
 description: Retrieves a software update point component in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSoftwareUpdatePointComponent
 ---
 
 # Get-CMSoftwareUpdatePointComponent
@@ -27,18 +23,23 @@ Get-CMSoftwareUpdatePointComponent [-SiteSystemServerName <String>] [-SiteCode <
 The **Get-CMSoftwareUpdatePointComponent** cmdlet retrieves a software update point component.
 A software update point component interacts with WSUS services to configure update settings, request synchronization to the upstream update source, and synchronize updates from the WSUS database to the site server database on the central site.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Retrieve a software update point component by name
 ```
-PS C:\> Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
+PS XYZ:\> Get-CMSoftwareUpdatePointComponent -SiteSystemServerName "Contoso-SiteSysSrv.Western.Contoso.com"
 ```
 
 This command retrieves a software update point component by using the site system server name.
 
 ### Example 2: Retrieve a software update point component by site code
 ```
-PS C:\> Get-CMSoftwareUpdatePointComponent -SiteCode "CM1"
+PS XYZ:\> Get-CMSoftwareUpdatePointComponent -SiteCode "CM1"
 ```
 
 This command retrieves a software update point component by using the site code.
@@ -51,7 +52,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,7 +67,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +82,7 @@ Specifies a site code in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,12 +107,10 @@ Accept wildcard characters: False
 ```
 
 ### -WsusSyncManager
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

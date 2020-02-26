@@ -1,14 +1,7 @@
 ---
 title: Update-CMAmtProvisioning
-titleSuffix: Configuration Manager
 description: Updates provisioning for an Intel AMT-based computer.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Update-CMAmtProvisioning
@@ -43,26 +36,31 @@ This cmdlet updates provisioning information.
 
 You can specify computers to update by using the System Center Configuration Manager device name or device ID, or you can use the [Get-CMDevice](Get-CMDevice.md) cmdlet to get a device object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Update provisioning for a device by using an ID
 ```
-PS C:\>Update-CMAmtProvisioning -DeviceID "16777230"
+PS XYZ:\>Update-CMAmtProvisioning -DeviceID "16777230"
 ```
 
 This command updates provisioning for an Intel AMT-based computer that has the device ID 16777230.
 
 ### Example 2: Update provisioning for a device by using an ID
 ```
-PS C:\>Update-CMAmtProvisioning -DeviceName "Accn023.Contoso.com"
+PS XYZ:\>Update-CMAmtProvisioning -DeviceName "Accn023.Contoso.com"
 ```
 
 This command updates provisioning for an Intel AMT-based computer named Accn023.Contoso.com.
 
 ### Example 3: Enable audit logging by using a variable
 ```
-PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
-PS C:\> Update-CMAmtProvisioning -Device $CMD
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS XYZ:\> Update-CMAmtProvisioning -Device $CMD
 ```
 
 The first command gets a device object by using the **Get-CMDevice** cmdlet, and then stores it in the $CMD variable.
@@ -92,7 +90,7 @@ To obtain a device object, use **Get-CMDevice**.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -134,7 +132,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +146,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

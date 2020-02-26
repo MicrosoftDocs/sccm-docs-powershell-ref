@@ -1,14 +1,10 @@
 ---
-title: Add-CMDistributionPointToGroup
-titleSuffix: Configuration Manager
 description: Adds a distribution point to a distribution point group.
+external help file: AdminUI.PS.Content.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDistributionPointToGroup
 ---
 
 # Add-CMDistributionPointToGroup
@@ -79,11 +75,16 @@ Distribution point groups provide a logical grouping of distribution points for 
 You can add one or more distribution points from any site in the Microsoft System Center Configuration Manager hierarchy to the distribution point group.
 You can also add the distribution point to more than one distribution point group so that you can manage and monitor content from a central location for distribution points that span multiple sites.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a distribution point to a group
 ```
-PS C:\>Add-CMDistributionPointToGroup -DistributionPointGroupName "DPG01" -Id "{FA921CF2-89C9-407D-A21D-FE6947F2C00A}"
+PS XYZ:\>Add-CMDistributionPointToGroup -DistributionPointGroupName "DPG01" -Id "{FA921CF2-89C9-407D-A21D-FE6947F2C00A}"
 ```
 
 This command adds the distribution point that has the Id FA921CF2-89C9-407D-A21D-FE6947F2C00A to the distribution point group named DPG01.
@@ -111,7 +112,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +128,7 @@ To obtain a **CMDistributionPoint** object, use the [Get-CMDistributionPoint](Ge
 ```yaml
 Type: IResultObject
 Parameter Sets: AddDistributionPointToGroupByObject_Object, AddDistributionPointToGroupByObject_Id, AddDistributionPointToGroupByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +144,7 @@ To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPoin
 ```yaml
 Type: IResultObject
 Parameter Sets: AddDistributionPointToGroupByObject_Object, AddDistributionPointToGroupById_Object, AddDistributionPointToGroupByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +159,7 @@ Specifies the ID of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: AddDistributionPointToGroupById_Id, AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -173,7 +174,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: AddDistributionPointToGroupById_Name, AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +189,7 @@ Specifies the ID of a distribution point.
 ```yaml
 Type: String
 Parameter Sets: AddDistributionPointToGroupById_Id, AddDistributionPointToGroupById_Name, AddDistributionPointToGroupById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -203,7 +204,7 @@ Specifies the name of a distribution point.
 ```yaml
 Type: String
 Parameter Sets: AddDistributionPointToGroupByName_Id, AddDistributionPointToGroupByName_Name, AddDistributionPointToGroupByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -218,7 +219,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

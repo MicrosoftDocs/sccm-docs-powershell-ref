@@ -1,14 +1,10 @@
 ---
-title: Remove-CMDistributionPointGroup
-titleSuffix: Configuration Manager
 description: Removes distribution point groups.
+external help file: AdminUI.PS.Content.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDistributionPointGroup
 ---
 
 # Remove-CMDistributionPointGroup
@@ -40,18 +36,23 @@ Remove-CMDistributionPointGroup -Id <String> [-Force] [-DisableWildcardHandling]
 The **Remove-CMDistributionPointGroup** cmdlet removes one or more distribution point groups.
 When you remove a distribution point group, you cannot use the distribution point group to distribute content to the site collections that are associated with the distribution point group and to the distribution points that are members of the distribution point group.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a distribution point group by using an ID
 ```
-PS C:\> Remove-CMDistributionPointGroup -Id "{03BCD6FE-5604-4725-B650-DD1EA03676DE}"
+PS XYZ:\> Remove-CMDistributionPointGroup -Id "{03BCD6FE-5604-4725-B650-DD1EA03676DE}"
 ```
 
 This command removes the distribution point group that has the ID 03BCD6FE-5604-4725-B650-DD1EA03676DE.
 
 ### Example 2: Remove a distribution point group by using a name
 ```
-PS C:\> Remove-CMDistributionPointGroup -Name "DpgDept01"
+PS XYZ:\> Remove-CMDistributionPointGroup -Name "DpgDept01"
 ```
 
 This command removes the distribution point group named DpgDept01.
@@ -79,7 +80,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +95,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +110,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +141,7 @@ To obtain a **CMDistributionPointGroup** object, use the [Get-CMDistributionPoin
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +156,7 @@ Specifies a name of a distribution point group.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

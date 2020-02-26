@@ -1,14 +1,10 @@
 ---
-title: Set-CMEmailNotificationComponent
-titleSuffix: Configuration Manager
 description: Changes configuration settings of an email notification component.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMEmailNotificationComponent
 ---
 
 # Set-CMEmailNotificationComponent
@@ -35,11 +31,16 @@ Set-CMEmailNotificationComponent [-DisableEmailNotification] [-DisableWildcardHa
 The **Set-CMEmailNotificationComponent** cmdlet changes configuration settings of an email notification component in Microsoft System Center Configuration Manager.
 You can configure the email notification component for each System Center Configuration Manager site to configure email subscriptions to alerts.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable email notification
 ```
-PS C:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM2" -EnableEmailNotification $True -MstpServerFqdn "mail.corp.contosco.com" -Port 25 -TypeOfAuthentication DefaultServiceAccount -SendFrom "evan.narvaez@contoso.com"
+PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM2" -EnableEmailNotification $True -MstpServerFqdn "mail.corp.contosco.com" -Port 25 -TypeOfAuthentication DefaultServiceAccount -SendFrom "evan.narvaez@contoso.com"
 ```
 
 This command enables email notification for System Center Configuration Manager.
@@ -49,14 +50,14 @@ The command specifies that System Center Configuration Manager uses the default 
 
 ### Example 2: Disable email notification
 ```
-PS C:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -EnableEmailNotification $False
+PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -EnableEmailNotification $False
 ```
 
 This command disables email notification for System Center Configuration Manager on the site server named cmcen-dist02.tsqa.corp.contoso.com.
 
 ### Example 3: Set the outgoing SMTP port for email notification
 ```
-PS C:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -Port 27
+PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -Port 27
 ```
 
 This command sets the outgoing SMTP port that System Center Configuration Manager uses for sending email alerts on the site server named cmcen-dist02.tsqa.corp.contoso.com to port 27.
@@ -84,7 +85,7 @@ Indicates that email notification is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Disable
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -99,7 +100,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +115,7 @@ Indicates that Configuration Manager uses an SMTP server to send email alerts.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Enable
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -129,7 +130,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +145,7 @@ Specifies the outgoing SMTP port for sending email alerts.
 ```yaml
 Type: Int32
 Parameter Sets: Enable
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +160,7 @@ Specifies the email address from which Configuration Manager sends email alerts.
 ```yaml
 Type: String
 Parameter Sets: Enable
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,7 +175,7 @@ Specifies the fully qualified domain name (FQDN) of the SMTP server.
 ```yaml
 Type: String
 Parameter Sets: Enable
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -194,7 +195,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: AuthenticationMethod
 Parameter Sets: Enable
-Aliases: 
+Aliases:
 Accepted values: Anonymous, DefaultServiceAccount, Other
 
 Required: True
@@ -205,12 +206,10 @@ Accept wildcard characters: False
 ```
 
 ### -UseSsl
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: Enable
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +225,7 @@ This parameter also specifies the SMTP Server Connection account.
 ```yaml
 Type: String
 Parameter Sets: Enable
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

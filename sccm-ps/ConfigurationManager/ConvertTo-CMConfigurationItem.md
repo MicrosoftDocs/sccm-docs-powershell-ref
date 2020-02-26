@@ -1,14 +1,10 @@
 ---
-title: ConvertTo-CMConfigurationItem
-titleSuffix: Configuration Manager
 description: Convert a Configuration Manager management iResultObject to a configuration item object.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/29/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: ConvertTo-CMConfigurationItem
 ---
 
 # ConvertTo-CMConfigurationItem
@@ -20,29 +16,33 @@ Convert a Configuration Manager management iResultObject to a configuration item
 ## SYNTAX
 
 ### ByObjectValue (Default)
-
-```powershell
+```
 ConvertTo-CMConfigurationItem -InputObject <IResultObject> [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByStringValue
-
-```powershell
+```
 ConvertTo-CMConfigurationItem -DigestText <String> [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **ConvertTo-CMConfigurationItem** cmdlet converts a string which contains Configuration Item digest XML definition into a ConfigurationItem object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $myCI = ConvertTo-CMConfigurationItem -DigestText $digestString 
-PS C:\> $myCI.Persist($myCI)    
+PS XYZ:\> $myCI = ConvertTo-CMConfigurationItem -DigestText $digestString
+PS XYZ:\> $myCI.Persist($myCI)
 ```
 
 This command converts a digest into a ConfigurationItem object, and then save the object to the site.
@@ -130,6 +130,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
@@ -138,9 +141,11 @@ Accept wildcard characters: False
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
+[Introduction to Compliance Settings in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=211014)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

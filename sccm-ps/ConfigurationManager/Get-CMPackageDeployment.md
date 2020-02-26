@@ -1,14 +1,10 @@
 ---
-title: Get-CMPackageDeployment
-titleSuffix: Configuration Manager
 description: Gets a package deployment from Configuration Manager.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMPackageDeployment
 ---
 
 # Get-CMPackageDeployment
@@ -20,32 +16,28 @@ Gets a package deployment from Configuration Manager.
 ## SYNTAX
 
 ### SearchByName (Default)
-
-```powershell
+```
 Get-CMPackageDeployment [-Name <String>] [-ProgramName <String>] [-Summary] [-CollectionName <String>]
  [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchById
-
-```powershell
+```
 Get-CMPackageDeployment [-ProgramName <String>] [-PackageId <String>] [-Summary] [-CollectionName <String>]
  [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByDeploymentId
-
-```powershell
+```
 Get-CMPackageDeployment [-ProgramName <String>] [-DeploymentId <String>] [-Summary] [-CollectionName <String>]
  [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
-
-```powershell
+```
 Get-CMPackageDeployment [-ProgramName <String>] [-InputObject <IResultObject>] [-Summary]
  [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
@@ -55,12 +47,17 @@ Get-CMPackageDeployment [-ProgramName <String>] [-InputObject <IResultObject>] [
 
 The **Get-CMPackageDeployment** cmdlet starts deployment of a specified software package to computers that belong to a Microsoft System Center Configuration Manager collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Get-CMPackageDeployment -PackageId $thisPackage.packageid
+PS XYZ:\> Get-CMPackageDeployment -PackageId $thisPackage.packageid
 ```
 
 This command gets a package deployment by the package id.
@@ -74,7 +71,7 @@ Specifies the user collection.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +87,7 @@ Specifies the ID of a device or user collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +103,7 @@ Specifies the name of a user collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +135,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +151,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +215,7 @@ Specifies the name of a program.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +229,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -242,8 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -256,6 +252,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 IResultObject#SMS_DeploymentSummary
 IResultObject[]#SMS_Advertisement
 IResultObject#SMS_Advertisement
+
+## NOTES
 
 ## RELATED LINKS
 

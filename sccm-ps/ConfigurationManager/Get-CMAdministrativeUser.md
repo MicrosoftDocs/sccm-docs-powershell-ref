@@ -1,14 +1,10 @@
 ---
-title: Get-CMAdministrativeUser
-titleSuffix: Configuration Manager
 description: Gets an administrative user.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMAdministrativeUser
 ---
 
 # Get-CMAdministrativeUser
@@ -34,18 +30,23 @@ Get-CMAdministrativeUser -Id <String> [-RoleName <String[]>] [-DisableWildcardHa
 The **Get-CMAdministrativeUser** cmdlet gets one or more administrative users in Microsoft System Center Configuration Manager.
 An administrative user has a defined set of permissions and may be a member of one or more scopes or roles.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all the administrative users
 ```
-PS C:\> Get-CMAdministrativeUser
+PS XYZ:\> Get-CMAdministrativeUser
 ```
 
 This command gets all administrative users.
 
 ### Example 2: Get administrative user by name
 ```
-PS C:\> Get-CMAdministrativeUser -Name "testDomain\myAdminUser"
+PS XYZ:\> Get-CMAdministrativeUser -Name "testDomain\myAdminUser"
 ```
 
 This command gets the administrative user named AdminUser1.
@@ -58,7 +59,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +74,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +115,7 @@ Accept wildcard characters: False
 
 ### -RoleName
 Specifies an array of names of security roles.
-Valid values are: 
+Valid values are:
 
 - Application Administrator
 - Application Author
@@ -146,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
