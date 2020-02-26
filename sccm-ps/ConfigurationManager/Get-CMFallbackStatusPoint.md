@@ -1,14 +1,10 @@
 ---
-title: Get-CMFallbackStatusPoint
-titleSuffix: Configuration Manager
 description: Gets a Configuration Manager fallback status point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMFallbackStatusPoint
 ---
 
 # Get-CMFallbackStatusPoint
@@ -37,11 +33,16 @@ You can get fallback status point for a site system name or a site code or both.
 Microsoft System Center Configuration Manager can use one or more fallback status points to collect state messages for a site and send them on to Configuration Manager.
 You can use this cmdlet to get a fallback status point to use with other cmdlets, such as the Set-CMFallbackStatusPoint cmdlet or the Remove-CMFallbackStatusPoint cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a fallback status point
 ```
-PS C:\> Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
+PS XYZ:\> Get-CMFallbackStatusPoint -SiteCode "CM1" -SiteSystemServerName "Server21.West01.Contoso.com"
 ```
 
 This command gets a fallback status point for the site with the site code cm1 and the system name Server21.West01.Contoso.com.
@@ -51,8 +52,6 @@ This example specifies both the site code and the server name.
 ## PARAMETERS
 
 ### -AllSite
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -71,7 +70,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +85,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,13 +95,13 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,7 +116,7 @@ Specifies the site code for a fallback status point.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Get-CMIPSubnet
-titleSuffix: Configuration Manager
 description: Gets a Configuration Manager IP subnet.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMIPSubnet
 ---
 
 # Get-CMIPSubnet
@@ -33,13 +29,18 @@ The **Get-CMIPSubnet** cmdlet gets an IP subnet object that Microsoft System Cen
 
 A boundary is a network location on the intranet that can contain one or more devices that you want to manage.
 Configuration Manager can define a boundary in several ways, including an IP subnet.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268431) on TechNet.
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get an IP subnet
 ```
-PS C:\> Get-CMIPSubnet -Name "West07Subnet"
+PS XYZ:\> Get-CMIPSubnet -Name "West07Subnet"
 ```
 
 This command gets the IP subnet object named West07Subnet.
@@ -52,7 +53,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -67,7 +68,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

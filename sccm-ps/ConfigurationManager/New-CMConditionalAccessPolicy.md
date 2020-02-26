@@ -1,14 +1,10 @@
 ---
-title: New-CMConditionalAccessPolicy
-titleSuffix: Configuration Manager
 description: Creates a conditional access policy.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMConditionalAccessPolicy
 ---
 
 # New-CMConditionalAccessPolicy
@@ -44,11 +40,16 @@ The **New-CMConditionalAccessPolicy** cmdlet creates a conditional access policy
 
 NOTE: Ensure that the Administrator has set the notification email address for the Exchange connector before running this cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a conditional access policy by value
 ```
-PS C:\> New-CMConditionalAccessPolicy -TargetedCollection (Get-CMCollection -Name 'All Users') -DefaultRuleOverride -ExcludedCollection (Get-CMCollection -Name "TestCol") -NotificationText "Succeedtest"
+PS XYZ:\> New-CMConditionalAccessPolicy -TargetedCollection (Get-CMCollection -Name 'All Users') -DefaultRuleOverride -ExcludedCollection (Get-CMCollection -Name "TestCol") -NotificationText "Succeedtest"
 ```
 
 This command creates a conditional access policy with a targeted collection named All Users and an excluded collection named TestCol.
@@ -56,7 +57,7 @@ The command provides text for the user notification sent by Exchange when the us
 
 ### Example 2: Create a conditional access policy by ID
 ```
-PS C:\> New-CMConditionalAccessPolicy -TargetedCollectionId sms00004 -ExcludedCollectionID TS300014 -NotificationText "Test text" -DefaultRuleOverride
+PS XYZ:\> New-CMConditionalAccessPolicy -TargetedCollectionId sms00004 -ExcludedCollectionID TS300014 -NotificationText "Test text" -DefaultRuleOverride
 ```
 
 This command creates a conditional access policy with a targeted collection with the ID of sms00004 and an excluded collection with the ID TS300014.
@@ -64,7 +65,7 @@ The command provides text for the user notification sent by Exchange when the us
 
 ### Example 3: Create a conditional access policy by name
 ```
-PS C:\> New-CMConditionalAccessPolicy -TargetedCollectionName "All Users" -ExcludedCollectionName "TestCol1" -NotificationText "Test text" -DefaultRuleOverride
+PS XYZ:\> New-CMConditionalAccessPolicy -TargetedCollectionName "All Users" -ExcludedCollectionName "TestCol1" -NotificationText "Test text" -DefaultRuleOverride
 ```
 
 This command creates a conditional access policy with a targeted collection named All Users and an excluded collection named TestCol1.
@@ -94,7 +95,7 @@ This rule overrides the default Exchange access rule, which means that even if y
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +110,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +177,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +192,7 @@ Specifies the text of the email that Exchange sends to users when their device i
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

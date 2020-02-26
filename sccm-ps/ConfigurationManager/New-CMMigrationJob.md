@@ -1,14 +1,10 @@
 ---
-title: New-CMMigrationJob
-titleSuffix: Configuration Manager
 description: Creates a migration job in System Center Configuration Manager.
+external help file: AdminUI.PS.Migration.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMMigrationJob
 ---
 
 # New-CMMigrationJob
@@ -64,13 +60,18 @@ New-CMMigrationJob [-ContentObjectsSiteCodeMapping <Hashtable>] [-Description <S
 ## DESCRIPTION
 The **New-CMMigrationJob** cmdlet creates a migration job in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a migration job
 ```
-PS C:\> $CategoryObjects = Get-CMInitialModifiableSecuredCategory
-PS C:\> $MigrationEntity = Get-CMMigrationEntity
-PS C:\> New-CMMigrationJob -Name "123" -ObjectMigrationJobType -SecurityScope $CategoryObjects -MigrationObject $MigrationEntity
+PS XYZ:\> $CategoryObjects = Get-CMInitialModifiableSecuredCategory
+PS XYZ:\> $MigrationEntity = Get-CMMigrationEntity
+PS XYZ:\> New-CMMigrationJob -Name "123" -ObjectMigrationJobType -SecurityScope $CategoryObjects -MigrationObject $MigrationEntity
 ```
 
 The first command uses the Get-CMInitialModifiableSecuredCategory cmdlet and stores the result in the $CategoryObjects variable.
@@ -88,7 +89,7 @@ Collection limiting prevents the addition of collection members you do want in t
 ```yaml
 Type: Hashtable
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +104,7 @@ Indicates that the job migrates collections, objects, or previously migrated obj
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,7 +134,7 @@ Specifies key-value pairs that map content objects in the new site.
 ```yaml
 Type: Hashtable
 Parameter Sets: NewMigrationJobByObject, NewMigrationJobByCollectionMigrateObject, NewMigrationJobByObjectModified
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +149,7 @@ Specifies a description for the migration job.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +164,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,7 +179,7 @@ Indicates whether to enable programs associated with an advertisement after they
 ```yaml
 Type: Boolean
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +194,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +209,7 @@ Indicates that you migrate associated objects with the collection.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -223,7 +224,7 @@ Specifies an array of input objects.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -238,7 +239,7 @@ Specifies a date time, in D.HH:MM:SS format, to schedule the migration job.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -253,7 +254,7 @@ Specifies an array of input objects.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: NewMigrationJobByObject, NewMigrationJobByCollectionMigrateObject, NewMigrationJobByObjectModified
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -268,7 +269,7 @@ Specifies the name of a migration job in Configuration Manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -283,7 +284,7 @@ Indicates that the job type is an object migration job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -298,7 +299,7 @@ Indicates that the new migration job only includes objects that were modified si
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewMigrationJobByObjectModified
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -313,7 +314,7 @@ Indicates whether to overwrite objects in the destination database.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -328,7 +329,7 @@ Specifies a path for the collection information.
 ```yaml
 Type: String
 Parameter Sets: NewMigrationJobByCollectionNotMigrateObject, NewMigrationJobByCollectionMigrateObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -343,7 +344,7 @@ Specifies a path for the object information.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -360,7 +361,7 @@ The cmdlet applies the security scopes that you specify to data migrated to the 
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -375,7 +376,7 @@ Specifies key-value pairs that map a migrated collection to a site in the destin
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -391,7 +392,7 @@ Configuration Manager converts the empty collection to an organizational folder.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -406,7 +407,7 @@ Indicates whether to use UTC time.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -432,7 +433,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: New-CMExchangeConnectorSecuritySetting
-titleSuffix: Configuration Manager
 description: Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMExchangeConnectorSecuritySetting
 ---
 
 # New-CMExchangeConnectorSecuritySetting
@@ -29,28 +25,31 @@ New-CMExchangeConnectorSecuritySetting [-Bluetooth <BluetoothConnectionType>] [-
 The **New-CMExchangeServerConnectorSecuritySetting** cmdlet configures security options for a Microsoft Exchange Server connector in Microsoft System Center Configuration Manager.
 An Exchange Server connector in System Center Configuration Manager manages mobile devices that connect to an on-premise or online Exchange Server by using the Exchange ActiveSync protocol.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Configure security settings for a mobile device
 ```
-PS C:\> New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
+PS XYZ:\> New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
 ```
 
 This command sets the following security options for a mobile device:
 
-- Enables the camera. 
+- Enables the camera.
 - Disables Bluetooth, infrared communications, file encryption on storage cards, and text messaging.
 - Allows the mobile device to connect to the Internet only when the device is in hands-free mode.
 
 ## PARAMETERS
 
 ### -Bluetooth
- 
-
 ```yaml
 Type: BluetoothConnectionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disable, HandsfreeOnly, Allow
 
 Required: False
@@ -61,12 +60,10 @@ Accept wildcard characters: False
 ```
 
 ### -Browser
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,12 +73,10 @@ Accept wildcard characters: False
 ```
 
 ### -Camera
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +91,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,12 +101,10 @@ Accept wildcard characters: False
 ```
 
 ### -FileEncrypt
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +119,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,8 +129,6 @@ Accept wildcard characters: False
 ```
 
 ### -Infrared
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -151,12 +142,10 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDesktop
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,12 +155,10 @@ Accept wildcard characters: False
 ```
 
 ### -StorageCard
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,12 +168,10 @@ Accept wildcard characters: False
 ```
 
 ### -StorageCardEncrypt
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,12 +181,10 @@ Accept wildcard characters: False
 ```
 
 ### -TextMessage
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,12 +194,10 @@ Accept wildcard characters: False
 ```
 
 ### -WifiConnection
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -234,7 +215,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorSecuritySetting
+### Microsoft.ConfigurationManagement.cmdlets.HS.Commands.ExchangeConnectorSecuritySetting
 
 ## NOTES
 

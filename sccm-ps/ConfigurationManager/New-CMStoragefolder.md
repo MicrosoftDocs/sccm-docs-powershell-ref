@@ -1,14 +1,10 @@
 ---
-title: New-CMStorageFolder
-titleSuffix: Configuration Manager
 description: Creates a new storage folder in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMStorageFolder
 ---
 
 # New-CMStorageFolder
@@ -30,11 +26,16 @@ The **New-CMStoragefolder** cmdlet creates a new storage folder to store user mi
 A storage folder identifies a location on a state migration point site system to store user migration data.
 Use this cmdlet in conjunction with the [Add-CMStateMigrationPoint](Add-CMStateMigrationPoint.md) cmdlet to create a new state migration point with storage folders.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a new storage folder
 ```
-PS C:\> New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
+PS XYZ:\> New-CMStoragefolder -MaximumClientNumber 80 -MinimumFreeSpace 10 -SpaceUnit Megabyte -StorageFolderName "D:\Contoso-Mobile-Users"
 ```
 
 This command creates a new storage folder for migration data by using the maximum number of clients, minimum free space, and storage folder path parameters.
@@ -62,7 +63,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +78,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +95,7 @@ Valid values are: numbers between 1 and 99999.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +111,7 @@ Valid values are: numbers between 1 - 99999 when specifying a byte value, or num
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +126,7 @@ Specifies the storage units for the *MinimumFreeSpace* parameter.
 ```yaml
 Type: MinSpaceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Megabyte, Gigabyte, Percent
 
 Required: False
@@ -142,7 +143,7 @@ The associated state migration point site system role in Configuration Manager u
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -168,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -177,4 +178,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,14 +1,10 @@
 ---
-title: Set-CMMigrationExclusionList
-titleSuffix: Configuration Manager
 description: Edits the global exclusion list for migration jobs.
+external help file: AdminUI.PS.Migration.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMMigrationExclusionList
 ---
 
 # Set-CMMigrationExclusionList
@@ -30,11 +26,16 @@ For a collection-based migration, you specify one or more collections to migrate
 For each collection that you specify, the migration job automatically selects all related objects for migration.
 Objects on the exclusion list are available for migration, but System Center Configuration Manager does not automatically include these objects when you create a new collection-based migration job.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Specify a migration exclusion list
 ```
-PS C:\> Set-CMMigrationExclusionList -Name "ContosoUsersWest01"
+PS XYZ:\> Set-CMMigrationExclusionList -Name "ContosoUsersWest01"
 ```
 
 This command adds the objects in the array ContosoUsersWest01 to the migration exclusion list.
@@ -62,7 +63,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +78,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

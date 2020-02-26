@@ -1,14 +1,10 @@
 ---
-title: Set-CMUpdateGroupDeployment
-titleSuffix: Configuration Manager
 description: Sets an update group deployment.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMUpdateGroupDeployment
 ---
 
 # Set-CMUpdateGroupDeployment
@@ -67,16 +63,18 @@ Set-CMUpdateGroupDeployment [-Enable] -Deployment <IResultObject> [-DisableWildc
 ```
 
 ## DESCRIPTION
- 
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -96,12 +94,10 @@ Accept wildcard characters: False
 ```
 
 ### -Deployment
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByDeploymentSummaryValueDisable, ByDeploymentSummaryValueEnable
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -111,8 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentName
- 
-
 ```yaml
 Type: String
 Parameter Sets: ByNameDisable, ByNameEnable
@@ -126,12 +120,10 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByNameDisable, ByIdDisable, ByValueDisable, ByDeploymentSummaryValueDisable
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +138,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,12 +148,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValueEnable, ByNameEnable, ByIdEnable, ByDeploymentSummaryValueEnable
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +166,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,12 +176,10 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateGroupDeployment
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValueEnable, ByValueDisable
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -201,8 +189,6 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateGroupDeploymentId
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: ByIdDisable, ByIdEnable
@@ -232,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -245,4 +231,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

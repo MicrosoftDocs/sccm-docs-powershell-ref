@@ -1,14 +1,10 @@
 ---
-title: Get-CMCollectionMember
-titleSuffix: Configuration Manager
 description: Gets a member of a Configuration Manager collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCollectionMember
 ---
 
 # Get-CMCollectionMember
@@ -39,18 +35,23 @@ Get-CMCollectionMember -InputObject <IResultObject> [-Name <String>] [-SmsId <St
 ## DESCRIPTION
 The **Get-CMCollectionMember** cmdlet gets a member of a Microsoft System Center Configuration Manager collection. Configuration Manager collections provide a way to manage users, computers, and other resources in your organization.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a member of a collection by using the pipeline operator
 ```
-PS C:\> Get-CMCollection -Name "UserCol1" | Get-CMCollectionMember
+PS XYZ:\> Get-CMCollection -Name "UserCol1" | Get-CMCollectionMember
 ```
 
 This command gets the collection object named UserCol1 and uses the pipeline operator to pass the object to **Get-CMCollectionMember**, which gets all members in UserCol1.
 
 ### Example 2: Get a member of a collection by name
 ```
-PS C:\> Get-CMCollectionMember -CollectionName "DeviceCol1" -Name "domain*"
+PS XYZ:\> Get-CMCollectionMember -CollectionName "DeviceCol1" -Name "domain*"
 ```
 
 This command gets the all members of the device collection named DeviceCol1 that have a name beginning with domain.
@@ -63,7 +64,7 @@ Specifies the ID of a collection.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,7 +79,7 @@ Specifies the name of a collection.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +94,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +109,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +155,7 @@ Specifies the ID of a resource.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +170,7 @@ Specifies the SMSID of a resource.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

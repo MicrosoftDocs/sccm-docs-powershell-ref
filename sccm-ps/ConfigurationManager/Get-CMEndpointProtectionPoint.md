@@ -1,14 +1,10 @@
 ---
-title: Get-CMEndpointProtectionPoint
-titleSuffix: Configuration Manager
 description: Gets an Endpoint Protection point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMEndpointProtectionPoint
 ---
 
 # Get-CMEndpointProtectionPoint
@@ -32,13 +28,18 @@ Get-CMEndpointProtectionPoint [-AllSite] -InputObject <IResultObject> [-DisableW
 
 ## DESCRIPTION
 The **Get-CMEndpointProtectionPoint** cmdlet gets a System Center 2016 Endpoint Protection point in Microsoft System Center Configuration Manager.
-For more information about Endpoint Protection in Microsoft System Center Configuration Manager, see [Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427) on TechNet.
+For more information about Endpoint Protection in Microsoft System Center Configuration Manager, see [Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get an Endpoint Protection point
 ```
-PS C:\> Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
+PS XYZ:\> Get-CMEndpointProtectionPoint -SiteCode "CM1" -SiteSystemServerName "CMServer01.Contoso.com"
 ```
 
 This command gets an Endpoint Protection point.
@@ -46,8 +47,6 @@ This command gets an Endpoint Protection point.
 ## PARAMETERS
 
 ### -AllSite
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -66,7 +65,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +80,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,13 +90,13 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -112,7 +111,7 @@ Specifies a site code.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -147,7 +146,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268427)
+[Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10))
 
 [Add-CMEndpointProtectionPoint](Add-CMEndpointProtectionPoint.md)
 

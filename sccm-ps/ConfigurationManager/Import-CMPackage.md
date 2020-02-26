@@ -1,14 +1,10 @@
 ---
-title: Import-CMPackage
-titleSuffix: Configuration Manager
 description: Imports a Configuration Manager package.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Import-CMPackage
 ---
 
 # Import-CMPackage
@@ -27,11 +23,16 @@ Import-CMPackage -ImportFilePath <String> [-ImportActionType <ImportActionType>]
 The **Import-CMPackage** cmdlet imports a Microsoft System Center Configuration Manager package.
 You can use this cmdlet to import a package of collections, queries, or reports so that you can later deploy these items to a different location.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import a package
 ```
-PS C:\>Import-CMPackage -ImportFilePath "\\Deploy01\ExportPackages"
+PS XYZ:\>Import-CMPackage -ImportFilePath "\\Deploy01\ExportPackages"
 ```
 
 This command imports a package from the path \\\\Deploy01\ExportPackages.
@@ -59,7 +60,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +75,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,12 +85,10 @@ Accept wildcard characters: False
 ```
 
 ### -ImportActionType
- 
-
 ```yaml
 Type: ImportActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NotSet, Skip, DirectImport, Rename, Overwrite, ImportFail, IgnoreDependencyFailure, AppendDriverCategories, OverwriteIgnoreDependencyFailure
 
 Required: False
@@ -106,7 +105,7 @@ The cmdlet imports all packages that the file package contains.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

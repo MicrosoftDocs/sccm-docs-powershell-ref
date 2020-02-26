@@ -1,14 +1,10 @@
 ---
-title: Invoke-CMScript
-titleSuffix: Configuration Manager
 description: Invokes a script in Configuration Manager.
+external help file: AdminUI.PS.ClientOperations.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/15/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMScript
 ---
 
 # Invoke-CMScript
@@ -20,31 +16,34 @@ Invokes a script in Configuration Manager.
 ## SYNTAX
 
 ### ByInputObject
-
-```powershell
+```
 Invoke-CMScript [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
  [-Device <IResultObject[]>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByGuid
-
-```powershell
+```
 Invoke-CMScript [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>]
  [-Device <IResultObject[]>] [-PassThru] -ScriptGuid <String> [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Invoke-CMScript** cmdlet invokes a PowerShell script in Microsoft System Center Configuration Manager. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts).
+The **Invoke-CMScript** cmdlet invokes a PowerShell script in Microsoft System Center Configuration Manager. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Invoke a script by using the script id
 
 ```powershell
-PS C:\> Invoke-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"  
+PS XYZ:\> Invoke-CMScript -ScriptGuid "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
 ```
 
 This command invoke a script that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80  .
@@ -52,8 +51,8 @@ This command invoke a script that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F8
 ### Example 2: Invoke a script by using script object variable
 
 ```powershell
-PS C:\> $ScriptObj = Get-CMScript -Id "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
-PS C:\> Invoke-CMScript -InputObject $ScriptObj
+PS XYZ:\> $ScriptObj = Get-CMScript -Id "DF8E7546-FD66-4A3D-A129-53AF5AA54F80"
+PS XYZ:\> Invoke-CMScript -InputObject $ScriptObj
 ```
 
 The first command gets a **CMScript** object that has the ID DF8E7546-FD66-4A3D-A129-53AF5AA54F80, and then stores it in the $ScriptObj variable.
@@ -102,6 +101,22 @@ Specifies the name of a collection.
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -209,22 +224,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -242,6 +241,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
@@ -249,6 +251,8 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

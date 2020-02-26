@@ -1,14 +1,10 @@
 ---
-title: Set-CMSiteSystemServer
-titleSuffix: Configuration Manager
 description: Modifies a site system server.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSiteSystemServer
 ---
 
 # Set-CMSiteSystemServer
@@ -37,11 +33,16 @@ Set-CMSiteSystemServer [-SiteCode <String>] [-SiteSystemServerName] <String> [-P
 ## DESCRIPTION
 The **Set-CMSiteSystemServer** cmdlet modifies a site system server in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a site system server by using the pipeline operator
 ```
-PS C:\> Get-CMSiteSystemServer -Name "Server2.contoso.com" -SiteCode MP5 | Set-CMSiteSystemServer -SiteCode MP5 -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
+PS XYZ:\> Get-CMSiteSystemServer -Name "Server2.contoso.com" -SiteCode MP5 | Set-CMSiteSystemServer -SiteCode MP5 -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
 ```
 
 This command gets the site system server object named Server2.contoso.com with the site code MP5 and uses the pipeline operator to pass the object to **Set-CMSiteSystemServer**.
@@ -49,7 +50,7 @@ This command gets the site system server object named Server2.contoso.com with t
 
 ### Example 2: Modify a site system server
 ```
-PS C:\> Set-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
+PS XYZ:\> Set-CMSiteSystemServer -SiteSystemServerName "Server2.contoso.com" -SiteCode "MP5" -PublicFqdn "Internetsrv2New.contoso.com" -FdmOperation $False -AccountName "contoso\administrator" -EnableProxy $True -ProxyServerName "ProxyServer1" -ProxyServerPort 80 -ProxyAccessAccount (Get-CMAccount "contoso\administrator") -PassThru
 ```
 
 This command gets the site system server object named Server2.contoso.com with the site code MP5, adds an FQDN to the site system server to use on the Internet, and enables a proxy server named ProxyServer1 to connect to the Internet using port 80.
@@ -62,7 +63,7 @@ Specifies the account name for the site system.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +93,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +108,7 @@ Indicates whether to enable a proxy server to use when the server synchronizes i
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +123,7 @@ Indicates whether the site system server is required to initiate connections to 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +138,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +170,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +186,7 @@ Do not use user principal name (UPN) format.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +202,7 @@ Use a fully qualified domain name (FQDN), short name, or IPv4/IPv6 address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,7 +217,7 @@ Specifies the proxy server port number to use when connecting to the Internet.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,7 +232,7 @@ Specifies a FQDN for the site system for use on the Internet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +247,7 @@ Specifies the site code of a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +277,7 @@ Indicates that the cmdlet uses the site server's computer account to install the
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -302,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

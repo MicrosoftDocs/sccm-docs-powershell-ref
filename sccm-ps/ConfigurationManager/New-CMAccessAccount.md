@@ -1,14 +1,10 @@
 ---
-title: New-CMAccessAccount
-titleSuffix: Configuration Manager
 description: Adds users or groups to an access account.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMAccessAccount
 ---
 
 # New-CMAccessAccount
@@ -129,12 +125,17 @@ The **New-CMAccessAccount** cmdlet adds users or groups to an access account.
 An access account is a list of users or groups that can access an established service or application that is located on a distribution point.
 For example, members in the Software Update Point Connection access account can access two services to manage software updates: Windows Server Update Services (WSUS) and WSUS Synchronization Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify access to an application by using the application ID
 ```
-PS C:\> $ID = Get-CMAccessAccount -ApplicationID "12994680"
-PS C:\> New-CMAccessAccount -ApplicationID $ID -Type WindowsUser Username "CONTOSO\EDaugherty" -Access "FullControl"
+PS XYZ:\> $ID = Get-CMAccessAccount -ApplicationID "12994680"
+PS XYZ:\> New-CMAccessAccount -ApplicationID $ID -Type WindowsUser Username "CONTOSO\EDaugherty" -Access "FullControl"
 ```
 
 The first command gets an application ID, and then stores it in the $ID variable.
@@ -151,7 +152,7 @@ Valid values are: No Access, Read, Change, and Full Control.
 ```yaml
 Type: AccessRight
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NoAccess, Read, Change, FullControl
 
 Required: True
@@ -168,7 +169,7 @@ Valid values are: Guest, User, WindowsGroup, and WindowsUser.
 ```yaml
 Type: AccessAccountType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: User, Guest, Administrator, WindowsUser, WindowsGroup
 
 Required: True
@@ -184,7 +185,7 @@ Specifies the ID of an application.
 ```yaml
 Type: String
 Parameter Sets: SearchByApplicationId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,7 +200,7 @@ Specifies the name of an application.
 ```yaml
 Type: String
 Parameter Sets: SearchByApplicationName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -214,7 +215,7 @@ Specifies the ID of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -229,7 +230,7 @@ Specifies the name of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByBootImageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -259,7 +260,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -274,7 +275,7 @@ Specifies the ID of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -289,7 +290,7 @@ Specifies the name of a driver package.
 ```yaml
 Type: String
 Parameter Sets: SearchByDriverPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -304,7 +305,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -314,8 +315,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -335,7 +336,7 @@ Specifies the ID of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -350,7 +351,7 @@ Specifies the name of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSImageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -365,7 +366,7 @@ Specifies the ID of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -380,7 +381,7 @@ Specifies the name of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SearchByOSInstallerName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -395,7 +396,7 @@ Specifies the ID of a deployed software script or program.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -410,7 +411,7 @@ Specifies the name of a deployed software script or program.
 ```yaml
 Type: String
 Parameter Sets: SearchByPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -425,7 +426,7 @@ Specifies the ID of a deployed software update.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -440,7 +441,7 @@ Specifies the name of a deployed software update.
 ```yaml
 Type: String
 Parameter Sets: SearchBySoftwareUpdateDeploymentPackageName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -455,7 +456,7 @@ Specifies a Windows user account name in domain\user format.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -481,7 +482,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: New-CMPackageDeployment
-titleSuffix: Configuration Manager
 description: Creates a package deployment to a Configuration Manager collection.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMPackageDeployment
 ---
 
 # New-CMPackageDeployment
@@ -20,24 +16,23 @@ Creates a package deployment to a Configuration Manager collection.
 ## SYNTAX
 
 ### DeployStandardProgramByPackageValue (Default)
-
-```powershell
+```
 New-CMPackageDeployment [-StandardProgram] [-Package] <IResultObject> -ProgramName <String>
  [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>] [-UseUtcForAvailableSchedule <Boolean>]
  [-UseUtcForExpireSchedule <Boolean>] [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>]
  [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>]
  [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-FastNetworkOption <FastNetworkOptionType>] [-SlowNetworkOption <SlowNetworkOptionType>]
- [-AllowSharedContent <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>] [-DistributeContent]
+ [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
+ [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-UseMeteredNetwork <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeployDeviceProgramByPackageName
-
-```powershell
+```
 New-CMPackageDeployment [-DeviceProgram] -PackageName <String> -ProgramName <String>
  [-DeployPurpose <DeployPurposeType>] [-UseUtc <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>]
  [-Rerun <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
@@ -48,8 +43,7 @@ New-CMPackageDeployment [-DeviceProgram] -PackageName <String> -ProgramName <Str
 ```
 
 ### DeployDeviceProgramByPackageId
-
-```powershell
+```
 New-CMPackageDeployment [-DeviceProgram] -PackageId <String> -ProgramName <String>
  [-DeployPurpose <DeployPurposeType>] [-UseUtc <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>]
  [-Rerun <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
@@ -60,8 +54,7 @@ New-CMPackageDeployment [-DeviceProgram] -PackageId <String> -ProgramName <Strin
 ```
 
 ### DeployDeviceProgramByPackageValue
-
-```powershell
+```
 New-CMPackageDeployment [-DeviceProgram] [-Package] <IResultObject> -ProgramName <String>
  [-DeployPurpose <DeployPurposeType>] [-UseUtc <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>]
  [-Rerun <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
@@ -72,8 +65,7 @@ New-CMPackageDeployment [-DeviceProgram] [-Package] <IResultObject> -ProgramName
 ```
 
 ### DeployDeviceProgramByProgramValue
-
-```powershell
+```
 New-CMPackageDeployment [-DeviceProgram] [-Program] <IResultObject> [-DeployPurpose <DeployPurposeType>]
  [-SendWakeupPacket <Boolean>] [-UseUtc <Boolean>] [-RecurValue <Int32>] [-RecurUnit <RecurUnitType>]
  [-Rerun <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
@@ -84,51 +76,50 @@ New-CMPackageDeployment [-DeviceProgram] [-Program] <IResultObject> [-DeployPurp
 ```
 
 ### DeployStandardProgramByPackageName
-
-```powershell
+```
 New-CMPackageDeployment [-StandardProgram] -PackageName <String> -ProgramName <String>
  [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>] [-UseUtcForAvailableSchedule <Boolean>]
  [-UseUtcForExpireSchedule <Boolean>] [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>]
  [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>]
  [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-FastNetworkOption <FastNetworkOptionType>] [-SlowNetworkOption <SlowNetworkOptionType>]
- [-AllowSharedContent <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>] [-DistributeContent]
+ [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
+ [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
+ [-UseMeteredNetwork <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeployStandardProgramByPackageId
-
-```powershell
+```
 New-CMPackageDeployment [-StandardProgram] -PackageId <String> -ProgramName <String>
  [-DeployPurpose <DeployPurposeType>] [-SendWakeupPacket <Boolean>] [-UseUtcForAvailableSchedule <Boolean>]
  [-UseUtcForExpireSchedule <Boolean>] [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>]
  [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>]
  [-SystemRestart <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-FastNetworkOption <FastNetworkOptionType>] [-SlowNetworkOption <SlowNetworkOptionType>]
- [-AllowSharedContent <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
- [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
- [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### DeployStandardProgramByProgramValue
-
-```powershell
-New-CMPackageDeployment [-StandardProgram] [-Program] <IResultObject> [-DeployPurpose <DeployPurposeType>]
- [-SendWakeupPacket <Boolean>] [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
- [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
- [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
- [-PersistOnWriteFilterDevice <Boolean>] [-FastNetworkOption <FastNetworkOptionType>]
- [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-DistributeContent]
+ [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>] [-DistributeContent]
  [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
  [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
  [-UseMeteredNetwork <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
  [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
+```
+
+### DeployStandardProgramByProgramValue
+```
+New-CMPackageDeployment [-StandardProgram] [-Program] <IResultObject> [-DeployPurpose <DeployPurposeType>]
+ [-SendWakeupPacket <Boolean>] [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-ScheduleEvent <ScheduleEventType>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
+ [-RunFromSoftwareCenter <Boolean>] [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-FastNetworkOption <FastNetworkOptionType>]
+ [-SlowNetworkOption <SlowNetworkOptionType>] [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>]
+ [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
+ [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
+ [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-CollectionName <String>]
+ [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,27 +132,47 @@ The cmdlet always output the new created deployment.
 You can choose when the package becomes available and when the package deployment expires.
 You can specify whether System Center Configuration Manager deploys the package only once or repeatedly and what happens when installation fails for a computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: By ID
 
 ```powershell
-PS C:\> New-CMPackageDeployment -PackageId $ReferencePackage.PackageID -ProgramName $ReferenceProgram.ProgramName -CollectionID $Collection.CollectionID -StandardProgram -Comment $Comment -DeployPurpose Available
+PS XYZ:\> New-CMPackageDeployment -PackageId $ReferencePackage.PackageID -ProgramName $ReferenceProgram.ProgramName -CollectionID $Collection.CollectionID -StandardProgram -Comment $Comment -DeployPurpose Available
 ```
 
 ### Example 2: By name
 
 ```powershell
-PS C:\> New-CMPackageDeployment -PackageName $ReferencePackage.Name -ProgramName $ReferenceProgram.ProgramName -CollectionName $Collection.Name -StandardProgram -Comment $Comment -DeployPurpose Available 
+PS XYZ:\> New-CMPackageDeployment -PackageName $ReferencePackage.Name -ProgramName $ReferenceProgram.ProgramName -CollectionName $Collection.Name -StandardProgram -Comment $Comment -DeployPurpose Available
 ```
 
 ### Example 3: By pipeline
 
 ```powershell
-PS C:\> $ReferencePackage | New-CMPackageDeployment -ProgramName $ReferenceProgram.ProgramName -Collection $Collection -StandardProgram -Comment $Comment -DeployPurpose Available 
+PS XYZ:\> $ReferencePackage | New-CMPackageDeployment -ProgramName $ReferenceProgram.ProgramName -Collection $Collection -StandardProgram -Comment $Comment -DeployPurpose Available
 ```
 
 ## PARAMETERS
+
+### -AllowFallback
+{{ Fill AllowFallback Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: DeployStandardProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByPackageId, DeployStandardProgramByProgramValue
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowSharedContent
 
@@ -269,7 +280,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:cf
+Aliases: cf
 
 Required: False
 Position: Named
@@ -540,7 +551,7 @@ Specifies the name of a program.
 ```yaml
 Type: String
 Parameter Sets: DeployStandardProgramByPackageValue, DeployDeviceProgramByPackageName, DeployDeviceProgramByPackageId, DeployDeviceProgramByPackageValue, DeployStandardProgramByPackageName, DeployStandardProgramByPackageId
-Aliases:StandardProgramName, DeviceProgramName
+Aliases: StandardProgramName, DeviceProgramName
 
 Required: True
 Position: Named
@@ -864,7 +875,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
 Required: False
 Position: Named
@@ -874,8 +885,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -884,6 +894,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

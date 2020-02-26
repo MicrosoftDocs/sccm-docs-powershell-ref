@@ -1,14 +1,10 @@
 ---
-title: Set-CMBootImage
-titleSuffix: Configuration Manager
 description: Modifies an operating system boot image.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMBootImage
 ---
 
 # Set-CMBootImage
@@ -73,11 +69,16 @@ Before you can add a new device driver, you must first import the driver to the 
 
 A modification to the boot image does not change its source package.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Rename a boot image object that is identified by using its ID
 ```
-PS C:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
+PS XYZ:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
 ```
 
 This command retrieves a boot image by using its ID, and then renames the boot image.
@@ -85,7 +86,7 @@ Depending on replication issues, this modification can take a long time to displ
 
 ### Example 2: Rename a boot image object that is identified by using its name
 ```
-PS C:\> Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
+PS XYZ:\> Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
 ```
 
 This command retrieves a boot image by using its name, and then renames the boot image.
@@ -111,7 +112,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +153,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +166,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +181,7 @@ Describes the contents of a boot image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +196,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -247,7 +248,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +261,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +274,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +287,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -301,7 +302,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -316,7 +317,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -344,7 +345,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -359,7 +360,7 @@ Specifies a boot image object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -374,7 +375,7 @@ Specifies a name of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -389,7 +390,7 @@ Specifies a new name for the boot image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -405,7 +406,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -431,7 +432,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -444,7 +445,7 @@ Accept wildcard characters: False
 ```yaml
 Type: PrestageBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ManualCopy, DownloadDelta, OnDemand
 
 Required: False
@@ -471,7 +472,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -484,7 +485,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: High, Medium, Low
 
 Required: False
@@ -511,7 +512,7 @@ Accept wildcard characters: False
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: 32, 64, 128, 256, 512
 
 Required: False
@@ -540,7 +541,7 @@ Specifies the version of the boot image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -566,7 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

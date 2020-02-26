@@ -1,14 +1,10 @@
 ---
-title: New-CMTaskSequence
-titleSuffix: Configuration Manager
 description: Creates a task sequence in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMTaskSequence
 ---
 
 # New-CMTaskSequence
@@ -20,8 +16,7 @@ Creates a task sequence in Configuration Manager.
 ## SYNTAX
 
 ### NewBuildOSImage (Default)
-
-```powershell
+```
 New-CMTaskSequence [-BuildOperatingSystemImage] -Name <String> [-Description <String>]
  -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
  [-ApplyAll <Boolean>] [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>]
@@ -37,8 +32,7 @@ New-CMTaskSequence [-BuildOperatingSystemImage] -Name <String> [-Description <St
 ```
 
 ### NewInstallOSImage
-
-```powershell
+```
 New-CMTaskSequence [-InstallOperatingSystemImage] -Name <String> [-Description <String>]
  -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
  [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>] [-ConfigureBitLocker <Boolean>]
@@ -54,8 +48,7 @@ New-CMTaskSequence [-InstallOperatingSystemImage] -Name <String> [-Description <
 ```
 
 ### NewInstallOSImageVhd
-
-```powershell
+```
 New-CMTaskSequence [-InstallOperatingSystemImageVhd] -Name <String> [-Description <String>]
  -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
  [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>] [-ConfigureBitLocker <Boolean>]
@@ -68,8 +61,7 @@ New-CMTaskSequence [-InstallOperatingSystemImageVhd] -Name <String> [-Descriptio
 ```
 
 ### UpgradeOSImage
-
-```powershell
+```
 New-CMTaskSequence [-UpgradeOperatingSystem] -Name <String> -UpgradePackageId <String> [-ProductKey <String>]
  [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-ApplicationName <String[]>]
  [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
@@ -77,8 +69,7 @@ New-CMTaskSequence [-UpgradeOperatingSystem] -Name <String> -UpgradePackageId <S
 ```
 
 ### NewCustom
-
-```powershell
+```
 New-CMTaskSequence [-CustomTaskSequence] -Name <String> [-Description <String>] [-BootImagePackageId <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -88,12 +79,17 @@ New-CMTaskSequence [-CustomTaskSequence] -Name <String> [-Description <String>] 
 The **New-CMTaskSequence** cmdlet creates a task sequence.
 A task sequence performs multiple steps or tasks on a Microsoft System Center Configuration Manager client computer without user intervention.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a custom task sequence
 
 ```powershell
-PS C:\> New-CMTaskSequence -CustomTaskSequence -Name "TaskSequence01"
+PS XYZ:\> New-CMTaskSequence -CustomTaskSequence -Name "TaskSequence01"
 ```
 
 This command creates a task sequence with the name TaskSequence01.
@@ -101,7 +97,7 @@ This command creates a task sequence with the name TaskSequence01.
 ### Example 2: Create a task sequence to install an operating system image
 
 ```powershell
-PS C:\> New-CMTaskSequence -InstallOperatingSystemImage -Name "TaskSequence02" -BootImagePackageId SC100002 -OperatingSystemImagePackageId SC10000D -OperatingSystemImageIndex 1 -JoinDomain WorkgroupType -WorkgroupName "WorkGroup01" -ApplyAll $True -Description "Task sequence description"
+PS XYZ:\> New-CMTaskSequence -InstallOperatingSystemImage -Name "TaskSequence02" -BootImagePackageId SC100002 -OperatingSystemImagePackageId SC10000D -OperatingSystemImageIndex 1 -JoinDomain WorkgroupType -WorkgroupName "WorkGroup01" -ApplyAll $True -Description "Task sequence description"
 ```
 
 This command creates a task sequence named TaskSequence02 that installs an operating system image and joins a workgroup.
@@ -109,7 +105,7 @@ This command creates a task sequence named TaskSequence02 that installs an opera
 ### Example 3: Create a task sequence to build an operating system and join a workgroup
 
 ```powershell
-PS C:\> New-CMTaskSequence -BuildOperatingSystemImage -Name "TaskSequence03" -BootImagePackageId SC100002 -OperatingSystemImagePackageId SC10000D -OperatingSystemImageIndex 1 -JoinDomain WorkgroupType -WorkgroupName "WorkGroup01" -OperatingSystemFilePath "\\Server1\image\OSImage.wim" -OperatingSystemFileAccount "domain\account"
+PS XYZ:\> New-CMTaskSequence -BuildOperatingSystemImage -Name "TaskSequence03" -BootImagePackageId SC100002 -OperatingSystemImagePackageId SC10000D -OperatingSystemImageIndex 1 -JoinDomain WorkgroupType -WorkgroupName "WorkGroup01" -OperatingSystemFilePath "\\Server1\image\OSImage.wim" -OperatingSystemFileAccount "domain\account"
 ```
 
 This command creates a task sequence named TaskSequence03 that builds an operating system using the supplied location and account, and joins a workgroup.
@@ -117,7 +113,7 @@ This command creates a task sequence named TaskSequence03 that builds an operati
 ### Example 4: Create a task sequence to install an operating system to a virtual hard disk
 
 ```powershell
-PS C:\> New-CMTaskSequence -InstallOperatingSystemImageVhd -Name "TaskSequence04" -BootImagePackageId SC100002 -OperatingSystemImagePackageId SC10000D -OperatingSystemImageIndex 1 -JoinDomain WorkgroupType -WorkgroupName "WorkGroup01"
+PS XYZ:\> New-CMTaskSequence -InstallOperatingSystemImageVhd -Name "TaskSequence04" -BootImagePackageId SC100002 -OperatingSystemImagePackageId SC10000D -OperatingSystemImageIndex 1 -JoinDomain WorkgroupType -WorkgroupName "WorkGroup01"
 ```
 
 This command creates a task sequence named TaskSequence04 that installs an operating system to a vhd and joins a workgroup.
@@ -125,7 +121,7 @@ This command creates a task sequence named TaskSequence04 that installs an opera
 ### Example 5: Create a task sequence to upgrade an operating system
 
 ```powershell
-PS C:\> New-CMTaskSequence -UpgradeOperatingSystem -Name "TaskSequence05" -UpgradePackageId SC102EBA
+PS XYZ:\> New-CMTaskSequence -UpgradeOperatingSystem -Name "TaskSequence05" -UpgradePackageId SC102EBA
 ```
 
 This command creates the task sequence named TaskSequence05 and specifies that the task sequence will upgrade the operating system using the upgrade package with the ID SC102EBA.
@@ -139,7 +135,7 @@ Specifies an array of names for applications.
 ```yaml
 Type: String[]
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, UpgradeOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +167,7 @@ Specifies the ID of a boot image package.
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -183,7 +179,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: NewCustom
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +231,7 @@ Indicates whether the task sequence captures network settings from the computer 
 ```yaml
 Type: Boolean
 Parameter Sets: NewInstallOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,7 +248,7 @@ If you specify this parameter, also specify the *UserStateMigrationToolPackageId
 ```yaml
 Type: Boolean
 Parameter Sets: NewInstallOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +265,7 @@ You can capture the computer name, registered user and organization name, and th
 ```yaml
 Type: Boolean
 Parameter Sets: NewInstallOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -285,7 +281,7 @@ Specifies the ID of the client package to install on the destination computer.
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -301,11 +297,27 @@ Indicates whether the task sequence enables BitLocker encryption on the hard dri
 ```yaml
 Type: Boolean
 Parameter Sets: NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -317,7 +329,7 @@ Specifies the name of the user that created the operating system image that the 
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -365,7 +377,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -381,7 +393,7 @@ Specifies an account, in the format Domain\User, that has the necessary permissi
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -398,7 +410,7 @@ Include this parameter to have the target computer join the specified domain.
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -418,7 +430,7 @@ If the computer is already a member of some other OU, Active Directory Domain Se
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -434,7 +446,7 @@ Specifies, as a secure string, the password for the user account that you specif
 ```yaml
 Type: SecureString
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -450,7 +462,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -466,7 +478,7 @@ Indicates whether Configuration Manager randomly generates a password for the lo
 ```yaml
 Type: Boolean
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -485,7 +497,7 @@ If you do not specify this parameter, the task sequence step ends immediately wh
 ```yaml
 Type: Boolean
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd, UpgradeOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -501,7 +513,7 @@ Specifies a description of the operating system image that the task sequence cap
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -517,50 +529,7 @@ Specifies the user-defined version of the operating system that the task sequenc
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallationLicensingMode
-
-Specifies the Windows Server license mode that the task sequence uses.
-Valid values are:
-
-- NonSpecify
-- PerSeat
-- PerServer
-
-```yaml
-Type: ServerLicensingMode
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
-Accepted values: NonSpecify, PerSeat, PerServer
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallationProperty
-
-Specifies Configuration Manager client installation properties.
-
-Site assignment and the default configuration are automatically specified by the task sequence action.
-You can use this parameter to specify any additional installation properties to use when you install the client.
-To enter multiple installation properties, separate them with a space.
-If a property contains spaces, surround it by quotation marks ("").
-
-```yaml
-Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -601,10 +570,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstallationLicensingMode
+
+Specifies the Windows Server license mode that the task sequence uses.
+Valid values are:
+
+- NonSpecify
+- PerSeat
+- PerServer
+
+```yaml
+Type: ServerLicensingMode
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Aliases:
+Accepted values: NonSpecify, PerSeat, PerServer
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallationProperty
+
+Specifies Configuration Manager client installation properties.
+
+Site assignment and the default configuration are automatically specified by the task sequence action.
+You can use this parameter to specify any additional installation properties to use when you install the client.
+To enter multiple installation properties, separate them with a space.
+If a property contains spaces, surround it by quotation marks ("").
+
+```yaml
+Type: String
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -JoinDomain
 
 Specifies the destination computer to add to a workgroup or domain.
-Valid values are: 
+Valid values are:
 
 - DomainType
 - WorkgroupType
@@ -612,7 +624,7 @@ Valid values are:
 ```yaml
 Type: JoinType
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 Accepted values: DomainType, WorkgroupType
 
 Required: True
@@ -629,7 +641,7 @@ Specifies, as a secure string, the local administrator password for the destinat
 ```yaml
 Type: SecureString
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -646,7 +658,7 @@ Specify this parameter if you use the PerServer value for the *InstallationLicen
 ```yaml
 Type: Int32
 Parameter Sets: NewBuildOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -694,7 +706,7 @@ Specifies as a secure string the password for the account that you specify in th
 ```yaml
 Type: SecureString
 Parameter Sets: NewBuildOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -727,7 +739,7 @@ Use this parameter if the operating system image package has multiple images.
 ```yaml
 Type: UInt32
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -743,7 +755,7 @@ Specifies the ID of the package that contains the operating system image to inst
 ```yaml
 Type: String
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -759,7 +771,7 @@ Indicates whether the task sequence partitions and formats the destination compu
 ```yaml
 Type: Boolean
 Parameter Sets: NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -791,7 +803,7 @@ This parameter has been deprecated.
 ```yaml
 Type: Boolean
 Parameter Sets: NewInstallOSImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -803,7 +815,7 @@ Accept wildcard characters: False
 ### -SoftwareUpdateStyle
 
 Specifies whether the task sequence installs all updates or only mandatory updates for the destination computers that receive the task sequence.
-Valid values are: 
+Valid values are:
 
 - All
 - Mandatory
@@ -812,7 +824,7 @@ Valid values are:
 ```yaml
 Type: SoftwareUpdateStyleType
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, UpgradeOSImage
-Aliases: 
+Aliases:
 Accepted values: All, Mandatory, NoInstall
 
 Required: False
@@ -829,7 +841,7 @@ Specifies time zone info.
 ```yaml
 Type: TimeZoneInfo
 Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -861,7 +873,7 @@ Specifies the ID for an upgrade package.
 ```yaml
 Type: String
 Parameter Sets: UpgradeOSImage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -879,44 +891,11 @@ To store the user state data locally or on a state migration point, you must cre
 ```yaml
 Type: String
 Parameter Sets: NewInstallOSImage
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WorkgroupName
-
-Specifies the name of a workgroup.
-Specify this parameter if you use the WorkgroupType value for the *JoinDomain* parameter.
-
-```yaml
-Type: String
-Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -938,9 +917,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
+### -WorkgroupName
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Specifies the name of a workgroup.
+Specify this parameter if you use the WorkgroupType value for the *JoinDomain* parameter.
+
+```yaml
+Type: String
+Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

@@ -1,14 +1,10 @@
 ---
-title: Set-CMOperatingSystemInstaller
-titleSuffix: Configuration Manager
 description: Changes configuration settings of operating system installers.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMOperatingSystemInstaller
 ---
 
 # Set-CMOperatingSystemInstaller
@@ -61,11 +57,16 @@ Set-CMOperatingSystemInstaller -InputObject <IResultObject> [-NewName <String>] 
 The **Set-CMOperatingSystemInstaller** cmdlet changes configuration settings of one or more operating system installers in Microsoft System Center Configuration Manager.
 An operating system installer is an installation package that contains all the files that System Center Configuration Manager needs to install a Windows operating system on a reference computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change settings for an operating system installer by using a name
 ```
-PS C:\> Set-CMOperatingSystemInstaller -Name "Win8x64" -NewName "OsiWin8x64" -Version "I20B" -Description "Dept02 Sys Install" -Path "\\Win2k3X64contoso\Public\OSD\win8x64"
+PS XYZ:\> Set-CMOperatingSystemInstaller -Name "Win8x64" -NewName "OsiWin8x64" -Version "I20B" -Description "Dept02 Sys Install" -Path "\\Win2k3X64contoso\Public\OSD\win8x64"
 ```
 
 This command changes configuration settings of the operating system installer named Win8x64.
@@ -73,14 +74,14 @@ The command renames the operating system installer, adds a version and descripti
 
 ### Example 2: Add an operating system installer to a security scope by using a name
 ```
-PS C:\> Set-CMOperatingSystemInstaller -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
+PS XYZ:\> Set-CMOperatingSystemInstaller -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
 ```
 
 This command adds membership to the security scope named SecScope02 for the operating system installer named InstPkg01.
 
 ### Example 3: Remove an operating system installer from a security scope
 ```
-PS C:\> Set-CMOperatingSystemInstaller -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
+PS XYZ:\> Set-CMOperatingSystemInstaller -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
 ```
 
 This command removes membership to the security scope named SecScope02 for the operating system installer named InstPkg01.
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ Specifies a description for the operating system installer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +150,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +202,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +215,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +230,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +261,7 @@ To obtain a CMOperatingSystemInstaller object, use the [Get-CMOperatingSystemIns
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -273,7 +274,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +287,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,7 +300,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -314,7 +315,7 @@ Specifies the name of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -329,7 +330,7 @@ Specifies the new name of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -345,7 +346,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -373,7 +374,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -386,7 +387,7 @@ Accept wildcard characters: False
 ```yaml
 Type: PrestageBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ManualCopy, DownloadDelta, OnDemand
 
 Required: False
@@ -403,7 +404,7 @@ Valid values are: Increase and Decrease.
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: High, Medium, Low
 
 Required: False
@@ -432,7 +433,7 @@ Specifies the version of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -458,7 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

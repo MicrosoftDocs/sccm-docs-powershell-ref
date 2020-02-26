@@ -1,14 +1,10 @@
 ---
-title: Get-CMClientSetting
-titleSuffix: Configuration Manager
 description: Gets client settings.
+external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMClientSetting
 ---
 
 # Get-CMClientSetting
@@ -33,13 +29,18 @@ Get-CMClientSetting [-Setting <SettingType>] [-SettingType <Types>] -Id <String>
 ## DESCRIPTION
 The **Get-CMClientSetting** cmdlet gets a customized collection of client settings.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226) on TechNet.
+For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get a collection of customized client settings that is specified by its name
 ```
-PS C:\> Get-CMClientSetting -Name "Windows 8 Client Computers Settings"
+PS XYZ:\> Get-CMClientSetting -Name "Windows 8 Client Computers Settings"
 AgentConfigurations: {}
 AssignmentCount:     0
 CreatedBy:           Contoso\DChew
@@ -68,7 +69,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +84,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +114,7 @@ Specifies a name for customized client settings.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,12 +124,10 @@ Accept wildcard characters: False
 ```
 
 ### -Raw
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +139,7 @@ Accept wildcard characters: False
 ### -Setting
 Specifies an array of setting types for one or more collections of client settings.
 
-Valid values are: 
+Valid values are:
 
 - BackgroundIntelligentTransfer
 - ClientPolicy
@@ -165,8 +164,8 @@ Valid values are:
 ```yaml
 Type: SettingType
 Parameter Sets: (All)
-Aliases: 
-Accepted values: BackgroundIntelligentTransfer, Cloud, ClientCache, ClientPolicy, ComplianceSettings, ComputerAgent, ComputerRestart, EndpointProtection, HardwareInventory, MeteredNetwork, MobileDevice, NetworkAccessProtection, PowerManagement, RemoteTools, SoftwareDeployment, SoftwareInventory, SoftwareMetering, SoftwareUpdates, StateMessaging, UserAndDeviceAffinity
+Aliases:
+Accepted values: BackgroundIntelligentTransfer, Cloud, ClientCache, ClientPolicy, ComplianceSettings, ComputerAgent, ComputerRestart, DeliveryOptimization, EndpointProtection, HardwareInventory, MeteredNetwork, MobileDevice, NetworkAccessProtection, PowerManagement, RemoteTools, SoftwareCenter, SoftwareDeployment, SoftwareInventory, SoftwareMetering, SoftwareUpdates, StateMessaging, UserAndDeviceAffinity, WindowsAnalytics
 
 Required: False
 Position: Named
@@ -190,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -200,7 +199,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226)
+[About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10))
 
 [New-CMClientSetting](New-CMClientSetting.md)
 

@@ -1,14 +1,10 @@
 ---
-title: Add-CMDeviceCollectionQueryMembershipRule
-titleSuffix: Configuration Manager
 description: Adds a query membership rule to one or more Configuration Manager device collections.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDeviceCollectionQueryMembershipRule
 ---
 
 # Add-CMDeviceCollectionQueryMembershipRule
@@ -43,13 +39,18 @@ You can specify the device collections by names, IDs, or an object that represen
 The query is specified as a text string.
 
 A query rule lets you dynamically update the members of a collection based on a query that is run on a schedule.
-For more information on collection rules in Microsoft System Center Configuration Manager, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information on collection rules in Microsoft System Center Configuration Manager, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Add a query membership rule
 ```
-PS C:\>Add-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -QueryExpression "select SMS_R_System.ResourceId, SMS_R_System.ResourceType, SMS_R_System.Name, SMS_R_System.SMSUniqueIdentifier, SMS_R_System.ResourceDomainORWorkgroup, SMS_R_System.Client from  SMS_R_System inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId" -RuleName "TPM Information"
+PS XYZ:\>Add-CMDeviceCollectionQueryMembershipRule -CollectionName "Mobile Windows 7 Devices" -QueryExpression "select SMS_R_System.ResourceId, SMS_R_System.ResourceType, SMS_R_System.Name, SMS_R_System.SMSUniqueIdentifier, SMS_R_System.ResourceDomainORWorkgroup, SMS_R_System.Client from  SMS_R_System inner join SMS_G_System_TPM on SMS_G_System_TPM.ResourceID = SMS_R_System.ResourceId" -RuleName "TPM Information"
 ```
 
 This command adds a membership rule named TPM Information to the device collection named Mobile Windows 7 Devices.
@@ -64,7 +65,7 @@ To obtain a device collection object, use the **Get-CMDeviceCollection** cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: ByCollectionValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,7 +80,7 @@ Specifies the ID of the device collection where the rule is applied.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -94,7 +95,7 @@ Specifies the name of the device collection where the rule is applied.
 ```yaml
 Type: String
 Parameter Sets: ByCollectionName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,7 +125,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +140,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +156,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +171,7 @@ Specifies the query expression that Configuration Manager uses to update the dev
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,7 +186,7 @@ Specifies the name for the rule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -211,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -221,7 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433)
+[Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10))
 
 [Get-CMDeviceCollectionQueryMembershipRule](Get-CMDeviceCollectionQueryMembershipRule.md)
 

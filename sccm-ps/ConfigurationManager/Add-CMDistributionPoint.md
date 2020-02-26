@@ -1,14 +1,10 @@
 ---
-title: Add-CMDistributionPoint
-titleSuffix: Configuration Manager
 description: Adds a distribution point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDistributionPoint
 ---
 
 # Add-CMDistributionPoint
@@ -25,14 +21,14 @@ Add-CMDistributionPoint -InputObject <IResultObject> [-InstallInternetServer]
  [-EnableAnonymous] -CertificateExpirationTimeUtc <DateTime> [-AllowPreStaging] [-MinimumFreeSpaceMB <Int32>]
  [-PrimaryContentLibraryLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
  [-PrimaryPackageShareLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>] [-EnablePxe]
- [-AllowPxeResponse] [-EnableUnknownComputerSupport] [-PxePassword <SecureString>]
+ [-AllowPxeResponse] [-EnableUnknownComputerSupport] [-EnableNonWdsPxe] [-PxePassword <SecureString>]
  [-UserDeviceAffinity <UserDeviceAffinityType>] [-MacAddressForRespondingPxeRequest <String[]>]
  [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast] [-UserName <String>] [-StartIPAddress <String>]
  [-EndIPAddress <String>] [-StartUdpPort <Int32>] [-EndUdpPort <Int32>] [-MulticastMaximumClientCount <Int32>]
  [-EnableScheduledMulticast <Boolean>] [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>]
  [-EnableContentValidation] [-ContentValidationSchedule <IResultObject>]
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP] [-SourceDistributionPoint <String[]>]
- [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache] [-AllowFallbackForContent]
+ [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache] [-EnableLedbat] [-AllowFallbackForContent]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -44,15 +40,15 @@ Add-CMDistributionPoint -InputObject <IResultObject> [-InstallInternetServer]
  [-MinimumFreeSpaceMB <Int32>] [-PrimaryContentLibraryLocation <DriveType>]
  [-SecondaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
  [-SecondaryPackageShareLocation <DriveType>] [-EnablePxe] [-AllowPxeResponse] [-EnableUnknownComputerSupport]
- [-PxePassword <SecureString>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-EnableNonWdsPxe] [-PxePassword <SecureString>] [-UserDeviceAffinity <UserDeviceAffinityType>]
  [-MacAddressForRespondingPxeRequest <String[]>] [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast]
  [-UserName <String>] [-StartIPAddress <String>] [-EndIPAddress <String>] [-StartUdpPort <Int32>]
  [-EndUdpPort <Int32>] [-MulticastMaximumClientCount <Int32>] [-EnableScheduledMulticast <Boolean>]
  [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>] [-EnableContentValidation]
  [-ContentValidationSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-EnablePullDP]
  [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache]
- [-AllowFallbackForContent] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-EnableLedbat] [-AllowFallbackForContent] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### DistributionPointWithSelfCert
@@ -62,14 +58,14 @@ Add-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
  [-EnableAnonymous] -CertificateExpirationTimeUtc <DateTime> [-AllowPreStaging] [-MinimumFreeSpaceMB <Int32>]
  [-PrimaryContentLibraryLocation <DriveType>] [-SecondaryContentLibraryLocation <DriveType>]
  [-PrimaryPackageShareLocation <DriveType>] [-SecondaryPackageShareLocation <DriveType>] [-EnablePxe]
- [-AllowPxeResponse] [-EnableUnknownComputerSupport] [-PxePassword <SecureString>]
+ [-AllowPxeResponse] [-EnableUnknownComputerSupport] [-EnableNonWdsPxe] [-PxePassword <SecureString>]
  [-UserDeviceAffinity <UserDeviceAffinityType>] [-MacAddressForRespondingPxeRequest <String[]>]
  [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast] [-UserName <String>] [-StartIPAddress <String>]
  [-EndIPAddress <String>] [-StartUdpPort <Int32>] [-EndUdpPort <Int32>] [-MulticastMaximumClientCount <Int32>]
  [-EnableScheduledMulticast <Boolean>] [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>]
  [-EnableContentValidation] [-ContentValidationSchedule <IResultObject>]
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP] [-SourceDistributionPoint <String[]>]
- [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache] [-AllowFallbackForContent]
+ [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache] [-EnableLedbat] [-AllowFallbackForContent]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -81,15 +77,15 @@ Add-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
  [-MinimumFreeSpaceMB <Int32>] [-PrimaryContentLibraryLocation <DriveType>]
  [-SecondaryContentLibraryLocation <DriveType>] [-PrimaryPackageShareLocation <DriveType>]
  [-SecondaryPackageShareLocation <DriveType>] [-EnablePxe] [-AllowPxeResponse] [-EnableUnknownComputerSupport]
- [-PxePassword <SecureString>] [-UserDeviceAffinity <UserDeviceAffinityType>]
+ [-EnableNonWdsPxe] [-PxePassword <SecureString>] [-UserDeviceAffinity <UserDeviceAffinityType>]
  [-MacAddressForRespondingPxeRequest <String[]>] [-PxeServerResponseDelaySec <Int32>] [-EnableMulticast]
  [-UserName <String>] [-StartIPAddress <String>] [-EndIPAddress <String>] [-StartUdpPort <Int32>]
  [-EndUdpPort <Int32>] [-MulticastMaximumClientCount <Int32>] [-EnableScheduledMulticast <Boolean>]
  [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>] [-EnableContentValidation]
  [-ContentValidationSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-EnablePullDP]
  [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache]
- [-AllowFallbackForContent] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-EnableLedbat] [-AllowFallbackForContent] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,13 +95,18 @@ A distribution point is a site system role that Microsoft System Center Configur
 You must designate a site system server as a distribution point before you can make content available to client computers.
 You can add the distribution point site role to a new site system server or add the site role to an existing site system server.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a site by using a site system server object
 ```
-PS C:\> $Date = [DateTime]::Now.AddYears(30)
-PS C:\> $SystemServer = Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com"
-PS C:\> Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc $Date
+PS XYZ:\> $Date = [DateTime]::Now.AddYears(30)
+PS XYZ:\> $SystemServer = Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+PS XYZ:\> Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc $Date
 ```
 
 The first command creates a date object for thirty years from the current date and stores the object in the $Date variable.
@@ -116,8 +117,8 @@ The third command adds a distribution point to the site system server stored in 
 
 ### Example 2: Add a site by using the pipeline
 ```
-PS C:\> $Date = [DateTime]::Now.AddYears(30)
-PS C:\> Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add-CMDistributionPoint -CertificateExpirationTimeUtc $Date
+PS XYZ:\> $Date = [DateTime]::Now.AddYears(30)
+PS XYZ:\> Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add-CMDistributionPoint -CertificateExpirationTimeUtc $Date
 ```
 
 The first command creates a date object for thirty years from the current date and stores the object in the $Date variable.
@@ -132,7 +133,7 @@ Indicates that clients outside of the boundary groups associated with a site sys
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +148,7 @@ Indicates that the distribution point can pre-stage contents.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,8 +158,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowProxyTraffic
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -192,7 +191,7 @@ Specifies, in UTC format, the date and time when the certificate expires.
 ```yaml
 Type: DateTime
 Parameter Sets: DistributionPointWithSelfCertByValue, DistributionPointWithSelfCert
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -207,7 +206,7 @@ Specifies, as a secure string, the password for a PKI client certificate.
 ```yaml
 Type: SecureString
 Parameter Sets: DistributionPointwithUserSpecifiedCertByValue, DistributionPointwithUserSpecifiedCert
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -222,7 +221,7 @@ Specifies the import path for a PKI client certificate.
 ```yaml
 Type: String
 Parameter Sets: DistributionPointwithUserSpecifiedCertByValue, DistributionPointwithUserSpecifiedCert
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -242,7 +241,7 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 
 Required: False
@@ -280,7 +279,7 @@ Valid values are:
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lowest, Low, Medium, High, Highest
 
 Required: False
@@ -312,7 +311,7 @@ Specifies a description for the distribution point.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -327,7 +326,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +341,7 @@ Indicates that the distribution point permits anonymous connections from Configu
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -357,7 +356,7 @@ Indicates that the cmdlet enables and configures BranchCache for the distributio
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -381,13 +380,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableLedbat
+{{ Fill EnableLedbat Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableMulticast
 Indicates that multicast is enabled for this distribution point.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNonWdsPxe
+{{ Fill EnableNonWdsPxe Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -402,7 +431,7 @@ Enables the distribution point to pull content from other distribution points.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -436,7 +465,7 @@ Indicates whether you can schedule when Configuration Manager deploys the operat
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -451,7 +480,7 @@ Indicates that SSL is enabled on this distribution point.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -467,7 +496,7 @@ Unknown computers are computers that are not managed by Configuration Manager.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -482,7 +511,7 @@ Specifies the ending IP address in a range of multicast addresses that Configura
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -497,7 +526,7 @@ Specifies the ending UDP port in a range of multicast UDP ports that Configurati
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -512,7 +541,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -544,7 +573,7 @@ IIS must be installed on all distribution points.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -559,7 +588,7 @@ Specifies an array of MAC addresses that the distribution point uses to respond 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -576,7 +605,7 @@ Content files can span multiple drives.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -591,7 +620,7 @@ Specifies how many client requests must be received before a scheduled multicast
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -606,7 +635,7 @@ Specifies the maximum number of clients that can download the operating system f
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -626,7 +655,7 @@ Valid values are:
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -641,13 +670,13 @@ Specifies the primary package share location.
 Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the *MinimumFreeSpaceMB* parameter.
 Valid values are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -692,13 +721,13 @@ Accept wildcard characters: False
 Specifies the secondary content location.
 Valid values are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -712,13 +741,13 @@ Accept wildcard characters: False
 Specifies the secondary package share location.
 Valid values are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -749,7 +778,7 @@ Specifies the site code for the Configuration Manager site that hosts this site 
 ```yaml
 Type: String
 Parameter Sets: DistributionPointWithSelfCert, DistributionPointwithUserSpecifiedCert
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -810,7 +839,7 @@ Specifies the starting IP address in a range of multicast addresses that Configu
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -825,7 +854,7 @@ Specifies the starting UDP port in a range of multicast UDP ports that Configura
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -836,7 +865,7 @@ Accept wildcard characters: False
 
 ### -UserDeviceAffinity
 Specifies how you want the distribution point to associate users with their devices for PXE deployments.
-Valid values are: 
+Valid values are:
 
 - AllowWithAutomaticApproval
 - AllowWithManualApproval
@@ -845,7 +874,7 @@ Valid values are:
 ```yaml
 Type: UserDeviceAffinityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotUse, AllowWithManualApproval, AllowWithAutomaticApproval
 
 Required: False
@@ -862,7 +891,7 @@ Use the format domain\username.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -888,7 +917,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

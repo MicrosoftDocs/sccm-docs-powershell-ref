@@ -1,14 +1,10 @@
 ---
-title: Start-CMContentDistribution
-titleSuffix: Configuration Manager
 description: Copies content to distribution points.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Start-CMContentDistribution
 ---
 
 # Start-CMContentDistribution
@@ -159,11 +155,16 @@ The **Start-CMContentDistribution** cmdlet copies content from the content libra
 You can use this cmdlet to distribute several types of content, including application deployment types, packages, deployment packages, driver packages, operating system images, operating system installers, boot images, and task sequences.
 You can distribute the content to distribution points, distribution point groups, or collections associated with distribution point groups.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Distribute a boot image
 ```
-PS C:\> Start-CMContentDistribution -BootImageId "CM200004" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -BootImageId "CM200004" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the boot image that has the ID CM200004.
@@ -171,14 +172,14 @@ The command distributes the boot image to the collection named All Systems, the 
 
 ### Example 2: Distribute a task sequence
 ```
-PS C:\> Start-CMContentDistribution -TaskSequenceId "CM200007" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM"
+PS XYZ:\> Start-CMContentDistribution -TaskSequenceId "CM200007" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM"
 ```
 
 This command distributes the task sequence that has the ID CM200007 to the collection named All Systems and the distribution point named CMDIV-TSQA04.CORP.CONTOSO.COM.
 
 ### Example 3: Distribute an application
 ```
-PS C:\> Start-CMContentDistribution -ApplicationName "Dict.app" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -ApplicationName "Dict.app" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the application named Dict.app.
@@ -186,7 +187,7 @@ The command distributes the application to the collection named All Systems, the
 
 ### Example 4: Distribute a package
 ```
-PS C:\> Start-CMContentDistribution -PackageId "CM200001" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -PackageId "CM200001" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the package that has the ID CM200001.
@@ -194,7 +195,7 @@ The command distributes the package to the collection named All Systems, the dis
 
 ### Example 5: Distribute a deployment package
 ```
-PS C:\> Start-CMContentDistribution -DeploymentPackageName "DivDeployPkg01" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -DeploymentPackageName "DivDeployPkg01" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the deployment package named DivDeployPkg01.
@@ -202,7 +203,7 @@ The command distributes the deployment package to the collection named All Syste
 
 ### Example 6: Distribute a driver package
 ```
-PS C:\> Start-CMContentDistribution -DriverPackageName "DrvPkg02" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -DriverPackageName "DrvPkg02" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM" -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the driver package named DrvPkg02.
@@ -210,7 +211,7 @@ The command distributes the driver package to the collection named All Systems, 
 
 ### Example 7: Distribute an operating system image
 ```
-PS C:\> Start-CMContentDistribution -OperatingSystemImageId "CM200013" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -OperatingSystemImageId "CM200013" -CollectionName "All Systems" -DistributionPointName "CMDIV-TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the operating system image that has the ID CM200013.
@@ -218,7 +219,7 @@ The command distributes the operating system image to the collection named All S
 
 ### Example 8: Distribute an operating system installer
 ```
-PS C:\> Start-CMContentDistribution -OperatingSystemInstallerId "CM200017" -CollectionName "All Systems" -DistributionPointName CMDIV- TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
+PS XYZ:\> Start-CMContentDistribution -OperatingSystemInstallerId "CM200017" -CollectionName "All Systems" -DistributionPointName CMDIV- TSQA04.CORP.CONTOSO.COM -DistributionPointGroupName "DistPtGroup02"
 ```
 
 This command distributes the operating system installer that has the ID CM200017.
@@ -232,7 +233,7 @@ Specifies an array of application IDs.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -247,7 +248,7 @@ Specifies an array of application names.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -292,7 +293,7 @@ Specifies the name of a Configuration Manager collection.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -365,7 +366,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -380,7 +381,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -395,7 +396,7 @@ Specifies the name of a distribution point that is associated with the deploymen
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -440,7 +441,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -450,8 +451,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -471,7 +470,7 @@ To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage]
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemImage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -617,7 +616,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

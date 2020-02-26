@@ -1,14 +1,10 @@
 ---
-title: Set-CMGlobalConditionXPathQuery
-titleSuffix: Configuration Manager
 description: Sets a XPath Query type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMGlobalConditionXPathQuery
 ---
 
 # Set-CMGlobalConditionXPathQuery
@@ -20,36 +16,55 @@ Sets a XPath Query type global condition in Configuration Manager.
 ## SYNTAX
 
 ### SetQueryFromFile (Default)
-
-```powershell
+```
 Set-CMGlobalConditionXPathQuery [-XmlFilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
  [-XPathQueryFilePath <String>] [-XmlNamespace <String[]>] -Name <String> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetQueryFromText
-
-```powershell
+```
 Set-CMGlobalConditionXPathQuery [-XmlFilePath <String>] [-IncludeSubfolder <Boolean>] [-Is64Bit <Boolean>]
  [-XPathQuery <String>] [-XmlNamespace <String[]>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **Set-CMGlobalConditionXPathQuery** cmdlet modifies settings for a XPath Query type global condition in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalXpath = Set-CMGlobalConditionXPathQuery -DataType String -XmlFilePath "c:\A" -XPathQuery "/" -Name GC8
+PS XYZ:\> $GlobalXpath = Set-CMGlobalConditionXPathQuery -DataType String -XmlFilePath "c:\A" -XPathQuery "/" -Name GC8
 ```
 
 This command sets a XPath Query type global condition in Configuration Manager.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -148,30 +163,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -XmlFilePath
+### -WhatIf
 
-Specifies the path to the XML file on client computers that will be used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the %USERPROFILE% user variable in the path name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -XmlNamespace
-
-Specifies namespaces to use during the XPath query.
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: String[]
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: XmlNamespaces
+Aliases: wi
 
 Required: False
 Position: Named
@@ -212,14 +212,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -XmlFilePath
 
-Prompts you for confirmation before running the cmdlet.
+Specifies the path to the XML file on client computers that will be used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the %USERPROFILE% user variable in the path name.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
@@ -228,15 +228,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
+### -XmlNamespace
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Specifies namespaces to use during the XPath query.
 
 ```yaml
-Type: SwitchParameter
+Type: String[]
 Parameter Sets: (All)
-Aliases: wi
+Aliases: XmlNamespaces
 
 Required: False
 Position: Named
@@ -244,22 +243,40 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
 
 ## OUTPUTS
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-- [New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXPathQuery.md)
-- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
-- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
-- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
-- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
-- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
-- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+[New-CMGlobalConditionXPathQuery](./New-CMGlobalConditionXPathQuery.md)
+
+[Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+
+[Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+
+[Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+
+[Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+
+[Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+
+[Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+
+[Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+
+[Set-CMGlobalConditionRegistryValue](./Set-CMGlobalConditionRegistryValue.md)
+
+[Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+
+[Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+
+[Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)

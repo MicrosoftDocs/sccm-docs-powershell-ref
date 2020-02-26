@@ -1,14 +1,7 @@
 ---
 title: Remove-CMSystemHealthValidatorPoint
-titleSuffix: Configuration Manager
 description: Removes a system health validator point from Configuration Manager.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Remove-CMSystemHealthValidatorPoint
@@ -37,11 +30,16 @@ You can specify a validator point by site system name or site code or both or yo
 
 Before you remove a system health validator point, make sure that there is another system health validator point for the site, or that the server that is running NPS has policies that grant network access and do not reference the System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a validator point
 ```
-PS C:\> Remove-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com"
+PS XYZ:\> Remove-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com"
 ```
 
 This command removes a system health validator point.
@@ -49,8 +47,8 @@ The command specifies the site code and the name of the server that hosts that s
 
 ### Example 2: Remove a validator point by using a variable
 ```
-PS C:\> $CMSHVP = Get-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com" 
-PS C:\> Remove-CMSystemHealthValidatorPoint -InputObject $CMSHVP
+PS XYZ:\> $CMSHVP = Get-CMSystemHealthValidatorPoint -SiteCode "CM1" -SiteSystemServerName "Test01.TSQA.Contoso.com"
+PS XYZ:\> Remove-CMSystemHealthValidatorPoint -InputObject $CMSHVP
 ```
 
 The first command gets the system role that has the specified site code and host name and stores it in the $CMSHVP variable.
@@ -79,7 +77,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +91,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +105,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +134,7 @@ Specifies a site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -174,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

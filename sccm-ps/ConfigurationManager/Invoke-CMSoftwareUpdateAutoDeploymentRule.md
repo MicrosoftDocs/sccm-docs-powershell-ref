@@ -1,14 +1,10 @@
 ---
-title: Invoke-CMSoftwareUpdateAutoDeploymentRule
-titleSuffix: Configuration Manager
 description: Runs a Configuration Manager deployment rule for automatic software updates.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Invoke-CMSoftwareUpdateAutoDeploymentRule
 ---
 
 # Invoke-CMSoftwareUpdateAutoDeploymentRule
@@ -47,11 +43,16 @@ You can specify rules to run by ID or by name, or specify a rule object by using
 You cannot run a disabled rule.
 You can use the [Enable-CMSoftwareUpdateAutoDeploymentRule](Enable-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet to enable a rule and then run it.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Invoke a deployment rule
 ```
-PS C:\>Invoke-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Security Updates"
+PS XYZ:\>Invoke-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Security Updates"
 ```
 
 This command runs a rule called Weekly Security Updates.
@@ -79,7 +80,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +95,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +127,7 @@ To obtain a deployment rule object, use the **Get-CMSoftwareUpdateAutoDeployment
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -141,7 +142,7 @@ Specifies a name of a rule for automatic deployment of software updates.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -151,12 +152,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

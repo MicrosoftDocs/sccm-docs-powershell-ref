@@ -1,14 +1,10 @@
 ---
-title: Add-CMDeviceAffinityToUser
-titleSuffix: Configuration Manager
 description: Adds device affinity to a Configuration Manager user.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDeviceAffinityToUser
 ---
 
 # Add-CMDeviceAffinityToUser
@@ -20,13 +16,13 @@ Adds device affinity to a Configuration Manager user.
 
 ### AddDeviceAffinityByUserName (Default)
 ```
-Add-CMDeviceAffinityToUser -UserName <String[]> [-DeviceId <String>] [-DeviceName <String>]
+Add-CMDeviceAffinityToUser -UserName <String[]> [-DeviceId <Int32[]>] [-DeviceName <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddDeviceAffinityByUserId
 ```
-Add-CMDeviceAffinityToUser -UserId <String> [-DeviceId <String>] [-DeviceName <String>]
+Add-CMDeviceAffinityToUser -UserId <Int32> [-DeviceId <Int32[]>] [-DeviceName <String[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -37,13 +33,18 @@ Device affinity in Configuration Manager associates a user with one or more devi
 Instead of deploying applications to all the user's devices, you deploy the application to the user and Configuration Manager automatically installs the application on all devices that are associated with that user.
 Device affinity removes the need for Configuration Manager to determine the names of the devices of a user before you deploy applications for that user.
 
-For more information about user device affinity, see [How to Manage User Device Affinity in Configuration Manager](http://go.microsoft.com/fwlink/?linkid=247182) on TechNet.
+For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Add device affinity to a user by user ID
 ```
-PS C:\>Add-CMDeviceAffinityToUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
+PS XYZ:\>Add-CMDeviceAffinityToUser -UserName "Patti Fuller" -DeviceName "WestDivUpdates05"
 ```
 
 This command adds affinity to the device named WestDivUpdates05 for the user named Patti Fuller.
@@ -69,9 +70,9 @@ Accept wildcard characters: False
 Specifies a device by using an ID.
 
 ```yaml
-Type: String
+Type: Int32[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: DeviceIds
 
 Required: False
 Position: Named
@@ -84,9 +85,9 @@ Accept wildcard characters: False
 Specifies a device by using a name.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: DeviceNames
 
 Required: False
 Position: Named
@@ -101,7 +102,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +117,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,9 +130,9 @@ Accept wildcard characters: False
 Specifies a user by using an ID.
 
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: AddDeviceAffinityByUserId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

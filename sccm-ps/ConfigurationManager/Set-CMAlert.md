@@ -1,14 +1,10 @@
 ---
-title: Set-CMAlert
-titleSuffix: Configuration Manager
 description: Changes properties of Configuration Manager alerts.
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAlert
 ---
 
 # Set-CMAlert
@@ -42,19 +38,24 @@ Set-CMAlert -Id <String> [-NewName <String>] [-Severity <Severities>] [-Paramete
 ## DESCRIPTION
 The **Set-CMAlert** cmdlet changes the properties of one or more Microsoft System Center Configuration Manager alerts.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set alert properties
 ```
-PS C:\> Set-CMAlert -Id "16777223" -Comments "Editing severity" -Severity 2
+PS XYZ:\> Set-CMAlert -Id "16777223" -Comments "Editing severity" -Severity 2
 ```
 
 This command changes the values of the *Comments* and *Severity* properties for an alert that has the ID 16777223.
 
 ### Example 2: Set alert properties by using alert object variable
 ```
-PS C:\> $AlertObj = Get-CMAlert -Id "16777221"
-PS C:\> Set-CMAlert -InputObject $AlertObj -Comments "Updating alert"
+PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777221"
+PS XYZ:\> Set-CMAlert -InputObject $AlertObj -Comments "Updating alert"
 ```
 
 The first command gets an alert object that has the ID 16777221, and then stores it in the $AlertObj variable.
@@ -97,7 +98,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +129,7 @@ You can obtain the ID of an alert by using the [Get-CMAlert](Get-CMAlert.md) cmd
 ```yaml
 Type: String
 Parameter Sets: SetById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +161,7 @@ You can obtain the name of an alert by using **Get-CMAlert**.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -175,7 +176,7 @@ Specifies a new name for the alert.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -208,7 +209,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Severities
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Error, Warning, Informational
 
 Required: False
@@ -235,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

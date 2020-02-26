@@ -1,14 +1,7 @@
 ---
 title: Remove-CMAmtProvisioningData
-titleSuffix: Configuration Manager
 description: Removes provisioning information for an Intel AMT computer.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Remove-CMAmtProvisioningData
@@ -45,11 +38,16 @@ You can either remove all configuration data or retain identification informatio
 By default, System Center Configuration Manager automatically reprovisions Intel AMT-based computers if you have configured Intel AMT provisioning.
 Use the *ControlType* parameter to control reprovisioning for individual computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove provisioning information completely for a specified computer
 ```
-PS C:\> Remove-CMAmtProvisioningData -ControlType FullUnprovisionSuppressAuto -DeviceId "SMS000076" -Force
+PS XYZ:\> Remove-CMAmtProvisioningData -ControlType FullUnprovisionSuppressAuto -DeviceId "SMS000076" -Force
 ```
 
 This command removes provisioning information from a computer that has the ID SMS000076.
@@ -100,7 +98,7 @@ Resets Intel AMT to the factory default settings, except for identification info
 ```yaml
 Type: RemoteControlType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DiscoveryBmc, PartialUnprovision, FullUnprovision, FullUnprovisionSuppressAuto, PartialUnprovisionSuppressAuto, KerberosFullUnprovision, KerberosFullUnprovisionSuppressAuto, KerberosPartialUnprovision, KerberosPartialUnprovisionSuppressAuto, Unsuppress, EnableAudit, DisableAudit, ClearAuditLog
 Required: True
 Position: Named
@@ -158,7 +156,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +170,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -205,7 +203,7 @@ Resets Intel AMT to the factory default settings, except for identification info
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -229,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

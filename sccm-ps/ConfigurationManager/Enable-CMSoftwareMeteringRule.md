@@ -1,14 +1,10 @@
 ---
-title: Enable-CMSoftwareMeteringRule
-titleSuffix: Configuration Manager
 description: Enables Configuration Manager software metering rules.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Enable-CMSoftwareMeteringRule
 ---
 
 # Enable-CMSoftwareMeteringRule
@@ -46,13 +42,18 @@ You can create software metering rules that specify which software to monitor.
 
 You can specify rules that enable software metering rules by ID or by product name, or by using the [Get-CMSoftwareMeteringRule](Get-CMSoftwareMeteringRule.md) cmdlet.
 
-For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268432) on TechNet.
+For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682005(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Enable rules for a specific product
 ```
-PS C:\>Enable-CMSoftwareMeteringRule -ProductName "Accounting Package"
+PS XYZ:\>Enable-CMSoftwareMeteringRule -ProductName "Accounting Package"
 ```
 
 This command enables software metering rules for a product named Accounting Package.
@@ -61,7 +62,7 @@ If you previously disabled some rules for this product, but not all, the cmdlet 
 
 ### Example 2: Enable a specific rule
 ```
-PS C:\>Enable-CMSoftwareMeteringRule -Id "16777229"
+PS XYZ:\>Enable-CMSoftwareMeteringRule -Id "16777229"
 ```
 
 This command enables a software metering rule that has the specified ID.
@@ -89,7 +90,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +136,7 @@ To obtain a software metering rule object, use the [Get-CMSoftwareMeteringRule](
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -150,7 +151,7 @@ Specifies a name for a product that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -176,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

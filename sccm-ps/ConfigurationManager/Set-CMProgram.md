@@ -1,14 +1,10 @@
 ---
-title: Set-CMProgram
-titleSuffix: Configuration Manager
 description: Modifies a program in Configuration Manager.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMProgram
 ---
 
 # Set-CMProgram
@@ -118,18 +114,23 @@ Programs are commands that are associated with a System Center Configuration Man
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a standard program
 ```
-PS C:\> Set-CMProgram -Name "Test" -StandardProgramName SPM -Comment "Standard Upgrades" -CommandLine "RunThisNow" -RunType Maximized -AfterRunningType ProgramControlsRestart -Category "Laptops" -DiskSpaceRequirement 50 -DiskSpaceUnit MB -Duration 150 -Requirement 4 -Reconnect $False -SuppressProgramNotifications $False -DisableProgram $True -EnableTaskSequence $True -DisableMomAlertOnRun $True -GenerateMomAlertOnFail $True
+PS XYZ:\> Set-CMProgram -Name "Test" -StandardProgramName SPM -Comment "Standard Upgrades" -CommandLine "RunThisNow" -RunType Maximized -AfterRunningType ProgramControlsRestart -Category "Laptops" -DiskSpaceRequirement 50 -DiskSpaceUnit MB -Duration 150 -Requirement 4 -Reconnect $False -SuppressProgramNotifications $False -DisableProgram $True -EnableTaskSequence $True -DisableMomAlertOnRun $True -GenerateMomAlertOnFail $True
 ```
 
 This command modifies a standard program.
 
 ### Example 2: Modify a device program
 ```
-PS C:\> Set-CMProgram -Name "Test" -DeviceProgramName DPM -Comment "Upgrades for December" -CommandLine "RunMe" -WorkingDirectory "\TempWork" -CommandLineFolder "C:\Windows" -DiskSpaceRequirement 30 -DiskSpaceUnit MB -DownloadProgramType AsSoonAsPossible -Requirement "All previous device updates"
+PS XYZ:\> Set-CMProgram -Name "Test" -DeviceProgramName DPM -Comment "Upgrades for December" -CommandLine "RunMe" -WorkingDirectory "\TempWork" -CommandLineFolder "C:\Windows" -DiskSpaceRequirement 30 -DiskSpaceUnit MB -DownloadProgramType AsSoonAsPossible -Requirement "All previous device updates"
 ```
 
 This command modifies a device program.
@@ -137,8 +138,6 @@ This command modifies a device program.
 ## PARAMETERS
 
 ### -AddSupportedOperatingSystemPlatform
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
@@ -155,15 +154,15 @@ Accept wildcard characters: False
 Specifies the action that occurs after the program completes successfully.
 The acceptable values for this parameter are:
 
-- ConfigurationManagerLogUserOff 
-- ConfigurationManagerStartsComputer 
- NoActionRequired 
+- ConfigurationManagerLogUserOff
+- ConfigurationManagerStartsComputer
+ NoActionRequired
 - ProgramControlsRestart.
 
 ```yaml
 Type: AfterRunningType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 Accepted values: NoActionRequired, ConfigurationManagerRestartsComputer, ProgramControlsRestart, ConfigurationManagerLogsUserOff
 
 Required: False
@@ -179,7 +178,7 @@ Specifies the category under which the program is displayed on the client comput
 ```yaml
 Type: String
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +193,7 @@ Specifies the command line for the program.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +209,7 @@ This folder can be an absolute path on the client, or a path relative to the dis
 ```yaml
 Type: String
 Parameter Sets: SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +225,7 @@ On client computers, this text appears in Run Advertised Programs in Control Pan
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,7 +253,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -270,7 +269,7 @@ When in maintenance mode, Microsoft Operations Manager (MOM) disables alerts whi
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +285,7 @@ If this option is selected, the program is removed from the list of available pr
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -301,7 +300,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -318,7 +317,7 @@ The value must be greater than or equal to zero.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -334,7 +333,7 @@ The acceptable values for this parameter are: GB, KB, and MB.
 ```yaml
 Type: DiskSpaceUnitType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: KB, MB, GB
 
 Required: False
@@ -348,14 +347,14 @@ Accept wildcard characters: False
 Specifies when the program is to run.
 The acceptable values for this parameter are:
 
-- AsSoonAsPossible 
-- OnlyOverFastNetwork 
+- AsSoonAsPossible
+- OnlyOverFastNetwork
 - OnlyWhenTheDeviceIsLocked
 
 ```yaml
 Type: DownloadProgramType
 Parameter Sets: SetDeviceProgramByName, SetDeviceProgramById, SetDeviceProgramByValue, SetDeviceProgramByProgramValue
-Aliases: 
+Aliases:
 Accepted values: AsSoonAsPossible, OnlyOverFastNetwork, OnlyWhenTheDeviceIsDocked
 
 Required: False
@@ -371,7 +370,7 @@ Specifies a drive letter to qualify the location if the *DriveMode* parameter is
 ```yaml
 Type: String
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -389,7 +388,7 @@ If *DriveMode* is set to RequiresSpecificDriveLetter, the program only runs if t
 ```yaml
 Type: DriveModeType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 Accepted values: RenameWithUnc, RequiresDriveLetter, RequiresSpecificDriveLetter
 
 Required: False
@@ -406,7 +405,7 @@ The default value is 120 minutes.
 ```yaml
 Type: Int32
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -421,7 +420,7 @@ Indicates whether this program can be installed from the Install Software task s
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -436,7 +435,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -451,7 +450,7 @@ Indicates whether Configuration Manager generates an application log event entry
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -513,7 +512,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -530,7 +529,7 @@ The program is only assigned to users when the *ProgramRunType* parameter is set
 ```yaml
 Type: ProgramAssignedType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 Accepted values: RunOnceForTheComputer, RunOnceForEveryUserWhoLogsOn
 
 Required: False
@@ -559,16 +558,16 @@ Accept wildcard characters: False
 Specifies the logon conditions that are necessary for the program to run.
 The acceptable values for this parameter are:
 
-- OnlyWhenNoUserIsLoggedOn 
-- OnlyWhenUserIsLoggedOn 
-- WhetherOrNotUserIsLoggedOn 
+- OnlyWhenNoUserIsLoggedOn
+- OnlyWhenUserIsLoggedOn
+- WhetherOrNotUserIsLoggedOn
 
 The default setting is OnlyWhenUserIsLoggedOn.
 
 ```yaml
 Type: ProgramRunType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 Accepted values: OnlyWhenUserIsLoggedOn, WhetherOrNotUserIsLoggedOn, OnlyWhenNoUserIsLoggedOn
 
 Required: False
@@ -584,7 +583,7 @@ Indicates whether the client computer reconnects to the distribution point when 
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -594,8 +593,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupportedOperatingSystemPlatform
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
@@ -614,7 +611,7 @@ Specifies any additional requirements for standard or device programs.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -630,7 +627,7 @@ The acceptable values for this parameter are: RunWithAdministrativeRights and Ru
 ```yaml
 Type: RunModeType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 Accepted values: RunWithUserRights, RunWithAdministrativeRights
 
 Required: False
@@ -641,8 +638,6 @@ Accept wildcard characters: False
 ```
 
 ### -RunOnAnyPlatform
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
@@ -659,17 +654,17 @@ Accept wildcard characters: False
 Specifies the mode is which the program will run on the client computer.
 The acceptable values for this parameter are:
 
-- Hidden 
-- Maximized 
-- Minimized 
-- Normal 
+- Hidden
+- Maximized
+- Minimized
+- Normal
 
 The default is Normal.
 
 ```yaml
 Type: RunType
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 Accepted values: Normal, Minimized, Maximized, Hidden
 
 Required: False
@@ -685,7 +680,7 @@ Indicates that the program type in the deployment package is standard program.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -698,7 +693,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -713,7 +708,7 @@ Indicates whether to allow users to interact with the program.
 ```yaml
 Type: Boolean
 Parameter Sets: SetStandardProgramByProgramValue, SetStandardProgramByName, SetStandardProgramById, SetStandardProgramByValue
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -744,7 +739,7 @@ Specifies a working directory for the program.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -754,7 +749,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

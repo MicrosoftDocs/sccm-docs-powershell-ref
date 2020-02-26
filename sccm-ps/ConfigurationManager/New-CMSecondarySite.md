@@ -1,14 +1,10 @@
 ---
-title: New-CMSecondarySite
-titleSuffix: Configuration Manager
 description: Creates a secondary site in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMSecondarySite
 ---
 
 # New-CMSecondarySite
@@ -78,12 +74,17 @@ New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <
 ## DESCRIPTION
 The **New-CMSecondarySite** cmdlet creates a secondary site in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a secondary site
 ```
-PS C:\> $CIObj = New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite
-PS C:\> New-CMSecondarySite -CertificateExpirationTimeUtc "2/1/2020 12:00 AM" -CreateSelfSignedCertificate -Https -InstallationSourceFile "\\ContosoServer1\SourceFiles" -InstallInternetServer $True -ParentSiteCode "CM1" -ServerName "server2.corp.contoso.com" -SiteCode "CM2" -SiteName "Contoso remote site" -SqlServerSetting $CIObj
+PS XYZ:\> $CIObj = New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite
+PS XYZ:\> New-CMSecondarySite -CertificateExpirationTimeUtc "2/1/2020 12:00 AM" -CreateSelfSignedCertificate -Https -InstallationSourceFile "\\ContosoServer1\SourceFiles" -InstallInternetServer $True -ParentSiteCode "CM1" -ServerName "server2.corp.contoso.com" -SiteCode "CM2" -SiteName "Contoso remote site" -SqlServerSetting $CIObj
 ```
 
 This first command creates a SQL Server settings object and specifies that Microsoft SQL Server Express is copied to a Configuration Manager secondary site.
@@ -101,7 +102,7 @@ Indicates whether clients can use a fallback source location for content.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +117,7 @@ Indicates whether the secondary site can pre-stage contents.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +145,7 @@ Specifies the date and time at which the self-signed certificate expires for a d
 ```yaml
 Type: DateTime
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPSAndCreateCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +160,7 @@ Specifies the password for the PKI imported certificate for the distribution poi
 ```yaml
 Type: SecureString
 Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -175,7 +176,7 @@ This parameter applies when the secondary site has installed and configured IIS 
 ```yaml
 Type: String
 Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,14 +189,14 @@ Accept wildcard characters: False
 Specifies a client connection type.
 The acceptable values for this parameter are:
 
-- Internet 
+- Internet
 - InternetAndIntranet
 - Intranet
 
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: NewDistributionPointByHTTPSAndCreateCertificate, NewDistributionPointByHTTPSAndImportCertificate
-Aliases: 
+Aliases:
 Accepted values: Intranet, Internet, InternetAndIntranet
 
 Required: False
@@ -224,16 +225,16 @@ Accept wildcard characters: False
 Specifies content monitoring priority.
 The acceptable values for this parameter are:
 
-- High 
-- Highest 
-- Low 
-- Lowest 
+- High
+- Highest
+- Low
+- Lowest
 - Medium
 
 ```yaml
 Type: Priority
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lowest, Low, Medium, High, Highest
 
 Required: False
@@ -249,7 +250,7 @@ Indicates that the secondary site creates a self-signed certificate.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPSAndCreateCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -264,7 +265,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,7 +281,7 @@ This parameter applies when the secondary site has installed and configured IIS 
 ```yaml
 Type: Boolean
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPAndImportCertificate
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +297,7 @@ Content downloads from cloud-based distribution points can always be shared by c
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +312,7 @@ Indicates whether Configuration Manager overwrites a duplicate certificate when 
 ```yaml
 Type: Boolean
 Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +327,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -343,7 +344,7 @@ This option does not support mobile devices or computers running Mac OS.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewDistributionPointByHTTPAndCreateCertificate, NewDistributionPointByHTTPAndImportCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -360,7 +361,7 @@ This option does not support mobile devices or computers running Mac OS.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewDistributionPointByHTTPSAndCreateCertificate, NewDistributionPointByHTTPSAndImportCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -375,7 +376,7 @@ Indicates that the cmdlet imports a PKI certificate instead of using a self-sign
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NewDistributionPointByHTTPAndImportCertificate, NewDistributionPointByHTTPSAndImportCertificate
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -391,7 +392,7 @@ This parameter must be $True before the cmdlet installs the site system role for
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -422,7 +423,7 @@ To obtain an installation source file object, use the New-CMInstallationSourceFi
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -438,7 +439,7 @@ This value determines the remaining free space on the drive after the distributi
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -451,13 +452,13 @@ Accept wildcard characters: False
 Specifies a primary content library location.
 The acceptable values for this parameter are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -471,13 +472,13 @@ Accept wildcard characters: False
 Specifies a primary package share location.
 The acceptable values for this parameter are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -504,13 +505,13 @@ Accept wildcard characters: False
 Specifies a secondary content library location.
 The acceptable values for this parameter are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -524,13 +525,13 @@ Accept wildcard characters: False
 Specifies a secondary package share location.
 The acceptable values for this parameter are:
 
-- Automatic. 
+- Automatic.
 - Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Automatic, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
 
 Required: False
@@ -559,7 +560,7 @@ Specifies a fully qualified domain name (FQDN) for the secondary site server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -574,7 +575,7 @@ Specifies the site name that helps identify the secondary site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -590,7 +591,7 @@ To obtain a SQL Server settings object, use the New-CMSqlServerSetting cmdlet.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -605,7 +606,7 @@ Specifies an object that represents a schedule type and determines how frequentl
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -631,7 +632,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

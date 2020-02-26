@@ -1,14 +1,10 @@
 ---
-title: New-CMCertificateProfileTrustedRootCA
-titleSuffix: Configuration Manager
 description: Creates a trusted CA certificate profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMCertificateProfileTrustedRootCA
 ---
 
 # New-CMCertificateProfileTrustedRootCA
@@ -27,18 +23,23 @@ New-CMCertificateProfileTrustedRootCA [-Description <String>] [-DestinationStore
 ## DESCRIPTION
 The **New-CMCertificateProfileTrustedRootCA** cmdlet creates a trusted certification authority (CA) certificate profile.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a trusted CA certificate profile
 ```
-PS C:\> New-CMCertificateProfileTrustedRootCA -Name "Test01" -Path "\\Server01\ShareFolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
+PS XYZ:\> New-CMCertificateProfileTrustedRootCA -Name "Test01" -Path "\\Server01\ShareFolder\RootCA.cer" -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client")
 ```
 
 This command creates a trusted CA certificate profile named Test01 from the RootCA.cer certificate for all Windows 10 Client platforms.
 
 ### Example 2: Create a trusted CA certificate profile and set the destination store
 ```
-PS C:\> New-CMCertificateProfileTrustedRootCA -Name "Test02" -Path \\Server01\ShareFolder\RootCA.cer -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -Description "TestRootCertificate" -DestinationStore SystemIntermediate
+PS XYZ:\> New-CMCertificateProfileTrustedRootCA -Name "Test02" -Path \\Server01\ShareFolder\RootCA.cer -SupportedPlatform (Get-CMSupportedPlatform -Fast -Name "All Windows 10*Client") -Description "TestRootCertificate" -DestinationStore SystemIntermediate
 ```
 
 This command creates a trusted CA certificate profile named Test02 from the RootCA.cer certificate for all Windows 10 Client platforms.
@@ -67,7 +68,7 @@ Specifies a description for the trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +104,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +134,7 @@ Specifies a name for the trusted CA certificate profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

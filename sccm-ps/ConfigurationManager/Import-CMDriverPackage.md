@@ -1,14 +1,10 @@
 ---
-title: Import-CMDriverPackage
-titleSuffix: Configuration Manager
 description: Imports a driver package.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Import-CMDriverPackage
 ---
 
 # Import-CMDriverPackage
@@ -27,11 +23,16 @@ Import-CMDriverPackage -ImportFilePath <String> [-ImportActionType <ImportAction
 The **Import-CMDriverPackage** cmdlet imports a driver packages to Microsoft System Center Configuration Manager.
 You can use the [Export-CMDriverPackage](Export-CMDriverPackage.md) cmdlet to export a driver package to a .zip file.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import a driver package
 ```
-PS C:\>Import-CMDriverPackage -ImportFilePath "\\Contoso02\main\driverpackages\DriverPackage.zip"
+PS XYZ:\>Import-CMDriverPackage -ImportFilePath "\\Contoso02\main\driverpackages\DriverPackage.zip"
 ```
 
 This command imports a driver package from the import file named DriverPackage.zip.
@@ -59,7 +60,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +75,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,12 +85,10 @@ Accept wildcard characters: False
 ```
 
 ### -ImportActionType
- 
-
 ```yaml
 Type: ImportActionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NotSet, Skip, DirectImport, Rename, Overwrite, ImportFail, IgnoreDependencyFailure, AppendDriverCategories, OverwriteIgnoreDependencyFailure
 
 Required: False
@@ -105,7 +104,7 @@ Specifies the Universal Naming Convention (UNC) path of the import file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -131,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

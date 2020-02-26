@@ -1,14 +1,10 @@
 ---
-title: Merge-CMConflictingRecord
-titleSuffix: Configuration Manager
 description: Merges a new Configuration Manager client record with a conflicting client record.
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Merge-CMConflictingRecord
 ---
 
 # Merge-CMConflictingRecord
@@ -50,22 +46,27 @@ For example, you might have reinstalled the operating system.
 The previous client record still exists with the same hardware information.
 If you manually resolve conflicts, you have the option to merge the new record with the existing record, create a new record, or create a record as a blocked record.
 You can also configure Configuration Manager to resolve conflicts automatically.
-For more information, see [Configuring Settings for Client Management in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=269847) on TechNet.
+For more information, see [Configuring Settings for Client Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427330(v=technet.10)) on TechNet.
 
 You can specify conflicting records by using a name or ID or you can specify a site code to merge each of the unresolved conflicting records for that site.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Merge conflicting records for a site
 ```
-PS C:\>Merge-CMConflictingRecords -SiteCode "CM2"
+PS XYZ:\>Merge-CMConflictingRecords -SiteCode "CM2"
 ```
 
 This command merges each of the conflicting records for the specified System Center Configuration Manager site.
 
 ### Example 2: Merge records for a named conflict
 ```
-PS C:\>Merge-CMConflictingRecords -Name "CR07"
+PS XYZ:\>Merge-CMConflictingRecords -Name "CR07"
 ```
 
 This command merges the conflicting records named CR07.
@@ -93,7 +94,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +109,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,13 +134,13 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -170,7 +171,7 @@ This cmdlet merges the conflicting records for this site.
 ```yaml
 Type: String
 Parameter Sets: SearchBySiteCode
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -196,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

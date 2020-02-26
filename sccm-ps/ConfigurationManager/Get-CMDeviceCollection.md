@@ -1,14 +1,10 @@
 ---
-title: Get-CMDeviceCollection
-titleSuffix: Configuration Manager
 description: Gets one or more device collections in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDeviceCollection
 ---
 
 # Get-CMDeviceCollection
@@ -45,13 +41,18 @@ Get-CMDeviceCollection -DistributionPointGroup <IResultObject> [<CommonParameter
 
 ## DESCRIPTION
 The **Get-CMDeviceCollection** cmdlet retrieves collections that contain computers or mobile devices.
-For more information about collections, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information about collections, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get a device collection by using an ID
 ```
-PS C:\> Get-CMDeviceCollection -CollectionId "9990000D"
+PS XYZ:\> Get-CMDeviceCollection -CollectionId "9990000D"
 ```
 
 This command gets the device collection that has the ID 9990000D.
@@ -62,7 +63,7 @@ This command gets the device collection that has the ID 9990000D.
 ```yaml
 Type: IResultObject
 Parameter Sets: ByDPGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,7 +76,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByDPGroupId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +89,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByDPGroupName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,7 +115,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,7 +135,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433)
+[Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10))
 
 [New-CMDeviceCollection](New-CMDeviceCollection.md)
 

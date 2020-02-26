@@ -1,14 +1,10 @@
 ---
-title: Remove-CMBootImage
-titleSuffix: Configuration Manager
 description: Removes an operating system boot image.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMBootImage
 ---
 
 # Remove-CMBootImage
@@ -41,13 +37,18 @@ The **Remove-CMBootImage** cmdlet removes a Windows Preinstallation Environment 
 
 You must run **Remove-CMBootImage** on the computer that is running the Systems Management Server (SMS) provider.
 The computer account of the computer that is running the SMS provider must have Read and Write access to the package source of the boot image.
-For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=263566) on TechNet.
+For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712282(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Remove a boot image object that is identified by using its ID
 ```
-PS C:\> Remove-CMBootImage -Id "CM100004" -Confirm
+PS XYZ:\> Remove-CMBootImage -Id "CM100004" -Confirm
 ```
 
 This command removes a boot image object that is identified by using its ID.
@@ -55,7 +56,7 @@ You must confirm the action before the command performs it.
 
 ### Example 2: Remove a boot image object that is identified by using its name
 ```
-PS C:\> Remove-CMBootImage -Name "Boot image (86)" -Confirm
+PS XYZ:\> Remove-CMBootImage -Name "Boot image (86)" -Confirm
 ```
 
 This command removes a boot image object that is identified by using its name.
@@ -84,7 +85,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +100,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +115,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +146,7 @@ Specifies a boot image object.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +161,7 @@ Specifies a name of a boot image.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -186,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -196,7 +197,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for the SMS Provider in Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=263566)
+[Planning for the SMS Provider in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712282(v=technet.10))
 
 [Get-CMBootImage](Get-CMBootImage.md)
 

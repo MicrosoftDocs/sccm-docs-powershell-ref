@@ -1,14 +1,10 @@
 ---
-title: Set-CMDatabaseProperty
-titleSuffix: Configuration Manager
 description: Changes database settings for a Configuration Manager database.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMDatabaseProperty
 ---
 
 # Set-CMDatabaseProperty
@@ -31,11 +27,16 @@ Specify the Configuration Manager site code for the database that you want to mo
 You can modify whether the database uses data compression, the Service Broker port for the computer that runs Microsoft SQL Server, and the length of time that the database keeps data.
 You can use the [Get-CMDatabaseProperty](Get-CMDatabaseProperty.md) cmdlet to see current values for these properties.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change settings for a database
 ```
-PS C:\> Set-CMDatabaseProperty -SiteCode "CM2" -DataRetentionPeriodDays 10 -EnableDataCompression $False -SqlServerServiceBrokerPort 80
+PS XYZ:\> Set-CMDatabaseProperty -SiteCode "CM2" -DataRetentionPeriodDays 10 -EnableDataCompression $False -SqlServerServiceBrokerPort 80
 ```
 
 This command makes changes to the database for the site that has the site code CM2.
@@ -77,7 +78,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +93,7 @@ Specifies whether the database uses data compression.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +108,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +123,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +138,7 @@ Specifies the port that the computer running SQL Server uses as a Service Broker
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

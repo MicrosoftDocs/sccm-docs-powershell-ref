@@ -1,14 +1,10 @@
 ---
-title: Resume-CMApplication
-titleSuffix: Configuration Manager
 description: Resumes a suspended application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Resume-CMApplication
 ---
 
 # Resume-CMApplication
@@ -40,18 +36,23 @@ Resume-CMApplication [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHan
 The **Resume-CMApplication** cmdlet resumes an application that was suspended using the Suspend-CMApplication cmdlet.
 After a suspended application has been resumed, clients can again download the application.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an application and resume it
 ```
-PS C:\> Get-CMApplication -Name "Application01" | Resume-CMApplication
+PS XYZ:\> Get-CMApplication -Name "Application01" | Resume-CMApplication
 ```
 
 This command gets the application object named Application01 and uses the pipeline operator to pass the object to **Resume-CMApplication**, which resumes the application.
 
 ### Example 2: Resume an application
 ```
-PS C:\> Resume-CMApplication -Name "Application01"
+PS XYZ:\> Resume-CMApplication -Name "Application01"
 ```
 
 This command resumes the application named Application01.
@@ -79,7 +80,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +95,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +126,7 @@ To get an application object, use the [Get-CMApplication](Get-CMApplication.md) 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -166,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

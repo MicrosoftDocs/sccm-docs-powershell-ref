@@ -1,14 +1,10 @@
 ---
-title: New-CMCollection
-titleSuffix: Configuration Manager
 description: Creates a Configuration Manager collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMCollection
 ---
 
 # New-CMCollection
@@ -22,21 +18,24 @@ Creates a Configuration Manager collection.
 ```
 New-CMCollection -CollectionType <CollectionType> [-Comment <String>] -LimitingCollectionName <String>
  -Name <String> [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VariablePriority <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByValue
 ```
 New-CMCollection -CollectionType <CollectionType> [-Comment <String>] -InputObject <IResultObject>
  -Name <String> [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VariablePriority <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ById
 ```
 New-CMCollection -CollectionType <CollectionType> [-Comment <String>] -LimitingCollectionId <String>
  -Name <String> [-RefreshSchedule <IResultObject>] [-RefreshType <CollectionRefreshType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VariablePriority <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,18 +43,23 @@ The **New-CMCollection** cmdlet creates a collection in Microsoft System Center 
 
 Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a collection and specify its scope
 ```
-PS C:\> New-CMCollection -CollectionType User -LimitingCollectionName "All Users" -Name "testUser"
+PS XYZ:\> New-CMCollection -CollectionType User -LimitingCollectionName "All Users" -Name "testUser"
 ```
 
 This command creates a user collection named testUser that establishes the All Users collection as the scope from which you can add members.
 
 ### Example 2: Create a collection based on an existing one
 ```
-PS C:\> Get-CMCollection -Name "All Users" | New-CMCollection -Name "testUser" -CollectionType "User"
+PS XYZ:\> Get-CMCollection -Name "All Users" | New-CMCollection -Name "testUser" -CollectionType "User"
 ```
 
 This command gets the collection object named All Users and uses the pipeline operator to pass the object to **New-CMCollection**.
@@ -75,7 +79,7 @@ Valid values are:
 ```yaml
 Type: CollectionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: User, Device
 
 Required: True
@@ -91,7 +95,7 @@ Specifies a comment for the collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +125,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +140,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +201,7 @@ Specifies a name for the collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -212,7 +216,7 @@ Specifies a schedule that determines when Configuration Manager refreshes the co
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,8 +238,23 @@ Valid values are:
 ```yaml
 Type: CollectionRefreshType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Manual, Periodic, Continuous, Both
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VariablePriority
+{{ Fill VariablePriority Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: DeviceCollectionVariablePrecedence
 
 Required: False
 Position: Named
@@ -261,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

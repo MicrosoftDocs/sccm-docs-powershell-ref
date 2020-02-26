@@ -1,14 +1,10 @@
 ---
-title: Get-CMEmailProfile
-titleSuffix: Configuration Manager
 description: Gets an email profile.
+external help file: AdminUI.PS.Dcm-help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMEmailProfile
 ---
 
 # Get-CMEmailProfile
@@ -36,25 +32,30 @@ Get-CMEmailProfile [-Name] <String> [-Fast] [<CommonParameters>]
 ## DESCRIPTION
 The **Get-CMEmailProfile** function gets an Exchange ActiveSync email profile.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an email profile by name
 ```
-PS C:\> Get-CMEmailProfile -Name "EmailProfile1"
+PS XYZ:\> Get-CMEmailProfile -Name "EmailProfile1"
 ```
 
 This command gets the Exchange ActiveSync email profile with the name EmailProfile1.
 
 ### Example 2: Get an email profile by ID
 ```
-PS C:\> Get-CMEmailProfile -ID 16795653
+PS XYZ:\> Get-CMEmailProfile -ID 16795653
 ```
 
 This command gets the Exchange ActiveSync email profile with the CI_ID of 16795653.
 
 ### Example 3: Get all email profiles
 ```
-PS C:\> Get-CMEmailProfile -Fast
+PS XYZ:\> Get-CMEmailProfile -Fast
 ```
 
 This command gets all Exchange ActiveSync email profiles.
@@ -71,7 +72,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +102,7 @@ Specifies the name of an email profile.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -111,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

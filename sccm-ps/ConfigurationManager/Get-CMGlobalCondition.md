@@ -1,14 +1,10 @@
 ---
-title: Get-CMGlobalCondition
-titleSuffix: Configuration Manager
 description: Gets Configuration Manager global condition objects.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMGlobalCondition
 ---
 
 # Get-CMGlobalCondition
@@ -20,15 +16,13 @@ Gets Configuration Manager global condition objects.
 ## SYNTAX
 
 ### SearchByName (Default)
-
-```powershell
+```
 Get-CMGlobalCondition [-Name <String>] [-AsDcmSdkObject] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Get-CMGlobalCondition -Id <String> [-AsDcmSdkObject] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -45,12 +39,17 @@ You can get global conditions by name, ID, or security scope.
 You can also specify one or more security scope names with either names or IDs.
 For instance, you might specify an array of global condition names and specify a security scope to narrow your results.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a global condition by name
 
 ```powershell
-PS C:\> Get-CMGlobalCondition -Name "CPU speed"
+PS XYZ:\> Get-CMGlobalCondition -Name "CPU speed"
 ```
 
 This command gets the global condition named CPU speed.
@@ -58,7 +57,7 @@ This command gets the global condition named CPU speed.
 ### Example 2: Get a global condition by id (CI_ID)
 
 ```powershell
-PS C:\> $test = Get-CMGlobalCondition -Id 16777504
+PS XYZ:\> $test = Get-CMGlobalCondition -Id 16777504
         $test.CI_ID
 ```
 
@@ -85,7 +84,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +100,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,11 +144,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-- [New-CMGlobalCondition](./Get-CMGlobalCondition.md)
-- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
-- [Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)
+[New-CMGlobalCondition](./Get-CMGlobalCondition.md)
+
+[Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+
+[Remove-CMGlobalCondition](./Remove-CMGlobalCondition.md)

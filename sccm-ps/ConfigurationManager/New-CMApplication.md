@@ -1,14 +1,10 @@
 ---
-title: New-CMApplication
-titleSuffix: Configuration Manager
 description: Creates an application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMApplication
 ---
 
 # New-CMApplication
@@ -20,26 +16,78 @@ Creates an application.
 
 ```
 New-CMApplication [-Name] <String> [-Description <String>] [-Publisher <String>] [-SoftwareVersion <String>]
- [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>] [-Owner <String>]
- [-SupportContact <String>] [-LocalizedName <String>] [-UserDocumentation <String>] [-LinkText <String>]
- [-LocalizedDescription <String>] [-Keyword <String>] [-PrivacyUrl <String>] [-IsFeatured <Boolean>]
- [-IconLocationFile <String>] [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-OptionalReference <String>] [-ReleaseDate <DateTime>] [-AutoInstall <Boolean>] [-AddOwner <String[]>]
+ [-AddSupportContact <String[]>] [-Owner <String>] [-SupportContact <String>] [-LocalizedName <String>]
+ [-UserDocumentation <String>] [-LinkText <String>] [-LocalizedDescription <String>] [-Keyword <String[]>]
+ [-PrivacyUrl <String>] [-IsFeatured <Boolean>] [-IconLocationFile <String>]
+ [-DisplaySupersedenceInApplicationCatalog <Boolean>] [-AppCatalog <AppDisplayInfo[]>]
+ [-DefaultLanguageId <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **New-CMApplication** cmdlet creates an application in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an application
 ```
-PS C:\> New-CMApplication -Name "Application01" -Description "New Application" -Publisher "Contoso" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator" -SupportContact "Administrator" -LocalizedName "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "For more information, see https://contoso.com/content" -LocalizedDescription "New Localized Application" -Keyword "application" -PrivacyUrl "https://contoso.com/library/privacy" -IsFeatured $True -IconLocationFile "C:\Users\administrator\Desktop\icon.png" -DisplaySupersedenceInApplicationCatalog $True
+PS XYZ:\> New-CMApplication -Name "Application01" -Description "New Application" -Publisher "Contoso" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator" -SupportContact "Administrator" -LocalizedName "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "For more information, see https://contoso.com/content" -LocalizedDescription "New Localized Application" -Keyword "application" -PrivacyUrl "https://contoso.com/library/privacy" -IsFeatured $True -IconLocationFile "C:\Users\administrator\Desktop\icon.png" -DisplaySupersedenceInApplicationCatalog $True
 ```
 
 This command creates an application named Application01.
 
 ## PARAMETERS
+
+### -AddOwner
+{{ Fill AddOwner Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddOwners
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddSupportContact
+{{ Fill AddSupportContact Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: AddSupportContacts
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppCatalog
+{{ Fill AppCatalog Description }}
+
+```yaml
+Type: AppDisplayInfo[]
+Parameter Sets: (All)
+Aliases: AppCatalogs
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AutoInstall
 Indicates whether a task sequence action can install the application.
@@ -47,7 +95,7 @@ Indicates whether a task sequence action can install the application.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,6 +119,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultLanguageId
+{{ Fill DefaultLanguageId Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Specifies a description for the application.
 The description appears in the Configuration Manager console.
@@ -78,7 +141,7 @@ The description appears in the Configuration Manager console.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +156,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +186,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +202,7 @@ This is set to the single default language.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +217,7 @@ Indicates whether the application displays as a featured app and is highlighted 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,9 +234,9 @@ To add multiple keywords, use CultureInfo.CurrentCulture.TextInfo.ListSeparator 
 This keyword will help users of Software Center search for the application.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: Keywords
 
 Required: False
 Position: Named
@@ -189,7 +252,7 @@ This is set to the single default language.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +314,7 @@ Specifies optional reference information for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,7 +329,7 @@ Specifies an owner for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +345,7 @@ This is set to the single default language.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -312,7 +375,7 @@ Specifies a release date for the application.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -327,7 +390,7 @@ Specifies a software version for the application.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +405,7 @@ Specifies one or more administrative users who are support contacts for the appl
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -358,7 +421,7 @@ This is set to the single default language.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -384,7 +447,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

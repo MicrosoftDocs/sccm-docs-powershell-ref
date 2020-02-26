@@ -1,14 +1,10 @@
 ---
-title: New-CMOperatingSystemInstaller
-titleSuffix: Configuration Manager
 description: Adds an operating system installer.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMOperatingSystemInstaller
 ---
 
 # New-CMOperatingSystemInstaller
@@ -27,11 +23,16 @@ New-CMOperatingSystemInstaller [-Name <String>] -Path <String> [-Description <St
 The **New-CMOperatingSystemInstaller** cmdlet adds an operating system installer to a Microsoft System Center Configuration Manager site.
 An operating system installer is an installation package that contains all the files that Microsoft System Center Configuration Manager needs to install a Windows operating system on a reference computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add an operating system installer
 ```
-PS C:\> New-CMOperatingSystemInstaller -Name "INSTALL01" -Path "\\Contoso01\CM\Win8Install"
+PS XYZ:\> New-CMOperatingSystemInstaller -Name "INSTALL01" -Path "\\Contoso01\CM\Win8Install"
 ```
 
 This command adds an operating system installer named INSTALL01 and specifies the network path to the installation source files of the operating system installer.
@@ -59,7 +60,7 @@ Specifies a description for an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +75,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ Specifies a name of the operating system installer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ Specifies the version of an operating system installer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

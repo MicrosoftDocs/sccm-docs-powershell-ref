@@ -1,14 +1,10 @@
 ---
-title: Get-CMInitialModifiableSecuredCategory
-titleSuffix: Configuration Manager
 description: Gets modifiable secured categories.
+external help file: AdminUI.PS.Migration.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMInitialModifiableSecuredCategory
 ---
 
 # Get-CMInitialModifiableSecuredCategory
@@ -35,18 +31,23 @@ The **Get-CMInitialModifiableSecuredCategory** cmdlet gets modifiable secured ca
 
 Note: This cmdlet was previously known as **Get-CMInitModifiableSecuredCategory** in System Center 2012 Configuration Manager SP1.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get information about all your modifiable secured categories
 ```
-PS C:\> Get-CMInitialModifiableSecuredCategory
+PS XYZ:\> Get-CMInitialModifiableSecuredCategory
 ```
 
 This command returns information about all your modifiable secured categories.
 
 ### Example 2: Get information about a specific modifiable secured category
 ```
-PS C:\> Get-CMInitialModifiableSecuredCategory -ID "121989"
+PS XYZ:\> Get-CMInitialModifiableSecuredCategory -ID "121989"
 ```
 
 This command returns information about the modifiable secured category that has the ID 121989.
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,4 +140,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Configuration Manager Cmdlets](ConfigurationManager.md)
+[Configuration Manager cmdlets](ConfigurationManager.md)

@@ -1,14 +1,10 @@
 ---
-title: Export-CMQuery
-titleSuffix: Configuration Manager
 description: Exports a query from Configuration Manager.
+external help file: AdminUI.PS.SystemStatus.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Export-CMQuery
 ---
 
 # Export-CMQuery
@@ -38,28 +34,30 @@ Export-CMQuery [-InputObject] <IResultObject> -ExportFilePath <String> [-Comment
 
 ## DESCRIPTION
 The **Export-CMQuery** cmdlet exports a query from Microsoft System Center Configuration Manager.
-Configuration Manager queries define and store the criteria for sets of database objects that you want to find. 
+Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.xml"
+PS XYZ:\> Export-CMQuery -Name "My Systems" -ExportFilePath "C:\Export\Query.xml"
 ```
 
 This command exports a query called My Systems to an exported file called Query.xml
- 
+
 
 ## PARAMETERS
 
 ### -Comment
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +87,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,12 +97,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExportFilePath
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +115,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,8 +125,6 @@ Accept wildcard characters: False
 ```
 
 ### -Id
- 
-
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
@@ -144,8 +138,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -159,12 +151,10 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -203,4 +193,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,14 +1,10 @@
 ---
-title: Set-CMAssetIntelligenceClass
-titleSuffix: Configuration Manager
 description: Modifies the Asset Intelligence hardware inventory reporting classes.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAssetIntelligenceClass
 ---
 
 # Set-CMAssetIntelligenceClass
@@ -38,18 +34,23 @@ The Hardware Inventory Client Agent collects inventory from Microsoft System Cen
 You can modify the categorization information, which includes product name, vendor, software category, and software family, for inventoried software only at the top-level site in your hierarchy.
 After you modify the categorization information for predefined software, the validation state for the software changes from Validated to User Defined.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change the Asset Intelligence hardware inventory reporting classes
 ```
-PS C:\> Set-CMAssetIntelligenceClass -EnableReportingClassName SMS_InstalledExecutable -DisableReportingClassName MS_InstalledSoftware
+PS XYZ:\> Set-CMAssetIntelligenceClass -EnableReportingClassName SMS_InstalledExecutable -DisableReportingClassName MS_InstalledSoftware
 ```
 
 This command enables the reporting class named SMS_InstalledExecutable and disables the reporting class named MS_InstalledSoftware.
 
 ### Example 2: Enable all Asset Intelligence hardware inventory reporting classes
 ```
-PS C:\> Set-CMAssetIntelligenceClass -EnableAllReportingClass
+PS XYZ:\> Set-CMAssetIntelligenceClass -EnableAllReportingClass
 ```
 
 This command enables all the Asset Intelligence hardware inventory reporting classes.
@@ -90,7 +91,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ClassNameType[]
 Parameter Sets: SetBySelectReportClass
-Aliases: 
+Aliases:
 Accepted values: SMS_AutoStartSoftware, SMS_BrowserHelperObject, SMS_InstalledExecutable, SMS_InstalledSoftware, SMS_SoftwareShortcut, SMS_SystemConsoleUsage, SMS_SystemConsoleUser, SoftwareLicensingProduct, SoftwareLicensingService, Win32_USBDevice, SMS_SoftwareTag
 
 Required: False
@@ -106,7 +107,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +122,7 @@ Indicates that all Asset Intelligence reporting classes are enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetByAllReportClass
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +150,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ClassNameType[]
 Parameter Sets: SetBySelectReportClass
-Aliases: 
+Aliases:
 Accepted values: SMS_AutoStartSoftware, SMS_BrowserHelperObject, SMS_InstalledExecutable, SMS_InstalledSoftware, SMS_SoftwareShortcut, SMS_SystemConsoleUsage, SMS_SystemConsoleUser, SoftwareLicensingProduct, SoftwareLicensingService, Win32_USBDevice, SMS_SoftwareTag
 
 Required: False
@@ -165,7 +166,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

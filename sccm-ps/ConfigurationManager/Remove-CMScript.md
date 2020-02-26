@@ -1,14 +1,10 @@
 ---
-title: Remove-CMScript
-titleSuffix: Configuration Manager
 description: Removes Configuration Manager Powershell scripts.
+external help file: AdminUI.PS.ClientOperations.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/15/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMScript
 ---
 
 # Remove-CMScript
@@ -20,34 +16,53 @@ Removes Configuration Manager Powershell scripts.
 ## SYNTAX
 
 ### SearchByValueMandatory (Default)
-
-```powershell
+```
 Remove-CMScript [-Force] -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
-
-```powershell
+```
 Remove-CMScript [-Force] -ScriptName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **Remove-CMScript** cmdlet removes one or more Microsoft System Center Configuration Manager scripts. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a script by using the script name
 
 ```powershell
-PS C:\> Remove-CMScript -ScriptName "getUsers"
+PS XYZ:\> Remove-CMScript -ScriptName "getUsers"
 ```
 
 This command removes a script that has the name getUesrs.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -130,22 +145,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -163,6 +162,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
@@ -170,6 +172,8 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

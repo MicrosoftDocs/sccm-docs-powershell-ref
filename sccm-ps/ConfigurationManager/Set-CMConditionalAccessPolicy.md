@@ -1,14 +1,10 @@
 ---
-title: Set-CMConditionalAccessPolicy
-titleSuffix: Configuration Manager
 description: Sets a conditional access policy.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMConditionalAccessPolicy
 ---
 
 # Set-CMConditionalAccessPolicy
@@ -33,18 +29,23 @@ Set-CMConditionalAccessPolicy [-AddExcludedCollection <IResultObject[]>] [-AddEx
 ## DESCRIPTION
 The **Set-CMConditionalAccessPolicy** cmdlet updates the settings of a conditional access policy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set a conditional access policy to add collections
 ```
-PS C:\> Get-CMConditionalAccessPolicy | Set-CMConditionalAccessPolicy -NotificationText "Test text 01" -AddExcludedCollectionID EC300016 -AddTargetedCollectionID TC300018
+PS XYZ:\> Get-CMConditionalAccessPolicy | Set-CMConditionalAccessPolicy -NotificationText "Test text 01" -AddExcludedCollectionID EC300016 -AddTargetedCollectionID TC300018
 ```
 
 This command gets the conditional access policy object and uses the pipeline operator to pass the object to **Set-CMConditionalAccessPolicy**, which adds an excluded collection with the ID of EC300016 and a targeted collection with the id of TC300018.
 
 ### Example 2: Set a conditional access policy to remove collections
 ```
-PS C:\> Get-CMConditionalAccessPolicy | Set-CMConditionalAccessPolicy -NotificationText "Text text 02" -RemoveExcludedCollectionID EC300014 -RemoveTargetedCollectionName "All Users"
+PS XYZ:\> Get-CMConditionalAccessPolicy | Set-CMConditionalAccessPolicy -NotificationText "Text text 02" -RemoveExcludedCollectionID EC300014 -RemoveTargetedCollectionName "All Users"
 ```
 
 This command gets the conditional access policy object and uses the pipeline operator to pass the object to **Set-CMConditionalAccessPolicy**, which removes the excluded collection with the ID of EC300014, and the targeted collection with the name of All Users.
@@ -209,7 +210,7 @@ This rule overrides the default Exchange access rule, which means that even if y
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +225,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,7 +240,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,7 +256,7 @@ To obtain a conditional access policy object, use the [Get-CMConditionalAccessPo
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -270,7 +271,7 @@ Specifies the text of the email that Exchange sends to users when their device i
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +287,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -416,7 +417,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

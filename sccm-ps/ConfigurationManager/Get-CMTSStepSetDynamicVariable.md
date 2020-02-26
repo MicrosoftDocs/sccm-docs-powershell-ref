@@ -1,14 +1,10 @@
 ---
-title: Get-CMTSStepSetDynamicVariable
-titleSuffix: Configuration Manager
 description: Gets task sequence Set Dynamic Variable steps in Configuration Manager.
+external help file: AdminUI.PS.Osd-help.xml
+Module Name: ConfigurationManager
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMTSStepSetDynamicVariable
 ---
 
 # Get-CMTSStepSetDynamicVariable
@@ -20,38 +16,59 @@ Gets task sequence Set Dynamic Variable steps in Configuration Manager.
 ## SYNTAX
 
 ### ByValue (Default)
-
-```powershell
+```
 Get-CMTSStepSetDynamicVariable [-InputObject] <IResultObject> [-StepName <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ById
-
-```powershell
+```
 Get-CMTSStepSetDynamicVariable [-TaskSequenceId] <String> [-StepName <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByName
-
-```powershell
+```
 Get-CMTSStepSetDynamicVariable [-TaskSequenceName] <String> [-StepName <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **Get-CMTSStepSetDynamicVariable** gets task sequence "Set Dynamic Variable" step(s) in a task sequence. This command supports pipeline from a task sequence object, and could be filtered by the name of the step.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Get-CMTaskSequenceStepSetDynamicVariable -StepName $stepName
+PS XYZ:\> $ReferencedTaskSequence | Get-CMTaskSequenceStepSetDynamicVariable -StepName $stepName
 ```
 
-This command gets task sequence "Set Dynamic Variable" steps in a task sequence. 
+This command gets task sequence "Set Dynamic Variable" steps in a task sequence.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -InputObject
 
@@ -117,22 +134,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -150,6 +151,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
@@ -157,6 +161,8 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

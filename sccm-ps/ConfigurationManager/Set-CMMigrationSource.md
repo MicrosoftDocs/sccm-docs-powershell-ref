@@ -1,14 +1,10 @@
 ---
-title: Set-CMMigrationSource
-titleSuffix: Configuration Manager
 description: Specifies or changes settings for a migration source site in Configuration Manager.
+external help file: AdminUI.PS.Migration.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMMigrationSource
 ---
 
 # Set-CMMigrationSource
@@ -32,11 +28,16 @@ By default, the top-level site of the hierarchy becomes a source site of the sou
 If you migrate from a Microsoft System Center Configuration Manager 2007 hierarchy, you can configure additional source sites for migration.
 If you migrate from a System Center Configuration Manager hierarchy, you do not need to configure additional source sites because the System Center Configuration Manager shared database at the top of the source hierarchy contains all of the information that you can migrate.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Specify a migration source
 ```
-PS C:\> Set-CMMigrationSource -SourceSiteServerName "cmdev-contoso01" -SmsProviderAccount "tsqa\pattifuller" -SqlServerAccount "tsqa\pattifuller" -EnableDistributionPointSharing $True
+PS XYZ:\> Set-CMMigrationSource -SourceSiteServerName "cmdev-contoso01" -SmsProviderAccount "tsqa\pattifuller" -SqlServerAccount "tsqa\pattifuller" -EnableDistributionPointSharing $True
 ```
 
 This command specifies the site server named cmdev-contoso01 as the source of migration data.
@@ -66,7 +67,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +82,7 @@ Indicates whether Configuration Manager shares distribution points between sourc
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ The top-level site uses these connections to retrieve objects and distribution p
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +128,7 @@ Specifies the name of a server that contains a source site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +144,7 @@ The account must have read and run permissions for this database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

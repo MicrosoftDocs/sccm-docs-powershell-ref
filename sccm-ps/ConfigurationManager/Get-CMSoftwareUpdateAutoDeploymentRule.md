@@ -1,14 +1,10 @@
 ---
-title: Get-CMSoftwareUpdateAutoDeploymentRule
-titleSuffix: Configuration Manager
 description: Gets Configuration Manager deployment rules for automatic software updates.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSoftwareUpdateAutoDeploymentRule
 ---
 
 # Get-CMSoftwareUpdateAutoDeploymentRule
@@ -40,18 +36,23 @@ The System Center Configuration Manager server downloads content files and copie
 You can specify rules by ID or by name.
 You can use this cmdlet to get deployment rules for automatic software updates to use with other cmdlets, such as the Invoke-CMSoftwareUpdateAutoDeploymentRule cmdlet or the [Remove-CMSoftwareUpdateAutoDeploymentRule](Remove-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a deployment rule by name
 ```
-PS C:\> Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+PS XYZ:\> Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
 ```
 
 This command gets a deployment rule named Weekly Driver Updates.
 
 ### Example 2: Get a deployment rule by ID
 ```
-PS C:\> Get-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
+PS XYZ:\> Get-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
 ```
 
 This command gets a deployment rule that has the ID 16777217.
@@ -64,7 +65,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +83,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +98,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +127,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +142,7 @@ Specifies a name of a rule for automatic deployment of software updates.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -151,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Set-CMSecurityScope
-titleSuffix: Configuration Manager
 description: Sets a security scope.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSecurityScope
 ---
 
 # Set-CMSecurityScope
@@ -39,12 +35,17 @@ Set-CMSecurityScope -Name <String> [-NewName <String>] [-Description <String>] [
 ## DESCRIPTION
 The **Set-CMSecurityScope** cmdlet changes the configuration settings of a security scope.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a security scope and update its name
 ```
-PS C:\> $Scope = Get-CMSecurityScope -Name "Scope"
-PS C:\> Set-CMSecurityScope -InputObject $Scope -NewName "newScope"
+PS XYZ:\> $Scope = Get-CMSecurityScope -Name "Scope"
+PS XYZ:\> Set-CMSecurityScope -InputObject $Scope -NewName "newScope"
 ```
 
 The first command gets the security scope object named Scope and stores the object in the $Scope variable.
@@ -53,7 +54,7 @@ The second command changes the name of the security scope stored in $Scope to ne
 
 ### Example 2: Pass a security scope through the pipeline and update its name
 ```
-PS C:\> Get-CMSecurityScope -Name "Scope" | Set-CMSecurityScope -NewName "newScope"
+PS XYZ:\> Get-CMSecurityScope -Name "Scope" | Set-CMSecurityScope -NewName "newScope"
 ```
 
 This command gets the security scope object named Scope and uses the pipeline operator to pass the object to **Set-CMSecurityScope**, which changes the name of the security scope to newScope.
@@ -96,7 +97,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +112,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +143,7 @@ To obtain a security scope object, use the [Get-CMSecurityScope](Get-CMSecurityS
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,7 +173,7 @@ Specifies a new name for the security scope.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: New-CMDeviceCollection
-titleSuffix: Configuration Manager
 description: Creates a collection for devices and adds the collection to the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections-help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMDeviceCollection
 ---
 
 # New-CMDeviceCollection
@@ -48,23 +44,28 @@ You specify the limiting collection by providing its name or ID.
 Devices are added to the collection by membership rules.
 To add members to the device collection use one of the following membership rule cmdlets:
 
-- [Add-CMDeviceCollectionDirectMembershipRule](Add-CMDeviceCollectionDirectMembershipRule.md) 
-- [Add-CMDeviceCollectionExcludeMembershipRule](Add-CMDeviceCollectionExcludeMembershipRule.md) 
-- [Add-CMDeviceCollectionIncludeMembershipRule](Add-CMDeviceCollectionIncludeMembershipRule.md) 
+- [Add-CMDeviceCollectionDirectMembershipRule](Add-CMDeviceCollectionDirectMembershipRule.md)
+- [Add-CMDeviceCollectionExcludeMembershipRule](Add-CMDeviceCollectionExcludeMembershipRule.md)
+- [Add-CMDeviceCollectionIncludeMembershipRule](Add-CMDeviceCollectionIncludeMembershipRule.md)
 - [Add-CMDeviceCollectionQueryMembershipRule](Add-CMDeviceCollectionQueryMembershipRule.md)
 
 Collections represent logical groupings of resources, such as users and devices.
-For more information about Configuration Manager collections, see [Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433) on TechNet.
+For more information about Configuration Manager collections, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Create a device collection
 ```
-PS C:\> New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
+PS XYZ:\> New-CMDeviceCollection -Name "Windows 7" -LimitingCollectionName "All Systems"
 ```
 
-This command creates a collection for all computers that run WindowsÂ® 7.
-The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the WindowsÂ® 7 collection.
+This command creates a collection for all computers that run Windows® 7.
+The *LimitingCollectionName* parameter specifies that any device in the All Systems collection can be a member of the Windows® 7 collection.
 
 ## PARAMETERS
 
@@ -72,7 +73,7 @@ The *LimitingCollectionName* parameter specifies that any device in the All Syst
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,8 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -116,7 +117,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +143,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +156,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +169,7 @@ Accept wildcard characters: False
 ```yaml
 Type: CollectionRefreshType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Manual, Periodic, Continuous, Both
 
 Required: False
@@ -195,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -205,6 +206,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkID=259433)
+[Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10))
 
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)

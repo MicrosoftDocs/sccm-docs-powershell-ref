@@ -1,14 +1,10 @@
 ---
-title: New-CMTSStepSetupWindowsAndConfigMgr
-titleSuffix: Configuration Manager
 description: Creates a t s step setup windows and config mgr.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMTSStepSetupWindowsAndConfigMgr
 ---
 
 # New-CMTSStepSetupWindowsAndConfigMgr
@@ -16,7 +12,6 @@ manager: dougeby
 ## SYNOPSIS
 
 Creates a t s step setup windows and config mgr.
-
 
 ## SYNTAX
 
@@ -28,22 +23,22 @@ New-CMTSStepSetupWindowsAndConfigMgr -PackageId <String> [-PreproductionPackageI
 ```
 
 ## DESCRIPTION
- 
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -Condition
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -72,12 +67,10 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,12 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -Description
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,8 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -122,7 +111,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +126,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,8 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationProperty
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -162,8 +149,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -177,8 +162,6 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -192,8 +175,6 @@ Accept wildcard characters: False
 ```
 
 ### -PreproductionPackageId
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -223,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -236,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

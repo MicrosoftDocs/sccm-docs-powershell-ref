@@ -1,14 +1,10 @@
 ---
-title: Get-CMReportingServicePoint
-titleSuffix: Configuration Manager
 description: Gets a reporting service point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMReportingServicePoint
 ---
 
 # Get-CMReportingServicePoint
@@ -34,11 +30,16 @@ Get-CMReportingServicePoint [-AllSite] -InputObject <IResultObject> [-DisableWil
 The **Get-CMReportingServicePoint** cmdlet gets a reporting service point.
 A reporting service point is a site system role that is installed on a server that runs Microsoft SQL Server Reporting Services.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a reporting service point
 ```
-PS C:\> Get-CMReportingServicePoint -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM" -SiteCode "CM1" >>\Cmrsp01\Get-CMReportingServicePoint_data.txt
+PS XYZ:\> Get-CMReportingServicePoint -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM" -SiteCode "CM1" >>\Cmrsp01\Get-CMReportingServicePoint_data.txt
 ```
 
 This command gets a reporting service point from the Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
@@ -47,8 +48,6 @@ The command directs the output to the file \Cmrsp01\Get-CMReportingServicePoint_
 ## PARAMETERS
 
 ### -AllSite
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -67,7 +66,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +81,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,13 +91,13 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,7 +112,7 @@ Specifies the site code of the Microsoft System Center Configuration Manager sit
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

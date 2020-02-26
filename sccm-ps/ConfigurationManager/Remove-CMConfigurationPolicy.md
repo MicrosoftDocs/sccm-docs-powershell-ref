@@ -1,14 +1,10 @@
 ---
-title: Remove-CMConfigurationPolicy
-titleSuffix: Configuration Manager
 description: Removes a configuration policy.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMConfigurationPolicy
 ---
 
 # Remove-CMConfigurationPolicy
@@ -41,18 +37,23 @@ The **Remove-CMConfigurationPolicy** cmdlet removes a configuration policy.
 A configuration policy can be an email profile, a firewall policy, or others.
 See the Alias section for additional policy types that you can use this cmdlet to remove.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a configuration policy by ID
 ```
-PS C:\> Remove-CMConfigurationPolicy -ID 16777454 -Force
+PS XYZ:\> Remove-CMConfigurationPolicy -ID 16777454 -Force
 ```
 
 This command removes the configuration policy with the CI_ID of 16777454, without prompting the user for confirmation.
 
 ### Example 2: Remove a configuration policy by name
 ```
-PS C:\> Get-CMcertificateProfilePfx -Name "CertProf1" | Remove-CMConfigurationPolicy
+PS XYZ:\> Get-CMcertificateProfilePfx -Name "CertProf1" | Remove-CMConfigurationPolicy
 ```
 
 This command gets the PFX certificate profile object named CertProf01 and uses the pipeline operator to pass the object to **Remove-CMConfigurationPolicy** which removes the certificate profile.
@@ -80,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +96,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +142,7 @@ To obtain a configuration policy object, use the Get-CMConfigurationPolicy cmdle
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -182,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

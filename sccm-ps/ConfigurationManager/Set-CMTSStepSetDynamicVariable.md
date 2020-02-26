@@ -1,265 +1,242 @@
 ---
-title: Set-CMTSStepSetDynamicVariable
-titleSuffix: Configuration Manager
-description: Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager. 
+description: Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMTSStepSetDynamicVariable
 ---
 
 # Set-CMTSStepSetDynamicVariable
 
 ## SYNOPSIS
 
-Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager. 
+Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager.
 
 ## SYNTAX
 
 ### ByValue (Default)
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable [-AddRule <IResultObject[]>] [-CleanRule] -InputObject <IResultObject>
  [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
  [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
  [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ById
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable [-AddRule <IResultObject[]>] [-CleanRule] -TaskSequenceId <String>
  [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
  [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
  [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByName
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable [-AddRule <IResultObject[]>] [-CleanRule] -TaskSequenceName <String>
  [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
  [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
  [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByIdSetConditionIfStatement
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceId <String> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionQueryWmi
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceId <String> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionVariable
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceId <String> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionOperatingSystem
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceId <String> [-StepName <String>] [-SetConditionOperatingSystem]
  [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionFile
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceId <String> [-StepName <String>] [-SetConditionFile]
  [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
  [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionFolder
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceId <String> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionRegistry
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceId <String> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionSoftware
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceId <String> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionIfStatement
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceName <String> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionQueryWmi
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceName <String> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionVariable
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceName <String> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionOperatingSystem
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceName <String> [-StepName <String>] [-SetConditionOperatingSystem]
  [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionFile
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceName <String> [-StepName <String>] [-SetConditionFile]
  [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
  [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionFolder
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceName <String> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionRegistry
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceName <String> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionSoftware
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -TaskSequenceName <String> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionIfStatement
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionQueryWmi
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionVariable
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionOperatingSystem
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>] [-SetConditionOperatingSystem]
  [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionFile
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>] [-SetConditionFile]
  [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
  [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionFolder
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionRegistry
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionSoftware
-
-```powershell
+```
 Set-CMTSStepSetDynamicVariable -InputObject <IResultObject> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Set-CMTSStepSetDynamicVariable** cmdlet sets properties, options, specific conditions for “Set Dynamic Variable” steps in a task sequence.  The cmdlet supports pipeline from a task sequence object, and could be filtered by the name of the step.
+The **Set-CMTSStepSetDynamicVariable** cmdlet sets properties, options, specific conditions for "Set Dynamic Variable" steps in a task sequence.  The cmdlet supports pipeline from a task sequence object, and could be filtered by the name of the step.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -ClearCondition -AddCondition $cd1 -CleanRule -AddRule ($rule5,$rule6)
+PS XYZ:\> $ReferencedTaskSequence | Set-CMTaskSequenceStepSetDynamicVariable -ClearCondition -AddCondition $cd1 -CleanRule -AddRule ($rule5,$rule6)
 ```
 
 ## PARAMETERS
@@ -330,7 +307,7 @@ Accept wildcard characters: False
 
 ### -Condition
 
-Specifies the conditions. This parameter is used with one of the following parameters: SetConditionIfStatement, SetConditionQueryWmi, SetConditionVariable, SetConditionOperatingSystem, SetConditionFile, SetConditionFolder, SetConditionRegistry, and SetConditionSoftware. 
+Specifies the conditions. This parameter is used with one of the following parameters: SetConditionIfStatement, SetConditionQueryWmi, SetConditionVariable, SetConditionOperatingSystem, SetConditionFile, SetConditionFolder, SetConditionRegistry, and SetConditionSoftware.
 
 ```yaml
 Type: IResultObject[]
@@ -368,6 +345,22 @@ Specifies condition variable value.
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases: Value
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -1169,22 +1162,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -1202,6 +1179,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
@@ -1209,6 +1189,8 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

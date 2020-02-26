@@ -1,14 +1,10 @@
 ---
-title: Get-CMAccount
-titleSuffix: Configuration Manager
 description: Gets a named user account.
+external help file: AdminUI.PS.Accounts.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMAccount
 ---
 
 # Get-CMAccount
@@ -26,13 +22,18 @@ Get-CMAccount [[-UserName] <String>] [-SiteCode <String>] [-DisableWildcardHandl
 ## DESCRIPTION
 The **Get-CMAccount** cmdlet gets a Microsoft System Center Configuration Manager user account.
 The user name must be in the domain\user format.
-For more information about System Center Configuration Manager user accounts, see [Technical Reference for Accounts Used in Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=248317) in the TechNet library.
+For more information about System Center Configuration Manager user accounts, see [Technical Reference for Accounts Used in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427337(v=technet.10)) in the TechNet library.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get a user account by using its name
 ```
-PS C:\> Get-CMAccount -Name "CONTOSO\ENarvaez"
+PS XYZ:\> Get-CMAccount -Name "CONTOSO\ENarvaez"
 ```
 
 This command gets a user account.
@@ -45,7 +46,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -60,7 +61,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +74,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

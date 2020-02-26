@@ -1,14 +1,7 @@
 ---
 title: Send-CMCmdletUpdateCheck
-titleSuffix: Configuration Manager
 description: Performs an unscheduled cmdlet update check.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Send-CMCmdletUpdateCheck
@@ -29,12 +22,17 @@ An unscheduled check does not consider policy settings.
 
 **Note:** This cmdlet is deprecated starting with version 1610, and may be removed in a future release.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Perform a cmdlet update check
 ```
-PS C:\> $Timeout = 50 * 24 * 3600
-PS C:\> Send-CMCmdletUpdateCheck -Timeout $Timeout
+PS XYZ:\> $Timeout = 50 * 24 * 3600
+PS XYZ:\> Send-CMCmdletUpdateCheck -Timeout $Timeout
 ```
 
 The first command creates a time span and stores the time span in the $Timeout variable.
@@ -115,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

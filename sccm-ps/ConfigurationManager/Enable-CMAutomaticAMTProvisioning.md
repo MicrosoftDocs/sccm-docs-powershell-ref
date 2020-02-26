@@ -1,14 +1,7 @@
 ---
 title: Enable-CMAutomaticAmtProvisioning
-titleSuffix: Configuration Manager
 description: Enables automatic provisioning of AMT-based computers.
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Enable-CMAutomaticAmtProvisioning
@@ -41,11 +34,16 @@ The **Enable-CMAutomaticAMTProvisioning** cmdlet enables automatic provisioning 
 After System Center Configuration Manager identifies computers with an AMT management controller from an out of band service point, you can use this cmdlet to enable automatic provision of the computers.
 An out of band service point is a site system role that provisions and configures Intel Active Management Technology (AMT)-based computers for System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable automatic provisioning of an AMT-based computers
 ```
-PS C:\>Enable-CMAutomaticAmtProvisioning -DeviceName "CMdiv-west03"
+PS XYZ:\>Enable-CMAutomaticAmtProvisioning -DeviceName "CMdiv-west03"
 ```
 
 This command enables automatic provisioning of the device named CMdiv-west03.
@@ -73,7 +71,7 @@ To obtain a **CMDevice** object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -115,7 +113,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +127,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

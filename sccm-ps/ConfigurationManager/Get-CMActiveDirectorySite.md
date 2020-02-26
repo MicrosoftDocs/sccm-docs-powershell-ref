@@ -1,14 +1,10 @@
 ---
-title: Get-CMActiveDirectorySite
-titleSuffix: Configuration Manager
 description: Gets Configuration Manager sites that publish data to AD DS.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMActiveDirectorySite
 ---
 
 # Get-CMActiveDirectorySite
@@ -42,14 +38,19 @@ Get-CMActiveDirectorySite -ForestId <String[]> [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Get-CMActiveDirectorySite** cmdlet gets one or more Microsoft System Center Configuration Manager sites that are configured to publish site information to Active DirectoryÂ® Domain Services (AD DS).
+The **Get-CMActiveDirectorySite** cmdlet gets one or more Microsoft System Center Configuration Manager sites that are configured to publish site information to Active Directory® Domain Services (AD DS).
 You can get System Center Configuration Manager sites that publish site data to AD DS by using an identifier or a fully qualified domain name (FQDN).
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get an Active Directory site
 ```
-PS C:\> Get-CMActiveDirectorySite
+PS XYZ:\> Get-CMActiveDirectorySite
 ```
 
 This command gets the Active Directory sites that are configured to publish site information.
@@ -62,7 +63,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +78,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +94,7 @@ The FQDN provides a path to an Active Directory forest.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByForestName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,7 +109,7 @@ Specifies an array of IDs that identify Active Directory forests.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByForestId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Lock-CMObject
-titleSuffix: Configuration Manager
 description: Locks global objects in Configuration Manager.
+external help file: AdminUI.PS.Common.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Lock-CMObject
 ---
 
 # Lock-CMObject
@@ -31,12 +27,17 @@ While the lock is assigned to you, no other user or computer can edit the object
 
 **Important:** Configuration Manager cmdlets now automatically handle the locking and unlocking of objects. Therefore, we do not recommend you use this cmdlet to lock objects because this may interfere with the functionality of the cmdlets.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Lock a global object
 ```
-PS C:\> $CIObj = Get-CMDriverPackage -Id "CM100042"
-PS C:\> Lock-CMObject -InputObject $CIObj
+PS XYZ:\> $CIObj = Get-CMDriverPackage -Id "CM100042"
+PS XYZ:\> Lock-CMObject -InputObject $CIObj
 ```
 
 The first command gets the driver package object that has the ID CM100042, and stores the object in the $CIObj variable.
@@ -66,7 +67,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +82,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ Specifies an array of Configuration Manager objects output from another cmdlet.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -122,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

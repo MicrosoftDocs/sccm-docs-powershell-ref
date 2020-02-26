@@ -1,14 +1,10 @@
 ---
-title: Get-CMSoftwareInventory
-titleSuffix: Configuration Manager
 description: Retrieves an object that collects software inventory data in Configuration Manager.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSoftwareInventory
 ---
 
 # Get-CMSoftwareInventory
@@ -32,11 +28,16 @@ Get-CMSoftwareInventory -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 ## DESCRIPTION
 The **Get-CMSoftwareInventory** cmdlet retrieves an object that collects information about files that client devices contain.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a software inventory object
 ```
-PS C:\> Get-CMSoftwareInventory -Name "MSXML 6.0 Parser"
+PS XYZ:\> Get-CMSoftwareInventory -Name "MSXML 6.0 Parser"
 ```
 
 This command gets the software inventory object named MSXML 6.0 Parser.
@@ -49,7 +50,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -64,7 +65,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Set-CMGlobalConditionRegistryValue
-titleSuffix: Configuration Manager
 description: Sets a Registry Value type global condition in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMGlobalConditionRegistryValue
 ---
 
 # Set-CMGlobalConditionRegistryValue
@@ -19,27 +15,48 @@ Sets a Registry Value type global condition in Configuration Manager.
 
 ## SYNTAX
 
-```powershell
+```
 Set-CMGlobalConditionRegistryValue [-Is64Bit <Boolean>] [-RegistryHive <RegistryRootKey>] [-KeyName <String>]
  [-ValueName <String>] -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The **Set-CMGlobalConditionRegistryValue** cmdlet modifies settings for a Registry Value type global condition in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $GlobalRegValue = Set-CMGlobalConditionRegistryValue -DataType String -KeyName key -Name GC4 -DeviceType WindowsMobile -RegistryHive LocalMachine -ValueName VName 
+PS XYZ:\> $GlobalRegValue = Set-CMGlobalConditionRegistryValue -DataType String -KeyName key -Name GC4 -DeviceType WindowsMobile -RegistryHive LocalMachine -ValueName VName
 ```
 
 This command sets a Registry Value type global condition in Configuration Manager.
 
 ## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 
@@ -171,22 +188,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -204,22 +205,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
 ## OUTPUTS
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-- [New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
-- [Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
-- [Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
-- [Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
-- [Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
-- [Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
-- [Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
-- [Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
-- [Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
-- [Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
-- [Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
-- [Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)
+[New-CMGlobalConditionRegistryValue](./New-CMGlobalConditionRegistryValue.md)
 
+[Set-CMGlobalCondition](./Set-CMGlobalCondition.md)
+
+[Set-CMGlobalConditionActiveDirectoryQuery](./Set-CMGlobalConditionActiveDirectoryQuery.md)
+
+[Set-CMGlobalConditionAssembly](./Set-CMGlobalConditionAssembly.md)
+
+[Set-CMGlobalConditionFile](./Set-CMGlobalConditionFile.md)
+
+[Set-CMGlobalConditionIisMetabase](./Set-CMGlobalConditionIisMetabase.md)
+
+[Set-CMGlobalConditionOmaUri](./Set-CMGlobalConditionOmaUri.md)
+
+[Set-CMGlobalConditionRegistryKey](./Set-CMGlobalConditionRegistryKey.md)
+
+[Set-CMGlobalConditionScript](./Set-CMGlobalConditionScript.md)
+
+[Set-CMGlobalConditionSqlQuery](./Set-CMGlobalConditionSqlQuery.md)
+
+[Set-CMGlobalConditionWqlQuery](./Set-CMGlobalConditionWqlQuery.md)
+
+[Set-CMGlobalConditionXPathQuery](./Set-CMGlobalConditionXPathQuery.md)

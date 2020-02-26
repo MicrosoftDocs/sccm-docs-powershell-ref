@@ -1,14 +1,10 @@
 ---
-title: Get-CMSiteMaintenanceTask
-titleSuffix: Configuration Manager
 description: Gets maintenance tasks in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMSiteMaintenanceTask
 ---
 
 # Get-CMSiteMaintenanceTask
@@ -19,7 +15,7 @@ Gets maintenance tasks in Configuration Manager.
 ## SYNTAX
 
 ```
-Get-CMSiteMaintenanceTask [-MaintenanceTaskName <String>] [-SiteCode <String>] [-DisableWildcardHandling]
+Get-CMSiteMaintenanceTask [-Name <String>] [-SiteCode <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
@@ -27,11 +23,16 @@ Get-CMSiteMaintenanceTask [-MaintenanceTaskName <String>] [-SiteCode <String>] [
 The **Get-CMSiteMaintenanceTask** cmdlet gets maintenance tasks in Microsoft System Center Configuration Manager.
 A maintenance task is a task in System Center Configuration Manager that performs maintenance on sites and databases.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a maintenance task
 ```
-PS C:\> Get-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup"
+PS XYZ:\> Get-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup"
 ```
 
 This command gets the maintenance task named Backup for the Configuration Manager site that has the site code CM1.
@@ -44,7 +45,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -59,7 +60,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,13 +69,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MaintenanceTaskName
-Specifies an array of names for maintenance tasks.
+### -Name
+{{ Fill Name Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: ItemName
+Aliases: ItemName, MaintenanceTaskName, TaskName
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ Specifies the site code of the Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

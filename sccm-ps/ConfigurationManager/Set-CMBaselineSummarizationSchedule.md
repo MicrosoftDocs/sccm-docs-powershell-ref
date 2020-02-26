@@ -1,14 +1,10 @@
 ---
-title: Set-CMBaselineSummarizationSchedule
-titleSuffix: Configuration Manager
 description: Configures the summarization schedule for configuration baseline data.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMBaselineSummarizationSchedule
 ---
 
 # Set-CMBaselineSummarizationSchedule
@@ -26,11 +22,16 @@ Set-CMBaselineSummarizationSchedule -Interval <Int32> [-Unit <SummarizationSched
 ## DESCRIPTION
 The **Set-CMBaselineSummarizationSchedule** cmdlet configures the schedule by which the configuration baseline data in the Microsoft System Center Configuration Manager is updated with the latest information from the site database.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Set the configuration baseline update schedule
 ```
-PS C:\> Set-CMBaselineSummarizationSchedule -Interval 6 -Unit "Hours"
+PS XYZ:\> Set-CMBaselineSummarizationSchedule -Interval 6 -Unit "Hours"
 ```
 
 This command schedules Configuration Manager to automatically update the configuration baseline data every six hours.
@@ -58,7 +59,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +74,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,16 +86,16 @@ Accept wildcard characters: False
 ### -Interval
 Specifies an amount of time, as an integer.
 This value works with the unit type you specify in the *Unit* parameter.
-Valid values for this parameter depend on the unit that you select: 
+Valid values for this parameter depend on the unit that you select:
 
-- Minutes: 10 through 59. 
-- Hours: 1 through 23. 
+- Minutes: 10 through 59.
+- Hours: 1 through 23.
 - Days: 1 through 31.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,7 +106,7 @@ Accept wildcard characters: False
 
 ### -Unit
 Specifies a unit to use to define an interval for the summarization schedule.
-Valid values are: 
+Valid values are:
 
 - Days
 - Hours
@@ -114,7 +115,7 @@ Valid values are:
 ```yaml
 Type: SummarizationScheduleUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Minutes, Hours, Days
 
 Required: False
@@ -141,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

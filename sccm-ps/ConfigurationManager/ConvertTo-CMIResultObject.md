@@ -1,14 +1,10 @@
 ---
-title: ConvertTo-CMIResultObject
-titleSuffix: Configuration Manager
 description: Converts a **ManagementBaseObject** to an **IResultObject**.
+external help file: AdminUI.PS.Common.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: ConvertTo-CMIResultObject
 ---
 
 # ConvertTo-CMIResultObject
@@ -25,6 +21,11 @@ ConvertTo-CMIResultObject -InputObject <ManagementBaseObject> [-DisableWildcardH
 
 ## DESCRIPTION
 The **ConvertTo-CMIResultObject** cmdlet converts a **ManagementBaseObject** to an **IResultObject**.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
@@ -56,7 +57,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,7 +72,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +87,7 @@ Specifies the **ManagementBaseObject** to convert to an **IResultObject**.
 ```yaml
 Type: ManagementBaseObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -96,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

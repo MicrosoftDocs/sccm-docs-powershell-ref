@@ -1,14 +1,10 @@
 ---
-title: Set-CMClientStatusUpdateSchedule
-titleSuffix: Configuration Manager
 description: Modifies the schedule interval of the client status update task.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMClientStatusUpdateSchedule
 ---
 
 # Set-CMClientStatusUpdateSchedule
@@ -25,13 +21,18 @@ Set-CMClientStatusUpdateSchedule -Interval <Int32> -UnitType <ClientStatusUpdate
 
 ## DESCRIPTION
 The **Set-CMClientStatusUpdateSchedule** cmdlet modifies the schedule interval of the client status update task.
-For more information, see [How to Configure Client Status in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247263) on TechNet.
+For more information, see [How to Configure Client Status in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh338432(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Modify a client's status update schedule
 ```
-PS C:\> Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
+PS XYZ:\> Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
 ```
 
 This command modifies the client status update schedule.
@@ -59,7 +60,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +75,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ Specifies the number of hours or days between client status updates.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,7 +106,7 @@ Valid values are: Hours and Days.
 ```yaml
 Type: ClientStatusUpdateScheduleUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Days, Hours
 
 Required: True
@@ -132,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -142,7 +143,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to Configure Client Status in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=247263)
+[How to Configure Client Status in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh338432(v=technet.10))
 
 [Get-CMClientStatusUpdateSchedule](Get-CMClientStatusUpdateSchedule.md)
 

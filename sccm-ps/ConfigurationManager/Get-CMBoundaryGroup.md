@@ -1,14 +1,10 @@
 ---
-title: Get-CMBoundaryGroup
-titleSuffix: Configuration Manager
 description: Gets a boundary group.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMBoundaryGroup
 ---
 
 # Get-CMBoundaryGroup
@@ -35,22 +31,27 @@ A boundary group is a collection of boundaries.
 You can use boundary groups to manage network locations.
 You must assign boundaries to boundary groups before you can use the boundary group.
 Boundary groups enable client computers to find a primary site for client assignment, which is referred to as automatic site assignment, and a list of available site systems that have content.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266225) on TechNet.
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get a boundary group that is specified by its identifier
 ```
-PS C:\> Get-CMBoundaryGroup -Id "1600231"
+PS XYZ:\> Get-CMBoundaryGroup -Id "1600231"
 CreatedBy:          Contoso\ENarvaez
 CreatedOn           5/17/2012 06:01:29 AM
-DefaultSiteCode: 
-Description: 
+DefaultSiteCode:
+Description:
 GroupID:            1600231
 MemberCount:        80
-ModifiedBy:         
-ModifiedOn:         
-Name:               BGroup01 
+ModifiedBy:
+ModifiedOn:
+Name:               BGroup01
 SiteSystemCount:    0
 ```
 
@@ -58,36 +59,36 @@ This command gets a boundary group that is specified by the identifier 1600231.
 
 ### Example 2: Get multiple boundary groups that are specified by name
 ```
-PS C:\> Get-CMBoundaryGroup -Name "BGroup01", "BGroup02", "BGroup03"
+PS XYZ:\> Get-CMBoundaryGroup -Name "BGroup01", "BGroup02", "BGroup03"
 CreatedBy:          Contoso\ENarvaez
 CreatedOn           5/17/2012 07:13:02 AM
-DefaultSiteCode: 
-Description: 
+DefaultSiteCode:
+Description:
 GroupID:            1600231
 MemberCount:        80
-ModifiedBy:         
-ModifiedOn:         
-Name:               BGroup01 
+ModifiedBy:
+ModifiedOn:
+Name:               BGroup01
 SiteSystemCount:    0
 CreatedBy:          Contoso\ENarvaez
 CreatedOn           7/13/2012 12:24:21 PM
-DefaultSiteCode: 
-Description: 
+DefaultSiteCode:
+Description:
 GroupID:            1600246
 MemberCount:        11
 ModifiedBy:         Contoso\DChew
 ModifiedOn:         9/10/2012 04:32:16 PM
-Name:               BGroup02 
+Name:               BGroup02
 SiteSystemCount:    0
 CreatedBy:          Contoso\DChew
 CreatedOn           8/06/2012 09:32:05 AM
-DefaultSiteCode: 
-Description: 
+DefaultSiteCode:
+Description:
 GroupID:            1600249
 MemberCount:        96
 ModifiedBy:         Contoso\EDaugherty
 ModifiedOn:         9/14/2012 10:11:36 AM
-Name:               BGroup03 
+Name:               BGroup03
 SiteSystemCount:    0
 ```
 
@@ -101,7 +102,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +117,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +147,7 @@ Specifies the name for a boundary group.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -166,7 +167,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for Boundaries and Boundary Groups in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266225)
+[Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10))
 
 [New-CMBoundaryGroup](New-CMBoundaryGroup.md)
 

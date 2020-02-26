@@ -1,14 +1,10 @@
 ---
-title: Set-CMIntuneSubscriptionAndroidProperty
-titleSuffix: Configuration Manager
 description: Updates a Microsoft Intune subscription to enable Android enrollment.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMIntuneSubscriptionAndroidProperty
 ---
 
 # Set-CMIntuneSubscriptionAndroidProperty
@@ -19,23 +15,44 @@ Updates a Microsoft Intune subscription to enable Android enrollment.
 ## SYNTAX
 
 ```
-Set-CMIntuneSubscriptionAndroidProperty [-Enable <Boolean>] [-PassThru] [-DisableWildcardHandling]
+Set-CMIntuneSubscriptionAndroidProperty [-Enable <Boolean>] [-BlockPersonalDevice <Boolean>]
+ [-PreventMinimumVersion <String>] [-PreventMaximumVersion <String>] [-PassThru] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Set-CMIntuneSubscriptionAndroidProperty** updates the settings of a Microsoft Intune subscription to enable Android enrollment.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable Android enrollment
 ```
-PS C:\> Set-CMIntuneSubscriptionAndroidProperty -Enable $True
+PS XYZ:\> Set-CMIntuneSubscriptionAndroidProperty -Enable $True
 ```
 
 This command enables Android enrollment for the Microsoft Intune subscription.
 
 ## PARAMETERS
+
+### -BlockPersonalDevice
+{{ Fill BlockPersonalDevice Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -58,7 +75,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +105,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +121,37 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreventMaximumVersion
+{{ Fill PreventMaximumVersion Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreventMinimumVersion
+{{ Fill PreventMinimumVersion Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

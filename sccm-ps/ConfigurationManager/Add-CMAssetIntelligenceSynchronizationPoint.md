@@ -1,14 +1,10 @@
 ---
-title: Add-CMAssetIntelligenceSynchronizationPoint
-titleSuffix: Configuration Manager
 description: Installs an Asset Intelligence synchronization point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMAssetIntelligenceSynchronizationPoint
 ---
 
 # Add-CMAssetIntelligenceSynchronizationPoint
@@ -38,19 +34,24 @@ Microsoft System Center Configuration Manager uses the Asset Intelligence synchr
 
 You can install the Asset Intelligence synchronization point only on a site system located at the top-level site of the System Center Configuration Manager hierarchy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Install an Asset Intelligence synchronization point
 ```
-PS C:\>Add-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-TSQA04.CORP.CONTOSO.COM"
+PS XYZ:\>Add-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-TSQA04.CORP.CONTOSO.COM"
 ```
 
 This command installs an Asset Intelligence synchronization point on the site system server named CMDIV-TSQA04.CORP.CONTOSO.COM.
 
 ### Example 2: Install a scheduled Asset Intelligence synchronization point
 ```
-PS C:\> $Sc = New-CMSchedule -DayOfWeek Friday -RecurCount 2
-PS C:\> Add-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-TSQA04.CORP.CONTOSO.COM" -CertificateFile "\\Contoso01\CM\ACDataFile\AIpfx.pfx" -ScheduleToken $Sc
+PS XYZ:\> $Sc = New-CMSchedule -DayOfWeek Friday -RecurCount 2
+PS XYZ:\> Add-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-TSQA04.CORP.CONTOSO.COM" -CertificateFile "\\Contoso01\CM\ACDataFile\AIpfx.pfx" -ScheduleToken $Sc
 ```
 
 This first command creates a System Center Configuration Manager schedule token that specifies an event that occurs once a week for three weeks on Fridays.
@@ -67,7 +68,7 @@ Specifies the path to a System Center Online authentication certificate (.pfx) f
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +96,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +109,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

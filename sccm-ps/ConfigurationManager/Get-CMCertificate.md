@@ -1,14 +1,10 @@
 ---
-title: Get-CMCertificate
-titleSuffix: Configuration Manager
 description: Gets a certificate.
+external help file: AdminUI.PS.Certificates.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCertificate
 ---
 
 # Get-CMCertificate
@@ -25,6 +21,11 @@ Get-CMCertificate [-Id <String>] [-Thumbprint <String>] [-CertificateType <Certi
 
 ## DESCRIPTION
 The **Get-CMCertificate** cmdlet gets a certificate.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
@@ -55,7 +56,7 @@ Valid values are:
 ```yaml
 Type: CertificateType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: BootMedia, DistributionPoint, IsvProxy
 
 Required: False
@@ -71,7 +72,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +139,7 @@ Valid values are:
 ```yaml
 Type: KeyType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: SelfSigned, Issued
 
 Required: False
@@ -154,7 +155,7 @@ Specifies the thumbprint of the certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Get-CMEndpointProtectionSummarizationSchedule
-titleSuffix: Configuration Manager
 description: Gets an Endpoint Protection summarization schedule.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMEndpointProtectionSummarizationSchedule
 ---
 
 # Get-CMEndpointProtectionSummarizationSchedule
@@ -25,13 +21,18 @@ Get-CMEndpointProtectionSummarizationSchedule [-DisableWildcardHandling] [-Force
 
 ## DESCRIPTION
 The **Get-CMEndpointProtectionSummarizationSchedule** cmdlet gets a System Center 2016 Endpoint Protection summarization schedule.
-For more information about Endpoint Protection summarization schedules, see [How to Monitor Endpoint Protection in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268428) on TechNet.
+For more information about Endpoint Protection summarization schedules, see [How to Monitor Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508769(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get an Endpoint Protection summarization schedule
 ```
-PS C:\> Get-CMEndpointProtectionSummarizationSchedule
+PS XYZ:\> Get-CMEndpointProtectionSummarizationSchedule
 ```
 
 This command gets an Endpoint Protection summarization schedule.
@@ -44,7 +45,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -59,7 +60,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

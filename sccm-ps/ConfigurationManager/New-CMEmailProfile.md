@@ -1,14 +1,10 @@
 ---
-title: New-CMEmailProfile
-titleSuffix: Configuration Manager
 description: Creates an email profile.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMEmailProfile
 ---
 
 # New-CMEmailProfile
@@ -31,12 +27,17 @@ New-CMEmailProfile [-AccountDomainActiveDirectory <String>] [-AccountDomainCusto
 ## DESCRIPTION
 The **New-CMEmailProfile** cmdlet creates an Exchange ActiveSync email profile.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an email profile
 ```
-PS C:\> $Platform = Get-CMSupportedPlatform -Fast -Platform "Windows Phone"
-PS C:\> New-CMEmailProfile -AccountName "TestAccount1" -ExchangeHost "TestHost1" -Name "EmailProfile01" -SupportedPlatform $Platform[1] -AccountUserNameType sAMAccountName -AccountDomainActiveDirectory domain
+PS XYZ:\> $Platform = Get-CMSupportedPlatform -Fast -Platform "Windows Phone"
+PS XYZ:\> New-CMEmailProfile -AccountName "TestAccount1" -ExchangeHost "TestHost1" -Name "EmailProfile01" -SupportedPlatform $Platform[1] -AccountUserNameType sAMAccountName -AccountDomainActiveDirectory domain
 ```
 
 The first command gets all supported platform objects for Windows Phone and stores the objects in the $Platform variable.
@@ -47,7 +48,7 @@ The second command creates an email named EmailProfile01 using the second suppor
 
 ### -AccountDomainActiveDirectory
 Specifies the type of Active Directory account domain.
-Valid values are: 
+Valid values are:
 
 - domain
 - ntdomain
@@ -55,7 +56,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: domain, ntdomain
 
 Required: False
@@ -72,7 +73,7 @@ This parameter can only be used if the sAMAccountName value is specified for the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +88,7 @@ Specifies the display name for the email account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 
 ### -AccountUserNameType
 Specifies an account user name type.
-Valid values are: 
+Valid values are:
 
 - mail
 - sAMAccountName
@@ -107,7 +108,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: mail, sAMAccountName, userPrincipalName
 
 Required: False
@@ -123,7 +124,7 @@ Indicates that users are allowed to move email messages between different accoun
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +139,7 @@ Indicates that users are allowed to send email from certain non-default, third-p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +169,7 @@ Specifies a description for the Exchange ActiveSync email profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +184,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +199,7 @@ Indicates that Secure Sockets Layer (SSL) communication is not used when sending
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,7 +210,7 @@ Accept wildcard characters: False
 
 ### -EmailAddressType
 Specifies an email address type.
-Valid values are: 
+Valid values are:
 
 - mail
 - userPrincipalName
@@ -217,7 +218,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: mail, userPrincipalName
 
 Required: False
@@ -233,7 +234,7 @@ Indicates that outgoing email is sent using S/MIME encryption.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +249,7 @@ Specifies the hostname of the Exchange server that hosts Exchange ActiveSync ser
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -263,7 +264,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -279,7 +280,7 @@ To obtain an identity certificate object, use the Get-CMConfigurationPolicy cmdl
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,7 +291,7 @@ Accept wildcard characters: False
 
 ### -MailSyncDays
 Specifies the number of days of email to synchronize.
-Valid values are: 
+Valid values are:
 
 - Unlimited
 - OneDay
@@ -302,7 +303,7 @@ Valid values are:
 ```yaml
 Type: MailNumberofDaysToSync
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unlimited, OneDay, ThreeDays, OneWeek, TwoWeeks, OneMonth
 
 Required: False
@@ -318,7 +319,7 @@ Specifies a name for the Exchange ActiveSync email profile.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -334,7 +335,7 @@ To obtain a signing certificate object, use the Get-CMConfigurationPolicy cmdlet
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -361,13 +362,13 @@ Accept wildcard characters: False
 
 ### -SyncContentType
 Specifies a content type to synchronize to devices.
-Valid values are: 
+Valid values are:
 
 - None
 - Email
-- Contacts 
-- Calendar 
-- Tasks 
+- Contacts
+- Calendar
+- Tasks
 - Notes
 - All
 
@@ -385,7 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncSchedule
-Specifies the schedule by which devices will synchronize data from the Exchange Server. 
+Specifies the schedule by which devices will synchronize data from the Exchange Server.
 
 - Manual
 - FifteenMins
@@ -396,7 +397,7 @@ Specifies the schedule by which devices will synchronize data from the Exchange 
 ```yaml
 Type: Schedule
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Manual, FifteenMins, ThirtyMins, SixtyMins, AsArrive
 
 Required: False
@@ -412,7 +413,7 @@ Indicates that the list of email addresses that have been recently used on the d
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -438,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Add-CMDeploymentType
-titleSuffix: Configuration Manager
 description: Adds a deployment type for a Configuration Manager deployment application. This cmdlet is deprecated.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDeploymentType
 ---
 
 # Add-CMDeploymentType
@@ -20,8 +16,7 @@ Adds a deployment type for a Configuration Manager deployment application. This 
 ## SYNTAX
 
 ### AddDeploymentTypeByMsiInstallerAuto (Default)
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
  [-EnableContentLocationFallback <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
  [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>]
@@ -32,8 +27,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByAndroidInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-AndroidInstaller]
  [-InputObject <IResultObject>] [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile]
  [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String>
@@ -42,8 +36,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByAppV5xInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
  [-EnableContentLocationFallback <Boolean>] [-AppV5xInstaller] [-InputObject <IResultObject>]
  [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
@@ -53,8 +46,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByAppvInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
  [-EnableContentLocationFallback <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
  [-AppvInstaller] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
@@ -64,8 +56,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByIosAppStoreInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
  [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-IosAppStoreInstaller] [-Language <String[]>]
@@ -73,8 +64,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByIosInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
  [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-IosInstaller] [-Language <String[]>]
@@ -82,8 +72,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByMacInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
  [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-Language <String[]>] [-MacInstaller]
@@ -91,8 +80,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByScriptInstallerManual
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-EnableBranchCache <Boolean>]
  [-EnableContentLocationFallback <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
  -DeploymentTypeName <String> [-DetectDeploymentTypeByCustomScript] [-EstimatedInstallationTimeMins <Int32>]
@@ -107,8 +95,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByWebAppInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
  -ContentLocation <String> [-Language <String[]>] [-WebAppInstaller] [-DisableWildcardHandling]
@@ -116,8 +103,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByWindows8AppInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
  [-EnableContentLocationFallback <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
  [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>]
@@ -127,8 +113,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByWindowsStoreInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] -ApplicationNameInWindowsStore <String> [-AutoIdentifyFromInstallationFile]
  [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>] [-Language <String[]>]
@@ -137,8 +122,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByWinPhone8InstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
  [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-Language <String[]>]
@@ -147,8 +131,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByWinPhoneStoreInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
  [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-Language <String[]>]
@@ -157,8 +140,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByWMInstaller
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
  [-EnableUserUninstall <Boolean>] [-InputObject <IResultObject>] [-ApplicationName <String>]
  [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>]
@@ -168,8 +150,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByMobileMsiInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile] [-DeploymentTypeName <String>]
  [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String> [-InstallationCommandLine <String>]
@@ -178,8 +159,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByMobileMsiInstallerManual
-
-```powershell
+```
 Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>] [-InputObject <IResultObject>]
  [-ApplicationName <String>] -DeploymentTypeName <String> [-ContentLocation <String>] [-Language <String[]>]
  [-ManualSpecifyDeploymentType] [-MobileMsiInstaller] [-DisableWildcardHandling] [-ForceWildcardHandling]
@@ -187,8 +167,7 @@ Add-CMDeploymentType [-AddRequirement <Rule[]>] [-AdministratorComment <String>]
 ```
 
 ### AddDeploymentTypeByAndroidGooglePlayInstallerAuto
-
-```powershell
+```
 Add-CMDeploymentType [-AdministratorComment <String>] [-AndroidGooglePlayInstaller]
  [-InputObject <IResultObject>] [-ApplicationName <String>] [-AutoIdentifyFromInstallationFile]
  [-DeploymentTypeName <String>] [-ForceForUnknownPublisher <Boolean>] -ContentLocation <String>
@@ -224,12 +203,17 @@ The **Add-CMDeploymentType** cmdlet adds a deployment type for an application.
 A deployment type is contained within an application and contains the information that Microsoft System Center Configuration Manager requires to install software.
 A deployment type also contains rules that specify if and how the software is deployed.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add an Windows Installer deployment type to an application
 
 ```powershell
-PS C:\>Add-CMDeploymentType -MsiInstaller -ApplicationName "App01d2012" -AutoIdentifyFromIntallationFile -InstallationFileLocation "\\CMCEN\D02\Software\RDCMan.msi" -ForceForUnknownPublisher $True
+PS XYZ:\>Add-CMDeploymentType -MsiInstaller -ApplicationName "App01d2012" -AutoIdentifyFromIntallationFile -InstallationFileLocation "\\CMCEN\D02\Software\RDCMan.msi" -ForceForUnknownPublisher $True
 ```
 
 This command adds a Windows Installer deployment type for the application named App01d2012.
@@ -239,7 +223,7 @@ The command uses the *ForceForUnknownPublisher* parameter to specify that the de
 ### Example 2: Add a deployment type that uses a script
 
 ```powershell
-PS C:\>Add-CMDeploymentType -ApplicationName "App02d2012" -MsiInstaller -DeploymentTypeName "Type01" -AdministratorComment "Div A script" -Language Afrikaans,Arabic -InstallationProgram 'msiexec /i "\\atd-dist01\Public\CM\DTeam\FeatureData\OSD\Tbreck\Setup1.msi"' -DetectDeploymentTypeByCustomScript -ScriptType VBScript -ScriptContent "1231231" -RunScriptAs32bitProcessOn64bitClient $True
+PS XYZ:\>Add-CMDeploymentType -ApplicationName "App02d2012" -MsiInstaller -DeploymentTypeName "Type01" -AdministratorComment "Div A script" -Language Afrikaans,Arabic -InstallationProgram 'msiexec /i "\\atd-dist01\Public\CM\DTeam\FeatureData\OSD\Tbreck\Setup1.msi"' -DetectDeploymentTypeByCustomScript -ScriptType VBScript -ScriptContent "1231231" -RunScriptAs32bitProcessOn64bitClient $True
 ```
 
 This command adds a Windows Installer deployment type for the application named App02d2012.
@@ -1241,8 +1225,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

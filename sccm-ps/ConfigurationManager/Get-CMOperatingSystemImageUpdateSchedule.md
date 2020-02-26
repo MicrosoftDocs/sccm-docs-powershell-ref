@@ -1,14 +1,10 @@
 ---
-title: Get-CMOperatingSystemImageUpdateSchedule
-titleSuffix: Configuration Manager
 description: Retrieves an operating system image update schedule object in Configuration Manager.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMOperatingSystemImageUpdateSchedule
 ---
 
 # Get-CMOperatingSystemImageUpdateSchedule
@@ -39,11 +35,16 @@ Get-CMOperatingSystemImageUpdateSchedule -InputObject <IResultObject> [-DisableW
 ## DESCRIPTION
 The **Get-CMOperatingSystemImageUpdateSchedule** cmdlet retrieves an object that represents an operating system image update schedule in Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Retrieve the operating system image update schedule
 ```
-PS C:\> Get-CMOperatingSystemImageUpdateSchedule -Id "1207"
+PS XYZ:\> Get-CMOperatingSystemImageUpdateSchedule -Id "1207"
 ```
 
 This command retrieves the operating system image update schedule identified by the ID 1207.
@@ -56,7 +57,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,7 +72,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +102,7 @@ Specifies an operating system image update schedule object in Configuration Mana
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,7 +117,7 @@ Specifies a name of an operating system image update schedule in Configuration M
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

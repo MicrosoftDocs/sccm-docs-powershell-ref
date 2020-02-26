@@ -1,14 +1,10 @@
 ---
-title: Remove-CMUserAffinityFromDevice
-titleSuffix: Configuration Manager
 description: Removes a primary user from one or more devices in the Configuration Manager hierarchy.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMUserAffinityFromDevice
 ---
 
 # Remove-CMUserAffinityFromDevice
@@ -20,13 +16,13 @@ Removes a primary user from one or more devices in the Configuration Manager hie
 
 ### RemoveUserAffinityByDeviceName (Default)
 ```
-Remove-CMUserAffinityFromDevice -DeviceName <String[]> [-UserId <String>] [-UserName <String>] [-Force]
+Remove-CMUserAffinityFromDevice -DeviceName <String[]> [-UserId <Int32[]>] [-UserName <String[]>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveUserAffinityByDeviceId
 ```
-Remove-CMUserAffinityFromDevice -DeviceId <String[]> [-UserId <String>] [-UserName <String>] [-Force]
+Remove-CMUserAffinityFromDevice -DeviceId <Int32[]> [-UserId <Int32[]>] [-UserName <String[]>] [-Force]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,11 +31,16 @@ The **Remove-CMUserAffinityFromDevice** cmdlet removes a primary user from the d
 
 User device affinity is a method of associating a user with one or more specified devices in System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a primary user from a device
 ```
-PS C:\> Remove-CMUserAffinityFromDevice -DeviceId "209846738" -UserId "206359374"
+PS XYZ:\> Remove-CMUserAffinityFromDevice -DeviceId "209846738" -UserId "206359374"
 ```
 
 This command removes the association between the user that has the ID 206359374 and the device that has the ID 209846738.
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 Specifies an array of IDs of the devices.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: RemoveUserAffinityByDeviceId
 Aliases: ResourceId
 
@@ -97,7 +98,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +128,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,9 +141,9 @@ Accept wildcard characters: False
 Specifies the ID of a user.
 
 ```yaml
-Type: String
+Type: Int32[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: UserIds
 
 Required: False
 Position: Named
@@ -155,9 +156,9 @@ Accept wildcard characters: False
 Specifies the name of the primary user that you want to disassociate from the specified devices.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: UserNames
 
 Required: False
 Position: Named
@@ -183,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

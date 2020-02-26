@@ -1,14 +1,10 @@
 ---
-title: New-CMClientSetting
-titleSuffix: Configuration Manager
 description: Creates customized client settings.
+external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMClientSetting
 ---
 
 # New-CMClientSetting
@@ -27,13 +23,18 @@ New-CMClientSetting -Name <String> [-Description <String>] -Type <Types> [-Disab
 The **New-CMClientSetting** cmdlet creates a collection of customized settings for Microsoft System Center Configuration Manager client computers.
 After you create the customized settings and deploy them to client computer collections, the customized settings override the default client settings for that collection.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226) on TechNet.
+For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Create a customized collection of client settings
 ```
-PS C:\> New-CMClientSetting -Name "Win08ClientSettings" -Description "Windows 8 Client Computers Settings" -Type 1
+PS XYZ:\> New-CMClientSetting -Name "Win08ClientSettings" -Description "Windows 8 Client Computers Settings" -Type 1
 AgentConfigurations: {}
 AssignmentCount:     0
 CreatedBy:           Contoso\DChew
@@ -52,7 +53,7 @@ Type:                1
 UniqueID:            {0CCA6700-AE5E-4949-8FBC-AA6719775CC3}
 ```
 
-This command creates customized device settings for the group of client computers that run WindowsÂ® 8.
+This command creates customized device settings for the group of client computers that run Windows® 8.
 After the new collection of settings is created, the command displays an unpopulated list of setting properties.
 To refresh and view a populated list of properties, use **Get-CMClientSetting**.
 The output for this example shows a populated list.
@@ -80,7 +81,7 @@ Specifies a description of the content of the new settings.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +96,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +126,7 @@ Specifies a name for customized client settings.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -141,7 +142,7 @@ Valid values are: 1 (device) or 2 (user).
 ```yaml
 Type: Types
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Default, Device, User
 
 Required: True
@@ -168,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,7 +179,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226)
+[About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10))
 
 [Get-CMClientSetting](Get-CMClientSetting.md)
 

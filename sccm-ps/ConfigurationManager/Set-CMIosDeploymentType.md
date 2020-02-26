@@ -1,14 +1,10 @@
 ---
-title: Set-CMIosDeploymentType
-titleSuffix: Configuration Manager
 description: Sets an iOS deployment type.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMIosDeploymentType
 ---
 
 # Set-CMIosDeploymentType
@@ -53,11 +49,16 @@ Set-CMIosDeploymentType [-AddRequirement <Rule[]>] -InputObject <IResultObject> 
 ## DESCRIPTION
 The **Set-CMIosDeploymentType** cmdlet changes the settings for an iOS deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Rename a deployment type
 ```
-PS C:\> Set-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS01" -NewName "TIOS01_updated" -ContentLocation "\\server01\Resources\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -PassThru -Comment "test-set-CMMacDeploymentType"
+PS XYZ:\> Set-CMIOSDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS01" -NewName "TIOS01_updated" -ContentLocation "\\server01\Resources\Applications\Ipa\iOSTestApp\iOSTestApp.ipa" -PassThru -Comment "test-set-CMMacDeploymentType"
 ```
 
 This command changes the name of the deployment type named DTIOS01 for the application named testIOS to TIOS01_updated, and adds a description.
@@ -65,7 +66,7 @@ The *PassThru* parameter indicates that an object is returned from this command.
 
 ### Example 2: Change the display name of a deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS" | Set-CMIOSDeploymentType -NewName "DTIOS_updated" -ContentLocation "\\server01\Resources\Applications\Ipa\iOSTestAppV2\iOSTestAppV2.ipa" -PassThru -Comment "test-set-CMIOSDeploymentType"
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testIOS" -DeploymentTypeName "DTIOS" | Set-CMIOSDeploymentType -NewName "DTIOS_updated" -ContentLocation "\\server01\Resources\Applications\Ipa\iOSTestAppV2\iOSTestAppV2.ipa" -PassThru -Comment "test-set-CMIOSDeploymentType"
 ```
 
 This command gets the deployment type object named testIOS for the application named testIOS and uses the pipeline operator to pass the object to **Set-CMIosDeploymentType**.
@@ -79,7 +80,7 @@ The *PassThru* parameter indicates that an object is returned from this command.
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -99,7 +100,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +116,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -145,7 +146,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -191,7 +192,7 @@ The site system server requires permissions to read the content files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +207,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -221,7 +222,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +252,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,7 +299,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -355,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

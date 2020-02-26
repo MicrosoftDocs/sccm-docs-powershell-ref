@@ -1,14 +1,10 @@
 ---
-title: Get-CMUser
-titleSuffix: Configuration Manager
 description: Gets a Configuration Manager user.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMUser
 ---
 
 # Get-CMUser
@@ -49,18 +45,23 @@ Get-CMUser -ResourceId <Int32> [-DisableWildcardHandling] [-ForceWildcardHandlin
 ## DESCRIPTION
 The **Get-CMUser** cmdlet gets a Microsoft System Center Configuration Manager user object.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a user by name
 ```
-PS C:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\username01"
+PS XYZ:\> Get-CMUser -CollectionName "All Users" -Name "Contoso\username01"
 ```
 
 This command gets the user named username01 from the All Users collection.
 
 ### Example 2: Pass a collection and get a user from it
 ```
-PS C:\> Get-CMCollection -Name "All Users" | Get-CMUser -Name "Contoso\testuser01"
+PS XYZ:\> Get-CMCollection -Name "All Users" | Get-CMUser -Name "Contoso\testuser01"
 ```
 
 This command gets the collection object named All Users and uses the pipeline operator to pass the object to **Get-CMUser**, which gets the user named testuser01 from the collection object.
@@ -73,7 +74,7 @@ Specifies the ID of a user collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +89,7 @@ Specifies the name of a user collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -103,7 +104,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +150,7 @@ Specifies the name of a user.
 ```yaml
 Type: String
 Parameter Sets: ByName, SearchByValueMandatory, SearchByIdMandatory, SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

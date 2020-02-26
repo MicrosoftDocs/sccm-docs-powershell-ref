@@ -1,14 +1,10 @@
 ---
-title: New-CMOperatingSystemImage
-titleSuffix: Configuration Manager
 description: Creates an operating system image.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMOperatingSystemImage
 ---
 
 # New-CMOperatingSystemImage
@@ -27,11 +23,16 @@ New-CMOperatingSystemImage -Name <String> -Path <String> [-Version <String>] [-D
 The **New-CMOperatingSystemImage** cmdlet adds an operating system image to a Microsoft System Center Configuration Manager site.
 Operating system images are .wim format files and represent a compressed collection of reference files and folders that are System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an operating system image
 ```
-PS C:\> New-CMOperatingSystemImage -Name "STANDARD_WIN7" -Path "\\Contoso01\CM\Images\STANDARD_WIN7.wim"
+PS XYZ:\> New-CMOperatingSystemImage -Name "STANDARD_WIN7" -Path "\\Contoso01\CM\Images\STANDARD_WIN7.wim"
 ```
 
 This command creates the operating system image named STANDARD_WIN7 and specifies the network path to the installation source files of the operating system image.
@@ -59,7 +60,7 @@ Specifies a description for the operating system image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +75,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ Specifies the name of an operating system image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,7 +135,7 @@ Specifies a version of the operating system image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

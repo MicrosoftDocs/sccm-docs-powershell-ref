@@ -1,14 +1,10 @@
 ---
-title: Get-CMAssetIntelligenceCatalogItem
-titleSuffix: Configuration Manager
 description: Gets an item from the Asset Intelligence catalog.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMAssetIntelligenceCatalogItem
 ---
 
 # Get-CMAssetIntelligenceCatalogItem
@@ -39,20 +35,25 @@ Predefined items cannot be modified.
 In addition to predefined software categories and software families, you can create custom categories and families.
 You can also create custom software labels.
 
-For more information about the Asset Intelligence catalog, see [Introduction to Asset Intelligence in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=262650) on TechNet.
+For more information about the Asset Intelligence catalog, see [Introduction to Asset Intelligence in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg681998(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get catalog items by category name
 ```
-PS C:\> Get-CMAssetIntelligenceCatalogItem -CategoryName "Browsers"
+PS XYZ:\> Get-CMAssetIntelligenceCatalogItem -CategoryName "Browsers"
 ```
 
 This command gets Asset Intelligence catalog items by category name.
 
 ### Example 2: Get catalog items by category ID
 ```
-PS C:\> Get-CMAssetIntelligenceCatalogItem -Id "1211"
+PS XYZ:\> Get-CMAssetIntelligenceCatalogItem -Id "1211"
 ```
 
 This command gets Asset Intelligence catalog items by category ID.
@@ -65,7 +66,7 @@ Specifies the name of a category, family, or label in the Asset Intelligence cat
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +96,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

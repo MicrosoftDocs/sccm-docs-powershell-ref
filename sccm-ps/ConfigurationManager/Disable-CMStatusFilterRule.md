@@ -1,14 +1,10 @@
 ---
-title: Disable-CMStatusFilterRule
-titleSuffix: Configuration Manager
 description: Disables a Configuration Manager filter rule for status messages.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Disable-CMStatusFilterRule
 ---
 
 # Disable-CMStatusFilterRule
@@ -41,11 +37,16 @@ Use the rule name and site code to specify a rule to disable.
 You can use the [Enable-CMStatusFilterRule](Enable-CMStatusFilterRule.md) cmdlet to enable a rule.
 To remove a rule permanently, use the [Remove-CMStatusFilterRule](Remove-CMStatusFilterRule.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Disable a status filter rule
 ```
-PS C:\>Disable-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1"
+PS XYZ:\>Disable-CMStatusFilterRule -Name "Status change to critical" -SiteCode "CM1"
 ```
 
 This command disables a status filter rule that has the specified name in a site that has the site code CM1.
@@ -73,7 +74,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +89,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ To obtain a status filter rule object, use the [Get-CMStatusFilterRule](Get-CMSt
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +120,7 @@ Specifies a name of a rule.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,7 +135,7 @@ Specifies a site code for the Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

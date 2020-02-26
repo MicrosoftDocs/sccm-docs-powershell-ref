@@ -1,14 +1,10 @@
 ---
-title: Set-CMTaskSequenceGroup
-titleSuffix: Configuration Manager
 description: Sets a Configuration Manager task sequence group.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMTaskSequenceGroup
 ---
 
 # Set-CMTaskSequenceGroup
@@ -20,8 +16,7 @@ Sets a Configuration Manager task sequence group.
 ## SYNTAX
 
 ### ByValue (Default)
-
-```powershell
+```
 Set-CMTaskSequenceGroup [-CleanStep] [-AddStep <IResultObject[]>] [-InsertStepStartIndex <Int32>]
  -InputObject <IResultObject> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
@@ -32,8 +27,7 @@ Set-CMTaskSequenceGroup [-CleanStep] [-AddStep <IResultObject[]>] [-InsertStepSt
 ```
 
 ### ById
-
-```powershell
+```
 Set-CMTaskSequenceGroup [-CleanStep] [-AddStep <IResultObject[]>] [-InsertStepStartIndex <Int32>]
  -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
@@ -44,8 +38,7 @@ Set-CMTaskSequenceGroup [-CleanStep] [-AddStep <IResultObject[]>] [-InsertStepSt
 ```
 
 ### ByName
-
-```powershell
+```
 Set-CMTaskSequenceGroup [-CleanStep] [-AddStep <IResultObject[]>] [-InsertStepStartIndex <Int32>]
  -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
@@ -56,40 +49,35 @@ Set-CMTaskSequenceGroup [-CleanStep] [-AddStep <IResultObject[]>] [-InsertStepSt
 ```
 
 ### ByIdSetConditionIfStatement
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionQueryWmi
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionVariable
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionOperatingSystem
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetConditionOperatingSystem]
  [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionFile
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetConditionFile] [-FilePath <String>]
  [-FileVersion <String>] [-FileTimestamp <DateTime>] [-FileDateTimeOperator <VariableOperatorType>]
  [-VersionOperator <VariableOperatorType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
@@ -97,16 +85,14 @@ Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetCondi
 ```
 
 ### ByIdSetConditionFolder
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionRegistry
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
@@ -114,48 +100,42 @@ Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetCondi
 ```
 
 ### ByIdSetConditionSoftware
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceId <String> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionIfStatement
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionQueryWmi
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionVariable
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionOperatingSystem
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetConditionOperatingSystem]
  [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionFile
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetConditionFile]
  [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
  [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
@@ -163,16 +143,14 @@ Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetCon
 ```
 
 ### ByNameSetConditionFolder
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionRegistry
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
@@ -180,48 +158,42 @@ Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetCon
 ```
 
 ### ByNameSetConditionSoftware
-
-```powershell
+```
 Set-CMTaskSequenceGroup -TaskSequenceName <String> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionIfStatement
-
-```powershell
+```
 Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionQueryWmi
-
-```powershell
+```
 Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionVariable
-
-```powershell
+```
 Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionOperatingSystem
-
-```powershell
+```
 Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetConditionOperatingSystem]
  [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionFile
-
-```powershell
+```
 Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetConditionFile]
  [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
  [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
@@ -229,16 +201,14 @@ Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetC
 ```
 
 ### ByValueSetConditionFolder
-
-```powershell
+```
 Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionRegistry
-
-```powershell
+```
 Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
@@ -246,8 +216,7 @@ Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetC
 ```
 
 ### ByValueSetConditionSoftware
-
-```powershell
+```
 Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -257,12 +226,17 @@ Set-CMTaskSequenceGroup -InputObject <IResultObject> [-StepName <String>] [-SetC
 
 The **Set-CMTaskSequenceGroup** cmdlet sets properties, options, specific conditions and steps of task sequence group(s) in a task sequence. The cmdlet supports pipeline from a task sequence object, and could be filtered by the name of the group.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Set-CMTaskSequenceGroup -StepName $gpName -NewStepName $gpName2 -Description $gpNewDescription -IsContinueOnError $false -IsEnabled $false -ClearStep -AddStep $st1 -ClearCondition -AddCondition $cd1
+PS XYZ:\>$ReferencedTaskSequence | Set-CMTaskSequenceGroup -StepName $gpName -NewStepName $gpName2 -Description $gpNewDescription -IsContinueOnError $false -IsEnabled $false -ClearStep -AddStep $st1 -ClearCondition -AddCondition $cd1
 ```
 
 ### Example 2
@@ -397,6 +371,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 
 Specifies a description.
@@ -404,7 +394,7 @@ Specifies a description.
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -420,7 +410,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -436,7 +426,7 @@ Specifies a file date time operator.
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
-Aliases: 
+Aliases:
 Accepted values: Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
 
 Required: False
@@ -453,7 +443,7 @@ Specifies a file path.
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -469,7 +459,7 @@ Specifies a file time stamp.
 ```yaml
 Type: DateTime
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -485,7 +475,7 @@ Specifies a file version.
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -501,7 +491,7 @@ Specifies a folder date time operator.
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
-Aliases: 
+Aliases:
 Accepted values: Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
 
 Required: False
@@ -518,7 +508,7 @@ Specifies a folder path.
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -534,7 +524,7 @@ Specifies a folder time stamp.
 ```yaml
 Type: DateTime
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -550,7 +540,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -596,7 +586,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -660,7 +650,7 @@ Specifies an MSI file path.
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -676,7 +666,7 @@ Specifies namespaces.
 ```yaml
 Type: String[]
 Parameter Sets: ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -692,7 +682,7 @@ Specifies a new step name.
 ```yaml
 Type: String
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -708,7 +698,7 @@ Specifies an operation type.
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
-Aliases: 
+Aliases:
 Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like
 
 Required: False
@@ -725,7 +715,7 @@ Specifies a query.
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -741,7 +731,7 @@ Specifies a registry key.
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -757,7 +747,7 @@ Specifies a registry operator.
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
-Aliases: 
+Aliases:
 Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
 
 Required: False
@@ -774,7 +764,7 @@ Specifies registry value data.
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -790,7 +780,7 @@ Specifies a registry value name.
 ```yaml
 Type: String
 Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -806,7 +796,7 @@ Remove condition file by value/ID/name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -822,7 +812,7 @@ Remove condition folder by value/ID/name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -838,7 +828,7 @@ Remove condition IF statement by value/ID/name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -854,7 +844,7 @@ Remove condition operating system by value/ID/name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -870,7 +860,7 @@ Remove condition query WMI by value/ID/name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -886,7 +876,7 @@ Remove condition registry by value/ID/name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -902,7 +892,7 @@ Remove condition software by value/ID/name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -918,7 +908,7 @@ Remove condition variable by value/ID/name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -934,7 +924,7 @@ Specify a root key.
 ```yaml
 Type: RegistryRootKeyType
 Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
-Aliases: 
+Aliases:
 Accepted values: HKeyCurrentUser, HKeyLocalMachine, HKeyUsers, HKeyCurrentConfig
 
 Required: False
@@ -946,11 +936,10 @@ Accept wildcard characters: False
 
 ### -SetConditionFile
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -964,7 +953,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionFolder, ByNameSetConditionFolder, ByValueSetConditionFolder
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -978,7 +967,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionIfStatement, ByNameSetConditionIfStatement, ByValueSetConditionIfStatement
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -992,7 +981,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionOperatingSystem, ByNameSetConditionOperatingSystem, ByValueSetConditionOperatingSystem
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1006,7 +995,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionQueryWmi, ByNameSetConditionQueryWmi, ByValueSetConditionQueryWmi
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1020,7 +1009,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1034,7 +1023,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1048,7 +1037,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1079,7 +1068,7 @@ Specifies a step name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1144,7 +1133,7 @@ Specifies a task sequence name.
 ```yaml
 Type: String
 Parameter Sets: ByName, ByNameSetConditionIfStatement, ByNameSetConditionQueryWmi, ByNameSetConditionVariable, ByNameSetConditionOperatingSystem, ByNameSetConditionFile, ByNameSetConditionFolder, ByNameSetConditionRegistry, ByNameSetConditionSoftware
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1160,7 +1149,7 @@ Specifies a value type.
 ```yaml
 Type: RegistryValueType
 Parameter Sets: ByIdSetConditionRegistry, ByNameSetConditionRegistry, ByValueSetConditionRegistry
-Aliases: 
+Aliases:
 Accepted values: RegistrySZ, RegistryExpandSZ, RegistryDWord
 
 Required: False
@@ -1177,24 +1166,8 @@ Specifies a version operator.
 ```yaml
 Type: VariableOperatorType
 Parameter Sets: ByIdSetConditionFile, ByNameSetConditionFile, ByValueSetConditionFile
-Aliases: 
+Aliases:
 Accepted values: Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -1221,8 +1194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -1231,6 +1203,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

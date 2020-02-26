@@ -1,14 +1,10 @@
 ---
-title: Get-CMCollection
-titleSuffix: Configuration Manager
 description: Gets a Configuration Manager collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCollection
 ---
 
 # Get-CMCollection
@@ -53,18 +49,23 @@ The **Get-CMCollection** cmdlet gets a Microsoft System Center Configuration Man
 
 Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a collection by name
 ```
-PS C:\> Get-CMCollection -Name "testUser"
+PS XYZ:\> Get-CMCollection -Name "testUser"
 ```
 
 This command gets the collection named testUser.
 
 ### Example 2: Get a collection for a distribution point group
 ```
-PS C:\> Get-CMDistributionPointGroup -Name "testDPGroup" | Get-CMCollection
+PS XYZ:\> Get-CMDistributionPointGroup -Name "testDPGroup" | Get-CMCollection
 ```
 
 This command gets the distribution point group object named testDPGroup and uses the pipeline operator to pass the object to **Get-CMCollection**, which gets the collection associated with the distribution point group.
@@ -83,7 +84,7 @@ Valid values are:
 ```yaml
 Type: CollectionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: User, Device
 
 Required: False
@@ -99,7 +100,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +116,7 @@ To obtain a distribution point group object, use the [Get-CMDistributionPointGro
 ```yaml
 Type: IResultObject
 Parameter Sets: ByDPGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -130,7 +131,7 @@ Specifies the ID of the distribution point group that is associated with the col
 ```yaml
 Type: String
 Parameter Sets: ByDPGroupId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -145,7 +146,7 @@ Specifies the name of the distribution point group that is associated with a col
 ```yaml
 Type: String
 Parameter Sets: ByDPGroupName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +161,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +193,7 @@ If you do not specify a collection, all collections in the hierarchy are returne
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

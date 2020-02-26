@@ -1,14 +1,10 @@
 ---
-title: New-CMPrestageMedia
-titleSuffix: Configuration Manager
 description: Creates a prestage media.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMPrestageMedia
 ---
 
 # New-CMPrestageMedia
@@ -26,7 +22,7 @@ New-CMPrestageMedia [-Application <IResultObject[]>] [-Comment <String>] [-Creat
  [-CertificateExpireTime <DateTime>] [-CertificatePassword <SecureString>] [-CertificatePath <String>]
  [-CertificateStartTime <DateTime>] -DistributionPoint <IResultObject[]> [-Force]
  -ManagementPoint <IResultObject[]> -MediaMode <MediaMode> [-MediaPassword <SecureString>] -Path <String>
- [-PrestartCommand <String>] [-PrestartPackage <IResultObject>] [-ProviderCredential <PSCredential>]
+ [-TemporaryFolder <String>] [-PrestartCommand <String>] [-PrestartPackage <IResultObject>]
  [-UserDeviceAffinity <UserDeviceAffinityType>] [-Variable <Hashtable>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -34,15 +30,20 @@ New-CMPrestageMedia [-Application <IResultObject[]>] [-Comment <String>] [-Creat
 ## DESCRIPTION
 The **New-CMPrestagedMedia** cmdlet creates a file to prestage on a new hard drive that includes an operating system image.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
-PS C:\> $BootImage = Get-CMBootImage -Name "BootImage01"
-PS C:\> $DistributionPoint = Get-CMDistributionPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
-PS C:\> $OSImage = Get-CMOperatingSystemImage -Name "OSImagePkg01"
-PS C:\> New-CMPrestagedMedia -MediaMode Dynamic -Path "\\server\share\PrestargedMedia.wim" -BootImage $BootImage -DistributionPoint $DistributionPoint -ManagementPoint $ManagementPoint -OperatingSystemImage $OSImage
+PS XYZ:\> $ManagementPoint = Get-CMManagementPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
+PS XYZ:\> $BootImage = Get-CMBootImage -Name "BootImage01"
+PS XYZ:\> $DistributionPoint = Get-CMDistributionPoint -SiteSystemServerName "dist01.contoso.com" -SiteCode "CM1"
+PS XYZ:\> $OSImage = Get-CMOperatingSystemImage -Name "OSImagePkg01"
+PS XYZ:\> New-CMPrestagedMedia -MediaMode Dynamic -Path "\\server\share\PrestargedMedia.wim" -BootImage $BootImage -DistributionPoint $DistributionPoint -ManagementPoint $ManagementPoint -OperatingSystemImage $OSImage
 ```
 
 The first command gets the management point object for the site system server named dist01.contoso.com with the site code CM1 and stores the object in the $ManagementPoint variable.
@@ -58,12 +59,10 @@ The last command creates a dynamic prestaged media file named PrestargedMedia.wi
 ## PARAMETERS
 
 ### -AllowUacPrompt
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,12 +72,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnattended
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,12 +85,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnknownMachine
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,8 +98,6 @@ Accept wildcard characters: False
 ```
 
 ### -Application
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -118,8 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -BootImage
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -133,12 +124,10 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateExpireTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,12 +137,10 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
- 
-
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,12 +150,10 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePath
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,12 +163,10 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateStartTime
- 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,12 +176,10 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -223,12 +204,10 @@ Accept wildcard characters: False
 ```
 
 ### -CreatedBy
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -243,7 +222,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -253,8 +232,6 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionPoint
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -268,8 +245,6 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackage
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -283,12 +258,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +276,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,8 +286,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeApplicationDependency
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -328,8 +299,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementPoint
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -343,12 +312,10 @@ Accept wildcard characters: False
 ```
 
 ### -MediaMode
- 
-
 ```yaml
 Type: MediaMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Dynamic, SiteBased
 
 Required: True
@@ -359,12 +326,10 @@ Accept wildcard characters: False
 ```
 
 ### -MediaPassword
- 
-
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -374,8 +339,6 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImage
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -389,12 +352,10 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemImageIndex
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -404,8 +365,6 @@ Accept wildcard characters: False
 ```
 
 ### -Package
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
@@ -419,8 +378,6 @@ Accept wildcard characters: False
 ```
 
 ### -Path
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -434,8 +391,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrestartCommand
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -449,27 +404,10 @@ Accept wildcard characters: False
 ```
 
 ### -PrestartPackage
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProviderCredential
- 
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -479,12 +417,10 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequence
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -493,13 +429,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserDeviceAffinity
- 
+### -TemporaryFolder
+{{ Fill TemporaryFolder Description }}
 
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: TemporaryDirectory, StagingArea
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserDeviceAffinity
 ```yaml
 Type: UserDeviceAffinityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotAllow, AdministratorApproval, AutoApproval
 
 Required: False
@@ -510,8 +459,6 @@ Accept wildcard characters: False
 ```
 
 ### -Variable
- 
-
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
@@ -525,12 +472,10 @@ Accept wildcard characters: False
 ```
 
 ### -Version
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -556,7 +501,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Set-CMObjectSecurityScope
-titleSuffix: Configuration Manager
 description: Sets the security scopes for Configuration Manager objects.
+external help file: AdminUI.PS.Common.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMObjectSecurityScope
 ---
 
 # Set-CMObjectSecurityScope
@@ -29,11 +25,16 @@ The **Set-CMObjectSecurityScope** cmdlet adds and removes security scopes for Mi
 This cmdlet has been deprecated and may be removed in a future release.
 Use [Add-CMObjectSecurityScope](Add-CMObjectSecurityScope.md) and [Remove-CMObjectSecurityScope](Remove-CMObjectSecurityScope.md) to add and remove security scopes from Configuration Manager objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a security scope to application objects by using the pipeline
 ```
-PS C:\> Get-CMApplication -Name "Application*" | Set-CMObjectSecurityScope -Action AddMembership -Name "Scope1"
+PS XYZ:\> Get-CMApplication -Name "Application*" | Set-CMObjectSecurityScope -Action AddMembership -Name "Scope1"
 ```
 
 This command gets all application objects that have a name beginning with Application and uses the pipeline operator to pass the objects to **Set-CMObjectSecurityScope**.
@@ -41,7 +42,7 @@ This command gets all application objects that have a name beginning with Applic
 
 ### Example 2: Add a security scope to application objects
 ```
-PS C:\> Set-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Action AddMembership -Name "Scope1"
+PS XYZ:\> Set-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Action AddMembership -Name "Scope1"
 ```
 
 This command gets all application objects that have a name beginning with Application and adds the security scope named Scope1 to each application object.
@@ -50,7 +51,7 @@ This command gets all application objects that have a name beginning with Applic
 
 ### -Action
 Specifies the action that this cmdlet takes on the security scope.
-Valid values are: 
+Valid values are:
 
 - AddMembership
 - RemoveMembership
@@ -89,7 +90,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +120,7 @@ Specifies an array of Configuration Manager objects associated with a security s
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

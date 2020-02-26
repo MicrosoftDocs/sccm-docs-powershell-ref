@@ -1,14 +1,10 @@
 ---
-title: Publish-CMPrestageContent
-titleSuffix: Configuration Manager
 description: Publishes files to a distribution point.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Publish-CMPrestageContent
 ---
 
 # Publish-CMPrestageContent
@@ -20,148 +16,148 @@ Publishes files to a distribution point.
 
 ### SearchByValueMandatory_DeploymentPackage (Default)
 ```
-Publish-CMPrestageContent -DeploymentPackage <IResultObject> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -DeploymentPackage <IResultObject> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_DeploymentPackage
 ```
-Publish-CMPrestageContent -DeploymentPackageId <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -DeploymentPackageId <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_DeploymentPackage
 ```
-Publish-CMPrestageContent -DeploymentPackageName <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -DeploymentPackageName <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_BootImage
 ```
-Publish-CMPrestageContent -BootImageId <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -BootImageId <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_BootImage
 ```
-Publish-CMPrestageContent -BootImageName <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -BootImageName <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_BootImage
 ```
-Publish-CMPrestageContent -BootImage <IResultObject> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -BootImage <IResultObject> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_DriverPackage
 ```
-Publish-CMPrestageContent -DriverPackageId <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -DriverPackageId <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_DriverPackage
 ```
-Publish-CMPrestageContent -DriverPackageName <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -DriverPackageName <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_DriverPackage
 ```
-Publish-CMPrestageContent -DriverPackage <IResultObject> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -DriverPackage <IResultObject> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_OperatingSystemImage
 ```
-Publish-CMPrestageContent -OperatingSystemImageId <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -OperatingSystemImageId <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_OperatingSystemImage
 ```
-Publish-CMPrestageContent -OperatingSystemImageName <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -OperatingSystemImageName <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_OperatingSystemImage
 ```
-Publish-CMPrestageContent -OperatingSystemImage <IResultObject> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -OperatingSystemImage <IResultObject> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_OperatingSystemInstaller
 ```
-Publish-CMPrestageContent -OperatingSystemInstallerId <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -OperatingSystemInstallerId <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_OperatingSystemInstaller
 ```
-Publish-CMPrestageContent -OperatingSystemInstallerName <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -OperatingSystemInstallerName <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_OperatingSystemInstaller
 ```
-Publish-CMPrestageContent -OperatingSystemInstaller <IResultObject> [-FileName <String>]
- [-Description <String>] [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Publish-CMPrestageContent -OperatingSystemInstaller <IResultObject> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_Package
 ```
-Publish-CMPrestageContent -PackageId <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -PackageId <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_Package
 ```
-Publish-CMPrestageContent -PackageName <String[]> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -PackageName <String[]> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_Package
 ```
-Publish-CMPrestageContent -Package <IResultObject> [-FileName <String>] [-Description <String>]
- [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+Publish-CMPrestageContent -Package <IResultObject> -FileName <String> [-Description <String>]
+ -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory_Application
 ```
-Publish-CMPrestageContent -ApplicationId <String[]> [-DisableDependencyExport] [-FileName <String>]
- [-Description <String>] [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Publish-CMPrestageContent -ApplicationId <String[]> [-DisableDependencyExport] -FileName <String>
+ [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory_Application
 ```
-Publish-CMPrestageContent -ApplicationName <String[]> [-DisableDependencyExport] [-FileName <String>]
- [-Description <String>] [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Publish-CMPrestageContent -ApplicationName <String[]> [-DisableDependencyExport] -FileName <String>
+ [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory_Application
 ```
-Publish-CMPrestageContent -Application <IResultObject> [-DisableDependencyExport] [-FileName <String>]
- [-Description <String>] [-DistributionPointName <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Publish-CMPrestageContent -Application <IResultObject> [-DisableDependencyExport] -FileName <String>
+ [-Description <String>] -DistributionPointName <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -170,7 +166,7 @@ The **Publish-CMPrestageContent** cmdlet publishes files for applications, image
 
 Specify the distribution site, the file name, and the item to publish.
 
-You can specify any of the following to publish to a distribution point: 
+You can specify any of the following to publish to a distribution point:
 
 - Application
 - BootImage
@@ -182,39 +178,44 @@ You can specify any of the following to publish to a distribution point:
 
 You can specify the item to be published by name or ID, or use another cmdlet to get the desired item.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Publish a package
 ```
-PS C:\>Publish-CMPrestageContent -PackageId "CM200001" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\Package.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -PackageId "CM200001" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\Package.pkgx"
 ```
 
 This command publishes the package that has the ID CM200001 to the specified distribution point as the specified .pkgx file.
 
 ### Example 2: Publish a boot image
 ```
-PS C:\>Publish-CMPrestageContent -BootImageId "CM200005" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\BootImage.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -BootImageId "CM200005" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\BootImage.pkgx"
 ```
 
 This command publishes the boot image that has the ID CM200005 to the specified distribution point as the specified .pkgx file.
 
 ### Example 3: Publish a driver package
 ```
-PS C:\>Publish-CMPrestageContent -DriverPackageId "CM20000F" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\DriverPackage.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -DriverPackageId "CM20000F" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\DriverPackage.pkgx"
 ```
 
 This command publishes the driver package that has the ID CM20000F to the specified distribution point as the specified .pkgx file.
 
 ### Example 4: Publish an operating system image
 ```
-PS C:\>Publish-CMPrestageContent -OperatingSystemImageId "CM200006" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\OSImage.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -OperatingSystemImageId "CM200006" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\OSImage.pkgx"
 ```
 
 This command publishes the operating system image that has the ID CM200006 to the specified distribution point as the specified .pkgx file.
 
 ### Example 5: Publish an operating system installer
 ```
-PS C:\>Publish-CMPrestageContent -OperatingSystemInstallerId "CM200017" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\OSInstaller.pkgx"
+PS XYZ:\>Publish-CMPrestageContent -OperatingSystemInstallerId "CM200017" -DistributionPointName "FileDist02.Western.Contoso.com" -FileName "C:\Users\admin\Documents\OSInstaller.pkgx"
 ```
 
 This command publishes the operating system installer that has the ID CM200017 to the specified distribution point as the specified .pkgx file.
@@ -228,7 +229,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -274,7 +275,7 @@ To obtain a boot image object, use the [Get-CMBootImage](Get-CMBootImage.md) cmd
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_BootImage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -335,7 +336,7 @@ To obtain a deployment package object, use the [Get-CMDeploymentPackage](Get-CMD
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_DeploymentPackage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -380,7 +381,7 @@ Specifies a description for the content.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -408,7 +409,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -423,9 +424,9 @@ Specifies a distribution point for the content.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -439,7 +440,7 @@ To obtain a driver package object, use the [Get-CMDriverPackage](Get-CMDriverPac
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_DriverPackage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -484,9 +485,9 @@ Specifies a file name for a .pkgx file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -499,7 +500,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -515,7 +516,7 @@ To obtain an operating system image object, use the [Get-CMOperatingSystemImage]
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemImage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -561,7 +562,7 @@ To obtain an operating system installer object, use the [Get-CMOperatingSystemIn
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemInstaller
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -607,7 +608,7 @@ To obtain a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_Package
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -663,7 +664,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,7 @@
 ---
 title: Set-CMOutOfBandServicePoint
-titleSuffix: Configuration Manager
 description: Changes configuration settings for an out of band service point.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Set-CMOutOfBandServicePoint
@@ -38,19 +31,24 @@ Set-CMOutOfBandServicePoint [-SiteCode <String>] [-SiteSystemServerName] <String
 The **Set-CMOutOfBandServicePoint** cmdlet changes configuration settings for an out of band service point.
 An out of band service point is a site system role that provisions and configures Intel Active Management Technology (AMT)-based computers for Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Change settings of an out of band service point
 ```
-PS C:\> Set-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2" -ErrorRetryMinutesDelay 1 -TransmissionThreadCount 1 -TransmissionStartMinutesInterval 1 -EnableCrlChecking 1 -ProvisioningCertificateThumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
+PS XYZ:\> Set-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2" -ErrorRetryMinutesDelay 1 -TransmissionThreadCount 1 -TransmissionStartMinutesInterval 1 -EnableCrlChecking 1 -ProvisioningCertificateThumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
 ```
 
 This command changes the settings of the out of band service point from the System Center Configuration Manager site that has the site code named CM2 on the site system named cmcen-dist02.tsqa.contoso.com.
 
 ### Example 2: Change settings of an out of band service point by using an object variable
 ```
-PS C:\> $Osp = Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2"
-PS C:\> Set-CMOutOfBandServicePoint -InputObject $Osp -ErrorRetryCount 1 -ErrorRetryMinutesDelay 1 -TransmissionThreadCount 1 -TransmissionStartMinutesInterval 1 -EnableCrlChecking 1 -ProvisioningCertificateThumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
+PS XYZ:\> $Osp = Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso.com" -SiteCode "CM2"
+PS XYZ:\> Set-CMOutOfBandServicePoint -InputObject $Osp -ErrorRetryCount 1 -ErrorRetryMinutesDelay 1 -TransmissionThreadCount 1 -TransmissionStartMinutesInterval 1 -EnableCrlChecking 1 -ProvisioningCertificateThumbprint "916EC36F1068D47DE48A02A788A9DB137CD0B674"
 ```
 
 The first command gets the out of band service point from the System Center Configuration Manager site that has the site code named CM2 on the site system named cmcen-dist02.tsqa.contoso.com.
@@ -80,7 +78,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +92,7 @@ Indicates whether the out of band service point verifies the certificate revocat
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +134,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -166,7 +164,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +178,7 @@ Specifies the thumbprint of the AMT provisioning certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -194,7 +192,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -260,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

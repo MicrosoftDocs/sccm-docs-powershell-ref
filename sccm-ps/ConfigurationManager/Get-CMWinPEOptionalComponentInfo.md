@@ -1,14 +1,10 @@
 ---
-title: Get-CMWinPEOptionalComponentInfo
-titleSuffix: Configuration Manager
 description: Gets WinPE optional component information.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMWinPEOptionalComponentInfo
 ---
 
 # Get-CMWinPEOptionalComponentInfo
@@ -32,6 +28,11 @@ Get-CMWinPEOptionalComponentInfo -UniqueId <String> [-DisableWildcardHandling] [
 
 ## DESCRIPTION
 The **Get-CMWinPEOptionalComponentInfo** cmdlet gets Windows PE (Preinstallation Environment) optional component information.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
@@ -61,7 +62,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 Accepted values: X64, X86
 
 Required: True
@@ -77,7 +78,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +93,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +109,7 @@ Provide a locale ID, such as 1033.
 ```yaml
 Type: UInt32
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +124,7 @@ Specifies the name of a WinPE optional component.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +139,7 @@ Specifies the unique ID of a WinPE optional component.
 ```yaml
 Type: String
 Parameter Sets: SearchById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -157,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

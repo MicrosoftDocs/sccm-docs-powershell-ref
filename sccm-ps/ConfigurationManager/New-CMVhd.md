@@ -1,14 +1,10 @@
 ---
-title: New-CMVhd
-titleSuffix: Configuration Manager
 description: Creates a VHD image.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMVhd
 ---
 
 # New-CMVhd
@@ -28,11 +24,16 @@ New-CMVhd -Name <String> -VhdFilePath <String> [-Version <String>] [-Description
 ## DESCRIPTION
 The **New-CMVhd** cmdlet creates a virtual hard disk (VHD) image by using the operating system deployment feature.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a VHD image
 ```
-PS C:\> New-CMVhd -Name "Windows 10 Enterprise " -Path "\\vhd-server\hyper-v\ Windows10.vhd" -VHDSize 50 -TaskSequencePackageId "P0071267" -DistributionPointServerNames "distribution-server.contoso.com" -Version "X64"
+PS XYZ:\> New-CMVhd -Name "Windows 10 Enterprise " -Path "\\vhd-server\hyper-v\ Windows10.vhd" -VHDSize 50 -TaskSequencePackageId "P0071267" -DistributionPointServerNames "distribution-server.contoso.com" -Version "X64"
 ```
 
 This command creates a virtual hard disk (VHD) image named Windows 10 Enterprise, and then copies the VHD image file to the distribution point that is named distribution-server.contoso.com.
@@ -60,7 +61,7 @@ Specifies a description for the VHD.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +76,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +104,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ Specifies the name of a VHD image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,7 +134,7 @@ Specifies an ID for a task sequence package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -146,7 +147,7 @@ Accept wildcard characters: False
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +163,7 @@ Use any string.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

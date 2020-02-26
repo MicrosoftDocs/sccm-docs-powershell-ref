@@ -1,14 +1,10 @@
 ---
-title: New-CMDetectionClauseFile
-titleSuffix: Configuration Manager
 description: Creates a detection clause file.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMDetectionClauseFile
 ---
 
 # New-CMDetectionClauseFile
@@ -32,16 +28,18 @@ New-CMDetectionClauseFile -FileName <String> [-Is64Bit] -Path <String> [-Existen
 ```
 
 ## DESCRIPTION
- 
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -51,7 +49,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,12 +59,10 @@ Accept wildcard characters: False
 ```
 
 ### -Existence
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Existence
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,12 +72,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectedValue
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: Value
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,12 +85,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressionOperator
- 
-
 ```yaml
 Type: RuleExpressionOperator
 Parameter Sets: Value
-Aliases: 
+Aliases:
 Accepted values: IsEquals, NotEquals, GreaterThan, GreaterEquals, LessThan, LessEquals, Between, OneOf, NoneOf
 
 Required: True
@@ -107,12 +99,10 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -127,7 +117,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,12 +127,10 @@ Accept wildcard characters: False
 ```
 
 ### -Is64Bit
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,12 +140,10 @@ Accept wildcard characters: False
 ```
 
 ### -Path
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -167,12 +153,10 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyType
- 
-
 ```yaml
 Type: FileFolderProperty
 Parameter Sets: Value
-Aliases: 
+Aliases:
 Accepted values: DateCreated, DateModified, Version, Size
 
 Required: True
@@ -183,8 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -Value
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Value
@@ -198,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -211,4 +193,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,14 +1,10 @@
 ---
-title: Remove-CMAssetIntelligenceSynchronizationPoint
-titleSuffix: Configuration Manager
 description: Removes an Asset Intelligence synchronization point.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMAssetIntelligenceSynchronizationPoint
 ---
 
 # Remove-CMAssetIntelligenceSynchronizationPoint
@@ -34,19 +30,24 @@ Remove-CMAssetIntelligenceSynchronizationPoint [-SiteCode <String>] [-Force] [-S
 The **Remove-CMAssetIntelligenceSynchronizationPoint** cmdlet removes an Asset Intelligence synchronization point from a site system.
 After you remove an Asset Intelligence synchronization point, the Microsoft System Center Configuration Manager sites that used the synchronization point cannot connect to System Center Online.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove an Asset Intelligence synchronization point
 ```
-PS C:\> Remove-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM1"
+PS XYZ:\> Remove-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM1"
 ```
 
 This command removes the Asset Intelligence synchronization point on the System Center Configuration Manager site that has the site code CM1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
 
 ### Example 2: Remove an Asset Intelligence synchronization point by using an object variable
 ```
-PS C:\> $AIsync = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "WEST04.CORP.CONTOSO.COM" -SiteCode "ST1"
-PS C:\> Remove-CMAssetIntelligenceSynchronizationPoint -InputObject $AIsync
+PS XYZ:\> $AIsync = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "WEST04.CORP.CONTOSO.COM" -SiteCode "ST1"
+PS XYZ:\> Remove-CMAssetIntelligenceSynchronizationPoint -InputObject $AIsync
 ```
 
 The first command gets the Asset Intelligence synchronization point on the System Center Configuration Manager site that has the site code ST1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
@@ -77,7 +78,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +93,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +108,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +124,7 @@ To get a **CMAssetIntelligenceSynchronizationPoint** object, use the Get-CMAsset
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -138,7 +139,7 @@ Specifies the three-letter site code of the Configuration Manager site that host
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

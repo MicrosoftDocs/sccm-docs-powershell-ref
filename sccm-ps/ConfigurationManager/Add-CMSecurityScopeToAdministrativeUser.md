@@ -1,14 +1,10 @@
 ---
-title: Add-CMSecurityScopeToAdministrativeUser
-titleSuffix: Configuration Manager
 description: Adds a security scope to an administrative user or group in Configuration Manager.
+external help file: AdminUI.PS.Rba.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMSecurityScopeToAdministrativeUser
 ---
 
 # Add-CMSecurityScopeToAdministrativeUser
@@ -75,23 +71,28 @@ Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -Administ
 ## DESCRIPTION
 The **Add-CMSecurityScopeToAdministrativeUser** cmdlet adds a security scope to an administrative user or administrative group in Microsoft System Center Configuration Manager.
 
-For more information about security scopes, see [Configuring Security for Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=247225) on TechNet.
+For more information about security scopes, see [Configuring Security for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427332(v=technet.10)) on TechNet.
 
 You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
 You can specify a security scope to add by name or by ID or you can use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet to obtain a security scope.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Add a named security scope to a named administrative group
 ```
-PS C:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName "Western Administrators" -SecurityScopeName "Scope22"
+PS XYZ:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserName "Western Administrators" -SecurityScopeName "Scope22"
 ```
 
 This command adds a security scope named Scope22 to an administrative group named Western Administrators.
 
 ### Example 2: Add a security scope to an administrative group by using an ID
 ```
-PS C:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserId 345 -SecurityScopeId "SMS00067"
+PS XYZ:\>Add-CMSecurityScopeToAdministrativeUser -AdministrativeUserId 345 -SecurityScopeId "SMS00067"
 ```
 
 This command adds the security scope that has the ID SMS00067 to the administrative user that has the ID 345.
@@ -105,7 +106,7 @@ To get an administrative user or administrative group object, use the [Get-CMAdm
 ```yaml
 Type: IResultObject
 Parameter Sets: AddScopeToAdminById_Object, AddScopeToAdminByName_Object, AddScopeToAdminByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,7 +121,7 @@ Specifies an ID of an administrative user or administrative group.
 ```yaml
 Type: Int32
 Parameter Sets: AddScopeToAdminById_Id, AddScopeToAdminByName_Id, AddScopeToAdminByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,7 +136,7 @@ Specifies a name of an administrative user or administrative group.
 ```yaml
 Type: String
 Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminById_Name, AddScopeToAdminByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -165,7 +166,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +181,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,7 +197,7 @@ To obtain a security scope object, use the [Get-CMSecurityScope](Get-CMSecurityS
 ```yaml
 Type: IResultObject
 Parameter Sets: AddScopeToAdminByObject_Id, AddScopeToAdminByObject_Name, AddScopeToAdminByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -211,7 +212,7 @@ Specifies the ID of a security scope.
 ```yaml
 Type: String
 Parameter Sets: AddScopeToAdminById_Id, AddScopeToAdminById_Name, AddScopeToAdminById_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -227,7 +228,7 @@ A security scope name can be Default or the name of a custom security scope.
 ```yaml
 Type: String
 Parameter Sets: AddScopeToAdminByName_Name, AddScopeToAdminByName_Id, AddScopeToAdminByName_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -253,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Add-CMManagementPoint
-titleSuffix: Configuration Manager
 description: Adds a management point to Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMManagementPoint
 ---
 
 # Add-CMManagementPoint
@@ -56,22 +52,27 @@ Add-CMManagementPoint [-EnableSsl] [-EnableCloudGateway] [-CommunicationType <Co
 The **Add-CMManagementPoint** cmdlet adds a management point to Microsoft System Center Configuration Manager.
 A management point is a System Center Configuration Manager site system role that provides policy and service information to clients and receives configuration data from clients.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a management point
 ```
-PS C:\>Add-CMManagementPoint -SiteSystemServerName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SiteCode "CM2" -ClientConnectionType InternetAndIntranet -AllowDevice $True -GenerateAlert -SQLServerFqdnName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SQLServerInstanceName "MSSQLServer" -DatabaseName "test" -UserName "TSQA\MPAdmin" -Verbose
+PS XYZ:\>Add-CMManagementPoint -SiteSystemServerName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SiteCode "CM2" -ClientConnectionType InternetAndIntranet -AllowDevice $True -GenerateAlert -SQLServerFqdnName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SQLServerInstanceName "MSSQLServer" -DatabaseName "test" -UserName "TSQA\MPAdmin" -Verbose
 ```
 
 This command adds a management point to a System Center Configuration Manager installation.
-The command specifies the following information about the management point: 
+The command specifies the following information about the management point:
 
 - The new management point appears on the site system named CMDEV-TEST02.TSQA.CONTOSO.COM.
 This name is also the fully qualified domain name for the SQL Server instance named MSSQLServer.
 - The site has code CM2.
 - The management point accepts connections from internet and intranet clients and from portable devices.
 - The management point has the associated database name Test.
-- The management point uses the domain user account for the user named TSQA\MPAdmin. 
+- The management point uses the domain user account for the user named TSQA\MPAdmin.
 - The cmdlet displays all messages that the addition operation generates.
 
 ## PARAMETERS
@@ -82,7 +83,7 @@ Indicates that the management point supports device clients.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +94,7 @@ Accept wildcard characters: False
 
 ### -ClientConnectionType
 Specifies the type of the client connection.
-Valid values are: 
+Valid values are:
 
 - Internet
 - InternetAndIntranet
@@ -102,7 +103,7 @@ Valid values are:
 ```yaml
 Type: ClientConnectionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Internet, Intranet, InternetAndIntranet
 
 Required: False
@@ -160,7 +161,7 @@ Specifies the name of the site database or site database replica that the manage
 ```yaml
 Type: String
 Parameter Sets: ByNameReplica, ByValueReplica
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -175,7 +176,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,12 +186,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCloudGateway
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,7 +204,7 @@ Indicates that the cmdlet enables SSL for the management point.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,7 +219,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +234,7 @@ Indicates that Configuration Manager generates an alert when the management poin
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,8 +244,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -266,7 +265,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 ```yaml
 Type: String
 Parameter Sets: ByNameNoReplica, ByNameReplica
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +308,7 @@ Specifies the name of the SQL Server instance that clients use to communicate wi
 ```yaml
 Type: String
 Parameter Sets: ByNameReplica, ByValueReplica
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -335,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

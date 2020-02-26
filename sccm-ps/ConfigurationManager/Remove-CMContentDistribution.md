@@ -1,14 +1,10 @@
 ---
-title: Remove-CMContentDistribution
-titleSuffix: Configuration Manager
 description: Removes packages from a distribution point.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMContentDistribution
 ---
 
 # Remove-CMContentDistribution
@@ -156,11 +152,16 @@ Remove-CMContentDistribution [-Force] [-CollectionName <String[]>] [-Distributio
 ## DESCRIPTION
 The **Remove-CMContentDistribution** cmdlet removes one or more packages from a distribution point.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a driver package from a distribution point
 ```
-PS C:\> Remove-CMContentDistribution -DriverPackageID "PCP00019" -DistributionPointName "distribution-server.contoso.com"
+PS XYZ:\> Remove-CMContentDistribution -DriverPackageID "PCP00019" -DistributionPointName "distribution-server.contoso.com"
 ```
 
 This command removes the driver package PCO00019 from the distribution point distribution-server.contoso.com.
@@ -173,7 +174,7 @@ Specifies an array of application IDs.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByIdMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +189,7 @@ Specifies an array of application names.
 ```yaml
 Type: String[]
 Parameter Sets: SearchByNameMandatory_Application
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -233,7 +234,7 @@ Specifies the name of a Configuration Manager collection.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -306,7 +307,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +322,7 @@ Specifies the name of a distribution point group.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -336,7 +337,7 @@ Specifies the name of a distribution point that is associated with the deploymen
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -381,7 +382,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -396,7 +397,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -406,8 +407,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -427,7 +426,7 @@ To get a **CMOperatingSystemImage** object, use the [Get-CMOperatingSystemImage]
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory_OperatingSystemImage
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -573,7 +572,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

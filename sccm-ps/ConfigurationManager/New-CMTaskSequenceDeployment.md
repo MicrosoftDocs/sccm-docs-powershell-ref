@@ -1,14 +1,10 @@
 ---
-title: New-CMTaskSequenceDeployment
-titleSuffix: Configuration Manager
 description: Creates a task sequence deployment in Configuration Manager.
+external help file: AdminUI.PS.Deployments.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 12/03/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMTaskSequenceDeployment
 ---
 
 # New-CMTaskSequenceDeployment
@@ -20,36 +16,34 @@ Creates a task sequence deployment in Configuration Manager.
 ## SYNTAX
 
 ### SearchByValueMandatory (Default)
-
-```powershell
-New-CMTaskSequenceDeployment [-InputObject] <IResultObject> [-DeployPurpose <DeployPurposeType>]
- [-Availability <MakeAvailableToType>] [-UseUtcForAvailableSchedule <Boolean>]
- [-UseUtcForExpireSchedule <Boolean>] [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>]
- [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
- [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] [-InternetOption <Boolean>]
- [-PercentSuccess <Int32>] [-AlertDateTime <DateTime>] [-PercentFailure <Int32>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>]
- [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
- [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+```
+New-CMTaskSequenceDeployment [-InputObject] <IResultObject> [-DeadlineDateTime <DateTime>]
+ [-DeployPurpose <DeployPurposeType>] [-Availability <MakeAvailableToType>]
+ [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
+ [-RunFromSoftwareCenter <Boolean>] [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-SystemRestart <Boolean>] [-InternetOption <Boolean>] [-PercentSuccess <Int32>] [-AlertDateTime <DateTime>]
+ [-PercentFailure <Int32>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
+ [-AllowFallback <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
+ [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
  [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchPackageByIdMandatory
-
-```powershell
-New-CMTaskSequenceDeployment [-TaskSequencePackageId] <String> [-DeployPurpose <DeployPurposeType>]
- [-Availability <MakeAvailableToType>] [-UseUtcForAvailableSchedule <Boolean>]
- [-UseUtcForExpireSchedule <Boolean>] [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>]
- [-RerunBehavior <RerunBehaviorType>] [-RunFromSoftwareCenter <Boolean>] [-ShowTaskSequenceProgress <Boolean>]
- [-SoftwareInstallation <Boolean>] [-SystemRestart <Boolean>] [-InternetOption <Boolean>]
- [-PercentSuccess <Int32>] [-AlertDateTime <DateTime>] [-PercentFailure <Int32>]
- [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>] [-AllowFallback <Boolean>]
- [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
- [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+```
+New-CMTaskSequenceDeployment [-DeadlineDateTime <DateTime>] [-TaskSequencePackageId] <String>
+ [-DeployPurpose <DeployPurposeType>] [-Availability <MakeAvailableToType>]
+ [-UseUtcForAvailableSchedule <Boolean>] [-UseUtcForExpireSchedule <Boolean>]
+ [-ScheduleEvent <ScheduleEventType[]>] [-Schedule <IResultObject[]>] [-RerunBehavior <RerunBehaviorType>]
+ [-RunFromSoftwareCenter <Boolean>] [-ShowTaskSequenceProgress <Boolean>] [-SoftwareInstallation <Boolean>]
+ [-SystemRestart <Boolean>] [-InternetOption <Boolean>] [-PercentSuccess <Int32>] [-AlertDateTime <DateTime>]
+ [-PercentFailure <Int32>] [-DeploymentOption <DeploymentOptionType>] [-AllowSharedContent <Boolean>]
+ [-AllowFallback <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
+ [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
  [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -60,6 +54,13 @@ New-CMTaskSequenceDeployment [-TaskSequencePackageId] <String> [-DeployPurpose <
 The **New-CMTaskSequenceDeployment** cmdlet creates a task sequence deployment.
 A task sequence deployment assigns a task sequence to a collection of computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
+## EXAMPLES
+
 ## PARAMETERS
 
 ### -AlertDateTime
@@ -69,7 +70,7 @@ Specifies an alert date time.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +86,7 @@ Indicates whether to allow clients to use a fallback source location for content
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ Specifies an available date time.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +151,7 @@ Specifies a collection.
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +167,7 @@ Specifies the ID of a collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +184,7 @@ A collection is a group of client computers.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -199,7 +200,23 @@ Specifies a comment for the task sequence deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -215,7 +232,24 @@ Specifies a deadline date time.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases: DeploymentExpireDateTime
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployPurpose
+
+Specifies a deployment purpose.
+
+```yaml
+Type: DeployPurposeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Available, Required
 
 Required: False
 Position: Named
@@ -232,25 +266,8 @@ By default, clients download content as needed.
 ```yaml
 Type: DeploymentOptionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DownloadContentLocallyWhenNeededByRunningTaskSequence, DownloadAllContentLocallyBeforeStartingTaskSequence, RunFromDistributionPoint
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeployPurpose
-
-Specifies a deployment purpose.
-
-```yaml
-Type: DeployPurposeType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: Available, Required
 
 Required: False
 Position: Named
@@ -266,7 +283,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +299,7 @@ Specifies the name of a distribute collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,7 +315,7 @@ Specifies distribute content.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -314,7 +331,7 @@ Specifies the name of a distribution point group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -330,7 +347,7 @@ Specifies the name of a distribution name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -346,7 +363,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -379,7 +396,7 @@ Indicates whether the task sequence runs on clients connecting over the Internet
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -395,7 +412,7 @@ Specifies a threshold percentage for failed task sequence deployment.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -411,7 +428,7 @@ Specifies a threshold percentage for successful task sequence deployment.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -427,7 +444,7 @@ Indicates whether to install a task sequence on the temporary overlay and commit
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -444,7 +461,7 @@ By default, the task sequence is always rerun.
 ```yaml
 Type: RerunBehaviorType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NeverRerunDeployedProgram, AlwaysRerunProgram, RerunIfFailedPreviousAttempt, RerunIfSucceededOnPreviousAttempt
 
 Required: False
@@ -479,7 +496,7 @@ To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) c
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -500,7 +517,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ScheduleEventType[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AsSoonAsPossible, LogOn, LogOff
 
 Required: False
@@ -520,7 +537,7 @@ For computers to wake, you must first configure Wake On LAN.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -536,7 +553,7 @@ Indicates whether to show a process dialog for a task sequence.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -552,7 +569,7 @@ Indicates whether to allow the application to install, even if the installation 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -568,7 +585,7 @@ Indicates whether to allow an advertised program to restart the system, even if 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -600,7 +617,7 @@ Indicates whether to allow clients on a metered Internet connection to download 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -617,7 +634,7 @@ UTC time makes the task sequence available at the same time for all computers.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -634,23 +651,7 @@ UTC time makes the task sequence available at the same time for all computers.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
@@ -677,8 +678,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -687,6 +687,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Advertisement
+
+## NOTES
 
 ## RELATED LINKS
 

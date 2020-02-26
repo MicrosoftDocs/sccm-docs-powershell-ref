@@ -1,14 +1,10 @@
 ---
-title: New-CMBaseline
-titleSuffix: Configuration Manager
 description: Creates a Configuration Manager baseline.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMBaseline
 ---
 
 # New-CMBaseline
@@ -28,11 +24,16 @@ The **New-CMBaseline** cmdlet creates a Microsoft System Center Configuration Ma
 A baseline is a collection of configuration items that System Center Configuration Manager uses to evaluate whether a computer complies with software requirements.
 After you create a baseline, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess compliance with it.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a configuration baseline
 ```
-PS C:\> New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
+PS XYZ:\> New-CMBaseline -Name "Accounting Department baseline" -Description "Compliance standards for Accounting computers."
 ```
 
 This command creates a baseline for compliance named Accounting Department baseline.
@@ -42,7 +43,7 @@ The command specifies a description for the baseline.
 
 ### -Category
 Specifies an array of categories to which the baseline configuration belongs.
-Valid values are: 
+Valid values are:
 
 - Client
 - IT Infrastructure
@@ -97,7 +98,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

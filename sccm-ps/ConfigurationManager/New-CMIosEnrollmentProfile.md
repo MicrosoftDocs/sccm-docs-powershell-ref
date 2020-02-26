@@ -1,14 +1,10 @@
 ---
-title: New-CMIosEnrollmentProfile
-titleSuffix: Configuration Manager
 description: Creates an ios enrollment profile.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMIosEnrollmentProfile
 ---
 
 # New-CMIosEnrollmentProfile
@@ -29,22 +25,22 @@ New-CMIosEnrollmentProfile -Name <String> [-Description <String>] [-Department <
 ```
 
 ## DESCRIPTION
- 
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -AddCertificatePath
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -58,8 +54,6 @@ Accept wildcard characters: False
 ```
 
 ### -Affinity
- 
-
 ```yaml
 Type: AffinitySetting
 Parameter Sets: (All)
@@ -74,12 +68,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPairingType
- 
-
 ```yaml
 Type: PairingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enable, Disable, RequireCertificate
 
 Required: False
@@ -90,12 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -AppleId
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,12 +95,10 @@ Accept wildcard characters: False
 ```
 
 ### -ApplePay
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,12 +123,10 @@ Accept wildcard characters: False
 ```
 
 ### -Department
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,8 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -165,12 +149,10 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +167,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +182,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,8 +192,6 @@ Accept wildcard characters: False
 ```
 
 ### -IsDepEnable
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -225,8 +205,6 @@ Accept wildcard characters: False
 ```
 
 ### -IsMdmRemovable
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -240,12 +218,10 @@ Accept wildcard characters: False
 ```
 
 ### -Location
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,8 +231,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -270,12 +244,10 @@ Accept wildcard characters: False
 ```
 
 ### -Passcode
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -285,12 +257,10 @@ Accept wildcard characters: False
 ```
 
 ### -Preparation
- 
-
 ```yaml
 Type: PreparationMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unsupervised, Supervised
 
 Required: False
@@ -301,12 +271,10 @@ Accept wildcard characters: False
 ```
 
 ### -Restore
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -316,12 +284,10 @@ Accept wildcard characters: False
 ```
 
 ### -Siri
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -331,8 +297,6 @@ Accept wildcard characters: False
 ```
 
 ### -SupportPhone
- 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -346,12 +310,10 @@ Accept wildcard characters: False
 ```
 
 ### -TermAndCondition
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -361,12 +323,10 @@ Accept wildcard characters: False
 ```
 
 ### -TouchId
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -392,12 +352,10 @@ Accept wildcard characters: False
 ```
 
 ### -Zoom
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -407,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -420,4 +378,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

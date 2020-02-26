@@ -1,14 +1,10 @@
 ---
-title: Get-CMTaskSequenceStep
-titleSuffix: Configuration Manager
 description: Gets a Configuration Manager task sequence step.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMTaskSequenceStep
 ---
 
 # Get-CMTaskSequenceStep
@@ -20,22 +16,19 @@ Gets a Configuration Manager task sequence step.
 ## SYNTAX
 
 ### ByValue (Default)
-
-```powershell
+```
 Get-CMTaskSequenceStep [-ActionClassName <String>] -InputObject <IResultObject> [-StepName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ById
-
-```powershell
+```
 Get-CMTaskSequenceStep [-ActionClassName <String>] -TaskSequenceId <String> [-StepName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### ByName
-
-```powershell
+```
 Get-CMTaskSequenceStep [-ActionClassName <String>] -TaskSequenceName <String> [-StepName <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -44,13 +37,19 @@ Get-CMTaskSequenceStep [-ActionClassName <String>] -TaskSequenceName <String> [-
 
 The **Get-CMTaskSequence** cmdlet gets task sequence group or step object(s) from a specific task sequence. The cmdlet supports pipeline from a task sequence object, and can be filtered by the name of the group/step.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\>$ReferencedTaskSequence | Get-CMTaskSequenceStep -StepName $st1.Name
+PS XYZ:\>$ReferencedTaskSequence | Get-CMTaskSequenceStep -StepName $st1.Name
 ```
+
 The comment gets a task sequence step by using the name.
 
 ## PARAMETERS
@@ -62,7 +61,7 @@ Specifies an action class name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +77,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +93,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +125,7 @@ Specifies the name of a step.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +157,7 @@ Specifies the name of a task sequence.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -168,8 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,6 +176,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

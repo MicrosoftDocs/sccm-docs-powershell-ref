@@ -1,14 +1,10 @@
 ---
-title: Get-CMApprovalRequest
-titleSuffix: Configuration Manager
 description: Gets an approval request to allow the installation of a Configuration Manager application.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMApprovalRequest
 ---
 
 # Get-CMApprovalRequest
@@ -20,36 +16,31 @@ Gets an approval request to allow the installation of a Configuration Manager ap
 ## SYNTAX
 
 ### SearchByName (Default)
-
-```powershell
+```
 Get-CMApprovalRequest [-ApplicationName <String[]>] [-User <String>] [-CurrentState <RequestState>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchById
-
-```powershell
+```
 Get-CMApprovalRequest -Id <String[]> [-User <String>] [-CurrentState <RequestState>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByModelName
-
-```powershell
+```
 Get-CMApprovalRequest [-User <String>] -ModelName <String> [-CurrentState <RequestState>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByGuid
-
-```powershell
+```
 Get-CMApprovalRequest [-User <String>] -RequestGuid <String> [-CurrentState <RequestState>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByValue
-
-```powershell
+```
 Get-CMApprovalRequest [-User <String>] -InputObject <IResultObject> [-CurrentState <RequestState>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -59,12 +50,17 @@ Get-CMApprovalRequest [-User <String>] -InputObject <IResultObject> [-CurrentSta
 The **Get-CMApprovalRequest** cmdlet gets a request from a user to install a Microsoft System Center Configuration Manager application.
 You can specify an approval request by application name, application ID, or by user name.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all approval requests
 
 ```powershell
-PS C:\> Get-CMApprovalRequest
+PS XYZ:\> Get-CMApprovalRequest
 ```
 
 This command gets all pending Microsoft System Center Configuration Manager approval requests.
@@ -72,7 +68,7 @@ This command gets all pending Microsoft System Center Configuration Manager appr
 ### Example 2: Get an approval request by using an application ID
 
 ```powershell
-PS C:\> Get-CMApprovalRequest -Id "1635223"
+PS XYZ:\> Get-CMApprovalRequest -Id "1635223"
 ```
 
 This command gets an approval request for an application with the specified ID.
@@ -80,7 +76,7 @@ This command gets an approval request for an application with the specified ID.
 ### Example 3: Get an approval request for a specific user
 
 ```powershell
-PS C:\> Get-CMApprovalRequest -Application "HelloWorld" -User "tsqa\davidchew"
+PS XYZ:\> Get-CMApprovalRequest -Application "HelloWorld" -User "tsqa\davidchew"
 ```
 
 This command gets an approval request for the application HelloWorld for a specified user.
@@ -108,7 +104,7 @@ Accept wildcard characters: False
 ```yaml
 Type: RequestState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, Requested, Canceled, Denied, Approved
 
 Required: False
@@ -125,7 +121,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +137,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,13 +164,13 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -187,7 +183,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: SearchByModelName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -203,7 +199,7 @@ Sepcifies the request ID.
 ```yaml
 Type: String
 Parameter Sets: SearchByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -220,7 +216,7 @@ Use the format domain\user.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -230,8 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

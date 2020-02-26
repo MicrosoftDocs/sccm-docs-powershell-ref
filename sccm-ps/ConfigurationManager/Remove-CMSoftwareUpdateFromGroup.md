@@ -1,14 +1,10 @@
 ---
-title: Remove-CMSoftwareUpdateFromGroup
-titleSuffix: Configuration Manager
 description: Removes a software update from group.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMSoftwareUpdateFromGroup
 ---
 
 # Remove-CMSoftwareUpdateFromGroup
@@ -74,16 +70,18 @@ Remove-CMSoftwareUpdateFromGroup [-Force] -SoftwareUpdate <IResultObject[]>
 ```
 
 ## DESCRIPTION
- 
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
@@ -108,7 +106,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,12 +116,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +134,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,8 +144,6 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
- 
-
 ```yaml
 Type: IResultObject[]
 Parameter Sets: ByObject_Id, ByObject_Name, ByObject_Object
@@ -163,12 +157,10 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroup
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: ById_Object, ByName_Object, ByObject_Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -178,12 +170,10 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupId
- 
-
 ```yaml
 Type: String
 Parameter Sets: ById_Id, ByName_Id, ByObject_Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -193,12 +183,10 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupName
- 
-
 ```yaml
 Type: String
 Parameter Sets: ById_Name, ByName_Name, ByObject_Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -208,8 +196,6 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateId
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: ById_Id, ById_Name, ById_Object
@@ -223,8 +209,6 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateName
- 
-
 ```yaml
 Type: String[]
 Parameter Sets: ByName_Id, ByName_Name, ByName_Object
@@ -254,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -268,4 +252,3 @@ Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 ## NOTES
 
 ## RELATED LINKS
-

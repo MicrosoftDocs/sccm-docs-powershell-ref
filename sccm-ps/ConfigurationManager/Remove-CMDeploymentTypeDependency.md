@@ -1,15 +1,12 @@
 ---
-title: Remove-CMDeploymentTypeDependency
-titleSuffix: Configuration Manager
 description: Removes a deployment type dependency from Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMDeploymentTypeDependency
 ---
+
 # Remove-CMDeploymentTypeDependency
 
 ## SYNOPSIS
@@ -18,7 +15,7 @@ Removes a deployment type dependency from Configuration Manager deployment type 
 
 ## SYNTAX
 
-```powershell
+```
 Remove-CMDeploymentTypeDependency [-Force] -DeploymentTypeDependency <IResultObject[]>
  -InputObject <DeploymentTypeDependencyGroup> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -28,14 +25,19 @@ Remove-CMDeploymentTypeDependency [-Force] -DeploymentTypeDependency <IResultObj
 
 The **Remove-CMDeploymentTypeDependency** cmdlet removes a deployment type dependency from a deployment type dependency group. If removing a dependency causes the group to have no more dependencies, the group will be removed. Required input is a deployment type object from [Get-CMDeploymentType](./Get-CMDeploymentType.md) or [Get-CMDeploymentTypeDependency](./Get-CMDeploymentTypeDependency.md) and a dependency group from [Get-CMDeploymentTypeDependencyGroup](./Get-CMDeploymentTypeDependencyGroup.md).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> $dpGroup = Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup
-PS C:\> $dpDeps = Get-CMDeploymentTypeDependency -Group $dpGroup
-PS C:\> Remove-CMDeploymentTypeDependency -Group $dpGroup -DeploymentTypeDependency $dpDeps[1] -Force
+PS XYZ:\> $dpGroup = Get-CMDeploymentType -ApplicationName MyApp | Get-CMDeploymentTypeDependencyGroup -GroupName MyGroup
+PS XYZ:\> $dpDeps = Get-CMDeploymentTypeDependency -Group $dpGroup
+PS XYZ:\> Remove-CMDeploymentTypeDependency -Group $dpGroup -DeploymentTypeDependency $dpDeps[1] -Force
 ```
 
 This command removes a deployment type dependency.
@@ -81,7 +83,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +99,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +115,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,16 +158,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
+### Microsoft.ConfigurationManagement.cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
 
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

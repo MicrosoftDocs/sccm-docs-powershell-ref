@@ -1,14 +1,10 @@
 ---
-title: Get-CMTaskSequence
-titleSuffix: Configuration Manager
 description: Gets Configuration Manager task sequences.
+external help file: AdminUI.PS.Osd.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMTaskSequence
 ---
 
 # Get-CMTaskSequence
@@ -20,14 +16,12 @@ Gets Configuration Manager task sequences.
 ## SYNTAX
 
 ### SearchByName (Default)
-
-```powershell
+```
 Get-CMTaskSequence [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Get-CMTaskSequence -TaskSequencePackageId <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -40,12 +34,17 @@ A task sequence includes configuration and operating system deployment settings 
 You can specify a name or ID to get a specific sequence.
 You can also specify a security scope, by itself or with a name or ID, to get sequences with that security scope.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a task sequence by name
 
 ```powershell
-PS C:\> Get-CMTaskSequence -Name "taskSequence"
+PS XYZ:\> Get-CMTaskSequence -Name "taskSequence"
 ```
 
 This command gets the task sequence named taskSequence.
@@ -59,7 +58,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +74,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +90,7 @@ Specifies a name for a task sequence.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,8 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 

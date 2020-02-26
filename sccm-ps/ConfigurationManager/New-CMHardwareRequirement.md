@@ -1,14 +1,10 @@
 ---
-title: New-CMHardwareRequirement
-titleSuffix: Configuration Manager
 description: Creates a Configuration Manager hardware requirement object for a product.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMHardwareRequirement
 ---
 
 # New-CMHardwareRequirement
@@ -29,14 +25,19 @@ The **New-CMHardwareRequirement** cmdlet creates a hardware requirement object f
 Microsoft System Center Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
 You can add, modify, or delete your own hardware requirements, but you cannot change built-in hardware requirement objects.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a hardware requirement object
 ```
-PS C:\> New-CMHardwareRequirement -MinCpu 233 -MinDiskFree 1572864 -MinDiskSize 10485760 -MinRam 131072 -Product "Accounts Program"
+PS XYZ:\> New-CMHardwareRequirement -MinCpu 233 -MinDiskFree 1572864 -MinDiskSize 10485760 -MinRam 131072 -Product "Accounts Program"
 
 
-IsLocal     : 
+IsLocal     :
 MinCPU      : 233
 MinDiskFree : 1572864
 MinDiskSize : 10485760
@@ -72,7 +73,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +88,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +103,7 @@ Specifies the minimum CPU speed, in megahertz (MHz), required for a software pro
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,7 +118,7 @@ Specifies the minimum amount of available disk memory, in kilobytes (KB), requir
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +133,7 @@ Specifies the minimum disk size, in kilobytes, required for a software product.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -147,7 +148,7 @@ Specifies the minimum amount of random access memory (RAM), in kilobytes, requir
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -162,7 +163,7 @@ Specifies the name of a software product.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

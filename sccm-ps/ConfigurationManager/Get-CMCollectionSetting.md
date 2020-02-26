@@ -1,14 +1,10 @@
 ---
-title: Get-CMCollectionSetting
-titleSuffix: Configuration Manager
 description: Gets the settings for a collection.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMCollectionSetting
 ---
 
 # Get-CMCollectionSetting
@@ -39,18 +35,23 @@ Get-CMCollectionSetting -CollectionName <String> [-CollectionType <CollectionTyp
 ## DESCRIPTION
 The **Get-CMCollectionSetting** cmdlet gets the settings for a collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get the settings for a collection by using the pipeline
 ```
-PS C:\> Get-CMCollection -Id MP500014 | Get-CMCollectionSetting -CollectionType Device
+PS XYZ:\> Get-CMCollection -Id MP500014 | Get-CMCollectionSetting -CollectionType Device
 ```
 
 This command gets the collection object with the ID of MP500014 and uses the pipeline operator to pass the object to **Get-CMCollectionSetting**, which gets the device collection settings for the collection object.
 
 ### Example 2: Get the settings for a collection by name
 ```
-PS C:\> Get-CMCollectionSetting -CollectionName "Devicecol1"
+PS XYZ:\> Get-CMCollectionSetting -CollectionName "Devicecol1"
 ```
 
 This command gets the collection settings for the device collection named Devicecol1.
@@ -63,7 +64,7 @@ Specifies the ID of a collection.
 ```yaml
 Type: String
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,7 +79,7 @@ Specifies the name of a collection.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -96,7 +97,7 @@ You can specify the type by using either User or Device, or 1 or 2.
 ```yaml
 Type: CollectionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: User, Device
 
 Required: False
@@ -112,7 +113,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +128,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

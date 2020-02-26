@@ -1,14 +1,10 @@
 ---
-title: Remove-CMMdmEnrollmentManager
-titleSuffix: Configuration Manager
 description: Removes a Device Enrollment Manager.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMMdmEnrollmentManager
 ---
 
 # Remove-CMMdmEnrollmentManager
@@ -39,18 +35,23 @@ Remove-CMMdmEnrollmentManager [-Force] -Name <String> [-DisableWildcardHandling]
 ## DESCRIPTION
 The **Remove-CMMdmEnrollmentManager** cmdlet removes a Device Enrollment Manager from the Microsoft Intune subscription.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a device enrollment manager using the pipeline
 ```
-PS C:\> Get-CMUser -Name "Contoso\User01"| Remove-CMMdmEnrollmentManager
+PS XYZ:\> Get-CMUser -Name "Contoso\User01"| Remove-CMMdmEnrollmentManager
 ```
 
 This command gets the user object named User01 and uses the pipeline operator to pass the object to **Remove-CMMdmEnrollmentManager**, which removes the device enrollment manager.
 
 ### Example 2: Remove a device enrollment manager by name
 ```
-PS C:\> Remove-CMMdmEnrollmentManager -Name "Contoso\User02"
+PS XYZ:\> Remove-CMMdmEnrollmentManager -Name "Contoso\User02"
 ```
 
 This command removes the device enrollment manager named User02.
@@ -78,7 +79,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +94,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +109,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +156,7 @@ Specifies the name of a Configuration Manager user.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

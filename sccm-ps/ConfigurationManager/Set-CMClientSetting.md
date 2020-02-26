@@ -1,14 +1,10 @@
 ---
-title: Set-CMClientSetting
-titleSuffix: Configuration Manager
 description: Changes client settings for Configuration Manager devices and users.
+external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMClientSetting
 ---
 
 # Set-CMClientSetting
@@ -153,8 +149,8 @@ Set-CMClientSetting -Name <String> [-ComputerAgent] [-InitialReminderHours <Int3
 ### SetComputerRestartSettingsByName
 ```
 Set-CMClientSetting -Name <String> [-ComputerRestart] [-RebootLogoffNotificationCountdownMins <Int32>]
- [-RebootLogoffNotificationFinalWindowMins <Int32>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RebootLogoffNotificationFinalWindowMins <Int32>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetMeteredNetworksSettingsByName
@@ -180,7 +176,7 @@ Set-CMClientSetting -Name <String> [-RemoteControl]
 The **Set-CMClientSetting** cmdlet changes client settings for Microsoft System Center Configuration Manager devices and users.
 System Center Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects.
 Settings objects determine settings for individual clients.
-For more information about client settings, see [About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226) on TechNet.
+For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
 
 Client settings for devices include the following categories:
 
@@ -205,11 +201,16 @@ Client settings for users include the following categories:
 
 To modify a client setting, specify it by name.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Rename a client setting
 ```
-PS C:\> Set-CMClientSetting -Name "Client Settings Main" -Description "Client settings for TSQA office site." -NewName "Client Settings TSQA"
+PS XYZ:\> Set-CMClientSetting -Name "Client Settings Main" -Description "Client settings for TSQA office site." -NewName "Client Settings TSQA"
 ```
 
 This command renames the client setting object.
@@ -218,21 +219,21 @@ The command also adds a description for the client setting object.
 
 ### Example 2: Configure power management
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA02" -AllowUserToOptOutFromPowerPlan $True -EnablePowerManagement $False
+PS XYZ:\> Set-CMClientSetting -Name "TSQA02" -AllowUserToOptOutFromPowerPlan $True -EnablePowerManagement $False
 ```
 
 This command allows users to opt out of power plans and disables power management for the clients with the setting named TSQA02.
 
 ### Example 3: Set state messaging reporting cycle value
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA02" -StateMessagingReportingCycleMinutes 10
+PS XYZ:\> Set-CMClientSetting -Name "TSQA02" -StateMessagingReportingCycleMinutes 10
 ```
 
 This command sets a state messaging reporting cycle value of 10 minutes.
 
 ### Example 4: Configure user affinity
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA03" -AutoApproveAffinity $False -UserAffinityLogOnThresholdMinutes 2800 -UserAffinityUsageThresholdDays 20
+PS XYZ:\> Set-CMClientSetting -Name "TSQA03" -AutoApproveAffinity $False -UserAffinityLogOnThresholdMinutes 2800 -UserAffinityUsageThresholdDays 20
 ```
 
 This command configures user affinity settings for a client setting named TSQA03.
@@ -241,14 +242,14 @@ The command sets the *UserAffinityLogOnThresholdMinutes* parameter to 2800 minut
 
 ### Example 5: Allow user affinity
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA04" -AllowUserAffinity $True
+PS XYZ:\> Set-CMClientSetting -Name "TSQA04" -AllowUserAffinity $True
 ```
 
 This command changes the client setting named TSQA04 to have a client automatically configure user device affinity from usage data.
 
 ### Example 6: Set bandwidth for client
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA05" -EnableBITSMaxBandwidth $True EnableDownloadOffSchedule $True -MaxBandwidthValidFrom 8 -MaxBandwidthValidTo 15 -MaxTransferRateOnSchedule 1500
+PS XYZ:\> Set-CMClientSetting -Name "TSQA05" -EnableBITSMaxBandwidth $True EnableDownloadOffSchedule $True -MaxBandwidthValidFrom 8 -MaxBandwidthValidTo 15 -MaxTransferRateOnSchedule 1500
 ```
 
 This command changes settings for the client settings object named TSQA05.
@@ -257,7 +258,7 @@ The command also specifies values for maximum bandwidth value from and to and ma
 
 ### Example 7: Configure user policies on the Internet
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA06" -EnableUserPolicyOnInternet $True -EnableUserPolicyPolling $False -EnableUserPolicyOnInternet $True -PolicyPollingInterval 50
+PS XYZ:\> Set-CMClientSetting -Name "TSQA06" -EnableUserPolicyOnInternet $True -EnableUserPolicyPolling $False -EnableUserPolicyOnInternet $True -PolicyPollingInterval 50
 ```
 
 This command changes settings for the client settings object named TSQA06.
@@ -265,14 +266,14 @@ The command enables user policy on the Internet, enables user policy polling, an
 
 ### Example 8: Disable compliance evaluation
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA07" -EnableComplianceEvaluation $False
+PS XYZ:\> Set-CMClientSetting -Name "TSQA07" -EnableComplianceEvaluation $False
 ```
 
 This command disables compliance evaluation for the setting named TSQA07.
 
 ### Example 9: Set computer agent settings
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA09" -AddPortalToTrustedSiteList $True -AllowPortalToHaveElevatedTrust $True -BrandingTitle "Contoso IT" -EnableThirdPartyOrchestration Yes -FinalReminderMinutesInterval 52 -InitialReminderHoursInterval 6 -InstallRestriction OnlyAdministrators -PortalUrl "http://NewInstall.Contoso.com" -PowerShellExecutionPolicy Bypass -SuspendBitLocker Always
+PS XYZ:\> Set-CMClientSetting -Name "TSQA09" -AddPortalToTrustedSiteList $True -AllowPortalToHaveElevatedTrust $True -BrandingTitle "Contoso IT" -EnableThirdPartyOrchestration Yes -FinalReminderMinutesInterval 52 -InitialReminderHoursInterval 6 -InstallRestriction OnlyAdministrators -PortalUrl "https://NewInstall.Contoso.com" -PowerShellExecutionPolicy Bypass -SuspendBitLocker Always
 ```
 
 This command changes settings for the client settings object named TSQA09.
@@ -284,14 +285,14 @@ The command also specifies that only administrators can install software, select
 
 ### Example 10: Configure restart settings
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA11" -RebootLogoffNotificationCountdownDuration 12 -RebootLogoffNotificationFinalWindowMinutes 80
+PS XYZ:\> Set-CMClientSetting -Name "TSQA11" -RebootLogoffNotificationCountdownDuration 12 -RebootLogoffNotificationFinalWindowMinutes 80
 ```
 
 This command sets restart logoff notification countdown duration and logoff notification final window duration for a client setting object named TSQA11.
 
 ### Example 11: Configure metered network usage
 ```
-PS C:\> Set-CMClientSetting -Name "TSQA21" -MeteredNetworkUsage Limit
+PS XYZ:\> Set-CMClientSetting -Name "TSQA21" -MeteredNetworkUsage Limit
 ```
 
 This command specifies the type of metered network usage for the client setting object named TSQA21 as Limit.
@@ -310,7 +311,7 @@ Valid values are:
 ```yaml
 Type: AccessLevelType
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 Accepted values: NoAccess, ViewOnly, FullControl
 
 Required: False
@@ -326,7 +327,7 @@ Indicates whether to add the default Application Catalog website to the Internet
 ```yaml
 Type: Boolean
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -341,7 +342,7 @@ Indicates whether users can change policy or notification settings in Software C
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -356,7 +357,7 @@ Indicates whether a device or user can access content from a cloud-based distrib
 ```yaml
 Type: Boolean
 Parameter Sets: SetCloudSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -384,7 +385,7 @@ Indicates whether to allow a portal to have elevated trust.
 ```yaml
 Type: Boolean
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -399,7 +400,7 @@ Indicates whether to allow remote control of a computer with no user logged onto
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -414,7 +415,7 @@ Indicates whether users can define their primary devices.
 ```yaml
 Type: Boolean
 Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -429,7 +430,7 @@ Indicates whether to allow users to exclude a device from power management setti
 ```yaml
 Type: Boolean
 Parameter Sets: SetPowerManagementSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -442,7 +443,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -464,7 +465,7 @@ Valid values are:
 ```yaml
 Type: AudibleSignalType
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 Accepted values: PlayNoSound, PlaySoundAtBeginAndEnd, PlaySoundRepeatedly
 
 Required: False
@@ -480,7 +481,7 @@ Indicates whether the client automatically configures user device affinity from 
 ```yaml
 Type: Boolean
 Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -497,7 +498,7 @@ When an update deadline passes, Configuration Manager deploys all updates pendin
 ```yaml
 Type: Int32
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -526,7 +527,7 @@ This branding information helps users identify Configuration Manager as a truste
 ```yaml
 Type: String
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -622,7 +623,7 @@ To obtain a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -637,7 +638,7 @@ Specifies a description for client settings.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -652,7 +653,7 @@ Indicates whether to disable the first signature update on client from a remote 
 ```yaml
 Type: Boolean
 Parameter Sets: SetEndpointProtectionSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -667,7 +668,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -683,7 +684,7 @@ If this parameter has a value of $False, the user sees only restart notification
 ```yaml
 Type: Boolean
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -713,7 +714,7 @@ Specifies whether to enable maximum bandwidth for Background Intelligent Transfe
 ```yaml
 Type: Boolean
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -728,7 +729,7 @@ Indicates whether to enable compliance evaluation for this client.
 ```yaml
 Type: Boolean
 Parameter Sets: SetComplianceSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -743,7 +744,7 @@ Specifies whether allow BITS downloads outside of a throttling window.
 ```yaml
 Type: Boolean
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -760,7 +761,7 @@ Valid values are: Yes and No.
 ```yaml
 Type: EnableThirdPartyOrchestrationType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 Accepted values: No, Yes
 
 Required: False
@@ -776,7 +777,7 @@ Indicates whether to enable user data and profile settings.
 ```yaml
 Type: Boolean
 Parameter Sets: SetComplianceSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -807,7 +808,7 @@ An Internet-based management point must authenticate the user.
 ```yaml
 Type: Boolean
 Parameter Sets: SetClientPolicySettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -820,7 +821,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: SetPowerManagementSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -848,7 +849,7 @@ Indicates whether to enforce all mandatory software update deployments that have
 ```yaml
 Type: Boolean
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -922,7 +923,7 @@ Valid values are:
 ```yaml
 Type: FirewallExceptionProfileType[]
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 Accepted values: Disabled, Public, Private, Domain
 
 Required: False
@@ -951,7 +952,7 @@ Indicates whether to enable force scan.
 ```yaml
 Type: Boolean
 Parameter Sets: SetNetworkAccessProtectionSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -966,7 +967,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -981,7 +982,7 @@ Indicates whether local administrators on the server initiating a remote control
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1022,7 +1023,7 @@ Indicates whether to install and enable the Endpoint Protection client on this c
 ```yaml
 Type: Boolean
 Parameter Sets: SetEndpointProtectionSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1043,7 +1044,7 @@ Valid values are:
 ```yaml
 Type: InstallRestrictionType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 Accepted values: AllUsers, OnlyAdministrators, OnlyAdministratorsAndPrimaryUsers, NoUsers
 
 Required: False
@@ -1072,7 +1073,7 @@ Specifies an inventory report ID.
 ```yaml
 Type: String
 Parameter Sets: SetHardwareInventorySettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1100,7 +1101,7 @@ Indicates whether to allow Configuration Manager to manage Remote Desktop sessio
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1115,7 +1116,7 @@ Indicates whether to allow Configuration Manager to manage solicited remote assi
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1130,7 +1131,7 @@ Indicates whether to allow Configuration Manager to manage unsolicited remote as
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1171,7 +1172,7 @@ Specifies an integer value for maximum transfer rate off schedule.
 ```yaml
 Type: Int32
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1186,7 +1187,7 @@ Specifies an integer value for maximum transfer rate on schedule.
 ```yaml
 Type: Int32
 Parameter Sets: SetBackgroundIntelligentTransferSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1220,7 +1221,7 @@ Valid values are:
 ```yaml
 Type: MeteredNetworkUsageType
 Parameter Sets: SetMeteredNetworksSettingsByName
-Aliases: 
+Aliases:
 Accepted values: None, Allow, Limit, Block
 
 Required: False
@@ -1236,7 +1237,7 @@ Specifies a name for a client setting.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1264,7 +1265,7 @@ Specifies a new name for a client setting.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1280,7 +1281,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1323,7 +1324,7 @@ Specifies a link, as a URL, for a portal for a client.
 ```yaml
 Type: String
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1360,7 +1361,7 @@ When you select Restricted, the Configuration Manager client uses the current Wi
 ```yaml
 Type: PowerShellExecutionPolicyType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 Accepted values: AllSigned, Bypass, Restricted
 
 Required: False
@@ -1377,7 +1378,7 @@ Valid values are: Decrease and Increase.
 ```yaml
 Type: PriorityChangeType
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 Accepted values: Increase, Decrease
 
 Required: False
@@ -1393,7 +1394,7 @@ Indicates whether a client computer displays a message asking for user permissio
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1440,7 +1441,7 @@ Valid values are:
 ```yaml
 Type: RemoteAssistanceAccessLevelType
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 Accepted values: None, RemoteViewing, FullControl
 
 Required: False
@@ -1469,7 +1470,22 @@ Indicates whether to remove third party.
 ```yaml
 Type: Boolean
 Parameter Sets: SetEndpointProtectionSettingsByName
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplaceToastNotificationWithDialog
+{{ Fill ReplaceToastNotificationWithDialog Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: SetComputerRestartSettingsByName
+Aliases:
 
 Required: False
 Position: Named
@@ -1497,7 +1513,7 @@ Indicates whether to use network-level authentication to establish Remote Deskto
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1513,7 +1529,7 @@ To obtain a schedule object, use the **New-CMSchedule** cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1542,7 +1558,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ApplicationCatalogWebsitePointType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 Accepted values: Fqdn, AutoDetect, NetBios
 
 Required: False
@@ -1558,7 +1574,7 @@ Indicates whether to display an icon on the taskbar of a client computer to indi
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1573,7 +1589,7 @@ Indicates whether to display a high-visibility session connection bar on a clien
 ```yaml
 Type: Boolean
 Parameter Sets: SetRemoteToolsSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1615,7 +1631,7 @@ This parameter allows you to standardize inventory information for software name
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareInventorySettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1631,7 +1647,7 @@ During software inventory, Configuration Manager gets inventoried names from hea
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareInventorySettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1647,7 +1663,7 @@ You can use the wildcard (*) to represent any string of text and the question ma
 ```yaml
 Type: String
 Parameter Sets: SetSoftwareInventorySettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1701,7 +1717,7 @@ Indicates whether to bypass a required computer restart after installing the Sys
 ```yaml
 Type: Boolean
 Parameter Sets: SetEndpointProtectionSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1725,7 +1741,7 @@ If you select Never, the software installation cannot finish until the user ente
 ```yaml
 Type: SuspendBitLockerType
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 Accepted values: Never, Always
 
 Required: False
@@ -1742,7 +1758,7 @@ Valid values are: Hours and Days.
 ```yaml
 Type: BatchingTimeoutType
 Parameter Sets: SetSoftwareUpdatesSettingsByName
-Aliases: 
+Aliases:
 Accepted values: Days, Hours
 
 Required: False
@@ -1769,7 +1785,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: SetComputerAgentSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1785,7 +1801,7 @@ If you specify $False, Configuration Manager uses local time.
 ```yaml
 Type: Boolean
 Parameter Sets: SetNetworkAccessProtectionSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1811,7 +1827,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: SetPowerManagementSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1837,7 +1853,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: SetPowerManagementSettingsByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1863,7 +1879,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -1873,7 +1889,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=266226)
+[About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10))
 
 [Get-CMClientSetting](Get-CMClientSetting.md)
 

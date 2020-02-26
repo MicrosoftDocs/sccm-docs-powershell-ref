@@ -1,14 +1,7 @@
 ---
 title: Set-CMNokiaDeploymentType
-titleSuffix: Configuration Manager
 description: Sets a Nokia deployment type.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Set-CMNokiaDeploymentType
@@ -53,18 +46,23 @@ Set-CMNokiaDeploymentType [-AddRequirement <Rule[]>] -InputObject <IResultObject
 ## DESCRIPTION
 The **Set-CMNokiaDeploymentType** cmdlet changes the settings for a Nokia deployment type.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a Nokia deployment type
 ```
-PS C:\> Set-CMNokiaDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia" -NewName "DTNokia_Updated" -RemoveLanguage "zh-CN"
+PS XYZ:\> Set-CMNokiaDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia" -NewName "DTNokia_Updated" -RemoveLanguage "zh-CN"
 ```
 
 This command changes the name of the Nokia deployment type named DTNokia for the application named testNokia to DTNokia_Updated and removes Chinese from the deployment type.
 
 ### Example 2: Modify a Nokia deployment type by using the pipeline
 ```
-PS C:\> Get-CMDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia01" | Set-CMNokiaDeploymentType -NewName "DTNokia01_updated" -RemoveLanguage "en-US" -Comment "Set Nokia deployment type" -Confirm
+PS XYZ:\> Get-CMDeploymentType -ApplicationName "testNokia" -DeploymentTypeName "DTNokia01" | Set-CMNokiaDeploymentType -NewName "DTNokia01_updated" -RemoveLanguage "en-US" -Comment "Set Nokia deployment type" -Confirm
 ```
 
 This command gets the Nokia deployment type object named DTNokia01 for the application named testNokia and uses the pipeline operator to pass the object to **Set-CMNokiaDeploymentType**.
@@ -77,7 +75,7 @@ By specifying the *Confirm* parameter, the user will be prompted before this com
 Adds an array of languages that this deployment type supports.
 Provide the languages in the "languagecode2-country" or "languagecode2" format, for example: en, en-US, ja-JP, zh-CN.
 
-For more information about the **CultureInfo.Name** property, see [https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.name.aspx).
+For more information, see [CultureInfo.Name](/dotnet/api/system.globalization.cultureinfo.name#System_Globalization_CultureInfo_Name).
 
 ```yaml
 Type: String[]
@@ -96,7 +94,7 @@ Adds an array of requirements for this deployment type.
 ```yaml
 Type: Rule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +109,7 @@ To obtain an application object, use the [Get-CMApplication](Get-CMApplication.m
 ```yaml
 Type: IResultObject
 Parameter Sets: ByAppValue
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -139,7 +137,7 @@ Specifies the name of the application that is associated with this deployment ty
 ```yaml
 Type: String
 Parameter Sets: ByAppName
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -182,7 +180,7 @@ The site system server requires permissions to read the content files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -196,7 +194,7 @@ Specifies a display name for this deployment type.
 ```yaml
 Type: String
 Parameter Sets: ByAppName, ByAppId, ByAppValue
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -210,7 +208,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -238,7 +236,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -282,7 +280,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -335,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

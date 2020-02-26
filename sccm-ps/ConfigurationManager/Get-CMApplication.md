@@ -1,14 +1,10 @@
 ---
-title: Get-CMApplication
-titleSuffix: Configuration Manager
 description: Gets a Configuration Manager application.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMApplication
 ---
 
 # Get-CMApplication
@@ -20,43 +16,49 @@ Gets a Configuration Manager application.
 
 ### SearchByName (Default)
 ```
-Get-CMApplication [[-Name] <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMApplication [[-Name] <String>] [-Fast] [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMApplication -Id <Int32> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMApplication -Id <Int32> [-Fast] [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByModelName
 ```
-Get-CMApplication -ModelName <String> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMApplication -ModelName <String> [-Fast] [-ShowHidden] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByDeploymentType
 ```
-Get-CMApplication -InputObject <IResultObject> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [<CommonParameters>]
+Get-CMApplication -InputObject <IResultObject> [-Fast] [-ShowHidden] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Get-CMApplication** cmdlet gets a Microsoft System Center Configuration Manager application. A Configuration Manager application defines the metadata about app. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods and requirements. These rules specify when and how the client installs the software.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an application by name
 ```
-PS C:\> Get-CMApplication -Name "Application1"
+PS XYZ:\> Get-CMApplication -Name "Application1"
 ```
 
 This command gets the application object named Application1.
 
 ### Example 2: Get the application for a deployment type
 ```
-PS C:\> $DeploymentType = Get-CMDeploymentType -DeploymentTypeName "DT2" -ApplicationName "Application1"
-PS C:\> $DeploymentType | Get-CMApplication
+PS XYZ:\> $DeploymentType = Get-CMDeploymentType -DeploymentTypeName "DT2" -ApplicationName "Application1"
+PS XYZ:\> $DeploymentType | Get-CMApplication
 ```
 
 The first command gets the deployment type object named DT2 for the application named Application1 and stores the object in the $DeploymentType variable.
@@ -71,7 +73,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +91,7 @@ If lazy properties are not used, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +106,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +152,7 @@ Specifies the model name of an application.
 ```yaml
 Type: String
 Parameter Sets: SearchByModelName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,8 +176,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowHidden
+{{ Fill ShowHidden Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

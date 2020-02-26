@@ -1,14 +1,10 @@
 ---
-title: Set-CMSoftwareUpdateGroup
-titleSuffix: Configuration Manager
 description: Changes configuration settings for software update groups in Configuration Manager.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareUpdateGroup
 ---
 
 # Set-CMSoftwareUpdateGroup
@@ -49,18 +45,23 @@ A software update group is a collection of one or more software updates.
 You can add software updates to a software update group and then deploy the group to clients.
 After you deploy a software update group, you can add new software updates to the group and System Center Configuration Manager automatically deploys them.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Add a software update group to a security scope
 ```
-PS C:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction AddMembership -SecurityScopeName "ScopeNameD02" -Name "SUGroup01"
+PS XYZ:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction AddMembership -SecurityScopeName "ScopeNameD02" -Name "SUGroup01"
 ```
 
 This command adds a software update group named SUGroup01 as a member of the security scope named ScopeNameD02.
 
 ### Example 2: Remove a software update group from a security scope
 ```
-PS C:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "ScopeNameD17" -Name "SUGroup01"
+PS XYZ:\> Set-CMSoftwareUpdateGroup -SecurityScopeAction RemoveMembership -SecurityScopeName "ScopeNameD17" -Name "SUGroup01"
 ```
 
 This command removes the software update group named SUGroup01 from membership in the security scope named ScopeNameD17.
@@ -84,7 +85,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +111,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +156,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +171,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +202,7 @@ To obtain a software group object, use the [Get-CMSoftwareUpdateGroup](Get-CMSof
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -232,7 +233,7 @@ This name replaces the current name of the group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +249,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

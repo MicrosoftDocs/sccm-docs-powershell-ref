@@ -1,14 +1,10 @@
 ---
-title: Import-CMComputerInformation
-titleSuffix: Configuration Manager
 description: Imports computer information into a Configuration Manager database.
+external help file: AdminUI.PS.Oob.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Import-CMComputerInformation
 ---
 
 # Import-CMComputerInformation
@@ -48,11 +44,16 @@ This cmdlet adds the computers to the specified collection.
 You can specify the name of a reference computer.
 System Center Configuration Manager migrates user information and settings from the reference computer to the new computer.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Import computers by using a file
 ```
-PS C:\>Import-CMComputerInformation -CollectionName "All Systems" -FileName "\\cmshare\Public\CM\ImportComputers.csv" -EnableColumnHeadings $True
+PS XYZ:\>Import-CMComputerInformation -CollectionName "All Systems" -FileName "\\cmshare\Public\CM\ImportComputers.csv" -EnableColumnHeadings $True
 ```
 
 This command imports the computers specified in the CVS file into the All Systems collection.
@@ -61,7 +62,7 @@ The cmdlet ignores the first line of the file.
 
 ### Example 2: Import a single computer
 ```
-PS C:\>Import-CMComputerInformation -CollectionName "All Systems" -ComputerName "Computer08" -MacAddress "5F:DA:FA:FA:FA:FA" -SmBiosGuid "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
+PS XYZ:\>Import-CMComputerInformation -CollectionName "All Systems" -ComputerName "Computer08" -MacAddress "5F:DA:FA:FA:FA:FA" -SmBiosGuid "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"
 ```
 
 This command imports a specified computer into the All Systems collection.
@@ -69,7 +70,7 @@ The command specifies the name, MAC address, and SMBIOS GUID for a computer.
 
 ### Example 3: Import a computer using a reference computer
 ```
-PS C:\>Import-CMComputerInformation -CollectionName "All Systems" -ComputerName "Computer08" -MacAddress "5F:DA:FA:FA:FA:FA" -SmBiosGuid "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA" -SourceComputerName "ResourceComputer01"
+PS XYZ:\>Import-CMComputerInformation -CollectionName "All Systems" -ComputerName "Computer08" -MacAddress "5F:DA:FA:FA:FA:FA" -SmBiosGuid "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA" -SourceComputerName "ResourceComputer01"
 ```
 
 This command imports a specified computer into the All Systems collection.
@@ -112,7 +113,7 @@ Specifies the name of a computer that this cmdlet imports information from.
 ```yaml
 Type: String
 Parameter Sets: ImportSingleComputer
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +143,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +172,7 @@ The file must contain the name and MAC address of each computer to be imported.
 ```yaml
 Type: String
 Parameter Sets: ImportComputerByUsingFile
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -186,7 +187,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,8 +197,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -218,7 +219,7 @@ The Windows Preinstallation Environment (Windows PE) must have a driver for the 
 ```yaml
 Type: String
 Parameter Sets: ImportSingleComputer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,12 +229,10 @@ Accept wildcard characters: False
 ```
 
 ### -MergeIfExist
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ImportSingleComputer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +263,7 @@ Configuration Manager migrates user state and settings from the reference comput
 ```yaml
 Type: String
 Parameter Sets: ImportSingleComputer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,7 +276,7 @@ Accept wildcard characters: False
 ```yaml
 Type: MigrationBehavior
 Parameter Sets: ImportSingleComputer
-Aliases: 
+Aliases:
 Accepted values: CaptureAllUserAccountsAndRestoreSpecifiedAccounts, CaptureAndRestoreSpecifiedUserAccounts
 
 Required: False
@@ -308,7 +307,7 @@ A variable allows you to assign a column to a variable.
 ```yaml
 Type: String
 Parameter Sets: ImportComputerByUsingFile
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -347,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Set-CMSoftwareUpdate
-titleSuffix: Configuration Manager
 description: Sets a software update.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareUpdate
 ---
 
 # Set-CMSoftwareUpdate
@@ -42,18 +38,23 @@ The **Set-CMSoftwareUpdate** cmdlet changes configuration settings for a softwar
 You can use this cmdlet to set the severity and the maximum run time for an update.
 A software update is an update to Windows or other software that Microsoft System Center Configuration Manager applies to a collection of computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a software update and change its settings
 ```
-PS C:\> Get-CMSoftwareUpdate -Name "Update for Windows 10 (KB3106932)" | Set-CMSoftwareUpdate -MaximumExecutionMins 10 -CustomSeverity Critical
+PS XYZ:\> Get-CMSoftwareUpdate -Name "Update for Windows 10 (KB3106932)" | Set-CMSoftwareUpdate -MaximumExecutionMins 10 -CustomSeverity Critical
 ```
 
 This command gets the software update object named Update for Windows 10 (KB3106932) and uses the pipeline operator to pass the object to **Set-CMSoftwareUpdate**, which sets the severity of the update to Critical and the maximum installation time to 10 minutes.
 
 ### Example 2: Modify software update settings
 ```
-PS C:\> Set-CMSoftwareUpdate -Id 16777979 -MaximumExecutionMins 10 -CustomSeverity Critical
+PS XYZ:\> Set-CMSoftwareUpdate -Id 16777979 -MaximumExecutionMins 10 -CustomSeverity Critical
 ```
 
 This command gets the software update with the ID of 16777979 and sets the severity of the update to Critical and the maximum installation time to 10 minutes.
@@ -88,7 +89,7 @@ Valid values are:
 ```yaml
 Type: CustomSeverityType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Low, Moderate, Important, Critical
 
 Required: False
@@ -104,7 +105,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +120,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +151,7 @@ To obtain a software update object, use the [Get-CMSoftwareUpdate](Get-CMSoftwar
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -206,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

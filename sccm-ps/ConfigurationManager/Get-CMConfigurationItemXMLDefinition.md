@@ -1,14 +1,10 @@
 ---
-title: Get-CMConfigurationItemXMLDefinition
-titleSuffix: Configuration Manager
 description: Gets an XML definition of a configuration item in Configuration Manager.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/29/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMConfigurationItemXMLDefinition
 ---
 
 # Get-CMConfigurationItemXMLDefinition
@@ -20,22 +16,19 @@ Gets an XML definition of a configuration item in Configuration Manager.
 ## SYNTAX
 
 ### SearchByNameMandatory (Default)
-
-```powershell
+```
 Get-CMConfigurationItemXMLDefinition [[-Name] <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Get-CMConfigurationItemXMLDefinition [-Id] <Int32> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
-
-```powershell
+```
 Get-CMConfigurationItemXMLDefinition [-InputObject] <IResultObject> [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -45,12 +38,17 @@ Get-CMConfigurationItemXMLDefinition [-InputObject] <IResultObject> [-DisableWil
 The **Get-CMConfigurationItemXMLDefinition** cmdlet gets an XML definition of a configuration item object as a string.
 You can specify a configuration item with the configuration item ID, the configuration item name, or using the [Get-CMConfigurationItem](Get-CMConfigurationItem.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get XML formatted item using an ID
 
 ```powershell
-PS C:\> Get-CMConfigurationItemXMLDefinition -Id "16777568"
+PS XYZ:\> Get-CMConfigurationItemXMLDefinition -Id "16777568"
 ```
 
 This command gets a configuration item formatted in XML for the item that has the specified identifier.
@@ -58,7 +56,7 @@ This command gets a configuration item formatted in XML for the item that has th
 ### Example 2: Get XML formatted item using a name
 
 ```powershell
-PS C:\> Get-CMConfigurationItemXMLDefinition -Name "ConfigItem76"
+PS XYZ:\> Get-CMConfigurationItemXMLDefinition -Name "ConfigItem76"
 ```
 
 This command gets a configuration item formatted in XML for the item named ConfigItem76.
@@ -66,8 +64,8 @@ This command gets a configuration item formatted in XML for the item named Confi
 ### Example 3: Get XML formatted item using a variable
 
 ```powershell
-PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
-PS C:\> Get-CMConfigurationItemXMLDefinition -InputObject $CIObj
+PS XYZ:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Get-CMConfigurationItemXMLDefinition -InputObject $CIObj
 ```
 
 The first command uses the [Get-CMConfigurationItem](Get-CMConfigurationItem.md) cmdlet to get a configuration item with the specified ID, and then stores it in the $CIObj variable.
@@ -83,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +97,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +131,7 @@ To get a configuration item object, use the [Get-CMConfigurationItem](Get-CMConf
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -160,12 +158,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
+[Introduction to Compliance Settings in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=211014)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

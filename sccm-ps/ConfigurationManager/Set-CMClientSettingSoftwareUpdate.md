@@ -1,14 +1,10 @@
 ---
-title: Set-CMClientSettingSoftwareUpdate
-titleSuffix: Configuration Manager
 description: Sets a client setting software update.
+external help file: AdminUI.PS.ClientSettings.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMClientSettingSoftwareUpdate
 ---
 
 # Set-CMClientSettingSoftwareUpdate
@@ -43,26 +39,26 @@ Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObj
 ```
 
 ## DESCRIPTION
- 
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>  
+PS XYZ:\>
 ```
-
- 
 
 ## PARAMETERS
 
 ### -BatchingTimeout
- 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,12 +83,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSetting
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SetDefaultSetting
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,12 +96,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentEvaluationSchedule
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +114,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,8 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -147,12 +137,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceMandatory
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +155,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,12 +165,10 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: SetCustomSettingByValue
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -192,12 +178,10 @@ Accept wildcard characters: False
 ```
 
 ### -Name
- 
-
 ```yaml
 Type: String
 Parameter Sets: SetCustomSettingByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -207,12 +191,10 @@ Accept wildcard characters: False
 ```
 
 ### -Office365ManagementType
- 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +209,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -237,12 +219,10 @@ Accept wildcard characters: False
 ```
 
 ### -ScanSchedule
- 
-
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,12 +232,10 @@ Accept wildcard characters: False
 ```
 
 ### -TimeUnit
- 
-
 ```yaml
 Type: BatchingTimeoutType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Days, Hours
 
 Required: False
@@ -284,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -297,4 +275,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

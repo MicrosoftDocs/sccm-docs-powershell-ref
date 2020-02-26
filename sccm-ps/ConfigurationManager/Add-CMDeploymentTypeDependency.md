@@ -1,14 +1,10 @@
 ---
-title: Add-CMDeploymentTypeDependency
-titleSuffix: Configuration Manager
 description: Adds a deployment type as a dependency to a dependency group in Configuration Manager.
+external help file: AdminUI.PS.AppMan.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 01/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Add-CMDeploymentTypeDependency
 ---
 
 # Add-CMDeploymentTypeDependency
@@ -19,7 +15,7 @@ Adds a deployment type as a dependency to a dependency group in Configuration Ma
 
 ## SYNTAX
 
-```powershell
+```
 Add-CMDeploymentTypeDependency [-IsAutoInstall <Boolean>] -DeploymentTypeDependency <IResultObject[]>
  -InputObject <DeploymentTypeDependencyGroup> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -29,12 +25,17 @@ Add-CMDeploymentTypeDependency [-IsAutoInstall <Boolean>] -DeploymentTypeDepende
 
 The **Add-CMDeploymentTypeDependency** adds a deployment type as a dependency to a dependency group. Required input is a deployment type object from [Get-CMDeploymentType](./Get-CMDeploymentType.md) and a dependency group from [Get-CMDeploymentTypeDependencyGroup](./Get-CMDeploymentTypeDependencyGroup.md) and [New-CMDeploymentTypeDependencyGroup](./New-CMDeploymentTypeDependencyGroup.md).
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\>  Get-CMDeploymentType -ApplicationName MyApp | New-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Add-CMDeploymentTypeDependency -DeploymentTypeDependency (Get-CMDeploymentType -ApplicationName MyChildApp) -IsAutoInstall $true
+PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | New-CMDeploymentTypeDependencyGroup -GroupName MyGroup | Add-CMDeploymentTypeDependency -DeploymentTypeDependency (Get-CMDeploymentType -ApplicationName MyChildApp) -IsAutoInstall $true
 ```
 
 This command adds a deployment type dependency.
@@ -64,7 +65,7 @@ Specifies a deployment type object.
 ```yaml
 Type: IResultObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -80,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,12 +124,12 @@ Accept wildcard characters: False
 
 ### -IsAutoInstall
 
-Indicate whether install automatically. 
+Indicate whether install automatically.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,16 +156,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.ConfigurationManagement.Cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
+### Microsoft.ConfigurationManagement.cmdlets.AppMan.Commands.DeploymentTypeDependencyGroup
 
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

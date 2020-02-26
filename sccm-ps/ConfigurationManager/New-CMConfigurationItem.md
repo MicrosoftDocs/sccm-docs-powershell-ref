@@ -1,14 +1,10 @@
 ---
-title: New-CMConfigurationItem
-titleSuffix: Configuration Manager
 description: Creates a Configuration Manager configuration item.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/29/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: New-CMConfigurationItem
 ---
 
 # New-CMConfigurationItem
@@ -20,16 +16,14 @@ Creates a Configuration Manager configuration item.
 ## SYNTAX
 
 ### NewChild (Default)
-
-```powershell
+```
 New-CMConfigurationItem -Name <String> [-Description <String>] [-Category <String[]>]
  -ParentConfigurationItem <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### New
-
-```powershell
+```
 New-CMConfigurationItem -Name <String> [-Description <String>] [-Category <String[]>]
  -CreationType <CICreationType> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -44,12 +38,17 @@ You can specify the *ParentConfigurationItem* parameter to create a child config
 Child configuration items in System Center Configuration Manager are copies of configuration items that retain a relationship to the original configuration item; therefore, they inherit the original configuration from the parent configuration item.
 You cannot create child configuration items for mobile devices.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create a configuration item
 
 ```powershell
-PS C:\> New-CMConfigurationItem -CreationType MobileDevice -Name "MD_Config88"
+PS XYZ:\> New-CMConfigurationItem -CreationType MobileDevice -Name "MD_Config88"
 ```
 
 This command creates a configuration item for mobile devices named MD_Config88.
@@ -102,7 +101,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: CICreationType
 Parameter Sets: New
-Aliases: 
+Aliases:
 Accepted values: None, WindowsApplication, WindowsOS, MacOS, MobileDevice
 
 Required: True
@@ -135,7 +134,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +150,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +183,7 @@ To obtain a **CMConfigurationItem** object, use the [Get-CMConfigurationItem](Ge
 ```yaml
 Type: IResultObject
 Parameter Sets: NewChild
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -211,12 +210,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
+[Introduction to Compliance Settings in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=211014)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

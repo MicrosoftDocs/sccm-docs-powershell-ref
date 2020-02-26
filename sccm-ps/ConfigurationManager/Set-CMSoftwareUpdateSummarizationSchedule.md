@@ -1,14 +1,10 @@
 ---
-title: Set-CMSoftwareUpdateSummarizationSchedule
-titleSuffix: Configuration Manager
 description: Sets how often Configuration Manager summarizes the status of updates.
+external help file: AdminUI.PS.Sum.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMSoftwareUpdateSummarizationSchedule
 ---
 
 # Set-CMSoftwareUpdateSummarizationSchedule
@@ -28,18 +24,23 @@ The **Set-CMSoftwareUpdateSummarizationSchedule** cmdlet sets how often Microsof
 You can set the summary to run on an interval defined in days, hours, or minutes.
 You can use the [Invoke-CMSoftwareUpdateSummarization](Invoke-CMSoftwareUpdateSummarization.md) cmdlet to run the summarization immediately.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Schedule summarization interval and unit
 ```
-PS C:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 5 -Unit Days
+PS XYZ:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 5 -Unit Days
 ```
 
 This command sets the update summarization schedule to run every five days.
 
 ### Example 2: Change schedule interval
 ```
-PS C:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 7
+PS XYZ:\> Set-CMSoftwareUpdateSummarizationSchedule -Interval 7
 ```
 
 This command changes the interval for the update summarization schedule to seven.
@@ -68,7 +69,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +84,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ Valid values for this parameter depend on the unit that you select:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,7 +121,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +141,7 @@ Valid values are:
 ```yaml
 Type: SummarizationScheduleUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Days, Hours, Minutes
 
 Required: True
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

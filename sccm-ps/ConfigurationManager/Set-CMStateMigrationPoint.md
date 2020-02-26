@@ -1,14 +1,10 @@
 ---
-title: Set-CMStateMigrationPoint
-titleSuffix: Configuration Manager
 description: Modifies settings for a state migration point in Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMStateMigrationPoint
 ---
 
 # Set-CMStateMigrationPoint
@@ -45,12 +41,17 @@ Use this cmdlet to modify the boundary groups and storage folders associated wit
 
 You can specify which migration point to modify by using the site system server name and the site code, or use the [Get-CMStateMigrationPoint](Get-CMStateMigrationPoint.md) cmdlet.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Modify a state migration point
 ```
-PS C:\> $StateMigrationPoint = Get-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com"
-PS C:\> Set-CMStateMigrationPoint -InputObject $StateMigrationPoint -AllowFallbackSourceLocationForContent $True -TimeDeleteAfter 12 -TimeUnit Hours
+PS XYZ:\> $StateMigrationPoint = Get-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com"
+PS XYZ:\> Set-CMStateMigrationPoint -InputObject $StateMigrationPoint -AllowFallbackSourceLocationForContent $True -TimeDeleteAfter 12 -TimeUnit Hours
 ```
 
 This example modifies a migration point named MigrationServer.TSQA.Contoso.com for the site that has the code CM4.
@@ -63,9 +64,9 @@ The command sets the *AllowFallbackSourceLocationForContent* parameter to $True,
 
 ### Example 2: Modify storage folders and boundary groups for a state migration point
 ```
-PS C:\> $Storage01 = New-CMStoragefolder -MaximumClientNumber 100 -MinimumFreeSpace 100 -SpaceUnit Megabyte -StorageFolderName "C:\"
-PS C:\> $Storage02 = New-CMStoragefolder -MaximumClientNumber 100 -MinimumFreeSpace 10 -SpaceUnit Gigabyte -StorageFolderName "D:\"
-PS C:\> Set-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com" -AddBoundaryGroupName "BG07" -AddStorageFolder $Storage02 -AllowFallbackSourceLocationForContent $False -DeleteImmediately -EnableRestoreOnlyMode $True -RemoveBoundaryGroupName "BG22" -RemoveStorageFolder $Storage01
+PS XYZ:\> $Storage01 = New-CMStoragefolder -MaximumClientNumber 100 -MinimumFreeSpace 100 -SpaceUnit Megabyte -StorageFolderName "C:\"
+PS XYZ:\> $Storage02 = New-CMStoragefolder -MaximumClientNumber 100 -MinimumFreeSpace 10 -SpaceUnit Gigabyte -StorageFolderName "D:\"
+PS XYZ:\> Set-CMStateMigrationPoint -SiteCode "CM4" -SiteSystemServerName "MigrationServer.TSQA.Contoso.com" -AddBoundaryGroupName "BG07" -AddStorageFolder $Storage02 -AllowFallbackSourceLocationForContent $False -DeleteImmediately -EnableRestoreOnlyMode $True -RemoveBoundaryGroupName "BG22" -RemoveStorageFolder $Storage01
 ```
 
 This example modifies settings for a state migration point named MigrationServer.TSQA.Contoso.com for the site that has the site code CM4.
@@ -91,7 +92,7 @@ During migration, clients in a boundary group use this site as a source location
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +111,7 @@ A state migration point stores user state data when it migrates a computer to a 
 ```yaml
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +126,7 @@ Indicates whether a fallback source location is available.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +157,7 @@ If you select a value of $False, specify how long to wait by using the *TimeDele
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +172,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +188,7 @@ In restore only mode, Configuration Manager refuses new requests to store client
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +203,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +235,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +252,7 @@ During migration, clients in a boundary group use this site as a source location
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -268,7 +269,7 @@ A state migration point stores user state data when it migrates a computer to a 
 ```yaml
 Type: StorageDirectoryData[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -283,7 +284,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: SetByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,7 +316,7 @@ To delete data immediately, specify a value of $True for the *DeleteImmediately*
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -331,7 +332,7 @@ The acceptable values for this parameter are: Days and Hours.
 ```yaml
 Type: IntervalType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hours, Days
 
 Required: False
@@ -358,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

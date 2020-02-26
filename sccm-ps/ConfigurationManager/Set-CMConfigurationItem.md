@@ -1,14 +1,10 @@
 ---
-title: Set-CMConfigurationItem
-titleSuffix: Configuration Manager
 description: Changes settings for a Configuration Manager configuration item.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/29/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Set-CMConfigurationItem
 ---
 
 # Set-CMConfigurationItem
@@ -20,24 +16,21 @@ Changes settings for a Configuration Manager configuration item.
 ## SYNTAX
 
 ### SetByIdMandatory (Default)
-
-```powershell
+```
 Set-CMConfigurationItem [-Id] <Int32> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
  [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>] [-Digest <ConfigurationItem>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
-
-```powershell
+```
 Set-CMConfigurationItem [-Name] <String> [-NewName <String>] [-Description <String>] [-AddCategory <String[]>]
  [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>] [-Digest <ConfigurationItem>]
  [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
-
-```powershell
+```
 Set-CMConfigurationItem [-InputObject] <IResultObject> [-NewName <String>] [-Description <String>]
  [-AddCategory <String[]>] [-RemoveCategory <String[]>] [-DigestPath <String>] [-DigestXml <String>]
  [-Digest <ConfigurationItem>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
@@ -50,14 +43,19 @@ The **Set-CMConfigurationItem** cmdlet changes settings for a Microsoft System C
 
 Configuration items contain one or more settings, along with compliance rules.
 Items usually define a unit of configuration you want to monitor.
-For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014) on TechNet.
+For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Change the name of a configuration item
 
 ```powershell
-PS C:\> Set-CMConfigurationItem -Name "CITest" -NewName "CITest01"
+PS XYZ:\> Set-CMConfigurationItem -Name "CITest" -NewName "CITest01"
 ```
 
 This command changes the name of the configuration item named CITest to CITest01.
@@ -65,7 +63,7 @@ This command changes the name of the configuration item named CITest to CITest01
 ### Example 2: Set item settings
 
 ```powershell
-PS C:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction AddMembership -SecurityScopeName "DefaultScope"
+PS XYZ:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction AddMembership -SecurityScopeName "DefaultScope"
 ```
 
 This command sets the security scope action to AddMembership and the security scope name to DefaultScope for the item named CITest01.
@@ -73,7 +71,7 @@ This command sets the security scope action to AddMembership and the security sc
 ### Example 3: Change item settings
 
 ```powershell
-PS C:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction RemoveMembership -SecurityScopeName "DefaultScope"
+PS XYZ:\> Set-CMConfigurationItem -Name "CITest01" -SecurityScopeAction RemoveMembership -SecurityScopeName "DefaultScope"
 ```
 
 This command sets the security scope action to RemoveMembership and the security scope name to DefaultScope for the item named CITest01.
@@ -87,7 +85,7 @@ Specifies an array of localized names of the categories to which the configurati
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +133,7 @@ Specifies the Digest that contain the configuration item.
 ```yaml
 Type: ConfigurationItem
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +165,7 @@ Specifies the XML definition.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +181,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -199,7 +197,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +231,7 @@ To obtain a configuration item object, you can use the [Get-CMConfigurationItem]
 ```yaml
 Type: IResultObject
 Parameter Sets: SetByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -265,7 +263,7 @@ Specifies a new name for a configuration item.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +280,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,7 +296,7 @@ Specifies an array of localized names of the categories from which to remove the
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,12 +323,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
+[Introduction to Compliance Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10))
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

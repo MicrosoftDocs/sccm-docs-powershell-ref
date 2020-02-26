@@ -1,14 +1,10 @@
 ---
-title: Set-CMAccount
-titleSuffix: Configuration Manager
 description: Sets a Configuration Manager user account.
+external help file: AdminUI.PS.Accounts.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Set-CMAccount
 ---
 
 # Set-CMAccount
@@ -33,14 +29,19 @@ Set-CMAccount [-Password <SecureString>] -InputObject <IResultObject> [-DisableW
 ## DESCRIPTION
 The **Set-CMAccount** cmdlet sets a user account in Microsoft System Center Configuration Manager.
 A **CMAccount** is a user account that Configuration Manager uses to connect to various system and network resources.
-For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=248317) in the TechNet library.
+For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427337(v=technet.10)) in the TechNet library.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Set an account by using name and password
 ```
-PS C:\> $Secure = ConvertTo-SecureString -String "Pas$W0rd02" -AsPlainText -Force
-PS C:\> Set-CMAccount -Name "TSQA\PFuller" -Password $Secure -SiteCode "CM2"
+PS XYZ:\> $Secure = ConvertTo-SecureString -String "Pas$W0rd02" -AsPlainText -Force
+PS XYZ:\> Set-CMAccount -Name "TSQA\PFuller" -Password $Secure -SiteCode "CM2"
 ```
 
 The first command creates a variable as a secure string.
@@ -70,7 +71,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +86,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +117,7 @@ Specifies a secure string that contains the password for the user account.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +132,7 @@ Specifies a Configuration Manager site code.
 ```yaml
 Type: String
 Parameter Sets: SetAccountByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Get-CMPackage
-titleSuffix: Configuration Manager
 description: Gets Configuration Manager packages.
+external help file: AdminUI.PS.AppModel.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMPackage
 ---
 
 # Get-CMPackage
@@ -20,12 +16,12 @@ Gets Configuration Manager packages.
 
 ### SearchByName (Default)
 ```
-Get-CMPackage [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMPackage [-Name <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMPackage -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMPackage -Id <String> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,25 +29,30 @@ The **Get-CMPackage** cmdlet gets Microsoft System Center Configuration Manager 
 System Center Configuration Manager uses packages to distribute software to clients.
 You can use the *SecuredScopeNames* parameter to specify the security scope of a package to get.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all packages
 ```
-PS C:\> Get-CMPackage
+PS XYZ:\> Get-CMPackage
 ```
 
 This command gets all Configuration Manager packages.
 
 ### Example 2: Get a package by using an ID
 ```
-PS C:\> Get-CMPackage -Id "CM100002"
+PS XYZ:\> Get-CMPackage -Id "CM100002"
 ```
 
 This command gets the program that has the ID CM100002.
 
 ### Example 3: Get a package by using a name
 ```
-PS C:\> Get-CMPackage -Name "Configuration Manager Client Package"
+PS XYZ:\> Get-CMPackage -Name "Configuration Manager Client Package"
 ```
 
 This command gets the program named Configuration Manager Client Package.
@@ -64,7 +65,22 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fast
+{{ Fill Fast Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +95,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +125,7 @@ Specifies the name of a package.
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

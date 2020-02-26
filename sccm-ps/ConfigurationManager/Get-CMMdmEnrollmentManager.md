@@ -1,14 +1,10 @@
 ---
-title: Get-CMMdmEnrollmentManager
-titleSuffix: Configuration Manager
 description: Gets a Device Enrollment Manager.
+external help file: AdminUI.PS.Hybrid.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMMdmEnrollmentManager
 ---
 
 # Get-CMMdmEnrollmentManager
@@ -33,18 +29,23 @@ Get-CMMdmEnrollmentManager -Id <Int32[]> [-DisableWildcardHandling] [-ForceWildc
 ## DESCRIPTION
 The **Get-CMMdmEnrollmentManger** cmdlet gets one or more Device Enrollment Managers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a device enrollment manager by name
 ```
-PS C:\> Get-CMMdmEnrollmentManager -name "Contoso\User01"
+PS XYZ:\> Get-CMMdmEnrollmentManager -name "Contoso\User01"
 ```
 
 This command gets the device enrollment manager named User01.
 
 ### Example 2: Get a device enrollment manager by ID
 ```
-PS C:\> Get-CMMdmEnrollmentManager -ID "1234567890"
+PS XYZ:\> Get-CMMdmEnrollmentManager -ID "1234567890"
 ```
 
 This command gets the device enrollment manager named 1234567890.
@@ -57,7 +58,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +73,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +103,7 @@ Specifies the name of a Configuration Manager user.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

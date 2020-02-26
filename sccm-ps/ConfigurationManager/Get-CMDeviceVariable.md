@@ -1,14 +1,10 @@
 ---
-title: Get-CMDeviceVariable
-titleSuffix: Configuration Manager
 description: Gets device variables of a Configuration Manager device.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Get-CMDeviceVariable
 ---
 
 # Get-CMDeviceVariable
@@ -41,11 +37,16 @@ The **Get-CMDeviceVariable** cmdlet gets device variables of a Microsoft System 
 
 Individual devices have device variables. Task sequence processing uses device variables.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get a variable value by using its name
 ```
-PS C:\> Get-CMDeviceVariable -DeviceName "Computer073" -VariableName "HostDrive"
+PS XYZ:\> Get-CMDeviceVariable -DeviceName "Computer073" -VariableName "HostDrive"
 ```
 
 This command gets the value of the variable named HostDrive for the specified computer.
@@ -59,7 +60,7 @@ You can specify a NetBIOS name or a fully qualified domain name (FQDN).
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -74,7 +75,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,8 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -120,7 +121,7 @@ Specifies a Systems Management Server (SMS) ID.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,7 +136,7 @@ Specifies the name of the device variable.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

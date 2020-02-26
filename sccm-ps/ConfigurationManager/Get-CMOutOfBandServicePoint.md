@@ -1,14 +1,7 @@
 ---
 title: Get-CMOutOfBandServicePoint
-titleSuffix: Configuration Manager
 description: Gets an out of band service point.
 ms.date: 05/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Get-CMOutOfBandServicePoint
@@ -34,11 +27,16 @@ Get-CMOutOfBandServicePoint -InputObject <IResultObject> [-DisableWildcardHandli
 The **Get-CMOutOfBandServicePoint** cmdlet gets an out of band service point.
 An out of band service point is a site system role that provisions and configures Intel Active Management Technology (AMT)-based computers for Microsoft System Center Configuration Manager.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get an out of band service point
 ```
-PS C:\> Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM1" >>\Results\Get-CMOutOfBandServicePoint_data.txt"
+PS XYZ:\> Get-CMOutOfBandServicePoint -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM1" >>\Results\Get-CMOutOfBandServicePoint_data.txt"
 ```
 
 This command get an out of band service point that is associated with the site system named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM and the site code CM1.
@@ -52,7 +50,7 @@ Indicates that wildcard handling is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -66,7 +64,7 @@ Indicates that wildcard handling is enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -75,13 +73,13 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
-Aliases: 
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -95,7 +93,7 @@ Specifies the site code of the Configuration Manager site that hosts the site sy
 ```yaml
 Type: String
 Parameter Sets: SearchByName
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,14 +1,10 @@
 ---
-title: Add-CMEnrollmentPoint
-titleSuffix: Configuration Manager
 description: Adds an enrollment point to Configuration Manager.
+external help file: AdminUI.PS.HS.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Add-CMEnrollmentPoint
 ---
 
 # Add-CMEnrollmentPoint
@@ -40,13 +36,18 @@ When Configuration Manager enrolls a mobile device, it installs a Configuration 
 The client provides management capabilities that include hardware inventory, software deployment, settings, and remote wipe.
 To enroll mobile devices, use Microsoft Certificate Services with an enterprise certification authority.
 You need a System Center Configuration Manager enrollment point site system role, as well as an enrollment proxy point site system role.
-For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=262649) on TechNet.
+For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh272770(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Add an enrollment point
 ```
-PS C:\>Add-CMEnrollmentPoint -SiteCode "CM4" -SiteSystemServerName "Server04.Building02.Contoso.com" -IISWebsite "Intranet17" -PortNumber 80 -UserName "QADept\Admins" -WebApplicationName "Tracker"
+PS XYZ:\>Add-CMEnrollmentPoint -SiteCode "CM4" -SiteSystemServerName "Server04.Building02.Contoso.com" -IISWebsite "Intranet17" -PortNumber 80 -UserName "QADept\Admins" -WebApplicationName "Tracker"
 ```
 
 This command adds an enrollment point for the site that has the site code CM4 to the server named Server04.Building02.Contoso.com.
@@ -76,7 +77,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +92,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,8 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet. 
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -122,7 +123,7 @@ Specifies the port to use with an enrollment point.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +138,7 @@ Specifies the site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: EnrollmentPoint
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +168,7 @@ Specifies an account that the enrollment point uses to connect to the Configurat
 ```yaml
 Type: String
 Parameter Sets: EnrollmentPoint
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +183,7 @@ Specifies the name of the web application used for enrollment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

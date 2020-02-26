@@ -1,14 +1,7 @@
 ---
 title: Invoke-CMAmtProvisioningDiscovery
-titleSuffix: Configuration Manager
 description: Checks whether computers have Intel AMT hardware.
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # Invoke-CMAmtProvisioningDiscovery
@@ -58,26 +51,31 @@ Invoke-CMAmtProvisioningDiscovery -DeviceCollection <IResultObject> [-DisableWil
 The **Invoke-CMAmtProvisioningDiscovery** cmdlet checks whether computers have Intel Active Management Technology (Intel AMT) hardware that supports out-of-band management.
 You can check individual computers or computers that belong to a Microsoft System Center Configuration Manager collection.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Check a computer for Intel AMT hardware by using an ID
 ```
-PS C:\>Invoke-CMAmtProvisioningDiscovery -DeviceID "16777230"
+PS XYZ:\>Invoke-CMAmtProvisioningDiscovery -DeviceID "16777230"
 ```
 
 This command checks for Intel AMT-based hardware on a device that has the ID 16777230.
 
 ### Example 2: Check computers for Intel AMT hardware in a named device collection
 ```
-PS C:\>Invoke-CMAmtProvisioningDiscovery -DeviceCollectionName "Floor03"
+PS XYZ:\>Invoke-CMAmtProvisioningDiscovery -DeviceCollectionName "Floor03"
 ```
 
 This command checks for Intel AMT-based hardware on the devices that belong to the collection named Floor03.
 
 ### Example 3: Check for a computer for Intel AMT hardware by using a variable
 ```
-PS C:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
-PS C:\> Invoke-CMAmtProvisioningDiscovery -Device $CMD
+PS XYZ:\> $CMD = Get-CMDevice -Name "Accn023.Contoso.com"
+PS XYZ:\> Invoke-CMAmtProvisioningDiscovery -Device $CMD
 ```
 
 The first command gets a device object by using the **Get-CMDevice** command, and then stores it in the $CMD variable.
@@ -108,7 +106,7 @@ To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByDeviceValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,7 +122,7 @@ To obtain a device collection object, use the [Get-CMDeviceCollection](Get-CMDev
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,7 +137,7 @@ Specifies the ID of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +152,7 @@ Specifies the name of a device collection.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,7 +197,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +212,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

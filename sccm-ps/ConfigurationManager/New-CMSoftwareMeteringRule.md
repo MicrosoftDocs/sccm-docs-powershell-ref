@@ -1,14 +1,10 @@
 ---
-title: New-CMSoftwareMeteringRule
-titleSuffix: Configuration Manager
 description: Creates a Configuration Manager software metering rule.
+external help file: AdminUI.PS.AssetIntelligence.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: New-CMSoftwareMeteringRule
 ---
 
 # New-CMSoftwareMeteringRule
@@ -39,24 +35,29 @@ You can obtain necessary file information from Windows Explorer.
 Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
 
-For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=268432) on TechNet.
+For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682005(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Create a software metering rule
 ```
-PS C:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System" 
+PS XYZ:\> New-CMSoftwareMeteringRule -Path "Notepad.exe" -SiteCode "CM1" -FileVersion "6.1.7600.16385" -OriginalFileName "NOTEPAD.EXE" -ProductName "Microsoft Windows Operating System"
 ApplyToChildSites : True
-Comment           : 
+Comment           :
 Enabled           : True
 FileName          : Notepad.exe
 FileVersion       : 6.1.7600.16385
-LanguageID        : 
-LastUpdateTime    : 
+LanguageID        :
+LastUpdateTime    :
 OriginalFileName  : NOTEPAD.EXE
 ProductName       : Microsoft Windows Operating System
-RuleID            : 
-SecurityKey       : 
+RuleID            :
+SecurityKey       :
 SiteCode          : CM1
 SourceSite        :
 ```
@@ -72,7 +73,7 @@ Specifies a comment for a software metering rule.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +103,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +116,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +131,7 @@ Specifies a version of the software that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +146,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,12 +157,12 @@ Accept wildcard characters: False
 
 ### -LanguageId
 Specifies a LocaleID of the software that a rule meters.
-For more information and a list of locale identifiers, see the Locale IDs Assigned by Microsoft topic at [http://go.microsoft.com/fwlink/?LinkId=262651](http://go.microsoft.com/fwlink/?LinkId=262651).
+For more information and a list of locale identifiers, see the Locale IDs Assigned by Microsoft topic at [https://go.microsoft.com/fwlink/?LinkId=262651](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +178,7 @@ This parameter can differ from the *Path* parameter if a user changed the name.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +193,7 @@ Specifies a file path of the software that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: NewFromPath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -207,7 +208,7 @@ Specifies a name for a product that a rule meters.
 ```yaml
 Type: String
 Parameter Sets: New
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -219,7 +220,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: NewFromPath
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +235,7 @@ Specifies a site code for a Configuration Manager site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

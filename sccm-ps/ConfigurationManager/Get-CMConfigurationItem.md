@@ -1,14 +1,10 @@
 ---
-title: Get-CMConfigurationItem
-titleSuffix: Configuration Manager
 description: Gets Configuration Manager configuration items.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 11/29/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: reference
-author: mumian
-ms.author: jgao
-manager: dougeby
+schema: 2.0.0
+title: Get-CMConfigurationItem
 ---
 
 # Get-CMConfigurationItem
@@ -20,15 +16,13 @@ Gets Configuration Manager configuration items.
 ## SYNTAX
 
 ### SearchByName (Default)
-
-```powershell
+```
 Get-CMConfigurationItem [[-Name] <String>] [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
-
-```powershell
+```
 Get-CMConfigurationItem [-Id] <Int32> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -40,14 +34,19 @@ You can use this cmdlet to get items for other cmdlets to use.
 For instance, you might get configuration items so you can use the Set-CMConfigurationItem to change settings on them.
 
 Configuration items contain one or more settings, along with compliance rules.
-For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014) on TechNet.
+For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)) on TechNet.
+
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Get an item using a name
 
 ```powershell
-PS C:\> Get-CMConfigurationItem -Name "ConfigItem76"
+PS XYZ:\> Get-CMConfigurationItem -Name "ConfigItem76"
 ```
 
 This command gets a configuration item named ConfigItem76.
@@ -55,8 +54,8 @@ This command gets a configuration item named ConfigItem76.
 ### Example 2: Get an item to use with another cmdlet
 
 ```powershell
-PS C:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
-PS C:\> Remove-CMConfigurationItem -InputObject $CIObj
+PS XYZ:\> $CIObj=Get-CMConfigurationItem -Id "16777568"
+PS XYZ:\> Remove-CMConfigurationItem -InputObject $CIObj
 ```
 
 The first command gets a configuration item with the specified identifier and stores it in the $CIObj variable.
@@ -72,7 +71,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +90,7 @@ If lazy properties are not needed, this parameter should be specified.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +106,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,12 +150,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=211014)
+[Introduction to Compliance Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10))
 
 [Get-CMConfigurationItemXMLDefinition](Get-CMConfigurationItemXMLDefinition.md)
 

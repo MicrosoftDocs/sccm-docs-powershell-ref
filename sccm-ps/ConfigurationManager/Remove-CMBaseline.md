@@ -1,14 +1,10 @@
 ---
-title: Remove-CMBaseline
-titleSuffix: Configuration Manager
 description: Removes configuration baselines.
+external help file: AdminUI.PS.Dcm.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Remove-CMBaseline
 ---
 
 # Remove-CMBaseline
@@ -41,18 +37,23 @@ The **Remove-CMBaseline** cmdlet removes one or more configuration baseline item
 You must remove all references to a configuration baseline before you can remove the configuration baseline.
 After you remove a configuration baseline, System Center Configuration Manager removes the configuration baseline from the collection of devices to which you deployed it, and Configuration Manager no longer assesses their compliance with the configuration baseline.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Remove a baseline configuration by using a name
 ```
-PS C:\> Remove-CMBaseline -Name "BLConfigContoso02"
+PS XYZ:\> Remove-CMBaseline -Name "BLConfigContoso02"
 ```
 
 This command removes the configuration baseline named BLConfigContoso02.
 
 ### Example 2: Remove a baseline configuration by using an ID
 ```
-PS C:\> Remove-CMBaseline -Id "16777366"
+PS XYZ:\> Remove-CMBaseline -Id "16777366"
 ```
 
 This command removes the configuration baseline that has the ID 16777366.
@@ -80,7 +81,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +96,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +111,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +142,7 @@ To obtain a **CMBaseline** object, use the [Get-CMBaseline](Get-CMBaseline.md) c
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -182,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

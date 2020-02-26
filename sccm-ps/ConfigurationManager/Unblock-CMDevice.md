@@ -1,14 +1,10 @@
 ---
-title: Unblock-CMDevice
-titleSuffix: Configuration Manager
 description: Unblocks a client device.
+external help file: AdminUI.PS.Collections.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Unblock-CMDevice
 ---
 
 # Unblock-CMDevice
@@ -41,18 +37,23 @@ The **Unblock-CMDevice** cmdlet unblocks one or more Microsoft System Center Con
 You must unblock a device from the client's assigned site.
 You cannot unblock the device from sites higher in the hierarchy.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Unblock a device
 ```
-PS C:\>Unbock-CMDevice -DeviceName "Test-DIST02"
+PS XYZ:\>Unbock-CMDevice -DeviceName "Test-DIST02"
 ```
 
 This command unblocks the device named Test-DIST02.
 
 ### Example 2: Get a device and unblock it
 ```
-PS C:\> Get-CMDevice -Name "WIN10-86-33" | Unblock-CMDevice
+PS XYZ:\> Get-CMDevice -Name "WIN10-86-33" | Unblock-CMDevice
 ```
 
 This command gets the device object named WIN10-86-33 and uses the pipeline operator to pass the object to **Unblock-CMDevice**, which unblocks the device object.
@@ -110,7 +111,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +126,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +142,7 @@ To obtain a device object, use the [Get-CMDevice](Get-CMDevice.md) cmdlet.
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

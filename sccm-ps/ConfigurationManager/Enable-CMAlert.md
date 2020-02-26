@@ -1,14 +1,10 @@
 ---
-title: Enable-CMAlert
-titleSuffix: Configuration Manager
 description: Enables Configuration Manager alerts.
+external help file: AdminUI.PS.Alerts.dll-Help.xml
+Module Name: ConfigurationManager
 ms.date: 05/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+schema: 2.0.0
+title: Enable-CMAlert
 ---
 
 # Enable-CMAlert
@@ -39,19 +35,24 @@ Enable-CMAlert -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWild
 ## DESCRIPTION
 The **Enable-CMAlert** cmdlet enables one or more Microsoft System Center Configuration Manager alerts.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Enable an alert by using alert ID
 ```
-PS C:\>Enable-CMAlert -Id "16777223"
+PS XYZ:\>Enable-CMAlert -Id "16777223"
 ```
 
 This command enables an alert that has the ID 16777223.
 
 ### Example 2: Enable an alert by using an alert object variable
 ```
-PS C:\> $AlertObj = Get-CMAlert -Id "16777218"
-PS C:\> Enable-CMAlert -InputObject $AlertObj
+PS XYZ:\> $AlertObj = Get-CMAlert -Id "16777218"
+PS XYZ:\> Enable-CMAlert -InputObject $AlertObj
 ```
 
 The first command gets the alert object that has the ID 16777218, and then stores it in the $AlertObj variable.
@@ -81,7 +82,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +97,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ You can obtain the ID of an alert by using the [Get-CMAlert](Get-CMAlert.md) cmd
 ```yaml
 Type: String
 Parameter Sets: SearchByIdMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,7 +145,7 @@ You can obtain the name of an alert by using **Get-CMAlert**.
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,12 +155,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
- 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

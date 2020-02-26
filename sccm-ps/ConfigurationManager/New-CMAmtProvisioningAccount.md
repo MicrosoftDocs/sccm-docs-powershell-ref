@@ -1,14 +1,7 @@
 ---
 title: New-CMAmtProvisioningAccount
-titleSuffix: Configuration Manager
 description: Creates an AMT Discovery and Provisioning Account.
 ms.date: 05/05/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
 ---
 
 # New-CMAmtProvisioningAccount
@@ -29,11 +22,16 @@ The **New-CMAmtProvisioningAccount** cmdlet creates an account for AMT provision
 The server that runs the out of band service point role uses this account to manage some network interface features of AMT in System Center Configuration Manager, by using the out of band management feature.
 The AMT Provisioning and Discovery Account that you specify in System Center Configuration Manager must match the AMT Remote Admin Account name and password of the BIOS extensions in the AMT-based computers.
 
+> [!NOTE]
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
+> The examples in this article use the site name **XYZ**. For more information, see the
+> [getting started](/powershell/sccm/overview) documentation.
+
 ## EXAMPLES
 
 ### Example 1: Create an AMT Discovery and Provisioning Account
 ```
-PS C:\> New-CMAmtProvisioningAccount -Username "AMT_Manager" -Password "S@mPle1Pswrd" -Description "Out-of-band management security group"
+PS XYZ:\> New-CMAmtProvisioningAccount -Username "AMT_Manager" -Password "S@mPle1Pswrd" -Description "Out-of-band management security group"
 ```
 
 This command creates an AMT Discovery and Provisioning Account named AMT_Manager, and specifies a password and description for the account.
@@ -61,7 +59,7 @@ Specifies a description for the AMT Discovery and Provisioning Account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,7 +74,7 @@ DisableWildcardHandling treats wildcard characters as literal character values. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +89,7 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +104,7 @@ Specifies the password, as a secure string, for the AMT Discovery and Provisioni
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +119,7 @@ Specifies the name of the MEBx Account or Remote Admin Account of the BIOS exten
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -147,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
