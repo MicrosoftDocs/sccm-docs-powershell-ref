@@ -179,7 +179,7 @@ $myPhasedDeployment | Suspend-CMPhasedDeployment -Force
 
 #### Remove-CMApplicationPhasedDeployment
 
-Use this cmdlet to remove an phased deployment for an application.
+Use this cmdlet to remove a phased deployment for an application.
 
 ``` PowerShell
 Remove-CMApplicationPhasedDeployment -ApplicationName "myApplicationName"
@@ -191,7 +191,7 @@ $myPhasedDeployment | Remove-CMApplicationPhasedDeployment -Force
 
 #### Remove-CMSoftwareUpdatePhasedDeployment
 
-Use this cmdlet to remove an phased deployment for software updates.
+Use this cmdlet to remove a phased deployment for software updates.
 
 ``` PowerShell
 Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateName "mySoftwareUpdateName"
@@ -205,7 +205,7 @@ $myPhasedDeployment | Remove-CMSoftwareUpdatePhasedDeployment -Force
 
 #### Remove-CMTaskSequencePhasedDeployment
 
-Use this cmdlet to remove an phased deployment for a task sequence.
+Use this cmdlet to remove a phased deployment for a task sequence.
 
 ``` PowerShell
 Remove-CMTaskSequencePhasedDeployment -TaskSequenceName "myTaskSequenceName"
@@ -303,7 +303,7 @@ The -ContentLocation will no longer accept an empty folder.
 
 #### Bugs that were fixed
 
-The -ContentLocation should not allow empty folder.
+The -ContentLocation shouldn't allow an empty folder.
  
 ### Add-CMUserCollectionQueryMembershipRule
 
@@ -346,7 +346,7 @@ The -ReferencedVariableName now accept variable name that begins with underscore
 
 #### Bugs that were fixed
 
-The -ReferencedVariableName does not allow user to specify variable name that begins with underscore.
+The -ReferencedVariableName doesn't allow user to specify variable name that begins with underscore.
 
 ### Set-CMApplicationDeployment
 
@@ -389,14 +389,14 @@ The -ContentLocation will no longer accept an empty folder.
 
 #### Bugs that were fixed
 
-The -ContentLocation should not allow empty folder.
+The -ContentLocation shouldn't allow an empty folder.
 
 ### Set-CMThirdPartyUpdateCatalog
 
 #### Non-breaking changes
 
 - The cmdlet now supports setting 'Sync Schedule' for a catalog.
-- Modified an internal function call due a native method change.
+- Modified an internal function call due to a native method change.
 
 ##### Example
 
