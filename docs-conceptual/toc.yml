@@ -2,6 +2,8 @@
   href: overview.md
 - name: Release notes
   items:
+  - name: 2002 release notes
+    href: 2002-release-notes.md
   - name: 1910 release notes
     href: 1910-release-notes.md
   - name: 1906 release notes
