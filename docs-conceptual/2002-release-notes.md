@@ -288,7 +288,7 @@ Added more error handling for the query rule.
 #### Non-breaking changes
 
 Added the following new parameters to allow you to configure the repair command and directory options when creating deployment type:
-- RepareCommand
+- RepairCommand
 - RepairWorkingDirectory
 
 #### Bugs that were fixed
@@ -364,7 +364,7 @@ Missing parameter to configure repair application option when set deployment for
 #### Non-breaking changes
 
 Added the following new parameters to allow you to configure repair command and directory options when you set the deployment type:
-- RepareCommand
+- RepairCommand
 - RepairWorkingDirectory
 
 #### Bugs that were fixed
