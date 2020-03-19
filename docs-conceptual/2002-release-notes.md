@@ -16,7 +16,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!NOTE]  
-> Configuration Manager current branch version 110 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1906](https://docs.microsoft.com/powershell/sccm/1910-release-notes).
+> Configuration Manager current branch version 1910 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1910](https://docs.microsoft.com/powershell/sccm/1910-release-notes).
 
 ## Important changes
 
