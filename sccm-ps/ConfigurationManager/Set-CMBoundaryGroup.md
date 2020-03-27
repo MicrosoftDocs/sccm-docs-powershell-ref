@@ -148,6 +148,9 @@ Accept wildcard characters: False
 ### -DefaultSiteCode
 Specifies the default site code of a boundary group.
 
+> [!NOTE]
+> This parameter not only sets the default site code but also enables the boundary group for site assignment.You can disable site assignment for a boundary group by setting the value to null.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
