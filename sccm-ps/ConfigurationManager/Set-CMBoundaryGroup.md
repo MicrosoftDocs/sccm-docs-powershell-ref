@@ -96,6 +96,10 @@ Accept wildcard characters: False
 ```
 
 ### -AddSiteSystemServerName
+ 
+ This parameter requires the fully qualified domain name of the site server.
+
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -124,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSiteSystemServer
-Indicates that the site system server is removed from the boundary group.
+Indicates that the site system server is removed from the boundary group. This parameter requires use of the fully qualifed domain name. 
 
 ```yaml
 Type: SwitchParameter
