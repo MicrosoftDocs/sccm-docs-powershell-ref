@@ -58,7 +58,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 
 ### Example 1: Get a boundary that is specified by its identifier
 ```
-PS XYZ:\> Get-Boundary -Id "67777217"
+PS XYZ:\> Get-CMBoundary -Id "67777217"
 BoundaryFlags:      0
 BoundaryID:         67777217
 BoundaryType:       1
@@ -77,7 +77,7 @@ This command gets a boundary that is specified by the identifier 67777217.
 
 ### Example 2: Get a boundary that is specified by the name of an associated boundary group
 ```
-PS XYZ:\> Get-Boundary -BoundaryGroupName "BGroup07"
+PS XYZ:\> Get-CMBoundary -BoundaryGroupName "BGroup07"
 BoundaryFlags:      0
 BoundaryID:         63997411
 BoundaryType:       2
