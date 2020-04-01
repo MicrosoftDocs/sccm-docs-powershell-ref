@@ -1,11 +1,24 @@
+---
+title: Version 1702 release notes
+titleSuffix: Configuration Manager
+description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1702. 
+ms.date: 03/27/2017
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+---
+
 # System Center Configuration Manager Cmdlet Library changes for Current Branch 1702
 
  >[!NOTE]
- > System Center Configuration Current Branch 1610 is the baseline for these changes. See [System Center Configuration Manager Cmdlet Library changes for Current Branch 1610](https://docs.microsoft.com/en-us/powershell/sccm/configurationmanager/1610_release_notes) for more details.
+ > System Center Configuration Current Branch 1610 is the baseline for these changes. See [System Center Configuration Manager Cmdlet Library changes for Current Branch 1610](https://docs.microsoft.com/powershell/sccm/configurationmanager/1610_release_notes) for more details.
 
 ## Important changes
 ### Documentation library updates
-Up-to-date Cmdlet Library documentation is now available from https://docs.microsoft.com/en-us/powershell/sccm/configurationmanager/vlatest/configurationmanager.
+For the latest cmdlet library documentation, see [ConfigurationManager module reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
 
 ### Removed cmdlets
 The following cmdlets are no longer supported and have been removed:
@@ -66,7 +79,7 @@ The following cmdlets are no longer supported and have been removed:
 There is now support for importing the ConfigurationManager module by using a logical name or path.
 
 If the C:\\Program Files (x86)\\Microsoft Configuration Manager\\AdminConsole\\bin or equivalent path is added to the
-[PSModulePath](https://msdn.microsoft.com/en-us/library/dd878326(v=vs.85).aspx) variable, the following can be used:
+[PSModulePath](https://docs.microsoft.com/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path?view=powershell-7) variable, the following can be used:
 
 `Import-Module ConfigrationManager`
 
@@ -75,8 +88,7 @@ Otherwise, the following can be used:
 `Import-Module 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\ConfigurationManager'`
 
 ## How to provide feedback or report issues
-Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, use
-[Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=529220) (a Microsoft Account is required) or [UserVoice](https://configurationmanager.uservoice.com).
+Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, use [UserVoice](https://configurationmanager.uservoice.com).
 
 ## Known issues
 These are known issues with the Cmdlet Library that are not resolved in this release.
@@ -214,7 +226,7 @@ The following changes have been made to existing cmdlets for this release. Chang
 #### Bugs that were fixed
 Large SMS\_EmbeddedPropertyList objects used by certain provider classes may not be properly consumed by the cmdlet framework, leading to undefined behavior when getting or setting these values.
 
-Certain combinations of changes to antimalware policies or client settings can cause an invalid policy to be generated. When in this state, the SMS Provider will return an “Instance is not a valid client agent config” error.
+Certain combinations of changes to antimalware policies or client settings can cause an invalid policy to be generated. When in this state, the SMS Provider will return an "Instance is not a valid client agent config" error.
 
 Cmdlets for configuring management points and software update points have added the *EnableCloudGateway* parameter to enable these roles for use with the cloud management gateway.
 
