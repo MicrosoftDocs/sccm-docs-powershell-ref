@@ -1,11 +1,26 @@
+---
+title: Version 1710 release notes
+titleSuffix: Configuration Manager
+description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1710.
+ms.date: 11/20/2017
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+---
+
 # System Center Configuration Manager Cmdlet Library changes for Current Branch 1710
 
  >[!NOTE]
- > System Center Configuration Current Branch 1706 is the baseline for these changes. See [System Center Configuration Manager Cmdlet Library changes for Current Branch 1706](https://docs.microsoft.com/en-us/powershell/sccm/configurationmanager/1706_release_notes) for more details.
+ > System Center Configuration Current Branch 1706 is the baseline for these changes. See [System Center Configuration Manager Cmdlet Library changes for Current Branch 1706](https://docs.microsoft.com/powershell/sccm/configurationmanager/1706_release_notes) for more details.
 
 ## Important changes
+
 ### Documentation library updates
-Up-to-date Cmdlet Library documentation is now available from https://docs.microsoft.com/en-us/powershell/sccm/configurationmanager/vlatest/configurationmanager.
+
+For the latest cmdlet library documentation, see [ConfigurationManager module reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
 
 ### Removed cmdlets
 The following cmdlets are no longer supported and have been removed:
@@ -23,8 +38,7 @@ When the ConfigurationManager.psd1 module is loaded, PowerShell automatically at
 > When drive auto-creation is disabled, the Configuration Manager console may report an error when launching a PowerShell window.
 
 ## How to provide feedback or report issues
-Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, use
-[Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=529220) (a Microsoft Account is required) or [UserVoice](https://configurationmanager.uservoice.com).
+Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, use [UserVoice](https://configurationmanager.uservoice.com).
 
 ## Known issues
 These are known issues with the Cmdlet Library that are not resolved in this release.
