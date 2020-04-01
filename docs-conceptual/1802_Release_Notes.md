@@ -1,7 +1,20 @@
+---
+title: Version 1802 release notes
+titleSuffix: Configuration Manager
+description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 1802.
+ms.date: 03/22/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+---
+
 # System Center Configuration Manager Cmdlet Library changes for Current Branch 1802
 
  >[!NOTE]
- > System Center Configuration Current Branch 1710 is the baseline for these changes. For more information, see [System Center Configuration Manager Cmdlet Library changes for Current Branch 1710](https://docs.microsoft.com/en-us/powershell/sccm/configurationmanager/1710_release_notes).
+ > System Center Configuration Current Branch 1710 is the baseline for these changes. For more information, see [System Center Configuration Manager Cmdlet Library changes for Current Branch 1710](https://docs.microsoft.com/powershell/sccm/configurationmanager/1710_release_notes).
 
 ## Important changes
 ### Administrator console no longer creates hard link for PowerShell module
@@ -19,7 +32,7 @@ When the ConfigurationManager.psd1 module is loaded, PowerShell automatically tr
 ## How to provide feedback or report issues
 Many of the fixes and improvements described in this document are a result of customer feedback.
 
-To leave bug reports, use the [Feedback Hub](https://docs.microsoft.com/en-us/sccm/core/understand/find-help). For feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
+To leave bug reports, file [Product Feedback](https://docs.microsoft.com/sccm/core/understand/find-help). For feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
 
 ## Known issues
 The following items are known issues with the Cmdlet Library that are not resolved in this release.
