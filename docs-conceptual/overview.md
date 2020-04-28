@@ -2,7 +2,7 @@
 title: Get started with ConfigMgr cmdlets
 titleSuffix: Configuration Manager
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 05/31/2019
+ms.date: 04/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -66,9 +66,7 @@ The easiest method to load Windows PowerShell is directly from the Configuration
 
 Another method of connecting to Configuration Manager from your Windows PowerShell environment is to load the Configuration Manager module manually.  
 
-1.  Right-click the Windows PowerShell icon and choose "Run as administrator".  
-
-2.  Import the Configuration Manager module by using the `Import-Module` cmdlet. To import the Configuration Manager module, specify the path to the Configuration Manager module, or change to the directory that contains the module. By default, the module is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\ConfigurationManager.psd1`   
+1. Import the Configuration Manager module by using the `Import-Module` cmdlet. To import the Configuration Manager module, specify the path to the Configuration Manager module, or change to the directory that contains the module. By default, the module is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\ConfigurationManager.psd1`   
 
     The following example changes to the module's directory and then imports it:  
 
@@ -78,14 +76,14 @@ Another method of connecting to Configuration Manager from your Windows PowerShe
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1  
     ```  
 
-3.  To run the Configuration Manager cmdlets, you need to switch the path to the Configuration Manager site. In the following example, the site code is `ABC`:  
+1. To run the Configuration Manager cmdlets, you need to switch the path to the Configuration Manager site. In the following example, the site code is `ABC`:  
 
     ```  PowerShell
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> CD ABC:   
     PS ABC:\>  
     ```  
 
-4.  Confirm that PowerShell properly loaded the Configuration Manager module by using the `Get-CMSite` cmdlet.  
+1. Confirm that PowerShell properly loaded the Configuration Manager module by using the `Get-CMSite` cmdlet.  
 
 
 
