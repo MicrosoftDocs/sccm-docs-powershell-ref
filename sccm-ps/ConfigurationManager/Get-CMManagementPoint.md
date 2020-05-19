@@ -43,7 +43,7 @@ PS XYZ:\> Get-CMManagementPoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso
 ```
 
 This command gets a management point that is associated with the site system named cmcen-dist02.tsqa.contoso.com and the site code CM1.
-The command directs the output to the file Get-CMOutOfBandServicePoint_data.txt.
+The command directs the output to the file Get-CMManagementPoint_data.txt.
 
 ## PARAMETERS
 

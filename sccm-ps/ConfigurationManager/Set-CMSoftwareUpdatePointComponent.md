@@ -617,4 +617,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMStatusReportingComponent](Set-CMStatusReportingComponent.md)
 
-[Set-CMSystemHealthValidatorPointComponent](Set-CMSystemHealthValidatorPointComponent.md)
