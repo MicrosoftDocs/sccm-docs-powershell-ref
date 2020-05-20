@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,7 +15,11 @@ schema: 2.0.0
 ### ByValue (Default)
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
- [-Memory <Int32>] [-CheckOS <Boolean>] [-OS <OSType>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
+ [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
+ [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
+ [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
+ [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
+ [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
  -InputObject <IResultObject> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
  [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
@@ -27,7 +31,11 @@ Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMe
 ### ById
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
- [-Memory <Int32>] [-CheckOS <Boolean>] [-OS <OSType>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
+ [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
+ [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
+ [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
+ [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
+ [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
  -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
  [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
@@ -39,7 +47,11 @@ Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMe
 ### ByName
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
- [-Memory <Int32>] [-CheckOS <Boolean>] [-OS <OSType>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
+ [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
+ [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
+ [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
+ [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
+ [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
  -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
  [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
@@ -256,6 +268,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CheckCMClientMinVersion
+{{ Fill CheckCMClientMinVersion Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: CheckClientMinVersion
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckMaxOSVersion
+{{ Fill CheckMaxOSVersion Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CheckMemory
 {{ Fill CheckMemory Description }}
 
@@ -271,6 +313,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CheckMinOSVersion
+{{ Fill CheckMinOSVersion Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckNetworkConnected
+{{ Fill CheckNetworkConnected Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: NetworkConnected
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckNetworkWired
+{{ Fill CheckNetworkWired Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: NetworkWired
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CheckOS
 {{ Fill CheckOS Description }}
 
@@ -278,6 +365,51 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
 Aliases: EnableCheckOSType
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckOSArchitecture
+{{ Fill CheckOSArchitecture Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckOSLanguageId
+{{ Fill CheckOSLanguageId Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: EnableCheckOSLanguageId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckPowerState
+{{ Fill CheckPowerState Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: NotBattery
 
 Required: False
 Position: Named
@@ -331,6 +463,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CMClientMinVersion
+{{ Fill CMClientMinVersion Description }}
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: ClientMinVersion
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Condition
 {{ Fill Condition Description }}
 
@@ -368,21 +515,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
 Aliases: Value
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -618,6 +750,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MaxOSVersion
+{{ Fill MaxOSVersion Description }}
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: CurrentMaxOSVersion
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Memory
 {{ Fill Memory Description }}
 
@@ -625,6 +772,21 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: ByValue, ById, ByName
 Aliases: MinimumMemory
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MinOSVersion
+{{ Fill MinOSVersion Description }}
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: CurrentMinOSVersion
 
 Required: False
 Position: Named
@@ -693,6 +855,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OperatorType
+{{ Fill OperatorType Description }}
+
+```yaml
+Type: VariableOperatorType
+Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
+Aliases:
+Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OS
 {{ Fill OS Description }}
 
@@ -709,14 +887,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OperatorType
-{{ Fill OperatorType Description }}
+### -OSArchitecture
+{{ Fill OSArchitecture Description }}
 
 ```yaml
-Type: VariableOperatorType
-Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
-Aliases:
-Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like
+Type: OSArch
+Parameter Sets: ByValue, ById, ByName
+Aliases: CurrentOSArchitecture
+Accepted values: Arch32, Arch64
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OSLanguageId
+{{ Fill OSLanguageId Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: ByValue, ById, ByName
+Aliases: LanguageId
 
 Required: False
 Position: Named
@@ -1196,6 +1389,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1213,7 +1421,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

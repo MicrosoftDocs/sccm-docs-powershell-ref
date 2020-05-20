@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a deployment for an automatic deployment rule.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -26,8 +26,9 @@ Set-CMAutoDeploymentRuleDeployment [-InputObject] <IResultObject> [-Collection <
  [-WriteFilterHandling <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
  [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
@@ -42,8 +43,9 @@ Set-CMAutoDeploymentRuleDeployment [-Id] <Int32> [-Collection <IResultObject>] [
  [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>] [-AlertTime <Int32>]
  [-AlertTimeUnit <TimeUnitType>] [-DisableOperationsManager <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>] [-NoInstallOnUnprotected <Boolean>]
- [-UseBranchCache <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-UseBranchCache <Boolean>] [-AllowDownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
+ [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -115,6 +117,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowDownloadFromMicrosoftUpdate
+Starting in version 1906, use this parameter to set the following option on the **Download Settings** page of the ADR deployment settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowRestart
 Indicates whether a system restart is allowed to be performed outside of any defined maintenance windows when the installation deadline is reached.
 
@@ -132,6 +149,21 @@ Accept wildcard characters: False
 
 ### -AllowSoftwareInstallationOutsideMaintenanceWindow
 Indicates whether software installation is allowed to be performed outside of any defined maintenance windows when the installation deadline is reached.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUseMeteredNetwork
+Starting in version 1906, use this parameter to set the following option on the **Download Settings** page of the ADR deployment settings: **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additionl costs**
 
 ```yaml
 Type: Boolean
@@ -239,21 +271,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -478,6 +495,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequirePostRebootFullScan
+Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: RunEvaluationAfterRestart
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SendWakeupPacket
 Indicates whether to use Wake-on-LAN to wake up clients for required deployments.
 
@@ -485,6 +516,20 @@ Indicates whether to use Wake-on-LAN to wake up clients for required deployments
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableWakeOnLan
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeadlineEnabled
+Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: DelayEnforcementAndUpToGracePeriod
 
 Required: False
 Position: Named
@@ -554,21 +599,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseUtc
-Indicates whether the schedule for this deployment is evaluated based upon Universal Coordinated Time (UTC).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserNotification
 Specifies the notification behavior of the user visual experience.
 Valid values are:
@@ -582,6 +612,21 @@ Type: UserNotificationOption
 Parameter Sets: (All)
 Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseUtc
+Indicates whether the schedule for this deployment is evaluated based upon Universal Coordinated Time (UTC).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -611,22 +656,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WriteFilterHandling
 Indicates whether changes are committed at deadline or during a maintenance window (requires restarts).
 If set to $False, content is applied on the overlay and committed later.
@@ -643,10 +672,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
 

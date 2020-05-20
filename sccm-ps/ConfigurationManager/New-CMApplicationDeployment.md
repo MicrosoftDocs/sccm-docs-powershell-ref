@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates an application deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,12 +22,13 @@ New-CMApplicationDeployment [-InputObject] <IResultObject> [-ApprovalRequired <B
  [-PreDeploy <Boolean>] [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-DistributeContent]
- [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
- [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
- [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
+ [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
+ [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
+ [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+ [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
@@ -38,12 +39,13 @@ New-CMApplicationDeployment [-Name] <String> [-ApprovalRequired <Boolean>] [-Dep
  [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-DistributeContent]
- [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
- [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
- [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
+ [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
+ [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
+ [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+ [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
@@ -54,12 +56,13 @@ New-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-Deploy
  [-GenerateScomAlertOnFailure <Boolean>] [-RebootOutsideServiceWindow <Boolean>]
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-DistributeContent]
- [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
- [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
- [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
+ [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
+ [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
+ [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+ [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,6 +80,21 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
+
+### -AllowRepairApp
+Starting in version 2002, use this parameter to configure the repair application option when creating a deployment for an application.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: AllowUserRepairApplication
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ApprovalRequired
 ```yaml
@@ -148,21 +166,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -571,6 +574,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -588,7 +606,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -597,7 +615,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a software update deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -24,7 +24,7 @@ New-CMSoftwareUpdateDeployment -InputObject <IResultObject> [-DeploymentName <St
  [-TimeValue <Int32>] [-TimeUnit <TimeUnitType>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-RequirePostRebootFullScan <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula] [-DistributeContent]
+ [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula] [-SoftDeadlineEnabled <Boolean>] [-DistributeContent]
  [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
  [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
  [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
@@ -42,7 +42,7 @@ New-CMSoftwareUpdateDeployment -SoftwareUpdateName <String> [-DeploymentName <St
  [-TimeValue <Int32>] [-TimeUnit <TimeUnitType>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-RequirePostRebootFullScan <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula] [-DistributeContent]
+ [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula] [-SoftDeadlineEnabled <Boolean>] [-DistributeContent]
  [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
  [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
  [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
@@ -60,12 +60,12 @@ New-CMSoftwareUpdateDeployment -SoftwareUpdateId <String> [-DeploymentName <Stri
  [-DisableOperationsManagerAlert <Boolean>] [-GenerateOperationsManagerAlert <Boolean>]
  [-ProtectedType <ProtectedType>] [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>]
  [-RequirePostRebootFullScan <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula]
- [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
- [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
- [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
- [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SoftDeadlineEnabled <Boolean>] [-DistributeContent] [-DistributeCollectionName <String>]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
+ [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>]
+ [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>] [-CollectionName <String>]
+ [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DeploySoftwareUpdateGroupByName
@@ -78,7 +78,7 @@ New-CMSoftwareUpdateDeployment -SoftwareUpdateGroupName <String> [-DeploymentNam
  [-TimeValue <Int32>] [-TimeUnit <TimeUnitType>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-RequirePostRebootFullScan <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula] [-DistributeContent]
+ [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula] [-SoftDeadlineEnabled <Boolean>] [-DistributeContent]
  [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
  [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
  [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
@@ -96,7 +96,7 @@ New-CMSoftwareUpdateDeployment -SoftwareUpdateGroupId <String> [-DeploymentName 
  [-TimeValue <Int32>] [-TimeUnit <TimeUnitType>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-RequirePostRebootFullScan <Boolean>]
- [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula] [-DistributeContent]
+ [-DownloadFromMicrosoftUpdate <Boolean>] [-AcceptEula] [-SoftDeadlineEnabled <Boolean>] [-DistributeContent]
  [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>] [-DistributionPointName <String>]
  [-Comment <String>] [-AvailableDateTime <DateTime>] [-DeadlineDateTime <DateTime>]
  [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>] [-SendWakeupPacket <Boolean>]
@@ -203,21 +203,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -470,7 +455,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: RunEvaluationAfterRestart
 
 Required: False
 Position: Named
@@ -523,6 +508,21 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeadlineEnabled
+Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: DelayEnforcementAndUpToGracePeriod
 
 Required: False
 Position: Named
@@ -705,6 +705,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -722,7 +737,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -731,7 +746,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

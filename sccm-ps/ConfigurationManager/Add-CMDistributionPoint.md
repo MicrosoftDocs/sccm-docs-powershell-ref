@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a distribution point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -29,7 +29,7 @@ Add-CMDistributionPoint -InputObject <IResultObject> [-InstallInternetServer]
  [-EnableContentValidation] [-ContentValidationSchedule <IResultObject>]
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP] [-SourceDistributionPoint <String[]>]
  [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache] [-EnableLedbat] [-AllowFallbackForContent]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DistributionPointwithUserSpecifiedCertByValue
@@ -47,8 +47,8 @@ Add-CMDistributionPoint -InputObject <IResultObject> [-InstallInternetServer]
  [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>] [-EnableContentValidation]
  [-ContentValidationSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-EnablePullDP]
  [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache]
- [-EnableLedbat] [-AllowFallbackForContent] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-EnableLedbat] [-AllowFallbackForContent] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DistributionPointWithSelfCert
@@ -66,7 +66,7 @@ Add-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
  [-EnableContentValidation] [-ContentValidationSchedule <IResultObject>]
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP] [-SourceDistributionPoint <String[]>]
  [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache] [-EnableLedbat] [-AllowFallbackForContent]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DistributionPointwithUserSpecifiedCert
@@ -84,8 +84,8 @@ Add-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
  [-SessionStartDelayMins <Int32>] [-MinimumSessionSize <Int32>] [-EnableContentValidation]
  [-ContentValidationSchedule <IResultObject>] [-ContentMonitoringPriority <Priority>] [-EnablePullDP]
  [-SourceDistributionPoint <String[]>] [-SourceDPRank <Int32[]>] [-EnableSsl] [-EnableBranchCache]
- [-EnableLedbat] [-AllowFallbackForContent] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-EnableLedbat] [-AllowFallbackForContent] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -251,21 +251,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContentMonitoringPriority
 Specifies the content monitoring priority.
 Valid values are:
@@ -381,7 +366,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLedbat
-{{ Fill EnableLedbat Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -411,7 +395,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNonWdsPxe
-{{ Fill EnableNonWdsPxe Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -525,6 +508,21 @@ Specifies the ending UDP port in a range of multicast UDP ports that Configurati
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Starting in version 1910, use the `-Force` switch to add a duplicated certificate.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -802,14 +800,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDPRank
-Specifies an array containing the priorities for the distribution point sources from which this distribution point can pull content.
-Source distribution points with the same priority are randomly selected.
+### -SourceDistributionPoint
+Specifies an array of distribution point sources from which this distribution point can pull content.
 
 ```yaml
-Type: Int32[]
+Type: String[]
 Parameter Sets: (All)
-Aliases: SourceDPRanks
+Aliases: SourceDistributionPoints
 
 Required: False
 Position: Named
@@ -818,13 +815,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDistributionPoint
-Specifies an array of distribution point sources from which this distribution point can pull content.
+### -SourceDPRank
+Specifies an array containing the priorities for the distribution point sources from which this distribution point can pull content.
+Source distribution points with the same priority are randomly selected.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: (All)
-Aliases: SourceDistributionPoints
+Aliases: SourceDPRanks
 
 Required: False
 Position: Named
@@ -900,6 +898,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -917,11 +930,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
+### IResultObject#SMS_SCI_SysResUse
 
 ## NOTES
 

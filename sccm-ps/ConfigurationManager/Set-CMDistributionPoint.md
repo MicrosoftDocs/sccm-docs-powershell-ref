@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a distribution point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -33,7 +33,8 @@ Set-CMDistributionPoint [-InputObject] <IResultObject> [-Description <String>]
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP <Boolean>] [-SourceDistributionPoint <String[]>]
  [-SourceDPRank <Int32[]>] [-AllowFallbackForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
  [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-EnableLedbat <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ReassignSiteCode <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByName
@@ -55,7 +56,8 @@ Set-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP <Boolean>] [-SourceDistributionPoint <String[]>]
  [-SourceDPRank <Int32[]>] [-AllowFallbackForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
  [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-EnableLedbat <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ReassignSiteCode <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -295,21 +297,6 @@ Accepted values: None, ProfileCustom, Profile10Mbps, Profile100Mbps, Profile1Gbp
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -569,6 +556,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceWildcardHandling
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
@@ -707,6 +709,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReassignSiteCode
+{{ Fill ReassignSiteCode Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveBoundaryGroupName
 Removes an array of boundary groups, by name, from the distribution point.
 
@@ -797,14 +814,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDPRank
-Specifies an array that contains the priorities for the distribution point sources from which this distribution point can pull content.
-Source distribution points that have the same priority are randomly selected.
+### -SourceDistributionPoint
+Specifies an array of distribution point sources from which this distribution point can pull content.
 
 ```yaml
-Type: Int32[]
+Type: String[]
 Parameter Sets: (All)
-Aliases: SourceDPRanks
+Aliases: SourceDistributionPoints
 
 Required: False
 Position: Named
@@ -813,13 +829,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDistributionPoint
-Specifies an array of distribution point sources from which this distribution point can pull content.
+### -SourceDPRank
+Specifies an array that contains the priorities for the distribution point sources from which this distribution point can pull content.
+Source distribution points that have the same priority are randomly selected.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: (All)
-Aliases: SourceDistributionPoints
+Aliases: SourceDPRanks
 
 Required: False
 Position: Named
@@ -925,6 +942,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -942,11 +974,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
+### IResultObject#SMS_SCI_SysResUse
 
 ## NOTES
 

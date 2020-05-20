@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a software update deployment in Configuration Manager.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -25,9 +25,10 @@ Set-CMSoftwareUpdateDeployment -InputObject <IResultObject> [-DeploymentName <St
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
- [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-SoftDeadlineEnabled <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdateDeploymentByNameMandatory
@@ -41,9 +42,10 @@ Set-CMSoftwareUpdateDeployment -SoftwareUpdateName <String> [-DeploymentName <St
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
- [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-SoftDeadlineEnabled <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdateDeploymentByIdMandatory
@@ -57,9 +59,10 @@ Set-CMSoftwareUpdateDeployment -SoftwareUpdateId <String> [-DeploymentName <Stri
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
- [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-SoftDeadlineEnabled <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdateGroupDeploymentByNameMandatory
@@ -73,9 +76,10 @@ Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupName <String> [-DeploymentNam
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
- [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-SoftDeadlineEnabled <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetSoftwareUpdateGroupDeploymentByIdMandatory
@@ -89,9 +93,10 @@ Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupId <String> [-DeploymentName 
  [-GenerateSuccessAlert <Boolean>] [-PercentSuccess <Int32>] [-DisableOperationsManagerAlert <Boolean>]
  [-GenerateOperationsManagerAlert <Boolean>] [-ProtectedType <ProtectedType>]
  [-UnprotectedType <UnprotectedType>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
- [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowUseMeteredNetwork <Boolean>] [-Enable <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-SoftDeadlineEnabled <Boolean>] [-PassThru] [-CollectionName <String>] [-CollectionId <String>]
+ [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -228,21 +233,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -502,7 +492,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: RunEvaluationAfterRestart
 
 Required: False
 Position: Named
@@ -551,6 +541,21 @@ For computers to wake, you must first configure Wake On LAN.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeadlineEnabled
+Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: DelayEnforcementAndUpToGracePeriod
 
 Required: False
 Position: Named
@@ -720,6 +725,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -737,12 +757,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

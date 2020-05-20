@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes security scope settings for Configuration Manager sites.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -26,8 +26,8 @@ Set-CMSite -InputObject <IResultObject> [-Comment <String>] [-EnableWakeOnLan <B
  [-MaximumConcurrentSendingForAllSite <Int32>] [-MaximumConcurrentSendingForPerSite <Int32>]
  [-RetryNumberForConcurrentSending <Int32>] [-ConcurrentSendingDelayBeforeRetryingMins <Int32>]
  [-AddActiveDirectoryForest <IResultObject[]>] [-RemoveActiveDirectoryForest <IResultObject[]>]
- [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UsePkiClientCertificate <Boolean>]
- [-ClientCertificateCustomStoreName <String>]
+ [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UseSmsGeneratedCert <Boolean>]
+ [-UsePkiClientCertificate <Boolean>] [-ClientCertificateCustomStoreName <String>]
  [-ClientCertificateSelectionCriteriaType <ClientCertificateSelectionCriteriaType>]
  [-ClientCertificateSelectionCriteriaValue <String>]
  [-TakeActionForMultipleCertificateMatchCriteria <TakeActionForMultipleCertificateMatchCriteria>]
@@ -36,7 +36,8 @@ Set-CMSite -InputObject <IResultObject> [-Comment <String>] [-EnableWakeOnLan <B
  [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
  [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
  [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RetryInstallPassiveSite] [-PromotePassiveSiteToActive] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
@@ -51,8 +52,8 @@ Set-CMSite -Name <String> [-Comment <String>] [-EnableWakeOnLan <Boolean>] [-Wak
  [-MaximumConcurrentSendingForAllSite <Int32>] [-MaximumConcurrentSendingForPerSite <Int32>]
  [-RetryNumberForConcurrentSending <Int32>] [-ConcurrentSendingDelayBeforeRetryingMins <Int32>]
  [-AddActiveDirectoryForest <IResultObject[]>] [-RemoveActiveDirectoryForest <IResultObject[]>]
- [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UsePkiClientCertificate <Boolean>]
- [-ClientCertificateCustomStoreName <String>]
+ [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UseSmsGeneratedCert <Boolean>]
+ [-UsePkiClientCertificate <Boolean>] [-ClientCertificateCustomStoreName <String>]
  [-ClientCertificateSelectionCriteriaType <ClientCertificateSelectionCriteriaType>]
  [-ClientCertificateSelectionCriteriaValue <String>]
  [-TakeActionForMultipleCertificateMatchCriteria <TakeActionForMultipleCertificateMatchCriteria>]
@@ -61,7 +62,8 @@ Set-CMSite -Name <String> [-Comment <String>] [-EnableWakeOnLan <Boolean>] [-Wak
  [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
  [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
  [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RetryInstallPassiveSite] [-PromotePassiveSiteToActive] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetBySiteCodeMandatory
@@ -76,8 +78,8 @@ Set-CMSite [-SiteCode <String>] [-Comment <String>] [-EnableWakeOnLan <Boolean>]
  [-MaximumConcurrentSendingForAllSite <Int32>] [-MaximumConcurrentSendingForPerSite <Int32>]
  [-RetryNumberForConcurrentSending <Int32>] [-ConcurrentSendingDelayBeforeRetryingMins <Int32>]
  [-AddActiveDirectoryForest <IResultObject[]>] [-RemoveActiveDirectoryForest <IResultObject[]>]
- [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UsePkiClientCertificate <Boolean>]
- [-ClientCertificateCustomStoreName <String>]
+ [-ClientComputerCommunicationType <ClientComputerCommunicationType>] [-UseSmsGeneratedCert <Boolean>]
+ [-UsePkiClientCertificate <Boolean>] [-ClientCertificateCustomStoreName <String>]
  [-ClientCertificateSelectionCriteriaType <ClientCertificateSelectionCriteriaType>]
  [-ClientCertificateSelectionCriteriaValue <String>]
  [-TakeActionForMultipleCertificateMatchCriteria <TakeActionForMultipleCertificateMatchCriteria>]
@@ -86,7 +88,8 @@ Set-CMSite [-SiteCode <String>] [-Comment <String>] [-EnableWakeOnLan <Boolean>]
  [-FreeSpaceThresholdWarningGB <Int32>] [-FreeSpaceThresholdCriticalGB <Int32>] [-RequireSigning <Boolean>]
  [-RequireSha256 <Boolean>] [-UseEncryption <Boolean>] [-ThresholdOfSelectCollectionByDefault <Int32>]
  [-ThresholdOfSelectCollectionMax <Int32>] [-SiteSystemCollectionBehavior <CollectionBehaviorType>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RetryInstallPassiveSite] [-PromotePassiveSiteToActive] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -275,21 +278,6 @@ Aliases: ConcurrentSendingDelayBeforeRetryingMinutes
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -485,6 +473,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PromotePassiveSiteToActive
+{{ Fill PromotePassiveSiteToActive Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveActiveDirectoryForest
 Specifies an array of Active Directory Forest objects to remove from Active Directory Domain Services.
 
@@ -559,6 +562,21 @@ Indicates whether to require Configuration Manager sites to sign communications 
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetryInstallPassiveSite
+{{ Fill RetryInstallPassiveSite Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -770,6 +788,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseSmsGeneratedCert
+{{ Fill UseSmsGeneratedCert Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: UseConfigurationManagerGeneratedCertificateForHttp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WakeOnLanTransmissionMethodType
 Specifies the type of transmission method to use for Wake On LAN transmissions.
 
@@ -802,6 +835,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -819,11 +867,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
+### 
 
 ## NOTES
 

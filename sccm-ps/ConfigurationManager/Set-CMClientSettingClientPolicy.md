@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting client policy.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,22 +17,22 @@ Sets a client setting client policy.
 ### SetCustomSettingByName (Default)
 ```
 Set-CMClientSettingClientPolicy [-PolicyPollingMins <Int32>] [-EnableUserPolicy <Boolean>]
- [-EnableUserPolicyOnInternet <Boolean>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableUserPolicyOnInternet <Boolean>] [-EnableUserPolicyOnTS <Boolean>] -Name <String> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
 Set-CMClientSettingClientPolicy [-PolicyPollingMins <Int32>] [-EnableUserPolicy <Boolean>]
- [-EnableUserPolicyOnInternet <Boolean>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableUserPolicyOnInternet <Boolean>] [-EnableUserPolicyOnTS <Boolean>] [-DefaultSetting] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
 Set-CMClientSettingClientPolicy [-PolicyPollingMins <Int32>] [-EnableUserPolicy <Boolean>]
- [-EnableUserPolicyOnInternet <Boolean>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableUserPolicyOnInternet <Boolean>] [-EnableUserPolicyOnTS <Boolean>] -InputObject <IResultObject>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,21 +50,6 @@ PS XYZ:\>
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DefaultSetting
 ```yaml
@@ -108,6 +93,21 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserPolicyOnInternet
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableUserPolicyOnTS
+{{ Fill EnableUserPolicyOnTS Description }}
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -189,6 +189,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -206,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -215,7 +230,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a driver package.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,37 +17,37 @@ Modifies a driver package.
 ### SetByValueMandatory (Default)
 ```
 Set-CMDriverPackage -InputObject <IResultObject> [-NewName <String>] [-Description <String>]
- [-Version <String>] [-DriverPackageSource <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Version <String>] [-DriverManufacturer <String>] [-DriverModel <String>] [-DriverPackageSource <String>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
+ [-CustomPackageShareName <String>] [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>]
+ [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetById
 ```
 Set-CMDriverPackage -Id <String> [-NewName <String>] [-Description <String>] [-Version <String>]
- [-DriverPackageSource <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DriverManufacturer <String>] [-DriverModel <String>] [-DriverPackageSource <String>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
+ [-CustomPackageShareName <String>] [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>]
+ [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMDriverPackage -Name <String> [-NewName <String>] [-Description <String>] [-Version <String>]
- [-DriverPackageSource <String>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
- [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
- [-MulticastTransferOnly <Boolean>] [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>]
- [-PrestageBehavior <PrestageBehavior>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DriverManufacturer <String>] [-DriverModel <String>] [-DriverPackageSource <String>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-DisconnectUserFromDistributionPoint <Boolean>]
+ [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
+ [-CustomPackageShareName <String>] [-CopyToPackageShareOnDistributionPoint <Boolean>]
+ [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>] [-MulticastTransferOnly <Boolean>]
+ [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,21 +75,6 @@ PS XYZ:\> Set-CMDriverPackage -SecurityScopeAction RemoveMembership -SecuritySco
 This command removes a security scope action from the driver package that is named Windows 7 Standard Hardware Package.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CopyToPackageShareOnDistributionPoint
 ```yaml
@@ -189,6 +174,35 @@ Accept wildcard characters: False
 ### -DistributionPointUpdateSchedule
 ```yaml
 Type: IResultObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DriverManufacturer
+Starting in version 1910, use this parameter to set the manufacturer. Use with the DriverModel parameter. You can use them for managing the driver catalog, and with task sequence pre-caching.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DriverModel
+Starting in version 1910, use this parameter to set the model. Use with the DriverManufacturer parameter. You can use them for managing the driver catalog, and with task sequence pre-caching.
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -402,6 +416,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -419,12 +448,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

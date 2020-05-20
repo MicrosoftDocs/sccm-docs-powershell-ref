@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting power management.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -19,8 +19,8 @@ Sets a client setting power management.
 Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPowerPlan <Boolean>]
  [-EnableWakeupProxy <Boolean>] [-WakeupProxyPort <Int32>] [-WakeOnLanPort <Int32>]
  [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
- [-WakeupProxyDirectAccessPrefix <String>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WakeupProxyDirectAccessPrefix <String>] [-NetworkWakeupOption <NetworkWakeupType>] -Name <String>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
@@ -28,8 +28,8 @@ Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPo
 Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPowerPlan <Boolean>]
  [-EnableWakeupProxy <Boolean>] [-WakeupProxyPort <Int32>] [-WakeOnLanPort <Int32>]
  [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
- [-WakeupProxyDirectAccessPrefix <String>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WakeupProxyDirectAccessPrefix <String>] [-NetworkWakeupOption <NetworkWakeupType>] [-DefaultSetting]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
@@ -37,8 +37,9 @@ Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPo
 Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPowerPlan <Boolean>]
  [-EnableWakeupProxy <Boolean>] [-WakeupProxyPort <Int32>] [-WakeOnLanPort <Int32>]
  [-FirewallExceptionForWakeupProxy <WakeUpProxyFirewallExceptionTypes>]
- [-WakeupProxyDirectAccessPrefix <String>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WakeupProxyDirectAccessPrefix <String>] [-NetworkWakeupOption <NetworkWakeupType>]
+ -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,21 +63,6 @@ PS XYZ:\>
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -194,6 +180,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NetworkWakeupOption
+{{ Fill NetworkWakeupOption Description }}
+
+```yaml
+Type: NetworkWakeupType
+Parameter Sets: (All)
+Aliases:
+Accepted values: NotConfigured, Enabled, Disabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassThru
 Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
 
@@ -248,6 +250,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -265,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -274,7 +291,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

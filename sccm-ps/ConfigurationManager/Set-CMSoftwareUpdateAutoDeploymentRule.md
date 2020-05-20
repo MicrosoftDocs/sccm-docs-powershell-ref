@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies Configuration Manager deployment rules for automatic software updates.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -28,13 +28,15 @@ Set-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-NewName <String>] [-Desc
  [-SuccessPercentage <Int32>] [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
  [-DisableOperationManager <Boolean>] [-GenerateOperationManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>]
  [-NoInstallOnUnprotected <Boolean>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
- [-AllowUseMeteredNetwork <Boolean>] [-LanguageSelection <String[]>] [-ArticleId <String[]>]
- [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
+ [-AllowUseMeteredNetwork <Boolean>] [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>]
+ [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>]
  [-DownloadFromInternet <Boolean>] [-Location <String>] [-Language <String[]>] [-Required <String[]>]
  [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>] [-UpdateClassification <String[]>]
- [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>] [-Force] [-PassThru]
- [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>] [-DisableWildcardHandling]
+ [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>] [-ContentSize <String[]>]
+ [-Architecture <ArchitectureType[]>] [-Force] [-PassThru] [-DeploymentRing <DeploymentRing>]
+ [-UpdateDeploymentWaitDay <Int32>] [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -52,13 +54,15 @@ Set-CMSoftwareUpdateAutoDeploymentRule -Id <String[]> [-NewName <String>] [-Desc
  [-SuccessPercentage <Int32>] [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
  [-DisableOperationManager <Boolean>] [-GenerateOperationManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>]
  [-NoInstallOnUnprotected <Boolean>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
- [-AllowUseMeteredNetwork <Boolean>] [-LanguageSelection <String[]>] [-ArticleId <String[]>]
- [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
+ [-AllowUseMeteredNetwork <Boolean>] [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>]
+ [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>]
  [-DownloadFromInternet <Boolean>] [-Location <String>] [-Language <String[]>] [-Required <String[]>]
  [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>] [-UpdateClassification <String[]>]
- [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>] [-Force] [-PassThru]
- [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>] [-DisableWildcardHandling]
+ [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>] [-ContentSize <String[]>]
+ [-Architecture <ArchitectureType[]>] [-Force] [-PassThru] [-DeploymentRing <DeploymentRing>]
+ [-UpdateDeploymentWaitDay <Int32>] [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -76,13 +80,15 @@ Set-CMSoftwareUpdateAutoDeploymentRule -InputObject <IResultObject> [-NewName <S
  [-SuccessPercentage <Int32>] [-AlertTime <Int32>] [-AlertTimeUnit <TimeUnitType>]
  [-DisableOperationManager <Boolean>] [-GenerateOperationManagerAlert <Boolean>] [-NoInstallOnRemote <Boolean>]
  [-NoInstallOnUnprotected <Boolean>] [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>]
- [-AllowUseMeteredNetwork <Boolean>] [-LanguageSelection <String[]>] [-ArticleId <String[]>]
- [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
+ [-AllowUseMeteredNetwork <Boolean>] [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>]
+ [-ArticleId <String[]>] [-BulletinId <String[]>] [-CustomSeverity <SeverityType[]>] [-CMTag <CMTagTypes[]>]
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>]
  [-DownloadFromInternet <Boolean>] [-Location <String>] [-Language <String[]>] [-Required <String[]>]
  [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>] [-UpdateClassification <String[]>]
- [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>] [-Force] [-PassThru]
- [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>] [-DisableWildcardHandling]
+ [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>] [-ContentSize <String[]>]
+ [-Architecture <ArchitectureType[]>] [-Force] [-PassThru] [-DeploymentRing <DeploymentRing>]
+ [-UpdateDeploymentWaitDay <Int32>] [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>]
+ [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -102,13 +108,23 @@ The System Center Configuration Manager server downloads content files and copie
 ## EXAMPLES
 
 ### Example 1: Modify the language selection and name of a rule
-```
-PS XYZ:\> Set-CMSoftwareUpdateAutoDeploymentRule -Name "DeploymentRule07" -NewName "DeploymentRule07Revised" -Description "Update rule to use Portuguese (Brazil)." -LanguageSelection "Portuguese (Brazil)"
+
+This command modifies the automatic deployment rule named DeploymentRule07. It specifies Portuguese (Brazil) as the language selection. The command also changes the name of the rule to DeploymentRule07Revised.
+
+```PowerShell
+Set-CMSoftwareUpdateAutoDeploymentRule -Name "DeploymentRule07" -NewName "DeploymentRule07Revised" -Description "Update rule to use Portuguese (Brazil)." -LanguageSelection "Portuguese (Brazil)"
 ```
 
-This command modifies the automatic deployment rule named DeploymentRule07.
-The command specifies Portuguese (Brazil) as the language selection.
-The command also changes the name of the rule to DeploymentRule07Revised.
+### Example 2: Configure the deployment package
+
+The following examples demonstrate different methods to configure the deployment package.
+
+```PowerShell
+Set-CMSoftwareUpdateAutoDeploymentRule -Name $ReferenceADRName -DeploymentPackageName $null
+Set-CMSoftwareUpdateAutoDeploymentRule -Name $ReferenceADRName -DeploymentPackageName $packageName
+Set-CMSoftwareUpdateAutoDeploymentRule -Name $ReferenceADRName -DeploymentPackage $null
+Set-CMSoftwareUpdateAutoDeploymentRule -Name $ReferenceADRName -DeploymentPackage $package
+```
 
 ## PARAMETERS
 
@@ -212,6 +228,22 @@ Indicates whether to allow clients to download content over a metered Internet c
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Architecture
+Starting in version 1906, use this parameter to set the **Architecture** property filter on the Software Updates page of the ADR properties.
+
+```yaml
+Type: ArchitectureType[]
+Parameter Sets: (All)
+Aliases: Architectures
+Accepted values: Arm64, Itanium, X64, X86
 
 Required: False
 Position: Named
@@ -338,17 +370,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
+### -ContentSize
+Starting in version 1906, use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
 ```yaml
-Type: SwitchParameter
+Type: String[]
 Parameter Sets: (All)
-Aliases: cf
+Aliases: ContentSizes
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -482,13 +513,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DeployWithoutLicense
-Indicates whether the rule deploys updates without licenses.
-If you specify a value of $True, Configuration Manager deploys all updates for this rule and approves any license agreements.
-If this value is $False, Configuration Manager deploys only updates that do not include a license or for which the license agreement has been approved.
-
+### -DeploymentPackage
+Starting in version 1906, use this parameter to set the deployment package for the existing software update auto deployment rule. To not require a package, set the value to `$null`.
 ```yaml
-Type: Boolean
+Type: IResultObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeploymentPackageName
+Starting in version 1906, use this parameter to set the deployment package for the existing software update auto deployment rule. To not require a package, set the value to `$null`.
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -505,6 +547,23 @@ Type: DeploymentRing
 Parameter Sets: (All)
 Aliases:
 Accepted values: CB, Release, BusinessMainstream, Cbb, Ltsb
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployWithoutLicense
+Indicates whether the rule deploys updates without licenses.
+If you specify a value of $True, Configuration Manager deploys all updates for this rule and approves any license agreements.
+If this value is $False, Configuration Manager deploys only updates that do not include a license or for which the license agreement has been approved.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -849,6 +908,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -O365LanguageSelection
+Starting in version 1906, use this parameter to set the **Office 365 Client Update** language selection
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassThru
 Returns the current working object.
 By default, this cmdlet does not generate any output.
@@ -889,6 +962,20 @@ The rule adds software updates identified by required that meet specified criter
 Type: String[]
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequirePostRebootFullScan
+Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: RunEvaluationAfterRestart
 
 Required: False
 Position: Named
@@ -971,6 +1058,21 @@ Type: SeverityType[]
 Parameter Sets: (All)
 Aliases: Severities
 Accepted values: None, Low, Moderate, Important, Critical
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeadlineEnabled
+Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: DelayEnforcementAndUpToGracePeriod
 
 Required: False
 Position: Named
@@ -1119,23 +1221,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseUtc
-Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
-If this value is $True, Configuration Manager uses UTC for this deployment.
-If this value is $False, Configuration Manager uses local time.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserNotification
 Specifies the type of user notification.
 The acceptable values for this parameter are:
@@ -1160,12 +1245,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseUtc
+Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
+If this value is $True, Configuration Manager uses UTC for this deployment.
+If this value is $False, Configuration Manager uses local time.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Vendor
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: Vendors
-Accepted values: Microsoft, Local Publisher
 
 Required: False
 Position: Named
@@ -1195,22 +1296,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WriteFilterHandling
 Indicates whether to enable write filters for embedded devices.
 For a value of $True, the device commits changes during a maintenance window.
@@ -1229,13 +1314,47 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS
