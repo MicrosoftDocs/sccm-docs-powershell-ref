@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Starting in version 1910, use this parameter to force remove an expired NAP update.
 
 ```yaml
 Type: SwitchParameter

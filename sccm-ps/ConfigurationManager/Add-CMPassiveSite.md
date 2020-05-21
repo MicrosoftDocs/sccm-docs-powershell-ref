@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-CMPassiveSite
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Use this cmdlet to add a site server in passive mode.
 
 ## SYNTAX
 
@@ -29,16 +29,21 @@ Add-CMPassiveSite -SiteCode <String> -SiteSystemServerName <String> -InstallDire
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Starting in version 2002, use this cmdlet to add a site server in passive mode.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Add-CMPassiveSite -InputObject $SiteSystem -InstallDirectory $InstallPath -SourceFilePathOption CopySourceFileFromActiveSite
 ```
 
-{{ Add example description here }}
+### Example 2
+
+```powershell
+Add-CMPassiveSite -SiteCode $SiteCode -SiteSystemServerName $SiteSystemServerName -InstallDirectory $InstallPath -SourceFilePathOption UseLocalSourceDirectory -LocalSourceDirectory $LocalSourcePath
+```
 
 ## PARAMETERS
 
@@ -222,3 +227,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Site server high availability](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/site-server-high-availability)

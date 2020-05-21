@@ -474,7 +474,7 @@ Accept wildcard characters: False
 ```
 
 ### -PromotePassiveSiteToActive
-{{ Fill PromotePassiveSiteToActive Description }}
+Starting in version 2002, use this parameter to promote a passive site server to the active site server.
 
 ```yaml
 Type: SwitchParameter
@@ -573,7 +573,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryInstallPassiveSite
-{{ Fill RetryInstallPassiveSite Description }}
+Starting in version 2002, use this parameter to retry the installation for a site server in passive mode that previously failed.
 
 ```yaml
 Type: SwitchParameter
@@ -789,7 +789,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseSmsGeneratedCert
-{{ Fill UseSmsGeneratedCert Description }}
+Use this parameter to enable or disable the site property to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/enhanced-http).
 
 ```yaml
 Type: Boolean

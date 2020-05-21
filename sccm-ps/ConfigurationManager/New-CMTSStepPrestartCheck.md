@@ -43,7 +43,7 @@ PS XYZ:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -CheckCMClientMinVersion
-{{ Fill CheckCMClientMinVersion Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum client version**. Use the parameter **CMClientMinVersion** to set the specific client version number.
 
 ```yaml
 Type: Boolean
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMaxOSVersion
-{{ Fill CheckMaxOSVersion Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Maximum OS version**. Use the parameter **MaxOSVersion** to set the specific OS version number.
 
 ```yaml
 Type: Boolean
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMemory
-{{ Fill CheckMemory Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum memory (MB)**. Use the parameter **Memory** to set the specific memory size.
 
 ```yaml
 Type: Boolean
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckMinOSVersion
-{{ Fill CheckMinOSVersion Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum OS version**. Use the parameter **MinOSVersion** to set the specific OS version number.
 
 ```yaml
 Type: Boolean
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckNetworkConnected
-{{ Fill CheckNetworkConnected Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Network adapter connected**
 
 ```yaml
 Type: Boolean
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckNetworkWired
-{{ Fill CheckNetworkWired Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Network adapter is not wireless**
 
 ```yaml
 Type: Boolean
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOS
-{{ Fill CheckOS Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Current OS to be refreshed is**. Use the parameter **OS** to set the specific OS type.
 
 ```yaml
 Type: Boolean
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOSArchitecture
-{{ Fill CheckOSArchitecture Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Architecture of current OS**. Use the parameter **OSArchitecture** to set the specific architecture type.
 
 ```yaml
 Type: Boolean
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckOSLanguageId
-{{ Fill CheckOSLanguageId Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Language of current OS**. Use the parameter **OSLanguageID** to set the specific language.
 
 ```yaml
 Type: Boolean
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckPowerState
-{{ Fill CheckPowerState Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **AC power plugged in**.
 
 ```yaml
 Type: Boolean
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckSpace
-{{ Fill CheckSpace Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum free disk space (MB)**. Use the parameter **DiskSpace** to set the specific size.
 
 ```yaml
 Type: Boolean
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckSpeed
-{{ Fill CheckSpeed Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum processor speed (MHz)**. Use the parameter **Speed** to set the specific speed.
 
 ```yaml
 Type: Boolean
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -CMClientMinVersion
-{{ Fill CMClientMinVersion Description }}
+Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
 
 ```yaml
 Type: String
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSpace
-{{ Fill DiskSpace Description }}
+Use this parameter to configure the specific size for the minimum free disk space check. Specify an integer value for the size in MB. Use the parameter **CheckSpace** to enable or disable the check.
 
 ```yaml
 Type: Int32
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxOSVersion
-{{ Fill MaxOSVersion Description }}
+Use this parameter to configure the specific OS version. Specify the maximum OS version with major version, minor version, and build number. For example, `10.0.18356`. Use the parameter **CheckMaxOSVersion** to enable or disable the check.
 
 ```yaml
 Type: String
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -Memory
-{{ Fill Memory Description }}
+Use this parameter to configure the specific size for the minimum memory check. Specify an integer value for the size in MB. Use the parameter **CheckMemory** to enable or disable the check.
 
 ```yaml
 Type: Int32
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinOSVersion
-{{ Fill MinOSVersion Description }}
+Use this parameter to configure the specific OS version. Specify the minimum OS version with major version, minor version, and build number. For example, `10.0.16299`. Use the parameter **CheckMinOSVersion** to enable or disable the check.
 
 ```yaml
 Type: String
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -OS
-{{ Fill OS Description }}
+Use this parameter to configure the specific OS type: `Client` or `Server`. Use the parameter **CheckOS** to enable or disable the check.
 
 ```yaml
 Type: OSType
@@ -419,7 +419,7 @@ Accept wildcard characters: False
 ```
 
 ### -OSArchitecture
-{{ Fill OSArchitecture Description }}
+Use this parameter to configure the specific OS architecture: `Arch32` for 32-bit or `Arch64` for 64-bit. Use the parameter **CheckOSArchitecture** to enable or disable the check.
 
 ```yaml
 Type: OSArch
@@ -435,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### -OSLanguageId
-{{ Fill OSLanguageId Description }}
+Use this parameter to configure the specific OS language. This check compares the language ID to the **OSLanguage** property of the **Win32_OperatingSystem** WMI class on the client. For example, `1033` for **English (United States)**. Use the parameter **CheckOSLanguageId** to enable or disable the check.
 
 ```yaml
 Type: Int32
@@ -450,7 +450,7 @@ Accept wildcard characters: False
 ```
 
 ### -Speed
-{{ Fill Speed Description }}
+Use this parameter to configure the specific speed for the minimum processor speed check. Specify an integer value for the speed in MHz. Use the parameter **CheckSpeed** to enable or disable the check.
 
 ```yaml
 Type: Int32

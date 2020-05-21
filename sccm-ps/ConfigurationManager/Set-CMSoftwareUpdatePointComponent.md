@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableManualCertManagement
-{{ Fill EnableManualCertManagement Description }}
+Starting in version 1910, use this parameter to enable or disable manual management of the WSUS signing certificate for third-party updates.
 
 ```yaml
 Type: Boolean
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyUpdates
-{{ Fill EnableThirdPartyUpdates Description }}
+Starting in version 1910, use this parameter to enable or disable the following option on the **Third Party Updates** tab of the software update point component properties: **Enable third-party software updates**.
 
 ```yaml
 Type: Boolean
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureUpdateMaxRuntimeMins
-{{ Fill FeatureUpdateMaxRuntimeMins Description }}
+Starting in 1910, use this parameter to configure the following setting on the **Maximum Run Time** tab of the software update point component properties: **Maximum run time for Windows feature updates (minutes)**.
 
 ```yaml
 Type: Int32
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -NonFeatureUpdateMaxRuntimeMins
-{{ Fill NonFeatureUpdateMaxRuntimeMins Description }}
+Starting in 1910, use this parameter to configure the following setting on the **Maximum Run Time** tab of the software update point component properties: **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**.
 
 ```yaml
 Type: Int32

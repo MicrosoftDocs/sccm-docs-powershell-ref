@@ -50,9 +50,17 @@ Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObj
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Enable third-party updates in the default client settings
+
+``` PowerShell
+Set-CMClientSettingSoftwareUpdate -DefaultSetting -Enable $true -EnableThirdPartyUpdates $true
 ```
-PS XYZ:\>
+
+### Example 2: Enable third-party updates in a custom device setting
+
+``` PowerShell
+$clientDeviceSettingName = "Dev device settings"
+Set-CMClientSettingSoftwareUpdate -Name $clientDeviceSettingName -Enable $true -EnableThirdPartyUpdates $true
 ```
 
 ## PARAMETERS
@@ -84,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeltaDownloadPort
-{{ Fill DeltaDownloadPort Description }}
+Use this parameter to configure the network port value for the following client setting in the **Software Updates** group: **Port that clients use to receive requests for delta content**. Use the **EnableDeltaDownload** parameter to enable the behavior.
 
 ```yaml
 Type: Int32
@@ -127,6 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
+Use this parameter to enable or disable the following client setting in the **Software Updates** group: **Enable software updates on clients**.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -140,7 +150,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDeltaDownload
-{{ Fill EnableDeltaDownload Description }}
+
+Use this parameter to enable or disable the following client setting in the **Software Updates** group: **Allow clients to download delta content when available**. Use the **DeltaDownloadPort** parameter to configure the network port.
 
 ```yaml
 Type: Boolean
@@ -155,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyUpdates
-{{ Fill EnableThirdPartyUpdates Description }}
+Starting in version 1910, use this parameter to enable or disable the following client setting in the **Software Updates** group: **Enable third party software updates**.
 
 ```yaml
 Type: Boolean

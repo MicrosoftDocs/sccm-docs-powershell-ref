@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CMTSStepRunTaskSequence
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Use cmdlet to remove the task sequence step **Run Task Sequence** from a specific task sequence.
 
 ## SYNTAX
 
@@ -31,16 +31,15 @@ Remove-CMTSStepRunTaskSequence [-TaskSequenceName] <String> [-StepName <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Starting in version 1906, use cmdlet to remove the task sequence step **Run Task Sequence** from a specific task sequence.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```PowerShell
+$ReferenceTaskSequence | Remove-CMTSStepRunTaskSequence -StepName $myStep.Name -Force
+```
 
 ## PARAMETERS
 
@@ -163,3 +162,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[About task sequence steps - Run Task Sequence](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#child-task-sequence)

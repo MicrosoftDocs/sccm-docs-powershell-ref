@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CMTSStepRunTaskSequence
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Use this cmdlet to get the **Run Task Sequence** step from a specific task sequence.
 
 ## SYNTAX
 
@@ -31,16 +31,15 @@ Get-CMTSStepRunTaskSequence [-TaskSequenceName] <String> [-StepName <String>] [-
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Starting in version 1906, use this cmdlet to get the **Run Task Sequence** step from a specific task sequence.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+```PowerShell
+$myStep = $ReferenceTaskSequence | Get-CMTSStepRunTaskSequence -StepName $name1
+```
 
 ## PARAMETERS
 
@@ -148,3 +147,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[About task sequence steps - Run Task Sequence](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#child-task-sequence)

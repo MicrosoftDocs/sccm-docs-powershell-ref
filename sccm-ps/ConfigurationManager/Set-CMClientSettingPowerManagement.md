@@ -51,9 +51,10 @@ Set-CMClientSettingPowerManagement [-Enable <Boolean>] [-AllowUserToOptOutFromPo
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example
+
+```PowerShell
+Set-CMClientSettingPowerManagement -Name "test settings" -AllowUserToOptOutFromPowerPlan $true -EnableWakeupProxy $true -NetworkWakeupOption Enabled -WakeupProxyPort 25511 -WakeOnLanPort 10 -FirewallExceptionForWakeupProxy None
 ```
 
 ## PARAMETERS
@@ -181,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWakeupOption
-{{ Fill NetworkWakeupOption Description }}
+Starting in version 1906, use this parameter to enable or disable the client setting, **Allow network wake-up**.
 
 ```yaml
 Type: NetworkWakeupType

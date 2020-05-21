@@ -64,28 +64,34 @@ Set-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
 The **Set-CMDistributionPoint** cmdlet modifies a distribution point on a site system server.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive. For more information, see the [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Set properties of a distribution point
-```
-PS XYZ:\> $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
-PS XYZ:\> Set-CMDistributionPoint -InputObject $DP -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $False -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
-```
 
-The first command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and stores the object in the $DP variable.
+The first command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com. It then stores the object in the `$DP` variable. The second command modifies the distribution point object stored in that variable.
 
-The second command modifies the distribution point object stored in $DP.
+```powershell
+$DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+Set-CMDistributionPoint -InputObject $DP -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $False -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
+```
 
 ### Example 2: Set properties of a distribution point by using the pipeline
-```
-PS XYZ:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
+
+This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com. It then uses the pipeline operator to pass the object to **Set-CMDistributionPoint**, which modifies the distribution point object.
+
+```powershell
+Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
 ```
 
-This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and uses the pipeline operator to pass the object to **Set-CMDistributionPoint**, which modifies the distribution point object.
+### Example 3: Reassign a distribution point to a new site
+
+The following example reassigns the mydp server from site ABC to site XYZ
+
+```PowerShell
+Set-CMDistributionPoint -SiteSystemServerName "MyDP.TestDOM.net" -ReassignSiteCode "XYZ" -SiteCode "ABC"
+```
 
 ## PARAMETERS
 
@@ -557,7 +563,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Starting in version 1910, use this parameter to add a duplicate certificate
 
 ```yaml
 Type: SwitchParameter
@@ -710,7 +716,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReassignSiteCode
-{{ Fill ReassignSiteCode Description }}
+Starting in version 1906, use the following parameter to reassign the distribution point to a new site. Specify the three-letter site code as a string value.
 
 ```yaml
 Type: String

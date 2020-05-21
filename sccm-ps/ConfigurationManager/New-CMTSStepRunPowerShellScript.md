@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputVariableName
-{{ Fill OutputVariableName Description }}
+Use this parameter to configure the following setting in the **Run PowerShell Script** task sequence step: **Output to task sequence variable**. Save the command output to a custom task sequence variable.
 
 ```yaml
 Type: String

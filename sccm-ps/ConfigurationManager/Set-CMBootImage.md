@@ -77,21 +77,28 @@ A modification to the boot image does not change its source package.
 ## EXAMPLES
 
 ### Example 1: Rename a boot image object that is identified by using its ID
-```
+
+This command retrieves a boot image by using its ID, and then renames the boot image. Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
+
+```powershell
 PS XYZ:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
 ```
 
-This command retrieves a boot image by using its ID, and then renames the boot image.
-Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
-
 ### Example 2: Rename a boot image object that is identified by using its name
-```
+
+This command retrieves a boot image by using its name, and then renames the boot image. It also adds a version and description to the boot image object. Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
+
+```powershell
 PS XYZ:\> Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
 ```
 
-This command retrieves a boot image by using its name, and then renames the boot image.
-The command also adds a version and description to the boot image object.
-Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
+### Example 3: Set the keyboard layout
+
+The following example sets the default keyboard layout of the boot image to the **Russian (Russia)** language. It identifies the boot image by its ID.
+
+```powershell
+Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"
+```
 
 ## PARAMETERS
 
@@ -340,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputLocale
-{{ Fill InputLocale Description }}
+Starting in version 1910, use this parameter to configure the default keyboard layout for a boot image. It's the same setting as the **Set default keyboard layout in WinPE** option on the Customization tab of a boot image. For example, to set the input locale to Russian (Russia), specify the string `ru-ru`.
 
 ```yaml
 Type: String

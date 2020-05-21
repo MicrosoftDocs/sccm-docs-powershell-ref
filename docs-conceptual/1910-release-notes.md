@@ -338,7 +338,7 @@ Added a new parameter to support keyboard layout setting: `-InputLocale [string]
 
 #### Non-breaking changes
 
-Added a new parameter to support user policy on task sequence option: `-EnableUserPolicyOnTS [bool]`
+Added a new parameter to support the client setting for user policy on devices with multiple user sessions: `-EnableUserPolicyOnTS [bool]`
 
 ### Set-CMClientSettingSoftwareUpdate
 
