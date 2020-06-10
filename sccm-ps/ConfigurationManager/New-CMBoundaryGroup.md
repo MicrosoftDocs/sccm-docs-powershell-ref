@@ -49,7 +49,7 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 
 ### Example 1: Create a new boundary group
 ```
-PS XYZ:\> New-BoundaryGroup -Name "BGroup05"
+PS XYZ:\> New-CMBoundaryGroup -Name "BGroup05"
 CreatedBy:          
 CreatedOn           
 DefaultSiteCode:
