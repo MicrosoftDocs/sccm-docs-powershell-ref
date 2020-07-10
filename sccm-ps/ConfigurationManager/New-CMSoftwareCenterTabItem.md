@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMSoftwareCenterTabItem
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to create a custom Software Center tab.
 
 ## SYNTAX
 
@@ -18,21 +19,22 @@ New-CMSoftwareCenterTabItem -Name <String> -Url <Uri> [-DisableWildcardHandling]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1906, use this cmdlet to create a custom Software Center tab.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Create a helpdesk tab
 
-{{ Add example description here }}
+This example creates a new Software Center tab named **Helpdesk** that opens the helpdesk website.
+
+```powershell
+New-CMSoftwareCenterTabItem -Name "Helpdesk" -Url https://helpdesk.contoso.com
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -47,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -62,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the custom tab, which displays in the Software Center menu.
 
 ```yaml
 Type: String
@@ -77,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-{{ Fill Url Description }}
+
+Specify the URL for Software Center to display when a user selects this tab.
 
 ```yaml
 Type: Uri
@@ -92,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -101,6 +105,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-CMTaskSequencePhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to get the phased deployment for a task sequence.
 
 ## SYNTAX
 
@@ -43,21 +44,30 @@ Get-CMTaskSequencePhasedDeployment -Name <String> [-DisableWildcardHandling] [-F
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to get the phased deployment for a task sequence.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the deployment by name
+
+This example gets a task sequence phased deployment by the name of the phased deployment.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMTaskSequencePhasedDeployment -Name "myPhasedDeploymentName"
 ```
 
-{{ Add example description here }}
+### Example 2: Get the deployment by task sequence name
+
+This example gets a task sequence phased deployment by the name of the task sequence.
+
+```powershell
+Get-CMTaskSequencePhasedDeployment -TaskSequenceName "myTaskSequenceName"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -72,7 +82,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the phased deployment.
 
 ```yaml
 Type: String
@@ -102,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the phased deployment.
 
 ```yaml
 Type: String
@@ -117,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequence
-{{ Fill TaskSequence Description }}
+
+Specify a task sequence object.
 
 ```yaml
 Type: IResultObject
@@ -132,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the ID for a task sequence.
 
 ```yaml
 Type: String
@@ -147,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name for a task sequence.
 
 ```yaml
 Type: String
@@ -162,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

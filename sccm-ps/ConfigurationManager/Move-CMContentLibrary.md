@@ -8,7 +8,8 @@ schema: 2.0.0
 # Move-CMContentLibrary
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to move the content library before adding a passive site.
 
 ## SYNTAX
 
@@ -25,21 +26,30 @@ Move-CMContentLibrary -SiteCode <String> -NewLocation <String> [-DisableWildcard
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to move the content library before adding a passive site.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Move the content library for a site object
+
+This example uses a site object to move its content library to the specified location path.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Move-CMContentLibrary -InputObject $Site -NewLocation $NewLocationPath
 ```
 
-{{ Add example description here }}
+### Example 2: Move the content library for a site code
+
+This example uses a site code to move its content library to the specified location path.
+
+```powershell
+Move-CMContentLibrary -SiteCode $SiteCode -NewLocation $NewLocationPath
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a site object.
 
 ```yaml
 Type: IResultObject
@@ -84,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewLocation
-{{ Fill NewLocation Description }}
+
+Specify the network path to the new location for the content library.
 
 ```yaml
 Type: String
@@ -99,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{ Fill SiteCode Description }}
+
+Specify the site code.
 
 ```yaml
 Type: String
@@ -114,6 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -129,8 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -145,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -154,6 +168,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

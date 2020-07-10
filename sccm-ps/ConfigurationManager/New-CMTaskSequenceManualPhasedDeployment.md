@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMTaskSequenceManualPhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to create a phased deployment for a task sequence.
 
 ## SYNTAX
 
@@ -34,21 +35,36 @@ New-CMTaskSequenceManualPhasedDeployment [-TaskSequenceName] <String> -AddPhases
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to create a phased deployment for a task sequence. Before you use this cmdlet, add new customized deployment phases with the cmdlet [New-CMTaskSequencePhase](New-CMTaskSequencePhase.md).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a deployment for a task sequence by name
+
+This example creates a two-phase deployment named **phaseDeployment** for the task sequence **myTaskSequence**.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$phase1 = New-CMTaskSequencePhase -CollectionId "SMSDM001" -PhaseName "test01" -UserNotification DisplayAll
+$phase2 = New-CMTaskSequencePhase -CollectionId "SMSDM003" -PhaseName "test02" -UserNotification HideAll
+New-CMTaskSequenceManualPhasedDeployment -TaskSequenceName "myTaskSequence" -Name "phasedDeployment" -AddPhases ($phase1, $phase2)
 ```
 
-{{ Add example description here }}
+### Example 2: Create a deployment for a task sequence object
+
+This example creates a two-phase deployment named **phasedDeployment** for a piped task sequence object.
+
+```powershell
+$phase3 = New-CMTaskSequencePhase -CollectionId "SMSDM001" -PhaseName "test03" -UserNotification DisplayAll
+$phase4 = New-CMTaskSequencePhase -CollectionId "SMSDM003" -PhaseName "test04" -UserNotification HideAll
+$myTaskSequence | New-CMTaskSequenceManualPhasedDeployment -Name "phasedDeployment" -AddPhases ($phase3, $phase4)
+```
 
 ## PARAMETERS
 
 ### -AddPhases
-{{ Fill AddPhases Description }}
+
+Specify an array of phases. Use [New-CMTaskSequencePhase](New-CMTaskSequencePhase.md) to create the phases.
 
 ```yaml
 Type: Phase[]
@@ -63,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify a description for the task sequence phased deployment.
 
 ```yaml
 Type: String
@@ -78,7 +95,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +109,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for the task sequence phased deployment.
 
 ```yaml
 Type: String
@@ -123,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequence
-{{ Fill TaskSequence Description }}
+
+Specify a task sequence object.
 
 ```yaml
 Type: IResultObject
@@ -138,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify a task sequence by ID.
 
 ```yaml
 Type: String
@@ -153,7 +171,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify a task sequence by name.
 
 ```yaml
 Type: String
@@ -168,6 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -183,8 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -199,6 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -208,6 +229,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

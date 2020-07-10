@@ -8,7 +8,8 @@ schema: 2.0.0
 # Move-CMPhasedDeploymentToNext
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to move the specified phased deployment to the next phase.
 
 ## SYNTAX
 
@@ -31,21 +32,30 @@ Move-CMPhasedDeploymentToNext [-Force] -Name <String> [-DisableWildcardHandling]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to move the specified phased deployment to the next phase.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Move to the next phase for the deployment by name
+
+This example targets a phased deployment by its name, and moves it to the next phase.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Move-CMPhasedDeploymentToNext -Name "myPhasedDeploymentName"  
 ```
 
-{{ Add example description here }}
+### Example 1: Force move to the next phase for an input deployment object
+
+This example targets a phased deployment by a piped object, and force moves it to the next phase.
+
+```powershell
+$myPhasedDeployment | Move-CMPhasedDeploymentToNext -Force
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -60,7 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Force moves the deployment to the next phase.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the phased deployment ID.
 
 ```yaml
 Type: String
@@ -105,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a phased deployment object.
 
 ```yaml
 Type: IResultObject
@@ -120,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a phased deployment by name.
 
 ```yaml
 Type: String
@@ -135,6 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -150,8 +164,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -166,6 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -175,6 +190,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

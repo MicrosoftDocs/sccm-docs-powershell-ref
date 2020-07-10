@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-CMApplicationPhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to get a phased deployment for an application.
 
 ## SYNTAX
 
@@ -43,21 +44,32 @@ Get-CMApplicationPhasedDeployment -Name <String> [-DisableWildcardHandling] [-Fo
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to get a phased deployment for an application.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get phased deployment by name
+
+This example gets the object by the name of the phased deployment.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMApplicationPhasedDeployment -Name "myPhasedDeploymentName"
 ```
 
-{{ Add example description here }}
+### Example 2: Get phased deployment by app name
+
+This example gets the object by the name of the application.
+
+```powershell
+Get-CMApplicationPhasedDeployment -ApplicationName "myApplicationName"
+```
 
 ## PARAMETERS
 
 ### -Application
-{{ Fill Application Description }}
+
+Specify an object for the application.
 
 ```yaml
 Type: IResultObject
@@ -72,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-{{ Fill ApplicationId Description }}
+
+Specify the application ID.
 
 ```yaml
 Type: String
@@ -87,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationName
-{{ Fill ApplicationName Description }}
+
+Specify the application name.
 
 ```yaml
 Type: String
@@ -102,7 +116,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +130,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -132,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the phased deployment.
 
 ```yaml
 Type: String
@@ -147,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the phased deployment.
 
 ```yaml
 Type: String
@@ -162,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

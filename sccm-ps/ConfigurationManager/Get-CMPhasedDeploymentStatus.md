@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-CMPhasedDeploymentStatus
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to get the status of a specific phased deployment.
 
 ## SYNTAX
 
@@ -31,21 +32,30 @@ Get-CMPhasedDeploymentStatus -Name <String> [-DisableWildcardHandling] [-ForceWi
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to get the status of a specific phased deployment.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get status by the deployment name
+
+This example displays the status of a phased deployment based on its name.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMPhasedDeploymentStatus -Name "myPhasedDeploymentName"
 ```
 
-{{ Add example description here }}
+### Example 2: Get status of a variable deployment object
+
+This example displays the status of a phased deployment object that's saved into a variable.
+
+```powershell
+$myPhasedDeployment | Get-CMPhasedDeploymentStatus
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -60,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the phased deployment.
 
 ```yaml
 Type: String
@@ -90,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a phased deployment object.
 
 ```yaml
 Type: IResultObject
@@ -105,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the phased deployment.
 
 ```yaml
 Type: String

@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMDuplicateHardwareIdMacAddress
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to add duplicate hardware identifiers by MAC address.
 
 ## SYNTAX
 
@@ -18,21 +19,22 @@ New-CMDuplicateHardwareIdMacAddress -MacAddress <String> [-DisableWildcardHandli
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1910, use this cmdlet to add duplicate hardware identifiers by MAC address.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Add a duplicate hardware entry for a MAC address
 
-{{ Add example description here }}
+This example adds a duplicate hardware entry for the site by the device's network MAC address.
+
+```powershell
+New-CMDuplicateHardwareIdMacAddress -MacAddress '01:02:03:04:05:E0'
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -47,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -62,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -MacAddress
-{{ Fill MacAddress Description }}
+
+Specify the MAC address of the machine as a string with colon (`:`) delimiters. For example, `'01:02:03:04:05:E0'`
 
 ```yaml
 Type: String
@@ -77,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -92,8 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -108,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

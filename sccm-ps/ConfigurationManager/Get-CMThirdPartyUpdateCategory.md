@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-CMThirdPartyUpdateCategory
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to get third-party update categories.
 
 ## SYNTAX
 
@@ -34,21 +35,32 @@ Get-CMThirdPartyUpdateCategory [-CatalogId] <String> [-Id <String>] [-Name <Stri
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to get third-party update categories.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the category for a catalog object
+
+This example gets the category for a third-party update catalog object.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMThirdPartyUpdateCategory -Catalog $catalog
 ```
 
-{{ Add example description here }}
+### Example 2: Get the category for a catalog and category name
+
+This example gets the category for a specified third-party update catalog name and specified category name.
+
+```powershell
+Get-CMThirdPartyUpdateCategory -CatalogName $catalogName -Name $categoryName
+```
 
 ## PARAMETERS
 
 ### -CatalogId
-{{ Fill CatalogId Description }}
+
+Specify the ID of the third-party update catalog.
 
 ```yaml
 Type: String
@@ -63,7 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -CatalogName
-{{ Fill CatalogName Description }}
+
+Specify the name of the third-party update catalog.
 
 ```yaml
 Type: String
@@ -78,7 +91,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the category.
 
 ```yaml
 Type: String
@@ -123,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for a third-party update catalog.
 
 ```yaml
 Type: IResultObject
@@ -138,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the category.
 
 ```yaml
 Type: String
@@ -153,7 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -ParentId
-{{ Fill ParentId Description }}
 
 ```yaml
 Type: String
@@ -168,7 +181,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublishOption
-{{ Fill PublishOption Description }}
 
 ```yaml
 Type: PublishOptionType
@@ -184,6 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

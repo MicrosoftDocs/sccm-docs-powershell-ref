@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-CMSoftwareUpdatePhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to get the phased deployment for software updates.
 
 ## SYNTAX
 
@@ -61,21 +62,30 @@ Get-CMSoftwareUpdatePhasedDeployment -Name <String> [-DisableWildcardHandling] [
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to get the phased deployment for software updates.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get deployment by name
+
+This example gets the software update phased deployment by its name.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMSoftwareUpdatePhasedDeployment -Name "myPhasedDeploymentName"
 ```
 
-{{ Add example description here }}
+### Example 2: Get deployment by software update name
+
+This example gets the software update phased deployment by the name of the software update.
+
+```powershell
+Get-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateName "myUpdateName"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -105,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the phased deployment.
 
 ```yaml
 Type: String
@@ -120,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the phased deployment.
 
 ```yaml
 Type: String
@@ -135,7 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
-{{ Fill SoftwareUpdate Description }}
+
+Specify a software update object.
 
 ```yaml
 Type: IResultObject
@@ -150,7 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroup
-{{ Fill SoftwareUpdateGroup Description }}
+
+Specify a software update group object.
 
 ```yaml
 Type: IResultObject
@@ -165,7 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupId
-{{ Fill SoftwareUpdateGroupId Description }}
+
+Specify the ID of a software update group.
 
 ```yaml
 Type: String
@@ -180,7 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupName
-{{ Fill SoftwareUpdateGroupName Description }}
+
+Specify the name of a software update group.
 
 ```yaml
 Type: String
@@ -195,7 +210,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateId
-{{ Fill SoftwareUpdateId Description }}
+
+Specify the ID of a software update.
 
 ```yaml
 Type: String
@@ -210,7 +226,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateName
-{{ Fill SoftwareUpdateName Description }}
+
+Specify the name of a software update.
 
 ```yaml
 Type: String
@@ -225,6 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

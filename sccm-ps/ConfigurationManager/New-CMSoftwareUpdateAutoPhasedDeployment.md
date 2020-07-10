@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMSoftwareUpdateAutoPhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to create a phased deployment for software updates by generating two phases with same settings.
 
 ## SYNTAX
 
@@ -85,16 +86,26 @@ New-CMSoftwareUpdateAutoPhasedDeployment [-SoftwareUpdateGroupName] <String> [-F
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to create a phased deployment for software updates by generating two phases with same settings.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a deployment by update name
+
+This example creates a new software update phased deployment named **myDPName** for the software update **myUpdateName**.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+New-CMSoftwareUpdateAutoPhasedDeployment -SoftwareUpdateName "myUpdateName" -Name "myPDName" -FirstCollectionID "SMSDM001" -SecondCollectionID "SMSDM003" -CriteriaOption Compliance -CriteriaValue 1 -BeginCondition AfterPeriod -DaysAfterPreviousPhaseSuccess 2 -ThrottlingDays 3 -InstallationChoice AfterPeriod -DeadlineUnit Hours -DeadlineValue 4 -Description "MyDescription"
 ```
 
-{{ Add example description here }}
+### Example 2: Create a deployment by input update object
+
+This example creates a new software update phased deployment named **myPDName** for a piped software update object.
+
+```powershell
+$myUpdate | New-CMSoftwareUpdateAutoPhasedDeployment -Name "myPDName" -FirstCollectionID "SMSDM001" -SecondCollectionID "SMSDM003" -CriteriaOption Compliance -CriteriaValue 1 -BeginCondition AfterPeriod -DaysAfterPreviousPhaseSuccess 2 -ThrottlingDays 3 -InstallationChoice AfterPeriod -DeadlineUnit Hours -DeadlineValue 4 -Description "MyDescription"
+```
 
 ## PARAMETERS
 
@@ -207,7 +218,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify a description for the software update phased deployment.
 
 ```yaml
 Type: String
@@ -222,7 +234,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -237,7 +248,8 @@ Accept wildcard characters: False
 ```
 
 ### -FirstCollection
-{{ Fill FirstCollection Description }}
+
+Specify a collection object for the first phase.
 
 ```yaml
 Type: IResultObject
@@ -252,7 +264,8 @@ Accept wildcard characters: False
 ```
 
 ### -FirstCollectionId
-{{ Fill FirstCollectionId Description }}
+
+Specify a collection ID for the first phase.
 
 ```yaml
 Type: String
@@ -267,7 +280,8 @@ Accept wildcard characters: False
 ```
 
 ### -FirstCollectionName
-{{ Fill FirstCollectionName Description }}
+
+Specify a collection name for the first phase.
 
 ```yaml
 Type: String
@@ -282,7 +296,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -328,7 +341,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for the application phased deployment.
 
 ```yaml
 Type: String
@@ -343,7 +357,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecondCollection
-{{ Fill SecondCollection Description }}
+
+Specify a collection object for the second phase.
 
 ```yaml
 Type: IResultObject
@@ -358,7 +373,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecondCollectionId
-{{ Fill SecondCollectionId Description }}
+
+Specify a collection ID for the second phase.
 
 ```yaml
 Type: String
@@ -373,7 +389,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecondCollectionName
-{{ Fill SecondCollectionName Description }}
+
+Specify a collection name for the second phase.
 
 ```yaml
 Type: String
@@ -388,7 +405,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroup
-{{ Fill SoftwareUpdateGroup Description }}
+
+Specify an object for the software update group.
 
 ```yaml
 Type: IResultObject
@@ -403,7 +421,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupId
-{{ Fill SoftwareUpdateGroupId Description }}
+
+Specify the software update group by ID.
 
 ```yaml
 Type: String
@@ -418,7 +437,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupName
-{{ Fill SoftwareUpdateGroupName Description }}
+
+Specify the software update group by name.
 
 ```yaml
 Type: String
@@ -433,7 +453,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateIds
-{{ Fill SoftwareUpdateIds Description }}
+
+Specify an array of software update IDs.
 
 ```yaml
 Type: String[]
@@ -448,7 +469,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateNames
-{{ Fill SoftwareUpdateNames Description }}
+
+Specify an array of software update names.
 
 ```yaml
 Type: String[]
@@ -463,7 +485,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdates
-{{ Fill SoftwareUpdates Description }}
+
+Specify an array of software update objects.
 
 ```yaml
 Type: IResultObject[]
@@ -493,6 +516,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -508,8 +532,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -524,6 +548,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -535,6 +560,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

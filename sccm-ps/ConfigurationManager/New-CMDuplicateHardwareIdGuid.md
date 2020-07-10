@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMDuplicateHardwareIdGuid
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to add duplicate hardware identifiers by GUID.
 
 ## SYNTAX
 
@@ -18,21 +19,22 @@ New-CMDuplicateHardwareIdGuid -Id <Guid> [-DisableWildcardHandling] [-ForceWildc
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1910, use this cmdlet to add duplicate hardware identifiers by GUID.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Add a duplicate hardware entry for a GUID
 
-{{ Add example description here }}
+This example adds a new duplicate hardware entry for the site by the device's GUID.
+
+```powershell
+New-CMDuplicateHardwareIdGuid -Id 24D0F753-B2E2-4D9C-B07C-099C4FC1EF3C
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -47,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -62,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the hardware GUID.
 
 ```yaml
 Type: Guid
@@ -77,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -92,8 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -108,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

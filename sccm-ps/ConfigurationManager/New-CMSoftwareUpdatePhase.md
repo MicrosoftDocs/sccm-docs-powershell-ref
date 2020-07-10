@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMSoftwareUpdatePhase
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to create a deployment phase for software update.
 
 ## SYNTAX
 
@@ -61,16 +62,21 @@ New-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-Sof
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to create a deployment phase for software update.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Create a software update phase
 
-{{ Add example description here }}
+This example creates a software update phase named **MySUPhase** for the collection named **MyCollection** that will only display in Software Center.
+
+```powershell
+New-CMSoftwareUpdatePhase `
+ -CollectionName "MyCollection" `
+ -PhaseName "MySUPhase" `
+ -UserNotificationOption DisplaySoftwareCenterOnly
+```
 
 ## PARAMETERS
 
@@ -182,7 +188,8 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{ Fill Collection Description }}
+
+Specify an object for the target collection.
 
 ```yaml
 Type: IResultObject
@@ -197,7 +204,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{ Fill CollectionId Description }}
+
+Specify the target collection by ID.
 
 ```yaml
 Type: String
@@ -212,7 +220,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{ Fill CollectionName Description }}
+
+Specify the target collection by name.
 
 ```yaml
 Type: String
@@ -364,7 +373,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -410,7 +418,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhaseDescription
-{{ Fill PhaseDescription Description }}
+
+Specify a description for the phase.
 
 ```yaml
 Type: String
@@ -425,7 +434,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhaseName
-{{ Fill PhaseName Description }}
+
+Specify a name for the description.
 
 ```yaml
 Type: String
@@ -592,6 +602,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -607,8 +618,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -623,6 +634,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

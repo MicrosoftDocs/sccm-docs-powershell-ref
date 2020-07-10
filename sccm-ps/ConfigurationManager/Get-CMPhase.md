@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-CMPhase
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to get a deployment phase for a specific instance or a phased deployment.
 
 ## SYNTAX
 
@@ -34,21 +35,24 @@ Get-CMPhase [-Name] <String> [-PhaseOrder <Int32>] [-PhaseId <String>] [-PhaseNa
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to get a deployment phase for a specific instance or a phased deployment.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Get phase by ID
 
-{{ Add example description here }}
+This example gets the phase by its ID.
+
+```powershell
+Get-CMPhase -Id "66DEDF86-D0CB-457D-88BE-47E3FAC92A47"
+```
 
 ## PARAMETERS
 
 ### -Collection
-{{ Fill Collection Description }}
+
+Specify a collection object for the phase.
 
 ```yaml
 Type: IResultObject
@@ -63,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{ Fill CollectionId Description }}
+
+Specify a collection by ID for the phase.
 
 ```yaml
 Type: String
@@ -78,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{ Fill CollectionName Description }}
+
+Specify a collection by name for the phase.
 
 ```yaml
 Type: String
@@ -93,7 +99,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +113,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -123,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the phased deployment.
 
 ```yaml
 Type: String
@@ -138,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the phased deployment.
 
 ```yaml
 Type: String
@@ -153,7 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhasedDeployment
-{{ Fill PhasedDeployment Description }}
+
+Specify the phased deployment object for the phase.
 
 ```yaml
 Type: IResultObject
@@ -168,7 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhaseId
-{{ Fill PhaseId Description }}
+
+Specify the ID of the phase.
 
 ```yaml
 Type: String
@@ -183,7 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhaseName
-{{ Fill PhaseName Description }}
+
+Specify the name of the phase.
 
 ```yaml
 Type: String
@@ -198,7 +207,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhaseOrder
-{{ Fill PhaseOrder Description }}
+
+Specify an integer value for the phase's order.
 
 ```yaml
 Type: Int32
@@ -213,6 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

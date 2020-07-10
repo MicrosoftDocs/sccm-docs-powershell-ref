@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-CMThirdPartyUpdateCatalog
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to get a third-party updates catalog.
 
 ## SYNTAX
 
@@ -27,21 +28,46 @@ Get-CMThirdPartyUpdateCatalog [-Id] <String> [-PublisherName <String>] [-SiteCod
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1910, use this cmdlet to get a third-party updates catalog.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a catalog by ID
+
+This example gets a third-party update catalog by its ID.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMThirdPartyUpdateCatalog -Id $id
 ```
 
-{{ Add example description here }}
+### Example 2: Get a catalog by name
+
+This example gets a third-party update catalog by its name.
+
+```powershell
+Get-CMThirdPartyUpdateCatalog -Name $name
+```
+
+### Example 3: Get all catalogs for a site
+
+This example gets all third-party update catalogs for a site by the site code.
+
+```powershell
+Get-CMThirdPartyUpdateCatalog -SiteCode $siteCode
+```
+
+### Example 4: Get all custom catalogs
+
+This example gets all custom third-party update catalogs.
+
+```powershell
+Get-CMThirdPartyUpdateCatalog -IsCustomCatalog $true
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -56,7 +82,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -71,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the catalog.
 
 ```yaml
 Type: String
@@ -86,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsCustomCatalog
-{{ Fill IsCustomCatalog Description }}
+
+To filter the results for only custom catalogs, set this parameter to `$true`.
 
 ```yaml
 Type: Boolean
@@ -101,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsSyncEnabled
-{{ Fill IsSyncEnabled Description }}
+
+To filter the results for only catalogs that you enable for sync, set this parameter to `$true`.
 
 ```yaml
 Type: Boolean
@@ -116,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the catalog.
 
 ```yaml
 Type: String
@@ -131,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublisherName
-{{ Fill PublisherName Description }}
+
+Specify the name of the catalog's publisher.
 
 ```yaml
 Type: String
@@ -146,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-{{ Fill SiteCode Description }}
+
+Specify the site code to filter the results for a specific site.
 
 ```yaml
 Type: String
@@ -161,6 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

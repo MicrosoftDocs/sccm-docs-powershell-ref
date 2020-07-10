@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMSoftwareUpdateManualPhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to create a phased deployment for software updates.
 
 ## SYNTAX
 
@@ -55,21 +56,35 @@ New-CMSoftwareUpdateManualPhasedDeployment [-SoftwareUpdateGroupName] <String> -
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Starting in version 2002, use this cmdlet to create a phased deployment for software updates. Before you use this cmdlet, add new customized deployment phases with the cmdlet [New-CMSoftwareUpdatePhase](New-CMSoftwareUpdatePhase.md).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a deployment for software updates by name
+
+This example creates a two-phase deployment named **myPhaseDeployment** for two software updates.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$phase1 = New-CMSoftwareUpdatePhase -CollectionId "SMSDM001" -PhaseName "test01" -UserNotificationOption DisplaySoftwareCenterOnly
+$phase2 = New-CMSoftwareUpdatePhase -CollectionId "SMSDM003" -PhaseName "test02" -UserNotificationOption DisplaySoftwareCenterOnly
+New-CMSoftwareUpdateManualPhasedDeployment -SoftwareUpdateNames ("myUpdateA", "myUpdateB") -Name "myPhaseDeployment" -AddPhases ($phase1, $phase2)
 ```
 
-{{ Add example description here }}
+### Example 2: Create a deployment for a software update group by name
+
+This example creates a two-phase deployment named **myPhaseDeploymentForGroup** for the software update group **myGroup**.
+
+```powershell
+$phase3 = New-CMSoftwareUpdatePhase -CollectionId "SMSDM001" -PhaseName "test03" -UserNotificationOption DisplaySoftwareCenterOnly
+$phase4 = New-CMSoftwareUpdatePhase -CollectionId "SMSDM003" -PhaseName "test04" -UserNotificationOption DisplaySoftwareCenterOnly
+New-CMSoftwareUpdateManualPhasedDeployment -SoftwareUpdateGroupName "myGroup" -Name "myPhaseDeploymentForGroup" -AddPhases ($phase3, $phase4)
+```
 
 ## PARAMETERS
 
 ### -AddPhases
-{{ Fill AddPhases Description }}
+
+Specify an array of phases. Use [New-CMSoftwareUpdatePhase](New-CMSoftwareUpdatePhase.md) to create the phases.
 
 ```yaml
 Type: Phase[]
@@ -84,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify a description for the software update phased deployment.
 
 ```yaml
 Type: String
@@ -99,7 +115,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +129,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for the software update phased deployment.
 
 ```yaml
 Type: String
@@ -144,7 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroup
-{{ Fill SoftwareUpdateGroup Description }}
+
+Specify an object for a software update group.
 
 ```yaml
 Type: IResultObject
@@ -159,7 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupId
-{{ Fill SoftwareUpdateGroupId Description }}
+
+Specify a software update group by ID.
 
 ```yaml
 Type: String
@@ -174,7 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupName
-{{ Fill SoftwareUpdateGroupName Description }}
+
+Specify a software update group by name.
 
 ```yaml
 Type: String
@@ -189,7 +207,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateIds
-{{ Fill SoftwareUpdateIds Description }}
+
+Specify an array of software update IDs.
 
 ```yaml
 Type: String[]
@@ -204,7 +223,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateNames
-{{ Fill SoftwareUpdateNames Description }}
+
+Specify an array of software update names.
 
 ```yaml
 Type: String[]
@@ -219,7 +239,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdates
-{{ Fill SoftwareUpdates Description }}
+
+Specify an array of software update objects.
 
 ```yaml
 Type: IResultObject[]
@@ -234,6 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -249,8 +271,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -265,6 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -276,6 +299,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
