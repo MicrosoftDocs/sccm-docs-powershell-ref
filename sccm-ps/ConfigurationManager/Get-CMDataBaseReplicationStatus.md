@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets the status for database replication.
 external help file: AdminUI.PS.DatabaseReplication.dll-Help.xml
 Module Name: ConfigurationManager
@@ -102,11 +102,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### IResultObject[]#SMS_ReplicationLinkSummary
+
+### IResultObject#SMS_ReplicationLinkSummary
 
 ## NOTES
 

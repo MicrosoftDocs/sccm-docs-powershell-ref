@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes client settings for Configuration Manager devices and users.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -128,8 +128,8 @@ Set-CMClientSetting -Name <String> [-Bits] [-EnableBitsMaxBandwidth <Boolean>] [
 ### SetClientPolicySettingsByName
 ```
 Set-CMClientSetting -Name <String> [-ClientPolicy] [-PolicyPollingMins <Int32>] [-EnableUserPolicy <Boolean>]
- [-EnableUserPolicyOnInternet <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableUserPolicyOnInternet <Boolean>] [-EnableUserPolicyOnTS <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetComputerAgentSettingsByName
@@ -601,21 +601,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentEvaluationSchedule
 Specifies a deployment evaluation schedule as a schedule object.
 To obtain a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
@@ -804,6 +789,21 @@ Indicates whether users receive a user policy when logged on to a computer on th
 In order for users to receive user policy, you must enable user polling.
 You can use the *EnableUserPolicyPolling* parameter to enable user polling.
 An Internet-based management point must authenticate the user.
+
+```yaml
+Type: Boolean
+Parameter Sets: SetClientPolicySettingsByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableUserPolicyOnTS
+Starting in version 1910, use this parameter to enable or disable the client setting, **Enable user policy for multiple user sessions**.
 
 ```yaml
 Type: Boolean
@@ -1794,6 +1794,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UserDeviceAffinity
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetUserDeviceAffinitySettingsByName
+Aliases: UserDeviceAffinitySettings
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UseUtcForEvaluationTime
 Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time, to configure a recurring interval.
 If you specify $False, Configuration Manager uses local time.
@@ -1804,19 +1817,6 @@ Parameter Sets: SetNetworkAccessProtectionSettingsByName
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserDeviceAffinity
-```yaml
-Type: SwitchParameter
-Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases: UserDeviceAffinitySettings
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1862,6 +1862,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1879,12 +1894,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

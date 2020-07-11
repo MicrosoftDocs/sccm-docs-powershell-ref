@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds a compliance setting script.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -16,7 +16,7 @@ Adds a compliance setting script
 
 ### EmptyRule (Default)
 ```
-Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile <String>]
+Add-CMComplianceSettingScript -DataType <SettingDataType> [-Remediate] [-DiscoveryScriptFile <String>]
  -DiscoveryScriptLanguage <ScriptingLanguage> [-DiscoveryScriptText <String>] [-Is64Bit] [-IsPerUser]
  [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
  [-RemediationScriptText <String>] [-Description <String>] -InputObject <PSObject> -Name <String> [-NoRule]
@@ -25,7 +25,7 @@ Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile 
 
 ### ExistentialRule
 ```
-Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile <String>]
+Add-CMComplianceSettingScript -DataType <SettingDataType> [-Remediate] [-DiscoveryScriptFile <String>]
  -DiscoveryScriptLanguage <ScriptingLanguage> [-DiscoveryScriptText <String>] [-Is64Bit] [-IsPerUser]
  [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
  [-RemediationScriptText <String>] [-Description <String>] -Existence <ExistenceType> [-ExistentialRule]
@@ -36,7 +36,7 @@ Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile 
 
 ### ValueRule
 ```
-Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile <String>]
+Add-CMComplianceSettingScript -DataType <SettingDataType> [-Remediate] [-DiscoveryScriptFile <String>]
  -DiscoveryScriptLanguage <ScriptingLanguage> [-DiscoveryScriptText <String>] [-Is64Bit] [-IsPerUser]
  [-RemediationScriptFile <String>] [-RemediationScriptLanguage <ScriptingLanguage>]
  [-RemediationScriptText <String>] [-Description <String>] -ExpectedValue <String[]>
@@ -56,26 +56,12 @@ Add-CMComplianceSettingScript -DataType <SettingDataType> [-DiscoveryScriptFile 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+```PowerShell
+Add-CMComplianceSettingScript -InputObject $ci -DiscoveryScriptLanguage PowerShell -DataType String -Name "test1" -DiscoveryScriptText "test" -RemediationScriptLanguage PowerShell -RemediationScriptText "test"  -RuleName rule1 -ExpressionOperator IsEquals -ValueRule -ExpectedValue 1.0 -Remediate
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DataType
 ```yaml
@@ -305,19 +291,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoRule
-```yaml
-Type: SwitchParameter
-Parameter Sets: EmptyRule
-Aliases: NoRules
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NoncomplianceSeverity
 ```yaml
 Type: NoncomplianceSeverity
@@ -332,8 +305,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NoRule
+```yaml
+Type: SwitchParameter
+Parameter Sets: EmptyRule
+Aliases: NoRules
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassThru
 Returns an object representing the item with which you are working. By default, this cmdlet may not generate any output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Remediate
 
 ```yaml
 Type: SwitchParameter
@@ -439,6 +439,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -456,7 +471,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -465,7 +480,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

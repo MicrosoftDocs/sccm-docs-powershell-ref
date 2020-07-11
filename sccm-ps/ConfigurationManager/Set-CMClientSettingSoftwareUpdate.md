@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a client setting software update.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
@@ -18,7 +18,8 @@ Sets a client setting software update.
 ```
 Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObject>]
  [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
- [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] -Name <String> [-PassThru]
+ [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnableDeltaDownload <Boolean>] [-DeltaDownloadPort <Int32>] -Name <String> [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -26,7 +27,8 @@ Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObj
 ```
 Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObject>]
  [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
- [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] [-DefaultSetting] [-PassThru]
+ [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnableDeltaDownload <Boolean>] [-DeltaDownloadPort <Int32>] [-DefaultSetting] [-PassThru]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,8 +36,9 @@ Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObj
 ```
 Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObject>]
  [-DeploymentEvaluationSchedule <IResultObject>] [-BatchingTimeout <Int32>] [-EnforceMandatory <Boolean>]
- [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] -InputObject <IResultObject>
- [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TimeUnit <BatchingTimeoutType>] [-Office365ManagementType <Boolean>] [-EnableThirdPartyUpdates <Boolean>]
+ [-EnableDeltaDownload <Boolean>] [-DeltaDownloadPort <Int32>] -InputObject <IResultObject> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,9 +50,17 @@ Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObj
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Enable third-party updates in the default client settings
+
+``` PowerShell
+Set-CMClientSettingSoftwareUpdate -DefaultSetting -Enable $true -EnableThirdPartyUpdates $true
 ```
-PS XYZ:\>
+
+### Example 2: Enable third-party updates in a custom device setting
+
+``` PowerShell
+$clientDeviceSettingName = "Dev device settings"
+Set-CMClientSettingSoftwareUpdate -Name $clientDeviceSettingName -Enable $true -EnableThirdPartyUpdates $true
 ```
 
 ## PARAMETERS
@@ -67,21 +78,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultSetting
 ```yaml
 Type: SwitchParameter
@@ -89,6 +85,21 @@ Parameter Sets: SetDefaultSetting
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeltaDownloadPort
+Use this parameter to configure the network port value for the following client setting in the **Software Updates** group: **Port that clients use to receive requests for delta content**. Use the **EnableDeltaDownload** parameter to enable the behavior.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -124,10 +135,43 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
+Use this parameter to enable or disable the following client setting in the **Software Updates** group: **Enable software updates on clients**.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableSoftwareUpdatesOnClient
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableDeltaDownload
+
+Use this parameter to enable or disable the following client setting in the **Software Updates** group: **Allow clients to download delta content when available**. Use the **DeltaDownloadPort** parameter to configure the network port.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableThirdPartyUpdates
+Starting in version 1910, use this parameter to enable or disable the following client setting in the **Software Updates** group: **Enable third party software updates**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -245,6 +289,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -262,7 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -271,7 +330,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

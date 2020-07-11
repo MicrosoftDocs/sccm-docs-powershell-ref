@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets maintenance tasks in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -31,11 +31,12 @@ A maintenance task is a task in System Center Configuration Manager that perform
 ## EXAMPLES
 
 ### Example 1: Get a maintenance task
-```
-PS XYZ:\> Get-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup"
-```
 
-This command gets the maintenance task named Backup for the Configuration Manager site that has the site code CM1.
+This example gets the maintenance task named **Backup SMS Site Server** for the Configuration Manager site that has the site code **CM1**.
+
+```powershell
+Get-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup SMS Site Server"
+```
 
 ## PARAMETERS
 
@@ -100,11 +101,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### IResultObject[]#SMS_SCI_SQLTask
+
+### IResultObject#SMS_SCI_SQLTask
 
 ## NOTES
 

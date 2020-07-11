@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -14,10 +14,11 @@ schema: 2.0.0
 
 ### ByValue (Default)
 ```
-Set-CMTSStepApplyWindowsSetting [-UserName <String>] [-OrganizationName <String>] [-ProductKey <String>]
- [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>] [-Password <SecureString>]
- [-TimeZone <TimeZoneInfo>] -InputObject <IResultObject> [-StepName <String>] [-NewStepName <String>]
- [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+Set-CMTSStepApplyWindowsSetting [-UserName <String>] [-OrganizationName <String>] [-InputLocale <String>]
+ [-SystemLocale <String>] [-UserLocale <String>] [-UILanguage <String>] [-UILanguageFallback <String>]
+ [-ProductKey <String>] [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>]
+ [-Password <SecureString>] [-TimeZone <TimeZoneInfo>] -InputObject <IResultObject> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
  [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
  [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
@@ -27,10 +28,11 @@ Set-CMTSStepApplyWindowsSetting [-UserName <String>] [-OrganizationName <String>
 
 ### ById
 ```
-Set-CMTSStepApplyWindowsSetting [-UserName <String>] [-OrganizationName <String>] [-ProductKey <String>]
- [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>] [-Password <SecureString>]
- [-TimeZone <TimeZoneInfo>] -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>]
- [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+Set-CMTSStepApplyWindowsSetting [-UserName <String>] [-OrganizationName <String>] [-InputLocale <String>]
+ [-SystemLocale <String>] [-UserLocale <String>] [-UILanguage <String>] [-UILanguageFallback <String>]
+ [-ProductKey <String>] [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>]
+ [-Password <SecureString>] [-TimeZone <TimeZoneInfo>] -TaskSequenceId <String> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
  [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
  [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
@@ -40,10 +42,11 @@ Set-CMTSStepApplyWindowsSetting [-UserName <String>] [-OrganizationName <String>
 
 ### ByName
 ```
-Set-CMTSStepApplyWindowsSetting [-UserName <String>] [-OrganizationName <String>] [-ProductKey <String>]
- [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>] [-Password <SecureString>]
- [-TimeZone <TimeZoneInfo>] -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>]
- [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+Set-CMTSStepApplyWindowsSetting [-UserName <String>] [-OrganizationName <String>] [-InputLocale <String>]
+ [-SystemLocale <String>] [-UserLocale <String>] [-UILanguage <String>] [-UILanguageFallback <String>]
+ [-ProductKey <String>] [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>]
+ [-Password <SecureString>] [-TimeZone <TimeZoneInfo>] -TaskSequenceName <String> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
  [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
  [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
@@ -319,21 +322,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
 {{ Fill Description Description }}
 
@@ -477,6 +465,21 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputLocale
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
 Aliases:
 
 Required: False
@@ -1092,6 +1095,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SystemLocale
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TaskSequenceId
 {{ Fill TaskSequenceId Description }}
 
@@ -1127,6 +1145,51 @@ Accept wildcard characters: False
 
 ```yaml
 Type: TimeZoneInfo
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UILanguage
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UILanguageFallback
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserLocale
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
 Parameter Sets: ByValue, ById, ByName
 Aliases:
 
@@ -1184,6 +1247,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1201,7 +1279,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

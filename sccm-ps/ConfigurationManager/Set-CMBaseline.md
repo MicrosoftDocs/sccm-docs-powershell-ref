@@ -1,4 +1,4 @@
----
+﻿---
 description: Changes the settings of configuration baselines.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
@@ -24,8 +24,8 @@ Set-CMBaseline -Id <Int32> [-NewName <String>] [-Description <String>] [-AddCate
  [-RemoveOSConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>]
  [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
  [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>]
- [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-AllowComanagedClients <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByNameMandatory
@@ -38,8 +38,8 @@ Set-CMBaseline -Name <String> [-NewName <String>] [-Description <String>] [-AddC
  [-RemoveOSConfigurationItem <String[]>] [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>]
  [-AddRequiredConfigurationItem <String[]>] [-AddProhibitedConfigurationItem <String[]>]
  [-AddOptionalConfigurationItem <String[]>] [-AddOSConfigurationItem <String[]>]
- [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-AllowComanagedClients <Boolean>] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByValueMandatory
@@ -52,8 +52,9 @@ Set-CMBaseline -InputObject <IResultObject> [-NewName <String>] [-Description <S
  [-RemoveOptionalConfigurationItem <String[]>] [-RemoveOSConfigurationItem <String[]>]
  [-RemoveSoftwareUpdate <String[]>] [-RemoveBaseline <String[]>] [-AddRequiredConfigurationItem <String[]>]
  [-AddProhibitedConfigurationItem <String[]>] [-AddOptionalConfigurationItem <String[]>]
- [-AddOSConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddOSConfigurationItem <String[]>] [-AddSoftwareUpdate <String[]>] [-AddBaseline <String[]>]
+ [-AllowComanagedClients <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,11 +111,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddOSConfigurationItem
+### -AddOptionalConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: AddOSConfigurationItems
+Aliases: AddOptionalConfigurationItems
 
 Required: False
 Position: Named
@@ -123,11 +124,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddOptionalConfigurationItem
+### -AddOSConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: AddOptionalConfigurationItems
+Aliases: AddOSConfigurationItems
 
 Required: False
 Position: Named
@@ -175,6 +176,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowComanagedClients
+Starting in version 1906, use this parameter to set the following option on the configuration baseline properties: **Always apply this baseline even for co-managed clients**
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClearBaseline
 ```yaml
 Type: SwitchParameter
@@ -188,7 +203,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClearOSConfigurationItem
+### -ClearOptionalConfigurationItem
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -201,7 +216,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClearOptionalConfigurationItem
+### -ClearOSConfigurationItem
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -249,21 +264,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -433,11 +433,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveOSConfigurationItem
+### -RemoveOptionalConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: RemoveOSConfigurationItems
+Aliases: RemoveOptionalConfigurationItems
 
 Required: False
 Position: Named
@@ -446,11 +446,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveOptionalConfigurationItem
+### -RemoveOSConfigurationItem
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: RemoveOptionalConfigurationItems
+Aliases: RemoveOSConfigurationItems
 
 Required: False
 Position: Named
@@ -498,6 +498,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -515,12 +530,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

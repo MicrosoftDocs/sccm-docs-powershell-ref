@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies properties for an application deployment in Configuration Manager.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
@@ -23,9 +23,9 @@ Set-CMApplicationDeployment -InputObject <IResultObject> [-Comment <String>] [-R
  [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
  [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
  [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetApplicationDeploymentByNameMandatory
@@ -37,9 +37,9 @@ Set-CMApplicationDeployment -ApplicationName <String> [-Comment <String>] [-Requ
  [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
  [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
  [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetApplicationDeploymentByIdMandatory
@@ -51,9 +51,9 @@ Set-CMApplicationDeployment -ApplicationId <String> [-Comment <String>] [-Requir
  [-PersistOnWriteFilterDevice <Boolean>] [-CreateAlertBaseOnPercentSuccess <Boolean>]
  [-SuccessParameterValue <Int32>] [-PostponeDateTime <DateTime>] [-CreateAlertBaseOnPercentFailure <Boolean>]
  [-FailParameterValue <Int32>] [-EnableMomAlert <Boolean>] [-RaiseMomAlertsOnFailure <Boolean>]
- [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
- [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
+ [-PassThru] [-CollectionName <String>] [-CollectionId <String>] [-Collection <IResultObject>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,14 +72,29 @@ You can specify an application by name or ID, or you can use the [Get-CMApplicat
 ## EXAMPLES
 
 ### Example 1: Modify availability and deadline for an application deployment
-```
-PS XYZ:\> Set-CMApplicationDeployment -ApplicationName "Track System 2011" -CollectionName "All Users" -AvaliableDate 2012/10/21 -AvaliableTime 17:25 -DeadlineDate 2013/01/01 -DeadlineTime 13:10
+
+```PowerShell
+Set-CMApplicationDeployment -ApplicationName "Track System 2011" -CollectionName "All Users" -AvaliableDate 2012/10/21 -AvaliableTime 17:25 -DeadlineDate 2013/01/01 -DeadlineTime 13:10
 ```
 
-This command modifies an application deployment for an application named Track System 2011 for a collection named All Users.
-The command specifies the date and time when the application becomes available and the date and time of a deadline for deployment.
+This command modifies an application deployment for an application named **Track System 2011** for a collection named **All Users**. The command specifies the date and time when the application becomes available and the date and time of a deadline for deployment.
 
 ## PARAMETERS
+
+### -AllowRepairApp
+Starting in version 2002, use this parameter to configure the repair application option when creating a deployment for an application.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: AllowUserRepairApplication
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ApplicationId
 Specifies the ID of an application.
@@ -176,21 +191,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -562,6 +562,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -579,11 +594,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
+### IResultObject#SMS_ApplicationAssignment
 
 ## NOTES
 

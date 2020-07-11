@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a Configuration Manager task sequence.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -24,7 +24,8 @@ Set-CMTaskSequence -InputObject <IResultObject> [-NewName <String>] [-Descriptio
  [-EnableTaskSequence <Boolean>] [-MaxRunTimeMins <Int64>] [-UseBootImage <Boolean>] [-BootImageId <String>]
  [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
  [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-HighPerformance <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetById
@@ -36,7 +37,8 @@ Set-CMTaskSequence -TaskSequenceId <String> [-NewName <String>] [-Description <S
  [-EnableTaskSequence <Boolean>] [-MaxRunTimeMins <Int64>] [-UseBootImage <Boolean>] [-BootImageId <String>]
  [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
  [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-HighPerformance <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByName
@@ -48,7 +50,8 @@ Set-CMTaskSequence -TaskSequenceName <String> [-NewName <String>] [-Description 
  [-EnableTaskSequence <Boolean>] [-MaxRunTimeMins <Int64>] [-UseBootImage <Boolean>] [-BootImageId <String>]
  [-AddSupportedOperatingSystemPlatform <IResultObject[]>]
  [-RemoveSupportedOperatingSystemPlatform <IResultObject[]>] [-RunOnAnyPlatform] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-HighPerformance <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -129,22 +132,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -269,6 +256,21 @@ ForceWildcardHandling processes wildcard characters and may lead to unexpected b
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighPerformance
+Starting in version 1910, use this parameter to set the following option on the **Performance** page of the task sequence properties: **Run as high performance power plan**.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -509,6 +511,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -527,12 +545,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

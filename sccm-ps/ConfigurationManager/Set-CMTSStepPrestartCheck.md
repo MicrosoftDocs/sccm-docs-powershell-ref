@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,7 +15,11 @@ schema: 2.0.0
 ### ByValue (Default)
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
- [-Memory <Int32>] [-CheckOS <Boolean>] [-OS <OSType>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
+ [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
+ [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
+ [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
+ [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
+ [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
  -InputObject <IResultObject> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
  [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
@@ -27,7 +31,11 @@ Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMe
 ### ById
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
- [-Memory <Int32>] [-CheckOS <Boolean>] [-OS <OSType>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
+ [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
+ [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
+ [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
+ [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
+ [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
  -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
  [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
@@ -39,7 +47,11 @@ Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMe
 ### ByName
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
- [-Memory <Int32>] [-CheckOS <Boolean>] [-OS <OSType>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
+ [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
+ [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
+ [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
+ [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
+ [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
  -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
  [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
  [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
@@ -256,8 +268,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CheckCMClientMinVersion
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum client version**. Use the parameter **CMClientMinVersion** to set the specific client version number.
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: CheckClientMinVersion
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckMaxOSVersion
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Maximum OS version**. Use the parameter **MaxOSVersion** to set the specific OS version number.
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CheckMemory
-{{ Fill CheckMemory Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum memory (MB)**. Use the parameter **Memory** to set the specific memory size.
 
 ```yaml
 Type: Boolean
@@ -271,8 +313,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CheckMinOSVersion
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum OS version**. Use the parameter **MinOSVersion** to set the specific OS version number.
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckNetworkConnected
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Network adapter connected**
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: NetworkConnected
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckNetworkWired
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Network adapter is not wireless**
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: NetworkWired
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CheckOS
-{{ Fill CheckOS Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Current OS to be refreshed is**. Use the parameter **OS** to set the specific OS type.
 
 ```yaml
 Type: Boolean
@@ -286,8 +373,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CheckOSArchitecture
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Architecture of current OS**. Use the parameter **OSArchitecture** to set the specific architecture type.
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckOSLanguageId
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Language of current OS**. Use the parameter **OSLanguageID** to set the specific language.
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: EnableCheckOSLanguageId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckPowerState
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **AC power plugged in**.
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases: NotBattery
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CheckSpace
-{{ Fill CheckSpace Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum free disk space (MB)**. Use the parameter **DiskSpace** to set the specific size.
 
 ```yaml
 Type: Boolean
@@ -302,7 +434,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckSpeed
-{{ Fill CheckSpeed Description }}
+Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum processor speed (MHz)**. Use the parameter **Speed** to set the specific speed.
 
 ```yaml
 Type: Boolean
@@ -323,6 +455,21 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: ByValue, ById, ByName
 Aliases: ClearConditions
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CMClientMinVersion
+Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: ClientMinVersion
 
 Required: False
 Position: Named
@@ -376,21 +523,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
 {{ Fill Description Description }}
 
@@ -422,7 +554,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskSpace
-{{ Fill DiskSpace Description }}
+Use this parameter to configure the specific size for the minimum free disk space check. Specify an integer value for the size in MB. Use the parameter **CheckSpace** to enable or disable the check.
 
 ```yaml
 Type: Int32
@@ -618,13 +750,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MaxOSVersion
+Use this parameter to configure the specific OS version. Specify the maximum OS version with major version, minor version, and build number. For example, `10.0.18356`. Use the parameter **CheckMaxOSVersion** to enable or disable the check.
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: CurrentMaxOSVersion
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Memory
-{{ Fill Memory Description }}
+Use this parameter to configure the specific size for the minimum memory check. Specify an integer value for the size in MB. Use the parameter **CheckMemory** to enable or disable the check.
 
 ```yaml
 Type: Int32
 Parameter Sets: ByValue, ById, ByName
 Aliases: MinimumMemory
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MinOSVersion
+Use this parameter to configure the specific OS version. Specify the minimum OS version with major version, minor version, and build number. For example, `10.0.16299`. Use the parameter **CheckMinOSVersion** to enable or disable the check.
+
+```yaml
+Type: String
+Parameter Sets: ByValue, ById, ByName
+Aliases: CurrentMinOSVersion
 
 Required: False
 Position: Named
@@ -693,8 +855,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OperatorType
+{{ Fill OperatorType Description }}
+
+```yaml
+Type: VariableOperatorType
+Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
+Aliases:
+Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OS
-{{ Fill OS Description }}
+Use this parameter to configure the specific OS type: `Client` or `Server`. Use the parameter **CheckOS** to enable or disable the check.
 
 ```yaml
 Type: OSType
@@ -709,14 +887,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OperatorType
-{{ Fill OperatorType Description }}
+### -OSArchitecture
+Use this parameter to configure the specific OS architecture: `Arch32` for 32-bit or `Arch64` for 64-bit. Use the parameter **CheckOSArchitecture** to enable or disable the check.
 
 ```yaml
-Type: VariableOperatorType
-Parameter Sets: ByIdSetConditionVariable, ByNameSetConditionVariable, ByValueSetConditionVariable
-Aliases:
-Accepted values: Exists, NotExists, Equals, NotEquals, Greater, GreaterEqual, Less, LessEqual, Like
+Type: OSArch
+Parameter Sets: ByValue, ById, ByName
+Aliases: CurrentOSArchitecture
+Accepted values: Arch32, Arch64
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OSLanguageId
+Use this parameter to configure the specific OS language. This check compares the language ID to the **OSLanguage** property of the **Win32_OperatingSystem** WMI class on the client. For example, `1033` for **English (United States)**. Use the parameter **CheckOSLanguageId** to enable or disable the check.
+
+```yaml
+Type: Int32
+Parameter Sets: ByValue, ById, ByName
+Aliases: LanguageId
 
 Required: False
 Position: Named
@@ -1058,7 +1251,7 @@ Accept wildcard characters: False
 ```
 
 ### -Speed
-{{ Fill Speed Description }}
+Use this parameter to configure the specific speed for the minimum processor speed check. Specify an integer value for the speed in MHz. Use the parameter **CheckSpeed** to enable or disable the check.
 
 ```yaml
 Type: Int32
@@ -1196,6 +1389,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1213,7 +1421,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

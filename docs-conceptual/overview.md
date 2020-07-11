@@ -61,31 +61,35 @@ The easiest method to load Windows PowerShell is directly from the Configuration
 
     ```  
 
-
 ### Import the Configuration Manager PowerShell module
 
-Another method of connecting to Configuration Manager from your Windows PowerShell environment is to load the Configuration Manager module manually.  
+Another method of connecting to Configuration Manager from your Windows PowerShell environment is to manually load the Configuration Manager module.
 
-1. Import the Configuration Manager module by using the `Import-Module` cmdlet. To import the Configuration Manager module, specify the path to the Configuration Manager module, or change to the directory that contains the module. By default, the module is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\ConfigurationManager.psd1`   
+1. Import the Configuration Manager module by using the `Import-Module` cmdlet. Specify the path to the Configuration Manager module, or change to the directory that contains the module. By default, the module is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\ConfigurationManager.psd1`
 
-    The following example changes to the module's directory and then imports it:  
+    > [!IMPORTANT]
+    > This path changed starting in version 1910 to use the `Microsoft Endpoint Manager` folder. Make sure you don't import an older version of the module that might exist in another folder. After you import the module, use the following commands to check the module version and path:
+    >
+    > ```powershell
+    > (Get-Module -Name ConfigurationManager).Version
+    > (Get-Module -Name ConfigurationManager).Path
+    > ```
 
-    ```  PowerShell
-    PS C:\>  
-    PS C:\> CD 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin'  
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1  
+    The following example changes to the module's directory and then imports it:
+
+    ```PowerShell
+    CD 'C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin'
+    Import-Module .\ConfigurationManager.psd1
     ```  
 
-1. To run the Configuration Manager cmdlets, you need to switch the path to the Configuration Manager site. In the following example, the site code is `ABC`:  
+1. To run the Configuration Manager cmdlets, you need to switch the path to the Configuration Manager site. In the following example, the site code is `ABC`:
 
-    ```  PowerShell
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> CD ABC:   
-    PS ABC:\>  
-    ```  
+    ```output
+    PS C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin> CD ABC:
+    PS ABC:\>
+    ```
 
-1. Confirm that PowerShell properly loaded the Configuration Manager module by using the `Get-CMSite` cmdlet.  
-
-
+1. Confirm that PowerShell properly loaded the Configuration Manager module by using the `Get-CMSite` cmdlet.
 
 ## Update help
 

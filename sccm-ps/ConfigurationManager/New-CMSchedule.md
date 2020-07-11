@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a Configuration Manager schedule token.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
@@ -50,8 +50,8 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-
 ### RecurMonthlyByWeekdayWithEnd
 ```
 New-CMSchedule [-ScheduleString] [-Start <DateTime>] -End <DateTime> [-IsUtc] [-RecurCount <Int32>]
- -DayOfWeek <DayOfWeek> -WeekOrder <ScheduleWeekOrder> [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ -DayOfWeek <DayOfWeek> -WeekOrder <ScheduleWeekOrder> [-OffsetDay <Int32>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecurrenceIntervalWithEnd
@@ -93,7 +93,8 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval 
 ```
 New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] -DurationInterval <ScheduleInterval>
  -DurationCount <Int32> [-RecurCount <Int32>] -DayOfWeek <DayOfWeek> -WeekOrder <ScheduleWeekOrder>
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-OffsetDay <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RecurrenceIntervalWithDuration
@@ -124,8 +125,8 @@ New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int3
 ### RecurMonthlyByWeekday
 ```
 New-CMSchedule [-ScheduleString] [-Start <DateTime>] [-IsUtc] [-RecurCount <Int32>] -DayOfWeek <DayOfWeek>
- -WeekOrder <ScheduleWeekOrder> [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -WeekOrder <ScheduleWeekOrder> [-OffsetDay <Int32>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecurrenceInterval
@@ -152,28 +153,22 @@ You can then use the interval strings to set schedule properties when you define
 ## EXAMPLES
 
 ### Example 1: Create a schedule token
-```
-PS XYZ:\> New-CMSchedule -DayOfMonth 0 -DateTime "20120105185728.303000+000"
-```
 
 This command creates a schedule token that specifies that the event occurs on the last day of the month at the specified date and time.
 
-## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+```PowerShell
+New-CMSchedule -DayOfMonth 0 -DateTime "20120105185728.303000+000"
 ```
+
+### Example 2: Create an offset schedule
+
+The following example creates a schedule with an offset.
+
+```PowerShell
+New-CMSchedule -Start (Get-Date) -DayOfWeek Monday -WeekOrder Second -RecurCount 1 -OffsetDay 0
+```
+
+## PARAMETERS
 
 ### -DayOfMonth
 Specifies the day of the month when the event occurs.
@@ -340,6 +335,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OffsetDay
+Starting in version 1906, use this parameter to configure an offset such as monthly by weekday.
+```yaml
+Type: Int32
+Parameter Sets: RecurMonthlyByWeekdayWithEnd, RecurMonthlyByWeekdayWithDuration, RecurMonthlyByWeekday
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecurCount
 Specifies the number of recurrences of the scheduled event.
 
@@ -436,6 +445,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -453,11 +477,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### IResultObject#SMS_ScheduleToken
+
+### System.String
 
 ## NOTES
 

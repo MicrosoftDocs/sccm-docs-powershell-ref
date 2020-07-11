@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a task sequence in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -17,61 +17,62 @@ Creates a task sequence in Configuration Manager.
 
 ### NewBuildOSImage (Default)
 ```
-New-CMTaskSequence [-BuildOperatingSystemImage] -Name <String> [-Description <String>]
- -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
- [-ApplyAll <Boolean>] [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>]
- [-MaximumServerConnection <Int32>] [-GeneratePassword <Boolean>] [-LocalAdminPassword <SecureString>]
- [-TimeZone <TimeZoneInfo>] -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>]
- [-DomainOrganizationUnit <String>] [-DomainAccount <String>] [-DomainPassword <SecureString>]
- [-ClientPackagePackageId <String>] [-InstallationProperty <String>]
- [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-ApplicationName <String[]>]
- [-IgnoreInvalidApplication <Boolean>] [-CreatedBy <String>] [-ImageVersion <String>]
- [-ImageDescription <String>] -OperatingSystemFilePath <String> -OperatingSystemFileAccount <String>
- [-OperatingSystemFileAccountPassword <SecureString>] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequence [-BuildOperatingSystemImage] [-HighPerformance <Boolean>] -Name <String>
+ [-Description <String>] -BootImagePackageId <String> -OperatingSystemImagePackageId <String>
+ -OperatingSystemImageIndex <UInt32> [-ApplyAll <Boolean>] [-ProductKey <String>]
+ [-InstallationLicensingMode <ServerLicensingMode>] [-MaximumServerConnection <Int32>]
+ [-GeneratePassword <Boolean>] [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>]
+ -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
+ [-DomainAccount <String>] [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>]
+ [-InstallationProperty <String>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>]
+ [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>] [-CreatedBy <String>]
+ [-ImageVersion <String>] [-ImageDescription <String>] -OperatingSystemFilePath <String>
+ -OperatingSystemFileAccount <String> [-OperatingSystemFileAccountPassword <SecureString>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewInstallOSImage
 ```
-New-CMTaskSequence [-InstallOperatingSystemImage] -Name <String> [-Description <String>]
- -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
- [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>] [-ConfigureBitLocker <Boolean>]
- [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>] [-GeneratePassword <Boolean>]
- [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>] -JoinDomain <JoinType>
- [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>] [-DomainAccount <String>]
- [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>] [-InstallationProperty <String>]
- [-CaptureUserSetting <Boolean>] [-UserStateMigrationToolPackageId <String>] [-SaveLocally <Boolean>]
- [-CaptureLocallyUsingLink <Boolean>] [-CaptureNetworkSetting <Boolean>] [-CaptureWindowsSetting <Boolean>]
- [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-ApplicationName <String[]>]
- [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### NewInstallOSImageVhd
-```
-New-CMTaskSequence [-InstallOperatingSystemImageVhd] -Name <String> [-Description <String>]
- -BootImagePackageId <String> -OperatingSystemImagePackageId <String> -OperatingSystemImageIndex <UInt32>
- [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>] [-ConfigureBitLocker <Boolean>]
- [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>] [-GeneratePassword <Boolean>]
- [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>] -JoinDomain <JoinType>
- [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>] [-DomainAccount <String>]
- [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>] [-InstallationProperty <String>]
+New-CMTaskSequence [-InstallOperatingSystemImage] [-HighPerformance <Boolean>] -Name <String>
+ [-Description <String>] -BootImagePackageId <String> -OperatingSystemImagePackageId <String>
+ -OperatingSystemImageIndex <UInt32> [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>]
+ [-ConfigureBitLocker <Boolean>] [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>]
+ [-GeneratePassword <Boolean>] [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>]
+ -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
+ [-DomainAccount <String>] [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>]
+ [-InstallationProperty <String>] [-CaptureUserSetting <Boolean>] [-UserStateMigrationToolPackageId <String>]
+ [-SaveLocally <Boolean>] [-CaptureLocallyUsingLink <Boolean>] [-CaptureNetworkSetting <Boolean>]
+ [-CaptureWindowsSetting <Boolean>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>]
  [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### NewInstallOSImageVhd
+```
+New-CMTaskSequence [-InstallOperatingSystemImageVhd] [-HighPerformance <Boolean>] -Name <String>
+ [-Description <String>] -BootImagePackageId <String> -OperatingSystemImagePackageId <String>
+ -OperatingSystemImageIndex <UInt32> [-ApplyAll <Boolean>] [-PartitionAndFormatTarget <Boolean>]
+ [-ConfigureBitLocker <Boolean>] [-ProductKey <String>] [-InstallationLicensingMode <ServerLicensingMode>]
+ [-GeneratePassword <Boolean>] [-LocalAdminPassword <SecureString>] [-TimeZone <TimeZoneInfo>]
+ -JoinDomain <JoinType> [-WorkgroupName <String>] [-DomainName <String>] [-DomainOrganizationUnit <String>]
+ [-DomainAccount <String>] [-DomainPassword <SecureString>] [-ClientPackagePackageId <String>]
+ [-InstallationProperty <String>] [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### UpgradeOSImage
 ```
-New-CMTaskSequence [-UpgradeOperatingSystem] -Name <String> -UpgradePackageId <String> [-ProductKey <String>]
- [-SoftwareUpdateStyle <SoftwareUpdateStyleType>] [-ApplicationName <String[]>]
- [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTaskSequence [-UpgradeOperatingSystem] [-HighPerformance <Boolean>] -Name <String>
+ -UpgradePackageId <String> [-ProductKey <String>] [-SoftwareUpdateStyle <SoftwareUpdateStyleType>]
+ [-ApplicationName <String[]>] [-IgnoreInvalidApplication <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewCustom
 ```
-New-CMTaskSequence [-CustomTaskSequence] -Name <String> [-Description <String>] [-BootImagePackageId <String>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CMTaskSequence [-CustomTaskSequence] [-HighPerformance <Boolean>] -Name <String> [-Description <String>]
+ [-BootImagePackageId <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -306,22 +307,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CreatedBy
 
 Specifies the name of the user that created the operating system image that the task sequence captures.
@@ -487,6 +472,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HighPerformance
+Starting in version 1910, use this parameter to set the following option on the **Performance** page of the task sequence properties: **Run as high performance power plan**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreInvalidApplication
 
 Indicates whether the task sequence step continues if an individual application installation encounters a recoverable failure.
@@ -538,38 +538,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InstallOperatingSystemImage
-
-Indicates that the task sequence installs an operating system image.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImage
-Aliases: InstallOperatingSystemImageOption
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallOperatingSystemImageVhd
-
-Indicates that the task sequence installs an existing operating system image to a virtual hard disk.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: NewInstallOSImageVhd
-Aliases: InstallOperatingSystemImageVhdOption
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstallationLicensingMode
 
 Specifies the Windows Server license mode that the task sequence uses.
@@ -607,6 +575,38 @@ Parameter Sets: NewBuildOSImage, NewInstallOSImage, NewInstallOSImageVhd
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallOperatingSystemImage
+
+Indicates that the task sequence installs an operating system image.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImage
+Aliases: InstallOperatingSystemImageOption
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallOperatingSystemImageVhd
+
+Indicates that the task sequence installs an existing operating system image to a virtual hard disk.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: NewInstallOSImageVhd
+Aliases: InstallOperatingSystemImageVhdOption
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -900,23 +900,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WorkgroupName
 
 Specifies the name of a workgroup.
@@ -934,12 +917,49 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### IResultObject#SMS_TaskSequencePackage
 
 ## NOTES
 

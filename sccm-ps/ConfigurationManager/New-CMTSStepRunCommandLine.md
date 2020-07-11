@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates a t s step run command line.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -15,10 +15,29 @@ Creates a t s step run command line.
 
 ## SYNTAX
 
+### ByName (Default)
 ```
 New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
  [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>] [-UserPassword <SecureString>]
  [-SuccessCode <Int32[]>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
+ [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RunScriptFromSource
+```
+New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
+ [-OutputVariableName <String>] [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>]
+ [-UserPassword <SecureString>] [-SuccessCode <Int32[]>] [-Description <String>] [-ContinueOnError] [-Disable]
+ [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### RunScriptFromPackage
+```
+New-CMTSStepRunCommandLine -CommandLine <String> [-WorkingDirectory <String>] [-PackageId <String>]
+ [-OutputVariableName <String>] [-Timeout <Int32>] [-DisableWow64Redirection] [-RunAsUser] [-UserName <String>]
+ [-UserPassword <SecureString>] [-SuccessCode <Int32[]>] [-Description <String>] [-ContinueOnError] [-Disable]
  [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -57,21 +76,6 @@ Accept wildcard characters: False
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -165,10 +169,25 @@ Accept wildcard characters: False
 ### -Name
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ByName
 Aliases: StepName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutputVariableName
+Use this parameter to configure the following setting in the **Run Command Line** task sequence step: **Output to task sequence variable**. Save the command output to a custom task sequence variable.
+
+```yaml
+Type: String
+Parameter Sets: RunScriptFromSource, RunScriptFromPackage
+Aliases: Output, OutputVariable
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -253,6 +272,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WorkingDirectory
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: StartIn
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -269,21 +316,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkingDirectory
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: StartIn
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

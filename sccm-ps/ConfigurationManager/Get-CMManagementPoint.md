@@ -1,4 +1,4 @@
----
+﻿---
 description: Gets a management point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -43,7 +43,7 @@ PS XYZ:\> Get-CMManagementPoint -SiteSystemServerName "cmcen-dist02.tsqa.contoso
 ```
 
 This command gets a management point that is associated with the site system named cmcen-dist02.tsqa.contoso.com and the site code CM1.
-The command directs the output to the file Get-CMOutOfBandServicePoint_data.txt.
+The command directs the output to the file Get-CMManagementPoint_data.txt.
 
 ## PARAMETERS
 
@@ -137,11 +137,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
+### IResultObject[]#SMS_SCI_SysResUse
+
+### IResultObject#SMS_SCI_SysResUse
 
 ## NOTES
 
