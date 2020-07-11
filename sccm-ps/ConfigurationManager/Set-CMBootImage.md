@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies an operating system boot image.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
@@ -19,8 +19,8 @@ Modifies an operating system boot image.
 Set-CMBootImage -InputObject <IResultObject> [-NewName <String>] [-Version <String>] [-Description <String>]
  [-Path <String>] [-EnablePrestartCommand <Boolean>] [-PrestartCommandLine <String>]
  [-IncludeFilesForPrestart <Boolean>] [-PrestartIncludeFilesDirectory <String>]
- [-BackgroundBitmapPath <String>] [-ScratchSpace <UInt32>] [-EnableCommandSupport <Boolean>]
- [-PersistContentInCache <Boolean>] [-EnableBinaryDeltaReplication <Boolean>]
+ [-BackgroundBitmapPath <String>] [-InputLocale <String>] [-ScratchSpace <UInt32>]
+ [-EnableCommandSupport <Boolean>] [-PersistContentInCache <Boolean>] [-EnableBinaryDeltaReplication <Boolean>]
  [-DeployFromPxeDistributionPoint <Boolean>] [-DistributionPointUpdateSchedule <IResultObject>]
  [-CustomPackageShareName <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
  [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
@@ -34,30 +34,30 @@ Set-CMBootImage -InputObject <IResultObject> [-NewName <String>] [-Version <Stri
 ```
 Set-CMBootImage -Id <String> [-NewName <String>] [-Version <String>] [-Description <String>] [-Path <String>]
  [-EnablePrestartCommand <Boolean>] [-PrestartCommandLine <String>] [-IncludeFilesForPrestart <Boolean>]
- [-PrestartIncludeFilesDirectory <String>] [-BackgroundBitmapPath <String>] [-ScratchSpace <UInt32>]
- [-EnableCommandSupport <Boolean>] [-PersistContentInCache <Boolean>] [-EnableBinaryDeltaReplication <Boolean>]
- [-DeployFromPxeDistributionPoint <Boolean>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-CustomPackageShareName <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
- [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
- [-AddOptionalComponent <IResultObject[]>] [-RemoveOptionalComponent <IResultObject[]>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-Force] [-Priority <Priority>]
- [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PrestartIncludeFilesDirectory <String>] [-BackgroundBitmapPath <String>] [-InputLocale <String>]
+ [-ScratchSpace <UInt32>] [-EnableCommandSupport <Boolean>] [-PersistContentInCache <Boolean>]
+ [-EnableBinaryDeltaReplication <Boolean>] [-DeployFromPxeDistributionPoint <Boolean>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-CustomPackageShareName <String>]
+ [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-AddOptionalComponent <IResultObject[]>]
+ [-RemoveOptionalComponent <IResultObject[]>] [-CopyToPackageShareOnDistributionPoint <Boolean>] [-Force]
+ [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMBootImage -Name <String> [-NewName <String>] [-Version <String>] [-Description <String>] [-Path <String>]
  [-EnablePrestartCommand <Boolean>] [-PrestartCommandLine <String>] [-IncludeFilesForPrestart <Boolean>]
- [-PrestartIncludeFilesDirectory <String>] [-BackgroundBitmapPath <String>] [-ScratchSpace <UInt32>]
- [-EnableCommandSupport <Boolean>] [-PersistContentInCache <Boolean>] [-EnableBinaryDeltaReplication <Boolean>]
- [-DeployFromPxeDistributionPoint <Boolean>] [-DistributionPointUpdateSchedule <IResultObject>]
- [-CustomPackageShareName <String>] [-DisconnectUserFromDistributionPoint <Boolean>]
- [-DisconnectUserFromDistributionPointRetryCount <UInt32>] [-DisconnectUserFromDistributionPointMins <UInt32>]
- [-AddOptionalComponent <IResultObject[]>] [-RemoveOptionalComponent <IResultObject[]>]
- [-CopyToPackageShareOnDistributionPoint <Boolean>] [-Force] [-Priority <Priority>]
- [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PrestartIncludeFilesDirectory <String>] [-BackgroundBitmapPath <String>] [-InputLocale <String>]
+ [-ScratchSpace <UInt32>] [-EnableCommandSupport <Boolean>] [-PersistContentInCache <Boolean>]
+ [-EnableBinaryDeltaReplication <Boolean>] [-DeployFromPxeDistributionPoint <Boolean>]
+ [-DistributionPointUpdateSchedule <IResultObject>] [-CustomPackageShareName <String>]
+ [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
+ [-DisconnectUserFromDistributionPointMins <UInt32>] [-AddOptionalComponent <IResultObject[]>]
+ [-RemoveOptionalComponent <IResultObject[]>] [-CopyToPackageShareOnDistributionPoint <Boolean>] [-Force]
+ [-Priority <Priority>] [-SendToPreferredDistributionPoint <Boolean>] [-PrestageBehavior <PrestageBehavior>]
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,21 +77,28 @@ A modification to the boot image does not change its source package.
 ## EXAMPLES
 
 ### Example 1: Rename a boot image object that is identified by using its ID
-```
+
+This command retrieves a boot image by using its ID, and then renames the boot image. Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
+
+```powershell
 PS XYZ:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
 ```
 
-This command retrieves a boot image by using its ID, and then renames the boot image.
-Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
-
 ### Example 2: Rename a boot image object that is identified by using its name
-```
+
+This command retrieves a boot image by using its name, and then renames the boot image. It also adds a version and description to the boot image object. Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
+
+```powershell
 PS XYZ:\> Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
 ```
 
-This command retrieves a boot image by using its name, and then renames the boot image.
-The command also adds a version and description to the boot image object.
-Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
+### Example 3: Set the keyboard layout
+
+The following example sets the default keyboard layout of the boot image to the **Russian (Russia)** language. It identifies the boot image by its ID.
+
+```powershell
+Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"
+```
 
 ## PARAMETERS
 
@@ -117,21 +124,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -354,6 +346,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputLocale
+Starting in version 1910, use this parameter to configure the default keyboard layout for a boot image. It's the same setting as the **Set default keyboard layout in WinPE** option on the Customization tab of a boot image. For example, to set the input locale to Russian (Russia), specify the string `ru-ru`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Specifies a boot image object.
 
@@ -550,6 +557,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -567,12 +589,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

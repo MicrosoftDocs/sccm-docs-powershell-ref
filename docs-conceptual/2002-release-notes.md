@@ -381,7 +381,7 @@ Added the following new parameter to allow you to retry the installation for a f
 Added the following new parameter to allow you to promote a passive site to active:
 - PromotePassiveSiteToActive
 
-### Set-CMScriptDeploymentTypes
+### Set-CMScriptDeploymentType
 
 #### Breaking changes
 

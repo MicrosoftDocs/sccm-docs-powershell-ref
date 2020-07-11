@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a distribution point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -33,7 +33,8 @@ Set-CMDistributionPoint [-InputObject] <IResultObject> [-Description <String>]
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP <Boolean>] [-SourceDistributionPoint <String[]>]
  [-SourceDPRank <Int32[]>] [-AllowFallbackForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
  [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-EnableLedbat <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ReassignSiteCode <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByName
@@ -55,35 +56,42 @@ Set-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
  [-ContentMonitoringPriority <Priority>] [-EnablePullDP <Boolean>] [-SourceDistributionPoint <String[]>]
  [-SourceDPRank <Int32[]>] [-AllowFallbackForContent <Boolean>] [-AddBoundaryGroupName <String[]>]
  [-RemoveBoundaryGroupName <String[]>] [-EnableBranchCache <Boolean>] [-PassThru] [-EnableLedbat <Boolean>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ReassignSiteCode <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Set-CMDistributionPoint** cmdlet modifies a distribution point on a site system server.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Configuration Manager cmdlets must be run from the Configuration Manager site drive. For more information, see the [getting started](/powershell/sccm/overview) documentation.
 
 ## EXAMPLES
 
 ### Example 1: Set properties of a distribution point
-```
-PS XYZ:\> $DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
-PS XYZ:\> Set-CMDistributionPoint -InputObject $DP -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $False -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
-```
 
-The first command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and stores the object in the $DP variable.
+The first command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com. It then stores the object in the `$DP` variable. The second command modifies the distribution point object stored in that variable.
 
-The second command modifies the distribution point object stored in $DP.
+```powershell
+$DP = Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+Set-CMDistributionPoint -InputObject $DP -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $False -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
+```
 
 ### Example 2: Set properties of a distribution point by using the pipeline
-```
-PS XYZ:\> Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
+
+This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com. It then uses the pipeline operator to pass the object to **Set-CMDistributionPoint**, which modifies the distribution point object.
+
+```powershell
+Get-CMDistributionPoint -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Set-CMDistributionPoint -AllowFallbackForContent $True -AllowPreStaging $True -AllowPxeResponse $True -ClientCommunicationType Http -ClientConnectionType Internet -ContentMonitoringPriority High
 ```
 
-This command gets the distribution point object for the site system server named MySiteSys_11310.Contoso.com and uses the pipeline operator to pass the object to **Set-CMDistributionPoint**, which modifies the distribution point object.
+### Example 3: Reassign a distribution point to a new site
+
+The following example reassigns the mydp server from site ABC to site XYZ
+
+```PowerShell
+Set-CMDistributionPoint -SiteSystemServerName "MyDP.TestDOM.net" -ReassignSiteCode "XYZ" -SiteCode "ABC"
+```
 
 ## PARAMETERS
 
@@ -295,21 +303,6 @@ Accepted values: None, ProfileCustom, Profile10Mbps, Profile100Mbps, Profile1Gbp
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -569,6 +562,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+Starting in version 1910, use this parameter to add a duplicate certificate
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceWildcardHandling
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
@@ -707,6 +715,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReassignSiteCode
+Starting in version 1906, use the following parameter to reassign the distribution point to a new site. Specify the three-letter site code as a string value.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveBoundaryGroupName
 Removes an array of boundary groups, by name, from the distribution point.
 
@@ -797,14 +820,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDPRank
-Specifies an array that contains the priorities for the distribution point sources from which this distribution point can pull content.
-Source distribution points that have the same priority are randomly selected.
+### -SourceDistributionPoint
+Specifies an array of distribution point sources from which this distribution point can pull content.
 
 ```yaml
-Type: Int32[]
+Type: String[]
 Parameter Sets: (All)
-Aliases: SourceDPRanks
+Aliases: SourceDistributionPoints
 
 Required: False
 Position: Named
@@ -813,13 +835,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDistributionPoint
-Specifies an array of distribution point sources from which this distribution point can pull content.
+### -SourceDPRank
+Specifies an array that contains the priorities for the distribution point sources from which this distribution point can pull content.
+Source distribution points that have the same priority are randomly selected.
 
 ```yaml
-Type: String[]
+Type: Int32[]
 Parameter Sets: (All)
-Aliases: SourceDistributionPoints
+Aliases: SourceDPRanks
 
 Required: False
 Position: Named
@@ -925,6 +948,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -942,11 +980,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
+### IResultObject#SMS_SCI_SysResUse
 
 ## NOTES
 

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,21 +15,24 @@ schema: 2.0.0
 ### SearchByDeviceValueMandatory (Default)
 ```
 Invoke-CMClientAction -Device <IResultObject> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
+ [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByDeviceNameMandatory
 ```
 Invoke-CMClientAction -DeviceName <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
+ [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### SearchByDeviceIdMandatory
 ```
 Invoke-CMClientAction -DeviceId <String> [-NotificationType <ClientNotificationType>]
- [-ActionType <ClientActionType>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [-ActionType <ClientActionType>] [-ParentCollectionId <String>] [-ParentCollectionName <String>]
+ [-ParentCollection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -65,11 +68,12 @@ Invoke-CMClientAction -Collection <IResultObject> [-NotificationType <ClientNoti
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+The following example sends the wake up action to a device in a specific collection:
+
+```PowerShell
+Invoke-CMClientAction -DeviceName "SleepDevice01" -ActionType ClientNotificationWakeUpClientNow -ParentCollectionId $col.CollectionID
+```
 
 ## PARAMETERS
 
@@ -80,7 +84,7 @@ PS XYZ:\> {{ Add example code here }}
 Type: ClientActionType
 Parameter Sets: (All)
 Aliases:
-Accepted values: None, EndpointProtectionFullScan, EndpointProtectionQuickScan, EndpointProtectionDownloadDefinition, EndpointProtectionEvaluateSoftwareUpdate, EndpointProtectionExcludeScanPaths, EndpointProtectionAllowThreat, EndpointProtectionRestoreQuarantinedItems, ClientNotificationRequestMachinePolicyNow, ClientNotificationRequestUsersPolicyNow, ClientNotificationRequestDDRNow, ClientNotificationRequestSWInvNow, ClientNotificationRequestHWInvNow, ClientNotificationAppDeplEvalNow, ClientNotificationSUMDeplEvalNow, ClientRequestSUPChangeNow, ClientRequestDHAChangeNow, ClientNotificationRebootMachine, EndpointProtectionRestoreWithDeps, ClientNotificationCheckComplianceNow, RequestScriptExecution, ClientNotificationWakeUpClientNow
+Accepted values: None, EndpointProtectionFullScan, EndpointProtectionQuickScan, EndpointProtectionDownloadDefinition, EndpointProtectionEvaluateSoftwareUpdate, EndpointProtectionExcludeScanPaths, EndpointProtectionAllowThreat, EndpointProtectionRestoreQuarantinedItems, ClientNotificationRequestMachinePolicyNow, ClientNotificationRequestUsersPolicyNow, ClientNotificationRequestDDRNow, ClientNotificationRequestSWInvNow, ClientNotificationRequestHWInvNow, ClientNotificationAppDeplEvalNow, ClientNotificationSUMDeplEvalNow, ClientRequestSUPChangeNow, ClientRequestDHAChangeNow, ClientNotificationRebootMachine, DiagnosticsEnableVerboseLogging, DiagnosticsDisableVerboseLogging, DiagnosticsCollectFiles, EndpointProtectionRestoreWithDeps, ClientNotificationCheckComplianceNow, RequestScriptExecution, RequestCMPivotExecution, ClientNotificationWakeUpClientNow
 
 Required: False
 Position: Named
@@ -128,21 +132,6 @@ Parameter Sets: SearchByNameMandatory
 Aliases: DeviceCollectionName
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -240,6 +229,66 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ParentCollection
+Starting in version 1906, use this parameter to support waking up a machine.
+
+```yaml
+Type: IResultObject
+Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Aliases: ParentDeviceCollection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentCollectionId
+Starting in version 1906, use this parameter to support waking up a machine.
+
+```yaml
+Type: String
+Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Aliases: ParentDeviceCollectionId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentCollectionName
+Starting in version 1906, use this parameter to support waking up a machine.
+
+```yaml
+Type: String
+Parameter Sets: SearchByDeviceValueMandatory, SearchByDeviceNameMandatory, SearchByDeviceIdMandatory
+Aliases: ParentDeviceCollectionName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -257,7 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

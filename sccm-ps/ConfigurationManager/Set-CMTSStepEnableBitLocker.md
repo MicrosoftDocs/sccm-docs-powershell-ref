@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -16,36 +16,39 @@ schema: 2.0.0
 ```
 Set-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Drive <String>]
  [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>] [-IsWaitingForBitLockerComplete <Boolean>]
- -InputObject <IResultObject> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
- [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
- [-RemoveConditionVariable] [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IsEncryptFullDisk <Boolean>] -InputObject <IResultObject> [-StepName <String>] [-NewStepName <String>]
+ [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ById
 ```
 Set-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Drive <String>]
  [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>] [-IsWaitingForBitLockerComplete <Boolean>]
- -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
- [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
- [-RemoveConditionVariable] [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IsEncryptFullDisk <Boolean>] -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>]
+ [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByName
 ```
 Set-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Drive <String>]
  [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>] [-IsWaitingForBitLockerComplete <Boolean>]
- -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
- [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
- [-RemoveConditionVariable] [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IsEncryptFullDisk <Boolean>] -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>]
+ [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByIdSetConditionIfStatement
@@ -316,21 +319,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CreateKeyOption
 {{ Fill CreateKeyOption Description }}
 
@@ -566,6 +554,20 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
 Aliases: IsThisStepEnabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsEncryptFullDisk
+Starting in version 1906, use this parameter to set the following option on the **Enable BitLocker** task sequence step: **Use full disk encryption**.
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
 
 Required: False
 Position: Named
@@ -1196,6 +1198,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1213,7 +1230,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

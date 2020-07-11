@@ -1,4 +1,4 @@
----
+﻿---
 description: Modifies a software update point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -24,10 +24,12 @@ Set-CMSoftwareUpdatePointComponent [-SiteCode <String>] [-DefaultWsusServer <Str
  [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>] [-Schedule <IResultObject>]
  [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
- [-WaitMonth <Int32>] [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>]
- [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
- [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableThirdPartyUpdates <Boolean>] [-EnableManualCertManagement <Boolean>] [-WaitMonth <Int32>]
+ [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>] [-RemoveLanguageUpdateFile <String[]>]
+ [-AddLanguageSummaryDetail <String[]>] [-RemoveLanguageSummaryDetail <String[]>]
+ [-ContentFileOption <ContentFileOptions>] [-NonFeatureUpdateMaxRuntimeMins <Int32>]
+ [-FeatureUpdateMaxRuntimeMins <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByNameMandatory
@@ -40,10 +42,12 @@ Set-CMSoftwareUpdatePointComponent -Name <String> [-DefaultWsusServer <String>]
  [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>] [-Schedule <IResultObject>]
  [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
- [-WaitMonth <Int32>] [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>]
- [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
- [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableThirdPartyUpdates <Boolean>] [-EnableManualCertManagement <Boolean>] [-WaitMonth <Int32>]
+ [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>] [-RemoveLanguageUpdateFile <String[]>]
+ [-AddLanguageSummaryDetail <String[]>] [-RemoveLanguageSummaryDetail <String[]>]
+ [-ContentFileOption <ContentFileOptions>] [-NonFeatureUpdateMaxRuntimeMins <Int32>]
+ [-FeatureUpdateMaxRuntimeMins <Int32>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SearchByValueMandatory
@@ -55,11 +59,12 @@ Set-CMSoftwareUpdatePointComponent [-DefaultWsusServer <String>] [-SynchronizeAc
  [-AddProduct <String[]>] [-RemoveProduct <String[]>] [-EnableSynchronization <Boolean>]
  [-Schedule <IResultObject>] [-EnableSyncFailureAlert <Boolean>] [-ImmediatelyExpireSupersedence <Boolean>]
  [-ImmediatelyExpireSupersedenceForFeature <Boolean>] [-EnableCallWsusCleanupWizard <Boolean>]
- [-WaitMonth <Int32>] [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>]
- [-RemoveLanguageUpdateFile <String[]>] [-AddLanguageSummaryDetail <String[]>]
- [-RemoveLanguageSummaryDetail <String[]>] [-ContentFileOption <ContentFileOptions>]
- -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-EnableThirdPartyUpdates <Boolean>] [-EnableManualCertManagement <Boolean>] [-WaitMonth <Int32>]
+ [-WaitMonthForFeature <Int32>] [-AddLanguageUpdateFile <String[]>] [-RemoveLanguageUpdateFile <String[]>]
+ [-AddLanguageSummaryDetail <String[]>] [-RemoveLanguageSummaryDetail <String[]>]
+ [-ContentFileOption <ContentFileOptions>] [-NonFeatureUpdateMaxRuntimeMins <Int32>]
+ [-FeatureUpdateMaxRuntimeMins <Int32>] -InputObject <IResultObject> [-PassThru] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -172,21 +177,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContentFileOption
 ```yaml
 Type: ContentFileOptions
@@ -242,6 +232,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableManualCertManagement
+Starting in version 1910, use this parameter to enable or disable manual management of the WSUS signing certificate for third-party updates.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableSyncFailureAlert
 Indicates whether Configuration Manager creates an alert when synchronization fails on a site.
 
@@ -263,6 +268,36 @@ Specify a schedule by using the *Schedule* parameter.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableThirdPartyUpdates
+Starting in version 1910, use this parameter to enable or disable the following option on the **Third Party Updates** tab of the software update point component properties: **Enable third-party software updates**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FeatureUpdateMaxRuntimeMins
+Starting in 1910, use this parameter to configure the following setting on the **Maximum Run Time** tab of the software update point component properties: **Maximum run time for Windows feature updates (minutes)**.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -346,6 +381,21 @@ Parameter Sets: SearchByNameMandatory
 Aliases: SiteName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NonFeatureUpdateMaxRuntimeMins
+Starting in 1910, use this parameter to configure the following setting on the **Maximum Run Time** tab of the software update point component properties: **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -578,6 +628,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -595,11 +660,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
+### IResultObject#SMS_SCI_Component
 
 ## NOTES
 
@@ -617,4 +686,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMStatusReportingComponent](Set-CMStatusReportingComponent.md)
 
-[Set-CMSystemHealthValidatorPointComponent](Set-CMSystemHealthValidatorPointComponent.md)

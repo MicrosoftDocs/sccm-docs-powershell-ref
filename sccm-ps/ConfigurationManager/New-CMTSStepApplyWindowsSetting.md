@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -13,11 +13,12 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepApplyWindowsSetting -UserName <String> -OrganizationName <String> [-ProductKey <String>]
- [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>] [-Password <SecureString>]
- [-TimeZone <TimeZoneInfo>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CMTSStepApplyWindowsSetting -UserName <String> -OrganizationName <String> [-InputLocale <String>]
+ [-SystemLocale <String>] [-UserLocale <String>] [-UILanguage <String>] [-UILanguageFallback <String>]
+ [-ProductKey <String>] [-ServerLicensing <ServerLicenseMode>] [-MaximumConnection <Int32>]
+ [-Password <SecureString>] [-TimeZone <TimeZoneInfo>] -Name <String> [-Description <String>]
+ [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,21 +47,6 @@ PS XYZ:\> {{ Add example code here }}
 Type: IResultObject[]
 Parameter Sets: (All)
 Aliases: Conditions
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -134,6 +120,21 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputLocale
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -235,11 +236,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SystemLocale
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TimeZone
 {{ Fill TimeZone Description }}
 
 ```yaml
 Type: TimeZoneInfo
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UILanguage
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UILanguageFallback
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserLocale
+Starting in version 1910, use this parameter to set the locale setting. For example, to set input locale to Russian (Russia), specify string `ru-ru`: `-InputLocale "ru-ru"`
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -265,6 +326,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -282,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

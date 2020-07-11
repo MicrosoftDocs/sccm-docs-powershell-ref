@@ -1,4 +1,4 @@
----
+﻿---
 description: Creates Configuration Manager deployment rules for automatic software updates.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -23,9 +23,10 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
  [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
  [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
- [-RunType <RunType>] [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>]
- [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>]
- [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
+ [-ContentSize <String[]>] [-Architecture <ArchitectureType[]>] [-RunType <RunType>]
+ [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>]
+ [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
+ [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
  [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
  [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
  [-GenerateFailureAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
@@ -34,8 +35,9 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
  [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
  [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DownloadFromInternet <Boolean>]
  [-Location <String>] [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>]
- [-LanguageSelection <String[]>] [-IsServicingPlan] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>] [-IsServicingPlan]
+ [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewByCollectionName
@@ -47,9 +49,10 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
  [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
  [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
- [-RunType <RunType>] [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>]
- [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>]
- [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
+ [-ContentSize <String[]>] [-Architecture <ArchitectureType[]>] [-RunType <RunType>]
+ [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>]
+ [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
+ [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
  [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
  [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
  [-GenerateFailureAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
@@ -58,8 +61,9 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
  [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
  [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DownloadFromInternet <Boolean>]
  [-Location <String>] [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>]
- [-LanguageSelection <String[]>] [-IsServicingPlan] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>] [-IsServicingPlan]
+ [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewByCollectionId
@@ -71,9 +75,10 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
  [-DateReleasedOrRevised <DateReleasedOrRevisedType>] [-UpdateDescription <String[]>] [-Language <String[]>]
  [-Required <String[]>] [-Severity <SeverityType[]>] [-Superseded <Boolean>] [-Title <String[]>]
  [-UpdateClassification <String[]>] [-Product <String[]>] [-MicrosoftAsVendor <Boolean>] [-Vendor <String[]>]
- [-RunType <RunType>] [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>]
- [-AvailableTime <Int32>] [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>]
- [-DeadlineTime <Int32>] [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
+ [-ContentSize <String[]>] [-Architecture <ArchitectureType[]>] [-RunType <RunType>]
+ [-Schedule <IResultObject>] [-UseUtc <Boolean>] [-AvailableImmediately <Boolean>] [-AvailableTime <Int32>]
+ [-AvailableTimeUnit <TimeUnitType>] [-DeadlineImmediately <Boolean>] [-DeadlineTime <Int32>]
+ [-DeadlineTimeUnit <TimeUnitType>] [-UserNotification <UserNotificationType>]
  [-AllowSoftwareInstallationOutsideMaintenanceWindow <Boolean>] [-AllowRestart <Boolean>]
  [-SuppressRestartServer <Boolean>] [-SuppressRestartWorkstation <Boolean>] [-WriteFilterHandling <Boolean>]
  [-GenerateFailureAlert <Boolean>] [-GenerateSuccessAlert <Boolean>] [-SuccessPercentage <Int32>]
@@ -82,8 +87,9 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
  [-UseBranchCache <Boolean>] [-DownloadFromMicrosoftUpdate <Boolean>] [-AllowUseMeteredNetwork <Boolean>]
  [-DeploymentPackageName <String>] [-DeploymentPackage <IResultObject>] [-DownloadFromInternet <Boolean>]
  [-Location <String>] [-DeploymentRing <DeploymentRing>] [-UpdateDeploymentWaitDay <Int32>]
- [-LanguageSelection <String[]>] [-IsServicingPlan] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LanguageSelection <String[]>] [-O365LanguageSelection <String[]>] [-IsServicingPlan]
+ [-SoftDeadlineEnabled <Boolean>] [-RequirePostRebootFullScan <Boolean>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -225,6 +231,22 @@ Indicates whether to allow clients to download content over a metered Internet c
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Architecture
+Starting in version 1906, use this parameter to set the **Architecture** property filter on the Software Updates page of the ADR properties.
+
+```yaml
+Type: ArchitectureType[]
+Parameter Sets: (All)
+Aliases: Architectures
+Accepted values: Arm64, Itanium, X64, X86
 
 Required: False
 Position: Named
@@ -377,17 +399,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
+### -ContentSize
+Starting in version 1906, use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
 ```yaml
-Type: SwitchParameter
+Type: String[]
 Parameter Sets: (All)
-Aliases: cf
+Aliases: ContentSizes
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -521,23 +542,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DeployWithoutLicense
-Indicates whether the rule deploys updates without licenses.
-If you specify a value of $True, Configuration Manager deploys only software updates found by this rule that do not include a license agreement, or for which the agreement has already been approved.
-If this value is $False, Configuration Manager deploys all software updates found by this rule, and approves any license agreements.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeploymentPackage
 ```yaml
 Type: IResultObject
@@ -572,6 +576,23 @@ Type: DeploymentRing
 Parameter Sets: (All)
 Aliases:
 Accepted values: CB, Release, BusinessMainstream, Cbb, Ltsb
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeployWithoutLicense
+Indicates whether the rule deploys updates without licenses.
+If you specify a value of $True, Configuration Manager deploys only software updates found by this rule that do not include a license agreement, or for which the agreement has already been approved.
+If this value is $False, Configuration Manager deploys all software updates found by this rule, and approves any license agreements.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -868,6 +889,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -O365LanguageSelection
+Starting in version 1906, use this parameter to set the **Office 365 Client Update** language selection
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Product
 Specifies an array of criteria, as strings, for software updates.
 The rule adds software updates for products that meet specified criteria to the software update group.
@@ -892,6 +927,20 @@ The rule adds software updates identified by required that meet specified criter
 Type: String[]
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequirePostRebootFullScan
+Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: RunEvaluationAfterRestart
 
 Required: False
 Position: Named
@@ -974,6 +1023,21 @@ Type: SeverityType[]
 Parameter Sets: (All)
 Aliases: Severities
 Accepted values: None, Low, Moderate, Important, Critical
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeadlineEnabled
+Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: DelayEnforcementAndUpToGracePeriod
 
 Required: False
 Position: Named
@@ -1122,23 +1186,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseUtc
-Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
-If this value is $True, Configuration Manager uses UTC for this deployment.
-If this value is $False, Configuration Manager uses local time.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserNotification
 Specifies the type of user notification.
 Valid values are:
@@ -1163,12 +1210,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseUtc
+Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
+If this value is $True, Configuration Manager uses UTC for this deployment.
+If this value is $False, Configuration Manager uses local time.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Vendor
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: Vendors
-Accepted values: Microsoft, Local Publisher
 
 Required: False
 Position: Named
@@ -1198,22 +1261,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WriteFilterHandling
 Indicates whether to enable write filters for embedded devices.
 For a value of $True, the device commits changes during a maintenance window.
@@ -1232,12 +1279,47 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
+
+### IResultObject#SMS_AutoDeployment
 
 ## NOTES
 

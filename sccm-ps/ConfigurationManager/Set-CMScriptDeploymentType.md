@@ -1,4 +1,4 @@
----
+﻿---
 description: Sets a script installer deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -20,18 +20,18 @@ Sets a script installer deployment type.
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
  [-RemoveDetectionClause <String[]>] [-GroupDetectionClauses <String[]>]
  [-DetectionClauseConnector <Hashtable[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
- [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
- [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
- [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-InstallWorkingDirectory <String>]
- [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
- [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
- [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
- [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -ApplicationName <String>
- -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InstallCommand <String>] [-UninstallCommand <String>] [-RepairCommand <String>]
+ [-UserInteractionMode <UserInteractionMode>] [-LogonRequirementType <LogonRequirementType>]
+ [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>] [-RequireUserInteraction <Boolean>]
+ [-ContentFallback <Boolean>] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-InstallWorkingDirectory <String>] [-UninstallWorkingDirectory <String>] [-RepairWorkingDirectory <String>]
+ [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>] [-ScriptFile <String>]
+ [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>] [-SourceUpdateProductCode <String>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] [-RebootBehavior <PostExecutionBehavior>]
+ [-UninstallContentLocation <String>] [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>]
+ -ApplicationName <String> -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>]
+ [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppId
@@ -39,18 +39,18 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
  [-RemoveDetectionClause <String[]>] [-GroupDetectionClauses <String[]>]
  [-DetectionClauseConnector <Hashtable[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
- [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
- [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
- [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-InstallWorkingDirectory <String>]
- [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
- [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
- [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
- [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -ApplicationId <Int32>
- -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InstallCommand <String>] [-UninstallCommand <String>] [-RepairCommand <String>]
+ [-UserInteractionMode <UserInteractionMode>] [-LogonRequirementType <LogonRequirementType>]
+ [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>] [-RequireUserInteraction <Boolean>]
+ [-ContentFallback <Boolean>] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-InstallWorkingDirectory <String>] [-UninstallWorkingDirectory <String>] [-RepairWorkingDirectory <String>]
+ [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>] [-ScriptFile <String>]
+ [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>] [-SourceUpdateProductCode <String>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] [-RebootBehavior <PostExecutionBehavior>]
+ [-UninstallContentLocation <String>] [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>]
+ -ApplicationId <Int32> -DeploymentTypeName <String> [-NewName <String>] [-RemoveRequirement <Rule[]>]
+ [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByAppValue
@@ -58,18 +58,18 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
  [-RemoveDetectionClause <String[]>] [-GroupDetectionClauses <String[]>]
  [-DetectionClauseConnector <Hashtable[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
- [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
- [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
- [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-InstallWorkingDirectory <String>]
- [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
- [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
- [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
- [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -DeploymentTypeName <String>
- -Application <IResultObject> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
- [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InstallCommand <String>] [-UninstallCommand <String>] [-RepairCommand <String>]
+ [-UserInteractionMode <UserInteractionMode>] [-LogonRequirementType <LogonRequirementType>]
+ [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>] [-RequireUserInteraction <Boolean>]
+ [-ContentFallback <Boolean>] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-InstallWorkingDirectory <String>] [-UninstallWorkingDirectory <String>] [-RepairWorkingDirectory <String>]
+ [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>] [-ScriptFile <String>]
+ [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>] [-SourceUpdateProductCode <String>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] [-RebootBehavior <PostExecutionBehavior>]
+ [-UninstallContentLocation <String>] [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>]
+ -DeploymentTypeName <String> -Application <IResultObject> [-NewName <String>] [-RemoveRequirement <Rule[]>]
+ [-RemoveLanguage <String[]>] [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByDTValue
@@ -77,18 +77,18 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <DetectionClause[]>]
  [-RemoveDetectionClause <String[]>] [-GroupDetectionClauses <String[]>]
  [-DetectionClauseConnector <Hashtable[]>] [-EnableBranchCache <Boolean>] [-EstimatedRuntimeMins <Int32>]
- [-InstallCommand <String>] [-UninstallCommand <String>] [-UserInteractionMode <UserInteractionMode>]
- [-LogonRequirementType <LogonRequirementType>] [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>]
- [-RequireUserInteraction <Boolean>] [-ContentFallback <Boolean>]
- [-SlowNetworkDeploymentMode <ContentHandlingMode>] [-InstallWorkingDirectory <String>]
- [-UninstallWorkingDirectory <String>] [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>]
- [-ScriptFile <String>] [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>]
- [-SourceUpdateProductCode <String>] [-InstallationBehaviorType <InstallationBehaviorType>]
- [-RebootBehavior <PostExecutionBehavior>] [-UninstallContentLocation <String>]
- [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>] -InputObject <IResultObject>
- [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>] [-PassThru]
- [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InstallCommand <String>] [-UninstallCommand <String>] [-RepairCommand <String>]
+ [-UserInteractionMode <UserInteractionMode>] [-LogonRequirementType <LogonRequirementType>]
+ [-MaximumRuntimeMins <Int32>] [-CacheContent <Boolean>] [-RequireUserInteraction <Boolean>]
+ [-ContentFallback <Boolean>] [-SlowNetworkDeploymentMode <ContentHandlingMode>]
+ [-InstallWorkingDirectory <String>] [-UninstallWorkingDirectory <String>] [-RepairWorkingDirectory <String>]
+ [-Force32Bit <Boolean>] [-ProductCode <String>] [-ScriptText <String>] [-ScriptFile <String>]
+ [-ForceScriptDetection32Bit <Boolean>] [-ScriptLanguage <ScriptLanguage>] [-SourceUpdateProductCode <String>]
+ [-InstallationBehaviorType <InstallationBehaviorType>] [-RebootBehavior <PostExecutionBehavior>]
+ [-UninstallContentLocation <String>] [-UninstallOption <UninstallContentSetting>] [-AddRequirement <Rule[]>]
+ -InputObject <IResultObject> [-NewName <String>] [-RemoveRequirement <Rule[]>] [-RemoveLanguage <String[]>]
+ [-PassThru] [-AddLanguage <String[]>] [-Comment <String>] [-Force] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -247,22 +247,6 @@ Aliases: AdministratorComment
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -478,6 +462,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -InstallationBehaviorType
+
+Specifies the installation behavior of the deployment type.
+Valid values are:
+
+- InstallForSystem
+- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
+- InstallForUser
+
+```yaml
+Type: InstallationBehaviorType
+Parameter Sets: (All)
+Aliases:
+Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstallCommand
 
 Specifies the install command line for the Windows Installer package.
@@ -503,28 +509,6 @@ This folder can be an absolute path on the client, or a path to the distribution
 Type: String
 Parameter Sets: (All)
 Aliases: InstallationStartIn, InstallFolder
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstallationBehaviorType
-
-Specifies the installation behavior of the deployment type.
-Valid values are:
-
-- InstallForSystem
-- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-- InstallForUser
-
-```yaml
-Type: InstallationBehaviorType
-Parameter Sets: (All)
-Aliases:
-Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
 
 Required: False
 Position: Named
@@ -677,6 +661,36 @@ Removes the existing installation requirements from this deployment type.
 Type: Rule[]
 Parameter Sets: (All)
 Aliases: RemoveRequirements
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RepairCommand
+Starting in version 2002, use this parameter to configure the repair command and directory options when creating deployment type. Also configure the RepairWorkingDirectory parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: RepairProgram
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RepairWorkingDirectory
+Starting in version 2002, use this parameter to configure the repair command and directory options when creating deployment type. Also configure the RepairCommand parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: RepairStartIn, RepairFolder
 
 Required: False
 Position: Named
@@ -882,6 +896,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
@@ -900,12 +930,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

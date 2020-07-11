@@ -1,4 +1,4 @@
----
+﻿---
 description: Adds new password settings to a Exchange Server connector in Configuration Manager.
 external help file:
 Module Name: AdminUI.PS.HS
@@ -46,11 +46,15 @@ This command sets these password-related options for an Exchange Server connecto
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorPasswordSetting
 
 ## NOTES
 
