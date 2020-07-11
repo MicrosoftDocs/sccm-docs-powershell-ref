@@ -47,6 +47,8 @@ Starting in version 2002, use this cmdlet to modify third-party update categorie
 
 ## EXAMPLES
 
+### Example 1
+
 ```powershell
 Set-CMThirdPartyUpdateCategory -Catalog $catalog -Id $categoryId -PublishOption $publishOption -EnableCategories $true
 $catalog | Set-CMThirdPartyUpdateCategory -Name $categoryName -PublishOption $publishOption -EnableCategories $true
