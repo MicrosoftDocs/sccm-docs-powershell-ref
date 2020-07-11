@@ -37,24 +37,12 @@ For more information about boundaries, see [Planning for Boundaries and Boundary
 ## EXAMPLES
 
 ### Example 1: Create a new boundary group
-```
-PS XYZ:\> New-CMBoundaryGroup -Name "BGroup05"
-CreatedBy:
-CreatedOn
-DefaultSiteCode:
-Description:
-GroupID:
-MemberCount:        0
-ModifiedBy:
-ModifiedOn:
-Name:               BGroup05
-SiteSystemCount:
-```
 
-This command creates a new boundary group.
-After the new boundary group is created, the command displays an unpopulated list of boundary properties.
-To refresh and see a populated list, use the **Get-CMBoundaryGroup** cmdlet.
-The output shown for this example is the latter.
+This example creates a new boundary group. After the new boundary group is created, the command displays an unpopulated list of boundary properties. To refresh and see a populated list, use the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
+
+```powershell
+New-CMBoundaryGroup -Name "BGroup05"
+```
 
 ## PARAMETERS
 
