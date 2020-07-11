@@ -8,7 +8,8 @@ schema: 2.0.0
 # Set-CMTSStepRunTaskSequence
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to edit the task sequence step **Run Task Sequence**.
 
 ## SYNTAX
 
@@ -229,21 +230,26 @@ Set-CMTSStepRunTaskSequence -RunTaskSequence <IResultObject> -InputObject <IResu
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1906, use this cmdlet to edit the task sequence step **Run Task Sequence**.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Change the child task sequence to run
 
-{{ Add example description here }}
+This example gets objects for both task sequences. It then changes the child task sequence that's run from the **Run Task Sequence** step in the parent task sequence.
+
+```powershell
+$parentTS = Get-CMTaskSequence -Name "parent task sequence"
+$childTS = Get-CMTaskSequence -Name "child task sequence"
+$parentTS | Set-CMTSStepRunTaskSequence -RunTaskSequence $childTS
+```
 
 ## PARAMETERS
 
 ### -AddCondition
-{{ Fill AddCondition Description }}
+
+Specify a task sequence step condition object to add to the specified task sequence. For example, use the [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -258,7 +264,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
-{{ Fill ClearCondition Description }}
+
+Remove the specified condition from the task sequence step.
 
 ```yaml
 Type: SwitchParameter
@@ -273,7 +280,8 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-{{ Fill Condition Description }}
+
+Specify a task sequence step condition object. For example, use the [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -288,7 +296,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
-{{ Fill ConditionVariableName Description }}
+
+Specify the variable name to add as a condition to the task sequence step.
 
 ```yaml
 Type: String
@@ -303,7 +312,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
-{{ Fill ConditionVariableValue Description }}
+
+Specify the variable value to add as a condition to the task sequence step.
 
 ```yaml
 Type: String
@@ -318,7 +328,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify a description for the task sequence step.
 
 ```yaml
 Type: String
@@ -333,7 +344,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -455,7 +467,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -470,7 +483,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the task sequence to modify.
 
 ```yaml
 Type: IResultObject
@@ -500,7 +514,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
-{{ Fill IsContinueOnError Description }}
+
+Check whether this task sequence step is configured to continue on error.
 
 ```yaml
 Type: Boolean
@@ -515,7 +530,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-{{ Fill IsEnabled Description }}
+
+Check whether this task sequence step is enabled.
 
 ```yaml
 Type: Boolean
@@ -530,7 +546,8 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
-{{ Fill MoveToIndex Description }}
+
+Move the specified task sequence step to the specified integer index.
 
 ```yaml
 Type: Int32
@@ -575,7 +592,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
-{{ Fill NewStepName Description }}
+
+Specify a new name for this task sequence step.
 
 ```yaml
 Type: String
@@ -818,7 +836,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunTaskSequence
-{{ Fill RunTaskSequence Description }}
+
+Specify an object for the child task sequence to run with this step.
 
 ```yaml
 Type: IResultObject
@@ -981,7 +1000,8 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+
+Specify the name of the target task sequence step.
 
 ```yaml
 Type: String
@@ -1027,7 +1047,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+
+Specify the ID of the task sequence to target.
 
 ```yaml
 Type: String
@@ -1042,7 +1063,8 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+
+Specify the name of the task sequence to target.
 
 ```yaml
 Type: String
@@ -1089,6 +1111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -1104,8 +1127,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -1120,6 +1143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -1129,6 +1153,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

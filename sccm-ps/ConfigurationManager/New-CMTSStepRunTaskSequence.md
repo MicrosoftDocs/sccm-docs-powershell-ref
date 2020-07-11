@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMTSStepRunTaskSequence
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to create the task sequence step **Run Task Sequence**.
 
 ## SYNTAX
 
@@ -19,21 +20,23 @@ New-CMTSStepRunTaskSequence -RunTaskSequence <IResultObject> -Name <String> [-De
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1906, se this cmdlet to create the task sequence step **Run Task Sequence**.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Create the task sequence step
 
-{{ Add example description here }}
+```powershell
+$refSubTaskSequence = Get-CMTaskSequence -Name "Child task sequence"
+$myStep = New-CMTSStepRunTaskSequence -Name "Run child task sequence" -RunTaskSequence $refSubTaskSequence
+```
 
 ## PARAMETERS
 
 ### -Condition
-{{ Fill Condition Description }}
+
+Specify a task sequence step condition object. For example, use the [Get-CMTSStepConditionVariable](Get-CMTSStepConditionVariable.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -48,7 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
-{{ Fill ContinueOnError Description }}
+
+This parameter is the same as the following setting on the **Options** tab of the **Run Task Sequence** step in the **Task Sequence Editor** in the console: **Continue on error**.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify a description for the task sequence step.
 
 ```yaml
 Type: String
@@ -78,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-{{ Fill Disable Description }}
+
+This parameter is the same as the following setting on the **Options** tab of the **Run Task Sequence** step in the **Task Sequence Editor** in the console: **Disable this step**.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -123,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for the task sequence step.
 
 ```yaml
 Type: String
@@ -138,7 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunTaskSequence
-{{ Fill RunTaskSequence Description }}
+
+Specify an object for the task sequence that you want this step to run. This parameter is the same as the following setting on the **Properties** tab of the **Run Task Sequence** step in the **Task Sequence Editor** in the console: **Select task sequence to run**.
 
 ```yaml
 Type: IResultObject
@@ -153,6 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -168,8 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -184,6 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

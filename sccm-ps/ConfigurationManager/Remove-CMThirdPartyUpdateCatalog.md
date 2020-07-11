@@ -8,7 +8,8 @@ schema: 2.0.0
 # Remove-CMThirdPartyUpdateCatalog
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to remove a third-party updates catalog.
 
 ## SYNTAX
 
@@ -31,21 +32,33 @@ Remove-CMThirdPartyUpdateCatalog [-InputObject] <IResultObject> [-Force] [-Disab
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1910, use this cmdlet to remove a third-party updates catalog.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Force remove the catalog by name
+
+This example force removes the third-party update catalog by its name.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-CMThirdPartyUpdateCatalog -Name "Contoso updates catalog" -Force
 ```
 
-{{ Add example description here }}
+### Example 2: Remove the catalog as an object
+
+This example removes the third-party update catalog as an object.
+
+```powershell
+$catalog = Get-CMThirdPartyUpdateCatalog -Name "Contoso updates catalog"
+Remove-CMThirdPartyUpdateCatalog -ThirdPartyUpdateCatalog $catalog
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -60,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Force remove the third-party updates catalog.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the third-party updates catalog.
 
 ```yaml
 Type: String
@@ -105,7 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the third-party updates catalog.
 
 ```yaml
 Type: IResultObject
@@ -120,7 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the third-party updates catalog.
 
 ```yaml
 Type: String
@@ -135,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -150,8 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -166,6 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -175,6 +195,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

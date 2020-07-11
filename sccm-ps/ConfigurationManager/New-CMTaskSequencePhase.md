@@ -63,7 +63,8 @@ New-CMTaskSequencePhase -CollectionName "MyCollection" -PhaseName "MyTSPhase" -U
 ## PARAMETERS
 
 ### -AllowFallback
-{{ Fill AllowFallback Description }}
+
+This parameter is the same as the following setting on the **Distribution Points** page of the **Add Phase Wizard** in the console: **Allow clients to use distribution points from the default site boundary group**.
 
 ```yaml
 Type: Boolean
@@ -78,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRemoteDP
-{{ Fill AllowRemoteDP Description }}
+
+This parameter is the same as the following setting on the **Distribution Points** page of the **Add Phase Wizard** in the console: **When no local distribution point is available, use a remote distribution point**.
 
 ```yaml
 Type: Boolean
@@ -93,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSystemRestart
-{{ Fill AllowSystemRestart Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **System restart (if required to complete installation)**. This setting applies when the installation deadline is reached, to allow this activity to be performed outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -108,7 +111,12 @@ Accept wildcard characters: False
 ```
 
 ### -BeginCondition
-{{ Fill BeginCondition Description }}
+
+Specify an option for beginning this phase of deployment after success of the previous phase:
+
+- `AfterPeriod`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Automatically begin this phase after a deferral period (in days)**. If you specify this value, use **DaysAfterPreviousPhaseSuccess** to configure the period of time.
+
+- `Manually`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Manually begin this phase of deployment**.
 
 ```yaml
 Type: BeginConditionType
@@ -172,7 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -Comments
-{{ Fill Comments Description }}
+
+Specify optional comments for this phase. The maximum length is 512 characters.
 
 ```yaml
 Type: String
@@ -187,7 +196,12 @@ Accept wildcard characters: False
 ```
 
 ### -CriteriaOption
-{{ Fill CriteriaOption Description }}
+
+Specify an option to choose the criteria for success of the previous phase:
+
+- `Compliance`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Deployment success percentage**. Specify the percentage value with the **CriteriaValue** parameter.
+
+- `Number`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Number of devices successfully deployed**. Specify the number of devices with the **CriteriaValue** parameter.
 
 ```yaml
 Type: CriteriaType
@@ -203,7 +217,12 @@ Accept wildcard characters: False
 ```
 
 ### -CriteriaValue
-{{ Fill CriteriaValue Description }}
+
+This integer value depends upon the value that you specify for **CriteriaOption**:
+
+- `Compliance`: Specify the percentage
+
+- `Number`: Specify the number of devices
 
 ```yaml
 Type: Int32
@@ -218,7 +237,8 @@ Accept wildcard characters: False
 ```
 
 ### -DaysAfterPreviousPhaseSuccess
-{{ Fill DaysAfterPreviousPhaseSuccess Description }}
+
+Specify an integer value for the number of days after success of the previous phase to begin this phase. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Automatically begin this phase after a deferral period (in days)**.
 
 ```yaml
 Type: Int32
@@ -233,7 +253,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineUnit
-{{ Fill DeadlineUnit Description }}
+
+Specify the type of deadline period. Use this parameter with **DeadlineValue**.
 
 ```yaml
 Type: TimeUnitType
@@ -249,7 +270,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineValue
-{{ Fill DeadlineValue Description }}
+
+This parameter is only used if you specify `AfterPeriod` with the **InstallationChoice** parameter.
+
+Specify an integer value for the period of time for the deadline. Use the **DeadlineUnit** parameter to specify the type of period: `Hours`, `Days`, `Weeks`, `Months`. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required after this period of time**.
 
 ```yaml
 Type: Int32
@@ -264,7 +288,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentOption
-{{ Fill DeploymentOption Description }}
+
+This parameter is the same as the following setting on the **Distribution Points** page of the **Add Phase Wizard** in the console: **Select the deployment option to use when a client uses a distribution point from a neighbor boundary group or the default site boundary group**. It accepts the following values:
+
+- `DownloadContentLocallyWhenNeededByRunningTaskSequence`: Download content locally when needed by the running task sequence
+- `DownloadAllContentLocallyBeforeStartingTaskSequence`: Download all content locally before starting task sequence
 
 ```yaml
 Type: DeploymentOptionType
@@ -281,6 +309,8 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -295,6 +325,8 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -308,7 +340,12 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationChoice
-{{ Fill InstallationChoice Description }}
+
+Specify an option for the behavior relative to when the software is made available:
+
+- `AsSoonAsPossible`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required as soon as possible**.
+
+- `AfterPeriod`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required after this period of time**. If you specify this value, use **DeadlineUnit** and **DeadlineValue** to configure the period of time.
 
 ```yaml
 Type: InstallationChoiceType
@@ -340,7 +377,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreDownload
-{{ Fill PreDownload Description }}
+
+This parameter is the same as the following setting on the **General** page of the **Add Phase Wizard** in the console: **Pre-download content for this task sequence**.
 
 ```yaml
 Type: Boolean
@@ -355,7 +393,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
-{{ Fill SoftwareInstallation Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Software Installation**. This setting applies when the installation deadline is reached, to allow this activity to be performed outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -370,7 +409,8 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottlingDays
-{{ Fill ThrottlingDays Description }}
+
+Specify an integer value for the number of days to gradually make this software available. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Gradually make this software available over this period of time (in days)**.
 
 ```yaml
 Type: Int32
@@ -385,7 +425,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserNotification
-{{ Fill UserNotification Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Specify user experience setting for this deployment** with the following values:
+
+- `DisplayAll`: Display in Software Center and show all notifications
+- `HideAll`: Hide in Software Center and all notifications
 
 ```yaml
 Type: UserNotificationType
@@ -401,7 +445,8 @@ Accept wildcard characters: False
 ```
 
 ### -WriteFilterCommit
-{{ Fill WriteFilterCommit Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Commit changes at deadline or during a maintenance window (requires restart)**. This setting applies to write filter handling for Windows Embedded devices.
 
 ```yaml
 Type: Boolean

@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CMThirdPartyUpdateCatalog
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to create a new third-party updates catalog.
 
 ## SYNTAX
 
@@ -19,21 +20,22 @@ New-CMThirdPartyUpdateCatalog [-DownloadUrl] <Uri> [-PublisherName] <String> [-N
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1910, use this cmdlet to create a new third-party updates catalog.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Create a third-party update catalog
 
-{{ Add example description here }}
+```powershell
+New-CMThirdPartyUpdateCatalog -DownloadUrl $downloadUrl -PublisherName $publisher -Name $name -Description $description -SupportUrl $supportUrl -SupportContact $supportContact
+```
 
 ## PARAMETERS
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify a description for the third-party update catalog. The maximum length is 200 characters.
 
 ```yaml
 Type: String
@@ -48,7 +50,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadUrl
-{{ Fill DownloadUrl Description }}
+
+Specify a valid HTTPS URL for the site to download the third-party update catalog.
 
 ```yaml
 Type: Uri
@@ -78,7 +80,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for the third-party update catalog. The maximum length is 200 characters.
 
 ```yaml
 Type: String
@@ -108,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublisherName
-{{ Fill PublisherName Description }}
+
+Specify the publisher name of the third-party update catalog. The maximum length is 200 characters.
 
 ```yaml
 Type: String
@@ -123,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupportContact
-{{ Fill SupportContact Description }}
+
+Specify the support contact for the third-party update catalog.
 
 ```yaml
 Type: String
@@ -138,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupportUrl
-{{ Fill SupportUrl Description }}
+
+Specify the support URL for the third-party update catalog.
 
 ```yaml
 Type: Uri
@@ -153,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

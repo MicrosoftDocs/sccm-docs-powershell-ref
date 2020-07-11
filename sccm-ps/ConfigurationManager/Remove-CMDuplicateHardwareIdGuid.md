@@ -8,7 +8,8 @@ schema: 2.0.0
 # Remove-CMDuplicateHardwareIdGuid
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to remove duplicate hardware identifiers by GUID.
 
 ## SYNTAX
 
@@ -25,21 +26,32 @@ Remove-CMDuplicateHardwareIdGuid -Id <Guid> [-DisableWildcardHandling] [-ForceWi
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1910, use this cmdlet to remove duplicate hardware identifiers by GUID.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Specify an explicit ID to remove
+
+This example removes a hardware identifier for the specified GUID.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-CMDuplicateHardwareIdGuid -Id 24D0F753-B2E2-4D9C-B07C-099C4FC1EF3C
 ```
 
-{{ Add example description here }}
+### Example 2: Remove an ID for an input object
+
+This example removes a hardware identifier for an input object `$myGuid`. This variable stores the identifier as `IResultObject#SMS_CommonSmbiosGuids`.
+
+```powershell
+Remove-CMDuplicateHardwareIdGuid -InputObject $myGuid
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the GUID of the hardware identifier to remove from the site.
 
 ```yaml
 Type: Guid
@@ -84,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a GUID object for the hardware identifier to remove from the site. This object is of type `IResultObject#SMS_CommonSmbiosGuids`.
 
 ```yaml
 Type: IResultObject
@@ -99,6 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -114,8 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -130,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -139,6 +156,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

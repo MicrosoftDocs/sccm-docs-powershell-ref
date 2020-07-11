@@ -81,7 +81,10 @@ New-CMSoftwareUpdatePhase `
 ## PARAMETERS
 
 ### -AlertDelta
-{{ Fill AlertDelta Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Offset from the deadline time**. Specify an integer value for the offset, and then specify the period type with the **AlertUnit** parameter.
+
+To set this value, you have to use the **EnableAlert** parameter.
 
 ```yaml
 Type: Int32
@@ -96,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -AlertThresholdPercentage
-{{ Fill AlertThresholdPercentage Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Client compliance is below the following (percent)**. Specify an integer value for the percentage. To set this value, you have to use the **EnableAlert** parameter.
 
 ```yaml
 Type: Int32
@@ -111,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -AlertUnit
-{{ Fill AlertUnit Description }}
+
+Specify the type of period. Use this parameter with **AlertDelta**.
 
 ```yaml
 Type: TimeUnitType
@@ -127,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeteredConnection
-{{ Fill AllowMeteredConnection Description }}
+
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **Allow clients on a metered internet connection to download content after the installation deadline, which might incur additional costs**.
 
 ```yaml
 Type: Boolean
@@ -142,7 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSystemRestart
-{{ Fill AllowSystemRestart Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **System restart (if required to complete installation)**. This setting applies when the installation deadline is reached, to allow this activity to be performed outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -157,7 +164,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWUMUFallback
-{{ Fill AllowWUMUFallback Description }}
+
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
 
 ```yaml
 Type: Boolean
@@ -172,7 +180,12 @@ Accept wildcard characters: False
 ```
 
 ### -BeginCondition
-{{ Fill BeginCondition Description }}
+
+Specify an option for beginning this phase of deployment after success of the previous phase:
+
+- `AfterPeriod`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Automatically begin this phase after a deferral period (in days)**. If you specify this value, use **DaysAfterPreviousPhaseSuccess** to configure the period of time.
+
+- `Manually`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Manually begin this phase of deployment**.
 
 ```yaml
 Type: BeginConditionType
@@ -236,7 +249,12 @@ Accept wildcard characters: False
 ```
 
 ### -CriteriaOption
-{{ Fill CriteriaOption Description }}
+
+Specify an option to choose the criteria for success of the previous phase:
+
+- `Compliance`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Deployment success percentage**. Specify the percentage value with the **CriteriaValue** parameter.
+
+- `Number`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Number of devices successfully deployed**. Specify the number of devices with the **CriteriaValue** parameter.
 
 ```yaml
 Type: CriteriaType
@@ -252,7 +270,12 @@ Accept wildcard characters: False
 ```
 
 ### -CriteriaValue
-{{ Fill CriteriaValue Description }}
+
+This integer value depends upon the value that you specify for **CriteriaOption**:
+
+- `Compliance`: Specify the percentage
+
+- `Number`: Specify the number of devices
 
 ```yaml
 Type: Int32
@@ -267,7 +290,8 @@ Accept wildcard characters: False
 ```
 
 ### -DaysAfterPreviousPhaseSuccess
-{{ Fill DaysAfterPreviousPhaseSuccess Description }}
+
+Specify an integer value for the number of days after success of the previous phase to begin this phase. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Automatically begin this phase after a deferral period (in days)**.
 
 ```yaml
 Type: Int32
@@ -282,7 +306,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineUnit
-{{ Fill DeadlineUnit Description }}
+
+Specify the type of deadline period. Use this parameter with **DeadlineValue**.
 
 ```yaml
 Type: TimeUnitType
@@ -298,7 +323,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineValue
-{{ Fill DeadlineValue Description }}
+
+This parameter is only used if you specify `AfterPeriod` with the **InstallationChoice** parameter.
+
+Specify an integer value for the period of time for the deadline. Use the **DeadlineUnit** parameter to specify the type of period: `Hours`, `Days`, `Weeks`, `Months`. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required after this period of time**.
 
 ```yaml
 Type: Int32
@@ -313,7 +341,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSCOMAlert
-{{ Fill DisableSCOMAlert Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Disable Operations Manager alerts while software updates run**.
 
 ```yaml
 Type: Boolean
@@ -328,7 +357,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -343,7 +373,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAlert
-{{ Fill EnableAlert Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Generate an alert when the following conditions are met**. When you set this parameter to `$true`, also set the following parameters:
+
+- AlertThresholdPercentage
+- AlertDelta
 
 ```yaml
 Type: Boolean
@@ -358,7 +392,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWakeOnLan
-{{ Fill EnableWakeOnLan Description }}
+
+This parameter is the same as the following setting on the **Deployment Settings** page of the **Add Phase Wizard** in the console: **Use Wake-on-LAN to wake up clients for required deployments**.
 
 ```yaml
 Type: Boolean
@@ -374,6 +409,8 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -387,7 +424,8 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateSCOMAlertOnFailure
-{{ Fill GenerateSCOMAlertOnFailure Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Generate Operations Manager alert when a software update installation fails**.
 
 ```yaml
 Type: Boolean
@@ -402,7 +440,12 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationChoice
-{{ Fill InstallationChoice Description }}
+
+Specify an option for the behavior relative to when the software is made available:
+
+- `AsSoonAsPossible`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required as soon as possible**.
+
+- `AfterPeriod`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required after this period of time**. If you specify this value, use **DeadlineUnit** and **DeadlineValue** to configure the period of time.
 
 ```yaml
 Type: InstallationChoiceType
@@ -450,7 +493,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePostRebootFullScan
-{{ Fill RequirePostRebootFullScan Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
 
 ```yaml
 Type: Boolean
@@ -465,7 +509,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerRestartSuppression
-{{ Fill ServerRestartSuppression Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console. Suppress the system restart on the following devices: **Servers**.
 
 ```yaml
 Type: Boolean
@@ -480,7 +525,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
-{{ Fill SoftwareInstallation Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Software Installation**. This setting applies when the installation deadline is reached, to allow this activity to be performed outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -495,7 +541,12 @@ Accept wildcard characters: False
 ```
 
 ### -StateMessageVerbosity
-{{ Fill StateMessageVerbosity Description }}
+
+This parameter is the same as the following setting on the **Deployment Settings** page of the **Add Phase Wizard** in the console: **State message detail level** with the following values:
+
+- `AllMessages`: All messages
+- `OnlySuccessAndErrorMessages`: Only success and error messages
+- `OnlyErrorMessages`: Only error messages
 
 ```yaml
 Type: VerbosityLevelType
@@ -511,7 +562,8 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottlingDays
-{{ Fill ThrottlingDays Description }}
+
+Specify an integer value for the number of days to gradually make this software available. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Gradually make this software available over this period of time (in days)**.
 
 ```yaml
 Type: Int32
@@ -526,7 +578,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseNeighborDP
-{{ Fill UseNeighborDP Description }}
+
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **Select the deployment option to use when a client uses a distribution point from a neighbor boundary group or the default site boundary group**. Specify the following values:
+
+- `$true`: Download software updates from distribution point and install
+- `$false`: Do not install software updates
 
 ```yaml
 Type: Boolean
@@ -541,7 +597,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserNotificationOption
-{{ Fill UserNotificationOption Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Specify user experience setting for this deployment** with the following values:
+
+- `DisplayAll`: Display in Software Center and show all notifications
+- `DisplaySoftwareCenterOnly`: Display in Software Center, and only show notifications for computer restarts
+- `HideAll`: Hide in Software Center and all notifications
 
 ```yaml
 Type: UserNotificationType
@@ -557,7 +618,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseSiteDefaultDP
-{{ Fill UseSiteDefaultDP Description }}
+
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **When software updates are not available on any distribution points in current or neighbor boundary group, client can download and install software updates from distribution points in site default boundary group**. Specify the following values:
+
+- `$true`: Download and install software updates from the distribution points in site default boundary group
+- `$false`: Do not install software updates
 
 ```yaml
 Type: Boolean
@@ -572,7 +637,8 @@ Accept wildcard characters: False
 ```
 
 ### -WorkstationRestartSuppression
-{{ Fill WorkstationRestartSuppression Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console. Suppress the system restart on the following devices: **Workstations**.
 
 ```yaml
 Type: Boolean
@@ -587,7 +653,8 @@ Accept wildcard characters: False
 ```
 
 ### -WriteFilterCommit
-{{ Fill WriteFilterCommit Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Commit changes at deadline or during a maintenance window (requires restart)**. This setting applies to write filter handling for Windows Embedded devices.
 
 ```yaml
 Type: Boolean

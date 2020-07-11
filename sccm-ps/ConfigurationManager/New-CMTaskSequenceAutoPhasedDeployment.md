@@ -51,7 +51,10 @@ New-CMTaskSequenceAutoPhasedDeployment [-TaskSequenceName] <String> [-FirstColle
 
 ## DESCRIPTION
 
-Starting in version 2002, use this cmdlet to create a phased deployment for a task sequence by generating two phases with same settings.
+Starting in version 2002, use this cmdlet to create a phased deployment for a task sequence by generating two phases with same settings. This cmdlet's behavior is the same as the **Create Phased Deployment** wizard on a task sequence, when you select the option to **Automatically create a default two phase deployment**.
+
+> [!NOTE]
+> Before you create a phased deployment, make sure to distribute the task sequence content to a distribution point.
 
 ## EXAMPLES
 
@@ -74,7 +77,8 @@ $myTS | New-CMTaskSequenceAutoPhasedDeployment -Name "myPDName" -FirstCollection
 ## PARAMETERS
 
 ### -AddPhases
-{{ Fill AddPhases Description }}
+
+This cmdlet automatically creates two phases for the specified two collections. You can also add more phases with this parameter. Specify an array of phases. Use [New-CMTaskSequencePhase](New-CMTaskSequencePhase.md) to create the phases.
 
 ```yaml
 Type: Phase[]
@@ -89,7 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -BeginCondition
-{{ Fill BeginCondition Description }}
+
+Specify an option for beginning the second phase of deployment after success of the first phase:
+
+- `AfterPeriod`: This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Automatically begin this phase after a deferral period (in days)**. If you specify this value, use **DaysAfterPreviousPhaseSuccess** to configure the period of time.
+
+- `Manually`: This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Manually begin the second phase deployment**.
 
 ```yaml
 Type: BeginConditionType
@@ -105,7 +114,12 @@ Accept wildcard characters: False
 ```
 
 ### -CriteriaOption
-{{ Fill CriteriaOption Description }}
+
+Specify an option to choose the criteria for success of the first phase:
+
+- `Compliance`: This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Deployment success percentage**. Specify the percentage value with the **CriteriaValue** parameter.
+
+- `Number`: This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Number of devices successfully deployed**. Specify the number of devices with the **CriteriaValue** parameter.
 
 ```yaml
 Type: CriteriaType
@@ -121,7 +135,12 @@ Accept wildcard characters: False
 ```
 
 ### -CriteriaValue
-{{ Fill CriteriaValue Description }}
+
+This integer value depends upon the value that you specify for **CriteriaOption**:
+
+- `Compliance`: Specify the percentage
+
+- `Number`: Specify the number of devices
 
 ```yaml
 Type: Int32
@@ -136,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -DaysAfterPreviousPhaseSuccess
-{{ Fill DaysAfterPreviousPhaseSuccess Description }}
+
+Specify an integer value for the number of days after success of the first phase to begin the second phase. This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Automatically begin this phase after a deferral period (in days)**.
 
 ```yaml
 Type: Int32
@@ -151,7 +171,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineUnit
-{{ Fill DeadlineUnit Description }}
+
+Specify the type of deadline period. Use this parameter with **DeadlineValue**.
 
 ```yaml
 Type: TimeUnitType
@@ -167,7 +188,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineValue
-{{ Fill DeadlineValue Description }}
+
+This parameter is only used if you specify `AfterPeriod` with the **InstallationChoice** parameter.
+
+Specify an integer value for the period of time for the deadline. Use the **DeadlineUnit** parameter to specify the type of period: `Hours`, `Days`, `Weeks`, `Months`. This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Installation is required after this period of time**.
 
 ```yaml
 Type: Int32
@@ -198,6 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -261,6 +287,8 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -274,7 +302,8 @@ Accept wildcard characters: False
 ```
 
 ### -InsertAtOrder
-{{ Fill InsertAtOrder Description }}
+
+If you use the **AddPhases** parameter, use this parameter to determine where in the order of phases to insert the additional phases. Specify an integer with the order number.
 
 ```yaml
 Type: Int32
@@ -289,7 +318,12 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationChoice
-{{ Fill InstallationChoice Description }}
+
+Specify an option for the behavior relative to when the software is made available:
+
+- `AsSoonAsPossible`: This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Installation is required as soon as possible**.
+
+- `AfterPeriod`: This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Installation is required after this period of time**. If you specify this value, use **DeadlineUnit** and **DeadlineValue** to configure the period of time.
 
 ```yaml
 Type: InstallationChoiceType
@@ -417,7 +451,8 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottlingDays
-{{ Fill ThrottlingDays Description }}
+
+Specify an integer value for the number of days to gradually make this software available. This parameter is the same as the following setting on the **Settings** page of the **Create Phased Deployment** wizard in the console: **Gradually make this software available over this period of time (in days)**.
 
 ```yaml
 Type: Int32

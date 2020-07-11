@@ -8,7 +8,8 @@ schema: 2.0.0
 # Suspend-CMPhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to suspend the specified phased deployment.
 
 ## SYNTAX
 
@@ -31,21 +32,32 @@ Suspend-CMPhasedDeployment [-Force] -Name <String> [-DisableWildcardHandling] [-
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to suspend the specified phased deployment.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Suspend the deployment by name
+
+This example suspends the phased deployment that you specify by name.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Suspend-CMPhasedDeployment -Name "myPhasedDeploymentName"
 ```
 
-{{ Add example description here }}
+### Example 2: Force suspend the deployment by piped object
+
+This example force suspends the phased deployment that you pipe on the command line.
+
+```powershell
+$myPhasedDeployment | Suspend-CMPhasedDeployment -Force
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -60,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Force suspend the phased deployment.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the phased deployment to suspend. The ID is a GUID format.
 
 ```yaml
 Type: String
@@ -105,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the phased deployment to suspend.
 
 ```yaml
 Type: IResultObject
@@ -120,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the phased deployment to suspend.
 
 ```yaml
 Type: String
@@ -135,6 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -150,8 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -166,6 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -175,6 +194,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

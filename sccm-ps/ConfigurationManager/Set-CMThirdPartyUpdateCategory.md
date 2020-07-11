@@ -8,7 +8,8 @@ schema: 2.0.0
 # Set-CMThirdPartyUpdateCategory
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to modify third-party update categories.
 
 ## SYNTAX
 
@@ -41,21 +42,24 @@ Set-CMThirdPartyUpdateCategory [-Category] <IResultObject[]> [-PublishOption <Pu
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to modify third-party update categories.
 
 ## EXAMPLES
 
-### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+Set-CMThirdPartyUpdateCategory -Catalog $catalog -Id $categoryId -PublishOption $publishOption -EnableCategories $true
+$catalog | Set-CMThirdPartyUpdateCategory -Name $categoryName -PublishOption $publishOption -EnableCategories $true
+Set-CMThirdPartyUpdateCategory -CatalogId $catalogId -ParentId $parentId -PublishOption $publishOption -EnableCategories $true
+Set-CMThirdPartyUpdateCategory -CatalogName $catalogName -Name $categoryName -ParentId $parentId -PublishOption $publishOption -EnableCategories $true
+Set-CMThirdPartyUpdateCategory -Categories $categories -PublishOption $publishOption -EnableCategories $true
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -CatalogId
-{{ Fill CatalogId Description }}
+
+Specify the ID of the third-party update catalog.
 
 ```yaml
 Type: String
@@ -70,7 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -CatalogName
-{{ Fill CatalogName Description }}
+
+Specify the name of the third-party update catalog.
 
 ```yaml
 Type: String
@@ -85,7 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -Category
-{{ Fill Category Description }}
+
+Specify an object for the the third-party update catalog category.
 
 ```yaml
 Type: IResultObject[]
@@ -100,7 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -115,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCategory
-{{ Fill EnableCategory Description }}
+
+Enable the catagory for the third-party update catalog.
 
 ```yaml
 Type: Boolean
@@ -130,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the category ID for the third-party update catalog.
 
 ```yaml
 Type: String
@@ -160,7 +170,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the third-party update catalog.
 
 ```yaml
 Type: IResultObject
@@ -175,7 +186,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the category name for the third-party update catalog.
 
 ```yaml
 Type: String
@@ -190,7 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentId
-{{ Fill ParentId Description }}
+
+Specify the parent ID of the the third-party update catalog category.
 
 ```yaml
 Type: String
@@ -205,7 +218,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -220,7 +232,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublishOption
-{{ Fill PublishOption Description }}
 
 ```yaml
 Type: PublishOptionType
@@ -236,6 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -251,8 +263,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -267,6 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

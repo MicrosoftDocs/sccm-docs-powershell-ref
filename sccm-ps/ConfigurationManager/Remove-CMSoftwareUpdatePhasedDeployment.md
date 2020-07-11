@@ -8,7 +8,8 @@ schema: 2.0.0
 # Remove-CMSoftwareUpdatePhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to remove a phased deployment for software updates.
 
 ## SYNTAX
 
@@ -67,21 +68,48 @@ Remove-CMSoftwareUpdatePhasedDeployment [-Force] -Name <String> [-DisableWildcar
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 2002, use this cmdlet to remove a phased deployment for software updates.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a phased deployment on an update
+
+This example removes the phased deployment from the specified software update.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateName "mySoftwareUpdateName"
 ```
 
-{{ Add example description here }}
+### Example 2: Remove a phased deployment on an update group
+
+This example removes the phased deployment from the specified software update group.
+
+```powershell
+Remove-CMSoftwareUpdatePhasedDeployment -SoftwareUpdateGroupName "mySoftwareUpdateGroupName"
+```
+
+### Example 3: Remove a phased deployment by name
+
+This example removes the phased deployment by its name.
+
+```powershell
+Remove-CMSoftwareUpdatePhasedDeployment -Name "myPhasedDeploymentName"
+```
+
+### Example 4: Force remove a phased deployment from input
+
+This example force removes a piped object phased deployment.
+
+```powershell
+$myPhasedDeployment | Remove-CMSoftwareUpdatePhasedDeployment -Force
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -96,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Force remove the phased deployment.
 
 ```yaml
 Type: SwitchParameter
@@ -111,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -126,7 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the phased deployment to remove. The value is a GUID format.
 
 ```yaml
 Type: String
@@ -141,7 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the phased deployment to remove.
 
 ```yaml
 Type: IResultObject
@@ -156,7 +188,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the phased deployment to remove.
 
 ```yaml
 Type: String
@@ -171,7 +204,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdate
-{{ Fill SoftwareUpdate Description }}
+
+Remove a phased deployment from the specified software update object.
 
 ```yaml
 Type: IResultObject
@@ -186,7 +220,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroup
-{{ Fill SoftwareUpdateGroup Description }}
+
+Remove a phased deployment from the specified software update group object.
 
 ```yaml
 Type: IResultObject
@@ -201,7 +236,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupId
-{{ Fill SoftwareUpdateGroupId Description }}
+
+Specify the ID of the software update group.
 
 ```yaml
 Type: String
@@ -216,7 +252,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateGroupName
-{{ Fill SoftwareUpdateGroupName Description }}
+
+Specify the name of the software update group.
 
 ```yaml
 Type: String
@@ -231,7 +268,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateId
-{{ Fill SoftwareUpdateId Description }}
+
+Specify the ID of the software update.
 
 ```yaml
 Type: String
@@ -246,7 +284,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareUpdateName
-{{ Fill SoftwareUpdateName Description }}
+
+Specify the name of the software update.
 
 ```yaml
 Type: String
@@ -261,6 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -276,8 +316,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -292,6 +332,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -301,6 +342,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

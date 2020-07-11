@@ -8,7 +8,8 @@ schema: 2.0.0
 # Remove-CMDuplicateHardwareIdMacAddress
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to remove duplicate hardware identifiers by MAC address.
 
 ## SYNTAX
 
@@ -25,21 +26,32 @@ Remove-CMDuplicateHardwareIdMacAddress -MacAddress <String> [-DisableWildcardHan
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Starting in version 1910, use this cmdlet to remove duplicate hardware identifiers by MAC address.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Specify an explicit MAC to remove
+
+This example removes a hardware identifier for the specified MAC address.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-CMDuplicateHardwareIdMacAddress -MacAddress '01:02:03:04:05:E0'
 ```
 
-{{ Add example description here }}
+### Example 2: Remove an ID for an input object
+
+This example removes a hardware identifier for an input object `$myMacAddress`. This variable stores the identifier as `IResultObject#SMS_CommonMacAddresses`.
+
+```powershell
+Remove-CMDuplicateHardwareIdMacAddress -InputObject $myMacAddress
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for the hardware identifier to remove from the site. This object is of type `IResultObject#SMS_CommonMacAddresses`.
 
 ```yaml
 Type: IResultObject
@@ -84,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -MacAddress
-{{ Fill MacAddress Description }}
+
+Specify a network MAC address of the hardware identifier to remove from the site. It's a colon-delimited (`:`) string value.
 
 ```yaml
 Type: String
@@ -99,6 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -114,8 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -130,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -139,6 +156,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
