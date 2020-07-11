@@ -653,8 +653,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-For more information, see [About client settings - Software Center](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings#software-center) and [Plan for Software Center](https://docs.microsoft.com/mem/configmgr/apps/plan-design/plan-for-software-center).
+[About client settings - Software Center](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings#software-center)
+
+[Plan for Software Center](https://docs.microsoft.com/mem/configmgr/apps/plan-design/plan-for-software-center)
