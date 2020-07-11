@@ -56,11 +56,12 @@ The **Set-CMSiteMaintenanceTask** cmdlet changes settings for a Microsoft System
 ## EXAMPLES
 
 ### Example 1: Set a maintenance task to run once a week
-```
-PS XYZ:\> Set-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup" -DaysOfWeek Friday
-```
 
-This command specifies that the maintenance task named Backup runs on Friday each week on the Configuration Manager site that has the site code CM1.
+This example specifies that the maintenance task named **Backup SMS Site Server** runs on **Friday** each week on the Configuration Manager site that has the site code **CM1**.
+
+```powershell
+Set-CMSiteMaintenanceTask -SiteCode "CM1" -MaintenanceTaskName "Backup SMS Site Server" -DaysOfWeek Friday
+```
 
 ## PARAMETERS
 
