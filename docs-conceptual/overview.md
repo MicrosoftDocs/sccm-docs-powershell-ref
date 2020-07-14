@@ -99,3 +99,5 @@ Get-Help Get-CMSite
 For more information about what's changed in the most recent release of Configuration Manager, select the latest **Release Notes** from the table of contents.
 
 For more information on individual cmdlets, see the [Configuration Manager cmdlet reference](https://docs.microsoft.com/powershell/module/configurationmanager/?view=sccm-ps).
+
+For more information on learning and getting started with Windows PowerShell, see [PowerShell 101](https://docs.microsoft.com/powershell/scripting/learn/ps101/00-introduction?view=powershell-7).
