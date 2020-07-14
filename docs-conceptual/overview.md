@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
 ms.date: 04/28/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 63712bbf-0f8a-4cdb-8998-e7d41257981e
 author: aczechowski
