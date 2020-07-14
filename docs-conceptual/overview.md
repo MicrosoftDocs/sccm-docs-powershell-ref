@@ -29,7 +29,7 @@ The easiest method to open PowerShell is directly from the Configuration Manager
 
 1. After Windows PowerShell loads, you'll see a prompt that contains your site code. For example, if the site code is "ABC", the prompt looks like: `PS ABC:\>`
 
-1. To verify it works, use the `Get-CMSite` cmdlet. This cmdlet returns information about the Configuration Manager site you're currently connected to and any child sites. For example, the site server name, installation director, site name, and version.
+1. To verify it works, use the **Get-CMSite** cmdlet. This cmdlet returns information about the Configuration Manager site you're currently connected to and any child sites. For example, the site server name, installation director, site name, and version.
 
 ## Import the Configuration Manager PowerShell module
 
@@ -37,7 +37,7 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
 
 1. Open a Windows PowerShell session from the Start menu.
 
-1. Import the Configuration Manager module by using the `Import-Module` cmdlet. Specify the path to the Configuration Manager module, or change to the directory that contains the module. By default, the module is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\ConfigurationManager.psd1`
+1. Import the Configuration Manager module by using the **Import-Module** cmdlet. Specify the path to the Configuration Manager module, or change to the directory that contains the module. By default, the module is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\ConfigurationManager.psd1`
 
     > [!IMPORTANT]
     > This path changed starting in version 1910 to use the `Microsoft Endpoint Manager` folder. Make sure you don't import an older version of the module that might exist in another folder. After you import the module, use the following commands to check the module version and path:
@@ -55,7 +55,7 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
     ```
 
     > [!TIP]
-    > You can also use the `$env:SMS_ADMIN_UI_PATH` variable. For example:
+    > You can also use the **SMS_ADMIN_UI_PATH** environment variable. For example:
     >
     > ```powershell
     > Set-Location $env:SMS_ADMIN_UI_PATH\..\
@@ -78,17 +78,17 @@ Connect to Configuration Manager from an existing Windows PowerShell session by 
     Set-Location ABC:
     ```
 
-1. Confirm that PowerShell properly loaded the Configuration Manager module by using the `Get-CMSite` cmdlet.
+1. Confirm that PowerShell properly loaded the Configuration Manager module by using the **Get-CMSite** cmdlet.
 
 ## Update help
 
-Update Windows PowerShell help by using the `Update-Help` cmdlet. This action can also update the help for the Configuration Manager cmdlets. If your computer is connected to the internet, go to your Windows PowerShell window, and type the following command:
+Update Windows PowerShell help by using the **Update-Help** cmdlet. This action can also update the help for the Configuration Manager cmdlets. If your computer is connected to the internet, go to your Windows PowerShell window, and type the following command:
 
 ```powershell
 Update-Help –Module ConfigurationManager
 ```
 
-After you update the Configuration Manager cmdlet help, you can get help about the cmdlets by using the `Get-Help` cmdlet. For example:
+After you update the Configuration Manager cmdlet help, you can get help about the cmdlets by using the **Get-Help** cmdlet. For example:
 
 ```powershell
 Get-Help Get-CMSite
