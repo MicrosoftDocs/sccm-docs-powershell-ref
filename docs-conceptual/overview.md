@@ -25,7 +25,7 @@ The easiest method to open PowerShell is directly from the Configuration Manager
 
 1. Launch the Configuration Manager console. In the upper-left corner, there's a blue rectangle. Select the white arrow in the blue rectangle, and choose **Connect via Windows PowerShell**.
 
-    :::image type="content" source="./media/console-menu.png" alt-text="Menu in Configuration Manager console with PowerShell option":::
+    ![Menu in Configuration Manager console with PowerShell option](./media/console-menu.png)
 
 1. After Windows PowerShell loads, you'll see a prompt that contains your site code. For example, if the site code is "ABC", the prompt looks like: `PS ABC:\>`
 
