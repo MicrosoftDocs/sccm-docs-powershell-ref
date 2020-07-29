@@ -1,8 +1,8 @@
 ﻿---
-description: Changes configuration settings of operating system installers.
+description: Changes configuration settings of OS upgrade packages.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Set-CMOperatingSystemInstaller
 ---
@@ -10,7 +10,7 @@ title: Set-CMOperatingSystemInstaller
 # Set-CMOperatingSystemInstaller
 
 ## SYNOPSIS
-Changes configuration settings of operating system installers.
+Changes configuration settings of OS upgrade packages.
 
 ## SYNTAX
 
@@ -54,37 +54,38 @@ Set-CMOperatingSystemInstaller -InputObject <IResultObject> [-Reload] [-NewName 
 ```
 
 ## DESCRIPTION
-The **Set-CMOperatingSystemInstaller** cmdlet changes configuration settings of one or more operating system installers in Microsoft System Center Configuration Manager.
-An operating system installer is an installation package that contains all the files that System Center Configuration Manager needs to install a Windows operating system on a reference computer.
+The **Set-CMOperatingSystemInstaller** cmdlet changes configuration settings of one or more OS upgrade packages in Configuration Manager.
+An OS upgrade package contains all the files that Configuration Manager needs to install a Windows OS on a reference computer.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Change settings for an operating system installer by using a name
-```
-PS XYZ:\> Set-CMOperatingSystemInstaller -Name "Win8x64" -NewName "OsiWin8x64" -Version "I20B" -Description "Dept02 Sys Install" -Path "\\Win2k3X64contoso\Public\OSD\win8x64"
+### Example 1: Change settings for an OS upgrade package by using a name
+
+This command changes configuration settings of the OS upgrade package named Win8x64.
+The command renames the OS upgrade package, adds a version and description, and specifies the path to the installation source files of the OS upgrade package.
+
+```powershell
+Set-CMOperatingSystemInstaller -Name "Win8x64" -NewName "OsiWin8x64" -Version "I20B" -Description "Dept02 Sys Install" -Path "\\Win2k3X64contoso\Public\OSD\win8x64"
 ```
 
-This command changes configuration settings of the operating system installer named Win8x64.
-The command renames the operating system installer, adds a version and description, and specifies the path to the installation source files of the operating system installer.
+### Example 2: Add an OS upgrade package to a security scope by using a name
 
-### Example 2: Add an operating system installer to a security scope by using a name
-```
-PS XYZ:\> Set-CMOperatingSystemInstaller -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
-```
+This command adds membership to the security scope named SecScope02 for the OS upgrade package named InstPkg01.
 
-This command adds membership to the security scope named SecScope02 for the operating system installer named InstPkg01.
-
-### Example 3: Remove an operating system installer from a security scope
-```
-PS XYZ:\> Set-CMOperatingSystemInstaller -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
+```powershell
+Set-CMOperatingSystemInstaller -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
 ```
 
-This command removes membership to the security scope named SecScope02 for the operating system installer named InstPkg01.
+### Example 3: Remove an OS upgrade package from a security scope
+
+This command removes membership to the security scope named SecScope02 for the OS upgrade package named InstPkg01.
+
+```powershell
+Set-CMOperatingSystemInstaller -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "InstPkg01"
+```
 
 ## PARAMETERS
 
@@ -115,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description for the operating system installer.
+Specifies a description for the OS upgrade package.
 
 ```yaml
 Type: String
@@ -225,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of operating system installers.
+Specifies an array of IDs of OS upgrade packages.
 
 ```yaml
 Type: String
@@ -295,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of an operating system installer.
+Specifies the name of an OS upgrade package.
 
 ```yaml
 Type: String
@@ -310,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies the new name of an operating system installer.
+Specifies the new name of an OS upgrade package.
 
 ```yaml
 Type: String
@@ -341,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the network path to the installation source files of an operating system installer.
+Specifies the network path to the installation source files of an OS upgrade package.
 
 ```yaml
 Type: String
@@ -400,7 +401,8 @@ Accept wildcard characters: False
 ```
 
 ### -Reload
-{{ Fill Reload Description }}
+
+Applies to version 2006 and later. If you change the image properties using an external tool, use this option to reload the information in the site database.
 
 ```yaml
 Type: SwitchParameter
@@ -428,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Specifies the version of an operating system installer.
+Specifies the version of an OS upgrade package.
 
 ```yaml
 Type: String

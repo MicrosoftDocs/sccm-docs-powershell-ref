@@ -1,8 +1,8 @@
 ﻿---
-description: Changes configuration settings of operating system images.
+description: Changes configuration settings of OS images.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Set-CMOperatingSystemImage
 ---
@@ -10,7 +10,7 @@ title: Set-CMOperatingSystemImage
 # Set-CMOperatingSystemImage
 
 ## SYNOPSIS
-Changes configuration settings of operating system images.
+Changes configuration settings of OS images.
 
 ## SYNTAX
 
@@ -54,37 +54,38 @@ Set-CMOperatingSystemImage -Name <String> [-Reload] [-NewName <String>] [-Path <
 ```
 
 ## DESCRIPTION
-The **Set-CMOperatingSystemImage** cmdlet changes configuration settings of one or more operating system images in Microsoft System Center Configuration Manager.
-Operating system images are .wim format files and represent a compressed collection of reference files and folders that System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
+The **Set-CMOperatingSystemImage** cmdlet changes configuration settings of one or more OS images in Configuration Manager.
+OS images are .wim format files and represent a compressed collection of reference files and folders that Configuration Manager requires to successfully install and configure an OS on a computer.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Change settings for an operating system image by using an ID
-```
-PS XYZ:\> Set-CMOperatingSystemImage -Id "Cm10004f" -NewName "Microsoft Windows 8 (x64)" -Version "I20C" -Description "Dept02 Sys Image" -Path "\\Contoso\Public\OSD\win8x64.wim"
+### Example 1: Change settings for an OS image by using an ID
+
+This command changes configuration settings of the OS image that has the ID Cm10004f.
+The command renames the OS image, adds a version and description, and specifies the path to the installation source files of the OS image.
+
+```powershell
+Set-CMOperatingSystemImage -Id "Cm10004f" -NewName "Microsoft Windows 8 (x64)" -Version "I20C" -Description "Dept02 Sys Image" -Path "\\Contoso\Public\OSD\win8x64.wim"
 ```
 
-This command changes configuration settings of the operating system image that has the ID Cm10004f.
-The command renames the operating system image, adds a version and description, and specifies the path to the installation source files of the operating system image.
+### Example 2: Add an OS image to a security scope by using a name
 
-### Example 2: Add an operating system image to a security scope by using a name
-```
-PS XYZ:\> Set-CMOperatingSystemImage -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "ImagePkg01"
-```
+This command adds membership to the security scope named SecScope02 for the OS image named ImagePkg01.
 
-This command adds membership to the security scope named SecScope02 for the operating system image named ImagePkg01.
-
-### Example 3: Remove an operating system image from a security scope
-```
-PS XYZ:\> Set-CMOperatingSystemImage -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "ImagePkg01"
+```powershell
+Set-CMOperatingSystemImage -SecurityScopeAction AddMembership -SecurityScopeName "SecScope02" -Name "ImagePkg01"
 ```
 
-This command removes membership from the security scope named SecScope02 for the operating system image named ImagePkg01.
+### Example 3: Remove an OS image from a security scope
+
+This command removes membership from the security scope named SecScope02 for the OS image named ImagePkg01.
+
+```powershell
+Set-CMOperatingSystemImage -SecurityScopeAction RemoveMembership -SecurityScopeName "SecScope02" -Name "ImagePkg01"
+```
 
 ## PARAMETERS
 
@@ -115,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description for the operating system image.
+Specifies a description for the OS image.
 
 ```yaml
 Type: String
@@ -210,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Can't combine with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -225,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of operating system images.
+Specifies an array of IDs of OS images.
 
 ```yaml
 Type: String
@@ -295,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of an operating system image.
+Specifies the name of an OS image.
 
 ```yaml
 Type: String
@@ -310,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies the new name of an operating system image.
+Specifies the new name of an OS image.
 
 ```yaml
 Type: String
@@ -341,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the network path to the operating system image source .wim file.
+Specifies the network path to the OS image source .wim file.
 
 ```yaml
 Type: String
@@ -400,7 +401,8 @@ Accept wildcard characters: False
 ```
 
 ### -Reload
-{{ Fill Reload Description }}
+
+Applies to version 2006 and later. If you change the image properties using an external tool, use this option to reload the information in the site database.
 
 ```yaml
 Type: SwitchParameter
@@ -428,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Specifies the version of the operating system image.
+Specifies the version of the OS image.
 
 ```yaml
 Type: String

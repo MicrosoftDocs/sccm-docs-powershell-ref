@@ -1,8 +1,8 @@
 ﻿---
-description: Gets operating system installers.
+description: Gets OS upgrade packages
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 07/31/2021
 schema: 2.0.0
 title: Get-CMOperatingSystemInstaller
 ---
@@ -10,7 +10,7 @@ title: Get-CMOperatingSystemInstaller
 # Get-CMOperatingSystemInstaller
 
 ## SYNOPSIS
-Gets operating system installers.
+Gets OS upgrade packages.
 
 ## SYNTAX
 
@@ -27,22 +27,20 @@ Get-CMOperatingSystemInstaller -Id <String> [-Reload] [-DisableWildcardHandling]
 ```
 
 ## DESCRIPTION
-The **Get-CMOperatingSystemInstaller** cmdlet gets one or more operating system installers.
-An operating system installer is an installation package that contains all the files that Microsoft System Center Configuration Manager needs to install a Windows operating system on a reference computer.
+The **Get-CMOperatingSystemInstaller** cmdlet gets one or more OS upgrade packages. An OS upgrade package contains all the files that Configuration Manager needs to install a Windows OS on a reference computer.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get an operating system installer
-```
-PS XYZ:\> Get-CMOperatingSystemInstaller -Name "OSInstPkg01"-SecuredScopeNames "SecScope02"
-```
+### Example 1: Get an OS upgrade package
 
-This command gets the operating system installer named OSInstPkg01 for the security scope named SecScope02.
+This command gets the OS upgrade package named OSInstPkg01 for the security scope named SecScope02.
+
+```powershell
+Get-CMOperatingSystemInstaller -Name "OSInstPkg01"-SecuredScopeNames "SecScope02"
+```
 
 ## PARAMETERS
 
@@ -77,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of operating system installers.
+Specifies an array of IDs of OS upgrade packages.
 
 ```yaml
 Type: String
@@ -92,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of an operating system installer.
+Specifies the name of an OS upgrade package.
 
 ```yaml
 Type: String
@@ -107,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -Reload
-{{ Fill Reload Description }}
+
+Applies to version 2006 and later. If you change the image properties using an external tool, use this option to reload the information in the site database.
 
 ```yaml
 Type: SwitchParameter

@@ -72,9 +72,7 @@ Before you can add a new device driver, you must first import the driver to the 
 A modification to the boot image does not change its source package.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -83,7 +81,7 @@ A modification to the boot image does not change its source package.
 This command retrieves a boot image by using its ID, and then renames the boot image. Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
 
 ```powershell
-PS XYZ:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
+Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
 ```
 
 ### Example 2: Rename a boot image object that is identified by using its name
@@ -91,7 +89,7 @@ PS XYZ:\> Set-CMBootimage -Id "CM100004" -NewName "Windows8 (x64)"
 This command retrieves a boot image by using its name, and then renames the boot image. It also adds a version and description to the boot image object. Depending on replication issues, this modification can take a long time to display in the Configuration Manager console.
 
 ```powershell
-PS XYZ:\> Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
+Set-CMBootImage -Name "Boot Image (x64)" -NewName "Windows 8 x64" -Version "6.2.8400.1" -Description "Microsoft Windows 8 PE (x64)"
 ```
 
 ### Example 3: Set the keyboard layout
@@ -505,7 +503,8 @@ Accept wildcard characters: False
 ```
 
 ### -Reload
-{{ Fill Reload Description }}
+
+Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information on this process, see [Update distribution points with the boot image](https://docs.microsoft.com/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 ```yaml
 Type: SwitchParameter
