@@ -2,7 +2,7 @@
 description: Modifies an operating system boot image.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Set-CMBootImage
 ---

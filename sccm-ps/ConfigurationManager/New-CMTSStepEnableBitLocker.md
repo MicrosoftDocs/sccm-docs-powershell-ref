@@ -2,13 +2,14 @@
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 07/31/2020
 schema: 2.0.0
 ---
 
 # New-CMTSStepEnableBitLocker
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Add the **Enable BitLocker** step to a task sequence, which enables BitLocker encryption on the hard drive.
 
 ## SYNTAX
 
@@ -21,26 +22,26 @@ New-CMTSStepEnableBitLocker [-TpmOnly] [-EnableSkipWhenNoValidTpm <Boolean>] [-U
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Add the **Enable BitLocker** step to a task sequence, which enables BitLocker encryption on the hard drive. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
 {{ Add example description here }}
+
+```powershell
+{{ Add example code here }}
+```
 
 ## PARAMETERS
 
 ### -Condition
-{{ Fill Condition Description }}
+
+Specify a condition object to use with this step.
 
 ```yaml
 Type: IResultObject[]
@@ -55,7 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
-{{ Fill ContinueOnError Description }}
+
+Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
 Type: SwitchParameter
@@ -70,7 +72,11 @@ Accept wildcard characters: False
 ```
 
 ### -CreateKeyOption
-{{ Fill CreateKeyOption Description }}
+
+Use one of the following values to specify where to create the recovery key:
+
+- `ActiveDirectoryDomainServices`: Create the recovery password and escrow it in Active Directory (recommended)
+- `DoNotCreateRecoveryKey`: Encrypt the drive, but don't create a recovery password.
 
 ```yaml
 Type: CreateKeyType
@@ -86,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify an optional description for this task sequence step.
 
 ```yaml
 Type: String
@@ -101,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-{{ Fill Disable Description }}
+
+Add this parameter to disable this task sequence step.
 
 ```yaml
 Type: SwitchParameter
@@ -116,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -131,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -Drive
-{{ Fill Drive Description }}
+
+Specify the drive to encrypt.
 
 ```yaml
 Type: String
@@ -146,7 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSkipWhenNoValidTpm
-{{ Fill EnableSkipWhenNoValidTpm Description }}
+
+Applies to version 2006 and later. Set this parameter to `true` to skip this step for computers that don't have a TPM or when the TPM isn't enabled.
 
 ```yaml
 Type: Boolean
@@ -161,8 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptFullDisk
-Starting in version 1906, use this parameter to set the following option on the **Enable BitLocker** task sequence step: **Use full disk encryption**.
 
+Applies to version 1906 and later. Add this parameter to use full disk encryption. By default, the **Enable BitLocker** step only encrypts used space on the drive.
 
 ```yaml
 Type: SwitchParameter
@@ -177,7 +188,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionMethod
-{{ Fill EncryptionMethod Description }}
+
+Applies to version 2006 and later. Use this parameter to specify the disk encryption mode. By default or if not specified, the step continues to use the default encryption method for the OS version.
 
 ```yaml
 Type: DiskEncryptionMethod
@@ -193,7 +205,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -208,7 +221,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for this step to identify it in the task sequence.
 
 ```yaml
 Type: String
@@ -223,7 +237,8 @@ Accept wildcard characters: False
 ```
 
 ### -Pin
-{{ Fill Pin Description }}
+
+If you use the parameter **-TpmAndPin**, use this parameter to specify the PIN value. Specify 4-20 integers.
 
 ```yaml
 Type: SecureString
@@ -238,7 +253,8 @@ Accept wildcard characters: False
 ```
 
 ### -TpmAndPin
-{{ Fill TpmAndPin Description }}
+
+Add this parameter to configure key management for the OS drive to use a TPM and a personal identification number (PIN). When you specify this option, BitLocker locks the normal boot process until the user provides the PIN. If you use this parameter, use **-Pin** to specify the PIN value. You can't combine this parameter with **-TpmAndUsb**, **-TpmOnly**, or **-UsbOnly**.
 
 ```yaml
 Type: SwitchParameter
@@ -253,7 +269,8 @@ Accept wildcard characters: False
 ```
 
 ### -TpmAndUsb
-{{ Fill TpmAndUsb Description }}
+
+Add this parameter to configure key management for the OS drive to use a TPM and a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer. You can't combine this parameter with **-TpmAndPin**, **-TpmOnly**, or **-UsbOnly**.
 
 ```yaml
 Type: SwitchParameter
@@ -268,7 +285,8 @@ Accept wildcard characters: False
 ```
 
 ### -TpmOnly
-{{ Fill TpmOnly Description }}
+
+Add this parameter to configure key management for the OS drive to only use a TPM. You can't combine this parameter with **-TpmAndPin**, **-TpmAndUsb**, or **-UsbOnly**.
 
 ```yaml
 Type: SwitchParameter
@@ -283,7 +301,8 @@ Accept wildcard characters: False
 ```
 
 ### -UsbOnly
-{{ Fill UsbOnly Description }}
+
+Add this parameter to configure key management for the OS drive to only use a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer. You can't combine this parameter with **-TpmAndPin**, **-TpmAndUsb**, or **-TpmOnly**.
 
 ```yaml
 Type: SwitchParameter
@@ -298,7 +317,8 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForBitLockerComplete
-{{ Fill WaitForBitLockerComplete Description }}
+
+Add this parameter to configure the step to wait for BitLocker to complete the drive encryption process on all drives before continuing task sequence execution.
 
 ```yaml
 Type: SwitchParameter
@@ -313,6 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -328,8 +349,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. It doesn't run the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -344,6 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -357,3 +379,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[About task sequence steps - Enable BitLocker](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)

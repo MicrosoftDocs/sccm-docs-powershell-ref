@@ -2,13 +2,14 @@
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 07/31/2020
 schema: 2.0.0
 ---
 
 # New-CMTSStepOfflineEnableBitLocker
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Add the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
 
 ## SYNTAX
 
@@ -20,26 +21,26 @@ New-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Add the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
 {{ Add example description here }}
+
+```powershell
+{{ Add example code here }}
+```
 
 ## PARAMETERS
 
 ### -Condition
-{{ Fill Condition Description }}
+
+Specify a condition object to add to this step.
 
 ```yaml
 Type: IResultObject[]
@@ -54,7 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
-{{ Fill ContinueOnError Description }}
+
+Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify an optional description for this task sequence step.
 
 ```yaml
 Type: String
@@ -84,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-{{ Fill Disable Description }}
+
+Add this parameter to disable this task sequence step.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -Disk
-{{ Fill Disk Description }}
+
+Specify the specific disk number to encrypt. Use this parameter with the **-Partition** parameter.
 
 ```yaml
 Type: Int32
@@ -129,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -Drive
-{{ Fill Drive Description }}
+
+Specify the logical drive letter to encrypt. For example, `C:`
 
 ```yaml
 Type: String
@@ -144,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSkipWhenTpmInvalid
-{{ Fill EnableSkipWhenTpmInvalid Description }}
+
+Set this parameter to `true` to skip this step for computers that don't have a TPM or when the TPM isn't enabled.
 
 ```yaml
 Type: Boolean
@@ -159,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionMethod
-{{ Fill EncryptionMethod Description }}
+
+Applies to version 2006 and later. Use this parameter to specify the disk encryption mode. By default or if not specified, the step continues to use the default encryption method for the OS version.
 
 ```yaml
 Type: DiskEncryptionMethod
@@ -175,7 +184,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -190,7 +200,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for this step to identify it in the task sequence.
 
 ```yaml
 Type: String
@@ -205,7 +216,8 @@ Accept wildcard characters: False
 ```
 
 ### -Partition
-{{ Fill Partition Description }}
+
+Specify the specific partition number to encrypt. Use this parameter with the **-Disk** parameter.
 
 ```yaml
 Type: Int32
@@ -220,7 +232,8 @@ Accept wildcard characters: False
 ```
 
 ### -VariableName
-{{ Fill VariableName Description }}
+
+Specify a task sequence variable to identify the logical drive letter as the destination for BitLocker.
 
 ```yaml
 Type: String
@@ -235,6 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -250,8 +264,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. It doesn't run the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -266,6 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -279,3 +294,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[About task sequence steps - Pre-provision BitLocker](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)
