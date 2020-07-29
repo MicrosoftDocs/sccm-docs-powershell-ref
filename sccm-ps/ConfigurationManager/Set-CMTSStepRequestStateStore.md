@@ -242,7 +242,8 @@ PS XYZ:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AddCondition
-{{ Fill AddCondition Description }}
+Specify a condition object to add to this step.
+
 
 ```yaml
 Type: IResultObject[]
@@ -257,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCondition
-{{ Fill ClearCondition Description }}
+Remove a condition from this step. Use the **-Condition** parameter to specify the condition to remove.
 
 ```yaml
 Type: SwitchParameter
@@ -272,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-{{ Fill Condition Description }}
+Specify a condition object to use with this step.
 
 ```yaml
 Type: IResultObject[]
@@ -287,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableName
-{{ Fill ConditionVariableName Description }}
+Specify the name of the task sequence variable to use as a condition.
 
 ```yaml
 Type: String
@@ -302,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionVariableValue
-{{ Fill ConditionVariableValue Description }}
+Specify the value of the task sequence variable to use in a condition.
 
 ```yaml
 Type: String
@@ -317,7 +318,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+Specify an optional description for this task sequence step.
 
 ```yaml
 Type: String
@@ -332,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -362,7 +363,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileDateTimeOperator
-{{ Fill FileDateTimeOperator Description }}
+Specify a variable operator type for a file date/time condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -378,7 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-{{ Fill FilePath Description }}
+Specify the path for a file condition.
 
 ```yaml
 Type: String
@@ -393,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileTimestamp
-{{ Fill FileTimestamp Description }}
+Specify a date/time value to use for a file condition.
 
 ```yaml
 Type: DateTime
@@ -408,7 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileVersion
-{{ Fill FileVersion Description }}
+Specify a version string for a file condition.
 
 ```yaml
 Type: String
@@ -423,7 +424,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderDateTimeOperator
-{{ Fill FolderDateTimeOperator Description }}
+Specify a variable operator for a folder date/time condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -439,7 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
-{{ Fill FolderPath Description }}
+Specify the path for a folder condition.
 
 ```yaml
 Type: String
@@ -454,7 +455,7 @@ Accept wildcard characters: False
 ```
 
 ### -FolderTimestamp
-{{ Fill FolderTimestamp Description }}
+Specify a date/time value to use for a folder condition.
 
 ```yaml
 Type: DateTime
@@ -469,7 +470,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -514,7 +515,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsContinueOnError
-{{ Fill IsContinueOnError Description }}
+Use this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
 Type: Boolean
@@ -529,7 +530,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-{{ Fill IsEnabled Description }}
+Use this parameter to enable this task sequence step.
 
 ```yaml
 Type: Boolean
@@ -544,7 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
-{{ Fill MoveToIndex Description }}
+Move this step to the specified index position in the task sequence.
 
 ```yaml
 Type: Int32
@@ -559,7 +560,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsiFilePath
-{{ Fill MsiFilePath Description }}
+Specify the path to a Windows Installer file for an software condition.
 
 ```yaml
 Type: String
@@ -574,7 +575,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-{{ Fill Namespace Description }}
+Specify the namespace for a WMI query condition.
 
 ```yaml
 Type: String[]
@@ -589,7 +590,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewStepName
-{{ Fill NewStepName Description }}
+Use this parameter to rename this task sequence step.
 
 ```yaml
 Type: String
@@ -604,7 +605,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatorType
-{{ Fill OperatorType Description }}
+Specify an operator to use with a task sequence variable condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -620,7 +621,7 @@ Accept wildcard characters: False
 ```
 
 ### -Query
-{{ Fill Query Description }}
+Specify a WMI query string to use for a condition.
 
 ```yaml
 Type: String
@@ -635,7 +636,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryKey
-{{ Fill RegistryKey Description }}
+Specify the key to use with a registry condition.
 
 ```yaml
 Type: String
@@ -650,7 +651,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryOperator
-{{ Fill RegistryOperator Description }}
+Specify an operator to use with a registry condition.
 
 ```yaml
 Type: VariableOperatorType
@@ -666,7 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueData
-{{ Fill RegistryValueData Description }}
+Specify the value data to use with a registry condition.
 
 ```yaml
 Type: String
@@ -681,7 +682,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryValueName
-{{ Fill RegistryValueName Description }}
+Specify the value name to use with a registry condition.
 
 ```yaml
 Type: String
@@ -696,7 +697,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFile
-{{ Fill RemoveConditionFile Description }}
+Use this parameter to remove a file condition.
 
 ```yaml
 Type: SwitchParameter
@@ -711,7 +712,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionFolder
-{{ Fill RemoveConditionFolder Description }}
+Use this parameter to remove a folder condition.
 
 ```yaml
 Type: SwitchParameter
@@ -726,7 +727,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionIfStatement
-{{ Fill RemoveConditionIfStatement Description }}
+Use this parameter to remove an `if` statement condition.
 
 ```yaml
 Type: SwitchParameter
@@ -741,7 +742,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionOperatingSystem
-{{ Fill RemoveConditionOperatingSystem Description }}
+Use this parameter to remove an OS condition.
 
 ```yaml
 Type: SwitchParameter
@@ -756,7 +757,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionQueryWmi
-{{ Fill RemoveConditionQueryWmi Description }}
+Use this parameter to remove a WMI query condition.
 
 ```yaml
 Type: SwitchParameter
@@ -771,7 +772,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionRegistry
-{{ Fill RemoveConditionRegistry Description }}
+Use this parameter to remove a registry condition.
 
 ```yaml
 Type: SwitchParameter
@@ -786,7 +787,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionSoftware
-{{ Fill RemoveConditionSoftware Description }}
+Use this parameter to remove a software condition.
 
 ```yaml
 Type: SwitchParameter
@@ -801,7 +802,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConditionVariable
-{{ Fill RemoveConditionVariable Description }}
+Use this parameter to remove a task sequence variable condition.
 
 ```yaml
 Type: SwitchParameter
@@ -862,7 +863,7 @@ Accept wildcard characters: False
 ```
 
 ### -RootKey
-{{ Fill RootKey Description }}
+Specify the root key to use with a registry condition.
 
 ```yaml
 Type: RegistryRootKeyType
@@ -878,7 +879,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFile
-{{ Fill SetConditionFile Description }}
+Add a new file condition.
 
 ```yaml
 Type: SwitchParameter
@@ -893,7 +894,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionFolder
-{{ Fill SetConditionFolder Description }}
+Add a new folder condition.
 
 ```yaml
 Type: SwitchParameter
@@ -908,7 +909,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionIfStatement
-{{ Fill SetConditionIfStatement Description }}
+Add a new `if` statement condition.
 
 ```yaml
 Type: SwitchParameter
@@ -923,7 +924,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionOperatingSystem
-{{ Fill SetConditionOperatingSystem Description }}
+Add a new OS condition.
 
 ```yaml
 Type: SwitchParameter
@@ -938,7 +939,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionQueryWmi
-{{ Fill SetConditionQueryWmi Description }}
+Add a new WMI query condition.
 
 ```yaml
 Type: SwitchParameter
@@ -953,7 +954,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionRegistry
-{{ Fill SetConditionRegistry Description }}
+Add a new registry condition.
 
 ```yaml
 Type: SwitchParameter
@@ -968,7 +969,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionSoftware
-{{ Fill SetConditionSoftware Description }}
+Add a new software condition.
 
 ```yaml
 Type: SwitchParameter
@@ -983,7 +984,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetConditionVariable
-{{ Fill SetConditionVariable Description }}
+Add a new task sequence variable condition.
 
 ```yaml
 Type: SwitchParameter
@@ -998,7 +999,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatementType
-{{ Fill StatementType Description }}
+Set the type for an `if` statement condition.
 
 ```yaml
 Type: ConditionStatementType
@@ -1014,7 +1015,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepName
-{{ Fill StepName Description }}
+Specify the name of the step to select for changes.
 
 ```yaml
 Type: String
@@ -1029,7 +1030,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
-{{ Fill StepOrder Description }}
+Use this parameter to reorder the step in the task sequence.
 
 ```yaml
 Type: ReorderType
@@ -1045,7 +1046,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
-{{ Fill SupportedPlatform Description }}
+Use this parameter to specify the platforms for an OS condition.
 
 ```yaml
 Type: IResultObject[]
@@ -1060,7 +1061,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceId
-{{ Fill TaskSequenceId Description }}
+Specify the ID of the task sequence to target for changes.
 
 ```yaml
 Type: String
@@ -1075,7 +1076,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskSequenceName
-{{ Fill TaskSequenceName Description }}
+Specify the name of the task sequence to target for changes.
 
 ```yaml
 Type: String
@@ -1090,7 +1091,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
-{{ Fill ValueType Description }}
+Specify the type of value for a registry condition.
 
 ```yaml
 Type: RegistryValueType
@@ -1106,7 +1107,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionOperator
-{{ Fill VersionOperator Description }}
+Specify an operator to use with a file condition.
 
 ```yaml
 Type: VariableOperatorType

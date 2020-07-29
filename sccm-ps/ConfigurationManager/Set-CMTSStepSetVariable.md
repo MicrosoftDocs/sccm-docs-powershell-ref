@@ -518,7 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToIndex
-{{ Fill MoveToIndex Description }}
+Move this step to the specified index position in the task sequence.
 
 ```yaml
 Type: Int32
@@ -901,7 +901,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepOrder
-{{ Fill StepOrder Description }}
+Use this parameter to reorder the step in the task sequence.
 
 ```yaml
 Type: ReorderType

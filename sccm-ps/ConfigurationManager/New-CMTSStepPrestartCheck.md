@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-{{ Fill Condition Description }}
+Specify a condition object to use with this step.
 
 ```yaml
 Type: IResultObject[]
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueOnError
-{{ Fill ContinueOnError Description }}
+Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
 Type: SwitchParameter
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+Specify an optional description for this task sequence step.
 
 ```yaml
 Type: String
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-{{ Fill Disable Description }}
+Add this parameter to disable this task sequence step.
 
 ```yaml
 Type: SwitchParameter
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specify a name for this step to identify it in the task sequence.
 
 ```yaml
 Type: String

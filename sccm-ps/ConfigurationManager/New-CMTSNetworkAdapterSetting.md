@@ -40,7 +40,7 @@ PS XYZ:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
