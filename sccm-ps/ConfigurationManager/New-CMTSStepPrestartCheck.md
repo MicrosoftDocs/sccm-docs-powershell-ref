@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 07/31/2020
 schema: 2.0.0
 ---
 
 # New-CMTSStepPrestartCheck
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions.
 
 ## SYNTAX
 
@@ -25,21 +27,21 @@ New-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckPo
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
 {{ Add example description here }}
+
+```powershell
+{{ Add example code here }}
+```
 
 ## PARAMETERS
 
@@ -224,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckUefi
-{{ Fill CheckUefi Description }}
+Applies to version 2006 and later. Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Computer is in UEFI mode**.
 
 ```yaml
 Type: Boolean
@@ -525,3 +527,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[About task sequence steps - Check Readiness](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)

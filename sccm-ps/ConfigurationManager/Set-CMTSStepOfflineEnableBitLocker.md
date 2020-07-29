@@ -630,7 +630,7 @@ Accept wildcard characters: False
 
 ### -MsiFilePath
 
-Specify the path for an MSI condition.
+Specify the path to a Windows Installer file for an software condition.
 
 ```yaml
 Type: String
