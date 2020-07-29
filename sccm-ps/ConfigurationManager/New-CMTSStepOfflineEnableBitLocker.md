@@ -14,9 +14,9 @@ schema: 2.0.0
 
 ```
 New-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive <String>]
- [-VariableName <String>] [-EnableSkipWhenTpmInvalid <Boolean>] -Name <String> [-Description <String>]
- [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VariableName <String>] [-EnableSkipWhenTpmInvalid <Boolean>] [-EncryptionMethod <DiskEncryptionMethod>]
+ -Name <String> [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -150,6 +150,22 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionMethod
+{{ Fill EncryptionMethod Description }}
+
+```yaml
+Type: DiskEncryptionMethod
+Parameter Sets: (All)
+Aliases: DiskEncryptionMethod
+Accepted values: DoNotSpecify, AES_128, AES_256, XTS_AES128, XTS_AES256, TotalCount
 
 Required: False
 Position: Named

@@ -148,7 +148,7 @@ Accept wildcard characters: False
 Type: BoundaryTypes
 Parameter Sets: (All)
 Aliases: NewBoundaryType
-Accepted values: IPSubnet, ADSite, IPV6Prefix, IPRange
+Accepted values: IPSubnet, ADSite, IPV6Prefix, IPRange, Vpn
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ Valid values are: ADSite, IPV6Prefix, IPSubnet, and IPRange.
 Type: BoundaryTypes
 Parameter Sets: SetByName
 Aliases: BoundaryType
-Accepted values: IPSubnet, ADSite, IPV6Prefix, IPRange
+Accepted values: IPSubnet, ADSite, IPV6Prefix, IPRange, Vpn
 
 Required: True
 Position: Named

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -15,21 +15,21 @@ Use this cmdlet to get a deployment phase for a specific instance or a phased de
 
 ### SearchByPhasedDeployment
 ```
-Get-CMPhase [-PhasedDeployment] <IResultObject> [-PhaseOrder <Int32>] [-PhaseId <String>] [-PhaseName <String>]
+Get-CMPhase [-InputObject] <IResultObject> [-Order <Int32>] [-Id <String>] [-Name <String>]
  [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentId
 ```
-Get-CMPhase [-Id] <String> [-PhaseOrder <Int32>] [-PhaseId <String>] [-PhaseName <String>]
+Get-CMPhase [-PhasedDeploymentId] <String> [-Order <Int32>] [-Id <String>] [-Name <String>]
  [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ### SearchByPhasedDeploymentName
 ```
-Get-CMPhase [-Name] <String> [-PhaseOrder <Int32>] [-PhaseId <String>] [-PhaseName <String>]
+Get-CMPhase [-PhasedDeploymentName] <String> [-Order <Int32>] [-Id <String>] [-Name <String>]
  [-Collection <IResultObject>] [-CollectionId <String>] [-CollectionName <String>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [<CommonParameters>]
 ```
@@ -132,13 +132,28 @@ Specify the ID of the phased deployment.
 
 ```yaml
 Type: String
-Parameter Sets: SearchByPhasedDeploymentId
-Aliases: PhasedDeploymentId
+Parameter Sets: (All)
+Aliases: PhaseId
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{ Fill InputObject Description }}
+
+```yaml
+Type: IResultObject
+Parameter Sets: SearchByPhasedDeployment
+Aliases: PhasedDeployment
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -148,40 +163,8 @@ Specify the name of the phased deployment.
 
 ```yaml
 Type: String
-Parameter Sets: SearchByPhasedDeploymentName
-Aliases: PhasedDeploymentName
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PhasedDeployment
-
-Specify the phased deployment object for the phase.
-
-```yaml
-Type: IResultObject
-Parameter Sets: SearchByPhasedDeployment
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -PhaseId
-
-Specify the ID of the phase.
-
-```yaml
-Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: PhaseName
 
 Required: False
 Position: Named
@@ -190,40 +173,52 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhaseName
-
-Specify the name of the phase.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PhaseOrder
-
-Specify an integer value for the phase's order.
+### -Order
+{{ Fill Order Description }}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: PhaseOrder
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PhasedDeploymentId
+{{ Fill PhasedDeploymentId Description }}
+
+```yaml
+Type: String
+Parameter Sets: SearchByPhasedDeploymentId
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PhasedDeploymentName
+{{ Fill PhasedDeploymentName Description }}
+
+```yaml
+Type: String
+Parameter Sets: SearchByPhasedDeploymentName
+Aliases:
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

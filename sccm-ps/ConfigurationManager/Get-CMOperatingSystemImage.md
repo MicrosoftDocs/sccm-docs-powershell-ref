@@ -16,13 +16,13 @@ Gets operating system images.
 
 ### SearchByName (Default)
 ```
-Get-CMOperatingSystemImage [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMOperatingSystemImage [-Name <String>] [-Reload] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMOperatingSystemImage -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMOperatingSystemImage -Id <String> [-Reload] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -98,6 +98,21 @@ Specifies the name of an operating system image.
 Type: String
 Parameter Sets: SearchByName
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reload
+{{ Fill Reload Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ReloadImage
 
 Required: False
 Position: Named

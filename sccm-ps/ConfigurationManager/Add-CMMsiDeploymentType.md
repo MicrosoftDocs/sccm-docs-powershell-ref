@@ -679,6 +679,8 @@ Accept wildcard characters: False
 
 ### -RepairCommand
 Starting in version 2002, use this parameter to configure the repair command and directory options when creating deployment type. Also configure the RepairWorkingDirectory parameter.
+
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -693,6 +695,8 @@ Accept wildcard characters: False
 
 ### -RepairWorkingDirectory
 Starting in version 2002, use this parameter to configure the repair command and directory options when creating deployment type. Also configure the RepairCommand parameter.
+
+
 ```yaml
 Type: String
 Parameter Sets: (All)

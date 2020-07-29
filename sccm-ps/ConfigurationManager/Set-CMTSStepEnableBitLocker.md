@@ -16,8 +16,9 @@ schema: 2.0.0
 ```
 Set-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Drive <String>]
  [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>] [-IsWaitingForBitLockerComplete <Boolean>]
- [-IsEncryptFullDisk <Boolean>] -InputObject <IResultObject> [-StepName <String>] [-NewStepName <String>]
- [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-IsEncryptFullDisk <Boolean>] [-EncryptionMethod <DiskEncryptionMethod>]
+ [-EnableSkipWhenNoValidTpm <Boolean>] -InputObject <IResultObject> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
  [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
  [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
@@ -29,7 +30,8 @@ Set-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Dr
 ```
 Set-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Drive <String>]
  [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>] [-IsWaitingForBitLockerComplete <Boolean>]
- [-IsEncryptFullDisk <Boolean>] -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>]
+ [-IsEncryptFullDisk <Boolean>] [-EncryptionMethod <DiskEncryptionMethod>]
+ [-EnableSkipWhenNoValidTpm <Boolean>] -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>]
  [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
  [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
  [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
@@ -42,7 +44,8 @@ Set-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Dr
 ```
 Set-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Drive <String>]
  [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>] [-IsWaitingForBitLockerComplete <Boolean>]
- [-IsEncryptFullDisk <Boolean>] -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>]
+ [-IsEncryptFullDisk <Boolean>] [-EncryptionMethod <DiskEncryptionMethod>]
+ [-EnableSkipWhenNoValidTpm <Boolean>] -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>]
  [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
  [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
  [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
@@ -380,6 +383,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSkipWhenNoValidTpm
+{{ Fill EnableSkipWhenNoValidTpm Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionMethod
+{{ Fill EncryptionMethod Description }}
+
+```yaml
+Type: DiskEncryptionMethod
+Parameter Sets: ByValue, ById, ByName
+Aliases: DiskEncryptionMethod
+Accepted values: DoNotSpecify, AES_128, AES_256, XTS_AES128, XTS_AES256, TotalCount
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FileDateTimeOperator
 {{ Fill FileDateTimeOperator Description }}
 
@@ -564,6 +598,8 @@ Accept wildcard characters: False
 
 ### -IsEncryptFullDisk
 Starting in version 1906, use this parameter to set the following option on the **Enable BitLocker** task sequence step: **Use full disk encryption**.
+
+
 ```yaml
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName

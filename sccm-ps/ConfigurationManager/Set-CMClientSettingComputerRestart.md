@@ -17,22 +17,22 @@ Sets a client setting computer restart.
 ### SetCustomSettingByName (Default)
 ```
 Set-CMClientSettingComputerRestart [-CountdownMins <Int32>] [-FinalWindowMins <Int32>]
- [-ReplaceToastNotificationWithDialog <Boolean>] -Name <String> [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ReplaceToastNotificationWithDialog <Boolean>] [-NoRebootEnforcement <Boolean>] -Name <String> [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetDefaultSetting
 ```
 Set-CMClientSettingComputerRestart [-CountdownMins <Int32>] [-FinalWindowMins <Int32>]
- [-ReplaceToastNotificationWithDialog <Boolean>] [-DefaultSetting] [-PassThru] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ReplaceToastNotificationWithDialog <Boolean>] [-NoRebootEnforcement <Boolean>] [-DefaultSetting] [-PassThru]
+ [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomSettingByValue
 ```
 Set-CMClientSettingComputerRestart [-CountdownMins <Int32>] [-FinalWindowMins <Int32>]
- [-ReplaceToastNotificationWithDialog <Boolean>] -InputObject <IResultObject> [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ReplaceToastNotificationWithDialog <Boolean>] [-NoRebootEnforcement <Boolean>] -InputObject <IResultObject>
+ [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -140,6 +140,21 @@ Parameter Sets: SetCustomSettingByName
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoRebootEnforcement
+{{ Fill NoRebootEnforcement Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

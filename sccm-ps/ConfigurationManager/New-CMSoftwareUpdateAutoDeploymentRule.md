@@ -401,6 +401,8 @@ Accept wildcard characters: False
 
 ### -ContentSize
 Starting in version 1906, use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
+
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -891,6 +893,8 @@ Accept wildcard characters: False
 
 ### -O365LanguageSelection
 Starting in version 1906, use this parameter to set the **Office 365 Client Update** language selection
+
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -937,6 +941,8 @@ Accept wildcard characters: False
 
 ### -RequirePostRebootFullScan
 Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

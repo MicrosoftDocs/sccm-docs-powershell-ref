@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -42,7 +42,7 @@ Starting in version 2002, use this cmdlet to move the specified phased deploymen
 This example targets a phased deployment by its name, and moves it to the next phase.
 
 ```powershell
-Move-CMPhasedDeploymentToNext -Name "myPhasedDeploymentName"  
+Move-CMPhasedDeploymentToNext -Name "myPhasedDeploymentName"
 ```
 
 ### Example 1: Force move to the next phase for an input deployment object
@@ -180,7 +180,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -190,7 +189,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

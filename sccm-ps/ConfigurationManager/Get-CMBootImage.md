@@ -16,12 +16,13 @@ Gets an operating system boot image.
 
 ### SearchByName (Default)
 ```
-Get-CMBootImage [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMBootImage [-Name <String>] [-Reload] [-DisableWildcardHandling] [-ForceWildcardHandling]
+ [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMBootImage -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
+Get-CMBootImage -Id <String> [-Reload] [-DisableWildcardHandling] [-ForceWildcardHandling] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,6 +111,21 @@ Specifies a name of a boot image.
 Type: String
 Parameter Sets: SearchByName
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reload
+{{ Fill Reload Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ReloadImage
 
 Required: False
 Position: Named

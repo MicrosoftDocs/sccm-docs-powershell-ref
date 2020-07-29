@@ -16,13 +16,13 @@ Gets operating system installers.
 
 ### SearchByName (Default)
 ```
-Get-CMOperatingSystemInstaller [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMOperatingSystemInstaller [-Name <String>] [-Reload] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMOperatingSystemInstaller -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMOperatingSystemInstaller -Id <String> [-Reload] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
@@ -98,6 +98,21 @@ Specifies the name of an operating system installer.
 Type: String
 Parameter Sets: SearchByName
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reload
+{{ Fill Reload Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ReloadImage
 
 Required: False
 Position: Named

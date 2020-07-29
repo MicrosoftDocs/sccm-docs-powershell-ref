@@ -18,24 +18,27 @@ Sets a cloud management gateway.
 ```
 Set-CMCloudManagementGateway -InputObject <IResultObject> [-Description <String>] [-TrafficOutGB <Int32>]
  [-TrafficWarningPct <Int32>] [-TrafficCriticalPct <Int32>] [-VMInstancesCount <Int32>]
- [-CheckClientCertRevocation <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckClientCertRevocation <Boolean>] [-ServiceCertPath <String>] [-ServiceCertPassword <SecureString>]
+ [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetById
 ```
 Set-CMCloudManagementGateway -Id <String> [-Description <String>] [-TrafficOutGB <Int32>]
  [-TrafficWarningPct <Int32>] [-TrafficCriticalPct <Int32>] [-VMInstancesCount <Int32>]
- [-CheckClientCertRevocation <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckClientCertRevocation <Boolean>] [-ServiceCertPath <String>] [-ServiceCertPassword <SecureString>]
+ [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SetByName
 ```
 Set-CMCloudManagementGateway -Name <String> [-Description <String>] [-TrafficOutGB <Int32>]
  [-TrafficWarningPct <Int32>] [-TrafficCriticalPct <Int32>] [-VMInstancesCount <Int32>]
- [-CheckClientCertRevocation <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckClientCertRevocation <Boolean>] [-ServiceCertPath <String>] [-ServiceCertPassword <SecureString>]
+ [-Force] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,6 +85,21 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -156,6 +174,36 @@ Returns an object representing the item with which you are working. By default, 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceCertPassword
+{{ Fill ServiceCertPassword Description }}
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases: ServiceCertificatePassword
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceCertPath
+{{ Fill ServiceCertPath Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ServiceCertificatePath
 
 Required: False
 Position: Named

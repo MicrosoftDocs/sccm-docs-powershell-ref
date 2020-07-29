@@ -16,48 +16,51 @@ schema: 2.0.0
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
  [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
- [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
- [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
- [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
- [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
- -InputObject <IResultObject> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
- [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
- [-RemoveConditionVariable] [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckUefi <Boolean>] [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>]
+ [-MinOSVersion <String>] [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>]
+ [-CheckCMClientMinVersion <Boolean>] [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>]
+ [-CheckNetworkWired <Boolean>] [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>]
+ [-CheckSpeed <Boolean>] [-Speed <Int32>] -InputObject <IResultObject> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ById
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
  [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
- [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
- [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
- [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
- [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
- -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
- [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
- [-RemoveConditionVariable] [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckUefi <Boolean>] [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>]
+ [-MinOSVersion <String>] [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>]
+ [-CheckCMClientMinVersion <Boolean>] [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>]
+ [-CheckNetworkWired <Boolean>] [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>]
+ [-CheckSpeed <Boolean>] [-Speed <Int32>] -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>]
+ [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByName
 ```
 Set-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckMemory <Boolean>]
  [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckPowerState <Boolean>]
- [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>]
- [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>]
- [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
- [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
- -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>] [-Description <String>]
- [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition]
- [-StepOrder <ReorderType>] [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi]
- [-RemoveConditionVariable] [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder]
- [-RemoveConditionRegistry] [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckUefi <Boolean>] [-CheckOSArchitecture <Boolean>] [-CheckMinOSVersion <Boolean>]
+ [-MinOSVersion <String>] [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>]
+ [-CheckCMClientMinVersion <Boolean>] [-CMClientMinVersion <String>] [-CheckNetworkConnected <Boolean>]
+ [-CheckNetworkWired <Boolean>] [-CheckOS <Boolean>] [-OS <OSType>] [-OSArchitecture <OSArch>]
+ [-CheckSpeed <Boolean>] [-Speed <Int32>] -TaskSequenceName <String> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
+ [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByIdSetConditionIfStatement
@@ -440,6 +443,21 @@ Use this parameter to enable or disable the following setting in the **Check Rea
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
 Aliases: EnableCheckProcessorSpeed
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckUefi
+{{ Fill CheckUefi Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ByValue, ById, ByName
+Aliases:
 
 Required: False
 Position: Named

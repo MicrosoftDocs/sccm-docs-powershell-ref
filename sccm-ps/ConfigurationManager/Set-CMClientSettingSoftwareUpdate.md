@@ -52,13 +52,15 @@ Set-CMClientSettingSoftwareUpdate [-Enable <Boolean>] [-ScanSchedule <IResultObj
 
 ### Example 1: Enable third-party updates in the default client settings
 
-``` PowerShell
+```
+PowerShell
 Set-CMClientSettingSoftwareUpdate -DefaultSetting -Enable $true -EnableThirdPartyUpdates $true
 ```
 
 ### Example 2: Enable third-party updates in a custom device setting
 
-``` PowerShell
+```
+PowerShell
 $clientDeviceSettingName = "Dev device settings"
 Set-CMClientSettingSoftwareUpdate -Name $clientDeviceSettingName -Enable $true -EnableThirdPartyUpdates $true
 ```

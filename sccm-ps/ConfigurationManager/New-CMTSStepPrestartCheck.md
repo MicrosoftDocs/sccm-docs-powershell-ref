@@ -14,13 +14,14 @@ schema: 2.0.0
 
 ```
 New-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckPowerState <Boolean>]
- [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>] [-CheckMemory <Boolean>] [-Memory <Int32>]
- [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckOS <Boolean>] [-OS <OSType>]
- [-CheckOSArchitecture <Boolean>] [-OSArchitecture <OSArch>] [-CheckMinOSVersion <Boolean>]
- [-MinOSVersion <String>] [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>]
- [-CheckCMClientMinVersion <Boolean>] [-CMClientMinVersion <String>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
- -Name <String> [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckUefi <Boolean>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
+ [-CheckMemory <Boolean>] [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>]
+ [-CheckOS <Boolean>] [-OS <OSType>] [-CheckOSArchitecture <Boolean>] [-OSArchitecture <OSArch>]
+ [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>] [-CheckMaxOSVersion <Boolean>]
+ [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>] [-CMClientMinVersion <String>]
+ [-CheckSpeed <Boolean>] [-Speed <Int32>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
+ [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -214,6 +215,21 @@ Use this parameter to enable or disable the following setting in the **Check Rea
 Type: Boolean
 Parameter Sets: (All)
 Aliases: EnableCheckProcessorSpeed
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckUefi
+{{ Fill CheckUefi Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -16,7 +16,7 @@ Changes configuration settings of operating system installers.
 
 ### SetById (Default)
 ```
-Set-CMOperatingSystemInstaller -Id <String> [-NewName <String>] [-Path <String>] [-Version <String>]
+Set-CMOperatingSystemInstaller -Id <String> [-Reload] [-NewName <String>] [-Path <String>] [-Version <String>]
  [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
  [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
  [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
@@ -29,8 +29,8 @@ Set-CMOperatingSystemInstaller -Id <String> [-NewName <String>] [-Path <String>]
 
 ### SetByName
 ```
-Set-CMOperatingSystemInstaller -Name <String> [-NewName <String>] [-Path <String>] [-Version <String>]
- [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
+Set-CMOperatingSystemInstaller -Name <String> [-Reload] [-NewName <String>] [-Path <String>]
+ [-Version <String>] [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
  [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
  [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
  [-CopyToPackageShareOnDistributionPoint <Boolean>] [-MulticastAllow <Boolean>] [-MulticastEncrypt <Boolean>]
@@ -42,7 +42,7 @@ Set-CMOperatingSystemInstaller -Name <String> [-NewName <String>] [-Path <String
 
 ### SetByValueMandatory
 ```
-Set-CMOperatingSystemInstaller -InputObject <IResultObject> [-NewName <String>] [-Path <String>]
+Set-CMOperatingSystemInstaller -InputObject <IResultObject> [-Reload] [-NewName <String>] [-Path <String>]
  [-Version <String>] [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
  [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
  [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
@@ -391,6 +391,21 @@ Type: Priority
 Parameter Sets: (All)
 Aliases:
 Accepted values: High, Medium, Low
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reload
+{{ Fill Reload Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ReloadImage
 
 Required: False
 Position: Named

@@ -149,8 +149,9 @@ Set-CMClientSetting -Name <String> [-ComputerAgent] [-InitialReminderHours <Int3
 ### SetComputerRestartSettingsByName
 ```
 Set-CMClientSetting -Name <String> [-ComputerRestart] [-RebootLogoffNotificationCountdownMins <Int32>]
- [-RebootLogoffNotificationFinalWindowMins <Int32>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RebootLogoffNotificationFinalWindowMins <Int32>] [-ReplaceToastNotificationWithDialog <Boolean>]
+ [-NoRebootEnforcement <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetMeteredNetworksSettingsByName
@@ -1265,6 +1266,21 @@ Specifies a new name for a client setting.
 ```yaml
 Type: String
 Parameter Sets: SetByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoRebootEnforcement
+{{ Fill NoRebootEnforcement Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: SetComputerRestartSettingsByName
 Aliases:
 
 Required: False

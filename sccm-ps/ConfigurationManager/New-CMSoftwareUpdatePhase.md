@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -20,9 +20,9 @@ New-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-Sof
  [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
  [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
  [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableSCOMAlert <Boolean>]
- [-GenerateSCOMAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWUMUFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
+ [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
+ [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
  [-Collection] <IResultObject> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
  [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
  [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
@@ -36,9 +36,9 @@ New-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-Sof
  [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
  [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
  [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableSCOMAlert <Boolean>]
- [-GenerateSCOMAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWUMUFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
+ [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
+ [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
  [-CollectionId] <String> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
  [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
  [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
@@ -52,9 +52,9 @@ New-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-Sof
  [-EnableWakeOnLan <Boolean>] [-StateMessageVerbosity <VerbosityLevelType>]
  [-ServerRestartSuppression <Boolean>] [-WorkstationRestartSuppression <Boolean>]
  [-RequirePostRebootFullScan <Boolean>] [-EnableAlert <Boolean>] [-AlertThresholdPercentage <Int32>]
- [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableSCOMAlert <Boolean>]
- [-GenerateSCOMAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
- [-AllowWUMUFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
+ [-AlertDelta <Int32>] [-AlertUnit <TimeUnitType>] [-DisableScomAlert <Boolean>]
+ [-GenerateScomAlertOnFailure <Boolean>] [-UseNeighborDP <Boolean>] [-UseSiteDefaultDP <Boolean>]
+ [-AllowWumuFallback <Boolean>] [-AllowMeteredConnection <Boolean>] -PhaseName <String>
  [-CollectionName] <String> [-CriteriaOption <CriteriaType>] [-CriteriaValue <Int32>]
  [-BeginCondition <BeginConditionType>] [-DaysAfterPreviousPhaseSuccess <Int32>] [-ThrottlingDays <Int32>]
  [-InstallationChoice <InstallationChoiceType>] [-DeadlineUnit <TimeUnitType>] [-DeadlineValue <Int32>]
@@ -163,7 +163,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowWUMUFallback
+### -AllowWumuFallback
 
 This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
 
@@ -340,7 +340,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisableSCOMAlert
+### -DisableScomAlert
 
 This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Disable Operations Manager alerts while software updates run**.
 
@@ -423,7 +423,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GenerateSCOMAlertOnFailure
+### -GenerateScomAlertOnFailure
 
 This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Generate Operations Manager alert when a software update installation fails**.
 
@@ -483,7 +483,7 @@ Specify a name for the description.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: Name
 
 Required: True
 Position: Named
@@ -701,7 +701,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

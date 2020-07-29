@@ -15,10 +15,11 @@ schema: 2.0.0
 ### ByValue (Default)
 ```
 Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive <String>]
- [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>] -InputObject <IResultObject>
- [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
- [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
- [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>]
+ [-EncryptionMethod <DiskEncryptionMethod>] -InputObject <IResultObject> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -27,10 +28,11 @@ Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive 
 ### ById
 ```
 Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive <String>]
- [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>] -TaskSequenceId <String>
- [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
- [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
- [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>]
+ [-EncryptionMethod <DiskEncryptionMethod>] -TaskSequenceId <String> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -39,10 +41,11 @@ Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive 
 ### ByName
 ```
 Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive <String>]
- [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>] -TaskSequenceName <String>
- [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
- [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
- [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>]
+ [-EncryptionMethod <DiskEncryptionMethod>] -TaskSequenceName <String> [-StepName <String>]
+ [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
+ [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
+ [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -383,6 +386,22 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: ByValue, ById, ByName
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionMethod
+{{ Fill EncryptionMethod Description }}
+
+```yaml
+Type: DiskEncryptionMethod
+Parameter Sets: ByValue, ById, ByName
+Aliases: DiskEncryptionMethod
+Accepted values: DoNotSpecify, AES_128, AES_256, XTS_AES128, XTS_AES256, TotalCount
 
 Required: False
 Position: Named

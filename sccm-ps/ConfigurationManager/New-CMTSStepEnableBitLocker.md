@@ -13,9 +13,10 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CMTSStepEnableBitLocker [-TpmOnly] [-UsbOnly] [-TpmAndUsb] [-TpmAndPin] [-Drive <String>]
- [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>] [-WaitForBitLockerComplete] [-EncryptFullDisk]
- -Name <String> [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
+New-CMTSStepEnableBitLocker [-TpmOnly] [-EnableSkipWhenNoValidTpm <Boolean>] [-UsbOnly] [-TpmAndUsb]
+ [-TpmAndPin] [-Drive <String>] [-Pin <SecureString>] [-CreateKeyOption <CreateKeyType>]
+ [-WaitForBitLockerComplete] [-EncryptFullDisk] [-EncryptionMethod <DiskEncryptionMethod>] -Name <String>
+ [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -144,12 +145,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSkipWhenNoValidTpm
+{{ Fill EnableSkipWhenNoValidTpm Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EncryptFullDisk
 Starting in version 1906, use this parameter to set the following option on the **Enable BitLocker** task sequence step: **Use full disk encryption**.
+
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionMethod
+{{ Fill EncryptionMethod Description }}
+
+```yaml
+Type: DiskEncryptionMethod
+Parameter Sets: (All)
+Aliases: DiskEncryptionMethod
+Accepted values: DoNotSpecify, AES_128, AES_256, XTS_AES128, XTS_AES256, TotalCount
 
 Required: False
 Position: Named

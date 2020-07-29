@@ -23,9 +23,9 @@ New-CMApplicationDeployment [-InputObject] <IResultObject> [-ApprovalRequired <B
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
  [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
- [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-DistributeContent] [-DistributeCollectionName <String>]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
+ [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
  [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -40,9 +40,9 @@ New-CMApplicationDeployment [-Name] <String> [-ApprovalRequired <Boolean>] [-Dep
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
  [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
- [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-DistributeContent] [-DistributeCollectionName <String>]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
+ [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
  [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -57,9 +57,9 @@ New-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-Deploy
  [-SuccessParameterValue <Int32>] [-TimeBaseOn <TimeType>] [-UserNotification <UserNotificationType>]
  [-DisableContentDependencyDetection] [-UpdateSupersedence <Boolean>] [-Simulation]
  [-EnableSoftDeadline <Boolean>] [-ReplaceToastNotificationWithDialog <Boolean>] [-AllowRepairApp <Boolean>]
- [-DistributeContent] [-DistributeCollectionName <String>] [-DistributionPointGroupName <String>]
- [-DistributionPointName <String>] [-Comment <String>] [-AvailableDateTime <DateTime>]
- [-DeadlineDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
+ [-DeadlineDateTime <DateTime>] [-DistributeContent] [-DistributeCollectionName <String>]
+ [-DistributionPointGroupName <String>] [-DistributionPointName <String>] [-Comment <String>]
+ [-AvailableDateTime <DateTime>] [-UseMeteredNetwork <Boolean>] [-PersistOnWriteFilterDevice <Boolean>]
  [-SendWakeupPacket <Boolean>] [-CollectionName <String>] [-CollectionId <String>]
  [-Collection <IResultObject>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases:
+Aliases: SupersedenceDeadlineDateTime
 
 Required: False
 Position: Named

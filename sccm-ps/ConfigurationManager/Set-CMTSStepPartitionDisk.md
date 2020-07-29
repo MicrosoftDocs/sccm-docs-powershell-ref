@@ -17,10 +17,10 @@ Sets a TS step partition disk.
 ### ByValue (Default)
 ```
 Set-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean>] [-DiskNumber <Int32>]
- [-PartitionSetting <IResultObject[]>] -InputObject <IResultObject> [-StepName <String>]
- [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-DiskNumberVariable <String>] [-PartitionSetting <IResultObject[]>] -InputObject <IResultObject>
+ [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
+ [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -29,10 +29,10 @@ Set-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean
 ### ById
 ```
 Set-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean>] [-DiskNumber <Int32>]
- [-PartitionSetting <IResultObject[]>] -TaskSequenceId <String> [-StepName <String>] [-NewStepName <String>]
- [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-DiskNumberVariable <String>] [-PartitionSetting <IResultObject[]>] -TaskSequenceId <String>
+ [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
+ [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -41,10 +41,10 @@ Set-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean
 ### ByName
 ```
 Set-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean>] [-DiskNumber <Int32>]
- [-PartitionSetting <IResultObject[]>] -TaskSequenceName <String> [-StepName <String>] [-NewStepName <String>]
- [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+ [-DiskNumberVariable <String>] [-PartitionSetting <IResultObject[]>] -TaskSequenceName <String>
+ [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
+ [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -336,6 +336,21 @@ Accept wildcard characters: False
 ### -DiskNumber
 ```yaml
 Type: Int32
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiskNumberVariable
+{{ Fill DiskNumberVariable Description }}
+
+```yaml
+Type: String
 Parameter Sets: ByValue, ById, ByName
 Aliases:
 

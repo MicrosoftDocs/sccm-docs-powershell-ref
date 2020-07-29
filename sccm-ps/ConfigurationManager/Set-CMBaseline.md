@@ -178,6 +178,8 @@ Accept wildcard characters: False
 
 ### -AllowComanagedClients
 Starting in version 1906, use this parameter to set the following option on the configuration baseline properties: **Always apply this baseline even for co-managed clients**
+
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

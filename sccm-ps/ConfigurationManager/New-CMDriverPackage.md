@@ -86,6 +86,8 @@ Accept wildcard characters: False
 
 ### -DriverModel
 Starting in version 1910, use this parameter to set the model. Use with the DriverManufacturer parameter. You can use them for managing the driver catalog, and with task sequence pre-caching.
+
+
 ```yaml
 Type: String
 Parameter Sets: (All)

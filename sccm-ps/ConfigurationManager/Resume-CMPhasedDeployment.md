@@ -1,4 +1,4 @@
----
+﻿---
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -42,7 +42,7 @@ Starting in version 2002, use this cmdlet to resume the phased deployment from t
 This example resumes the phased deployment that you specify by name.
 
 ```powershell
-Resume-CMPhasedDeployment -Name "myPhasedDeploymentName"  
+Resume-CMPhasedDeployment -Name "myPhasedDeploymentName"
 ```
 
 ### Example 2: Force resume the deployment by object
@@ -184,7 +184,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -194,7 +193,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

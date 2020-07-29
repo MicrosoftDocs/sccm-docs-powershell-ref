@@ -17,9 +17,9 @@ Creates a t s step partition disk.
 
 ```
 New-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean>] [-DiskNumber <Int32>]
- -PartitionSetting <IResultObject[]> -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
- [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DiskNumberVariable <String>] -PartitionSetting <IResultObject[]> -Name <String> [-Description <String>]
+ [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
+ [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,6 +108,21 @@ Accept wildcard characters: False
 ### -DiskNumber
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiskNumberVariable
+{{ Fill DiskNumberVariable Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

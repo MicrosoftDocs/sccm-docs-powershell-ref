@@ -16,7 +16,7 @@ Changes configuration settings of operating system images.
 
 ### SetByValueMandatory (Default)
 ```
-Set-CMOperatingSystemImage -InputObject <IResultObject> [-NewName <String>] [-Path <String>]
+Set-CMOperatingSystemImage -InputObject <IResultObject> [-Reload] [-NewName <String>] [-Path <String>]
  [-Version <String>] [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
  [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
  [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
@@ -29,7 +29,7 @@ Set-CMOperatingSystemImage -InputObject <IResultObject> [-NewName <String>] [-Pa
 
 ### SetById
 ```
-Set-CMOperatingSystemImage -Id <String> [-NewName <String>] [-Path <String>] [-Version <String>]
+Set-CMOperatingSystemImage -Id <String> [-Reload] [-NewName <String>] [-Path <String>] [-Version <String>]
  [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
  [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
  [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
@@ -42,7 +42,7 @@ Set-CMOperatingSystemImage -Id <String> [-NewName <String>] [-Path <String>] [-V
 
 ### SetByName
 ```
-Set-CMOperatingSystemImage -Name <String> [-NewName <String>] [-Path <String>] [-Version <String>]
+Set-CMOperatingSystemImage -Name <String> [-Reload] [-NewName <String>] [-Path <String>] [-Version <String>]
  [-Description <String>] [-DistributionPointUpdateSchedule <IResultObject>]
  [-DisconnectUserFromDistributionPoint <Boolean>] [-DisconnectUserFromDistributionPointRetryCount <UInt32>]
  [-DisconnectUserFromDistributionPointMins <UInt32>] [-CustomPackageShareName <String>]
@@ -391,6 +391,21 @@ Type: Priority
 Parameter Sets: (All)
 Aliases:
 Accepted values: High, Medium, Low
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reload
+{{ Fill Reload Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ReloadImage
 
 Required: False
 Position: Named

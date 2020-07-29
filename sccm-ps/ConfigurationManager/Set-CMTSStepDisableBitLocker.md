@@ -648,6 +648,8 @@ Accept wildcard characters: False
 
 ### -RebootCount
 Starting in version 1906, use this parameter to set the following option on the **Disable BitLocker** task sequence step: **Resume protection after Windows has been restarted the specified number of times**.
+
+
 ```yaml
 Type: Int32
 Parameter Sets: ByValue, ById, ByName

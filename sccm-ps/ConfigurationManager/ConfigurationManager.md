@@ -158,6 +158,9 @@ Adds a multicast service point.
 ### [Add-CMObjectSecurityScope](Add-CMObjectSecurityScope.md)
 Adds a security scope to an object.
 
+### [Add-CMPassiveSite](Add-CMPassiveSite.md)
+Use this cmdlet to add a site server in passive mode.
+
 ### [Add-CMReportingServicePoint](Add-CMReportingServicePoint.md)
 Adds a reporting service point to Configuration Manager.
 
@@ -434,6 +437,9 @@ Gets an application deployment.
 
 ### [Get-CMApplicationDeploymentStatus](Get-CMApplicationDeploymentStatus.md)
 Gets an application deployment status.
+
+### [Get-CMApplicationPhasedDeployment](Get-CMApplicationPhasedDeployment.md)
+Use this cmdlet to get a phased deployment for an application.
 
 ### [Get-CMApplicationRevisionHistory](Get-CMApplicationRevisionHistory.md)
 Gets a Configuration Manager object that represents the revision history for an application.
@@ -801,6 +807,12 @@ Gets a package deployment from Configuration Manager.
 ### [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 Gets the status of classic software distribution deployments.
 
+### [Get-CMPhase](Get-CMPhase.md)
+Use this cmdlet to get a deployment phase for a specific instance or a phased deployment.
+
+### [Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+Use this cmdlet to get the status of a specific phased deployment.
+
 ### [Get-CMPowerManagementSchema](Get-CMPowerManagementSchema.md)
 Gets a power management schema.
 
@@ -921,6 +933,9 @@ Gets software update groups.
 ### [Get-CMSoftwareUpdateLicense](Get-CMSoftwareUpdateLicense.md)
 Gets a EULA or SLT for a software update in Configuration Manager.
 
+### [Get-CMSoftwareUpdatePhasedDeployment](Get-CMSoftwareUpdatePhasedDeployment.md)
+Use this cmdlet to get the phased deployment for software updates.
+
 ### [Get-CMSoftwareUpdatePoint](Get-CMSoftwareUpdatePoint.md)
 Gets a Configuration Manager software update point.
 
@@ -960,6 +975,9 @@ Gets a task sequence deployment in Configuration Manager.
 ### [Get-CMTaskSequenceGroup](Get-CMTaskSequenceGroup.md)
 Gets a Configuration Manager task sequence group.
 
+### [Get-CMTaskSequencePhasedDeployment](Get-CMTaskSequencePhasedDeployment.md)
+Use this cmdlet to get the phased deployment for a task sequence.
+
 ### [Get-CMTaskSequenceStep](Get-CMTaskSequenceStep.md)
 Gets a Configuration Manager task sequence step.
 
@@ -968,6 +986,12 @@ Gets a Configuration Manager task sequence step condition.
 
 ### [Get-CMTermsAndConditionsConfigurationItem](Get-CMTermsAndConditionsConfigurationItem.md)
 Gets a terms and conditions configuration item.
+
+### [Get-CMThirdPartyUpdateCatalog](Get-CMThirdPartyUpdateCatalog.md)
+Use this cmdlet to get a third-party updates catalog.
+
+### [Get-CMThirdPartyUpdateCategory](Get-CMThirdPartyUpdateCategory.md)
+Use this cmdlet to get third-party update categories.
 
 ### [Get-CMTrackedObject](Get-CMTrackedObject.md)
 Gets a tracked object.
@@ -1088,6 +1112,9 @@ Gets a TS step run command line.
 
 ### [Get-CMTSStepRunPowerShellScript](Get-CMTSStepRunPowerShellScript.md)
 Gets a TS step run power shell script
+
+### [Get-CMTSStepRunTaskSequence](Get-CMTSStepRunTaskSequence.md)
+Use this cmdlet to get the **Run Task Sequence** step from a specific task sequence.
 
 ### [Get-CMTSStepSetDynamicVariable](Get-CMTSStepSetDynamicVariable.md)
 Gets task sequence Set Dynamic Variable steps in Configuration Manager.
@@ -1320,8 +1347,14 @@ Merges antimalware policies for Endpoint Protection.
 ### [Merge-CMConflictingRecord](Merge-CMConflictingRecord.md)
 Merges a new Configuration Manager client record with a conflicting client record.
 
+### [Move-CMContentLibrary](Move-CMContentLibrary.md)
+Use this cmdlet to move the content library before adding a passive site.
+
 ### [Move-CMObject](Move-CMObject.md)
 Moves a Configuration Manager object into a different folder.
+
+### [Move-CMPhasedDeploymentToNext](Move-CMPhasedDeploymentToNext.md)
+Use this cmdlet to move the specified phased deployment to the next phase.
 
 ### [New-CMAccessAccount](New-CMAccessAccount.md)
 Adds users or groups to an access account.
@@ -1355,6 +1388,9 @@ Creates an object that specifies antimalware policies.
 
 ### [New-CMApplication](New-CMApplication.md)
 Creates an application.
+
+### [New-CMApplicationAutoPhasedDeployment](New-CMApplicationAutoPhasedDeployment.md)
+Use this cmdlet to create a phased deployment for an application by generating two phases with same settings.
 
 ### [New-CMApplicationDeployment](New-CMApplicationDeployment.md)
 Creates an application deployment.
@@ -1511,6 +1547,12 @@ Creates a distribution point group.
 
 ### [New-CMDriverPackage](New-CMDriverPackage.md)
 Creates a driver package.
+
+### [New-CMDuplicateHardwareIdGuid](New-CMDuplicateHardwareIdGuid.md)
+Use this cmdlet to add duplicate hardware identifiers by GUID.
+
+### [New-CMDuplicateHardwareIdMacAddress](New-CMDuplicateHardwareIdMacAddress.md)
+Use this cmdlet to add duplicate hardware identifiers by MAC address.
 
 ### [New-CMEmailProfile](New-CMEmailProfile.md)
 Creates an email profile.
@@ -1728,11 +1770,17 @@ Creates a security scope.
 ### [New-CMSiteSystemServer](New-CMSiteSystemServer.md)
 Creates a site system server.
 
+### [New-CMSoftwareCenterTabItem](New-CMSoftwareCenterTabItem.md)
+Use this cmdlet to create a custom Software Center tab.
+
 ### [New-CMSoftwareMeteringRule](New-CMSoftwareMeteringRule.md)
 Creates a Configuration Manager software metering rule.
 
 ### [New-CMSoftwareUpdateAutoDeploymentRule](New-CMSoftwareUpdateAutoDeploymentRule.md)
 Creates Configuration Manager deployment rules for automatic software updates.
+
+### [New-CMSoftwareUpdateAutoPhasedDeployment](New-CMSoftwareUpdateAutoPhasedDeployment.md)
+Use this cmdlet to create a phased deployment for software updates by generating two phases with same settings.
 
 ### [New-CMSoftwareUpdateDeployment](New-CMSoftwareUpdateDeployment.md)
 Creates a software update deployment.
@@ -1742,6 +1790,12 @@ Creates a software update deployment package.
 
 ### [New-CMSoftwareUpdateGroup](New-CMSoftwareUpdateGroup.md)
 Creates a software update group.
+
+### [New-CMSoftwareUpdateManualPhasedDeployment](New-CMSoftwareUpdateManualPhasedDeployment.md)
+Use this cmdlet to create a phased deployment for software updates.
+
+### [New-CMSoftwareUpdatePhase](New-CMSoftwareUpdatePhase.md)
+Use this cmdlet to create a deployment phase for software update.
 
 ### [New-CMSqlServerSetting](New-CMSqlServerSetting.md)
 Creates a SQL Server settings object in Configuration Manager.
@@ -1761,14 +1815,26 @@ Creates a new storage folder in Configuration Manager.
 ### [New-CMTaskSequence](New-CMTaskSequence.md)
 Creates a task sequence in Configuration Manager.
 
+### [New-CMTaskSequenceAutoPhasedDeployment](New-CMTaskSequenceAutoPhasedDeployment.md)
+Use this cmdlet to create a phased deployment for a task sequence by generating two phases with same settings.
+
 ### [New-CMTaskSequenceDeployment](New-CMTaskSequenceDeployment.md)
 Creates a task sequence deployment in Configuration Manager.
 
 ### [New-CMTaskSequenceGroup](New-CMTaskSequenceGroup.md)
 Creates a Configuration Manager task sequence group.
 
+### [New-CMTaskSequenceManualPhasedDeployment](New-CMTaskSequenceManualPhasedDeployment.md)
+Use this cmdlet to create a phased deployment for a task sequence.
+
 ### [New-CMTaskSequenceMedia](New-CMTaskSequenceMedia.md)
 Creates task sequence media in System Center Configuration Manager.
+
+### [New-CMTaskSequencePhase](New-CMTaskSequencePhase.md)
+Use this cmdlet to create a deployment phase for a task sequence.
+
+### [New-CMThirdPartyUpdateCatalog](New-CMThirdPartyUpdateCatalog.md)
+Use this cmdlet to create a new third-party updates catalog.
 
 ### [New-CMTrustedRootCertificateProfileConfigurationItem](New-CMTrustedRootCertificateProfileConfigurationItem.md)
 Creates a root certificate profile.
@@ -1899,6 +1965,9 @@ Creates a t s step run command line.
 ### [New-CMTSStepRunPowerShellScript](New-CMTSStepRunPowerShellScript.md)
 Creates a t s step run power shell script.
 
+### [New-CMTSStepRunTaskSequence](New-CMTSStepRunTaskSequence.md)
+Use this cmdlet to create the task sequence step **Run Task Sequence**.
+
 ### [New-CMTSStepSetDynamicVariable](New-CMTSStepSetDynamicVariable.md)
 Create a task sequence Set Dynamic Variable step in Configuration Manager.
 
@@ -1979,6 +2048,9 @@ Removes a Configuration Manager Application Catalog website point.
 
 ### [Remove-CMApplicationDeployment](Remove-CMApplicationDeployment.md)
 Removes an application deployment.
+
+### [Remove-CMApplicationPhasedDeployment](Remove-CMApplicationPhasedDeployment.md)
+Use this cmdlet to remove a phased deployment for an application.
 
 ### [Remove-CMApplicationRevisionHistory](Remove-CMApplicationRevisionHistory.md)
 Removes a revision history from a Configuration Manager application.
@@ -2148,6 +2220,12 @@ Removes a driver from a driver package.
 ### [Remove-CMDriverPackage](Remove-CMDriverPackage.md)
 Removes a driver package.
 
+### [Remove-CMDuplicateHardwareIdGuid](Remove-CMDuplicateHardwareIdGuid.md)
+Use this cmdlet to remove duplicate hardware identifiers by GUID.
+
+### [Remove-CMDuplicateHardwareIdMacAddress](Remove-CMDuplicateHardwareIdMacAddress.md)
+Use this cmdlet to remove duplicate hardware identifiers by MAC address.
+
 ### [Remove-CMEndpointProtectionPoint](Remove-CMEndpointProtectionPoint.md)
 Removes an Endpoint Protection point.
 
@@ -2253,6 +2331,9 @@ Removes a software update from group.
 ### [Remove-CMSoftwareUpdateGroup](Remove-CMSoftwareUpdateGroup.md)
 Removes Configuration Manager software update groups.
 
+### [Remove-CMSoftwareUpdatePhasedDeployment](Remove-CMSoftwareUpdatePhasedDeployment.md)
+Use this cmdlet to remove a phased deployment for software updates.
+
 ### [Remove-CMSoftwareUpdatePoint](Remove-CMSoftwareUpdatePoint.md)
 Removes a software update point site system role from Configuration Manager.
 
@@ -2274,8 +2355,14 @@ Removes a task sequence deployment from Configuration Manager.
 ### [Remove-CMTaskSequenceGroup](Remove-CMTaskSequenceGroup.md)
 Removes a Configuration Manager task sequence group.
 
+### [Remove-CMTaskSequencePhasedDeployment](Remove-CMTaskSequencePhasedDeployment.md)
+Use this cmdlet to remove a phased deployment for a task sequence.
+
 ### [Remove-CMTaskSequenceStep](Remove-CMTaskSequenceStep.md)
 Removes a Configuration Manager task sequence step.
+
+### [Remove-CMThirdPartyUpdateCatalog](Remove-CMThirdPartyUpdateCatalog.md)
+Use this cmdlet to remove a third-party updates catalog.
 
 ### [Remove-CMTSStepApplyDataImage](Remove-CMTSStepApplyDataImage.md)
 {{ Fill in the Synopsis }}
@@ -2367,6 +2454,9 @@ Removes a TS step run command line
 ### [Remove-CMTSStepRunPowerShellScript](Remove-CMTSStepRunPowerShellScript.md)
 Removes a TS step run power shell script
 
+### [Remove-CMTSStepRunTaskSequence](Remove-CMTSStepRunTaskSequence.md)
+Use cmdlet to remove the task sequence step **Run Task Sequence** from a specific task sequence.
+
 ### [Remove-CMTSStepSetDynamicVariable](Remove-CMTSStepSetDynamicVariable.md)
 Remove Set Dynamic Variable steps from a Configuration Manager task sequence.
 
@@ -2414,6 +2504,9 @@ Restores a previous version of a Configuration Manager application from the appl
 
 ### [Resume-CMApplication](Resume-CMApplication.md)
 Resumes a suspended application.
+
+### [Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+Use this cmdlet to resume the phased deployment from the suspend status.
 
 ### [Save-CMDatabaseReplicationDiagnostic](Save-CMDatabaseReplicationDiagnostic.md)
 Saves database replication diagnostic information for Configuration Manager in a file.
@@ -2575,7 +2668,7 @@ Sets a client setting power management.
 Sets a client setting remote tool.
 
 ### [Set-CMClientSettingSoftwareCenter](Set-CMClientSettingSoftwareCenter.md)
-{{ Fill in the Synopsis }}
+Use this cmdlet to configure the client settings in the **Software Center** group.
 
 ### [Set-CMClientSettingSoftwareDeployment](Set-CMClientSettingSoftwareDeployment.md)
 Sets a client setting software deployment.
@@ -2886,6 +2979,9 @@ Modifies a remote connection profile.
 ### [Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
 Modifies a System Center Configuration Manager reporting service point.
 
+### [Set-CMScript](Set-CMScript.md)
+Use this cmdlet to edit a script.
+
 ### [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
 Sets a script installer deployment type.
 
@@ -2976,6 +3072,12 @@ Creates a task sequence deployment in Configuration Manager.
 ### [Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md)
 Sets a Configuration Manager task sequence group.
 
+### [Set-CMThirdPartyUpdateCatalog](Set-CMThirdPartyUpdateCatalog.md)
+Use this cmdlet to modify a third-party updates catalog.
+
+### [Set-CMThirdPartyUpdateCategory](Set-CMThirdPartyUpdateCategory.md)
+Use this cmdlet to modify third-party update categories.
+
 ### [Set-CMTSStepApplyDataImage](Set-CMTSStepApplyDataImage.md)
 {{ Fill in the Synopsis }}
 
@@ -3065,6 +3167,9 @@ Sets a TS step run command line.
 
 ### [Set-CMTSStepRunPowerShellScript](Set-CMTSStepRunPowerShellScript.md)
 Sets a TS step run power shell script.
+
+### [Set-CMTSStepRunTaskSequence](Set-CMTSStepRunTaskSequence.md)
+Use this cmdlet to edit the task sequence step **Run Task Sequence**.
 
 ### [Set-CMTSStepSetDynamicVariable](Set-CMTSStepSetDynamicVariable.md)
 Sets properties, options, specific conditions for a task sequence Set Dynamic Variable step in Configuration Manager.
@@ -3173,6 +3278,9 @@ Suspends monitoring alerts.
 
 ### [Suspend-CMApplication](Suspend-CMApplication.md)
 Suspends an application.
+
+### [Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+Use this cmdlet to suspend the specified phased deployment.
 
 ### [Sync-CMAssetIntelligenceCatalog](Sync-CMAssetIntelligenceCatalog.md)
 Synchronizes the Asset Intelligence catalog with System Center Online.

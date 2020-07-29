@@ -66,6 +66,8 @@ Accept wildcard characters: False
 
 ### -ClearCache
 Starting in version 1906, use this parameter to set the following option on the **Install Application** task sequence step: **Clear application content from cache after installing**.
+
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
