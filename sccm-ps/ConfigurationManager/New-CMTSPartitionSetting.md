@@ -409,7 +409,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [About task sequence steps - Format and Partition Disk](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk)
 
-For more information about how to configure hard drive partitions, see one of the following articles:
+[UEFI/GPT-based hard drive partitions](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)
 
-- [UEFI/GPT-based hard drive partitions](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)
-- [BIOS/MBR-based hard drive partitions](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)
+[BIOS/MBR-based hard drive partitions](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)
