@@ -2493,11 +2493,8 @@ Sets a trusted CA certificate profile.
 ### [Set-CMCertificateRegistrationPoint](Set-CMCertificateRegistrationPoint.md)
 Sets a certificate registration point role on a site system server.
 
-### [Set-CMClientAuthCertificateProfileConfigurationItem](Set-CMClientAuthCertificateProfileConfigurationItem.md)
-Modifies a certificate profile.
-
 ### [Set-CMClientCertificateProfileConfigurationItem](Set-CMClientCertificateProfileConfigurationItem.md)
-Modifies a certificate profile.
+Modify a certificate profile.
 
 ### [Set-CMClientPushInstallation](Set-CMClientPushInstallation.md)
 Changes settings of a client push installation.
