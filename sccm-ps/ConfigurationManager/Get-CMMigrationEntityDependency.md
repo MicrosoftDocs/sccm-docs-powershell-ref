@@ -27,7 +27,7 @@ Get-CMMigrationEntityDependency [-Type <String>] [-DisableWildcardHandling] [-Fo
 ```
 
 ## DESCRIPTION
-The **Get-CMMigrationEntityDependency** cmdlet gets a migration entity dependency in Microsoft System Center Configuration Manager.
+The **Get-CMMigrationEntityDependency** cmdlet gets a migration entity dependency in Configuration Manager.
 A migration entity dependency is an object upon which another object to be migrated is dependent.
 
 > [!NOTE]

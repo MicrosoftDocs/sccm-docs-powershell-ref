@@ -21,7 +21,7 @@ Set-CMDatabaseProperty [-SiteCode <String>] [-EnableDataCompression <Boolean>]
 ```
 
 ## DESCRIPTION
-The **Set-CMDatabaseProperty** cmdlet changes database settings for a Microsoft System Center Configuration Manager site database.
+The **Set-CMDatabaseProperty** cmdlet changes database settings for a Configuration Manager site database.
 Specify the Configuration Manager site code for the database that you want to modify.
 
 You can modify whether the database uses data compression, the Service Broker port for the computer that runs Microsoft SQL Server, and the length of time that the database keeps data.

@@ -11,10 +11,10 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# System Center Configuration Manager Cmdlet Library changes for Current Branch 1702
+# Configuration Manager Cmdlet Library changes for Current Branch 1702
 
  >[!NOTE]
- > System Center Configuration Current Branch 1610 is the baseline for these changes. See [System Center Configuration Manager Cmdlet Library changes for Current Branch 1610](https://docs.microsoft.com/powershell/sccm/configurationmanager/1610_release_notes) for more details.
+ > System Center Configuration Current Branch 1610 is the baseline for these changes. See [Configuration Manager Cmdlet Library changes for Current Branch 1610](https://docs.microsoft.com/powershell/sccm/configurationmanager/1610_release_notes) for more details.
 
 ## Important changes
 ### Documentation library updates

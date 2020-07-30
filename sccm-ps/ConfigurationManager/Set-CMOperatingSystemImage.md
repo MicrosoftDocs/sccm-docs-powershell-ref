@@ -54,8 +54,8 @@ Set-CMOperatingSystemImage -Name <String> [-NewName <String>] [-Path <String>] [
 ```
 
 ## DESCRIPTION
-The **Set-CMOperatingSystemImage** cmdlet changes configuration settings of one or more operating system images in Microsoft System Center Configuration Manager.
-Operating system images are .wim format files and represent a compressed collection of reference files and folders that System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
+The **Set-CMOperatingSystemImage** cmdlet changes configuration settings of one or more operating system images in Configuration Manager.
+Operating system images are .wim format files and represent a compressed collection of reference files and folders that Configuration Manager requires to successfully install and configure an operating system on a computer.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

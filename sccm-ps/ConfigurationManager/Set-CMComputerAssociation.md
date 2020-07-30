@@ -31,13 +31,13 @@ Set-CMComputerAssociation -MigrationId <String> [-MigrationBehavior <MigrationBe
 
 ## DESCRIPTION
 The **Set-CMComputerAssociation** cmdlet changes settings for a computer association used for migration.
-Microsoft System Center Configuration Manager can migrate user state and settings from an existing computer to a different computer as part of operating system deployment.
-In the course of migration, System Center Configuration Manager saves accounts created on the source computer and creates those user accounts on the destination computer.
+Configuration Manager can migrate user state and settings from an existing computer to a different computer as part of operating system deployment.
+In the course of migration, Configuration Manager saves accounts created on the source computer and creates those user accounts on the destination computer.
 
 A computer association contains the user names to be migrated and how to deal with other user names from the source computer.
 You can use this cmdlet to modify an association.
 You can add user names to the association, or remove user names.
-You can also change whether System Center Configuration Manager includes other user names from the source computer.
+You can also change whether Configuration Manager includes other user names from the source computer.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

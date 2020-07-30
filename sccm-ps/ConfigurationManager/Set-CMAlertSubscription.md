@@ -36,7 +36,7 @@ Set-CMAlertSubscription -Name <String> [-NewName <String>] [-AlertId <Int32[]>] 
 ```
 
 ## DESCRIPTION
-The **Set-CMAlertSubscription** cmdlet changes the properties of an alert subscription object in Microsoft System Center Configuration Manager.
+The **Set-CMAlertSubscription** cmdlet changes the properties of an alert subscription object in Configuration Manager.
 You can change the name of an alert subscription, the email address of the recipient of an alert notification, the Windows locale ID, and the alert ID.
 You can also change the security scope membership of an alert subscription by adding it to or removing it from a specified security scope.
 

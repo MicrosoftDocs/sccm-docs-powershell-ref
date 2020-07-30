@@ -20,7 +20,7 @@ Get-CMCollectionMembershipEvaluationComponent [-SiteSystemServerName <String>] [
 ```
 
 ## DESCRIPTION
-The **Get-CMCollectionMembershipEvaluationComponent** cmdlet gets the value for how often Microsoft System Center Configuration Manager evaluates collections.
+The **Get-CMCollectionMembershipEvaluationComponent** cmdlet gets the value for how often Configuration Manager evaluates collections.
 Configuration Manager queries the database at a regular interval to check for changes in collection membership.
 You can specify which value to get by site server name or site code.
 

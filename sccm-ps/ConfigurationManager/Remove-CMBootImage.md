@@ -33,7 +33,7 @@ Remove-CMBootImage -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWil
 ```
 
 ## DESCRIPTION
-The **Remove-CMBootImage** cmdlet removes a Windows Preinstallation Environment (Windows PE) operating system boot image from Microsoft System Center Configuration Manager.
+The **Remove-CMBootImage** cmdlet removes a Windows Preinstallation Environment (Windows PE) operating system boot image from Configuration Manager.
 
 You must run **Remove-CMBootImage** on the computer that is running the Systems Management Server (SMS) provider.
 The computer account of the computer that is running the SMS provider must have Read and Write access to the package source of the boot image.

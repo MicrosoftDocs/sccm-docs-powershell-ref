@@ -27,9 +27,9 @@ Disable-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-DisableWildcard
 ```
 
 ## DESCRIPTION
-The **Disable-CMStatusFilterRule** cmdlet disables a specified Microsoft System Center Configuration Manager filter rule for status messages.
+The **Disable-CMStatusFilterRule** cmdlet disables a specified Configuration Manager filter rule for status messages.
 
-Status filter rules specify how System Center Configuration Manager responds to status messages.
+Status filter rules specify how Configuration Manager responds to status messages.
 Each filter rule contains criteria and actions for status messages.
 You configure status filter rules for each site, not across all sites.
 

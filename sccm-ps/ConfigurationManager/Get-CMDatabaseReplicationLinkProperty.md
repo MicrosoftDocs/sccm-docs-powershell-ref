@@ -20,7 +20,7 @@ Get-CMDatabaseReplicationLinkProperty -ParentSiteCode <String> -ChildSiteCode <S
 ```
 
 ## DESCRIPTION
-The **Get-CMDatabaseReplicationLinkProperty** cmdlet gets a specified replication link between a Microsoft System Center Configuration Manager parent site and child site.
+The **Get-CMDatabaseReplicationLinkProperty** cmdlet gets a specified replication link between a Configuration Manager parent site and child site.
 
 Database replication for Configuration Manager sites transfers data and merges changes made in a site database with information stored at other sites in the Configuration Manager hierarchy.
 This enables all sites to share the same information.

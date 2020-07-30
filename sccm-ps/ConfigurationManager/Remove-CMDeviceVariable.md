@@ -33,7 +33,7 @@ Remove-CMDeviceVariable -DeviceName <String> -VariableName <String> [-Force] [-D
 ```
 
 ## DESCRIPTION
-The **Remove-CMDeviceVariable** cmdlet removes a variable defined for a Microsoft System Center Configuration Manager device.
+The **Remove-CMDeviceVariable** cmdlet removes a variable defined for a Configuration Manager device.
 
 Individual devices have device variables. Task sequence processing uses device variables.
 

@@ -34,7 +34,7 @@ Suspend-CMAlert -Name <String> [-Comment <String>] -SkipUntil <DateTime> [-PassT
 
 ## DESCRIPTION
 The **Suspend-CMAlert** cmdlet suspends monitoring of an alert until a specified date.
-At that time, Microsoft System Center Configuration Manager updates the state of the alert.
+At that time, Configuration Manager updates the state of the alert.
 You can suspend an alert only when it is enabled.
 If you do not specify the *SkipUntil* parameter, the alert is suspended indefinitely.
 

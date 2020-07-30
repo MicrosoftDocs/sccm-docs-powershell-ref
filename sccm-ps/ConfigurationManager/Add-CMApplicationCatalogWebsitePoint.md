@@ -1,5 +1,5 @@
 ﻿---
-description: Adds an Application Catalog website point to a Microsoft System Center Configuration Manager site.
+description: Adds an Application Catalog website point to a Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/27/2019
@@ -75,7 +75,7 @@ Add-CMApplicationCatalogWebsitePoint [-IisWebsite <String>] [-WebApplicationName
 ```
 
 ## DESCRIPTION
-The **Add-CMApplicationCatalogWebsitePoint** cmdlet adds an Application Catalog website point to a Microsoft System Center Configuration Manager site.
+The **Add-CMApplicationCatalogWebsitePoint** cmdlet adds an Application Catalog website point to a Configuration Manager site.
 This site system role supports the Application Catalog website and the Software Library.
 
 Specify the site that this website point supports and the server that hosts the website point.

@@ -28,7 +28,7 @@ Get-CMStatusSummarizer [-SiteCode <String>] [-Name <String>] [-DisableWildcardHa
 
 ## DESCRIPTION
 The **Get-CMStatusSummarizer** cmdlet gets a status summarizer object.
-The Microsoft System Center Configuration Manager status summarizers apply to the areas of application deployment, application statistics, component status, and site system status.
+The Configuration Manager status summarizers apply to the areas of application deployment, application statistics, component status, and site system status.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

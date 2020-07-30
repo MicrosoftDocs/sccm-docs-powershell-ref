@@ -39,16 +39,16 @@ Set-CMSoftwareMeteringRule [-FileName <String>] [-FileVersion <String>] [-Origin
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareMeteringRule** cmdlet changes properties for software metering rules in Microsoft System Center Configuration Manager and adds or removes security scopes for software metering rules.
+The **Set-CMSoftwareMeteringRule** cmdlet changes properties for software metering rules in Configuration Manager and adds or removes security scopes for software metering rules.
 Every rule must have at least one security scope.
 
-Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
+Software metering monitors and collects software usage data from Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
 
 To change rule properties, you can specify rules to change by ID or by product name, or use the [Get-CMSoftwareMeteringRule](Get-CMSoftwareMeteringRule.md) cmdlet.
 Likewise, you can change security scope for rules for specified ID, product name, or by using **Get-CMSoftwareMeteringRule**.
 
-For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682005(v=technet.10)) on TechNet.
+For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682005(v=technet.10)) on TechNet.
 For more information about security scopes, see [Planning for Security in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=268426).
 
 > [!NOTE]

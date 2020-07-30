@@ -71,7 +71,7 @@ Remove-CMSecurityScopeFromAdministrativeUser -SecurityScope <IResultObject> -Adm
 ## DESCRIPTION
 The **Remove-CMSecurityScopeFromAdministrativeUser** cmdlet removes the association between one or more security scopes and an administrative user.
 
-After you remove the association between a security scope and an administrative user, the administrative user cannot view the objects in Microsoft System Center Configuration Manager that are associated with the security scope, and no longer has the permission to perform the tasks that are related to those objects.
+After you remove the association between a security scope and an administrative user, the administrative user cannot view the objects in Configuration Manager that are associated with the security scope, and no longer has the permission to perform the tasks that are related to those objects.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

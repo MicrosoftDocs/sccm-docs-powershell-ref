@@ -29,7 +29,7 @@ Set-CMAssetIntelligenceClass [-EnableReportingClass <ClassNameType[]>]
 
 ## DESCRIPTION
 The **Set-CMAssetIntelligenceClass** cmdlet modifies the Asset Intelligence hardware inventory reporting classes.
-The Hardware Inventory Client Agent collects inventory from Microsoft System Center Configuration Manager clients based on the Asset Intelligence hardware inventory reporting classes that you enable.
+The Hardware Inventory Client Agent collects inventory from Configuration Manager clients based on the Asset Intelligence hardware inventory reporting classes that you enable.
 
 You can modify the categorization information, which includes product name, vendor, software category, and software family, for inventoried software only at the top-level site in your hierarchy.
 After you modify the categorization information for predefined software, the validation state for the software changes from Validated to User Defined.

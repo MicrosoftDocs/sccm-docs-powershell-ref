@@ -33,7 +33,7 @@ Remove-CMSecondarySite -Name <String> [-Force] -Action <ActionType> [-DisableWil
 ```
 
 ## DESCRIPTION
-The **Remove-CMSecondarySite** cmdlet removes a secondary site from Microsoft System Center Configuration Manager.
+The **Remove-CMSecondarySite** cmdlet removes a secondary site from Configuration Manager.
 A secondary site has no site database of its own.
 Instead it is connected to a primary site and sends client data to the primary site for storage.
 

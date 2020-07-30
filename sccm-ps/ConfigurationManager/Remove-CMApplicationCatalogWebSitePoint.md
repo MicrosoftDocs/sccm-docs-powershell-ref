@@ -27,7 +27,7 @@ Remove-CMApplicationCatalogWebsitePoint [-SiteCode <String>] [-Force] [-SiteSyst
 ```
 
 ## DESCRIPTION
-The **Remove-CMApplicationCatalogWebSitePoint** cmdlet removes an Application Catalog website point in Microsoft System Center Configuration Manager.
+The **Remove-CMApplicationCatalogWebSitePoint** cmdlet removes an Application Catalog website point in Configuration Manager.
 This site system role supports the Application Catalog website and the Software Library.
 
 You can specify a website point to remove by site code and name of the server that hosts the role, or you can use the Get-CMApplicationCatalogWebsitePoint cmdlet to get a website point to remove.

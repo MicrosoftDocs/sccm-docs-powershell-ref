@@ -37,7 +37,7 @@ Get-CMConfigurationItemHistory [-InputObject] <IResultObject> [-Revision <Int32>
 
 The **Get-CMConfigurationItemHistory** cmdlet gets the previous versions of a configuration item.
 
-Microsoft System Center Configuration Manager updates configuration items based on configuration management, software updates management, and operating system deployment.
+Configuration Manager updates configuration items based on configuration management, software updates management, and operating system deployment.
 Configuration Manager stores the previous version of the item.
 The server removes previous versions, by default, when the data is more than 90 days old.
 

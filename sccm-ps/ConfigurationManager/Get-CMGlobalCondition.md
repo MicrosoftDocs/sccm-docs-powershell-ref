@@ -32,7 +32,7 @@ Get-CMGlobalCondition -Id <String> [-AsDcmSdkObject] [-DisableWildcardHandling] 
 The **Get-CMGlobalCondition** cmdlet gets global condition objects.
 You can pass the results of this cmdlet to the **Set-CMGlobalCondition** cmdlet or the **Remove-CMGlobalCondition** cmdlet.
 
-Microsoft System Center Configuration Manager uses global conditions to represent business or technical conditions.
+Configuration Manager uses global conditions to represent business or technical conditions.
 Global conditions specify how to provide and deploy applications to client devices.
 
 You can get global conditions by name, ID, or security scope.

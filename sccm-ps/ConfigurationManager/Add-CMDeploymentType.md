@@ -198,7 +198,7 @@ Use one of the following cmdlets:
 * [Add-CMWindowsStoreDeploymentType](Add-CMWindowsStoreDeploymentType.md)
 
 The **Add-CMDeploymentType** cmdlet adds a deployment type for an application.
-A deployment type is contained within an application and contains the information that Microsoft System Center Configuration Manager requires to install software.
+A deployment type is contained within an application and contains the information that Configuration Manager requires to install software.
 A deployment type also contains rules that specify if and how the software is deployed.
 
 > [!NOTE]

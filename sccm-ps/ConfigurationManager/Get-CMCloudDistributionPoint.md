@@ -45,7 +45,7 @@ Get-CMCloudDistributionPoint -DistributionPointGroup <IResultObject> [-DisableWi
 ```
 
 ## DESCRIPTION
-The **Get-CMCloudDistributionPoint** cmdlet gets one or more cloud-based distribution points in Microsoft System Center Configuration Manager.
+The **Get-CMCloudDistributionPoint** cmdlet gets one or more cloud-based distribution points in Configuration Manager.
 
 In Configuration Manager, you can use a cloud service in Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.

@@ -36,7 +36,7 @@ Set-CMBoundary [-NewName <String>] -Type <BoundaryTypes> -Value <String> [-NewTy
 ## DESCRIPTION
 The **Set-CMBoundary** cmdlet modifies boundary settings.
 
-In Microsoft System Center Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
+In Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
 A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an IP address range.
 
 > [!NOTE]

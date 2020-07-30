@@ -100,7 +100,7 @@ Set-CMSoftwareUpdateDeployment -SoftwareUpdateGroupId <String> [-DeploymentName 
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdateDeployment** cmdlet modifies a deployment of software updates in Microsoft System Center Configuration Manager.
+The **Set-CMSoftwareUpdateDeployment** cmdlet modifies a deployment of software updates in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -20,7 +20,7 @@ Get-CMEmailNotificationComponent [-SiteSystemServerName <String>] [-SiteCode <St
 ```
 
 ## DESCRIPTION
-The **Get-CMEmailNotificationComponent** cmdlet gets one or more email notification components Microsoft System Center Configuration Manager.
+The **Get-CMEmailNotificationComponent** cmdlet gets one or more email notification components Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

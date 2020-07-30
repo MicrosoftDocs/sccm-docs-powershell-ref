@@ -22,7 +22,7 @@ Get-CMDeploymentTypeDependencyGroup [-GroupName <String>] [-GroupId <String>] -I
 
 ## DESCRIPTION
 
-The **Get-CMDeploymentTypeDependencyGroup** cmdlet gets a deployment type dependency group from the Microsoft System Center Configuration Manager.
+The **Get-CMDeploymentTypeDependencyGroup** cmdlet gets a deployment type dependency group from the Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

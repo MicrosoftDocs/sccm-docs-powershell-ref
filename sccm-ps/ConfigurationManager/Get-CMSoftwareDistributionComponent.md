@@ -20,7 +20,7 @@ Get-CMSoftwareDistributionComponent [-SiteCode <String>] [-SiteSystemServerName 
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareDistributionComponent** cmdlet gets an object that represents a software distribution component in Microsoft System Center Configuration Manager.
+The **Get-CMSoftwareDistributionComponent** cmdlet gets an object that represents a software distribution component in Configuration Manager.
 A software distribution component consists of individual components such as the client software distribution component.
 
 > [!NOTE]

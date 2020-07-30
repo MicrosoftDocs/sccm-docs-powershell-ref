@@ -28,7 +28,7 @@ Remove-CMAssetIntelligenceSynchronizationPoint [-SiteCode <String>] [-Force] [-S
 
 ## DESCRIPTION
 The **Remove-CMAssetIntelligenceSynchronizationPoint** cmdlet removes an Asset Intelligence synchronization point from a site system.
-After you remove an Asset Intelligence synchronization point, the Microsoft System Center Configuration Manager sites that used the synchronization point cannot connect to System Center Online.
+After you remove an Asset Intelligence synchronization point, the Configuration Manager sites that used the synchronization point cannot connect to System Center Online.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -42,7 +42,7 @@ After you remove an Asset Intelligence synchronization point, the Microsoft Syst
 PS XYZ:\> Remove-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -SiteCode "CM1"
 ```
 
-This command removes the Asset Intelligence synchronization point on the System Center Configuration Manager site that has the site code CM1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
+This command removes the Asset Intelligence synchronization point on the Configuration Manager site that has the site code CM1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
 
 ### Example 2: Remove an Asset Intelligence synchronization point by using an object variable
 ```
@@ -50,7 +50,7 @@ PS XYZ:\> $AIsync = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServe
 PS XYZ:\> Remove-CMAssetIntelligenceSynchronizationPoint -InputObject $AIsync
 ```
 
-The first command gets the Asset Intelligence synchronization point on the System Center Configuration Manager site that has the site code ST1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
+The first command gets the Asset Intelligence synchronization point on the Configuration Manager site that has the site code ST1 on the site system server named CMDIV-WEST04.CORP.CONTOSO.COM.
 The command stores the results in the $AIsync variable.
 
 The second command removes the Asset Intelligence synchronization point stored in the $AIsync variable.

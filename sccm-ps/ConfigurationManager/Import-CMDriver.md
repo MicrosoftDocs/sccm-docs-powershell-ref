@@ -24,7 +24,7 @@ Import-CMDriver -Path <String> [-ImportFolder] [-ImportDuplicateDriverOption <Im
 ```
 
 ## DESCRIPTION
-The **Import-CMDriver** cmdlet imports one or more device drivers into the driver catalog in Microsoft System Center Configuration Manager.
+The **Import-CMDriver** cmdlet imports one or more device drivers into the driver catalog in Configuration Manager.
 When you import device drivers into the catalog, you can add the device drivers to driver packages or to boot image packages.
 
 As part of the import process for the device driver, Configuration Manager reads the provider, class, version, signature, supported hardware, and supported platform information that is associated with the device.

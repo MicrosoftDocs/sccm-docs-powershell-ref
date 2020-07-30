@@ -173,8 +173,8 @@ Set-CMClientSetting -Name <String> [-RemoteControl]
 ```
 
 ## DESCRIPTION
-The **Set-CMClientSetting** cmdlet changes client settings for Microsoft System Center Configuration Manager devices and users.
-System Center Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects.
+The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users.
+Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects.
 Settings objects determine settings for individual clients.
 For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
 

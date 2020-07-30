@@ -28,7 +28,7 @@ Get-CMAssetIntelligenceSynchronizationPoint [-AllSite] -InputObject <IResultObje
 
 ## DESCRIPTION
 The **Get-CMAssetIntelligenceSynchronizationPoint** cmdlet gets one or more Asset Intelligence synchronization points.
-Microsoft System Center Configuration Manager uses the Asset Intelligence synchronization point site system role to connect System Center Configuration Manager sites to System Center Online to synchronize Asset Intelligence catalog information.
+Configuration Manager uses the Asset Intelligence synchronization point site system role to connect Configuration Manager sites to System Center Online to synchronize Asset Intelligence catalog information.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

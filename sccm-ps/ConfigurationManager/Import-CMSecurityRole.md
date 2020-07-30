@@ -20,7 +20,7 @@ Import-CMSecurityRole -Overwrite <Boolean> -XmlFileName <String> [-NewRoleName <
 ```
 
 ## DESCRIPTION
-The **Import-CMSecurityRole** cmdlet imports a security role that was exported from another Microsoft System Center Configuration Manager hierarchy.
+The **Import-CMSecurityRole** cmdlet imports a security role that was exported from another Configuration Manager hierarchy.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

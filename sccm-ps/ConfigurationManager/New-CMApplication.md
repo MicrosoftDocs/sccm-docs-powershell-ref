@@ -26,7 +26,7 @@ New-CMApplication [-Name] <String> [-Description <String>] [-Publisher <String>]
 ```
 
 ## DESCRIPTION
-The **New-CMApplication** cmdlet creates an application in Microsoft System Center Configuration Manager.
+The **New-CMApplication** cmdlet creates an application in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

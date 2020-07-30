@@ -28,8 +28,8 @@ Get-CMTaskSequence -TaskSequencePackageId <String> [-DisableWildcardHandling] [-
 
 ## DESCRIPTION
 
-The **Get-CMTaskSequence** cmdlet gets Microsoft System Center Configuration Manager task sequences.
-A task sequence includes configuration and operating system deployment settings for a System Center Configuration Manager client computer.
+The **Get-CMTaskSequence** cmdlet gets Configuration Manager task sequences.
+A task sequence includes configuration and operating system deployment settings for a Configuration Manager client computer.
 
 You can specify a name or ID to get a specific sequence.
 You can also specify a security scope, by itself or with a name or ID, to get sequences with that security scope.

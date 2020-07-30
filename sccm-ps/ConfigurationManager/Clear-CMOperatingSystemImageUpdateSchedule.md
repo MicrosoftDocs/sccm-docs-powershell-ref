@@ -33,10 +33,10 @@ Clear-CMOperatingSystemImageUpdateSchedule -Name <String> [-Force] [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Clear-CMOperatingSystemImageUpdateSchedule** cmdlet removes a schedule for updating an operating system image from a Microsoft System Center Configuration Manager site.
+The **Clear-CMOperatingSystemImageUpdateSchedule** cmdlet removes a schedule for updating an operating system image from a Configuration Manager site.
 
-Operating system images are .wim format files, which represent a compressed collection of reference files and folders that System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
-You can use System Center Configuration Manager to define a schedule for updating these images by using Component Based Servicing (CBS), then delete unwanted schedules by using this cmdlet.
+Operating system images are .wim format files, which represent a compressed collection of reference files and folders that Configuration Manager requires to successfully install and configure an operating system on a computer.
+You can use Configuration Manager to define a schedule for updating these images by using Component Based Servicing (CBS), then delete unwanted schedules by using this cmdlet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

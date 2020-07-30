@@ -31,9 +31,9 @@ Import-CMComputerInformation [-CollectionName <String[]>] [-EnableColumnHeading 
 ```
 
 ## DESCRIPTION
-The **Import-CMComputerInformation** cmdlet imports computer information directly into a Microsoft System Center Configuration Manager database.
-For System Center Configuration Manager to deploy an operating system to a new computer with no installed operating system, you must add the new computer to System Center Configuration Manager.
-After you import the computer information, System Center Configuration Manager can deploy an operating system.
+The **Import-CMComputerInformation** cmdlet imports computer information directly into a Configuration Manager database.
+For Configuration Manager to deploy an operating system to a new computer with no installed operating system, you must add the new computer to Configuration Manager.
+After you import the computer information, Configuration Manager can deploy an operating system.
 
 You can import a single computer by specifying the Media Access Control (MAC) address and computer name, along with the name of a collection.
 This cmdlet adds this computer to the specified collection.
@@ -42,7 +42,7 @@ You can also import several computers by specifying a Comma Separated Values .cs
 This cmdlet adds the computers to the specified collection.
 
 You can specify the name of a reference computer.
-System Center Configuration Manager migrates user information and settings from the reference computer to the new computer.
+Configuration Manager migrates user information and settings from the reference computer to the new computer.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

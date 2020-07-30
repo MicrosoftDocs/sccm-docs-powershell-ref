@@ -33,7 +33,7 @@ Remove-CMBoundaryGroup -Name <String> [-Force] [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Remove-CMBoundaryGroup** cmdlet removes a boundary group from Microsoft System Center Configuration Manager.
+The **Remove-CMBoundaryGroup** cmdlet removes a boundary group from Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

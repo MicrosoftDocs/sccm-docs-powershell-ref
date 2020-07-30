@@ -27,9 +27,9 @@ Remove-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-Force] [-Disable
 ```
 
 ## DESCRIPTION
-The **Remove-CMStatusFilterRule** cmdlet removes a specified Microsoft System Center Configuration Manager filter rule for status messages.
+The **Remove-CMStatusFilterRule** cmdlet removes a specified Configuration Manager filter rule for status messages.
 
-Status filter rules specify how System Center Configuration Manager responds to status messages.
+Status filter rules specify how Configuration Manager responds to status messages.
 Each filter rule contains criteria and actions for status messages.
 You configure status filter rules for each site, not across all sites.
 

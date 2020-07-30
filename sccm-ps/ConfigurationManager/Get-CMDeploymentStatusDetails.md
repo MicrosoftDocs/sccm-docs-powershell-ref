@@ -21,7 +21,7 @@ Get-CMDeploymentStatusDetails -InputObject <IResultObject> [-DisableWildcardHand
 
 ## DESCRIPTION
 
-The **Get-CMDeploymentStatusDetails** cmdlet gets the status details of a Microsoft System Center Configuration Manager deployment.
+The **Get-CMDeploymentStatusDetails** cmdlet gets the status details of a Configuration Manager deployment.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

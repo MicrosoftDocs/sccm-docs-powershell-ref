@@ -29,7 +29,7 @@ Add-CMServiceConnectionPoint -Mode <ServiceConnectionPointMode> [-SiteCode <Stri
 
 ## DESCRIPTION
 The **Add-CMServiceconnectionPoint** cmdlet adds a service connection point role to a site system server.
-This connects Microsoft System Center Configuration Manager to Microsoft cloud services and enables you to add a Microsoft Intune subscription and to update your Configuration Manager installation.
+This connects Configuration Manager to Microsoft cloud services and enables you to add a Microsoft Intune subscription and to update your Configuration Manager installation.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

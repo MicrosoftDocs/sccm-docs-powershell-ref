@@ -115,9 +115,9 @@ Start-CMPackageDeployment [-StandardProgram] [-Program] <IResultObject> -Collect
 
 ## DESCRIPTION
 
-The **Start-CMPackageDeployment** cmdlet starts deployment of a specified software package to computers that belong to a Microsoft System Center Configuration Manager collection.
+The **Start-CMPackageDeployment** cmdlet starts deployment of a specified software package to computers that belong to a Configuration Manager collection.
 You can choose when the package becomes available and when the package deployment expires.
-You can specify whether System Center Configuration Manager deploys the package only once or repeatedly and what happens when installation fails for a computer.
+You can specify whether Configuration Manager deploys the package only once or repeatedly and what happens when installation fails for a computer.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -27,7 +27,7 @@ Get-CMObjectSecurityScope -InputObject <IResultObject> [-Id <String>] [-DisableW
 ```
 
 ## DESCRIPTION
-The **Get-CMObjectSecurityScope** cmdlet gets the security scopes that are associated with a Microsoft System Center Configuration Manager object.
+The **Get-CMObjectSecurityScope** cmdlet gets the security scopes that are associated with a Configuration Manager object.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

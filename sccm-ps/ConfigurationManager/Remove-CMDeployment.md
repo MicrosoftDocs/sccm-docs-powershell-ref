@@ -33,7 +33,7 @@ Remove-CMDeployment -CollectionName <String> [-Force] -ApplicationName <String> 
 ```
 
 ## DESCRIPTION
-The **Remove-CMDeployment** cmdlet removes an application deployment from Microsoft System Center Configuration Manager.
+The **Remove-CMDeployment** cmdlet removes an application deployment from Configuration Manager.
 
 When you remove an application deployment, Configuration Manager does not remove instances of the application that it has already installed.
 To remove these applications, you must deploy the application to computers with the action Uninstall.

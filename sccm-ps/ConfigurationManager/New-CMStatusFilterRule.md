@@ -26,7 +26,7 @@ New-CMStatusFilterRule [-SiteCode <String>] -Name <String> [-Source <String>]
 ```
 
 ## DESCRIPTION
-The **New-CMStatusFilterRule** cmdlet creates a rule that triggers one or more actions that alerts an administrator to a specific message in Microsoft System Center Configuration Manager.
+The **New-CMStatusFilterRule** cmdlet creates a rule that triggers one or more actions that alerts an administrator to a specific message in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a System Center Configuration Manager site code that defines the status rule.
+Specifies a Configuration Manager site code that defines the status rule.
 
 ```yaml
 Type: String

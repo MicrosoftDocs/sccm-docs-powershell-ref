@@ -20,10 +20,10 @@ Get-CMTrustedRootCertificate [-CAServerName <String>] [-DisableWildcardHandling]
 ```
 
 ## DESCRIPTION
-The **Get-CMTrustedRootCertificate** cmdlet gets a trusted root certificate for Microsoft System Center Configuration Manager.
-For native mode communication, System Center Configuration Manager authenticates, encrypts, and signs communications based on public key infrastructure (PKI) keys that depend on trusted root certificate.
+The **Get-CMTrustedRootCertificate** cmdlet gets a trusted root certificate for Configuration Manager.
+For native mode communication, Configuration Manager authenticates, encrypts, and signs communications based on public key infrastructure (PKI) keys that depend on trusted root certificate.
 Devices that communicate by using certificates must have a root certificate in common.
-Devices in your System Center Configuration Manager hierarchy might have different root certificates.
+Devices in your Configuration Manager hierarchy might have different root certificates.
 If so, install all necessary trusted root certificates.
 
 Computers that run the Windows operating system, as well as many other devices, rely on some well-known third-party root certificates.

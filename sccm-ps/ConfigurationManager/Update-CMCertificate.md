@@ -33,7 +33,7 @@ Update-CMCertificate -InputObject <IResultObject> -X509Certificate <X509Certific
 ```
 
 ## DESCRIPTION
-The **Update-CMCertificate** cmdlet updates a public key infrastructure (PKI) certificate that Microsoft System Center Configuration Manager uses.
+The **Update-CMCertificate** cmdlet updates a public key infrastructure (PKI) certificate that Configuration Manager uses.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

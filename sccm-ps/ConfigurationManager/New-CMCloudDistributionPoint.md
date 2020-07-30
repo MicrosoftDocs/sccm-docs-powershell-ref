@@ -25,9 +25,9 @@ New-CMCloudDistributionPoint -SubscriptionId <String> [-SiteCode <String>] -Mana
 ```
 
 ## DESCRIPTION
-The **New-CMCloudDistributionPoint** cmdlet creates a cloud distribution point in Microsoft System Center Configuration Manager.
+The **New-CMCloudDistributionPoint** cmdlet creates a cloud distribution point in Configuration Manager.
 
-In System Center Configuration Manager, you can use a cloud service in Azure to host a distribution point for storing files to download to clients.
+In Configuration Manager, you can use a cloud service in Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.
 For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712321(v=technet.10)) on TechNet.
 

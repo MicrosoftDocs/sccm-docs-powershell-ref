@@ -66,7 +66,7 @@ Set-CMWindowsFirewallPolicy [-InputObject] <IResultObject> -Order <PriorityChang
 ```
 
 ## DESCRIPTION
-The **Set-CMWindowsFirewallPolicy** cmdlet changes settings of one or more Windows Firewall policies for System Center 2016 Endpoint Protection in Microsoft System Center Configuration Manager.
+The **Set-CMWindowsFirewallPolicy** cmdlet changes settings of one or more Windows Firewall policies for System Center 2016 Endpoint Protection in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

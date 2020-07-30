@@ -23,7 +23,7 @@ Set-CMGlobalConditionActiveDirectoryQuery [-LdapPrefix <String>] [-Distinguished
 
 ## DESCRIPTION
 
-The **Set-CMGlobalConditionActiveDirectoryQuery** cmdlet modifies settings for an Active Directory Query global condition in Microsoft System Center Configuration Manager.
+The **Set-CMGlobalConditionActiveDirectoryQuery** cmdlet modifies settings for an Active Directory Query global condition in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -39,7 +39,7 @@ Set-CMActiveDirectoryForest -Id <UInt32> [-Description <String>] [-EnableDiscove
 ```
 
 ## DESCRIPTION
-The **Set-CMActiveDirectoryForest** cmdlet changes values for an Active Directory forest object in Microsoft System Center Configuration Manager.
+The **Set-CMActiveDirectoryForest** cmdlet changes values for an Active Directory forest object in Configuration Manager.
 You can edit the description, enable or disable discovery, and specify a fully qualified domain name (FQDN) and publishing path.
 You can specify an Active Directory forest object by ID or FQDN, or you can supply the Active Directory forest object itself.
 

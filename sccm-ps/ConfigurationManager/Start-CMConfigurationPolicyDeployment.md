@@ -90,7 +90,7 @@ Start-CMConfigurationPolicyDeployment -RemoteConnectionProfile <IResultObject> -
 ```
 
 ## DESCRIPTION
-The **Start-CMConfigurationPolicyDeployment** cmdlet deploys specified policies for a Microsoft System Center Configuration Manager collection.
+The **Start-CMConfigurationPolicyDeployment** cmdlet deploys specified policies for a Configuration Manager collection.
 You can deploy firewall policies or user session management policies.
 
 You can specify a firewall policy by name or by ID or use another cmdlet to get firewall policy object.

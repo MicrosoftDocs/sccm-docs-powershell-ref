@@ -20,9 +20,9 @@ Get-CMSoftwareUpdateBasedClientInstallation [-SiteCode <String>] [-SiteSystemSer
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareUpdateBasedClientInstallation** cmdlet gets a client installation hosted on a software update point for Microsoft System Center Configuration Manager.
+The **Get-CMSoftwareUpdateBasedClientInstallation** cmdlet gets a client installation hosted on a software update point for Configuration Manager.
 
-System Center Configuration Manager publishes the System Center Configuration Manager client to a software update point.
+Configuration Manager publishes the Configuration Manager client to a software update point.
 This site system role can install the client on computers that do not already have it or upgrade existing clients.
 
 To use software update point based installation, you must use the same Windows Server Update Services (WSUS) server for both client installation and software updates.

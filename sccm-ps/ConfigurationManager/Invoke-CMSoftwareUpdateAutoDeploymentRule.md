@@ -33,11 +33,11 @@ Invoke-CMSoftwareUpdateAutoDeploymentRule -InputObject <IResultObject> [-PassThr
 ```
 
 ## DESCRIPTION
-The **Invoke-CMSoftwareUpdateAutoDeploymentRule** cmdlet runs a Microsoft System Center Configuration Manager deployment rule for automatic software updates immediately instead of according to its schedule.
+The **Invoke-CMSoftwareUpdateAutoDeploymentRule** cmdlet runs a Configuration Manager deployment rule for automatic software updates immediately instead of according to its schedule.
 
-System Center Configuration Manager uses rules to manage automatic deployment of software updates.
-When a rule runs, System Center Configuration Manager adds updates that qualify for the rule to a software update group.
-The System Center Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
+Configuration Manager uses rules to manage automatic deployment of software updates.
+When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group.
+The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
 You can specify rules to run by ID or by name, or specify a rule object by using the [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 You cannot run a disabled rule.

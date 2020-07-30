@@ -33,9 +33,9 @@ Remove-CMBaseline [-InputObject] <IResultObject> [-Force] [-DisableWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Remove-CMBaseline** cmdlet removes one or more configuration baseline items in Microsoft System Center Configuration Manager.
+The **Remove-CMBaseline** cmdlet removes one or more configuration baseline items in Configuration Manager.
 You must remove all references to a configuration baseline before you can remove the configuration baseline.
-After you remove a configuration baseline, System Center Configuration Manager removes the configuration baseline from the collection of devices to which you deployed it, and Configuration Manager no longer assesses their compliance with the configuration baseline.
+After you remove a configuration baseline, Configuration Manager removes the configuration baseline from the collection of devices to which you deployed it, and Configuration Manager no longer assesses their compliance with the configuration baseline.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

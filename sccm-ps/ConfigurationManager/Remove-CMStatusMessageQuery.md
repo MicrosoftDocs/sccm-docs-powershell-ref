@@ -33,8 +33,8 @@ Remove-CMStatusMessageQuery -Name <String> [-Force] [-DisableWildcardHandling] [
 ```
 
 ## DESCRIPTION
-The **Remove-CMStatusMessageQuery** cmdlet removes  a status message query from Microsoft System Center Configuration Manager.
-Status message queries return status messages from the System Center Configuration Manager site database.
+The **Remove-CMStatusMessageQuery** cmdlet removes  a status message query from Configuration Manager.
+Status message queries return status messages from the Configuration Manager site database.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

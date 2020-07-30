@@ -29,7 +29,7 @@ Add-CMFallbackStatusPoint [-SiteSystemServerName] <String> [-SiteCode <String>] 
 ```
 
 ## DESCRIPTION
-The **Add-CMFallbackStatusPoint** cmdlet adds a fallback status point to a Microsoft System Center Configuration Manager site.
+The **Add-CMFallbackStatusPoint** cmdlet adds a fallback status point to a Configuration Manager site.
 To add this site system role, specify the site code for the Configuration Manager site and the name of the computer that hosts the role.
 You also need to specify a throttle interval and the number of messages for that throttle window.
 

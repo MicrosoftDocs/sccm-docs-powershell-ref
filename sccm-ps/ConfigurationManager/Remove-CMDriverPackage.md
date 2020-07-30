@@ -33,7 +33,7 @@ Remove-CMDriverPackage -Name <String> [-Force] [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Remove-CMDriverPackage** cmdlet removes a driver package from Microsoft System Center Configuration Manager.
+The **Remove-CMDriverPackage** cmdlet removes a driver package from Configuration Manager.
 After the driver package is removed, it cannot be used by any task sequence.
 
 > [!NOTE]

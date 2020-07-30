@@ -33,7 +33,7 @@ Remove-CMQuery -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcar
 ```
 
 ## DESCRIPTION
-The **Remove-CMQuery** cmdlet removes queries stored in Microsoft System Center Configuration Manager.
+The **Remove-CMQuery** cmdlet removes queries stored in Configuration Manager.
 Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
 
 > [!NOTE]

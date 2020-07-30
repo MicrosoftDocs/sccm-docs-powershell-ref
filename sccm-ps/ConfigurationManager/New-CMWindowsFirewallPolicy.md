@@ -24,7 +24,7 @@ New-CMWindowsFirewallPolicy -Name <String> [-Description <String>] [-DomainTurnO
 ```
 
 ## DESCRIPTION
-The **New-CMWindowsFirewallPolicy** cmdlet creates a configuration policy for Windows Firewall in Microsoft System Center Configuration Manager.
+The **New-CMWindowsFirewallPolicy** cmdlet creates a configuration policy for Windows Firewall in Configuration Manager.
 
 Windows Firewall allows or denies incoming connections to an IP address.
 The blocking actions allow or deny incoming traffic based on a network location type.

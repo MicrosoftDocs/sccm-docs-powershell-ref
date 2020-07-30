@@ -29,7 +29,7 @@ New-CMSqlServerSetting [-CopySqlServerExpressOnSecondarySite] [-SqlServerService
 ```
 
 ## DESCRIPTION
-The **New-CMSqlServerSetting** cmdlet creates a Microsoft SQL Server settings object in Microsoft System Center Configuration Manager.
+The **New-CMSqlServerSetting** cmdlet creates a Microsoft SQL Server settings object in Configuration Manager.
 The object specifies settings for the name of the site database and the port number for the SQL Server service and SQL Server Service Broker.
 
 > [!NOTE]
@@ -44,8 +44,8 @@ The object specifies settings for the name of the site database and the port num
 PS XYZ:\> New-CMSqlServerSetting -CopySqlServerExpressOnSecondarySite -SqlServerServiceBrokerPort 4037
 ```
 
-This command creates a SQL Server settings object that specifies that System Center Configuration Manager copies Microsoft SQL Server Express to a secondary site.
-The command specifies that System Center Configuration Manager use port 4037 for the SQL Server Service Broker.
+This command creates a SQL Server settings object that specifies that Configuration Manager copies Microsoft SQL Server Express to a secondary site.
+The command specifies that Configuration Manager use port 4037 for the SQL Server Service Broker.
 
 ## PARAMETERS
 

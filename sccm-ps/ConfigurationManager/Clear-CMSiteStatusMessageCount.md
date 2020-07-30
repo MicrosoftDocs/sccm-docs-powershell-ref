@@ -20,7 +20,7 @@ Clear-CMSiteStatusMessageCount -Severity <Severity> -ComputerName <String> [-Sit
 ```
 
 ## DESCRIPTION
-The **Clear-CMSiteStatusMessageCount** cmdlet clears the message count in Microsoft System Center Configuration Manager.
+The **Clear-CMSiteStatusMessageCount** cmdlet clears the message count in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

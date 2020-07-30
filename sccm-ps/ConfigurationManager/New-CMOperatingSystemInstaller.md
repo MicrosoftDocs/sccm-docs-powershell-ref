@@ -20,8 +20,8 @@ New-CMOperatingSystemInstaller [-Name <String>] -Path <String> [-Description <St
 ```
 
 ## DESCRIPTION
-The **New-CMOperatingSystemInstaller** cmdlet adds an operating system installer to a Microsoft System Center Configuration Manager site.
-An operating system installer is an installation package that contains all the files that Microsoft System Center Configuration Manager needs to install a Windows operating system on a reference computer.
+The **New-CMOperatingSystemInstaller** cmdlet adds an operating system installer to a Configuration Manager site.
+An operating system installer is an installation package that contains all the files that Configuration Manager needs to install a Windows operating system on a reference computer.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

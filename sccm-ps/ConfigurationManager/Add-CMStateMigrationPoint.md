@@ -33,7 +33,7 @@ Add-CMStateMigrationPoint [-SiteSystemServerName] <String> [-SiteCode <String>]
 ```
 
 ## DESCRIPTION
-The **Add-CMStateMigrationPoint** cmdlet adds a state migration point in Microsoft System Center Configuration Manager.
+The **Add-CMStateMigrationPoint** cmdlet adds a state migration point in Configuration Manager.
 A state migration point is a site system role that manages data transfer from client computers during an operating system installation process.
 
 > [!NOTE]

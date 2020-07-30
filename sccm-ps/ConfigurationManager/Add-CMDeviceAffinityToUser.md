@@ -27,7 +27,7 @@ Add-CMDeviceAffinityToUser -UserId <Int32> [-DeviceId <Int32[]>] [-DeviceName <S
 ```
 
 ## DESCRIPTION
-The **Add-CMDeviceAffinityToUser** cmdlet adds device affinity to a user of Microsoft System Center Configuration Manager.
+The **Add-CMDeviceAffinityToUser** cmdlet adds device affinity to a user of Configuration Manager.
 
 Device affinity in Configuration Manager associates a user with one or more devices.
 Instead of deploying applications to all the user's devices, you deploy the application to the user and Configuration Manager automatically installs the application on all devices that are associated with that user.

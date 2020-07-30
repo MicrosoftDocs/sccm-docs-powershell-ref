@@ -27,7 +27,7 @@ Import-CMCertificate [-Path] <String> [-PassThru] [-DisableWildcardHandling] [-F
 ```
 
 ## DESCRIPTION
-The **Import-CMCertificate** cmdlet imports a public key infrastructure (PKI) certificate to Microsoft System Center Configuration Manager.
+The **Import-CMCertificate** cmdlet imports a public key infrastructure (PKI) certificate to Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

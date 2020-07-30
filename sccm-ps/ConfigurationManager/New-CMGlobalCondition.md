@@ -128,9 +128,9 @@ New-CMGlobalCondition -Name <String> [-Description <String>] -DeviceType <Global
 
 ## DESCRIPTION
 
-The **New-CMGlobalCondition** cmdlet creates a global condition in Microsoft System Center Configuration Manager.
+The **New-CMGlobalCondition** cmdlet creates a global condition in Configuration Manager.
 
-A global condition is a setting or expression in System Center Configuration Manager that you can use to specify how System Center Configuration Manager provides and deploys an application to clients.
+A global condition is a setting or expression in Configuration Manager that you can use to specify how Configuration Manager provides and deploys an application to clients.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

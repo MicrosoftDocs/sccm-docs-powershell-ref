@@ -33,7 +33,7 @@ Remove-CMDevice [-ResourceId] <Int32> [-Force] [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Remove-CMDevice** cmdlet removes one or more Microsoft System Center Configuration Manager client devices.
+The **Remove-CMDevice** cmdlet removes one or more Configuration Manager client devices.
 Do not remove a client if you want to uninstall the client or remove it from a collection.
 
 > [!NOTE]

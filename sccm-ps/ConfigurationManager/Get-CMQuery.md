@@ -25,7 +25,7 @@ Get-CMQuery [-Id <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [
 ```
 
 ## DESCRIPTION
-The **Get-CMQuery** cmdlet gets the queries stored in Microsoft System Center Configuration Manager.
+The **Get-CMQuery** cmdlet gets the queries stored in Configuration Manager.
 Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
 
 > [!NOTE]

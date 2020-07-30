@@ -20,10 +20,10 @@ New-CMBootImage -Path <String> -Index <Int32> -Name <String> [-Version <String>]
 ```
 
 ## DESCRIPTION
-The **New-CMBootImage** cmdlet adds a new Windows Preinstallation Environment (Windows PE) operating system boot image to Microsoft System Center Configuration Manager.
+The **New-CMBootImage** cmdlet adds a new Windows Preinstallation Environment (Windows PE) operating system boot image to Configuration Manager.
 Operating system images are .wim format files.
 These files contain a compressed set of reference files and folders that are required to successfully install and configure a boot image on a computer.
-By default, System Center Configuration Manager includes both x86 and x64 operating system images.
+By default, Configuration Manager includes both x86 and x64 operating system images.
 
 You must run **New-CMBootImage** on the computer that is running the Systems Management Server (SMS) provider.
 The computer account of the computer that is running the SMS provider must have Read and Write access to the package source of the boot image.

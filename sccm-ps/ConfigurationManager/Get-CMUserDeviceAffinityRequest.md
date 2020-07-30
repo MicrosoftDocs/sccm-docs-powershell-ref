@@ -31,7 +31,7 @@ Get-CMUserDeviceAffinityRequest -CollectionId <String> [-UserName <String>] [-Us
 ## DESCRIPTION
 The **Get-CMUserDeviceAffinityRequest** cmdlet gets a request for user device affinity.
 
-In Microsoft System Center Configuration Manager, user device affinity defines a relationship between a user and a device.
+In Configuration Manager, user device affinity defines a relationship between a user and a device.
 Instead of deploying an application to a group of devices, you deploy an application to a user and Configuration Manager installs the application on all devices associated with the user.
 
 > [!NOTE]

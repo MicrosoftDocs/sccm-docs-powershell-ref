@@ -34,7 +34,7 @@ Remove-CMSoftwareUpdateDeploymentPackage -Name <String> [-Force] [-DisableWildca
 
 ## DESCRIPTION
 The **Remove-CMSoftwareUpdateDeploymentPackage** cmdlet removes a software update deployment package from the site server and all child sites.
-A **CMSoftwareUpdateDeploymentPackage** object contains one or more software updates that Microsoft System Center Configuration Manager deploys to a collection of computers.
+A **CMSoftwareUpdateDeploymentPackage** object contains one or more software updates that Configuration Manager deploys to a collection of computers.
 Once the deployment package is removed, clients cannot install the software updates.
 
 > [!NOTE]

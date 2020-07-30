@@ -39,7 +39,7 @@ Set-CMSoftwareInventory -InputObject <IResultObject> [-NewName <String>] [-Publi
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareInventory** cmdlet modifies an object that collects information about files on client devices in Microsoft System Center Configuration Manager.
+The **Set-CMSoftwareInventory** cmdlet modifies an object that collects information about files on client devices in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

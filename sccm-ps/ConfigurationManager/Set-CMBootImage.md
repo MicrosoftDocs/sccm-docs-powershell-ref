@@ -65,7 +65,7 @@ The **Set-CMBootImage** cmdlet modifies an operating system boot image.
 Boot images are Windows Preinstallation Environment (Windows PE) images into which you boot a client computer before you install an operating system.
 
 You can add device drivers to a boot image or change its properties.
-Before you can add a new device driver, you must first import the driver to the Microsoft System Center Configuration Manager driver catalog and enable it.
+Before you can add a new device driver, you must first import the driver to the Configuration Manager driver catalog and enable it.
 
 A modification to the boot image does not change its source package.
 

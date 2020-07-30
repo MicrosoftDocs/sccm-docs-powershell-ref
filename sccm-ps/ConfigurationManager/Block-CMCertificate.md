@@ -28,7 +28,7 @@ Block-CMCertificate [-Id] <String> [-PassThru] [-DisableWildcardHandling] [-Forc
 
 ## DESCRIPTION
 The **Block-CMCertificate** cmdlet blocks a certificate.
-Microsoft System Center Configuration Manager uses certificates to manage boot media, Pre-Boot eXecution Environment (PXE) deployments, and Independent Software Vendors (ISV) proxies.
+Configuration Manager uses certificates to manage boot media, Pre-Boot eXecution Environment (PXE) deployments, and Independent Software Vendors (ISV) proxies.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

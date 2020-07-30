@@ -27,8 +27,8 @@ Get-CMOperatingSystemImage -Id <String> [-DisableWildcardHandling] [-ForceWildca
 ```
 
 ## DESCRIPTION
-The **Get-CMOperatingSystemImage** cmdlet gets one or more operating system images on a Microsoft System Center Configuration Manager site.
-Operating system images are .wim format files and represent a compressed collection of reference files and folders that System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
+The **Get-CMOperatingSystemImage** cmdlet gets one or more operating system images on a Configuration Manager site.
+Operating system images are .wim format files and represent a compressed collection of reference files and folders that Configuration Manager requires to successfully install and configure an operating system on a computer.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

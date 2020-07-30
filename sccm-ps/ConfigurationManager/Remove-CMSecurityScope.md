@@ -33,7 +33,7 @@ Remove-CMSecurityScope -Id <String> [-Force] [-DisableWildcardHandling] [-ForceW
 ```
 
 ## DESCRIPTION
-The **Remove-CMSecurityScope** cmdlet removes a security scope from Microsoft System Center Configuration Manager.
+The **Remove-CMSecurityScope** cmdlet removes a security scope from Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

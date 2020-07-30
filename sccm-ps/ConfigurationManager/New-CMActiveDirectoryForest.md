@@ -24,7 +24,7 @@ New-CMActiveDirectoryForest -ForestFqdn <String> [-Description <String>] [-Enabl
 The **New-CMActiveDirectoryForest** cmdlet creates an Active Directory forest object that has a fully qualified domain name (FQDN), description, and publishing path that you supply.
 
 If you configured an Active Directory Forest Discovery method, you can enable discovery for an Active Directory forest.
-After you enable discovery, Microsoft System Center Configuration Manager discovers Active Directory sites and subnets.
+After you enable discovery, Configuration Manager discovers Active Directory sites and subnets.
 
 Active Directory Forest Discovery requires a global account to discover or publish to untrusted forests.
 

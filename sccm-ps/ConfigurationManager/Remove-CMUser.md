@@ -33,7 +33,7 @@ Remove-CMUser [-ResourceId] <Int32> [-Force] [-DisableWildcardHandling] [-ForceW
 ```
 
 ## DESCRIPTION
-The **Remove-CMUser** cmdlet removes user accounts from Microsoft System Center Configuration Manager.
+The **Remove-CMUser** cmdlet removes user accounts from Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

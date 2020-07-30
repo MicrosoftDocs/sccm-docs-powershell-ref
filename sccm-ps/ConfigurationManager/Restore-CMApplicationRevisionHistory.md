@@ -33,10 +33,10 @@ Restore-CMApplicationRevisionHistory [-Id] <UInt32> [-Revision] <UInt32> [-PassT
 ```
 
 ## DESCRIPTION
-The **Restore-CMApplicationRevisionHistory** cmdlet restores a previous version of a Microsoft System Center Configuration Manager application.
-You can use the revision history that System Center Configuration Manager creates and maintains for each application to choose the version of the application that you want to restore.
+The **Restore-CMApplicationRevisionHistory** cmdlet restores a previous version of a Configuration Manager application.
+You can use the revision history that Configuration Manager creates and maintains for each application to choose the version of the application that you want to restore.
 
-If you restore an application version from the history, System Center Configuration Manager might automatically replace currently installed copies of the application the next time it evaluates the deployment schedule.
+If you restore an application version from the history, Configuration Manager might automatically replace currently installed copies of the application the next time it evaluates the deployment schedule.
 For more control over application replacement, create a new application that supersedes the application that you want to replace, and then deploy this application to the required collection.
 
 > [!NOTE]

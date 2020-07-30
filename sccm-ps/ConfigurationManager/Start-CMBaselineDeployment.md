@@ -40,11 +40,11 @@ Start-CMBaselineDeployment [-Name] <String> -CollectionName <String> [-EnableEnf
 ```
 
 ## DESCRIPTION
-The **Start-CMBaselineDeployment** cmdlet starts the deployment of a Microsoft System Center Configuration Manager baseline configuration to a collection of computers.
+The **Start-CMBaselineDeployment** cmdlet starts the deployment of a Configuration Manager baseline configuration to a collection of computers.
 
 A baseline defines the configuration of a product or system established at a specific time.
 Baselines contain a defined set of required configurations and associated rules.
-System Center Configuration Manager assigns baselines to computer in collections, together with a compliance evaluation schedule.
+Configuration Manager assigns baselines to computer in collections, together with a compliance evaluation schedule.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

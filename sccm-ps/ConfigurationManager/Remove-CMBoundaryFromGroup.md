@@ -70,7 +70,7 @@ Remove-CMBoundaryFromGroup [-Force] -BoundaryInputObject <IResultObject>
 ```
 
 ## DESCRIPTION
-The **Remove-CMBoundaryFromGroup** cmdlet removes a Microsoft System Center Configuration Manager boundary from a boundary group.
+The **Remove-CMBoundaryFromGroup** cmdlet removes a Configuration Manager boundary from a boundary group.
 A boundary is a network address range, subnet, or Active Directory site that identifies a group of computers that are close in the network.
 A boundary group is a collection of boundaries.
 

@@ -31,7 +31,7 @@ Set-CMGlobalConditionFile [-Path <String>] [-FileOrFolderName <String>] [-Includ
 
 ## DESCRIPTION
 
-The **Set-CMGlobalConditionFile** cmdlet modifies settings for a File System type global condition in Microsoft System Center Configuration Manager.
+The **Set-CMGlobalConditionFile** cmdlet modifies settings for a File System type global condition in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

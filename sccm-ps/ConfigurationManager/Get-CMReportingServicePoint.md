@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies the site code of the Microsoft System Center Configuration Manager site that hosts the site system role.
+Specifies the site code of the Configuration Manager site that hosts the site system role.
 
 ```yaml
 Type: String

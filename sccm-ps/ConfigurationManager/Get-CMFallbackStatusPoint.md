@@ -30,7 +30,7 @@ Get-CMFallbackStatusPoint [-AllSite] -InputObject <IResultObject> [-DisableWildc
 The **Get-CMFallbackStatusPoint** cmdlet gets a fallback status point site server role.
 You can get fallback status point for a site system name or a site code or both.
 
-Microsoft System Center Configuration Manager can use one or more fallback status points to collect state messages for a site and send them on to Configuration Manager.
+Configuration Manager can use one or more fallback status points to collect state messages for a site and send them on to Configuration Manager.
 You can use this cmdlet to get a fallback status point to use with other cmdlets, such as the Set-CMFallbackStatusPoint cmdlet or the Remove-CMFallbackStatusPoint cmdlet.
 
 > [!NOTE]

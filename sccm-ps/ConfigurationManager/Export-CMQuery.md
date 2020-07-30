@@ -33,7 +33,7 @@ Export-CMQuery [-InputObject] <IResultObject> -ExportFilePath <String> [-Comment
 ```
 
 ## DESCRIPTION
-The **Export-CMQuery** cmdlet exports a query from Microsoft System Center Configuration Manager.
+The **Export-CMQuery** cmdlet exports a query from Configuration Manager.
 Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
 
 > [!NOTE]

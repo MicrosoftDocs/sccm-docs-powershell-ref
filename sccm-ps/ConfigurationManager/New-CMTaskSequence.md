@@ -78,7 +78,7 @@ New-CMTaskSequence [-CustomTaskSequence] [-HighPerformance <Boolean>] -Name <Str
 ## DESCRIPTION
 
 The **New-CMTaskSequence** cmdlet creates a task sequence.
-A task sequence performs multiple steps or tasks on a Microsoft System Center Configuration Manager client computer without user intervention.
+A task sequence performs multiple steps or tasks on a Configuration Manager client computer without user intervention.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

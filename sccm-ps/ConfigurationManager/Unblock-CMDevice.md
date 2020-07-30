@@ -33,7 +33,7 @@ Unblock-CMDevice -DeviceId <String> [-DisableWildcardHandling] [-ForceWildcardHa
 ```
 
 ## DESCRIPTION
-The **Unblock-CMDevice** cmdlet unblocks one or more Microsoft System Center Configuration Manager client devices.
+The **Unblock-CMDevice** cmdlet unblocks one or more Configuration Manager client devices.
 You must unblock a device from the client's assigned site.
 You cannot unblock the device from sites higher in the hierarchy.
 

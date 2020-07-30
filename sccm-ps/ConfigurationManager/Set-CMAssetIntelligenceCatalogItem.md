@@ -36,7 +36,7 @@ Set-CMAssetIntelligenceCatalogItem -InputObject <IResultObject> [-NewCategoryNam
 ```
 
 ## DESCRIPTION
-The **Set-CMAssetIntelligenceCatalogItem** cmdlet changes the properties of software categories, software families, and custom software labels in the Microsoft System Center Configuration Manager Asset Intelligence catalog.
+The **Set-CMAssetIntelligenceCatalogItem** cmdlet changes the properties of software categories, software families, and custom software labels in the Configuration Manager Asset Intelligence catalog.
 
 The Asset Intelligence catalog contains categorization and identification information for software titles.
 The catalog includes predefined categories and families.

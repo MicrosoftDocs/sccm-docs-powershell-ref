@@ -33,7 +33,7 @@ Remove-CMAlertSubscription -Name <String> [-Force] [-DisableWildcardHandling] [-
 ```
 
 ## DESCRIPTION
-The **Remove-CMAlertSubscription** cmdlet removes an alert subscription from Microsoft System Center Configuration Manager.
+The **Remove-CMAlertSubscription** cmdlet removes an alert subscription from Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

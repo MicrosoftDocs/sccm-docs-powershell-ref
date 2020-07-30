@@ -39,9 +39,9 @@ Get-CMUserDeviceAffinity -UserId <Int32[]> [-DisableWildcardHandling] [-ForceWil
 ```
 
 ## DESCRIPTION
-The **Get-CMUserDeviceAffinity** cmdlet gets one or more user device affinities in Microsoft System Center Configuration Manager.
+The **Get-CMUserDeviceAffinity** cmdlet gets one or more user device affinities in Configuration Manager.
 
-User device affinity in Microsoft System Center Configuration Manager is a method of associating a user with one or more specified devices.
+User device affinity in Configuration Manager is a method of associating a user with one or more specified devices.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

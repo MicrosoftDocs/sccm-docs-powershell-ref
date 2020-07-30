@@ -27,7 +27,7 @@ Remove-CMExchangeServer [-Force] -InputObject <ExchangeConnector> [-DisableWildc
 ```
 
 ## DESCRIPTION
-The **Remove-CMExchangeServer** cmdlet removes a Microsoft Exchange Server object from Microsoft System Center Configuration Manager for one or more Configuration Manager sites.
+The **Remove-CMExchangeServer** cmdlet removes a Microsoft Exchange Server object from Configuration Manager for one or more Configuration Manager sites.
 This cmdlet does not uninstall the Exchange Server.
 
 Configuration Manager works with Exchange Server to manage mobile devices that cannot run Configuration Manager clients.

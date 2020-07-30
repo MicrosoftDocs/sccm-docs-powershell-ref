@@ -22,7 +22,7 @@ New-CMSiteSystemServer [-SiteCode <String>] [-SiteSystemServerName] <String> [-P
 ```
 
 ## DESCRIPTION
-The **New-CMSiteSystemServer** cmdlet creates a site system server in Microsoft System Center Configuration Manager.
+The **New-CMSiteSystemServer** cmdlet creates a site system server in Configuration Manager.
 A site system server provides functionality to a configuration management site, such as communication between a Configuration Manager server and Configuration Manager clients.
 You can designate a new server as a site system server and add the site system roles, or install site system roles to an existing site system server in the site.
 

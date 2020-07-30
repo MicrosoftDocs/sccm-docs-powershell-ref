@@ -57,7 +57,7 @@ Set-CMApplicationDeployment -ApplicationId <String> [-Comment <String>] [-Requir
 ```
 
 ## DESCRIPTION
-The **Set-CMApplicationDeployment** cmdlet modifies properties for an application deployment in Microsoft System Center Configuration Manager.
+The **Set-CMApplicationDeployment** cmdlet modifies properties for an application deployment in Configuration Manager.
 An application deployment installs an application according to schedule for a several computers.
 Application deployments can also allow users to install at a time they choose.
 

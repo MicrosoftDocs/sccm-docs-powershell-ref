@@ -79,7 +79,7 @@ Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -Dr
 
 ## DESCRIPTION
 The **Set-CMDriverBootImage** cmdlet adds a driver to a boot image or removes a driver from a boot image.
-You can add Windows device drivers that you have imported into the Microsoft System Center Configuration Manager driver catalog to one or more boot images.
+You can add Windows device drivers that you have imported into the Configuration Manager driver catalog to one or more boot images.
 You should add only mass storage device drivers and network adapter device drivers to boot images because other types of drivers are not needed and will increase the size of the boot image.
 
 > [!NOTE]

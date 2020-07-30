@@ -31,7 +31,7 @@ Set-CMHardwareRequirement -InputObject <IResultObject> [-MinCpu <Int32>] [-MinDi
 ## DESCRIPTION
 The **Set-CMHardwareRequirement** cmdlet changes settings for hardware requirements for software products.
 
-Microsoft System Center Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
+Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
 You can add, modify, or delete your own hardware requirements, but you cannot change built-in hardware requirements.
 
 You can use this cmdlet to modify the minimum requirements associated with a software product or change the name that Configuration Manager uses for a product.

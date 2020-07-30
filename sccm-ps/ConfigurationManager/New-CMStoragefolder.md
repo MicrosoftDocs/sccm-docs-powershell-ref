@@ -21,7 +21,7 @@ New-CMStorageFolder -StorageFolderName <String> [-MaximumClientNumber <Int32>] [
 ```
 
 ## DESCRIPTION
-The **New-CMStoragefolder** cmdlet creates a new storage folder to store user migration data in Microsoft System Center Configuration Manager.
+The **New-CMStoragefolder** cmdlet creates a new storage folder to store user migration data in Configuration Manager.
 
 A storage folder identifies a location on a state migration point site system to store user migration data.
 Use this cmdlet in conjunction with the [Add-CMStateMigrationPoint](Add-CMStateMigrationPoint.md) cmdlet to create a new state migration point with storage folders.

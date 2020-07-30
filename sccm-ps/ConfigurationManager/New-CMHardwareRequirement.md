@@ -22,7 +22,7 @@ New-CMHardwareRequirement -Product <String> -MinCpu <Int32> -MinDiskFree <Int64>
 ## DESCRIPTION
 The **New-CMHardwareRequirement** cmdlet creates a hardware requirement object for a product.
 
-Microsoft System Center Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
+Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
 You can add, modify, or delete your own hardware requirements, but you cannot change built-in hardware requirement objects.
 
 > [!NOTE]

@@ -46,7 +46,7 @@ Set-CMSiteMaintenanceTask [-DeleteOlderThanDays <Int32>] [-DeviceName <String>]
 ```
 
 ## DESCRIPTION
-The **Set-CMSiteMaintenanceTask** cmdlet changes settings for a Microsoft System Center Configuration Manager maintenance task.
+The **Set-CMSiteMaintenanceTask** cmdlet changes settings for a Configuration Manager maintenance task.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

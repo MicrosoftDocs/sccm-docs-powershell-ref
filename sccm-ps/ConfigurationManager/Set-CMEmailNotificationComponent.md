@@ -28,8 +28,8 @@ Set-CMEmailNotificationComponent [-DisableEmailNotification] [-DisableWildcardHa
 ```
 
 ## DESCRIPTION
-The **Set-CMEmailNotificationComponent** cmdlet changes configuration settings of an email notification component in Microsoft System Center Configuration Manager.
-You can configure the email notification component for each System Center Configuration Manager site to configure email subscriptions to alerts.
+The **Set-CMEmailNotificationComponent** cmdlet changes configuration settings of an email notification component in Configuration Manager.
+You can configure the email notification component for each Configuration Manager site to configure email subscriptions to alerts.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -43,24 +43,24 @@ You can configure the email notification component for each System Center Config
 PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -SiteCode "CM2" -EnableEmailNotification $True -MstpServerFqdn "mail.corp.contosco.com" -Port 25 -TypeOfAuthentication DefaultServiceAccount -SendFrom "evan.narvaez@contoso.com"
 ```
 
-This command enables email notification for System Center Configuration Manager.
-The command specifies that System Center Configuration Manager uses the System Center Configuration Manager site that has the site code CM2 on the server cmcen-dist02.tsqa.corp.contoso.com to host the site system role for email notification.
-The command specifies that System Center Configuration Manager uses the server named mail.corp.contosco.com for the email server and specifies the outgoing SMTP port for sending email alerts.
-The command specifies that System Center Configuration Manager uses the default service account for authenticating the site server to the SMTP Server, and specifies that System Center Configuration Manager sends email alerts from the email address evan.narvaez@contoso.com.
+This command enables email notification for Configuration Manager.
+The command specifies that Configuration Manager uses the Configuration Manager site that has the site code CM2 on the server cmcen-dist02.tsqa.corp.contoso.com to host the site system role for email notification.
+The command specifies that Configuration Manager uses the server named mail.corp.contosco.com for the email server and specifies the outgoing SMTP port for sending email alerts.
+The command specifies that Configuration Manager uses the default service account for authenticating the site server to the SMTP Server, and specifies that Configuration Manager sends email alerts from the email address evan.narvaez@contoso.com.
 
 ### Example 2: Disable email notification
 ```
 PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -EnableEmailNotification $False
 ```
 
-This command disables email notification for System Center Configuration Manager on the site server named cmcen-dist02.tsqa.corp.contoso.com.
+This command disables email notification for Configuration Manager on the site server named cmcen-dist02.tsqa.corp.contoso.com.
 
 ### Example 3: Set the outgoing SMTP port for email notification
 ```
 PS XYZ:\> Set-CMEmailNotificationComponent -SiteSystemServerName "cmcen-dist02.tsqa.corp.contoso.com" -Port 27
 ```
 
-This command sets the outgoing SMTP port that System Center Configuration Manager uses for sending email alerts on the site server named cmcen-dist02.tsqa.corp.contoso.com to port 27.
+This command sets the outgoing SMTP port that Configuration Manager uses for sending email alerts on the site server named cmcen-dist02.tsqa.corp.contoso.com to port 27.
 
 ## PARAMETERS
 

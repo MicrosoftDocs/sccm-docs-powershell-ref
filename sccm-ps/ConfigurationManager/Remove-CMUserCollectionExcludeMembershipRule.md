@@ -71,7 +71,7 @@ Remove-CMUserCollectionExcludeMembershipRule -InputObject <IResultObject> -Exclu
 The **Remove-CMUserCollectionExcludeMembershipRule** cmdlet removes an exclude rule from the specified collections.
 You can specify the user collections by using their names, IDs, or by specifying an input object that represents the collections.
 
-For more information about collection rules in Microsoft System Center Configuration Manager, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
+For more information about collection rules in Configuration Manager, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

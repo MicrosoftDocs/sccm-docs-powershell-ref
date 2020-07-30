@@ -78,9 +78,9 @@ Set-CMConfigurationPolicyDeployment -FirewallPolicyId <String> [-EnableEnforceme
 ```
 
 ## DESCRIPTION
-The **Set-CMConfigurationPolicyDeployment** cmdlet creates a configuration policy deployment in Microsoft System Center Configuration Manager.
+The **Set-CMConfigurationPolicyDeployment** cmdlet creates a configuration policy deployment in Configuration Manager.
 You can deploy firewall policies or user session management policies.
-Use the [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md) cmdlet to deploy specified policies for a System Center Configuration Manager collection.
+Use the [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md) cmdlet to deploy specified policies for a Configuration Manager collection.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

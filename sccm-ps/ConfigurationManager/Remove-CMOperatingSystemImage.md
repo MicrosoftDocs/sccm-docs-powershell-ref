@@ -33,8 +33,8 @@ Remove-CMOperatingSystemImage -Name <String> [-Force] [-DisableWildcardHandling]
 ```
 
 ## DESCRIPTION
-The **Remove-CMOperatingSystemImage** cmdlet removes one or more operating system images from a Microsoft System Center Configuration Manager site.
-Operating system images are .wim format files and represent a compressed collection of reference files and folders that System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
+The **Remove-CMOperatingSystemImage** cmdlet removes one or more operating system images from a Configuration Manager site.
+Operating system images are .wim format files and represent a compressed collection of reference files and folders that Configuration Manager requires to successfully install and configure an operating system on a computer.
 
 After you remove an operating system image, you cannot distribute the operating system image to distribution points.
 

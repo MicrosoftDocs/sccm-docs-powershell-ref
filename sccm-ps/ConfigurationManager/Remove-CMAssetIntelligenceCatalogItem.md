@@ -33,7 +33,7 @@ Remove-CMAssetIntelligenceCatalogItem -Id <String> [-Force] [-DisableWildcardHan
 ```
 
 ## DESCRIPTION
-The **Remove-CMAssetIntelligenceCatalogItem** cmdlet removes software categories, software families, and custom software labels from the Asset Intelligence catalog in Microsoft System Center Configuration Manager.
+The **Remove-CMAssetIntelligenceCatalogItem** cmdlet removes software categories, software families, and custom software labels from the Asset Intelligence catalog in Configuration Manager.
 
 The Asset Intelligence catalog contains categorization and identification information for software titles.
 The catalog includes predefined categories and families.

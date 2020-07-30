@@ -20,7 +20,7 @@ Invoke-CMClientOperationSummarization [-DisableWildcardHandling] [-ForceWildcard
 ```
 
 ## DESCRIPTION
-The **Invoke-CMClientOperationSummarization** cmdlet performs a Microsoft System Center Configuration Manager client operations summarization immediately, instead of waiting for the next scheduled summarization.
+The **Invoke-CMClientOperationSummarization** cmdlet performs a Configuration Manager client operations summarization immediately, instead of waiting for the next scheduled summarization.
 This cmdlet does not change the regular schedule for summarizations.
 
 > [!NOTE]

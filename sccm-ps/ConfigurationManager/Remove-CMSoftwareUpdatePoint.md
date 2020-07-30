@@ -28,10 +28,10 @@ Remove-CMSoftwareUpdatePoint [-SiteCode <String>] [-Force] [-SiteSystemServerNam
 ```
 
 ## DESCRIPTION
-The **Remove-CMSoftwareUpdatePoint** cmdlet removes a software update point site system role from Microsoft System Center Configuration Manager.
+The **Remove-CMSoftwareUpdatePoint** cmdlet removes a software update point site system role from Configuration Manager.
 
 A software update point is a site server role that hosts software updates.
-System Center Configuration Manager clients connect to a software update point to get available updates.
+Configuration Manager clients connect to a software update point to get available updates.
 The software update point interacts with Windows Server Update Services (WSUS) to configure update settings, request synchronization to the update source, and to synchronize software updates from the WSUS database.
 
 You can specify a software update point to remove by site code and the name of the computer that hosts the site system role.

@@ -33,7 +33,7 @@ Approve-CMDevice -DeviceId <String> [-DisableWildcardHandling] [-ForceWildcardHa
 ```
 
 ## DESCRIPTION
-The **Approve-CMDevice** cmdlet approves one or more Microsoft System Center Configuration Manager device clients to join a site.
+The **Approve-CMDevice** cmdlet approves one or more Configuration Manager device clients to join a site.
 You cannot approve a Configuration Manager client until you have installed the device and assigned it to a site.
 
 > [!NOTE]

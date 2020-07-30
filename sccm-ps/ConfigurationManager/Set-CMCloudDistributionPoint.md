@@ -39,7 +39,7 @@ Set-CMCloudDistributionPoint -Name <String> [-NewName <String>] [-Description <S
 ## DESCRIPTION
 The **Set-CMCloudDistributionPoint** cmdlet changes settings for a cloud-based distribution point.
 
-In Microsoft System Center Configuration Manager, you can use a cloud service in Windows Azure to host a distribution point for storing files to download to clients.
+In Configuration Manager, you can use a cloud service in Windows Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.
 For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712321(v=technet.10)) on TechNet.
 

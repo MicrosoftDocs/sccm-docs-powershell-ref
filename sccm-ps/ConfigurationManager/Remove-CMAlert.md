@@ -33,7 +33,7 @@ Remove-CMAlert -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcar
 ```
 
 ## DESCRIPTION
-The **Remove-CMAlert** cmdlet removes one or more Microsoft System Center Configuration Manager alerts.
+The **Remove-CMAlert** cmdlet removes one or more Configuration Manager alerts.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

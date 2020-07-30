@@ -29,7 +29,7 @@ Remove-CMScript [-Force] -ScriptName <String> [-DisableWildcardHandling] [-Force
 
 ## DESCRIPTION
 
-The **Remove-CMScript** cmdlet removes one or more Microsoft System Center Configuration Manager scripts. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
+The **Remove-CMScript** cmdlet removes one or more Configuration Manager scripts. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

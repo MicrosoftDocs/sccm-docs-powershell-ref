@@ -27,13 +27,13 @@ Get-CMStateMigrationPoint [-AllSite] -InputObject <IResultObject> [-DisableWildc
 ```
 
 ## DESCRIPTION
-The **Get-CMStateMigrationPoint** cmdlet gets a state migration point for a Microsoft System Center Configuration Manager site.
+The **Get-CMStateMigrationPoint** cmdlet gets a state migration point for a Configuration Manager site.
 This site system role stores user information.
 You can store user information while an operating system deployment proceeds and then restore user information from the state migration point.
 
 You can use this cmdlet to get state migration point objects to use with the [Remove-CMStateMigrationPoint](Remove-CMStateMigrationPoint.md) cmdlet.
 
-Each state migration point site server can be a member of only one System Center Configuration Manager site.
+Each state migration point site server can be a member of only one Configuration Manager site.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

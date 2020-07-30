@@ -26,7 +26,7 @@ Get-CMConflictingRecord -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 ```
 
 ## DESCRIPTION
-The **Get-CMConflictingRecord** cmdlet gets one or more conflicting Microsoft System Center Configuration Manager record objects.
+The **Get-CMConflictingRecord** cmdlet gets one or more conflicting Configuration Manager record objects.
 
 When Configuration Manager recognizes a new client, it uses hardware information to check whether it previously created a record for that computer.
 For example, you might have reinstalled the operating system.

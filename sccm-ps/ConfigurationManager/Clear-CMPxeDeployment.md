@@ -51,11 +51,11 @@ Clear-CMPxeDeployment -Device <IResultObject> [-DisableWildcardHandling] [-Force
 ```
 
 ## DESCRIPTION
-The **Clear-CMPxeDeployment** cmdlet clears the status of the most recent Pre-Boot EXecution Environment (PXE) deployment in Microsoft System Center Configuration Manager.
+The **Clear-CMPxeDeployment** cmdlet clears the status of the most recent Pre-Boot EXecution Environment (PXE) deployment in Configuration Manager.
 
 You can redeploy a required PXE deployment for a collection of devices.
-Clear the status of the last PXE deployment assigned to that System Center Configuration Manager collection.
-System Center Configuration Manager redeploys the most recent required deployments.
+Clear the status of the last PXE deployment assigned to that Configuration Manager collection.
+Configuration Manager redeploys the most recent required deployments.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

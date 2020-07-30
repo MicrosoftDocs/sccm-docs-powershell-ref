@@ -31,7 +31,7 @@ Set-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-NewServerAdd
 ## DESCRIPTION
 The **Set-CMExchangeServer** cmdlet changes settings for a Microsoft Exchange Server.
 
-Microsoft System Center Configuration Manager works with Exchange Server to manage mobile devices that cannot run Configuration Manager clients.
+Configuration Manager works with Exchange Server to manage mobile devices that cannot run Configuration Manager clients.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

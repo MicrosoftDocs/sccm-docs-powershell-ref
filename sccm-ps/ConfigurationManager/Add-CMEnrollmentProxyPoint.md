@@ -29,7 +29,7 @@ Add-CMEnrollmentProxyPoint [-WebsiteName <String>] [-PortNumber <Int32>] [-Servi
 ```
 
 ## DESCRIPTION
-The **Add-CMEnrollmentProxyPoint** cmdlet adds an enrollment proxy point to a Microsoft System Center Configuration Manager site.
+The **Add-CMEnrollmentProxyPoint** cmdlet adds an enrollment proxy point to a Configuration Manager site.
 An enrollment proxy point is a site system role.
 
 When Configuration Manager enrolls a mobile device, it installs a Configuration Manager client.

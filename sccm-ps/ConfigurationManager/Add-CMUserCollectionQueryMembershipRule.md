@@ -36,7 +36,7 @@ Add-CMUserCollectionQueryMembershipRule -CollectionName <String> -RuleName <Stri
 ```
 
 ## DESCRIPTION
-The **Add-CMUserCollectionQueryMembershipRule** cmdlet adds a rule that adds users to the collections based on a query in Microsoft System Center Configuration Manager.
+The **Add-CMUserCollectionQueryMembershipRule** cmdlet adds a rule that adds users to the collections based on a query in Configuration Manager.
 You can specify the user collections by using their names, IDs, or by specifying an object that represents the collections.
 The query is specified as a text string.
 

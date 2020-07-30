@@ -45,7 +45,7 @@ Remove-CMPackageDeployment [-ProgramName <String>] [-DeploymentId <String>] [-Fo
 
 ## DESCRIPTION
 
-The **Remove-CMPackageDeployment** cmdlet remove a package deployment from Microsoft System Center Configuration Manager.
+The **Remove-CMPackageDeployment** cmdlet remove a package deployment from Configuration Manager.
 A deployment includes a collection of devices or users, a package to deploy, and either a device program name or a standard program name.
 To specify which deployment to modify, specify the collection name, package, and program name.
 You can specify the package by name or ID, or you can use the [Get-CMPackage](Get-CMPackage.md) cmdlet to get a package object.

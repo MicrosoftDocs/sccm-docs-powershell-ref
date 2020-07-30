@@ -39,7 +39,7 @@ New-CMCollection -CollectionType <CollectionType> [-Comment <String>] -LimitingC
 ```
 
 ## DESCRIPTION
-The **New-CMCollection** cmdlet creates a collection in Microsoft System Center Configuration Manager.
+The **New-CMCollection** cmdlet creates a collection in Configuration Manager.
 
 Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 

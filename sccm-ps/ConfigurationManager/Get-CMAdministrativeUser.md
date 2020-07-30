@@ -27,7 +27,7 @@ Get-CMAdministrativeUser -Id <String> [-RoleName <String[]>] [-DisableWildcardHa
 ```
 
 ## DESCRIPTION
-The **Get-CMAdministrativeUser** cmdlet gets one or more administrative users in Microsoft System Center Configuration Manager.
+The **Get-CMAdministrativeUser** cmdlet gets one or more administrative users in Configuration Manager.
 An administrative user has a defined set of permissions and may be a member of one or more scopes or roles.
 
 > [!NOTE]

@@ -33,8 +33,8 @@ Export-CMBaseline [-InputObject] <IResultObject> -Path <String> [-DisableWildcar
 ```
 
 ## DESCRIPTION
-The **Export-CMBaseline** cmdlet exports configuration baselines in a cabinet (.cab) file format from a Microsoft System Center Configuration Manager site.
-You can then import it to the same or a different System Center Configuration Manager site.
+The **Export-CMBaseline** cmdlet exports configuration baselines in a cabinet (.cab) file format from a Configuration Manager site.
+You can then import it to the same or a different Configuration Manager site.
 Configuration data is converted to desired configuration management (DCM) Digest.
 
 > [!NOTE]

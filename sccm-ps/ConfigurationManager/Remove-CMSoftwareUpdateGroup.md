@@ -33,7 +33,7 @@ Remove-CMSoftwareUpdateGroup -InputObject <IResultObject> [-Force] [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Remove-CMSoftwareUpdateGroup** cmdlet removes software update groups from Microsoft System Center Configuration Manager.
+The **Remove-CMSoftwareUpdateGroup** cmdlet removes software update groups from Configuration Manager.
 You can specify each software update group that you are removing by using the group IDs or names.
 If you remove a software update group, you can use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet to return a software update group object and use that object to specify the group that you want to remove.
 

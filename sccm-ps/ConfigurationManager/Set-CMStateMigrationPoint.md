@@ -35,7 +35,7 @@ Set-CMStateMigrationPoint [-SiteCode <String>] [-SiteSystemServerName] <String>
 ```
 
 ## DESCRIPTION
-The **Set-CMStateMigrationPoint** cmdlet modifies settings for a state migration point in Microsoft System Center Configuration Manager.
+The **Set-CMStateMigrationPoint** cmdlet modifies settings for a state migration point in Configuration Manager.
 A state migration point is a site system role that manages data transfer from client computers during an operating system installation process.
 Use this cmdlet to modify the boundary groups and storage folders associated with the migration point, how long to wait before the migration point deletes client data, whether to allow a fallback source location for content, and whether to enable restore only mode.
 

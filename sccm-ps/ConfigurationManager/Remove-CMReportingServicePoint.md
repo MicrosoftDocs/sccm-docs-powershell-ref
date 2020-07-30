@@ -27,10 +27,10 @@ Remove-CMReportingServicePoint [-SiteCode <String>] [-Force] [-SiteSystemServerN
 ```
 
 ## DESCRIPTION
-The **Remove-CMReportingServicePoint** cmdlet removes a reporting service point from a Microsoft System Center Configuration Manager site.
+The **Remove-CMReportingServicePoint** cmdlet removes a reporting service point from a Configuration Manager site.
 The reporting service point is a site system role that is installed on a server that is running Microsoft SQL Server Reporting Services.
 
-After you remove a reporting service point from a System Center Configuration Manager site, you cannot manage reports in System Center Configuration Manager at the site.
+After you remove a reporting service point from a Configuration Manager site, you cannot manage reports in Configuration Manager at the site.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -44,7 +44,7 @@ After you remove a reporting service point from a System Center Configuration Ma
 PS XYZ:\> Remove-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerName "CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM"
 ```
 
-This command removes the reporting service point from the System Center Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
+This command removes the reporting service point from the Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
 
 ### Example 2: Remove a reporting service point by using an object variable
 ```
@@ -52,7 +52,7 @@ PS XYZ:\> $Rsp = Get-CMReportingServicePoint -SiteCode "CM1" -SiteSystemServerNa
 PS XYZ:\> Remove-CMReportingServicePoint -InputObject $Rsp
 ```
 
-The first command gets the reporting service point from the System Center Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
+The first command gets the reporting service point from the Configuration Manager site that has the site code CM1 on the site system server named CMCEN-DIST02.TSQA.CORP.CONTOSCO.COM.
 The command stores the results in the $Rsp variable.
 
 The second command removes the reporting service point in $Rsp.

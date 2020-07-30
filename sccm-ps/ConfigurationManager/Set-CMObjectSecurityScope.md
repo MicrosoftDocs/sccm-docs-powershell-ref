@@ -20,7 +20,7 @@ Set-CMObjectSecurityScope -InputObject <IResultObject[]> -Action <SecurityScopeA
 ```
 
 ## DESCRIPTION
-The **Set-CMObjectSecurityScope** cmdlet adds and removes security scopes for Microsoft System Center Configuration Manager objects.
+The **Set-CMObjectSecurityScope** cmdlet adds and removes security scopes for Configuration Manager objects.
 
 This cmdlet has been deprecated and may be removed in a future release.
 Use [Add-CMObjectSecurityScope](Add-CMObjectSecurityScope.md) and [Remove-CMObjectSecurityScope](Remove-CMObjectSecurityScope.md) to add and remove security scopes from Configuration Manager objects.

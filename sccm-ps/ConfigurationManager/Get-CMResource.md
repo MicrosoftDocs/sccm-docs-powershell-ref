@@ -20,7 +20,7 @@ Get-CMResource [[-ResourceId] <Int32>] [-Fast] [-ResourceType <ResourceType>] [-
 ```
 
 ## DESCRIPTION
-The **Get-CMResource** cmdlet gets a Microsoft System Center Configuration Manager resource.
+The **Get-CMResource** cmdlet gets a Configuration Manager resource.
 
 A resource can be a user or a device.
 

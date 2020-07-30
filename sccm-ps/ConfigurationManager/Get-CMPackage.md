@@ -25,8 +25,8 @@ Get-CMPackage -Id <String> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHan
 ```
 
 ## DESCRIPTION
-The **Get-CMPackage** cmdlet gets Microsoft System Center Configuration Manager packages.
-System Center Configuration Manager uses packages to distribute software to clients.
+The **Get-CMPackage** cmdlet gets Configuration Manager packages.
+Configuration Manager uses packages to distribute software to clients.
 You can use the *SecuredScopeNames* parameter to specify the security scope of a package to get.
 
 > [!NOTE]

@@ -29,13 +29,13 @@ Add-CMEnrollmentPoint [-WebsiteName <String>] [-WebApplicationName <String>] [-P
 ```
 
 ## DESCRIPTION
-The **Add-CMEnrollmentPoint** cmdlet adds an enrollment point to a Microsoft System Center Configuration Manager site.
+The **Add-CMEnrollmentPoint** cmdlet adds an enrollment point to a Configuration Manager site.
 An enrollment point is a site system role that manages enrollment requests from mobile devices.
 
 When Configuration Manager enrolls a mobile device, it installs a Configuration Manager client.
 The client provides management capabilities that include hardware inventory, software deployment, settings, and remote wipe.
 To enroll mobile devices, use Microsoft Certificate Services with an enterprise certification authority.
-You need a System Center Configuration Manager enrollment point site system role, as well as an enrollment proxy point site system role.
+You need a Configuration Manager enrollment point site system role, as well as an enrollment proxy point site system role.
 For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh272770(v=technet.10)) on TechNet.
 
 > [!NOTE]

@@ -25,7 +25,7 @@ Get-CMSecurityRole -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandli
 ```
 
 ## DESCRIPTION
-The **Get-CMSecurityRole** cmdlet gets one or more security roles in Microsoft System Center Configuration Manager.
+The **Get-CMSecurityRole** cmdlet gets one or more security roles in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

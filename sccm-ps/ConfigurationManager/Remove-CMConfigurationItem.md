@@ -35,7 +35,7 @@ Remove-CMConfigurationItem [-InputObject] <IResultObject> [-Force] [-DisableWild
 
 ## DESCRIPTION
 
-The **Remove-CMConfigurationItem** cmdlet removes specified configuration items from Microsoft System Center Configuration Manager.
+The **Remove-CMConfigurationItem** cmdlet removes specified configuration items from Configuration Manager.
 You can specify items by ID, name, or by use of the  cmdlet.
 
 Configuration items contain one or more settings, along with compliance rules.

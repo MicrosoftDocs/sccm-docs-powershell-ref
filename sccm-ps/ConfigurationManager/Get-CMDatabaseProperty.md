@@ -20,7 +20,7 @@ Get-CMDatabaseProperty [-SiteCode <String>] [-DisableWildcardHandling] [-ForceWi
 ```
 
 ## DESCRIPTION
-The **Get-CMDatabaseProperty** cmdlet gets an object that represents a Microsoft System Center Configuration Manager database.
+The **Get-CMDatabaseProperty** cmdlet gets an object that represents a Configuration Manager database.
 Use the site code for a site to specify a database.
 
 When this cmdlet returns a database object in the console, it displays current settings for data compression, Broker port for the computer that runs Microsoft SQL Server, and the length of time that the database keeps data.

@@ -33,7 +33,7 @@ Set-CMApplicationCatalogWebsitePoint [-SiteCode <String>] [-SiteSystemServerName
 ```
 
 ## DESCRIPTION
-The **Set-CMApplicationCatalogWebsitePoint** cmdlet changes the settings of an Application Catalog website point in Microsoft System Center Configuration Manager.
+The **Set-CMApplicationCatalogWebsitePoint** cmdlet changes the settings of an Application Catalog website point in Configuration Manager.
 This site system role supports the Application Catalog website.
 
 Specify the site that this website point supports and the server that hosts the website point.

@@ -42,7 +42,7 @@ New-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-IsHosted <Bo
 ```
 
 ## DESCRIPTION
-The **New-CMExchangeServer** cmdlet configures a new Microsoft Exchange Server connector in Microsoft System Center Configuration Manager.
+The **New-CMExchangeServer** cmdlet configures a new Microsoft Exchange Server connector in Configuration Manager.
 An Exchange Server connector synchronizes and manages the device enrolled by the Exchange Server.
 For more information, see [Configuration Manager 2012 Exchange Connector Implementation in Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=286314) on TechNet.
 

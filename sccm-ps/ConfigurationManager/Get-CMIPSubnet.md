@@ -25,7 +25,7 @@ Get-CMIPSubnet -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling] 
 ```
 
 ## DESCRIPTION
-The **Get-CMIPSubnet** cmdlet gets an IP subnet object that Microsoft System Center Configuration Manager uses as a boundary.
+The **Get-CMIPSubnet** cmdlet gets an IP subnet object that Configuration Manager uses as a boundary.
 
 A boundary is a network location on the intranet that can contain one or more devices that you want to manage.
 Configuration Manager can define a boundary in several ways, including an IP subnet.

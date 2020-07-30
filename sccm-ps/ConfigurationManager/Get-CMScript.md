@@ -22,7 +22,7 @@ Get-CMScript [-Author <String>] [-ScriptName <String>] [-Fast] [-DisableWildcard
 
 ## DESCRIPTION
 
-The **Get-CMScript** cmdlet gets one or more Microsoft System Center Configuration Manager Powershell scripts. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+The **Get-CMScript** cmdlet gets one or more Configuration Manager Powershell scripts. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
 You can get a specific script by specifying the author or the name of the script.
 
@@ -39,7 +39,7 @@ You can get a specific script by specifying the author or the name of the script
 PS XYZ:\> Get-CMScript
 ```
 
-This command gets all scripts that System Center Configuration Manager manages.
+This command gets all scripts that Configuration Manager manages.
 
 ### Example 2: Get scripts by using name
 

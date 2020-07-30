@@ -71,7 +71,7 @@ Add-CMBoundaryToGroup -InputObject <IResultObject> -BoundaryGroupName <String> [
 ## DESCRIPTION
 The **Add-CMBoundaryToGroup** cmdlet assigns boundaries to a boundary group.
 
-In Microsoft System Center Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
+In Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
 A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an IP address range.
 
 You can use boundary groups to manage network locations.

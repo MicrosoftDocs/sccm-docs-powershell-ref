@@ -38,7 +38,7 @@ Export-CMTaskSequence -TaskSequencePackageId <String> -ExportFilePath <String> [
 
 ## DESCRIPTION
 
-The **Export-CMTaskSequence** cmdlet exports a Microsoft System Center Configuration Manager task sequence to a .zip file.
+The **Export-CMTaskSequence** cmdlet exports a Configuration Manager task sequence to a .zip file.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

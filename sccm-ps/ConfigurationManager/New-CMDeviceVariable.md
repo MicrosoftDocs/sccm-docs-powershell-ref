@@ -34,7 +34,7 @@ New-CMDeviceVariable -DeviceName <String> -VariableName <String> [-VariableValue
 ```
 
 ## DESCRIPTION
-The **New-CMDeviceVariable** cmdlet creates a device variable for a Microsoft System Center Configuration Manager device.
+The **New-CMDeviceVariable** cmdlet creates a device variable for a Configuration Manager device.
 
 Individual devices have device variables. Task sequence processing uses device variables.
 

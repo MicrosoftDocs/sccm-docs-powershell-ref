@@ -29,7 +29,7 @@ Remove-CMUserAffinityFromDevice -DeviceId <Int32[]> [-UserId <Int32[]>] [-UserNa
 ## DESCRIPTION
 The **Remove-CMUserAffinityFromDevice** cmdlet removes a primary user from the devices.
 
-User device affinity is a method of associating a user with one or more specified devices in System Center Configuration Manager.
+User device affinity is a method of associating a user with one or more specified devices in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -50,13 +50,13 @@ Start-CMDistributionPointUpgrade [-AllowFallbackForContent <Boolean>] [-AllowPre
 ```
 
 ## DESCRIPTION
-The **Start-CMDistributionPointUpgrade** cmdlet upgrades a shared distribution point to a Microsoft System Center Configuration Manager distribution point.
+The **Start-CMDistributionPointUpgrade** cmdlet upgrades a shared distribution point to a Configuration Manager distribution point.
 
-When you migrate from a Microsoft System Center Configuration Manager 2007 source hierarchy, you can upgrade a shared distribution point to make it a System Center Configuration Manager distribution point.
+When you migrate from a Configuration Manager 2007 source hierarchy, you can upgrade a shared distribution point to make it a Configuration Manager distribution point.
 You can upgrade distribution points at both primary sites and secondary sites.
-The upgrade process removes the distribution point from the Configuration Manager 2007 hierarchy and makes it a site system server in the System Center Configuration Manager hierarchy.
+The upgrade process removes the distribution point from the Configuration Manager 2007 hierarchy and makes it a site system server in the Configuration Manager hierarchy.
 This process also copies the existing content that is on the distributing point to a new location on the distribution point computer.
-The upgrade process then modifies the copy of the content to create the System Center Configuration Manager single instance store for use with System Center Configuration Manager content deployment.
+The upgrade process then modifies the copy of the content to create the Configuration Manager single instance store for use with Configuration Manager content deployment.
 Therefore, when you upgrade a distribution point, you do not have to redistribute migrated content that was hosted on the Configuration Manager 2007 distribution point.
 
 > [!NOTE]

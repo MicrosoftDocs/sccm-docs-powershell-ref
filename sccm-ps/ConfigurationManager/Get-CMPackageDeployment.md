@@ -45,7 +45,7 @@ Get-CMPackageDeployment [-ProgramName <String>] [-InputObject <IResultObject>] [
 
 ## DESCRIPTION
 
-The **Get-CMPackageDeployment** cmdlet starts deployment of a specified software package to computers that belong to a Microsoft System Center Configuration Manager collection.
+The **Get-CMPackageDeployment** cmdlet starts deployment of a specified software package to computers that belong to a Configuration Manager collection.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

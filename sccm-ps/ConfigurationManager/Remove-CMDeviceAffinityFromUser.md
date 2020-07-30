@@ -27,7 +27,7 @@ Remove-CMDeviceAffinityFromUser -UserId <Int32> [-DeviceId <Int32[]>] [-DeviceNa
 ```
 
 ## DESCRIPTION
-The **Remove-CMDeviceAffinityFromUser** cmdlet removes device affinity from a user of Microsoft System Center Configuration Manager.
+The **Remove-CMDeviceAffinityFromUser** cmdlet removes device affinity from a user of Configuration Manager.
 
 Device affinity in Configuration Manager associates a user with one or more devices.
 Instead of deploying applications to all the devices of a user, you deploy the application to the user and Configuration Manager automatically installs the application on all devices that are associated with that user.

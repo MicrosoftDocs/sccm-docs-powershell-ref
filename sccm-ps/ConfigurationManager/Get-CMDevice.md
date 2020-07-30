@@ -63,7 +63,7 @@ Get-CMDevice -ResourceId <Int32> [-Fast] [-CollectionMember] [-Resource] [-Disab
 ```
 
 ## DESCRIPTION
-The **Get-CMDevice** cmdlet gets a Microsoft System Center Configuration Manager device.
+The **Get-CMDevice** cmdlet gets a Configuration Manager device.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

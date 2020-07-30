@@ -19,7 +19,7 @@ Get-CMSoftwareMeteringSetting [-DisableWildcardHandling] [-ForceWildcardHandling
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareMeteringSetting** cmdlet gets a software metering settings object in Microsoft System Center Configuration Manager.
+The **Get-CMSoftwareMeteringSetting** cmdlet gets a software metering settings object in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

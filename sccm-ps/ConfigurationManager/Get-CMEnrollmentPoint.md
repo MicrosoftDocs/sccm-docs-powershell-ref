@@ -27,7 +27,7 @@ Get-CMEnrollmentPoint [-AllSite] -InputObject <IResultObject> [-DisableWildcardH
 ```
 
 ## DESCRIPTION
-The **Get-CMEnrollmentPoint** cmdlet gets an enrollment point in Microsoft System Center Configuration Manager.
+The **Get-CMEnrollmentPoint** cmdlet gets an enrollment point in Configuration Manager.
 An enrollment point is a site system role that uses public key infrastructure (PKI) certificates to complete mobile device enrollment and to provision Intel AMT-based computers.
 
 > [!NOTE]

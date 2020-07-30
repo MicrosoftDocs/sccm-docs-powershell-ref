@@ -28,14 +28,14 @@ New-CMSoftwareMeteringRule [-ProductName <String>] [-SiteCode <String>] -Path <S
 ```
 
 ## DESCRIPTION
-The **New-CMSoftwareMeteringRule** cmdlet creates a Microsoft System Center Configuration Manager software metering rule.
+The **New-CMSoftwareMeteringRule** cmdlet creates a Configuration Manager software metering rule.
 A software metering rule specifies a piece of software, along with version information.
 You can obtain necessary file information from Windows Explorer.
 
-Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
+Software metering monitors and collects software usage data from Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
 
-For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682005(v=technet.10)) on TechNet.
+For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682005(v=technet.10)) on TechNet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -62,7 +62,7 @@ SiteCode          : CM1
 SourceSite        :
 ```
 
-This command creates a software metering rule for the System Center Configuration Manager site named CM1.
+This command creates a software metering rule for the Configuration Manager site named CM1.
 The command specifies the file name, version, original file name, and product name for the software product.
 
 ## PARAMETERS

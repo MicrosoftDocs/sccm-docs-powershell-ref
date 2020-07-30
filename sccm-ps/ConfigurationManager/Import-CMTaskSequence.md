@@ -23,7 +23,7 @@ Import-CMTaskSequence [-IgnoreDependency] [-ImportActionType <ImportActionType>]
 
 ## DESCRIPTION
 
-The **Import-CMTaskSequence** cmdlet imports a task sequence into Microsoft System Center Configuration Manager.
+The **Import-CMTaskSequence** cmdlet imports a task sequence into Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

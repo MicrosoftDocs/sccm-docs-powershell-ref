@@ -72,7 +72,7 @@ New-CMSecondarySite -SecondarySiteCode <String> -ServerName <String> -SiteName <
 ```
 
 ## DESCRIPTION
-The **New-CMSecondarySite** cmdlet creates a secondary site in Microsoft System Center Configuration Manager.
+The **New-CMSecondarySite** cmdlet creates a secondary site in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -586,7 +586,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateContentSchedule
-Specifies an object that represents a schedule type and determines how frequently System Center Configuration Manager validates the integrity of packages on the distribution point.
+Specifies an object that represents a schedule type and determines how frequently Configuration Manager validates the integrity of packages on the distribution point.
 
 ```yaml
 Type: IResultObject

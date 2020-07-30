@@ -20,7 +20,7 @@ Get-CMExchangeServer [-SiteCode <String>] [-ExchangeServerUrl <String>] [-Disabl
 ```
 
 ## DESCRIPTION
-The **Get-CMExchangeServer** cmdlet gets an object that represents a Microsoft Exchange Server that Microsoft System Center Configuration Manager uses.
+The **Get-CMExchangeServer** cmdlet gets an object that represents a Microsoft Exchange Server that Configuration Manager uses.
 
 Configuration Manager works with Exchange Server to manage mobile devices that cannot run Configuration Manager clients.
 

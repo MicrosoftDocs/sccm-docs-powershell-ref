@@ -31,7 +31,7 @@ Set-CMSiteSystemServer [-SiteCode <String>] [-SiteSystemServerName] <String> [-P
 ```
 
 ## DESCRIPTION
-The **Set-CMSiteSystemServer** cmdlet modifies a site system server in Microsoft System Center Configuration Manager.
+The **Set-CMSiteSystemServer** cmdlet modifies a site system server in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

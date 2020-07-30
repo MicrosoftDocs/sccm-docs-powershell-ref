@@ -58,7 +58,7 @@ Set-CMBaseline -InputObject <IResultObject> [-NewName <String>] [-Description <S
 ```
 
 ## DESCRIPTION
-The **Set-CMBaseline** cmdlet changes the settings of one or more configuration baselines in Microsoft System Center Configuration Manager.
+The **Set-CMBaseline** cmdlet changes the settings of one or more configuration baselines in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

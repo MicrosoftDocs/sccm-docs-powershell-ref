@@ -72,7 +72,7 @@ Get-CMUserCollectionIncludeMembershipRule -InputObject <IResultObject> [-Include
 The **Get-CMUserCollectionIncludeMembershipRule** cmdlet retrieves rules that include the members of another collection in the user collections where the rule is applied.
 You can specify the user collections where the rule is applied by using their names, IDs, or by specifying an object that represents the collections.
 
-Microsoft System Center Configuration Manager dynamically updates the membership of the user collection if the membership of the included collection changes.
+Configuration Manager dynamically updates the membership of the user collection if the membership of the included collection changes.
 For more information about membership rules, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
 
 > [!NOTE]

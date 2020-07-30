@@ -33,7 +33,7 @@ Remove-CMObjectSecurityScope [-Force] -InputObject <IResultObject[]> [-Name] <St
 ```
 
 ## DESCRIPTION
-The **Remove-CMObjectSecurityScope** cmdlet removes a security scope from a Microsoft System Center Configuration Manager object.
+The **Remove-CMObjectSecurityScope** cmdlet removes a security scope from a Configuration Manager object.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

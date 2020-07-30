@@ -35,9 +35,9 @@ Copy-CMTaskSequence -InputObject <IResultObject> [-DisableWildcardHandling] [-Fo
 
 ## DESCRIPTION
 
-The **Copy-CMTaskSequence** cmdlet creates a copy of an existing task sequence in Microsoft System Center Configuration Manager.
+The **Copy-CMTaskSequence** cmdlet creates a copy of an existing task sequence in Configuration Manager.
 
-A task sequence performs multiple steps or tasks on a Microsoft System Center Configuration Manager client computer without user intervention.
+A task sequence performs multiple steps or tasks on a Configuration Manager client computer without user intervention.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

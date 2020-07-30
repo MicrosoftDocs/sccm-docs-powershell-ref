@@ -56,7 +56,7 @@ Set-CMTaskSequence -TaskSequenceName <String> [-NewName <String>] [-Description 
 
 ## DESCRIPTION
 
-The **Set-CMTaskSequence** cmdlet modifies a Microsoft System Center Configuration Manager task sequence.
+The **Set-CMTaskSequence** cmdlet modifies a Configuration Manager task sequence.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

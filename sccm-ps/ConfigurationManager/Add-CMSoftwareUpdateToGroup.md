@@ -69,7 +69,7 @@ Add-CMSoftwareUpdateToGroup -SoftwareUpdate <IResultObject[]> -SoftwareUpdateGro
 ```
 
 ## DESCRIPTION
-The **Add-CMSoftwareUpdateToGroup** cmdlet adds a software update to a software update group in Microsoft System Center Configuration Manager.
+The **Add-CMSoftwareUpdateToGroup** cmdlet adds a software update to a software update group in Configuration Manager.
 You can specify a software update by name or by ID or use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet to obtain an update.
 Likewise, you can specify a software update group by name or by ID or use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet to obtain one.
 

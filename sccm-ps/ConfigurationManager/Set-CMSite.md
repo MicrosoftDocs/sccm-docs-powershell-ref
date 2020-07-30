@@ -93,9 +93,9 @@ Set-CMSite [-SiteCode <String>] [-Comment <String>] [-EnableWakeOnLan <Boolean>]
 ```
 
 ## DESCRIPTION
-The **Set-CMSite** cmdlet changes security scope settings for one or more Microsoft System Center Configuration Manager sites.
+The **Set-CMSite** cmdlet changes security scope settings for one or more Configuration Manager sites.
 A security scope is a collection of permissions that, in conjunction with security roles, defines the configuration actions that an administrator can perform on the site.
-You can use this cmdlet to change the type of a security scope action and the name of a security scope for a System Center Configuration Manager site.
+You can use this cmdlet to change the type of a security scope action and the name of a security scope for a Configuration Manager site.
 You can specify a site for which you change security scope settings by using a site name or a site code, or you can use the [Get-CMSite](Get-CMSite.md) cmdlet to specify a site.
 
 > [!NOTE]
@@ -110,14 +110,14 @@ You can specify a site for which you change security scope settings by using a s
 PS XYZ:\> Set-CMSite -SecurityScopeAction AddMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
 ```
 
-This command assigns a custom security scope named Scope22 to a System Center Configuration Manager site named CMSiteSystem.
+This command assigns a custom security scope named Scope22 to a Configuration Manager site named CMSiteSystem.
 
 ### Example 2: Remove a security scope for a site by using the site name
 ```
 PS XYZ:\> Set-CMSite -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
 ```
 
-This command removes the custom security scope in the previous example from a System Center Configuration Manager site named CMSiteSystem.
+This command removes the custom security scope in the previous example from a Configuration Manager site named CMSiteSystem.
 
 ## PARAMETERS
 

@@ -158,7 +158,7 @@ Add-CMScriptDeploymentType [-ContentLocation <String>] -DeploymentTypeName <Stri
 
 ## DESCRIPTION
 
-The **Add-CMScriptDeploymentType** cmdlet adds a script installer deployment type to an application. System Center Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+The **Add-CMScriptDeploymentType** cmdlet adds a script installer deployment type to an application. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

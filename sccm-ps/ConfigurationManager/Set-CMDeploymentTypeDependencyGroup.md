@@ -22,7 +22,7 @@ Set-CMDeploymentTypeDependencyGroup -InputObject <DeploymentTypeDependencyGroup>
 
 ## DESCRIPTION
 
-The **Set-CMDeploymentTypeDependencyGroup** cmdlet sets a deployment type dependency group in the Microsoft System Center Configuration Manager.
+The **Set-CMDeploymentTypeDependencyGroup** cmdlet sets a deployment type dependency group in the Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

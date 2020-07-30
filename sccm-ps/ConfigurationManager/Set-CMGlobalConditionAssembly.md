@@ -22,7 +22,7 @@ Set-CMGlobalConditionAssembly [-AssemblyName <String>] -Name <String> [-PassThru
 
 ## DESCRIPTION
 
-The **Set-CMGlobalConditionAssembly** cmdlet modifies settings for an Assembly type global condition in Microsoft System Center Configuration Manager.
+The **Set-CMGlobalConditionAssembly** cmdlet modifies settings for an Assembly type global condition in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

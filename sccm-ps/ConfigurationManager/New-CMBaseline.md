@@ -20,8 +20,8 @@ New-CMBaseline -Name <String> [-Description <String>] [-Category <String[]>] [-A
 ```
 
 ## DESCRIPTION
-The **New-CMBaseline** cmdlet creates a Microsoft System Center Configuration Manager baseline.
-A baseline is a collection of configuration items that System Center Configuration Manager uses to evaluate whether a computer complies with software requirements.
+The **New-CMBaseline** cmdlet creates a Configuration Manager baseline.
+A baseline is a collection of configuration items that Configuration Manager uses to evaluate whether a computer complies with software requirements.
 After you create a baseline, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess compliance with it.
 
 > [!NOTE]

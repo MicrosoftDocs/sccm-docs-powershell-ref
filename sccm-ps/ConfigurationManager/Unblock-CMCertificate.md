@@ -27,7 +27,7 @@ Unblock-CMCertificate -Id <String> [-PassThru] [-DisableWildcardHandling] [-Forc
 ```
 
 ## DESCRIPTION
-The **Unblock-CMCertificate** cmdlet unblocks one or more public key infrastructure (PKI) certificates that Microsoft System Center Configuration Manager uses.
+The **Unblock-CMCertificate** cmdlet unblocks one or more public key infrastructure (PKI) certificates that Configuration Manager uses.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

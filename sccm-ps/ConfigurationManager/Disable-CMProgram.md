@@ -33,13 +33,13 @@ Disable-CMProgram -PackageName <String> -ProgramName <String> [-PassThru] [-Disa
 ```
 
 ## DESCRIPTION
-The **Disable-CMProgram** cmdlet disables one or more programs in Microsoft System Center Configuration Manager packages.
-Programs are commands that are associated with a System Center Configuration Manager package.
+The **Disable-CMProgram** cmdlet disables one or more programs in Configuration Manager packages.
+Programs are commands that are associated with a Configuration Manager package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
-You can disable a program to prevent System Center Configuration Manager from running it on client computers where it is currently advertised.
-When you disable a program, System Center Configuration Manager still sends the program to distribution points and still advertises the Program on client computers, but Configuration Manager does not display or run the program on the client.
+You can disable a program to prevent Configuration Manager from running it on client computers where it is currently advertised.
+When you disable a program, Configuration Manager still sends the program to distribution points and still advertises the Program on client computers, but Configuration Manager does not display or run the program on the client.
 This behavior is the same that occurs when you disable an advertisement with which the program has been associated.
 
 > [!NOTE]

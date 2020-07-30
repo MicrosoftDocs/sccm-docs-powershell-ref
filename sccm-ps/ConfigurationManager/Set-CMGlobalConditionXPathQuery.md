@@ -31,7 +31,7 @@ Set-CMGlobalConditionXPathQuery [-XmlFilePath <String>] [-IncludeSubfolder <Bool
 
 ## DESCRIPTION
 
-The **Set-CMGlobalConditionXPathQuery** cmdlet modifies settings for a XPath Query type global condition in Microsoft System Center Configuration Manager.
+The **Set-CMGlobalConditionXPathQuery** cmdlet modifies settings for a XPath Query type global condition in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

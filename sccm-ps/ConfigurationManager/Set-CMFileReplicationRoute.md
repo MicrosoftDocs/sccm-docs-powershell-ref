@@ -52,11 +52,11 @@ Set-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String
 ```
 
 ## DESCRIPTION
-The **Set-CMFileReplicationRoute** cmdlet changes settings for a file replication route from Microsoft System Center Configuration Manager.
+The **Set-CMFileReplicationRoute** cmdlet changes settings for a file replication route from Configuration Manager.
 Configuration Manager uses file replication routes to transfer file-based data between sites in a hierarchy.
 Each file replication route identifies a destination site to which file-based data can transfer.
 
-File replication routes were known as addresses in versions of Configuration Manager before System Center Configuration Manager.
+File replication routes were known as addresses in versions of Configuration Manager before Configuration Manager.
 The functionality of file replication routes is the same as that of addresses in earlier versions.
 
 > [!NOTE]

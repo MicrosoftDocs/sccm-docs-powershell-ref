@@ -75,7 +75,7 @@ Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
 ```
 
 ## DESCRIPTION
-The **Remove-CMDistributionPointFromGroup** cmdlet removes a Microsoft System Center Configuration Manager distribution point from a distribution point group.
+The **Remove-CMDistributionPointFromGroup** cmdlet removes a Configuration Manager distribution point from a distribution point group.
 Distribution point groups provide a logical grouping of distribution points for content distribution.
 
 To remove a distribution point, specify both the distribution point to remove and the distribution point group.

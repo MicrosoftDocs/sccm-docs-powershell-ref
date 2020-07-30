@@ -33,7 +33,7 @@ Invoke-CMQuery -Id <String> [-LimitToCollectionId <String>] [-DisableWildcardHan
 ```
 
 ## DESCRIPTION
-The **Invoke-CMQuery** cmdlet runs a query stored in Microsoft System Center Configuration Manager.
+The **Invoke-CMQuery** cmdlet runs a query stored in Configuration Manager.
 Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
 
 > [!NOTE]

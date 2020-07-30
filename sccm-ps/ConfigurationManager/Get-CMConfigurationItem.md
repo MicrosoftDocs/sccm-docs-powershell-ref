@@ -29,7 +29,7 @@ Get-CMConfigurationItem [-Id] <Int32> [-Fast] [-DisableWildcardHandling] [-Force
 
 ## DESCRIPTION
 
-The **Get-CMConfigurationItem** cmdlet gets configuration item objects in Microsoft System Center Configuration Manager.
+The **Get-CMConfigurationItem** cmdlet gets configuration item objects in Configuration Manager.
 You can use this cmdlet to get items for other cmdlets to use.
 For instance, you might get configuration items so you can use the Set-CMConfigurationItem to change settings on them.
 

@@ -21,8 +21,8 @@ New-CMAlertSubscription -Name <String> [-AlertId <Int32[]>] -AddEmailAddress <St
 ```
 
 ## DESCRIPTION
-The **New-CMAlertSubscription** cmdlet creates a subscription that sends alert notifications to one or more users when specific events occur in Microsoft System Center Configuration Manager.
-Before you create an alert subscription, make sure that you have configured email settings for sending alert notifications, and that you have at least one alert configured in System Center Configuration Manager.
+The **New-CMAlertSubscription** cmdlet creates a subscription that sends alert notifications to one or more users when specific events occur in Configuration Manager.
+Before you create an alert subscription, make sure that you have configured email settings for sending alert notifications, and that you have at least one alert configured in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

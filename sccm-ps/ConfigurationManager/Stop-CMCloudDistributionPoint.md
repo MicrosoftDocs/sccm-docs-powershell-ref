@@ -35,7 +35,7 @@ Stop-CMCloudDistributionPoint -Name <String> [-DisableWildcardHandling] [-ForceW
 ## DESCRIPTION
 The **Stop-CMCloudDistributionPoint** cmdlet stops the cloud distribution point service.
 
-If you use the **Stop-CMCloudDistributionPoint** cmdlet, System Center Configuration Manager does not delete content from the distribution point and does not prevent the site server from transferring additional content to the distribution point.
+If you use the **Stop-CMCloudDistributionPoint** cmdlet, Configuration Manager does not delete content from the distribution point and does not prevent the site server from transferring additional content to the distribution point.
 While the cloud distribution point service is stopped, the cloud distribution point does not distribute content.
 Use the [Start-CMCloudDistributionPoint](Start-CMCloudDistributionPoint.md) cmdlet to restart distribution.
 

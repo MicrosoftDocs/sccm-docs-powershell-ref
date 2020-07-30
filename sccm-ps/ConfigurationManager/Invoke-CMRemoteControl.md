@@ -42,9 +42,9 @@ Invoke-CMRemoteControl -DeviceId <String> [-PassThru] [-DisableWildcardHandling]
 The **Invoke-CMRemoteControl** cmdlet enables remote control on the computers that you want to use in a remote control session.
 You can enable remote control on computers by specifying the ID or name of the computers, the site systems, or the site status.
 
-Use remote control in Microsoft System Center Configuration Manager to remotely administer, provide assistance, or view any client computer in the hierarchy.
+Use remote control in Configuration Manager to remotely administer, provide assistance, or view any client computer in the hierarchy.
 You can use remote control to troubleshoot hardware and software configuration problems on client computers and to provide help desk support when access to the computer of a user is required.
-System Center Configuration Manager supports the remote control of workgroup computers and computers that are joined to an Active Directory domain.
+Configuration Manager supports the remote control of workgroup computers and computers that are joined to an Active Directory domain.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

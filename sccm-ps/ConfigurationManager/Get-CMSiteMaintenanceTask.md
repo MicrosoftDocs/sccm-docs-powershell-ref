@@ -20,8 +20,8 @@ Get-CMSiteMaintenanceTask [-Name <String>] [-SiteCode <String>] [-DisableWildcar
 ```
 
 ## DESCRIPTION
-The **Get-CMSiteMaintenanceTask** cmdlet gets maintenance tasks in Microsoft System Center Configuration Manager.
-A maintenance task is a task in System Center Configuration Manager that performs maintenance on sites and databases.
+The **Get-CMSiteMaintenanceTask** cmdlet gets maintenance tasks in Configuration Manager.
+A maintenance task is a task in Configuration Manager that performs maintenance on sites and databases.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

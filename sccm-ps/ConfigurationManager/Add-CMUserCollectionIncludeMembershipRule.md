@@ -73,7 +73,7 @@ The **Add-CMUserCollectionIncludeMembershipRule** cmdlet adds a rule that includ
 You can specify the user collections where the rule is applied by using their names, IDs, or by specifying an object that represents the collections.
 You can specify the collection whose members are included by using its name, ID, or an object that represents the collection.
 
-Microsoft System Center Configuration Manager dynamically updates the membership of the user collection on a schedule if the membership of the included collection changes.
+Configuration Manager dynamically updates the membership of the user collection on a schedule if the membership of the included collection changes.
 For more information on these rules, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
 
 > [!NOTE]

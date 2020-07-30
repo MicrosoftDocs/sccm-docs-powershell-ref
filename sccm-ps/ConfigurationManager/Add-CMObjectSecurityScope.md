@@ -33,7 +33,7 @@ Add-CMObjectSecurityScope -InputObject <IResultObject[]> [-Name] <String> [-Disa
 ```
 
 ## DESCRIPTION
-The **Add-CMObjectSecurityScope** cmdlet adds security scope to a Microsoft System Center Configuration Manager object.
+The **Add-CMObjectSecurityScope** cmdlet adds security scope to a Configuration Manager object.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

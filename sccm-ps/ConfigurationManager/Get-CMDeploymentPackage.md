@@ -21,9 +21,9 @@ Get-CMDeploymentPackage [-DeploymentPackageName <String>] -DistributionPointName
 
 ## DESCRIPTION
 The **Get-CMDeploymentPackage** cmdlet gets information about one or more deployment packages on a distribution point.
-If you do not specify the *DeploymentPackageName* parameter, Microsoft System Center Configuration Manager returns all the deployment packages on the distribution point that you specify.
+If you do not specify the *DeploymentPackageName* parameter, Configuration Manager returns all the deployment packages on the distribution point that you specify.
 
-A deployment package is a Configuration Manager object that contains the content files and instructions for distributing programs, software updates, boot images, operating system images, and drivers to System Center Configuration Manager clients.
+A deployment package is a Configuration Manager object that contains the content files and instructions for distributing programs, software updates, boot images, operating system images, and drivers to Configuration Manager clients.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

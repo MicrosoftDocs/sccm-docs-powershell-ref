@@ -33,8 +33,8 @@ Remove-CMOperatingSystemInstaller -Name <String> [-Force] [-DisableWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Remove-CMOperatingSystemInstaller** cmdlet removes one or more operating system installers from a Microsoft System Center Configuration Manager site.
-An operating system installer is an installation package that contains all the files that System Center Configuration Manager needs to install a Windows operating system on a reference computer.
+The **Remove-CMOperatingSystemInstaller** cmdlet removes one or more operating system installers from a Configuration Manager site.
+An operating system installer is an installation package that contains all the files that Configuration Manager needs to install a Windows operating system on a reference computer.
 
 After you remove an operating system installer, you cannot distribute the installation source files that are associated with the operating system installer to distribution points.
 

@@ -78,7 +78,7 @@ Remove-CMDriverFromDriverPackage [-Force] -Driver <IResultObject> -DriverPackage
 ```
 
 ## DESCRIPTION
-The **Remove-CMDriverFromDriverPackage** cmdlet removes a driver from a driver package in Microsoft System Center Configuration Manager.
+The **Remove-CMDriverFromDriverPackage** cmdlet removes a driver from a driver package in Configuration Manager.
 When you remove a driver from a driver package, the device driver content is deleted from the source directory share for the driver package.
 
 > [!NOTE]

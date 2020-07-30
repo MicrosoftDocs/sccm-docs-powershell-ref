@@ -33,7 +33,7 @@ Enable-CMDriver -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWil
 ```
 
 ## DESCRIPTION
-The **Enable-CMDriver** cmdlet enables a device driver in Microsoft System Center Configuration Manager.
+The **Enable-CMDriver** cmdlet enables a device driver in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

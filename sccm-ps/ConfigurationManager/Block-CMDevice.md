@@ -36,7 +36,7 @@ Block-CMDevice -DeviceId <String> [-DisableWildcardHandling] [-ForceWildcardHand
 The **Block-CMDevice** cmdlet blocks one or more client devices.
 You must block a device from the client's assigned site.
 You cannot block the device from sites higher in the hierarchy.
-Blocked devices are ignored by the Microsoft System Center Configuration Manager hierarchy.
+Blocked devices are ignored by the Configuration Manager hierarchy.
 To unblock a device, use the [Unblock-CMDevice](Unblock-CMDevice.md) cmdlet.
 
 > [!NOTE]

@@ -1,5 +1,5 @@
 ﻿---
-description: Modifies a System Center Configuration Manager reporting service point.
+description: Modifies a Configuration Manager reporting service point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
@@ -10,7 +10,7 @@ title: Set-CMReportingServicePoint
 # Set-CMReportingServicePoint
 
 ## SYNOPSIS
-Modifies a System Center Configuration Manager reporting service point.
+Modifies a Configuration Manager reporting service point.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Set-CMReportingServicePoint [-SiteCode <String>] [-SiteSystemServerName] <String
 ```
 
 ## DESCRIPTION
-The **Set-CMReportingServicePoint** cmdlet modifies a Microsoft System Center Configuration Manager reporting service point.
+The **Set-CMReportingServicePoint** cmdlet modifies a Configuration Manager reporting service point.
 A reporting service point is a site system role that is installed on a server that is running Microsoft SQL Server Reporting Services.
 
 > [!NOTE]

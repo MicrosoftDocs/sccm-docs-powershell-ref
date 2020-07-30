@@ -27,14 +27,14 @@ Remove-CMProgram -PackageId <String> -ProgramName <String> [-Force] [-DisableWil
 ```
 
 ## DESCRIPTION
-The **Remove-CMProgram** cmdlet removes one or more programs from a Microsoft System Center Configuration Manager package.
-Programs are commands that are associated with a System Center Configuration Manager package.
+The **Remove-CMProgram** cmdlet removes one or more programs from a Configuration Manager package.
+Programs are commands that are associated with a Configuration Manager package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
-When you remove a program from a package, System Center Configuration Manager updates the package information in the System Center Configuration Manager site database.
-System Center Configuration Manager removes all of the advertisements for this program from the database and removes the advertisements from clients that have received them.
-If System Center Configuration Manager has already run the advertised program on the client computer, System Center Configuration Manager does not remove the software.
+When you remove a program from a package, Configuration Manager updates the package information in the Configuration Manager site database.
+Configuration Manager removes all of the advertisements for this program from the database and removes the advertisements from clients that have received them.
+If Configuration Manager has already run the advertised program on the client computer, Configuration Manager does not remove the software.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

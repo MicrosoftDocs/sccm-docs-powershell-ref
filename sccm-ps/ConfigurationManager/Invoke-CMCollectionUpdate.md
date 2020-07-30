@@ -33,7 +33,7 @@ Invoke-CMCollectionUpdate -CollectionId <String> [-DisableWildcardHandling] [-Fo
 ```
 
 ## DESCRIPTION
-The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a Microsoft System Center Configuration Manager collection.
+The **Invoke-CMCollectionUpdate** cmdlet updates the membership of a Configuration Manager collection.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

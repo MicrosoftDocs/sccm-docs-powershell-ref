@@ -33,7 +33,7 @@ Remove-CMAppVVirtualEnvironment -Id <Int32[]> [-Force] [-DisableWildcardHandling
 ```
 
 ## DESCRIPTION
-The **Remove-CMAppVVirtualEnvironment** cmdlet removes one or more Microsoft Application Virtualization (App-V) virtual environment objects from Microsoft System Center Configuration Manager.
+The **Remove-CMAppVVirtualEnvironment** cmdlet removes one or more Microsoft Application Virtualization (App-V) virtual environment objects from Configuration Manager.
 You can specify App-V virtual environments by name or ID, or you can provide an App-V virtual environment object.
 
 > [!NOTE]

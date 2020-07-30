@@ -20,7 +20,7 @@ Save-CMDatabaseReplicationDiagnostic [-SiteCode <String>] -ChildSiteCode <String
 ```
 
 ## DESCRIPTION
-The **Save-CMDatabaseReplicationDiagnostic** cmdlet saves diagnostic information for database replication issues for Microsoft System Center Configuration Manager in a specified file.
+The **Save-CMDatabaseReplicationDiagnostic** cmdlet saves diagnostic information for database replication issues for Configuration Manager in a specified file.
 This cmdlet runs diagnostics for a link between a parent and a child site databases.
 You can specify sites by either name or site code, but you cannot specify one site by name and the other by site code.
 

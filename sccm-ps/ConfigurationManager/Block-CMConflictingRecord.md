@@ -33,7 +33,7 @@ Block-CMConflictingRecord -Name <String> [-DisableWildcardHandling] [-ForceWildc
 ```
 
 ## DESCRIPTION
-The **Block-CMConflictingRecord** cmdlet blocks a record for a client that has a conflicting record in Microsoft System Center Configuration Manager.
+The **Block-CMConflictingRecord** cmdlet blocks a record for a client that has a conflicting record in Configuration Manager.
 
 When Configuration Manager recognizes a new client, it uses hardware information to check whether it previously created a record for that computer.
 For example, you might have reinstalled the operating system.

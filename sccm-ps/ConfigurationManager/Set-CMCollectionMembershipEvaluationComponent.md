@@ -21,7 +21,7 @@ Set-CMCollectionMembershipEvaluationComponent [-SiteSystemServerName <String>] [
 ```
 
 ## DESCRIPTION
-The **Set-CMCollectionMembershipEvaluationComponent** cmdlet changes how often Microsoft System Center Configuration Manager evaluates collections.
+The **Set-CMCollectionMembershipEvaluationComponent** cmdlet changes how often Configuration Manager evaluates collections.
 Configuration Manager queries the database at a regular interval to check for changes in collection membership.
 You can specify which site to change by site server name or site code.
 

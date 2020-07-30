@@ -20,7 +20,7 @@ Resolve-CMInventoriedSoftwareConflict -Id <String> -RevertLocalEdit <Boolean> [-
 ```
 
 ## DESCRIPTION
-The **Resolve-CMInventoriedSoftwareConflict** cmdlet resolves a conflict in Microsoft System Center Configuration Manager software inventory information.
+The **Resolve-CMInventoriedSoftwareConflict** cmdlet resolves a conflict in Configuration Manager software inventory information.
 
 When Configuration Manager receives updated information about software that is part of the software inventory, that information may conflict with your local settings.
 You can resolve a conflict by keeping your local inventory information or updating to the new information.

@@ -33,10 +33,10 @@ Set-CMSoftwareUpdatePoint [-HttpPort <Int32>] [-HttpsPort <Int32>] [-SiteSystemS
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdatePoint** cmdlet changes settings for a software update point in Microsoft System Center Configuration Manager.
+The **Set-CMSoftwareUpdatePoint** cmdlet changes settings for a software update point in Configuration Manager.
 
 A software update point is a site server role that hosts software updates.
-System Center Configuration Manager clients connect to a software update point to get available updates.
+Configuration Manager clients connect to a software update point to get available updates.
 The software update point interacts with Windows Server Update Services (WSUS) to configure update settings, request synchronization to the update source, and to synchronize software updates from the WSUS database.
 
 You can use this cmdlet to configure the settings a software update point uses when connecting with clients and with a WSUS server.

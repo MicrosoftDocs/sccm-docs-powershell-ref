@@ -20,8 +20,8 @@ New-CMAccount -Password <SecureString> -UserName <String> [-SiteCode <String>] [
 ```
 
 ## DESCRIPTION
-The **New-CMAccount** cmdlet creates a new user account in Microsoft System Center Configuration Manager.
-A **CMAccount** is a user account that System Center Configuration Manager uses to connect to various system and network resources.
+The **New-CMAccount** cmdlet creates a new user account in Configuration Manager.
+A **CMAccount** is a user account that Configuration Manager uses to connect to various system and network resources.
 For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427337(v=technet.10)) in the TechNet library.
 
 > [!NOTE]

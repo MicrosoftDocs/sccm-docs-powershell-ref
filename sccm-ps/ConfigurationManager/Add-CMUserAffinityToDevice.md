@@ -27,7 +27,7 @@ Add-CMUserAffinityToDevice -DeviceId <Int32[]> [-UserId <Int32[]>] [-UserName <S
 ```
 
 ## DESCRIPTION
-The **Add-CMUserAffinityToDevice** cmdlet associates the devices with a primary user in Microsoft System Center Configuration Manager.
+The **Add-CMUserAffinityToDevice** cmdlet associates the devices with a primary user in Configuration Manager.
 You can specify the devices to associate with the primary user by their names or IDs.
 You can specify the primary user by their name or ID.
 

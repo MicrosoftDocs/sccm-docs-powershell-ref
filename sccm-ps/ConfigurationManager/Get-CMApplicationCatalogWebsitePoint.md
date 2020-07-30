@@ -27,7 +27,7 @@ Get-CMApplicationCatalogWebsitePoint [-AllSite] -InputObject <IResultObject> [-D
 ```
 
 ## DESCRIPTION
-The **Get-CMApplicationCatalogWebsitePoint** cmdlet gets an Application Catalog website point in Microsoft System Center Configuration Manager.
+The **Get-CMApplicationCatalogWebsitePoint** cmdlet gets an Application Catalog website point in Configuration Manager.
 This site system role supports the Application Catalog website.
 
 You can specify a website point by either site code or by the name of the server that hosts the role.

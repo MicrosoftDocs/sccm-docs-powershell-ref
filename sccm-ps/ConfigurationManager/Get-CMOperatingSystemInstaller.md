@@ -28,7 +28,7 @@ Get-CMOperatingSystemInstaller -Id <String> [-DisableWildcardHandling] [-ForceWi
 
 ## DESCRIPTION
 The **Get-CMOperatingSystemInstaller** cmdlet gets one or more operating system installers.
-An operating system installer is an installation package that contains all the files that Microsoft System Center Configuration Manager needs to install a Windows operating system on a reference computer.
+An operating system installer is an installation package that contains all the files that Configuration Manager needs to install a Windows operating system on a reference computer.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

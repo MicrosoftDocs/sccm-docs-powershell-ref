@@ -39,7 +39,7 @@ Remove-CMCategory [-Force] -CategoryType <CategoryType> [-DisableWildcardHandlin
 ```
 
 ## DESCRIPTION
-The **Remove-CMCategory** cmdlet removes a configuration category in Microsoft System Center Configuration Manager.
+The **Remove-CMCategory** cmdlet removes a configuration category in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

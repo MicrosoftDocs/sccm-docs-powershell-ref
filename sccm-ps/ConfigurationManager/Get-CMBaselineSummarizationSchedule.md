@@ -19,7 +19,7 @@ Get-CMBaselineSummarizationSchedule [-DisableWildcardHandling] [-ForceWildcardHa
 ```
 
 ## DESCRIPTION
-The **Get-CMBaselineSummarizationSchedule** cmdlet gets the schedule by which the configuration baseline data in the Microsoft System Center Configuration Manager is updated with the latest information from the site database.
+The **Get-CMBaselineSummarizationSchedule** cmdlet gets the schedule by which the configuration baseline data in the Configuration Manager is updated with the latest information from the site database.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

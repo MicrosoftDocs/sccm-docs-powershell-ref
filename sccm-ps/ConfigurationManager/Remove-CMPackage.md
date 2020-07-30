@@ -33,13 +33,13 @@ Remove-CMPackage -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildc
 ```
 
 ## DESCRIPTION
-The **Remove-CMPackage** cmdlet removes a package in Microsoft System Center Configuration Manager.
+The **Remove-CMPackage** cmdlet removes a package in Configuration Manager.
 You can delete a package from the site where it was created.
-System Center Configuration Manager cannot delete a package from a distribution point if a user has locked a network file.
+Configuration Manager cannot delete a package from a distribution point if a user has locked a network file.
 
-When you remove a package, System Center Configuration Manager removes it from the database.
-If the package was sent to child sites, System Center Configuration Manager removes the package information at those child sites.
-If a compressed version of source files for the package exists, System Center Configuration Manager deletes the compressed file from the site server.
+When you remove a package, Configuration Manager removes it from the database.
+If the package was sent to child sites, Configuration Manager removes the package information at those child sites.
+If a compressed version of source files for the package exists, Configuration Manager deletes the compressed file from the site server.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

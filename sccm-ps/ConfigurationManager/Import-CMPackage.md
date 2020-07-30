@@ -20,7 +20,7 @@ Import-CMPackage -ImportFilePath <String> [-ImportActionType <ImportActionType>]
 ```
 
 ## DESCRIPTION
-The **Import-CMPackage** cmdlet imports a Microsoft System Center Configuration Manager package.
+The **Import-CMPackage** cmdlet imports a Configuration Manager package.
 You can use this cmdlet to import a package of collections, queries, or reports so that you can later deploy these items to a different location.
 
 > [!NOTE]

@@ -21,7 +21,7 @@ Get-CMComponentStatusSetting [-SiteSystemServerName <String>] [-ComponentName <S
 
 ## DESCRIPTION
 The **Get-CMComponentStatusSetting** cmdlet gets component status setting objects.
-These objects contain thresholds for Microsoft System Center Configuration Manager component status messages.
+These objects contain thresholds for Configuration Manager component status messages.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

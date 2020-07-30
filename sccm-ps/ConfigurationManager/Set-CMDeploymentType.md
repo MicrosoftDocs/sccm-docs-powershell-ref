@@ -255,7 +255,7 @@ Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeId <Int32> [-Prior
 
 ## DESCRIPTION
 
-The **Set-CMDeploymentType** cmdlet changes a deployment type for a deployment application in Microsoft System Center Configuration Manager.
+The **Set-CMDeploymentType** cmdlet changes a deployment type for a deployment application in Configuration Manager.
 A deployment type is a part of the application that defines how that application deploys other applications to devices.
 You can also use this cmdlet to change the priority for dependencies of the deployment type.
 Configuration Manager evaluates and installs dependencies of a deployment type in order of priorities before it installs the deployment type.

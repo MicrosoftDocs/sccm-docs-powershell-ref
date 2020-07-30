@@ -35,9 +35,9 @@ Disable-CMAlert -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWil
 
 ## DESCRIPTION
 
-The **Disable-CMAlert** cmdlet disables one or more alerts in Microsoft System Center Configuration Manager.
+The **Disable-CMAlert** cmdlet disables one or more alerts in Configuration Manager.
 
-System Center Configuration Manager does not evaluate the condition for a disabled alert and does not update a disabled alert, even if the state of the alert changes.
+Configuration Manager does not evaluate the condition for a disabled alert and does not update a disabled alert, even if the state of the alert changes.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

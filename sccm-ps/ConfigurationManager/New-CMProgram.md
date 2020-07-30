@@ -51,8 +51,8 @@ New-CMProgram [-WorkingDirectory <String>] -CommandLine <String> [-DiskSpaceRequ
 ```
 
 ## DESCRIPTION
-The **New-CMProgram** cmdlet creates a program in Microsoft System Center Configuration Manager.
-Programs are commands that are associated with a System Center Configuration Manager package.
+The **New-CMProgram** cmdlet creates a program in Configuration Manager.
+Programs are commands that are associated with a Configuration Manager package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 

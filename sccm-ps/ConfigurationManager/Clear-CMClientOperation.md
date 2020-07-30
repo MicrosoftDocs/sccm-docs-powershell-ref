@@ -27,7 +27,7 @@ Clear-CMClientOperation -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 ```
 
 ## DESCRIPTION
-The **Clear-CMClientOperation** cmdlet clears a Microsoft System Center Configuration Manager client operation object.
+The **Clear-CMClientOperation** cmdlet clears a Configuration Manager client operation object.
 Specify the operation to clear by using its ID.
 
 You can use the Remove-CMClientOperation cmdlet to remove a client operation object.

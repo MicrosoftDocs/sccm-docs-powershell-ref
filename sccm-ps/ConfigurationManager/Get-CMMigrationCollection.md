@@ -28,7 +28,7 @@ Get-CMMigrationCollection [-Name <String>] [-DisableWildcardHandling] [-ForceWil
 
 ## DESCRIPTION
 The **Get-CMMigrationCollection** cmdlet gets the collections selected from a source hierarchy for migration.
-A collection is a set of resources in the Microsoft System Center Configuration Manager hierarchy.
+A collection is a set of resources in the Configuration Manager hierarchy.
 A migration collection is the set of resources chosen from a hierarchy for migration, including related objects.
 
 > [!NOTE]

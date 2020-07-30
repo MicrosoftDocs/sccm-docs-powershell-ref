@@ -26,7 +26,7 @@ Get-CMSiteInstallStatus -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 ```
 
 ## DESCRIPTION
-The **Get-CMSiteInstallStatus** cmdlet provides information about the installation status for Microsoft System Center Configuration Manager.
+The **Get-CMSiteInstallStatus** cmdlet provides information about the installation status for Configuration Manager.
 You can specify an installation by ID or by site code.
 
 > [!NOTE]

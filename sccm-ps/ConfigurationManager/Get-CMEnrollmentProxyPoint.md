@@ -27,7 +27,7 @@ Get-CMEnrollmentProxyPoint [-AllSite] -InputObject <IResultObject> [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Get-CMEnrollmentProxyPoint** cmdlet gets a Microsoft System Center Configuration Manager enrollment proxy point.
+The **Get-CMEnrollmentProxyPoint** cmdlet gets a Configuration Manager enrollment proxy point.
 An enrollment proxy point is a site system role that manages enrollment requests from mobile devices.
 
 > [!NOTE]

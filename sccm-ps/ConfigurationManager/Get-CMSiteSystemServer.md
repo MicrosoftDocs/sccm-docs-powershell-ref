@@ -27,7 +27,7 @@ Get-CMSiteSystemServer [-AllSite] -InputObject <IResultObject> [-DisableWildcard
 ```
 
 ## DESCRIPTION
-The **Get-CMSiteSystemServer** cmdlet gets a site system server in Microsoft System Center Configuration Manager.
+The **Get-CMSiteSystemServer** cmdlet gets a site system server in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

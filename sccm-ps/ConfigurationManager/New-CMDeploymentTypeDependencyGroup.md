@@ -22,7 +22,7 @@ New-CMDeploymentTypeDependencyGroup -GroupName <String> -InputObject <IResultObj
 
 ## DESCRIPTION
 
-The **New-CMDeploymentTypeDependencyGroup** cmdlet creates a deployment type dependency group in the Microsoft System Center Configuration Manager.
+The **New-CMDeploymentTypeDependencyGroup** cmdlet creates a deployment type dependency group in the Configuration Manager.
 Must be added to an existing deployment type by using [Add-CMDeploymentTypeDependency](./Add-CMDeploymentTypeDependency.md).
 
 > [!NOTE]

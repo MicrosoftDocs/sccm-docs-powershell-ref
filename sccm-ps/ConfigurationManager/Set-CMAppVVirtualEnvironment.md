@@ -36,7 +36,7 @@ Set-CMAppVVirtualEnvironment [-Name] <String> [-NewName <String>] [-Description 
 ```
 
 ## DESCRIPTION
-The **Set-CMAppVVirtualEnvironment** cmdlet changes settings for one or more Microsoft Application Virtualization (App-V) virtual environment objects from Microsoft System Center Configuration Manager.
+The **Set-CMAppVVirtualEnvironment** cmdlet changes settings for one or more Microsoft Application Virtualization (App-V) virtual environment objects from Configuration Manager.
 You can specify App-V environments by name or ID.
 
 > [!NOTE]

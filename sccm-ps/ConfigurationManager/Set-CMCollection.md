@@ -39,7 +39,7 @@ Set-CMCollection -CollectionId <String> [-NewName <String>] [-Comment <String>]
 ```
 
 ## DESCRIPTION
-**The Set-CMCollection** cmdlet changes settings for a collection in Microsoft System Center Configuration Manager.
+**The Set-CMCollection** cmdlet changes settings for a collection in Configuration Manager.
 
 Configuration Manager collections provide a way to manage users, computers, and other resources in your organization. They not only give you a means to organize your resources, but they also give you a means to distribute Configuration Manager packages to clients and users.
 

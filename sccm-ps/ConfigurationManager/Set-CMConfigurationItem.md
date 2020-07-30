@@ -39,7 +39,7 @@ Set-CMConfigurationItem [-InputObject] <IResultObject> [-NewName <String>] [-Des
 
 ## DESCRIPTION
 
-The **Set-CMConfigurationItem** cmdlet changes settings for a Microsoft System Center Configuration Manager configuration item.
+The **Set-CMConfigurationItem** cmdlet changes settings for a Configuration Manager configuration item.
 
 Configuration items contain one or more settings, along with compliance rules.
 Items usually define a unit of configuration you want to monitor.

@@ -40,7 +40,7 @@ Get-CMUserCollection -DistributionPointGroup <IResultObject> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-The **Get-CMUserCollection** cmdlet retrieves collections that contain users in Microsoft System Center Configuration Manager.
+The **Get-CMUserCollection** cmdlet retrieves collections that contain users in Configuration Manager.
 For more information about collections, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
 
 > [!NOTE]

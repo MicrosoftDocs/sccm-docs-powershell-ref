@@ -34,7 +34,7 @@ Copy-CMSecurityRole -Name <String> [-Description <String>] -SourceRoleName <Stri
 
 ## DESCRIPTION
 The **Copy-CMSecurityRole** cmdlet creates a new security role by using an existing security role as a template.
-Microsoft System Center Configuration Manager provides several built-in security roles.
+Configuration Manager provides several built-in security roles.
 If you require additional security roles, you can create a custom security role by creating a copy of an existing security role, and then modifying the copy.
 
 > [!NOTE]

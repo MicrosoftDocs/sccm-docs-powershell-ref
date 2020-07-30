@@ -33,7 +33,7 @@ Get-CMCollectionMember -InputObject <IResultObject> [-Name <String>] [-SmsId <St
 ```
 
 ## DESCRIPTION
-The **Get-CMCollectionMember** cmdlet gets a member of a Microsoft System Center Configuration Manager collection. Configuration Manager collections provide a way to manage users, computers, and other resources in your organization.
+The **Get-CMCollectionMember** cmdlet gets a member of a Configuration Manager collection. Configuration Manager collections provide a way to manage users, computers, and other resources in your organization.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

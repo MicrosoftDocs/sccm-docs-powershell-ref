@@ -22,10 +22,10 @@ Get-CMHardwareRequirement [-Product <String>] [-DisableWildcardHandling] [-Force
 ## DESCRIPTION
 The **Get-CMHardwareRequirement** cmdlet gets hardware requirements objects for software products.
 
-Microsoft System Center Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
+Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
 You can add, modify, or delete your own hardware requirements, but you cannot change built-in hardware requirement objects.
 
-You can use this cmdlet to get all the hardware requirement objects for a System Center Configuration Manager server or one or more hardware requirement objects for a specified product names.
+You can use this cmdlet to get all the hardware requirement objects for a Configuration Manager server or one or more hardware requirement objects for a specified product names.
 You can use hardware requirements with other cmdlets, such as the **Remove-CMHardwareRequirement** cmdlet or the **Set-CMHardwareRequirement** cmdlet.
 
 > [!NOTE]

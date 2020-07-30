@@ -27,8 +27,8 @@ Get-CMStatusMessageQuery -Id <String> [-ShowMessage] [-PassThru] [-DisableWildca
 ```
 
 ## DESCRIPTION
-The **Get-CMStatusMessageQuery** cmdlet gets Microsoft System Center Configuration Manager status message queries.
-Status message queries return status messages from a System Center Configuration Manager site database.
+The **Get-CMStatusMessageQuery** cmdlet gets Configuration Manager status message queries.
+Status message queries return status messages from a Configuration Manager site database.
 You can use this cmdlet with the *ShowMessages* parameter to display messages found by this query.
 
 You can use this cmdlet to get queries to use with the [Set-CMStatusMessageQuery](Set-CMStatusMessageQuery.md) cmdlet or the [Remove-CMStatusMessageQuery](Remove-CMStatusMessageQuery.md) cmdlet.

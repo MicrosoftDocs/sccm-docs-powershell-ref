@@ -33,7 +33,7 @@ Export-CMSecurityRole -Path <String> -RoleId <String> [-DisableWildcardHandling]
 ```
 
 ## DESCRIPTION
-The **Export-CMSecurityRole** cmdlet exports a security role configuration from Microsoft System Center Configuration Manager to an XML file.
+The **Export-CMSecurityRole** cmdlet exports a security role configuration from Configuration Manager to an XML file.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

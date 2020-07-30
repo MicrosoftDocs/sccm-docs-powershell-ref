@@ -35,7 +35,7 @@ Remove-CMDeploymentType [-DeploymentTypeName] <String> [-Force] -ApplicationName
 
 ## DESCRIPTION
 
-The **Remove-CMDeploymentType** cmdlet removes a deployment type in Microsoft System Center Configuration Manager.
+The **Remove-CMDeploymentType** cmdlet removes a deployment type in Configuration Manager.
 You cannot remove a deployment type if it is referenced by a deployment type in another application.
 
 To remove a deployment type, you must remove any dependencies to the deployment type in other deployment types.

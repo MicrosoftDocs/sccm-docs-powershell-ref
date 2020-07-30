@@ -20,8 +20,8 @@ New-CMCategory -Name <String> -CategoryType <CategoryType> [-DisableWildcardHand
 ```
 
 ## DESCRIPTION
-The **New-CMCategory** cmdlet creates a configuration category in Microsoft System Center Configuration Manager.
-Configuration categories offer an optional method of sorting and filtering configuration baselines and configuration items in System Center Configuration Manager and Configuration Manager reports.
+The **New-CMCategory** cmdlet creates a configuration category in Configuration Manager.
+Configuration categories offer an optional method of sorting and filtering configuration baselines and configuration items in Configuration Manager and Configuration Manager reports.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -33,7 +33,7 @@ Enable-CMAlert -Name <String> [-PassThru] [-DisableWildcardHandling] [-ForceWild
 ```
 
 ## DESCRIPTION
-The **Enable-CMAlert** cmdlet enables one or more Microsoft System Center Configuration Manager alerts.
+The **Enable-CMAlert** cmdlet enables one or more Configuration Manager alerts.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -757,7 +757,7 @@ Gets a component for a Configuration Manager management point.
 Gets collections selected for migration.
 
 ### [Get-CMMigrationEntity](Get-CMMigrationEntity.md)
-Gets a migration entity in System Center Configuration Manager.
+Gets a migration entity in Configuration Manager.
 
 ### [Get-CMMigrationEntityDependency](Get-CMMigrationEntityDependency.md)
 Gets a dependency for a migration entity in Configuration Manager.
@@ -1600,7 +1600,7 @@ Creates an installation source file for Configuration Manager.
 Creates a maintenance window for a collection.
 
 ### [New-CMMigrationJob](New-CMMigrationJob.md)
-Creates a migration job in System Center Configuration Manager.
+Creates a migration job in Configuration Manager.
 
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
@@ -1744,7 +1744,7 @@ Creates a task sequence deployment in Configuration Manager.
 Creates a Configuration Manager task sequence group.
 
 ### [New-CMTaskSequenceMedia](New-CMTaskSequenceMedia.md)
-Creates task sequence media in System Center Configuration Manager.
+Creates task sequence media in Configuration Manager.
 
 ### [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
 {{ Fill in the Synopsis }}
@@ -2788,7 +2788,7 @@ Sets a Google Play deployment type.
 Changes Configuration Manager hardware requirement settings for a product.
 
 ### [Set-CMHierarchySetting](Set-CMHierarchySetting.md)
-Sets hierarchy settings in System Center Configuration Manager.
+Sets hierarchy settings in Configuration Manager.
 
 ### [Set-CMIosAppStoreDeploymentType](Set-CMIosAppStoreDeploymentType.md)
 Sets an iOS App Store deployment type.
@@ -2854,7 +2854,7 @@ Changes the setting for the query result maximum.
 Modifies a remote connection profile.
 
 ### [Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
-Modifies a System Center Configuration Manager reporting service point.
+Modifies a Configuration Manager reporting service point.
 
 ### [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
 Sets a script installer deployment type.

@@ -33,7 +33,7 @@ Update-CMApplicationStatistic [-Id] <Int32> [-PassThru] [-DisableWildcardHandlin
 ```
 
 ## DESCRIPTION
-The **Update-CMApplicationStatistic** cmdlet updates the statistics for a Microsoft System Center Configuration Manager application.
+The **Update-CMApplicationStatistic** cmdlet updates the statistics for a Configuration Manager application.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

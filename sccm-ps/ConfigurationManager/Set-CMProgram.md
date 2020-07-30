@@ -109,8 +109,8 @@ Set-CMProgram -InputObject <IResultObject> [-DeviceProgram] [-Comment <String>] 
 ```
 
 ## DESCRIPTION
-The **Set-CMProgram** cmdlet modifies a program in Microsoft System Center Configuration Manager.
-Programs are commands that are associated with a System Center Configuration Manager package.
+The **Set-CMProgram** cmdlet modifies a program in Configuration Manager.
+Programs are commands that are associated with a Configuration Manager package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 

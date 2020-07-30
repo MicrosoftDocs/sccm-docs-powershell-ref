@@ -23,7 +23,7 @@ Clear-CMComponentStatusMessageCount -ComponentName <String> [-ComputerName <Stri
 ## DESCRIPTION
 The **Clear-CMComponentStatusMessageCount** cmdlet changes the component status message count to zero (0).
 
-Microsoft System Center Configuration Manager indicates whether operations succeed or fail and include other information in component status messages.
+Configuration Manager indicates whether operations succeed or fail and include other information in component status messages.
 Threads or processes send component status messages to Configuration Manager sites, identified by site codes.
 
 You can define which message count to set to zero by the component that created the messages, severity of the messages, and the site code of the Configuration Manager server that receives the messages.

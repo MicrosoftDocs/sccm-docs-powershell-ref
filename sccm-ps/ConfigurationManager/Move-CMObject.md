@@ -27,7 +27,7 @@ Move-CMObject -FolderPath <String> -ObjectId <String[]> [-DisableWildcardHandlin
 ```
 
 ## DESCRIPTION
-The **Move-CMObject** cmdlet moves a Microsoft System Center Configuration Manager object into a different folder.
+The **Move-CMObject** cmdlet moves a Configuration Manager object into a different folder.
 Specify the object to move and the destination folder.
 Because an object exists in only one folder, the cmdlet does not specify the current folder.
 

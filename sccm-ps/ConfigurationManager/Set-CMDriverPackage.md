@@ -51,7 +51,7 @@ Set-CMDriverPackage -Name <String> [-NewName <String>] [-Description <String>] [
 ```
 
 ## DESCRIPTION
-The **Set-CMDriverPackage** cmdlet modifies a driver package in Microsoft System Center Configuration Manager.
+The **Set-CMDriverPackage** cmdlet modifies a driver package in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

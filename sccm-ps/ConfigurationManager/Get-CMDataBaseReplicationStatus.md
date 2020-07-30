@@ -20,7 +20,7 @@ Get-CMDatabaseReplicationStatus [-ChildSiteCode <String>] [-ParentSiteCode <Stri
 ```
 
 ## DESCRIPTION
-The **Get-CMDatabaseReplicationStatus** cmdlet gets the status of the database replication link for a Microsoft System Center Configuration Manager parent/child site pair.
+The **Get-CMDatabaseReplicationStatus** cmdlet gets the status of the database replication link for a Configuration Manager parent/child site pair.
 The cmdlet identifies the sites by site code.
 
 You can specify just the site code or just the name for a parent or child and get all the database replication links for the specified site.

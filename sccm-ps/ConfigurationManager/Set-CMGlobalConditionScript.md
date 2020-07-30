@@ -31,7 +31,7 @@ Set-CMGlobalConditionScript [-ScriptText <String>] [-ScriptLanguage <ScriptingLa
 
 ## DESCRIPTION
 
-The **Set-CMGlobalConditionScript** cmdlet modifies settings for a Script type global condition in Microsoft System Center Configuration Manager.
+The **Set-CMGlobalConditionScript** cmdlet modifies settings for a Script type global condition in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

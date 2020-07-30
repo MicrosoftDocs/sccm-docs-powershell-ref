@@ -42,10 +42,10 @@ Set-CMBaselineDeployment -BaselineId <String> [-EnableEnforcement <Boolean>] [-O
 ```
 
 ## DESCRIPTION
-The **Set-CMBaselineDeployment** cmdlet changes settings for a Microsoft System Center Configuration Manager baseline configuration deployment.
+The **Set-CMBaselineDeployment** cmdlet changes settings for a Configuration Manager baseline configuration deployment.
 A baseline defines the configuration of a product or system established at a specific time.
 Baselines contain a defined set of required configurations and associated rules.
-System Center Configuration Manager assigns baselines to computer in collections, together with a compliance evaluation schedule.
+Configuration Manager assigns baselines to computer in collections, together with a compliance evaluation schedule.
 
 Use the baseline and the name of a collection to specify a deployment to modify.
 You can specify a baseline by its name or ID, or use the **Get-CMBaseline** cmdlet to get a baseline object.

@@ -25,7 +25,7 @@ Get-CMSecurityScope -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Get-CMSecurityScope** cmdlet gets one or more security scopes in Microsoft System Center Configuration Manager.
+The **Get-CMSecurityScope** cmdlet gets one or more security scopes in Configuration Manager.
 You can get a security scope by its name or ID.
 If you don't provide any parameters, all security scopes are returned.
 

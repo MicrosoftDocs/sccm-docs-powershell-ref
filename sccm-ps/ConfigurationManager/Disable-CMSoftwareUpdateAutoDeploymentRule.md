@@ -33,12 +33,12 @@ Disable-CMSoftwareUpdateAutoDeploymentRule -InputObject <IResultObject> [-Disabl
 ```
 
 ## DESCRIPTION
-The **Disable-CMSoftwareUpdateAutoDeploymentRule** cmdlet disables specified Microsoft System Center Configuration Manager deployment rules for automatic software updates.
+The **Disable-CMSoftwareUpdateAutoDeploymentRule** cmdlet disables specified Configuration Manager deployment rules for automatic software updates.
 While a rule is disabled, it does not run in accordance with its schedule and you cannot run it manually.
 
-System Center Configuration Manager uses rules to manage automatic deployment of software updates.
-When a rule runs, System Center Configuration Manager adds updates that qualify for the rule to a software update group.
-The System Center Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
+Configuration Manager uses rules to manage automatic deployment of software updates.
+When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group.
+The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
 You can specify rules to disable by ID or by name, or specify a rule object by using the [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 You can use the [Enable-CMSoftwareUpdateAutoDeploymentRule](Enable-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet to enable a rule.

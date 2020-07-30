@@ -36,7 +36,7 @@ Set-CMQuery -Name <String> [-NewName <String>] [-Comment <String>] [-Expression 
 ```
 
 ## DESCRIPTION
-The **Set-CMQuery** cmdlet configures a query stored in Microsoft System Center Configuration Manager.
+The **Set-CMQuery** cmdlet configures a query stored in Configuration Manager.
 Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
 
 > [!NOTE]

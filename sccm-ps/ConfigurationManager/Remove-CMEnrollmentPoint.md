@@ -27,7 +27,7 @@ Remove-CMEnrollmentPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <
 ```
 
 ## DESCRIPTION
-The **Remove-CMEnrollmentPoint** cmdlet removes an enrollment point in Microsoft System Center Configuration Manager.
+The **Remove-CMEnrollmentPoint** cmdlet removes an enrollment point in Configuration Manager.
 An enrollment point is a site system role that uses public key infrastructure (PKI) certificates to complete mobile device enrollment and to provision Intel AMT-based computers.
 After you remove an enrollment point, client computers and devices must use a different enrollment point.
 

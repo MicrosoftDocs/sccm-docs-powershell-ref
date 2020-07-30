@@ -27,9 +27,9 @@ Remove-CMHardwareRequirement -InputObject <IResultObject> [-Force] [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Remove-CMHardwareRequirement** cmdlet removes hardware requirement objects from Microsoft System Center Configuration Manager.
+The **Remove-CMHardwareRequirement** cmdlet removes hardware requirement objects from Configuration Manager.
 
-System Center Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
+Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
 You can add, modify, or delete your own hardware requirements, but you cannot change built-in hardware requirement objects.
 
 You can use this cmdlet to remove hardware requirement objects.

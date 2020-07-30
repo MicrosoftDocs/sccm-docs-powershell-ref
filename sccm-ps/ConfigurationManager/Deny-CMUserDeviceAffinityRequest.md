@@ -33,7 +33,7 @@ Deny-CMUserDeviceAffinityRequest -CollectionId <String> [-UserName <String>] [-U
 ## DESCRIPTION
 The **Deny-CMUserDeviceAffinityRequest** cmdlet denies a request for user device affinity.
 
-In Microsoft System Center Configuration Manager, user device affinity defines a relationship between a user and a device.
+In Configuration Manager, user device affinity defines a relationship between a user and a device.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

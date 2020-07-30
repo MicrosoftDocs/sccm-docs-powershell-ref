@@ -50,7 +50,7 @@ Install-CMClient -DeviceId <String> [-IncludeDomainController <Boolean>] [-Alway
 ```
 
 ## DESCRIPTION
-The **Install-CMClient** cmdlet installs a client for Microsoft System Center Configuration Manager.
+The **Install-CMClient** cmdlet installs a client for Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

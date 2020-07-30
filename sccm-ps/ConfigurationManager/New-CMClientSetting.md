@@ -20,7 +20,7 @@ New-CMClientSetting -Name <String> [-Description <String>] -Type <Types> [-Disab
 ```
 
 ## DESCRIPTION
-The **New-CMClientSetting** cmdlet creates a collection of customized settings for Microsoft System Center Configuration Manager client computers.
+The **New-CMClientSetting** cmdlet creates a collection of customized settings for Configuration Manager client computers.
 After you create the customized settings and deploy them to client computer collections, the customized settings override the default client settings for that collection.
 
 For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.

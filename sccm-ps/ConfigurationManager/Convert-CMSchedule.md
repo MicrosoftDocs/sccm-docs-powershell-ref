@@ -27,9 +27,9 @@ Convert-CMSchedule [-ScheduleString] <String[]> [-DisableWildcardHandling] [-For
 ```
 
 ## DESCRIPTION
-The **Convert-CMSchedule** cmdlet decodes and encodes schedule tokens into and from Microsoft System Center Configuration Manager interval strings.
+The **Convert-CMSchedule** cmdlet decodes and encodes schedule tokens into and from Configuration Manager interval strings.
 
-In Microsoft System Center Configuration Manager, scheduling information is configured by using schedule tokens. The interval strings can be used to set schedule properties when defining or modifying objects.
+In Configuration Manager, scheduling information is configured by using schedule tokens. The interval strings can be used to set schedule properties when defining or modifying objects.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -22,9 +22,9 @@ Convert-CMDeploymentType -InputObject <PSObject> [-DisableWildcardHandling] [-Fo
 
 ## DESCRIPTION
 
-The **Convert-CMDeploymentType** cmdlet converts the deployment type of a Microsoft System Center Configuration Manager application.
+The **Convert-CMDeploymentType** cmdlet converts the deployment type of a Configuration Manager application.
 
-A deployment type is contained within an application and contains the information that Microsoft System Center Configuration Manager requires to install software.
+A deployment type is contained within an application and contains the information that Configuration Manager requires to install software.
 A deployment type also contains rules that specify if and how the software is deployed.
 
 This cmdlet allows for getting a native DeploymentType object from an SMS_DeploymentType WMI object instance. Can be combined with [Get-CMDeploymentType](Get-CMDeploymentType.md).

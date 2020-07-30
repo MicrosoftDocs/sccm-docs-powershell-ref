@@ -20,9 +20,9 @@ New-CMStatusMessageQuery -Name <String> [-Comment <String>] [-Expression <String
 ```
 
 ## DESCRIPTION
-The **New-CMStatusMessageQuery** cmdlet creates a status message query in Microsoft System Center Configuration Manager.
-Status message queries in System Center Configuration Manager return status messages from the site database.
-All major System Center Configuration Manager components generate status messages.
+The **New-CMStatusMessageQuery** cmdlet creates a status message query in Configuration Manager.
+Status message queries in Configuration Manager return status messages from the site database.
+All major Configuration Manager components generate status messages.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

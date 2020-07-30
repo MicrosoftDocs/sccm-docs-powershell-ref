@@ -34,7 +34,7 @@ Invoke-CMDeviceRetire -Id <Int32> [-Force] [-Cancel] [-DisableWildcardHandling] 
 
 ## DESCRIPTION
 The **Invoke-CMDeviceRetire** cmdlet retires one or more devices.
-A retired device is no longer active in Microsoft System Center Configuration Manager.
+A retired device is no longer active in Configuration Manager.
 It does not receive new policies or policy updates.
 Retired devices remain listed until a maintenance task removes them.
 

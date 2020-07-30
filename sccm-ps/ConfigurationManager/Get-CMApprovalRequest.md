@@ -47,7 +47,7 @@ Get-CMApprovalRequest [-User <String>] -InputObject <IResultObject> [-CurrentSta
 
 ## DESCRIPTION
 
-The **Get-CMApprovalRequest** cmdlet gets a request from a user to install a Microsoft System Center Configuration Manager application.
+The **Get-CMApprovalRequest** cmdlet gets a request from a user to install a Configuration Manager application.
 You can specify an approval request by application name, application ID, or by user name.
 
 > [!NOTE]
@@ -63,7 +63,7 @@ You can specify an approval request by application name, application ID, or by u
 PS XYZ:\> Get-CMApprovalRequest
 ```
 
-This command gets all pending Microsoft System Center Configuration Manager approval requests.
+This command gets all pending Configuration Manager approval requests.
 
 ### Example 2: Get an approval request by using an application ID
 

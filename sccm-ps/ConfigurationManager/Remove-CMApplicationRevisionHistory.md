@@ -39,7 +39,7 @@ Remove-CMApplicationRevisionHistory [-Force] -Id <UInt32> -Revision <UInt32> [-D
 ```
 
 ## DESCRIPTION
-The **Remove-CMApplicationRevisionHistory** cmdlet removes a revision history from a Microsoft System Center Configuration Manager application.
+The **Remove-CMApplicationRevisionHistory** cmdlet removes a revision history from a Configuration Manager application.
 The revision history contains a list of revisions to an application or a development type that the application contains.
 
 > [!NOTE]

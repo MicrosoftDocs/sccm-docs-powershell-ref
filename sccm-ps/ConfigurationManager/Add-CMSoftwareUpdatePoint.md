@@ -34,7 +34,7 @@ Add-CMSoftwareUpdatePoint [-WsusIisPort <Int32>] [-WsusIisSslPort <Int32>] [-Sit
 
 ## DESCRIPTION
 The **Add-CMSoftwareUpdatePoint** cmdlet adds a software update point that hosts the Windows Software Update Services (WSUS) processes.
-A software update point in Microsoft System Center Configuration Manager manages the transfer of information from WSUS.
+A software update point in Configuration Manager manages the transfer of information from WSUS.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

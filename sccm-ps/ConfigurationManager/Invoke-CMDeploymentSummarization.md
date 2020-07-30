@@ -39,7 +39,7 @@ Invoke-CMDeploymentSummarization [-SoftwareName <String>] -InputObject <IResultO
 ```
 
 ## DESCRIPTION
-The **Invoke-CMDeploymentSummarization** cmdlet runs a Microsoft System Center Configuration Manager deployment summarization as soon as possible.
+The **Invoke-CMDeploymentSummarization** cmdlet runs a Configuration Manager deployment summarization as soon as possible.
 Summarization compiles information about current deployment of software from the Configuration Manager site database.
 By default, Configuration Manager runs this summarization every four hours.
 If you use this cmdlet to create the summarization immediately, it does not interfere with the regular schedule of creating the current summarization.

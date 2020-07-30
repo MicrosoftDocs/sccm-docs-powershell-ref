@@ -35,7 +35,7 @@ Remove-CMTaskSequence -Name <String> [-Force] [-DisableWildcardHandling] [-Force
 
 ## DESCRIPTION
 
-The **Remove-CMTaskSequence** cmdlet removes a task sequence from Microsoft System Center Configuration Manager.
+The **Remove-CMTaskSequence** cmdlet removes a task sequence from Configuration Manager.
 
 NOTE:  All related deployments are automatically removed.
 

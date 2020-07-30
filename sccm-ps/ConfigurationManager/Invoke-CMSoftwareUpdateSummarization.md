@@ -20,8 +20,8 @@ Invoke-CMSoftwareUpdateSummarization [-DisableWildcardHandling] [-ForceWildcardH
 ```
 
 ## DESCRIPTION
-The **Invoke-CMSoftwareUpdateSummarization** cmdlet runs the software update summarization in Microsoft System Center Configuration Manager immediately.
-System Center Configuration Manager summarizes software update status on a regular schedule.
+The **Invoke-CMSoftwareUpdateSummarization** cmdlet runs the software update summarization in Configuration Manager immediately.
+Configuration Manager summarizes software update status on a regular schedule.
 This cmdlet does not reset the time for the next automatic summarization.
 
 You can use the Get-CMSoftwareUpdateSummarizationSchedule cmdlet to view the current schedule and the [Set-CMSoftwareUpdateSummarizationSchedule](Set-CMSoftwareUpdateSummarizationSchedule.md) cmdlet to change the schedule.
