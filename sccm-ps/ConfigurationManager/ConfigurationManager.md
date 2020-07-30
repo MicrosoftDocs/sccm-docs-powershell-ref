@@ -1534,19 +1534,16 @@ Create application-related settings for a mobile device that uses a Exchange Ser
 Create a set of email management settings for a mobile device that uses an Exchange Server connector.
 
 ### [New-CMExchangeConnectorGeneralSetting](New-CMExchangeConnectorGeneralSetting.md)
-Creates an exchange connector general setting.
+Create an exchange connector general setting.
 
 ### [New-CMExchangeConnectorPasswordSetting](New-CMExchangeConnectorPasswordSetting.md)
-Adds new password settings to a Exchange Server connector in Configuration Manager.
+Add new password settings to a Exchange Server connector in Configuration Manager.
 
 ### [New-CMExchangeConnectorSecuritySetting](New-CMExchangeConnectorSecuritySetting.md)
-Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
+Configure security options for a Microsoft Exchange Server connector in Configuration Manager.
 
 ### [New-CMExchangeServer](New-CMExchangeServer.md)
-Configures a new Exchange Server connector.
-
-### [New-CMExchangeServerConnectorSecuritySetting](New-CMExchangeServerConnectorSecuritySetting.md)
-Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
+Configure a new Exchange Server connector.
 
 ### [New-CMFileReplicationRoute](New-CMFileReplicationRoute.md)
 Creates a file replication route for Configuration Manager.
