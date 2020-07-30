@@ -1708,7 +1708,7 @@ Creates a remote connection profile.
 {{ Fill in the Synopsis }}
 
 ### [New-CMRootCertificateProfileConfigurationItem](New-CMRootCertificateProfileConfigurationItem.md)
-Creates a root certificate profile.
+Create a root certificate profile.
 
 ### [New-CMSchedule](New-CMSchedule.md)
 Creates a Configuration Manager schedule token.
@@ -1767,14 +1767,8 @@ Creates a Configuration Manager task sequence group.
 ### [New-CMTaskSequenceMedia](New-CMTaskSequenceMedia.md)
 Creates task sequence media in System Center Configuration Manager.
 
-### [New-CMTrustedRootCertificateProfileConfigurationItem](New-CMTrustedRootCertificateProfileConfigurationItem.md)
-Creates a root certificate profile.
-
 ### [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
 {{ Fill in the Synopsis }}
-
-### [New-CMTrustedRootCertificateProfileConfigurationItem](New-CMTrustedRootCertificateProfileConfigurationItem.md)
-Creates a root certificate profile.
 
 ### [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
 Create a task sequence partition object to use with the **Format and Partition Disk** step.
