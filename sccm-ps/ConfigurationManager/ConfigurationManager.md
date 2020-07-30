@@ -1528,7 +1528,7 @@ Creates a Client Access server role for an Exchange Server.
 Configure access settings for a mobile device that uses a Microsoft Exchange Server connector.
 
 ### [New-CMExchangeConnectorApplicationSetting](New-CMExchangeConnectorApplicationSetting.md)
-Creates application-related settings for a mobile device that uses a Exchange Server connector.
+Create application-related settings for a mobile device that uses a Exchange Server connector.
 
 ### [New-CMExchangeConnectorEmailManagementSetting](New-CMExchangeConnectorEmailManagementSetting.md)
 Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
@@ -1544,9 +1544,6 @@ Configures security options for a Microsoft Exchange Server connector in Configu
 
 ### [New-CMExchangeServer](New-CMExchangeServer.md)
 Configures a new Exchange Server connector.
-
-### [New-CMExchangeServerConnectorApplicationSetting](New-CMExchangeServerConnectorApplicationSetting.md)
-Creates application-related settings for a mobile device that uses a Exchange Server connector.
 
 ### [New-CMExchangeServerConnectorEmailManagementSetting](New-CMExchangeServerConnectorEmailManagementSetting.md)
 Creates a set of email management settings for a mobile device that uses an Exchange Server connector.

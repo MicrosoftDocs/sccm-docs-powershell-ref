@@ -42,23 +42,23 @@ Microsoft System Center Configuration Manager works with Exchange Server to mana
 
 ### Example 1: Change settings for an nextref_exchange
 ```
-PS XYZ:\> $Gs= New-CMExchangeServerConnectorGeneralSetting -AllowInternetShare $True -AllowDesktopSync $True -AllowNonProvision $True -RefreshInterval 4
-PS XYZ:\> $Ps= New-CMExchangeServerConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity
-PS XYZ:\> $Em = New-CMExchangeServerConnectorEmailManagementSetting -ConsumerEmail $True -MaximumEmailAge OneDay -MaximumCalenderAge ThreeMonths -PushWhenRoaming $True -AllowHtmlEmail $True -EmailAttachmentPolicy $True -MaximumSizeTextEmail 401 -MaximumSizeHtmlEmail 402 -MaximumSizeAttachment 24
-PS XYZ:\> $Ss = New-CMExchangeServerConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
-PS XYZ:\> $As= New-CMExchangeServerConnectorApplicationSetting -UnsignedInstall $True -UnsignedApplication $False -BlockedApplication "App01","App02"
+PS XYZ:\> $Gs= New-CMExchangeConnectorGeneralSetting -AllowInternetShare $True -AllowDesktopSync $True -AllowNonProvision $True -RefreshInterval 4
+PS XYZ:\> $Ps= New-CMExchangeConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity
+PS XYZ:\> $Em = New-CMExchangeConnectorEmailManagementSetting -ConsumerEmail $True -MaximumEmailAge OneDay -MaximumCalenderAge ThreeMonths -PushWhenRoaming $True -AllowHtmlEmail $True -EmailAttachmentPolicy $True -MaximumSizeTextEmail 401 -MaximumSizeHtmlEmail 402 -MaximumSizeAttachment 24
+PS XYZ:\> $Ss = New-CMExchangeConnectorSecuritySetting -RemoteDesktop $True -StorageCard $True -Camera $True -Bluetooth $False -WiFiConnection HandsfreeOnly -Infra $False -Browser $False -StorageCardEncrypt $False -FileEncrypt $False -TextMessage $False
+PS XYZ:\> $As= New-CMExchangeConnectorApplicationSetting -UnsignedInstall $True -UnsignedApplication $False -BlockedApplication "App01","App02"
 PS XYZ:\> Set-CMExchangeServer -SiteCode "CM2" -ServerAddress "https://www.contoso.com/powershell" -NewServerAddress "www.fabrikam.com" -UserName "ElisaDaugherty@contoso.com" -DeltaSyncInterval 124 -MaximumInactiveDay 26 -FindAll -AllowExternalDeviceManagement $False -EnableAccessRule $True -AccessLevel Allow -EmailAddress "EvanNarvaez@fabrikam.com","DavidChew@contosco.com" -GeneralSetting $Gs -PasswordSetting $Ps -EmailManagementSetting $Em -SecuritySetting $Ss -ApplicationSetting $As
 ```
 
-The first command uses the **New-CMExchangeServerConnectorGeneralSetting** cmdlet to add new settings to an Exchange Server connector in Configuration Manager, and stores the settings in the $Gs variable.<!--505995-->
+The first command uses the **New-CMExchangeConnectorGeneralSetting** cmdlet to add new settings to an Exchange Server connector in Configuration Manager, and stores the settings in the $Gs variable.<!--505995-->
 
-The second command uses the [New-CMExchangeServerConnectorPasswordSetting](New-CMExchangeServerConnectorPasswordSetting.md) cmdlet adds new password settings to an Exchange Server connector in Configuration Manager, and stores the password settings in the $Ps variable.
+The second command uses the [New-CMExchangeConnectorPasswordSetting](New-CMExchangeConnectorPasswordSetting.md) cmdlet adds new password settings to an Exchange Server connector in Configuration Manager, and stores the password settings in the $Ps variable.
 
-The third command uses the [New-CMExchangeServerConnectorEmailManagementSetting](New-CMExchangeServerConnectorEmailManagementSetting.md) cmdlet creates a set of e-mail management settings for a mobile device that uses an Exchange Server connector, and stores the password settings in the $Em variable.
+The third command uses the [New-CMExchangeConnectorEmailManagementSetting](New-CMExchangeConnectorEmailManagementSetting.md) cmdlet creates a set of e-mail management settings for a mobile device that uses an Exchange Server connector, and stores the password settings in the $Em variable.
 
-The fourth command uses the [New-CMExchangeServerConnectorSecuritySetting](New-CMExchangeServerConnectorSecuritySetting.md) cmdlet configures security options for an Exchange Server connector in Configuration Manager, and security settings in the $Ss variable.
+The fourth command uses the [New-CMExchangeConnectorSecuritySetting](New-CMExchangeConnectorSecuritySetting.md) cmdlet configures security options for an Exchange Server connector in Configuration Manager, and security settings in the $Ss variable.
 
-The fifth command uses the [New-CMExchangeServerConnectorApplicationSetting](New-CMExchangeServerConnectorApplicationSetting.md) cmdlet creates application-related settings for a mobile device that uses an Exchange Server connector, and stores the application settings in the $As variable.
+The fifth command uses the [New-CMExchangeConnectorApplicationSetting](New-CMExchangeConnectorApplicationSetting.md) cmdlet creates application-related settings for a mobile device that uses an Exchange Server connector, and stores the application settings in the $As variable.
 
 The final command changes settings for an Exchange Server for the Configuration Manager site that has the site code CM2.
 The command specifies the general settings for the Exchange Server connector stored in $Gs.
@@ -516,11 +516,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMExchangeServer](New-CMExchangeServer.md)
 
-[New-CMExchangeServerConnectorApplicationSetting](New-CMExchangeServerConnectorApplicationSetting.md)
+[New-CMExchangeConnectorApplicationSetting](New-CMExchangeConnectorApplicationSetting.md)
 
-[New-CMExchangeServerConnectorEmailManagementSetting](New-CMExchangeServerConnectorEmailManagementSetting.md)
+[New-CMExchangeConnectorEmailManagementSetting](New-CMExchangeConnectorEmailManagementSetting.md)
 
-[New-CMExchangeServerConnectorSecuritySetting](New-CMExchangeServerConnectorSecuritySetting.md)
+[New-CMExchangeConnectorSecuritySetting](New-CMExchangeConnectorSecuritySetting.md)
 
 [Remove-CMExchangeServer](Remove-CMExchangeServer.md)
 
