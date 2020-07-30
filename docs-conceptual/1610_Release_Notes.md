@@ -11,10 +11,10 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# System Center Configuration Manager Cmdlet Library changes for Current Branch 1610
+# Configuration Manager Cmdlet Library changes for Current Branch 1610
 
  >[!NOTE]
- > The 1604 version of the System Center Configuration Manager Cmdlet
+ > The 1604 version of the Configuration Manager Cmdlet
  > Library is the baseline for these changes.
 
 ## Important changes

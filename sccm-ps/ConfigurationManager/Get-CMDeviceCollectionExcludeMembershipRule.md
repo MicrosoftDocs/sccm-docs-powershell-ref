@@ -73,7 +73,7 @@ The **Get-CMDeviceCollectionExcludeMembershipRule** cmdlet retrieves the rules t
 You can specify the device collections where the rule is applied by name, ID, or an object that represents the collections.
 You can specify the collection whose members are excluded by name, ID, or an object that represents the collection.
 
-Microsoft System Center Configuration Manager dynamically updates the membership of the device collection on a schedule if the membership of the excluded collection changes.
+Configuration Manager dynamically updates the membership of the device collection on a schedule if the membership of the excluded collection changes.
 For more information about membership rules, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
 
 > [!NOTE]
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

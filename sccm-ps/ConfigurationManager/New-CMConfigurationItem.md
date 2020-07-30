@@ -31,11 +31,11 @@ New-CMConfigurationItem -Name <String> [-Description <String>] [-Category <Strin
 
 ## DESCRIPTION
 
-The **New-CMConfigurationItem** cmdlet creates a configuration item in Microsoft System Center Configuration Manager.
+The **New-CMConfigurationItem** cmdlet creates a configuration item in Configuration Manager.
 Create configuration items to define configurations that you want to manage and assess for compliance on devices.
 
 You can specify the *ParentConfigurationItem* parameter to create a child configuration item.
-Child configuration items in System Center Configuration Manager are copies of configuration items that retain a relationship to the original configuration item; therefore, they inherit the original configuration from the parent configuration item.
+Child configuration items in Configuration Manager are copies of configuration items that retain a relationship to the original configuration item; therefore, they inherit the original configuration from the parent configuration item.
 You cannot create child configuration items for mobile devices.
 
 > [!NOTE]
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

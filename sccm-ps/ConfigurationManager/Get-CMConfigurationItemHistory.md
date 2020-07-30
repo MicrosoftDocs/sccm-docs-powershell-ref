@@ -37,7 +37,7 @@ Get-CMConfigurationItemHistory [-InputObject] <IResultObject> [-Revision <Int32>
 
 The **Get-CMConfigurationItemHistory** cmdlet gets the previous versions of a configuration item.
 
-Microsoft System Center Configuration Manager updates configuration items based on configuration management, software updates management, and operating system deployment.
+Configuration Manager updates configuration items based on configuration management, software updates management, and operating system deployment.
 Configuration Manager stores the previous version of the item.
 The server removes previous versions, by default, when the data is more than 90 days old.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

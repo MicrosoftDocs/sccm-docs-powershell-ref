@@ -24,7 +24,7 @@ New-CMWindowsFirewallPolicy -Name <String> [-Description <String>] [-DomainTurnO
 ```
 
 ## DESCRIPTION
-The **New-CMWindowsFirewallPolicy** cmdlet creates a configuration policy for Windows Firewall in Microsoft System Center Configuration Manager.
+The **New-CMWindowsFirewallPolicy** cmdlet creates a configuration policy for Windows Firewall in Configuration Manager.
 
 Windows Firewall allows or denies incoming connections to an IP address.
 The blocking actions allow or deny incoming traffic based on a network location type.
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

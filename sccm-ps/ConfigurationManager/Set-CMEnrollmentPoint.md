@@ -28,7 +28,7 @@ Set-CMEnrollmentPoint [-SiteCode <String>] [-SiteSystemServerName] <String> [-Us
 ```
 
 ## DESCRIPTION
-The **Set-CMEnrollmentPoint** cmdlet sets an enrollment point in Microsoft System Center Configuration Manager.
+The **Set-CMEnrollmentPoint** cmdlet sets an enrollment point in Configuration Manager.
 An enrollment point is a site system role that uses public key infrastructure (PKI) certificates to complete mobile device enrollment and to provision Intel AMT-based computers.
 
 > [!NOTE]
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

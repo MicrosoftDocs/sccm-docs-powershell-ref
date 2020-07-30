@@ -27,7 +27,7 @@ Get-CMSoftwareUpdateLicense -InputObject <IResultObject> [-EulaAcceptance <EulaA
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareUpdateLicense** cmdlet gets an End User License Agreement (EULA) or Software License Terms (SLT) for a software update in Microsoft System Center Configuration Manager.
+The **Get-CMSoftwareUpdateLicense** cmdlet gets an End User License Agreement (EULA) or Software License Terms (SLT) for a software update in Configuration Manager.
 You can specify a software update by ID or by name or use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet to obtain one.
 If you specify an ID or name, you can further specify a security scope membership.
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

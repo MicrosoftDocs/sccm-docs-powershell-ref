@@ -26,7 +26,7 @@ Get-CMConflictingRecord -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 ```
 
 ## DESCRIPTION
-The **Get-CMConflictingRecord** cmdlet gets one or more conflicting Microsoft System Center Configuration Manager record objects.
+The **Get-CMConflictingRecord** cmdlet gets one or more conflicting Configuration Manager record objects.
 
 When Configuration Manager recognizes a new client, it uses hardware information to check whether it previously created a record for that computer.
 For example, you might have reinstalled the operating system.
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

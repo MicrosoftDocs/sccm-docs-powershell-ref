@@ -54,8 +54,8 @@ Set-CMOperatingSystemImage -Name <String> [-NewName <String>] [-Path <String>] [
 ```
 
 ## DESCRIPTION
-The **Set-CMOperatingSystemImage** cmdlet changes configuration settings of one or more operating system images in Microsoft System Center Configuration Manager.
-Operating system images are .wim format files and represent a compressed collection of reference files and folders that System Center Configuration Manager requires to successfully install and configure an operating system on a computer.
+The **Set-CMOperatingSystemImage** cmdlet changes configuration settings of one or more operating system images in Configuration Manager.
+Operating system images are .wim format files and represent a compressed collection of reference files and folders that Configuration Manager requires to successfully install and configure an operating system on a computer.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -459,7 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

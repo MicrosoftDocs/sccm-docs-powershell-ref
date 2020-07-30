@@ -20,10 +20,10 @@ Get-CMStatusFilterRule [-SiteCode <String>] [-Name <String>] [-DisableWildcardHa
 ```
 
 ## DESCRIPTION
-The **Get-CMStatusFilterRule** cmdlet gets filter rules for Microsoft System Center Configuration Manager status messages.
-You can get all the rules for a System Center Configuration Manager site or you can specify a name of a rule within a site.
+The **Get-CMStatusFilterRule** cmdlet gets filter rules for Configuration Manager status messages.
+You can get all the rules for a Configuration Manager site or you can specify a name of a rule within a site.
 
-Status filter rules specify how System Center Configuration Manager responds to status messages.
+Status filter rules specify how Configuration Manager responds to status messages.
 Each filter rule contains criteria and actions for status messages.
 You configure status filter rules for each site, not across all sites.
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

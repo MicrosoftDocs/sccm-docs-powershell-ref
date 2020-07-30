@@ -20,11 +20,11 @@ Set-CMMigrationExclusionList -Name <String> [-DisableWildcardHandling] [-ForceWi
 ```
 
 ## DESCRIPTION
-The **Set-CMMigrationExclusionList** cmdlet edits the global exclusion list for migration jobs in Microsoft System Center Configuration Manager.
+The **Set-CMMigrationExclusionList** cmdlet edits the global exclusion list for migration jobs in Configuration Manager.
 
 For a collection-based migration, you specify one or more collections to migrate.
 For each collection that you specify, the migration job automatically selects all related objects for migration.
-Objects on the exclusion list are available for migration, but System Center Configuration Manager does not automatically include these objects when you create a new collection-based migration job.
+Objects on the exclusion list are available for migration, but Configuration Manager does not automatically include these objects when you create a new collection-based migration job.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

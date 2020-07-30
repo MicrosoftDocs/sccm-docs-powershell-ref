@@ -29,7 +29,7 @@ Add-CMFallbackStatusPoint [-SiteSystemServerName] <String> [-SiteCode <String>] 
 ```
 
 ## DESCRIPTION
-The **Add-CMFallbackStatusPoint** cmdlet adds a fallback status point to a Microsoft System Center Configuration Manager site.
+The **Add-CMFallbackStatusPoint** cmdlet adds a fallback status point to a Configuration Manager site.
 To add this site system role, specify the site code for the Configuration Manager site and the name of the computer that hosts the role.
 You also need to specify a throttle interval and the number of messages for that throttle window.
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

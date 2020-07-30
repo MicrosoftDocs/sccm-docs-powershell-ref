@@ -40,7 +40,7 @@ Get-CMUserCollection -DistributionPointGroup <IResultObject> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-The **Get-CMUserCollection** cmdlet retrieves collections that contain users in Microsoft System Center Configuration Manager.
+The **Get-CMUserCollection** cmdlet retrieves collections that contain users in Configuration Manager.
 For more information about collections, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
 
 > [!NOTE]
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

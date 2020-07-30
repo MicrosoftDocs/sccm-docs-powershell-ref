@@ -39,7 +39,7 @@ Invoke-CMDeploymentSummarization [-SoftwareName <String>] -InputObject <IResultO
 ```
 
 ## DESCRIPTION
-The **Invoke-CMDeploymentSummarization** cmdlet runs a Microsoft System Center Configuration Manager deployment summarization as soon as possible.
+The **Invoke-CMDeploymentSummarization** cmdlet runs a Configuration Manager deployment summarization as soon as possible.
 Summarization compiles information about current deployment of software from the Configuration Manager site database.
 By default, Configuration Manager runs this summarization every four hours.
 If you use this cmdlet to create the summarization immediately, it does not interfere with the regular schedule of creating the current summarization.
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

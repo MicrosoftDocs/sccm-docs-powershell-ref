@@ -1,8 +1,8 @@
 ﻿---
-description: Creates application-related settings for a mobile device that uses a Exchange Server connector.
+description: Create application-related settings for a mobile device that uses a Exchange Server connector.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/30/2020
 schema: 2.0.0
 title: New-CMExchangeConnectorApplicationSetting
 ---
@@ -10,7 +10,8 @@ title: New-CMExchangeConnectorApplicationSetting
 # New-CMExchangeConnectorApplicationSetting
 
 ## SYNOPSIS
-Creates application-related settings for a mobile device that uses a Exchange Server connector.
+
+Create application-related settings for a mobile device that uses a Exchange Server connector.
 
 ## SYNTAX
 
@@ -20,25 +21,25 @@ New-CMExchangeConnectorApplicationSetting [-UnsignedInstall <Boolean>] [-Unsigne
 ```
 
 ## DESCRIPTION
+
 The **New-CMExchangeConnectorApplicationSetting** cmdlet creates application-related settings for a mobile device that uses a Microsoft Exchange Server connector.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Set application options for an Exchange Server connector
-```
-PS XYZ:\> New-CMExchangeServerConnectorApplicationSetting -UnsignedApplication $False -UnsignedInstall $True -BlockedApplication "a1","a2"
-```
 
 This command sets these application options for an Exchange Server connector:
 
 - Allows the mobile device to install unsigned applications.
 - Blocks unsigned applications from running on the mobile device.
 - Blocks the two applications named a1 and a2 from running.
+
+```powershell
+New-CMExchangeConnectorApplicationSetting -UnsignedApplication $False -UnsignedInstall $True -BlockedApplication "a1","a2"
+```
 
 ## PARAMETERS
 
@@ -56,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -71,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -112,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
@@ -123,6 +127,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorApplicationSetting
 
 ## NOTES
+
+Cmdlet aliases: **New-CMExchangeServerConnectorApplicationSetting**
 
 ## RELATED LINKS
 

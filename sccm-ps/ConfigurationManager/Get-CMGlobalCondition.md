@@ -32,7 +32,7 @@ Get-CMGlobalCondition -Id <String> [-AsDcmSdkObject] [-DisableWildcardHandling] 
 The **Get-CMGlobalCondition** cmdlet gets global condition objects.
 You can pass the results of this cmdlet to the **Set-CMGlobalCondition** cmdlet or the **Remove-CMGlobalCondition** cmdlet.
 
-Microsoft System Center Configuration Manager uses global conditions to represent business or technical conditions.
+Configuration Manager uses global conditions to represent business or technical conditions.
 Global conditions specify how to provide and deploy applications to client devices.
 
 You can get global conditions by name, ID, or security scope.
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

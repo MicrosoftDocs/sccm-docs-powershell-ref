@@ -69,7 +69,7 @@ Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -Administ
 ```
 
 ## DESCRIPTION
-The **Add-CMSecurityScopeToAdministrativeUser** cmdlet adds a security scope to an administrative user or administrative group in Microsoft System Center Configuration Manager.
+The **Add-CMSecurityScopeToAdministrativeUser** cmdlet adds a security scope to an administrative user or administrative group in Configuration Manager.
 
 For more information about security scopes, see [Configuring Security for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427332(v=technet.10)) on TechNet.
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

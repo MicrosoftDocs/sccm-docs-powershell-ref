@@ -29,6 +29,61 @@
       "source_path": "sccm-ps/ConfigurationManager/about_ConfigurationManager_Cmdlets.md",
       "redirect_url": "/powershell/sccm/overview",
       "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/Invoke-CMClientNotification.md",
+      "redirect_url": "/powershell/module/configurationmanager/Invoke-CMClientAction",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/New-CMClientAuthCertificateProfileConfigurationItem.md",
+      "redirect_url": "/powershell/module/configurationmanager/New-CMClientCertificateProfileConfigurationItem",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/New-CMTrustedRootCertificateProfileConfigurationItem.md",
+      "redirect_url": "/powershell/module/configurationmanager/New-CMRootCertificateProfileConfigurationItem",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/New-CMExchangeServerConnectorAccessRule.md",
+      "redirect_url": "/powershell/module/configurationmanager/New-CMExchangeConnectorAccessRule",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/New-CMExchangeServerConnectorApplicationSetting.md",
+      "redirect_url": "/powershell/module/configurationmanager/New-CMExchangeConnectorApplicationSetting",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/Set-CMClientAuthCertificateProfileConfigurationItem.md",
+      "redirect_url": "/powershell/module/configurationmanager/Set-CMClientCertificateProfileConfigurationItem",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/New-CMExchangeServerConnectorEmailManagementSetting.md",
+      "redirect_url": "/powershell/module/configurationmanager/New-CMExchangeConnectorEmailManagementSetting",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/New-CMExchangeServerConnectorPasswordSetting.md",
+      "redirect_url": "/powershell/module/configurationmanager/New-CMExchangeConnectorPasswordSetting",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/New-CMExchangeServerConnectorSecuritySetting.md",
+      "redirect_url": "/powershell/module/configurationmanager/New-CMExchangeConnectorSecuritySetting",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/Get-CMDeploymentStatus.md",
+      "redirect_url": "/powershell/module/configurationmanager/Get-CMPackageDeploymentStatus",
+      "redirect_document_id": "False"
+    },
+    {
+      "source_path": "sccm-ps/ConfigurationManager/New-CMPrestagedMedia.md",
+      "redirect_url": "/powershell/module/configurationmanager/New-CMPrestageMedia",
+      "redirect_document_id": "False"
     }
   ]
 }

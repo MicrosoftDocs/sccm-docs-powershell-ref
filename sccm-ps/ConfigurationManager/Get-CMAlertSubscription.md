@@ -26,7 +26,7 @@ Get-CMAlertSubscription -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 ```
 
 ## DESCRIPTION
-The **Get-CMAlertSubscription** cmdlet gets one or more Microsoft System Center Configuration Manager alert subscriptions and displays their properties.
+The **Get-CMAlertSubscription** cmdlet gets one or more Configuration Manager alert subscriptions and displays their properties.
 If you specify the name or ID of an alert subscription, the cmdlet retrieves only that alert subscription.
 If you specify part of the name or ID of an alert subscription, the cmdlet retrieves all alert subscriptions that match the partial name or ID.
 If you do not specify anything, the cmdlet returns the properties of all alert subscriptions.
@@ -43,21 +43,21 @@ If you do not specify anything, the cmdlet returns the properties of all alert s
 PS XYZ:\> Get-CMAlertSubscription
 ```
 
-This command displays all System Center Configuration Manager alert subscriptions.
+This command displays all Configuration Manager alert subscriptions.
 
 ### Example 2: Display alert subscriptions by ID by using wildcard characters
 ```
 PS XYZ:\> Get-CMAlertSubscription -Id 16777*
 ```
 
-This command displays all System Center Configuration Manager alert subscriptions that have an ID that starts with the number 16777.
+This command displays all Configuration Manager alert subscriptions that have an ID that starts with the number 16777.
 
 ### Example 3: Display an alert subscription by name
 ```
 PS XYZ:\> Get-CMAlertSubscription -Name "Subscription01"
 ```
 
-This command displays the System Center Configuration Manager alert subscription named Subscription01.
+This command displays the Configuration Manager alert subscription named Subscription01.
 
 ## PARAMETERS
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -39,7 +39,7 @@ Merge-CMConflictingRecord -SiteCode <String> [-DisableWildcardHandling] [-ForceW
 ```
 
 ## DESCRIPTION
-The **Merge-CMConflictingRecord** cmdlet merges a new Microsoft System Center Configuration Manager client record with a conflicting client record that has the same hardware information.
+The **Merge-CMConflictingRecord** cmdlet merges a new Configuration Manager client record with a conflicting client record that has the same hardware information.
 
 When Configuration Manager recognizes a new client, it uses hardware information to check whether it previously created a record for that computer.
 For example, you might have reinstalled the operating system.
@@ -62,7 +62,7 @@ You can specify conflicting records by using a name or ID or you can specify a s
 PS XYZ:\>Merge-CMConflictingRecords -SiteCode "CM2"
 ```
 
-This command merges each of the conflicting records for the specified System Center Configuration Manager site.
+This command merges each of the conflicting records for the specified Configuration Manager site.
 
 ### Example 2: Merge records for a named conflict
 ```
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

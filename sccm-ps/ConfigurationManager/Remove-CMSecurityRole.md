@@ -33,7 +33,7 @@ Remove-CMSecurityRole -Id <String> [-Force] [-DisableWildcardHandling] [-ForceWi
 ```
 
 ## DESCRIPTION
-The **Remove-CMSecurityRole** cmdlet removes custom security roles from Microsoft System Center Configuration Manager.
+The **Remove-CMSecurityRole** cmdlet removes custom security roles from Configuration Manager.
 Specify the name or ID of a security role you want to remove or use the [Get-CMSecurityRole](Get-CMSecurityRole.md) cmdlet to obtain one.
 
 Configuration Manager uses security roles, along with security scopes and collections, to define an administrative scope for each administrative user.
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -35,7 +35,7 @@ Export-CMConfigurationItem [-InputObject] <IResultObject> -Path <String> [-Disab
 
 ## DESCRIPTION
 
-The **Export-CMConfigurationItem** cmdlet saves a Microsoft System Center Configuration Manager configuration item to a specified .cab file.
+The **Export-CMConfigurationItem** cmdlet saves a Configuration Manager configuration item to a specified .cab file.
 You can specify items by ID, name, or by use of the [Get-CMConfigurationItem](Get-CMConfigurationItem.md) cmdlet.
 
 Configuration items contain one or more settings, along with compliance rules.
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

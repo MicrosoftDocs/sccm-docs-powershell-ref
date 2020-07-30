@@ -28,7 +28,7 @@ Get-CMComputerAssociation -MigrationId <String> [-DisableWildcardHandling] [-For
 
 ## DESCRIPTION
 The **Get-CMComputerAssociation** cmdlet gets computer associations.
-Microsoft System Center Configuration Manager uses a computer association to migrate user state and settings as part of operating system deployment.
+Configuration Manager uses a computer association to migrate user state and settings as part of operating system deployment.
 You can specify a source computer, a destination computer, or both.
 You can also use an ID to specify a computer association.
 
@@ -44,7 +44,7 @@ You can also use an ID to specify a computer association.
 PS XYZ:\> Get-CMComputerAssociation
 ```
 
-This command gets all the computer associations for System Center Configuration Manager.
+This command gets all the computer associations for Configuration Manager.
 
 ### Example 2: Get computer associations for a destination comptuter
 ```
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -27,7 +27,7 @@ Get-CMEnrollmentProxyPoint [-AllSite] -InputObject <IResultObject> [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Get-CMEnrollmentProxyPoint** cmdlet gets a Microsoft System Center Configuration Manager enrollment proxy point.
+The **Get-CMEnrollmentProxyPoint** cmdlet gets a Configuration Manager enrollment proxy point.
 An enrollment proxy point is a site system role that manages enrollment requests from mobile devices.
 
 > [!NOTE]
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

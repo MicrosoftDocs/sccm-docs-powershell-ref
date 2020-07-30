@@ -20,7 +20,7 @@ Get-CMDatabaseReplicationStatus [-ChildSiteCode <String>] [-ParentSiteCode <Stri
 ```
 
 ## DESCRIPTION
-The **Get-CMDatabaseReplicationStatus** cmdlet gets the status of the database replication link for a Microsoft System Center Configuration Manager parent/child site pair.
+The **Get-CMDatabaseReplicationStatus** cmdlet gets the status of the database replication link for a Configuration Manager parent/child site pair.
 The cmdlet identifies the sites by site code.
 
 You can specify just the site code or just the name for a parent or child and get all the database replication links for the specified site.
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -1,5 +1,5 @@
 ﻿---
-description: Sets hierarchy settings in System Center Configuration Manager.
+description: Sets hierarchy settings in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
@@ -10,7 +10,7 @@ title: Set-CMHierarchySetting
 # Set-CMHierarchySetting
 
 ## SYNOPSIS
-Sets hierarchy settings in System Center Configuration Manager.
+Sets hierarchy settings in Configuration Manager.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Set-CMHierarchySetting [-UseFallbackSite <Boolean>] [-FallbackSiteCode <String>]
 ```
 
 ## DESCRIPTION
-The **Set-CMHierarchySetting** cmdlet sets hierarchy settings in Microsoft System Center Configuration Manager.
+The **Set-CMHierarchySetting** cmdlet sets hierarchy settings in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -69,7 +69,7 @@ Add-CMSoftwareUpdateToGroup -SoftwareUpdate <IResultObject[]> -SoftwareUpdateGro
 ```
 
 ## DESCRIPTION
-The **Add-CMSoftwareUpdateToGroup** cmdlet adds a software update to a software update group in Microsoft System Center Configuration Manager.
+The **Add-CMSoftwareUpdateToGroup** cmdlet adds a software update to a software update group in Configuration Manager.
 You can specify a software update by name or by ID or use the [Get-CMSoftwareUpdate](Get-CMSoftwareUpdate.md) cmdlet to obtain an update.
 Likewise, you can specify a software update group by name or by ID or use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet to obtain one.
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

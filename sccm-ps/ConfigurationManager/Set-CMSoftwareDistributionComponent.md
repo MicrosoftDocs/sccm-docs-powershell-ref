@@ -33,8 +33,8 @@ Set-CMSoftwareDistributionComponent [-SiteCode <String>] [-MaximumPackageCount <
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareDistributionComponent** cmdlet sets properties of a software distribution component in Microsoft System Center Configuration Manager.
-You can configure the properties of an object to meet the demands that clients place on the System Center Configuration Manager site.
+The **Set-CMSoftwareDistributionComponent** cmdlet sets properties of a software distribution component in Configuration Manager.
+You can configure the properties of an object to meet the demands that clients place on the Configuration Manager site.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -288,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

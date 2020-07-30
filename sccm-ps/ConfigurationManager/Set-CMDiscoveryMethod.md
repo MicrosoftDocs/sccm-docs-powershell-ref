@@ -72,9 +72,9 @@ Set-CMDiscoveryMethod [-Heartbeat] [-SiteCode <String>] [-Enabled <Boolean>] [-P
 
 ## DESCRIPTION
 The **Set-CMDiscoveryMethod** cmdlet changes configuration settings of a discovery method.
-Discovery identifies computer and user resources that Microsoft System Center Configuration Manager can manage.
-When System Center Configuration Manager discovers a resource, System Center Configuration Manager creates a record in the Configuration Manager database for the resource and its associated information.
-You can then use the discovery information to help you to install the System Center Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
+Discovery identifies computer and user resources that Configuration Manager can manage.
+When Configuration Manager discovers a resource, Configuration Manager creates a record in the Configuration Manager database for the resource and its associated information.
+You can then use the discovery information to help you to install the Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -700,7 +700,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

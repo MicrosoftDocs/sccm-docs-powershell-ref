@@ -57,7 +57,7 @@ Set-CMApplicationDeployment -ApplicationId <String> [-Comment <String>] [-Requir
 ```
 
 ## DESCRIPTION
-The **Set-CMApplicationDeployment** cmdlet modifies properties for an application deployment in Microsoft System Center Configuration Manager.
+The **Set-CMApplicationDeployment** cmdlet modifies properties for an application deployment in Configuration Manager.
 An application deployment installs an application according to schedule for a several computers.
 Application deployments can also allow users to install at a time they choose.
 
@@ -594,7 +594,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

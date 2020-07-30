@@ -20,8 +20,8 @@ Get-CMSite [[-SiteCode] <String>] [-Name <String>] [-DisableWildcardHandling] [-
 ```
 
 ## DESCRIPTION
-The **Get-CMSite** cmdlet gets one or more Microsoft System Center Configuration Manager sites.
-A System Center Configuration Manager site is a server that has clients assigned to it and that processes client-generated data.
+The **Get-CMSite** cmdlet gets one or more Configuration Manager sites.
+A Configuration Manager site is a server that has clients assigned to it and that processes client-generated data.
 You can get a Configuration Manager site by using either a site name or a site code.
 
 > [!NOTE]
@@ -36,7 +36,7 @@ You can get a Configuration Manager site by using either a site name or a site c
 PS XYZ:\> Get-CMSite -SiteName "CMSiteSystem"
 ```
 
-This command gets a System Center Configuration Manager site by using the site name CMSiteSystem.
+This command gets a Configuration Manager site by using the site name CMSiteSystem.
 
 ## PARAMETERS
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

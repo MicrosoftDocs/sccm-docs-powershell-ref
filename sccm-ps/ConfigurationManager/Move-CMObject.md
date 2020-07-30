@@ -27,7 +27,7 @@ Move-CMObject -FolderPath <String> -ObjectId <String[]> [-DisableWildcardHandlin
 ```
 
 ## DESCRIPTION
-The **Move-CMObject** cmdlet moves a Microsoft System Center Configuration Manager object into a different folder.
+The **Move-CMObject** cmdlet moves a Configuration Manager object into a different folder.
 Specify the object to move and the destination folder.
 Because an object exists in only one folder, the cmdlet does not specify the current folder.
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

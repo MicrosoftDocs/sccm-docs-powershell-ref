@@ -33,7 +33,7 @@ Remove-CMSoftwareUpdateGroup -InputObject <IResultObject> [-Force] [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Remove-CMSoftwareUpdateGroup** cmdlet removes software update groups from Microsoft System Center Configuration Manager.
+The **Remove-CMSoftwareUpdateGroup** cmdlet removes software update groups from Configuration Manager.
 You can specify each software update group that you are removing by using the group IDs or names.
 If you remove a software update group, you can use the [Get-CMSoftwareUpdateGroup](Get-CMSoftwareUpdateGroup.md) cmdlet to return a software update group object and use that object to specify the group that you want to remove.
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

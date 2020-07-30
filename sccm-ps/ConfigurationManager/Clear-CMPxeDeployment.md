@@ -51,11 +51,11 @@ Clear-CMPxeDeployment -Device <IResultObject> [-DisableWildcardHandling] [-Force
 ```
 
 ## DESCRIPTION
-The **Clear-CMPxeDeployment** cmdlet clears the status of the most recent Pre-Boot EXecution Environment (PXE) deployment in Microsoft System Center Configuration Manager.
+The **Clear-CMPxeDeployment** cmdlet clears the status of the most recent Pre-Boot EXecution Environment (PXE) deployment in Configuration Manager.
 
 You can redeploy a required PXE deployment for a collection of devices.
-Clear the status of the last PXE deployment assigned to that System Center Configuration Manager collection.
-System Center Configuration Manager redeploys the most recent required deployments.
+Clear the status of the last PXE deployment assigned to that Configuration Manager collection.
+Configuration Manager redeploys the most recent required deployments.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

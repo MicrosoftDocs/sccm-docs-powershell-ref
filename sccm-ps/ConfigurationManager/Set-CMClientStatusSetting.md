@@ -23,7 +23,7 @@ Set-CMClientStatusSetting [-ClientPolicyDays <Int32>] [-HeartbeatDiscoveryDays <
 
 ## DESCRIPTION
 The **Set-CMClientStatusSetting** cmdlet modifies client status settings.
-These settings determine the data collection intervals for individual client monitoring activities in Microsoft System Center Configuration Manager.
+These settings determine the data collection intervals for individual client monitoring activities in Configuration Manager.
 
 For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) in the TechNet library.
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

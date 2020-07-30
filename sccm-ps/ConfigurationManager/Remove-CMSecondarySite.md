@@ -33,7 +33,7 @@ Remove-CMSecondarySite -Name <String> [-Force] -Action <ActionType> [-DisableWil
 ```
 
 ## DESCRIPTION
-The **Remove-CMSecondarySite** cmdlet removes a secondary site from Microsoft System Center Configuration Manager.
+The **Remove-CMSecondarySite** cmdlet removes a secondary site from Configuration Manager.
 A secondary site has no site database of its own.
 Instead it is connected to a primary site and sends client data to the primary site for storage.
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

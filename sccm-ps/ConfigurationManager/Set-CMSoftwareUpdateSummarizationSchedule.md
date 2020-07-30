@@ -20,7 +20,7 @@ Set-CMSoftwareUpdateSummarizationSchedule -Interval <Int32> -Unit <Summarization
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdateSummarizationSchedule** cmdlet sets how often Microsoft System Center Configuration Manager summarizes the status of software updates for all the System Center Configuration Manager sites.
+The **Set-CMSoftwareUpdateSummarizationSchedule** cmdlet sets how often Configuration Manager summarizes the status of software updates for all the Configuration Manager sites.
 You can set the summary to run on an interval defined in days, hours, or minutes.
 You can use the [Invoke-CMSoftwareUpdateSummarization](Invoke-CMSoftwareUpdateSummarization.md) cmdlet to run the summarization immediately.
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

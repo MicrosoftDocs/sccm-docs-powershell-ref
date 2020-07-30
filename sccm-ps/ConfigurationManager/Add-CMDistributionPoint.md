@@ -90,7 +90,7 @@ Add-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
 
 ## DESCRIPTION
 The **Add-CMDistributionPoint** cmdlet creates a distribution point on a site system server.
-A distribution point is a site system role that Microsoft System Center Configuration Manager uses to store files for clients to download, such as application content, software packages, software updates, operating system images, and boot images.
+A distribution point is a site system role that Configuration Manager uses to store files for clients to download, such as application content, software packages, software updates, operating system images, and boot images.
 
 You must designate a site system server as a distribution point before you can make content available to client computers.
 You can add the distribution point site role to a new site system server or add the site role to an existing site system server.
@@ -930,7 +930,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

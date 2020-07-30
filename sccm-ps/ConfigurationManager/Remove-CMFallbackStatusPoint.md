@@ -30,7 +30,7 @@ Remove-CMFallbackStatusPoint [-SiteCode <String>] [-Force] [-SiteSystemServerNam
 The **Remove-CMFallbackStatusPoint** cmdlet removes a specified fallback status point site system role.
 You can specify the site system name and site code for a fallback status point or use the **Get-CMFallbackStatusPoint** cmdlet to obtain a fallback status point object.
 
-Microsoft System Center Configuration Manager can use one or more fallback status points to collect state messages for a site and send them on to Configuration Manager.
+Configuration Manager can use one or more fallback status points to collect state messages for a site and send them on to Configuration Manager.
 After you remove a fallback status point, that system no longer forwards state messages.
 
 The use of a fallback status point is optional.
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

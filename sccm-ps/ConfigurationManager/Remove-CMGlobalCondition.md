@@ -37,7 +37,7 @@ Remove-CMGlobalCondition -Name <String> [-Force] [-DisableWildcardHandling] [-Fo
 
 The **Remove-CMGlobalCondition** cmdlet removes a global condition object.
 
-Microsoft System Center Configuration Manager uses global conditions to represent business or technical conditions.
+Configuration Manager uses global conditions to represent business or technical conditions.
 Global conditions specify how to provide and deploy applications to client devices.
 
 You can specify a global condition by name or ID or use the **Get-CMGlobalCondition** cmdlet to obtain a global condition object.
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
