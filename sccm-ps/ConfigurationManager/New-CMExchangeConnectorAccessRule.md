@@ -1,8 +1,8 @@
 ﻿---
-description: Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
+description: Configure access settings for a mobile device that uses a Microsoft Exchange Server connector.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/30/2020
 schema: 2.0.0
 title: New-CMExchangeConnectorAccessRule
 ---
@@ -10,7 +10,8 @@ title: New-CMExchangeConnectorAccessRule
 # New-CMExchangeConnectorAccessRule
 
 ## SYNOPSIS
-Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
+
+Configure access settings for a mobile device that uses a Microsoft Exchange Server connector.
 
 ## SYNTAX
 
@@ -20,21 +21,20 @@ New-CMExchangeConnectorAccessRule -RuleName <String> -AccessLevel <AccessLevelTy
 ```
 
 ## DESCRIPTION
-The **New-CMExchangeServerConnectorAccessRule** cmdlet configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
+The **New-CMExchangeConnectorAccessRule** cmdlet configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Configure email management settings for a mobile device
-```
-PS XYZ:\> New-CMExchangeServerConnectorAccessRule -RuleName "AccessRule01" -AccessLevel Allow -Device DeviceType
-```
 
-This command creates an access rule for a device type named AccessRule01 that has the Allow access level.
+This command creates an access rule for a device type named **AccessRule01** that has the **Allow** access level.
+
+```powershell
+New-CMExchangeConnectorAccessRule -RuleName "AccessRule01" -AccessLevel Allow -Device DeviceType
+```
 
 ## PARAMETERS
 
@@ -67,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -82,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -110,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
@@ -122,6 +125,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+Cmdlet aliases: **New-CMExchangeServerConnectorAccessRule**
+
 ## RELATED LINKS
 
 [New-CMExchangeConnectorApplicationSetting](New-CMExchangeConnectorApplicationSetting.md)
@@ -130,4 +135,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMExchangeConnectorPasswordSetting](New-CMExchangeConnectorPasswordSetting.md)
 
-[New-CMExchangeServerConnectorSecuritySetting](New-CMExchangeConnectorSecuritySetting.md)
+[New-CMExchangeConnectorSecuritySetting](New-CMExchangeConnectorSecuritySetting.md)

@@ -1525,7 +1525,7 @@ Creates an embedded property list.
 Creates a Client Access server role for an Exchange Server.
 
 ### [New-CMExchangeConnectorAccessRule](New-CMExchangeConnectorAccessRule.md)
-Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
+Configure access settings for a mobile device that uses a Microsoft Exchange Server connector.
 
 ### [New-CMExchangeConnectorApplicationSetting](New-CMExchangeConnectorApplicationSetting.md)
 Creates application-related settings for a mobile device that uses a Exchange Server connector.
@@ -1544,9 +1544,6 @@ Configures security options for a Microsoft Exchange Server connector in Configu
 
 ### [New-CMExchangeServer](New-CMExchangeServer.md)
 Configures a new Exchange Server connector.
-
-### [New-CMExchangeServerConnectorAccessRule](New-CMExchangeServerConnectorAccessRule.md)
-Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
 
 ### [New-CMExchangeServerConnectorApplicationSetting](New-CMExchangeServerConnectorApplicationSetting.md)
 Creates application-related settings for a mobile device that uses a Exchange Server connector.
