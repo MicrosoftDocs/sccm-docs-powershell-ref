@@ -1222,9 +1222,6 @@ Installs a site update.
 Updates configuration baseline data.
 
 ### [Invoke-CMClientAction](Invoke-CMClientAction.md)
-{{ Fill in the Synopsis }}
-
-### [Invoke-CMClientNotification](Invoke-CMClientNotification.md)
 Sends a notification to client computers to trigger an immediate client action.
 
 ### [Invoke-CMClientOperationSummarization](Invoke-CMClientOperationSummarization.md)
