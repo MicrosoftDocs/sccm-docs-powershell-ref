@@ -180,7 +180,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CMDeploymentStatus](Get-CMDeploymentStatus.md)
+[Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 
 [Get-CMDeploymentType](Get-CMDeploymentType.md)
 

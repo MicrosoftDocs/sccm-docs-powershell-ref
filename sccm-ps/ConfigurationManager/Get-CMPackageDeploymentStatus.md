@@ -1,8 +1,8 @@
 ﻿---
-description: Gets the status of classic software distribution deployments.
+description: Get the status of classic software distribution deployments.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/30/2018
+ms.date: 07/30/2020
 schema: 2.0.0
 title: Get-CMPackageDeploymentStatus
 ---
@@ -11,7 +11,7 @@ title: Get-CMPackageDeploymentStatus
 
 ## SYNOPSIS
 
-Gets the status of classic software distribution deployments.
+Get the status of classic software distribution deployments.
 
 ## SYNTAX
 
@@ -41,23 +41,20 @@ Get-CMPackageDeploymentStatus [-StatusType <PackageDeploymentStatusType>] -Input
 
 ## DESCRIPTION
 
-The **Get-CMPackageDeploymentStatus** cmdlet gets the status of one or more classic software distribution deployments.
-A classic software distribution is a legacy software distribution program on a client.
+The **Get-CMPackageDeploymentStatus** cmdlet gets the status of one or more classic software distribution deployments. A classic software distribution is a legacy software distribution program on a client.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the status of a deployment
+
+This command gets the status of a deployment that is distributed to Configuration Manager clients by using the deployment package named **Depack01**.
 
 ```powershell
-PS XYZ:\> Get-CMPackageDeploymentStatus -Name "Depack01"
+Get-CMPackageDeploymentStatus -Name "Depack01"
 ```
-
-This command gets the status of a deployment that is distributed to Configuration Manager clients by using the deployment package named Depack01.
 
 ## PARAMETERS
 
@@ -79,7 +76,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -95,7 +92,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -175,7 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
@@ -184,7 +182,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
+
+Cmdlet aliases: **Get-CMDeploymentStatus**
 
 ## RELATED LINKS
 

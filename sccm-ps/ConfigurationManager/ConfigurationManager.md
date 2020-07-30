@@ -627,9 +627,6 @@ Gets a Configuration Manager deployment.
 ### [Get-CMDeploymentPackage](Get-CMDeploymentPackage.md)
 Gets information about deployment packages on a distribution point.
 
-### [Get-CMDeploymentStatus](Get-CMDeploymentStatus.md)
-Gets the status of classic software distribution deployments.
-
 ### [Get-CMDeploymentStatusDetails](Get-CMDeploymentStatusDetails.md)
 Gets the status details of a Configuration Manager deployment.
 
@@ -799,7 +796,7 @@ Gets Configuration Manager packages.
 Gets a package deployment from Configuration Manager.
 
 ### [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
-Gets the status of classic software distribution deployments.
+Get the status of classic software distribution deployments.
 
 ### [Get-CMPowerManagementSchema](Get-CMPowerManagementSchema.md)
 Gets a power management schema.

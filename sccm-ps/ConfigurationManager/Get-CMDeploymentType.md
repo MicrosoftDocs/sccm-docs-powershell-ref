@@ -195,7 +195,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMDeploymentPackage](Get-CMDeploymentPackage.md)
 
-[Get-CMDeploymentStatus](Get-CMDeploymentStatus.md)
+[Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 
 [Remove-CMDeploymentType](Remove-CMDeploymentType.md)
 
