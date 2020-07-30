@@ -1623,11 +1623,8 @@ Creates a package deployment to a Configuration Manager collection.
 ### [New-CMPowerManagementCustomPlan](New-CMPowerManagementCustomPlan.md)
 Creates a custom power management plan.
 
-### [New-CMPrestagedMedia](New-CMPrestagedMedia.md)
-Creates prestaged media.
-
 ### [New-CMPrestageMedia](New-CMPrestageMedia.md)
-Creates a prestage media.
+Create an OS deployment prestaged media file.
 
 ### [New-CMProgram](New-CMProgram.md)
 Creates a new program in Configuration Manager.
