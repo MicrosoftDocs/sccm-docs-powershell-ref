@@ -1531,7 +1531,7 @@ Configure access settings for a mobile device that uses a Microsoft Exchange Ser
 Create application-related settings for a mobile device that uses a Exchange Server connector.
 
 ### [New-CMExchangeConnectorEmailManagementSetting](New-CMExchangeConnectorEmailManagementSetting.md)
-Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
+Create a set of email management settings for a mobile device that uses an Exchange Server connector.
 
 ### [New-CMExchangeConnectorGeneralSetting](New-CMExchangeConnectorGeneralSetting.md)
 Creates an exchange connector general setting.
@@ -1544,9 +1544,6 @@ Configures security options for a Microsoft Exchange Server connector in Configu
 
 ### [New-CMExchangeServer](New-CMExchangeServer.md)
 Configures a new Exchange Server connector.
-
-### [New-CMExchangeServerConnectorEmailManagementSetting](New-CMExchangeServerConnectorEmailManagementSetting.md)
-Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
 
 ### [New-CMExchangeServerConnectorPasswordSetting](New-CMExchangeServerConnectorPasswordSetting.md)
 Adds new password settings to a Exchange Server connector in Configuration Manager.
