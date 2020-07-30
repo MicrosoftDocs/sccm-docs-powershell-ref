@@ -1776,6 +1776,9 @@ Creates a root certificate profile.
 ### [New-CMTrustedRootCertificateProfileConfigurationItem](New-CMTrustedRootCertificateProfileConfigurationItem.md)
 Creates a root certificate profile.
 
+### [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
+Create a task sequence partition object to use with the **Format and Partition Disk** step.
+
 ### [New-CMTSRule](New-CMTSRule.md)
 {{ Fill in the Synopsis }}
 
