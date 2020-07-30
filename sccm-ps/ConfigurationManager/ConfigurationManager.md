@@ -1404,11 +1404,11 @@ Creates a SCEP certificate profile.
 ### [New-CMCertificateProfileTrustedRootCA](New-CMCertificateProfileTrustedRootCA.md)
 Creates a trusted CA certificate profile.
 
-### [New-CMClientAuthCertificateProfileConfigurationItem](New-CMClientAuthCertificateProfileConfigurationItem.md)
-Creates a certificate profile.
-
 ### [New-CMCertificateProfileTrustedRootCA](New-CMCertificateProfileTrustedRootCA.md)
 Creates a trusted CA certificate profile.
+
+### [New-CMClientCertificateProfileConfigurationItem](New-CMClientCertificateProfileConfigurationItem.md)
+Create a client certificate profile.
 
 ### [New-CMClientSetting](New-CMClientSetting.md)
 Creates customized client settings.
