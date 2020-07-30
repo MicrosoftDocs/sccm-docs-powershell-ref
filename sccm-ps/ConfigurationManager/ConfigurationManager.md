@@ -1545,9 +1545,6 @@ Configures security options for a Microsoft Exchange Server connector in Configu
 ### [New-CMExchangeServer](New-CMExchangeServer.md)
 Configures a new Exchange Server connector.
 
-### [New-CMExchangeServerConnectorPasswordSetting](New-CMExchangeServerConnectorPasswordSetting.md)
-Adds new password settings to a Exchange Server connector in Configuration Manager.
-
 ### [New-CMExchangeServerConnectorSecuritySetting](New-CMExchangeServerConnectorSecuritySetting.md)
 Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
 
