@@ -33,9 +33,9 @@ Remove-CMBoundary -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWild
 ```
 
 ## DESCRIPTION
-The **Remove-CMBoundary** cmdlet removes a boundary from Microsoft System Center Configuration Manager.
+The **Remove-CMBoundary** cmdlet removes a boundary from Configuration Manager.
 
-In System Center Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
+In Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
 A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an IP address range.
 
 > [!NOTE]
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

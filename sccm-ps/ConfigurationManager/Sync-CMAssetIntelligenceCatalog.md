@@ -24,7 +24,7 @@ The **Sync-CMAssetIntelligenceCatalog** cmdlet synchronizes the local Asset Inte
 The Asset Intelligence catalog contains categorization and identification information for software titles.
 System Center Online accepts only one manual synchronization request in a 12-hour period.
 
-Microsoft System Center Configuration Manager updates the asset Intelligence catalog by using the Asset Intelligence synchronization point site system role.
+Configuration Manager updates the asset Intelligence catalog by using the Asset Intelligence synchronization point site system role.
 You must install an Asset Intelligence synchronization point site system role before you can synchronize the Asset Intelligence catalog with System Center Online.
 You can use the Add-CMAssetIntelligenceSynchronizationPoint cmdlet to install an Asset Intelligence synchronization point site system role.
 
@@ -42,7 +42,7 @@ When you manually request catalog synchronization with System Center Online, it 
 PS XYZ:\> Sync-CMAssetIntelligenceCatalog -SiteCode "CM2" -SiteSystemServerName "Contoso-west02"
 ```
 
-This command the updates the Asset Intelligence catalog on the System Center Configuration Manager site that has the site code CM2 on the site system server named Contoso-west02.
+This command the updates the Asset Intelligence catalog on the Configuration Manager site that has the site code CM2 on the site system server named Contoso-west02.
 
 ## PARAMETERS
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

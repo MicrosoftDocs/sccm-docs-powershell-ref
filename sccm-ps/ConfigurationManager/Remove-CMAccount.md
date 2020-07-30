@@ -27,8 +27,8 @@ Remove-CMAccount [-Force] -UserName <String> [-DisableWildcardHandling] [-ForceW
 ```
 
 ## DESCRIPTION
-The **Remove-CMAccount** cmdlet removes a user account from Microsoft System Center Configuration Manager.
-System Center Configuration Manager uses user accounts to connect to various system and network resources.
+The **Remove-CMAccount** cmdlet removes a user account from Configuration Manager.
+Configuration Manager uses user accounts to connect to various system and network resources.
 For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427337(v=technet.10)) in the TechNet library.
 
 > [!NOTE]
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

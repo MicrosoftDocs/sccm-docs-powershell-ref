@@ -1,5 +1,5 @@
 ﻿---
-description: Gets a migration entity in System Center Configuration Manager.
+description: Gets a migration entity in Configuration Manager.
 external help file: AdminUI.PS.Migration.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/02/2019
@@ -10,7 +10,7 @@ title: Get-CMManagementPoint
 # Get-CMMigrationEntity
 
 ## SYNOPSIS
-Gets a migration entity in System Center Configuration Manager.
+Gets a migration entity in Configuration Manager.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Get-CMMigrationEntity [-Type <String>] [-IsActive <String>] [-DisableWildcardHan
 ```
 
 ## DESCRIPTION
-The **Get-CMMigrationEntity** cmdlet gets the migration entity in Microsoft System Center Configuration Manager.
+The **Get-CMMigrationEntity** cmdlet gets the migration entity in Configuration Manager.
 A migration entity is an object to be migrated that is of any type that is supported by migration.
 
 > [!NOTE]
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

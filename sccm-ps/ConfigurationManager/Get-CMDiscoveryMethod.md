@@ -20,12 +20,12 @@ Get-CMDiscoveryMethod [-Name <DiscoveryType>] [-SiteCode <String>] [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Get-CMDiscoveryMethod** cmdlet gets a discovery method for Microsoft System Center Configuration Manager.
-Discovery identifies computer and user resources that System Center Configuration Manager can manage.
-If it discovers a resource, Configuration Manager creates a record in the System Center Configuration Manager database for the resource and its associated information.
-You can then use the discovery information to help you to install the System Center Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
+The **Get-CMDiscoveryMethod** cmdlet gets a discovery method for Configuration Manager.
+Discovery identifies computer and user resources that Configuration Manager can manage.
+If it discovers a resource, Configuration Manager creates a record in the Configuration Manager database for the resource and its associated information.
+You can then use the discovery information to help you to install the Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
 
-For more information about discovery in System Center Configuration Manager, see [About Configuration Manager Discovery](/previous-versions/system-center/configuration-manager-2007/bb633276(v=technet.10)) on TechNet.
+For more information about discovery in Configuration Manager, see [About Configuration Manager Discovery](/previous-versions/system-center/configuration-manager-2007/bb633276(v=technet.10)) on TechNet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -39,7 +39,7 @@ For more information about discovery in System Center Configuration Manager, see
 PS XYZ:\> Get-CMDiscoveryMethod -Name "ActiveDirectoryUserDiscovery"
 ```
 
-This command gets a System Center Configuration Manager method that discovers users in the installation.
+This command gets a Configuration Manager method that discovers users in the installation.
 
 ## PARAMETERS
 
@@ -81,7 +81,7 @@ The acceptable values for this parameter are:
 - ActiveDirectoryGroupDiscovery: Discovers additional information, including the OU and group membership of the computer, about previously discovered computers from specified locations in Active Directory Domain Services.
 - ActiveDirectorySystemDiscovery: Discovers computers from specified locations in Active Directory Domain Services.
 - ActiveDirectoryUserDiscovery: Discovers users from specified locations in Active Directory Domain Services.
-- HeartbeatDiscovery: Updates discovery records for Microsoft System Center Configuration Manager clients in the System Center Configuration Manager database without discovering new resources.
+- HeartbeatDiscovery: Updates discovery records for Configuration Manager clients in the Configuration Manager database without discovering new resources.
 - NetworkForestDiscovery: Searches the network infrastructure for network devices (such as printers, routers, and bridges) that have an IP address.
 
 ```yaml
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

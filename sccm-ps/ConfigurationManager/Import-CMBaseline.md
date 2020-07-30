@@ -20,7 +20,7 @@ Import-CMBaseline -FileName <String[]> [-DuplicateWhileImporting] [-Force] [-Dis
 ```
 
 ## DESCRIPTION
-The **Import-CMBaseline** cmdlet imports Microsoft System Center Configuration Manager baselines from files.
+The **Import-CMBaseline** cmdlet imports Configuration Manager baselines from files.
 A baseline is a collection of configuration items that Configuration Manager uses to evaluate whether a computer complies with software requirements.
 After you import a baseline, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess compliance with it.
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

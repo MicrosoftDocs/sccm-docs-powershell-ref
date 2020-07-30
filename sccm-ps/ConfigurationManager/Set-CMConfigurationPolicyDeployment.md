@@ -78,9 +78,9 @@ Set-CMConfigurationPolicyDeployment -FirewallPolicyId <String> [-EnableEnforceme
 ```
 
 ## DESCRIPTION
-The **Set-CMConfigurationPolicyDeployment** cmdlet creates a configuration policy deployment in Microsoft System Center Configuration Manager.
+The **Set-CMConfigurationPolicyDeployment** cmdlet creates a configuration policy deployment in Configuration Manager.
 You can deploy firewall policies or user session management policies.
-Use the [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md) cmdlet to deploy specified policies for a System Center Configuration Manager collection.
+Use the [Start-CMConfigurationPolicyDeployment](Start-CMConfigurationPolicyDeployment.md) cmdlet to deploy specified policies for a Configuration Manager collection.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -425,7 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

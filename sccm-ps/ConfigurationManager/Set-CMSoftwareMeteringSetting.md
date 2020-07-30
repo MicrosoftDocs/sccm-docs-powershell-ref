@@ -21,18 +21,18 @@ Set-CMSoftwareMeteringSetting [-DataRetentionDayCount <Int32>] [-AutoCreateDisab
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareMeteringSetting** cmdlet configures software metering properties for Microsoft System Center Configuration Manager.
+The **Set-CMSoftwareMeteringSetting** cmdlet configures software metering properties for Configuration Manager.
 
 Software metering can use software inventory information to create software metering rules.
-When you select this feature, System Center Configuration Manager identifies multiple computers that use the same software and creates a rule to track that usage.
-You decide how long to keep software metering data that System Center Configuration Manager uses to create rules.
+When you select this feature, Configuration Manager identifies multiple computers that use the same software and creates a rule to track that usage.
+You decide how long to keep software metering data that Configuration Manager uses to create rules.
 
-To prevent System Center Configuration Manager from creating too many rules, you can specify what percentage of computers use a piece of software before System Center Configuration Manager creates a rule.
+To prevent Configuration Manager from creating too many rules, you can specify what percentage of computers use a piece of software before Configuration Manager creates a rule.
 
 You can also set a rule threshold.
-If the number of software metering rules exceeds this threshold, System Center Configuration Manager stops automatically creating rules.
+If the number of software metering rules exceeds this threshold, Configuration Manager stops automatically creating rules.
 
-When System Center Configuration Manager creates a rule automatically, it creates that rule as disabled.
+When Configuration Manager creates a rule automatically, it creates that rule as disabled.
 A disabled rule does not collect information from clients.
 You can use the [Enable-CMSoftwareMeteringRule](Enable-CMSoftwareMeteringRule.md) cmdlet to enable a rule.
 You can use the [Remove-CMSoftwareMeteringRule](Remove-CMSoftwareMeteringRule.md) cmdlet to remove unwanted rules.
@@ -50,7 +50,7 @@ PS XYZ:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $False
 ```
 
 This command disables automatic rule creation.
-System Center Configuration Manager does not automatically create software metering rules after you run this command.
+Configuration Manager does not automatically create software metering rules after you run this command.
 
 ### Example 2: Configure automatic rule creation
 ```
@@ -58,7 +58,7 @@ PS XYZ:\> Set-CMSoftwareMeteringSetting -AutoCreateDisabledRule $True -AutoCreat
 ```
 
 This command enables automatic rule creation and sets properties for it.
-This command sets the percentage of computers that use a piece of software to 50 percent, the rule threshold to 200, and the amount of time System Center Configuration Manager keeps software metering data to 30 days.
+This command sets the percentage of computers that use a piece of software to 50 percent, the rule threshold to 200, and the amount of time Configuration Manager keeps software metering data to 30 days.
 
 ### Example 3: Change automatic rule creation percentage
 ```
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

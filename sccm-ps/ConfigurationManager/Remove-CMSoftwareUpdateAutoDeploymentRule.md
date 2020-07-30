@@ -33,11 +33,11 @@ Remove-CMSoftwareUpdateAutoDeploymentRule [-InputObject] <IResultObject> [-Force
 ```
 
 ## DESCRIPTION
-The **Remove-CMSoftwareUpdateAutoDeploymentRule** cmdlet removes specified Microsoft System Center Configuration Manager deployment rules for automatic software updates.
+The **Remove-CMSoftwareUpdateAutoDeploymentRule** cmdlet removes specified Configuration Manager deployment rules for automatic software updates.
 
-System Center Configuration Manager uses rules to manage automatic deployment of software updates.
-When a rule runs, System Center Configuration Manager adds updates that qualify for the rule to a software update group.
-The System Center Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
+Configuration Manager uses rules to manage automatic deployment of software updates.
+When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group.
+The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
 You can specify rules to remove by ID or by name, or specify a rule object by using the [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 This cmdlet deletes rules permanently.
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

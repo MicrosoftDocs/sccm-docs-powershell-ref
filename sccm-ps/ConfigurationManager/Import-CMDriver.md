@@ -24,7 +24,7 @@ Import-CMDriver -Path <String> [-ImportFolder] [-ImportDuplicateDriverOption <Im
 ```
 
 ## DESCRIPTION
-The **Import-CMDriver** cmdlet imports one or more device drivers into the driver catalog in Microsoft System Center Configuration Manager.
+The **Import-CMDriver** cmdlet imports one or more device drivers into the driver catalog in Configuration Manager.
 When you import device drivers into the catalog, you can add the device drivers to driver packages or to boot image packages.
 
 As part of the import process for the device driver, Configuration Manager reads the provider, class, version, signature, supported hardware, and supported platform information that is associated with the device.
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

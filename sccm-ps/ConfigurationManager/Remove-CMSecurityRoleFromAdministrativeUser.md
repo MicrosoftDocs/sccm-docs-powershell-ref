@@ -70,7 +70,7 @@ Remove-CMSecurityRoleFromAdministrativeUser -Role <IResultObject> -Administrativ
 
 ## DESCRIPTION
 The **Remove-CMSecurityRoleFromAdministrativeUser** cmdlet removes the association between one or more security roles and an administrative user.
-After you remove the association of a security role with an administrative user, the administrative user cannot view the objects in Microsoft System Center Configuration Manager that are associated with the security role, and no longer has the permission to perform the tasks that are related to those objects.
+After you remove the association of a security role with an administrative user, the administrative user cannot view the objects in Configuration Manager that are associated with the security role, and no longer has the permission to perform the tasks that are related to those objects.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -22,7 +22,7 @@ New-CMSiteSystemServer [-SiteCode <String>] [-SiteSystemServerName] <String> [-P
 ```
 
 ## DESCRIPTION
-The **New-CMSiteSystemServer** cmdlet creates a site system server in Microsoft System Center Configuration Manager.
+The **New-CMSiteSystemServer** cmdlet creates a site system server in Configuration Manager.
 A site system server provides functionality to a configuration management site, such as communication between a Configuration Manager server and Configuration Manager clients.
 You can designate a new server as a site system server and add the site system roles, or install site system roles to an existing site system server in the site.
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

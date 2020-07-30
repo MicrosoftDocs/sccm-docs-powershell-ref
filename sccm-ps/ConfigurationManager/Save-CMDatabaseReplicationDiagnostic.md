@@ -20,7 +20,7 @@ Save-CMDatabaseReplicationDiagnostic [-SiteCode <String>] -ChildSiteCode <String
 ```
 
 ## DESCRIPTION
-The **Save-CMDatabaseReplicationDiagnostic** cmdlet saves diagnostic information for database replication issues for Microsoft System Center Configuration Manager in a specified file.
+The **Save-CMDatabaseReplicationDiagnostic** cmdlet saves diagnostic information for database replication issues for Configuration Manager in a specified file.
 This cmdlet runs diagnostics for a link between a parent and a child site databases.
 You can specify sites by either name or site code, but you cannot specify one site by name and the other by site code.
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

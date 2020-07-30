@@ -69,10 +69,10 @@ Add-CMSecurityRoleToAdministrativeUser -InputObject <IResultObject> -Administrat
 ```
 
 ## DESCRIPTION
-The **Add-CMSecurityRoleToAdministrativeUser** cmdlet adds a security role to an administrative user or administrative group in Microsoft System Center Configuration Manager.
+The **Add-CMSecurityRoleToAdministrativeUser** cmdlet adds a security role to an administrative user or administrative group in Configuration Manager.
 
 Permissions defined in a role represent object types and actions available for each object type.
-System Center Configuration Manager provides some built-in security roles.
+Configuration Manager provides some built-in security roles.
 You can also create custom security roles.
 For more information about security roles, see [Configuring Security for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427332(v=technet.10)) on TechNet.
 
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

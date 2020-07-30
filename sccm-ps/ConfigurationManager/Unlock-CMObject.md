@@ -20,7 +20,7 @@ Unlock-CMObject [-InputObject] <IResultObject[]> [-Force] [-DisableWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Unlock-CMObject** cmdlet releases locks of one or more objects in Microsoft System Center Configuration Manager.
+The **Unlock-CMObject** cmdlet releases locks of one or more objects in Configuration Manager.
 You can use the *InputObject* parameter to specify the input to this cmdlet, or you can pipe the input to this cmdlet.
 When you obtain the lock, the lock is assigned to you, your computer and the site in which the computer resides.
 While the lock is assigned to you, no other user or computer can edit the object until you release the lock.
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

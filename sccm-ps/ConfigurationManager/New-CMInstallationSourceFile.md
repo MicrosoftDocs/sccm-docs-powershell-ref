@@ -33,9 +33,9 @@ New-CMInstallationSourceFile [-CopyFromSecondarySiteLocation] -LocalPath <String
 ```
 
 ## DESCRIPTION
-The **New-CMInstallationSourceFile** cmdlet creates an installation source file for Microsoft System Center Configuration Manager.
+The **New-CMInstallationSourceFile** cmdlet creates an installation source file for Configuration Manager.
 An installation source file is an object that contains installation source parameters for a secondary site installation.
-A secondary site has no System Center Configuration Manager database of its own.
+A secondary site has no Configuration Manager database of its own.
 Instead, it forwards information that it gets from clients to a primary site that stores the data for all the secondary sites that are attached to it.
 
 > [!NOTE]
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

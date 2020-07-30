@@ -42,7 +42,7 @@ New-CMExchangeServer [-SiteCode <String>] -ServerAddress <String> [-IsHosted <Bo
 ```
 
 ## DESCRIPTION
-The **New-CMExchangeServer** cmdlet configures a new Microsoft Exchange Server connector in Microsoft System Center Configuration Manager.
+The **New-CMExchangeServer** cmdlet configures a new Microsoft Exchange Server connector in Configuration Manager.
 An Exchange Server connector synchronizes and manages the device enrolled by the Exchange Server.
 For more information, see [Configuration Manager 2012 Exchange Connector Implementation in Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=286314) on TechNet.
 
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

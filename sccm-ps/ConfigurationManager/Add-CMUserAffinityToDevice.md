@@ -27,7 +27,7 @@ Add-CMUserAffinityToDevice -DeviceId <Int32[]> [-UserId <Int32[]>] [-UserName <S
 ```
 
 ## DESCRIPTION
-The **Add-CMUserAffinityToDevice** cmdlet associates the devices with a primary user in Microsoft System Center Configuration Manager.
+The **Add-CMUserAffinityToDevice** cmdlet associates the devices with a primary user in Configuration Manager.
 You can specify the devices to associate with the primary user by their names or IDs.
 You can specify the primary user by their name or ID.
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -21,7 +21,7 @@ Set-CMDatabaseProperty [-SiteCode <String>] [-EnableDataCompression <Boolean>]
 ```
 
 ## DESCRIPTION
-The **Set-CMDatabaseProperty** cmdlet changes database settings for a Microsoft System Center Configuration Manager site database.
+The **Set-CMDatabaseProperty** cmdlet changes database settings for a Configuration Manager site database.
 Specify the Configuration Manager site code for the database that you want to modify.
 
 You can modify whether the database uses data compression, the Service Broker port for the computer that runs Microsoft SQL Server, and the length of time that the database keeps data.
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

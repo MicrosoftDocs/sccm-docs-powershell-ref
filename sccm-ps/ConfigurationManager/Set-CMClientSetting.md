@@ -174,8 +174,8 @@ Set-CMClientSetting -Name <String> [-RemoteControl]
 ```
 
 ## DESCRIPTION
-The **Set-CMClientSetting** cmdlet changes client settings for Microsoft System Center Configuration Manager devices and users.
-System Center Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects.
+The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users.
+Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects.
 Settings objects determine settings for individual clients.
 For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
 
@@ -1910,7 +1910,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

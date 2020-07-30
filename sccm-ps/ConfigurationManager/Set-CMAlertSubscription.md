@@ -36,7 +36,7 @@ Set-CMAlertSubscription -Name <String> [-NewName <String>] [-AlertId <Int32[]>] 
 ```
 
 ## DESCRIPTION
-The **Set-CMAlertSubscription** cmdlet changes the properties of an alert subscription object in Microsoft System Center Configuration Manager.
+The **Set-CMAlertSubscription** cmdlet changes the properties of an alert subscription object in Configuration Manager.
 You can change the name of an alert subscription, the email address of the recipient of an alert notification, the Windows locale ID, and the alert ID.
 You can also change the security scope membership of an alert subscription by adding it to or removing it from a specified security scope.
 
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

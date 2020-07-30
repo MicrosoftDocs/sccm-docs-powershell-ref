@@ -20,8 +20,8 @@ New-CMBaseline -Name <String> [-Description <String>] [-Category <String[]>] [-A
 ```
 
 ## DESCRIPTION
-The **New-CMBaseline** cmdlet creates a Microsoft System Center Configuration Manager baseline.
-A baseline is a collection of configuration items that System Center Configuration Manager uses to evaluate whether a computer complies with software requirements.
+The **New-CMBaseline** cmdlet creates a Configuration Manager baseline.
+A baseline is a collection of configuration items that Configuration Manager uses to evaluate whether a computer complies with software requirements.
 After you create a baseline, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess compliance with it.
 
 > [!NOTE]
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -22,8 +22,8 @@ New-CMComputerAssociation -DestinationComputer <String> -SourceComputer <String>
 
 ## DESCRIPTION
 The **New-CMComputerAssociation** cmdlet creates an association between two computers to use for migration.
-Microsoft System Center Configuration Manager can migrate user state and settings from an existing computer to a different computer as part of operating system deployment.
-In the course of migration, System Center Configuration Manager saves accounts created on the source computer and creates those user accounts on the destination computer.
+Configuration Manager can migrate user state and settings from an existing computer to a different computer as part of operating system deployment.
+In the course of migration, Configuration Manager saves accounts created on the source computer and creates those user accounts on the destination computer.
 
 To create an association, specify the source computer, the destination computer, and at least one user name created on the source computer to be migrated.
 You can also specify whether the migration includes other user names from the source computer.
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

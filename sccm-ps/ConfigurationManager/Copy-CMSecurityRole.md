@@ -34,7 +34,7 @@ Copy-CMSecurityRole -Name <String> [-Description <String>] -SourceRoleName <Stri
 
 ## DESCRIPTION
 The **Copy-CMSecurityRole** cmdlet creates a new security role by using an existing security role as a template.
-Microsoft System Center Configuration Manager provides several built-in security roles.
+Configuration Manager provides several built-in security roles.
 If you require additional security roles, you can create a custom security role by creating a copy of an existing security role, and then modifying the copy.
 
 > [!NOTE]
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -109,8 +109,8 @@ Set-CMProgram -InputObject <IResultObject> [-DeviceProgram] [-Comment <String>] 
 ```
 
 ## DESCRIPTION
-The **Set-CMProgram** cmdlet modifies a program in Microsoft System Center Configuration Manager.
-Programs are commands that are associated with a System Center Configuration Manager package.
+The **Set-CMProgram** cmdlet modifies a program in Configuration Manager.
+Programs are commands that are associated with a Configuration Manager package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
@@ -749,7 +749,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

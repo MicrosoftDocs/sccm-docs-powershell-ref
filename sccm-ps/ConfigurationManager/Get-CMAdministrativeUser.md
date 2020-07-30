@@ -27,7 +27,7 @@ Get-CMAdministrativeUser -Id <String> [-RoleName <String[]>] [-DisableWildcardHa
 ```
 
 ## DESCRIPTION
-The **Get-CMAdministrativeUser** cmdlet gets one or more administrative users in Microsoft System Center Configuration Manager.
+The **Get-CMAdministrativeUser** cmdlet gets one or more administrative users in Configuration Manager.
 An administrative user has a defined set of permissions and may be a member of one or more scopes or roles.
 
 > [!NOTE]
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

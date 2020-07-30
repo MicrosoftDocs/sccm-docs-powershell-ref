@@ -30,9 +30,9 @@ Add-CMAssetIntelligenceSynchronizationPoint [-CertificateFile <String>] [-Schedu
 
 ## DESCRIPTION
 The **Add-CMAssetIntelligenceSynchronizationPoint** cmdlet installs an Asset Intelligence synchronization point.
-Microsoft System Center Configuration Manager uses the Asset Intelligence synchronization point site system role to connect System Center Configuration Manager sites to System Center Online to synchronize Asset Intelligence catalog information.
+Configuration Manager uses the Asset Intelligence synchronization point site system role to connect Configuration Manager sites to System Center Online to synchronize Asset Intelligence catalog information.
 
-You can install the Asset Intelligence synchronization point only on a site system located at the top-level site of the System Center Configuration Manager hierarchy.
+You can install the Asset Intelligence synchronization point only on a site system located at the top-level site of the Configuration Manager hierarchy.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -54,7 +54,7 @@ PS XYZ:\> $Sc = New-CMSchedule -DayOfWeek Friday -RecurCount 2
 PS XYZ:\> Add-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-TSQA04.CORP.CONTOSO.COM" -CertificateFile "\\Contoso01\CM\ACDataFile\AIpfx.pfx" -ScheduleToken $Sc
 ```
 
-This first command creates a System Center Configuration Manager schedule token that specifies an event that occurs once a week for three weeks on Fridays.
+This first command creates a Configuration Manager schedule token that specifies an event that occurs once a week for three weeks on Fridays.
 The command stores the results in the $Sc variable.
 
 The second command installs an Asset Intelligence synchronization point on the site system server named CMDIV-TSQA04.CORP.CONTOSO.COM, specifying the schedule stored in $Sc.
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

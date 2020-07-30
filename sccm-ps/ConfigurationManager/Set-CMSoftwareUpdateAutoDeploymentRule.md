@@ -93,12 +93,12 @@ Set-CMSoftwareUpdateAutoDeploymentRule -InputObject <IResultObject> [-NewName <S
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdateAutoDeploymentRule** cmdlet modifies Microsoft System Center Configuration Manager deployment rules for automatic software updates.
+The **Set-CMSoftwareUpdateAutoDeploymentRule** cmdlet modifies Configuration Manager deployment rules for automatic software updates.
 To create a rule, use the [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 
-System Center Configuration Manager uses rules to manage automatic deployment of software updates.
-When a rule runs, System Center Configuration Manager adds updates that qualify for the rule to a software update group.
-The System Center Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
+Configuration Manager uses rules to manage automatic deployment of software updates.
+When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group.
+The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -1356,7 +1356,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -55,9 +55,9 @@ Set-CMClientPushInstallation -InputObject <IResultObject> [-ChosenAccount <Strin
 ```
 
 ## DESCRIPTION
-The **Set-CMClientPushInstallation** cmdlet changes the settings of an object that installs a Microsoft System Center Configuration Manager client by using client push.
-A client push installation installs client software on computers that System Center Configuration Manager discovered.
-When you configure client push installation for a site, the client installation automatically runs on the computers that System Center Configuration Manager discovered within the site's configured boundaries when those boundaries are part of a boundary group.
+The **Set-CMClientPushInstallation** cmdlet changes the settings of an object that installs a Configuration Manager client by using client push.
+A client push installation installs client software on computers that Configuration Manager discovered.
+When you configure client push installation for a site, the client installation automatically runs on the computers that Configuration Manager discovered within the site's configured boundaries when those boundaries are part of a boundary group.
 You can also start a client push installation by running the Client Push Installation Wizard for a specific collection or resource within a collection.
 
 For more information about how to install clients, see [How to Install Clients on Windows-Based Computers in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=247203) on TechNet.
@@ -231,9 +231,9 @@ Accept wildcard characters: False
 ### -InstallationProperty
 Specifies any installation properties to use when installing the Configuration Manager client.
 
-For System Center Configuration Manager with no service pack installed: You can specify only installation properties for the Windows Installer package (Client.msi); you cannot specify properties for CCMSetup.exe.
+For Configuration Manager with no service pack installed: You can specify only installation properties for the Windows Installer package (Client.msi); you cannot specify properties for CCMSetup.exe.
 
-For System Center Configuration Manager SP1: You can specify installation properties for the Windows Installer package (Client.msi) and the following CCMSetup.exe properties:
+For Configuration Manager SP1: You can specify installation properties for the Windows Installer package (Client.msi) and the following CCMSetup.exe properties:
 
 - forcereboot
 - skipprereq
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

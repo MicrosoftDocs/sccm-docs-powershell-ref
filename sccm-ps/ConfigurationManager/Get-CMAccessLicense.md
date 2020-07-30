@@ -32,7 +32,7 @@ Get-CMAccessLicense -LicenseName <String> [-DisableWildcardHandling] [-ForceWild
 ```
 
 ## DESCRIPTION
-The **Get-CMAccessLicense** cmdlet gets license usage information for the servers and clients in the scope of System Center Configuration Manager.
+The **Get-CMAccessLicense** cmdlet gets license usage information for the servers and clients in the scope of Configuration Manager.
 This cmdlet returns a list of features able to be licensed and a list of unique users and devices per licensable feature.
 
 > [!NOTE]
@@ -47,7 +47,7 @@ This cmdlet returns a list of features able to be licensed and a list of unique 
 PS XYZ:\> Get-CMAccessLicense -License
 ```
 
-This command gets all licensable features for all servers and clients within the scope of System Center Configuration Manager.
+This command gets all licensable features for all servers and clients within the scope of Configuration Manager.
 
 ### Example 2: Get the unique users, devices, and license-specific unique ID for a specified license
 ```
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -License
-Indicates that the cmdlet gets all licensable features for all of the servers and clients within the scope of System Center Configuration Manager.
+Indicates that the cmdlet gets all licensable features for all of the servers and clients within the scope of Configuration Manager.
 You can specify the name of the license that is returned for the *LicenseName* parameter to obtain the unique users and devices for that specific license.
 
 ```yaml
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -27,7 +27,7 @@ Get-CMActiveDirectoryForest -Id <String[]> [-DisableWildcardHandling] [-ForceWil
 ```
 
 ## DESCRIPTION
-The **Get-CMActiveDirectoryForest** cmdlet gets one or more Active Directory forest objects in Microsoft System Center Configuration Manager.
+The **Get-CMActiveDirectoryForest** cmdlet gets one or more Active Directory forest objects in Configuration Manager.
 You can get an Active Directory forest object by ID or fully qualified domain name (FQDN).
 
 > [!NOTE]
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

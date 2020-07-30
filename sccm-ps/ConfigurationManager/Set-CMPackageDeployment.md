@@ -86,7 +86,7 @@ Set-CMPackageDeployment -InputObject <IResultObject> -DeviceProgramName <String>
 
 ## DESCRIPTION
 
-The **Set-CMPackageDeployment** cmdlet changes values that define how Microsoft System Center Configuration Manager deploys a software package.
+The **Set-CMPackageDeployment** cmdlet changes values that define how Configuration Manager deploys a software package.
 A deployment includes a collection of devices or users, a package to deploy, and either a device program name or a standard program name.
 To specify which deployment to modify, specify the collection name, package, and program name.
 You can specify the package by name or ID, or you can use the [Get-CMPackage](Get-CMPackage.md) cmdlet to get a package object.
@@ -798,7 +798,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

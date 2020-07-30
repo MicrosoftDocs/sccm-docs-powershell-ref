@@ -22,7 +22,7 @@ New-CMHardwareRequirement -Product <String> -MinCpu <Int32> -MinDiskFree <Int64>
 ## DESCRIPTION
 The **New-CMHardwareRequirement** cmdlet creates a hardware requirement object for a product.
 
-Microsoft System Center Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
+Configuration Manager manages Asset Intelligence information, including hardware requirements, for different software products.
 You can add, modify, or delete your own hardware requirements, but you cannot change built-in hardware requirement objects.
 
 > [!NOTE]
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -33,7 +33,7 @@ Remove-CMAdministrativeUser [-Force] -Id <String> [-DisableWildcardHandling] [-F
 ```
 
 ## DESCRIPTION
-The **Remove-CMAdministrativeUser** cmdlet removes one or more Microsoft System Center Configuration Manager administrative users.
+The **Remove-CMAdministrativeUser** cmdlet removes one or more Configuration Manager administrative users.
 When you remove an administrative user, Configuration Manager revokes the access of the administrative user to manage Configuration Manager.
 
 > [!NOTE]
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

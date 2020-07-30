@@ -27,11 +27,11 @@ Remove-CMStateMigrationPoint [-SiteCode <String>] [-Force] [-SiteSystemServerNam
 ```
 
 ## DESCRIPTION
-The **Remove-CMStateMigrationPoint** cmdlet removes a state migration point from a Microsoft System Center Configuration Manager site.
+The **Remove-CMStateMigrationPoint** cmdlet removes a state migration point from a Configuration Manager site.
 This site system role stores user information while you perform an operating system deployment.
 If you remove a state migration point, you also remove all associated stored user information.
 
-Each state migration point can be a member of only one System Center Configuration Manager site.
+Each state migration point can be a member of only one Configuration Manager site.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

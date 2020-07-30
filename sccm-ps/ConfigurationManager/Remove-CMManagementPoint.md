@@ -30,9 +30,9 @@ Remove-CMManagementPoint [-SiteCode <String>] [-Force] [-SiteSystemServerName] <
 The **Remove-CMManagementPoint** cmdlet removes a management point.
 A management point is a site system role that provides policy and service location information to clients and receives configuration data from clients.
 
-When you remove a management point, Microsoft System Center Configuration Manager disables communication between the site server and the clients that you assigned to the site server.
-System Center Configuration Manager cannot provide these clients with installation prerequisites, client installation files, configuration details, advertisements, and software distribution package source file locations.
-Additionally, System Center Configuration Manager cannot receive inventory data, software metering information, and status and state messages from the clients.
+When you remove a management point, Configuration Manager disables communication between the site server and the clients that you assigned to the site server.
+Configuration Manager cannot provide these clients with installation prerequisites, client installation files, configuration details, advertisements, and software distribution package source file locations.
+Additionally, Configuration Manager cannot receive inventory data, software metering information, and status and state messages from the clients.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

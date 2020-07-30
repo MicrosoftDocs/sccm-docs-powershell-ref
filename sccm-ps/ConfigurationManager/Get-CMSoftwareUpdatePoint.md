@@ -27,10 +27,10 @@ Get-CMSoftwareUpdatePoint [-AllSite] -InputObject <IResultObject> [-DisableWildc
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareUpdatePoint** cmdlet gets a software update point site system role for Microsoft System Center Configuration Manager.
+The **Get-CMSoftwareUpdatePoint** cmdlet gets a software update point site system role for Configuration Manager.
 
 A software update point is a site server role that hosts software updates.
-System Center Configuration Manager clients connect to a software update point to get available updates.
+Configuration Manager clients connect to a software update point to get available updates.
 The software update point interacts with Windows Server Update Services (WSUS) to configure update settings, request synchronization to the update source, and to synchronize software updates from the WSUS database.
 
 You can specify a software update point by site code or by the name of the computer that hosts the site system role.
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

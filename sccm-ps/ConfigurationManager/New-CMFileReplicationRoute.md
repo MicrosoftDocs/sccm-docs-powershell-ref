@@ -21,11 +21,11 @@ New-CMFileReplicationRoute -SourceSiteCode <String> -DestinationSiteCode <String
 ```
 
 ## DESCRIPTION
-The **New-CMFileReplicationRoute** cmdlet creates a file replication route for Microsoft System Center Configuration Manager.
-System Center Configuration Manager uses file replication routes to transfer file-based data between sites in a hierarchy.
+The **New-CMFileReplicationRoute** cmdlet creates a file replication route for Configuration Manager.
+Configuration Manager uses file replication routes to transfer file-based data between sites in a hierarchy.
 Each file replication route identifies a destination site to which file-based data can transfer.
 
-File replication routes were known as addresses in versions of Configuration Manager before System Center Configuration Manager.
+File replication routes were known as addresses in versions of Configuration Manager before Configuration Manager.
 The functionality of file replication routes is the same as that of addresses in earlier versions.
 
 > [!NOTE]
@@ -41,7 +41,7 @@ PS XYZ:\> New-CMFileReplicationRoute -DestinationSiteCode "IM5" -SourceSiteCode 
 ```
 
 This command creates a file replication route from the site that has the site code IM1 to the site that has the site code IM5 on the server named ImgDataServer01.
-System Center Configuration Manager uses the account named AdminRepl01 to manage data transfer over this route.
+Configuration Manager uses the account named AdminRepl01 to manage data transfer over this route.
 
 ## PARAMETERS
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -31,7 +31,7 @@ Get-CMUserDeviceAffinityRequest -CollectionId <String> [-UserName <String>] [-Us
 ## DESCRIPTION
 The **Get-CMUserDeviceAffinityRequest** cmdlet gets a request for user device affinity.
 
-In Microsoft System Center Configuration Manager, user device affinity defines a relationship between a user and a device.
+In Configuration Manager, user device affinity defines a relationship between a user and a device.
 Instead of deploying an application to a group of devices, you deploy an application to a user and Configuration Manager installs the application on all devices associated with the user.
 
 > [!NOTE]
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

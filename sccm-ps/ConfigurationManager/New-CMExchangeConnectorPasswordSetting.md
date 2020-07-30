@@ -1,8 +1,8 @@
 ﻿---
-description: Adds new password settings to a Exchange Server connector in Configuration Manager.
+description: Add new password settings to a Exchange Server connector in Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/30/2020
 schema: 2.0.0
 title: New-CMExchangeConnectorPasswordSetting
 ---
@@ -10,7 +10,8 @@ title: New-CMExchangeConnectorPasswordSetting
 # New-CMExchangeConnectorPasswordSetting
 
 ## SYNOPSIS
-Adds new password settings to a Exchange Server connector in Configuration Manager.
+
+Add new password settings to a Exchange Server connector in Configuration Manager.
 
 ## SYNTAX
 
@@ -23,20 +24,15 @@ New-CMExchangeConnectorPasswordSetting [-AllowSimplePassword <Boolean>] [-Maximu
 ```
 
 ## DESCRIPTION
-The **New-CMExchangeConnectorPasswordSetting** cmdlet adds new password settings to a Microsoft Exchange Server connector in Microsoft System Center Configuration Manager.
-An Exchange Server connector in Configuration Manager manages mobile devices that connect to an on-premise or online Exchange Server by using the Exchange ActiveSync protocol.
+
+The **New-CMExchangeConnectorPasswordSetting** cmdlet adds new password settings to a Microsoft Exchange Server connector in Configuration Manager. An Exchange Server connector in Configuration Manager manages mobile devices that connect to an on-premise or online Exchange Server by using the Exchange ActiveSync protocol.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Specify password settings for an Exchange Server connector
-```
-PS XYZ:\> New-CMExchangeServerConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity Strong -MinimumComplexChar 3 -AllowSimplePassword $True -PasswordRecovery $True
-```
 
 This command sets these password-related options for an Exchange Server connector:
 
@@ -50,6 +46,10 @@ This command sets these password-related options for an Exchange Server connecto
 - Requires an alphanumeric password.
 - Allows passwords to be simple.
 - Allows users to recover missing passwords from the mobile device.
+
+```powershell
+New-CMExchangeConnectorPasswordSetting -PasswordEnabled $True -MinimumPasswordLength 8 -PasswordExpiration 51 -PasswordHistory 21 -WipeAfterFailedAttempt 6 -MaximumIdleTimeMinutes 41 -PasswordComplexity Strong -MinimumComplexChar 3 -AllowSimplePassword $True -PasswordRecovery $True
+```
 
 ## PARAMETERS
 
@@ -67,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -82,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -215,7 +217,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
@@ -226,6 +229,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorPasswordSetting
 
 ## NOTES
+
+Cmdlet aliases: **New-CMExchangeServerConnectorPasswordSetting**
 
 ## RELATED LINKS
 

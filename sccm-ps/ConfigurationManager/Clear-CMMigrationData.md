@@ -21,7 +21,7 @@ Clear-CMMigrationData -SourceSiteCode <String> [-Force] [-DisableWildcardHandlin
 
 ## DESCRIPTION
 The **Clear-CMMigrationData** cmdlet deletes the historical data about a data migration operation.
-With Microsoft System Center Configuration Manager, you can migrate data from a supported Configuration Manager hierarchy to a System Center Configuration Manager environment.
+With Configuration Manager, you can migrate data from a supported Configuration Manager hierarchy to a Configuration Manager environment.
 When you migrate data from a source hierarchy, you access data from the site databases that you identify in the source infrastructure and then transfer that data to your current environment from the database of the destination hierarchy.
 **Clear-CMMigrationData** cleans up the historical data from the destination hierarchy database.
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

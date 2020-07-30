@@ -39,11 +39,11 @@ Set-CMSoftwareUpdateGroup -InputObject <IResultObject> [-NewName <String>] [-Des
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdateGroup** cmdlet changes the name or description of one or more Microsoft System Center Configuration Manager software update groups, or it adds or removes software update groups for one or more security scopes.
+The **Set-CMSoftwareUpdateGroup** cmdlet changes the name or description of one or more Configuration Manager software update groups, or it adds or removes software update groups for one or more security scopes.
 
 A software update group is a collection of one or more software updates.
 You can add software updates to a software update group and then deploy the group to clients.
-After you deploy a software update group, you can add new software updates to the group and System Center Configuration Manager automatically deploys them.
+After you deploy a software update group, you can add new software updates to the group and Configuration Manager automatically deploys them.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -288,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
