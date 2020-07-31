@@ -1,8 +1,8 @@
 ---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
-Download Help Link: {{ Update Download Link }}
-Help Version: {{ Please enter version of help manually (X.X.X.X) format }}
+Download Help Link: https://aka.ms/configmgrps-help
+Help Version: 5.2006.0.0
 Locale: en-US
 ---
 
@@ -3237,8 +3237,8 @@ Sets a TS step install update.
 ### [Set-CMTSStepOfflineEnableBitLocker](Set-CMTSStepOfflineEnableBitLocker.md)
 Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
 
-### [Set-CMTSStepOfflineEnableBitLocker](Set-CMTSStepOfflineEnableBitLocker.md)
-Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
+### [Set-CMTSStepPartitionDisk](Set-CMTSStepPartitionDisk.md)
+Configure the **Format and Partition Disk** step in a task sequence.
 
 ### [Set-CMTSStepPrepareConfigMgrClient](Set-CMTSStepPrepareConfigMgrClient.md)
 {{ Fill in the Synopsis }}

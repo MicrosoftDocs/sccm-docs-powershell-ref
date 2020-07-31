@@ -589,7 +589,7 @@ For a new partition, set this parameter to `true` to make it the boot partition.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: ByValue, ById, ByName
 Aliases:
 
 Required: False
@@ -718,10 +718,10 @@ Specify an array of partition setting objects.
 
 ```yaml
 Type: IResultObject[]
-Parameter Sets: (All)
+Parameter Sets: ByValue, ById, ByName
 Aliases: PartitionSettings
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
