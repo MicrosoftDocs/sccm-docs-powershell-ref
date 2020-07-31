@@ -1,8 +1,8 @@
 ---
-description: Creates a task sequence deployment in Configuration Manager.
+description: Create a task sequence deployment
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/03/2018
+ms.date: 07/31/2020
 schema: 2.0.0
 title: New-CMTaskSequenceDeployment
 ---
@@ -11,7 +11,7 @@ title: New-CMTaskSequenceDeployment
 
 ## SYNOPSIS
 
-Creates a task sequence deployment in Configuration Manager.
+Create a task sequence deployment.
 
 ## SYNTAX
 
@@ -51,15 +51,20 @@ New-CMTaskSequenceDeployment [-DeadlineDateTime <DateTime>] [-TaskSequencePackag
 
 ## DESCRIPTION
 
-The **New-CMTaskSequenceDeployment** cmdlet creates a task sequence deployment.
-A task sequence deployment assigns a task sequence to a collection of computers.
+The **New-CMTaskSequenceDeployment** cmdlet creates a task sequence deployment. A task sequence deployment assigns a task sequence to a collection of computers.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
+
+{{ Add example description here }}
+
+### Example 1
+
+```powershell
+{{ Add example code here }}
+```
 
 ## PARAMETERS
 
@@ -261,7 +266,6 @@ Accept wildcard characters: False
 ### -DeploymentOption
 
 Specifies if clients download all content before starting the task sequence, or download content as needed by the running task sequence.
-By default, clients download content as needed.
 
 ```yaml
 Type: DeploymentOptionType
@@ -278,7 +282,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -358,7 +362,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -374,8 +378,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a task sequence deployment object.
-To obtain a task sequence object, use the [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md) cmdlet.
+Specifies a task sequence deployment object. To get a task sequence object, use the [Get-CMTaskSequenceDeployment](Get-CMTaskSequenceDeployment.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -391,7 +394,7 @@ Accept wildcard characters: False
 
 ### -InternetOption
 
-Indicates whether the task sequence runs on clients connecting over the Internet.
+Indicates whether the task sequence runs on clients connecting over the internet.
 
 ```yaml
 Type: Boolean
@@ -455,8 +458,7 @@ Accept wildcard characters: False
 
 ### -RerunBehavior
 
-Specifies that a task sequence will be rerun on a computer if it has previously been run before the scheduled mandatory time.
-By default, the task sequence is always rerun.
+Specifies whether the task sequence will rerun on a computer if it previously ran before the scheduled mandatory time. By default, the task sequence always reruns.
 
 ```yaml
 Type: RerunBehaviorType
@@ -473,7 +475,7 @@ Accept wildcard characters: False
 
 ### -RunFromSoftwareCenter
 
-Indicate whether to run from software center.
+Indicate whether to run from Software Center.
 
 ```yaml
 Type: Boolean
@@ -489,9 +491,7 @@ Accept wildcard characters: False
 
 ### -Schedule
 
-Specifies an array of **CMSchedule** objects.
-A **CMSchedule** object defines the mandatory assignment schedule for a deployment.
-To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+Specifies an array of **CMSchedule** objects. A **CMSchedule** object defines the mandatory assignment schedule for a deployment. To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -508,11 +508,6 @@ Accept wildcard characters: False
 ### -ScheduleEvent
 
 Specifies an array of events that determine when the task sequence deployment runs.
-The acceptable values for this parameter are:
-
-- AsSoonAsPossible
-- LogOff
-- LogOn
 
 ```yaml
 Type: ScheduleEventType[]
@@ -529,10 +524,7 @@ Accept wildcard characters: False
 
 ### -SendWakeupPacket
 
-Indicates whether to send a wake-up packet to computers before the deployment begins.
-If this value is $True, Configuration Manager wakes a computer from sleep.
-If this value is $False, it does not wake computers from sleep.
-For computers to wake, you must first configure Wake On LAN.
+Indicates whether to send a wake-up packet to computers before the deployment begins. If this value is `$True`, Configuration Manager wakes a computer from sleep. If this value is `$False`, it doesn't wake computers from sleep. For computers to wake, first configure Wake On LAN.
 
 ```yaml
 Type: Boolean
@@ -612,7 +604,7 @@ Accept wildcard characters: False
 
 ### -UseMeteredNetwork
 
-Indicates whether to allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs.
+Indicates whether to allow clients on a metered internet connection to download content after the installation deadline, which might incur additional costs.
 
 ```yaml
 Type: Boolean
@@ -628,8 +620,7 @@ Accept wildcard characters: False
 
 ### -UseUtcForAvailableSchedule
 
-Indicates whether client computers use UTC time to determine the availability of a program.
-UTC time makes the task sequence available at the same time for all computers.
+Indicates whether client computers use UTC time to determine the availability of a program. UTC time makes the task sequence available at the same time for all computers.
 
 ```yaml
 Type: Boolean
@@ -645,8 +636,7 @@ Accept wildcard characters: False
 
 ### -UseUtcForExpireSchedule
 
-Indicates whether client computers use UTC time to determine the expiration of a program.
-UTC time makes the task sequence available at the same time for all computers.
+Indicates whether client computers use UTC time to determine the expiration of a program. UTC time makes the task sequence available at the same time for all computers.
 
 ```yaml
 Type: Boolean
@@ -662,8 +652,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -678,6 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
