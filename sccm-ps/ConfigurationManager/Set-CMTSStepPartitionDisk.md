@@ -7,21 +7,21 @@ schema: 2.0.0
 title: Set-CMTSStepPartitionDisk
 ---
 
-# Set-CMTSStepOfflineEnableBitLocker
+# Set-CMTSStepPartitionDisk
 
 ## SYNOPSIS
-Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
+
+Configure the **Format and Partition Disk** step in a task sequence.
 
 ## SYNTAX
 
 ### ByValue (Default)
 ```
-Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive <String>]
- [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>]
- [-EncryptionMethod <DiskEncryptionMethod>] -InputObject <IResultObject> [-StepName <String>]
- [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+Set-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean>] [-DiskNumber <Int32>]
+ [-DiskNumberVariable <String>] [-PartitionSetting <IResultObject[]>] -InputObject <IResultObject>
+ [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
+ [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -29,12 +29,11 @@ Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive 
 
 ### ById
 ```
-Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive <String>]
- [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>]
- [-EncryptionMethod <DiskEncryptionMethod>] -TaskSequenceId <String> [-StepName <String>]
- [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+Set-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean>] [-DiskNumber <Int32>]
+ [-DiskNumberVariable <String>] [-PartitionSetting <IResultObject[]>] -TaskSequenceId <String>
+ [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
+ [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -42,12 +41,11 @@ Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive 
 
 ### ByName
 ```
-Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive <String>]
- [-VariableName <String>] [-NextPartition] [-EnableSkipWhenTpmInvalid <Boolean>]
- [-EncryptionMethod <DiskEncryptionMethod>] -TaskSequenceName <String> [-StepName <String>]
- [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>] [-IsEnabled <Boolean>]
- [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>] [-MoveToIndex <Int32>]
- [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
+Set-CMTSStepPartitionDisk [-DiskType <PartitionDiskStyle>] [-IsBootDisk <Boolean>] [-DiskNumber <Int32>]
+ [-DiskNumberVariable <String>] [-PartitionSetting <IResultObject[]>] -TaskSequenceName <String>
+ [-StepName <String>] [-NewStepName <String>] [-Description <String>] [-IsContinueOnError <Boolean>]
+ [-IsEnabled <Boolean>] [-AddCondition <IResultObject[]>] [-ClearCondition] [-StepOrder <ReorderType>]
+ [-MoveToIndex <Int32>] [-RemoveConditionIfStatement] [-RemoveConditionQueryWmi] [-RemoveConditionVariable]
  [-RemoveConditionOperatingSystem] [-RemoveConditionFile] [-RemoveConditionFolder] [-RemoveConditionRegistry]
  [-RemoveConditionSoftware] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -55,35 +53,35 @@ Set-CMTSStepOfflineEnableBitLocker [-Disk <Int32>] [-Partition <Int32>] [-Drive 
 
 ### ByIdSetConditionIfStatement
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>] [-SetConditionIfStatement]
+Set-CMTSStepPartitionDisk -TaskSequenceId <String> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionQueryWmi
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>] [-SetConditionQueryWmi]
+Set-CMTSStepPartitionDisk -TaskSequenceId <String> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionVariable
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>] [-SetConditionVariable]
+Set-CMTSStepPartitionDisk -TaskSequenceId <String> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionOperatingSystem
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>] [-SetConditionOperatingSystem]
+Set-CMTSStepPartitionDisk -TaskSequenceId <String> [-StepName <String>] [-SetConditionOperatingSystem]
  [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionFile
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>] [-SetConditionFile]
+Set-CMTSStepPartitionDisk -TaskSequenceId <String> [-StepName <String>] [-SetConditionFile]
  [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
  [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -91,14 +89,14 @@ Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>]
 
 ### ByIdSetConditionFolder
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>] [-SetConditionFolder]
+Set-CMTSStepPartitionDisk -TaskSequenceId <String> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByIdSetConditionRegistry
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>] [-SetConditionRegistry]
+Set-CMTSStepPartitionDisk -TaskSequenceId <String> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -106,42 +104,42 @@ Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>]
 
 ### ByIdSetConditionSoftware
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceId <String> [-StepName <String>] [-SetConditionSoftware]
+Set-CMTSStepPartitionDisk -TaskSequenceId <String> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionIfStatement
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String>] [-SetConditionIfStatement]
+Set-CMTSStepPartitionDisk -TaskSequenceName <String> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionQueryWmi
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String>] [-SetConditionQueryWmi]
+Set-CMTSStepPartitionDisk -TaskSequenceName <String> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionVariable
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String>] [-SetConditionVariable]
+Set-CMTSStepPartitionDisk -TaskSequenceName <String> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionOperatingSystem
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String>]
- [-SetConditionOperatingSystem] [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTSStepPartitionDisk -TaskSequenceName <String> [-StepName <String>] [-SetConditionOperatingSystem]
+ [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionFile
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String>] [-SetConditionFile]
+Set-CMTSStepPartitionDisk -TaskSequenceName <String> [-StepName <String>] [-SetConditionFile]
  [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
  [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -149,14 +147,14 @@ Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String
 
 ### ByNameSetConditionFolder
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String>] [-SetConditionFolder]
+Set-CMTSStepPartitionDisk -TaskSequenceName <String> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByNameSetConditionRegistry
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String>] [-SetConditionRegistry]
+Set-CMTSStepPartitionDisk -TaskSequenceName <String> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -164,42 +162,42 @@ Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String
 
 ### ByNameSetConditionSoftware
 ```
-Set-CMTSStepOfflineEnableBitLocker -TaskSequenceName <String> [-StepName <String>] [-SetConditionSoftware]
+Set-CMTSStepPartitionDisk -TaskSequenceName <String> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionIfStatement
 ```
-Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <String>] [-SetConditionIfStatement]
+Set-CMTSStepPartitionDisk -InputObject <IResultObject> [-StepName <String>] [-SetConditionIfStatement]
  [-StatementType <ConditionStatementType>] [-Condition <IResultObject[]>] [-DisableWildcardHandling]
  [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionQueryWmi
 ```
-Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <String>] [-SetConditionQueryWmi]
+Set-CMTSStepPartitionDisk -InputObject <IResultObject> [-StepName <String>] [-SetConditionQueryWmi]
  [-Namespace <String[]>] [-Query <String>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionVariable
 ```
-Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <String>] [-SetConditionVariable]
+Set-CMTSStepPartitionDisk -InputObject <IResultObject> [-StepName <String>] [-SetConditionVariable]
  [-OperatorType <VariableOperatorType>] [-ConditionVariableName <String>] [-ConditionVariableValue <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionOperatingSystem
 ```
-Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <String>]
- [-SetConditionOperatingSystem] [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling]
- [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CMTSStepPartitionDisk -InputObject <IResultObject> [-StepName <String>] [-SetConditionOperatingSystem]
+ [-SupportedPlatform <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionFile
 ```
-Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <String>] [-SetConditionFile]
+Set-CMTSStepPartitionDisk -InputObject <IResultObject> [-StepName <String>] [-SetConditionFile]
  [-FilePath <String>] [-FileVersion <String>] [-FileTimestamp <DateTime>]
  [-FileDateTimeOperator <VariableOperatorType>] [-VersionOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -207,14 +205,14 @@ Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <Stri
 
 ### ByValueSetConditionFolder
 ```
-Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <String>] [-SetConditionFolder]
+Set-CMTSStepPartitionDisk -InputObject <IResultObject> [-StepName <String>] [-SetConditionFolder]
  [-FolderPath <String>] [-FolderTimestamp <DateTime>] [-FolderDateTimeOperator <VariableOperatorType>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByValueSetConditionRegistry
 ```
-Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <String>] [-SetConditionRegistry]
+Set-CMTSStepPartitionDisk -InputObject <IResultObject> [-StepName <String>] [-SetConditionRegistry]
  [-RootKey <RegistryRootKeyType>] [-RegistryKey <String>] [-RegistryOperator <VariableOperatorType>]
  [-RegistryValueName <String>] [-ValueType <RegistryValueType>] [-RegistryValueData <String>]
  [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -222,13 +220,14 @@ Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <Stri
 
 ### ByValueSetConditionSoftware
 ```
-Set-CMTSStepOfflineEnableBitLocker -InputObject <IResultObject> [-StepName <String>] [-SetConditionSoftware]
+Set-CMTSStepPartitionDisk -InputObject <IResultObject> [-StepName <String>] [-SetConditionSoftware]
  [-MsiFilePath <String>] [-IsAnyVersion <Boolean>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
+
+Configure the **Format and Partition Disk** step in a task sequence. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -236,6 +235,7 @@ Configure the **Pre-provision BitLocker** step in a task sequence, to enable Bit
 ## EXAMPLES
 
 ### Example 1
+
 {{ Add example description here }}
 
 ```powershell
@@ -372,44 +372,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Disk
+### -DiskNumber
 
-Specify the specific disk number to encrypt. Use this parameter with the **-Partition** parameter.
+Specify an integer for the physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.
 
 ```yaml
 Type: Int32
-Parameter Sets: ByValue, ById, ByName
-Aliases: DestinationDisk
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Drive
-
-Specify the logical drive letter to encrypt. For example, `C:`
-
-```yaml
-Type: String
-Parameter Sets: ByValue, ById, ByName
-Aliases: SpecificDrive
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSkipWhenTpmInvalid
-
-Set this parameter to `true` to skip this step for computers that don't have a TPM or when the TPM isn't enabled.
-
-```yaml
-Type: Boolean
 Parameter Sets: ByValue, ById, ByName
 Aliases:
 
@@ -420,15 +388,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EncryptionMethod
+### -DiskNumberVariable
 
-Applies to version 2006 and later. Use this parameter to specify the disk encryption mode. By default or if not specified, the step continues to use the default encryption method for the OS version.
+Applies to version 2006 and later. Use a task sequence variable to specify the target disk to format. This variable option supports more complex task sequences with dynamic behaviors. For more information, see [About task sequence steps - Format and Parition Disk](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#properties-for-format-and-partition-disk).
 
 ```yaml
-Type: DiskEncryptionMethod
+Type: String
 Parameter Sets: ByValue, ById, ByName
-Aliases: DiskEncryptionMethod
-Accepted values: DoNotSpecify, AES_128, AES_256, XTS_AES128, XTS_AES256, TotalCount
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiskType
+
+Specify the type of the disk to format:
+
+- `Mbr`: Master Boot Record
+- `Gpt`: GUID Partition Table
+
+```yaml
+Type: PartitionDiskStyle
+Parameter Sets: ByValue, ById, ByName
+Aliases:
+Accepted values: Mbr, Gpt
 
 Required: False
 Position: Named
@@ -568,7 +555,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
 
 ```yaml
 Type: IResultObject
@@ -588,6 +574,22 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: ByIdSetConditionSoftware, ByNameSetConditionSoftware, ByValueSetConditionSoftware
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsBootDisk
+
+For a new partition, set this parameter to `true` to make it the boot partition.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -693,22 +695,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NextPartition
-
-Add this parameter to configure BitLocker to apply to the next available formatted partition.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: ByValue, ById, ByName
-Aliases: UseNextAvailableFormattedPartition
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OperatorType
 
 Specify an operator to use with a task sequence variable condition.
@@ -726,16 +712,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Partition
+### -PartitionSetting
 
-Specify the specific partition number to encrypt. Use this parameter with the **-Disk** parameter.
+Specify an array of partition setting objects.
 
 ```yaml
-Type: Int32
-Parameter Sets: ByValue, ById, ByName
-Aliases: DestinationPartition
+Type: IResultObject[]
+Parameter Sets: (All)
+Aliases: PartitionSettings
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1185,22 +1171,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VariableName
-
-Specify a task sequence variable to identify the logical drive letter as the destination for BitLocker.
-
-```yaml
-Type: String
-Parameter Sets: ByValue, ById, ByName
-Aliases: DestinationVariable
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -VersionOperator
 Specify an operator to use with a file condition.
 
@@ -1248,4 +1218,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About task sequence steps - Pre-provision BitLocker](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)
+[About task sequence steps - Format and Partition Disk](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk)
