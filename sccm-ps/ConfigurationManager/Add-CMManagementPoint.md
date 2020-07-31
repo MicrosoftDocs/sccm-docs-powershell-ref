@@ -49,8 +49,8 @@ Add-CMManagementPoint [-EnableSsl] [-EnableCloudGateway] [-CommunicationType <Co
 ```
 
 ## DESCRIPTION
-The **Add-CMManagementPoint** cmdlet adds a management point to Microsoft System Center Configuration Manager.
-A management point is a System Center Configuration Manager site system role that provides policy and service information to clients and receives configuration data from clients.
+The **Add-CMManagementPoint** cmdlet adds a management point to Configuration Manager.
+A management point is a Configuration Manager site system role that provides policy and service information to clients and receives configuration data from clients.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -64,7 +64,7 @@ A management point is a System Center Configuration Manager site system role tha
 PS XYZ:\>Add-CMManagementPoint -SiteSystemServerName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SiteCode "CM2" -ClientConnectionType InternetAndIntranet -AllowDevice $True -GenerateAlert -SQLServerFqdnName "CMDEV-TEST02.TSQA.CONTOSO.COM" -SQLServerInstanceName "MSSQLServer" -DatabaseName "test" -UserName "TSQA\MPAdmin" -Verbose
 ```
 
-This command adds a management point to a System Center Configuration Manager installation.
+This command adds a management point to a Configuration Manager installation.
 The command specifies the following information about the management point:
 
 - The new management point appears on the site system named CMDEV-TEST02.TSQA.CONTOSO.COM.
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

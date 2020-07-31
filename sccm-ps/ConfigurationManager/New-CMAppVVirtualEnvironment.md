@@ -21,8 +21,8 @@ New-CMAppVVirtualEnvironment -Name <String> [-Description <String>]
 ```
 
 ## DESCRIPTION
-The **New-CMAppVVirtualEnvironment** cmdlet creates an Microsoft Application Virtualization (App-V) virtual environment in Microsoft System Center Configuration Manager.
-App-V virtual environments in System Center Configuration Manager enable deployed virtual applications to share the same file system and registry on client computers.
+The **New-CMAppVVirtualEnvironment** cmdlet creates an Microsoft Application Virtualization (App-V) virtual environment in Configuration Manager.
+App-V virtual environments in Configuration Manager enable deployed virtual applications to share the same file system and registry on client computers.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

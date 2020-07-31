@@ -255,7 +255,7 @@ Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeId <Int32> [-Prior
 
 ## DESCRIPTION
 
-The **Set-CMDeploymentType** cmdlet changes a deployment type for a deployment application in Microsoft System Center Configuration Manager.
+The **Set-CMDeploymentType** cmdlet changes a deployment type for a deployment application in Configuration Manager.
 A deployment type is a part of the application that defines how that application deploys other applications to devices.
 You can also use this cmdlet to change the priority for dependencies of the deployment type.
 Configuration Manager evaluates and installs dependencies of a deployment type in order of priorities before it installs the deployment type.
@@ -1259,7 +1259,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

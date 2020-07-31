@@ -39,7 +39,7 @@ Remove-CMApplication -ModelName <String> [-Force] [-DisableWildcardHandling] [-F
 ```
 
 ## DESCRIPTION
-The **Remove-CMApplication** cmdlet removes an application from Microsoft System Center Configuration Manager so that it cannot be installed by clients.
+The **Remove-CMApplication** cmdlet removes an application from Configuration Manager so that it cannot be installed by clients.
 This cmdlet does not remove any existing client installations.
 
 > [!NOTE]
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

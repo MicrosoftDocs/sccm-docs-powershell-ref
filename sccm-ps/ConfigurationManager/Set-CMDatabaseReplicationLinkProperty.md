@@ -33,7 +33,7 @@ Set-CMDatabaseReplicationLinkProperty -ParentSiteCode <String> -ChildSiteCode <S
 ```
 
 ## DESCRIPTION
-The **Set-CMDatabaseReplicationLinkProperty** cmdlet changes configuration settings for a database replication link between a Microsoft System Center Configuration Manager parent site and child site.
+The **Set-CMDatabaseReplicationLinkProperty** cmdlet changes configuration settings for a database replication link between a Configuration Manager parent site and child site.
 
 Database replication for Configuration Manager sites transfers data and merges changes made in a site database with information stored at other sites in the Configuration Manager hierarchy.
 This enables all sites to share the same information.
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

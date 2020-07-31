@@ -25,7 +25,7 @@ Get-CMSecurityScope -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Get-CMSecurityScope** cmdlet gets one or more security scopes in Microsoft System Center Configuration Manager.
+The **Get-CMSecurityScope** cmdlet gets one or more security scopes in Configuration Manager.
 You can get a security scope by its name or ID.
 If you don't provide any parameters, all security scopes are returned.
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -1,5 +1,5 @@
 ﻿---
-description: Creates task sequence media in System Center Configuration Manager.
+description: Creates task sequence media in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 12/03/2018
@@ -11,7 +11,7 @@ title: New-CMTaskSequenceMedia
 
 ## SYNOPSIS
 
-Creates task sequence media in System Center Configuration Manager.
+Creates task sequence media in Configuration Manager.
 
 ## SYNTAX
 
@@ -112,7 +112,7 @@ New-CMTaskSequenceMedia [-PrestagedMedia] -MediaPath <String> [-AllowUnattendedD
 
 ## DESCRIPTION
 
-The **New-CMTaskSequenceMedia** cmdlet creates task sequence media in Microsoft System Center Configuration Manager.
+The **New-CMTaskSequenceMedia** cmdlet creates task sequence media in Configuration Manager.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -609,7 +609,7 @@ Accept wildcard characters: False
 ### -ImportCertificatePassword
 
 Specifies a password for an import certificate, as a secure string.
-An import certificate is a PKI-issued certificate added to the boot media for client authentication and communication with a System Center Configuration Manager site.
+An import certificate is a PKI-issued certificate added to the boot media for client authentication and communication with a Configuration Manager site.
 
 ```yaml
 Type: SecureString
@@ -1129,7 +1129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

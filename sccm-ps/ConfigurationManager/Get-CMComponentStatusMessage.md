@@ -23,7 +23,7 @@ Get-CMComponentStatusMessage [-ComponentName <String>] [-ComputerName <String>] 
 ## DESCRIPTION
 The **Get-CMComponentStatusMessage** cmdlet gets component status messages for a specified period.
 
-Microsoft System Center Configuration Manager indicates whether operations succeed or fail and include other information in component status messages.
+Configuration Manager indicates whether operations succeed or fail and include other information in component status messages.
 Threads or processes send component status messages to Configuration Manager sites, which are identified by site codes.
 
 You can define which messages to get by the severity of the message, the component that created the message, the computer that hosts that component, or the Configuration Manager server that receives the message.
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -22,12 +22,12 @@ Import-CMConfigurationItem -FileName <String[]> [-DuplicateWhileImporting] [-For
 
 ## DESCRIPTION
 
-The **Import-CMConfigurationItem** cmdlet imports Microsoft System Center Configuration Manager configuration items from one or more cabinet files.
+The **Import-CMConfigurationItem** cmdlet imports Configuration Manager configuration items from one or more cabinet files.
 The files that you import must conform to the Service Modeling Language (SML) schema and can contain information about configuration data from one of the following sources:
 
-- Best practices from a System Center Configuration Manager Configuration Pack.
+- Best practices from a Configuration Manager Configuration Pack.
 - Configuration data that you have externally authored and packaged into a cabinet (.cab) file.
-- Configuration data exported from System Center Configuration Manager.
+- Configuration data exported from Configuration Manager.
 
 Configuration items contain one or more settings, along with compliance rules.
 Items usually define a unit of configuration you want to monitor.
@@ -54,7 +54,7 @@ PS XYZ:\>Import-CMConfigurationItem -FileName "\\Contoso01\Public\CM\7389_OSCI.c
 ```
 
 This command imports configuration items from the files 7389_OSCI.cab and 7452OS_1.cab.
-The *DuplicateWhileImporting* parameter indicates that imports configuration items that exist in System Center Configuration Manager as duplicate configuration items.
+The *DuplicateWhileImporting* parameter indicates that imports configuration items that exist in Configuration Manager as duplicate configuration items.
 
 ## PARAMETERS
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

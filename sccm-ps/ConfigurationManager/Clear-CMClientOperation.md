@@ -27,7 +27,7 @@ Clear-CMClientOperation -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 ```
 
 ## DESCRIPTION
-The **Clear-CMClientOperation** cmdlet clears a Microsoft System Center Configuration Manager client operation object.
+The **Clear-CMClientOperation** cmdlet clears a Configuration Manager client operation object.
 Specify the operation to clear by using its ID.
 
 You can use the Remove-CMClientOperation cmdlet to remove a client operation object.
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

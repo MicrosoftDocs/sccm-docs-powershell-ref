@@ -33,8 +33,8 @@ Export-CMBaseline [-InputObject] <IResultObject> -Path <String> [-DisableWildcar
 ```
 
 ## DESCRIPTION
-The **Export-CMBaseline** cmdlet exports configuration baselines in a cabinet (.cab) file format from a Microsoft System Center Configuration Manager site.
-You can then import it to the same or a different System Center Configuration Manager site.
+The **Export-CMBaseline** cmdlet exports configuration baselines in a cabinet (.cab) file format from a Configuration Manager site.
+You can then import it to the same or a different Configuration Manager site.
 Configuration data is converted to desired configuration management (DCM) Digest.
 
 > [!NOTE]
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

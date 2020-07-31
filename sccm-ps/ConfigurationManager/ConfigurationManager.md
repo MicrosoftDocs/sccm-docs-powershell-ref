@@ -627,9 +627,6 @@ Gets a Configuration Manager deployment.
 ### [Get-CMDeploymentPackage](Get-CMDeploymentPackage.md)
 Gets information about deployment packages on a distribution point.
 
-### [Get-CMDeploymentStatus](Get-CMDeploymentStatus.md)
-Gets the status of classic software distribution deployments.
-
 ### [Get-CMDeploymentStatusDetails](Get-CMDeploymentStatusDetails.md)
 Gets the status details of a Configuration Manager deployment.
 
@@ -760,7 +757,7 @@ Gets a component for a Configuration Manager management point.
 Gets collections selected for migration.
 
 ### [Get-CMMigrationEntity](Get-CMMigrationEntity.md)
-Gets a migration entity in System Center Configuration Manager.
+Gets a migration entity in Configuration Manager.
 
 ### [Get-CMMigrationEntityDependency](Get-CMMigrationEntityDependency.md)
 Gets a dependency for a migration entity in Configuration Manager.
@@ -799,7 +796,7 @@ Gets Configuration Manager packages.
 Gets a package deployment from Configuration Manager.
 
 ### [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
-Gets the status of classic software distribution deployments.
+Get the status of classic software distribution deployments.
 
 ### [Get-CMPowerManagementSchema](Get-CMPowerManagementSchema.md)
 Gets a power management schema.
@@ -1222,9 +1219,6 @@ Installs a site update.
 Updates configuration baseline data.
 
 ### [Invoke-CMClientAction](Invoke-CMClientAction.md)
-{{ Fill in the Synopsis }}
-
-### [Invoke-CMClientNotification](Invoke-CMClientNotification.md)
 Sends a notification to client computers to trigger an immediate client action.
 
 ### [Invoke-CMClientOperationSummarization](Invoke-CMClientOperationSummarization.md)
@@ -1407,11 +1401,11 @@ Creates a SCEP certificate profile.
 ### [New-CMCertificateProfileTrustedRootCA](New-CMCertificateProfileTrustedRootCA.md)
 Creates a trusted CA certificate profile.
 
-### [New-CMClientAuthCertificateProfileConfigurationItem](New-CMClientAuthCertificateProfileConfigurationItem.md)
-Creates a certificate profile.
-
 ### [New-CMCertificateProfileTrustedRootCA](New-CMCertificateProfileTrustedRootCA.md)
 Creates a trusted CA certificate profile.
+
+### [New-CMClientCertificateProfileConfigurationItem](New-CMClientCertificateProfileConfigurationItem.md)
+Create a client certificate profile.
 
 ### [New-CMClientSetting](New-CMClientSetting.md)
 Creates customized client settings.
@@ -1528,40 +1522,25 @@ Creates an embedded property list.
 Creates a Client Access server role for an Exchange Server.
 
 ### [New-CMExchangeConnectorAccessRule](New-CMExchangeConnectorAccessRule.md)
-Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
+Configure access settings for a mobile device that uses a Microsoft Exchange Server connector.
 
 ### [New-CMExchangeConnectorApplicationSetting](New-CMExchangeConnectorApplicationSetting.md)
-Creates application-related settings for a mobile device that uses a Exchange Server connector.
+Create application-related settings for a mobile device that uses a Exchange Server connector.
 
 ### [New-CMExchangeConnectorEmailManagementSetting](New-CMExchangeConnectorEmailManagementSetting.md)
-Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
+Create a set of email management settings for a mobile device that uses an Exchange Server connector.
 
 ### [New-CMExchangeConnectorGeneralSetting](New-CMExchangeConnectorGeneralSetting.md)
-Creates an exchange connector general setting.
+Create an exchange connector general setting.
 
 ### [New-CMExchangeConnectorPasswordSetting](New-CMExchangeConnectorPasswordSetting.md)
-Adds new password settings to a Exchange Server connector in Configuration Manager.
+Add new password settings to a Exchange Server connector in Configuration Manager.
 
 ### [New-CMExchangeConnectorSecuritySetting](New-CMExchangeConnectorSecuritySetting.md)
-Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
+Configure security options for a Microsoft Exchange Server connector in Configuration Manager.
 
 ### [New-CMExchangeServer](New-CMExchangeServer.md)
-Configures a new Exchange Server connector.
-
-### [New-CMExchangeServerConnectorAccessRule](New-CMExchangeServerConnectorAccessRule.md)
-Configures access settings for a mobile device that uses a Microsoft Exchange Server connector.
-
-### [New-CMExchangeServerConnectorApplicationSetting](New-CMExchangeServerConnectorApplicationSetting.md)
-Creates application-related settings for a mobile device that uses a Exchange Server connector.
-
-### [New-CMExchangeServerConnectorEmailManagementSetting](New-CMExchangeServerConnectorEmailManagementSetting.md)
-Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
-
-### [New-CMExchangeServerConnectorPasswordSetting](New-CMExchangeServerConnectorPasswordSetting.md)
-Adds new password settings to a Exchange Server connector in Configuration Manager.
-
-### [New-CMExchangeServerConnectorSecuritySetting](New-CMExchangeServerConnectorSecuritySetting.md)
-Configures security options for a Microsoft Exchange Server connector in Configuration Manager.
+Configure a new Exchange Server connector.
 
 ### [New-CMFileReplicationRoute](New-CMFileReplicationRoute.md)
 Creates a file replication route for Configuration Manager.
@@ -1621,7 +1600,7 @@ Creates an installation source file for Configuration Manager.
 Creates a maintenance window for a collection.
 
 ### [New-CMMigrationJob](New-CMMigrationJob.md)
-Creates a migration job in System Center Configuration Manager.
+Creates a migration job in Configuration Manager.
 
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
@@ -1644,11 +1623,8 @@ Creates a package deployment to a Configuration Manager collection.
 ### [New-CMPowerManagementCustomPlan](New-CMPowerManagementCustomPlan.md)
 Creates a custom power management plan.
 
-### [New-CMPrestagedMedia](New-CMPrestagedMedia.md)
-Creates prestaged media.
-
 ### [New-CMPrestageMedia](New-CMPrestageMedia.md)
-Creates a prestage media.
+Create an OS deployment prestaged media file.
 
 ### [New-CMProgram](New-CMProgram.md)
 Creates a new program in Configuration Manager.
@@ -1711,7 +1687,7 @@ Creates a remote connection profile.
 {{ Fill in the Synopsis }}
 
 ### [New-CMRootCertificateProfileConfigurationItem](New-CMRootCertificateProfileConfigurationItem.md)
-Creates a root certificate profile.
+Create a root certificate profile.
 
 ### [New-CMSchedule](New-CMSchedule.md)
 Creates a Configuration Manager schedule token.
@@ -1768,16 +1744,13 @@ Creates a task sequence deployment in Configuration Manager.
 Creates a Configuration Manager task sequence group.
 
 ### [New-CMTaskSequenceMedia](New-CMTaskSequenceMedia.md)
-Creates task sequence media in System Center Configuration Manager.
-
-### [New-CMTrustedRootCertificateProfileConfigurationItem](New-CMTrustedRootCertificateProfileConfigurationItem.md)
-Creates a root certificate profile.
+Creates task sequence media in Configuration Manager.
 
 ### [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
 {{ Fill in the Synopsis }}
 
-### [New-CMTrustedRootCertificateProfileConfigurationItem](New-CMTrustedRootCertificateProfileConfigurationItem.md)
-Creates a root certificate profile.
+### [New-CMTSPartitionSetting](New-CMTSPartitionSetting.md)
+Create a task sequence partition object to use with the **Format and Partition Disk** step.
 
 ### [New-CMTSRule](New-CMTSRule.md)
 {{ Fill in the Synopsis }}
@@ -2517,11 +2490,8 @@ Sets a trusted CA certificate profile.
 ### [Set-CMCertificateRegistrationPoint](Set-CMCertificateRegistrationPoint.md)
 Sets a certificate registration point role on a site system server.
 
-### [Set-CMClientAuthCertificateProfileConfigurationItem](Set-CMClientAuthCertificateProfileConfigurationItem.md)
-Modifies a certificate profile.
-
 ### [Set-CMClientCertificateProfileConfigurationItem](Set-CMClientCertificateProfileConfigurationItem.md)
-Modifies a certificate profile.
+Modify a certificate profile.
 
 ### [Set-CMClientPushInstallation](Set-CMClientPushInstallation.md)
 Changes settings of a client push installation.
@@ -2818,7 +2788,7 @@ Sets a Google Play deployment type.
 Changes Configuration Manager hardware requirement settings for a product.
 
 ### [Set-CMHierarchySetting](Set-CMHierarchySetting.md)
-Sets hierarchy settings in System Center Configuration Manager.
+Sets hierarchy settings in Configuration Manager.
 
 ### [Set-CMIosAppStoreDeploymentType](Set-CMIosAppStoreDeploymentType.md)
 Sets an iOS App Store deployment type.
@@ -2884,7 +2854,7 @@ Changes the setting for the query result maximum.
 Modifies a remote connection profile.
 
 ### [Set-CMReportingServicePoint](Set-CMReportingServicePoint.md)
-Modifies a System Center Configuration Manager reporting service point.
+Modifies a Configuration Manager reporting service point.
 
 ### [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
 Sets a script installer deployment type.

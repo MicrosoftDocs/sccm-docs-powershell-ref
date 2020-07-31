@@ -23,7 +23,7 @@ Clear-CMComponentStatusMessageCount -ComponentName <String> [-ComputerName <Stri
 ## DESCRIPTION
 The **Clear-CMComponentStatusMessageCount** cmdlet changes the component status message count to zero (0).
 
-Microsoft System Center Configuration Manager indicates whether operations succeed or fail and include other information in component status messages.
+Configuration Manager indicates whether operations succeed or fail and include other information in component status messages.
 Threads or processes send component status messages to Configuration Manager sites, identified by site codes.
 
 You can define which message count to set to zero by the component that created the messages, severity of the messages, and the site code of the Configuration Manager server that receives the messages.
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

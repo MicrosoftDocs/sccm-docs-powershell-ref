@@ -20,7 +20,7 @@ Set-CMObjectSecurityScope -InputObject <IResultObject[]> -Action <SecurityScopeA
 ```
 
 ## DESCRIPTION
-The **Set-CMObjectSecurityScope** cmdlet adds and removes security scopes for Microsoft System Center Configuration Manager objects.
+The **Set-CMObjectSecurityScope** cmdlet adds and removes security scopes for Configuration Manager objects.
 
 This cmdlet has been deprecated and may be removed in a future release.
 Use [Add-CMObjectSecurityScope](Add-CMObjectSecurityScope.md) and [Remove-CMObjectSecurityScope](Remove-CMObjectSecurityScope.md) to add and remove security scopes from Configuration Manager objects.
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

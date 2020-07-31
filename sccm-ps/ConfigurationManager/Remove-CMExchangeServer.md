@@ -27,7 +27,7 @@ Remove-CMExchangeServer [-Force] -InputObject <ExchangeConnector> [-DisableWildc
 ```
 
 ## DESCRIPTION
-The **Remove-CMExchangeServer** cmdlet removes a Microsoft Exchange Server object from Microsoft System Center Configuration Manager for one or more Configuration Manager sites.
+The **Remove-CMExchangeServer** cmdlet removes a Microsoft Exchange Server object from Configuration Manager for one or more Configuration Manager sites.
 This cmdlet does not uninstall the Exchange Server.
 
 Configuration Manager works with Exchange Server to manage mobile devices that cannot run Configuration Manager clients.
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

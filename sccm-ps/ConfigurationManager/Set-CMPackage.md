@@ -57,15 +57,15 @@ Set-CMPackage -Name <String> [-NewName <String>] [-Version <String>] [-Manufactu
 ```
 
 ## DESCRIPTION
-The **Set-CMPackage** cmdlet changes configuration settings for Microsoft System Center Configuration Manager packages.
+The **Set-CMPackage** cmdlet changes configuration settings for Configuration Manager packages.
 
-If you set the *MifFileName* parameter, System Center Configuration Manager looks in the %TEMP% directory or the %windir% directory for the installation status Management Information Format (MIF) file that you specified in *MifFileName*.
+If you set the *MifFileName* parameter, Configuration Manager looks in the %TEMP% directory or the %windir% directory for the installation status Management Information Format (MIF) file that you specified in *MifFileName*.
 The installation status indicates whether the program successfully ran.
 
-If System Center Configuration Manager does not find the file, it searches for all MIF files in those directories.
-System Center Configuration Manager makes a case-insensitive comparison of the values that you specify for *MifName*, *MifPublisher*, and *MifVersion* to the values that the MIF file specifies.
-If System Center Configuration Manager finds a match, it uses the status that the MIF file specifies as the installation status for the program.
-If System Center Configuration Manager cannot find a match, or if you do not specify *MifFileName*, System Center Configuration Manager uses the program exit code to set the installation status for the program.
+If Configuration Manager does not find the file, it searches for all MIF files in those directories.
+Configuration Manager makes a case-insensitive comparison of the values that you specify for *MifName*, *MifPublisher*, and *MifVersion* to the values that the MIF file specifies.
+If Configuration Manager finds a match, it uses the status that the MIF file specifies as the installation status for the program.
+If Configuration Manager cannot find a match, or if you do not specify *MifFileName*, Configuration Manager uses the program exit code to set the installation status for the program.
 An exit code of zero indicates that the program successfully ran.
 Any other values indicate application-specific error codes.
 
@@ -568,7 +568,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

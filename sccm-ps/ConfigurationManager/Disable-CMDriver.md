@@ -33,7 +33,7 @@ Disable-CMDriver -Name <String> [-DisableWildcardHandling] [-ForceWildcardHandli
 ```
 
 ## DESCRIPTION
-The **Disable-CMDriver** cmdlet disables a device driver in Microsoft System Center Configuration Manager.
+The **Disable-CMDriver** cmdlet disables a device driver in Configuration Manager.
 To enable the driver, use the [Enable-CMDriver](Enable-CMDriver.md) cmdlet.
 
 > [!NOTE]
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

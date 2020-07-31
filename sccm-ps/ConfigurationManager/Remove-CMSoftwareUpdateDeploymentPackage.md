@@ -34,7 +34,7 @@ Remove-CMSoftwareUpdateDeploymentPackage -Name <String> [-Force] [-DisableWildca
 
 ## DESCRIPTION
 The **Remove-CMSoftwareUpdateDeploymentPackage** cmdlet removes a software update deployment package from the site server and all child sites.
-A **CMSoftwareUpdateDeploymentPackage** object contains one or more software updates that Microsoft System Center Configuration Manager deploys to a collection of computers.
+A **CMSoftwareUpdateDeploymentPackage** object contains one or more software updates that Configuration Manager deploys to a collection of computers.
 Once the deployment package is removed, clients cannot install the software updates.
 
 > [!NOTE]
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

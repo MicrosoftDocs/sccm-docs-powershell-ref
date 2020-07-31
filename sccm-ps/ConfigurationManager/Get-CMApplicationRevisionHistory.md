@@ -33,8 +33,8 @@ Get-CMApplicationRevisionHistory -Id <Int32> [-Revision <UInt32>] [-DisableWildc
 ```
 
 ## DESCRIPTION
-The **Get-CMApplicationRevisionHistory** cmdlet gets a Microsoft System Center Configuration Manager object that represents the revision history for an application.
-When you revise an application or a deployment type contained in an application, System Center Configuration Manager creates a new revision of the application.
+The **Get-CMApplicationRevisionHistory** cmdlet gets a Configuration Manager object that represents the revision history for an application.
+When you revise an application or a deployment type contained in an application, Configuration Manager creates a new revision of the application.
 You can use the revision history to display each revision made to an application, view the properties of a revision, restore a previous revision, or delete an old revision.
 
 > [!NOTE]
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

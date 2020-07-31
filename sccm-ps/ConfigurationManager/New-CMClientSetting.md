@@ -20,7 +20,7 @@ New-CMClientSetting -Name <String> [-Description <String>] -Type <Types> [-Disab
 ```
 
 ## DESCRIPTION
-The **New-CMClientSetting** cmdlet creates a collection of customized settings for Microsoft System Center Configuration Manager client computers.
+The **New-CMClientSetting** cmdlet creates a collection of customized settings for Configuration Manager client computers.
 After you create the customized settings and deploy them to client computer collections, the customized settings override the default client settings for that collection.
 
 For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

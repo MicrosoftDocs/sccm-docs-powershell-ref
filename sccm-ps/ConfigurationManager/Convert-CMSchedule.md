@@ -27,9 +27,9 @@ Convert-CMSchedule [-ScheduleString] <String[]> [-DisableWildcardHandling] [-For
 ```
 
 ## DESCRIPTION
-The **Convert-CMSchedule** cmdlet decodes and encodes schedule tokens into and from Microsoft System Center Configuration Manager interval strings.
+The **Convert-CMSchedule** cmdlet decodes and encodes schedule tokens into and from Configuration Manager interval strings.
 
-In Microsoft System Center Configuration Manager, scheduling information is configured by using schedule tokens. The interval strings can be used to set schedule properties when defining or modifying objects.
+In Configuration Manager, scheduling information is configured by using schedule tokens. The interval strings can be used to set schedule properties when defining or modifying objects.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

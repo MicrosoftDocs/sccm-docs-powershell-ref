@@ -25,8 +25,8 @@ Get-CMPackage -Id <String> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHan
 ```
 
 ## DESCRIPTION
-The **Get-CMPackage** cmdlet gets Microsoft System Center Configuration Manager packages.
-System Center Configuration Manager uses packages to distribute software to clients.
+The **Get-CMPackage** cmdlet gets Configuration Manager packages.
+Configuration Manager uses packages to distribute software to clients.
 You can use the *SecuredScopeNames* parameter to specify the security scope of a package to get.
 
 > [!NOTE]
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -21,7 +21,7 @@ Set-CMCollectionMembershipEvaluationComponent [-SiteSystemServerName <String>] [
 ```
 
 ## DESCRIPTION
-The **Set-CMCollectionMembershipEvaluationComponent** cmdlet changes how often Microsoft System Center Configuration Manager evaluates collections.
+The **Set-CMCollectionMembershipEvaluationComponent** cmdlet changes how often Configuration Manager evaluates collections.
 Configuration Manager queries the database at a regular interval to check for changes in collection membership.
 You can specify which site to change by site server name or site code.
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

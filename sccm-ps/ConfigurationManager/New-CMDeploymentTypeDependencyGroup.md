@@ -22,7 +22,7 @@ New-CMDeploymentTypeDependencyGroup -GroupName <String> -InputObject <IResultObj
 
 ## DESCRIPTION
 
-The **New-CMDeploymentTypeDependencyGroup** cmdlet creates a deployment type dependency group in the Microsoft System Center Configuration Manager.
+The **New-CMDeploymentTypeDependencyGroup** cmdlet creates a deployment type dependency group in the Configuration Manager.
 Must be added to an existing deployment type by using [Add-CMDeploymentTypeDependency](./Add-CMDeploymentTypeDependency.md).
 
 > [!NOTE]
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

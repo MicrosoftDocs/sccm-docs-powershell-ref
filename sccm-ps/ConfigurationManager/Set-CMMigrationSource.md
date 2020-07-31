@@ -21,12 +21,12 @@ Set-CMMigrationSource -SourceSiteServerName <String> [-SmsProviderAccount <Strin
 ```
 
 ## DESCRIPTION
-The **Set-CMMigrationSource** cmdlet specifies or changes settings for a migration source site in Microsoft System Center Configuration Manager.
-To enable migration of data to your System Center Configuration Manager environment, you must configure a supported System Center Configuration Manager source hierarchy and specify one or more source sites that contain data that you want to migrate.
+The **Set-CMMigrationSource** cmdlet specifies or changes settings for a migration source site in Configuration Manager.
+To enable migration of data to your Configuration Manager environment, you must configure a supported Configuration Manager source hierarchy and specify one or more source sites that contain data that you want to migrate.
 
 By default, the top-level site of the hierarchy becomes a source site of the source hierarchy.
-If you migrate from a Microsoft System Center Configuration Manager 2007 hierarchy, you can configure additional source sites for migration.
-If you migrate from a System Center Configuration Manager hierarchy, you do not need to configure additional source sites because the System Center Configuration Manager shared database at the top of the source hierarchy contains all of the information that you can migrate.
+If you migrate from a Configuration Manager 2007 hierarchy, you can configure additional source sites for migration.
+If you migrate from a Configuration Manager hierarchy, you do not need to configure additional source sites because the Configuration Manager shared database at the top of the source hierarchy contains all of the information that you can migrate.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

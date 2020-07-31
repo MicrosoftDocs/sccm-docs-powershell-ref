@@ -79,7 +79,7 @@ Set-CMDriverBootImage -SetDriveBootImageAction <SetDriveBootImageActionType> -Dr
 
 ## DESCRIPTION
 The **Set-CMDriverBootImage** cmdlet adds a driver to a boot image or removes a driver from a boot image.
-You can add Windows device drivers that you have imported into the Microsoft System Center Configuration Manager driver catalog to one or more boot images.
+You can add Windows device drivers that you have imported into the Configuration Manager driver catalog to one or more boot images.
 You should add only mass storage device drivers and network adapter device drivers to boot images because other types of drivers are not needed and will increase the size of the boot image.
 
 > [!NOTE]
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

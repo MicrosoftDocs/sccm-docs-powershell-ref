@@ -75,7 +75,7 @@ Remove-CMDistributionPointFromGroup [-Force] -DistributionPoint <IResultObject>
 ```
 
 ## DESCRIPTION
-The **Remove-CMDistributionPointFromGroup** cmdlet removes a Microsoft System Center Configuration Manager distribution point from a distribution point group.
+The **Remove-CMDistributionPointFromGroup** cmdlet removes a Configuration Manager distribution point from a distribution point group.
 Distribution point groups provide a logical grouping of distribution points for content distribution.
 
 To remove a distribution point, specify both the distribution point to remove and the distribution point group.
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

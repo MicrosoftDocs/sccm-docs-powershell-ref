@@ -27,7 +27,7 @@ Remove-CMDeviceAffinityFromUser -UserId <Int32> [-DeviceId <Int32[]>] [-DeviceNa
 ```
 
 ## DESCRIPTION
-The **Remove-CMDeviceAffinityFromUser** cmdlet removes device affinity from a user of Microsoft System Center Configuration Manager.
+The **Remove-CMDeviceAffinityFromUser** cmdlet removes device affinity from a user of Configuration Manager.
 
 Device affinity in Configuration Manager associates a user with one or more devices.
 Instead of deploying applications to all the devices of a user, you deploy the application to the user and Configuration Manager automatically installs the application on all devices that are associated with that user.
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

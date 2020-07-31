@@ -33,7 +33,7 @@ Add-CMStateMigrationPoint [-SiteSystemServerName] <String> [-SiteCode <String>]
 ```
 
 ## DESCRIPTION
-The **Add-CMStateMigrationPoint** cmdlet adds a state migration point in Microsoft System Center Configuration Manager.
+The **Add-CMStateMigrationPoint** cmdlet adds a state migration point in Configuration Manager.
 A state migration point is a site system role that manages data transfer from client computers during an operating system installation process.
 
 > [!NOTE]
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

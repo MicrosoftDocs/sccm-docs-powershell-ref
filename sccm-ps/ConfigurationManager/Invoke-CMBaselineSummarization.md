@@ -20,7 +20,7 @@ Invoke-CMBaselineSummarization [-DisableWildcardHandling] [-ForceWildcardHandlin
 ```
 
 ## DESCRIPTION
-The **Invoke-CMBaselineSummarization** cmdlet updates data in configuration baselines in Microsoft System Center Configuration Manager with the latest data from the site database.
+The **Invoke-CMBaselineSummarization** cmdlet updates data in configuration baselines in Configuration Manager with the latest data from the site database.
 This action might take several minutes to complete.
 
 You can use the [Set-CMBaselineSummarizationSchedule](Set-CMBaselineSummarizationSchedule.md) cmdlet to configure a schedule by which the data is updated with the latest information from the site database.
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -20,7 +20,7 @@ Get-CMExchangeServer [-SiteCode <String>] [-ExchangeServerUrl <String>] [-Disabl
 ```
 
 ## DESCRIPTION
-The **Get-CMExchangeServer** cmdlet gets an object that represents a Microsoft Exchange Server that Microsoft System Center Configuration Manager uses.
+The **Get-CMExchangeServer** cmdlet gets an object that represents a Microsoft Exchange Server that Configuration Manager uses.
 
 Configuration Manager works with Exchange Server to manage mobile devices that cannot run Configuration Manager clients.
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

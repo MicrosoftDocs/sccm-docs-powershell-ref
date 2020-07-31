@@ -78,7 +78,7 @@ Remove-CMDriverFromDriverPackage [-Force] -Driver <IResultObject> -DriverPackage
 ```
 
 ## DESCRIPTION
-The **Remove-CMDriverFromDriverPackage** cmdlet removes a driver from a driver package in Microsoft System Center Configuration Manager.
+The **Remove-CMDriverFromDriverPackage** cmdlet removes a driver from a driver package in Configuration Manager.
 When you remove a driver from a driver package, the device driver content is deleted from the source directory share for the driver package.
 
 > [!NOTE]
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

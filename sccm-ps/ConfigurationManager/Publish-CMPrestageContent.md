@@ -162,7 +162,7 @@ Publish-CMPrestageContent -Application <IResultObject> [-DisableDependencyExport
 ```
 
 ## DESCRIPTION
-The **Publish-CMPrestageContent** cmdlet publishes files for applications, images, packages, or operating system installers to a distribution point without using the Microsoft System Center Configuration Manager distribution process.
+The **Publish-CMPrestageContent** cmdlet publishes files for applications, images, packages, or operating system installers to a distribution point without using the Configuration Manager distribution process.
 
 Specify the distribution site, the file name, and the item to publish.
 
@@ -664,7 +664,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

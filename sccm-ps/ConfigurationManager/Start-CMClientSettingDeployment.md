@@ -69,7 +69,7 @@ Start-CMClientSettingDeployment -ClientSetting <IResultObject> -Collection <IRes
 ```
 
 ## DESCRIPTION
-The **Start-CMClientSettingDeployment** cmdlet deploys client settings to devices in a Microsoft System Center Configuration Manager collection.
+The **Start-CMClientSettingDeployment** cmdlet deploys client settings to devices in a Configuration Manager collection.
 Specify the client setting object by using its name or ID, or you can use the **Get-CMClientSetting** cmdlet to get a client setting object.
 Specify the collection to apply the settings to by using its name or ID, or you can use the [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlet to get a device collection.
 
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

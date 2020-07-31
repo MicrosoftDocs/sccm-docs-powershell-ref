@@ -20,8 +20,8 @@ Import-CMUserDeviceAffinity [-EnableColumnHeading <Boolean>] -FileName <String> 
 ```
 
 ## DESCRIPTION
-The **Import-CMUserDeviceAffinity** cmdlet imports a file that contains user and device affinities to Microsoft System Center Configuration Manager.
-User device affinity in System Center Configuration Manager is a method of associating a user with one or more specified devices.
+The **Import-CMUserDeviceAffinity** cmdlet imports a file that contains user and device affinities to Configuration Manager.
+User device affinity in Configuration Manager is a method of associating a user with one or more specified devices.
 
 The devices listed in the file that you specify in the *FileName* parameter must already exist as resources in the Configuration Manager database.
 If they do not exist, the import will fail.
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -1,14 +1,17 @@
 ﻿---
+description: Sends a notification to client computers to trigger an immediate client action.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 07/30/2020
 schema: 2.0.0
 ---
 
 # Invoke-CMClientAction
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Sends a notification to client computers to trigger an immediate client action.
 
 ## SYNTAX
 
@@ -58,27 +61,37 @@ Invoke-CMClientAction -Collection <IResultObject> [-NotificationType <ClientNoti
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The **Invoke-CMClientAction** cmdlet sends a notification to client computers to trigger an immediate client action. You can specify one or more client computers, or send a notification to all the computers in a specified device collection.
+
+For more information about these actions, see [Client notification](https://docs.microsoft.com/mem/configmgr/core/clients/manage/client-notification).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Wake up a device
 
-The following example sends the wake up action to a device in a specific collection:
+The following example sends the wake-up action to a device in a specific collection:
 
 ```PowerShell
 Invoke-CMClientAction -DeviceName "SleepDevice01" -ActionType ClientNotificationWakeUpClientNow -ParentCollectionId $col.CollectionID
 ```
 
+### Example 2: Request machine policy from a device
+
+This command sends a notification of the type `RequestMachinePolicyNow` to the device named `Computer073`.
+
+```powershell
+Invoke-CMClientAction -DeviceName "Computer073" -NotificationType RequestMachinePolicyNow
+```
+
 ## PARAMETERS
 
 ### -ActionType
-{{ Fill ActionType Description }}
+
+Specify an action keyword to send to the client. To request machine or user policy, use the **-NotificationType** parameter.
 
 ```yaml
 Type: ClientActionType
@@ -94,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{ Fill Collection Description }}
+
+Specify a collection object to target.
 
 ```yaml
 Type: IResultObject
@@ -109,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{ Fill CollectionId Description }}
+
+Specify a collection by ID to target.
 
 ```yaml
 Type: String
@@ -124,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{ Fill CollectionName Description }}
+
+Specify a collection by name to target.
 
 ```yaml
 Type: String
@@ -139,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -Device
-{{ Fill Device Description }}
+
+Specify a device object to target.
 
 ```yaml
 Type: IResultObject
@@ -154,7 +171,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceId
-{{ Fill DeviceId Description }}
+
+Specify a device by ID to target.
 
 ```yaml
 Type: String
@@ -169,7 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceName
-{{ Fill DeviceName Description }}
+
+Specify a device by name to target.
 
 ```yaml
 Type: String
@@ -184,7 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +219,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -214,7 +235,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationType
-{{ Fill NotificationType Description }}
+
+Request machine or user policy from a client. To trigger all other actions, use the **-ActionType** parameter.
 
 ```yaml
 Type: ClientNotificationType
@@ -230,7 +252,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentCollection
-Starting in version 1906, use this parameter to support waking up a machine.
+
+Applies to version 1906 and later. Use this parameter to support waking up a machine.
 
 ```yaml
 Type: IResultObject
@@ -245,7 +268,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentCollectionId
-Starting in version 1906, use this parameter to support waking up a machine.
+
+Applies to version 1906 and later. Use this parameter to support waking up a machine.
 
 ```yaml
 Type: String
@@ -260,7 +284,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentCollectionName
-Starting in version 1906, use this parameter to support waking up a machine.
+
+Applies to version 1906 and later. Use this parameter to support waking up a machine.
 
 ```yaml
 Type: String
@@ -275,6 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -290,8 +316,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. It doesn't run the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -306,7 +332,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
@@ -315,6 +342,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+Cmdlet aliases: **Invoke-CMClientNotification**
+
 ## RELATED LINKS
+
+[Get-CMDevice](Get-CMDevice.md)
+
+[Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+
+[Client notifications](https://docs.microsoft.com/mem/configmgr/core/clients/manage/client-notification)

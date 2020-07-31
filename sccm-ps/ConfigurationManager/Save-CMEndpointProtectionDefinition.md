@@ -36,7 +36,7 @@ Save-CMEndpointProtectionDefinition [-DeviceName <String>] [-DeviceId <String>] 
 ```
 
 ## DESCRIPTION
-The **Save-CMEndpointProtectionDefinition** cmdlet saves a System Center 2016 Endpoint Protection definition in Microsoft System Center Configuration Manager.
+The **Save-CMEndpointProtectionDefinition** cmdlet saves a System Center 2016 Endpoint Protection definition in Configuration Manager.
 Endpoint Protection definitions contain anti-malware policies and settings for Windows Firewall that you can apply to specific groups of computers.
 
 For more information about Endpoint Protection, see [Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) on TechNet.
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -29,7 +29,7 @@ Add-CMEnrollmentProxyPoint [-WebsiteName <String>] [-PortNumber <Int32>] [-Servi
 ```
 
 ## DESCRIPTION
-The **Add-CMEnrollmentProxyPoint** cmdlet adds an enrollment proxy point to a Microsoft System Center Configuration Manager site.
+The **Add-CMEnrollmentProxyPoint** cmdlet adds an enrollment proxy point to a Configuration Manager site.
 An enrollment proxy point is a site system role.
 
 When Configuration Manager enrolls a mobile device, it installs a Configuration Manager client.
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

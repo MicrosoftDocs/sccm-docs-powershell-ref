@@ -26,7 +26,7 @@ Get-CMSiteInstallStatus -Id <String> [-DisableWildcardHandling] [-ForceWildcardH
 ```
 
 ## DESCRIPTION
-The **Get-CMSiteInstallStatus** cmdlet provides information about the installation status for Microsoft System Center Configuration Manager.
+The **Get-CMSiteInstallStatus** cmdlet provides information about the installation status for Configuration Manager.
 You can specify an installation by ID or by site code.
 
 > [!NOTE]
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

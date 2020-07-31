@@ -1,8 +1,8 @@
 ﻿---
-description: Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
+description: Create a set of email management settings for a mobile device that uses an Exchange Server connector.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/30/2020
 schema: 2.0.0
 title: New-CMExchangeConnectorEmailManagementSetting
 ---
@@ -10,7 +10,8 @@ title: New-CMExchangeConnectorEmailManagementSetting
 # New-CMExchangeConnectorEmailManagementSetting
 
 ## SYNOPSIS
-Creates a set of email management settings for a mobile device that uses an Exchange Server connector.
+
+Create a set of email management settings for a mobile device that uses an Exchange Server connector.
 
 ## SYNTAX
 
@@ -23,19 +24,15 @@ New-CMExchangeConnectorEmailManagementSetting [-AllowHtmlEmail <Boolean>] [-Cons
 ```
 
 ## DESCRIPTION
+
 The **New-CMExchangeConnectorEmailManagementSetting** cmdlet creates a set of e-mail management settings for a mobile device that uses an Exchange Server connector.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Add email management settings to a mobile device
-```
-PS XYZ:\> New-CMExchangeServerConnectorEmailManagementSetting -AllowHtmlEmail $True -ConsumerEmail $True -EmailAttachmentPolicy $True -MaximumCalenderAge ThreeMonths -MaximumEmailAge OneDay -PushWhenRoaming $True -MaximumSizeAttachment 24 -MaximumSizeHtmlEmail 402 -MaximumSizeTextEmail 401
-```
 
 This command creates the following settings for a mobile device:
 
@@ -46,6 +43,10 @@ This command creates the following settings for a mobile device:
 - Allows HTML-formatted email.
 - Sets a maximum size of 401 KB for text-formatted email and of 402 KB for HTML-formatted email.
 - Sets a maximum attachment size of 24 KB.
+
+```powershell
+New-CMExchangeConnectorEmailManagementSetting -AllowHtmlEmail $True -ConsumerEmail $True -EmailAttachmentPolicy $True -MaximumCalenderAge ThreeMonths -MaximumEmailAge OneDay -PushWhenRoaming $True -MaximumSizeAttachment 24 -MaximumSizeHtmlEmail 402 -MaximumSizeTextEmail 401
+```
 
 ## PARAMETERS
 
@@ -76,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
@@ -210,6 +214,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.ExchangeConnectorEmailManagementSetting
 
 ## NOTES
+
+Cmdlet aliases: **New-CMExchangeServerConnectorEmailManagementSetting**
 
 ## RELATED LINKS
 

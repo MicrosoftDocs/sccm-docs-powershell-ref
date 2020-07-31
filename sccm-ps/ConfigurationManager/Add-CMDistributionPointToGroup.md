@@ -72,7 +72,7 @@ Add-CMDistributionPointToGroup -DistributionPoint <IResultObject> -DistributionP
 The **Add-CMDistributionPointToGroup** cmdlet adds a distribution point to a distribution point group.
 Distribution point groups provide a logical grouping of distribution points for content distribution.
 
-You can add one or more distribution points from any site in the Microsoft System Center Configuration Manager hierarchy to the distribution point group.
+You can add one or more distribution points from any site in the Configuration Manager hierarchy to the distribution point group.
 You can also add the distribution point to more than one distribution point group so that you can manage and monitor content from a central location for distribution points that span multiple sites.
 
 > [!NOTE]
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

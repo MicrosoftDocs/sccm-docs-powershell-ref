@@ -20,7 +20,7 @@ Set-CMQueryResultMaximum [-Maximum] <Int32> [-DisableWildcardHandling] [-ForceWi
 ```
 
 ## DESCRIPTION
-The **Set-CMQueryResultMaximum** cmdlet changes the setting for the maximum number of rows that a Microsoft System Center Configuration Manager query can return.
+The **Set-CMQueryResultMaximum** cmdlet changes the setting for the maximum number of rows that a Configuration Manager query can return.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

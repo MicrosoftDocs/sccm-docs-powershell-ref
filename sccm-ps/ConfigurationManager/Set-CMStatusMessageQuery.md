@@ -52,8 +52,8 @@ Set-CMStatusMessageQuery -InputObject <IResultObject> [-DeleteMessage] [-PassThr
 ```
 
 ## DESCRIPTION
-The **Set-CMStatusMessageQuery** cmdlet changes settings for a Microsoft System Center Configuration Manager status message query.
-Status message queries return status messages from a System Center Configuration Manager site database.
+The **Set-CMStatusMessageQuery** cmdlet changes settings for a Configuration Manager status message query.
+Status message queries return status messages from a Configuration Manager site database.
 You can modify a comment, a Windows Management Infrastructure (WMI) expression, or the name of a query.
 
 You can use this cmdlet with the *DeleteMessage* parameter to delete messages that this query finds.
@@ -82,7 +82,7 @@ This command adds the security scope named Scope22 to the query named All Status
 PS XYZ:\> Set-CMStatusMessageQuery -DeleteMessage -Name "All Active Directory Security Groups"
 ```
 
-This command removes messages found by the query named All Active Directory Security Groups from the System Center Configuration Manager database.
+This command removes messages found by the query named All Active Directory Security Groups from the Configuration Manager database.
 
 ### Example 3: Rename a query
 ```
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

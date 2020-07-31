@@ -33,17 +33,17 @@ Disable-CMSoftwareMeteringRule -InputObject <IResultObject> [-DisableWildcardHan
 ```
 
 ## DESCRIPTION
-The **Disable-CMSoftwareMeteringRule** cmdlet disables one or more software metering rules in Microsoft System Center Configuration Manager.
+The **Disable-CMSoftwareMeteringRule** cmdlet disables one or more software metering rules in Configuration Manager.
 If you disable a rule, it does not collect information from clients.
 You can use the [Enable-CMSoftwareMeteringRule](Enable-CMSoftwareMeteringRule.md) cmdlet to enable a rule that you previously disabled.
 
-Software metering monitors and collects software usage data from System Center Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
+Software metering monitors and collects software usage data from Configuration Manager clients, such as when clients began using a particular software program and how long users have worked with that software.
 You can create software metering rules that specify which software to monitor.
 
 You can specify rules that disable software metering rules by ID or by product name, or use the [Get-CMSoftwareMeteringRule](Get-CMSoftwareMeteringRule.md) cmdlet.
 You can use the Remove-CMSoftwareMeteringRule to permanently delete a rule.
 
-For more information about software metering in System Center Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682005(v=technet.10)) on TechNet.
+For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682005(v=technet.10)) on TechNet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

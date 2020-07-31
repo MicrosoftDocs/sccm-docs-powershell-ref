@@ -33,7 +33,7 @@ Remove-CMQuery -Name <String> [-Force] [-DisableWildcardHandling] [-ForceWildcar
 ```
 
 ## DESCRIPTION
-The **Remove-CMQuery** cmdlet removes queries stored in Microsoft System Center Configuration Manager.
+The **Remove-CMQuery** cmdlet removes queries stored in Configuration Manager.
 Configuration Manager queries define and store the criteria for sets of database objects that you want to find.
 
 > [!NOTE]
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

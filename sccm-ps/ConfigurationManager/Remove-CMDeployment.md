@@ -33,7 +33,7 @@ Remove-CMDeployment -CollectionName <String> [-Force] -ApplicationName <String> 
 ```
 
 ## DESCRIPTION
-The **Remove-CMDeployment** cmdlet removes an application deployment from Microsoft System Center Configuration Manager.
+The **Remove-CMDeployment** cmdlet removes an application deployment from Configuration Manager.
 
 When you remove an application deployment, Configuration Manager does not remove instances of the application that it has already installed.
 To remove these applications, you must deploy the application to computers with the action Uninstall.
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

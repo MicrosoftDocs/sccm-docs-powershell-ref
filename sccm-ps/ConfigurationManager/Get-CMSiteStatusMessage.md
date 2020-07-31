@@ -22,9 +22,9 @@ Get-CMSiteStatusMessage [-ComputerName <String[]>] [-Severity <Severity[]>] [-Si
 ```
 
 ## DESCRIPTION
-The **Get-CMSiteStatusMessage** cmdlet gets status messages for one or more Microsoft System Center Configuration Manager site system components.
-A status message is a message that a System Center Configuration Manager component generates that contains information about the success, failure, or operation of site system components.
-System Center Configuration Manager stores status messages in a System Center Configuration Manager site database.
+The **Get-CMSiteStatusMessage** cmdlet gets status messages for one or more Configuration Manager site system components.
+A status message is a message that a Configuration Manager component generates that contains information about the success, failure, or operation of site system components.
+Configuration Manager stores status messages in a Configuration Manager site database.
 You can view status messages in the Status Message Viewer.
 
 > [!NOTE]
@@ -39,8 +39,8 @@ You can view status messages in the Status Message Viewer.
 PS XYZ:\> Get-CMSiteStatusMessage -ViewingPeriod "2012/09/03 02:16:10.000" -ComputerName "cmcen-dist02" -Severity Error -SiteCode "CM2"
 ```
 
-This command gets the site status messages that System Center Configuration Manager receives on or after September 3, 2012 and that have an error severity.
-System Center Configuration Manager gets the status messages from the Configuration Manager site that has the site code CM2 on the computer named cmcen-dist02.tsqa.contoso.com.
+This command gets the site status messages that Configuration Manager receives on or after September 3, 2012 and that have an error severity.
+Configuration Manager gets the status messages from the Configuration Manager site that has the site code CM2 on the computer named cmcen-dist02.tsqa.contoso.com.
 
 ## PARAMETERS
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

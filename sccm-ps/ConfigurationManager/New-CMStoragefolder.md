@@ -21,7 +21,7 @@ New-CMStorageFolder -StorageFolderName <String> [-MaximumClientNumber <Int32>] [
 ```
 
 ## DESCRIPTION
-The **New-CMStoragefolder** cmdlet creates a new storage folder to store user migration data in Microsoft System Center Configuration Manager.
+The **New-CMStoragefolder** cmdlet creates a new storage folder to store user migration data in Configuration Manager.
 
 A storage folder identifies a location on a state migration point site system to store user migration data.
 Use this cmdlet in conjunction with the [Add-CMStateMigrationPoint](Add-CMStateMigrationPoint.md) cmdlet to create a new state migration point with storage folders.
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

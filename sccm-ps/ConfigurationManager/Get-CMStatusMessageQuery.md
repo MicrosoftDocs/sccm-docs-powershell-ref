@@ -27,8 +27,8 @@ Get-CMStatusMessageQuery -Id <String> [-ShowMessage] [-PassThru] [-DisableWildca
 ```
 
 ## DESCRIPTION
-The **Get-CMStatusMessageQuery** cmdlet gets Microsoft System Center Configuration Manager status message queries.
-Status message queries return status messages from a System Center Configuration Manager site database.
+The **Get-CMStatusMessageQuery** cmdlet gets Configuration Manager status message queries.
+Status message queries return status messages from a Configuration Manager site database.
 You can use this cmdlet with the *ShowMessages* parameter to display messages found by this query.
 
 You can use this cmdlet to get queries to use with the [Set-CMStatusMessageQuery](Set-CMStatusMessageQuery.md) cmdlet or the [Remove-CMStatusMessageQuery](Remove-CMStatusMessageQuery.md) cmdlet.
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

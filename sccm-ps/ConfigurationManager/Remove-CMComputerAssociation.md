@@ -33,7 +33,7 @@ Remove-CMComputerAssociation -InputObject <IResultObject> [-Force] [-DisableWild
 ```
 
 ## DESCRIPTION
-The **Remove-CMComputerAssociation** cmdlet deletes a computer association from Microsoft System Center Configuration Manager.
+The **Remove-CMComputerAssociation** cmdlet deletes a computer association from Configuration Manager.
 You can specify the association to remove by specifying both computers in the association or by specifying the association ID, or you can use the **Get-CMComputerAssociation** cmdlet to get an association to remove.
 
 > [!NOTE]
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

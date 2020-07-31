@@ -33,7 +33,7 @@ The **Set-CMFallbackStatusPoint** cmdlet changes the throttle interval or the me
 A fallback status point is a site system role.
 You can specify the site system name and site code for a fallback status point or use the [Get-CMFallbackStatusPoint](Get-CMFallbackStatusPoint.md) cmdlet to obtain a fallback status point object.
 
-Microsoft System Center Configuration Manager can use one or more fallback status points to collect state messages for a site and send them to a server that is running Configuration Manager.
+Configuration Manager can use one or more fallback status points to collect state messages for a site and send them to a server that is running Configuration Manager.
 Throttling prevents the fallback status point from sending too many messages together, which can affect performance.
 You can use the *StateMessagesCount* and *ThrottleMinutesInterval* parameters to limit how many messages a fallback status point sends during a defined period.
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

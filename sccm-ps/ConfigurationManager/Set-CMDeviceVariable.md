@@ -36,7 +36,7 @@ Set-CMDeviceVariable -DeviceName <String> -VariableName <String> [-NewVariableNa
 ```
 
 ## DESCRIPTION
-The **Set-CMDeviceVariable** cmdlet modifies a device variable of a Microsoft System Center Configuration Manager device.
+The **Set-CMDeviceVariable** cmdlet modifies a device variable of a Configuration Manager device.
 
 Individual devices have device variables. Task sequence processing uses device variables.
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

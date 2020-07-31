@@ -20,8 +20,8 @@ Get-CMSiteMaintenanceTask [-Name <String>] [-SiteCode <String>] [-DisableWildcar
 ```
 
 ## DESCRIPTION
-The **Get-CMSiteMaintenanceTask** cmdlet gets maintenance tasks in Microsoft System Center Configuration Manager.
-A maintenance task is a task in System Center Configuration Manager that performs maintenance on sites and databases.
+The **Get-CMSiteMaintenanceTask** cmdlet gets maintenance tasks in Configuration Manager.
+A maintenance task is a task in Configuration Manager that performs maintenance on sites and databases.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -33,8 +33,8 @@ Get-CMProgram -PackageId <String> [-ProgramName <String>] [-DisableWildcardHandl
 ```
 
 ## DESCRIPTION
-The **Get-CMProgram** cmdlet gets one or more programs in Microsoft System Center Configuration Manager.
-Programs are commands that are associated with a System Center Configuration Manager package.
+The **Get-CMProgram** cmdlet gets one or more programs in Configuration Manager.
+Programs are commands that are associated with a Configuration Manager package.
 Programs identify the actions that occur when the client receives the client package.
 You can associate multiple programs with the same package.
 
@@ -50,7 +50,7 @@ You can associate multiple programs with the same package.
 PS XYZ:\> Get-CMProgram
 ```
 
-This command gets all programs in System Center Configuration Manager.
+This command gets all programs in Configuration Manager.
 
 ### Example 2: Get a program by using a name and an ID
 ```
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

@@ -36,8 +36,8 @@ Export-CMPackage -Name <String> -FileName <String> [-WithDependence <Boolean>] [
 ```
 
 ## DESCRIPTION
-The **Export-CMPackage** cmdlet exports a Microsoft System Center Configuration Manager package.
-You can use this cmdlet in System Center Configuration Manager to create a package of collections, queries, or reports and then export that package so that you can later deploy these items to a different location.
+The **Export-CMPackage** cmdlet exports a Configuration Manager package.
+You can use this cmdlet in Configuration Manager to create a package of collections, queries, or reports and then export that package so that you can later deploy these items to a different location.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

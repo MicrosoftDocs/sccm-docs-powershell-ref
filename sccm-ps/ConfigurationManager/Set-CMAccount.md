@@ -27,7 +27,7 @@ Set-CMAccount [-Password <SecureString>] -InputObject <IResultObject> [-DisableW
 ```
 
 ## DESCRIPTION
-The **Set-CMAccount** cmdlet sets a user account in Microsoft System Center Configuration Manager.
+The **Set-CMAccount** cmdlet sets a user account in Configuration Manager.
 A **CMAccount** is a user account that Configuration Manager uses to connect to various system and network resources.
 For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427337(v=technet.10)) in the TechNet library.
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 

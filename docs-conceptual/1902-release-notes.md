@@ -13,7 +13,7 @@ manager: dougeby
 
 # Configuration Manager Cmdlet Library changes for version 1902
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (Current Branch)*
 
 > [!NOTE]  
 > Configuration Manager current branch version 1810 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes).
