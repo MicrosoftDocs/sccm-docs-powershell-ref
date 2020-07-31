@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 07/31/2020
 schema: 2.0.0
 ---
 
 # Set-CMSoftwareUpdatePhase
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to configure a deployment phase for a software update.
 
 ## SYNTAX
 
@@ -70,21 +72,44 @@ Set-CMSoftwareUpdatePhase [-UserNotificationOption <UserNotificationType>] [-Sof
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Applies to version 2006 and later. Use this cmdlet to configure a deployment phase for a software update. For more information, see [Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Change the collection
+
+This example changes the collection for the second phase in the software update phased deployment passed through on the command line.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$phasedDeployment = Get-CMSoftwareUpdatePhasedDeployment -Name "myPhasedDeployment"
+
+$phasedDeployment | Set-CMSoftwareUpdatePhase -Order 2 -NewCollectionId "XYZ00227"
 ```
 
-{{ Add example description here }}
+### Example 2: Move a phase up
+
+This example moves a phase up in the order. It selects the phased deployment by its ID, and selects the phase by the associated collection ID.
+
+```powershell
+Set-CMSoftwareUpdatePhase -PhasedDeploymentId "0bc464d9-e7dd-44c1-a157-3f8be6a79c03" -CollectionId "XYZ00227" -MovePhase MoveUp
+```
+
+### Example 3: Configure phase settings
+
+This example changes the configuration settings for the selected phase.
+
+```powershell
+Set-CMSoftwareUpdatePhase -PhasedDeploymentName "myPhasedDeployment" -Name "phase1" -UserNotification HideAll -SoftwareInstallation $true -AllowSystemRestart $true -WriteFilterCommit $false -EnableWakeOnLan $true -PhaseDescription "this is phase 1" -StateMessageVerbosity AllMessages -ServerRestartSuppression $true -WorkstationRestartSuppression $true -RequirePostRebootFullScan $true -EnableAlert $true -AlertThresholdPercentage 90 -AlertDelta 12 -AlertUnit Hours -DisableSCOMAlert $true -GenerateSCOMAlertOnFailure $true -UseNeighborDP $true -UseSiteDefaultDP $true -AllowWUMUFallback $true -AllowMeteredConnection $true -CriteriaOption Compliance -CriteriaValue 90 -BeginCondition AfterPeriod -DaysAfterPreviousPhaseSuccess 3 -ThrottlingDays 5 -InstallationChoice AfterPeriod -DeadlineUnit Hours -DeadlineValue 12
+```
 
 ## PARAMETERS
 
 ### -AlertDelta
-{{ Fill AlertDelta Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Offset from the deadline time**. Specify an integer value for the offset, and then specify the period type with the **AlertUnit** parameter.
+
+To set this value, you have to use the **EnableAlert** parameter.
 
 ```yaml
 Type: Int32
@@ -99,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -AlertThresholdPercentage
-{{ Fill AlertThresholdPercentage Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Client compliance is below the following (percent)**. Specify an integer value for the percentage. To set this value, you have to use the **EnableAlert** parameter.
 
 ```yaml
 Type: Int32
@@ -114,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -AlertUnit
-{{ Fill AlertUnit Description }}
+
+Specify the type of period. Use this parameter with **AlertDelta**.
 
 ```yaml
 Type: TimeUnitType
@@ -130,7 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeteredConnection
-{{ Fill AllowMeteredConnection Description }}
+
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **Allow clients on a metered internet connection to download content after the installation deadline, which might incur additional costs**.
 
 ```yaml
 Type: Boolean
@@ -145,7 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSystemRestart
-{{ Fill AllowSystemRestart Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **System restart (if required to complete installation)**. This setting applies when the installation deadline is reached, to allow this activity to be performed outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -160,7 +189,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWumuFallback
-{{ Fill AllowWumuFallback Description }}
+
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
 
 ```yaml
 Type: Boolean
@@ -175,7 +205,12 @@ Accept wildcard characters: False
 ```
 
 ### -BeginCondition
-{{ Fill BeginCondition Description }}
+
+Specify an option for beginning this phase of deployment after success of the previous phase:
+
+- `AfterPeriod`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Automatically begin this phase after a deferral period (in days)**. If you specify this value, use **DaysAfterPreviousPhaseSuccess** to configure the period of time.
+
+- `Manually`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Manually begin this phase of deployment**.
 
 ```yaml
 Type: BeginConditionType
@@ -191,7 +226,8 @@ Accept wildcard characters: False
 ```
 
 ### -Collection
-{{ Fill Collection Description }}
+
+Specify an object for the target collection.
 
 ```yaml
 Type: IResultObject
@@ -206,7 +242,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
-{{ Fill CollectionId Description }}
+
+Specify the target collection by ID.
 
 ```yaml
 Type: String
@@ -221,7 +258,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-{{ Fill CollectionName Description }}
+
+Specify the target collection by name.
 
 ```yaml
 Type: String
@@ -236,7 +274,12 @@ Accept wildcard characters: False
 ```
 
 ### -CriteriaOption
-{{ Fill CriteriaOption Description }}
+
+Specify an option to choose the criteria for success of the previous phase:
+
+- `Compliance`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Deployment success percentage**. Specify the percentage value with the **CriteriaValue** parameter.
+
+- `Number`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Number of devices successfully deployed**. Specify the number of devices with the **CriteriaValue** parameter.
 
 ```yaml
 Type: CriteriaType
@@ -252,7 +295,12 @@ Accept wildcard characters: False
 ```
 
 ### -CriteriaValue
-{{ Fill CriteriaValue Description }}
+
+This integer value depends upon the value that you specify for **CriteriaOption**:
+
+- `Compliance`: Specify the percentage
+
+- `Number`: Specify the number of devices
 
 ```yaml
 Type: Int32
@@ -267,7 +315,8 @@ Accept wildcard characters: False
 ```
 
 ### -DaysAfterPreviousPhaseSuccess
-{{ Fill DaysAfterPreviousPhaseSuccess Description }}
+
+Specify an integer value for the number of days after success of the previous phase to begin this phase. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Automatically begin this phase after a deferral period (in days)**.
 
 ```yaml
 Type: Int32
@@ -282,7 +331,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineUnit
-{{ Fill DeadlineUnit Description }}
+
+Specify the type of deadline period. Use this parameter with **DeadlineValue**.
 
 ```yaml
 Type: TimeUnitType
@@ -298,7 +348,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineValue
-{{ Fill DeadlineValue Description }}
+
+This parameter is only used if you specify `AfterPeriod` with the **InstallationChoice** parameter.
+
+Specify an integer value for the period of time for the deadline. Use the **DeadlineUnit** parameter to specify the type of period: `Hours`, `Days`, `Weeks`, `Months`. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required after this period of time**.
 
 ```yaml
 Type: Int32
@@ -313,7 +366,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScomAlert
-{{ Fill DisableScomAlert Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Disable Operations Manager alerts while software updates run**.
 
 ```yaml
 Type: Boolean
@@ -328,6 +382,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -343,7 +398,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAlert
-{{ Fill EnableAlert Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Generate an alert when the following conditions are met**. When you set this parameter to `$true`, also set the following parameters:
+
+- AlertThresholdPercentage
+- AlertDelta
 
 ```yaml
 Type: Boolean
@@ -358,7 +417,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWakeOnLan
-{{ Fill EnableWakeOnLan Description }}
+
+This parameter is the same as the following setting on the **Deployment Settings** page of the **Add Phase Wizard** in the console: **Use Wake-on-LAN to wake up clients for required deployments**.
 
 ```yaml
 Type: Boolean
@@ -373,7 +433,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior. It's not recommended. You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -388,7 +449,8 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateScomAlertOnFailure
-{{ Fill GenerateScomAlertOnFailure Description }}
+
+This parameter is the same as the following setting on the **Alerts** page of the **Add Phase Wizard** in the console: **Generate Operations Manager alert when a software update installation fails**.
 
 ```yaml
 Type: Boolean
@@ -403,7 +465,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the phase to configure.
 
 ```yaml
 Type: String
@@ -418,7 +481,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify a phased deployment object that includes the phase to configure.
 
 ```yaml
 Type: IResultObject
@@ -433,7 +497,12 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationChoice
-{{ Fill InstallationChoice Description }}
+
+Specify an option for the behavior relative to when the software is made available:
+
+- `AsSoonAsPossible`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required as soon as possible**.
+
+- `AfterPeriod`: This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Installation is required after this period of time**. If you specify this value, use **DeadlineUnit** and **DeadlineValue** to configure the period of time.
 
 ```yaml
 Type: InstallationChoiceType
@@ -449,7 +518,8 @@ Accept wildcard characters: False
 ```
 
 ### -MovePhase
-{{ Fill MovePhase Description }}
+
+Change the order for the selected phase. You can move it up one, move it down one, or move to a specific index. If you specify `MoveToOrder`, use the **-MoveToOrder** parameter to set the specific index.
 
 ```yaml
 Type: ReorderType
@@ -465,7 +535,8 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToOrder
-{{ Fill MoveToOrder Description }}
+
+When you set the **-MovePhase** parameter to `MoveToOrder`, use this parameter to set the specific index.
 
 ```yaml
 Type: Int32
@@ -480,7 +551,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the phase to configure.
 
 ```yaml
 Type: String
@@ -495,7 +567,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewCollection
-{{ Fill NewCollection Description }}
+
+Specify a collection object to use as the new target for the selected phase.
 
 ```yaml
 Type: IResultObject
@@ -510,7 +583,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewCollectionId
-{{ Fill NewCollectionId Description }}
+
+Specify a collection by ID to use as the new target for the selected phase.
 
 ```yaml
 Type: String
@@ -525,7 +599,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewCollectionName
-{{ Fill NewCollectionName Description }}
+
+Specify a collection by name to use as the new target for the selected phase.
 
 ```yaml
 Type: String
@@ -540,7 +615,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewPhaseName
-{{ Fill NewPhaseName Description }}
+
+Use this parameter to rename the selected phase.
 
 ```yaml
 Type: String
@@ -555,7 +631,8 @@ Accept wildcard characters: False
 ```
 
 ### -Order
-{{ Fill Order Description }}
+
+Specify the index of the phase to configure.
 
 ```yaml
 Type: Int32
@@ -570,7 +647,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhasedDeploymentId
-{{ Fill PhasedDeploymentId Description }}
+
+Select the phased deployment by ID. Then use other parameters to select the specific phase in that deployment.
 
 ```yaml
 Type: String
@@ -585,7 +663,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhasedDeploymentName
-{{ Fill PhasedDeploymentName Description }}
+
+Select the phased deployment by name. Then use other parameters to select the specific phase in that deployment.
 
 ```yaml
 Type: String
@@ -600,7 +679,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhaseDescription
-{{ Fill PhaseDescription Description }}
+
+Specify a description for the phase.
 
 ```yaml
 Type: String
@@ -615,7 +695,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePostRebootFullScan
-{{ Fill RequirePostRebootFullScan Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
 
 ```yaml
 Type: Boolean
@@ -630,7 +711,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerRestartSuppression
-{{ Fill ServerRestartSuppression Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console. Suppress the system restart on the following devices: **Servers**.
 
 ```yaml
 Type: Boolean
@@ -645,7 +727,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareInstallation
-{{ Fill SoftwareInstallation Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Software Installation**. This setting applies when the installation deadline is reached, to allow this activity to be performed outside the maintenance window.
 
 ```yaml
 Type: Boolean
@@ -660,7 +743,12 @@ Accept wildcard characters: False
 ```
 
 ### -StateMessageVerbosity
-{{ Fill StateMessageVerbosity Description }}
+
+This parameter is the same as the following setting on the **Deployment Settings** page of the **Add Phase Wizard** in the console: **State message detail level** with the following values:
+
+- `AllMessages`: All messages
+- `OnlySuccessAndErrorMessages`: Only success and error messages
+- `OnlyErrorMessages`: Only error messages
 
 ```yaml
 Type: VerbosityLevelType
@@ -676,7 +764,8 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottlingDays
-{{ Fill ThrottlingDays Description }}
+
+Specify an integer value for the number of days to gradually make this software available. This parameter is the same as the following setting on the **Phase Settings** page of the **Add Phase Wizard** in the console: **Gradually make this software available over this period of time (in days)**.
 
 ```yaml
 Type: Int32
@@ -691,7 +780,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseNeighborDP
-{{ Fill UseNeighborDP Description }}
+
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **Select the deployment option to use when a client uses a distribution point from a neighbor boundary group or the default site boundary group**. Specify the following values:
+
+- `$true`: Download software updates from distribution point and install
+- `$false`: Do not install software updates
 
 ```yaml
 Type: Boolean
@@ -706,7 +799,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserNotificationOption
-{{ Fill UserNotificationOption Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Specify user experience setting for this deployment** with the following values:
+
+- `DisplayAll`: Display in Software Center and show all notifications
+- `DisplaySoftwareCenterOnly`: Display in Software Center, and only show notifications for computer restarts
+- `HideAll`: Hide in Software Center and all notifications
 
 ```yaml
 Type: UserNotificationType
@@ -722,7 +820,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseSiteDefaultDP
-{{ Fill UseSiteDefaultDP Description }}
+
+This parameter is the same as the following setting on the **Download Settings** page of the **Add Phase Wizard** in the console: **When software updates are not available on any distribution points in current or neighbor boundary group, client can download and install software updates from distribution points in site default boundary group**. Specify the following values:
+
+- `$true`: Download and install software updates from the distribution points in site default boundary group
+- `$false`: Do not install software updates
 
 ```yaml
 Type: Boolean
@@ -737,7 +839,8 @@ Accept wildcard characters: False
 ```
 
 ### -WorkstationRestartSuppression
-{{ Fill WorkstationRestartSuppression Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console. Suppress the system restart on the following devices: **Workstations**.
 
 ```yaml
 Type: Boolean
@@ -752,7 +855,8 @@ Accept wildcard characters: False
 ```
 
 ### -WriteFilterCommit
-{{ Fill WriteFilterCommit Description }}
+
+This parameter is the same as the following setting on the **User Experience** page of the **Add Phase Wizard** in the console: **Commit changes at deadline or during a maintenance window (requires restart)**. This setting applies to write filter handling for Windows Embedded devices.
 
 ```yaml
 Type: Boolean
@@ -767,6 +871,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -782,8 +887,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -798,7 +903,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
@@ -811,3 +917,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMPhase](Get-CMPhase.md)
+
+[New-CMSoftwareUpdatePhase](New-CMSoftwareUpdatePhase.md)
+
+[Get-CMSoftwareUpdatePhasedDeployment](Get-CMSoftwareUpdatePhasedDeployment.md)
+
+[New-CMSoftwareUpdateAutoPhasedDeployment](New-CMSoftwareUpdateAutoPhasedDeployment.md)
+
+[New-CMSoftwareUpdateManualPhasedDeployment](New-CMSoftwareUpdateManualPhasedDeployment.md)
+
+[Remove-CMSoftwareUpdatePhasedDeployment](Remove-CMSoftwareUpdatePhasedDeployment.md)
+
+[Set-CMSoftwareUpdatePhasedDeployment](Set-CMSoftwareUpdatePhase.md)
+
+[Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+
+[Move-CMPhasedDeploymentToNext](Move-CMPhasedDeploymentToNext.md)
+
+[Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+
+[Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+
+[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

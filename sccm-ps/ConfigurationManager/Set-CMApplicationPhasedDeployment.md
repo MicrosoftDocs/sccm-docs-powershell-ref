@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 07/31/2020
 schema: 2.0.0
 ---
 
 # Set-CMApplicationPhasedDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure a phased deployment for an application.
 
 ## SYNTAX
 
@@ -31,21 +33,34 @@ Set-CMApplicationPhasedDeployment [-NewName <String>] [-Description <String>] [-
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Applies to version 2006 and later. Configure a phased deployment for an application. For more information, see [Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Rename a phased deployment
+
+This example renames an application phased deployment that's passed through on the command line.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$appPhasedDeployment = Get-CMApplicationPhasedDeployment -Name "myPhasedDeploymentName"
+
+$appPhasedDeployment | Set-CMApplicationPhasedDeployment -NewName "New app phased deployment" -PassThru
 ```
 
-{{ Add example description here }}
+### Example 2: Change the description
+
+This example changes the description for an application phased deployment targeted by its ID.
+
+```powershell
+Set-CMApplicationPhasedDeployment -Id "3b107e52-471b-4c9c-a034-928bcc5f6fc0" -Description "This is an app phased deployment description"
+```
 
 ## PARAMETERS
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify an optional description to better identify this application phased deployment.
 
 ```yaml
 Type: String
@@ -60,6 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -75,6 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -90,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+
+Specify the ID of the application phased deployment to configure. The format of this value is a GUID.
 
 ```yaml
 Type: String
@@ -105,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify an object for an application phased deployment to configure. For example, use the [Get-CMApplicationPhasedDeployment](Get-CMApplicationPhasedDeployment.md) cmdlet to get this object.
 
 ```yaml
 Type: IResultObject
@@ -120,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the application phased deployment to configure.
 
 ```yaml
 Type: String
@@ -135,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-{{ Fill NewName Description }}
+
+Use this parameter to rename the application phased deployment.
 
 ```yaml
 Type: String
@@ -150,7 +171,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -165,6 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -180,8 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +219,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
 
@@ -209,3 +233,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMApplicationPhasedDeployment](Get-CMApplicationPhasedDeployment.md)
+
+[New-CMApplicationAutoPhasedDeployment](New-CMApplicationAutoPhasedDeployment.md)
+
+[Remove-CMApplicationPhasedDeployment](Remove-CMApplicationPhasedDeployment.md)
+
+[Get-CMPhase](Get-CMPhase.md)
+
+[Get-CMPhasedDeploymentStatus](Get-CMPhasedDeploymentStatus.md)
+
+[Move-CMPhasedDeploymentToNext](Move-CMPhasedDeploymentToNext.md)
+
+[Resume-CMPhasedDeployment](Resume-CMPhasedDeployment.md)
+
+[Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
+
+[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
