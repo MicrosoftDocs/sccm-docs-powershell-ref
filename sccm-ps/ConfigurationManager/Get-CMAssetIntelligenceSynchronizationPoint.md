@@ -1,8 +1,8 @@
 ---
-description: Gets Asset Intelligence synchronization points.
+description: Gets asset intelligence synchronization points.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Get-CMAssetIntelligenceSynchronizationPoint
 ---
@@ -10,7 +10,7 @@ title: Get-CMAssetIntelligenceSynchronizationPoint
 # Get-CMAssetIntelligenceSynchronizationPoint
 
 ## SYNOPSIS
-Gets Asset Intelligence synchronization points.
+Gets asset intelligence synchronization points.
 
 ## SYNTAX
 
@@ -27,22 +27,28 @@ Get-CMAssetIntelligenceSynchronizationPoint [-AllSite] -InputObject <IResultObje
 ```
 
 ## DESCRIPTION
-The **Get-CMAssetIntelligenceSynchronizationPoint** cmdlet gets one or more Asset Intelligence synchronization points.
-Configuration Manager uses the Asset Intelligence synchronization point site system role to connect Configuration Manager sites to System Center Online to synchronize Asset Intelligence catalog information.
+The **Get-CMAssetIntelligenceSynchronizationPoint** cmdlet gets one or more asset intelligence synchronization points. Configuration Manager uses the asset intelligence synchronization point to connect to the Microsoft cloud to synchronize catalog information.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get an Asset Intelligence synchronization point
-```
-PS XYZ:\> Get-CMAssetIntelligenceSynchronizationPoint
+### Example 1: Get all asset intelligence synchronization points
+
+This command gets all asset intelligence synchronization points in the current site.
+
+```powershell
+Get-CMAssetIntelligenceSynchronizationPoint
 ```
 
-This command gets an Asset Intelligence synchronization point.
+### Example 2: Get a specific server
+
+This command gets the asset intelligence synchronization point on the site server named **CMDIV-WEST04.CORP.CONTOSO.COM**, and saves it as the variable **$aisp**. You can then use that variable with other cmdlets, for example [Set-CMAssetIntelligenceSynchronizationPoint](Set-CMAssetIntelligenceSynchronizationPoint.md).
+
+```powershell
+$aisp = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM"
+```
 
 ## PARAMETERS
 
@@ -60,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -90,8 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+Specifies the input to this cmdlet. You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -132,6 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -151,5 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMAssetIntelligenceSynchronizationPoint](Remove-CMAssetIntelligenceSynchronizationPoint.md)
 
 [Set-CMAssetIntelligenceSynchronizationPoint](Set-CMAssetIntelligenceSynchronizationPoint.md)
-
-

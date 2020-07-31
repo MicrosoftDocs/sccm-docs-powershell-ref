@@ -1,8 +1,8 @@
 ---
-description: Enables or disables an Asset Intelligence synchronization point.
+description: Configure an asset intelligence synchronization point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Set-CMAssetIntelligenceSynchronizationPoint
 ---
@@ -10,7 +10,8 @@ title: Set-CMAssetIntelligenceSynchronizationPoint
 # Set-CMAssetIntelligenceSynchronizationPoint
 
 ## SYNOPSIS
-Enables or disables an Asset Intelligence synchronization point.
+
+Configure an asset intelligence synchronization point.
 
 ## SYNTAX
 
@@ -21,22 +22,23 @@ Set-CMAssetIntelligenceSynchronizationPoint [-Enable <Boolean>] [-CertificateFil
 ```
 
 ## DESCRIPTION
-The **Set-CMAssetIntelligenceSynchronizationPoint** cmdlet enables or disables one or more Asset Intelligence synchronization points.
-You must enable the Asset Intelligence synchronization point to perform scheduled Asset Intelligence catalog synchronizations with System Center Online.
+
+The **Set-CMAssetIntelligenceSynchronizationPoint** cmdlet configures an asset intelligence synchronization point. Enable the asset intelligence synchronization point to schedule catalog synchronization with the Microsoft cloud.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Enable an Asset Intelligence synchronization point
-```
-PS XYZ:\> Set-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM" -Enabled $True
-```
+### Example 1: Enable an asset intelligence synchronization point
 
-This command enables the Asset Intelligence synchronization point on the site server named CMDIV-WEST04.CORP.CONTOSO.COM.
+The first command gets the asset intelligence synchronization point on the site server named **CMDIV-WEST04.CORP.CONTOSO.COM**, and saves it as the variable **$aisp**. The second command enables the role by passing the variable as the input object.
+
+```powershell
+$aisp = Get-CMAssetIntelligenceSynchronizationPoint -SiteSystemServerName "CMDIV-WEST04.CORP.CONTOSO.COM"
+
+Set-CMAssetIntelligenceSynchronizationPoint -InputObject $aisp -Enable $True
+```
 
 ## PARAMETERS
 
@@ -69,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -110,7 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -125,8 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an Asset Intelligence synchronization point object.
-To obtain a CMAssetIntelligenceSynchronizationPoint object, use the Get-CMAssetIntelligenceSynchronizationPoint cmdlet.
+Specifies an asset intelligence synchronization point object. To get a asset intelligence synchronization point object, use the [Get-CMAssetIntelligenceSynchronizationPoint](Get-CMAssetIntelligenceSynchronizationPoint.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -141,8 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+Returns the current working object. By default, this cmdlet doesn't generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -157,9 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies a **CMSchedule** object.
-The schedule specifies when the maintenance window occurs.
-To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+Specifies a **CMSchedule** object. The schedule specifies when the synchronization occurs. To create a **CMSchedule** object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -174,8 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -190,6 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
