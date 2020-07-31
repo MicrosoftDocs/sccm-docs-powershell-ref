@@ -2,7 +2,7 @@
 description: Sets an object representing a status reporting component.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Set-CMStatusReportingComponent
 ---
@@ -54,18 +54,17 @@ A status reporting component object specifies information about the client confi
 You can configure the reporting component to check log files and monitor the severity of entries in the log files.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Set status reporting component
-```
-PS XYZ:\> Set-CMStatusReportingComponent -SiteCode "CM1" -ClientReportType AllMilestones -ServerReportType AllMilestones
-```
 
 This command sets a client report type and a server report type.
+
+```powershell
+Set-CMStatusReportingComponent -SiteCode "CM1" -ClientReportType AllMilestones -ServerReportType AllMilestones
+```
 
 ## PARAMETERS
 
@@ -101,12 +100,6 @@ Accept wildcard characters: False
 
 ### -ClientLogType
 Specifies a type of client log.
-The acceptable values for this parameter are:
-
-- AllMilestones
-- AllMilestonesAndAllDetails
-- AllMilestonesAndAllDetails
-- ErrorMilestones
 
 ```yaml
 Type: StatusReportOrLogType
@@ -153,12 +146,6 @@ Accept wildcard characters: False
 
 ### -ClientReportType
 Specifies a type of report.
-The acceptable values for this parameter are:
-
-- AllMilestones
-- AllMilestonesAndAllDetails
-- ErrorAndWarningMilestones
-- ErrorMilestones
 
 ```yaml
 Type: StatusReportOrLogType
@@ -280,12 +267,6 @@ Accept wildcard characters: False
 
 ### -ServerLogType
 Specifies a server log type.
-The acceptable values for this parameter are:
-
-- AllMilestones
-- AllMilestonesAndAllDetails
-- ErrorAndWarningMilestones
-- ErrorMilestones
 
 ```yaml
 Type: StatusReportOrLogType
@@ -332,12 +313,6 @@ Accept wildcard characters: False
 
 ### -ServerReportType
 Specifies a report type.
-The acceptable values for this parameter are:
-
-- AllMilestones
-- AllMilestonesAndAllDetails
-- ErrorAndWarningMilestones
-- ErrorMilestones
 
 ```yaml
 Type: StatusReportOrLogType
@@ -368,8 +343,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -384,6 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -392,12 +368,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-
 ## NOTES
 
 ## RELATED LINKS
 
 [Get-CMStatusReportingComponent](Get-CMStatusReportingComponent.md)
-
-
