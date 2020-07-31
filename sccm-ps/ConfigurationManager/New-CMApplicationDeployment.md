@@ -1,8 +1,8 @@
 ﻿---
-description: Creates an application deployment.
+description: Create an application deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: New-CMApplicationDeployment
 ---
@@ -10,7 +10,8 @@ title: New-CMApplicationDeployment
 # New-CMApplicationDeployment
 
 ## SYNOPSIS
-Creates an application deployment.
+
+Create an application deployment.
 
 ## SYNTAX
 
@@ -67,22 +68,26 @@ New-CMApplicationDeployment [-Id] <Int32> [-ApprovalRequired <Boolean>] [-Deploy
 
 ## DESCRIPTION
 
+The **New-CMApplicationDeployment** cmdlet creates an application deployment.
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>
+
+{{ Add example description here }}
+
+```powershell
+{{ Add example code here }}
 ```
 
 ## PARAMETERS
 
 ### -AllowRepairApp
-Starting in version 2002, use this parameter to configure the repair application option when creating a deployment for an application.
+
+Applies to version 2002 and later. Use this parameter to configure the repair application option when creating a deployment for an application.
 
 ```yaml
 Type: Boolean
@@ -467,7 +472,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplaceToastNotificationWithDialog
-{{ Fill ReplaceToastNotificationWithDialog Description }}
+
+Specify whether to replace toast notifications with a more intrusive dialog window when a deployment requires a restart. It's an optional parameter and false by default.
 
 ```yaml
 Type: Boolean
@@ -575,6 +581,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -590,8 +597,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -606,6 +613,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 ## INPUTS
@@ -615,6 +623,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
