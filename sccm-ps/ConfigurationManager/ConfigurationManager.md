@@ -1,4 +1,4 @@
-﻿---
+---
 Module Name: ConfigurationManager
 Module Guid: 7f590131-5253-4425-8b32-eeab51a4c393
 Download Help Link: {{ Update Download Link }}
@@ -66,7 +66,7 @@ Adds a compliance setting iis metabase
 Adds a compliance setting registry key
 
 ### [Add-CMComplianceSettingRegistryKeyValue](Add-CMComplianceSettingRegistryKeyValue.md)
-Adds a compliance setting registry key value
+Add a compliance setting registry key value.
 
 ### [Add-CMComplianceSettingRule](Add-CMComplianceSettingRule.md)
 Adds a compliance setting rule
@@ -185,6 +185,9 @@ Adds a software update to a software update group in Configuration Manager.
 ### [Add-CMStateMigrationPoint](Add-CMStateMigrationPoint.md)
 Adds a state migration point in Configuration Manager.
 
+### [Add-CMTaskSequenceDeploymentType](Add-CMTaskSequenceDeploymentType.md)
+Create a task sequence as an app model deployment type.
+
 ### [Add-CMTaskSequenceStep](Add-CMTaskSequenceStep.md)
 Adds a Configuration Manager task sequence step.
 
@@ -287,6 +290,9 @@ Convert a Configuration Manager management iResultObject to a configuration item
 ### [ConvertTo-CMIResultObject](ConvertTo-CMIResultObject.md)
 Converts a **ManagementBaseObject** to an **IResultObject**.
 
+### [Copy-CMBlmSetting](Copy-CMBlmSetting.md)
+{{ Fill in the Synopsis }}
+
 ### [Copy-CMCollection](Copy-CMCollection.md)
 Copys a Configuration Manager collection.
 
@@ -298,6 +304,9 @@ Creates a custom security role.
 
 ### [Copy-CMTaskSequence](Copy-CMTaskSequence.md)
 Create a copy of an existing task sequence in Configuration Manager.
+
+### [Copy-CMWdacSetting](Copy-CMWdacSetting.md)
+{{ Fill in the Synopsis }}
 
 ### [Deny-CMApprovalRequest](Deny-CMApprovalRequest.md)
 Denies a request to allow the installation of an application.
@@ -476,6 +485,9 @@ Gets the summarization schedule for configuration baseline data.
 
 ### [Get-CMBaselineXMLDefinition](Get-CMBaselineXMLDefinition.md)
 Gets the XML definition of a configuration baseline.
+
+### [Get-CMBlmSetting](Get-CMBlmSetting.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-CMBootImage](Get-CMBootImage.md)
 Gets an operating system boot image.
@@ -784,13 +796,13 @@ Gets object lock details.
 Gets the security scope associated with a Configuration Manager object.
 
 ### [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md)
-Gets operating system images.
+Gets OS images.
 
 ### [Get-CMOperatingSystemImageUpdateSchedule](Get-CMOperatingSystemImageUpdateSchedule.md)
 Retrieves an operating system image update schedule object in Configuration Manager.
 
 ### [Get-CMOperatingSystemInstaller](Get-CMOperatingSystemInstaller.md)
-Gets operating system installers.
+Gets OS upgrade packages.
 
 ### [Get-CMOperatingSystemUpgradeUpdateSchedule](Get-CMOperatingSystemUpgradeUpdateSchedule.md)
 Gets an operating system upgrade update schedule.
@@ -851,6 +863,9 @@ Gets a security scope.
 
 ### [Get-CMServiceConnectionPoint](Get-CMServiceConnectionPoint.md)
 Gets a service connection point.
+
+### [Get-CMSettingDeployment](Get-CMSettingDeployment.md)
+{{ Fill in the Synopsis }}
 
 ### [Get-CMSite](Get-CMSite.md)
 Gets one or more Configuration Manager sites.
@@ -1161,6 +1176,9 @@ Gets VHD images.
 ### [Get-CMVpnProfileConfigurationItem](Get-CMVpnProfileConfigurationItem.md)
 Gets a vpn profile configuration item.
 
+### [Get-CMWdacSetting](Get-CMWdacSetting.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md)
 Gets a windows edition upgrade configuration item.
 
@@ -1387,7 +1405,7 @@ Creates an application.
 Use this cmdlet to create a phased deployment for an application by generating two phases with same settings.
 
 ### [New-CMApplicationDeployment](New-CMApplicationDeployment.md)
-Creates an application deployment.
+Create an application deployment.
 
 ### [New-CMApplicationDisplayInfo](New-CMApplicationDisplayInfo.md)
 {{ Fill in the Synopsis }}
@@ -1406,6 +1424,27 @@ Creates a Configuration Manager baseline.
 
 ### [New-CMBaselineDeployment](New-CMBaselineDeployment.md)
 Creates a baseline deployment.
+
+### [New-CMBLEncryptionMethodPolicy](New-CMBLEncryptionMethodPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMBLEncryptionMethodWithXts](New-CMBLEncryptionMethodWithXts.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMBlmSetting](New-CMBlmSetting.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMBMSClientConfigureCheckIntervalPolicy](New-CMBMSClientConfigureCheckIntervalPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMBMSFDVEncryptionPolicy](New-CMBMSFDVEncryptionPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMBMSOSDEncryptionPolicy](New-CMBMSOSDEncryptionPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMBMSUserExemptionPolicy](New-CMBMSUserExemptionPolicy.md)
+{{ Fill in the Synopsis }}
 
 ### [New-CMBootableMedia](New-CMBootableMedia.md)
 Creates bootable media.
@@ -1433,9 +1472,6 @@ Creates a PFX certificate profile.
 
 ### [New-CMCertificateProfileScep](New-CMCertificateProfileScep.md)
 Creates a SCEP certificate profile.
-
-### [New-CMCertificateProfileTrustedRootCA](New-CMCertificateProfileTrustedRootCA.md)
-Creates a trusted CA certificate profile.
 
 ### [New-CMCertificateProfileTrustedRootCA](New-CMCertificateProfileTrustedRootCA.md)
 Creates a trusted CA certificate profile.
@@ -1486,7 +1522,7 @@ Creates a compliance rule file folder size.
 Creates a compliance rule registry key permission.
 
 ### [New-CMComplianceRuleValue](New-CMComplianceRuleValue.md)
-Creates a compliance rule value.
+Create a compliance rule value.
 
 ### [New-CMComplianceRuleVersion](New-CMComplianceRuleVersion.md)
 Creates a compliance rule version.
@@ -1560,6 +1596,9 @@ Creates an embedded property.
 ### [New-CMEmbeddedPropertyList](New-CMEmbeddedPropertyList.md)
 Creates an embedded property list.
 
+### [New-CMEnhancedPIN](New-CMEnhancedPIN.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMExchangeClientAccessServer](New-CMExchangeClientAccessServer.md)
 Creates a Client Access server role for an Exchange Server.
 
@@ -1573,7 +1612,7 @@ Create application-related settings for a mobile device that uses a Exchange Ser
 Create a set of email management settings for a mobile device that uses an Exchange Server connector.
 
 ### [New-CMExchangeConnectorGeneralSetting](New-CMExchangeConnectorGeneralSetting.md)
-Create an exchange connector general setting.
+Creates an exchange connector general setting.
 
 ### [New-CMExchangeConnectorPasswordSetting](New-CMExchangeConnectorPasswordSetting.md)
 Add new password settings to a Exchange Server connector in Configuration Manager.
@@ -1582,7 +1621,16 @@ Add new password settings to a Exchange Server connector in Configuration Manage
 Configure security options for a Microsoft Exchange Server connector in Configuration Manager.
 
 ### [New-CMExchangeServer](New-CMExchangeServer.md)
-Configure a new Exchange Server connector.
+Configures a new Exchange Server connector.
+
+### [New-CMFDVDenyWriteAccessPolicy](New-CMFDVDenyWriteAccessPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMFDVHybridAccessPolicy](New-CMFDVHybridAccessPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMFDVPassPhrasePolicy](New-CMFDVPassPhrasePolicy.md)
+{{ Fill in the Synopsis }}
 
 ### [New-CMFileReplicationRoute](New-CMFileReplicationRoute.md)
 Creates a file replication route for Configuration Manager.
@@ -1644,6 +1692,12 @@ Creates a maintenance window for a collection.
 ### [New-CMMigrationJob](New-CMMigrationJob.md)
 Creates a migration job in Configuration Manager.
 
+### [New-CMMoreInfoUrlPolicy](New-CMMoreInfoUrlPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMNoOverwritePolicy](New-CMNoOverwritePolicy.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
 
@@ -1656,6 +1710,9 @@ Adds an operating system installer.
 ### [New-CMOperatingSystemUpgradeUpdateSchedule](New-CMOperatingSystemUpgradeUpdateSchedule.md)
 Creates an operating system upgrade update schedule.
 
+### [New-CMOSPassphrase](New-CMOSPassphrase.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMPackage](New-CMPackage.md)
 Creates a Configuration Manager package.
 
@@ -1665,6 +1722,9 @@ Creates a package deployment to a Configuration Manager collection.
 ### [New-CMPowerManagementCustomPlan](New-CMPowerManagementCustomPlan.md)
 Creates a custom power management plan.
 
+### [New-CMPrebootRecoveryInfo](New-CMPrebootRecoveryInfo.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMPrestageMedia](New-CMPrestageMedia.md)
 Create an OS deployment prestaged media file.
 
@@ -1673,6 +1733,18 @@ Creates a new program in Configuration Manager.
 
 ### [New-CMQuery](New-CMQuery.md)
 Creates a Configuration Manager query.
+
+### [New-CMRDVConfigureBDEPolicy](New-CMRDVConfigureBDEPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMRDVDenyWriteAccessPolicy](New-CMRDVDenyWriteAccessPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMRDVHybridAccessPolicy](New-CMRDVHybridAccessPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMRDVPassPhrasePolicy](New-CMRDVPassPhrasePolicy.md)
+{{ Fill in the Synopsis }}
 
 ### [New-CMRegistryAccessControlEntry](New-CMRegistryAccessControlEntry.md)
 {{ Fill in the Synopsis }}
@@ -1731,6 +1803,9 @@ Creates a remote connection profile.
 ### [New-CMRootCertificateProfileConfigurationItem](New-CMRootCertificateProfileConfigurationItem.md)
 Create a root certificate profile.
 
+### [New-CMScCompliancePolicy](New-CMScCompliancePolicy.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMSchedule](New-CMSchedule.md)
 Creates a Configuration Manager schedule token.
 
@@ -1742,6 +1817,9 @@ Creates a secondary site in Configuration Manager.
 
 ### [New-CMSecurityScope](New-CMSecurityScope.md)
 Creates a security scope.
+
+### [New-CMSettingDeployment](New-CMSettingDeployment.md)
+{{ Fill in the Synopsis }}
 
 ### [New-CMSiteSystemServer](New-CMSiteSystemServer.md)
 Creates a site system server.
@@ -1812,8 +1890,8 @@ Use this cmdlet to create a deployment phase for a task sequence.
 ### [New-CMThirdPartyUpdateCatalog](New-CMThirdPartyUpdateCatalog.md)
 Use this cmdlet to create a new third-party updates catalog.
 
-### [New-CMTrustedRootCertificateProfileConfigurationItem](New-CMTrustedRootCertificateProfileConfigurationItem.md)
-Creates a root certificate profile.
+### [New-CMTpmAutoResealPolicy](New-CMTpmAutoResealPolicy.md)
+{{ Fill in the Synopsis }}
 
 ### [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
 {{ Fill in the Synopsis }}
@@ -1894,7 +1972,7 @@ Creates a t s step condition variable.
 {{ Fill in the Synopsis }}
 
 ### [New-CMTSStepEnableBitLocker](New-CMTSStepEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+Add the **Enable BitLocker** step to a task sequence, which enables BitLocker encryption on the hard drive.
 
 ### [New-CMTSStepInstallApplication](New-CMTSStepInstallApplication.md)
 Creates a t s step install application.
@@ -1909,10 +1987,10 @@ Creates a t s step install update.
 {{ Fill in the Synopsis }}
 
 ### [New-CMTSStepOfflineEnableBitLocker](New-CMTSStepOfflineEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+Add the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
 
 ### [New-CMTSStepPartitionDisk](New-CMTSStepPartitionDisk.md)
-Creates a t s step partition disk.
+Add the **Format and Partition Disk** step in a task sequence.
 
 ### [New-CMTSStepPrepareConfigMgrClient](New-CMTSStepPrepareConfigMgrClient.md)
 {{ Fill in the Synopsis }}
@@ -1921,7 +1999,7 @@ Creates a t s step partition disk.
 {{ Fill in the Synopsis }}
 
 ### [New-CMTSStepPrestartCheck](New-CMTSStepPrestartCheck.md)
-{{ Fill in the Synopsis }}
+Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions.
 
 ### [New-CMTSStepReboot](New-CMTSStepReboot.md)
 Creates a t s step reboot.
@@ -1956,6 +2034,15 @@ Creates a t s step set variable.
 ### [New-CMTSStepUpgradeOperatingSystem](New-CMTSStepUpgradeOperatingSystem.md)
 {{ Fill in the Synopsis }}
 
+### [New-CMUidPolicy](New-CMUidPolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMUseFddEnforcePolicy](New-CMUseFddEnforcePolicy.md)
+{{ Fill in the Synopsis }}
+
+### [New-CMUseOsEnforcePolicy](New-CMUseOsEnforcePolicy.md)
+{{ Fill in the Synopsis }}
+
 ### [New-CMUserCollection](New-CMUserCollection.md)
 Creates a collection for users and adds the collection to the Configuration Manager hierarchy.
 
@@ -1970,6 +2057,9 @@ Creates a virtual environment group.
 
 ### [New-CMVpnProfileConfigurationItem](New-CMVpnProfileConfigurationItem.md)
 Creates a VPN profile.
+
+### [New-CMWdacSetting](New-CMWdacSetting.md)
+{{ Fill in the Synopsis }}
 
 ### [New-CMWindowsFirewallPolicy](New-CMWindowsFirewallPolicy.md)
 Creates a new Windows Firewall policy in Configuration Manager.
@@ -2048,6 +2138,9 @@ Removes configuration baselines.
 
 ### [Remove-CMBaselineDeployment](Remove-CMBaselineDeployment.md)
 Removes a baseline deployment.
+
+### [Remove-CMBlmSetting](Remove-CMBlmSetting.md)
+{{ Fill in the Synopsis }}
 
 ### [Remove-CMBootImage](Remove-CMBootImage.md)
 Removes an operating system boot image.
@@ -2283,6 +2376,9 @@ Removes the association between security scopes and an administrative user.
 ### [Remove-CMServiceConnectionPoint](Remove-CMServiceConnectionPoint.md)
 Removes a service connection point.
 
+### [Remove-CMSettingDeployment](Remove-CMSettingDeployment.md)
+{{ Fill in the Synopsis }}
+
 ### [Remove-CMSiteRole](Remove-CMSiteRole.md)
 Removes a site role.
 
@@ -2469,6 +2565,9 @@ Removes a query membership rule from one or more user collection in the Configur
 ### [Remove-CMVhd](Remove-CMVhd.md)
 Removes VHD images.
 
+### [Remove-CMWdacSetting](Remove-CMWdacSetting.md)
+{{ Fill in the Synopsis }}
+
 ### [Rename-CMCategory](Rename-CMCategory.md)
 Renames a category.
 
@@ -2529,6 +2628,9 @@ Changes the settings of an Application Catalog website point.
 ### [Set-CMApplicationDeployment](Set-CMApplicationDeployment.md)
 Modifies properties for an application deployment in Configuration Manager.
 
+### [Set-CMApplicationPhasedDeployment](Set-CMApplicationPhasedDeployment.md)
+Configure a phased deployment for an application.
+
 ### [Set-CMAppv5XDeploymentType](Set-CMAppv5XDeploymentType.md)
 Sets an App-V 5X deployment type.
 
@@ -2562,6 +2664,12 @@ Changes settings for a Configuration Manager baseline deployment.
 ### [Set-CMBaselineSummarizationSchedule](Set-CMBaselineSummarizationSchedule.md)
 Configures the summarization schedule for configuration baseline data.
 
+### [Set-CMBlmPlaintextStorage](Set-CMBlmPlaintextStorage.md)
+{{ Fill in the Synopsis }}
+
+### [Set-CMBlmSetting](Set-CMBlmSetting.md)
+{{ Fill in the Synopsis }}
+
 ### [Set-CMBootImage](Set-CMBootImage.md)
 Modifies an operating system boot image.
 
@@ -2593,7 +2701,7 @@ Modify a certificate profile.
 Changes settings of a client push installation.
 
 ### [Set-CMClientSetting](Set-CMClientSetting.md)
-Changes client settings for Configuration Manager devices and users.
+Change client settings for Configuration Manager devices and users.
 
 ### [Set-CMClientSettingBackgroundIntelligentTransfer](Set-CMClientSettingBackgroundIntelligentTransfer.md)
 Sets a client setting background intelligent transfer.
@@ -2614,7 +2722,7 @@ Sets a client setting compliance setting.
 Sets a client setting computer agent.
 
 ### [Set-CMClientSettingComputerRestart](Set-CMClientSettingComputerRestart.md)
-Sets a client setting computer restart.
+Set client settings for computer restart.
 
 ### [Set-CMClientSettingDeliveryOptimization](Set-CMClientSettingDeliveryOptimization.md)
 {{ Fill in the Synopsis }}
@@ -2674,7 +2782,7 @@ Modifies the schedule interval of the client status update task.
 Changes settings for a cloud-based distribution point.
 
 ### [Set-CMCloudManagementGateway](Set-CMCloudManagementGateway.md)
-Sets a cloud management gateway.
+Configure a cloud management gateway (CMG).
 
 ### [Set-CMCloudManagementGatewayConnectionPoint](Set-CMCloudManagementGatewayConnectionPoint.md)
 Sets a cloud management gateway connection point
@@ -2917,7 +3025,7 @@ Specifies or changes settings for a migration source site in Configuration Manag
 Sets a mobile Windows Installer deployment type.
 
 ### [Set-CMMsiDeploymentType](Set-CMMsiDeploymentType.md)
-Sets a Windows Installer deployment type.
+Set a Windows Installer deployment type.
 
 ### [Set-CMMulticastServicePoint](Set-CMMulticastServicePoint.md)
 Sets a multicast service point.
@@ -2926,10 +3034,10 @@ Sets a multicast service point.
 Sets the security scopes for Configuration Manager objects.
 
 ### [Set-CMOperatingSystemImage](Set-CMOperatingSystemImage.md)
-Changes configuration settings of operating system images.
+Changes configuration settings of OS images.
 
 ### [Set-CMOperatingSystemInstaller](Set-CMOperatingSystemInstaller.md)
-Changes configuration settings of operating system installers.
+Changes configuration settings of OS upgrade packages.
 
 ### [Set-CMPackage](Set-CMPackage.md)
 Changes configuration settings for Configuration Manager packages.
@@ -2956,7 +3064,7 @@ Modifies a Configuration Manager reporting service point.
 Use this cmdlet to edit a script.
 
 ### [Set-CMScriptDeploymentType](Set-CMScriptDeploymentType.md)
-Sets a script installer deployment type.
+Set a script installer deployment type.
 
 ### [Set-CMSecurityRole](Set-CMSecurityRole.md)
 Changes configuration settings of a security role.
@@ -2969,6 +3077,9 @@ Sets a service connection point.
 
 ### [Set-CMSettingDefinition](Set-CMSettingDefinition.md)
 Sets a setting definition.
+
+### [Set-CMSettingDeployment](Set-CMSettingDeployment.md)
+{{ Fill in the Synopsis }}
 
 ### [Set-CMSite](Set-CMSite.md)
 Changes security scope settings for Configuration Manager sites.
@@ -3012,6 +3123,12 @@ Modifies a software update deployment package.
 ### [Set-CMSoftwareUpdateGroup](Set-CMSoftwareUpdateGroup.md)
 Changes configuration settings for software update groups in Configuration Manager.
 
+### [Set-CMSoftwareUpdatePhase](Set-CMSoftwareUpdatePhase.md)
+Use this cmdlet to configure a deployment phase for a software update.
+
+### [Set-CMSoftwareUpdatePhasedDeployment](Set-CMSoftwareUpdatePhasedDeployment.md)
+Configure a phased deployment for a software update.
+
 ### [Set-CMSoftwareUpdatePoint](Set-CMSoftwareUpdatePoint.md)
 Changes settings for a Configuration Manager software update point.
 
@@ -3042,8 +3159,17 @@ Sets a Configuration Manager task sequence.
 ### [Set-CMTaskSequenceDeployment](Set-CMTaskSequenceDeployment.md)
 Creates a task sequence deployment in Configuration Manager.
 
+### [Set-CMTaskSequenceDeploymentType](Set-CMTaskSequenceDeploymentType.md)
+Configure a task sequence deployment type on an application.
+
 ### [Set-CMTaskSequenceGroup](Set-CMTaskSequenceGroup.md)
 Sets a Configuration Manager task sequence group.
+
+### [Set-CMTaskSequencePhase](Set-CMTaskSequencePhase.md)
+Use this cmdlet to configure a deployment phase for a task sequence.
+
+### [Set-CMTaskSequencePhasedDeployment](Set-CMTaskSequencePhasedDeployment.md)
+Configure a phased deployment for a task sequence.
 
 ### [Set-CMThirdPartyUpdateCatalog](Set-CMThirdPartyUpdateCatalog.md)
 Use this cmdlet to modify a third-party updates catalog.
@@ -3094,7 +3220,7 @@ Use this cmdlet to modify third-party update categories.
 {{ Fill in the Synopsis }}
 
 ### [Set-CMTSStepEnableBitLocker](Set-CMTSStepEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+Configure the **Enable BitLocker** step in a task sequence, to enable BitLocker encryption on the hard drive.
 
 ### [Set-CMTSStepInstallApplication](Set-CMTSStepInstallApplication.md)
 Sets a TS step install application.
@@ -3109,10 +3235,10 @@ Sets a TS step install update.
 {{ Fill in the Synopsis }}
 
 ### [Set-CMTSStepOfflineEnableBitLocker](Set-CMTSStepOfflineEnableBitLocker.md)
-{{ Fill in the Synopsis }}
+Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
 
-### [Set-CMTSStepPartitionDisk](Set-CMTSStepPartitionDisk.md)
-Sets a TS step partition disk.
+### [Set-CMTSStepOfflineEnableBitLocker](Set-CMTSStepOfflineEnableBitLocker.md)
+Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE.
 
 ### [Set-CMTSStepPrepareConfigMgrClient](Set-CMTSStepPrepareConfigMgrClient.md)
 {{ Fill in the Synopsis }}
@@ -3121,7 +3247,7 @@ Sets a TS step partition disk.
 {{ Fill in the Synopsis }}
 
 ### [Set-CMTSStepPrestartCheck](Set-CMTSStepPrestartCheck.md)
-{{ Fill in the Synopsis }}
+Configure the **Check Readiness** step in a task sequence, to verify that the target computer meets the specified deployment prerequisite conditions.
 
 ### [Set-CMTSStepReboot](Set-CMTSStepReboot.md)
 Sets a TS step reboot.
@@ -3167,6 +3293,9 @@ Modifies VHD images.
 
 ### [Set-CMVpnProfileConfigurationItem](Set-CMVpnProfileConfigurationItem.md)
 Modifies a VPN profile.
+
+### [Set-CMWdacSetting](Set-CMWdacSetting.md)
+{{ Fill in the Synopsis }}
 
 ### [Set-CMWebApplicationDeploymentType](Set-CMWebApplicationDeploymentType.md)
 Sets a web application deployment type.

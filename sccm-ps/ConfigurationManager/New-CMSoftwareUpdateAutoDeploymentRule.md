@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates Configuration Manager deployment rules for automatic software updates.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -399,6 +399,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentSize
 Starting in version 1906, use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
 
@@ -544,6 +559,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeployWithoutLicense
+Indicates whether the rule deploys updates without licenses.
+If you specify a value of $True, Configuration Manager deploys only software updates found by this rule that do not include a license agreement, or for which the agreement has already been approved.
+If this value is $False, Configuration Manager deploys all software updates found by this rule, and approves any license agreements.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeploymentPackage
 ```yaml
 Type: IResultObject
@@ -578,23 +610,6 @@ Type: DeploymentRing
 Parameter Sets: (All)
 Aliases:
 Accepted values: CB, Release, BusinessMainstream, Cbb, Ltsb
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeployWithoutLicense
-Indicates whether the rule deploys updates without licenses.
-If you specify a value of $True, Configuration Manager deploys only software updates found by this rule that do not include a license agreement, or for which the agreement has already been approved.
-If this value is $False, Configuration Manager deploys all software updates found by this rule, and approves any license agreements.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -923,22 +938,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Required
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates identified by required that meet specified criteria to the software update group.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RequirePostRebootFullScan
 Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
 
@@ -947,6 +946,22 @@ Starting in version 1906, use this parameter to set the following option on the 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: RunEvaluationAfterRestart
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Required
+Specifies an array of criteria, as strings, for software updates.
+The rule adds software updates identified by required that meet specified criteria to the software update group.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -1192,6 +1207,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseUtc
+Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
+If this value is $True, Configuration Manager uses UTC for this deployment.
+If this value is $False, Configuration Manager uses local time.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserNotification
 Specifies the type of user notification.
 Valid values are:
@@ -1208,23 +1240,6 @@ Type: UserNotificationType
 Parameter Sets: (All)
 Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseUtc
-Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
-If this value is $True, Configuration Manager uses UTC for this deployment.
-If this value is $False, Configuration Manager uses local time.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -1267,6 +1282,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WriteFilterHandling
 Indicates whether to enable write filters for embedded devices.
 For a value of $True, the device commits changes during a maintenance window.
@@ -1285,39 +1316,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

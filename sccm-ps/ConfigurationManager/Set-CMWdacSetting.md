@@ -78,14 +78,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnforcementMode
-{{ Fill EnforcementMode Description }}
+### -EnforceRestart
+{{ Fill EnforceRestart Description }}
 
 ```yaml
-Type: CMWDACEnforcementMode
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Accepted values: AuditMode, EnforceMode
 
 Required: False
 Position: Named
@@ -94,13 +93,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnforceRestart
-{{ Fill EnforceRestart Description }}
+### -EnforcementMode
+{{ Fill EnforcementMode Description }}
 
 ```yaml
-Type: Boolean
+Type: CMWDACEnforcementMode
 Parameter Sets: (All)
 Aliases:
+Accepted values: AuditMode, EnforceMode
 
 Required: False
 Position: Named

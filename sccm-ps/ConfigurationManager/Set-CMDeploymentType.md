@@ -1,4 +1,4 @@
-﻿---
+---
 description: Changes a deployment type for a Configuration Manager deployment application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
@@ -317,38 +317,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApplicationName
-
-Specifies the name of the deployment application that contains the deployment type.
-
-```yaml
-Type: String
-Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyOtherInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByNamePropertyWindowsPhoneStoreInstaller, SetByNamePriority, SetByIdPriority
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApplicationNameInWindowsStore
-
-Specifies the name of the application in the Windows Store.
-
-```yaml
-Type: String
-Parameter Sets: SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyWindowsStoreInstaller
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AppV5xInstaller
 
 Indicates that the deployment type detects application information and deployment types from a Application Virtualization (App-V) 5.0 .appv package file.
@@ -381,6 +349,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplicationName
+
+Specifies the name of the deployment application that contains the deployment type.
+
+```yaml
+Type: String
+Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyOtherInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByNamePropertyWindowsPhoneStoreInstaller, SetByNamePriority, SetByIdPriority
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationNameInWindowsStore
+
+Specifies the name of the application in the Windows Store.
+
+```yaml
+Type: String
+Parameter Sets: SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyWindowsStoreInstaller
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClearRequirements
 
 Indicates that this cmdlet clears the deployment type requirements.
@@ -393,6 +393,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1167,6 +1183,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Windows8AppInstaller
 
 Indicates that the deployment type detects application information and deployment types from a Windows app package (.appx) file.
@@ -1225,41 +1258,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

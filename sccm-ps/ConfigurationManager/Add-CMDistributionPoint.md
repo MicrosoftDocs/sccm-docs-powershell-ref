@@ -1,4 +1,4 @@
-﻿---
+---
 description: Adds a distribution point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -247,6 +247,21 @@ Accepted values: Intranet, Internet, InternetAndIntranet
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -800,21 +815,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceDistributionPoint
-Specifies an array of distribution point sources from which this distribution point can pull content.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: SourceDistributionPoints
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SourceDPRank
 Specifies an array containing the priorities for the distribution point sources from which this distribution point can pull content.
 Source distribution points with the same priority are randomly selected.
@@ -823,6 +823,21 @@ Source distribution points with the same priority are randomly selected.
 Type: Int32[]
 Parameter Sets: (All)
 Aliases: SourceDPRanks
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceDistributionPoint
+Specifies an array of distribution point sources from which this distribution point can pull content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: SourceDistributionPoints
 
 Required: False
 Position: Named
@@ -898,21 +913,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -930,7 +930,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
