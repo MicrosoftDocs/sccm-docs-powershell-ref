@@ -58,9 +58,9 @@ The **New-CMTaskSequenceDeployment** cmdlet creates a task sequence deployment. 
 
 ## EXAMPLES
 
-{{ Add example description here }}
-
 ### Example 1
+
+{{ Add example description here }}
 
 ```powershell
 {{ Add example code here }}
