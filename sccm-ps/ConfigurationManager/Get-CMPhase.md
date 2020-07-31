@@ -2,6 +2,7 @@
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 07/30/2020
 schema: 2.0.0
 ---
 
@@ -128,7 +129,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specify the ID of the phased deployment.
+Specify the ID of the phase.
 
 ```yaml
 Type: String
@@ -143,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specify the phased deployment object for the phase.
 
 ```yaml
 Type: IResultObject
@@ -174,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -Order
-{{ Fill Order Description }}
+
+Specify an integer value for the phase's order.
 
 ```yaml
 Type: Int32
@@ -189,7 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhasedDeploymentId
-{{ Fill PhasedDeploymentId Description }}
+
+Specify the ID of the phased deployment.
 
 ```yaml
 Type: String
@@ -204,7 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -PhasedDeploymentName
-{{ Fill PhasedDeploymentName Description }}
+
+Specify the name of the phased deployment.
 
 ```yaml
 Type: String
@@ -233,3 +238,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
