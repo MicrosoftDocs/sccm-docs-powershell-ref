@@ -2,13 +2,15 @@
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
+ms.date: 07/31/2020
 schema: 2.0.0
 ---
 
 # Add-CMTaskSequenceDeploymentType
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a task sequence as an app model deployment type.
 
 ## SYNTAX
 
@@ -127,16 +129,27 @@ Add-CMTaskSequenceDeploymentType -InstallTaskSequenceId <String> [-UninstallTask
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Applies to version 2006 and later. Create a task sequence as an app model deployment type. For more information, see [Task sequence deployment type](https://docs.microsoft.com/mem/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
+
+This cmdlet has similar syntax as the MSI deployment type cmdlet [Add-CMMsiDeploymentType](Add-CMMsiDeploymentType.md). The primary differences are the following parameters:
+
+- `-InstallTaskSequenceId <string>` (required): the ID of the task sequence to install the app
+
+- `-UninstallTaskSequenceId <string>` (optional): the ID of the task sequence to uninstall the app
+
+These two parameters relate to the deployment type task sequence options. They replace the `-InstallCommand` and `-UninstallCommand` parameters on the MSI cmdlet.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Add a task sequence deployment type
 
-{{ Add example description here }}
+This example adds the task sequence ID **ABC001EB** to the app **CBI**. It also adds the uninstall task sequence ID **ABC00378**.
+
+```powershell
+Add-CMTaskSequenceDeploymentType -ApplicationName "CBI" -DeploymentTypeName "Complex install" -Comment "New Deployment Type" -InstallTaskSequenceId "ABC001EB" -UninstallTaskSequenceId "ABC00378" -ScriptLanguage "PowerShell" -ScriptText "dir"
+
+```
 
 ## PARAMETERS
 
@@ -156,7 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddLanguage
-{{ Fill AddLanguage Description }}
+
+Adds an array of languages that this deployment type supports.
 
 ```yaml
 Type: String[]
@@ -171,7 +185,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddRequirement
-{{ Fill AddRequirement Description }}
+
+Adds an array of requirements for this deployment type.
 
 ```yaml
 Type: Rule[]
@@ -186,7 +201,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-{{ Fill ApplicationId Description }}
+
+Specifies the ID of the application that is associated with this deployment type.
 
 ```yaml
 Type: Int32
@@ -201,7 +217,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationName
-{{ Fill ApplicationName Description }}
+
+Specifies the name of the application that is associated with this deployment type.
 
 ```yaml
 Type: String
@@ -216,7 +233,8 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-{{ Fill Comment Description }}
+
+Specifies a description for this deployment type.
 
 ```yaml
 Type: String
@@ -231,7 +249,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentTypeName
-{{ Fill DeploymentTypeName Description }}
+
+Specifies a display name for this deployment type.
 
 ```yaml
 Type: String
@@ -273,6 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -288,7 +308,8 @@ Accept wildcard characters: False
 ```
 
 ### -EstimatedRuntimeMins
-{{ Fill EstimatedRuntimeMins Description }}
+
+Specifies the estimated installation time, in minutes, of the deployment program for the application. This estimate is displayed to the user before the application installs.
 
 ```yaml
 Type: Int32
@@ -303,7 +324,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -318,7 +340,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceScriptDetection32Bit
-{{ Fill ForceScriptDetection32Bit Description }}
+
+Indicates that the deployment type uses the Microsoft Windows-32-on-Windows-64 (WOW64) subsystem to run a script on a 64-bit client computer.
 
 ```yaml
 Type: SwitchParameter
@@ -333,6 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -363,7 +387,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{ Fill InputObject Description }}
+
+Specifies an application object. To get an application object, use the [Get-CMApplication](Get-CMApplication.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -378,7 +403,13 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationBehaviorType
-{{ Fill InstallationBehaviorType Description }}
+
+Specifies the installation behavior of the deployment type.
+Valid values are:
+
+- InstallForUser
+- InstallForSystem
+- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
 
 ```yaml
 Type: InstallationBehaviorType
@@ -394,7 +425,8 @@ Accept wildcard characters: False
 ```
 
 ### -InstallTaskSequenceId
-{{ Fill InstallTaskSequenceId Description }}
+
+The ID of the task sequence to install the app
 
 ```yaml
 Type: String
@@ -409,7 +441,13 @@ Accept wildcard characters: False
 ```
 
 ### -LogonRequirementType
-{{ Fill LogonRequirementType Description }}
+
+Specifies the logon requirement for the deployment type. Valid values are:
+
+- OnlyWhenNoUserLoggedOn
+- OnlyWhenUserLoggedOn
+- WhereOrNotUserLoggedOn
+- WhetherOrNotUserLoggedOn
 
 ```yaml
 Type: LogonRequirementType
@@ -425,7 +463,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumRuntimeMins
-{{ Fill MaximumRuntimeMins Description }}
+
+Specifies the maximum run time in minutes of the deployment program for this application.
 
 ```yaml
 Type: Int32
@@ -440,7 +479,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductCode
-{{ Fill ProductCode Description }}
+
+Specifies the product code in the detection method for the deployment type.
 
 ```yaml
 Type: String
@@ -455,7 +495,8 @@ Accept wildcard characters: False
 ```
 
 ### -RebootBehavior
-{{ Fill RebootBehavior Description }}
+
+Specifies the reboot behavior.
 
 ```yaml
 Type: PostExecutionBehavior
@@ -471,7 +512,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLanguage
-{{ Fill RemoveLanguage Description }}
+
+Removes the existing supported languages from this deployment type.
 
 ```yaml
 Type: String[]
@@ -486,7 +528,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveRequirement
-{{ Fill RemoveRequirement Description }}
+
+Removes the existing installation requirements from this deployment type.
 
 ```yaml
 Type: Rule[]
@@ -501,7 +544,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequireUserInteraction
-{{ Fill RequireUserInteraction Description }}
+
+Indicates whether a user can interact with the deployment type installation to configure the installation options.
 
 ```yaml
 Type: SwitchParameter
@@ -516,7 +560,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFile
-{{ Fill ScriptFile Description }}
+
+The path to the script to use to detect this deployment type. Use the **-ScriptLanguage** parameter to set the type of script.
 
 ```yaml
 Type: String
@@ -531,7 +576,13 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptLanguage
-{{ Fill ScriptLanguage Description }}
+
+Specifies the script language that you want to use to detect this deployment type.
+Valid values are:
+
+- PowerShell
+- VBScript
+- JavaScript
 
 ```yaml
 Type: ScriptLanguage
@@ -547,7 +598,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptText
-{{ Fill ScriptText Description }}
+
+Specifies the script to use to detect this deployment type.
 
 ```yaml
 Type: String
@@ -562,7 +614,13 @@ Accept wildcard characters: False
 ```
 
 ### -SlowNetworkDeploymentMode
-{{ Fill SlowNetworkDeploymentMode Description }}
+
+Specifies the installation behavior of the deployment type on a slow network.
+Valid values are:
+
+- DoNothing
+- Download
+- DownloadContentForStreaming
 
 ```yaml
 Type: ContentHandlingMode
@@ -578,7 +636,8 @@ Accept wildcard characters: False
 ```
 
 ### -UninstallTaskSequenceId
-{{ Fill UninstallTaskSequenceId Description }}
+
+The ID of the task sequence to uninstall the app.
 
 ```yaml
 Type: String
@@ -593,7 +652,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserInteractionMode
-{{ Fill UserInteractionMode Description }}
+
+Specifies the mode in which the deployment type runs on client devices.
+Valid values are:
+
+- Normal
+- Minimized
+- Maximized
+- Hidden
 
 ```yaml
 Type: UserInteractionMode
@@ -609,6 +675,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -624,8 +691,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -640,6 +707,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -649,6 +717,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Task sequence deployment type](https://docs.microsoft.com/mem/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt)
