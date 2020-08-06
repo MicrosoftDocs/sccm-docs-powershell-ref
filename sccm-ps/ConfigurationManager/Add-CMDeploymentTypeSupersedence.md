@@ -1,8 +1,8 @@
 ---
-description: Adds a deployment type supersedence in Configuration Manager.
+description: Add a deployment type supersedence in Configuration Manager.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/02/2019
+ms.date: 08/06/2020
 schema: 2.0.0
 title: Add-CMDeploymentTypeSupersedence
 ---
@@ -11,7 +11,7 @@ title: Add-CMDeploymentTypeSupersedence
 
 ## SYNOPSIS
 
-Adds a deployment type supersedence in Configuration Manager.
+Add a deployment type supersedence in Configuration Manager.
 
 ## SYNTAX
 
@@ -23,19 +23,21 @@ Add-CMDeploymentTypeSupersedence [-SupersedingDeploymentType] <IResultObject>
 
 ## DESCRIPTION
 
-The **Add-CMDeploymentTypeSupersedence** cmdlet sets one deployment type to supersede another. Required input is a superseding type from [Get-CMDeploymentType](./Get-CMDeploymentType.md) and superseded deployment type from [Get-CMDeploymentType](./Get-CMDeploymentType.md).
+The **Add-CMDeploymentTypeSupersedence** cmdlet sets one deployment type to supersede another. Required inputs are the superseding deployment type and the superseded deployment type. You can get both objects from the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS XYZ:\>  Get-CMDeploymentType -ApplicationName MyApp | Add-CMDeploymentTypeSupersedence -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName MySupersedingApp)
+This example gets the deployment type from **MyApp** and stores it as a variable **$oldAppVer**. It then supersedes this app deployment type with a newer version, using a deployment type from **MySupersedingApp**.
+
+```powershell
+$oldAppVer = Get-CMDeploymentType -ApplicationName "MyApp"
+
+Add-CMDeploymentTypeSupersedence -SupersededDeploymentType $oldAppVer -SupersedingDeploymentType (Get-CMDeploymentType -ApplicationName "MySupersedingApp")
 ```
 
 ## PARAMETERS
@@ -58,7 +60,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -74,7 +76,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -90,6 +92,8 @@ Accept wildcard characters: False
 
 ### -IsUninstall
 
+If `$false`, the new deployment type (superseding) will upgrade the installed deployment type (superseded). If you set this parameter to `$true`, Configuration Manager uninstalls the previous deployment type when it installs the new deployment type.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -104,7 +108,7 @@ Accept wildcard characters: False
 
 ### -SupersededDeploymentType
 
-Specifies a superseded deployment type object.
+Specifies a superseded (old) deployment type object. Get this object with the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -120,7 +124,7 @@ Accept wildcard characters: False
 
 ### -SupersedingDeploymentType
 
-Specifies a superseding deployment type object.
+Specifies a superseding (new) deployment type object. Get this object with the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -136,8 +140,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -152,6 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -161,6 +165,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
