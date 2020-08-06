@@ -1,8 +1,8 @@
 ---
-description: Sets the properties of an application.
+description: Configure the properties of an application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/06/2020
 schema: 2.0.0
 title: Set-CMApplication
 ---
@@ -10,7 +10,8 @@ title: Set-CMApplication
 # Set-CMApplication
 
 ## SYNOPSIS
-Sets the properties of an application.
+
+Configure the properties of an application.
 
 ## SYNTAX
 
@@ -87,29 +88,30 @@ Set-CMApplication -ModelName <String> [-Description <String>] [-Publisher <Strin
 ```
 
 ## DESCRIPTION
-The **Set-CMApplication** cmdlet changes the settings of an application.
+
+Use the **Set-CMApplication** cmdlet to configure the settings of an application.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Set the properties of an application by using the pipeline
-```
-PS XYZ:\> Get-CMApplication -Name "Application01" | Set-CMApplication -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "Linktext" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
-```
 
-The first command gets the application object named Application01 and uses the pipeline operator to pass the object to **Set-CMApplication**.
-**Set-CMApplication** sets the specified properties on Applicaton01.
+The first command gets the application object named **Application01** and uses the pipeline operator to pass the object to **Set-CMApplication**.
+**Set-CMApplication** sets the specified properties on **Applicaton01**.
+
+```powershell
+Get-CMApplication -Name "Application01" | Set-CMApplication -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName "Localized Application01" -UserDocumentation "https://contoso.com/content" -LinkText "Linktext" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -AddUserCategory "userCategory1","userCategory2" -AddAppCategory "adminCategory1","adminCategory2"
+```
 
 ### Example 2: Get an application, rename it, and update its settings
-```
-PS XYZ:\> Set-CMApplication -Name "Application01" -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName Localized "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "LinkText" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -UserCategory "userCategory1","userCategory2" -AppCategory "adminCategory1","adminCategory2"
-```
 
-This command gets the application named Application01, renames it to Application01_New, and sets the specified properties on the application.
+This command gets the application named **Application01**, renames it to **Application01_New**, and sets the specified properties on the application.
+
+```powershell
+Set-CMApplication -Name "Application01" -NewName "Application01_New" -Description "Application updated" -Publisher "Test group" -SoftwareVersion 1.0.0.1 -OptionalReference "Reference" -ReleaseDate 2/24/2016 -AutoInstall $True -Owner "Administrator1" -SupportContact "Administrator" -LocalizedApplicationName Localized "Application01" -UserDocumentation "https://contoso.com/content" -LinkText "LinkText" -LocalizedDescription "Localized Application New" -Keyword "Application" -PrivacyUrl "https://contoso.com/privacy" -IsFeatured $True -IconLocationFile "C:\Users\art\icon.png" -DisplaySupersedenceInApplicationCatalog $True -DistributionPriority Medium -SendToProtectedDistributionPoint $True -DistributionPointSetting NoDownload -AddUserCategory "userCategory1","userCategory2" -AddAppCategory "adminCategory1","adminCategory2"
+```
 
 ## PARAMETERS
 
@@ -129,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddAppCategory
-{{ Fill AddAppCategory Description }}
+
+Specifies an administrative category assigned to the application. Provide the category by its name. Only categories of the type AppCategories are supported.
 
 ```yaml
 Type: IResultObject[]
@@ -170,7 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddUserCategory
-{{ Fill AddUserCategory Description }}
+
+Specifies a user category assigned to the application for Software Center filtering use. Provide the category by its name. Only categories of the type CatalogCategories are supported.
 
 ```yaml
 Type: IResultObject[]
@@ -185,9 +189,8 @@ Accept wildcard characters: False
 ```
 
 ### -AppCategory
-Specifies an array of administrative categories assigned to the application.
-Provide the categories by their name.
-Only categories of the type AppCategories are supported.
+
+This parameter is deprecated in version 1802. For more information, see **-AddAppCategory**.
 
 ```yaml
 Type: String[]
@@ -825,8 +828,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserCategory
-Specifies an array of user categories assigned to the application.
-You can use this parameter to identify a group or category of software, such as "office productivity" or "graphics."
+
+This parameter is deprecated in version 1802. For more information, see **-AddUserCategory**.
 
 ```yaml
 Type: String[]
@@ -873,6 +876,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -882,6 +886,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Application
+
+For more information on this return object and its properties, see [SMS_Application server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/apps/sms_application-server-wmi-class).
 
 ## NOTES
 
@@ -906,5 +912,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-CMApplication](Resume-CMApplication.md)
 
 [Suspend-CMApplication](Suspend-CMApplication.md)
-
-
