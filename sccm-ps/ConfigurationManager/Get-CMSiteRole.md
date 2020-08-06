@@ -1,8 +1,8 @@
 ---
-description: Gets a site role.
+description: Get a site role object.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/06/2020
 schema: 2.0.0
 title: Get-CMSiteRole
 ---
@@ -10,7 +10,8 @@ title: Get-CMSiteRole
 # Get-CMSiteRole
 
 ## SYNOPSIS
-Gets a site role.
+
+Get a site role object.
 
 ## SYNTAX
 
@@ -28,21 +29,37 @@ Get-CMSiteRole [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling
 
 ## DESCRIPTION
 
+This cmdlet gets a site role object. For example, a management point or distribution point.
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Count all management points
+
+This example gets all of the management points in the current site, and displays the count.
+
+```powershell
+$mp = Get-CMSiteRole -RoleName "SMS Management Point" -AllSite
+$mp.Count
 ```
-PS XYZ:\>
+
+### Example 2: List all roles by name
+
+This example lists all roles in the current site.
+
+```powershell
+$allRoles = Get-CMSiteRole -AllSite
+$allRoles.RoleName
 ```
 
 ## PARAMETERS
 
 ### -AllSite
+
+Include this parameter to get all of the roles for the site.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -56,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -71,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -86,6 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
@@ -99,6 +119,35 @@ Accept wildcard characters: False
 ```
 
 ### -RoleName
+
+Specify a specific role name to get. The value is the string from the **RoleName** property on the **SMS_SCI_SysResUse** class. For example:
+
+- `SMS Site System`
+- `SMS Component Server`
+- `SMS Distribution Point`
+- `SMS Management Point`
+- `SMS Device Management Point`
+- `SMS Software Update Point`
+- `SMS Enrollment Server`
+- `SMS Enrollment Web Site`
+- `SMS Notification Server`
+- `SMS Certificate Registration Point`
+- `SMS DM Enrollment Service`
+- `SMS Site Server`
+- `SMS State Migration Point`
+- `SMS Provider`
+- `SMS Cloud Proxy Connector`
+- `SMS SQL Server`
+- `SMS Fallback Status Point`
+- `AI Update Service Point`
+- `SMS SRS Reporting Point`
+- `SMS Endpoint Protection Point`
+- `Data Warehouse Service Point`
+- `SMS Dmp Connector`
+
+> [!NOTE]
+> This list may not include all possible site roles.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -112,6 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
+
+Specify the site code for the specific site role.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -125,6 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
+
+Specify the name of a specific site system server from which to get the role.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -138,6 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -150,6 +206,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_SCI_SysResUse
 
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-CMSiteRole](Remove-CMSiteRole.md)
