@@ -29,7 +29,7 @@ The **New-CMCloudDistributionPoint** cmdlet creates a cloud distribution point i
 
 In Configuration Manager, you can use a cloud service in Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.
-For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712321(v=technet.10)) on TechNet.
+For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

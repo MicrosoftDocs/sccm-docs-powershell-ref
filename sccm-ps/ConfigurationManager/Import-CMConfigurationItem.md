@@ -191,7 +191,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=211014)
+[Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 

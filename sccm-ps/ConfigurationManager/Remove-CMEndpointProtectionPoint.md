@@ -28,7 +28,7 @@ Remove-CMEndpointProtectionPoint [-SiteCode <String>] [-Force] [-SiteSystemServe
 
 ## DESCRIPTION
 The **Remove-CMEndpointProtectionPoint** cmdlet removes a System Center 2016 Endpoint Protection point from Configuration Manager.
-For more information about Endpoint Protection in Configuration Manager, see [Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) on TechNet.
+For more information about Endpoint Protection in Configuration Manager, see [Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -193,7 +193,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10))
+[Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection)
 
 [Add-CMEndpointProtectionPoint](Add-CMEndpointProtectionPoint.md)
 

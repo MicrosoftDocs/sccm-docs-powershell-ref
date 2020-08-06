@@ -41,7 +41,7 @@ Get-CMUserCollection -DistributionPointGroup <IResultObject> [<CommonParameters>
 
 ## DESCRIPTION
 The **Get-CMUserCollection** cmdlet retrieves collections that contain users in Configuration Manager.
-For more information about collections, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
+For more information about collections, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -29,7 +29,7 @@ Remove-CMAccount [-Force] -UserName <String> [-DisableWildcardHandling] [-ForceW
 ## DESCRIPTION
 The **Remove-CMAccount** cmdlet removes a user account from Configuration Manager.
 Configuration Manager uses user accounts to connect to various system and network resources.
-For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427337(v=technet.10)) in the TechNet library.
+For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/accounts).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

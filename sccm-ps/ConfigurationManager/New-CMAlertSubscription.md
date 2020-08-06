@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies a locale for alert messages.
-For more information and a list of locale identifiers, see the Locale IDs Assigned by Microsoft topic at https://go.microsoft.com/fwlink/?LinkId=262651.
+For more information and a list of locale identifiers, see [Appendix A: Product Behavior](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32

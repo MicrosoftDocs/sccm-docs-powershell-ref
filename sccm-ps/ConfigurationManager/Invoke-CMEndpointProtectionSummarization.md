@@ -23,7 +23,7 @@ Invoke-CMEndpointProtectionSummarization [-DisableWildcardHandling] [-ForceWildc
 The **Invoke-CMEndpointProtectionSummarization** cmdlet retrieves summary status data about System Center 2016 Endpoint Protection in Configuration Manager.
 This data helps you monitor Endpoint Protection in your Configuration Manager hierarchy.
 
-For more information about configuring and monitoring Endpoint Protection, see [How To Monitor Endpoint Configuration In Configuration Manager](https://go.microsoft.com/fwlink/?linkid=268428) on TechNet.
+For more information about configuring and monitoring Endpoint Protection, see [How To Monitor Endpoint Configuration In Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/monitor-endpoint-protection).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -116,7 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How To Monitor Endpoint Configuration In Configuration Manager](https://go.microsoft.com/fwlink/?linkid=268428)
+[How To Monitor Endpoint Configuration In Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/monitor-endpoint-protection)
 
 [Get-CMEndpointProtectionSummarizationSchedule](Get-CMEndpointProtectionSummarizationSchedule.md)
 

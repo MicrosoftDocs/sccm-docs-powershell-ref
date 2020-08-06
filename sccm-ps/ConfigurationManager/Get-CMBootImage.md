@@ -34,7 +34,7 @@ By default, Configuration Manager includes both x86 and x64 boot images.
 
 You must run the **Get-CMBootImage** cmdlet on the computer that is running the Systems Management Server (SMS) provider.
 The computer account of the computer that is running the SMS provider must have Read and Write access to the source package of the boot image.
-For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712282(v=technet.10)) on TechNet.
+For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -152,7 +152,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for the SMS Provider in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712282(v=technet.10))
+[Planning for the SMS Provider in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
 
 [New-CMBootImage](New-CMBootImage.md)
 

@@ -41,7 +41,7 @@ You can specify the user collections by using their names, IDs, or by specifying
 The query is specified as a text string.
 
 A query rule lets you dynamically update the members of a collection based on a query that is run on a schedule.
-For more information on collection rules, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
+For more information on collection rules, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

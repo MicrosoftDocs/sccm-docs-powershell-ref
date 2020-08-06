@@ -54,7 +54,7 @@ Invoke-CMEndpointProtectionScan -DeviceCollectionId <String> [-ScanType <ScanTyp
 The **Invoke-CMEndpointProtectionScan** cmdlet invokes a System Center 2016 Endpoint Protection scan that is outside of any scheduled scans.
 You can specify the device or collection by using its name, ID, or by specifying an object that represents the device or collection.
 
-For more information about how Configuration Manager supports Endpoint Protection, see [Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) on TechNet.
+For more information about how Configuration Manager supports Endpoint Protection, see [Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -256,7 +256,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10))
+[Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection)
 
 [Get-CMEndpointProtectionPoint](Get-CMEndpointProtectionPoint.md)
 

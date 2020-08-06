@@ -30,7 +30,7 @@ Get-CMApplicationCatalogWebServicePoint [-AllSite] -InputObject <IResultObject> 
 The **Get-CMApplicationCatalogWebServicePoint** cmdlet gets a Configuration Manager Application Catalog web service point object that has a specified site code for a fully qualified domain name (FQDN).
 
 Before you can configure an Application Catalog web service point you must first install and configure site system roles in Configuration Manager.
-For more information, see [Install and Configure Site System Roles for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh272770(v=technet.10)) on TechNet.
+For more information, see [Install and Configure Site System Roles for Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

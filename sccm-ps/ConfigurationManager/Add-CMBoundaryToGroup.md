@@ -77,7 +77,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 You can use boundary groups to manage network locations.
 You must assign boundaries to boundary groups before you can use the boundary group.
 Boundary groups enable client computers to find a primary site for client assignment, which is referred to as automatic site assignment, and a list of available site systems that have content.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10)) on TechNet.
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -260,7 +260,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10))
+[Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)
 
 [Get-CMBoundary](Get-CMBoundary.md)
 

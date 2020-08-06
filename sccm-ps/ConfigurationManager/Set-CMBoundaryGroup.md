@@ -47,7 +47,7 @@ Set-CMBoundaryGroup -Name <String> [-NewName <String>] [-Description <String>] [
 ## DESCRIPTION
 The **Set-CMBoundaryGroup** cmdlet modifies the properties of a boundary group.
 A boundary group is a collection of boundaries.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10)) on TechNet and the [New-CMBoundary](New-CMBoundary.md) cmdlet.
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) and the [New-CMBoundary](New-CMBoundary.md) cmdlet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -21,7 +21,7 @@ Set-CMClientStatusUpdateSchedule -Interval <Int32> -UnitType <ClientStatusUpdate
 
 ## DESCRIPTION
 The **Set-CMClientStatusUpdateSchedule** cmdlet modifies the schedule interval of the client status update task.
-For more information, see [How to Configure Client Status in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh338432(v=technet.10)) on TechNet.
+For more information, see [How to Configure Client Status in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/configure-client-status).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -146,7 +146,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to Configure Client Status in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh338432(v=technet.10))
+[How to Configure Client Status in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/configure-client-status)
 
 [Get-CMClientStatusUpdateSchedule](Get-CMClientStatusUpdateSchedule.md)
 

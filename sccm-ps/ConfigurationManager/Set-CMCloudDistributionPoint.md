@@ -41,7 +41,7 @@ The **Set-CMCloudDistributionPoint** cmdlet changes settings for a cloud-based d
 
 In Configuration Manager, you can use a cloud service in Windows Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.
-For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712321(v=technet.10)) on TechNet.
+For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
 
 You can use the **Set-CMCloudDistributionPoint** cmdlet to specify storage alert thresholds and warning levels for content that you deploy to a cloud distribution point.
 You can also use the cmdlet to configure settings that enable users and devices to access the content.

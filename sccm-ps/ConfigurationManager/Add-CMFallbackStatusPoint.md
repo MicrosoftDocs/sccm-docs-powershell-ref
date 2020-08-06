@@ -35,7 +35,7 @@ You also need to specify a throttle interval and the number of messages for that
 
 Configuration Manager can use one or more fallback status points to collect state messages for a site and send them to Configuration Manager.
 Throttling prevents the fallback status point from sending too many messages together, which can affect performance.
-For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh272770(v=technet.10)) on TechNet.
+For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

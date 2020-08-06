@@ -25,7 +25,7 @@ Set-CMClientStatusSetting [-ClientPolicyDays <Int32>] [-HeartbeatDiscoveryDays <
 The **Set-CMClientStatusSetting** cmdlet modifies client status settings.
 These settings determine the data collection intervals for individual client monitoring activities in Configuration Manager.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) in the TechNet library.
+For more information about client settings, see [About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -222,7 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10))
+[About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [Get-CMClientStatusSetting](Get-CMClientStatusSetting.md)
 

@@ -46,7 +46,6 @@ For example, you might have reinstalled the operating system.
 The previous client record still exists with the same hardware information.
 If you manually resolve conflicts, you have the option to merge the new record with the existing record, create a new record, or create a record as a blocked record.
 You can also configure Configuration Manager to resolve conflicts automatically.
-For more information, see [Configuring Settings for Client Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427330(v=technet.10)) on TechNet.
 
 You can specify conflicting records by using a name or ID or you can specify a site code to merge each of the unresolved conflicting records for that site.
 

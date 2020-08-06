@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -LanguageId
 Specifies the locale ID for an item.
-For more information and a list of locale IDs, see [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=262651).
+For more information and a list of locale IDs, see [Appendix A: Product Behavior](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32

@@ -37,7 +37,7 @@ The **Remove-CMBootImage** cmdlet removes a Windows Preinstallation Environment 
 
 You must run **Remove-CMBootImage** on the computer that is running the Systems Management Server (SMS) provider.
 The computer account of the computer that is running the SMS provider must have Read and Write access to the package source of the boot image.
-For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712282(v=technet.10)) on TechNet.
+For more information about the SMS provider, see [Planning for the SMS Provider in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -200,7 +200,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning for the SMS Provider in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712282(v=technet.10))
+[Planning for the SMS Provider in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider)
 
 [Get-CMBootImage](Get-CMBootImage.md)
 

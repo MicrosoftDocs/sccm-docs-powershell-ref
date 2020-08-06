@@ -245,7 +245,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Planning a Task Sequence Strategy in Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkID=260806)
+[Planning a Task Sequence Strategy in Configuration Manager](https://docs.microsoft.com/mem/configmgr/osd/plan-design/planning-considerations-for-automating-tasks)
 
 [Get-CMDeviceCollectionVariable](Get-CMDeviceCollectionVariable.md)
 

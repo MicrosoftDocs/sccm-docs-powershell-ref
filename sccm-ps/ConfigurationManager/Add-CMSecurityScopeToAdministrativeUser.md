@@ -71,7 +71,7 @@ Add-CMSecurityScopeToAdministrativeUser -SecurityScope <IResultObject> -Administ
 ## DESCRIPTION
 The **Add-CMSecurityScopeToAdministrativeUser** cmdlet adds a security scope to an administrative user or administrative group in Configuration Manager.
 
-For more information about security scopes, see [Configuring Security for Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427332(v=technet.10)) on TechNet.
+For more information about security scopes, see [Configuring Security for Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/configure-security).
 
 You can specify an administrative user or group by name or by ID or you can use the use the [Get-CMAdministrativeUser](Get-CMAdministrativeUser.md) cmdlet to obtain a user or group object.
 You can specify a security scope to add by name or by ID or you can use the [Get-CMSecurityScope](Get-CMSecurityScope.md) cmdlet to obtain a security scope.

@@ -43,7 +43,7 @@ The **Set-CMConfigurationItem** cmdlet changes settings for a Configuration Mana
 
 Configuration items contain one or more settings, along with compliance rules.
 Items usually define a unit of configuration you want to monitor.
-For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)) on TechNet.
+For more information about configuration items, see [Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -336,7 +336,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Compliance Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10))
+[Introduction to Compliance Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/compliance/understand/ensure-device-compliance)
 
 [Get-CMConfigurationItem](Get-CMConfigurationItem.md)
 
