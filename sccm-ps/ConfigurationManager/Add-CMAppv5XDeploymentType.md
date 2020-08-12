@@ -4,7 +4,7 @@ external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 04/27/2019
 schema: 2.0.0
-title: Add-CMApplicationCatalogWebsitePoint
+title: Add-CMAppv5XDeploymentType
 ---
 
 # Add-CMAppv5XDeploymentType

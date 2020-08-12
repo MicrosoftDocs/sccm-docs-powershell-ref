@@ -4,7 +4,7 @@ external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 05/07/2019
 schema: 2.0.0
-title: New-CMUserCollection
+title: New-CMTSStepSetVariable
 ---
 
 # New-CMTSStepSetVariable
