@@ -1,8 +1,8 @@
-﻿---
-description: Gets the status details of a Configuration Manager deployment.
+---
+description: Get the status details of a Configuration Manager deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/06/2020
 schema: 2.0.0
 title: Get-CMDeploymentStatusDetails
 ---
@@ -10,7 +10,8 @@ title: Get-CMDeploymentStatusDetails
 # Get-CMDeploymentStatusDetails
 
 ## SYNOPSIS
-Gets the status details of a Configuration Manager deployment.
+
+Get the status details of a Configuration Manager deployment.
 
 ## SYNTAX
 
@@ -24,16 +25,24 @@ Get-CMDeploymentStatusDetails -InputObject <IResultObject> [-DisableWildcardHand
 The **Get-CMDeploymentStatusDetails** cmdlet gets the status details of a Configuration Manager deployment.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
+
+### Example 1
+
+This example gets the status of a task sequence deployment using the **Get-CMPackageDeploymentStatus** cmdlet. It then displays the status details using a variable object.
+
+```powershell
+$status = Get-CMPackageDeploymentStatus -Name "TS Name"
+Get-CMDeploymentStatusDetails -InputObject $status[1]
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -48,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -63,6 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify an deployment status object to get details. Use the [Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md) cmdlet to get the object. If that cmdlet returns more than one status, it stores them in an array.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -76,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -85,6 +99,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMApplicationDeploymentStatus](Get-CMApplicationDeploymentStatus.md)
+
+[Get-CMBaselineDeploymentStatus](Get-CMBaselineDeploymentStatus.md)
+
+[Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
+
+[Get-CMSoftwareUpdateDeploymentStatus](Get-CMSoftwareUpdateDeploymentStatus.md)

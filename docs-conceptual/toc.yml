@@ -2,17 +2,13 @@
   href: overview.md
 - name: Release notes
   items:
+  - name: 2006 release notes
+    href: 2006-release-notes.md
   - name: 2002 release notes
     href: 2002-release-notes.md
   - name: 1910 release notes
     href: 1910-release-notes.md
   - name: 1906 release notes
     href: 1906-release-notes.md
-  - name: 1902 release notes
-    href: 1902-release-notes.md
-  - name: 1810 release notes
-    href: 1810-release-notes.md
-  - name: 1806 release notes
-    href: 1806_Release_Notes.md
 - name: Privacy statement
   href: privacy-statement.md

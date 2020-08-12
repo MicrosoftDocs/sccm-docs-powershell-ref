@@ -1,8 +1,8 @@
-﻿---
-description: Gets a software update deployment status.
+---
+description: Get the status of a software update deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/07/2020
 schema: 2.0.0
 title: Get-CMSoftwareUpdateDeploymentStatus
 ---
@@ -10,7 +10,8 @@ title: Get-CMSoftwareUpdateDeploymentStatus
 # Get-CMSoftwareUpdateDeploymentStatus
 
 ## SYNOPSIS
-Gets a software update deployment status.
+
+Get the status of a software update deployment.
 
 ## SYNTAX
 
@@ -21,22 +22,28 @@ Get-CMSoftwareUpdateDeploymentStatus -InputObject <IResultObject> [-DisableWildc
 
 ## DESCRIPTION
 
+The **Get-CMSoftwareUpdateDeploymentStatus** cmdlet gets the status of a software update deployment. Use the **Get-CMSoftwareUpdateDeployment** cmdlet to get a software update deployment.
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example 1: Display deployment status for a Patch Tuesday deployment
+
+This example uses the **Get-CMSoftwareUpdateDeployment** cmdlet to get a software update deployment object. That object is then used as the input to show the status.
+
+```powershell
+$sudeploy = Get-CMSoftwareUpdateDeployment -Name "Patch Tuesday - Office and Edge 2020-07-15 00:11:11"
+
+Get-CMSoftwareUpdateDeploymentStatus -InputObject $sudeploy
 ```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -51,7 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -66,6 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a software update deployment object for which to get status. Use the **Get-CMSoftwareUpdateDeployment** cmdlet to get this object.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -79,7 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -88,6 +100,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMSoftwareUpdateDeployment](Get-CMSoftwareUpdateDeployment.md)

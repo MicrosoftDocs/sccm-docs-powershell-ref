@@ -1,8 +1,8 @@
-﻿---
-description: Gets Configuration Manager packages.
+---
+description: Get a Configuration Manager legacy package.
 external help file: AdminUI.PS.AppModel.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/06/2020
 schema: 2.0.0
 title: Get-CMPackage
 ---
@@ -10,7 +10,8 @@ title: Get-CMPackage
 # Get-CMPackage
 
 ## SYNOPSIS
-Gets Configuration Manager packages.
+
+Get a Configuration Manager legacy package.
 
 ## SYNTAX
 
@@ -25,42 +26,45 @@ Get-CMPackage -Id <String> [-Fast] [-DisableWildcardHandling] [-ForceWildcardHan
 ```
 
 ## DESCRIPTION
-The **Get-CMPackage** cmdlet gets Configuration Manager packages.
-Configuration Manager uses packages to distribute software to clients.
-You can use the *SecuredScopeNames* parameter to specify the security scope of a package to get.
+
+The **Get-CMPackage** cmdlet gets a Configuration Manager legacy package. You find these packages in the Configuration Manager console, **Software Library** workspace, **Application Management > Packages** node.
+
+Other objects are considered "packages" in certain contexts, but you need to use other cmdlets to get them. For more information, see the [Related links](#related-links).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get all packages
-```
-PS XYZ:\> Get-CMPackage
-```
 
-This command gets all Configuration Manager packages.
+This command gets all Configuration Manager packages and stores them in the variable **$packages**.
+
+```powershell
+$packages = Get-CMPackage
+```
 
 ### Example 2: Get a package by using an ID
-```
-PS XYZ:\> Get-CMPackage -Id "CM100002"
-```
 
-This command gets the program that has the ID CM100002.
+This command gets the program that has the ID **CM100002**.
+
+```powershell
+Get-CMPackage -Id "CM100002"
+```
 
 ### Example 3: Get a package by using a name
-```
-PS XYZ:\> Get-CMPackage -Name "Configuration Manager Client Package"
-```
 
-This command gets the program named Configuration Manager Client Package.
+This command gets the program named **Configuration Manager Client Package**.
+
+```powershell
+Get-CMPackage -Name "Configuration Manager Client Package"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -75,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-{{ Fill Fast Description }}
+
+Does a fast query.
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -105,7 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of package IDs.
+
+Specifies the package ID to get. For example, `"CM100002"`.
 
 ```yaml
 Type: String
@@ -120,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a package.
+
+Specifies the name of a package to get. For example `"Configuration Manager Client Package"`.
 
 ```yaml
 Type: String
@@ -135,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -146,6 +155,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_Package
 
 ### IResultObject#SMS_Package
+
+For more information on this return object and its properties, see [SMS_Package server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_package-server-wmi-class).
 
 ## NOTES
 
@@ -161,4 +172,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CMPackage](Set-CMPackage.md)
 
+[Get-CMDriverPackage](Get-CMDriverPackage.md)
 
+[Get-CMSoftwareUpdateDeploymentPackage](Get-CMSoftwareUpdateDeploymentPackage.md)
+
+[Get-CMTaskSequence](Get-CMTaskSequence.md)
+
+[Get-CMApplication](Get-CMApplication.md)

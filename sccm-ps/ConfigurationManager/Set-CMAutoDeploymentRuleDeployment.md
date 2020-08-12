@@ -1,4 +1,4 @@
-﻿---
+---
 description: Sets a deployment for an automatic deployment rule.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -275,6 +275,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DeadlineImmediately
 Indicates whether required software updates are installed as soon as possible when the deadline is reached.
 
@@ -497,6 +512,8 @@ Accept wildcard characters: False
 
 ### -RequirePostRebootFullScan
 Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
+
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -526,6 +543,8 @@ Accept wildcard characters: False
 
 ### -SoftDeadlineEnabled
 Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
+
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -599,6 +618,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseUtc
+Indicates whether the schedule for this deployment is evaluated based upon Universal Coordinated Time (UTC).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserNotification
 Specifies the notification behavior of the user visual experience.
 Valid values are:
@@ -612,21 +646,6 @@ Type: UserNotificationOption
 Parameter Sets: (All)
 Aliases:
 Accepted values: DisplayAll, DisplaySoftwareCenterOnly, HideAll
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseUtc
-Indicates whether the schedule for this deployment is evaluated based upon Universal Coordinated Time (UTC).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -656,37 +675,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WriteFilterHandling
-Indicates whether changes are committed at deadline or during a maintenance window (requires restarts).
-If set to $False, content is applied on the overlay and committed later.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -703,8 +691,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WriteFilterHandling
+Indicates whether changes are committed at deadline or during a maintenance window (requires restarts).
+If set to $False, content is applied on the overlay and committed later.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

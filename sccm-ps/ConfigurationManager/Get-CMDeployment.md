@@ -1,8 +1,8 @@
-﻿---
-description: Gets a Configuration Manager deployment.
+---
+description: Get a Configuration Manager deployment.
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/07/2020
 schema: 2.0.0
 title: Get-CMDeployment
 ---
@@ -10,7 +10,8 @@ title: Get-CMDeployment
 # Get-CMDeployment
 
 ## SYNOPSIS
-Gets a Configuration Manager deployment.
+
+Get a Configuration Manager deployment.
 
 ## SYNTAX
 
@@ -27,27 +28,26 @@ Get-CMDeployment -DeploymentId <String> [-DisableWildcardHandling] [-ForceWildca
 ```
 
 ## DESCRIPTION
-**The Get-CMDeployment** cmdlet gets one or more Configuration Manager deployments.
 
-The cmdlet gets summary information about application, Software Update Management (SUM), or classic program deployments.
+**The Get-CMDeployment** cmdlet gets one or more Configuration Manager deployments. The cmdlet gets summary information about deployments of applications, software updates, or classic programs.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get a deployment for a collection
-```
-PS XYZ:\> Get-CMDeployment -CollectionName "deviceCol1" -FeatureType "Application"
-```
 
-This command gets the Application deployment for the device collection named deviceCol1.
+This command gets the application deployment for the device collection named **deviceCol1**.
+
+```powershell
+Get-CMDeployment -CollectionName "deviceCol1" -FeatureType "Application"
+```
 
 ## PARAMETERS
 
 ### -CollectionName
+
 Specifies the name of the collection associated with the deployment.
 
 ```yaml
@@ -63,6 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentId
+
 Specifies the ID of a deployment.
 
 ```yaml
@@ -78,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -93,15 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureType
-Specifies the feature type of the deployment.
-Valid values are:
 
-- Application
-- Package
-- SoftwareUpdate
-- ConfigurationItem
-- TaskSequence
-- FirewallSetting
+Specifies the feature type of the deployment.
 
 ```yaml
 Type: DeploymentFeature
@@ -117,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -132,8 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProgramName
-Specifies the name of the program associated with the deployment.
-Use this parameter with a legacy distribution program.
+
+Specifies the name of the program associated with the deployment. Use this parameter with a legacy distribution program.
 
 ```yaml
 Type: String
@@ -148,8 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareName
-Specifies the name of the software associated with the deployment.
-Use this parameter with a software update.
+
+Specifies the name of the software associated with the deployment. Use this parameter with a software update.
 
 ```yaml
 Type: String
@@ -164,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -175,6 +172,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_DeploymentSummary
 
 ### IResultObject#SMS_DeploymentSummary
+
+For more information on this return object and its properties, see [SMS_DeploymentSummary server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/apps/sms_deploymentsummary-server-wmi-class).
 
 ## NOTES
 
@@ -187,5 +186,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDeployment](Remove-CMDeployment.md)
 
 [Set-CMDeploymentType](Set-CMDeploymentType.md)
-
-

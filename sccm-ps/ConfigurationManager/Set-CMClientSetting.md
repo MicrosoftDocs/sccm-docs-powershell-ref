@@ -1,8 +1,8 @@
-﻿---
-description: Changes client settings for Configuration Manager devices and users.
+---
+description: Change client settings for Configuration Manager devices and users.
 external help file: AdminUI.PS.ClientSettings.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Set-CMClientSetting
 ---
@@ -10,7 +10,8 @@ title: Set-CMClientSetting
 # Set-CMClientSetting
 
 ## SYNOPSIS
-Changes client settings for Configuration Manager devices and users.
+
+Change client settings for Configuration Manager devices and users.
 
 ## SYNTAX
 
@@ -149,8 +150,9 @@ Set-CMClientSetting -Name <String> [-ComputerAgent] [-InitialReminderHours <Int3
 ### SetComputerRestartSettingsByName
 ```
 Set-CMClientSetting -Name <String> [-ComputerRestart] [-RebootLogoffNotificationCountdownMins <Int32>]
- [-RebootLogoffNotificationFinalWindowMins <Int32>] [-ReplaceToastNotificationWithDialog <Boolean>] [-PassThru]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RebootLogoffNotificationFinalWindowMins <Int32>] [-ReplaceToastNotificationWithDialog <Boolean>]
+ [-NoRebootEnforcement <Boolean>] [-PassThru] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetMeteredNetworksSettingsByName
@@ -173,129 +175,119 @@ Set-CMClientSetting -Name <String> [-RemoteControl]
 ```
 
 ## DESCRIPTION
-The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users.
-Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects.
-Settings objects determine settings for individual clients.
-For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
 
-Client settings for devices include the following categories:
-
-- Client Policy
-- Computer Agent
-- Computer Restart
-- System Center 2016 Endpoint Protection
-- Hardware Inventory
-- Metered Internet Connections
-- Network Access Protection (NAP)
-- Power Options
-- Remote Tools
-- Software Deployment
-- Software Inventory
-- Software Updates
-- User and Device Affinity
-
-Client settings for users include the following categories:
-
-- Mobile Devices
-- User and Device Affinity
+The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users. Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects. Settings objects determine settings for individual clients. For more information, see [About client settings](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
 
 To modify a client setting, specify it by name.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Rename a client setting
-```
-PS XYZ:\> Set-CMClientSetting -Name "Client Settings Main" -Description "Client settings for TSQA office site." -NewName "Client Settings TSQA"
-```
 
-This command renames the client setting object.
-The new name is Client Settings TSQA.
-The command also adds a description for the client setting object.
+This command renames the client setting object. The new name is **Client Settings TSQA**. The command also adds a description for the client setting object.
+
+```powershell
+Set-CMClientSetting -Name "Client Settings Main" -Description "Client settings for TSQA office site." -NewName "Client Settings TSQA"
+```
 
 ### Example 2: Configure power management
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA02" -AllowUserToOptOutFromPowerPlan $True -EnablePowerManagement $False
-```
 
-This command allows users to opt out of power plans and disables power management for the clients with the setting named TSQA02.
+This command allows users to opt out of power plans and disables power management for the clients with the setting named **TSQA02**.
+
+```powershell
+Set-CMClientSetting -Name "TSQA02" -AllowUserToOptOutFromPowerPlan $True -EnablePowerManagement $False
+```
 
 ### Example 3: Set state messaging reporting cycle value
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA02" -StateMessagingReportingCycleMinutes 10
-```
 
 This command sets a state messaging reporting cycle value of 10 minutes.
 
-### Example 4: Configure user affinity
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA03" -AutoApproveAffinity $False -UserAffinityLogOnThresholdMinutes 2800 -UserAffinityUsageThresholdDays 20
+```powershell
+Set-CMClientSetting -Name "TSQA02" -StateMessagingReportingCycleMinutes 10
 ```
 
-This command configures user affinity settings for a client setting named TSQA03.
-The command disables auto approval of affinity.
-The command sets the *UserAffinityLogOnThresholdMinutes* parameter to 2800 minutes and the *UserAffinityUsageThresholdDays* parameter to 20 days, so if a user uses a device for 2800 minutes over a period of 20 days, Configuration Manager creates a user device affinity.
+### Example 4: Configure user affinity
+
+This command configures user affinity settings for a client setting named **TSQA03**:
+
+- It disables auto approval of affinity.
+- It sets the **UserAffinityLogOnThresholdMinutes** parameter to 2800 minutes and the **UserAffinityUsageThresholdDays** parameter to 20 days. If a user uses a device for 2800 minutes over a period of 20 days, Configuration Manager creates a user device affinity.
+
+```powershell
+Set-CMClientSetting -Name "TSQA03" -AutoApproveAffinity $False -UserAffinityLogOnThresholdMinutes 2800 -UserAffinityUsageThresholdDays 20
+```
 
 ### Example 5: Allow user affinity
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA04" -AllowUserAffinity $True
-```
 
-This command changes the client setting named TSQA04 to have a client automatically configure user device affinity from usage data.
+This command changes the client setting named **TSQA04** to have a client automatically configure user device affinity from usage data.
+
+```powershell
+Set-CMClientSetting -Name "TSQA04" -AllowUserAffinity $True
+```
 
 ### Example 6: Set bandwidth for client
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA05" -EnableBITSMaxBandwidth $True EnableDownloadOffSchedule $True -MaxBandwidthValidFrom 8 -MaxBandwidthValidTo 15 -MaxTransferRateOnSchedule 1500
+
+This command changes settings for the client settings object named **TSQA05**:
+
+- It enables maximum bandwidth for BITS transfers and enables off schedule downloads.
+- It also specifies values for maximum bandwidth value from and to and maximum transfer rate on schedule.
+
+```powershell
+Set-CMClientSetting -Name "TSQA05" -EnableBITSMaxBandwidth $True EnableDownloadOffSchedule $True -MaxBandwidthValidFrom 8 -MaxBandwidthValidTo 15 -MaxTransferRateOnSchedule 1500
 ```
 
-This command changes settings for the client settings object named TSQA05.
-The command enables maximum bandwidth for BITS transfers and enables off schedule downloads.
-The command also specifies values for maximum bandwidth value from and to and maximum transfer rate on schedule.
+### Example 7: Configure user policies on the internet
 
-### Example 7: Configure user policies on the Internet
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA06" -EnableUserPolicyOnInternet $True -EnableUserPolicyPolling $False -EnableUserPolicyOnInternet $True -PolicyPollingInterval 50
-```
+This command changes settings for the client settings object named **TSQA06**:
 
-This command changes settings for the client settings object named TSQA06.
-The command enables user policy on the Internet, enables user policy polling, and sets a policy polling interval.
+- Enables user policy on the internet
+- Enables user policy polling
+- Sets a policy polling interval
+
+```powershell
+Set-CMClientSetting -Name "TSQA06" -EnableUserPolicyOnInternet $True -EnableUserPolicyPolling $False -EnableUserPolicyOnInternet $True -PolicyPollingInterval 50
+```
 
 ### Example 8: Disable compliance evaluation
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA07" -EnableComplianceEvaluation $False
-```
 
-This command disables compliance evaluation for the setting named TSQA07.
+This command disables compliance evaluation for the setting named **TSQA07**.
+
+```powershell
+Set-CMClientSetting -Name "TSQA07" -EnableComplianceEvaluation $False
+```
 
 ### Example 9: Set computer agent settings
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA09" -AddPortalToTrustedSiteList $True -AllowPortalToHaveElevatedTrust $True -BrandingTitle "Contoso IT" -EnableThirdPartyOrchestration Yes -FinalReminderMinutesInterval 52 -InitialReminderHoursInterval 6 -InstallRestriction OnlyAdministrators -PortalUrl "https://NewInstall.Contoso.com" -PowerShellExecutionPolicy Bypass -SuspendBitLocker Always
-```
 
-This command changes settings for the client settings object named TSQA09.
-The command specifies a portal and adds that portal to the trusted site list and allows it to have elevated trust.
-The command specifies a branding title, Contoso IT.
-The command enables third party orchestration.
-The command sets final reminder and initial reminder intervals.
-The command also specifies that only administrators can install software, selects Bypass as the Windows PowerShell execution policy, and suspends a BitLocker PIN requirement.
+This command changes settings for the client settings object named **TSQA09**:
+
+- Specifies a portal and adds that portal to the trusted site list and allows it to have elevated trust.
+- Specifies a branding title, Contoso IT.
+- Enables third party orchestration.
+- Sets final reminder and initial reminder intervals.
+- Specifies that only administrators can install software, selects Bypass as the Windows PowerShell execution policy, and suspends a BitLocker PIN requirement.
+
+```powershell
+Set-CMClientSetting -Name "TSQA09" -AddPortalToTrustedSiteList $True -AllowPortalToHaveElevatedTrust $True -BrandingTitle "Contoso IT" -EnableThirdPartyOrchestration Yes -FinalReminderMinutesInterval 52 -InitialReminderHoursInterval 6 -InstallRestriction OnlyAdministrators -PortalUrl "https://NewInstall.Contoso.com" -PowerShellExecutionPolicy Bypass -SuspendBitLocker Always
+```
 
 ### Example 10: Configure restart settings
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA11" -RebootLogoffNotificationCountdownDuration 12 -RebootLogoffNotificationFinalWindowMinutes 80
-```
 
-This command sets restart logoff notification countdown duration and logoff notification final window duration for a client setting object named TSQA11.
+This command sets restart logoff notification countdown duration and logoff notification final window duration for a client setting object named **TSQA11**.
+
+```powershell
+Set-CMClientSetting -Name "TSQA11" -RebootLogoffNotificationCountdownDuration 12 -RebootLogoffNotificationFinalWindowMinutes 80
+```
 
 ### Example 11: Configure metered network usage
-```
-PS XYZ:\> Set-CMClientSetting -Name "TSQA21" -MeteredNetworkUsage Limit
-```
 
-This command specifies the type of metered network usage for the client setting object named TSQA21 as Limit.
+This command limits metered network usage for the client setting object named **TSQA21**.
+
+```powershell
+Set-CMClientSetting -Name "TSQA21" -MeteredNetworkUsage Limit
+```
 
 ## PARAMETERS
 
@@ -597,6 +589,21 @@ Aliases: ComputerRestartSettings
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1274,6 +1281,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NoRebootEnforcement
+
+Applies to version 2006 and later. Configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart. For more information, see [device restart notifications](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/device-restart-notifications).
+
+```yaml
+Type: Boolean
+Parameter Sets: SetComputerRestartSettingsByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassThru
 Returns the current working object.
 By default, this cmdlet does not generate any output.
@@ -1480,7 +1503,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplaceToastNotificationWithDialog
-{{ Fill ReplaceToastNotificationWithDialog Description }}
+
+Specify whether to replace toast notifications with a more intrusive dialog window when a deployment requires a restart. It's an optional parameter and false by default.
 
 ```yaml
 Type: Boolean
@@ -1794,19 +1818,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserDeviceAffinity
-```yaml
-Type: SwitchParameter
-Parameter Sets: SetUserDeviceAffinitySettingsByName
-Aliases: UserDeviceAffinitySettings
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UseUtcForEvaluationTime
 Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time, to configure a recurring interval.
 If you specify $False, Configuration Manager uses local time.
@@ -1817,6 +1828,19 @@ Parameter Sets: SetNetworkAccessProtectionSettingsByName
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserDeviceAffinity
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetUserDeviceAffinitySettingsByName
+Aliases: UserDeviceAffinitySettings
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1862,21 +1886,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1894,7 +1903,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -1907,7 +1916,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10))
+[About client settings](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [Get-CMClientSetting](Get-CMClientSetting.md)
 

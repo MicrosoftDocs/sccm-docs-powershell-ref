@@ -368,7 +368,7 @@ The following changes have been made to existing cmdlets in this version. Change
     - -Password 
     - -SuccessCodes
 
-### Set-CMWinodwsFirewallPolicy
+### Set-CMWindowsFirewallPolicy
 #### Bugs that were fixed
 - Set/Remove-CMWindowsFirewallPolicy  -InputObject need to input correct type from New-CMWindowsFirewallPolicy.
 #### Non-breaking changes

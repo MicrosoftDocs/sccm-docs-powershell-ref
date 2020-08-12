@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager PowerShell cmdlets
 description: Manage your Configuration Manager hierarchy using Windows PowerShell. 
-ms.date: 07/14/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -18,6 +18,11 @@ manager: dougeby
 Use Windows PowerShell to manage your Configuration Manager hierarchy. You can use PowerShell scripts to automate or extend Configuration Manager similar to other documented approaches using WMI and C#. For more information, see [Configuration Manager SDK](https://docs.microsoft.com/mem/configmgr/develop/).
 
 Run Configuration Manager cmdlets and scripts in PowerShell from the Configuration Manager console or from a Windows PowerShell session. When you run Configuration Manager cmdlets by using the Configuration Manager console, your session automatically runs in the context of the site.
+
+> [!NOTE]
+> Configuration Manager current branch supports Windows PowerShell version 6.
+>
+> For more information about support for PowerShell version 7, see [Features in Configuration Manager technical preview version 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004#bkmk_pwsh7).
 
 ## PowerShell from the Configuration Manager console
 

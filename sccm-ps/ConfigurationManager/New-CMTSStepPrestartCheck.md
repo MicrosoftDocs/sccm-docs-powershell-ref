@@ -1,6 +1,7 @@
-﻿---
+---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
+ms.date: 07/31/2020
 online version:
 schema: 2.0.0
 ---
@@ -8,39 +9,56 @@ schema: 2.0.0
 # New-CMTSStepPrestartCheck
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions.
 
 ## SYNTAX
 
 ```
 New-CMTSStepPrestartCheck [-CheckSpace <Boolean>] [-DiskSpace <Int32>] [-CheckPowerState <Boolean>]
- [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>] [-CheckMemory <Boolean>] [-Memory <Int32>]
- [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>] [-CheckOS <Boolean>] [-OS <OSType>]
- [-CheckOSArchitecture <Boolean>] [-OSArchitecture <OSArch>] [-CheckMinOSVersion <Boolean>]
- [-MinOSVersion <String>] [-CheckMaxOSVersion <Boolean>] [-MaxOSVersion <String>]
- [-CheckCMClientMinVersion <Boolean>] [-CMClientMinVersion <String>] [-CheckSpeed <Boolean>] [-Speed <Int32>]
- -Name <String> [-Description <String>] [-ContinueOnError] [-Disable] [-Condition <IResultObject[]>]
- [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CheckUefi <Boolean>] [-CheckNetworkConnected <Boolean>] [-CheckNetworkWired <Boolean>]
+ [-CheckMemory <Boolean>] [-Memory <Int32>] [-CheckOSLanguageId <Boolean>] [-OSLanguageId <Int32>]
+ [-CheckOS <Boolean>] [-OS <OSType>] [-CheckOSArchitecture <Boolean>] [-OSArchitecture <OSArch>]
+ [-CheckMinOSVersion <Boolean>] [-MinOSVersion <String>] [-CheckMaxOSVersion <Boolean>]
+ [-MaxOSVersion <String>] [-CheckCMClientMinVersion <Boolean>] [-CMClientMinVersion <String>]
+ [-CheckSpeed <Boolean>] [-Speed <Int32>] -Name <String> [-Description <String>] [-ContinueOnError] [-Disable]
+ [-Condition <IResultObject[]>] [-DisableWildcardHandling] [-ForceWildcardHandling] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
 
 {{ Add example description here }}
 
+```powershell
+{{ Add example code here }}
+```
+
 ## PARAMETERS
+
+### -CMClientMinVersion
+Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ClientMinVersion
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CheckCMClientMinVersion
 Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Minimum client version**. Use the parameter **CMClientMinVersion** to set the specific client version number.
@@ -222,13 +240,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CMClientMinVersion
-Use this parameter to configure the specific client version. Specify the client version in the following format: `5.00.8913.1005`. Use the parameter **CheckCMClientMinVersion** to enable or disable the check.
+### -CheckUefi
+Applies to version 2006 and later. Use this parameter to enable or disable the following setting in the **Check Readiness** task sequence step: **Computer is in UEFI mode**.
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
-Aliases: ClientMinVersion
+Aliases:
 
 Required: False
 Position: Named
@@ -238,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-{{ Fill Condition Description }}
+Specify a condition object to use with this step.
 
 ```yaml
 Type: IResultObject[]
@@ -252,8 +270,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContinueOnError
-{{ Fill ContinueOnError Description }}
+Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
 Type: SwitchParameter
@@ -268,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+Specify an optional description for this task sequence step.
 
 ```yaml
 Type: String
@@ -283,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-{{ Fill Disable Description }}
+Add this parameter to disable this task sequence step.
 
 ```yaml
 Type: SwitchParameter
@@ -298,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -328,7 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -388,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specify a name for this step to identify it in the task sequence.
 
 ```yaml
 Type: String
@@ -464,21 +497,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -496,7 +514,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -509,3 +527,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[About task sequence steps - Check Readiness](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)
