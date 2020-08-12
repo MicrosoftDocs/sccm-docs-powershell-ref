@@ -1,4 +1,4 @@
-﻿---
+---
 description: Gets client status settings.
 external help file: AdminUI.PS.ClientStatus.dll-Help.xml
 Module Name: ConfigurationManager
@@ -22,7 +22,7 @@ Get-CMClientStatusSetting [-DisableWildcardHandling] [-ForceWildcardHandling] [<
 The **Get-CMClientStatusSetting** cmdlet gets client status settings for the local computer.
 These settings determine the data collection intervals for individual client monitoring activities.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) on TechNet.
+For more information about client settings, see [About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -96,7 +96,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10))
+[About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [Set-CMClientStatusSetting](Set-CMClientStatusSetting.md)
 

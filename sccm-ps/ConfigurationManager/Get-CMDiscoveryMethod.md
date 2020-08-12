@@ -1,4 +1,4 @@
-﻿---
+---
 description: Gets a discovery method for Configuration Manager.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -25,7 +25,7 @@ Discovery identifies computer and user resources that Configuration Manager can 
 If it discovers a resource, Configuration Manager creates a record in the Configuration Manager database for the resource and its associated information.
 You can then use the discovery information to help you to install the Configuration Manager client and create custom queries and collections to logically group resources for related management tasks.
 
-For more information about discovery in Configuration Manager, see [About Configuration Manager Discovery](/previous-versions/system-center/configuration-manager-2007/bb633276(v=technet.10)) on TechNet.
+For more information about discovery in Configuration Manager, see [About Configuration Manager Discovery](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/run-discovery).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -133,6 +133,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Configuration Manager Discovery](/previous-versions/system-center/configuration-manager-2007/bb633276(v=technet.10))
+[About Configuration Manager Discovery](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/run-discovery)
 
 [Set-CMDiscoveryMethod](Set-CMDiscoveryMethod.md)

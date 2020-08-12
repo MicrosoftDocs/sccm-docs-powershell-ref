@@ -1,8 +1,8 @@
-﻿---
-description: Gets operating system images.
+---
+description: Gets OS images
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Get-CMOperatingSystemImage
 ---
@@ -10,39 +10,38 @@ title: Get-CMOperatingSystemImage
 # Get-CMOperatingSystemImage
 
 ## SYNOPSIS
-Gets operating system images.
+Gets OS images.
 
 ## SYNTAX
 
 ### SearchByName (Default)
 ```
-Get-CMOperatingSystemImage [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMOperatingSystemImage [-Name <String>] [-Reload] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByIdMandatory
 ```
-Get-CMOperatingSystemImage -Id <String> [-DisableWildcardHandling] [-ForceWildcardHandling]
+Get-CMOperatingSystemImage -Id <String> [-Reload] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-CMOperatingSystemImage** cmdlet gets one or more operating system images on a Configuration Manager site.
-Operating system images are .wim format files and represent a compressed collection of reference files and folders that Configuration Manager requires to successfully install and configure an operating system on a computer.
+
+The **Get-CMOperatingSystemImage** cmdlet gets one or more OS images on a Configuration Manager site. OS images are .wim format files and represent a compressed collection of reference files and folders that Configuration Manager requires to successfully install and configure an OS on a computer.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get an operating system image
-```
-PS XYZ:\> Get-CMOperatingSystemImage -Name "OSImagePkg01" -SecuredScopeNames "SecScope02"
-```
+### Example 1: Get an OS image
 
-This command gets the operating system image named OSImagePkg01 for the security scope named SecScope02.
+This command gets the OS image named OSImagePkg01 for the security scope named SecScope02.
+
+```powershell
+Get-CMOperatingSystemImage -Name "OSImagePkg01" -SecuredScopeNames "SecScope02"
+```
 
 ## PARAMETERS
 
@@ -77,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of operating system images.
+Specifies an array of IDs of OS images.
 
 ```yaml
 Type: String
@@ -92,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of an operating system image.
+Specifies the name of an OS image.
 
 ```yaml
 Type: String
@@ -106,8 +105,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Reload
+
+Applies to version 2006 and later. If you change the image properties using an external tool, use this option to reload the information in the site database.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ReloadImage
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

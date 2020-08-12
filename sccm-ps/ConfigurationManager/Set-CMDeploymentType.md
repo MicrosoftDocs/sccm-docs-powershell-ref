@@ -1,8 +1,8 @@
-﻿---
-description: Changes a deployment type for a Configuration Manager deployment application.
+---
+description: Change a deployment type for a Configuration Manager application.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 01/02/2019
+ms.date: 08/06/2020
 schema: 2.0.0
 title: Set-CMDeploymentType
 ---
@@ -11,7 +11,7 @@ title: Set-CMDeploymentType
 
 ## SYNOPSIS
 
-Changes a deployment type for a Configuration Manager deployment application.
+Change a deployment type for a Configuration Manager application.
 
 ## SYNTAX
 
@@ -255,33 +255,24 @@ Set-CMDeploymentType -ApplicationName <String> -DeploymentTypeId <Int32> [-Prior
 
 ## DESCRIPTION
 
-The **Set-CMDeploymentType** cmdlet changes a deployment type for a deployment application in Configuration Manager.
-A deployment type is a part of the application that defines how that application deploys other applications to devices.
-You can also use this cmdlet to change the priority for dependencies of the deployment type.
-Configuration Manager evaluates and installs dependencies of a deployment type in order of priorities before it installs the deployment type.
+The **Set-CMDeploymentType** cmdlet changes a deployment type for an application in Configuration Manager. A deployment type is a part of the application that defines how that application installs on devices.
+
+You can also use this cmdlet to change the priority for dependencies of the deployment type. Configuration Manager evaluates and installs dependencies of a deployment type in order of priorities before it installs the deployment type.
+
+For more information, see [Introduction to application management - Deployment types](https://docs.microsoft.com/mem/configmgr/apps/understand/introduction-to-application-management#deployment-type).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Increase the priority of a deployment application
 
-```powershell
-PS XYZ:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Increase
-```
-
-This command sets a deployment type named Configuration Manager Console - Windows Installer (Native) for a deployment application named 2 - Child and increases the priority of that application.
-
-### Example 2: Decrease the priority of a deployment application
+This command configures a deployment type named **Configuration Manager Console - Windows Installer (Native)** for a application named **2 - Child** and increases the priority of that application.
 
 ```powershell
-PS XYZ:\> Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Decrease
+Set-CMDeploymentType -ApplicationName "2 - Child" -DeploymentTypeName "Configuration Manager Console - Windows Installer (Native)" -Priority Increase
 ```
-
-This command sets a deployment type named Configuration Manager Console - Windows Installer (Native) for a deployment application named 2 - Child and decreases the priority of that application.
 
 ## PARAMETERS
 
@@ -308,38 +299,6 @@ Specifies a description for the deployment type.
 ```yaml
 Type: String
 Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyOtherInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByValuePropertyMobileMsiConfigureRule, SetByValuePropertyMsiConfigureRule, SetByValuePropertyOtherInstaller, SetByValuePropertyWindows8Installer, SetByValuePropertyAppV5xInstaller, SetByValuePropertyAppVInstaller, SetByValuePropertyMacInstaller, SetByValuePropertyWmInstaller, SetByValuePropertyWindowsStoreInstaller, SetByValuePropertyWebAppInstaller, SetByNamePropertyWindowsPhoneStoreInstaller, SetByValuePropertyWindowsPhoneStoreInstaller
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApplicationName
-
-Specifies the name of the deployment application that contains the deployment type.
-
-```yaml
-Type: String
-Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyOtherInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByNamePropertyWindowsPhoneStoreInstaller, SetByNamePriority, SetByIdPriority
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApplicationNameInWindowsStore
-
-Specifies the name of the application in the Windows Store.
-
-```yaml
-Type: String
-Parameter Sets: SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyWindowsStoreInstaller
 Aliases:
 
 Required: False
@@ -381,6 +340,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplicationName
+
+Specifies the name of the deployment application that contains the deployment type.
+
+```yaml
+Type: String
+Parameter Sets: SetByNamePropertyMsiConfigureRule, SetByNamePropertyOtherInstaller, SetByNamePropertyWindows8Installer, SetByNamePropertyAppV5xInstaller, SetByNamePropertyAppVInstaller, SetByNamePropertyMacInstaller, SetByNamePropertyWmInstaller, SetByNamePropertyWindowsStoreInstaller, SetByNamePropertyWebAppInstaller, SetByNamePropertyMobileMsiConfigureRule, SetByNamePropertyWindowsPhoneStoreInstaller, SetByNamePriority, SetByIdPriority
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationNameInWindowsStore
+
+Specifies the name of the application in the Windows Store.
+
+```yaml
+Type: String
+Parameter Sets: SetByNamePropertyWindowsStoreInstaller, SetByValuePropertyWindowsStoreInstaller
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClearRequirements
 
 Indicates that this cmdlet clears the deployment type requirements.
@@ -397,10 +388,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentLocation
 
-Specifies the path of the content.
-The site system server requires permission to read the content files.
+Specifies the path of the content. The site system server requires permission to read the content files.
 
 ```yaml
 Type: String
@@ -464,7 +470,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -480,8 +486,7 @@ Accept wildcard characters: False
 
 ### -EnableBranchCache
 
-Indicates that clients that use Windows BranchCache are allowed to download content from an on-premises distribution point.
-Content downloads from cloud-based distribution points can always be shared by clients that use Windows BranchCache.
+Indicates that clients that use Windows BranchCache are allowed to download content from an on-premises distribution point. Content downloads from cloud-based distribution points can always be shared by clients that use Windows BranchCache.
 
 ```yaml
 Type: Boolean
@@ -593,7 +598,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -609,8 +614,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a deployment type object for Configuration Manager.
-To obtain a deployment type object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
+Specifies a deployment type object for Configuration Manager. To obtain a deployment type object, use the [Get-CMDeploymentType](Get-CMDeploymentType.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -627,11 +631,6 @@ Accept wildcard characters: False
 ### -InstallationBehaviorType
 
 Specifies the installation behavior of the deployment type.
-Valid values are:
-
-- InstallForSystem
-- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-- InstallForUser
 
 ```yaml
 Type: InstallationBehaviorType
@@ -647,6 +646,8 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationCommandLine
+
+Specify the command line to install the application.
 
 ```yaml
 Type: String
@@ -679,12 +680,6 @@ Accept wildcard characters: False
 ### -InstallationProgramVisibility
 
 Specifies the mode in which the deployment type runs on client devices.
-Valid values are:
-
-- Normal
-- Minimized
-- Maximized
-- Hidden
 
 ```yaml
 Type: UserInteractionMode
@@ -701,8 +696,7 @@ Accept wildcard characters: False
 
 ### -InstallationStartIn
 
-Specifies the folder that contains the installation program for the deployment type.
-This folder can be an absolute path on the client, or a path to the distribution point folder that contains the installation files.
+Specifies the folder that contains the installation program for the deployment type. This folder can be an absolute path on the client, or a path to the distribution point folder that contains the installation files.
 
 ```yaml
 Type: String
@@ -763,11 +757,6 @@ Accept wildcard characters: False
 ### -LogonRequirementType
 
 Specifies the logon requirement for the deployment type.
-Valid values are:
-
-- OnlyWhenNoUserLoggedOn
-- OnlyWhenUserLoggedOn
-- WhereOrNotUserLoggedOn
 
 ```yaml
 Type: LogonRequirementType
@@ -784,7 +773,7 @@ Accept wildcard characters: False
 
 ### -MacInstaller
 
-Indicates that the deployment type detects application information and deployment types from a Mac OS X Installer (.cmmac) file that was created by using the CMAppUtil tool.
+Indicates that the deployment type detects application information and deployment types from a macOS installer (.cmmac) file that was created by using the CMAppUtil tool.
 
 ```yaml
 Type: SwitchParameter
@@ -800,7 +789,7 @@ Accept wildcard characters: False
 
 ### -MacRebootBehavior
 
-Specifies the reboot behavior for computers running Mac OS X software.
+Specifies the reboot behavior for computers running macOS.
 
 ```yaml
 Type: MacRebootBehavior
@@ -880,10 +869,6 @@ Accept wildcard characters: False
 ### -OnFastNetworkMode
 
 Specifies the installation behavior of the deployment type on a fast network.
-Valid values are:
-
-- RunFromNetwork
-- RunLocal
 
 ```yaml
 Type: OnFastNetworkMode
@@ -901,11 +886,6 @@ Accept wildcard characters: False
 ### -OnSlowNetworkMode
 
 Specifies the installation behavior of the deployment type on a slow network.
-Valid values are:
-
-- DoNothing
-- Download
-- DownloadContentForStreaming
 
 ```yaml
 Type: ContentHandlingMode
@@ -922,8 +902,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+Returns the current working object. By default, this cmdlet doesn't generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -956,7 +935,6 @@ Accept wildcard characters: False
 ### -Priority
 
 Specifies a change for the priority of the deployment type.
-Valid values are: Increase and Decrease.
 
 ```yaml
 Type: PriorityChangeType
@@ -1054,7 +1032,7 @@ Accept wildcard characters: False
 
 ### -ScriptContent
 
-Specifies the script language that you want to use to detect the deployment type.
+Specifies the script to detect the deployment type.
 
 ```yaml
 Type: String
@@ -1087,8 +1065,7 @@ Accept wildcard characters: False
 
 ### -SourceUpdateProductCode
 
-Specifies the Windows Installer product code to enable installation source management.
-Windows Source management enables an MSI represented by this deployment type to be automatically updated or repaired from content source files on an available distribution point.
+Specifies the Windows Installer product code to enable installation source management. Windows Source management enables an MSI represented by this deployment type to be automatically updated or repaired from content source files on an available distribution point.
 
 ```yaml
 Type: String
@@ -1136,8 +1113,7 @@ Accept wildcard characters: False
 
 ### -UninstallStartIn
 
-Specifies the folder that contains the uninstall program for the deployment type.
-This folder can be an absolute path on the client, or a path that is relative to the distribution point folder that contains the package.
+Specifies the folder that contains the uninstall program for the deployment type. This folder can be an absolute path on the client, or a path that is relative to the distribution point folder that contains the package.
 
 ```yaml
 Type: String
@@ -1163,6 +1139,22 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1225,41 +1217,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -1268,6 +1228,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_DeploymentType
+
+For more information on this return object and its properties, see [SMS_DeploymentType server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/apps/sms_deploymenttype-server-wmi-class).
 
 ## NOTES
 

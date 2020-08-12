@@ -1,4 +1,4 @@
-﻿---
+---
 description: Invokes a scan to detect malware on one or more devices in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -54,7 +54,7 @@ Invoke-CMEndpointProtectionScan -DeviceCollectionId <String> [-ScanType <ScanTyp
 The **Invoke-CMEndpointProtectionScan** cmdlet invokes a System Center 2016 Endpoint Protection scan that is outside of any scheduled scans.
 You can specify the device or collection by using its name, ID, or by specifying an object that represents the device or collection.
 
-For more information about how Configuration Manager supports Endpoint Protection, see [Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) on TechNet.
+For more information about how Configuration Manager supports Endpoint Protection, see [Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -71,6 +71,21 @@ PS XYZ:\>Invoke-CMEndpointProtectionScan -DeviceName "CMCEN-DIST02" -ScanType Fu
 This command invokes a full Endpoint Protection scan of the device named CMCEN-DIST02.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Device
 Specifies the device that is scanned for malware.
@@ -211,21 +226,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -256,7 +256,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10))
+[Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection)
 
 [Get-CMEndpointProtectionPoint](Get-CMEndpointProtectionPoint.md)
 

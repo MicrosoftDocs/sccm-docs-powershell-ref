@@ -1,8 +1,8 @@
-﻿---
-description: Changes security scope settings for Configuration Manager sites.
+---
+description: Configure a Configuration Manager site.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/06/2020
 schema: 2.0.0
 title: Set-CMSite
 ---
@@ -10,7 +10,8 @@ title: Set-CMSite
 # Set-CMSite
 
 ## SYNOPSIS
-Changes security scope settings for Configuration Manager sites.
+
+Configure a Configuration Manager site.
 
 ## SYNTAX
 
@@ -93,37 +94,37 @@ Set-CMSite [-SiteCode <String>] [-Comment <String>] [-EnableWakeOnLan <Boolean>]
 ```
 
 ## DESCRIPTION
-The **Set-CMSite** cmdlet changes security scope settings for one or more Configuration Manager sites.
-A security scope is a collection of permissions that, in conjunction with security roles, defines the configuration actions that an administrator can perform on the site.
-You can use this cmdlet to change the type of a security scope action and the name of a security scope for a Configuration Manager site.
-You can specify a site for which you change security scope settings by using a site name or a site code, or you can use the [Get-CMSite](Get-CMSite.md) cmdlet to specify a site.
+
+Use the **Set-CMSite** cmdlet to configure one or more Configuration Manager sites. You can specify a site to configure by using a site name or a site code, or you can use the [Get-CMSite](Get-CMSite.md) cmdlet to specify a site.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Add a site to a security scope by using a site name
-```
-PS XYZ:\> Set-CMSite -SecurityScopeAction AddMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
+### Example 1: Add a new Active Directory forest
+
+This command adds a new Active Directory forest to which the site is published.
+
+```powershell
+$newForest = New-CMActiveDirectoryForest -ForestFqdn "tsqa.contoso.com"
+
+Set-CMSite -SiteCode "XYZ" -AddActiveDirectoryForest $newForest
 ```
 
-This command assigns a custom security scope named Scope22 to a Configuration Manager site named CMSiteSystem.
+### Example 2: Change the warning alert threshold for free disk space
 
-### Example 2: Remove a security scope for a site by using the site name
-```
-PS XYZ:\> Set-CMSite -SecurityScopeAction RemoveMembership -SecurityScopeName "Scope22" -SiteName "CMSiteSystem"
-```
+This command changes the warning threshold for free disk space on the site database server to 15 GB.
 
-This command removes the custom security scope in the previous example from a Configuration Manager site named CMSiteSystem.
+```powershell
+Set-CMSite -SiteCode "XYZ" -FreeSpaceThresholdWarningGB 15
+```
 
 ## PARAMETERS
 
 ### -AddActiveDirectoryForest
-Specifies an array of Active Directory Forest objects to publish in Active Directory Domain Services.
-To obtain an Active Directory Forest object, use the [Get-ADForest](/powershell/module/addsadministration/get-adforest?view=win10-ps) cmdlet.
+
+Specifies an array of Active Directory forest objects to which the site is published. To get an Active Directory forest object, use the [Get-CMActiveDirectoryForest](Get-CMActiveDirectoryForest.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -138,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddCertificateByPath
-Specifies an array of paths to certificates.
+
+Specifies an array of paths to trusted root certification authorities.
 
 ```yaml
 Type: String[]
@@ -153,15 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddClientRequestServiceType
-Specifies a service type to add.
-The acceptable values for this parameter are:
 
-- ClientNotificationTcp
-- ClientRequestHttpTcp
-- ClientRequestHttpTcpDefault
-- ClientRequestHttpsTcp
-- ClientRequestHttpsTcpDefault
-- WakeOnLanUdp
+Specifies a service type to add for a port that Configuration Manager uses to communicate with clients in this site.
 
 ```yaml
 Type: ClientRequestServiceType
@@ -177,7 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCertificateCustomStoreName
-Specifies the name of a custom store that contains client certificates.
+
+Specify the store name where the client certificate is located in the Computer store when you don't use the default store of Personal.
 
 ```yaml
 Type: String
@@ -192,7 +188,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCertificateSelectionCriteriaType
-Specifies the criteria type to match in a client certificate, such as a string or attribute for a subject or an alternate name for a subject.
+
+Specifies the criteria type to match in a client certificate when more than one certificate is available. Use the **-ClientCertificateSelectionCriteriaValue** parameter to specify the value.
 
 ```yaml
 Type: ClientCertificateSelectionCriteriaType
@@ -208,7 +205,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCertificateSelectionCriteriaValue
-Specifies a value for the *ClientCertificateSelectionCriteriaType* parameter.
+
+Specifies a value for the **-ClientCertificateSelectionCriteriaType** parameter.
 
 ```yaml
 Type: String
@@ -223,7 +221,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCheckCertificateRevocationListForSiteSystem
-Indicates whether to check the Certificate Revocation List (CRL) for a certificate.
+
+Indicates whether clients check the Certificate Revocation List (CRL) for site systems.
 
 ```yaml
 Type: Boolean
@@ -238,8 +237,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientComputerCommunicationType
-Specifies the communication type.
-The acceptable values for this parameter are: HttpsOnly and HttpsOrHttp.
+
+Specifies the communication method for the site systems that use IIS. To use HTTPS, the servers need a valid PKI web server certificate for server authentication.
 
 ```yaml
 Type: ClientComputerCommunicationType
@@ -255,7 +254,8 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-Specifies a comment for a Configuration Manager site.
+
+Specifies a comment for a Configuration Manager site to help identify it.
 
 ```yaml
 Type: String
@@ -270,6 +270,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentSendingDelayBeforeRetryingMins
+
+A site can send data concurrently to multiple sites. If it needs to retry, this integer value specifies the number of minutes to delay before it retries. By default, the value is `1`. Use the **-RetryNumberForConcurrentSending** parameter to specify the number of retries.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -282,8 +285,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -298,6 +318,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLowFreeSpaceAlert
+
+Generate an alert when the free disk space on the site database server is low. Use the **-FreeSpaceThresholdWarningGB** and **-FreeSpaceThresholdCriticalGB** parameters to specify the specific thresholds.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -311,6 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWakeOnLan
+
 Indicates whether to send Wake On LAN packets for scheduled activities such as deployments of software updates.
 
 ```yaml
@@ -326,7 +350,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -341,6 +366,9 @@ Accept wildcard characters: False
 ```
 
 ### -FreeSpaceThresholdCriticalGB
+
+When **-EnableLowFreeSpaceAlert** is `$true`, the site raises a _critical_ alert when the free disk space falls below this value. Specify an integer for the free disk space in GB on the site database server.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -354,6 +382,9 @@ Accept wildcard characters: False
 ```
 
 ### -FreeSpaceThresholdWarningGB
+
+When **-EnableLowFreeSpaceAlert** is `$true`, the site raises a _warning_ alert when the free disk space falls below this value. Specify an integer for the free disk space in GB on the site database server.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -367,8 +398,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a Configuration Manager site object.
-To obtain a Configuration Manager site object, use the [Get-CMSite](Get-CMSite.md) cmdlet.
+
+Specifies a Configuration Manager site object to configure. To get a Configuration Manager site object, use the [Get-CMSite](Get-CMSite.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -383,7 +414,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConcurrentSendingForAllSite
-Specifies the maximum number of simultaneous communications to all sites.
+
+A site can send data concurrently to multiple sites. This value specifies the maximum number of simultaneous communications to all sites. By default, the value is `5`.
 
 ```yaml
 Type: Int32
@@ -398,7 +430,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConcurrentSendingForPerSite
-Specifies the maximum number of simultaneous communications to any single site.
+
+A site can send data concurrently to multiple sites. This value specifies the maximum number of simultaneous communications to any single site. By default, the value is `3`.
 
 ```yaml
 Type: Int32
@@ -413,6 +446,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumNumberOfSendingWakeupPacketBeforePausing
+
 Specifies the maximum number of wake up packets transmitted by this site server before pausing.
 
 ```yaml
@@ -428,7 +462,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a Configuration Manager site.
+
+Specifies the name of a Configuration Manager site to configure.
 
 ```yaml
 Type: String
@@ -443,8 +478,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -459,7 +494,8 @@ Accept wildcard characters: False
 ```
 
 ### -PortForClientRequestServiceType
-Specifies a port number, such as 80 or 8080, for client requests.
+
+When you use the **-AddClientRequestServiceType** parameter, use this parameter to specify a port number for client requests.
 
 ```yaml
 Type: Int32
@@ -474,6 +510,7 @@ Accept wildcard characters: False
 ```
 
 ### -PromotePassiveSiteToActive
+
 Starting in version 2002, use this parameter to promote a passive site server to the active site server.
 
 ```yaml
@@ -489,7 +526,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveActiveDirectoryForest
-Specifies an array of Active Directory Forest objects to remove from Active Directory Domain Services.
+
+Specifies an array of Active Directory forest objects. When removed, this site doesn't publish to that forest.
 
 ```yaml
 Type: IResultObject[]
@@ -504,6 +542,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveCertificateByKey
+
 Specifies an array of certificates to remove.
 
 ```yaml
@@ -519,15 +558,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveClientRequestServiceType
-Specifies a service type to remove.
-The acceptable values for this parameter are:
 
-- ClientNotificationTcp
-- ClientRequestHttpTcp
-- ClientRequestHttpTcpDefault
-- ClientRequestHttpsTcp
-- ClientRequestHttpsTcpDefault
-- WakeOnLanUdp
+Specifies a service type to remove as a port that Configuration Manager uses to communicate with clients in this site.
 
 ```yaml
 Type: ClientRequestServiceType
@@ -543,7 +575,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequireSha256
-Indicates whether to use the SHA-256 algorithm to sign communications.
+
+When clients sign data and communicate with site systems by using HTTP, this option requires the clients to use SHA-256 to sign the data. Clients must support this hash algorithm. This option applies to clients that don't use PKI certificates.
 
 ```yaml
 Type: Boolean
@@ -558,7 +591,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequireSigning
-Indicates whether to require Configuration Manager sites to sign communications with other sites.
+
+This option requires that clients sign data when they send to management points.
 
 ```yaml
 Type: Boolean
@@ -573,6 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryInstallPassiveSite
+
 Starting in version 2002, use this parameter to retry the installation for a site server in passive mode that previously failed.
 
 ```yaml
@@ -588,7 +623,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetryNumberForConcurrentSending
-Specifies the number of times to retry a failed communication.
+
+A site can send data concurrently to multiple sites. If it needs to retry, this integer value specifies the number of times to retry a failed communication. By default, the value is `2`. Use the **-ConcurrentSendingDelayBeforeRetryingMins** parameter to specify the delay in minutes before it retries.
 
 ```yaml
 Type: Int32
@@ -603,6 +639,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryNumberOfSendingWakeupPacketTransmission
+
 Specifies the number of times a wake up packet is sent to a target computer.
 
 ```yaml
@@ -657,7 +694,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
-Specifies a site code for a Configuration Manager site to which you assign security scopes.
+
+Specifies the Configuration Manager site code to configure.
 
 ```yaml
 Type: String
@@ -672,6 +710,12 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemCollectionBehavior
+
+For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), specify the behavior to take when the selected collection includes computers that host site systems roles.
+
+- `Block`: Don't create the deployment
+- `Warn`: Require verification before creating the deployment
+
 ```yaml
 Type: CollectionBehaviorType
 Parameter Sets: (All)
@@ -686,7 +730,8 @@ Accept wildcard characters: False
 ```
 
 ### -TakeActionForMultipleCertificateMatchCriteria
-Specifies the action to take for multiple matches of certificate criteria.
+
+Specifies the action to take if multiple certificates match criteria.
 
 ```yaml
 Type: TakeActionForMultipleCertificateMatchCriteria
@@ -702,6 +747,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThreadNumberOfSendingWakeupPacket
+
 Specifies the number of threads a site server uses when sending wake up packets.
 
 ```yaml
@@ -717,6 +763,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThresholdOfSelectCollectionByDefault
+
+For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the default collection size limit. The **Select Collection** window hides collections with membership that exceeds this default value. Specify `0` to disable.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -730,6 +779,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThresholdOfSelectCollectionMax
+
+For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the maximum collection size limit. The **Select Collection** window always hides collections that have more members than this maximum size. Specify `0` to disable.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -743,8 +795,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseCustomWebsite
-Indicates whether to use a custom web site.
-Use a custom web site when you do not want to use the default web site.
+
+Indicates whether to use a custom web site. By default, Configuration Manager site system servers that require IIS to communicate with clients use the default web site.
 
 ```yaml
 Type: Boolean
@@ -759,7 +811,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseEncryption
-Indicates whether to use encryption for communication between sites.
+
+Enable this option to use 3DES to encrypt the client inventory data and state messages that are sent to the management point.
 
 ```yaml
 Type: Boolean
@@ -774,7 +827,8 @@ Accept wildcard characters: False
 ```
 
 ### -UsePkiClientCertificate
-Indicates whether to use a PKI certificate management solution.
+
+Indicates whether to use a PKI client certificate for client authentication when available.
 
 ```yaml
 Type: Boolean
@@ -789,6 +843,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseSmsGeneratedCert
+
 Use this parameter to enable or disable the site property to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/enhanced-http).
 
 ```yaml
@@ -804,6 +859,7 @@ Accept wildcard characters: False
 ```
 
 ### -WakeOnLanTransmissionMethodType
+
 Specifies the type of transmission method to use for Wake On LAN transmissions.
 
 ```yaml
@@ -820,6 +876,7 @@ Accept wildcard characters: False
 ```
 
 ### -WakeOnLanType
+
 Specifies the type of Wake On LAN packet to use.
 
 ```yaml
@@ -835,24 +892,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -867,15 +909,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
-
-### 
 
 ## NOTES
 

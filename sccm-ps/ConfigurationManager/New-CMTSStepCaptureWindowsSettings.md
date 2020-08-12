@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
@@ -39,7 +39,7 @@ PS XYZ:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -Condition
-{{ Fill Condition Description }}
+Specify a condition object to use with this step.
 
 ```yaml
 Type: IResultObject[]
@@ -53,8 +53,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContinueOnError
-{{ Fill ContinueOnError Description }}
+Add this parameter to enable the step option **Continue on error**. When you enable this option, if the step fails, the task sequence continues.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+Specify an optional description for this task sequence step.
 
 ```yaml
 Type: String
@@ -84,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-{{ Fill Disable Description }}
+Add this parameter to disable this task sequence step.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-{{ Fill DisableWildcardHandling Description }}
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-{{ Fill ForceWildcardHandling Description }}
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -174,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Specify a name for this step to identify it in the task sequence.
 
 ```yaml
 Type: String
@@ -182,21 +197,6 @@ Parameter Sets: (All)
 Aliases: StepName
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -30,7 +30,7 @@ Some Get cmdlets now have a *Fast* parameter. This parameter allows the cmdlet t
 To provide visibility into this change, cmdlets that support *Fast* will write a warning to the console if it is not used in a case where its presence may be beneficial. This warning can be suppressed by setting `$CMPSSuppressFastNotUsedCheck = $True`.
 
 ## How to provide feedback or report issues
-Many of the fixes and improvements described in this document are a result of customer feedback. To leave feedback and bug reports, go to https://go.microsoft.com/fwlink/?LinkId=529220 (a Microsoft Account is required).
+Many of the fixes and improvements described in this document are a result of customer feedback. For more information, see [Product feedback](https://docs.microsoft.com/mem/configmgr/core/understand/find-help#product-feedback).
 
 ## Known issues
 These are known issues with the Cmdlet Library that are not resolved in this release.

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modifies the schedule interval of the client status update task.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
@@ -21,7 +21,7 @@ Set-CMClientStatusUpdateSchedule -Interval <Int32> -UnitType <ClientStatusUpdate
 
 ## DESCRIPTION
 The **Set-CMClientStatusUpdateSchedule** cmdlet modifies the schedule interval of the client status update task.
-For more information, see [How to Configure Client Status in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh338432(v=technet.10)) on TechNet.
+For more information, see [How to Configure Client Status in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/configure-client-status).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -38,6 +38,21 @@ PS XYZ:\> Set-CMClientStatusUpdateSchedule -Interval 23 -UnitType Hours
 This command modifies the client status update schedule.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
@@ -101,21 +116,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -146,7 +146,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to Configure Client Status in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh338432(v=technet.10))
+[How to Configure Client Status in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/configure-client-status)
 
 [Get-CMClientStatusUpdateSchedule](Get-CMClientStatusUpdateSchedule.md)
 

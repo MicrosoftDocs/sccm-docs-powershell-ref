@@ -1,8 +1,8 @@
-﻿---
-description: Sets a Windows Installer deployment type.
+---
+description: Set a Windows Installer deployment type.
 external help file: AdminUI.PS.AppMan.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 07/31/2020
 schema: 2.0.0
 title: Set-CMMsiDeploymentType
 ---
@@ -10,7 +10,8 @@ title: Set-CMMsiDeploymentType
 # Set-CMMsiDeploymentType
 
 ## SYNOPSIS
-Sets a Windows Installer deployment type.
+
+Set a Windows Installer deployment type.
 
 ## SYNTAX
 
@@ -91,31 +92,31 @@ Set-CMMsiDeploymentType [-AddDetectionClause <DetectionClause[]>] [-RemoveDetect
 ```
 
 ## DESCRIPTION
+
 The **Set-CMMsiDeploymentType** cmdlet changes the settings for a Windows Installer deployment type.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Modify a Windows Installer deployment type
-```
-PS XYZ:\> Set-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -NewName "DTMsi_Updated" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
-```
 
-This command changes the name of the Windows Installer deployment type named DTMsi for the application named testMsi to DTMsi_Updated, adds English and Chinese as supported languages, and adds a description.
-This command specifies that the installation will take approximately 14 minutes to complete, and will run when no users are logged on.
+This command changes the name of the Windows Installer deployment type named DTMsi for the application named testMsi to DTMsi_Updated, adds English and Chinese as supported languages, and adds a description. It also specifies that the installation will take approximately 14 minutes to complete, and will run when no users are logged on.
+
+```powershell
+Set-CMMSiDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi" -NewName "DTMsi_Updated" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
+```
 
 ### Example 2: Modify a Windows Installer deployment type by using the pipeline
-```
-PS XYZ:\> Get-CMDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi_Updated" | Set-CMMsiDeploymentType -NewName "DTMsi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
-```
 
 This command gets the Windows Installer deployment type object named DTMsi_Updated for the application named testMsi and uses the pipeline operator to pass the object to **Set-CMMsiDeploymentType**.
-**Set-CMMsiDeploymentType** changes the name of the deployment type to DTMsi, adds English and Chinese as supported languages, and adds a description.
-This command specifies that the installation will take approximately 14 minutes to complete, and will run when no users are logged on.
+
+Then **Set-CMMsiDeploymentType** changes the name of the deployment type to DTMsi, adds English and Chinese as supported languages, and adds a description. It also specifies that the installation will take approximately 14 minutes to complete, and will run when no users are logged on.
+
+```powershell
+Get-CMDeploymentType -ApplicationName "testMsi" -DeploymentTypeName "DTMsi_Updated" | Set-CMMsiDeploymentType -NewName "DTMsi" -AddLanguage "en-US","zh-CN" -Comment "New Deployment Type-updated" -EstimatedRuntimeMins 14 -LogonRequirementType OnlyWhenNoUserLoggedOn
+```
 
 ## PARAMETERS
 
@@ -238,6 +239,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentFallback
 Indicates that a client can use a fallback location provided by a management point.
 A fallback location point provides an alternate location for source content when the content for the deployment type is not available on any of the preferred distribution points.
@@ -301,7 +318,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -393,7 +411,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -438,27 +457,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -InstallationBehaviorType
-Specifies the installation behavior of the deployment type.
-Valid values are:
-
-- InstallForSystem
-- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-- InstallForUser
-
-```yaml
-Type: InstallationBehaviorType
-Parameter Sets: (All)
-Aliases:
-Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstallCommand
 Specifies the command to use to install the Windows Installer package from the command line.
 
@@ -482,6 +480,27 @@ This folder can be an absolute path on the client, or a path to the distribution
 Type: String
 Parameter Sets: (All)
 Aliases: InstallationStartIn, InstallFolder
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallationBehaviorType
+Specifies the installation behavior of the deployment type.
+Valid values are:
+
+- InstallForSystem
+- InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
+- InstallForUser
+
+```yaml
+Type: InstallationBehaviorType
+Parameter Sets: (All)
+Aliases:
+Accepted values: InstallForUser, InstallForSystem, InstallForSystemIfResourceIsDeviceOtherwiseInstallForUser
 
 Required: False
 Position: Named
@@ -633,6 +652,8 @@ Accept wildcard characters: False
 ### -RepairCommand
 Starting in version 2002, use this parameter to configure the repair command and directory options when creating deployment type. Also configure the RepairWorkingDirectory parameter.
 
+Starting in version 2006, you can specify an empty string.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -764,6 +785,8 @@ Accept wildcard characters: False
 ### -UninstallCommand
 Specifies the command to use to uninstall the Windows Installer package from the command line.
 
+Starting in version 2006, you can specify an empty string.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -845,24 +868,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -877,7 +885,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -886,6 +894,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

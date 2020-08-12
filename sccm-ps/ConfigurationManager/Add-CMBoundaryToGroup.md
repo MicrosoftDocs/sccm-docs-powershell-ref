@@ -1,4 +1,4 @@
-﻿---
+---
 description: Assigns boundaries to a boundary group.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
@@ -77,7 +77,7 @@ A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an I
 You can use boundary groups to manage network locations.
 You must assign boundaries to boundary groups before you can use the boundary group.
 Boundary groups enable client computers to find a primary site for client assignment, which is referred to as automatic site assignment, and a list of available site systems that have content.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10)) on TechNet.
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -168,6 +168,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableWildcardHandling
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
@@ -214,21 +229,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -254,13 +254,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### 
+###  
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Planning for Boundaries and Boundary Groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712679(v=technet.10))
+[Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)
 
 [Get-CMBoundary](Get-CMBoundary.md)
 

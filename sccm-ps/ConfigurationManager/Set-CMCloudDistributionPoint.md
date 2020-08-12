@@ -1,4 +1,4 @@
-﻿---
+---
 description: Changes settings for a cloud-based distribution point.
 external help file: AdminUI.PS.Content.dll-Help.xml
 Module Name: ConfigurationManager
@@ -41,7 +41,7 @@ The **Set-CMCloudDistributionPoint** cmdlet changes settings for a cloud-based d
 
 In Configuration Manager, you can use a cloud service in Windows Azure to host a distribution point for storing files to download to clients.
 You can send packages and apps to and host packages and apps in cloud distribution points.
-For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712321(v=technet.10)) on TechNet.
+For more information about cloud distribution points, see [Planning for Content Management in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
 
 You can use the **Set-CMCloudDistributionPoint** cmdlet to specify storage alert thresholds and warning levels for content that you deploy to a cloud distribution point.
 You can also use the cmdlet to configure settings that enable users and devices to access the content.
@@ -63,6 +63,21 @@ This command sets the description and name for a distribution point to the provi
 It also sets values for the storage quota and data transfer.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Specifies a description for a cloud distribution point.
@@ -234,21 +249,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

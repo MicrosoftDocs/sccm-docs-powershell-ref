@@ -1,4 +1,4 @@
-﻿---
+---
 description: Gets the exclude membership rules from one or more user collections in the Configuration Manager hierarchy.
 external help file: AdminUI.PS.Collections-help.xml
 Module Name: ConfigurationManager
@@ -74,7 +74,7 @@ You can specify the user collections where the rule is applied by using their na
 You can specify the collection whose members are excluded by using its name, ID, or an object that represents the collection.
 
 Configuration Manager dynamically updates the membership of the user collection on a schedule if the membership of the excluded collection changes.
-For more information about membership rules, see [Introduction to Collections in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682177(v=technet.10)) on TechNet.
+For more information about membership rules, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

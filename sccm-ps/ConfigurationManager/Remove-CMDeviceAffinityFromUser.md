@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes device affinity from a Configuration Manager user.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
@@ -33,7 +33,7 @@ Device affinity in Configuration Manager associates a user with one or more devi
 Instead of deploying applications to all the devices of a user, you deploy the application to the user and Configuration Manager automatically installs the application on all devices that are associated with that user.
 Device affinity removes the need for Configuration Manager to determine the names of all the devices of a user before you deploy applications for that user.
 
-For more information about user device affinity, see [How to Manage User Device Affinity in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699365(v=technet.10)) on TechNet.
+For more information about user device affinity, see [How to Manage User Device Affinity in Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -50,6 +50,21 @@ PS XYZ:\> Remove-CMDeviceAffinityFromUser -UserName "Patti Fuller" -DeviceName "
 This command adds affinity to the device named WestDivUpdates05 for the user named Patti Fuller.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DeviceId
 Specifies a device by using an ID.
@@ -154,21 +169,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
