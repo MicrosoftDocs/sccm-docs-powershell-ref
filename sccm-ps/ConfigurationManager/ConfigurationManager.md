@@ -1630,7 +1630,7 @@ Create a new policy to determine whether BitLocker protection is required for fi
 {{ Fill in the Synopsis }}
 
 ### [New-CMFDVPassPhrasePolicy](New-CMFDVPassPhrasePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to specify whether a password is required to unlock BitLocker-protected fixed data drives.
 
 ### [New-CMFileReplicationRoute](New-CMFileReplicationRoute.md)
 Creates a file replication route for Configuration Manager.

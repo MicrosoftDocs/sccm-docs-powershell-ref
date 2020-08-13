@@ -51,7 +51,7 @@ The following cmdlets are also new in this release, but the current article is a
 - New-CMEnhancedPIN
 - [New-CMFDVDenyWriteAccessPolicy](../sccm-ps/ConfigurationManager/New-CMFDVDenyWriteAccessPolicy.md)
 - New-CMFDVHybridAccessPolicy
-- New-CMFDVPassPhrasePolicy
+- [New-CMFDVPassPhrasePolicy](../sccm-ps/ConfigurationManager/New-CMFDVPassPhrasePolicy.md)
 - New-CMMoreInfoUrlPolicy
 - New-CMNoOverwritePolicy
 - [New-CMOSPassphrase](../sccm-ps/ConfigurationManager/New-CMOSPassphrase.md)
