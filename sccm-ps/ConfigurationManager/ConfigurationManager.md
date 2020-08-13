@@ -1441,7 +1441,7 @@ Creates a baseline deployment.
 {{ Fill in the Synopsis }}
 
 ### [New-CMBMSOSDEncryptionPolicy](New-CMBMSOSDEncryptionPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to manage whether to encrypt the OS drive with BitLocker.
 
 ### [New-CMBMSUserExemptionPolicy](New-CMBMSUserExemptionPolicy.md)
 {{ Fill in the Synopsis }}

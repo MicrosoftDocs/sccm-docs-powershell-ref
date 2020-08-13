@@ -46,7 +46,7 @@ The following cmdlets are also new in this release, but the current article is a
 - New-CMBlmSetting
 - New-CMBMSClientConfigureCheckIntervalPolicy
 - New-CMBMSFDVEncryptionPolicy
-- New-CMBMSOSDEncryptionPolicy
+- [New-CMBMSOSDEncryptionPolicy](../sccm-ps/ConfigurationManager/New-CMBMSOSDEncryptionPolicy.md)
 - New-CMBMSUserExemptionPolicy
 - New-CMEnhancedPIN
 - [New-CMFDVDenyWriteAccessPolicy](../sccm-ps/ConfigurationManager/New-CMFDVDenyWriteAccessPolicy.md)
