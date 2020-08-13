@@ -25,6 +25,8 @@ Create a policy to specify the constraints for passwords used to unlock BitLocke
 
 > [!NOTE]
 > Windows enforces these settings when you enable BitLocker, not when it unlocks a volume. BitLocker allows a user to unlock a drive with any of the available protectors.​
+>
+> You can't use passwords if you also enable Windows to use FIPS-compliant algorithms for encryption, hashing, and signing.
 
 ## EXAMPLES
 
