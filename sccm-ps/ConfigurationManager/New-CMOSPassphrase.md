@@ -21,7 +21,7 @@ New-CMOSPassphrase [-PolicyState <State>] [-PasswordComplexity <Dispensation>] [
 
 ## DESCRIPTION
 
-Create a policy to specify the constraints for passwords used to unlock BitLocker-protected OS drives. If you allow non-TPM protectors on OS drives, you can provision a password, enforce complexity requirements, and configure a minimum length. For the complexity requirement setting to be effective, use the **-PasswordComplexity** parameter.
+Create a policy to specify the constraints for passwords used to unlock BitLocker-protected OS drives. If you allow non-TPM protectors on OS drives, you can provision a password, enforce complexity requirements, and configure a minimum length. For these complexity requirement settings to be effective, also enable the group policy setting **Password must meet complexity requirements** in **Computer Configuration** > **Windows Settings** > **Security Settings** > **Account Policies** > **Password Policy**.
 
 > [!NOTE]
 > Windows enforces these settings when you enable BitLocker, not when it unlocks a volume. BitLocker allows a user to unlock a drive with any of the available protectors.​

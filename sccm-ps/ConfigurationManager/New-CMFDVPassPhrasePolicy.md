@@ -21,7 +21,7 @@ New-CMFDVPassPhrasePolicy [-PolicyState <State>] [-RequirePassword] [-PasswordCo
 
 ## DESCRIPTION
 
-Create a policy to specify whether a password is required to unlock BitLocker-protected fixed data drives. If you allow a password, you can require it, enforce complexity requirements, and configure a minimum length. For the complexity requirement setting to be effective, use the **-PasswordComplexity** parameter.
+Create a policy to specify whether a password is required to unlock BitLocker-protected fixed data drives. For these complexity requirement settings to be effective, also enable the group policy setting **Password must meet complexity requirements** in **Computer Configuration** > **Windows Settings** > **Security Settings** > **Account Policies** > **Password Policy**.
 
 > [!NOTE]
 > Windows enforces these settings when you enable BitLocker, not when it unlocks a volume. BitLocker allows a user to unlock a drive with any of the available protectors.​
@@ -38,7 +38,7 @@ This example creates a new policy that's enabled, requires a complex password th
 New-CMFDVPassPhrasePolicy -PolicyState Enabled -PasswordComplexity Require -MinimumLength 10​
 ```
 
-### Example 2: New policy that requires ASCII
+### Example 2: New policy that requires a password
 
 This example creates a policy that's enabled with the following properties:
 
