@@ -1744,7 +1744,7 @@ Creates a Configuration Manager query.
 {{ Fill in the Synopsis }}
 
 ### [New-CMRDVPassPhrasePolicy](New-CMRDVPassPhrasePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to specify whether a password is required to unlock BitLocker-protected removable data drives.
 
 ### [New-CMRegistryAccessControlEntry](New-CMRegistryAccessControlEntry.md)
 {{ Fill in the Synopsis }}

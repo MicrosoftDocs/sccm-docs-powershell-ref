@@ -59,7 +59,7 @@ The following cmdlets are also new in this release, but the current article is a
 - New-CMRDVConfigureBDEPolicy
 - New-CMRDVDenyWriteAccessPolicy
 - New-CMRDVHybridAccessPolicy
-- New-CMRDVPassPhrasePolicy
+- [New-CMRDVPassPhrasePolicy](../sccm-ps/ConfigurationManager/New-CMRDVPassPhrasePolicy.md)
 - [New-CMScCompliancePolicy](../sccm-ps/ConfigurationManager/New-CMScCompliancePolicy.md)
 - New-CMSettingDeployment
 - New-CMTpmAutoResealPolicy
