@@ -1711,7 +1711,7 @@ Adds an operating system installer.
 Creates an operating system upgrade update schedule.
 
 ### [New-CMOSPassphrase](New-CMOSPassphrase.md)
-{{ Fill in the Synopsis }}
+Create a policy to specify the constraints for passwords used to unlock BitLocker-protected OS drives.
 
 ### [New-CMPackage](New-CMPackage.md)
 Creates a Configuration Manager package.
