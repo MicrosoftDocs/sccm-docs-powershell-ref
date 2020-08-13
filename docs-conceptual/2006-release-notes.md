@@ -49,7 +49,7 @@ The following cmdlets are also new in this release, but the current article is a
 - New-CMBMSOSDEncryptionPolicy
 - New-CMBMSUserExemptionPolicy
 - New-CMEnhancedPIN
-- New-CMFDVDenyWriteAccessPolicy
+- [New-CMFDVDenyWriteAccessPolicy](../sccm-ps/ConfigurationManager/New-CMFDVDenyWriteAccessPolicy.md)
 - New-CMFDVHybridAccessPolicy
 - New-CMFDVPassPhrasePolicy
 - New-CMMoreInfoUrlPolicy

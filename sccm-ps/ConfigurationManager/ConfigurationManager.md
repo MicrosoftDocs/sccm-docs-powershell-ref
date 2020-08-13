@@ -1624,7 +1624,7 @@ Configure security options for a Microsoft Exchange Server connector in Configur
 Configures a new Exchange Server connector.
 
 ### [New-CMFDVDenyWriteAccessPolicy](New-CMFDVDenyWriteAccessPolicy.md)
-{{ Fill in the Synopsis }}
+Create a new policy to determine whether BitLocker protection is required for fixed data drives to be writable on a computer.
 
 ### [New-CMFDVHybridAccessPolicy](New-CMFDVHybridAccessPolicy.md)
 {{ Fill in the Synopsis }}
