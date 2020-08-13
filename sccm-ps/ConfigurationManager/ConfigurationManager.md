@@ -1804,7 +1804,7 @@ Creates a remote connection profile.
 Create a root certificate profile.
 
 ### [New-CMScCompliancePolicy](New-CMScCompliancePolicy.md)
-{{ Fill in the Synopsis }}
+Create a compliance policy to associate an object identifier from a smart card certificate to a BitLocker-protected drive.
 
 ### [New-CMSchedule](New-CMSchedule.md)
 Creates a Configuration Manager schedule token.
