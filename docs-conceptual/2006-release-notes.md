@@ -55,7 +55,7 @@ The following cmdlets are also new in this release, but the current article is a
 - New-CMMoreInfoUrlPolicy
 - New-CMNoOverwritePolicy
 - [New-CMOSPassphrase](../sccm-ps/ConfigurationManager/New-CMOSPassphrase.md)
-- New-CMPrebootRecoveryInfo
+- [New-CMPrebootRecoveryInfo](../sccm-ps/ConfigurationManager/New-CMPrebootRecoveryInfo.md)
 - New-CMRDVConfigureBDEPolicy
 - New-CMRDVDenyWriteAccessPolicy
 - New-CMRDVHybridAccessPolicy

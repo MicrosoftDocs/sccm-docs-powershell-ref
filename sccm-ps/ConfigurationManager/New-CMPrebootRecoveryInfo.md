@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/13/2020
 ---
 
 # New-CMPrebootRecoveryInfo
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Configure the recovery message that the pre-boot key recovery screen displays when the OS drive is locked.​
 
 ## SYNTAX
 
@@ -19,20 +21,34 @@ New-CMPrebootRecoveryInfo [-PolicyState <State>] [-RecoveryMessage <String>] [-R
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to configure the entire recovery message or replace the existing URL the pre-boot key recovery screen shows when the OS drive is locked.​
+
+If you use both **-UseRecoveryUrl** and **-UseRecoveryMessage** parameters, the pre-boot key recovery screen displays the default BitLocker recovery message and URL. If you previously configured a custom recovery message or URL and want to revert to the default message, keep the policy enabled and use both **-UseRecoveryUrl** and **-UseRecoveryMessage** parameters​
+
+> [!NOTE]
+> Pre-boot doesn't support all characters and languages. Test the characters that you want to use for the custom message or URL. Make sure the pre-boot recovery screen correctly displays your custom message or URL.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: New enabled policy with recovery message and recovery URL
+
+This example creates a new policy that's enabled with custom values.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+New-CMPrebootRecoveryInfo -PolicyState Enabled -RecoveryMessage "Contact the Contoso Helpdesk at 515-555-8127" -RecoveryUrl https://contoso.com/bitlockerrecovery
 ```
 
-{{ Add example description here }}
+### Example 2: New enabled policy with the default message and URL
+
+```powershell
+New-CMPrebootRecoveryInfo -PolicyState Enabled -UseRecoveryUrl -UseRecoveryMessage​
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -48,6 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -63,7 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyState
-{{ Fill PolicyState Description }}
+
+Use this parameter to configure the policy.
+
+- `Enabled`: If you enable this policy, 
+
+- `Disabled` or `NotConfigured`: If you disable or don't configure this policy, 
 
 ```yaml
 Type: State
@@ -79,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryMessage
-{{ Fill RecoveryMessage Description }}
+
+Specify a custom message to display on the pre-boot recovery screen. If you also want to specify a recovery URL, include it as part of this custom recovery message. The maximum string length is 32,768 characters.
 
 ```yaml
 Type: String
@@ -94,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryUrl
-{{ Fill RecoveryUrl Description }}
+
+Replace the default URL displayed in the pre-boot BitLocker recovery screen. The maximum URI length is 32,768 characters.
 
 ```yaml
 Type: Uri
@@ -109,7 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseRecoveryMessage
-{{ Fill UseRecoveryMessage Description }}
+
+If you add this parameter, the pre-boot key recovery screen displays the value of **-RecoveryMessage**.
 
 ```yaml
 Type: SwitchParameter
@@ -124,7 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseRecoveryUrl
-{{ Fill UseRecoveryUrl Description }}
+
+If you add this parameter, the URL you specify for **-RecoveryUrl** replaces the default URL in the default recovery message.
 
 ```yaml
 Type: SwitchParameter
@@ -139,6 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

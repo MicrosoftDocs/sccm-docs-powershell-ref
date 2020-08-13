@@ -1723,7 +1723,7 @@ Creates a package deployment to a Configuration Manager collection.
 Creates a custom power management plan.
 
 ### [New-CMPrebootRecoveryInfo](New-CMPrebootRecoveryInfo.md)
-{{ Fill in the Synopsis }}
+Configure the recovery message that the pre-boot key recovery screen displays when the OS drive is locked.​
 
 ### [New-CMPrestageMedia](New-CMPrestageMedia.md)
 Create an OS deployment prestaged media file.
