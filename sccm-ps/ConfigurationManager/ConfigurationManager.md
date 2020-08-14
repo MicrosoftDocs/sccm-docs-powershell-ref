@@ -1426,10 +1426,10 @@ Creates a Configuration Manager baseline.
 Creates a baseline deployment.
 
 ### [New-CMBLEncryptionMethodPolicy](New-CMBLEncryptionMethodPolicy.md)
-Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption.
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 8.1 devices.
 
 ### [New-CMBLEncryptionMethodWithXts](New-CMBLEncryptionMethodWithXts.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 10 devices.
 
 ### [New-CMBlmSetting](New-CMBlmSetting.md)
 {{ Fill in the Synopsis }}

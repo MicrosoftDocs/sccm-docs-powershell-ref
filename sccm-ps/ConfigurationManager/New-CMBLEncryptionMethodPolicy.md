@@ -10,7 +10,7 @@ ms.date: 08/13/2020
 
 ## SYNOPSIS
 
-Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption.
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 8.1 devices.
 
 ## SYNTAX
 
@@ -21,7 +21,9 @@ New-CMBLEncryptionMethodPolicy [-PolicyState <State>] [-EncryptionMethod <Encryp
 
 ## DESCRIPTION
 
-Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption. This policy is applied when you turn on BitLocker. If the drive is already encrypted, or if encryption is in progress, changing the encryption method has no effect.
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 8.1 devices. This policy is applied when you turn on BitLocker. If the drive is already encrypted, or if encryption is in progress, changing the encryption method has no effect.
+
+For Windows 10 devices, use the [New-CMBLEncryptionMethodWithXts](New-CMBLEncryptionMethodWithXts.md) cmdlet.
 
 ## EXAMPLES
 
@@ -120,5 +122,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMBLEncryptionMethodWithXts](New-CMBLEncryptionMethodWithXts.md)
 
 [BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#drive-encryption-method-and-cipher-strength)

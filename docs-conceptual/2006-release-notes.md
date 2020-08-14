@@ -42,7 +42,7 @@ The following cmdlets are also new in this release, but the current article is a
 - Get-CMSettingDeployment
 - Get-CMWdacSetting
 - [New-CMBLEncryptionMethodPolicy](../sccm-ps/ConfigurationManager/New-CMBLEncryptionMethodPolicy.md)
-- New-CMBLEncryptionMethodWithXts
+- [New-CMBLEncryptionMethodWithXts](../sccm-ps/ConfigurationManager/New-CMBLEncryptionMethodWithXts.md)
 - New-CMBlmSetting
 - [New-CMBMSClientConfigureCheckIntervalPolicy](../sccm-ps/ConfigurationManager/New-CMBMSClientConfigureCheckIntervalPolicy.md)
 - [New-CMBMSFDVEncryptionPolicy](../sccm-ps/ConfigurationManager/New-CMBMSFDVEncryptionPolicy.md)

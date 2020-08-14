@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/13/2020
 ---
 
 # New-CMBLEncryptionMethodWithXts
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 10 devices.
 
 ## SYNTAX
 
@@ -20,20 +22,34 @@ New-CMBLEncryptionMethodWithXts [-PolicyState <State>] [-OSDriveEncryptionMethod
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 10 devices. This policy is applied when you turn on BitLocker. If the drive is already encrypted, or if encryption is in progress, changing the encryption method has no effect.
+
+For Windows 8.1 devices, use the [New-CMBLEncryptionMethodPolicy](New-CMBLEncryptionMethodPolicy.md) cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: New disabled policy
+
+This example creates a Windows 10 policy that's disabled. Since the general policy specified with the New-CMBLEncryptionMethodPolicy cmdlet specifies AES-256, BitLocker uses that same encryption method on all devices.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+New-CMBLEncryptionMethodPolicy -PolicyState Enabled -EncryptionMethod AES256
+New-CMBLEncryptionMethodWithXts -PolicyState Disabled
 ```
 
-{{ Add example description here }}
+### Example 2: New enabled policy with XTS-CBC 128-bit encryption
+
+This example creates a policy that's enabled and specifies XTS-CBC 128-bit encryption on all drive types.
+
+```powershell
+New-CMBLEncryptionMethodWithXts -PolicyState Enabled -OSDriveEncryptionMethod AesCbc128 -FixedDriveEncryptionMethod AesCbc128 -RemovableDriveEncryptionMethod AesCbc128
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -49,7 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -FixedDriveEncryptionMethod
-{{ Fill FixedDriveEncryptionMethod Description }}
+
+Specify an encryption method for fixed data drives.
 
 ```yaml
 Type: WindowsTenEncryptionMethod
@@ -65,6 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -80,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -OSDriveEncryptionMethod
-{{ Fill OSDriveEncryptionMethod Description }}
+
+Specify an encryption method for the OS drive.
 
 ```yaml
 Type: WindowsTenEncryptionMethod
@@ -96,7 +115,12 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyState
-{{ Fill PolicyState Description }}
+
+Use this parameter to configure the policy.
+
+- `Enabled`: If you enable this policy, separately configure an encryption algorithm and key cipher strength for fixed data drives, OS drives, and removable data drives. For fixed and OS drives, the XTS-AES algorithm is recommended. If you'll use a removable drive in a Windows 8.1 device, use AES-CBC 128-bit or AES-CBC 256-bit.
+
+- `Disabled` or `NotConfigured`: If you disable or don't configure this policy, BitLocker uses AES with the same bit strength as a policy that you specify with the [New-CMBLEncryptionMethodPolicy](New-CMBLEncryptionMethodPolicy.md) cmdlet. If you don't enable that policy, BitLocker uses the default encryption method of XTS-AES 128-bit.
 
 ```yaml
 Type: State
@@ -112,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemovableDriveEncryptionMethod
-{{ Fill RemovableDriveEncryptionMethod Description }}
+
+Specify an encryption method for removable drives.
 
 ```yaml
 Type: WindowsTenEncryptionMethod
@@ -128,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -141,3 +167,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMBLEncryptionMethodPolicy](New-CMBLEncryptionMethodPolicy.md)
+
+[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#drive-encryption-method-and-cipher-strength)
