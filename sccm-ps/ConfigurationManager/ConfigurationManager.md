@@ -1426,7 +1426,7 @@ Creates a Configuration Manager baseline.
 Creates a baseline deployment.
 
 ### [New-CMBLEncryptionMethodPolicy](New-CMBLEncryptionMethodPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption.
 
 ### [New-CMBLEncryptionMethodWithXts](New-CMBLEncryptionMethodWithXts.md)
 {{ Fill in the Synopsis }}
