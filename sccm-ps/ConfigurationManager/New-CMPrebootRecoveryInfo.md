@@ -31,18 +31,18 @@ If you use both **-UseRecoveryUrl** and **-UseRecoveryMessage** parameters, the 
 
 ## EXAMPLES
 
-### Example 1: New enabled policy with recovery message and recovery URL
+### Example 1: New enabled policy with a custom recovery message and URL
 
 This example creates a new policy that's enabled with custom values.
 
 ```powershell
-New-CMPrebootRecoveryInfo -PolicyState Enabled -RecoveryMessage "Contact the Contoso Helpdesk at 515-555-8127" -RecoveryUrl https://contoso.com/bitlockerrecovery
+New-CMPrebootRecoveryInfo -PolicyState Enabled -UseRecoveryMessage -RecoveryMessage "Contact the Contoso Helpdesk at 515-555-8127 or https://contoso.com/bitlockerrecovery"
 ```
 
-### Example 2: New enabled policy with the default message and URL
+### Example 2: New enabled policy with a custom recovery URL
 
 ```powershell
-New-CMPrebootRecoveryInfo -PolicyState Enabled -UseRecoveryUrl -UseRecoveryMessage
+New-CMPrebootRecoveryInfo -PolicyState Enabled -UseRecoveryUrl -RecoveryUrl https://contoso.com/bitlockerrecovery
 ```
 
 ## PARAMETERS
@@ -83,9 +83,9 @@ Accept wildcard characters: False
 
 Use this parameter to configure the policy.
 
-- `Enabled`: If you enable this policy, 
+- `Enabled`: If you enable this policy, BitLocker uses the custom information that you specify.
 
-- `Disabled` or `NotConfigured`: If you disable or don't configure this policy, 
+- `Disabled` or `NotConfigured`: If you disable or don't configure this policy, BitLocker uses the default information.
 
 ```yaml
 Type: State
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -RecoveryMessage
 
-Specify a custom message to display on the pre-boot recovery screen. If you also want to specify a recovery URL, include it as part of this custom recovery message. The maximum string length is 32,768 characters.
+Specify a custom message to display on the pre-boot recovery screen. If you also want to specify a recovery URL, include it as part of this custom recovery message. The maximum string length is 32,768 characters. Use this parameter with the **-UseRecoveryMessage** parameter.
 
 ```yaml
 Type: String
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -RecoveryUrl
 
-Replace the default URL displayed in the pre-boot BitLocker recovery screen. The maximum URI length is 32,768 characters.
+Replace the default URL displayed in the pre-boot BitLocker recovery screen. The maximum URI length is 32,768 characters. Use this parameter with the **-UseRecoveryUrl** parameter.
 
 ```yaml
 Type: Uri
