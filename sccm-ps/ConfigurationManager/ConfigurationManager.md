@@ -1696,7 +1696,7 @@ Creates a migration job in Configuration Manager.
 {{ Fill in the Synopsis }}
 
 ### [New-CMNoOverwritePolicy](New-CMNoOverwritePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to control computer restart performance at the risk of exposing BitLocker secrets.
 
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
