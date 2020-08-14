@@ -1693,7 +1693,7 @@ Creates a maintenance window for a collection.
 Creates a migration job in Configuration Manager.
 
 ### [New-CMMoreInfoUrlPolicy](New-CMMoreInfoUrlPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to specify the **Security Policy** link that BitLocker displays to users.
 
 ### [New-CMNoOverwritePolicy](New-CMNoOverwritePolicy.md)
 Create a policy to control computer restart performance at the risk of exposing BitLocker secrets.

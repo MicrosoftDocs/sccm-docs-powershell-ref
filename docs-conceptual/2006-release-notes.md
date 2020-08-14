@@ -52,7 +52,7 @@ The following cmdlets are also new in this release, but the current article is a
 - [New-CMFDVDenyWriteAccessPolicy](../sccm-ps/ConfigurationManager/New-CMFDVDenyWriteAccessPolicy.md)
 - New-CMFDVHybridAccessPolicy
 - [New-CMFDVPassPhrasePolicy](../sccm-ps/ConfigurationManager/New-CMFDVPassPhrasePolicy.md)
-- New-CMMoreInfoUrlPolicy
+- [New-CMMoreInfoUrlPolicy](../sccm-ps/ConfigurationManager/New-CMMoreInfoUrlPolicy.md)
 - [New-CMNoOverwritePolicy](../sccm-ps/ConfigurationManager/New-CMNoOverwritePolicy.md)
 - [New-CMOSPassphrase](../sccm-ps/ConfigurationManager/New-CMOSPassphrase.md)
 - [New-CMPrebootRecoveryInfo](../sccm-ps/ConfigurationManager/New-CMPrebootRecoveryInfo.md)
