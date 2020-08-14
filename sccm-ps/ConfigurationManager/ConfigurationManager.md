@@ -1438,7 +1438,7 @@ Creates a baseline deployment.
 {{ Fill in the Synopsis }}
 
 ### [New-CMBMSFDVEncryptionPolicy](New-CMBMSFDVEncryptionPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to manage whether to use BitLocker encryption on fixed data drives.​
 
 ### [New-CMBMSOSDEncryptionPolicy](New-CMBMSOSDEncryptionPolicy.md)
 Create a policy to manage whether to encrypt the OS drive with BitLocker.

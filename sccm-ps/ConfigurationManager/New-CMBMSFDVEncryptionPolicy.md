@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/13/2020
 ---
 
 # New-CMBMSFDVEncryptionPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a policy to manage whether to use BitLocker encryption on fixed data drives.​
 
 ## SYNTAX
 
@@ -18,21 +20,28 @@ New-CMBMSFDVEncryptionPolicy [-PolicyState <State>] [-AutoUnlock <Dispensation>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a policy to manage whether to use BitLocker encryption on fixed data drives.​
+
+When you enable this policy, also create a password policy for fixed data drives. The only exception is if you allow or require the use of auto-unlock for fixed data drives. For more information, see [New-CMFDVPassPhrasePolicy](New-CMFDVPassPhrasePolicy.md).
+
+If you require the use of auto-unlock for fixed data drives, encrypt the OS volume too.​
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: New enabled policy that prohibits auto-unlock​
 
-{{ Add example description here }}
+This example creates a new policy that's enabled and doesn't allow auto-unlock.
+
+```powershell
+New-CMBMSFDVEncryptionPolicy -PolicyState Enabled -AutoUnlock Prohibit​
+```
 
 ## PARAMETERS
 
 ### -AutoUnlock
-{{ Fill AutoUnlock Description }}
+
+Allow, require, or prohibit BitLocker to automatically unlock any encrypted data drive. To use auto-unlock, also require BitLocker to encrypt the OS drive.
 
 ```yaml
 Type: Dispensation
@@ -48,6 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -63,6 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -78,7 +89,14 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyState
-{{ Fill PolicyState Description }}
+
+Use this parameter to configure the policy.
+
+- `Enabled`: If you enable this policy, the user has to put all fixed data drives under the BitLocker protection, and BitLocker encrypts the drives.
+
+- `Disabled`: If you disable this policy, the user can't put fixed data drives under BitLocker protection. If you disable this policy after BitLocker encrypts fixed data drives, BitLocker decrypts the fixed data drives.
+
+- `NotConfigured`: If you don't configure this policy, BitLocker doesn't require users to put fixed data drives under protection.
 
 ```yaml
 Type: State
@@ -94,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -107,3 +126,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMFDVPassPhrasePolicy](New-CMFDVPassPhrasePolicy.md)
+
+[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#fixed-data-drive-encryption)
