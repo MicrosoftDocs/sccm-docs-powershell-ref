@@ -2038,7 +2038,7 @@ Creates a t s step set variable.
 Create a policy to associate unique organizational identifiers to a new drive that is enabled with BitLocker.
 
 ### [New-CMUseFddEnforcePolicy](New-CMUseFddEnforcePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure the number of days that fixed drives can remain noncompliant until they are forced to comply with BitLocker policies.
 
 ### [New-CMUseOsEnforcePolicy](New-CMUseOsEnforcePolicy.md)
 {{ Fill in the Synopsis }}
