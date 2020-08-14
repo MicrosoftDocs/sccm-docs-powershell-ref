@@ -1444,7 +1444,7 @@ Creates a baseline deployment.
 Create a policy to manage whether to encrypt the OS drive with BitLocker.
 
 ### [New-CMBMSUserExemptionPolicy](New-CMBMSUserExemptionPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure instructions for users to request exemption from BitLocker protection.​
 
 ### [New-CMBootableMedia](New-CMBootableMedia.md)
 Creates bootable media.
