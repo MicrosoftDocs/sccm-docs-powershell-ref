@@ -1435,7 +1435,7 @@ Creates a baseline deployment.
 {{ Fill in the Synopsis }}
 
 ### [New-CMBMSClientConfigureCheckIntervalPolicy](New-CMBMSClientConfigureCheckIntervalPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to manage the key recovery service backup of BitLocker Drive Encryption recovery information.
 
 ### [New-CMBMSFDVEncryptionPolicy](New-CMBMSFDVEncryptionPolicy.md)
 Create a policy to manage whether to use BitLocker encryption on fixed data drives.
