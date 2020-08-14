@@ -2035,7 +2035,7 @@ Creates a t s step set variable.
 {{ Fill in the Synopsis }}
 
 ### [New-CMUidPolicy](New-CMUidPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to associate unique organizational identifiers to a new drive that is enabled with BitLocker.
 
 ### [New-CMUseFddEnforcePolicy](New-CMUseFddEnforcePolicy.md)
 {{ Fill in the Synopsis }}

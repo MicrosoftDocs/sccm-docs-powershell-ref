@@ -63,7 +63,7 @@ The following cmdlets are also new in this release, but the current article is a
 - [New-CMScCompliancePolicy](../sccm-ps/ConfigurationManager/New-CMScCompliancePolicy.md)
 - New-CMSettingDeployment
 - New-CMTpmAutoResealPolicy
-- New-CMUidPolicy
+- [New-CMUidPolicy](../sccm-ps/ConfigurationManager/New-CMUidPolicy.md)
 - New-CMUseFddEnforcePolicy
 - New-CMUseOsEnforcePolicy
 - New-CMWdacSetting
