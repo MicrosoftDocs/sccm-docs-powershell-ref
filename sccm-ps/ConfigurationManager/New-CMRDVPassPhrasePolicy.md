@@ -178,4 +178,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CMRDVConfigureBDEPolicy](New-CMRDVConfigureBDEPolicy.md)
+
 [BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#removable-data-drive-password-policy)

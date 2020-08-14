@@ -56,7 +56,7 @@ The following cmdlets are also new in this release, but the current article is a
 - New-CMNoOverwritePolicy
 - [New-CMOSPassphrase](../sccm-ps/ConfigurationManager/New-CMOSPassphrase.md)
 - [New-CMPrebootRecoveryInfo](../sccm-ps/ConfigurationManager/New-CMPrebootRecoveryInfo.md)
-- New-CMRDVConfigureBDEPolicy
+- [New-CMRDVConfigureBDEPolicy](../sccm-ps/ConfigurationManager/New-CMRDVConfigureBDEPolicy.md)
 - New-CMRDVDenyWriteAccessPolicy
 - New-CMRDVHybridAccessPolicy
 - [New-CMRDVPassPhrasePolicy](../sccm-ps/ConfigurationManager/New-CMRDVPassPhrasePolicy.md)

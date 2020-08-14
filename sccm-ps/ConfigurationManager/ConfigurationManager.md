@@ -1735,7 +1735,7 @@ Creates a new program in Configuration Manager.
 Creates a Configuration Manager query.
 
 ### [New-CMRDVConfigureBDEPolicy](New-CMRDVConfigureBDEPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to control the use of BitLocker on removable data drives.
 
 ### [New-CMRDVDenyWriteAccessPolicy](New-CMRDVDenyWriteAccessPolicy.md)
 {{ Fill in the Synopsis }}
