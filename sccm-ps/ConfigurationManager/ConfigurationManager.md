@@ -1438,13 +1438,13 @@ Creates a baseline deployment.
 {{ Fill in the Synopsis }}
 
 ### [New-CMBMSFDVEncryptionPolicy](New-CMBMSFDVEncryptionPolicy.md)
-Create a policy to manage whether to use BitLocker encryption on fixed data drives.​
+Create a policy to manage whether to use BitLocker encryption on fixed data drives.
 
 ### [New-CMBMSOSDEncryptionPolicy](New-CMBMSOSDEncryptionPolicy.md)
 Create a policy to manage whether to encrypt the OS drive with BitLocker.
 
 ### [New-CMBMSUserExemptionPolicy](New-CMBMSUserExemptionPolicy.md)
-Create a policy to configure instructions for users to request exemption from BitLocker protection.​
+Create a policy to configure instructions for users to request exemption from BitLocker protection.
 
 ### [New-CMBootableMedia](New-CMBootableMedia.md)
 Creates bootable media.
@@ -1723,7 +1723,7 @@ Creates a package deployment to a Configuration Manager collection.
 Creates a custom power management plan.
 
 ### [New-CMPrebootRecoveryInfo](New-CMPrebootRecoveryInfo.md)
-Configure the recovery message that the pre-boot key recovery screen displays when the OS drive is locked.​
+Configure the recovery message that the pre-boot key recovery screen displays when the OS drive is locked.
 
 ### [New-CMPrestageMedia](New-CMPrestageMedia.md)
 Create an OS deployment prestaged media file.
@@ -1891,7 +1891,7 @@ Use this cmdlet to create a deployment phase for a task sequence.
 Use this cmdlet to create a new third-party updates catalog.
 
 ### [New-CMTpmAutoResealPolicy](New-CMTpmAutoResealPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to control whether Windows refreshes platform validation data when it starts after BitLocker recovery.
 
 ### [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
 {{ Fill in the Synopsis }}
