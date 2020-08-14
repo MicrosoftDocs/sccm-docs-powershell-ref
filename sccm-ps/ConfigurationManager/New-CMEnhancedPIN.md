@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/13/2020
 ---
 
 # New-CMEnhancedPIN
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a policy to configure whether BitLocker can use enhanced startup PINs.
 
 ## SYNTAX
 
@@ -18,20 +20,33 @@ New-CMEnhancedPIN [-PolicyState <State>] [-RequireAsciiOnlyPin] [-DisableWildcar
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a policy to configure whether BitLocker can use enhanced startup PINs. Enhanced startup PINs permit the use of characters including uppercase and lowercase letters, symbols, numbers, and spaces. This policy setting is applied when you turn on BitLocker.
+
+Not all computers support enhanced PINs in the pre-boot environment. Before you enable this policy, evaluate if your devices are compatible with it. Use the **-RequireAsciiOnlyPin** parameter to help make enhanced PINs more compatible with computers that limit the type or number of characters that you can enter in the pre-boot environment.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: New default enabled policy
+
+This example creates a policy that's enabled to allow enhanced PINs for startup.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+New-CMEnhancedPIN -PolicyState Enabled
 ```
 
-{{ Add example description here }}
+### Example 2: New enabled policy with ASCII-only PIN
+
+This example creates a policy that's enabled but restricts PINs to the ASCII character set.
+
+```powershell
+New-CMEnhancedPIN -PolicyState Enabled -RequireAsciiOnlyPin
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -47,6 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -62,7 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyState
-{{ Fill PolicyState Description }}
+
+Use this parameter to configure the policy.
+
+- `Enabled`: If you enable this policy, all new BitLocker startup PINs will be enhanced PINs.
+
+- `Disabled` or `NotConfigured`: If you disable or don't configure this policy, BitLocker won't use enhanced PINs.
 
 ```yaml
 Type: State
@@ -78,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequireAsciiOnlyPin
-{{ Fill RequireAsciiOnlyPin Description }}
+
+Use this parameter to help make enhanced PINs more compatible with computers that limit the type or number of characters that you can enter in the pre-boot environment.
 
 ```yaml
 Type: SwitchParameter
@@ -93,6 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -106,3 +129,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#allow-enhanced-pins-for-startup)

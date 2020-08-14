@@ -48,7 +48,7 @@ The following cmdlets are also new in this release, but the current article is a
 - [New-CMBMSFDVEncryptionPolicy](../sccm-ps/ConfigurationManager/New-CMBMSFDVEncryptionPolicy.md)
 - [New-CMBMSOSDEncryptionPolicy](../sccm-ps/ConfigurationManager/New-CMBMSOSDEncryptionPolicy.md)
 - [New-CMBMSUserExemptionPolicy](../sccm-ps/ConfigurationManager/New-CMBMSUserExemptionPolicy.md)
-- New-CMEnhancedPIN
+- [New-CMEnhancedPIN](../sccm-ps/ConfigurationManager/New-CMEnhancedPIN.md)
 - [New-CMFDVDenyWriteAccessPolicy](../sccm-ps/ConfigurationManager/New-CMFDVDenyWriteAccessPolicy.md)
 - New-CMFDVHybridAccessPolicy
 - [New-CMFDVPassPhrasePolicy](../sccm-ps/ConfigurationManager/New-CMFDVPassPhrasePolicy.md)

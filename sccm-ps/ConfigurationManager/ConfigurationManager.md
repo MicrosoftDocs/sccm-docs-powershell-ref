@@ -1597,7 +1597,7 @@ Creates an embedded property.
 Creates an embedded property list.
 
 ### [New-CMEnhancedPIN](New-CMEnhancedPIN.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure whether BitLocker can use enhanced startup PINs.
 
 ### [New-CMExchangeClientAccessServer](New-CMExchangeClientAccessServer.md)
 Creates a Client Access server role for an Exchange Server.
