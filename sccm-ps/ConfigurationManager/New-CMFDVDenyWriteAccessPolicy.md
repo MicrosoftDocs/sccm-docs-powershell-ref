@@ -25,12 +25,12 @@ Create a new policy to determine whether BitLocker protection is required for fi
 
 ## EXAMPLES
 
-### Example 1: New default enabled policy​
+### Example 1: New default enabled policy
 
 This example creates a new policy that's enabled.
 
 ```powershell
-New-CMFDVDenyWriteAccessPolicy -PolicyState Enabled​
+New-CMFDVDenyWriteAccessPolicy -PolicyState Enabled
 ```
 
 ## PARAMETERS
@@ -71,9 +71,9 @@ Accept wildcard characters: False
 
 Use this parameter to configure the policy.
 
-- `Enabled`: If you enable this policy setting, Windows mounts all fixed data drives that BitLocker doesn't protect as read-only. If BitLocker protects the drive, Windows mounts it  with read and write access.​
+- `Enabled`: If you enable this policy setting, Windows mounts all fixed data drives that BitLocker doesn't protect as read-only. If BitLocker protects the drive, Windows mounts it  with read and write access.
 
-- `Disabled` or `NotConfigured`: If you disable or don't configure this policy setting, Windows mounts all fixed data drives on the computer with read and write access.​
+- `Disabled` or `NotConfigured`: If you disable or don't configure this policy setting, Windows mounts all fixed data drives on the computer with read and write access.
 
 ```yaml
 Type: State

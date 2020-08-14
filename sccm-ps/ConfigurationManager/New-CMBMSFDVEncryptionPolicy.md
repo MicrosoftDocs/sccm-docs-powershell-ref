@@ -10,7 +10,7 @@ ms.date: 08/13/2020
 
 ## SYNOPSIS
 
-Create a policy to manage whether to use BitLocker encryption on fixed data drives.​
+Create a policy to manage whether to use BitLocker encryption on fixed data drives.
 
 ## SYNTAX
 
@@ -21,20 +21,20 @@ New-CMBMSFDVEncryptionPolicy [-PolicyState <State>] [-AutoUnlock <Dispensation>]
 
 ## DESCRIPTION
 
-Create a policy to manage whether to use BitLocker encryption on fixed data drives.​
+Create a policy to manage whether to use BitLocker encryption on fixed data drives.
 
 When you enable this policy, also create a password policy for fixed data drives. The only exception is if you allow or require the use of auto-unlock for fixed data drives. For more information, see [New-CMFDVPassPhrasePolicy](New-CMFDVPassPhrasePolicy.md).
 
-If you require the use of auto-unlock for fixed data drives, encrypt the OS volume too.​
+If you require the use of auto-unlock for fixed data drives, encrypt the OS volume too.
 
 ## EXAMPLES
 
-### Example 1: New enabled policy that prohibits auto-unlock​
+### Example 1: New enabled policy that prohibits auto-unlock
 
 This example creates a new policy that's enabled and doesn't allow auto-unlock.
 
 ```powershell
-New-CMBMSFDVEncryptionPolicy -PolicyState Enabled -AutoUnlock Prohibit​
+New-CMBMSFDVEncryptionPolicy -PolicyState Enabled -AutoUnlock Prohibit
 ```
 
 ## PARAMETERS

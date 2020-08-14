@@ -24,18 +24,18 @@ New-CMOSPassphrase [-PolicyState <State>] [-PasswordComplexity <Dispensation>] [
 Create a policy to specify the constraints for passwords used to unlock BitLocker-protected OS drives. If you allow non-TPM protectors on OS drives, you can provision a password, enforce complexity requirements, and configure a minimum length. For these complexity requirement settings to be effective, also enable the group policy setting **Password must meet complexity requirements** in **Computer Configuration** > **Windows Settings** > **Security Settings** > **Account Policies** > **Password Policy**.
 
 > [!NOTE]
-> Windows enforces these settings when you enable BitLocker, not when it unlocks a volume. BitLocker allows a user to unlock a drive with any of the available protectors.​
+> Windows enforces these settings when you enable BitLocker, not when it unlocks a volume. BitLocker allows a user to unlock a drive with any of the available protectors.
 >
 > You can't use passwords if you also enable Windows to use FIPS-compliant algorithms for encryption, hashing, and signing.
 
 ## EXAMPLES
 
-### Example 1: New enabled policy that sets complexity and minimum length​
+### Example 1: New enabled policy that sets complexity and minimum length
 
 This example creates a new policy that's enabled, requires a complex password that's at least 10 characters in length.
 
 ```powershell
-New-CMOSPassphrase -PolicyState Enabled -PasswordComplexity Require -MinimumLength 10​
+New-CMOSPassphrase -PolicyState Enabled -PasswordComplexity Require -MinimumLength 10
 ```
 
 ### Example 2: New policy that requires ASCII
@@ -47,7 +47,7 @@ This example creates a policy that's enabled with the following properties:
 - Requires that the password only includes ASCII characters.
 
 ```powershell
-New-CMOSPassphrase -PolicyState Enabled -PasswordComplexity Allow -MinimumLength 12 -RequireAsciiOnlyPassword​
+New-CMOSPassphrase -PolicyState Enabled -PasswordComplexity Allow -MinimumLength 12 -RequireAsciiOnlyPassword
 ```
 
 ## PARAMETERS
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -MinimumLength
 
-Passwords must be at least `8` characters. To configure a greater minimum length for the password, use this parameter.​
+Passwords must be at least `8` characters. To configure a greater minimum length for the password, use this parameter.
 
 ```yaml
 Type: UInt64
@@ -108,7 +108,7 @@ Use this parameter to configure password complexity for OS drives. To enforce co
 
 - `Allow`: The device tries to connect to a domain controller to validate the complexity. If it can't communicate with a domain controller, it still accepts the password whatever the actual complexity. BitLocker encrypts the drive using that password as a protector.
 
-- `Prohibit`: The client doesn't connect to a domain controller to validate the password complexity.​
+- `Prohibit`: The client doesn't connect to a domain controller to validate the password complexity.
 
 ```yaml
 Type: Dispensation
@@ -127,9 +127,9 @@ Accept wildcard characters: False
 
 Use this parameter to configure the policy.
 
-- `Enabled`: If you enable this policy, users can configure a password that meets the requirements you define. To enforce complexity requirements on the password, use `-PasswordComplexity Require`.​
+- `Enabled`: If you enable this policy, users can configure a password that meets the requirements you define. To enforce complexity requirements on the password, use `-PasswordComplexity Require`.
 
-- `Disabled` or `NotConfigured`: If you disable or don't configure this policy, the default length constraint of eight characters applies to OS drive passwords, and it doesn't check the password complexity.​
+- `Disabled` or `NotConfigured`: If you disable or don't configure this policy, the default length constraint of eight characters applies to OS drive passwords, and it doesn't check the password complexity.
 
 ```yaml
 Type: State

@@ -10,7 +10,7 @@ ms.date: 08/13/2020
 
 ## SYNOPSIS
 
-Create a policy to configure instructions for users to request exemption from BitLocker protection.​
+Create a policy to configure instructions for users to request exemption from BitLocker protection.
 
 ## SYNTAX
 
@@ -21,11 +21,11 @@ New-CMBMSUserExemptionPolicy [-PolicyState <State>] [-MaxDays <UInt32>] [-Contac
 
 ## DESCRIPTION
 
-Use this cmdlet to create a policy to configure instructions for users to request exemption from BitLocker protection.​ These instructions include a URL, email address, or phone number.
+Use this cmdlet to create a policy to configure instructions for users to request exemption from BitLocker protection. These instructions include a URL, email address, or phone number.
 
 ## EXAMPLES
 
-### Example 1: Create a policy with URL​ as contact method
+### Example 1: Create a policy with URL as contact method
 
 This example creates a policy that's enabled with the following attributes:
 
@@ -33,7 +33,7 @@ This example creates a policy that's enabled with the following attributes:
 - A custom URL for the user to submit the request
 
 ```powershell
-New-CMBMSUserExemptionPolicy -PolicyState Enabled -MaxDays 6 -ContactMethod Url -ContactDetail "https://contoso.com/bitlockerexemption​"
+New-CMBMSUserExemptionPolicy -PolicyState Enabled -MaxDays 6 -ContactMethod Url -ContactDetail "https://contoso.com/bitlockerexemption"
 ```
 
 ### Example 2: Create a policy with email as contact method
@@ -55,7 +55,7 @@ This example creates a policy that's enabled with the following attributes:
 - A custom phone number for the user to submit the request
 
 ```powershell
-New-CMBMSUserExemptionPolicy -PolicyState Enabled -MaxDays 16 -ContactMethod Phone -ContactDetail "515-555-8127"​
+New-CMBMSUserExemptionPolicy -PolicyState Enabled -MaxDays 16 -ContactMethod Phone -ContactDetail "515-555-8127"
 ```
 
 ## PARAMETERS
@@ -66,7 +66,7 @@ Based on the **-ContactMethod** parameter, use this parameter to specify the spe
 
 - The URL format is `"https://YourExemptionWebSite"`
 
-- The email address format is `"alias@domain.tld"` ​
+- The email address format is `"alias@domain.tld"` 
 
     BitLocker automatically creates a link with the following format: `mailto: xyz@abc.com?subject=Request exemption from BitLocker protection”`
 

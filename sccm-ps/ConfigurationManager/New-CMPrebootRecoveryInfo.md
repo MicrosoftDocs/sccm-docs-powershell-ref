@@ -10,7 +10,7 @@ ms.date: 08/13/2020
 
 ## SYNOPSIS
 
-Configure the recovery message that the pre-boot key recovery screen displays when the OS drive is locked.​
+Configure the recovery message that the pre-boot key recovery screen displays when the OS drive is locked.
 
 ## SYNTAX
 
@@ -22,9 +22,9 @@ New-CMPrebootRecoveryInfo [-PolicyState <State>] [-RecoveryMessage <String>] [-R
 
 ## DESCRIPTION
 
-Use this cmdlet to configure the entire recovery message or replace the existing URL the pre-boot key recovery screen shows when the OS drive is locked.​
+Use this cmdlet to configure the entire recovery message or replace the existing URL the pre-boot key recovery screen shows when the OS drive is locked.
 
-If you use both **-UseRecoveryUrl** and **-UseRecoveryMessage** parameters, the pre-boot key recovery screen displays the default BitLocker recovery message and URL. If you previously configured a custom recovery message or URL and want to revert to the default message, keep the policy enabled and use both **-UseRecoveryUrl** and **-UseRecoveryMessage** parameters​
+If you use both **-UseRecoveryUrl** and **-UseRecoveryMessage** parameters, the pre-boot key recovery screen displays the default BitLocker recovery message and URL. If you previously configured a custom recovery message or URL and want to revert to the default message, keep the policy enabled and use both **-UseRecoveryUrl** and **-UseRecoveryMessage** parameters
 
 > [!NOTE]
 > Pre-boot doesn't support all characters and languages. Test the characters that you want to use for the custom message or URL. Make sure the pre-boot recovery screen correctly displays your custom message or URL.
@@ -42,7 +42,7 @@ New-CMPrebootRecoveryInfo -PolicyState Enabled -RecoveryMessage "Contact the Con
 ### Example 2: New enabled policy with the default message and URL
 
 ```powershell
-New-CMPrebootRecoveryInfo -PolicyState Enabled -UseRecoveryUrl -UseRecoveryMessage​
+New-CMPrebootRecoveryInfo -PolicyState Enabled -UseRecoveryUrl -UseRecoveryMessage
 ```
 
 ## PARAMETERS

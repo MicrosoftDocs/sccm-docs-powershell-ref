@@ -23,9 +23,9 @@ New-CMBMSOSDEncryptionPolicy [-PolicyState <State>] [-RequireTpm] [-MinimumPinLe
 
 Use this cmdlet to create a policy to manage whether to encrypt the OS drive with BitLocker.
 
-If you want to use BitLocker on a computer without a [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node), don't use the **-RequireTpm** parameter. In this mode, BitLocker requires a password when the device starts up. If you forget the password, use a BitLocker recovery option to access the drive.​
+If you want to use BitLocker on a computer without a [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node), don't use the **-RequireTpm** parameter. In this mode, BitLocker requires a password when the device starts up. If you forget the password, use a BitLocker recovery option to access the drive.
 
-On a computer with a compatible TPM, BitLocker can use two authentication methods when the device starts up. This behavior provides added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require the entry of a personal identification number (PIN).​
+On a computer with a compatible TPM, BitLocker can use two authentication methods when the device starts up. This behavior provides added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require the entry of a personal identification number (PIN).
 
 > [!TIP]
 > For higher security, when you enable devices with TPM + PIN protector, consider disabling the following group policy settings in **System** > **Power Management** > **Sleep Settings**:
@@ -45,7 +45,7 @@ This example creates a new policy that's enabled with the following attributes:
 - The PIN needs to be at least 16 numbers
 
 ```powershell
-New-CMBMSOSDEncryptionPolicy -PolicyState Enabled -RequireTpm -MinimumPinLength 16 -Protector TpmAndPin​
+New-CMBMSOSDEncryptionPolicy -PolicyState Enabled -RequireTpm -MinimumPinLength 16 -Protector TpmAndPin
 ```
 
 ### Example 2: Create a new policy for TPM only
@@ -53,7 +53,7 @@ New-CMBMSOSDEncryptionPolicy -PolicyState Enabled -RequireTpm -MinimumPinLength 
 This example creates a new policy that's enabled and requires only a TPM.
 
 ```powershell
-New-CMBMSOSDEncryptionPolicy -PolicyState Enabled -Protector TpmOnly​
+New-CMBMSOSDEncryptionPolicy -PolicyState Enabled -Protector TpmOnly
 ```
 
 ## PARAMETERS
@@ -110,11 +110,11 @@ Accept wildcard characters: False
 
 Use this parameter to configure the policy.
 
-- `Enabled`: If you enable this policy, the user has to put the OS drive under BitLocker protection, and it encrypts the drive.​
+- `Enabled`: If you enable this policy, the user has to put the OS drive under BitLocker protection, and it encrypts the drive.
 
-- `Disabled`: If you disable this policy, the user can't put the OS drive under BitLocker protection. If you apply this policy after the OS drive is encrypted, BitLocker decrypts the drive.​
+- `Disabled`: If you disable this policy, the user can't put the OS drive under BitLocker protection. If you apply this policy after the OS drive is encrypted, BitLocker decrypts the drive.
 
-- `NotConfigured`: If you don't configure this policy, then BitLocker isn't required on the OS drive.​
+- `NotConfigured`: If you don't configure this policy, then BitLocker isn't required on the OS drive.
 
 ```yaml
 Type: State

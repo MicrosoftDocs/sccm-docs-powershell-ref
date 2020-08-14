@@ -21,7 +21,7 @@ New-CMRDVConfigureBDEPolicy [-PolicyState <State>] [-PreventEncryption] [-Preven
 
 ## DESCRIPTION
 
-Create a policy to control the use of BitLocker on removable data drives. This policy setting is applied when you turn on BitLocker.​
+Create a policy to control the use of BitLocker on removable data drives. This policy setting is applied when you turn on BitLocker.
 
 After BitLocker encrypts a removable data drive, it saves recovery information based on the policy that you set with the [New-CMBMSClientConfigureCheckIntervalPolicy](New-CMBMSClientConfigureCheckIntervalPolicy.md) cmdlet.
 
@@ -48,7 +48,7 @@ This example creates a new policy that's enabled with the following attributes:
 - Prevent users from suspending or decrypting BitLocker on removable data drives
 
 ```powershell
-New-CMRDVConfigureBDEPolicy -PolicyState Enabled -PreventEncryption -PreventSuspendAndDecrypt​
+New-CMRDVConfigureBDEPolicy -PolicyState Enabled -PreventEncryption -PreventSuspendAndDecrypt
 ```
 
 ## PARAMETERS
@@ -91,9 +91,9 @@ Use this parameter to configure the policy.
 
 - `Enabled`: When you enable this policy, you control how users can configure BitLocker.
 
-- `NotConfigured`: If you don't configure this policy, users can use BitLocker on removable disk drives.​
+- `NotConfigured`: If you don't configure this policy, users can use BitLocker on removable disk drives.
 
-- `Disabled`: If you disable this policy, users can't use BitLocker on removable disk drives.​
+- `Disabled`: If you disable this policy, users can't use BitLocker on removable disk drives.
 
 ```yaml
 Type: State
