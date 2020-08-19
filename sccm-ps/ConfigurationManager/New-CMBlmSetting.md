@@ -142,8 +142,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-### BitLocker policy cmdlets
-
 [New-CMBLEncryptionMethodPolicy](New-CMBLEncryptionMethodPolicy.md)
 
 [New-CMBLEncryptionMethodWithXts](New-CMBLEncryptionMethodWithXts.md)
@@ -185,8 +183,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMUseFddEnforcePolicy](New-CMUseFddEnforcePolicy.md)
 
 [New-CMUseOsEnforcePolicy](New-CMUseOsEnforcePolicy.md)
-
-### Other links
 
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
 
