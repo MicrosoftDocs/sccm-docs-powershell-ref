@@ -147,4 +147,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMRDVDenyWriteAccessPolicy](New-CMRDVDenyWriteAccessPolicy.md)
 
+[New-CMBlmSetting](New-CMBlmSetting.md)
+
 [BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#organization-unique-identifiers)

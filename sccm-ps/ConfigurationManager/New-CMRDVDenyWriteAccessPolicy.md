@@ -124,4 +124,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMUidPolicy](New-CMUidPolicy.md)
 
+[New-CMBlmSetting](New-CMBlmSetting.md)
+
 [BitLocker settings reference](/mem/configmgr/protect/tech-ref/bitlocker/settings#deny-write-access-to-removable-drives-not-protected-by-bitlocker)

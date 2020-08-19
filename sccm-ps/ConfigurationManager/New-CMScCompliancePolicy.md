@@ -135,4 +135,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CMBlmSetting](New-CMBlmSetting.md)
+
 [BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#validate-smart-card-certificate-usage-rule-compliance)

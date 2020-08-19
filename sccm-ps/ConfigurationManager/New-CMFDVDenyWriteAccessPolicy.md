@@ -104,4 +104,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CMBlmSetting](New-CMBlmSetting.md)
+
 [BitLocker settings reference](/mem/configmgr/protect/tech-ref/bitlocker/settings#deny-write-access-to-fixed-drives-not-protected-by-bitlocker)

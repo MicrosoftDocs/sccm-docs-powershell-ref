@@ -1432,7 +1432,7 @@ Create a policy to configure the algorithm and cipher strength used by BitLocker
 Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 10 devices.
 
 ### [New-CMBlmSetting](New-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Create a BitLocker management settings policy.
 
 ### [New-CMBMSClientConfigureCheckIntervalPolicy](New-CMBMSClientConfigureCheckIntervalPolicy.md)
 Create a policy to manage the key recovery service backup of BitLocker Drive Encryption recovery information.
