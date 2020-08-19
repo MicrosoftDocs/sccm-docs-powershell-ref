@@ -21,7 +21,7 @@ New-CMFDVDenyWriteAccessPolicy [-PolicyState <State>] [-DisableWildcardHandling]
 
 ## DESCRIPTION
 
-Create a new policy to determine whether BitLocker protection is required for fixed data drives to be writable on a computer. For example, if you disable this policy, you deny write access to fixed drives that BitLocker doesn't protect.
+Create a new policy to determine whether BitLocker protection is required for fixed data drives to be writable on a computer.
 
 ## EXAMPLES
 
@@ -104,4 +104,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#deny-write-access-to-fixed-drives-not-protected-by-bitlocker)
+[BitLocker settings reference](/mem/configmgr/protect/tech-ref/bitlocker/settings#deny-write-access-to-fixed-drives-not-protected-by-bitlocker)

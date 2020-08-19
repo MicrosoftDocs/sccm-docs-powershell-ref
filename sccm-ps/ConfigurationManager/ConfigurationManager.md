@@ -1738,7 +1738,7 @@ Creates a Configuration Manager query.
 Create a policy to control the use of BitLocker on removable data drives.
 
 ### [New-CMRDVDenyWriteAccessPolicy](New-CMRDVDenyWriteAccessPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure whether BitLocker protection is required for removable data drives to be writable on a computer.
 
 ### [New-CMRDVHybridAccessPolicy](New-CMRDVHybridAccessPolicy.md)
 {{ Fill in the Synopsis }}
