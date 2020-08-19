@@ -2041,7 +2041,7 @@ Create a policy to associate unique organizational identifiers to a new drive th
 Create a policy to configure the number of days that fixed drives can remain noncompliant until they are forced to comply with BitLocker policies.
 
 ### [New-CMUseOsEnforcePolicy](New-CMUseOsEnforcePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure the number of days that users can delay complying with BitLocker policies for their OS drive.
 
 ### [New-CMUserCollection](New-CMUserCollection.md)
 Creates a collection for users and adds the collection to the Configuration Manager hierarchy.
