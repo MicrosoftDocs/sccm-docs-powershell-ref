@@ -24,48 +24,46 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 
 ### New cmdlets
 
-<!-- - [](../sccm-ps/ConfigurationManager/.md) -->
+<!-- - [<cmdlet>](/powershell/module/configurationmanager/<cmdlet>?view=sccm-ps) -->
 
-- [Add-CMTaskSequenceDeploymentType](../sccm-ps/ConfigurationManager/Add-CMTaskSequenceDeploymentType.md)
-- [Set-CMApplicationPhasedDeployment](../sccm-ps/ConfigurationManager/Set-CMApplicationPhasedDeployment.md)
-- [Set-CMSoftwareUpdatePhase](../sccm-ps/ConfigurationManager/Set-CMSoftwareUpdatePhase.md)
-- [Set-CMSoftwareUpdatePhasedDeployment](../sccm-ps/ConfigurationManager/Set-CMSoftwareUpdatePhasedDeployment.md)
-- [Set-CMTaskSequenceDeploymentType](../sccm-ps/ConfigurationManager/Set-CMTaskSequenceDeploymentType.md)
-- [Set-CMTaskSequencePhase](../sccm-ps/ConfigurationManager/Set-CMTaskSequencePhase.md)
-- [Set-CMTaskSequencePhasedDeployment](../sccm-ps/ConfigurationManager/Set-CMTaskSequencePhasedDeployment.md)
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/set-cmapplicationphaseddeployment?view=sccm-ps)
+- [Set-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/set-cmsoftwareupdatephase?view=sccm-ps)
+- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/set-cmsoftwareupdatephaseddeployment?view=sccm-ps)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMTaskSequencePhase](/powershell/module/configurationmanager/set-cmtasksequencephase?view=sccm-ps)
+- [Set-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/set-cmtasksequencephaseddeployment?view=sccm-ps)
 
-The following cmdlets are also new in this release, but the current article is a just stub. More information is coming soon.
+Use the following cmdlets to configure BitLocker management policies:
 
 - Copy-CMBlmSetting
 - Copy-CMWdacSetting
 - Get-CMBlmSetting
 - Get-CMSettingDeployment
 - Get-CMWdacSetting
-- [New-CMBLEncryptionMethodPolicy](../sccm-ps/ConfigurationManager/New-CMBLEncryptionMethodPolicy.md)
-- [New-CMBLEncryptionMethodWithXts](../sccm-ps/ConfigurationManager/New-CMBLEncryptionMethodWithXts.md)
+- [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps)
+- [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps)
 - New-CMBlmSetting
-- [New-CMBMSClientConfigureCheckIntervalPolicy](../sccm-ps/ConfigurationManager/New-CMBMSClientConfigureCheckIntervalPolicy.md)
-- [New-CMBMSFDVEncryptionPolicy](../sccm-ps/ConfigurationManager/New-CMBMSFDVEncryptionPolicy.md)
-- [New-CMBMSOSDEncryptionPolicy](../sccm-ps/ConfigurationManager/New-CMBMSOSDEncryptionPolicy.md)
-- [New-CMBMSUserExemptionPolicy](../sccm-ps/ConfigurationManager/New-CMBMSUserExemptionPolicy.md)
-- [New-CMEnhancedPIN](../sccm-ps/ConfigurationManager/New-CMEnhancedPIN.md)
-- [New-CMFDVDenyWriteAccessPolicy](../sccm-ps/ConfigurationManager/New-CMFDVDenyWriteAccessPolicy.md)
-- New-CMFDVHybridAccessPolicy
-- [New-CMFDVPassPhrasePolicy](../sccm-ps/ConfigurationManager/New-CMFDVPassPhrasePolicy.md)
-- [New-CMMoreInfoUrlPolicy](../sccm-ps/ConfigurationManager/New-CMMoreInfoUrlPolicy.md)
-- [New-CMNoOverwritePolicy](../sccm-ps/ConfigurationManager/New-CMNoOverwritePolicy.md)
-- [New-CMOSPassphrase](../sccm-ps/ConfigurationManager/New-CMOSPassphrase.md)
-- [New-CMPrebootRecoveryInfo](../sccm-ps/ConfigurationManager/New-CMPrebootRecoveryInfo.md)
-- [New-CMRDVConfigureBDEPolicy](../sccm-ps/ConfigurationManager/New-CMRDVConfigureBDEPolicy.md)
+- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
+- [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps)
+- [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps)
+- [New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy?view=sccm-ps)
+- [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin?view=sccm-ps)
+- [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy?view=sccm-ps)
+- [New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy?view=sccm-ps)
+- [New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy?view=sccm-ps)
+- [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy?view=sccm-ps)
+- [New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase?view=sccm-ps)
+- [New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo?view=sccm-ps)
+- [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy?view=sccm-ps)
 - New-CMRDVDenyWriteAccessPolicy
-- New-CMRDVHybridAccessPolicy
-- [New-CMRDVPassPhrasePolicy](../sccm-ps/ConfigurationManager/New-CMRDVPassPhrasePolicy.md)
-- [New-CMScCompliancePolicy](../sccm-ps/ConfigurationManager/New-CMScCompliancePolicy.md)
+- [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps)
+- [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps)
 - New-CMSettingDeployment
-- [New-CMTpmAutoResealPolicy](../sccm-ps/ConfigurationManager/New-CMTpmAutoResealPolicy.md)
-- [New-CMUidPolicy](../sccm-ps/ConfigurationManager/New-CMUidPolicy.md)
-- [New-CMUseFddEnforcePolicy](../sccm-ps/ConfigurationManager/New-CMUseFddEnforcePolicy.md)
-- New-CMUseOsEnforcePolicy
+- [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps)
+- [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps)
+- [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps)
+- [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps)
 - New-CMWdacSetting
 - Remove-CMBlmSetting
 - Remove-CMSettingDeployment
@@ -89,7 +87,7 @@ The following changes have been made to existing cmdlets in this version. Change
 
 <!-- Template
 ### Cmdlet name
-For more information, see [](../sccm-ps/ConfigurationManager/.md).
+For more information, see [](/powershell/module/configurationmanager/<cmdlet>?view=sccm-ps).
 #### Breaking changes
 #### Bugs that were fixed
 #### Non-breaking changes
@@ -98,7 +96,7 @@ For more information, see [](../sccm-ps/ConfigurationManager/.md).
 
 ### Add-CMComplianceSettingRegistryKeyValue
 
-For more information, see [Add-CMComplianceSettingRegistryKeyValue](../sccm-ps/ConfigurationManager/Add-CMComplianceSettingRegistryKeyValue.md).
+For more information, see [Add-CMComplianceSettingRegistryKeyValue](/powershell/module/configurationmanager/add-cmcompliancesettingregistrykeyvalue?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -106,7 +104,7 @@ You can now specify a null or empty string for the **-ExpectedValue** parameter.
 
 ### Get-CMBootImage
 
-For more information, see [Get-CMBootImage](../sccm-ps/ConfigurationManager/Get-CMBootImage.md).
+For more information, see [Get-CMBootImage](/powershell/module/configurationmanager/get-cmbootimage?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -114,7 +112,7 @@ Added a parameter to support the reload option: **-Reload**
 
 ### Get-CMOperatingSystemImage
 
-For more information, see [Get-CMOperatingSystemImage](../sccm-ps/ConfigurationManager/Get-CMOperatingSystemImage.md).
+For more information, see [Get-CMOperatingSystemImage](/powershell/module/configurationmanager/get-cmoperatingsystemimage?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -122,7 +120,7 @@ Added a parameter to support the reload option: **-Reload**
 
 ### Get-CMOperatingSystemInstaller
 
-For more information, see [Get-CMOperatingSystemInstaller](../sccm-ps/ConfigurationManager/Get-CMOperatingSystemInstaller.md).
+For more information, see [Get-CMOperatingSystemInstaller](/powershell/module/configurationmanager/get-cmoperatingsysteminstaller?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -130,7 +128,7 @@ Added a parameter to support the reload option: **-Reload**
 
 ### New-CMApplicationDeployment
 
-For more information, see [New-CMApplicationDeployment](../sccm-ps/ConfigurationManager/New-CMApplicationDeployment.md).
+For more information, see [New-CMApplicationDeployment](/powershell/module/configurationmanager/new-cmapplicationdeployment?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -138,7 +136,7 @@ You can now specify a deadline for an available deployment with superseding opti
 
 ### New-CMComplianceRuleValue
 
-For more information, see [New-CMComplianceRuleValue](../sccm-ps/ConfigurationManager/New-CMComplianceRuleValue.md).
+For more information, see [New-CMComplianceRuleValue](/powershell/module/configurationmanager/new-cmcompliancerulevalue?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -146,7 +144,7 @@ You can now specify a null or empty string with the **-ExpectedValue** parameter
 
 ### New-CMTSStepEnableBitLocker
 
-For more information, see [New-CMTSStepEnableBitLocker](../sccm-ps/ConfigurationManager/New-CMTSStepEnableBitLocker.md).
+For more information, see [New-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/new-cmtsstepenablebitlocker?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -156,7 +154,7 @@ For more information, see [New-CMTSStepEnableBitLocker](../sccm-ps/Configuration
 
 ### New-CMTSStepOfflineEnableBitLocker
 
-For more information, see [New-CMTSStepOfflineEnableBitLocker](../sccm-ps/ConfigurationManager/New-CMTSStepOfflineEnableBitLocker.md).
+For more information, see [New-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/new-cmtsstepofflineenablebitlocker?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -164,7 +162,7 @@ Added a parameter to specify the encryption method: **-EncryptionMethod**
 
 ### New-CMTSStepPartitionDisk
 
-For more information, see [New-CMTSStepPartitionDisk](../sccm-ps/ConfigurationManager/New-CMTSStepPartitionDisk.md).
+For more information, see [New-CMTSStepPartitionDisk](/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -172,7 +170,7 @@ Added a parameter to specify a disk number variable: **-DiskNumberVariable**
 
 ### New-CMTSStepPrestartCheck
 
-For more information, see [New-CMTSStepPrestartCheck](../sccm-ps/ConfigurationManager/New-CMTSStepPrestartCheck.md).
+For more information, see [New-CMTSStepPrestartCheck](/powershell/module/configurationmanager/new-cmtsstepprestartcheck?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -180,7 +178,7 @@ Fixed a blocking issue when you specify a value for the **-OSArchitecture** para
 
 ### Remove-CMDeployment
 
-For more information, see [Remove-CMDeployment](../sccm-ps/ConfigurationManager/Remove-CMDeployment.md).
+For more information, see [Remove-CMDeployment](/powershell/module/configurationmanager/remove-cmdeployment?view=sccm-ps).
 
 #### Bugs that were fixed
 
@@ -188,7 +186,7 @@ Fixed bad disposal.
 
 ### Remove-CMResource
 
-For more information, see [Remove-CMResource](../sccm-ps/ConfigurationManager/Remove-CMResource.md).
+For more information, see [Remove-CMResource](/powershell/module/configurationmanager/remove-cmresource?view=sccm-ps).
 
 #### Bugs that were fixed
 
@@ -196,7 +194,7 @@ Fixed bad disposal.
 
 ### Remove-CMTaskSequenceGroup
 
-For more information, see [Remove-CMTaskSequenceGroup](../sccm-ps/ConfigurationManager/Remove-CMTaskSequenceGroup.md).
+For more information, see [Remove-CMTaskSequenceGroup](/powershell/module/configurationmanager/remove-cmtasksequencegroup?view=sccm-ps).
 
 #### Bugs that were fixed
 
@@ -204,7 +202,7 @@ Fixed bad disposal.
 
 ### Remove-CMTaskSequenceStep
 
-For more information, see [Remove-CMTaskSequenceStep](../sccm-ps/ConfigurationManager/Remove-CMTaskSequenceStep.md).
+For more information, see [Remove-CMTaskSequenceStep](/powershell/module/configurationmanager/remove-cmtasksequencestep?view=sccm-ps).
 
 #### Bugs that were fixed
 
@@ -212,7 +210,7 @@ Fixed bad disposal.
 
 ### Set-CMBootImage
 
-For more information, see [Set-CMBootImage](../sccm-ps/ConfigurationManager/Set-CMBootImage.md).
+For more information, see [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -220,7 +218,7 @@ Added a parameter to support the reload option: **-Reload**
 
 ### Set-CMClientSetting
 
-For more information, see [Set-CMClientSetting](../sccm-ps/ConfigurationManager/Set-CMClientSetting.md).
+For more information, see [Set-CMClientSetting](/powershell/module/configurationmanager/set-cmclientsetting?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -228,7 +226,7 @@ Added a parameter to support the new restart setting: **-NoRebootEnforcement**
 
 ### Set-CMClientSettingComputerRestart
 
-For more information, see [Set-CMClientSettingComputerRestart](../sccm-ps/ConfigurationManager/Set-CMClientSettingComputerRestart.md).
+For more information, see [Set-CMClientSettingComputerRestart](/powershell/module/configurationmanager/set-cmclientsettingcomputerrestart?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -236,7 +234,7 @@ Added a parameter to support the new restart setting: **-NoRebootEnforcement**
 
 ### Set-CMCloudManagementGateway
 
-For more information, see [Set-CMCloudManagementGateway](../sccm-ps/ConfigurationManager/Set-CMCloudManagementGateway.md).
+For more information, see [Set-CMCloudManagementGateway](/powershell/module/configurationmanager/set-cmcloudmanagementgateway?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -250,7 +248,7 @@ Added the following parameters to support renewing the CMG server authentication
 
 ### Set-CMMsiDeploymentType
 
-For more information, see [Set-CMMsiDeploymentType](../sccm-ps/ConfigurationManager/Set-CMMsiDeploymentType.md).
+For more information, see [Set-CMMsiDeploymentType](/powershell/module/configurationmanager/set-cmmsideploymenttype?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -258,7 +256,7 @@ You can now specify an empty string for the parameters **-UninstallCommand** and
 
 ### Set-CMOperatingSystemImage
 
-For more information, see [Set-CMOperatingSystemImage](../sccm-ps/ConfigurationManager/Set-CMOperatingSystemImage.md).
+For more information, see [Set-CMOperatingSystemImage](/powershell/module/configurationmanager/set-cmoperatingsystemimage?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -266,7 +264,7 @@ Added a parameter to support the reload option: **-Reload**
 
 ### Set-CMOperatingSystemInstaller
 
-For more information, see [Set-CMOperatingSystemInstaller](../sccm-ps/ConfigurationManager/Set-CMOperatingSystemInstaller.md).
+For more information, see [Set-CMOperatingSystemInstaller](/powershell/module/configurationmanager/set-cmoperatingsysteminstaller?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -274,7 +272,7 @@ Added a parameter to support the reload option: **-Reload**
 
 ### Set-CMScriptDeploymentType
 
-For more information, see [Set-CMScriptDeploymentType](../sccm-ps/ConfigurationManager/Set-CMScriptDeploymentType.md).
+For more information, see [Set-CMScriptDeploymentType](/powershell/module/configurationmanager/set-cmscriptdeploymenttype?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -282,7 +280,7 @@ You can now specify an empty string for the parameters **-UninstallCommand** and
 
 ### Set-CMSoftwareUpdateAutoDeploymentRule
 
-For more information, see [Set-CMSoftwareUpdateAutoDeploymentRule](../sccm-ps/ConfigurationManager/Set-CMSoftwareUpdateAutoDeploymentRule.md).
+For more information, see [Set-CMSoftwareUpdateAutoDeploymentRule](/powershell/module/configurationmanager/set-cmsoftwareupdateautodeploymentrule?view=sccm-ps).
 
 #### Bugs that were fixed
 
@@ -290,7 +288,7 @@ When you tried to use **Get-CMSoftwareUpdateAutoDeploymentRule** with the **-Fas
 
 ### Set-CMTSStepEnableBitLocker
 
-For more information, see [Set-CMTSStepEnableBitLocker](../sccm-ps/ConfigurationManager/Set-CMTSStepEnableBitLocker.md).
+For more information, see [Set-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/set-cmtsstepenablebitlocker?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -300,7 +298,7 @@ For more information, see [Set-CMTSStepEnableBitLocker](../sccm-ps/Configuration
 
 ### Set-CMTSStepOfflineEnableBitLocker
 
-For more information, see [Set-CMTSStepOfflineEnableBitLocker](../sccm-ps/ConfigurationManager/Set-CMTSStepOfflineEnableBitLocker.md).
+For more information, see [Set-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/set-cmtsstepofflineenablebitlocker?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -308,7 +306,7 @@ Added a parameter to allow you to specify the encryption method: **-EncryptionMe
 
 ### Set-CMTSStepPartitionDisk
 
-For more information, see [Set-CMTSStepPartitionDisk](../sccm-ps/ConfigurationManager/Set-CMTSStepPartitionDisk.md).
+For more information, see [Set-CMTSStepPartitionDisk](/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -316,7 +314,7 @@ Added a parameter to allow you to set a disk number variable: **-DiskNumberVaria
 
 ### Set-CMTSStepPrestartCheck
 
-For more information, see [Set-CMTSStepPrestartCheck](../sccm-ps/ConfigurationManager/Set-CMTSStepPrestartCheck.md).
+For more information, see [Set-CMTSStepPrestartCheck](/powershell/module/configurationmanager/set-cmtsstepprestartcheck?view=sccm-ps).
 
 #### Non-breaking changes
 
@@ -326,4 +324,4 @@ Fixed a blocking issue when user specified a value for the **OSArchitecture** pa
 
 Many of the fixes and improvements described in this article are a result of your feedback.
 
-To submit bug reports, use [send a smile in the Configuration Manager console](https://docs.microsoft.com/mem/configmgr/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
+To submit bug reports, use [send a smile in the Configuration Manager console](/mem/configmgr/core/understand/find-help#product-feedback). For new feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
