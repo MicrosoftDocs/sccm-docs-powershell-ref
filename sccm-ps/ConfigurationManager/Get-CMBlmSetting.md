@@ -26,6 +26,8 @@ Get one or all the BitLocker management policies from the site. Use [New-CMBlmSe
 
 ### Example 1: Get all the BitLocker management policies and filter by description
 
+This example gets all policies and then uses the pipe operator to filter the results for the object with the matching description.
+
 ```powershell
 Get-CMBlmSetting | Where-Object { $_.Description -eq "Unique Description" }
 ```
@@ -97,5 +99,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CMBlmSetting](New-CMBlmSetting.md)
+
+[Set-CMBlmSetting](Set-CMBlmSetting.md)
 
 [Deploy BitLocker management](/mem/configmgr/protect/deploy-use/bitlocker/deploy-management-agent)

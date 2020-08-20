@@ -2668,7 +2668,7 @@ Configures the summarization schedule for configuration baseline data.
 {{ Fill in the Synopsis }}
 
 ### [Set-CMBlmSetting](Set-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Modify an existing BitLocker management policy setting.
 
 ### [Set-CMBootImage](Set-CMBootImage.md)
 Modifies an operating system boot image.
