@@ -38,7 +38,7 @@ Use the following cmdlets to configure BitLocker management policies:
 
 - Copy-CMBlmSetting
 - Copy-CMWdacSetting
-- Get-CMBlmSetting
+- [Get-CMBlmSetting](/powershell/module/configurationmanager/get-cmblmsetting?view=sccm-ps)
 - Get-CMSettingDeployment
 - Get-CMWdacSetting
 - [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps)

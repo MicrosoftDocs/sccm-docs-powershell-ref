@@ -487,7 +487,7 @@ Gets the summarization schedule for configuration baseline data.
 Gets the XML definition of a configuration baseline.
 
 ### [Get-CMBlmSetting](Get-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Get one or all the BitLocker management policies from the site.
 
 ### [Get-CMBootImage](Get-CMBootImage.md)
 Gets an operating system boot image.
