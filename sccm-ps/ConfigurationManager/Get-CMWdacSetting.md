@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/20/2020
 ---
 
 # Get-CMWdacSetting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get one or all of the Microsoft Defender Application Control policies from the site.
 
 ## SYNTAX
 
@@ -17,20 +19,23 @@ Get-CMWdacSetting [-Name <String>] [-DisableWildcardHandling] [-ForceWildcardHan
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Get one or all of the Microsoft Defender Application Control policies from the site. To create a new policy, use [New-CMWdacSetting](New-CMWdacSetting.md).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Get a Application Control policy by name
 
-{{ Add example description here }}
+This example gets a specific Application Control policy specified by name.
+
+```powershell
+Get-CMWdacSetting -Name "My App Control settings"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -46,6 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -61,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify the name of the policy to get.
 
 ```yaml
 Type: String
@@ -76,6 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -90,4 +98,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CMWdacSetting](New-CMWdacSetting.md)
+
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
+
+[Windows Defender Application Control management with Configuration Manager](/mem/configmgr/protect/deploy-use/use-device-guard-with-configuration-manager)

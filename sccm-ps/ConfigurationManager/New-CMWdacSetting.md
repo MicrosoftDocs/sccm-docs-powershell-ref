@@ -29,9 +29,6 @@ Use the [New-CMSettingDeployment](New-CMSettingDeployment.md) cmdlet to deploy t
 
 ## EXAMPLES
 
-
-
-
 ### Example 1: New audit mode Application Control policy
 
 This example creates a new policy object to put Application Control in audit mode.
@@ -223,6 +220,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMWdacSetting​](Get-CMWdacSetting​.md)
 
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
 

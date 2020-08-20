@@ -1177,7 +1177,7 @@ Gets VHD images.
 Gets a vpn profile configuration item.
 
 ### [Get-CMWdacSetting](Get-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Get one or all of the Microsoft Defender Application Control policies from the site.
 
 ### [Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md)
 Gets a windows edition upgrade configuration item.
