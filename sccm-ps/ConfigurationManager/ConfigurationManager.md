@@ -2665,7 +2665,7 @@ Changes settings for a Configuration Manager baseline deployment.
 Configures the summarization schedule for configuration baseline data.
 
 ### [Set-CMBlmPlaintextStorage](Set-CMBlmPlaintextStorage.md)
-{{ Fill in the Synopsis }}
+Set a policy to allow the site to store BitLocker recovery information in plain text.
 
 ### [Set-CMBlmSetting](Set-CMBlmSetting.md)
 Modify an existing BitLocker management policy setting.

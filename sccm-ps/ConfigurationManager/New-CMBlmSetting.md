@@ -184,6 +184,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMUseOsEnforcePolicy](New-CMUseOsEnforcePolicy.md)
 
+[Set-CMBlmPlaintextStorage](Set-CMBlmPlaintextStorage.md)
+
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
 
 [Get-CMBlmSetting](Get-CMBlmSetting.md)
