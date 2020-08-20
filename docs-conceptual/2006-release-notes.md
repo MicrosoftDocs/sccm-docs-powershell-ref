@@ -36,8 +36,8 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 
 Use the following cmdlets to configure BitLocker management policies:
 
-- Copy-CMBlmSetting
-- Copy-CMWdacSetting
+- [Copy-CMBlmSetting](/powershell/module/configurationmanager/copy-cmblmsetting?view=sccm-ps)
+- [Copy-CMWdacSetting](/powershell/module/configurationmanager/copy-cmwdacsetting?view=sccm-ps)
 - [Get-CMBlmSetting](/powershell/module/configurationmanager/get-cmblmsetting?view=sccm-ps)
 - [Get-CMSettingDeployment](/powershell/module/configurationmanager/get-cmsettingdeployment?view=sccm-ps)
 - [Get-CMWdacSetting](/powershell/module/configurationmanager/get-cmwdacsetting?view=sccm-ps)

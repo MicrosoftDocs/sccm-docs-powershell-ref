@@ -115,6 +115,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Copy-CMBlmSetting](Copy-CMBlmSetting.md)
+
 [Get-CMBlmSetting](Get-CMBlmSetting.md)
 
 [New-CMBlmSetting](New-CMBlmSetting.md)

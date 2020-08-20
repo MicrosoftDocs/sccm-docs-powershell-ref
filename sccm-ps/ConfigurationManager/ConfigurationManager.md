@@ -291,7 +291,7 @@ Convert a Configuration Manager management iResultObject to a configuration item
 Converts a **ManagementBaseObject** to an **IResultObject**.
 
 ### [Copy-CMBlmSetting](Copy-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Make a copy of a BitLocker management policy settings object.
 
 ### [Copy-CMCollection](Copy-CMCollection.md)
 Copys a Configuration Manager collection.

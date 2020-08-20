@@ -31,7 +31,7 @@ Modify an existing BitLocker management policy setting. Use [New-CMBlmSetting](N
 This example gets the existing BitLocker management policy by name. It then passes that object to the **Set-CMBlmSetting** cmdlet to add a new policy. The new policy is created by the **New-CMBMSOSDEncryptionPolicy** cmdlet.
 
 ```powershell
-Get-CMBlmSetting -Name "My BLM Policy" | Set-CMBlmSetting -Policies (New-CMBMSOSDEncryptionPolicy -PolicyState Enabled -Protector TpmOnly)
+Get-CMBlmSetting -Name "My BitLocker settings" | Set-CMBlmSetting -Policies (New-CMBMSOSDEncryptionPolicy -PolicyState Enabled -Protector TpmOnly)
 ```
 
 ## PARAMETERS
@@ -181,6 +181,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Copy-CMBlmSetting](Copy-CMBlmSetting.md)
 
 [Get-CMBlmSetting](Get-CMBlmSetting.md)
 

@@ -188,6 +188,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
 
+[Copy-CMBlmSetting](Copy-CMBlmSetting.md)
+
 [Get-CMBlmSetting](Get-CMBlmSetting.md)
 
 [Remove-CMBlmSetting](Remove-CMBlmSetting.md)
