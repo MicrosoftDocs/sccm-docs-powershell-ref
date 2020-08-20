@@ -43,7 +43,7 @@ New-CMSettingDeployment -CMSetting $setting -CollectionName $collection.Name
 This example also creates a custom schedule using the **New-CMSchedule** cmdlet.
 
 ```powershell
-$setting = Get-CMWdacSetting -Name "My WDAC Settings"
+$setting = Get-CMWdacSetting -Name "My App Control settings"
 
 $collection = Get-CMCollection -Name "All Desktop and Server Clients"
 
@@ -212,3 +212,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMCollection](Get-CMCollection.md)
 
 [New-CMSchedule](New-CMSchedule.md)
+
+[Get-CMSettingDeployment](Get-CMSettingDeployment.md)

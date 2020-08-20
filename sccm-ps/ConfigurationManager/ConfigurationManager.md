@@ -865,7 +865,7 @@ Gets a security scope.
 Gets a service connection point.
 
 ### [Get-CMSettingDeployment](Get-CMSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Get all of the deployments for a settings policy object.
 
 ### [Get-CMSite](Get-CMSite.md)
 Gets one or more Configuration Manager sites.

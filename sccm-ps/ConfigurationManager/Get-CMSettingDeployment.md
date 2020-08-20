@@ -3,12 +3,14 @@ external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/20/2020
 ---
 
 # Get-CMSettingDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Get all of the deployments for a settings policy object.
 
 ## SYNTAX
 
@@ -18,21 +20,35 @@ Get-CMSettingDeployment [-CMSetting] <CMSettings> [-DisableWildcardHandling] [-F
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Get all of the deployments for a settings policy object. For example, a BitLocker management policy or a Microsoft Defender Application Control policy. Use the [New-CMSettingDeployment](New-CMSettingDeployment.md) to deploy a policy object.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all deployments for a BitLocker management setting
+
+This example gets an existing BitLocker management setting object and then uses the pipe operator to get all deployments for that policy object.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMBlmSetting -Name "My BitLocker setting" | Get-CMSettingDeployment
 ```
 
-{{ Add example description here }}
+### Example 2: Get all deployments for a Microsoft Defender Application Control setting
+
+This example gets an existing Microsoft Defender Application Control setting object, and then uses the pipe operator to get all deployments for that policy object.
+
+```powershell
+Get-CMWdacSetting -Name "My App Control setting" | Get-CMSettingDeployment
+```
 
 ## PARAMETERS
 
 ### -CMSetting
-{{ Fill CMSetting Description }}
+
+Specify a settings object to get its deployments.
+
+- For BitLocker management, use the [Get-CMBlmSetting](Get-CMBlmSetting.md) cmdlet.
+- For Microsoft Defender Application Control, use the [Get-CMWdacSetting](Get-CMWdacSetting.md) cmdlet.
 
 ```yaml
 Type: CMSettings
@@ -47,6 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -62,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -77,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -90,3 +109,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMSettingDeployment](New-CMSettingDeployment.md)
