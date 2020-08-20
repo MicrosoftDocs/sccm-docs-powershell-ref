@@ -2059,7 +2059,7 @@ Creates a virtual environment group.
 Creates a VPN profile.
 
 ### [New-CMWdacSetting](New-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Create a Microsoft Defender Application Control settings policy object.
 
 ### [New-CMWindowsFirewallPolicy](New-CMWindowsFirewallPolicy.md)
 Creates a new Windows Firewall policy in Configuration Manager.
