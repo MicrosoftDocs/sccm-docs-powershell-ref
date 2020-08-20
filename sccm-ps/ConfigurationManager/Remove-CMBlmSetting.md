@@ -30,7 +30,7 @@ Delete a BitLocker management policy setting object from the site. Use [Get-CMBl
 This example gets an object by name and then removes it from the site.
 
 ```powershell
-Get-CMBlmSetting -Name "My Blm Setting" | Remove-CMBlmSetting​
+Get-CMBlmSetting -Name "My Blm Setting" | Remove-CMBlmSetting
 ```
 
 ## PARAMETERS

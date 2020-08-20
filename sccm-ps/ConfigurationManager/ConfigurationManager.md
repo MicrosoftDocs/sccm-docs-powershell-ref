@@ -1819,7 +1819,7 @@ Creates a secondary site in Configuration Manager.
 Creates a security scope.
 
 ### [New-CMSettingDeployment](New-CMSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Deploy a settings policy object to a collection.
 
 ### [New-CMSiteSystemServer](New-CMSiteSystemServer.md)
 Creates a site system server.
