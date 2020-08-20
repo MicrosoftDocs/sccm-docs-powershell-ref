@@ -159,3 +159,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CMSettingDeployment](Get-CMSettingDeployment.md)
 
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
+
+[Remove-CMSettingDeployment](Remove-CMSettingDeployment.md)

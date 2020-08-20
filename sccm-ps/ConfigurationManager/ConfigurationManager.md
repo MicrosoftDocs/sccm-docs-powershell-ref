@@ -2377,7 +2377,7 @@ Removes the association between security scopes and an administrative user.
 Removes a service connection point.
 
 ### [Remove-CMSettingDeployment](Remove-CMSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Remove a deployment for a settings policy object.
 
 ### [Remove-CMSiteRole](Remove-CMSiteRole.md)
 Removes a site role.

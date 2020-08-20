@@ -112,4 +112,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
 
+[Remove-CMSettingDeployment](Remove-CMSettingDeployment.md)
+
 [Set-CMSettingDeployment](Set-CMSettingDeployment.md)
