@@ -214,3 +214,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMSchedule](New-CMSchedule.md)
 
 [Get-CMSettingDeployment](Get-CMSettingDeployment.md)
+
+[Set-CMSettingDeployment](Set-CMSettingDeployment.md)

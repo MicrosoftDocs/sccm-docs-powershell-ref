@@ -3079,7 +3079,7 @@ Sets a service connection point.
 Sets a setting definition.
 
 ### [Set-CMSettingDeployment](Set-CMSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Configure an existing settings policy deployment.
 
 ### [Set-CMSite](Set-CMSite.md)
 Changes security scope settings for Configuration Manager sites.
