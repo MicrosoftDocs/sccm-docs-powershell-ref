@@ -100,6 +100,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMBlmSetting](New-CMBlmSetting.md)
 
+[Remove-CMBlmSetting](Remove-CMBlmSetting.md)
+
 [Set-CMBlmSetting](Set-CMBlmSetting.md)
 
 [Deploy BitLocker management](/mem/configmgr/protect/deploy-use/bitlocker/deploy-management-agent)

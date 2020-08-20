@@ -2140,7 +2140,7 @@ Removes configuration baselines.
 Removes a baseline deployment.
 
 ### [Remove-CMBlmSetting](Remove-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Delete a BitLocker management policy setting object from the site.
 
 ### [Remove-CMBootImage](Remove-CMBootImage.md)
 Removes an operating system boot image.

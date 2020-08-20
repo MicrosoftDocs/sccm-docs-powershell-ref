@@ -38,7 +38,7 @@ Get-CMBlmSetting -Name "My BLM Policy" | Set-CMBlmSetting -Policies (New-CMBMSOS
 
 ### -BlmSettings
 
-Specify a BitLocker management policy settings object. Use the [Get-CMBlmSetting](Get-CMBlmSetting.md) to get this object.
+Specify a BitLocker management policy settings object to configure. Use the [Get-CMBlmSetting](Get-CMBlmSetting.md) to get this object.
 
 ```yaml
 Type: BlmSettings
@@ -182,8 +182,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CMBlmSetting](Get-CMBlmSetting.md)
+
 [New-CMBlmSetting](New-CMBlmSetting.md)
 
-[Get-CMBlmSetting](Get-CMBlmSetting.md)
+[Remove-CMBlmSetting](Remove-CMBlmSetting.md)
 
 [Deploy BitLocker management](/mem/configmgr/protect/deploy-use/bitlocker/deploy-management-agent)

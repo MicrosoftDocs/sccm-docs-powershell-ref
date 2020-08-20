@@ -65,7 +65,7 @@ Use the following cmdlets to configure BitLocker management policies:
 - [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps)
 - [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps)
 - New-CMWdacSetting
-- Remove-CMBlmSetting
+- [Remove-CMBlmSetting](/powershell/module/configurationmanager/remove-cmblmsetting?view=sccm-ps)
 - Remove-CMSettingDeployment
 - Remove-CMWdacSetting
 - Set-CMBlmPlaintextStorage
