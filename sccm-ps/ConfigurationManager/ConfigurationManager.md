@@ -3295,7 +3295,7 @@ Modifies VHD images.
 Modifies a VPN profile.
 
 ### [Set-CMWdacSetting](Set-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Modify an existing Microsoft Defender Application Control policy.
 
 ### [Set-CMWebApplicationDeploymentType](Set-CMWebApplicationDeploymentType.md)
 Sets a web application deployment type.

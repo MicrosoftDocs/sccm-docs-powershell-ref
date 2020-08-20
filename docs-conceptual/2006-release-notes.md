@@ -71,7 +71,7 @@ Use the following cmdlets to configure BitLocker management policies:
 - Set-CMBlmPlaintextStorage
 - [Set-CMBlmSetting](/powershell/module/configurationmanager/set-cmblmsetting?view=sccm-ps)
 - [Set-CMSettingDeployment](/powershell/module/configurationmanager/set-cmsettingdeployment?view=sccm-ps)
-- Set-CMWdacSetting
+- [Set-CMWdacSetting](/powershell/module/configurationmanager/set-cmwdacsetting?view=sccm-ps)
 
 ### Deprecated cmdlets
 

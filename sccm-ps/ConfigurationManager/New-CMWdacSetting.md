@@ -223,6 +223,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMWdacSetting​](Get-CMWdacSetting​.md)
 
+[Set-CMWdacSetting](Set-CMWdacSetting.md)
+
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
 
 [Windows Defender Application Control management with Configuration Manager](/mem/configmgr/protect/deploy-use/use-device-guard-with-configuration-manager)
