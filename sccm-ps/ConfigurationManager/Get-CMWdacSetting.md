@@ -100,6 +100,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMWdacSetting](New-CMWdacSetting.md)
 
+[Remove-CMWdacSetting](Remove-CMWdacSetting.md)
+
 [Set-CMWdacSetting](Set-CMWdacSetting.md)
 
 [New-CMSettingDeployment](New-CMSettingDeployment.md)

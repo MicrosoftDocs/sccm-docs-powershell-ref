@@ -2566,7 +2566,7 @@ Removes a query membership rule from one or more user collection in the Configur
 Removes VHD images.
 
 ### [Remove-CMWdacSetting](Remove-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Delete a Microsoft Defender Application Control policy from the site.
 
 ### [Rename-CMCategory](Rename-CMCategory.md)
 Renames a category.

@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/20/2020
 ---
 
 # Remove-CMWdacSetting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Delete a Microsoft Defender Application Control policy from the site.
 
 ## SYNTAX
 
@@ -18,21 +20,24 @@ Remove-CMWdacSetting [-CMSettings] <CMSettings> [-Force] [-DisableWildcardHandli
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Delete a Microsoft Defender Application Control policy from the site. Use [Get-CMWdacSetting](Get-CMWdacSetting.md) to get an existing policy object.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
+This example gets an object by name and then removes it from the site.
+
+```powershell
+Get-CMWdacSetting -Name "My App Control setting" | Remove-CMWdacSetting
+```
 
 ## PARAMETERS
 
 ### -CMSettings
-{{ Fill CMSettings Description }}
+
+Specify a Microsoft Defender Application Control policy object to remove. Use the [Get-CMWdacSetting](Get-CMWdacSetting.md) to get this object.
 
 ```yaml
 Type: CMSettings
@@ -47,6 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -62,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -77,6 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -92,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -101,6 +110,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMWdacSetting](Get-CMWdacSetting.md)
+
+[New-CMWdacSetting](New-CMWdacSetting.md)
+
+[Set-CMWdacSetting](Set-CMWdacSetting.md)
+
+[Windows Defender Application Control management with Configuration Manager](/mem/configmgr/protect/deploy-use/use-device-guard-with-configuration-manager)

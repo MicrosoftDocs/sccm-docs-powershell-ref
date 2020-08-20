@@ -223,6 +223,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMWdacSetting​](Get-CMWdacSetting​.md)
 
+[Remove-CMWdacSetting](Remove-CMWdacSetting.md)
+
 [Set-CMWdacSetting](Set-CMWdacSetting.md)
 
 [New-CMSettingDeployment](New-CMSettingDeployment.md)
