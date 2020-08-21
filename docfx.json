@@ -87,16 +87,35 @@
       "feedback_product_url": "https://configurationmanager.uservoice.com"
     },
     "fileMetadata": {
-      "author": { "**/**.md": "aczechowski"},
-      "manager": { "**/**.md": "dougeby"},
-      "ms.author": { "**/**.md": "aaroncz"},
-      "ms.prod": { "**/**.md": "configuration-manager"},
-      "ms.technology": { "**/**.md": "configmgr-other"},
-      "ms.topic": {
-        "**/sccm-ps/ConfigurationManager/**.md": "reference",
-        "**/docs-conceptual/**.md": "conceptual"
+      "author": {
+          "**/**.md": "aczechowski",
+          "**/**.yml": "aczechowski"
       },
-      "titleSuffix": { "**/**.md": "Configuration Manager"}
+      "manager": {
+          "**/**.md": "dougeby",
+          "**/**.yml": "dougeby"
+      },
+      "ms.author": {
+          "**/**.md": "aaroncz",
+          "**/**.yml": "aaroncz"
+      },
+      "ms.prod": {
+          "**/**.md": "configuration-manager",
+          "**/**.yml": "configuration-manager"
+      },
+      "ms.technology": {
+          "**/**.md": "configmgr-other",
+          "**/**.yml": "configmgr-other"
+      },
+      "ms.topic": {
+          "**/sccm-ps/ConfigurationManager/**.md": "reference",
+          "**/sccm-ps/ConfigurationManager/**.yml": "reference",
+          "**/docs-conceptual/**.md": "conceptual"
+      },
+      "titleSuffix": {
+          "**/**.md": "Configuration Manager",
+          "**/**.yml": "Configuration Manager"
+      }
     },
     "template": [],
     "dest": "sccm-powershell",
