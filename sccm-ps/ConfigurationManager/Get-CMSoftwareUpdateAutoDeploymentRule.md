@@ -1,8 +1,8 @@
 ---
-description: Gets Configuration Manager deployment rules for automatic software updates.
+description: Get an automatic deployment rule for software updates.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/20/2020
 schema: 2.0.0
 title: Get-CMSoftwareUpdateAutoDeploymentRule
 ---
@@ -10,7 +10,8 @@ title: Get-CMSoftwareUpdateAutoDeploymentRule
 # Get-CMSoftwareUpdateAutoDeploymentRule
 
 ## SYNOPSIS
-Gets Configuration Manager deployment rules for automatic software updates.
+
+Get an automatic deployment rule for software updates.
 
 ## SYNTAX
 
@@ -27,40 +28,41 @@ Get-CMSoftwareUpdateAutoDeploymentRule [-Id] <Int32[]> [-IsServicingPlan <Boolea
 ```
 
 ## DESCRIPTION
-The **Get-CMSoftwareUpdateAutoDeploymentRule** cmdlet gets specified Configuration Manager deployment rules for automatic software updates.
+The **Get-CMSoftwareUpdateAutoDeploymentRule** cmdlet gets the specified automatic deployment rules for software updates.
 
 Configuration Manager uses rules to manage automatic deployment of software updates.
 When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group.
 The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
 You can specify rules by ID or by name.
-You can use this cmdlet to get deployment rules for automatic software updates to use with other cmdlets, such as the Invoke-CMSoftwareUpdateAutoDeploymentRule cmdlet or the [Remove-CMSoftwareUpdateAutoDeploymentRule](Remove-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
+You can use this cmdlet to get deployment rules for automatic software updates to use with other cmdlets. For example, the [Invoke-CMSoftwareUpdateAutoDeploymentRule](Invoke-CMSoftwareUpdateAutoDeploymentRule.md) or [Remove-CMSoftwareUpdateAutoDeploymentRule](Remove-CMSoftwareUpdateAutoDeploymentRule.md) cmdlets.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a deployment rule by name
-```
-PS XYZ:\> Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
+### Example 1: Get an ADR by name
+
+This command gets an automatic deployment rule named **Weekly Driver Updates**.
+
+```powershell
+Get-CMSoftwareUpdateAutoDeploymentRule -Name "Weekly Driver Updates"
 ```
 
-This command gets a deployment rule named Weekly Driver Updates.
+### Example 2: Get an ADR by ID
 
-### Example 2: Get a deployment rule by ID
-```
-PS XYZ:\> Get-CMSoftwareUpdateAutoDeploymentRule -Id "16777217"
-```
+This command gets an automatic deployment rule that has the ID **33**.
 
-This command gets a deployment rule that has the ID 16777217.
+```powershell
+Get-CMSoftwareUpdateAutoDeploymentRule -Id "33"
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -75,10 +77,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-Indicates that the cmdlet does not automatically refresh lazy properties.
 
-Lazy properties contain values that are relatively inefficient to retrieve which can cause additional network traffic and decrease cmdlet performance.
-If lazy properties are not used, this parameter should be specified.
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -108,8 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs for rules for automatic deployment of software updates.
-This value is the **AutoDeploymentID** property of the deployment rule object.
+
+Specify an array of automatic deployment rule IDs to configure. This value is the **AutoDeploymentID** property of the ADR object.
 
 ```yaml
 Type: Int32[]
@@ -137,6 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies a name of a rule for automatic deployment of software updates.
 
 ```yaml
@@ -152,6 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -164,7 +169,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_AutoDeployment
 
+For more information on this return object and its properties, see [SMS_AutoDeployment server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/sum/sms_autodeployment-server-wmi-class).
+
 ## NOTES
+
+The SMS_AutoDeployment output object displays many of the ADR settings as the stored XML. Parse this XML for specific settings.
+
+For example:
+
+- The **-Language** parameter is stored in the **UpdateRuleXML** property as `<MatchRules><string>'Locale:10'</string></MatchRules>`
+- The **-LanguageSelection** parameter is stored in the **ContentTemplate** property as `<ContentLocales><Locale>Locale:10</Locale></ContentLocales>`
+
+These locale codes are stored as the decimal equivalent of the Windows language ID. For example, `9` is `0x0009` for English, and `10` is `0x000A` for Spanish. For more information, see [[MS-LCID]: Windows Language Code Identifier (LCID) Reference](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ## RELATED LINKS
 
@@ -179,5 +195,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMSoftwareUpdateAutoDeploymentRule](Remove-CMSoftwareUpdateAutoDeploymentRule.md)
 
 [Set-CMSoftwareUpdateAutoDeploymentRule](Set-CMSoftwareUpdateAutoDeploymentRule.md)
-
-
