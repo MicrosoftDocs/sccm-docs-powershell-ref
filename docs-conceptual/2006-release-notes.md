@@ -2,7 +2,7 @@
 title: Version 2006 release notes
 titleSuffix: Configuration Manager
 description: Release notes for the changes to PowerShell cmdlets in Configuration Manager version 2006. 
-ms.date: 07/31/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -36,14 +36,8 @@ These release notes summarize changes to the Configuration Manager cmdlet librar
 
 Use the following cmdlets to configure BitLocker management policies:
 
-- [Copy-CMBlmSetting](/powershell/module/configurationmanager/copy-cmblmsetting?view=sccm-ps)
-- [Copy-CMWdacSetting](/powershell/module/configurationmanager/copy-cmwdacsetting?view=sccm-ps)
-- [Get-CMBlmSetting](/powershell/module/configurationmanager/get-cmblmsetting?view=sccm-ps)
-- [Get-CMSettingDeployment](/powershell/module/configurationmanager/get-cmsettingdeployment?view=sccm-ps)
-- [Get-CMWdacSetting](/powershell/module/configurationmanager/get-cmwdacsetting?view=sccm-ps)
 - [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps)
 - [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps)
-- [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps)
 - [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
 - [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps)
 - [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps)
@@ -59,19 +53,34 @@ Use the following cmdlets to configure BitLocker management policies:
 - [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy?view=sccm-ps)
 - [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps)
 - [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps)
-- [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps)
 - [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps)
 - [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps)
 - [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps)
 - [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps)
-- [New-CMWdacSetting](/powershell/module/configurationmanager/new-cmwdacsetting?view=sccm-ps)
-- [Remove-CMBlmSetting](/powershell/module/configurationmanager/remove-cmblmsetting?view=sccm-ps)
-- [Remove-CMSettingDeployment](/powershell/module/configurationmanager/remove-cmsettingdeployment?view=sccm-ps)
-- [Remove-CMWdacSetting](/powershell/module/configurationmanager/remove-cmwdacsetting?view=sccm-ps)
 - [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage?view=sccm-ps)
+
+Use the following cmdlets to manage BitLocker management policy settings objects:
+
+- [Copy-CMBlmSetting](/powershell/module/configurationmanager/copy-cmblmsetting?view=sccm-ps)
+- [Get-CMBlmSetting](/powershell/module/configurationmanager/get-cmblmsetting?view=sccm-ps)
+- [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps)
+- [Remove-CMBlmSetting](/powershell/module/configurationmanager/remove-cmblmsetting?view=sccm-ps)
 - [Set-CMBlmSetting](/powershell/module/configurationmanager/set-cmblmsetting?view=sccm-ps)
-- [Set-CMSettingDeployment](/powershell/module/configurationmanager/set-cmsettingdeployment?view=sccm-ps)
+
+Use the following cmdlets to manage Microsoft Defender Application Control policy objects:
+
+- [Copy-CMWdacSetting](/powershell/module/configurationmanager/copy-cmwdacsetting?view=sccm-ps)
+- [Get-CMWdacSetting](/powershell/module/configurationmanager/get-cmwdacsetting?view=sccm-ps)
+- [New-CMWdacSetting](/powershell/module/configurationmanager/new-cmwdacsetting?view=sccm-ps)
+- [Remove-CMWdacSetting](/powershell/module/configurationmanager/remove-cmwdacsetting?view=sccm-ps)
 - [Set-CMWdacSetting](/powershell/module/configurationmanager/set-cmwdacsetting?view=sccm-ps)
+
+Use the following cmdlets to manage deployments for BitLocker management policy settings and Microsoft Defender Application Control policy objects:
+
+- [Get-CMSettingDeployment](/powershell/module/configurationmanager/get-cmsettingdeployment?view=sccm-ps)
+- [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps)
+- [Remove-CMSettingDeployment](/powershell/module/configurationmanager/remove-cmsettingdeployment?view=sccm-ps)
+- [Set-CMSettingDeployment](/powershell/module/configurationmanager/set-cmsettingdeployment?view=sccm-ps)
 
 ### Deprecated cmdlets
 
