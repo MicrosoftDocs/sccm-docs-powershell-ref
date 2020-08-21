@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/13/2020
 ---
 
 # New-CMBMSUserExemptionPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a policy to configure instructions for users to request exemption from BitLocker protection.
 
 ## SYNTAX
 
@@ -18,21 +20,59 @@ New-CMBMSUserExemptionPolicy [-PolicyState <State>] [-MaxDays <UInt32>] [-Contac
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Use this cmdlet to create a policy to configure instructions for users to request exemption from BitLocker protection. These instructions include a URL, email address, or phone number.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a policy with URL as contact method
+
+This example creates a policy that's enabled with the following attributes:
+
+- An exemption deadline of six days
+- A custom URL for the user to submit the request
+
 ```powershell
-PS C:\> {{ Add example code here }}
+New-CMBMSUserExemptionPolicy -PolicyState Enabled -MaxDays 6 -ContactMethod Url -ContactDetail "https://contoso.com/bitlockerexemption"
 ```
 
-{{ Add example description here }}
+### Example 2: Create a policy with email as contact method
+
+This example creates a policy that's enabled with the following attributes:
+
+- An exemption deadline of four days
+- A custom email address for the user to submit the request
+
+```powershell
+New-CMBMSUserExemptionPolicy -PolicyState Enabled -MaxDays 4 -ContactMethod Email -ContactDetail "bitlockerexemption@contoso.com"
+```
+
+### Example 3: Create a policy with phone as contact method
+
+This example creates a policy that's enabled with the following attributes:
+
+- An exemption deadline of 16 days
+- A custom phone number for the user to submit the request
+
+```powershell
+New-CMBMSUserExemptionPolicy -PolicyState Enabled -MaxDays 16 -ContactMethod Phone -ContactDetail "515-555-8127"
+```
 
 ## PARAMETERS
 
 ### -ContactDetail
-{{ Fill ContactDetail Description }}
+
+Based on the **-ContactMethod** parameter, use this parameter to specify the specific string to include. For example, if **-ContactMethod** is `Phone`, specify a value phone number as the value of this parameter. The URL and email address display as links.
+
+- The URL format is `"https://YourExemptionWebSite"`
+
+- The email address format is `"alias@domain.tld"` 
+
+    BitLocker automatically creates a link with the following format: `mailto: xyz@abc.com?subject=Request exemption from BitLocker protection”`
+
+- The phone number format is as necessary for your local standard. For example, in the United States: `"123-456-7890"`
+
+    BitLocker displays the following message: **Please call 123-456-7890 for applying exemption**
 
 ```yaml
 Type: String
@@ -47,7 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContactMethod
-{{ Fill ContactMethod Description }}
+
+Select how users submit an exemption request. Use the **-ContactDetail** parameter to specify the custom string for this method.
 
 ```yaml
 Type: ContactMethod
@@ -63,6 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -78,6 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -93,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDays
-{{ Fill MaxDays Description }}
+
+Use this parameter to specify how many days the user can postpone an enforced policy. By default, this value is `7` days (one week).
 
 ```yaml
 Type: UInt32
@@ -108,7 +152,12 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyState
-{{ Fill PolicyState Description }}
+
+Use this parameter to configure the policy.
+
+- `Enabled`: If you enable this policy, and provide a URL, email address, or phone number, the user can apply for exemption. BitLocker displays instructions on how to apply for  exemption from BitLocker protection. Use the **-ContactMethod** and **ContactDetail** parameters to configure the specific method.
+
+- `Disabled` or `NotConfigured`: If you disable or don't configure this policy, Windows doesn't display the exemption request instructions to users.
 
 ```yaml
 Type: State
@@ -124,6 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -137,3 +187,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMBlmSetting](New-CMBlmSetting.md)
+
+[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#user-exemption-policy)

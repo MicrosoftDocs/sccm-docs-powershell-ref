@@ -20,7 +20,7 @@ Use Windows PowerShell to manage your Configuration Manager hierarchy. You can u
 Run Configuration Manager cmdlets and scripts in PowerShell from the Configuration Manager console or from a Windows PowerShell session. When you run Configuration Manager cmdlets by using the Configuration Manager console, your session automatically runs in the context of the site.
 
 > [!NOTE]
-> Configuration Manager current branch supports Windows PowerShell version 6.
+> Configuration Manager current branch supports Windows PowerShell version 5.1. If you've already installed PowerShell version 7, you can still use PowerShell version 5.1. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](https://docs.microsoft.com/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 >
 > For more information about support for PowerShell version 7, see [Features in Configuration Manager technical preview version 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004#bkmk_pwsh7).
 

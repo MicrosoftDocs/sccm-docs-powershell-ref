@@ -2,7 +2,7 @@
 description: Create an automatic deployment rule (ADR) for software updates.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/06/2020
+ms.date: 08/20/2020
 schema: 2.0.0
 title: New-CMSoftwareUpdateAutoDeploymentRule
 ---
@@ -95,14 +95,14 @@ New-CMSoftwareUpdateAutoDeploymentRule -Name <String> [-Description <String>] -C
 
 ## DESCRIPTION
 
-The **New-CMSoftwareUpdateAutoDeploymentRule** cmdlet creates automatic deployment rules for software updates. When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group. The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers. For more information, see [Automatically deploy software updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/automatically-deploy-software-updates).
+The **New-CMSoftwareUpdateAutoDeploymentRule** cmdlet creates a automatic deployment rule (ADR) for software updates. When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group. The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers. For more information, see [Automatically deploy software updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/automatically-deploy-software-updates).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Create an automatic deployment rule
+### Example 1: Create a basic ADR
 
 This command creates a deployment rule named **DeploymentRule07** for the collection named **Desktops** and the deployment package named **Updates123**. The rule deploys updates that have an article ID that contains **117**.
 
@@ -110,7 +110,7 @@ This command creates a deployment rule named **DeploymentRule07** for the collec
 New-CMSoftwareUpdateAutoDeploymentRule -CollectionName "Desktops" -DeploymentPackageName "Updates123" -Name "DeploymentRule07" -ArticleId "117"
 ```
 
-### Example 2: Create an automatic deployment rule that uses a schedule
+### Example 2: Create an ADR that uses a schedule and other properties
 
 This example creates an automatic deployment rule that uses a defined schedule. The deployment occurs according to the schedule.
 
@@ -121,7 +121,15 @@ The second command creates an automatic deployment rule for updates that uses th
 ```powershell
 $Schedule = New-CMSchedule -DayOfWeek Wednesday
 
-New-CMSoftwareUpdateAutoDeploymentRule -CollectionName "Laptops" -DeploymentPackageName "Updates235" -Name "DeploymentRule22" -AddToExistingSoftwareUpdateGroup $False -AlertTime 4 -AlertTimeUnit Weeks -AllowRestart $True -AllowSoftwareInstallationOutsideMaintenanceWindow $True -AllowUseMeteredNetwork $True -ArticleId "test" -AvailableImmediately $False -AvailableTime 5 -AvailableTimeUnit Months -CustomSeverity Critical -DateReleasedOrRevised Last1day -DeadlineImmediately $False -DeadlineTime $True -DeadlineTimeUnit Hours -DeployWithoutLicense $True -Description "Standard updates for our laptop systems." -DisableOperationManager $True -DownloadFromInternet $False -DownloadFromMicrosoftUpdate $True -EnabledAfterCreate $False -GenerateOperationManagerAlert $True -GenerateSuccessAlert $True -Language "Catalan" -LanguageSelection "English" -Location "\\k\aS_O15_Client_Dev_1" -MicrosoftAsVendor $True -NoInstallOnRemote $False -NoInstallOnUnprotected $True -RunType RunTheRuleOnSchedule -Schedule $Schedule -SendWakeUpPacket $True -SuccessPercent 99 -Superseded $True -SuppressRestartServer $True -SuppressRestartWorkstation $True -UpdateClassification "Critical Updates" -UseBranchCache $False -UserNotification DisplayAll -UseUtc $True -VerboseLevel AllMessages -WriteFilterHandling $True
+New-CMSoftwareUpdateAutoDeploymentRule -CollectionName "Laptops" -DeploymentPackageName "Updates235" -Name "DeploymentRule22" -AddToExistingSoftwareUpdateGroup $False -AlertTime 4 -AlertTimeUnit Weeks -AllowRestart $True -AllowSoftwareInstallationOutsideMaintenanceWindow $True -AllowUseMeteredNetwork $True -ArticleId "test" -AvailableImmediately $False -AvailableTime 5 -AvailableTimeUnit Months -CustomSeverity Critical -DateReleasedOrRevised Last1day -DeadlineImmediately $False -DeadlineTime $True -DeadlineTimeUnit Hours -DeployWithoutLicense $True -Description "Standard updates for our laptop systems." -DisableOperationManager $True -DownloadFromInternet $False -DownloadFromMicrosoftUpdate $True -EnabledAfterCreate $False -GenerateOperationManagerAlert $True -GenerateSuccessAlert $True -Location "\\k\aS_O15_Client_Dev_1" -NoInstallOnRemote $False -NoInstallOnUnprotected $True -RunType RunTheRuleOnSchedule -Schedule $Schedule -SendWakeUpPacket $True -SuccessPercent 99 -Superseded $True -SuppressRestartServer $True -SuppressRestartWorkstation $True -UpdateClassification "Critical Updates" -UseBranchCache $False -UserNotification DisplayAll -UseUtc $True -VerboseLevel AllMessages -WriteFilterHandling $True
+```
+
+### Example 3: Create an ADR for multiple languages
+
+This example creates an ADR that adds the **Language** criteria for three languages: English, Hungarian, and Chinese (Simplified, PRC). It also adds these languages for the Windows and Office 365 update binaries to download. This example rule is disabled by default.
+
+```powershell
+New-CMSoftwareUpdateAutoDeploymentRule -Name "Multi-language ADR" -CollectionId "XYZ0003F" -Language "English","Hungarian","Chinese (Simplified, PRC)" -Enable $false -EnabledAfterCreate $false -RunType DoNotRunThisRuleAutomatically -LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)" -O365LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)"
 ```
 
 ## PARAMETERS
@@ -533,7 +541,7 @@ Accept wildcard characters: False
 
 ### -DeploymentPackage
 
-Specify an object for the deployment package to use with this automatic deployment rule.
+Starting in version 1906, use this parameter to specify an object for the deployment package to use with this automatic deployment rule. To not require a package, set the value to `$null`.
 
 ```yaml
 Type: IResultObject
@@ -549,7 +557,7 @@ Accept wildcard characters: False
 
 ### -DeploymentPackageName
 
-Specify the name of the deployment package to use with this automatic deployment rule.
+Starting in version 1906, specify the name of the deployment package to use with this automatic deployment rule. To not require a package, set the value to `$null`.
 
 ```yaml
 Type: String
@@ -768,7 +776,18 @@ Accept wildcard characters: False
 
 ### -Language
 
-Specifies an array of criteria, as strings, for software updates. The rule adds software updates that have languages that meet specified criteria to the software update group.
+Specify a string array of language criteria for software updates. The rule adds software updates that have languages that meet specified criteria to the software update group.
+
+Use the format of the language as displayed in the console. For example:
+
+- `English`
+- `Hungarian`
+- `Chinese (Simplified, PRC)`
+
+The format for the string array is: `"English","Hungarian","Chinese (Simplified, PRC)"`
+
+> [!TIP]
+> If you run this cmdlet on a computer where Windows has a localized UI, the language names may be different. For example, the English version of Windows uses "Danish", but the Danish version of Windows uses "Dansk".
 
 ```yaml
 Type: String[]
@@ -784,7 +803,18 @@ Accept wildcard characters: False
 
 ### -LanguageSelection
 
-Specifies an array of languages, as strings. Computers download software updates available in the specified languages, in addition to non-language-specific updates.
+Specify a string array of languages. Clients download software updates available in the specified languages, and language-neutral updates.
+
+Use the format of the language as displayed in the console. For example:
+
+- `English`
+- `Hungarian`
+- `Chinese (Simplified, PRC)`
+
+The format for the string array is: `"English","Hungarian","Chinese (Simplified, PRC)"`
+
+> [!TIP]
+> If you run this cmdlet on a computer where Windows has a localized UI, the language names may be different. For example, the English version of Windows uses "Danish", but the Danish version of Windows uses "Dansk".
 
 ```yaml
 Type: String[]
@@ -886,7 +916,20 @@ Accept wildcard characters: False
 
 ### -O365LanguageSelection
 
-Starting in version 1906, use this parameter to set the **Office 365 Client Update** language selection
+Applies to version 1906 and later. Use this parameter to set the **Office 365 Client Update** language selection. Specify a string array of languages. Clients download software updates available in the specified languages, and language-neutral updates.
+
+Use the format of the language as displayed in the console for the **Windows Update** language selection. This format is the same as the with the **LanguageSelection** parameter. For example:
+
+- `English`
+- `Hungarian`
+- `Chinese (Simplified, PRC)`
+
+The format for the string array is: `"English","Hungarian","Chinese (Simplified, PRC)"`
+
+> [!TIP]
+> If you run this cmdlet on a computer where Windows has a localized UI, the language names may be different. For example, the English version of Windows uses "Danish", but the Danish version of Windows uses "Dansk".
+
+You currently can't specify with this parameter all of the languages that are available in the Configuration Manager console. For example, you can't specify "Irish (Ireland)" or "Maltese (Malta)".<!-- CMADO-7059972 -->
 
 ```yaml
 Type: String[]
@@ -950,7 +993,7 @@ Accept wildcard characters: False
 
 ### -RunType
 
-Specifies the mode in which an update runs on the client computer.
+Specify the recurring schedule for when the site evaluates the ADR.
 
 If you specify `RunTheRuleOnSchedule`, specify a schedule by using the **-Schedule** parameter.
 

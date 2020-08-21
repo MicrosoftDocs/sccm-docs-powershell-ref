@@ -1,8 +1,8 @@
 ---
-description: Modifies Configuration Manager deployment rules for automatic software updates.
+description: Modify an automatic deployment rule (ADR) for software updates.
 external help file: AdminUI.PS.Sum.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/20/2020
 schema: 2.0.0
 title: Set-CMSoftwareUpdateAutoDeploymentRule
 ---
@@ -10,7 +10,7 @@ title: Set-CMSoftwareUpdateAutoDeploymentRule
 # Set-CMSoftwareUpdateAutoDeploymentRule
 
 ## SYNOPSIS
-Modifies Configuration Manager deployment rules for automatic software updates.
+Modify an automatic deployment rule (ADR) for software updates.
 
 ## SYNTAX
 
@@ -93,26 +93,24 @@ Set-CMSoftwareUpdateAutoDeploymentRule -InputObject <IResultObject> [-NewName <S
 ```
 
 ## DESCRIPTION
-The **Set-CMSoftwareUpdateAutoDeploymentRule** cmdlet modifies Configuration Manager deployment rules for automatic software updates.
-To create a rule, use the [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
+
+The **Set-CMSoftwareUpdateAutoDeploymentRule** cmdlet modifies an automatic deployment rule (ADR) for software updates. To get an existing rule, use the [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 
 Configuration Manager uses rules to manage automatic deployment of software updates.
 When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group.
 The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Modify the language selection and name of a rule
 
-This command modifies the automatic deployment rule named DeploymentRule07. It specifies Portuguese (Brazil) as the language selection. The command also changes the name of the rule to DeploymentRule07Revised.
+This command modifies the automatic deployment rule named **DeploymentRule07**. It specifies **Portuguese (Brazil)** for the Windows software update files that the site downloads. The command also changes the name of the rule to **DeploymentRule07Revised**.
 
 ```PowerShell
-Set-CMSoftwareUpdateAutoDeploymentRule -Name "DeploymentRule07" -NewName "DeploymentRule07Revised" -Description "Update rule to use Portuguese (Brazil)." -LanguageSelection "Portuguese (Brazil)"
+Set-CMSoftwareUpdateAutoDeploymentRule -Name "DeploymentRule07" -NewName "DeploymentRule07Revised" -Description "ADR downloads Portuguese (Brazil) files." -LanguageSelection "Portuguese (Brazil)"
 ```
 
 ### Example 2: Configure the deployment package
@@ -126,13 +124,19 @@ Set-CMSoftwareUpdateAutoDeploymentRule -Name $ReferenceADRName -DeploymentPackag
 Set-CMSoftwareUpdateAutoDeploymentRule -Name $ReferenceADRName -DeploymentPackage $package
 ```
 
+### Example 3: Modify an ADR for multiple languages
+
+This example changes the ADR to use the **Language** criteria for three languages: English, Hungarian, and Chinese (Simplified, PRC). It also changes to these languages for the Windows and Office 365 update binaries to download.
+
+```powershell
+Set-CMSoftwareUpdateAutoDeploymentRule -Name "Multi-language ADR" -Language "English","Hungarian","Chinese (Simplified, PRC)" -LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)" -O365LanguageSelection "English","Hungarian","Chinese (Simplified, PRC)"
+```
+
 ## PARAMETERS
 
 ### -AddToExistingSoftwareUpdateGroup
-Indicates whether the rule adds to an existing update group.
-If this value is $True, each time the rule runs and finds new updates, it adds them to an existing update group.
-If this value is $False, it creates a new update group.
-Specify the existing update group or assign a name for the new update group by using the *DeploymentPackageName* parameter.
+
+Indicates whether the rule adds to an existing update group. If this value is `$True`, each time the rule runs and finds new updates, it adds them to an existing update group. If this value is `$False`, it creates a new update group. Specify the existing update group or assign a name for the new update group by using the **DeploymentPackageName** parameter.
 
 ```yaml
 Type: Boolean
@@ -147,9 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -AlertTime
-Specifies an integer offset from an update deployment deadline.
-The rule uses this value to specify when the rule generates alerts.
-Specify a time unit by using the *AlertTimeUnit* parameter.
+
+Specifies an integer offset from an update deployment deadline. The rule uses this value to specify when the rule generates alerts. Specify a time unit by using the **-AlertTimeUnit** parameter.
 
 ```yaml
 Type: Int32
@@ -164,13 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -AlertTimeUnit
-Specifies a unit of time for the *AlertTime* parameter.
-The acceptable values for this parameter are:
 
-- Days
-- Hours
-- Months
-- Weeks
+Specifies a unit of time for the **-AlertTime** parameter.
 
 ```yaml
 Type: TimeUnitType
@@ -186,10 +184,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRestart
-Indicates whether to allow a computer to restart if the update deployment takes place outside of a maintenance window.
-A maintenance window is a specified period of time used for computer maintenance and updates.
-If this value is $True, this Configuration Manager restarts the computer, if necessary to complete the update.
-If this value is $False, Configuration Manager does not restart the computer.
+
+Indicates whether to allow a computer to restart if the update deployment takes place outside of a maintenance window. A maintenance window is a specified period of time used for computer maintenance and updates.
+
+- If this value is `$True`, Configuration Manager restarts the computer, if necessary, to complete the update.
+- If this value is `$False`, Configuration Manager doesn't restart the computer.
 
 ```yaml
 Type: Boolean
@@ -204,10 +203,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSoftwareInstallationOutsideMaintenanceWindow
-Indicates whether the update deployment takes place even if scheduled outside of a maintenance window.
-A maintenance window is a specified period of time used for computer maintenance and updates.
-If this value is $True, this Configuration Manager deploys the update even the scheduled time falls outside the service window.
-If this value is $False, Configuration Manager does not deploy the update outside the service window, but Configuration Manager waits until it can deploy in a service window.
+
+Indicates whether the update deployment takes place even if scheduled outside of a maintenance window. A maintenance window is a specified period of time used for computer maintenance and updates.
+
+- If this value is `$True`, Configuration Manager deploys the update even the scheduled time falls outside the service window.
+- If this value is `$False`, Configuration Manager doesn't deploy the update outside the service window. It waits until it can deploy in a service window.
 
 ```yaml
 Type: Boolean
@@ -222,7 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUseMeteredNetwork
-Indicates whether to allow clients to download content over a metered Internet connection after the deadline, which may incur additional expense.
+
+Indicates whether to allow clients to download content over a metered internet connection after the deadline, which may incur additional expense.
 
 ```yaml
 Type: Boolean
@@ -237,6 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -Architecture
+
 Starting in version 1906, use this parameter to set the **Architecture** property filter on the Software Updates page of the ADR properties.
 
 ```yaml
@@ -253,8 +255,8 @@ Accept wildcard characters: False
 ```
 
 ### -ArticleId
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates that have article IDs that meet specified criteria to the software update group.
+
+Specifies an array of criteria, as strings, for software updates. The rule adds software updates that have article IDs that meet specified criteria to the software update group.
 
 ```yaml
 Type: String[]
@@ -269,8 +271,8 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableImmediately
-Indicates whether this rule deploys updates as soon as the updates become available.
-If you specify a value of $False, use the *AvailableTime* and *AvailableTimeUnit* parameters to specify how long after the rule runs to deploy the updates.
+
+Indicates whether this rule deploys updates as soon as the updates become available. If you select a value of `$False`, use the **-AvailableTime** and **-AvailableTimeUnit** parameters to specify how long after the rule runs to deploy the updates.
 
 ```yaml
 Type: Boolean
@@ -285,9 +287,8 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableTime
-Specifies a period of time as an integer.
-Configuration Manager deploys the updates this long after the rule runs.
-Specify a time unit by using the *AvailableTimeUnit* parameter.
+
+Specifies a period of time as an integer. Configuration Manager deploys the updates this long after the rule runs. Specify a time unit by using the **-AvailableTimeUnit** parameter.
 
 ```yaml
 Type: Int32
@@ -302,13 +303,8 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableTimeUnit
-Specifies a unit of time for the *AvailableTime* parameter.
-The acceptable values for this parameter are:
 
-- Days
-- Hours
-- Months
-- Weeks
+Specifies a unit of time for the **-AvailableTime** parameter.
 
 ```yaml
 Type: TimeUnitType
@@ -324,8 +320,8 @@ Accept wildcard characters: False
 ```
 
 ### -BulletinId
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates that have bulletin IDs that meet specified criteria to the software update group.
+
+Specifies an array of criteria, as strings, for software updates. The rule adds software updates that have bulletin IDs that meet specified criteria to the software update group.
 
 ```yaml
 Type: String[]
@@ -340,6 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### -CMTag
+
 {{ Fill CMTag Description }}
 
 ```yaml
@@ -356,7 +353,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of device collection or user collection.
+
+Specify a collection name as the target for the automatic deployment rule.
 
 ```yaml
 Type: String
@@ -371,6 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -386,6 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentSize
+
 Starting in version 1906, use this parameter to set the **Content Size (KB)** property filter on the Software Updates page of the ADR properties.
 
 
@@ -402,15 +402,8 @@ Accept wildcard characters: False
 ```
 
 ### -CustomSeverity
-Specifies an array of custom severity types for software updates.
-The rule adds software updates that have custom severity levels that meet specified criteria to the software update group.
-The acceptable values for this parameter are:
 
-- Critical
-- Important
-- Low
-- Moderate
-- None
+Specifies an array of custom severity types for software updates. The rule adds software updates that have custom severity levels that meet specified criteria to the software update group.
 
 ```yaml
 Type: SeverityType[]
@@ -426,40 +419,8 @@ Accept wildcard characters: False
 ```
 
 ### -DateReleasedOrRevised
-Specifies a date released or revised for software updates.
-The rule adds software updates that have a date that meets specified criteria to the software update group.
-The acceptable values for this parameter are:
 
-- Last10months
-- Last11months
-- Last12hours
-- Last14days
-- Last16hours
-- Last1day
-- Last1hour
-- Last1month
-- Last1year
-- Last20hours
-- Last21days
-- Last28days
-- Last2days
-- Last2hours
-- Last2months
-- Last3days
-- Last3hours
-- Last3months
-- Last4days
-- Last4hours
-- Last4months
-- Last5days
-- Last5months
-- Last6days
-- Last6months
-- Last7days
-- Last7months
-- Last8hours
-- Last8months
-- Last9months
+Specifies a date released or revised for software updates. The rule adds software updates that have a date that meets specified criteria to the software update group.
 
 ```yaml
 Type: DateReleasedOrRevisedType
@@ -475,9 +436,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineImmediately
-Indicates whether to impose the deadline as soon as the rule runs.
-If you specify a value of $False, use the *DeadlineTime* and *DeadlineTimeUnit* parameters to specify how long after the rule runs to set the deadline.
-After the deadline, Configuration Manager installs required updates.
+
+Indicates whether to impose the deadline as soon as the rule runs. If you specify a value of `$False`, use the **-DeadlineTime** and **-DeadlineTimeUnit** parameters to specify how long after the rule runs to set the deadline. After the deadline, Configuration Manager installs required updates.
 
 ```yaml
 Type: Boolean
@@ -492,9 +452,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineTime
-Specifies a period of time as an integer.
-The deadline for updates is this long after the rule runs.
-Specify a time unit by using the *DeadlineTimeUnit* parameter.
+
+Specifies a period of time as an integer. The deadline for updates is this long after the rule runs. Specify a time unit by using the **-DeadlineTimeUnit** parameter.
 
 ```yaml
 Type: Int32
@@ -509,13 +468,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineTimeUnit
-Specifies a unit of time for the *DeadlineTime* parameter.
-The acceptable values for this parameter are:
 
-- Days
-- Hours
-- Months
-- Weeks
+Specifies a unit of time for the **-DeadlineTime** parameter.
 
 ```yaml
 Type: TimeUnitType
@@ -531,9 +485,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeployWithoutLicense
+
 Indicates whether the rule deploys updates without licenses.
-If you specify a value of $True, Configuration Manager deploys all updates for this rule and approves any license agreements.
-If this value is $False, Configuration Manager deploys only updates that do not include a license or for which the license agreement has been approved.
+
+- If you specify a value of `$True`, Configuration Manager deploys all updates for this rule and approves any license agreements.
+- If this value is `$False`, Configuration Manager deploys only updates that don't include a license or for which the license agreement has been approved.
 
 ```yaml
 Type: Boolean
@@ -548,6 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentPackage
+
 Starting in version 1906, use this parameter to set the deployment package for the existing software update auto deployment rule. To not require a package, set the value to `$null`.
 
 
@@ -594,6 +551,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies a description for the automatic deployment rule for software updates.
 
 ```yaml
@@ -609,7 +567,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOperationManager
-Indicates whether to disable System Center 2016 - Operations Manager alerts during software updates.
+
+Indicates whether to disable System Center Operations Manager alerts during software updates.
 
 ```yaml
 Type: Boolean
@@ -624,7 +583,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -639,8 +599,8 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadFromInternet
-Indicates whether computers download software updates from the Internet.
-If you specify a value of $False, specify an alternative location where computers can download updates by using the *Location* parameter.
+
+Indicates whether computers download software updates from the internet. If you specify a value of `$False`, specify an alternative location where computers can download updates by using the **-Location** parameter.
 
 ```yaml
 Type: Boolean
@@ -655,6 +615,7 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadFromMicrosoftUpdate
+
 Indicates whether computers download content from Microsoft Update if that content is unavailable on a preferred distribution point of remote distribution point.
 
 ```yaml
@@ -670,6 +631,9 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
+
+Specify whether the automatic deployment rule is enabled after you create it.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -683,8 +647,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledAfterCreate
-Indicates whether to enable software deployment for the associated software update group after this rule runs.
-If this value is $False, deploy the software update group manually.
+
+Indicates whether to enable software deployment for the associated software update group after this rule runs. If this value is `$False`, deploy the software update group manually.
 
 ```yaml
 Type: Boolean
@@ -699,7 +663,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -714,7 +679,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -729,6 +695,9 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateFailureAlert
+
+If the rule fails, create a Configuration Manager alert.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -742,6 +711,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateOperationManagerAlert
+
 Indicates whether to generate Operations Manager alerts during a software update.
 
 ```yaml
@@ -757,6 +727,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateSuccessAlert
+
 Indicates whether to generate an alert for successful deployment.
 
 ```yaml
@@ -772,7 +743,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of IDs of automatic deployment rules for software updates.
+
+Specify an array of automatic deployment rule IDs to configure. This value is the **AutoDeploymentID** property of the ADR object.
 
 ```yaml
 Type: String[]
@@ -787,8 +759,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an object representing an automatic deployment rule for software updates.
-To obtain an object representing a rule, use [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md).
+
+Specify an automatic deployment rule object. To get an ADR object, use the [Get-CMSoftwareUpdateAutoDeploymentRule](Get-CMSoftwareUpdateAutoDeploymentRule.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -803,8 +775,21 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates that have languages that meet specified criteria to the software update group.
+
+Specify a string array of language criteria for software updates. The rule adds software updates that have languages that meet specified criteria to the software update group.
+
+Use the format of the language as displayed in the console. For example:
+
+- `English`
+- `Hungarian`
+- `Chinese (Simplified, PRC)`
+
+The format for the string array is: `"English","Hungarian","Chinese (Simplified, PRC)"`
+
+> [!TIP]
+> If you run this cmdlet on a computer where Windows has a localized UI, the language names may be different. For example, the English version of Windows uses "Danish", but the Danish version of Windows uses "Dansk".
+
+This parameter overwrites any existing values with the values that you specify.
 
 ```yaml
 Type: String[]
@@ -819,8 +804,21 @@ Accept wildcard characters: False
 ```
 
 ### -LanguageSelection
-Specifies an array of languages, as strings.
-Computers download software updates available in the specified languages, in addition to non-language-specific updates.
+
+Specify a string array of languages. Clients download software updates available in the specified languages, and language-neutral updates.
+
+Use the format of the language as displayed in the console. For example:
+
+- `English`
+- `Hungarian`
+- `Chinese (Simplified, PRC)`
+
+The format for the string array is: `"English","Hungarian","Chinese (Simplified, PRC)"`
+
+> [!TIP]
+> If you run this cmdlet on a computer where Windows has a localized UI, the language names may be different. For example, the English version of Windows uses "Danish", but the Danish version of Windows uses "Dansk".
+
+This parameter overwrites any existing values with the values that you specify.
 
 ```yaml
 Type: String[]
@@ -835,8 +833,8 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies a location in your network where computers can download software updates.
-In order to use this location, specify a value of $False for the *DownloadFromInternet* parameter.
+
+Specifies a location in your network where computers can download software updates. In order to use this location, specify a value of `$False` for the **-DownloadFromInternet** parameter.
 
 ```yaml
 Type: String
@@ -851,6 +849,7 @@ Accept wildcard characters: False
 ```
 
 ### -MicrosoftAsVendor
+
 Indicates whether the rule includes only updates that have Microsoft as the vendor.
 
 ```yaml
@@ -866,6 +865,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies a name for the automatic deployment rule for software updates.
 
 ```yaml
@@ -881,7 +881,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name for the automatic deployment rule for software updates.
+
+Specify a new name for the ADR.
 
 ```yaml
 Type: String
@@ -896,9 +897,12 @@ Accept wildcard characters: False
 ```
 
 ### -NoInstallOnRemote
+
 Indicates whether to disallow installation of updates on remote systems.
-If you specify a value of $True, if the client is within a slow or unreliable network boundary, or when the client uses a fallback source location for content, then Configuration Manager does not install software updates.
-If you specify a value of $False, installation proceeds.
+
+- If you specify a value of `$True`, if the client is within a slow or unreliable network boundary, or when the client uses a fallback source location for content, then Configuration Manager doesn't install software updates.
+- If you specify a value of `$False`, installation proceeds.
+
 
 ```yaml
 Type: Boolean
@@ -913,9 +917,11 @@ Accept wildcard characters: False
 ```
 
 ### -NoInstallOnUnprotected
+
 Indicates whether to disallow installation of updates on unprotected systems.
-If you specify a value of $True, if software updates are not available on any preferred distribution points, Configuration Manager does not download and install software updates.
-If you specify a value of $False, installation proceeds.
+
+- If you specify a value of `$True`, if software updates aren't available on any preferred distribution points, Configuration Manager doesn't download and install software updates.
+- If you specify a value of `$False`, installation proceeds.
 
 ```yaml
 Type: Boolean
@@ -930,8 +936,23 @@ Accept wildcard characters: False
 ```
 
 ### -O365LanguageSelection
-Starting in version 1906, use this parameter to set the **Office 365 Client Update** language selection
 
+Applies to version 1906 and later. Use this parameter to set the **Office 365 Client Update** language selection. Specify a string array of languages. Clients download software updates available in the specified languages, and language-neutral updates.
+
+Use the format of the language as displayed in the console for the **Windows Update** language selection. This format is the same as the with the **LanguageSelection** parameter. For example:
+
+- `English`
+- `Hungarian`
+- `Chinese (Simplified, PRC)`
+
+The format for the string array is: `"English","Hungarian","Chinese (Simplified, PRC)"`
+
+> [!TIP]
+> If you run this cmdlet on a computer where Windows has a localized UI, the language names may be different. For example, the English version of Windows uses "Danish", but the Danish version of Windows uses "Dansk".
+
+You currently can't specify with this parameter all of the languages that are available in the Configuration Manager console. For example, you can't specify "Irish (Ireland)" or "Maltese (Malta)".<!-- CMADO-7059972 -->
+
+This parameter overwrites any existing values with the values that you specify.
 
 ```yaml
 Type: String[]
@@ -946,8 +967,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -962,8 +983,8 @@ Accept wildcard characters: False
 ```
 
 ### -Product
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates for products that meet specified criteria to the software update group.
+
+Specifies an array of criteria, as strings, for software updates. The rule adds software updates for products that meet specified criteria to the software update group.
 
 ```yaml
 Type: String[]
@@ -978,8 +999,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequirePostRebootFullScan
-Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
 
+Starting in version 1906, use this parameter to set the following option on the **User Experience** page of the ADR deployment settings: **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.
 
 ```yaml
 Type: Boolean
@@ -994,8 +1015,8 @@ Accept wildcard characters: False
 ```
 
 ### -Required
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates identified by required that meet specified criteria to the software update group.
+
+Specifies an array of criteria, as strings, for software updates. The rule adds software updates identified by required that meet specified criteria to the software update group.
 
 ```yaml
 Type: String[]
@@ -1010,14 +1031,10 @@ Accept wildcard characters: False
 ```
 
 ### -RunType
-Specifies the mode in which an update runs on the client computer.
-The acceptable values for this parameter are:
 
-- DoNotRunThisRuleAutomatically
-- RunTheRuleAfterAnySoftwareUpdatePointSynchronization
-- RunTheRuleOnSchedule
+Specify the recurring schedule for when the site evaluates the ADR.
 
-If you specify RunTheRuleOnSchedule, specify a schedule by using the *Schedule* parameter.
+If you specify `RunTheRuleOnSchedule`, specify a schedule by using the **-Schedule** parameter.
 
 ```yaml
 Type: RunType
@@ -1033,9 +1050,8 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies a schedule object for the deployment.
-To obtain a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
-Specify a schedule for this parameter if you specify a value of RunTheRuleOnSchedule for the *RunType* parameter.
+
+Specifies a schedule object for the deployment. To obtain a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet. Specify a schedule for this parameter if you specify a value of `RunTheRuleOnSchedule` for the **-RunType** parameter.
 
 ```yaml
 Type: IResultObject
@@ -1050,9 +1066,12 @@ Accept wildcard characters: False
 ```
 
 ### -SendWakeupPacket
+
 Indicates whether to send a wake up packet to computers before the deployment begins.
-If this value is $True, Configuration Manager wakes a computer from sleep.
-If this value is $False, it does not wake computers from sleep.
+
+- If this value is `$True`, Configuration Manager wakes a computer from sleep.
+- If this value is `$False`, it doesn't wake computers from sleep.
+
 For computers to wake, you must first configure Wake On LAN.
 
 ```yaml
@@ -1068,15 +1087,8 @@ Accept wildcard characters: False
 ```
 
 ### -Severity
-Specifies an array of severity levels for software updates.
-The rule adds software updates for specified severity types to the software update group.
-The acceptable values for this parameter are:
 
-- Critical
-- Important
-- Low
-- Moderate
-- None
+Specifies an array of severity levels for software updates. The rule adds software updates for specified severity types to the software update group.
 
 ```yaml
 Type: SeverityType[]
@@ -1092,6 +1104,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeadlineEnabled
+
 Starting in version 1906, use this parameter to set the following option on the **Deployment Schedule** page of the ADR deployment settings: **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**.
 
 ```yaml
@@ -1107,8 +1120,8 @@ Accept wildcard characters: False
 ```
 
 ### -SuccessPercentage
-Specifies a percentage for client compliance as an integer from 0 to 99.
-If compliance falls below this percentage, Configuration Manager produces optional alerts.
+
+Specifies a percentage for client compliance as an integer from 0 to 99. If compliance falls below this percentage, Configuration Manager produces optional alerts.
 
 ```yaml
 Type: Int32
@@ -1123,6 +1136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Superseded
+
 Indicates whether the rule adds updates superseded by other updates.
 
 ```yaml
@@ -1138,8 +1152,8 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressRestartServer
-Indicates whether to suppress a required update for a server.
-Some software updates require a system restart to complete the installation process.
+
+Indicates whether to suppress a required update for a server. Some software updates require a system restart to complete the installation process.
 
 ```yaml
 Type: Boolean
@@ -1154,8 +1168,8 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressRestartWorkstation
-Indicates whether to suppress a required update for a workstation.
-Some software updates require a system restart to complete the installation process.
+
+Indicates whether to suppress a required update for a workstation. Some software updates require a system restart to complete the installation process.
 
 ```yaml
 Type: Boolean
@@ -1170,8 +1184,8 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates that have titles that meet specified criteria to the software update group.
+
+Specifies an array of criteria, as strings, for software updates. The rule adds software updates that have titles that meet specified criteria to the software update group.
 
 ```yaml
 Type: String[]
@@ -1186,8 +1200,8 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateClassification
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates that have update classifications that meet specified criteria to the software update group.
+
+Specifies an array of criteria, as strings, for software updates. The rule adds software updates that have update classifications that meet specified criteria to the software update group.
 
 ```yaml
 Type: String[]
@@ -1215,8 +1229,8 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateDescription
-Specifies an array of criteria, as strings, for software updates.
-The rule adds software updates that have update descriptions that meet specified criteria to the software update group.
+
+Specifies an array of criteria, as strings, for software updates. The rule adds software updates that have update descriptions that meet specified criteria to the software update group.
 
 ```yaml
 Type: String[]
@@ -1231,8 +1245,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseBranchCache
-Indicates whether to use a branch cache for this update deployment.
-If you specify a value of $True, clients share content on the same subnet.
+
+Indicates whether to use Windows BranchCache for this update deployment. If you specify a value of `$True`, clients share content on the same subnet.
 
 ```yaml
 Type: Boolean
@@ -1247,9 +1261,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseUtc
-Indicates whether to use Coordinated Universal Time (UTC), also known as Greenwich Mean Time.
-If this value is $True, Configuration Manager uses UTC for this deployment.
-If this value is $False, Configuration Manager uses local time.
+
+Indicates whether to use Coordinated Universal Time (UTC).
+
+- If this value is `$True`, Configuration Manager uses UTC for this deployment.
+- If this value is `$False`, Configuration Manager uses local time.
 
 ```yaml
 Type: Boolean
@@ -1264,15 +1280,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserNotification
-Specifies the type of user notification.
-The acceptable values for this parameter are:
 
-- DisplayAll.
-Display in Software Center and show all notifications.
-- DisplaySoftwareCenterOnly.
-Display in Software Center, and only show notifications of computer restarts.
-- HideAll.
-Hide in Software Center and all notifications.
+Specifies the type of user notification.
+
+- `DisplayAll`: Display in Software Center and show all notifications.
+- `DisplaySoftwareCenterOnly`: Display in Software Center, and only show notifications of computer restarts.
+- `HideAll`: Hide in Software Center and all notifications.
 
 ```yaml
 Type: UserNotificationType
@@ -1301,12 +1314,8 @@ Accept wildcard characters: False
 ```
 
 ### -VerboseLevel
-Specifies the level of detail you want clients to report for deployments that this rule creates.
-The acceptable values for this parameter are:
 
-- AllMessages
-- OnlyErrorMessages
-- OnlySuccessAndErrorMessages
+Specifies the level of detail you want clients to report for deployments that this rule creates.
 
 ```yaml
 Type: VerboseLevelType
@@ -1322,8 +1331,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -1338,10 +1347,11 @@ Accept wildcard characters: False
 ```
 
 ### -WriteFilterHandling
+
 Indicates whether to enable write filters for embedded devices.
-For a value of $True, the device commits changes during a maintenance window.
-This action requires a restart.
-For a value of $False, the device saves changes in an overlay and commits them later.
+
+- For a value of `$True`, the device commits changes during a maintenance window. This action requires a restart.
+- For a value of `$False`, the device saves changes in an overlay and commits them later.
 
 ```yaml
 Type: Boolean
@@ -1356,6 +1366,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -1365,6 +1376,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

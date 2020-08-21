@@ -3,12 +3,14 @@ external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/20/2020
 ---
 
 # Remove-CMSettingDeployment
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Remove a deployment for a settings policy object.
 
 ## SYNTAX
 
@@ -18,21 +20,32 @@ Remove-CMSettingDeployment [-CMSettingsDeployment] <SettingsDeployment> [-Force]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Delete a deployment for a settings policy object. For example, remove the deployment of a BitLocker management policy or a Microsoft Defender Application Control policy.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove all deployments for a BitLocker management settings object
+
+This example first gets a BitLocker management settings object. It then uses the pipe operator to get all deployments for that policy object, and deletes those deployments.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CMBlmSetting -Name "My BitLocker settings" | Get-CMSettingDeployment | Remove-CMSettingDeployment
 ```
 
-{{ Add example description here }}
+### Example 2: Remove all deployments to a specific collection for a Microsoft Defender Application Control settings object
+
+This example first gets a Microsoft Defender Application Control settings object. It then uses the pipe operator to get all deployments for that policy object. The **Where-Object** clause filters the list of deployments to those to the **All Desktop and Server Clients** collection, andr deletes those deployments.
+
+```powershell
+Get-CMWdacSetting -Name "My App Control settings" | Get-CMSettingDeployment | Where-Object { $_.CollectionId -eq (Get-CMCollection -Name "All Desktop and Server Clients").CollectionId } | Remove-CMSettingDeployment
+```
 
 ## PARAMETERS
 
 ### -CMSettingsDeployment
-{{ Fill CMSettingsDeployment Description }}
+
+Specify the settings deployment object to configure. To get the deployment object, use the [Get-CMSettingDeployment](Get-CMSettingDeployment.md) cmdlet.
 
 ```yaml
 Type: SettingsDeployment
@@ -47,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -62,7 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+Run the command without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -77,6 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -92,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -105,3 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMSettingDeployment](Get-CMSettingDeployment.md)
+
+[New-CMSettingDeployment](New-CMSettingDeployment.md)
+
+[Set-CMSettingDeployment](Set-CMSettingDeployment.md)

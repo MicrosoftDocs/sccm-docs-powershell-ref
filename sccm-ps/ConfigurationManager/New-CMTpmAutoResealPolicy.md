@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/13/2020
 ---
 
 # New-CMTpmAutoResealPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Create a policy to control whether Windows refreshes platform validation data when it starts after BitLocker recovery.
 
 ## SYNTAX
 
@@ -18,20 +20,23 @@ New-CMTpmAutoResealPolicy [-PolicyState <State>] [-DisableWildcardHandling] [-Fo
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a policy to control whether Windows refreshes platform validation data when it starts after BitLocker recovery.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: New default enabled policy
 
-{{ Add example description here }}
+This example creates a policy that's enabled.
+
+```powershell
+New-CMTpmAutoResealPolicy -PolicyState Enabled
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -47,6 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -62,7 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyState
-{{ Fill PolicyState Description }}
+
+Use this parameter to configure the policy.
+
+- `Enabled` or `NotConfigured`: If you enable or don't configure this policy, Windows refreshes platform validation data when it starts after BitLocker recovery.
+
+- `Disabled`: If you disable this policy, Windows doesn't refresh platform validation data when it starts after BitLocker recovery.
 
 ```yaml
 Type: State
@@ -78,6 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -91,3 +103,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CMBlmSetting](New-CMBlmSetting.md)
+
+[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#reset-platform-validation-data-after-bitlocker-recovery)
