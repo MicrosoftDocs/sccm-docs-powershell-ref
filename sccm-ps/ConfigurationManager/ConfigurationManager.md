@@ -306,7 +306,7 @@ Creates a custom security role.
 Create a copy of an existing task sequence in Configuration Manager.
 
 ### [Copy-CMWdacSetting](Copy-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Make a copy of a Microsoft Defender Application Control policy object.
 
 ### [Deny-CMApprovalRequest](Deny-CMApprovalRequest.md)
 Denies a request to allow the installation of an application.
