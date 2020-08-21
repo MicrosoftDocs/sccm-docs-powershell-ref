@@ -291,7 +291,7 @@ Convert a Configuration Manager management iResultObject to a configuration item
 Converts a **ManagementBaseObject** to an **IResultObject**.
 
 ### [Copy-CMBlmSetting](Copy-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Make a copy of a BitLocker management policy settings object.
 
 ### [Copy-CMCollection](Copy-CMCollection.md)
 Copys a Configuration Manager collection.
@@ -306,7 +306,7 @@ Creates a custom security role.
 Create a copy of an existing task sequence in Configuration Manager.
 
 ### [Copy-CMWdacSetting](Copy-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Make a copy of a Microsoft Defender Application Control policy object.
 
 ### [Deny-CMApprovalRequest](Deny-CMApprovalRequest.md)
 Denies a request to allow the installation of an application.
@@ -487,7 +487,7 @@ Gets the summarization schedule for configuration baseline data.
 Gets the XML definition of a configuration baseline.
 
 ### [Get-CMBlmSetting](Get-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Get one or all the BitLocker management policies from the site.
 
 ### [Get-CMBootImage](Get-CMBootImage.md)
 Gets an operating system boot image.
@@ -865,7 +865,7 @@ Gets a security scope.
 Gets a service connection point.
 
 ### [Get-CMSettingDeployment](Get-CMSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Get all of the deployments for a settings policy object.
 
 ### [Get-CMSite](Get-CMSite.md)
 Gets one or more Configuration Manager sites.
@@ -1177,7 +1177,7 @@ Gets VHD images.
 Gets a vpn profile configuration item.
 
 ### [Get-CMWdacSetting](Get-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Get one or all of the Microsoft Defender Application Control policies from the site.
 
 ### [Get-CMWindowsEditionUpgradeConfigurationItem](Get-CMWindowsEditionUpgradeConfigurationItem.md)
 Gets a windows edition upgrade configuration item.
@@ -1426,25 +1426,25 @@ Creates a Configuration Manager baseline.
 Creates a baseline deployment.
 
 ### [New-CMBLEncryptionMethodPolicy](New-CMBLEncryptionMethodPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 8.1 devices.
 
 ### [New-CMBLEncryptionMethodWithXts](New-CMBLEncryptionMethodWithXts.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure the algorithm and cipher strength used by BitLocker Drive Encryption on Windows 10 devices.
 
 ### [New-CMBlmSetting](New-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Create a BitLocker management settings policy.
 
 ### [New-CMBMSClientConfigureCheckIntervalPolicy](New-CMBMSClientConfigureCheckIntervalPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to manage the key recovery service backup of BitLocker Drive Encryption recovery information.
 
 ### [New-CMBMSFDVEncryptionPolicy](New-CMBMSFDVEncryptionPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to manage whether to use BitLocker encryption on fixed data drives.
 
 ### [New-CMBMSOSDEncryptionPolicy](New-CMBMSOSDEncryptionPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to manage whether to encrypt the OS drive with BitLocker.
 
 ### [New-CMBMSUserExemptionPolicy](New-CMBMSUserExemptionPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure instructions for users to request exemption from BitLocker protection.
 
 ### [New-CMBootableMedia](New-CMBootableMedia.md)
 Creates bootable media.
@@ -1597,7 +1597,7 @@ Creates an embedded property.
 Creates an embedded property list.
 
 ### [New-CMEnhancedPIN](New-CMEnhancedPIN.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure whether BitLocker can use enhanced startup PINs.
 
 ### [New-CMExchangeClientAccessServer](New-CMExchangeClientAccessServer.md)
 Creates a Client Access server role for an Exchange Server.
@@ -1624,13 +1624,13 @@ Configure security options for a Microsoft Exchange Server connector in Configur
 Configures a new Exchange Server connector.
 
 ### [New-CMFDVDenyWriteAccessPolicy](New-CMFDVDenyWriteAccessPolicy.md)
-{{ Fill in the Synopsis }}
+Create a new policy to determine whether BitLocker protection is required for fixed data drives to be writable on a computer.
 
 ### [New-CMFDVHybridAccessPolicy](New-CMFDVHybridAccessPolicy.md)
 {{ Fill in the Synopsis }}
 
 ### [New-CMFDVPassPhrasePolicy](New-CMFDVPassPhrasePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to specify whether a password is required to unlock BitLocker-protected fixed data drives.
 
 ### [New-CMFileReplicationRoute](New-CMFileReplicationRoute.md)
 Creates a file replication route for Configuration Manager.
@@ -1693,10 +1693,10 @@ Creates a maintenance window for a collection.
 Creates a migration job in Configuration Manager.
 
 ### [New-CMMoreInfoUrlPolicy](New-CMMoreInfoUrlPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to specify the **Security Policy** link that BitLocker displays to users.
 
 ### [New-CMNoOverwritePolicy](New-CMNoOverwritePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to control computer restart performance at the risk of exposing BitLocker secrets.
 
 ### [New-CMOperatingSystemImage](New-CMOperatingSystemImage.md)
 Creates an operating system image.
@@ -1711,7 +1711,7 @@ Adds an operating system installer.
 Creates an operating system upgrade update schedule.
 
 ### [New-CMOSPassphrase](New-CMOSPassphrase.md)
-{{ Fill in the Synopsis }}
+Create a policy to specify the constraints for passwords used to unlock BitLocker-protected OS drives.
 
 ### [New-CMPackage](New-CMPackage.md)
 Creates a Configuration Manager package.
@@ -1723,7 +1723,7 @@ Creates a package deployment to a Configuration Manager collection.
 Creates a custom power management plan.
 
 ### [New-CMPrebootRecoveryInfo](New-CMPrebootRecoveryInfo.md)
-{{ Fill in the Synopsis }}
+Configure the recovery message that the pre-boot key recovery screen displays when the OS drive is locked.
 
 ### [New-CMPrestageMedia](New-CMPrestageMedia.md)
 Create an OS deployment prestaged media file.
@@ -1735,16 +1735,16 @@ Creates a new program in Configuration Manager.
 Creates a Configuration Manager query.
 
 ### [New-CMRDVConfigureBDEPolicy](New-CMRDVConfigureBDEPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to control the use of BitLocker on removable data drives.
 
 ### [New-CMRDVDenyWriteAccessPolicy](New-CMRDVDenyWriteAccessPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure whether BitLocker protection is required for removable data drives to be writable on a computer.
 
 ### [New-CMRDVHybridAccessPolicy](New-CMRDVHybridAccessPolicy.md)
 {{ Fill in the Synopsis }}
 
 ### [New-CMRDVPassPhrasePolicy](New-CMRDVPassPhrasePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to specify whether a password is required to unlock BitLocker-protected removable data drives.
 
 ### [New-CMRegistryAccessControlEntry](New-CMRegistryAccessControlEntry.md)
 {{ Fill in the Synopsis }}
@@ -1804,7 +1804,7 @@ Creates a remote connection profile.
 Create a root certificate profile.
 
 ### [New-CMScCompliancePolicy](New-CMScCompliancePolicy.md)
-{{ Fill in the Synopsis }}
+Create a compliance policy to associate an object identifier from a smart card certificate to a BitLocker-protected drive.
 
 ### [New-CMSchedule](New-CMSchedule.md)
 Creates a Configuration Manager schedule token.
@@ -1819,7 +1819,7 @@ Creates a secondary site in Configuration Manager.
 Creates a security scope.
 
 ### [New-CMSettingDeployment](New-CMSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Deploy a settings policy object to a collection.
 
 ### [New-CMSiteSystemServer](New-CMSiteSystemServer.md)
 Creates a site system server.
@@ -1891,7 +1891,7 @@ Use this cmdlet to create a deployment phase for a task sequence.
 Use this cmdlet to create a new third-party updates catalog.
 
 ### [New-CMTpmAutoResealPolicy](New-CMTpmAutoResealPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to control whether Windows refreshes platform validation data when it starts after BitLocker recovery.
 
 ### [New-CMTSNetworkAdapterSetting](New-CMTSNetworkAdapterSetting.md)
 {{ Fill in the Synopsis }}
@@ -2035,13 +2035,13 @@ Creates a t s step set variable.
 {{ Fill in the Synopsis }}
 
 ### [New-CMUidPolicy](New-CMUidPolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to associate unique organizational identifiers to a new drive that is enabled with BitLocker.
 
 ### [New-CMUseFddEnforcePolicy](New-CMUseFddEnforcePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure the number of days that fixed drives can remain noncompliant until they are forced to comply with BitLocker policies.
 
 ### [New-CMUseOsEnforcePolicy](New-CMUseOsEnforcePolicy.md)
-{{ Fill in the Synopsis }}
+Create a policy to configure the number of days that users can delay complying with BitLocker policies for their OS drive.
 
 ### [New-CMUserCollection](New-CMUserCollection.md)
 Creates a collection for users and adds the collection to the Configuration Manager hierarchy.
@@ -2059,7 +2059,7 @@ Creates a virtual environment group.
 Creates a VPN profile.
 
 ### [New-CMWdacSetting](New-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Create a Microsoft Defender Application Control settings policy object.
 
 ### [New-CMWindowsFirewallPolicy](New-CMWindowsFirewallPolicy.md)
 Creates a new Windows Firewall policy in Configuration Manager.
@@ -2140,7 +2140,7 @@ Removes configuration baselines.
 Removes a baseline deployment.
 
 ### [Remove-CMBlmSetting](Remove-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Delete a BitLocker management policy setting object from the site.
 
 ### [Remove-CMBootImage](Remove-CMBootImage.md)
 Removes an operating system boot image.
@@ -2377,7 +2377,7 @@ Removes the association between security scopes and an administrative user.
 Removes a service connection point.
 
 ### [Remove-CMSettingDeployment](Remove-CMSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Remove a deployment for a settings policy object.
 
 ### [Remove-CMSiteRole](Remove-CMSiteRole.md)
 Removes a site role.
@@ -2566,7 +2566,7 @@ Removes a query membership rule from one or more user collection in the Configur
 Removes VHD images.
 
 ### [Remove-CMWdacSetting](Remove-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Delete a Microsoft Defender Application Control policy from the site.
 
 ### [Rename-CMCategory](Rename-CMCategory.md)
 Renames a category.
@@ -2665,10 +2665,10 @@ Changes settings for a Configuration Manager baseline deployment.
 Configures the summarization schedule for configuration baseline data.
 
 ### [Set-CMBlmPlaintextStorage](Set-CMBlmPlaintextStorage.md)
-{{ Fill in the Synopsis }}
+Set a policy to allow the site to store BitLocker recovery information in plain text.
 
 ### [Set-CMBlmSetting](Set-CMBlmSetting.md)
-{{ Fill in the Synopsis }}
+Modify an existing BitLocker management policy setting.
 
 ### [Set-CMBootImage](Set-CMBootImage.md)
 Modifies an operating system boot image.
@@ -3079,7 +3079,7 @@ Sets a service connection point.
 Sets a setting definition.
 
 ### [Set-CMSettingDeployment](Set-CMSettingDeployment.md)
-{{ Fill in the Synopsis }}
+Configure an existing settings policy deployment.
 
 ### [Set-CMSite](Set-CMSite.md)
 Changes security scope settings for Configuration Manager sites.
@@ -3295,7 +3295,7 @@ Modifies VHD images.
 Modifies a VPN profile.
 
 ### [Set-CMWdacSetting](Set-CMWdacSetting.md)
-{{ Fill in the Synopsis }}
+Modify an existing Microsoft Defender Application Control policy.
 
 ### [Set-CMWebApplicationDeploymentType](Set-CMWebApplicationDeploymentType.md)
 Sets a web application deployment type.

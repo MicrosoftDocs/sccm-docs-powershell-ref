@@ -3,12 +3,14 @@ external help file: AdminUI.PS.EP.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 08/20/2020
 ---
 
 # Copy-CMWdacSetting
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Make a copy of a Microsoft Defender Application Control policy object.
 
 ## SYNTAX
 
@@ -18,21 +20,24 @@ Copy-CMWdacSetting [-WdacSettings] <CMWdacSettings> -Name <String> [-Description
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+This cmdlet makes a copy of a Microsoft Defender Application Control policy object. All existing policies are included. Use the [Get-CMWdacSetting](Get-CMWdacSetting.md) to get this object.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
+### Example 1: Copy an existing policy object
 
-{{ Add example description here }}
+This example gets an existing Microsoft Defender Application Control policy object by name, and makes a copy.
+
+```powershell
+Get-CMWdacSetting -Name "My App Control settings" | Copy-CMWdacSetting -Name "New App Control settings"
+```
 
 ## PARAMETERS
 
 ### -Description
-{{ Fill Description Description }}
+
+Specify a description for the new Microsoft Defender Application Control policy object.
 
 ```yaml
 Type: String
@@ -47,6 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
+
 This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
@@ -62,6 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
@@ -77,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+
+Specify a name for the new Microsoft Defender Application Control policy object.
 
 ```yaml
 Type: String
@@ -92,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -WdacSettings
-{{ Fill WdacSettings Description }}
+
+Specify a Microsoft Defender Application Control policy object to copy. Use the [Get-CMWdacSetting](Get-CMWdacSetting.md) to get this object.
 
 ```yaml
 Type: CMWdacSettings
@@ -107,6 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -120,3 +130,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMWdacSetting](Get-CMWdacSetting.md)
+
+[New-CMWdacSetting](New-CMWdacSetting.md)
+
+[Remove-CMWdacSetting](Remove-CMWdacSetting.md)
+
+[Set-CMWdacSetting](Set-CMWdacSetting.md)
