@@ -83,4 +83,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Encrypt recovery data](/mem/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data)
 
-[BitLocker settings reference](mem/configmgr/protect/tech-ref/bitlocker/settings#bitlocker-management-services)
+[BitLocker settings reference](/mem/configmgr/protect/tech-ref/bitlocker/settings#bitlocker-management-services)

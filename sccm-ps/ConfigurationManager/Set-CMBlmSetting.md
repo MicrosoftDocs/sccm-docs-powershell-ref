@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -Policies
 
-Specify an array of BitLocker policies to include. For more information on the specific policy cmdlets, see the [New-CMBlmSetting](New-CMBlmSetting.md#related-links) cmdlet.
+Specify an array of BitLocker policies to include. For more information on the specific policy cmdlets, see the **Related links** in the [New-CMBlmSetting](New-CMBlmSetting.md) cmdlet.
 
 If you don't specify any policies with the **-Policies** parameter, the default policy is a single, not configured, OS drive encryption policy. For more information on this default policy type, see [New-CMBMSOSDEncryptionPolicy](New-CMBMSOSDEncryptionPolicy.md).
 

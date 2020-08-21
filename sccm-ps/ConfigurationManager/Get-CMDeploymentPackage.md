@@ -128,10 +128,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMDeployment](Get-CMDeployment.md)
 
-[Get-CMDeploymentStatus](Get-CMDeploymentStatus.md)
+[Get-CMPackageDeploymentStatus](Get-CMPackageDeploymentStatus.md)
 
 [Get-CMDeploymentType](Get-CMDeploymentType.md)
 
 [Invoke-CMDeploymentSummarization](Invoke-CMDeploymentSummarization.md)
-
-
