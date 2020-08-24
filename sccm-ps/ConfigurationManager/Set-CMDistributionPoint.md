@@ -1,8 +1,8 @@
 ---
-description: Sets a distribution point.
+description: Configure a distribution point
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/24/2020
 schema: 2.0.0
 title: Set-CMDistributionPoint
 ---
@@ -10,7 +10,8 @@ title: Set-CMDistributionPoint
 # Set-CMDistributionPoint
 
 ## SYNOPSIS
-Sets a distribution point.
+
+Configure a distribution point.
 
 ## SYNTAX
 
@@ -64,7 +65,7 @@ Set-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
 The **Set-CMDistributionPoint** cmdlet modifies a distribution point on a site system server.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive. For more information, see the [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
@@ -156,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowProxyTraffic
+
+Enables the site system to use a proxy server when it connects to the internet.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -244,11 +248,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCommunicationType
-Specifies how clients or devices communicate with the distribution point.
-Valid values are:
 
-- HTTP
-- HTTPS
+Specifies how clients or devices communicate with the distribution point.
 
 ```yaml
 Type: ComputerCommunicationType
@@ -264,12 +265,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientConnectionType
-Specifies the client connection type.
-Valid values are:
 
-- Internet
-- InternetAndIntranet
-- Intranet
+Specifies the client connection type.
 
 ```yaml
 Type: ClientConnectionTypes
@@ -285,14 +282,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientTransferRate
-Specifies the client transfer rate.
-Valid values are:
 
-- None
-- Profile100Mbps
-- Profile10Mbps
-- Profile1Gbps
-- ProfileCustom
+Specifies the client transfer rate.
 
 ```yaml
 Type: NetworkProfile
@@ -323,14 +314,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContentMonitoringPriority
-Specifies the content monitoring priority.
-Valid values are:
 
-- High
-- Highest
-- Low
-- Lowest
-- Medium
+Specifies the content monitoring priority.
 
 ```yaml
 Type: Priority
@@ -377,7 +362,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -438,7 +424,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLedbat
-{{ Fill EnableLedbat Description }}
+
+Enable distribution points to use network congestion control with Windows LEDBAT. This feature can adjust the download speed to use the unused network bandwidth.
 
 ```yaml
 Type: Boolean
@@ -468,7 +455,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNonWdsPxe
-{{ Fill EnableNonWdsPxe Description }}
+Indicates whether the Configuration Manager PXE responder is enabled on the distribution point. When you enable a PXE responder without Windows Deployment Service (WDS), Configuration Manager installs its PXE responder service on the distribution point.
+
+For more information, see [enable PXE on the distribution point](/mem/configmgr/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
 
 ```yaml
 Type: Boolean
@@ -483,7 +472,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePullDP
-Enables, when set to $True, the distribution point is able to pull content from other distribution points.
+
+When set to `$True`, the distribution point is able to pull content from other distribution points.
 
 ```yaml
 Type: Boolean
@@ -500,7 +490,7 @@ Accept wildcard characters: False
 ### -EnablePxe
 Indicates whether PXE is enabled on the distribution point.
 
-When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if required.
+When you enable PXE, Configuration Manager installs Windows Deployment Services (WDS) on the server, if required.
 Windows Deployment Services is the service that performs the PXE boot to install operating systems.
 After you create the distribution point, Configuration Manager installs a provider in Windows Deployment Services that uses the PXE boot functions.
 
@@ -578,7 +568,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Starting in version 1910, use this parameter to add a duplicate certificate
+
+Starting in version 1910, use this parameter to add a duplicate certificate without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -593,7 +584,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -684,8 +676,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -897,6 +889,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseAnyRangeIP
+
 Indicates that multicast uses IP addresses within any range.
 
 ```yaml
@@ -912,6 +905,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseComputerAccount
+
 Indicates that the distribution point uses its computer account as the multicast connection account when it connects to the primary site database.
 
 ```yaml
@@ -927,12 +921,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserDeviceAffinity
-Specifies how you want the distribution point to associate users with their devices for PXE deployments.
-Valid values are:
 
-- AllowWithAutomaticApproval
-- AllowWithManualApproval
-- DoNotUse
+Specifies how you want the distribution point to associate users with their devices for PXE deployments.
 
 ```yaml
 Type: UserDeviceAffinityType
@@ -948,6 +938,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
+
 Specifies the name of the user that the distribution point uses to connect to the primary site database.
 Use the format domain\username.
 
@@ -964,8 +955,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -980,6 +971,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -989,6 +981,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 
@@ -1005,3 +999,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CMDistributionPoint](Remove-CMDistributionPoint.md)
 
 [Update-CMDistributionPoint](Update-CMDistributionPoint.md)
+
+[Install and configure distribution points in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/install-and-configure-distribution-points)
