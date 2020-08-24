@@ -2,7 +2,7 @@
 description: Creates a detection clause windows installer.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 05/06/2019
 schema: 2.0.0
 title: New-CMDetectionClauseWindowsInstaller
 ---
