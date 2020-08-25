@@ -1,8 +1,8 @@
 ---
-description: Removes a Configuration Manager task sequence.
+description: Remove a task sequence.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 11/30/2018
+ms.date: 08/25/2020
 schema: 2.0.0
 title: Remove-CMTaskSequence
 ---
@@ -11,7 +11,7 @@ title: Remove-CMTaskSequence
 
 ## SYNOPSIS
 
-Removes a Configuration Manager task sequence.
+Remove a task sequence.
 
 ## SYNTAX
 
@@ -37,38 +37,34 @@ Remove-CMTaskSequence -Name <String> [-Force] [-DisableWildcardHandling] [-Force
 
 The **Remove-CMTaskSequence** cmdlet removes a task sequence from Configuration Manager.
 
-NOTE:  All related deployments are automatically removed.
+All related deployments are automatically removed.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Remove a task sequence by using a variable
 
+The first command gets the task sequence object named **TaskSequence01** and stores the object in the **$TaskSequence** variable.
+
+The second command removes the task sequence object stored in **$TaskSequence**. Since the **-Force** parameter isn't specified, PowerShell prompts the user to confirm the action.
+
 ```powershell
 PS XYZ:\> $TaskSequence = Get-CMTaskSequence -Name "TaskSequence01"
-PS XYZ:\> Remove-CMTaskSequence -InputObject $TaskSequence -Force
+PS XYZ:\> Remove-CMTaskSequence -InputObject $TaskSequence
 Remove
 Are you sure you wish to remove TaskSequence: Name="General Sequence 11"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-The first command gets the task sequence object named TaskSequence01 and stores the object in the $TaskSequence variable.
-
-The second command removes the task sequence object stored in $TaskSequence.
-Specifying the *Force* parameter indicates that the user is not prompted before the task sequence is removed.
-
 ### Example 2: Remove a task sequence by using the pipeline
 
-```powershell
-PS XYZ:\> Get-CMTaskSequence -Name "TaskSequence02" | Remove-CMTaskSequence -Force
-```
+This command gets the task sequence object named **TaskSequence02**. It then uses the pipeline operator to pass the object to **Remove-CMTaskSequence**, which removes the task sequence object. With the **Force** parameter, PowerShell doesn't prompt the user before it removes the task sequence.
 
-This command gets the task sequence object named TaskSequence02 and uses the pipeline operator to pass the object to **Remove-CMTaskSequence**, which removes the task sequence object.
-Specifying the *Force* parameter indicates that the user is not prompted before the task sequence is removed.
+```powershell
+Get-CMTaskSequence -Name "TaskSequence02" | Remove-CMTaskSequence -Force
+```
 
 ## PARAMETERS
 
@@ -90,7 +86,7 @@ Accept wildcard characters: False
 
 ### -DisableWildcardHandling
 
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +118,7 @@ Accept wildcard characters: False
 
 ### -ForceWildcardHandling
 
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -138,8 +134,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies a task sequence object.
-To obtain a task sequence object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
+Specifies a task sequence object. To get a task sequence object, use the [Get-CMTaskSequence](Get-CMTaskSequence.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -155,7 +150,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies a name of a task sequence.
+Specifies the name of a task sequence to remove.
 
 ```yaml
 Type: String
@@ -171,7 +166,7 @@ Accept wildcard characters: False
 
 ### -TaskSequencePackageId
 
-Specifies the package ID of a task sequence.
+Specifies the ID of a task sequence to remove.
 
 ```yaml
 Type: String
@@ -187,8 +182,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -203,6 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -212,11 +207,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CMTaskSequence](Get-CMTaskSequence.md)
+[New-CMTaskSequence](New-CMTaskSequence.md)
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 [Set-CMTaskSequence](Set-CMTaskSequence.md)
 [Copy-CMTaskSequence](Copy-CMTaskSequence.md)
@@ -224,4 +220,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-CMTaskSequence](Disable-CMTaskSequence.md)
 [Import-CMTaskSequence](Import-CMTaskSequence.md)
 [Export-CMTaskSequence](Export-CMTaskSequence.md)
-[Remove-CMTaskSequence](Remove-CMTaskSequence.md)
