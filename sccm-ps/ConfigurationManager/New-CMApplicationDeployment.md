@@ -265,6 +265,9 @@ Accept wildcard characters: False
 ```
 
 ### -DistributeCollectionName
+
+The site distributes content to the distribution point groups that are associated with this collection name.
+
 ```yaml
 Type: String
 Parameter Sets: (All)

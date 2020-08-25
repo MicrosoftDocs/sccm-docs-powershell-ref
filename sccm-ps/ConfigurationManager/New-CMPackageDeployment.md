@@ -361,7 +361,7 @@ Accept wildcard characters: False
 
 ### -DistributeCollectionName
 
-Specifies the distribution collection name.
+The site distributes content to the distribution point groups that are associated with this collection name.
 
 ```yaml
 Type: String

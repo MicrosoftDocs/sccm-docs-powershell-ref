@@ -134,6 +134,9 @@ This command starts a software update deployment by using a software update grou
 ## PARAMETERS
 
 ### -AcceptEula
+
+Some software updates include license terms. When you deploy software updates, the license terms aren't displayed. Add this parameter to automatically deploy all software updates regardless of an associated license term.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
