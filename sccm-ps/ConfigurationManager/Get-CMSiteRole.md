@@ -2,7 +2,7 @@
 description: Get a site role object.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/06/2020
+ms.date: 08/25/2020
 schema: 2.0.0
 title: Get-CMSiteRole
 ---
@@ -29,25 +29,49 @@ Get-CMSiteRole [-AllSite] -InputObject <IResultObject> [-DisableWildcardHandling
 
 ## DESCRIPTION
 
-This cmdlet gets a site role object. For example, a management point or distribution point.
+Returns the roles installed on a Configuration Manager site system server. For example, a management point or distribution point.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Count all management points
+### Example 1: Get all roles from all sites
 
-This example gets all of the management points in the current site, and displays the count.
+This example gets all roles for all sites in the hierarchy.
+
+```powershell
+Get-CMSiteRole -AllSite
+```
+
+### Example 2: Get all roles for a specific site
+
+This example gets all roles from the site **P01**.
+
+```powershell
+Get-CMSiteRole -SiteCode P01
+```
+
+### Example 3: Get roles for a specific server
+
+This example gets all roles installed on the site system **cm01.contoso.local**.
+
+```powershell
+Get-CMSiteRole -SiteSystemServerName "cm01.contoso.local"
+```
+
+### Example 4: Count all management points
+
+This example gets all of the management points in the hierarchy, and displays the count.
 
 ```powershell
 $mp = Get-CMSiteRole -RoleName "SMS Management Point" -AllSite
 $mp.Count
 ```
 
-### Example 2: List all roles by name
+### Example 5: List all roles by name
 
-This example lists all roles in the current site.
+This example lists the role names for all sites in the hierarchy.
 
 ```powershell
 $allRoles = Get-CMSiteRole -AllSite
@@ -213,3 +237,7 @@ For more information on this return object and its properties, see [SMS_SCI_SysR
 ## RELATED LINKS
 
 [Remove-CMSiteRole](Remove-CMSiteRole.md)
+
+[Get-CMSiteFeature](Get-CMSiteFeature.md)
+
+[Get-CMSiteSystemServer](Get-CMSiteSystemServer.md)

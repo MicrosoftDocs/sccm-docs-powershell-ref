@@ -1,8 +1,8 @@
 ---
-description: Upgrades a shared distribution point.
+description: Upgrade a shared distribution point.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/24/2020
 schema: 2.0.0
 title: Start-CMDistributionPointUpgrade
 ---
@@ -60,22 +60,21 @@ The upgrade process then modifies the copy of the content to create the Configur
 Therefore, when you upgrade a distribution point, you do not have to redistribute migrated content that was hosted on the Configuration Manager 2007 distribution point.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Upgrade a shared distribution point
-```
-PS XYZ:\> $CIObj = Get-CMDistributionPoint -DistributionPointGroupId "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
-PS XYZ:\> Start-CMDistributionPointUpgrade -AllowPreStaging $True -CertificatePath "\\Contoso01\CM\Toolbox\BaseCert.txt" -SharedDistributionPoint $CIObj -SiteCode "CM1"
-```
 
 The first command gets the distribution point object that has the ID 6617708D-0F98-4898-8D05-9E882C23DCB2, and stores the object in the $CIObj variable.
 
 The second command upgrades the shared distribution point stored in $CIObj to the Configuration Manager site that has the site code CM1.
 The command specifies the import path for the PKI issued certificate that the distribution point uses, and specifies that the distribution point can pre-stage contents.
+
+```powershell
+$CIObj = Get-CMDistributionPoint -DistributionPointGroupId "{6617708D-0F98-4898-8D05-9E882C23DCB2}"
+Start-CMDistributionPointUpgrade -AllowPreStaging $True -CertificatePath "\\Contoso01\CM\Toolbox\BaseCert.txt" -SharedDistributionPoint $CIObj -SiteCode "CM1"
+```
 
 ## PARAMETERS
 
@@ -288,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNonWdsPxe
-{{ Fill EnableNonWdsPxe Description }}
+Indicates whether the Configuration Manager PXE responder is enabled on the distribution point. When you enable a PXE responder without Windows Deployment Service (WDS), Configuration Manager installs its PXE responder service on the distribution point.
 
 ```yaml
 Type: Boolean
@@ -655,8 +654,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.ConfigurationManagement.ManagementProvider.IResultObject
 
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

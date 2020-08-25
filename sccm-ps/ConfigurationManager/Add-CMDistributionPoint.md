@@ -1,8 +1,8 @@
 ---
-description: Adds a distribution point.
+description: Add a distribution point role
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 04/29/2019
+ms.date: 08/24/2020
 schema: 2.0.0
 title: Add-CMDistributionPoint
 ---
@@ -10,7 +10,8 @@ title: Add-CMDistributionPoint
 # Add-CMDistributionPoint
 
 ## SYNOPSIS
-Adds a distribution point.
+
+Add a distribution point role.
 
 ## SYNTAX
 
@@ -92,38 +93,38 @@ Add-CMDistributionPoint [-SiteSystemServerName] <String> [-SiteCode <String>] [-
 The **Add-CMDistributionPoint** cmdlet creates a distribution point on a site system server.
 A distribution point is a site system role that Configuration Manager uses to store files for clients to download, such as application content, software packages, software updates, operating system images, and boot images.
 
-You must designate a site system server as a distribution point before you can make content available to client computers.
+Before you can make content available to client computers, assign a site system server as a distribution point.
 You can add the distribution point site role to a new site system server or add the site role to an existing site system server.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Add a site by using a site system server object
+
+The first command creates a date object for thirty years from the current date and stores the object in the **$Date** variable.
+
+The second command gets the site system server object named **MySiteSys_11310.Contoso.com** and stores the object in the **$SystemServer** variable.
+
+The third command adds a distribution point to the site system server stored in **$SystemServer**, and sets the certificate expiration to the date stored in **$Date**.
+
+```powershell
+$Date = [DateTime]::Now.AddYears(30)
+$SystemServer = Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com"
+Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc $Date
 ```
-PS XYZ:\> $Date = [DateTime]::Now.AddYears(30)
-PS XYZ:\> $SystemServer = Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com"
-PS XYZ:\> Add-CMDistributionPoint -InputObject $SystemServer -CertificateExpirationTimeUtc $Date
-```
-
-The first command creates a date object for thirty years from the current date and stores the object in the $Date variable.
-
-The second command gets the site system server object named MySiteSys_11310.Contoso.com and stores the object in the $SystemServer variable.
-
-The third command adds a distribution point to the site system server stored in $SystemServer, and sets the certificate expiration to the date stored in $Date.
 
 ### Example 2: Add a site by using the pipeline
-```
-PS XYZ:\> $Date = [DateTime]::Now.AddYears(30)
-PS XYZ:\> Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add-CMDistributionPoint -CertificateExpirationTimeUtc $Date
-```
 
-The first command creates a date object for thirty years from the current date and stores the object in the $Date variable.
+The first command creates a date object for thirty years from the current date and stores the object in the **$Date** variable.
 
-The second command gets the site system server object named MySiteSys_11310.Contoso.com and uses the pipeline operator to pass the object to **Add-DistributionPoint**, which adds a distribution point to the site system server object and sets the certificate expiration to the date stored in $Date.
+The second command gets the site system server object named **MySiteSys_11310.Contoso.com**. It then uses the pipeline operator to pass the object to **Add-DistributionPoint**, which adds a distribution point to the site system server object. It then sets the certificate expiration to the date stored in **$Date**.
+
+```powershell
+$Date = [DateTime]::Now.AddYears(30)
+Get-CMSiteSystemServer -SiteSystemServerName "MySiteSys_11310.Contoso.com" | Add-CMDistributionPoint -CertificateExpirationTimeUtc $Date
+```
 
 ## PARAMETERS
 
@@ -158,6 +159,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowProxyTraffic
+
+Enables the site system to use a proxy server when it connects to the internet.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -231,12 +235,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientConnectionType
-Specifies the client connection type.
-Valid values are:
 
-- Internet
-- InternetAndIntranet
-- Intranet
+Specifies the client connection type.
 
 ```yaml
 Type: ClientConnectionTypes
@@ -267,14 +267,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContentMonitoringPriority
-Specifies the content monitoring priority.
-Valid values are:
 
-- Highest
-- High
-- Medium
-- Low
-- Lowest
+Specifies the content monitoring priority.
 
 ```yaml
 Type: Priority
@@ -321,7 +315,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -351,7 +346,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBranchCache
-Indicates that the cmdlet enables and configures BranchCache for the distribution point.
+Indicates that clients that use Windows BranchCache are allowed to download content from an on-premises distribution point.
+Content downloads from cloud-based distribution points can always be shared by clients that use Windows BranchCache.
 
 ```yaml
 Type: SwitchParameter
@@ -382,6 +378,8 @@ Accept wildcard characters: False
 
 ### -EnableLedbat
 
+Enable distribution points to use network congestion control with Windows LEDBAT. This feature can adjust the download speed to use the unused network bandwidth.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -411,6 +409,10 @@ Accept wildcard characters: False
 
 ### -EnableNonWdsPxe
 
+Indicates whether the Configuration Manager PXE responder is enabled on the distribution point. When you enable a PXE responder without Windows Deployment Service (WDS), Configuration Manager installs its PXE responder service on the distribution point.
+
+For more information, see [enable PXE on the distribution point](/mem/configmgr/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -424,7 +426,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePullDP
-Enables the distribution point to pull content from other distribution points.
+
+When set to `$True`, the distribution point is able to pull content from other distribution points.
 
 ```yaml
 Type: SwitchParameter
@@ -534,7 +537,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Starting in version 1910, use the `-Force` switch to add a duplicated certificate.
+
+Starting in version 1910, use this parameter to add a duplicate certificate without asking for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -549,7 +553,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -580,8 +585,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstallInternetServer
-Indicates that Configuration Manager installs and configures Internet Information Services (IIS) on the server if it is not already installed.
-IIS must be installed on all distribution points.
+Indicates that Configuration Manager installs and configures Internet Information Services (IIS) on the server if it isn't already installed. The distribution point role requires IIS.
 
 ```yaml
 Type: SwitchParameter
@@ -658,12 +662,9 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryContentLibraryLocation
-Specifies the primary content location.
-Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the *MinimumFreeSpaceMB* parameter.
-Valid values are:
 
-- Automatic.
-- Drive letter from A: through Z:
+Specifies the primary content location.
+Configuration Manager copies content to the primary content location until the amount of free space reaches the value that you specified for the **MinimumFreeSpaceMB** parameter.
 
 ```yaml
 Type: DriveType
@@ -679,12 +680,9 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryPackageShareLocation
-Specifies the primary package share location.
-Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the *MinimumFreeSpaceMB* parameter.
-Valid values are:
 
-- Automatic.
-- Drive letter from A: through Z:.
+Specifies the primary package share location.
+Configuration Manager copies content to the primary package share location until the amount of free space reaches the value that you specified for the **MinimumFreeSpaceMB** parameter.
 
 ```yaml
 Type: DriveType
@@ -732,10 +730,6 @@ Accept wildcard characters: False
 
 ### -SecondaryContentLibraryLocation
 Specifies the secondary content location.
-Valid values are:
-
-- Automatic.
-- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -752,10 +746,6 @@ Accept wildcard characters: False
 
 ### -SecondaryPackageShareLocation
 Specifies the secondary package share location.
-Valid values are:
-
-- Automatic.
-- Drive letter from A: through Z:.
 
 ```yaml
 Type: DriveType
@@ -878,11 +868,6 @@ Accept wildcard characters: False
 
 ### -UserDeviceAffinity
 Specifies how you want the distribution point to associate users with their devices for PXE deployments.
-Valid values are:
-
-- AllowWithAutomaticApproval
-- AllowWithManualApproval
-- DoNotUse
 
 ```yaml
 Type: UserDeviceAffinityType
@@ -914,8 +899,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -930,6 +915,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -939,6 +925,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_SCI_SysResUse
+
+For more information on this return object and its properties, see [SMS_SCI_SysResUse server WMI class](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class).
 
 ## NOTES
 
@@ -958,4 +946,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMDistributionPointGroup](Get-CMDistributionPointGroup.md)
 
-
+[Install and configure distribution points in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/install-and-configure-distribution-points)
