@@ -1,8 +1,8 @@
 ---
-description: Removes a site role.
+description: Remove a site role.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/25/2020
 schema: 2.0.0
 title: Remove-CMSiteRole
 ---
@@ -10,7 +10,8 @@ title: Remove-CMSiteRole
 # Remove-CMSiteRole
 
 ## SYNOPSIS
-Removes a site role.
+
+Remove a site role.
 
 ## SYNTAX
 
@@ -30,23 +31,21 @@ Remove-CMSiteRole -SiteSystemServerName <String> -RoleName <String> [-SiteCode <
 
 Uninstalls a site system role from a site system server.
 
-## EXAMPLES
-
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS XYZ:\>  Remove-CMSiteRole -SiteSystemServerName "cm01.contoso.local" -RoleName "SMS SRS Reporting Point"
+
+```powershell
+Remove-CMSiteRole -SiteSystemServerName "cm01.contoso.local" -RoleName "SMS SRS Reporting Point"
 ```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -62,7 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -77,6 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+Run the command without asking for confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -90,7 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -105,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a site role object to remove. To get this object, use the [Get-CMSiteRole](Get-CMSiteRole.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: ByValue
@@ -118,6 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -RoleName
+
+Specify the role by name to remove.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -131,6 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCode
+
+Specify the site code for the site system server.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -144,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSystemServerName
+
+Specify the name of the site system server from which to remove the role.
+
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -157,8 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -173,6 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -181,8 +198,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMSiteRole](Get-CMSiteRole.md)
