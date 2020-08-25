@@ -153,6 +153,9 @@ Accept wildcard characters: False
 
 Specifies the severity of component status messages to get.
 
+> [!NOTE]
+> This parameter currently doesn't work with the `All` value, but also doesn't return any values if omitted.
+
 ```yaml
 Type: Severity
 Parameter Sets: (All)
@@ -215,8 +218,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 For more information on this return object and its properties, see [SMS_StatusMessage server WMI class](/mem/configmgr/develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class).
 
 ## NOTES
-
-Severity parameter does not currently work with 'All' value, but also doesn't return any values if omitted.
 
 ## RELATED LINKS
 
