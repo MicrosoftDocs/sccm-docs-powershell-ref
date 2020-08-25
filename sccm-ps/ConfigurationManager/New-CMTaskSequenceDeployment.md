@@ -149,7 +149,9 @@ Accept wildcard characters: False
 
 ### -AvailableDateTime
 
-Specify when this deployment is available.
+Specify when this deployment is _available_.
+
+Use **-DeadlineDateTime** to specify when the deployment _expires_, and **-Schedule** to specify the deployment assignment, or _deadline_.
 
 ```yaml
 Type: DateTime
@@ -245,7 +247,9 @@ Accept wildcard characters: False
 
 ### -DeadlineDateTime
 
-Specifies a deadline date time.
+Use this parameter to specify when the deployment _expires_.
+
+Use **-AvailableDateTime** to specify when the deployment is _available_, and **-Schedule** to specify the deployment assignment, or _deadline_.
 
 ```yaml
 Type: DateTime
@@ -507,7 +511,11 @@ Accept wildcard characters: False
 
 ### -Schedule
 
-Specifies an array of schedule objects. A schedule object defines the mandatory assignment schedule for a deployment. To create a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
+Use this parameter to specify the deployment assignment, or _deadline_.
+
+Use **-AvailableDateTime** to specify when the deployment is _available_, and **-DeadlineDateTime** to specify when the deployment _expires_.
+
+Specify an array of schedule objects. A schedule object defines the mandatory assignment schedule for a deployment. To create a schedule object, use the [New-CMSchedule](New-CMSchedule.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -695,6 +703,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject#SMS_Advertisement
 
 ## NOTES
+
+Make sure to use the schedule parameters appropriately:
+
+- **-AvailableDateTime**: Specify when this deployment is _available_.
+
+- **-DeadlineDateTime**: Specify when the deployment _expires_.
+
+- **-Schedule**: Specify the deployment assignment, or _deadline_.
 
 ## RELATED LINKS
 
