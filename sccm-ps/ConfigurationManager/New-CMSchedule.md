@@ -2,7 +2,7 @@
 description: Create a Configuration Manager schedule token.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 07/31/2020
+ms.date: 08/24/2020
 schema: 2.0.0
 title: New-CMSchedule
 ---
@@ -168,14 +168,13 @@ The following example creates the following schedule:
 $schedToken2 = New-CMSchedule -Start (Get-Date) -DayOfWeek Monday -WeekOrder Second -RecurCount 1 -OffsetDay 0
 ```
 
-### Example 2: Create a schedule to run daily (Simple Schedule)
+### Example 3: Create a schedule to run daily
+
+This example creates a simple schedule that occurs daily forever. You can use this type of schedule when you deploy a configuration baseline.
+
+```powershell
+New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
 ```
-PS XYZ:\> New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
-```
-
-This will create a Simple Schedule that will occur daily forever, used in conjunction with deploying Baselines.
-
-
 
 ## PARAMETERS
 
