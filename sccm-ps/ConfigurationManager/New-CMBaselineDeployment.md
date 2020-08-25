@@ -1,8 +1,8 @@
 ---
-description: Creates a baseline deployment.
+description: Create a baseline deployment
 external help file: AdminUI.PS.Deployments.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 08/24/2020
 schema: 2.0.0
 title: New-CMBaselineDeployment
 ---
@@ -10,7 +10,8 @@ title: New-CMBaselineDeployment
 # New-CMBaselineDeployment
 
 ## SYNOPSIS
-Creates a baseline deployment.
+
+Create a baseline deployment.
 
 ## SYNTAX
 
@@ -43,39 +44,44 @@ New-CMBaselineDeployment [-Name] <String> [-EnableEnforcement <Boolean>] [-Overr
 
 ## DESCRIPTION
 
+Deploy a configuration baseline. Use the [Get-CMBaseline](Get-CMBaseline.md) cmdlet to get a baseline.
+
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1 - Deploy Baseline to several Collections that Start with the Name "Collection_Name"
-```
-PS XYZ:\>
-PS XYZ:\>  $BaselineName = Get-CMBaseline -Name 'ConfigMgr Baseline'
-PS XYZ:\>  $DeployToCollections = Get-CMCollection -Name 'Collection_Name*' | Sort-Object -Property "Name"
-PS XYZ:\>  $BaselineSchedule = New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
-PS XYZ:\>  foreach ($Collection in $DeployToCollection)
+### Example 1: Deploy a baseline to collections with the same named prefix
+
+This example uses [Get-CMBaseline](Get-CMBaseline.md) to get the configuration baseline and store it into the variable **$BaselineName**. It then uses [Get-CMCollection](Get-CMCollection.md) to get a list of all collections whose name starts with "Collection_Name" and stores them to the variable **$DeployToCollections**.  Next, it creates a schedule for the deployment with the [New-CMSchedule](New-CMSchedule.md) cmdlet. Once all of the required information is stored, the example loops through each collection and deploys the baseline using **New-CMBaselineDeployment**.
+
+```powershell
+$BaselineName = Get-CMBaseline -Name 'ConfigMgr Baseline'
+$DeployToCollections = Get-CMCollection -Name 'Collection_Name*' | Sort-Object -Property "Name"
+$BaselineSchedule = New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
+
+foreach ($Collection in $DeployToCollection)
              {
              New-CMBaselineDeployment -InputObject $BaselineName -CollectionID $Collection.CollectionId -Schedule $BaselineSchedule
              Write-Output "Created Deployment for $($BaselineName.LocalizedDisplayName) on $($Collection.Name)"
              }
-             
-```
-This Example Grabs the Baseline we want to deploy and places it into the variable $BaselineName (InputObject) using [Get-CMBaseline](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmbaseline), we then grab a list of all the collections we wish to deploy it to ($DeployToCollections) using [Get-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollection).  We then need to create a schedule for the deployment using [New-CMSchedule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/new-cmschedule). Once we have all of the required information, we can deploy the baseline to those collections using New-CMBaselineDeployment.
-
-### Example 2 - Deploy Baseline to one Collection
-```
-PS XYZ:\>  $BaselineSchedule = New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
-PS XYZ:\>  New-CMBaselineDeployment -Name "MY_Baseline" -CollectionID "PS1000023" -Schedule $BaselineSchedule
 ```
 
-This first creates a simple schedule, then deployes the Baseline "MyName" to Collection ID: PS1000023 using that schedule.
+### Example 2: Deploy a baseline to one collection
+
+First, this example creates a simple schedule. It then deploys the baseline **MY_Baseline** to the collection with ID **PS1000023**.
+
+```powershell
+$BaselineSchedule = New-CMSchedule -DurationInterval Days -DurationCount 0 -RecurInterval Days -RecurCount 1
+New-CMBaselineDeployment -Name "MY_Baseline" -CollectionID "PS1000023" -Schedule $BaselineSchedule
+```
 
 ## PARAMETERS
 
 ### -Collection
+
+Specify a collection object as the target of the baseline deployment.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -89,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionId
+
+Specify the ID of the collection as the target of the deployment.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -102,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
+
+Specify the name of the collection as the target of the deployment.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -115,6 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -130,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -145,6 +159,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEnforcement
+
+If `$true`, remediate noncompliant rules when supported.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -158,7 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -173,6 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateAlert
+
+If `$true`, generate an alert.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -186,6 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
+Specify the ID of the configuration baseline to deploy.
+
 ```yaml
 Type: Int32
 Parameter Sets: SearchByIdMandatory
@@ -199,6 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+Specify a configuration baseline object to deploy. Use the [Get-CMBaseline](Get-CMBaseline.md) cmdlet to get a baseline.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValueMandatory
@@ -212,6 +239,9 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoredByScom
+
+If `$true`, generate a System Center Operations Manager alert.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -225,6 +255,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+Specify the name of the configuration baseline to deploy.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByNameMandatory
@@ -238,6 +271,9 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideServiceWindow
+
+If `$true`, allow the client to remediate this baseline outside of maintenance windows.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -251,6 +287,9 @@ Accept wildcard characters: False
 ```
 
 ### -ParameterValue
+
+If you use the **-GenerateAlert** parameter, specify an integer value as a percentage (0-100). When compliance of this configuration baseline is below this value, the site generates an alert.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -264,6 +303,9 @@ Accept wildcard characters: False
 ```
 
 ### -PostponeDateTime
+
+This parameter corresponds to the **Date and time** property of the configuration baseline when you use the **-GenerateAlert** parameter.
+
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
@@ -277,6 +319,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
+
+Specify a schedule object for when the client evaluates this configuration baseline. Use the [New-CMSchedule](New-CMSchedule.md) cmdlet to create a schedule.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: (All)
@@ -290,8 +335,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -306,6 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -315,6 +361,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMBaseline](Get-CMBaseline.md)
+
+[Get-CMCollection](Get-CMCollection.md)
+
+[New-CMSchedule](New-CMSchedule.md)
