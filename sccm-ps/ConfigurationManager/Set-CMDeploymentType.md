@@ -1235,8 +1235,6 @@ For more information on this return object and its properties, see [SMS_Deployme
 
 ## RELATED LINKS
 
-[Add-CMDeploymentType](Add-CMDeploymentType.md)
-
 [Get-CMDeploymentType](Get-CMDeploymentType.md)
 
 [Remove-CMDeploymentType](Remove-CMDeploymentType.md)

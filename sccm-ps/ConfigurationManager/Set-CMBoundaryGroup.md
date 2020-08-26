@@ -1,8 +1,8 @@
 ---
-description: Modifies the properties of a boundary group.
+description: Modify the properties of a boundary group.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 08/26/2020
 schema: 2.0.0
 title: Set-CMBoundaryGroup
 ---
@@ -10,7 +10,8 @@ title: Set-CMBoundaryGroup
 # Set-CMBoundaryGroup
 
 ## SYNOPSIS
-Modifies the properties of a boundary group.
+
+Modify the properties of a boundary group.
 
 ## SYNTAX
 
@@ -45,43 +46,46 @@ Set-CMBoundaryGroup -Name <String> [-NewName <String>] [-Description <String>] [
 ```
 
 ## DESCRIPTION
+
 The **Set-CMBoundaryGroup** cmdlet modifies the properties of a boundary group.
 A boundary group is a collection of boundaries.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) and the [New-CMBoundary](New-CMBoundary.md) cmdlet.
+For more information, see [Define site boundaries and boundary groups](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) and the [New-CMBoundary](New-CMBoundary.md) cmdlet.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Rename a boundary group
-```
-PS XYZ:\> Set-CMBoundaryGroup -Name "BGroup01" -NewName "BGroup00"
-```
 
-This command renames a boundary group.
+This command renames a boundary group. It uses the Get-CMBoundaryGroup cmdlet to get the boundary group object, and then passes it using the pipeline operator.
+
+```powershell
+Get-CMBoundaryGroup -Name "BGroup01" | Set-CMBoundaryGroup -NewName "BGroup00"
+```
 
 ### Example 2: Add a security scope to a boundary group
-```
-PS XYZ:\> Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
+
+This command adds the security scope **OSDeploymentScope** to the boundary group **BGroup02**.
+
+```powershell
+Set-CMBoundaryGroup -SecurityScopeAction AddMembership -SecurityScopeName "OSDeploymentScope" -Name "BGroup02"
 ```
 
-This command adds the security scope OSDeploymentScope to the boundary group BGroup02.
+### Example 3: Add a site system server
+
+This command uses the **Get-CMSiteSystemServer** cmdlet to get a server object, and then adds it to the boundary group.
+
+```powershell
+$server = Get-CMSiteSystemServer -Name "granitefalls.cloudapp.net"
+Set-CMBoundaryGroup -Name "Remote BG" -AddSiteSystemServer $server
+```
 
 ## PARAMETERS
 
 ### -AddSiteSystemServer
-Specifies the site system server and link speed as the key/value pair in a hash table.
-Valid values are:
 
-- FastLink
-- Slowlink
-
-For example: @{"Server01.contoso.com" = "FastLink"}
-
-**Important**: Starting in version 1610, FastLink is the only supported value for the hash table.
+Specify a site system server object to add to this boundary group. Clients on the boundary group use these servers for policy and content. You can add management points, distribution points, state migration points, software update points, and cloud management gateways. To get a site system server object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -96,6 +100,12 @@ Accept wildcard characters: False
 ```
 
 ### -AddSiteSystemServerName
+
+Specify the fully qualified domain name of a site system server to add to this boundary group. Clients on the boundary group use these servers for policy and content. You can add management points, distribution points, state migration points, software update points, and cloud management gateways.
+
+> [!Important]
+> This parameter requires the fully qualified domain name of the site server.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -109,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPeerDownload
-{{ Fill AllowPeerDownload Description }}
+
+Configure the boundary group option to allow peer downloads in this boundary group. For more information, see [Boundary group options for peer downloads](/mem/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 ```yaml
 Type: Boolean
@@ -124,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSiteSystemServer
-Indicates that the site system server is removed from the boundary group.
+
+Add this parameter to remove all referenced site system servers from the boundary group.
 
 ```yaml
 Type: SwitchParameter
@@ -139,6 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -154,7 +167,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSiteCode
-Specifies the default site code of a boundary group.
+
+Specify the site code to set as the assigned site, and enable the boundary group for site assignment.
+
+To disable site assignment for the boundary group, set this value to `$null`.
 
 ```yaml
 Type: String
@@ -169,7 +185,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description for a boundary group.
+
+Specify an optional description for this boundary group.
 
 ```yaml
 Type: String
@@ -184,7 +201,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +217,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -214,7 +233,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies an array of identifiers for one or more boundary groups.
+
+Specify the ID of a boundary group to configure. This ID is the **GroupID** property on the [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
 
 ```yaml
 Type: String
@@ -229,8 +249,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a boundary group object.
-To obtain a boundary group object, use the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
+
+Specify an object for a boundary group to configure. To get a boundary group object, use the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
 
 ```yaml
 Type: IResultObject
@@ -245,7 +265,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for a boundary group.
+
+Specify the name for a boundary group to configure.
 
 ```yaml
 Type: String
@@ -260,7 +281,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name for a boundary group.
+
+Use this parameter to rename a boundary group.
 
 ```yaml
 Type: String
@@ -275,8 +297,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the current working object.
-By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet may not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -291,7 +313,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreferCloudDPOverDP
-{{ Fill PreferCloudDPOverDP Description }}
+
+Configure the boundary group option to prefer cloud-based sources over on-premises sources. For more information, see [Boundary group options for peer downloads](/mem/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 ```yaml
 Type: Boolean
@@ -306,7 +329,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreferDPOverPeer
-{{ Fill PreferDPOverPeer Description }}
+
+Configure the boundary group option to prefer distribution points over peers within the same subnet. To enable this setting, also enable **-AllowPeerDownload**. For more information, see [Boundary group options for peer downloads](/mem/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 ```yaml
 Type: Boolean
@@ -321,8 +345,10 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSiteSystemServer
-Specifies a site system server object to remove from the boundary group.
-To obtain a site system server, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
+
+Specifies a site system server object to remove from the boundary group. To get this object, use the [Get-CMSiteSystemServer](Get-CMSiteSystemServer.md) cmdlet.
+
+To remove all site system servers, use the **-ClearSiteSystemServer** parameter.
 
 ```yaml
 Type: IResultObject[]
@@ -337,7 +363,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSiteSystemServerName
-Specifies the name of a site system server to remove from the boundary group.
+
+Specifies the name of one or more site system servers to remove from the boundary group. To remove all site system servers, use the **-ClearSiteSystemServer** parameter.
 
 ```yaml
 Type: String[]
@@ -352,7 +379,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetPeerDownloadOnly
-{{ Fill SubnetPeerDownloadOnly Description }}
+
+Configure the boundary group option to only use peers within the same subnet during peer downloads. To enable this setting, also enable **-AllowPeerDownload**. For more information, see [Boundary group options for peer downloads](/mem/configmgr/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 ```yaml
 Type: Boolean
@@ -367,8 +395,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -383,6 +411,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -393,11 +422,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_BoundaryGroup
 
+For more information on this return object and its properties, see [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
-
-[Define site boundaries and boundary groups for Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/)
 
 [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md)
 
@@ -408,3 +437,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMSecurityScope](Set-CMSecurityScope.md)
 
 [New-CMBoundary](New-CMBoundary.md)
+
+[Define site boundaries and boundary groups](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)

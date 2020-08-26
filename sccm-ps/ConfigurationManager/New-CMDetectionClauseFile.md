@@ -1,5 +1,5 @@
 ---
-description: Create a detection clause for a file in a configuration item.
+description: Create a detection clause for a file in a configuration item or app detection method.
 external help file: AdminUI.PS.Dcm.dll-Help.xml
 Module Name: ConfigurationManager
 ms.date: 08/25/2020
@@ -11,7 +11,7 @@ title: New-CMDetectionClauseFile
 
 ## SYNOPSIS
 
-Create a detection clause for a file in a configuration item.
+Create a detection clause for a file in a configuration item or app detection method.
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ New-CMDetectionClauseFile -FileName <String> [-Is64Bit] -Path <String> [-Existen
 
 ## DESCRIPTION
 
-Create a detection clause for a file in a configuration item.
+Create a detection clause for a file in a configuration item or app detection method.
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -43,6 +43,20 @@ This example detects the application **app.exe** in a specific folder where the 
 
 ```powershell
 New-CMDetectionClauseFile -Path "C:\Program Files\Application" -FileName App.exe -Value -PropertyType Version -ExpressionOperator GreaterEquals -ExpectedValue "1.0.0"
+```
+
+### Example 2: Create multiple clauses for an MSI app deployment type
+
+This example creates two file clauses and one registry clause, and then uses them to add an MSI deployment type to an app.
+
+```powershell
+$cla1=New-CMDetectionClauseFile -FileName "filetest" -PropertyType Size -ExpectedValue 123 -ExpressionOperator IsEquals -Path "C:\" -Value -Is64Bit
+$cla2=New-CMDetectionClauseFile -FileName "foldertest" -PropertyType DateCreated -ExpectedValue (Get-Date) -ExpressionOperator LessThan -Path "C:\" -Value
+$cla3=New-CMDetectionClauseRegistryKey -Hive ClassesRoot -KeyName "aaa"
+$logic1=$cla1.Setting.LogicalName
+$logic2=$cla2.Setting.LogicalName
+$logic3=$cla3.Setting.LogicalName
+Add-CMMsiDeploymentType -AddDetectionClause $cla1,$cla2,$cla3 -ApplicationName "app" -DeploymentTypeName "dt" -InstallCommand "mycommand" -ContentLocation “\\server\sources\Orca.msi” -GroupDetectionClauses $logic1,$logic2 -DetectionClauseConnector {LogicalName=$logic2;Connector="or"},{LogicalName=$logic3;Connector="or"}
 ```
 
 ## PARAMETERS

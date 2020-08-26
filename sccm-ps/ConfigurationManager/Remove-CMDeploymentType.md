@@ -231,8 +231,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-CMDeploymentType](Add-CMDeploymentType.md)
-
 [Get-CMDeployment](Get-CMDeployment.md)
 
 [Get-CMDeploymentType](Get-CMDeploymentType.md)

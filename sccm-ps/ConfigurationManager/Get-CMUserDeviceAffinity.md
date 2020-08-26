@@ -1,8 +1,8 @@
 ---
-description: Gets a Configuration Manager user's device affinities.
+description: Get the relationships between a device and its primary users.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/26/2020
 schema: 2.0.0
 title: Get-CMUserDeviceAffinity
 ---
@@ -10,7 +10,8 @@ title: Get-CMUserDeviceAffinity
 # Get-CMUserDeviceAffinity
 
 ## SYNOPSIS
-Gets a Configuration Manager user's device affinities.
+
+Get the relationships between a device and its primary users.
 
 ## SYNTAX
 
@@ -39,49 +40,51 @@ Get-CMUserDeviceAffinity -UserId <Int32[]> [-DisableWildcardHandling] [-ForceWil
 ```
 
 ## DESCRIPTION
-The **Get-CMUserDeviceAffinity** cmdlet gets one or more user device affinities in Configuration Manager.
 
-User device affinity in Configuration Manager is a method of associating a user with one or more specified devices.
+The **Get-CMUserDeviceAffinity** cmdlet gets one or more user device affinities in Configuration Manager. User device affinities are the relationships between a device and its primary users. For more information, see [Link users and devices with user device affinity in Configuration Manager](/mem/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a user device affinity by using a user name
-```
-PS XYZ:\> Get-CMUserDeviceAffinity -UserName "CENTRAL\001D$"
+### Example 1: Get user device affinities by user name
+
+This command gets any user device affinities for the user **contoso\jqpublic**.
+
+```powershell
+Get-CMUserDeviceAffinity -UserName "contoso\jqpublic"
 ```
 
-This command gets the user device affinity for the user named CENTRAL\001D$.
+### Example 2: Get user device affinities by user ID
 
-### Example 2: Get a user device affinity by using a user ID
-```
-PS XYZ:\> Get-CMUserDeviceAffinity -UserID "2063597981"
-```
+This command gets any user device affinities for the user with the resource ID **2063597981**.
 
-This command gets the user device affinity for the user that has the ID named 2063597981.
-
-### Example 3: Get a user device affinity by using a device name
-```
-PS XYZ:\> Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
+```powershell
+Get-CMUserDeviceAffinity -UserID "2063597981"
 ```
 
-This command gets the user device affinity for the device named CMCEN-DIST02.
+### Example 3: Get a user device affinity for a device name
 
-### Example 4: Get a user device affinity by using a device ID
-```
-PS XYZ:\> Get-CMUserDeviceAffinity -DeviceID "2097152000"
+This command gets the user device affinity for the device named **CMCEN-DIST02**.
+
+```powershell
+Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
 ```
 
-This command gets the user device affinity for the device that has the ID 2097152000.
+### Example 4: Get a user device affinity for a device ID
+
+This command gets the user device affinity for the device with resource ID **16780642**.
+
+```powershell
+Get-CMUserDeviceAffinity -DeviceID "16780642"
+```
 
 ## PARAMETERS
 
 ### -DeviceId
-Specifies an array of device IDs.
+
+Specify an array of device resource IDs to get their primary users.
 
 ```yaml
 Type: Int32[]
@@ -96,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceName
-Specifies an array of device names.
+
+Specify an array of device names.
 
 ```yaml
 Type: String[]
@@ -111,7 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -126,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -141,7 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Specifies an array of IDs of the primary users of the devices.
+
+Specifies an array of user resource IDs. Use this parameter to get any devices for which this user is the primary user.
 
 ```yaml
 Type: Int32[]
@@ -156,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-Specifies an array of names of the primary users of the devices.
+
+Specify an array of user names. Use this parameter to get any devices for which this user is the primary user.
 
 ```yaml
 Type: String[]
@@ -171,6 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -182,6 +191,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### IResultObject[]#SMS_UserMachineRelationship
 
 ### IResultObject#SMS_UserMachineRelationship
+
+For more information on this return object and its properties, see [SMS_UserMachineRelationship server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_usermachinerelationship-server-wmi-class).
 
 ## NOTES
 
@@ -195,4 +206,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Import-CMUserDeviceAffinity](Import-CMUserDeviceAffinity.md)
 
-
+[Link users and devices with user device affinity in Configuration Manager](/mem/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity)

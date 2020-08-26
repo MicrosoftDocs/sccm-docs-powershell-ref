@@ -109,8 +109,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-CMDeploymentType](Add-CMDeploymentType.md)
-
 [Get-CMDeploymentType](Add-CMDeploymentType.md)
 
 [Remove-CMDeploymentType](Remove-CMDeploymentType.md)

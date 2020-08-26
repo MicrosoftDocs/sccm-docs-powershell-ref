@@ -1,8 +1,8 @@
 ---
-description: Imports a device driver into Configuration Manager.
+description: Import a device driver into the driver catalog.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 08/26/2020
 schema: 2.0.0
 title: Import-CMDriver
 ---
@@ -10,7 +10,8 @@ title: Import-CMDriver
 # Import-CMDriver
 
 ## SYNOPSIS
-Imports a device driver into Configuration Manager.
+
+Import a device driver into the driver catalog.
 
 ## SYNTAX
 
@@ -24,42 +25,51 @@ Import-CMDriver -Path <String> [-ImportFolder] [-ImportDuplicateDriverOption <Im
 ```
 
 ## DESCRIPTION
+
 The **Import-CMDriver** cmdlet imports one or more device drivers into the driver catalog in Configuration Manager.
 When you import device drivers into the catalog, you can add the device drivers to driver packages or to boot image packages.
 
-As part of the import process for the device driver, Configuration Manager reads the provider, class, version, signature, supported hardware, and supported platform information that is associated with the device.
-By default, the driver is named after the first hardware device that it supports; however, you can rename the device driver later.
+As part of the import process for the device driver, Configuration Manager reads the following information associated with the device:
+
+- Provider
+- Class
+- Version
+- Signature
+- Supported hardware
+- Supported platform
+
+By default, the driver is named after the first hardware device that it supports. To rename the device driver, use the **-NewName** parameter of the [Set-CMDriver](Set-CMDriver.md) cmdlet.
 The supported platforms list is based on the information in the INF file of the driver.
-Because the accuracy of this information can vary, manually verify that the device driver is supported after it is imported into the driver catalog.
+Because the accuracy of this information can vary, manually verify that the device driver is supported after you import it into the driver catalog.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Import all device drivers in a path
-```
-PS XYZ:\>Import-CMDriver -UncFileLocation "\\Server1\Driver" -ImportFolder
-```
 
-This command imports all device drivers located in the network path \\\\Server1\Driver.
+This command imports all device drivers located in the network path `\\Server1\Driver`.
+
+```powershell
+Import-CMDriver -Path "\\Server1\Driver" -ImportFolder
+```
 
 ### Example 2: Import a device driver by name
-```
-PS XYZ:\>Import-CMDriver -UncFileLocation "\\Server1\Driver\driver.inf"
-```
 
-This command imports the driver named driver.inf from the network path \\\\Server1\Driver.
+This command imports the driver named **driver.inf** from the network path `\\Server1\Driver`.
+
+```powershell
+Import-CMDriver -Path "\\Server1\Driver\driver.inf"
+```
 
 ## PARAMETERS
 
 ### -AdministrativeCategory
-Specifies an array of administrative categories.
-To obtain an administrative category object, use the Get-CMCategory cmdlet.
 
-Assign the device drivers to an administrative category for filtering purposes, such as Desktops or Notebooks categories.
+Specify an array of category objects. To get this object, use the [Get-CMCategory](Get-CMCategory.md) cmdlet.
+
+Assign the device drivers to a category for filtering purposes, such as Desktops or Notebooks.
 
 ```yaml
 Type: IResultObject[]
@@ -74,10 +84,20 @@ Accept wildcard characters: False
 ```
 
 ### -BootImagePackage
-Specifies an array of boot image objects.
-To obtain a boot image object, use the [Get-CMBootImage](Get-CMBootImage.md) cmdlet.
 
-Use this parameter to specify the boot images that can install the imported device drivers.
+Specify an array of boot image objects. To get this object, use the [Get-CMBootImage](Get-CMBootImage.md) cmdlet.
+
+Use this parameter to add the imported drivers to the specified boot images.
+
+Only add drivers that Windows PE (WinPE) requires to boot:
+
+- Make sure that the drivers that you add to the boot image match the architecture of the boot image.
+
+- WinPE already comes with many drivers built-in. Add only network and storage drivers that aren't included in WinPE.
+
+- Add only network and storage drivers to the boot image, unless there are requirements for other drivers in WinPE.
+
+- It's best to use drivers that have a valid digital signature.
 
 ```yaml
 Type: IResultObject[]
@@ -92,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -107,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -122,10 +144,10 @@ Accept wildcard characters: False
 ```
 
 ### -DriverPackage
-Specifies an array of driver package objects.
-To obtain a driver package object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
 
-Use this parameter to specify the driver packages that Configuration Manager uses to distribute the device drivers.
+Specify an array of driver package objects. To get this object, use the [Get-CMDriverPackage](Get-CMDriverPackage.md) cmdlet.
+
+Use this parameter to add the imported drivers to the specified driver packages.
 
 ```yaml
 Type: IResultObject[]
@@ -140,8 +162,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAndAllowInstall
-Indicates whether Configuration Manager enables computers to install the device drivers used with the Auto Apply Driver task sequence step.
-Drivers added to the driver package are not affected.
+
+Enable the driver and allow clients to install it during the [Auto Apply Driver](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers) task sequence step.
+
+Drivers added to the driver package aren't affected.
 
 ```yaml
 Type: Boolean
@@ -156,7 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -171,13 +196,13 @@ Accept wildcard characters: False
 ```
 
 ### -ImportDuplicateDriverOption
-Specifies how Configuration Manager manages duplicate device drivers.
-Valid values are:
 
-- AppendCategory
-- KeepExistingCategory
-- NotImport
-- OverwriteCategory
+Specify how Configuration Manager manages duplicate device drivers.
+
+- `AppendCategory`: Import the driver and append a new category to the existing categories
+`- KeepExistingCategory`: Import the driver and keep the existing categories
+- `NotImport`: Don't import the driver
+- `OverwriteCategory`: Import the driver and overwrite the existing categories
 
 ```yaml
 Type: ImportDuplicateDriverOption
@@ -193,7 +218,8 @@ Accept wildcard characters: False
 ```
 
 ### -ImportFolder
-Indicates that Configuration Manager imports all the device drivers in the import folder.
+
+Add this parameter to import all the device drivers in the target folder.
 
 ```yaml
 Type: SwitchParameter
@@ -208,6 +234,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
+Specify a path to the driver files to import.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -221,7 +250,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatform
-Specifies a platform object on which the device driver can run.
+
+Specify a supported platform object to which the device driver is applicable and can run. To get this object, use the [Get-CMSupportedPlatform](Get-CMSupportedPlatform.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -236,7 +266,8 @@ Accept wildcard characters: False
 ```
 
 ### -SupportedPlatformName
-Specifies an array of names of platforms on which the device driver can run.
+
+Specifies an array of supported platforms name on which the device driver can run. For example, `"All Windows 10 (64-bit)"`.
 
 ```yaml
 Type: String[]
@@ -251,6 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateBootImageDistributionPoint
+
 Indicates whether Configuration Manager updates boot images on their distribution points to add the new drivers.
 
 ```yaml
@@ -266,7 +298,8 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateDriverPackageDistributionPoint
-Indicates whether Configuration Manager adds the drivers to packages and deploys them to distribution points so that computers can use them.
+
+If you use the **-DriverPackage** parameter, set this parameter to `$true` to update the driver package on assigned distribution points.
 
 ```yaml
 Type: Boolean
@@ -281,8 +314,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -297,6 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -306,6 +340,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### IResultObject#SMS_Driver
+
+For more information on this return object and its properties, see [SMS_Driver server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_driver-server-wmi-class).
 
 ## NOTES
 
@@ -327,4 +363,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMDriverPackage](Get-CMDriverPackage.md)
 
-
+[Manage drivers in Configuration Manager](/mem/configmgr/osd/get-started/manage-drivers)
