@@ -28,9 +28,20 @@ Get-CMSiteFeature [-Name <String>] [-Prerelease] [-Production] [-Fast] [-Disable
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all pre-release features
+
+This example gets all pre-release features for the site, without loading lazy properties
+
+```powershell
+Get-CMSiteFeature -Prerelease -Fast
 ```
-PS XYZ:\>
+
+### Example 2: Get a specific feature
+
+This example gets details for the feature named **Task Sequence Debugger**
+
+```powershell
+Get-CMSiteFeature -Name "Task Sequence Debugger"
 ```
 
 ## PARAMETERS
