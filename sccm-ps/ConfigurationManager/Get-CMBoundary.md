@@ -1,8 +1,8 @@
 ---
-description: Gets a Configuration Manager boundary.
+description: Get a site boundary.
 external help file: AdminUI.PS.HS.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 08/26/2020
 schema: 2.0.0
 title: Get-CMBoundary
 ---
@@ -10,7 +10,8 @@ title: Get-CMBoundary
 # Get-CMBoundary
 
 ## SYNOPSIS
-Gets a Configuration Manager boundary.
+
+Get a site boundary.
 
 ## SYNTAX
 
@@ -44,20 +45,22 @@ Get-CMBoundary -BoundaryGroupInputObject <IResultObject> [-DisableWildcardHandli
 ```
 
 ## DESCRIPTION
+
 The **Get-CMBoundary** cmdlet gets a Configuration Manager boundary.
 
-In Configuration Manager, a boundary is an intranet location that contains one or more devices that you can manage.
-A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, or an IP address range.
+In Configuration Manager, a boundary is a network location that contains one or more devices that you can manage.
+A boundary can be an IP subnet, Active Directory site name, IPv6 prefix, IP address range, or VPN.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Get a boundary that is specified by its identifier
-```
+### Example 1: Get a boundary by its ID
+
+This command gets a boundary that's specified by the ID **67777217**.
+
+```powershell
 PS XYZ:\> Get-CMBoundary -Id "67777217"
 BoundaryFlags:      0
 BoundaryID:         67777217
@@ -73,32 +76,19 @@ SiteSystems:
 Value:              Default1
 ```
 
-This command gets a boundary that is specified by the identifier 67777217.
+### Example 2: Get a boundary by the name of an associated boundary group
 
-### Example 2: Get a boundary that is specified by the name of an associated boundary group
-```
-PS XYZ:\> Get-CMBoundary -BoundaryGroupName "BGroup07"
-BoundaryFlags:      0
-BoundaryID:         63997411
-BoundaryType:       2
-CreatedBy:          Contoso\PFuller
-CreatedOn           4/13/2012 06:58:56 AM
-DefaultSiteCode:
-DisplayName:
-GroupCount:         1
-ModifiedBy:         Contoso\PFuller
-ModifiedOn:         8/02/2012  11:16 AM
-SiteSystems:
-Value:              Default1
-```
+This command gets a boundary that's specified by the associated boundary group **BGroup07**.
 
-This command gets a boundary that is specified by the associated boundary group BGroup07.
+```powershell
+Get-CMBoundary -BoundaryGroupName "BGroup07"
+```
 
 ## PARAMETERS
 
 ### -BoundaryGroupId
-Specifies an identifier (ID) for a boundary group.
-You can get a boundary group ID by using the **Get-CMBoundaryGroup** cmdlet.
+
+Specify the ID of a boundary group that includes the boundary to get. You can get a boundary group ID by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet. This ID is the **GroupID** property on the [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
 
 ```yaml
 Type: UInt32
@@ -113,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryGroupInputObject
+
+Specify an object for a boundary group that includes the boundary to get. You can get this object by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet.
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByBoundaryGroup
@@ -126,8 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryGroupName
-Specifies a name for a boundary group.
-You can get a boundary group name by using the **Get-CMBoundaryGroup** cmdlet.
+
+Specify the name of a boundary group that includes the boundary to get.
 
 ```yaml
 Type: String
@@ -142,6 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryId
+
+Specify the ID of the boundary to get. This ID is the **BoundaryID** property on the [SMS_Boundary](/mem/configmgr/develop/reference/core/servers/configure/sms_boundary-server-wmi-class) object. For example, `23`.
+
 ```yaml
 Type: UInt32
 Parameter Sets: SearchByIdMandatory
@@ -155,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -BoundaryName
+
+Specify the name of the boundary to get. This name is the **DisplayName** property on the [SMS_Boundary](/mem/configmgr/develop/reference/core/servers/configure/sms_boundary-server-wmi-class) object.
+
 ```yaml
 Type: String
 Parameter Sets: SearchByName
@@ -168,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -183,7 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -198,6 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -210,6 +212,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_Boundary
 
+For more information on this return object and its properties, see [SMS_Boundary](/mem/configmgr/develop/reference/core/servers/configure/sms_boundary-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
@@ -221,3 +225,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CMBoundary](Set-CMBoundary.md)
 
 [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md)
+
+[Define site boundaries and boundary groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups)
