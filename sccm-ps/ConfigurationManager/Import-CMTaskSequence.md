@@ -193,10 +193,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Copy-CMTaskSequence](Copy-CMTaskSequence.md)
 
-[Enable-CMTaskSequence](Enable-CMTaskSequence.md)
-
-[Disable-CMTaskSequence](Disable-CMTaskSequence.md)
-
 [Import-CMTaskSequence](Import-CMTaskSequence.md)
 
 [Export-CMTaskSequence](Export-CMTaskSequence.md)
