@@ -46,7 +46,15 @@ This example creates a clause to detect the existence of the Configuration Manag
 $regClause = New-CMDetectionClauseRegistryKeyValue -Hive LocalMachine -KeyName "SOFTWARE\Microsoft\CCM\Logging\@Global" -Existence -PropertyType String -ValueName "LogEnabled"
 ```
 
-### Example 2: Create multiple clauses for an MSI app deployment type
+### Example 2: Compare a version value in the registry
+
+This example creates a clause to compare the version of Microsoft 365 in the registry to be greater than or equal to `16.0.10730.20304`.
+
+```powershell
+New-CMDetectionClauseRegistryKeyValue -ExpectedValue '16.0.10730.20304' -ExpressionOperator GreaterEquals -Hive LocalMachine -KeyName 'Software\Microsoft\Office\ClickToRun\Configuration' -PropertyType Version -Value -ValueName 'VersionToReport'
+```
+
+### Example 3: Create multiple clauses for an MSI app deployment type
 
 This example creates two file clauses and one registry clause, and then uses them to add an MSI deployment type to an app.
 
