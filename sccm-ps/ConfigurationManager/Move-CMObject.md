@@ -1,8 +1,8 @@
 ---
-description: Moves a Configuration Manager object into a different folder.
+description: Move a Configuration Manager object into a different folder.
 external help file: AdminUI.PS.Common.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/05/2019
+ms.date: 08/26/2020
 schema: 2.0.0
 title: Move-CMObject
 ---
@@ -10,7 +10,8 @@ title: Move-CMObject
 # Move-CMObject
 
 ## SYNOPSIS
-Moves a Configuration Manager object into a different folder.
+
+Move a Configuration Manager object into a different folder.
 
 ## SYNTAX
 
@@ -27,27 +28,37 @@ Move-CMObject -FolderPath <String> -ObjectId <String[]> [-DisableWildcardHandlin
 ```
 
 ## DESCRIPTION
+
 The **Move-CMObject** cmdlet moves a Configuration Manager object into a different folder.
 Specify the object to move and the destination folder.
-Because an object exists in only one folder, the cmdlet does not specify the current folder.
+Because an object exists in only one folder, the cmdlet doesn't specify the current folder.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Move an object
-```
-PS XYZ:\>Move-CMObject -FolderPath "GKP:\Application\TestFolder" -ObjectId "209224563"
+### Example 1: Move an app by object
+
+This example first gets an application object by name. It then moves the object to the folder **TestFolder**.
+
+```powershell
+$app = Get-CMApplication -Name "Teams"
+Move-CMObject -FolderPath "XYZ:\Application\TestFolder" -InputObject $app
 ```
 
-This command moves the object that has the specified ID to the folder GKP:\Application\TestFolder.
+### Example 2: Move a task sequence by ID
+
+This example moves the task sequence with package ID **XYZ00550** to the **Development** folder.
+
+```powershell
+Move-CMObject -FolderPath "XYZ:\TaskSequence\Development" -ObjectId "XYZ00550"
+```
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -63,7 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -78,8 +90,22 @@ Accept wildcard characters: False
 ```
 
 ### -FolderPath
-Specifies a destination folder path, in the following format: AAA:\\\<object type\>\folder\sub-folder\subfolder, where AAA represents the Configuration Manager site code.
-For example, a folder that is named LOB Apps for an application node at a sight designated CM1 has the following file path: CM1:\Application\LOB Apps.
+
+Specifies a destination folder path, in the following format: `<site code>:\<object type>\folder\subfolder\subfolder`.
+
+- `<site code>`: The Configuration Manager site code.
+- `<object type>`: One of the following keywords for the type of object to move:
+  - **Application**
+  - **Package**
+  - **DriverPackage**
+  - **OperatingSystemImage**
+  - **OperatingSystemInstaller**
+  - **BootImage**
+  - **TaskSequence**
+
+For example, a folder named **LOB Apps** for an application at the site CM1 has the following file path: `CM1:\Application\LOB Apps`.
+
+To move an object to the root folder, don't specify a folder. For example, `CM1:\Application`.
 
 ```yaml
 Type: String
@@ -94,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +136,18 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies an array of Configuration Manager objects to move.
+
+Specify an array of Configuration Manager objects to move. If you specify an array, use the same object type. Match the object type with the keyword used with the **-FolderPath** parameter.
+
+Use one of the following cmdlets to get these objects:
+
+- [Get-CMApplication](Get-CMApplication.md)
+- [Get-CMPackage](Get-CMPackage.md)
+- [Get-CMDriverPackage](Get-CMDriverPackage.md)
+- [Get-CMOperatingSystemImage](Get-CMOperatingSystemImage.md)
+- [Get-CMOperatingSystemInstaller](Get-CMOperatingSystemInstaller.md)
+- [Get-CMBootImage](Get-CMBootImage.md)
+- [Get-CMTaskSequence](Get-CMTaskSequence.md)
 
 ```yaml
 Type: IResultObject[]
@@ -124,7 +162,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies an array of IDs of objects to move.
+
+Specifies an array of object IDs to move. If you specify an array, use the same object type. Match the object type with the keyword used with the **-FolderPath** parameter.
+
+For example, `XYZ00550`.
 
 ```yaml
 Type: String[]
@@ -139,8 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet doesn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -155,6 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -164,6 +206,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -171,5 +214,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Lock-CMObject](Lock-CMObject.md)
 
 [Unlock-CMObject](Unlock-CMObject.md)
-
-
