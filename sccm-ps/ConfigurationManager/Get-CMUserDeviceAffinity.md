@@ -56,7 +56,21 @@ This command gets any user device affinities for the user **contoso\jqpublic**.
 Get-CMUserDeviceAffinity -UserName "contoso\jqpublic"
 ```
 
-### Example 2: Get user device affinities by user ID
+### Example 2: Get devices for a given user
+
+This example is similar to the first, but reduces the returned list of attributes with the **Select-Object** cmdlet. You can use this example to quickly find which devices a specific user regularly uses. This example shows the output in this modified format.
+
+```powershell
+PS XYZ:\> $user = "contoso\jqpublic"
+PS XYZ:\> Get-CMUserDeviceAffinity -UserName $user | Select-Object ResourceName
+ResourceName
+------------
+PUYALLUP01
+KULSHAN02
+TAHOMA42
+```
+
+### Example 3: Get user device affinities by user ID
 
 This command gets any user device affinities for the user with the resource ID **2063597981**.
 
@@ -64,7 +78,7 @@ This command gets any user device affinities for the user with the resource ID *
 Get-CMUserDeviceAffinity -UserID "2063597981"
 ```
 
-### Example 3: Get a user device affinity for a device name
+### Example 4: Get a user device affinity for a device name
 
 This command gets the user device affinity for the device named **CMCEN-DIST02**.
 
@@ -72,7 +86,7 @@ This command gets the user device affinity for the device named **CMCEN-DIST02**
 Get-CMUserDeviceAffinity -DeviceName "CMCEN-DIST02"
 ```
 
-### Example 4: Get a user device affinity for a device ID
+### Example 5: Get a user device affinity for a device ID
 
 This command gets the user device affinity for the device with resource ID **16780642**.
 
@@ -80,7 +94,7 @@ This command gets the user device affinity for the device with resource ID **167
 Get-CMUserDeviceAffinity -DeviceID "16780642"
 ```
 
-### Example 5: Get primary users for a list of devices
+### Example 6: Get primary users for a list of devices
 
 This script sample displays the primary user for an imported list of devices. One method to get this list is from the Configuration Manager console, in the **Devices** node, multi-select multiple rows, and copy the text (**Ctrl** + **V**). Paste the data into a plain text file, replace the tab characters as commas (`,`), and then save it as **computers.csv**.
 
