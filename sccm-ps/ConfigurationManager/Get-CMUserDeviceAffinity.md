@@ -2,7 +2,7 @@
 description: Get the relationships between a device and its primary users.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 08/26/2020
+ms.date: 09/04/2020
 schema: 2.0.0
 title: Get-CMUserDeviceAffinity
 ---
@@ -79,6 +79,38 @@ This command gets the user device affinity for the device with resource ID **167
 ```powershell
 Get-CMUserDeviceAffinity -DeviceID "16780642"
 ```
+
+### Example 5: Get primary users for a list of devices
+
+This script sample displays the primary user for an imported list of devices. One method to get this list is from the Configuration Manager console, in the **Devices** node, multi-select multiple rows, and copy the text (**Ctrl** + **V**). Paste the data into a plain text file, replace the tab characters as commas (`,`), and then save it as **computers.csv**.
+
+```powershell
+$computers = Import-Csv -Path "C:\Users\jqpublic\computers.csv"
+
+foreach ( $computer in $computers )
+{
+  $uda = Get-CMUserDeviceAffinity -DeviceName $computer.Name
+  
+  if ( ($uda.UniqueUserName).count -gt 1 )
+  {
+    foreach ( $user in $uda.UniqueUserName )
+    {
+      Write-Host $uda.ResourceName[1] $user
+    }
+  }
+  else
+  {
+    write-host $uda.ResourceName $uda.UniqueUserName
+  }
+}
+```
+
+The script sample uses the Import-Csv cmdlet to take input from a comma-separated list that has a **Name** column for the device name.
+
+- The first `foreach` command loops through each line from the comma-separated file. It uses the **Get-CMUserDeviceAffinity** cmdlet to get the primary users for that device.
+- If there are more than one primary users of the device, then it writes the computer name and each user on a separate line.
+- If there is only one primary user of the device, it writes the computer name and the user.
+- The output of the script is a simple list of computer names and associated primary user names.
 
 ## PARAMETERS
 
