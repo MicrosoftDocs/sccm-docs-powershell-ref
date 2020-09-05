@@ -62,12 +62,12 @@ This example is similar to the first, but reduces the returned list of attribute
 
 ```powershell
 PS XYZ:\> $user = "contoso\jqpublic"
-PS XYZ:\> Get-CMUserDeviceAffinity -UserName $user | Select-Object ResourceName, IsActive
-ResourceName  IsActive
-------------  --------
-PUYALLUP01        True
-KULSHAN02         True
-TAHOMA42          True
+PS XYZ:\> Get-CMUserDeviceAffinity -UserName $user | Select-Object ResourceName
+ResourceName
+------------
+PUYALLUP01
+KULSHAN02
+TAHOMA42
 ```
 
 ### Example 3: Get user device affinities by user ID
