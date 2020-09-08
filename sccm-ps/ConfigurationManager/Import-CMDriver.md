@@ -341,7 +341,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_Driver
 
-For more information on this return object and its properties, see [SMS_Driver server WMI class](/mem/configmgr/develop/reference/core/servers/configure/sms_driver-server-wmi-class).
+For more information on this return object and its properties, see [SMS_Driver server WMI class](/mem/configmgr/develop/reference/osd/sms_driver-server-wmi-class).
 
 ## NOTES
 

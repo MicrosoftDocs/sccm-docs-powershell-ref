@@ -14,7 +14,7 @@ manager: dougeby
 # Configuration Manager Cmdlet Library changes for Current Branch 1802
 
  >[!NOTE]
- > System Center Configuration Current Branch 1710 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for Current Branch 1710](https://docs.microsoft.com/powershell/sccm/configurationmanager/1710_release_notes).
+ > System Center Configuration Current Branch 1710 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for Current Branch 1710](1710_release_notes.md).
 
 ## Important changes
 ### Administrator console no longer creates hard link for PowerShell module
