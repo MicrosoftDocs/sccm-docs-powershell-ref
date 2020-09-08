@@ -14,7 +14,7 @@ manager: dougeby
 # Configuration Manager Cmdlet Library changes for Current Branch 1710
 
  >[!NOTE]
- > System Center Configuration Current Branch 1706 is the baseline for these changes. See [Configuration Manager Cmdlet Library changes for Current Branch 1706](https://docs.microsoft.com/powershell/sccm/configurationmanager/1706_release_notes) for more details.
+ > System Center Configuration Current Branch 1706 is the baseline for these changes. See [Configuration Manager Cmdlet Library changes for Current Branch 1706](1706_release_notes.md) for more details.
 
 ## Important changes
 
