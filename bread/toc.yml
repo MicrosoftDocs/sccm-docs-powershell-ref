@@ -1,10 +1,10 @@
 - name: Docs
-  href: /
-  homepage: /
+  tocHref: /
+  topicHref: /
   items:
   - name: SCCM
-    href: /system-center/
-    homepage: /system-center/index
+    tocHref: /system-center/
+    topicHref: /system-center/index
     items:
     - name: Configuration Manager PowerShell
       tocHref: /powershell/sccm/
