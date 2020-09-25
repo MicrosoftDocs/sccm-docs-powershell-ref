@@ -53,11 +53,11 @@ Configuration Manager migrates user information and settings from the reference 
 
 ### Example 1: Import computers by using a file
 ```
-PS XYZ:\>Import-CMComputerInformation -CollectionName "All Systems" -FileName "\\cmshare\Public\CM\ImportComputers.csv" -EnableColumnHeadings $True
+PS XYZ:\>Import-CMComputerInformation -CollectionName "All Systems" -FileName "\\cmshare\Public\CM\ImportComputers.csv" -EnableColumnHeading $True
 ```
 
-This command imports the computers specified in the CVS file into the All Systems collection.
-This command includes a value of $True for the *-EnableColumnHeadings* parameter.
+This command imports the computers specified in the CSV file into the All Systems collection.
+This command includes a value of $True for the *-EnableColumnHeading* parameter.
 The cmdlet ignores the first line of the file.
 
 ### Example 2: Import a single computer
