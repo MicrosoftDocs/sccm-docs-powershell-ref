@@ -10,18 +10,21 @@ title: Get-CMDistributionStatus
 # Get-CMDistributionStatus
 
 ## SYNOPSIS
+
 Gets a distribution status.
 
 ## SYNTAX
 
 ### SearchById (Default)
-```
+
+```powershell
 Get-CMDistributionStatus [-Id <String>] [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
 
 ### SearchByValue
-```
+
+```powershell
 Get-CMDistributionStatus -InputObject <IResultObject> [-DisableWildcardHandling] [-ForceWildcardHandling]
  [<CommonParameters>]
 ```
@@ -35,14 +38,20 @@ Get-CMDistributionStatus -InputObject <IResultObject> [-DisableWildcardHandling]
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get status for an application using its package id
+
+```powershell
+PS XYZ:\>$PackageId = (Get-CMApplication -Name '7-Zip').PackageID
+PS XYZ:\>Get-CMDistributionStatus -Id $PackageId
 ```
-PS XYZ:\>
-```
+
+The first command gets the package id of an application named 7-Zip and stores it in the variable $PackageId.
+The second command uses the package id stored in $PackageId as parameter to **Get-CMDistributionStatus**, which gets the distribution status of the application.
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
+
 DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
 
 ```yaml
@@ -58,6 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
+
 ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
 
 ```yaml
@@ -73,6 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
+
 ```yaml
 Type: String
 Parameter Sets: SearchById
@@ -86,6 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 ```yaml
 Type: IResultObject
 Parameter Sets: SearchByValue
@@ -99,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
