@@ -157,6 +157,20 @@ PS XYZ:\> New-CMPackageDeployment -PackageName $ReferencePackage.Name -ProgramNa
 PS XYZ:\> $ReferencePackage | New-CMPackageDeployment -ProgramName $ReferenceProgram.ProgramName -Collection $Collection -StandardProgram -Comment $Comment -DeployPurpose Available
 ```
 
+### Example 4: With Required Schedule, Deadline in 10 days
+
+```powershell
+#Set Deadline to 10 days from now at 8PM
+[datetime]$DeadlineTime = (get-date -Hour 20 -Minute 0 -Second 0).AddDays(10)
+
+#Create CM Schedule based on that Time we just created - Recuring Daily
+$NewScheduleDeadline = New-CMSchedule -Start $DeadlineTime -Nonrecurring
+
+#Create the Deployment
+New-CMPackageDeployment -PackageId $ReferencePackage.PackageID -ProgramName $ReferenceProgram.ProgramName -DeployPurpose Required -CollectionName $Collection -StandardProgram  -FastNetworkOption DownloadContentFromDistributionPointAndRunLocally -SlowNetworkOption DownloadContentFromDistributionPointAndLocally -RerunBehavior RerunIfFailedPreviousAttempt -Schedule $NewScheduleDeadline
+
+```
+
 ## PARAMETERS
 
 ### -AllowFallback
