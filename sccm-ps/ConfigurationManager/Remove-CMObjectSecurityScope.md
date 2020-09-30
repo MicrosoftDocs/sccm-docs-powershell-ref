@@ -59,8 +59,12 @@ The *Force* parameter indicates that the user is not prompted before the securit
 PS XYZ:\> Remove-CMObjectSecurityScope -InputObject (Get-CMApplication -Name "Application*") -Name "Scope1" -Force
 ```
 
+This command gets all application objects that have a name beginning with Application and removes the security scope named Scope1 from each application object.
+The *Force* parameter indicates that the user is not prompted before the security scope is removed.
+
 ### Example 3: Add a new security scope then remove all others from application object
-```
+
+```powershell
 #Get Desired Security Scope
 $ScopeName = "Team ABC"
 $TeamABCScope = Get-CMSecurityScope | Where-Object {$_.CategoryName -eq $ScopeName}
@@ -77,9 +81,6 @@ foreach ($ExtraScope in (Get-CMObjectSecurityScope -InputObject $Application | W
     Remove-CMObjectSecurityScope -InputObject $Application -Scope $ExtraScope -Force
     }
 ```
-
-This command gets all application objects that have a name beginning with Application and removes the security scope named Scope1 from each application object.
-The *Force* parameter indicates that the user is not prompted before the security scope is removed.
 
 ## PARAMETERS
 
