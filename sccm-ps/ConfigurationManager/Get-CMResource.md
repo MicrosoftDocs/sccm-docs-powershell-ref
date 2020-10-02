@@ -1,8 +1,8 @@
 ---
-description: Gets a Configuration Manager resource.
+description: Get a Configuration Manager resource.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 10/01/2020
 schema: 2.0.0
 title: Get-CMResource
 ---
@@ -10,7 +10,8 @@ title: Get-CMResource
 # Get-CMResource
 
 ## SYNOPSIS
-Gets a Configuration Manager resource.
+
+Get a Configuration Manager resource.
 
 ## SYNTAX
 
@@ -20,37 +21,37 @@ Get-CMResource [[-ResourceId] <Int32>] [-Fast] [-ResourceType <ResourceType>] [-
 ```
 
 ## DESCRIPTION
-The **Get-CMResource** cmdlet gets a Configuration Manager resource.
 
-A resource can be a user or a device.
+The **Get-CMResource** cmdlet gets a Configuration Manager resource, such as a device or a user.
+
+For more complete data, use [Get-CMDevice](Get-CMDevice.md) or [Get-CMUser](Get-CMUser.md). For devices, it queries the **SMS_R_System** class. If you use `Get-CMDevice -Resource` the output is the same as **Get-CMResource**.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get a resource by ID
-```
-PS XYZ:\> Get-CMResource -ResourceID 2097152000 -Fast
-```
 
-This command gets the resource with the ID 2097152000.
-It does not return lazy properties.
+This command gets the resource with the ID **2097152000** and doesn't return lazy properties.
+
+```powershell
+Get-CMResource -ResourceID "2097152000" -Fast
+```
 
 ### Example 2: Get all user resources
-```
-PS XYZ:\> Get-CMResource -ResourceType User -Fast
-```
 
 This command gets all user resources.
-It does not return lazy properties.
+
+```powershell
+Get-CMResource -ResourceType User
+```
 
 ## PARAMETERS
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -65,10 +66,10 @@ Accept wildcard characters: False
 ```
 
 ### -Fast
-Indicates that the cmdlet does not automatically refresh lazy properties.
 
-Lazy properties contain values that are relatively inefficient to retrieve which can cause additional network traffic and decrease cmdlet performance.
-If lazy properties are not used, this parameter should be specified.
+Add this parameter to not automatically refresh lazy properties. Lazy properties contain values that are relatively inefficient to retrieve. Getting these properties can cause additional network traffic and decrease cmdlet performance.
+
+If you don't use this parameter, the cmdlet displays a warning. To disable this warning, set `$CMPSSuppressFastNotUsedCheck = $true`.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies the ID of a resource.
+
+Specifies the ID of a resource. For example, `16780010`.
 
 ```yaml
 Type: Int32
@@ -113,14 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-Specifies the resource type.
-Valid values are:
 
-- None
-- UnknownResource
-- UserGroup
-- User
-- System
+Specifies the resource type.
 
 ```yaml
 Type: ResourceType
@@ -136,6 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -146,10 +144,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_Resource
 
+For more information on this return object and its properties, see [SMS_Resource server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_resource-server-wmi-class).
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Remove-CMResource](Remove-CMResource.md)
 
+[Get-CMDevice](Get-CMDevice.md)
 
+[Get-CMUser](Get-CMUser.md)
