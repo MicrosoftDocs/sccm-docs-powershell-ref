@@ -323,7 +323,7 @@ Accept wildcard characters: False
 
 ### -Resource
 
-Add this parameter to query the **SMS_Resource** class for device information. This class shouldn't be restricted by role-based access. The output is the same as with the **Get-CMResource** cmdlet. This output has minimal properties for the device. For more detailed properties, use don't use this parameter, or use the **-CollectionMember** parameter.
+Add this parameter to query the **SMS_Resource** class for device information. This class shouldn't be restricted by role-based access. The output is the same as with the **Get-CMResource** cmdlet. This output has minimal properties for the device. For more detailed properties, don't add this parameter, or use the **-CollectionMember** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -355,7 +355,7 @@ Accept wildcard characters: False
 
 ### -ThreatId
 
-Use this parameter to filter the devices that it returns to those devices with specific malware by ID. To get this threat ID, use the [Get-CMDetectedMalware](Get-CMDetectedMalware.md) cmdlet. For example, `2147735505`.
+Use this parameter to filter the devices that it returns to those devices with specific malware by ID. For example, `2147735505`. To get this threat ID, use the [Get-CMDetectedMalware](Get-CMDetectedMalware.md) cmdlet.
 
 ```yaml
 Type: String
@@ -371,7 +371,7 @@ Accept wildcard characters: False
 
 ### -ThreatName
 
-Use this parameter to filter the devices that it returns to those devices with specific malware by name. To get this threat name, use the [Get-CMDetectedMalware](Get-CMDetectedMalware.md) cmdlet. For example, `Trojan:Win32/Wacatac.B!ml`.
+Use this parameter to filter the devices that it returns to those devices with specific malware by name. For example, `Trojan:Win32/Wacatac.B!ml`. To get this threat name, use the [Get-CMDetectedMalware](Get-CMDetectedMalware.md) cmdlet.
 
 ```yaml
 Type: String
@@ -399,11 +399,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### IResultObject#SMS_CombinedDeviceResources
 
-For more information on this return object and its properties, see the following articles:
+For more information on the **SMS_CombinedDeviceResources** object and its properties, see [SMS_CombinedDeviceResources server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_combineddeviceresources-server-wmi-class).
 
-[SMS_CombinedDeviceResources server WMI class](/mem/configmgr/develop/reference/core/clients/collections/sms_combineddeviceresources-server-wmi-class)
-
-[SMS_R_System server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_r_system-server-wmi-class)
+For more information on the **SMS_R_System** object and its properties, see [SMS_R_System server WMI class](/mem/configmgr/develop/reference/core/clients/manage/sms_r_system-server-wmi-class).
 
 ## NOTES
 
