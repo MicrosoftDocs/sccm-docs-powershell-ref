@@ -29,9 +29,17 @@ New-CMTSStepDownloadPackageContent -AddPackage <IResultObject[]> [-LocationOptio
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 Create Task Sequence Step with Condition, add to Group in Task Sequence
 ```powershell
-PS XYZ:\> {{ Add example code here }}
+PS XYZ:\> $TaskSequenceName = "Module - Download Driver Packages"
+PS XYZ:\> $Model = "Latitude E7470"
+PS XYZ:\> $GroupName = "Dell Drivers"
+PS XYZ:\> $ContentPackage = Get-CMPackage -Fast -Name "Driver Dell Latitude E7470"
+PS XYZ:\> $StepName = $ContentPackage.Name
+PS XYZ:\> $ConditionQuery = "Select * From Win32_ComputerSystem Where Model = `"$Model`""
+PS XYZ:\> $StepCondition = New-CMTaskSequenceStepConditionQueryWMI -Namespace "root\cimv2" -Query $ConditionQuery
+PS XYZ:\> $PackageStep = New-CMTSStepDownloadPackageContent -AddPackage $ContentPackage -Name $StepName -LocationOption TaskSequenceWorkingFolder -DestinationVariable "DRIVERS" -Condition $StepCondition
+PS XYZ:\> Set-CMTaskSequenceGroup -TaskSequenceName $TaskSequenceName -StepName $GroupName -AddStep $PackageStep -InsertStepStartIndex 1
 ```
 
 {{ Add example description here }}
