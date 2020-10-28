@@ -29,9 +29,11 @@ New-CMTSStepConditionQueryWmi [-Namespace <String[]>] -Query <String> [-DisableW
 
 ## EXAMPLES
 
-### Example 1
-```
-PS XYZ:\>
+### Example 1: Create a Query Condition based on Hardware Model
+```powershell
+PS XYZ:\>$Model = "Latitude E7470"
+PS XYZ:\>$ConditionQuery = "Select * From Win32_ComputerSystem Where Model = `"$Model`""
+PS XYZ:\>$StepCondition = New-CMTaskSequenceStepConditionQueryWMI -Namespace "root\cimv2" -Query $ConditionQuery
 ```
 
 ## PARAMETERS
