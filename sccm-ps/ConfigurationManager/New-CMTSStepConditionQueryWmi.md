@@ -1,8 +1,8 @@
 ---
-description: Creates a t s step condition query wmi.
+description: Create a WMI query condition for a task sequence step
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/07/2019
+ms.date: 10/28/2020
 schema: 2.0.0
 title: New-CMTSStepConditionQueryWmi
 ---
@@ -10,8 +10,7 @@ title: New-CMTSStepConditionQueryWmi
 # New-CMTSStepConditionQueryWmi
 
 ## SYNOPSIS
-
-Creates a t s step condition query wmi.
+Create a WMI query condition for a task sequence step.
 
 ## SYNTAX
 
@@ -21,19 +20,19 @@ New-CMTSStepConditionQueryWmi [-Namespace <String[]>] -Query <String> [-DisableW
 ```
 
 ## DESCRIPTION
+Use this cmdlet to create a WMI query condition for a task sequence step.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1: Create a Query Condition based on Hardware Model
+### Example 1: Create a query condition based on hardware model
+
 ```powershell
-PS XYZ:\>$Model = "Latitude E7470"
-PS XYZ:\>$ConditionQuery = "Select * From Win32_ComputerSystem Where Model = `"$Model`""
-PS XYZ:\>$StepCondition = New-CMTaskSequenceStepConditionQueryWMI -Namespace "root\cimv2" -Query $ConditionQuery
+$Model = "Latitude E7470"
+$ConditionQuery = "Select * From Win32_ComputerSystem Where Model = `"$Model`""
+$StepCondition = New-CMTSStepConditionQueryWMI -Namespace "root\cimv2" -Query $ConditionQuery
 ```
 
 ## PARAMETERS
@@ -54,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -69,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -84,6 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
+Specify the WMI namespace for the query.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -97,6 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -Query
+Specify the WMI query.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -110,8 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -139,3 +141,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepConditionQueryWmi](Get-CMTSStepConditionQueryWmi.md)
+[New-CMTSStepConditionFile](New-CMTSStepConditionFile.md)
+[New-CMTSStepConditionFolder](New-CMTSStepConditionFolder.md)
+[New-CMTSStepConditionIfStatement](New-CMTSStepConditionIfStatement.md)
+[New-CMTSStepConditionOperatingSystem](New-CMTSStepConditionOperatingSystem.md)
+[New-CMTSStepConditionOperatingSystemLanguage](New-CMTSStepConditionOperatingSystemLanguage.md)
+[New-CMTSStepConditionRegistry](New-CMTSStepConditionRegistry.md)
+[New-CMTSStepConditionSoftware](New-CMTSStepConditionSoftware.md)
+[New-CMTSStepConditionVariable](New-CMTSStepConditionVariable.md)

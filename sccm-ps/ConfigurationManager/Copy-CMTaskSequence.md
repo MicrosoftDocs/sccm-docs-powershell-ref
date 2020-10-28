@@ -187,7 +187,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CMTaskSequence](New-CMTaskSequence.md)
 [Get-CMTaskSequence](Get-CMTaskSequence.md)
 [Set-CMTaskSequence](Set-CMTaskSequence.md)
-[Copy-CMTaskSequence](Copy-CMTaskSequence.md)
 [Import-CMTaskSequence](Import-CMTaskSequence.md)
 [Export-CMTaskSequence](Export-CMTaskSequence.md)
 [Remove-CMTaskSequence](Remove-CMTaskSequence.md)
