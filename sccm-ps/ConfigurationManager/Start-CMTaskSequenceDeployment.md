@@ -2,7 +2,7 @@
 description: Starts a task sequence deployment in Configuration Manager.
 external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 12/03/2018
+ms.date: 10/28/2020
 schema: 2.0.0
 title: Start-CMTaskSequenceDeployment
 ---
