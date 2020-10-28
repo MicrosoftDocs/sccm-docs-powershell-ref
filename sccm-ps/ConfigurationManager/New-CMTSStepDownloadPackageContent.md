@@ -3,12 +3,13 @@ external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 10/28/2020
 ---
 
 # New-CMTSStepDownloadPackageContent
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Add the **Download Package Content** step to a task sequence.
 
 ## SYNTAX
 
@@ -20,26 +21,35 @@ New-CMTSStepDownloadPackageContent -AddPackage <IResultObject[]> [-LocationOptio
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet creates a new **Download Package Content** step to a task sequence. For more information on this step, see [Task sequence steps: Download package content](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS XYZ:\> {{ Add example code here }}
-```
+### Example 1: Create a task sequence step with condition and add to a group
 
-{{ Add example description here }}
+This example first sets variables for the necessary parameters. It then uses the **New-CMTSStepDownloadPackageContent** cmdlet to create the step, and saves that as a variable. It then adds the step to a task sequence in a specific group using the **Set-CMTaskSequenceGroup** cmdlet.
+
+```powershell
+$TaskSequenceName = "Module - Download Driver Packages"
+$Model = "Latitude E7470"
+$GroupName = "Dell Drivers"
+$ContentPackage = Get-CMPackage -Fast -Name "Driver Dell Latitude E7470"
+$StepName = $ContentPackage.Name
+$ConditionQuery = "Select * From Win32_ComputerSystem Where Model = `"$Model`""
+$StepCondition = New-CMTSStepConditionQueryWMI -Namespace "root\cimv2" -Query $ConditionQuery
+
+$PackageStep = New-CMTSStepDownloadPackageContent -AddPackage $ContentPackage -Name $StepName -LocationOption TaskSequenceWorkingFolder -DestinationVariable "DRIVERS" -Condition $StepCondition
+
+Set-CMTaskSequenceGroup -TaskSequenceName $TaskSequenceName -StepName $GroupName -AddStep $PackageStep -InsertStepStartIndex 1
+```
 
 ## PARAMETERS
 
 ### -AddPackage
-{{ Fill AddPackage Description }}
+Specify a package object to use with the step. To get a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -54,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step.
+Specify a condition object to use with this step. To get a condition object, use one of the step condition cmdlets. For example, [New-CMTSStepConditionQueryWMI](New-CMTSStepConditionQueryWMI.md).
 
 ```yaml
 Type: IResultObject[]
@@ -84,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContinueDownload
-{{ Fill ContinueDownload Description }}
+Set this parameter to `true` to continue downloading other packages in the list if a package download fails.
 
 ```yaml
 Type: Boolean
@@ -129,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationVariable
-{{ Fill DestinationVariable Description }}
+Use this parameter to save the package's path into a custom task sequence variable.
 
 ```yaml
 Type: String
@@ -189,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationOption
-{{ Fill LocationOption Description }}
+Specify one of the accepted values for where the task sequence saves the package. If you use **CustomPath**, set the path with the **-Path** parameter.
 
 ```yaml
 Type: LocationType
@@ -220,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{ Fill Path Description }}
+If you set the **LocationOption** parameter to **CustomPath**, use this parameter to specify the local path to save the package content. The task sequence engine appends the path with the package ID.
 
 ```yaml
 Type: String
@@ -235,8 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -264,3 +273,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CMTSStepDownloadPackageContent](Get-CMTSStepDownloadPackageContent.md)
+[Remove-CMTSStepDownloadPackageContent](Remove-CMTSStepDownloadPackageContent.md)
+[Set-CMTSStepDownloadPackageContent](Set-CMTSStepDownloadPackageContent.md)
+[Task sequence steps: Download package content](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)
