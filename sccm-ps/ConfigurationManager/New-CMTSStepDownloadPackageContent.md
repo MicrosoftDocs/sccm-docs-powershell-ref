@@ -3,6 +3,7 @@ external help file: AdminUI.PS.Osd.dll-Help.xml
 Module Name: ConfigurationManager
 online version:
 schema: 2.0.0
+ms.date: 10/28/2020
 ---
 
 # New-CMTSStepDownloadPackageContent
@@ -38,7 +39,7 @@ $GroupName = "Dell Drivers"
 $ContentPackage = Get-CMPackage -Fast -Name "Driver Dell Latitude E7470"
 $StepName = $ContentPackage.Name
 $ConditionQuery = "Select * From Win32_ComputerSystem Where Model = `"$Model`""
-$StepCondition = New-CMTaskSequenceStepConditionQueryWMI -Namespace "root\cimv2" -Query $ConditionQuery
+$StepCondition = New-CMTSStepConditionQueryWMI -Namespace "root\cimv2" -Query $ConditionQuery
 
 $PackageStep = New-CMTSStepDownloadPackageContent -AddPackage $ContentPackage -Name $StepName -LocationOption TaskSequenceWorkingFolder -DestinationVariable "DRIVERS" -Condition $StepCondition
 
@@ -48,7 +49,7 @@ Set-CMTaskSequenceGroup -TaskSequenceName $TaskSequenceName -StepName $GroupName
 ## PARAMETERS
 
 ### -AddPackage
-Specify a package object to use with the step. To get a package object, use the [Get-CMPackage](GetCMPackage.md) cmdlet.
+Specify a package object to use with the step. To get a package object, use the [Get-CMPackage](Get-CMPackage.md) cmdlet.
 
 ```yaml
 Type: IResultObject[]
@@ -63,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specify a condition object to use with this step. To get a condition object, use one of the step condition cmdlets. For example, [New-CMTaskSequenceStepConditionQueryWMI](New-CMTaskSequenceStepConditionQueryWMI.md).
+Specify a condition object to use with this step. To get a condition object, use one of the step condition cmdlets. For example, [New-CMTSStepConditionQueryWMI](New-CMTSStepConditionQueryWMI.md).
 
 ```yaml
 Type: IResultObject[]
@@ -273,4 +274,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CMTSStepDownloadPackageContent](Get-CMTSStepDownloadPackageContent.md)
+[Remove-CMTSStepDownloadPackageContent](Remove-CMTSStepDownloadPackageContent.md)
+[Set-CMTSStepDownloadPackageContent](Set-CMTSStepDownloadPackageContent.md)
 [Task sequence steps: Download package content](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)
