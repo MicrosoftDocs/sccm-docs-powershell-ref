@@ -1,8 +1,8 @@
 ---
-description: Gets a member of a Configuration Manager collection.
+description: Get members of a collection.
 external help file: AdminUI.PS.Collections.dll-Help.xml
 Module Name: ConfigurationManager
-ms.date: 05/02/2019
+ms.date: 10/30/2020
 schema: 2.0.0
 title: Get-CMCollectionMember
 ---
@@ -10,7 +10,8 @@ title: Get-CMCollectionMember
 # Get-CMCollectionMember
 
 ## SYNOPSIS
-Gets a member of a Configuration Manager collection.
+
+Get members of a collection.
 
 ## SYNTAX
 
@@ -33,33 +34,44 @@ Get-CMCollectionMember -InputObject <IResultObject> [-Name <String>] [-SmsId <St
 ```
 
 ## DESCRIPTION
-The **Get-CMCollectionMember** cmdlet gets a member of a Configuration Manager collection. Configuration Manager collections provide a way to manage users, computers, and other resources in your organization.
+
+The **Get-CMCollectionMember** cmdlet gets members of a Configuration Manager collection. Collections can include devices or users, but not both. When you query a collection, this cmdlet returns objects for all members. You can filter the results based on name or ID. Use this cmdlet to scope a query for devices or users to a specific collection.
 
 > [!NOTE]
-> Configuration Manager cmdlets must be run from the Configuration Manager site drive.
-> The examples in this article use the site name **XYZ**. For more information, see the
-> [getting started](/powershell/sccm/overview) documentation.
+> Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
 
 ## EXAMPLES
 
 ### Example 1: Get a member of a collection by using the pipeline operator
-```
-PS XYZ:\> Get-CMCollection -Name "UserCol1" | Get-CMCollectionMember
-```
 
-This command gets the collection object named UserCol1 and uses the pipeline operator to pass the object to **Get-CMCollectionMember**, which gets all members in UserCol1.
+This command first uses the **Get-CMCollection** cmdlet to get the collection object named **UserCol1**. It then uses the pipeline operator to pass the object to **Get-CMCollectionMember**, which gets all members in UserCol1. Finally, this example uses the **Select-Object** cmdlet to only display the member names.
+
+```powershell
+Get-CMCollection -Name "UserCol1" | Get-CMCollectionMember | Select-Object Name
+```
 
 ### Example 2: Get a member of a collection by name
-```
-PS XYZ:\> Get-CMCollectionMember -CollectionName "DeviceCol1" -Name "domain*"
+
+This command queries the collection **DeviceCol1** for members that have a name beginning with `domain`. The asterisk (`*`) wildcard matches multiple characters. So results can include names such as "domain1" or "domain-controller".
+
+```powershell
+Get-CMCollectionMember -CollectionName "DeviceCol1" -Name "domain*"
 ```
 
-This command gets the all members of the device collection named DeviceCol1 that have a name beginning with domain.
+### Example 3: Export collection details to a CSV
+
+This example queries the **XYZ0004B** device collection for a set of properties and stores that in the variable, **$collMem**. The second line converts that data into comma-separated value (CSV) format, and outputs to a file.
+
+```powershell
+$collMem = Get-CMCollectionMember -CollectionId "XYZ0004B" | Select-Object Name,Domain,LastLogonUser,DeviceOS,DeviceOSBuild,MACAddress,SerialNumber
+$collMem | ConvertTo-Csv -NoTypeInformation | Out-File -FilePath "C:\output\XYZ0004B.csv"
+```
 
 ## PARAMETERS
 
 ### -CollectionId
-Specifies the ID of a collection.
+
+Specify the ID of a collection to query. For example, `"XYZ0004B"`.
 
 ```yaml
 Type: String
@@ -74,7 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of a collection.
+
+Specify the name of a collection to query.
 
 ```yaml
 Type: String
@@ -89,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWildcardHandling
-DisableWildcardHandling treats wildcard characters as literal character values. Cannot be combined with **ForceWildcardHandling**.
+
+This parameter treats wildcard characters as literal character values. You can't combine it with **ForceWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWildcardHandling
-ForceWildcardHandling processes wildcard characters and may lead to unexpected behavior (not recommended). Cannot be combined with **DisableWildcardHandling**.
+
+This parameter processes wildcard characters and may lead to unexpected behavior (not recommended). You can't combine it with **DisableWildcardHandling**.
 
 ```yaml
 Type: SwitchParameter
@@ -119,8 +134,14 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a collection object.
-To obtain a collection object, use the Get-CMCollection, Get-CMDeviceCollection or Get-CMUserCollection cmdlets.
+
+Specify a collection object to query. To get a collection object, use one of the following cmdlets:
+
+- [Get-CMCollection](Get-CMCollection.md)
+- [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
+- [Get-CMUserCollection](Get-CMUserCollection.md)
+
+You can also use the pipeline operator (`|`) to pass a collection object to **Get-CMCollectionMemeber** on the command line.
 
 ```yaml
 Type: IResultObject
@@ -135,7 +156,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a resource.
+
+To filter the results, specify the name of a resource in the collection. This filter isn't case-sensitive.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -150,7 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies the ID of a resource.
+
+To filter the results, specify a resource ID. For example, `16777242`. The cmdlet only returns a record for that resource in the targeted collection.
 
 ```yaml
 Type: Int32
@@ -165,7 +193,13 @@ Accept wildcard characters: False
 ```
 
 ### -SmsId
-Specifies the SMSID of a resource.
+
+To filter the results, specify the SMSID of a resource. For example, `"GUID:7a186367-7372-4841-889e-ba2e3aad1e85"`. This filter isn't case-sensitive.
+
+You can use wildcard characters:
+
+- `*`: Multiple characters
+- `?`: Single character
 
 ```yaml
 Type: String
@@ -180,6 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -189,6 +224,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -199,4 +235,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMUserCollection](Get-CMUserCollection.md)
 
+[Get-CMDevice](Get-CMDevice.md)
 
+[Get-CMResource](Get-CMResource.md)
