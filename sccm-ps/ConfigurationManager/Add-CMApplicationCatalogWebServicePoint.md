@@ -34,7 +34,7 @@ The **Add-CMApplicationCatalogWebServicePoint** cmdlet adds an Application Catal
 Configuration Manager requires a web service point site system role to support the Application Catalog website and the Software Library.
 You also need an Application Catalog website point in the same site, but not necessarily on the same server.
 If you intend to use Secure Hypertext Transfer Protocol (HTTPS), you need to deploy a web server certificate on the server hosting the web service point.
-For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/install-site-system-roles).
+For more information about site system roles, see [Install and Configure Site System Roles for Configuration Manager](/mem/configmgr/core/servers/deploy/configure/install-site-system-roles).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

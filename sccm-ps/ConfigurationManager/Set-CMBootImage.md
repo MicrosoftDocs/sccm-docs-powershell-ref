@@ -505,7 +505,7 @@ Accept wildcard characters: False
 
 ### -Reload
 
-Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information on this process, see [Update distribution points with the boot image](https://docs.microsoft.com/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+Applies to version 2006 and later. If the version of the Windows ADK components in the boot image are out of date, use this parameter to reload this boot image with the current Windows PE version from the Windows ADK. For more information on this process, see [Update distribution points with the boot image](/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 ```yaml
 Type: SwitchParameter

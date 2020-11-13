@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 ### Documentation library updates
 
-For the latest cmdlet library documentation, see [ConfigurationManager module reference](https://docs.microsoft.com/powershell/module/configurationmanager/).
+For the latest cmdlet library documentation, see [ConfigurationManager module reference](/powershell/module/configurationmanager/).
 
 ### Removed cmdlets
 The following cmdlets are no longer supported and have been removed:

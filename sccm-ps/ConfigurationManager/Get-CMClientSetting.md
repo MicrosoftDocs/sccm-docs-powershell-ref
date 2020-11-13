@@ -29,7 +29,7 @@ Get-CMClientSetting -Id <String> [-Raw] [-Setting <SettingType>] [-SettingType <
 ## DESCRIPTION
 The **Get-CMClientSetting** cmdlet gets a customized collection of client settings.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
+For more information about client settings, see [About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -209,7 +209,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
+[About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [New-CMClientSetting](New-CMClientSetting.md)
 

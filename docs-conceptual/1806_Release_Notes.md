@@ -17,7 +17,7 @@ ROBOTS: NOINDEX
 *Applies to: Configuration Manager (Current Branch)*
 
  > [!NOTE]  
- > Configuration Manager version 1802 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1802](https://docs.microsoft.com/powershell/sccm/1802_release_notes).
+ > Configuration Manager version 1802 is the baseline for these changes. For more information, see [Configuration Manager Cmdlet Library changes for version 1802](1802_release_notes.md).
 
 
 ## Important changes
@@ -35,7 +35,7 @@ ROBOTS: NOINDEX
 
 Many of the fixes and improvements described in this article are a result of your feedback.
 
-To leave bug reports, use the [Feedback Hub](https://docs.microsoft.com/sccm/core/understand/find-help). For feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
+To leave bug reports, use the [Feedback Hub](/sccm/core/understand/find-help). For feature requests, use [UserVoice](https://configurationmanager.uservoice.com).
 
 
 

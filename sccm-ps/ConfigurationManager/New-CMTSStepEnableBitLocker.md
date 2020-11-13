@@ -22,7 +22,7 @@ New-CMTSStepEnableBitLocker [-CreateKeyOption <CreateKeyType>] [-Drive <String>]
 ```
 
 ## DESCRIPTION
-Add the **Enable BitLocker** step to a task sequence, which enables BitLocker encryption on the hard drive. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
+Add the **Enable BitLocker** step to a task sequence, which enables BitLocker encryption on the hard drive. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -379,4 +379,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About task sequence steps - Enable BitLocker](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)
+[About task sequence steps - Enable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)

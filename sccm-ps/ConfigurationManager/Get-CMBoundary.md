@@ -88,7 +88,7 @@ Get-CMBoundary -BoundaryGroupName "BGroup07"
 
 ### -BoundaryGroupId
 
-Specify the ID of a boundary group that includes the boundary to get. You can get a boundary group ID by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet. This ID is the **GroupID** property on the [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
+Specify the ID of a boundary group that includes the boundary to get. You can get a boundary group ID by using the [Get-CMBoundaryGroup](Get-CMBoundaryGroup.md) cmdlet. This ID is the **GroupID** property on the [SMS_BoundaryGroup](/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
 
 ```yaml
 Type: UInt32

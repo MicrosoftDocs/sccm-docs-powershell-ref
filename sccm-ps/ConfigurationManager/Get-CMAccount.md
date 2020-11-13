@@ -22,7 +22,7 @@ Get-CMAccount [-SiteCode <String>] [[-UserName] <String>] [-DisableWildcardHandl
 ## DESCRIPTION
 The **Get-CMAccount** cmdlet gets a Configuration Manager user account.
 The user name must be in the domain\user format.
-For more information about Configuration Manager user accounts, see [Technical Reference for Accounts Used in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/accounts).
+For more information about Configuration Manager user accounts, see [Technical Reference for Accounts Used in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/accounts).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

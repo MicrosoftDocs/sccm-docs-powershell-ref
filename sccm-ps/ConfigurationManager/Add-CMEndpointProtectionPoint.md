@@ -33,7 +33,7 @@ The **Add-CMEndpointProtectionPoint** cmdlet adds a site system role for System 
 
 Endpoint Protection lets you manage antimalware policies and Windows Firewall security for client computers in Configuration Manager.
 In order to use Endpoint Protection with Configuration Manager, you must install a single site system role for Endpoint Protection, either in the central site or in a stand-alone primary site.
-For more information about Endpoint Protection in Configuration Manager, see [Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection).
+For more information about Endpoint Protection in Configuration Manager, see [Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -211,7 +211,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection)
+[Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection)
 
 [Get-CMEndpointProtectionPoint](Get-CMEndpointProtectionPoint.md)
 

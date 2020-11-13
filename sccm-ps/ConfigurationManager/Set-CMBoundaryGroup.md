@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Specify the ID of a boundary group to configure. This ID is the **GroupID** property on the [SMS_BoundaryGroup](https://docs.microsoft.com/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
+Specify the ID of a boundary group to configure. This ID is the **GroupID** property on the [SMS_BoundaryGroup](/mem/configmgr/develop/reference/core/servers/configure/sms_boundarygroup-server-wmi-class) object. For example, `33`.
 
 ```yaml
 Type: String

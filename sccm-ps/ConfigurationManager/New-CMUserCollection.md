@@ -50,7 +50,7 @@ To add members to the user collection use one of the following membership rule c
 - Add-CMUserCollectionIncludeMembershipRule
 
 Collections represent logical groupings of resources, such as users and devices.
-For more information about Configuration Manager collections, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information about Configuration Manager collections, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

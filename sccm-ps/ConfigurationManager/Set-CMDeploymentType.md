@@ -262,7 +262,7 @@ The **Set-CMDeploymentType** cmdlet changes a deployment type for an application
 
 You can also use this cmdlet to change the priority for dependencies of the deployment type. Configuration Manager evaluates and installs dependencies of a deployment type in order of priorities before it installs the deployment type.
 
-For more information, see [Introduction to application management - Deployment types](https://docs.microsoft.com/mem/configmgr/apps/understand/introduction-to-application-management#deployment-type).
+For more information, see [Introduction to application management - Deployment types](/mem/configmgr/apps/understand/introduction-to-application-management#deployment-type).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).

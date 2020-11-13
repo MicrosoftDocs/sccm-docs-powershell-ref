@@ -27,7 +27,7 @@ New-CMTSStepPrestartCheck [-CheckCMClientMinVersion <Boolean>] [-CheckMaxOSVersi
 
 ## DESCRIPTION
 
-Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
+Add the **Check Readiness** step to a task sequence. Use this step to verify that the target computer meets the specified deployment prerequisite conditions. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -527,4 +527,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About task sequence steps - Check Readiness](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)
+[About task sequence steps - Check Readiness](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness)

@@ -698,7 +698,7 @@ Accept wildcard characters: False
 
 ### -SiteSystemCollectionBehavior
 
-For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), specify the behavior to take when the selected collection includes computers that host site systems roles.
+For [deployment verification](/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), specify the behavior to take when the selected collection includes computers that host site systems roles.
 
 - `Block`: Don't create the deployment
 - `Warn`: Require verification before creating the deployment
@@ -751,7 +751,7 @@ Accept wildcard characters: False
 
 ### -ThresholdOfSelectCollectionByDefault
 
-For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the default collection size limit. The **Select Collection** window hides collections with membership that exceeds this default value. Specify `0` to disable.
+For [deployment verification](/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the default collection size limit. The **Select Collection** window hides collections with membership that exceeds this default value. Specify `0` to disable.
 
 ```yaml
 Type: Int32
@@ -767,7 +767,7 @@ Accept wildcard characters: False
 
 ### -ThresholdOfSelectCollectionMax
 
-For [deployment verification](https://docs.microsoft.com/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the maximum collection size limit. The **Select Collection** window always hides collections that have more members than this maximum size. Specify `0` to disable.
+For [deployment verification](/mem/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments), configure the maximum collection size limit. The **Select Collection** window always hides collections that have more members than this maximum size. Specify `0` to disable.
 
 ```yaml
 Type: Int32
@@ -831,7 +831,7 @@ Accept wildcard characters: False
 
 ### -UseSmsGeneratedCert
 
-Use this parameter to enable or disable the site property to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/enhanced-http).
+Use this parameter to enable or disable the site property to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](/mem/configmgr/core/plan-design/hierarchy/enhanced-http).
 
 ```yaml
 Type: Boolean

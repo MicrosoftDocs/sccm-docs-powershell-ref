@@ -22,7 +22,7 @@ New-CMAccount -Password <SecureString> [-SiteCode <String>] -UserName <String> [
 ## DESCRIPTION
 The **New-CMAccount** cmdlet creates a new user account in Configuration Manager.
 A **CMAccount** is a user account that Configuration Manager uses to connect to various system and network resources.
-For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/accounts).
+For more information about user accounts, see [Technical Reference for Accounts Used in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/accounts).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

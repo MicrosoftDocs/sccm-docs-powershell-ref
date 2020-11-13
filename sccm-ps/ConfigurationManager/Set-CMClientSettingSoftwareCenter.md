@@ -657,6 +657,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About client settings - Software Center](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings#software-center)
+[About client settings - Software Center](/mem/configmgr/core/clients/deploy/about-client-settings#software-center)
 
-[Plan for Software Center](https://docs.microsoft.com/mem/configmgr/apps/plan-design/plan-for-software-center)
+[Plan for Software Center](/mem/configmgr/apps/plan-design/plan-for-software-center)

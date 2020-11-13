@@ -30,7 +30,7 @@ New-CMPrestageMedia [-Application <IResultObject[]>] [-Comment <String>] [-Creat
 
 ## DESCRIPTION
 
-The **New-CMPrestageMedia** cmdlet creates a file to prestage an OS image on a new hard drive. For more information, see [Plan prestaged media](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-task-sequence-media#BKMK_PlanPrestagedMedia).
+The **New-CMPrestageMedia** cmdlet creates a file to prestage an OS image on a new hard drive. For more information, see [Plan prestaged media](/mem/configmgr/osd/deploy-use/create-task-sequence-media#BKMK_PlanPrestagedMedia).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 
 ### -PrestartCommand
 
-Specify a command line to run before the task sequence starts. For more information, see [Prestart commands for task sequence media](https://docs.microsoft.com/mem/configmgr/osd/understand/prestart-commands-for-task-sequence-media).
+Specify a command line to run before the task sequence starts. For more information, see [Prestart commands for task sequence media](/mem/configmgr/osd/understand/prestart-commands-for-task-sequence-media).
 
 ```yaml
 Type: String
@@ -653,4 +653,4 @@ Cmdlet aliases: **New-CMPrestagedMedia**
 
 [Get-CMPackage](Get-CMPackage.md)
 
-[Plan prestaged media](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-task-sequence-media#BKMK_PlanPrestagedMedia)
+[Plan prestaged media](/mem/configmgr/osd/deploy-use/create-task-sequence-media#BKMK_PlanPrestagedMedia)

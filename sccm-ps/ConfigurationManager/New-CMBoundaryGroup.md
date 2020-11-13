@@ -27,7 +27,7 @@ A boundary group is a collection of boundaries.
 You can use boundary groups to manage network locations.
 You must assign boundaries to boundary groups before you can use the boundary group.
 Boundary groups enable client computers to find a primary site for client assignment, which is referred to as automatic site assignment, and a list of available site systems that have content.
-For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) and the [New-CMBoundary](New-CMBoundary.md) cmdlet.
+For more information about boundaries, see [Planning for Boundaries and Boundary Groups in Configuration Manager](/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) and the [New-CMBoundary](New-CMBoundary.md) cmdlet.
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

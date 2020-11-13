@@ -48,8 +48,8 @@ You can create software metering rules that specify which software to monitor.
 To change rule properties, you can specify rules to change by ID or by product name, or use the [Get-CMSoftwareMeteringRule](Get-CMSoftwareMeteringRule.md) cmdlet.
 Likewise, you can change security scope for rules for specified ID, product name, or by using **Get-CMSoftwareMeteringRule**.
 
-For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/monitor-app-usage-with-software-metering).
-For more information about security scopes, see [Planning for Security in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/plan-for-security).
+For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/mem/configmgr/apps/deploy-use/monitor-app-usage-with-software-metering).
+For more information about security scopes, see [Planning for Security in Configuration Manager](/mem/configmgr/core/plan-design/security/plan-for-security).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -LanguageId
 Specifies a LocaleID of the software that a rule meters.
-For more information and a list of locale identifiers, see [Appendix A: Product Behavior](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+For more information and a list of locale identifiers, see [Appendix A: Product Behavior](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ```yaml
 Type: Int32

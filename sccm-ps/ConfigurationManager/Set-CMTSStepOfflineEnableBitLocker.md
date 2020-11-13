@@ -225,7 +225,7 @@ Set-CMTSStepOfflineEnableBitLocker [-SetConditionOperatingSystem] [-StepName <St
 ```
 
 ## DESCRIPTION
-Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
+Configure the **Pre-provision BitLocker** step in a task sequence, to enable BitLocker encryption on a drive while in Windows PE. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -1244,4 +1244,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About task sequence steps - Pre-provision BitLocker](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)
+[About task sequence steps - Pre-provision BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)

@@ -41,7 +41,7 @@ You can create software metering rules that specify which software to monitor.
 You can specify rules to disable by ID or by product name, or use the [Get-CMSoftwareMeteringRule](Get-CMSoftwareMeteringRule.md) cmdlet.
 You can use the Disable-CMSoftwareMeteringRule to temporarily suspend a rule.
 
-For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/monitor-app-usage-with-software-metering).
+For more information about software metering in Configuration Manager, see [Introduction to Software Metering in Configuration Manager](/mem/configmgr/apps/deploy-use/monitor-app-usage-with-software-metering).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

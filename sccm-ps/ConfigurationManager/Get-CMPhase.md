@@ -238,4 +238,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
+[Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

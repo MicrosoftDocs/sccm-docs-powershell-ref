@@ -25,7 +25,7 @@ Set-CMClientStatusSetting [-ClientPolicyDays <Int32>] [-HardwareInventoryDays <I
 The **Set-CMClientStatusSetting** cmdlet modifies client status settings.
 These settings determine the data collection intervals for individual client monitoring activities in Configuration Manager.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
+For more information about client settings, see [About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -222,7 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
+[About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [Get-CMClientStatusSetting](Get-CMClientStatusSetting.md)
 

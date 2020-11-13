@@ -227,4 +227,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Site server high availability](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/site-server-high-availability)
+[Site server high availability](/mem/configmgr/core/servers/deploy/configure/site-server-high-availability)

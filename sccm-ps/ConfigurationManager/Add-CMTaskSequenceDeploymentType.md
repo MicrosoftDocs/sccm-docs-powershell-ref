@@ -130,7 +130,7 @@ Add-CMTaskSequenceDeploymentType [-DeploymentTypeName <String>] [-EstimatedRunti
 
 ## DESCRIPTION
 
-Applies to version 2006 and later. Create a task sequence as an app model deployment type. For more information, see [Task sequence deployment type](https://docs.microsoft.com/mem/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
+Applies to version 2006 and later. Create a task sequence as an app model deployment type. For more information, see [Task sequence deployment type](/mem/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
 
 This cmdlet has similar syntax as the MSI deployment type cmdlet [Add-CMMsiDeploymentType](Add-CMMsiDeploymentType.md). The primary differences are the following parameters:
 
@@ -719,4 +719,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Task sequence deployment type](https://docs.microsoft.com/mem/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt)
+[Task sequence deployment type](/mem/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt)

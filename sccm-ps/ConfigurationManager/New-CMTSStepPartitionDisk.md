@@ -22,7 +22,7 @@ New-CMTSStepPartitionDisk [-DiskNumber <Int32>] [-DiskNumberVariable <String>] [
 ```
 
 ## DESCRIPTION
-Add the **Format and Partition Disk** step in a task sequence. For more information on this task sequence step, see [About task sequence steps](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk).
+Add the **Format and Partition Disk** step in a task sequence. For more information on this task sequence step, see [About task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -DiskNumberVariable
 
-Applies to version 2006 and later. Use a task sequence variable to specify the target disk to format. This variable option supports more complex task sequences with dynamic behaviors. For more information, see [About task sequence steps - Format and Parition Disk](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#properties-for-format-and-partition-disk).
+Applies to version 2006 and later. Use a task sequence variable to specify the target disk to format. This variable option supports more complex task sequences with dynamic behaviors. For more information, see [About task sequence steps - Format and Parition Disk](/mem/configmgr/osd/understand/task-sequence-steps#properties-for-format-and-partition-disk).
 
 ```yaml
 Type: String
@@ -282,4 +282,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About task sequence steps - Format and Partition Disk](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk)
+[About task sequence steps - Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk)

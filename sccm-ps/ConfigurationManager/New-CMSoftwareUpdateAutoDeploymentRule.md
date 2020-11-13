@@ -98,7 +98,7 @@ New-CMSoftwareUpdateAutoDeploymentRule [-AddToExistingSoftwareUpdateGroup <Boole
 
 ## DESCRIPTION
 
-The **New-CMSoftwareUpdateAutoDeploymentRule** cmdlet creates a automatic deployment rule (ADR) for software updates. When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group. The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers. For more information, see [Automatically deploy software updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/automatically-deploy-software-updates).
+The **New-CMSoftwareUpdateAutoDeploymentRule** cmdlet creates a automatic deployment rule (ADR) for software updates. When a rule runs, Configuration Manager adds updates that qualify for the rule to a software update group. The Configuration Manager server downloads content files and copies them to distribution points, and then updates client computers. For more information, see [Automatically deploy software updates](/mem/configmgr/sum/deploy-use/automatically-deploy-software-updates).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).

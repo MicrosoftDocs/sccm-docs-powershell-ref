@@ -25,7 +25,7 @@ A client push installation installs client software on computers that Configurat
 When you configure client push installation for a site, the client installation automatically runs on the computers that Configuration Manager discovered within the site's configured boundaries when those boundaries are part of a boundary group.
 You can also start a client push installation by running the Client Push Installation Wizard for a specific collection or resource within a collection.
 
-For more information about how to install clients, see [How to Install Clients on Windows Computers in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers).
+For more information about how to install clients, see [How to Install Clients on Windows Computers in Configuration Manager](/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -121,7 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to Install Clients on Windows Computers in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers)
+[How to Install Clients on Windows Computers in Configuration Manager](/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers)
 
 [Set-CMClientPushInstallation](Set-CMClientPushInstallation.md)
 

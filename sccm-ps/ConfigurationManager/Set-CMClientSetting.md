@@ -178,7 +178,7 @@ Set-CMClientSetting -Name <String> [-PassThru] [-Schedule <IResultObject>] [-Sof
 
 ## DESCRIPTION
 
-The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users. Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects. Settings objects determine settings for individual clients. For more information, see [About client settings](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
+The **Set-CMClientSetting** cmdlet changes client settings for Configuration Manager devices and users. Configuration Manager provides default values for all client settings, but you can use this cmdlet to modify settings objects. Settings objects determine settings for individual clients. For more information, see [About client settings](/mem/configmgr/core/clients/deploy/about-client-settings).
 
 To modify a client setting, specify it by name.
 
@@ -1270,7 +1270,7 @@ Accept wildcard characters: False
 
 ### -NoRebootEnforcement
 
-Applies to version 2006 and later. Configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart. For more information, see [device restart notifications](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/device-restart-notifications).
+Applies to version 2006 and later. Configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart. For more information, see [device restart notifications](/mem/configmgr/core/clients/deploy/device-restart-notifications).
 
 ```yaml
 Type: Boolean
@@ -1918,7 +1918,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About client settings](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings)
+[About client settings](/mem/configmgr/core/clients/deploy/about-client-settings)
 
 [Get-CMClientSetting](Get-CMClientSetting.md)
 

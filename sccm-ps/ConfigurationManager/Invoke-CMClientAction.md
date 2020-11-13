@@ -64,7 +64,7 @@ Invoke-CMClientAction [-ActionType <ClientActionType>] -CollectionId <String>
 
 The **Invoke-CMClientAction** cmdlet sends a notification to client computers to trigger an immediate client action. You can specify one or more client computers, or send a notification to all the computers in a specified device collection.
 
-For more information about these actions, see [Client notification](https://docs.microsoft.com/mem/configmgr/core/clients/manage/client-notification).
+For more information about these actions, see [Client notification](/mem/configmgr/core/clients/manage/client-notification).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -351,4 +351,4 @@ Cmdlet aliases: **Invoke-CMClientNotification**
 
 [Get-CMDeviceCollection](Get-CMDeviceCollection.md)
 
-[Client notifications](https://docs.microsoft.com/mem/configmgr/core/clients/manage/client-notification)
+[Client notifications](/mem/configmgr/core/clients/manage/client-notification)

@@ -39,7 +39,7 @@ Save-CMEndpointProtectionDefinition [-Device <IResultObject>] -DeviceCollectionI
 The **Save-CMEndpointProtectionDefinition** cmdlet saves a System Center 2016 Endpoint Protection definition in Configuration Manager.
 Endpoint Protection definitions contain anti-malware policies and settings for Windows Firewall that you can apply to specific groups of computers.
 
-For more information about Endpoint Protection, see [Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection).
+For more information about Endpoint Protection, see [Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -226,7 +226,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/endpoint-protection)
+[Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection)
 
 [Add-CMEndpointProtectionPoint](Add-CMEndpointProtectionPoint.md)
 

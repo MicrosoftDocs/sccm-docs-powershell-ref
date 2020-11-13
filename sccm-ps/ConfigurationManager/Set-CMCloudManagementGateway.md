@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -CheckClientCertRevocation
 
-Set this parameter to `true` to verify client certificate revocation. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).
+Set this parameter to `true` to verify client certificate revocation. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](/mem/configmgr/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).
 
 ```yaml
 Type: Boolean
@@ -328,7 +328,7 @@ Accept wildcard characters: False
 
 ### -ServiceCertPath
 
-Applies to version 2006 and later. Specify the path to the CMG server authentication certificate in PFX format. For more information, see [Certificates for CMG](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway).
+Applies to version 2006 and later. Specify the path to the CMG server authentication certificate in PFX format. For more information, see [Certificates for CMG](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway).
 
 ```yaml
 Type: String
@@ -511,4 +511,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Plan for the cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway)
+[Plan for the cloud management gateway](/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway)

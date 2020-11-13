@@ -73,7 +73,7 @@ The **Start-CMClientSettingDeployment** cmdlet deploys client settings to device
 Specify the client setting object by using its name or ID, or you can use the **Get-CMClientSetting** cmdlet to get a client setting object.
 Specify the collection to apply the settings to by using its name or ID, or you can use the [Get-CMDeviceCollection](Get-CMDeviceCollection.md) cmdlet to get a device collection.
 
-For more information about client settings, see [About Client Settings in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings).
+For more information about client settings, see [About Client Settings in Configuration Manager](/mem/configmgr/core/clients/deploy/about-client-settings).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

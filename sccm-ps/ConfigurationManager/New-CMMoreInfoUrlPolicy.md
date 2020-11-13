@@ -121,4 +121,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMBlmSetting](New-CMBlmSetting.md)
 
-[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#url-for-the-security-policy-link)
+[BitLocker settings reference](/mem/configmgr/protect/tech-ref/bitlocker/settings#url-for-the-security-policy-link)

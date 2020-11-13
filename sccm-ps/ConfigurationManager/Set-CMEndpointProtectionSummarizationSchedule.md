@@ -21,7 +21,7 @@ Set-CMEndpointProtectionSummarizationSchedule -Interval <Int32> [-Unit <Summariz
 
 ## DESCRIPTION
 The **Set-CMEndpointProtectionSummarizationSchedule** cmdlet modifies the settings of an System Center 2016 Endpoint Protection summarization schedule.
-For more information about Endpoint Protection summarization schedules, see [How to Monitor Endpoint Protection in Configuration Manager](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/monitor-endpoint-protection).
+For more information about Endpoint Protection summarization schedules, see [How to Monitor Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/monitor-endpoint-protection).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.

@@ -93,7 +93,7 @@ Set-CMScriptDeploymentType [-ContentLocation <String>] [-AddDetectionClause <Det
 
 ## DESCRIPTION
 
-The **Set-CMScriptDeploymentType** cmdlet changes the settings for a script installer deployment type. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/create-deploy-scripts).
+The **Set-CMScriptDeploymentType** cmdlet changes the settings for a script installer deployment type. Configuration Manager has an integrated ability to run Powershell scripts. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!NOTE]
 > Run Configuration Manager cmdlets from the Configuration Manager site drive, for example `PS XYZ:\>`. For more information, see [getting started](/powershell/sccm/overview).
@@ -959,4 +959,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CMDeploymentType](Get-CMDeploymentType.md)
 
-[Create and run PowerShell scripts from the Configuration Manager console](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/create-deploy-scripts)
+[Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts)

@@ -105,4 +105,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CMBlmSetting](New-CMBlmSetting.md)
 
-[BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings#reset-platform-validation-data-after-bitlocker-recovery)
+[BitLocker settings reference](/mem/configmgr/protect/tech-ref/bitlocker/settings#reset-platform-validation-data-after-bitlocker-recovery)

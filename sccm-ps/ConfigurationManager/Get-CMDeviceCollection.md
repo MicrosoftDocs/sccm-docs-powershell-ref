@@ -41,7 +41,7 @@ Get-CMDeviceCollection -DistributionPointGroup <IResultObject> [<CommonParameter
 
 ## DESCRIPTION
 The **Get-CMDeviceCollection** cmdlet retrieves collections that contain computers or mobile devices.
-For more information about collections, see [Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+For more information about collections, see [Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 > [!NOTE]
 > Configuration Manager cmdlets must be run from the Configuration Manager site drive.
@@ -138,7 +138,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to Collections in Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
+[Introduction to Collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/introduction-to-collections)
 
 [New-CMDeviceCollection](New-CMDeviceCollection.md)
 

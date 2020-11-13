@@ -58,7 +58,7 @@ Set-CMTaskSequencePhase [-AllowFallback <Boolean>] [-AllowRemoteDP <Boolean>] [-
 
 ## DESCRIPTION
 
-Applies to version 2006 and later. Use this cmdlet to configure a deployment phase for a task sequence. For more information, see [Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
+Applies to version 2006 and later. Use this cmdlet to configure a deployment phase for a task sequence. For more information, see [Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 ## EXAMPLES
 
@@ -734,4 +734,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Suspend-CMPhasedDeployment](Suspend-CMPhasedDeployment.md)
 
-[Create phased deployments](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)
+[Create phased deployments](/mem/configmgr/osd/deploy-use/create-phased-deployment-for-task-sequence)

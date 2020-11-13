@@ -148,4 +148,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[About task sequence steps - Run Task Sequence](https://docs.microsoft.com/mem/configmgr/osd/understand/task-sequence-steps#child-task-sequence)
+[About task sequence steps - Run Task Sequence](/mem/configmgr/osd/understand/task-sequence-steps#child-task-sequence)
